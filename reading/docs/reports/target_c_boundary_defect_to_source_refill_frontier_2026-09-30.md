@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_boundary_defect_to_source_refill_frontier_2026-09-30.md) · source SHA-256 `8e88b4bd1edfb44a8155419c725d734951f06ec8ab52eceb7bd90437ee8d48ae`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-35750FED0E9D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: remaining boundary-defect to source-refill theorem
@@ -33,11 +33,12 @@ The train-boundary arguments subsequently proved candidates for:
 
 1. four opposite straight support faces under sublinear route/face defect;
 2. the finite symmetry estimate
+   
    ```math
    d_{\rm BL}(\nu_P,\sigma_\#\nu_P)
    \le2\sqrt{2LZ}+2Z+20Q;
-   
    ```
+
 3. a centrally symmetric parallelogram limit under those defects;
 4. exclusion of **every** positive-area circle-supported carrier with
    $`Z+Q=o(D)`$, including diameter-one wrapping limits, because a cyclic

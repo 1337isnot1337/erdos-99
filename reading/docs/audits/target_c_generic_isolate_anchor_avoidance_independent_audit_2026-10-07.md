@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_generic_isolate_anchor_avoidance_independent_audit_2026-10-07.md) · source SHA-256 `866ae69ddc13d9da6a90822f0a9ec16e7b1b42601876eeda28212cd84ad82481`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-65B00B3DF4D9","canonical":true,"claim_ids":["C-GENERIC-ISOLATE-ANCHOR-AVOIDANCE","C-LOADED-UNIT-ANCHOR-STRICT-OBTUSE","C-SHORT-WALL-WEAK-CLEARANCE-CLASSIFICATION","C-STATIC-SINGLETON-UNLOADED-ANCHOR"],"claim_statuses":{"C-GENERIC-ISOLATE-ANCHOR-AVOIDANCE":"canonical","C-LOADED-UNIT-ANCHOR-STRICT-OBTUSE":"canonical","C-SHORT-WALL-WEAK-CLEARANCE-CLASSIFICATION":"canonical","C-STATIC-SINGLETON-UNLOADED-ANCHOR":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C: independent audit of generic isolate anchors and static singleton constraints

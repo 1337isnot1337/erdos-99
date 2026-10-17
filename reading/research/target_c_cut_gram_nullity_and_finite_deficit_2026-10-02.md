@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_cut_gram_nullity_and_finite_deficit_2026-10-02.md) · source SHA-256 `7064906a964e4a5ecc71934b32378613f4a95d4e134581bbdfbcff34821b684a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

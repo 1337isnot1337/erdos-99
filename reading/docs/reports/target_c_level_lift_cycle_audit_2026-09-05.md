@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_level_lift_cycle_audit_2026-09-05.md) · source SHA-256 `1b46cc6ac92b90e7aa39c437e1ae38f7d1db07350fdc32335317e8d551845475`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-060604C23EE2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_level_lift_cycle_audit_2026-09-05.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=016b29a6089b3ddf2070a31b41f2385a6f62b324; lifecycle=unreviewed; canonical=false -->

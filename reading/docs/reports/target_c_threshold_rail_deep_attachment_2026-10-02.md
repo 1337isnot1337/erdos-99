@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_threshold_rail_deep_attachment_2026-10-02.md) · source SHA-256 `70525a68adcaa926e4c7167639f33f7e5cf4fd93684adcdcc4d39b32bc363d55`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5DAC484CA164","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — threshold rails force two quadratic source caps and deep attachments

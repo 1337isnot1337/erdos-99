@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_small_separated_packet_upper_release_2026-10-07.md) · source SHA-256 `212c3065d2b81c3014d33d5462d0952b5e8560e9a4db26c49027e0de0ab2bfb3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A2CF8FB478BA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: small separated packets with weak diameter upper bounds

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sol_run_ledger_2026-09-14.md) · source SHA-256 `19f56d5dc4a4ee7ace2a3bc51ae96d88a34a9bdc1dfe6c49b889b5db3e45945c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-19380E648F68","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Sol run proof-obligation ledger

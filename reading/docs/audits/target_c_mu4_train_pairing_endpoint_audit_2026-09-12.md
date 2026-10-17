@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_mu4_train_pairing_endpoint_audit_2026-09-12.md) · source SHA-256 `cf01a064fd62642518955ae31aef24d716caee5f291adcfab15c5d2679f4ebeb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C17DF7BB083A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Independent audit — Target C `mu_4` train-pairing endpoint exclusion

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_p1_trace_degree_reduction_2026-09-10.md) · source SHA-256 `8e174981848e43a3b15a781e9f5b30b89dee89483cf652a98abde1e28d958fca`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -387,28 +387,19 @@ Irrelevant. TR only constrains the irreducible factor containing the distinguish
 The arithmetic endpoint is now:
 
 > For the unique P1 angle `delta in (0,pi/n)` satisfying
-> 
-
-```math
+> ```math
 > \cos(n\delta/2)=2\sin(\delta/2),
-> 
-```
+> ```
 > let
-> 
-
-```math
+> ```math
 > t_n=2\cos\delta.
-> 
-```
+> ```
 > Prove
-> 
-
-```math
+> ```math
 > [\mathbb Q(t_n):\mathbb Q]
 > \ge
 > \left\lceil\frac n2\right\rceil.
-> 
-```
+> ```
 
 Any proof of this half-degree inequality eliminates the P1 branch at that `n`.
 

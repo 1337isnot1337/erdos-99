@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_inactive_chamber_residual_conservation.md) · source SHA-256 `3d1818600fb393f0baa280a1869a692a4166f92a2da686ef4ea5c0d9350b3b3c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — exact conservation of inactive-chamber boundary residual
 

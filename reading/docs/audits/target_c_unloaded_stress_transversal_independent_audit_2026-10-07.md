@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_unloaded_stress_transversal_independent_audit_2026-10-07.md) · source SHA-256 `9799a583f8340e791d4e471f5874540587cdb0ca3314bb123dee373948b95721`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6BA58386DC93","canonical":true,"claim_ids":["C-PRESELECTED-LOADED-UNLOADED-TRANSVERSAL","C-UNLOADED-KKT-STRESS-TRANSVERSAL","C-UNLOADED-TRANSVERSAL-RESTORATION-REGRESSION"],"claim_statuses":{"C-PRESELECTED-LOADED-UNLOADED-TRANSVERSAL":"canonical","C-UNLOADED-KKT-STRESS-TRANSVERSAL":"canonical","C-UNLOADED-TRANSVERSAL-RESTORATION-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent audit: unloaded stress transversals

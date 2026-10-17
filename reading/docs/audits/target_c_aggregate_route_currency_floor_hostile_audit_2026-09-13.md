@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_aggregate_route_currency_floor_hostile_audit_2026-09-13.md) · source SHA-256 `a81c66e09dfd8f6e95e1444c4d771c4c406809ab5c4f5fe6de2bae7988030d72`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-11808062A4AC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — aggregate route-currency floor

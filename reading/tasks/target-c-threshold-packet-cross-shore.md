@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/target-c-threshold-packet-cross-shore.md) · source SHA-256 `64f204e04e744fefd4517594261f15fd3f29ae658f4ca339a261138a0c3f7d6d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # target-c-threshold-packet-cross-shore
 

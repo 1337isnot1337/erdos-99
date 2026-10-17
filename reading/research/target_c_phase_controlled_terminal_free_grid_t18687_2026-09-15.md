@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_phase_controlled_terminal_free_grid_t18687_2026-09-15.md) · source SHA-256 `c6a7adfe77c03ecc88f2da02889488d9844d15cd4500f394e22a7eb8fb595ed1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "bb9048f152925624d1b8d64748c298c6d0cd8137", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_phase_controlled_terminal_free_grid_t18687_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "98904ba0e12400b6c1fd8a26b77d33eefd7a357d5fd65e3d7da67b768c2d663b"} -->
 

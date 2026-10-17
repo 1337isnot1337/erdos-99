@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_loaded_endpoint_local_incidence_independent_audit_2026-10-07.md) · source SHA-256 `3ebdc72958ffdbeb27c8a1842b676c2e308c4db3c315146b7c44ea97e32f929d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-74BB3967C43C","canonical":true,"claim_ids":["C-DIAMETER-ENDPOINT-LOCAL-DEGREE-TWO","C-NEARBY-DIAMETER-ENDPOINTS-FULL-HULL-SIDE"],"claim_statuses":{"C-DIAMETER-ENDPOINT-LOCAL-DEGREE-TWO":"canonical","C-NEARBY-DIAMETER-ENDPOINTS-FULL-HULL-SIDE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C nearby diameter-endpoint incidence: independent audit

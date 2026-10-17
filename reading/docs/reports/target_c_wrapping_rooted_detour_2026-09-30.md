@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_wrapping_rooted_detour_2026-09-30.md) · source SHA-256 `27ec7c5f10f471c1e5525d0955a854dd79ae19c17bdb4e94376e2b1a9bad91af`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7CC1135BA383","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- wrapping-rooted detour

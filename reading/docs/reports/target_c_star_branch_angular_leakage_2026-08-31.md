@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_star_branch_angular_leakage_2026-08-31.md) · source SHA-256 `df7e69e3ad0a360e126ad6f1d9769dfcaa70f663f4cc9d153e0d117d734866b5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4CB09197EFFF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C71: star-branch angular leakage
@@ -404,26 +404,29 @@ choose the C66 star center `z`. Then one of the following holds along a subseque
 1. **Return/cycle phase:** the multi-port component of `C-z` carries star mass bounded
    away from zero.
 2. **Single-port phase:** one single-port component `R` satisfies
+   
    ```math
    \boxed{w_R\longrightarrow1,}
    \tag{C71.26}
-   
    ```
+
    and its unique contact port obeys
+   
    ```math
    \boxed{
    \alpha_{zx_R}\ge(c_\infty-o(1))D,
    }
    \tag{C71.27}
-   
    ```
+
    where
+   
    ```math
    c_\infty
    :=\cos\left(\frac{5\pi}{12}-\frac{\sqrt3}{2}\right)
    =0.90348\ldots .
-   
    ```
+
 
 Indeed, if `W_multi` does not stay bounded away from zero, pass to a subsequence with
 `W_multi->0`; then C71.21, C71.23, and `delta_z->0` give `w_R->1`, and C71.22 gives
@@ -439,10 +442,11 @@ branches issuing from its common star center.
 C71 is not a restatement of either newer theorem.
 
 - C68 controls the **aggregate transverse contact-stress energy**
+  
   ```math
   Q_z=\sum_C\alpha_{ij}[1-(r_i-r_j)^2]
-  
   ```
+
   and gives `Q_z=o(D^2)` when `D epsilon->0`.
 - C70 controls the **boundary response support** and gives total non-`z` response
   conductance `X_z=o(1)` in the same regime.

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_two_side_polynomial_collective_refill_2026-10-05.md) · source SHA-256 `f6b75c01c629bbb4aa33a825f50ff991061f0b20622743af45a8174f03c81b25`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3EE36CEB5BDF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — a simultaneous protected refill with a polynomial wall tolerance

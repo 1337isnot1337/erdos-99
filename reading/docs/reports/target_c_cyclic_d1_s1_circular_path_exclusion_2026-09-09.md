@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_s1_circular_path_exclusion_2026-09-09.md) · source SHA-256 `330f2f2aff96d0027c0d378261742118dd3e6f0fa679f6a313e93f84d644dae7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 11 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

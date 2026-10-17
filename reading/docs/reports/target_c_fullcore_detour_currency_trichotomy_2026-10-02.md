@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_detour_currency_trichotomy_2026-10-02.md) · source SHA-256 `64db3e80b3552aa5deacf234bb65512d4990f4c15687524b3519964f5e15f985`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0B69AA45750E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fullcore_detour_currency_trichotomy_2026-10-02.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=648f9249797f7b50ae0efe5f662aca3cb4ca8090; lifecycle=unreviewed; canonical=false -->

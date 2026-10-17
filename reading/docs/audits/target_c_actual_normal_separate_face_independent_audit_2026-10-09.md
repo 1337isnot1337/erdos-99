@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_actual_normal_separate_face_independent_audit_2026-10-09.md) · source SHA-256 `0dbfc348521100935dfd1e7308fabefda17d96d9a38e691517616836daadbe64`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

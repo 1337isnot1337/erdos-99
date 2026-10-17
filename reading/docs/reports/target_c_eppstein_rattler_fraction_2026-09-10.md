@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_eppstein_rattler_fraction_2026-09-10.md) · source SHA-256 `48465de72a26aa2677e5d66f9f40ce151e656958144c48d42d9606e37aa3f740`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-FCF8AF21ECD0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Eppstein isoperimetry forces at least 85% rattlers near the GR frontier
@@ -205,7 +207,7 @@ Theorem 4 states
 
 ```math
 e\le
-2N-rac12\sqrt{2\pi\sqrt3\,N}+O(1).
+2N-\frac12\sqrt{2\pi\sqrt3\,N}+O(1).
 \tag{2.1}
 ```
 
@@ -285,19 +287,21 @@ For orientation,
 Hence:
 
 - if `mu_D<=0.5947+o(1)`, then
+  
   ```math
   \frac vn\le0.1433362780+o(1),
   \qquad
   \frac{n-v}{n}\ge0.8566637220-o(1);
-  
   ```
+
 - if `mu_D<=0.60+o(1)`, then
+  
   ```math
   \frac vn\le0.1459025040+o(1),
   \qquad
   \frac{n-v}{n}\ge0.8540974960-o(1);
-  
   ```
+
 - if `mu_D<=\pi/(2\sqrt2)+o(1)`, at least half of the source is rattlers.
 
 The first bullet is a formal endpoint-window calculation, not an assertion that GR

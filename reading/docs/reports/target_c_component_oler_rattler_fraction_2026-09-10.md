@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_component_oler_rattler_fraction_2026-09-10.md) · source SHA-256 `92360b8d978adcd4b7552a4d2da3fa3ea1a9b5f5ca4acce964ff156c7eff4997`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-63584E4CB8C9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — componentwise Oler bound forces low-surplus sources to be rattler-dominated
@@ -317,15 +317,17 @@ fully inactive rattler set `R`, `|R|=n-v`, and CO.4 follows.
 The theorem is most informative below `mu=1`.
 
 - `mu<=0.5947+o(1)` implies
+  
   ```math
   \liminf |R|/n\ge0.64633191.
-  
   ```
+
 - `mu<=0.60+o(1)` implies
+  
   ```math
   \liminf |R|/n\ge0.64.
-  
   ```
+
 - `mu<=2^{-1/2}+o(1)` implies at least half of all source points are rattlers.
 
 The new all-phase GR theorem says `mu>0.5947+epsilon_G` for every sufficiently large

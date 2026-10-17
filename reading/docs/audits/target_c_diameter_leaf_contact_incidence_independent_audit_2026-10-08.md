@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_diameter_leaf_contact_incidence_independent_audit_2026-10-08.md) · source SHA-256 `ab6a6af0486b7b78da790b75410d068ad75e925160f82e786fcea24c6f497e58`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0F9326ECA9C8","canonical":true,"claim_ids":["C-DIAMETER-LEAF-CONTACT-INCIDENCE"],"claim_statuses":{"C-DIAMETER-LEAF-CONTACT-INCIDENCE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: diameter-leaf contact incidence

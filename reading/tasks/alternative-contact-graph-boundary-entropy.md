@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/alternative-contact-graph-boundary-entropy.md) · source SHA-256 `063016493cd82343b36ff6600adfc94699167f8d32089d780869e8fe6c660a15`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # alternative-contact-graph-boundary-entropy
 

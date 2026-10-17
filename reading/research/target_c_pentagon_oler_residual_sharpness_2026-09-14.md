@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_pentagon_oler_residual_sharpness_2026-09-14.md) · source SHA-256 `6fbf0aa305d83b6bd93881f5942ebd6cfdedd6800dce7e405c611094fcb0a751`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3ddc04724b817abddcc2e6d721cff9eaee60fbf2", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_pentagon_oler_residual_sharpness_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "722c6c01ee89230772ee53a08dd965a64f7ab73b8b6157f6e122586f7ba054b4"} -->
 

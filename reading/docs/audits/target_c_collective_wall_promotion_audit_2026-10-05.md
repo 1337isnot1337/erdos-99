@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_collective_wall_promotion_audit_2026-10-05.md) · source SHA-256 `b6fe584d9c88046458fd31e5b07031958a0a960b88ba72679106794b5f701791`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D16153EED6A6","canonical":true,"claim_ids":["C-EMBEDDED-WALL-REFILL","C-FIXED-WALL-ACTIVATION-REGRESSION","C-LARGE-WALL-LOCK-REGRESSION","C-PENTAGON-WALL-DISJOINT-BULK"],"claim_statuses":{"C-EMBEDDED-WALL-REFILL":"canonical","C-FIXED-WALL-ACTIVATION-REGRESSION":"regression","C-LARGE-WALL-LOCK-REGRESSION":"regression","C-PENTAGON-WALL-DISJOINT-BULK":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent promotion audit — Target C embedded refill and collective pentagon-wall bulk

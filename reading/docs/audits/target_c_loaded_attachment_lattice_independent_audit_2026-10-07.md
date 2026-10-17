@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_loaded_attachment_lattice_independent_audit_2026-10-07.md) · source SHA-256 `b361f313720443d536d7bb99ccf527caef24addb1a0738619b75c984931bb65b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-666D492CA3D5","canonical":true,"claim_ids":["C-AFFINE-LATTICE-EXTREME-VERTEX-COUNT","C-DIAMETER-NORMAL-APPROX-LATTICE-EXCLUSION","C-EXACT-LATTICE-ATTACHMENT-REMAINDER","C-NEAR-DISK-APPROX-LATTICE-BOUNDARY-EXCLUSION"],"claim_statuses":{"C-AFFINE-LATTICE-EXTREME-VERTEX-COUNT":"canonical","C-DIAMETER-NORMAL-APPROX-LATTICE-EXCLUSION":"canonical","C-EXACT-LATTICE-ATTACHMENT-REMAINDER":"canonical","C-NEAR-DISK-APPROX-LATTICE-BOUNDARY-EXCLUSION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: loaded attachment lattice obstructions

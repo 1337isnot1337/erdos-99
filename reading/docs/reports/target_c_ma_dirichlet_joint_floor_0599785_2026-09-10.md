@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_ma_dirichlet_joint_floor_0599785_2026-09-10.md) · source SHA-256 `66d4238df3e735bcb7202b72f6751a265f01ee01b200fc3c4da0f0d1194e7b05`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 3 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-DA1AB5D38750","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_ma_dirichlet_joint_floor_0599785_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=007fb1c5bbd31a91b2c5dc845e8abfd913f25d60; lifecycle=unreviewed; canonical=false -->
@@ -283,7 +285,7 @@ For `0<=z<u(y)`, differentiation of (2.11)'s capacity gives
 ```math
 \begin{aligned}
 \partial_zU
-={}&-rac1{\sqrt6}
+={}&-\frac1{\sqrt6}
 \left[
 3(2x)^{1/2}v^{1/2}
 +\frac{(2x)^{3/2}}{2v^{1/2}}
@@ -304,7 +306,7 @@ so `(2x)^(3/2)>4`. Also `sqrt(v)<1/4`, `1/sqrt(6)>2/5`,
 
 ```math
 \partial_zU
-<-rac25\cdot8+\frac1{120}<0.
+<-\frac25\cdot8+\frac1{120}<0.
 \tag{3.3}
 ```
 
@@ -457,7 +459,7 @@ and `3141/1000<pi<22/7` give
 
 ```math
 Q_R(3/2,3/5)
-<-rac{926114759}{32112640000}<0,
+<-\frac{926114759}{32112640000}<0,
 ```
 
 where `Q_R` denotes the left side of (5.2). Since `Q_R` increases in `R`,

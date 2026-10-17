@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section106_strong_phase_shore_audit_2026-09-12.md) · source SHA-256 `c0057b7b5caab492d0daba08fe2786b7b20987ba03031c9e7a00d0ef6390add2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C8CCC53E6BF5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — Section 106 stronger phase-shore audit

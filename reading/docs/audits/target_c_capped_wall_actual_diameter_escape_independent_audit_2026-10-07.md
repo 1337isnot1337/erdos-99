@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_capped_wall_actual_diameter_escape_independent_audit_2026-10-07.md) · source SHA-256 `e058956ddb8d49f41f31f3156ecda2a53c9c9b28dde2a6653b7e96a851ec8b0b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-15A7FF07B8CB","canonical":false,"claim_ids":["C-CAPPED-WALL-ACTUAL-DIAMETER-ESCAPE-REGRESSION"],"claim_statuses":{"C-CAPPED-WALL-ACTUAL-DIAMETER-ESCAPE-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Target C capped-wall actual-diameter escape: independent audit

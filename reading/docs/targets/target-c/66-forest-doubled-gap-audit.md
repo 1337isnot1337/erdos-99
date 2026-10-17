@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/66-forest-doubled-gap-audit.md) · source SHA-256 `f4728ff4227421bbb6a54a08979169823f6ea31029b500455e9e6d61dfca50e6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_typeii_pure_tooth_linear_loss_2026-09-12.md) · source SHA-256 `2a5d11d07244d4e7ff90e0f97501c0f71b84f7115daed3f5af6ed569cfa7661f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-154DFFB63448","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — Type-II linear loss from the pure-tooth endpoint

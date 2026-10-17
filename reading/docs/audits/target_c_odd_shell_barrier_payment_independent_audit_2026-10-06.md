@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_odd_shell_barrier_payment_independent_audit_2026-10-06.md) · source SHA-256 `a63adeaef475113abc6b2fe637efd616eb4f2e21f6943f0f8e0bcd7da117da28`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D1C7F917E6B8","canonical":true,"claim_ids":["C-REGULAR-SHELL-BARRIER-NONGLOBAL-FAMILY","C-REGULAR-SHELL-BLOCKER-PAYMENT"],"claim_statuses":{"C-REGULAR-SHELL-BARRIER-NONGLOBAL-FAMILY":"regression","C-REGULAR-SHELL-BLOCKER-PAYMENT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C independent audit: odd-shell wall barriers

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_rooted_crosscut_branch_interval_capacity_independent_audit_2026-10-08.md) · source SHA-256 `494f1eb185ef0cb99d5648218b3344cbbd62c10cf99b0744ead39ca51f80b454`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EF73D8616731","canonical":true,"claim_ids":["C-ROOTED-CROSSCUT-MARKED-INTERVAL-CAPACITY"],"claim_statuses":{"C-ROOTED-CROSSCUT-MARKED-INTERVAL-CAPACITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: rooted crosscut branch interval capacity

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearcircle_giant_face_dichotomy_2026-09-09.md) · source SHA-256 `dc47b58f4e3283ba1f07f05f5f794cc2821cccd5a6d0b039b965d492987e375e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-AB4EC0FC3933","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_nearcircle_giant_face_dichotomy_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=4927e0a0139714d0b00be1019e8024acf426a1c5; lifecycle=unreviewed; canonical=false -->
@@ -127,7 +129,7 @@ The `k_f+z_f` points consisting of its boundary vertices and assigned isolated p
 ```math
 k_f+z_f
 \le
-\frac2{\sqrt3}A_f+rac12k_f+1.
+\frac2{\sqrt3}A_f+\frac12k_f+1.
 ```
 
 Therefore

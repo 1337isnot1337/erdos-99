@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_outer_excess_exact_topological_split_2026-09-14.md) · source SHA-256 `eecfe3bc6c32beef3825488350bbcbdc57711456e65443b3feaf3713f07bed27`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 10 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

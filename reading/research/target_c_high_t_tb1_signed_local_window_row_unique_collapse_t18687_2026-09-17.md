@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_signed_local_window_row_unique_collapse_t18687_2026-09-17.md) · source SHA-256 `78a78a63451839f37223a707fe5024bdbefe1fb95af068a998ccd82f47b9b7fb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 8 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

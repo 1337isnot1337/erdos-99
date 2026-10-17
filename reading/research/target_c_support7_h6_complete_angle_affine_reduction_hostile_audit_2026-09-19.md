@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_h6_complete_angle_affine_reduction_hostile_audit_2026-09-19.md) · source SHA-256 `c88dc61d2c34fb533ffe642eaafa4858bc1fb63d8789901532c7ecf6b582d2ff`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4a0e8aed93d0e4dcbfc7cfd3e906026dd5195c17", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_h6_complete_angle_affine_reduction_hostile_audit_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4c4d9206f28f984934b5139c8f6e362986b9fb373032a58f5e33d729e37a9def"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_extreme_stress_positive_circuit_2026-09-10.md) · source SHA-256 `6f3a6a2b6d170b82853449e40be9354ba4b7f9fa09ede7d4d4cda13fad2d3f5c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6C694D2C1FB2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — extreme normalized KKT stresses are positive rigidity circuits

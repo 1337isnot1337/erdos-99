@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_endpoint_outer_walk_stability_2026-09-12.md) · source SHA-256 `807ec9bcf838b9aaa5bc1ac7b0fde215af307fc0a67552aebfc2d86de305d386`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 6 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

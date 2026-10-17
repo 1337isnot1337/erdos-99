@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_pentagon_terminal_wall_disjoint_quadratic_bulk_2026-10-05.md) · source SHA-256 `f072a2079ecfa518cf50bdca8d54147868e197623f0a892e2372bb226f75f048`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6EB3D5F41D00","canonical":true,"claim_ids":["C-PENTAGON-WALL-DISJOINT-BULK"],"claim_statuses":{"C-PENTAGON-WALL-DISJOINT-BULK":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — quadratic train bulk survives disjoint terminal pentagon walls

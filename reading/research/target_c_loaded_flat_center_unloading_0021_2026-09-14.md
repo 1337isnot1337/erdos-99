@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_loaded_flat_center_unloading_0021_2026-09-14.md) · source SHA-256 `3e1ec9d94f5fefaefcd4abc2f2cd1aaa98dc9c12507e65439308ec94a76912d0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "0d0730ee37f7f87b6e793d28d51c4e1a1425f776", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_loaded_flat_center_unloading_0021_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ad74c1681033cf601f732f6cb5d87d208711d329b572010a3c2b8c67259dcc55"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_quarter_fold_outer_isolate_payment_independent_audit_2026-10-09.md) · source SHA-256 `91f15e8f40f74d7eba86f342da6a4f9971c372ad9b72aa487b2c130ee4fbdc3d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5814CEC8D84F","canonical":true,"claim_ids":["C-QUARTER-FOLD-OUTER-ISOLATE-PAYMENT"],"claim_statuses":{"C-QUARTER-FOLD-OUTER-ISOLATE-PAYMENT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: quarter-fold outer isolate payment

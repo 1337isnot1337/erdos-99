@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_large_near_triangular_fixed_wall_lock_2026-10-05.md) · source SHA-256 `d75246ed131d5a7a59765aee5e58882a2b55cdb34979555ea7154d92acbc6be1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A984E31FFD6D","canonical":false,"claim_ids":["C-LARGE-WALL-LOCK-REGRESSION"],"claim_statuses":{"C-LARGE-WALL-LOCK-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Target C — arbitrarily large near-triangular unit walls can forbid every strict refill

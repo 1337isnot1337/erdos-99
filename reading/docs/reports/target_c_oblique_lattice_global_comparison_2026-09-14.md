@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_oblique_lattice_global_comparison_2026-09-14.md) · source SHA-256 `642b05d4810f98a6ba7519841bffd3f8aee6371336c4f9b70f6b2ca2dab83903`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-274D82E6C6B6","canonical":true,"claim_ids":["C-OBLIQUE-LATTICE-COMPETITOR"],"claim_statuses":{"C-OBLIQUE-LATTICE-COMPETITOR":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Erdős Problem #99 — finite oblique-lattice global comparison
@@ -29,7 +31,7 @@ least two points. Put (n=|A|), (D=\\operatorname{diam}(A)), and
 If
 
 [
-  oxed{(1-\\kappa_\\theta)D>4\\kappa_\\theta+2\\rho,}
+  \boxed{(1-\\kappa_\\theta)D>4\\kappa_\\theta+2\\rho,}
   \tag{OL.1}
 ]
 

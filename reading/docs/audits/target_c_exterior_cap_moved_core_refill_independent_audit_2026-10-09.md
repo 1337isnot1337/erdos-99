@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_exterior_cap_moved_core_refill_independent_audit_2026-10-09.md) · source SHA-256 `7f16f0745a5cc5b41ec6e7b099f6adc802cd559bb0dc8229e296652e29782a30`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3C98A5047D35","canonical":false,"claim_ids":["C-EXTERIOR-CAP-MOVED-CORE-REFILL-NONGLOBAL-REGRESSION"],"claim_statuses":{"C-EXTERIOR-CAP-MOVED-CORE-REFILL-NONGLOBAL-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent audit: moved-core refill in a nonglobal exterior-cap family

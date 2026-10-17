@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_cusp27_g0035_global_floor_2026-09-14.md) · source SHA-256 `e54499edfa4e5703f5f6ec718a96389f257491c105a3324641dab955ad2e6db0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e37f4cbeb5572a35c4704911b2e4a71dfb716648", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_cusp27_g0035_global_floor_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "cc3a3378b3600c73d735f4dc3035a18cbfdf314ffa48ebd02aa5d46e7a781d19"} -->
 
@@ -16,18 +16,20 @@
 This note combines two independent proof-only improvements:
 
 1. the iterative-pruning six-pair theorem gives
+   
    ```math
    C:={T-q/2\over D}\ge C_0:=2\sqrt{\Delta_2}+0.0035-o(1),
    \qquad \Delta_2={\pi\over2\sqrt3};
-   
    ```
+
 2. the three-cusp theorem replaces the Section-171 outer-atom coefficient `81` by `27` whenever
+   
    ```math
    {\delta\over\pi+\delta}\le{\pi^3\over5184},
    \qquad
    \delta:=\lim {b-\operatorname{per}(F)\over D}.
-   
    ```
+
 
 Together they raise the all-Type-II scalar floor from the previous proof-only
 `1.82129...` range to

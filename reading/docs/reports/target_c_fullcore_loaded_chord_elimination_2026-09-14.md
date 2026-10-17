@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_loaded_chord_elimination_2026-09-14.md) · source SHA-256 `ff86603be7b46d8c682c869996a0b6e5f844b8572ea38ca174bdea5f1fd61634`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-579DC70FA3F3","canonical":true,"claim_ids":["C-FULLCORE-LOADED-CHORD"],"claim_statuses":{"C-FULLCORE-LOADED-CHORD":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Erdős Problem #99 — full-core loaded-chord elimination

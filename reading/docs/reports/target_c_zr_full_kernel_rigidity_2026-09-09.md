@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_full_kernel_rigidity_2026-09-09.md) · source SHA-256 `53594cdeb49528be3f159c384a8980cd5ba47edc4a57948be2c8773f77379647`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2681D123CCE0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — full-kernel consequences of ZR: strict cuts, universal rigidity, and bridge matching
@@ -127,16 +127,18 @@ be the mixed active bar graph.
 Under the preceding hypotheses:
 
 1. **Exact terminal kernel.**  
+   
    ```math
    \ker M
    =\operatorname{span}\{\mathbf1_B,P_x|_B,P_y|_B\},
    \qquad
    \operatorname{rank}M=q-3.
    \tag{ZK1}
-   
    ```
 
+
 2. **Every proper terminal cut is strictly response-dominated.** For every nonempty proper `S subset B`, if `c_bk=-Lambda_bk`, then
+   
    ```math
    \boxed{
    \sum_{b\in S,\ k\notin S}c_{bk}
@@ -144,27 +146,29 @@ Under the preceding hypotheses:
    \sum_{\substack{bk\in H\\b\in S,\ k\notin S}}\beta_{bk}.
    }
    \tag{ZK2}
-   
    ```
+
    In particular, every loaded terminal has strict local response excess:
+   
    ```math
    d_b:=\sum_{k\ne b}c_{bk}
    >
    s_b:=\sum_{k\ne b}\beta_{bk}
    \qquad(b\in B).
    \tag{ZK3}
-   
    ```
+
    Thus the zero-excess set in C64 is empty after ZR.
 
 3. **Universal rigidity of the mixed core.** Any realization `y_i` of `J` in any Euclidean space `R^d` satisfying
+   
    ```math
    |y_i-y_j|=1\quad(ij\in C),
    \qquad
    |y_i-y_j|=D\quad(ij\in H)
    \tag{ZK4}
-   
    ```
+
    is congruent to the original planar core.
 
 4. **Redundant infinitesimal rigidity.** Deleting any one bar of `C union H` leaves an infinitesimally rigid planar framework on the same `v` vertices.
@@ -430,14 +434,11 @@ For Level I, the shortest scalar theorem remains (1.3).
 Within the bridge-dominant subbranch, ZK sharpens the next theorem to the following form.
 
 > **BM2 — macroscopic matching-cut exclusion.** For every fixed `c>0`, there is `D_c` such that no lexicographically normalized triangle-free C-II global minimizer of diameter `D>=D_c` has a contact bridge `e` satisfying
-> 
-
-```math
+> ```math
 > \alpha_e\ge cD,
 > \qquad
 > w_e:=\sum_{h\text{ crossing }e}\beta_h\ge c,
-> 
-```
+> ```
 > where, as forced by ZK, the crossing diameter graph contains two vertex-disjoint diameter edges whenever both contact sides are nonsingletons.
 
 C27 would then exclude bridge-dominant stress. The remaining work is genuinely metric: use the two crossing diameter chords, exact bridge resultant, circular order, C18/C41 response structure, and global packing to contradict a macroscopic bridge cut. A purely topological argument is insufficient.

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_partition_perimeter_interface_2026-09-09.md) · source SHA-256 `6559b0680334e5d6adc54d7749379a68dcb33475e98c4de88999f091e16b3fbf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-A8427449EF5D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fullcore_partition_perimeter_interface_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=241144d9da2c78fb4ec554f8047a421d3571693e; lifecycle=unreviewed; canonical=false -->
@@ -306,7 +308,7 @@ Use (4.1) in (5.1):
 ```math
 s_C
 =
-\pi D-rac{K_I+Q_I}{2}-s_B+o(D).
+\pi D-\frac{K_I+Q_I}{2}-s_B+o(D).
 \tag{5.3}
 ```
 

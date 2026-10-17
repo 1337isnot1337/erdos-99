@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_noncontact_wall_shield_independent_audit_2026-10-07.md) · source SHA-256 `649f96184f85487a0da0319fb41126aabf79ba541cdad02b8de77f40fa4a7f5b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F8A0033706B9","canonical":true,"claim_ids":["C-NONCONTACT-WALL-SQRT3-THRESHOLD-REGRESSION","C-NONCONTACT-WALL-STRICT-SHIELD","C-UNIT-PENTAGON-ACTIVATION-THRESHOLD","C-WALL-SAFE-WINDING-BARRIER"],"claim_statuses":{"C-NONCONTACT-WALL-SQRT3-THRESHOLD-REGRESSION":"regression","C-NONCONTACT-WALL-STRICT-SHIELD":"canonical","C-UNIT-PENTAGON-ACTIVATION-THRESHOLD":"canonical","C-WALL-SAFE-WINDING-BARRIER":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent audit: noncontact wall shield and finite activation threshold

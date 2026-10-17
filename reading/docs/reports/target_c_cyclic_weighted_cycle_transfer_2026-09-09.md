@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_weighted_cycle_transfer_2026-09-09.md) · source SHA-256 `14dd5b9e30b8cfb171e3b309bbc2cdf0919209a733d8c0de503c9f17303a9281`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 9 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

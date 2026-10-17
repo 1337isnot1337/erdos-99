@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_open_cell_cyclic_phase_rotation_2026-10-02.md) · source SHA-256 `9814337d8a550b18259a2a8d2780b44fa42138f0254a7f60423a020512571979`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5886E29A96D7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- global cyclic phase rotation in one open witness cell

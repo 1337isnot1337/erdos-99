@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/problem/literature_baseline.md) · source SHA-256 `21bac2fde1a2d5f012f843de2d7bc8ed13a24c07081e9d3dc3541c7bba4e7784`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Supplied-literature baseline and argument audit
 
@@ -104,22 +104,24 @@ Eppstein [6](../BIBLIOGRAPHY.md#ref-6) proves:
 2. Every connected triangle-free penny graph containing a cycle has at least four non-articulation vertices of degree at most (2) [6, Lemma 2](../BIBLIOGRAPHY.md#ref-6).
 3. If $`G`$ is connected with graph diameter $`d_G`$, then
 
+   
    ```math
    |E(G)|\le2|V(G)|-d_G-2
    \tag{2.3}
-   
    ```
+
 
    [6, Theorem 2](../BIBLIOGRAPHY.md#ref-6).
 4. For arbitrary $`n`$-vertex triangle-free penny graphs,
 
+   
    ```math
    |E(G)|
    \le
    2n-\frac12\sqrt{2\pi\sqrt3\,n}+O(1)
    \tag{2.4}
-   
    ```
+
 
    [6, Theorem 4](../BIBLIOGRAPHY.md#ref-6).
 

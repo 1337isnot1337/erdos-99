@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_external_annulus_saturation_2026-09-10.md) · source SHA-256 `80e891f3731687ab147f127c84bfe6f18fcc059e400db38b1371bc902acfbb39`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-AD79EA7DC1B7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — external annulus saturation in the low-surplus branch
@@ -87,7 +89,7 @@ For the full source hull `K`, the exact whole-source notation is
 
 ```math
 \mathscr O_A
-=\operatorname{area}K+rac{\sqrt3}{4}\operatorname{per}K
+=\operatorname{area}K+\frac{\sqrt3}{4}\operatorname{per}K
 -\frac{\sqrt3}{2}(n-1).
 ```
 
@@ -497,14 +499,11 @@ another macroscopic area estimate.
 
 > **ASR — saturated-annulus release.**  Fix `lambda_0<lambda_disk`.  For a post-ZF
 > survivor in the AS.2 regime, use
-> 
-
-```math
+> ```math
 > Z_{ext}=\frac2{\sqrt3}A_{ann}+O(D),
 > \qquad
 > s_{ext}=1+O(D^{-1}),
-> 
-```
+> ```
 > together with the fixed force-visible core to construct an `n`-point unit-separated
 > set of diameter `<D`, or prove an exact boundary surplus that implies
 > `b+Q>2h`.

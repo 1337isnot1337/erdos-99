@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_force_bulk_transport_2026-09-05.md) · source SHA-256 `640656caa99f8eb763d343ad3a9b9ff0eea675dd86b4149e4e8e1981cd651658`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AAF3BCF0FC45","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 - C-II force-bulk transport

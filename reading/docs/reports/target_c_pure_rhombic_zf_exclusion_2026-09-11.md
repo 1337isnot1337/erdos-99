@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_pure_rhombic_zf_exclusion_2026-09-11.md) · source SHA-256 `7fe22200233ec3d86bdff47395c884dac966cddd289f2250339af0aff05dd39f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 
@@ -58,11 +58,12 @@ Assume the following additional, explicit subbranch hypotheses.
 3. The pure-disk phase theorem of Target B applies to this actual contact core.
    In particular, if (R) is the number of rhombi, (T) the number of train
    tracks, and (q) the number of convex-hull vertices, then
+   
    ```math
    \frac qT\le0.9039456812+o(1).
    \tag{PR.1}
-   
    ```
+
 
 The first hypothesis is deliberately weaker than source-carrying purity.  The
 second and third hypotheses are not consequences of the promoted C-II route

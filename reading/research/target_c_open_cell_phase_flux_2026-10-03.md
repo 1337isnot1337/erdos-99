@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_open_cell_phase_flux_2026-10-03.md) · source SHA-256 `82bcf72417a4e622cc72a2b52f7d4ae30b169a8970343d2a8ed7a9713f21ad1a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C: exact open-cell phase-flux law
 

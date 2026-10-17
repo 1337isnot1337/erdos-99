@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_bent_grid_positional_transport_independent_audit_2026-10-07.md) · source SHA-256 `cc759acabee7765577bcb11ab91ba928173606adffb9b5e1b6a3a82f5950a766`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-710FDD6028F8","canonical":false,"claim_ids":["C-BENT-GRID-REDUCED-POSITIONAL-TRANSPORT-REGRESSION"],"claim_statuses":{"C-BENT-GRID-REDUCED-POSITIONAL-TRANSPORT-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent audit: bent-grid positional transport regression

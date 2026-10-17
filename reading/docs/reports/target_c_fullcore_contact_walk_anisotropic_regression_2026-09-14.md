@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_contact_walk_anisotropic_regression_2026-09-14.md) · source SHA-256 `f2179c71da31e861160f7d5851f3a719140ea8f9452eac873d768f6b56bdbad9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 
@@ -107,30 +107,34 @@ Then, for all sufficiently large (R):
 2. (G_R) is connected and its edges are exactly the differences
    $`\pm u,\pm v`$, so it is bipartite;
 3. (D_R=2R+O(1)), (F_R) is within bounded Hausdorff distance of (B(0,R)), and
+   
    ```math
    |A_R|={\pi\over2\sqrt3}D_R^2+O(D_R);
-   
    ```
+
 4. the outer contact walk has the explicit lower bound
+   
    ```math
    b_R\ge {8(R-3)\over\sin\theta_R};
-   
    ```
+
 5. consequently,
+   
    ```math
    b_R-P_R\ge
    {8(R-3)\over\sin\theta_R}-2\pi R,
-   
    ```
+
    and therefore
+   
    ```math
    \boxed{
    \liminf_{R\to\infty}{b_R-P_R\over D_R}
    \ge {8\over\sqrt3}-\pi
    =1.4772094999272136\ldots .
    }
-   
    ```
+
 
 Thus near-disk geometry, asymptotically optimal triangular-packing density, and
 triangle-free two-direction contact structure do not imply

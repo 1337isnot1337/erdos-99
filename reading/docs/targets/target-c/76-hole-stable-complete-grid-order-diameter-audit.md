@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/76-hole-stable-complete-grid-order-diameter-audit.md) · source SHA-256 `8e7bb87b2e2b27c8696bc72558d3b59dc5955b690f6865b0de41f4fb715c453e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — hole-stable complete-grid order and diameter audit
 

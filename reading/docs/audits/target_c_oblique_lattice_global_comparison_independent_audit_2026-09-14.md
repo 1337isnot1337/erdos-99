@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_oblique_lattice_global_comparison_independent_audit_2026-09-14.md) · source SHA-256 `2cdfc3f407f2ed073238c55b394a95155652e77330bc79d27d9705e77151f1d6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-85E7741C3A58","canonical":true,"claim_ids":["C-OBLIQUE-LATTICE-COMPETITOR"],"claim_statuses":{"C-OBLIQUE-LATTICE-COMPETITOR":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit — finite oblique-lattice global comparison

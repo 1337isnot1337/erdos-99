@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_finite_compatibility_promotion_audit_2026-10-05.md) · source SHA-256 `a6f9240377e1f10c4f4d553ab2d0a5945ad77fcd676f8b13c81124ec1570c4d6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2018D5B086C9","canonical":true,"claim_ids":["C-ACTUAL-CUT-FINITE-BARRIER-REGRESSION","C-DISJOINT-SWAP-2SAT","C-LONG-PAIR-ISOLATE-DISPATCH"],"claim_statuses":{"C-ACTUAL-CUT-FINITE-BARRIER-REGRESSION":"regression","C-DISJOINT-SWAP-2SAT":"canonical","C-LONG-PAIR-ISOLATE-DISPATCH":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent promotion audit — Target C finite compatibility, isolate dispatch, and cut-barrier regression
@@ -96,15 +96,17 @@ and a fixed assignment sending each contact isolate either to an anchor in $`B`$
 
 - if $`H`$ is cyclic, $`E=\varnothing`$;
 - if $`H`$ is a forest and $`T`$ is a forest,
+  
   ```math
   |E|\le d_H-1;
-  
   ```
+
 - if $`H`$ is a forest and $`T`$ is odd-unicyclic,
+  
   ```math
   |E|\le d_H.
-  
   ```
+
 
 ### 2.1 Forest partition
 
@@ -140,10 +142,11 @@ Then:
 - all old contacts involving isolates are vacuous because isolates have no old contacts;
 - every inactive long pair outside $`E`$ is unchanged;
 - every other inactive pair starts at length at most $`L`$, and its relative displacement has norm at most $`s`$, so its final length is
+  
   ```math
   <L+\gamma=D.
-  
   ```
+
 
 Therefore **only** pairs in $`E`$ can create a new upper-diameter equality or violation.
 
@@ -322,15 +325,17 @@ If every
 then changing one local binary state changes a pair distance by at most $`2s`$. Therefore:
 
 - every lower-bound clause comes from an old pair with
+  
   ```math
   1<|pq|\le1+2s;
-  
   ```
+
 - every inactive upper-bound clause comes from an old pair with
+  
   ```math
   D-2s\le|pq|<D.
-  
   ```
+
 
 This converts the compatibility problem into an exact finite Boolean system supported only on near-unit, near-diameter, and active-diameter source pairs.
 

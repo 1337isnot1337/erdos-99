@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_diameter_budget_floor_2026-09-14.md) · source SHA-256 `1f521274ad9391b7960011649c7e9134ea8ae0d684addedb967388d9bb22dc9b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F5F4B09FCFA3","canonical":true,"claim_ids":["C-FULLCORE-DIAMETER-BUDGET-FLOOR"],"claim_statuses":{"C-FULLCORE-DIAMETER-BUDGET-FLOOR":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C-II full-core diameter-budget floor — 2026-09-14
@@ -17,14 +17,11 @@ Erdős Problem #99.  Its endpoint is the following asymptotic exclusion:
 
 > In the canonical full-core, no-macroscopic-container branch, any sequence of
 > triangle-free contact-minimal representatives satisfies
-> 
-
-```math
+> ```math
 > \liminf_{D\to\infty}
 > \frac{e_{BB}+2s_C-3k}{D}\ge 1,
 > \qquad k=d_H+s_Z.
-> 
-```
+> ```
 
 Here (D) is the diameter of the representative, (e_{BB}), (s_C), (d_H),
 and (s_Z) have exactly the meanings in the canonical Target C-II attachment
@@ -173,30 +170,33 @@ The following are canonical inputs, used only with their stated scopes.
 
 1. Full-core near-disk saturation gives
 
+   
    ```math
    \operatorname{area}(F_j)=\frac\pi4D_j^2-o(D_j^2).
-   
    ```
+
 
 2. Canonical attachment-cell disjoint tiling gives
 
+   
    ```math
    \sum_r\operatorname{area}(P_{r,j})
      =\operatorname{area}(F_j)-o(D_j^2),
    \qquad
    \sum_r\sqrt{\operatorname{area}(P_{r,j})}=O(D_j).
-   
    ```
+
 
    The first equality is the canonical full-core rhombic-saturation statement;
    it is not asserted for a Type-I chamber/cap branch.
 
 3. The attachment-cell diameter conversion is
 
+   
    ```math
    d_{r,j}=\operatorname{diam}(P_{r,j})\le\delta_{r,j}+2.
-   
    ```
+
 
    The (+2) is retained.  It is not discarded by claiming that boundary walks
    are simple or that bridges occur only once.
@@ -204,21 +204,23 @@ The following are canonical inputs, used only with their stated scopes.
 4. The exact attachment currency identity and nonnegativity of the residual
    terms give
 
+   
    ```math
    \sum_r\delta_{r,j}+R_{I,j}+s_{B,j}
      =6+e_{BB,j}+2s_{C,j}-3k_j.
-   
    ```
+
 
 Since $`R_{I,j},s_{B,j}\ge0`$, this implies
 
+   
    ```math
    \sum_r\delta_{r,j}
       \le6+\mu_jD_j,
    \qquad
    \mu_j:=\frac{e_{BB,j}+2s_{C,j}-3k_j}{D_j}.
-   
    ```
+
 
 Items 1 and 2 yield (2.1) with $`\alpha=\pi/4`$; items 3 and 4 yield (2.2)–
 (2.3) with $`b=2`$.  The abstract lemma therefore gives

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_angle_sensitive_nested_stability_2026-09-09.md) · source SHA-256 `bf2f6a1b7253bc98c6cb0fb276e26d69bc90e7f6fd53f92372c3c7e73936e930`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 17 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

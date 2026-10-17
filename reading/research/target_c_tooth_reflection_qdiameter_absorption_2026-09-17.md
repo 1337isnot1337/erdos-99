@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_qdiameter_absorption_2026-09-17.md) · source SHA-256 `629c4b31dda6e9aac283df515a0b3c2bde180ab08c44ebe5fdb7071c6de4c3a7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "28deb147c0c431a702c6ac77221256f3f22258d9", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_qdiameter_absorption_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "48cafbf93c8f2af13b6a9139e0f20314cc2025649d20d2a542013f286f7ded3a"} -->
 

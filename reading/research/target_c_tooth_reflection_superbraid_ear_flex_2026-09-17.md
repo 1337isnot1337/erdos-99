@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_superbraid_ear_flex_2026-09-17.md) · source SHA-256 `d6a6daca48710c4e1bc12dfb1a5381082b584d214a3f5a1193b9a37a97057e06`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -51,18 +51,20 @@ Call `v` **guarded** if its individual path reaches unit distance from some fixe
 original source point. Otherwise call it **movable**. By the one-ear theorem:
 
 - a guarded `v` has an original source point `u_v` with
+  
   ```math
   1<|v-u_v|\le1+\lambda;
   \tag{EF.2}
-  
   ```
+
 - a movable `v` satisfies
+  
   ```math
   |\gamma_v(t)-u|>1
   \quad\text{for every }u\in A\setminus\{v\},\ 0\le t\le1.
   \tag{EF.3}
-  
   ```
+
 
 ---
 

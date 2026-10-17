@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/seed090_shared_edge_overlap_audit_2026-10-14.md) · source SHA-256 `5b3a468e82e4b3f91ee1c63c795c227593b61af5d3750a8d63ff44a9e65faaa7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D33762849A4B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99 — shared-edge overlap audit of Seed 90

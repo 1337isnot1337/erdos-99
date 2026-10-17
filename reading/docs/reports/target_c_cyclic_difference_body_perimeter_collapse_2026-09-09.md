@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_difference_body_perimeter_collapse_2026-09-09.md) · source SHA-256 `6c540f9214506104c3b68a4ce6c3107d571fe44ff7a86c612fdcb67553f05221`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 9 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 30 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -288,7 +290,7 @@ Use the standard expansions
 \boxed{
 \delta_D
 =
-\frac1D+rac1{24D^3}+O(D^{-5}),}
+\frac1D+\frac1{24D^3}+O(D^{-5}),}
 \tag{3.4}
 ```
 
@@ -299,7 +301,7 @@ and, exactly before expansion,
 =
 \frac1D\sqrt{1-\frac1{4D^2}}
 =
-\frac1D-rac1{8D^3}+O(D^{-5}).
+\frac1D-\frac1{8D^3}+O(D^{-5}).
 \tag{3.5}
 ```
 
@@ -353,7 +355,7 @@ Combining (3.6)--(3.8), the two linear terms in `t_D+d+1` cancel:
 \boxed{
  n\sin\delta_D+\sin(n\delta_D)
 =
-\pi-rac\pi{6D^2}
+\pi-\frac\pi{6D^2}
 +O\left(
 \frac{t_D+1}{D^3}
 +
@@ -367,7 +369,7 @@ The right side of DP.5 is
 ```math
 \frac{q^2}{\pi D^2}
 =
-\pi-rac{2t_D}{D}
+\pi-\frac{2t_D}{D}
 +
 \frac{t_D^2}{\pi D^2}.
 \tag{3.10}
@@ -391,9 +393,9 @@ Therefore
 Insert this improved scale back into (3.9). The error is now `O(D^{-3})`, while the final quadratic term in (3.10) is `O(D^{-4})`. DP.5 yields
 
 ```math
-\pi-rac\pi{6D^2}+O(D^{-3})
+\pi-\frac\pi{6D^2}+O(D^{-3})
 \le
-\pi-rac{2t_D}{D}+O(D^{-4}).
+\pi-\frac{2t_D}{D}+O(D^{-4}).
 ```
 
 Hence
@@ -438,7 +440,7 @@ and (3.4),
 ```math
 q\delta_D
 =
-\pi-rac{t_D}{D}+rac\pi{24D^2}+O(D^{-3}).
+\pi-\frac{t_D}{D}+\frac\pi{24D^2}+O(D^{-3}).
 ```
 
 Thus (4.1) gives
@@ -468,7 +470,7 @@ Together with DP.2,
 The regular odd unit shell has
 
 ```math
-D=rac1{2\sin(\pi/(2q))}
+D=\frac1{2\sin(\pi/(2q))}
 ```
 
 and asymptotically attains the lower scale

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_dominant_pentagon_through_splicing_hostile_audit_2026-09-15.md) · source SHA-256 `95de9b4e3e2f2e402565af1f88ec3390db4dccd8d62eecb03a59d91139ec08a2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DA83393AC1D9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — dominant-pentagon through-splicing and quadratic orbit deficit

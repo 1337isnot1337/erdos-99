@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_stress_density_regression_2026-10-11.md) · source SHA-256 `bab8d3997c8fab67928557a0b95929a9688c929d044931bd3a15b1bd18709a14`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-98AB06F9B50D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Global stress and density: an independent obstruction test

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_pentagon_three_gap_inequality_hostile_audit_2026-09-19.md) · source SHA-256 `42ab583341769fa61553f65650d8c41cf8e067de623ef89443ae975304b1f273`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "bc7eee0be5db4d209da8ac33dbb2593329d5ab9b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_pentagon_three_gap_inequality_hostile_audit_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c13c36cf37c7b6475f1c59a204657910b5ace9c410121876ae8a2ed5cffa2d06"} -->
 

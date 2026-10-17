@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zero_transfer_forest_surplus_2026-09-11.md) · source SHA-256 `3aef7170fa2eca2a88359125c6f0c19d82c31cf742cf235fcdee2c3c2c38a122`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2A452F7392D9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 - zero-transfer forest alternative and surplus cost
@@ -28,19 +28,21 @@ Then:
 2. every connected component of $`H`$ is a star;
 3. every such star has at most four edges in fully force-visible C-II;
 4. if the report-level ZF conclusions are also invoked, then
+   
    ```math
    d_H\ge h/4\ge D/4;
    \tag{ZT.2}
-   
    ```
+
 5. in the report-level $`s_Z=0`$ E597 branch,
+   
    ```math
    \frac{e_{BB}+2s_C}{D}
    >0.597+\varepsilon_{597}+\frac35
    =1.347+\varepsilon_{597}.
    \tag{ZT.3}
-   
    ```
+
 
 The same conclusion with $`>1.347`$ follows in the report-level arbitrary-$`s_Z`$
 extension from

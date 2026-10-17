@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_adaptive_safe_saturation_promotion_audit_2026-10-05.md) · source SHA-256 `6009cacc34618aa6a90b5fbb2aa2f9fa7648ecbcb05a1099831bad3b973dda1e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F26B8515FEB7","canonical":true,"claim_ids":["C-ADAPTIVE-STRICT-SAFE-SATURATION"],"claim_statuses":{"C-ADAPTIVE-STRICT-SAFE-SATURATION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent promotion audit — adaptive strict-safe saturation

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_common_cut_caterpillar_2026-08-31.md) · source SHA-256 `6add9343925b1f644541fd3139f7f6e22fe25a54a22212314f2f472f3c9dead7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CC65FC5A77BF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C addendum: the common-cut diameter forest is a caterpillar forest

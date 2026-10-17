@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_groemer_pair_matching_refinement_2026-09-14.md) · source SHA-256 `4ba8188ab9cc00c8da01ac70e424119679f9d93392bd2d17d68430f4351a1b9a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-79D585A46210","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — pair-level refinement of the Groemer near-contact matching

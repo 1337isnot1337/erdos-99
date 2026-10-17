@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_p1_three_times_power_two_exclusion_2026-09-10.md) · source SHA-256 `932407eb9d7a8d8939782bfcf06c9ed8832269210d9dd7828fb30bfdf804478b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5D56035B9B92","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic P1: exclude `q-2 = 3*2^k`

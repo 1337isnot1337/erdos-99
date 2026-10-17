@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rooted_quantitative_phase_gap_2026-09-30.md) · source SHA-256 `1aff5c679e08d73a61a38cee6bc97815b485a993b67dedd5cabec69c67f0a439`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2FEDCA428009","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- explicit quantitative phase gap above the rooted-detour root

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearcircle_no_bounded_harmonic_components_2026-09-09.md) · source SHA-256 `6a9aa1f65799dc4495834890025334af316791088aeccbc415ec5bb8d86aa01e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E1CA24798E45","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — near-circle harmonic components have diverging graph diameter
@@ -50,7 +50,6 @@ Combining HBd.2 with NC and ZU yields the useful asymptotic identification
  d_H+s_Z=s_C+o(D).
 }
 \tag{HBd.3}
-
 ```
 
 ZT then becomes
@@ -60,7 +59,6 @@ ZT then becomes
 Q+2s_C=(\pi+o(1))D
 }
 \tag{HBd.4}
-
 ```
 
 throughout the near-circle branch.
@@ -100,7 +98,6 @@ C44 gives
 \le M+2.
 }
 \tag{1.2}
-
 ```
 
 C36 gives
@@ -108,7 +105,6 @@ C36 gives
 ```math
 \boxed{I_j\subseteq P_j.}
 \tag{1.3}
-
 ```
 
 The force hulls satisfy, after translation and scaling,
@@ -192,7 +188,6 @@ Therefore for all sufficiently large `j`,
 ```math
 \boxed{\deg_C(x_j)\le2.}
 \tag{3.1}
-
 ```
 
 But `x_j` is an unloaded vertex of the positive contact core. C26 proves that every such vertex has positive contact equilibrium and contact degree in
@@ -319,7 +314,6 @@ NC gives `E_BB=o(D)`, HBd gives `c_I=o(D)`, and the near-circle endpoint gives `
 S+R_I+s_B+s_C=(\pi+o(1))D.
 }
 \tag{6.1}
-
 ```
 
 Together with HBd.4 this may be written
@@ -330,7 +324,6 @@ S+R_I+s_B
 =\frac{\pi D+Q}{2}+o(D).
 }
 \tag{6.2}
-
 ```
 
 This exact asymptotic exchange is useful downstream: increasing face defect raises the amount of harmonic-diameter/internal-edge/unused-degree budget that must be present.

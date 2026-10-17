@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/24-three-channel-locked-stress.md) · source SHA-256 `8b2605132bd24627a54f06442b69e07c92b50a9d7426bdf12d1cd01dcffc581f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -51,17 +51,14 @@ neighbors.
 > **Lemma 172.1 (harmonic convex-hull lemma).**  Let `W subset V(G_+)`, and let `H`
 > be a connected component of `G_+-W` containing no reaction vertex.  If `H` has a
 > graph neighbor in `W`, then
-> 
-
-```math
+> ```math
 > \boxed{
 > \{p_h:h\in H\}
 > \subseteq
 > \operatorname{conv}\{p_w:w\in N(H)\cap W\}.
 > }
 > \tag{172.5}
-> 
-```
+> ```
 
 ### Proof
 
@@ -91,13 +88,10 @@ separation theorem gives (172.5).  $`\square`$
 > **Theorem 172.2 (three-vertex reaction connectivity).**  If a vertex set
 > `W subset V(G_+)` separates all vertices of `T_*\setminus W` from
 > `R_+\setminus W`, then
-> 
-
-```math
+> ```math
 > \boxed{|W|\ge3.}
 > \tag{172.8}
-> 
-```
+> ```
 
 ### Proof
 
@@ -158,40 +152,29 @@ vertex.
 
 > **Corollary 172.3 (three-channel locked stress).**  There exist three pairwise
 > vertex-disjoint positive-contact paths
-> 
-
-```math
+> ```math
 > P_i:t_i'\leadsto r_i
 > \qquad(i=1,2,3)
 > \tag{172.10}
-> 
-```
+> ```
 > with
-> 
-
-```math
+> ```math
 > \{t_1',t_2',t_3'\}=T_*,
 > \qquad
 > r_1,r_2,r_3\in R_+
 > \tag{172.11}
-> 
-```
+> ```
 > and the three reaction endpoints `r_i` distinct.  A path is permitted to have zero
 > edges only when `t_i'=r_i`.  In particular
-> 
-
-```math
+> ```math
 > \boxed{|R_+|\ge3.}
 > \tag{172.12}
-> 
-```
+> ```
 > and all three `r_i` lie in
-> 
-
-```math
+> ```math
 > X^*\cap\partial K^*\subseteq X^\partial.
 > \tag{172.13}
-```
+> ```
 
 For each path, stop at its first vertex on `partial K^*`.  The resulting three paths
 remain pairwise vertex-disjoint, have distinct boundary endpoints, and have no other

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_surplus_cap_and_capacity_gap_2026-09-11.md) · source SHA-256 `fa6249519f2a3e4404681ba75c194b2cce00d623bcbdc07f1d0dffc2a590f766`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1FC020EEE920","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic surplus cap and the remaining capacity gap

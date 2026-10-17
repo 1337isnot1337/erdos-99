@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_h7b_full_angle_reduction_2026-09-19.md) · source SHA-256 `366129cc4ff961ee09a2d6a6bba8786c148f4df83b355728d25ed259f3f85607`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "946c922d132049f92d465093129297e90efe06f0", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_h7b_full_angle_reduction_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d4393b65775f82c7873c6a6a9b9adf529fad4a01022236fdc05c85c9b832cf52"} -->
 

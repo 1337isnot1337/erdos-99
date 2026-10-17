@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_b_min_degree_phase_polytope_determinant_2026-10-02.md) · source SHA-256 `db0b9e6cd050067ed18c91040d92a329a04496b669ca9b4b717a03d75dc4ee5a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f1767a431b283cf03db49670ba682ea6cc692afe", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_b_min_degree_phase_polytope_determinant_2026-10-02.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2d47e0686b88cf3849eebd3808d982e8092944e249f8079339ee352daeffe3e8"} -->
 

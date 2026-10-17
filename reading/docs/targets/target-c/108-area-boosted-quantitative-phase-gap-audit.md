@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/108-area-boosted-quantitative-phase-gap-audit.md) · source SHA-256 `173e18cc6ef42720bb9a9f72f0367b6a4c782a9055639cd8778ba9713986eca0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

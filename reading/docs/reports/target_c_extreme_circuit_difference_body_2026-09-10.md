@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_extreme_circuit_difference_body_2026-09-10.md) · source SHA-256 `26d6ab8b87a61e0ccfc87638295afb27f8531bf25f9bb4af47014cdba248a65c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CECF14CCF1F3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — difference-body forcing for every extreme positive KKT circuit

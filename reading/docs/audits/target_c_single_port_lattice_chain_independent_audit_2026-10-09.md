@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_single_port_lattice_chain_independent_audit_2026-10-09.md) · source SHA-256 `2bf979db70b08787e5bee53fbff1f448f39008406b421364fca2833abe1e8550`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-90A40D90B1EB","canonical":true,"claim_ids":["C-LOADED-UNIT-CHAIN-LATTICE-ALIGNMENT","C-SINGLE-PORT-ATLAS-OBSTRUCTION","C-UNIT-CHAIN-TRIANGULAR-LATTICE-DIRECTION"],"claim_statuses":{"C-LOADED-UNIT-CHAIN-LATTICE-ALIGNMENT":"canonical","C-SINGLE-PORT-ATLAS-OBSTRUCTION":"canonical","C-UNIT-CHAIN-TRIANGULAR-LATTICE-DIRECTION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.208 — single-port lattice chain obstruction

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_two_scale_face_capacity_2026-08-31.md) · source SHA-256 `061c800e4fadd946ae467414c41eeb2a6c99abddfa7917c8f52d6001d6fc8d0c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B9637175FB5B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C49: two-scale strict-rhombus capacity

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_chain_face_train_atom_2026-08-31.md) · source SHA-256 `3ee9edf20e147ea78debba90def88aaebd5a1b6a3d9d788f56a28a847ed15c00`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

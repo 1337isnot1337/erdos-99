@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_all_defect_phase_train_gap_orientation_repair_2026-09-12.md) · source SHA-256 `134ffb704d72055559204d52e1a68538cc713e22af65749163a73475da6951c7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "ca5c44604f0216be2963b4bcc2cae0eb4770a90e", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_all_defect_phase_train_gap_orientation_repair_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c7b15e217bacb0fcdba8b82e2dc7d28ff5794f9682ee48a0b5b91fd792cb5ae7"} -->
 

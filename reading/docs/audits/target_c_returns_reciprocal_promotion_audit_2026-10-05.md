@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_returns_reciprocal_promotion_audit_2026-10-05.md) · source SHA-256 `38060ae30eca5c2b221697760f86d7c0f57528008c7a05fb5bf41ac8de3fc5f7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-164B99389ACD","canonical":true,"claim_ids":["C-GLOBAL-FACE-RETURN-QUOTAS","C-JOINT-BULK-FACE-SEPARATOR","C-LOADED-FLAT-PENTAGON-DEPLETION","C-OUTER-TRAIN-DETERMINATION","C-RECIPROCAL-TRAIN-GRAPH","C-TERMINAL-PHYSICAL-FRUSTRATION"],"claim_statuses":{"C-GLOBAL-FACE-RETURN-QUOTAS":"canonical","C-JOINT-BULK-FACE-SEPARATOR":"canonical","C-LOADED-FLAT-PENTAGON-DEPLETION":"canonical","C-OUTER-TRAIN-DETERMINATION":"canonical","C-RECIPROCAL-TRAIN-GRAPH":"canonical","C-TERMINAL-PHYSICAL-FRUSTRATION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent promotion audit — Target C reciprocal, return, and terminal-depletion stack
@@ -62,18 +62,20 @@ Canonical \`C-AUGMENTED-TRAIN-RANK\` makes these columns independent. Therefore:
 - two distinct trains cannot have the same unordered bounded endpoint pair;
 - the internal bounded-endpoint train graph is simple;
 - for every bounded node set $`U`$, each nontrivial induced connected component $`U_i`$ satisfies
+  
   ```math
   e(U_i)\le2|U_i|-3;
-  
   ```
+
 - equivalently
+  
   ```math
   \boxed{
   e(U)\le
   \sum_{i:\,|U_i|\ge2}(2|U_i|-3),
   }
-  
   ```
+
   and in particular $`e(U)\le2|U|-3`$ for $`|U|\ge2`$.
 
 The third row dependency is the actual reciprocal rotation with face block $`Jq_f`$; it is independent of the two translation dependencies whenever the component contains an edge, because its endpoints have distinct reciprocal coordinates.
@@ -445,10 +447,11 @@ It also closes two important subbranches:
 
 - if $`q/D\to\pi`$ and $`u_B=o(D)`$, every outer-ended train family is second-depletable and a linear physical unit-wall residual bank is forced;
 - if $`x_B=o(D)`$, a linear family of near-flat loaded physical pentagons is second-depletable and
+  
   ```math
   e_{BI}+6(Q-f)\ge sD+2k+\frac{S_U}{2}-o(D).
-  
   ```
+
 
 The live full-core obstruction remains active-diameter feasibility. The new return paths, reciprocal graph, physical walls, and contact manifold provide stronger independent combinatorial and geometric currency, but none yet produces a same-cardinality strict sub-$`D`$ source.
 

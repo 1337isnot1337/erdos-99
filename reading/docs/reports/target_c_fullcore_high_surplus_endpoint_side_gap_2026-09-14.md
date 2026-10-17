@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_high_surplus_endpoint_side_gap_2026-09-14.md) · source SHA-256 `d51f1ff5d8010a2879e2f826bcc7a21d814e2c7a87f55cd2c457022d435f5c0a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

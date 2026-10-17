@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_activation_rank_sequential_audit_2026-09-05.md) · source SHA-256 `3d7a310bb0150027c3d20ace17e0bae21ac680880e038fa393abb4cc2b22ec3c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-38CA77E00F73","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C activation-rank / sequential-contact audit

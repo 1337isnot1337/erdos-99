@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/69-coherent-grain-interface-audit.md) · source SHA-256 `29d98eba4843ccf2c67b6122453ae4f1e088a829eb422ebe2493795d258dd5af`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — coherent grain/interface audit
 

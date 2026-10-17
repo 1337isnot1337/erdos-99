@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_holed_train_angle_flex_dimension_2026-09-09.md) · source SHA-256 `87dcc34ff244bed7260f6f7cd7e93a5c1115f4c836d38ef28c1212e9fb80b36e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 10 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

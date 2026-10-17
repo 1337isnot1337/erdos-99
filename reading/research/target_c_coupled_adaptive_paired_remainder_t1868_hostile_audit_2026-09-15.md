@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_coupled_adaptive_paired_remainder_t1868_hostile_audit_2026-09-15.md) · source SHA-256 `22cd958515aa93c68e94e3aa121583c23a62b7ac2321cedfcdd7546569f218cc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "1688779a8d8d372d6ed6209ff1e8577d50c46e73", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_coupled_adaptive_paired_remainder_t1868_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "df4cffeddda0edc14a4674f0e95ff8f45a84698744b27f92decd8fba1158fc56"} -->
 

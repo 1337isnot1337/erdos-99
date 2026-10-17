@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_antipodal_stress_balance_t18687_2026-09-17.md) · source SHA-256 `733ade3673494c11938708c0ccbf02d143ec135f8cbfdba49dfb344321edaf38`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 17 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
-> Generated reading edition · [exact source](../../../docs/launch/GATE_2_VERIFICATION.md) · source SHA-256 `a5ae76450ca1448708d11482b3ee58b872a71399e4b2f45e60e9d5bcb2b33a6d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> Generated reading edition · [exact source](../../../docs/launch/GATE_2_VERIFICATION.md) · source SHA-256 `71349ea1b743ea4833bf7e7b974ea19a1e71781f23e83211a2a59b734227856e`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Gate 2: exact-commit release verification
 
@@ -121,7 +121,7 @@ attestation reconciliation are recorded in Gate 1. Historical schema URLs and
 scanner regex literals remain reviewed reference warnings. Each final release
 receipt verifies the resulting commit, including this repair.
 
-## Publication candidate 0.1.0-rc.3
+## Publication candidate 0.1.0-rc.4
 
 The release gate also runs the documented task selector and verifies every page
 of the [GitHub reading edition](../../README.md). Reading pages are

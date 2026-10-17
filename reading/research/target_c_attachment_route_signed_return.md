@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_attachment_route_signed_return.md) · source SHA-256 `9a4b21c638a6e95c509c8b9d0acbcaf5865b10cc32016671fb911de0ef372084`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "0aa63784c4af137c1b8a783d912cfc84339812c1", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_attachment_route_signed_return.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "09e68a681c525e682e9febfdd747539bb311a9efb2938a121b16bccc89aa1c6f"} -->
 

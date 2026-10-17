@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_central_face_two_geodesic_corridor_regression_2026-09-14.md) · source SHA-256 `2a46e29b0041fc5532754ec3a5bcf9a2ad854a30be3e52a59c63df7cf023ce6c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5B7651756EB4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact two-geodesic central-face corridor regression

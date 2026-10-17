@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/58-full-source-geometry-audit.md) · source SHA-256 `f504349650423786a6091ba9b7a8699cd62b7e6b200d2a2ce3a6a34b3d0b473d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — independent full-source geometry audit
 

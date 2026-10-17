@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_g0071_disjoint_penetration_brace_gadgets_2026-09-15.md) · source SHA-256 `89dd11f66737b2f3719e0f96654f94fe04c92b08069002993b9fc837e77eb3d2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 6 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -51,10 +51,11 @@ such that
 3. relative to the loaded side occurrence selected at `x_j`, the vector from `x_j` to
    `w_j` has signed inward component greater than `gamma_0>1/2`;
 4. `y_j` is an actual source point with
+   
    ```math
    |x_j-y_j|>D-1.
-   
    ```
+
 
 Thus the blocker branch does not merely contain an unbounded near-diameter matching.
 It contains an unbounded family of physically disjoint **braced boundary gadgets**

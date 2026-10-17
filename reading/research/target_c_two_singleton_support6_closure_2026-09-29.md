@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_two_singleton_support6_closure_2026-09-29.md) · source SHA-256 `9ca6a1dc2bb84a3a66a51d3bb26dfed9037d53a68b64748fbd92d4a29b19bc40`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e2c3ba0bbb093f6119a9e70de69c2cf238ef8373", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_two_singleton_support6_closure_2026-09-29.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3441b05c2f08844c6a5865fd45cbc09775c0209cd6ce9f21f3f8adbffdcb8b44"} -->
 

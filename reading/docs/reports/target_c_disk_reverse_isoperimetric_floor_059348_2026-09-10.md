@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_disk_reverse_isoperimetric_floor_059348_2026-09-10.md) · source SHA-256 `2210f1babb455f9b5ec137fddd45024beedd34f3b84edd454d1327363ff8d240`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7B0FC18B7BAF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — disk reverse isoperimetry raises the post-ZF surplus floor to 0.593483

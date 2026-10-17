@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_marker_classified_rectangle_cusp_t18687_2026-09-15.md) · source SHA-256 `03bca70942cd005add187d8fcb614105f47abe6119a41a9edb4d1cb71707ed7c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

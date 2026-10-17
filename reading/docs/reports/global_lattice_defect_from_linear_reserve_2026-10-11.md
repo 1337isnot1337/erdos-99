@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_lattice_defect_from_linear_reserve_2026-10-11.md) · source SHA-256 `0dcbb08f7c68c544e47b2636bc6789ec17026f5692f3368cd961433813ba30b1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9EC4573C677B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # A global lattice population bound and a full-source defect consequence

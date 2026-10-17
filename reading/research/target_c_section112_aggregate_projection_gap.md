@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section112_aggregate_projection_gap.md) · source SHA-256 `52b64f2efe76917b122eac2b308b77626a30de3b2d5a0d60f3903a6f136e64ba`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

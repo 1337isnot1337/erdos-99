@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_partner_rainbow_support_order_t18687_2026-09-17.md) · source SHA-256 `1c0f9aa5fedc6803a9697efd971acb1328f353399af9bacbb7235a20b7eea3a9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "428a74fab0c67b9f64c80bafa86caa6aa023a499", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_partner_rainbow_support_order_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "23839a1b44fba801bb8b2d35a45dba2bdfd1b98047179df862a5b51e3908fd34"} -->
 
@@ -58,54 +58,60 @@ I_s^\pm=\{i_s+1,\ldots,b_s^\pm\}.
 For every disjoint deep braid as above, after possibly exchanging the names of the two host arcs and reversing the global boundary orientation, the following hold.
 
 1. Around the **pre-hub shore** of the common cut `tau_k`, the `2M` birth endpoints occur in the two-block order
+   
    ```math
    x_M^+,x_{M-1}^+,\ldots,x_1^+,
    x_1^-,x_2^-,\ldots,x_M^-.
    \tag{PR.6}
-   
    ```
+
 2. Around the complementary **hubward shore**, the partner endpoints occur in the **same edge-label order**
+   
    ```math
    y_M^+,y_{M-1}^+,\ldots,y_1^+,
    y_1^-,y_2^-,\ldots,y_M^-.
    \tag{PR.7}
-   
    ```
+
    Here both shores are read in the same global cyclic orientation. If the two shore intervals are instead given compatible crosscut orientations, this is the usual order reversal from the ordered-thrackle theorem.
 3. The corresponding region-index sequence
+   
    ```math
    b_M^+,\ldots,b_1^+,b_1^-,\ldots,b_M^-
    \tag{PR.8}
-   
    ```
+
    is weakly unimodal: it is a subsequence of a sequence that increases from the hub toward the far end region, may plateau in the far end region, and then decreases back toward the hub.
 4. Consequently **at least one complete birth-side lane is monotone without any further thinning**:
+   
    ```math
    \boxed{
    (b_1^+,\ldots,b_M^+)\text{ is monotone}
    \quad\text{or}\quad
    (b_1^-,\ldots,b_M^-)\text{ is monotone}.}
    \tag{PR.9}
-   
    ```
+
 
 For the monotone lane there is an exact interval dichotomy.
 
 - If its `b_s` are nonincreasing with `s`, then
+  
   ```math
   I_1\supseteq I_2\supseteq\cdots\supseteq I_M;
   \tag{PR.10}
-  
   ```
+
   the complete lane is a nested support rainbow.
 - If its `b_s` are nondecreasing with `s`, then both support endpoints advance monotonically:
+  
   ```math
   i_1<i_2<\cdots<i_M,
   \qquad
   b_1\le b_2\le\cdots\le b_M;
   \tag{PR.11}
-  
   ```
+
   the complete lane is a proper hub-crossing staircase. All intervals still contain the common hub cut.
 
 Thus the previous statement
@@ -248,11 +254,12 @@ which simultaneously has:
 - one common transverse sign;
 - the common inverse-`D` train grid inherited from the parameterized deep-cell theorem;
 - the fixed local derivative margin
+  
   ```math
   |\ell_h(s d^{(i)})|\ge2D|s|\sin\delta.
   \tag{PR.19}
-  
   ```
+
 
 Use the current parameterized family with
 

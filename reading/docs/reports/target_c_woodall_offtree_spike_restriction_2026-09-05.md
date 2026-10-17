@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_woodall_offtree_spike_restriction_2026-09-05.md) · source SHA-256 `b39f01573d086c34530ef128c50c8bb66b0d6ca96e8b0b46e379c53fcd2f598a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-84DC3877C987","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C: Woodall restriction on the unique endpoint-equality defect

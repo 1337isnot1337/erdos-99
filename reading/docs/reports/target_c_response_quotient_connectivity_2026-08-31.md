@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_response_quotient_connectivity_2026-08-31.md) · source SHA-256 `e6d6a9fd5866772f211c5af7fcee4835dadaf6342d22b414c9c306ac5ead6fe6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6CB846EDB61A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C38: loaded-loaded contacts connect the harmonic response pieces

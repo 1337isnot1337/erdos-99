@@ -1,7 +1,7 @@
-> Generated reading edition · [exact source](../../../docs/launch/RELEASE_CANDIDATE.md) · source SHA-256 `47864d67020dee81afa15b4cabe07d1c6526f80dd0caeb82c27442a72bc9acf5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> Generated reading edition · [exact source](../../../docs/launch/RELEASE_CANDIDATE.md) · source SHA-256 `6b424c07040a8918feaa10aeeaf71cc9956df667e112ba32f67dfae343f5a084`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
-# Publication candidate 0.1.0-rc.3
+# Publication candidate 0.1.0-rc.4
 
 This is an open research corpus. **LEVEL I STATUS: STILL OPEN.**
 Target A, Target B, and C-II remain open; C-I is closed within its recorded scope.
@@ -24,6 +24,17 @@ The task selector resolves prerequisite IDs through the generated public theorem
 graph. Its regression tests exercise the complete catalogue and reject unknown
 IDs or unrelated proof mappings. Gate 2 now directly runs both the selector and
 the reading-edition check.
+
+The current reading fix preserves blockquote/list containers and GFM table cells.
+The [presentation repair ledger](../../../docs/publication/reading-tex-repairs.json) records
+source-hash-bound TeX escape and punctuation corrections; truncated quotations
+remain literal text. Every reading page links directly to the current theorem
+state. Original proof bytes and mathematical lifecycles remain unchanged.
+
+Candidates `0.1.0-rc.1`, `0.1.0-rc.2`, and `0.1.0-rc.3` are superseded
+presentation candidates. Their tags remain immutable; their receipts do not
+verify the current commit. A new final-commit release replay is still required
+before publication.
 
 ## Release evidence and remaining decisions
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_sparse_split_fullcore_window_0105_hostile_audit_2026-09-12.md) · source SHA-256 `2c5628a53cb185e85c942cb4f4399b68501ca31961505df9c9b6461257221268`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BE818BB1C195","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — sparse full-core exclusion through `sigma=0.0105`

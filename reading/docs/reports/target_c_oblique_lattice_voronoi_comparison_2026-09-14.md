@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_oblique_lattice_voronoi_comparison_2026-09-14.md) · source SHA-256 `c0c017b0603ae3c0649d41381315f12686308d5c2915d042e9c822690b613112`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-70D0F38992B1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Voronoi-cell comparison for an oblique affine source

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_ball_hull_lattice_discrepancy_2026-10-02.md) · source SHA-256 `9804deb271da2e2bac95bea94be069666ad3641ae463a5c500b7952bf71f415e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C0BC79F49781","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — logarithm-free diameter-endpoint lattice capacity

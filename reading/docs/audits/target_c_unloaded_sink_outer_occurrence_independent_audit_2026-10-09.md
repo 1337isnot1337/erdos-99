@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_unloaded_sink_outer_occurrence_independent_audit_2026-10-09.md) · source SHA-256 `ae67647438244849e18d741a288327686932a8ea54e5d17fdb0df3c4b6f9a800`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A29630046B60","canonical":true,"claim_ids":["C-BINARY-SINK-OUTER-EXCESS-TRADEOFF","C-BINARY-SINK-UNLOADED-WITNESS-OUTER-CAP"],"claim_statuses":{"C-BINARY-SINK-OUTER-EXCESS-TRADEOFF":"canonical","C-BINARY-SINK-UNLOADED-WITNESS-OUTER-CAP":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: unloaded sink witnesses and outer-walk excess
@@ -24,15 +24,17 @@ Let `B` be the actual loaded diameter-endpoint set, `q=|B|`, and `b` the occurre
 For pairwise disjoint internally incompatible binary sink SCCs `S_a`, choose the Audit.184 covering packet of `|S_a|+1` distinct physical lower-witness pairs. Let `u(S_a)` count packet pairs with at least one endpoint outside `B`, and let `R(S_a)` be the sum of cyclic loaded-hull owner-run counts. Then:
 
 1. For `D>=6`,
+   
    ```math
    \sum_a u(S_a)\le 6(b-q+Z_{out}).
-   
    ```
+
 2. For `D>=7`, the canonical Audit.184 payment also gives
+   
    ```math
    t\le 6(b-q+Z_{out})+\sum_a(R(S_a)-|S_a|),
-   
    ```
+
    where `t` is the number of counted sinks. In particular, the number of these sinks with `R(S_a)=|S_a|` is at most `6(b-q+Z_out)`.
 
 These are finite conditional owner-system bounds. They do not establish satisfiability, nonzero-move feasibility, an upper-diameter test, or an asymptotic bound on `b-q+Z_out`.

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_low_t_topology_network_squeeze_2026-09-14.md) · source SHA-256 `d2b3024527b9c8818f80d3ce4512b7ab25dfbb1a54087644734263696509f17b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3b1f22d19960962caa97eda079c6209940570580", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_low_t_topology_network_squeeze_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2594f6309a18ef0211aac1435e1ba3878b9b36a1e2b40db1428242bd4b82f4f8"} -->
 

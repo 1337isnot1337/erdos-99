@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_unit_pentagon_perimeter_capacity_independent_audit_2026-10-08.md) · source SHA-256 `2ee7af007e266eed858d83daa00aeec81db687d0eb31a69790e21df137b9148a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-36497A080471","canonical":true,"claim_ids":["C-FIVE-POINT-HULL-PERIMETER-LOWER-BOUND","C-UNIT-PENTAGON-PERIMETER-CAPACITY"],"claim_statuses":{"C-FIVE-POINT-HULL-PERIMETER-LOWER-BOUND":"canonical","C-UNIT-PENTAGON-PERIMETER-CAPACITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.162 — convex unit-pentagon perimeter capacity
@@ -42,10 +42,11 @@ unit-separated vertices.
    lying in the strict interior of at least one wall to at most one wall
    whose strict interior contains it. If wall $`j`$ loses $`d_j`$ vertices,
    then the number $`M`$ of assigned labels in walls with $`d_j>0`$ satisfies
+   
    ```math
    M\le\sum_{j:d_j>0}(d_j-1)=\sum_jd_j-a,
-   
    ```
+
    where $`a=|\{j:d_j>0\}|`$. A wall with $`d_j=0`$ admits no assigned
    strict-interior replacement point.
 
@@ -90,20 +91,22 @@ The hull cases are exhaustive:
 - If the hull is a triangle and its perimeter $`p<5`$, Heron's inequality
   gives area at most $`p^2/(12\sqrt3)`$. Canonical Oler (Lemma 21.1 of
   `docs/theory/03-oler-shell.md`) would then give
+  
   ```math
   5\le p^2/18+p/2+1<25/18+5/2+1=44/9<5,
-  
   ```
+
   a contradiction. Boundary points are included by Oler.
 - If the hull is a quadrilateral, let $`z`$ be the fifth point and
   $`r_i=|z-v_i|\ge1`$ for its cyclic vertices. The consecutive polar gaps
   $`\theta_i\in[0,\pi]`$ sum to $`2\pi`$, including when $`z`$ lies on a
   hull edge. The exact identity
+  
   ```math
   |v_{i+1}-v_i|^2-2(1-\cos\theta_i)
   =(r_i-r_{i+1})^2+2(1-\cos\theta_i)(r_ir_{i+1}-1)\ge0
-  
   ```
+
   implies each hull side has length at least
   $`\max\{1,2\sin(\theta_i/2)\}`$. Concavity of sine gives
   $`\max\{1,2\sin(\theta/2)\}\ge1/2+3\theta/(2\pi)`$ on

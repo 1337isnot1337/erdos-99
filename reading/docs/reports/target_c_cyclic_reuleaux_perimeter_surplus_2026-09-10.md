@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_reuleaux_perimeter_surplus_2026-09-10.md) · source SHA-256 `2d7f1cb68ebf8e9c982fa0e15cdd54f87bb947212c77bfca42696fffbc7860bb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DF29EF9E5806","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic Reuleaux perimeter saturation and a 0.693 circuit floor
@@ -95,46 +95,52 @@ The proof uses only the following existing statements.
 2. **FS.3.**  If two actual diameter pairs share an endpoint, their angle is at most
    `Theta_D=O(D^{-1/4})`.
 3. **SZ.**  In `s_Z=0`, with
+   
    ```math
    \nu_D={e_{BB}+2s_C-3d_H\over D},
-   
    ```
+
    every subsequential limit `(nu,y,p)` satisfies the RSJ cavity inequality
+   
    ```math
    A_*(y,p)-{\pi\over4}\nu^2
    \le {\bigl(\nu+m(y,p)\bigr)^2\over4\pi},
    \quad
    m(y,p)=\min\{y,p-y\},
    \tag{1.2}
-   
    ```
+
    where
+   
    ```math
    y=\lim h/D,
    \quad p=\lim P_F/D,
    \quad
    A_*(y,p)=\max\{\Phi(y),\Psi(p)\},
    \tag{1.3}
-   
    ```
+
    and
+   
    ```math
    \Psi(p)={\pi\over(\pi-2)^2}\left({p\over2}-1\right)^2.
    \tag{1.4}
-   
    ```
+
 4. **DD.2 and ZG.**  The outer-pocket area obeys
+   
    ```math
    H_{out}\le {1\over\sqrt6}(x_B+a)^{3/2}\sqrt{b-P_F},
    \tag{1.5}
-   
    ```
+
    while the force-hull uncovered gap satisfies
+   
    ```math
    G\le H_{out}+A_{exc}+O(D),
    \tag{1.6}
-   
    ```
+
    with `A_exc/D^2 <= (Q/D)^2/(4pi)+o(1)` in the asymptotic form used by SZ/E597.
 
 Since `d_H=0`, the SZ currency is simply

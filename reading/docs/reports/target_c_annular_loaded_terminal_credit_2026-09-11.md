@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_annular_loaded_terminal_credit_2026-09-11.md) · source SHA-256 `591a23814a4506f48b70c4ad7e98114a5a00a705195f8321a960c01e188e6c1b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D3FE8CC52D09","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — loaded-terminal credit in the annular capacity ledger

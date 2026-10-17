@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zf_exact_defect_budget_addendum_2026-09-09.md) · source SHA-256 `e206f0ce98084cfa0ef63e7160456f9416cde4f587cb3efefb083c4ffb41f039`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-28C441DE9FE1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 LEVEL I STATUS: STILL OPEN

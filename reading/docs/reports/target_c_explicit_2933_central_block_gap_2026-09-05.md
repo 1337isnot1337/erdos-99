@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_explicit_2933_central_block_gap_2026-09-05.md) · source SHA-256 `eab173c8ab2eb94f0d6d997ebe4da3f1cd2304d7e54cf8d1f3a3948f9a6da553`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B4453F3F8EC0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C explicit 2.933 central-block gap

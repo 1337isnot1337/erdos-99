@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_wrapping_endpoint_four_cell_rigidity_2026-09-30.md) · source SHA-256 `43e57f4468360cdb4f8219d82fa1b68c25696e2322f5f23c1a976e823511a08f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9AB805C11962","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- wrapping endpoint four-cell rigidity

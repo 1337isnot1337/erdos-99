@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zero_transfer_matching_split_separation_2026-09-11.md) · source SHA-256 `b20305b197a8319b6d3aafd4e0ef3288bba9dbe381054950f4d305fcdfe45a7b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A4A59386F3E7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact zero-transfer matching exclusion

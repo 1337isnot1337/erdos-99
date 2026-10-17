@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_2222_high_symmetry_closure_2026-09-23.md) · source SHA-256 `d68c9eff0424d2ef07966928e79c3f410d86feda08a2947ead6fd0537db6ed7c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "9e5a5a5c4ece3970643cca87732e8701a0503284", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_2222_high_symmetry_closure_2026-09-23.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "bc81f1372933660a00c9b12efbbcc399cd2c5d3f8de94d7e6e01d9f0a9bcf50f"} -->
 

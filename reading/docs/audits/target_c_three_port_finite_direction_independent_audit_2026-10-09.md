@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_three_port_finite_direction_independent_audit_2026-10-09.md) · source SHA-256 `262c25ab2fc95233a87f28da3a9c48ad89e0d2e2a3b603ff44a7532a8275d59b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B1E2A549A7A2","canonical":true,"claim_ids":["C-THREE-PORT-FINITE-DIRECTION-BOUND"],"claim_statuses":{"C-THREE-PORT-FINITE-DIRECTION-BOUND":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.209 — three-port finite chain direction bound

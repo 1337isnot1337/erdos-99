@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_global_support_reflection_blockers_2026-09-15.md) · source SHA-256 `81ca9df47b243e510e13ad8b397f754bf8ea8a109f2634ce8629188e4d495611`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -268,18 +268,20 @@ For every internal physical occurrence `x` of every distinguished Section-63 rou
 force-hull side. Then at least one of the following holds:
 
 1. **diameter blocker:** there exists a source point `y` with
+   
    ```math
    |y-x^-|>D,
    \qquad q_y>0,
    \qquad |x-y|>D-2h;
-   
    ```
+
 2. **exterior-isolate witness:** there exists a source point `z` with
+   
    ```math
    q_z<0,
    \qquad |z-x^-|\le1,
-   
    ```
+
    and `z` is contact-isolated in the original canonical source.
 
 The theorem is finite and source-preserving. It uses the canonical contact-minimal

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_low_t_flat_center_amplification_2026-09-14.md) · source SHA-256 `3011d1939d6dcb7793504bd0d87e8c287095a0333bfc29a757082600a654c4a1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-743EE1A4C170","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 - low-t flat-center amplification

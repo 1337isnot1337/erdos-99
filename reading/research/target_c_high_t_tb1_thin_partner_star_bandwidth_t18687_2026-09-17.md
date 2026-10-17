@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_thin_partner_star_bandwidth_t18687_2026-09-17.md) · source SHA-256 `1dd1c7b597a4b465825dc2a3f2dbf7a2dbb127a6742ab070a4c3bcdd00a71dc2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 25 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

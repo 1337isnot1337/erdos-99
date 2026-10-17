@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/21-full-diameter-visibility-frontier.md) · source SHA-256 `d6d46cbb91e16b40dbe2699f837bc835da5a62407fea38c84f69a1bad118da74`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — full-diameter-visibility frontier
 

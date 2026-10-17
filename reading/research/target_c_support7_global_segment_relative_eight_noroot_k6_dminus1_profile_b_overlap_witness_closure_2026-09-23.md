@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_overlap_witness_closure_2026-09-23.md) · source SHA-256 `d59d7ce3ad27ff912e7549654cc5e11af401c5f50acf967e98a962ec18ce7d1e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a38a93b782bfaf81dea3f10c09dfe2ae930b5038", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_overlap_witness_closure_2026-09-23.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3300ac3ead37525f93af64a21d47cf5ddd6350c628f770ab17a1b324e52c0c06"} -->
 

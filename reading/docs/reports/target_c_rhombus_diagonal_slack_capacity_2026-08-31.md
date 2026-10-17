@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rhombus_diagonal_slack_capacity_2026-08-31.md) · source SHA-256 `c403b475eb993e44c9c7373f77f84d0aa5f626b2fa60876c9d65ad4adfb3a594`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-781BB2082B0D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C75: rhombus diagonal-slack capacity
@@ -339,10 +339,11 @@ Therefore all but `O_tau(D)` force-core vertices have the following local struct
 - contact degree exactly four;
 - four incident strict unit rhombi; and
 - every one of those rhombi has a missing short diagonal in
+  
   ```math
   (1,1+\tau).
-  
   ```
+
 
 Thus the weight-free alternative to the C68-C74 anisotropic stress phase is not an
 arbitrary rhombic mesh. A near-capacity core is forced into a **near-triangular

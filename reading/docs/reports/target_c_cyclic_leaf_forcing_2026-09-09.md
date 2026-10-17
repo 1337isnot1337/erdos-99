@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_leaf_forcing_2026-09-09.md) · source SHA-256 `27cdf6167c443f03d73d50b798cdc96634bb2147fb79e48beb33f4b3a5f2b224`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

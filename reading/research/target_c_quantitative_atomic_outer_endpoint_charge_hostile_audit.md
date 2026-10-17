@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_quantitative_atomic_outer_endpoint_charge_hostile_audit.md) · source SHA-256 `711393d4cbc828958f9788331c65a18d0042369541904b487211a126022382d2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3a2f106690d86a2ebc63e1fbfdbe34ff3d166637", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_quantitative_atomic_outer_endpoint_charge_hostile_audit.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b98547f34653f49fabd93dfb3593c475d7b5800bf7823e064245629d60dd0042"} -->
 

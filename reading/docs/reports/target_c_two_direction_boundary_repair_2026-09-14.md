@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_two_direction_boundary_repair_2026-09-14.md) · source SHA-256 `e8ad235e4dbfcebcfb5b256ba4d2630274b8d82620d1777aa26dc433ad227c55`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A1701D333E3D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — repaired two-direction boundary exclusion

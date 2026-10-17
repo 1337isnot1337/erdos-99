@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/57-zr-zf-rigidity-audit.md) · source SHA-256 `754086809cdfd077235829e3e7647f3163fd73d9bcdce925097cd1716743ed06`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — independent ZR/ZF rigidity audit
 

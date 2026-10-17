@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_isolate_paid_aggregate_detour_2026-09-14.md) · source SHA-256 `e2a489b3ee320a5d0f309fd98d8074267afa71811e3dbe848b10da357acf0f34`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5A6F5E99ECE5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_isolate_paid_aggregate_detour_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=b6390d4e8f43a165d57558f2b857593c593b3fa7; lifecycle=unreviewed; canonical=false -->

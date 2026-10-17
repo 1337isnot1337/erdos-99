@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_kkt_cycle_spine_localization_2026-09-09.md) · source SHA-256 `c941b0af544b20618c01099c7af2de5a8714fd41402c5bafdd345b8c504e3602`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4A83C1364FFF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 — `d_H=1` KKT variation is confined to the canonical odd-cycle spine
@@ -37,15 +37,17 @@ Let `S` be the one-dimensional normalized KKT polytope in the cyclic S1 `d_H=1` 
 
 1. every diameter edge of `H` outside `C_*` has strictly positive beta coefficient for every stress in `S`;
 2. every diameter coordinate that vanishes anywhere on `partial S` is a retained edge of
+   
    ```math
    C_*\setminus\{g\};
-   
    ```
+
 3. in particular the two distinct coordinate facets required by LF are supplied by two distinct actual diameter edges
+   
    ```math
    e_-,e_+\in E(C_*)\setminus\{g\};
-   
    ```
+
 4. for either endpoint-zero edge `e`, deleting `e` from `H` cuts the opened odd-cycle path into two subpaths, together with the pendant leaves attached to those subpaths;
 5. the canonical short chord `g` is the unique edge of `A(F)` other than `e` that reconnects the two cycle-path sides through the deleted cycle.
 

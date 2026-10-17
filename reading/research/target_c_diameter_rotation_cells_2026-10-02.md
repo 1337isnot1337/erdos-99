@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_diameter_rotation_cells_2026-10-02.md) · source SHA-256 `542b96479dd024085f3a6e91c9a1219ec3c9da64352f20aa015c95bf77188e9d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "244de62635892903c481ceba03676592c35bc5d4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_diameter_rotation_cells_2026-10-02.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "1f411dea33d204d59dd0d327f27ee3e04847c0026198a1dc3165cd20f053e938"} -->
 

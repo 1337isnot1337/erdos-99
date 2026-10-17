@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_spine_fan_chain_decomposition_2026-10-01.md) · source SHA-256 `88087a2e05705717d1e2afc3b907378b6704cf1a2a16025a2dc30133226ccf62`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-305068368C13","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — diameter-spine order and fan-chain decomposition

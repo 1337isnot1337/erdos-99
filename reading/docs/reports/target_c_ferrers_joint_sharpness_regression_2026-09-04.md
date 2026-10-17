@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_ferrers_joint_sharpness_regression_2026-09-04.md) · source SHA-256 `c02bf2af7ec4f9b2e09684f0f543a83e877cf52a0fb6517dd08695b8acc16bac`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E8D0008213C2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C Ferrers joint-sharpness regression

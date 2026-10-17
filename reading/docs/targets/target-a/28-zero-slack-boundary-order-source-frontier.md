@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/28-zero-slack-boundary-order-source-frontier.md) · source SHA-256 `f3d1d0cee6ba98caa5264a5b0f15de8758949f9046e294fc0b91ce85f3ca0db1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — zero-slack boundary-order source frontier
 
@@ -50,15 +50,12 @@ G_{\rm ext}=\{x\in X^*:a_x\notin K^*\}.
 ```
 
 > **Lemma 176.1 (exterior labels start in the unit boundary layer).**
-> 
-
-```math
+> ```math
 > x\in G_{\rm ext}
 > \Longrightarrow
 > \operatorname{dist}(x,\partial K^*)<1.
 > \tag{176.2}
-> 
-```
+> ```
 
 ### Proof
 
@@ -67,14 +64,11 @@ and ends outside it. It therefore meets `partial K^*` between the endpoints, at
 strictly smaller distance from `x` than `|x-a_x|<1`. $`\square`$
 
 > **Lemma 176.2 (response boundary-layer count).**
-> 
-
-```math
+> ```math
 > \#\{x\in X^*: \operatorname{dist}(x,\partial K^*)\le1\}
 > \le12d+9.
 > \tag{176.3}
-> 
-```
+> ```
 
 ### Proof
 
@@ -99,28 +93,22 @@ Combining the two lemmas:
 
 > **Theorem 176.3 (uniform exterior-gate budget).** Every saturating source matching
 > obeys
-> 
-
-```math
+> ```math
 > \boxed{|G_{\rm ext}|\le12d+9.}
 > \tag{176.4}
-> 
-```
+> ```
 
 Since Section 168.3 gives `|G_ext|>=r` for every such matching:
 
 > **Corollary 176.4 (inner-source capacity defect).**
-> 
-
-```math
+> ```math
 > \boxed{
 > r\le12d+9,
 > \qquad
 > |A^0\cap K^*|\ge m^*-(12d+9).
 > }
 > \tag{176.5}
-> 
-```
+> ```
 
 Thus failure of exact plateau descent is confined to a boundary-order population; it
 is never a quadratic missing-source population.
@@ -153,16 +141,13 @@ six points, two consecutive polar angles differ by at most `pi/3`, and for radii
 The matching has distinct source endpoints. Therefore:
 
 > **Theorem 176.5 (source-label shield-crossing budget).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \#\{x\in X^*\setminus V(\Sigma):[x,a_x]\cap|\Sigma|\ne\varnothing\}
 > \le5|V(\Sigma)|.
 > }
 > \tag{176.7}
-> 
-```
+> ```
 
 ## 176.3 Combined sector-local source matching
 
@@ -176,16 +161,13 @@ cross `|Sigma|`, so Theorem 176.5 charges it. Exterior labels are charged by The
 
 > **Theorem 176.6 (zero-slack source localization).** For every saturating
 > `X^* -> A^0` source matching and every finite unit-contact shield,
-> 
-
-```math
+> ```math
 > \boxed{
 > \#\{x\in X^*\setminus V(\Sigma):x\text{ is not sector-good}\}
 > \le5|V(\Sigma)|+12d+9.
 > }
 > \tag{176.8}
-> 
-```
+> ```
 
 After deleting that explicit boundary-order exceptional set, the genuine-source
 matching restricts sector by sector.

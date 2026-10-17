@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_phase_threshold_transverse_nested_matching_2026-10-02.md) · source SHA-256 `c038220804e831fe26cf7f5a2660356759ad0193c675fde6b591a8f94ba19def`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EB26D7005982","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- threshold staircase yields a nested transverse matching

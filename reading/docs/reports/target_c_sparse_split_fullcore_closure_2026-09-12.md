@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sparse_split_fullcore_closure_2026-09-12.md) · source SHA-256 `7eb51768479d9b51d8338a6263d42926ddd07cd912ec240953cbad5c239c5e79`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B2CBEF355743","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — sparse/directional split closes the proof-only full-core window

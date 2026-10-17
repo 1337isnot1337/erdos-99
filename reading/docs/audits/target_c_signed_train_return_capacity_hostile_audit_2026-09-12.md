@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_signed_train_return_capacity_hostile_audit_2026-09-12.md) · source SHA-256 `eb37f917899cfd19007ed347d4a64f85691f85a88774ea1c554c56f545c80afe`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B3E815D5E7CF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Target C signed train-return capacity

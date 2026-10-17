@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sharp_hemmi_pi_nonattainment_2026-09-09.md) · source SHA-256 `62862a380b4ea33956849dab0ae7b98a38ec4467f5c8756b85c7a0d56484dded`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 21 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -129,7 +131,7 @@ At fixed area floor and perimeter, replacing `m_j` by `p_j/2` only enlarges the 
 At `p=p_c`, HKS's threshold equation is
 
 ```math
-A_c-rac\pi4\lambda_{HKS}^2
+A_c-\frac\pi4\lambda_{HKS}^2
 =
 \frac{(\lambda_{HKS}+p_c/2)^2}{4\pi}.
 \tag{2.2}

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_inactive_chamber_hull_stability_promotion_2026-09-12.md) · source SHA-256 `b778de2e52ea370a110a26d32a31266ad95cfed31744a6c15ed84cd907a3a059`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-24F6D7DE2CD3","canonical":true,"claim_ids":["C-INACTIVE-HULL-STABILITY"],"claim_statuses":{"C-INACTIVE-HULL-STABILITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C convex-hull stability promotion audit

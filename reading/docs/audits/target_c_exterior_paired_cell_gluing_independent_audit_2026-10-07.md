@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_exterior_paired_cell_gluing_independent_audit_2026-10-07.md) · source SHA-256 `11f36db175e7882fdf53f4e3f93c02a0672f2bc3a42b9ecfad7564fb2218d4bf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7E93D4BE8B87","canonical":true,"claim_ids":["C-EXTERIOR-FOUR-TIP-CROSS-SEPARATION","C-EXTERIOR-FOUR-TIP-FULL-SOURCE-SHIELD","C-EXTERIOR-PAIRED-CELL-CONTACT-BUDGET-ENDPOINT","C-EXTERIOR-PAIRED-CELL-STRICT-CAPACITY","C-EXTERIOR-TWO-UNIT-SIDE-WALL-SHIELD"],"claim_statuses":{"C-EXTERIOR-FOUR-TIP-CROSS-SEPARATION":"canonical","C-EXTERIOR-FOUR-TIP-FULL-SOURCE-SHIELD":"canonical","C-EXTERIOR-PAIRED-CELL-CONTACT-BUDGET-ENDPOINT":"canonical","C-EXTERIOR-PAIRED-CELL-STRICT-CAPACITY":"canonical","C-EXTERIOR-TWO-UNIT-SIDE-WALL-SHIELD":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C independent audit: separated four-tip cell gluing

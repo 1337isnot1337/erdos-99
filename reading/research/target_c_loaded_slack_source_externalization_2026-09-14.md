@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_loaded_slack_source_externalization_2026-09-14.md) · source SHA-256 `aeb410ca83a2c3e840106d0f7b4a7b0d9757b01f9cb7af2e50b1ac7c0f570ae4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f22f86b84644085d11d1fe8b6df24be0df1f877c", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_loaded_slack_source_externalization_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "63b14e43003f7a6333dbb47d7c30c0c6f4499c1aeba342f598fedddc2dc85a9e"} -->
 

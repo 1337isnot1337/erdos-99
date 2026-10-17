@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md) · source SHA-256 `60af5da043ca638e6f9740442e18d3d345b2d344cec91dc13cbb933f9ba02936`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F91C599D73F7","canonical":true,"claim_ids":["C-TYPEII-ACTUAL-DIAMETER-GRID-ACCESS","C-TYPEII-LOCAL-COHERENT-GRID-ACCESS","C-UNIFORM-HARMONIC-CELL-AREA"],"claim_statuses":{"C-TYPEII-ACTUAL-DIAMETER-GRID-ACCESS":"canonical","C-TYPEII-LOCAL-COHERENT-GRID-ACCESS":"canonical","C-UNIFORM-HARMONIC-CELL-AREA":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.173 — uniform harmonic-cell geometry and diameter access

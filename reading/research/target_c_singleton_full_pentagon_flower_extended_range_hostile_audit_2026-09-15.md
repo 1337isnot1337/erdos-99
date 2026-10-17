@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_singleton_full_pentagon_flower_extended_range_hostile_audit_2026-09-15.md) · source SHA-256 `39efb5e62b964a61965edc99852725ec850de6a3a385d0dc275af7e7fafe321d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "fe86ad385421d97acdb4fc44ab8ec28a5ceba298", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_singleton_full_pentagon_flower_extended_range_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "7c509c05a8ab27afe477b2d1daf27dfc316c7460bccb88004515080583beefb8"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_small_leaf_rectangle_pareto_hostile_audit_2026-09-15.md) · source SHA-256 `441f1ee7ab8b4758438a90d677bc80063aad0feb45d79dac5d14235b2a54fa18`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2e94cfb795099dafecccaa9ad4e906a1e90bdc95", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_small_leaf_rectangle_pareto_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "6fd5bd6596d49032b61838910f0af0a57dd6d43177758f9f3a5d7a9627004c8d"} -->
 

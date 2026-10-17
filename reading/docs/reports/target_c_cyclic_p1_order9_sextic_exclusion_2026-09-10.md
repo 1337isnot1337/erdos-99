@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_p1_order9_sextic_exclusion_2026-09-10.md) · source SHA-256 `5f6a3b72b23b736c4bb9204aebef88b04b687953d7e4d785c199dde98ba2e622`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C752F3655B0D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exclude the final order-nine sextic and close cyclic P1
@@ -79,13 +79,14 @@ EC proves:
 1. every even `m` P1 is impossible;
 2. every odd P1 must have `9|m`;
 3. in that branch
+   
    ```math
    \deg h=3,
    \qquad
    \overline h(T)=q_9(T):=T^3+T+1.
    \tag{1.1}
-   
    ```
+
 
 Let
 

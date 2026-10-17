@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_direct_witness_injection_t18687_2026-09-17.md) · source SHA-256 `31eb800a5ba08cbe77f03920936b16377b4ea21e309aeb392c5d4ae30967b0e9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "7e4c501a7f09266cba9d86fd909e643d39bb844b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_direct_witness_injection_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c08c2b32d6dd1c82eb5eee178d21eec37c99282e6f320a98c06797449c83f6f4"} -->
 

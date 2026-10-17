@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/75-all-phase-component-deatomization-audit.md) · source SHA-256 `39553cf0e644b37e1b7d81c6a9cc367e3e652532f5303c84436b8edab63d40c3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — all-phase component deatomization audit
 
@@ -42,41 +42,46 @@ The proof uses the following canonical facts.
 1. Every unloaded positive-contact vertex has contact degree `3`, `4`, or `5`.
 2. Every loaded vertex has contact degree at most three.
 3. Harmonic trapping gives
+   
    ```math
    I_r\subset\operatorname{conv}(A_r),
    \qquad |A_r|\ge3,
    \qquad \operatorname{diam}(A_r)\le\delta_r+2.
    \tag{75.1}
-   
    ```
+
 4. Canonical Section 62 gives
+   
    ```math
    c_I+e_{BB}+s_C=q-2+k
    \tag{75.2}
-   
    ```
+
    and
+   
    ```math
    \sum_r\delta_r+R_I+s_B+3k=6+e_{BB}+2s_C,
    \qquad R_I,s_B\ge0.
    \tag{75.3}
-   
    ```
+
 5. Canonical full-force stability gives
+   
    ```math
    \liminf {\operatorname{area}(F)\over D^2}
    \ge {2\rho+\sin(2\rho)\over4}
    =0.6184708847\ldots>{3\over5},
    \tag{75.4}
-   
    ```
+
    while canonical full-source geometry places `F` inside the source circumdisk of
    radius
+   
    ```math
    {D\over2}+3^{1/4}\sqrt D.
    \tag{75.5}
-   
    ```
+
 
 No KKT coefficient floor, disk-limit theorem, cap containment, or deletion of source
 isolates is used.

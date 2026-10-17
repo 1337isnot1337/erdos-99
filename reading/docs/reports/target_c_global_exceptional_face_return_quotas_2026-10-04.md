@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_global_exceptional_face_return_quotas_2026-10-04.md) · source SHA-256 `098d8f5ef1e1236241fb93f5d4f3400f9458e26652fba836b196115e2eed5ae6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E3C3DD7BE585","canonical":true,"claim_ids":["C-GLOBAL-FACE-RETURN-QUOTAS"],"claim_statuses":{"C-GLOBAL-FACE-RETURN-QUOTAS":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — global exceptional-face quotas for disjoint loaded returns

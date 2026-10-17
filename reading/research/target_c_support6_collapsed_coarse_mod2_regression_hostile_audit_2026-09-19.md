@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_collapsed_coarse_mod2_regression_hostile_audit_2026-09-19.md) · source SHA-256 `5e73ff8d70866401411cda4eb7e447dba18753e75263067ae1dd29fdfe968b37`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "df1587e19ab6b8ae00d75775405523dca3dd2917", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_collapsed_coarse_mod2_regression_hostile_audit_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b1c7e5925a2f9ce9d601968565b92573ced9e893f6576ba09ea854b1ec5181cd"} -->
 

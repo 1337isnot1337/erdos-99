@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_two_body_hinge_integration_2026-08-31.md) · source SHA-256 `9c60292d661451a0690a65918766ce0e2beca719815f2f0590722d4a9d93a03f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-B6E792CD886B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C: two-body hinge integration
@@ -161,7 +163,7 @@ If the collinear rays were the same, then, because exclusive source points satis
 one would have
 
 ```math
-|p-q|=igl||p-x|-|q-x|\bigr|\le D-1<D,
+|p-q|=\bigl||p-x|-|q-x|\bigr|\le D-1<D,
 ```
 
 a contradiction. Hence the rays are opposite. Their positive radii `r,s` satisfy `r+s=D`, and (C59.4) becomes

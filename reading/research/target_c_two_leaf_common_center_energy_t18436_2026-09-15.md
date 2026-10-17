@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_two_leaf_common_center_energy_t18436_2026-09-15.md) · source SHA-256 `af972dba71f8e5b1e114558d6043f31655218062e858c31a0ad16d034b5c006c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 8 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

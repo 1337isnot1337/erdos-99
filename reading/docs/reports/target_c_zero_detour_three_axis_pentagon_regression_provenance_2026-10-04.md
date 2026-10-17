@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zero_detour_three_axis_pentagon_regression_provenance_2026-10-04.md) · source SHA-256 `8100dc9b89e1fa4d81ea31f0a36101b6a902bdce317b11a65c89a7eaa8bbb88e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

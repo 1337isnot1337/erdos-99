@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_midpoint_diameter_dispersion_2026-10-02.md) · source SHA-256 `4963f83a849f8b408b724ea6cf78cc518a88dd21f9b4ff96749acb31020fcf94`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D2FD302A166E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_midpoint_diameter_dispersion_2026-10-02.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=fcad589770c79148262984b2bac29e5d41e7ebc6; lifecycle=unreviewed; canonical=false -->

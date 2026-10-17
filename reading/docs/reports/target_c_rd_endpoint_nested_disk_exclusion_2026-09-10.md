@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rd_endpoint_nested_disk_exclusion_2026-09-10.md) · source SHA-256 `8ea39b745599609ac026ae668f0951552434a772a684f6429993547f56376aa8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -155,7 +157,7 @@ Diameter and planar convex area are continuous under Hausdorff convergence.  Equ
 ```math
 \operatorname{diam}K_\infty=\lambda_{RD},
 \qquad
-\operatorname{area}K_\infty=rac\pi4\lambda_{RD}^2.
+\operatorname{area}K_\infty=\frac\pi4\lambda_{RD}^2.
 \tag{2.4}
 ```
 

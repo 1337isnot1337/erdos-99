@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_phase_star_endpoint_residual_stability_2026-09-15.md) · source SHA-256 `f0bf23d856b11740f1d6fc6041191eec0d3f83d8164b5ece11e4ac9ed10ec097`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 9 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

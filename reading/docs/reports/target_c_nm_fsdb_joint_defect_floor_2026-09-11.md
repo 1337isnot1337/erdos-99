@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nm_fsdb_joint_defect_floor_2026-09-11.md) · source SHA-256 `499981fb0c56eda37fcc276daff0029dad08b009d4cdad17d5df2d344b143d10`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2B2895EE5D9D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — near-matching/force-hull joint defect floor

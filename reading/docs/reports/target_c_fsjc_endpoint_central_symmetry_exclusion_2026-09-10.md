@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fsjc_endpoint_central_symmetry_exclusion_2026-09-10.md) · source SHA-256 `1a00499b814d042e577afee8249dca178745db05ee9f121ff98c89c1902b468d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-900E2197781E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fsjc_endpoint_central_symmetry_exclusion_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=68757e622a30fcb27ae90866d7a6dad14ce06d19; lifecycle=unreviewed; canonical=false -->

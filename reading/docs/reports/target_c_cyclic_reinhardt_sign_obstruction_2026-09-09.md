@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_reinhardt_sign_obstruction_2026-09-09.md) · source SHA-256 `1f1cf10680bba3f0c40c2ab9871053f4808f9d4c9bbfc77e703d4a77ebde7d38`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 6 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -66,23 +66,26 @@ P_q(x):=\sum_{j=0}^{q-1}\varepsilon_jx^j.
 Two finite exclusions/classifications follow immediately.
 
 1. If `q` is a power of two, RS.2 is impossible. Hence
+   
    ```math
    \boxed{q\ne2^m.}
    \tag{RS.3}
-   
    ```
+
 2. If `q=p` is an odd prime, then
+   
    ```math
    \boxed{P_p(x)=\pm\Phi_{2p}(x),}
    \tag{RS.4}
-   
    ```
+
    the signs alternate, and the side-vector set is a rotated copy of all `p`-th roots of unity. Consequently
+   
    ```math
    \boxed{F\text{ is the regular unit }p\text{-gon}.}
    \tag{RS.5}
-   
    ```
+
 
 Thus the exact cyclic endpoint has been reduced from arbitrary convex equilateral shells to the classical Reinhardt sign class, with complete rigidity at prime terminal counts and an exact arithmetic obstruction at power-of-two terminal counts.
 
@@ -438,10 +441,11 @@ There are two concrete next attacks.
 
 1. **Arithmetic/combinatorial:** classify the allowed sign words further under the actual diameter-thrackle incidence and triangle-free unit-separation constraints, not only polygon closure.
 2. **Source-wide:** in the prime case the shell is exactly regular. Combine that exact shell with CY's
+   
    ```math
    n-q>\Delta D^2-\pi D
-   
    ```
+
    contact-isolated population and the insertion/outer-shell machinery to seek a strict sub-`D` replacement or capacity contradiction.
 
 A theorem excluding all nonregular sign words would reduce the entire `d_H=0` endpoint to the regular odd-shell regression.

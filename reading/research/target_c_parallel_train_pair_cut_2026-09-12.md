@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_parallel_train_pair_cut_2026-09-12.md) · source SHA-256 `2e68526aa53f0a0b9bb147ccca6cd93f4d3624fcfeff01a72c6caf5ef7d49994`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — parallel trains cannot repeat a bounded stopping-face pair
 

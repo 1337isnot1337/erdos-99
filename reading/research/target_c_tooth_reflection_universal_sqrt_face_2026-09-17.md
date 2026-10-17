@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_universal_sqrt_face_2026-09-17.md) · source SHA-256 `f71c54f96528743feed39ed8195f4b223af72602a4cdb2144641806dcb970d52`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

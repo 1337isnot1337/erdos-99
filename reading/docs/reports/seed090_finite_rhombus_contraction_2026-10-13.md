@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/seed090_finite_rhombus_contraction_2026-10-13.md) · source SHA-256 `8732268645682e69753a3b82315d50394871d45291a688f162e6df3f3478bd37`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-25714D3C0C0B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Seed 90 — finite rhombus contraction rigidity and dense KKT regressions

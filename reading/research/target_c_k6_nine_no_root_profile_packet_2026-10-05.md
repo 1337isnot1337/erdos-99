@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_k6_nine_no_root_profile_packet_2026-10-05.md) · source SHA-256 `50aac14d91ad230cbaf879cbfc6380a10d0fcb5a70ffec6c46bb354bfa8b14f6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "bcd5d227a508cd12b3c50115c2c9df8e7261cd87", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_k6_nine_no_root_profile_packet_2026-10-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d807ce17146eb24534237cdb2dd93ed5700e918db0c53b95c32fc295ff77a1f3"} -->
 

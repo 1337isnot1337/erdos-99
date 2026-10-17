@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_one_vacancy_collective_strictification_2026-10-05.md) · source SHA-256 `f0257acc588d5e3d2b437bf4df73d8ebda768c5d733d7489934feba475e54a69`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C32C5C6B486E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — one vacancy releases a complete oblique grid behind its fixed wall

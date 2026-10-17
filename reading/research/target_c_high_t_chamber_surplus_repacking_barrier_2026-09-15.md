@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_chamber_surplus_repacking_barrier_2026-09-15.md) · source SHA-256 `f86fd9c56234020dd14ef4214bc1a9077e707b83b374856a8f8894989e17c066`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cb76a4485b592763e74f46d9ef76435feb7df65c", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_chamber_surplus_repacking_barrier_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "27a4d64170aa27781e74cc999645d71e0d754401fbcd5065f809236f22209e94"} -->
 

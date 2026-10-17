@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_free_terminal_outer_star_exact_flex_hostile_audit_2026-09-18.md) · source SHA-256 `fe07ffadc9f0d7bd2a8bd593530c729c1db4fcf927f8784bbd605014b530bc57`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "7b3dd1190a1be30f678809ffdbc4c97ae9e2beab", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_free_terminal_outer_star_exact_flex_hostile_audit_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "df96b08f7bd43acce25bbed5e28795a3e7fd5f53384748f8f6f51aae96f39bc2"} -->
 

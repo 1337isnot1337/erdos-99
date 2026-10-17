@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/original12_fan_flip_archive_audit_2026-10-15.md) · source SHA-256 `58e1f7be6b65e7cbd6c90e13b132842836664c973292360a3922228b07ad1e4d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6CE5D7647538","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Original worktree12: fan-flip and isolate-escape archive audit

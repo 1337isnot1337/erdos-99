@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_nine_noroot_k6_singleton_generator_reduction_2026-10-03.md) · source SHA-256 `2b1d1ac65322a7ff967fc949a75f471bba55412692a6a231b949b4ca9065a4d2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "321c56cb442c1845f58ed4149020da22d6850ccb", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_nine_noroot_k6_singleton_generator_reduction_2026-10-03.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "0c41f5052438019d1f341820d8d3b9dfb9732bccbf5058e715c49b176fdcaace"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_c102_bounded_variation_audit_2026-09-05.md) · source SHA-256 `5de852f931d55b4aa8df38670273258ff189f23a3d154cade041495c220aaa9b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A7AEE625D02B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Audit — Target C C102 dominant-separator bounded variation

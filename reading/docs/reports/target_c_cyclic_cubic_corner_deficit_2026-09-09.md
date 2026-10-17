@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_cubic_corner_deficit_2026-09-09.md) · source SHA-256 `5a2f9d871a7cd68c699583beafdb3cf408f0370049d2217478e319b03e38e456`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 25 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -197,15 +199,17 @@ Define the radius-of-curvature density, in support coordinates,
 For a Reuleaux polygon this is piecewise constant almost everywhere:
 
 - on the normal interval corresponding to a circular side of radius `D`,
+  
   ```math
   \rho=D;
-  
   ```
+
 - on the antipodal normal interval corresponding to the opposite vertex, constant-width duality gives
+  
   ```math
   \rho=0.
-  
   ```
+
 
 Indeed differentiating (1.1) twice in the distributional/piecewise sense gives
 
@@ -443,7 +447,7 @@ Complete-source Oler plus global strict minimality gives
 ```math
 A(F)
 >
-\frac\pi4D^2-rac{\sqrt3}{4}q.
+\frac\pi4D^2-\frac{\sqrt3}{4}q.
 \tag{5.2}
 ```
 

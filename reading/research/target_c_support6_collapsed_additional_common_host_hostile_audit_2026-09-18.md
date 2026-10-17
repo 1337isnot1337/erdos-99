@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_collapsed_additional_common_host_hostile_audit_2026-09-18.md) · source SHA-256 `663d99cc8768763ee0e521bdf4d8f2d4d267c6294043a9c9255c77c9b073d63b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "43609b63c1ea0ff63b94e9ee8cd9a70bbcd86a92", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_collapsed_additional_common_host_hostile_audit_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "31803e861c5a5f94a163b02fbc1b42abd106b79b29b43cf3f3f210abb50abe2b"} -->
 

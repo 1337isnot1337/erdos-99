@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_four_noroot_density_2026-09-20.md) · source SHA-256 `d9b4043a0712348ed768108a1776502362b7d66573ad8f27e0919e5da6179a63`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "1209893afff03d872fb84313ff439a9ad1e14ca6", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_four_noroot_density_2026-09-20.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "1e38978e34a81aa44046b2c4f68822d9b2ac4ee2e8ddc43f9251e7e2015c0239"} -->
 

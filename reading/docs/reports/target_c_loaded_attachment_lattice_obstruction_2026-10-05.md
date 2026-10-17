@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_loaded_attachment_lattice_obstruction_2026-10-05.md) · source SHA-256 `6af268a4ba51b8a86de6d9ea0652957bf4c8f3e85bb66fe0255fcb1cc2275c27`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1186EE9AD94D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — exact lattice carriers cannot account for the loaded boundary

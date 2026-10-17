@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/10-quantitative-kuperberg-rate.md) · source SHA-256 `84014aee1e919d5c9e930817a84746e50831c0475d95d93cc100290c90efc96e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — exact quantitative Kuperberg five-block rate
 
@@ -44,56 +44,38 @@ and reproduced by
 
 > **Theorem 157.1 (exact one-step five-block gain).** In the paper normalization,
 > after the full first move, the only controlling second-stage margin is
-> 
-
-```math
+> ```math
 > F_d(u)=u^2-(2\sqrt3+d)u+d^2.
 > \tag{157.1}
-> 
-```
+> ```
 > Hence the maximal continuous second move is the smaller root
-> 
-
-```math
+> ```math
 > \phi(d)=
 > \frac{2\sqrt3+d-\sqrt{(2\sqrt3+d)^2-4d^2}}2.
 > \tag{157.2}
-> 
-```
+> ```
 > After setting $`u=\phi(d)`$, the only controlling third-stage margin is
-> 
-
-```math
+> ```math
 > G_u(v)=v^2-(2\sqrt3-u)v+u^2,
 > \tag{157.3}
-> 
-```
+> ```
 > so the maximal upward move of the middle block is the smaller root
-> 
-
-```math
+> ```math
 > \psi(u)=
 > \frac{2\sqrt3-u-\sqrt{(2\sqrt3-u)^2-4u^2}}2.
 > \tag{157.4}
-> 
-```
+> ```
 > Therefore the gap gain is
-> 
-
-```math
+> ```math
 > \delta(d)=\psi(\phi(d))
 > =\frac{\sqrt3}{72}d^4-\frac1{72}d^5+O(d^6).
 > \tag{157.5}
-> 
-```
+> ```
 > In particular
-> 
-
-```math
+> ```math
 > \boxed{\delta(d)\sim\frac{\sqrt3}{72}d^4.}
 > \tag{157.6}
-> 
-```
+> ```
 
 ### Proof
 
@@ -141,21 +123,15 @@ $`\square`$
 
 > **Lemma 157.2 (factor-three nesting).** A size-$`m`$ five-block template fits along
 > the base of the translated middle $`\Delta_{n-1}`$ block whenever
-> 
-
-```math
+> ```math
 > \boxed{3m\le n-2.}
 > \tag{157.9}
-> 
-```
+> ```
 > Consequently $`k`$ recursive widening stages require an initial block parameter
-> 
-
-```math
+> ```math
 > n_0=O(3^k),
 > \tag{157.10}
-> 
-```
+> ```
 > and therefore support radius $`O(3^k)`$.
 
 ### Proof
@@ -177,16 +153,13 @@ $`\square`$
 
 > **Theorem 157.3 (explicit aligned support rate).** There exist constants
 > $`C_1,C_2,d_*>0`$ such that in the canonical minimum-distance-one normalization,
-> 
-
-```math
+> ```math
 > \boxed{
 > W(d)\le C_1\exp(C_2d^{-3})
 > \qquad(0<d<d_*).
 > }
 > \tag{157.11}
-> 
-```
+> ```
 
 ### Proof
 
@@ -227,23 +200,17 @@ W(r\alpha_L)=o(L),
 where $`\alpha_L`$ is the accumulated homothetic strain.
 
 > **Corollary 157.4 (explicit vanishing-strain regime).** If
-> 
-
-```math
+> ```math
 > \boxed{\alpha_L^{-3}=o(\log L),}
 > \tag{157.13}
-> 
-```
+> ```
 > then for all sufficiently large $`L`$,
-> 
-
-```math
+> ```math
 > \boxed{
 > \alpha_1(H_{L,\alpha_L})\ge |P_L|+1.
 > }
 > \tag{157.14}
-> 
-```
+> ```
 
 ### Proof
 

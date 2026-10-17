@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_explicit_response_star_constants_2026-09-09.md) · source SHA-256 `c003949a5cb2b67384cd3e0833c99c600b0cb1974ee92bf2d4ca3e203c0bf6a9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 11 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -207,16 +207,13 @@ Let
 C66's near-zero branch now reads:
 
 > There is an actual diameter vertex `z` such that
-> 
-
-```math
+> ```math
 > \boxed{
 > \sum_{h\not\ni z}\beta_h
 > \le\frac{723\pi}{49}D\varepsilon.
 > }
 > \tag{E43R.11}
-> 
-```
+> ```
 
 Equivalently,
 
@@ -245,20 +242,22 @@ Combining the same constants gives a convenient numerical version of the respons
 For every sufficiently large fully force-visible C-II survivor, at least one of the following holds:
 
 1. **absolute response defect**
+   
    ```math
    \operatorname{tr}(\Lambda-L_H)\ge0.0784;
-   
    ```
+
 
 2. **macroscopic harmonic cell**
    one component carries more than `0.01536D^2` contact stress and has attachment diameter greater than `0.96D`;
 
 3. **small trace / star degeneration**
    when the relevant C66 small-defect assumptions are imposed, the nonstar mechanical diameter mass is at most
+   
    ```math
    (723\pi/49)D\varepsilon.
-   
    ```
+
 
 The numbered branches above summarize existing implications and are not asserted to be a new logically disjoint trichotomy beyond the hypotheses of C44/C45/C66. Their purpose is to expose the actual scales after E43.
 

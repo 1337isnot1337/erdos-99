@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_free_module_linear_inactive_chain_2026-09-17.md) · source SHA-256 `19807bcbb073e644911d7bd29941613b1f39b73fd067d02f0964b3e4a9ad97cb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 17 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -294,7 +296,7 @@ N\cdot(v-q)
 Moving `v` by `-N` strictly decreases its distance from `q`, but by only `O(1)`. Consequently throughout the repair
 
 ```math
-oxed{1<|q-v(s)|<D}
+\boxed{1<|q-v(s)|<D}
 \tag{LC.18}
 ```
 

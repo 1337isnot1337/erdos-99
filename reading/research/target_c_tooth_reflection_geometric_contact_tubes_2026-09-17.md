@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_geometric_contact_tubes_2026-09-17.md) · source SHA-256 `7907b24e903378625e857f5484bec6155261915e45d8474c847e848c41e2c673`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 9 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

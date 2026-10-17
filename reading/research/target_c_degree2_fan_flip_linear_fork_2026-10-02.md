@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_degree2_fan_flip_linear_fork_2026-10-02.md) · source SHA-256 `21e8e1452d3e3a9bb205de27a924b1648eb530f7ec311d3c5bb6dc8e35aa3347`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C: exact fan flips force a linear diameter-inactive population
 

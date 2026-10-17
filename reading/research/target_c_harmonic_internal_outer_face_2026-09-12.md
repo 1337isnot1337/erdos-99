@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_harmonic_internal_outer_face_2026-09-12.md) · source SHA-256 `2a7526794df193143b387d52e498738ccda227b91cbb863a37eb67306649ac16`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e6533b8cc4f1d478e3df8e9cb65a978ce6d73167", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_harmonic_internal_outer_face_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "8321cfd26aa2f6602361f20d5d380786c965c517fb657a17988f44ec12ee29ef"} -->
 

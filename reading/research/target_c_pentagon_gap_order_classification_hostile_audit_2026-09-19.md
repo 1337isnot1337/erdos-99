@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_pentagon_gap_order_classification_hostile_audit_2026-09-19.md) · source SHA-256 `d96dd3b83af222129c89d49141a03b8176581dd31cc5a07159d856e61036e4c4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a9f5ca10ce37ae22e83033e28d1a1ea613fb91e4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_pentagon_gap_order_classification_hostile_audit_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "470d2a8b7b78b8afcfc0230d8d652fe9f602becc0cbc6d30342f00ae8a642a56"} -->
 

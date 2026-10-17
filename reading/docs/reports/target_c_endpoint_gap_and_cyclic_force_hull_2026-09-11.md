@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_endpoint_gap_and_cyclic_force_hull_2026-09-11.md) · source SHA-256 `e0e789f082d9d5ac961c463007743971c86311f058d31dca0b02357c2c14bedb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-59AC9A5F1DE3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — endpoint-aware direction gaps and the cyclic force hull
@@ -31,12 +31,13 @@ The new proved geometric statements are:
 2. Counting which consecutive directions share an endpoint converts the
    direction-gap bounds from an **edge count** into an **endpoint count**.
    If `q/D -> x`, the endpoint hull satisfies
+   
    ```math
    \liminf P_F/D\ge x+2\cos(x/2),\qquad
    \liminf A_F/D^2\ge (x+\sin x)/4.
    \tag{EG.1}
-   
    ```
+
    The perimeter assertion is purely geometric. The area assertion uses the
    full-source near-minimal circumradius, with every isolated point retained.
 3. In the fully visible **cyclic diameter-graph phase**, the force hull contains

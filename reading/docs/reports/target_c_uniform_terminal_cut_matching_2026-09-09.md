@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_uniform_terminal_cut_matching_2026-09-09.md) · source SHA-256 `10d700953f2351a995a345da79397498035f18cdfd83eb47479fa4d9ee558073`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-41323D557A2E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — UCM: uniform matching of every terminal response cut to the diameter-beta cut

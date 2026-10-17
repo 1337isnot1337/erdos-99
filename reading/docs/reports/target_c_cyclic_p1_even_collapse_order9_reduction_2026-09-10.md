@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_p1_even_collapse_order9_reduction_2026-09-10.md) · source SHA-256 `19fefc547cb4f0d896d056b7f7d08a4d8d5da7597912c931cd674a5083797c34`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D8C7BC5BC3FA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — all even P1 endpoints are impossible; odd P1 reduces to one order-nine factor
@@ -52,27 +52,31 @@ SR2/OR1 show that, except for two explicitly isolated residue types, a local tra
 ### Main theorem EC
 
 1. If
+   
    ```math
    r\ge2,
-   
    ```
+
    then P1 is impossible for every odd part `u`.
 
 2. If
+   
    ```math
    r=1
-   
    ```
+
    and `9` does not divide `u`, then P1 is impossible.
 
 3. Therefore every surviving P1 candidate must satisfy
+   
    ```math
    \boxed{m=q-2\text{ odd and }9\mid m.}
    \tag{EC.2}
-   
    ```
 
+
 4. In that remaining case the physical reciprocal minimal polynomial has exact degree six and exact mod-two reduction
+   
    ```math
    \boxed{
    \deg M=6,
@@ -80,9 +84,10 @@ SR2/OR1 show that, except for two explicitly isolated residue types, a local tra
    \overline M(Z)=\Phi_9(Z)=Z^6+Z^3+1.
    }
    \tag{EC.3}
-   
    ```
+
    Equivalently
+   
    ```math
    \boxed{
    \deg h=3,
@@ -90,8 +95,8 @@ SR2/OR1 show that, except for two explicitly isolated residue types, a local tra
    \overline h(T)=T^3+T+1.
    }
    \tag{EC.4}
-   
    ```
+
 
 5. PR #153 shows the characteristic-zero factor `M` is noncyclotomic.  Thus the only P1 escape is a **noncyclotomic reciprocal sextic** reducing to `Phi_9` modulo two and dividing the sparse P1 polynomial `F_m` for an odd multiple `m` of nine.
 
@@ -383,12 +388,9 @@ Therefore the surviving sextic `M` must be noncyclotomic.
 The entire P1 endpoint is now reduced to:
 
 > `m` is an odd multiple of nine and `F_m` has a noncyclotomic reciprocal irreducible sextic factor `M` such that
-> 
-
-```math
+> ```math
 > \overline M=\Phi_9\pmod2
-> 
-```
+> ```
 > and whose physical unit-circle root lies in the P1 arc `0<arg z<pi/m`.
 
 This is much smaller than the previous arbitrary-degree factor problem.

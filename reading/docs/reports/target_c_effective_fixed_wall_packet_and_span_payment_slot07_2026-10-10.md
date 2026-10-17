@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_effective_fixed_wall_packet_and_span_payment_slot07_2026-10-10.md) · source SHA-256 `dc562b728b3a574730e0a71eaebd996dbebc85eb2bc01f9f2ce375c771a01b90`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4944383024AA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II: an effective discrete packet and forced wall-span contraction

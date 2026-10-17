@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exceptional_diameter_star_face_2026-10-08.md) · source SHA-256 `0a1f5ce15d5784b8203807ce666c913fe7488d57a10833fb77bdac0b220e0a41`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-74D84CB9C25D","canonical":true,"claim_ids":["C-DIAMETER-STAR-STRESS-CHAIN-CLASSIFICATION","C-NONSTAR-DIAMETER-CYCLE-STRESS-REGRESSION","C-STAR-EXCEPTIONAL-FACE-ONE-UNLOADED-TRANSVERSAL","C-TWO-EDGE-STAR-TRIANGLE-HYPOTHESIS-REGRESSION"],"claim_statuses":{"C-DIAMETER-STAR-STRESS-CHAIN-CLASSIFICATION":"canonical","C-NONSTAR-DIAMETER-CYCLE-STRESS-REGRESSION":"regression","C-STAR-EXCEPTIONAL-FACE-ONE-UNLOADED-TRANSVERSAL":"canonical","C-TWO-EDGE-STAR-TRIANGLE-HYPOTHESIS-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C: an exceptional diameter-star face is empty or one straight-chain stress

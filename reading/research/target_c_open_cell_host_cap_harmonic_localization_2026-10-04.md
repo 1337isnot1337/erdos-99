@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_open_cell_host_cap_harmonic_localization_2026-10-04.md) · source SHA-256 `307e8acdf0ca444ac1c000c90df2920d1b2b2f658cc7e979c97962716eb15a4f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C: strong open-cell host cap contains a macroscopic harmonic grain
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/81-near-unit-isolate-matching-audit.md) · source SHA-256 `c2405b23826fee8e4cdd077ad7b1d1e347a323eef6d07aa1b3af72a69fb7a38e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — near-unit matching inside a macroscopic inactive chamber
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_branch_aware_0071_energy_restored_incidence_2026-09-15.md) · source SHA-256 `ea7fe8e996e45330d9d437749705171bf43116ec370df4c5b90e9f9b426c17d3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 18 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

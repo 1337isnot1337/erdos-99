@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_sparse_split_fullcore_closure_self_audit_2026-09-12.md) · source SHA-256 `3ddc17d0da89fb4b17476214adc5e9f708e0096a7f4d5abeb73b264f42e5d427`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4A455CFD8206","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — hostile audit of the sparse/directional full-core closure

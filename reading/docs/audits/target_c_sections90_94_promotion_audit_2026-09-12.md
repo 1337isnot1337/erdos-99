@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_sections90_94_promotion_audit_2026-09-12.md) · source SHA-256 `8e0c4bda99f0e5dc97cfb258682d05bb159199a4b34b097e7236a71c3ff2b055`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F9B9171E4B7D","canonical":true,"claim_ids":["C-DENSE-PHASE-CORE","C-EXPLICIT-ORDERED-GRID","C-WRAP-FULL-GAP","C-WRAP-PERIMETER","C-WRAP-THREE-GAP"],"claim_statuses":{"C-DENSE-PHASE-CORE":"canonical","C-EXPLICIT-ORDERED-GRID":"canonical","C-WRAP-FULL-GAP":"canonical","C-WRAP-PERIMETER":"canonical","C-WRAP-THREE-GAP":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent hostile audit — Target C Sections 90–94

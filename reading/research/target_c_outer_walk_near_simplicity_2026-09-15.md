@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_outer_walk_near_simplicity_2026-09-15.md) · source SHA-256 `7163d20854729774ec1b662ed4908a71d1173c29d7dc92bdd7fd615381364c94`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "22bc2b0fed35eb0313f5b8f54d966cb6b9f58a98", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_outer_walk_near_simplicity_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "7834a81f731b04463d25245b10c1138a931f16314773a2414ac358df88bdebe9"} -->
 

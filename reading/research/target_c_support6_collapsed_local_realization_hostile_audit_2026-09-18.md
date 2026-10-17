@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_collapsed_local_realization_hostile_audit_2026-09-18.md) · source SHA-256 `16ece3e8c2bb837c2c5d3d24df71407fe87110e06cfdca41afc8910f369a5349`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "fac881b3bc701e3e5ff0a235a9ab677e1f45d601", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_collapsed_local_realization_hostile_audit_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "096f25a5eae557c5be89b7955739a9651aac0569369371d9225fa49cf6b239e7"} -->
 

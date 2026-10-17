@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md) · source SHA-256 `ab5aa7d3660838ada63d56e8106e7d589e338809017bcb8c8efeced1e3781ae0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-67750D8F53A4","canonical":true,"claim_ids":["C-AUGMENTED-TRAIN-RANK","C-FULLCORE-RESIDUAL-FLOOR"],"claim_statuses":{"C-AUGMENTED-TRAIN-RANK":"canonical","C-FULLCORE-RESIDUAL-FLOOR":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — augmented train rank excludes the entire small-residual full-core branch

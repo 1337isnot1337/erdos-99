@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nested_hexagon_packet_stress_energy_obligation_2026-10-06.md) · source SHA-256 `a918d2251b8ed9af98b8ff17c70b83e3c1c3e3675be067ccfac7d15054124e52`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E352AC3C410D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: nested hexagon stresses in the nonaffine packet problem

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/theory/04-ambient-force-and-cap-transport.md) · source SHA-256 `a7cb6163bde2c300138d7f384fbf666cca9ade2d4b3b922085784acbfc6e0f50`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Shared theory — ambient force geometry and exterior-cap capacity
 

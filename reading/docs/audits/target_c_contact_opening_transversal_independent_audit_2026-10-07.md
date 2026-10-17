@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_contact_opening_transversal_independent_audit_2026-10-07.md) · source SHA-256 `67aad6b548ca0a3db8fbcfdf2fcc149f315ed106274849142ddeeb3a544897ae`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F3356CCDE30C","canonical":true,"claim_ids":["C-FINITE-KKT-STRICT-MOTION-ALTERNATIVE","C-KKT-CAGE-FIRST-ORDER-FINITE-RELEASE-REGRESSION","C-LOADED-KKT-DIAMETER-SUPPORT-TRANSVERSAL"],"claim_statuses":{"C-FINITE-KKT-STRICT-MOTION-ALTERNATIVE":"canonical","C-KKT-CAGE-FIRST-ORDER-FINITE-RELEASE-REGRESSION":"regression","C-LOADED-KKT-DIAMETER-SUPPORT-TRANSVERSAL":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent audit: contact-opening KKT transversal

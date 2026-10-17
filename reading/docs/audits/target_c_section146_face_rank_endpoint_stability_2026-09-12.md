@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section146_face_rank_endpoint_stability_2026-09-12.md) · source SHA-256 `aa0f4bd226a38f0656c1603edacf4825bf0c2b41bbb9ef7ca7511f4fcf53fa75`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2B9D5006AA72","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Audit — Section-146 face-rank endpoint stability

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_integer_hull_route_defect_2026-09-13.md) · source SHA-256 `1f3065ef1bc358745f8a8ebd2485d1a588531d0880d20bf51d9a9dc7b6796769`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "464723a7f120c05f14c4f916ad4ad119b52b5f13", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_integer_hull_route_defect_2026-09-13.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c6abcb36289b8f758680d936eb5aba6573b6ef306563535353de7c1482e3f943"} -->
 

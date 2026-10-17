@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md) · source SHA-256 `afd5a20ba695bd56ee8306beb1a0f78b961176b2a7b239603670f4e6466814f5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4D8046BD79F1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — one spare site suffices in both canonical branches

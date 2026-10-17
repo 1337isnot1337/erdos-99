@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/13-five-block-local-optimality.md) · source SHA-256 `f1a389e994ffd428b83a721a7d18d833bd35b5ab4a078bc3c611619b194bb7ad`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — local five-block quartic optimality
 
@@ -198,9 +198,7 @@ Adding again removes the middle horizontal translation. Thus every feasible endp
 satisfies the exact inequality
 
 > **Lemma 161.1 (middle quadratic cage).**
-> 
-
-```math
+> ```math
 > \boxed{
 > 4\sqrt3\,y_3
 > \le
@@ -208,8 +206,7 @@ satisfies the exact inequality
 > +\|\tau_4\|^2+\|\tau_4-\tau_3\|^2.
 > }
 > \tag{161.16}
-> 
-```
+> ```
 
 No sequential path, symmetry, or stationarity assumption enters (161.16). In
 particular, because each difference has norm at most `2E`,
@@ -322,34 +319,25 @@ Therefore:
 > **Theorem 161.2 (universal local quartic upper bound).** For every `n>=3`, every
 > feasible rigid translation endpoint of the Section 157 five-block aligned-gap
 > architecture satisfying
-> 
-
-```math
+> ```math
 > E\le\frac1{24},
 > \qquad y_3\ge0,
-> 
-```
+> ```
 > obeys
-> 
-
-```math
+> ```math
 > \boxed{
 > E\le2d,
 > \qquad
 > 0\le y_3\le\frac{4040}{\sqrt3}d^4.
 > }
 > \tag{161.29}
-> 
-```
+> ```
 > In particular, for any feasible family with `d->0`, `E(d)->0`, and `y_3(d)>=0`,
 > the three inner/middle block translations are `O(d^2)` and
-> 
-
-```math
+> ```math
 > \boxed{y_3(d)=O(d^4).}
 > \tag{161.30}
-> 
-```
+> ```
 
 ## 161.5 Matching lower bound from Section 160
 
@@ -381,16 +369,13 @@ y_3
 Theorem 161.2 supplies the matching upper order. Hence:
 
 > **Corollary 161.3 (local exponent optimality of the rigid five-block model).**
-> 
-
-```math
+> ```math
 > \boxed{
 > V_5^{\rm loc}(d)=\Theta(d^4)
 > \qquad(d\downarrow0).
 > }
 > \tag{161.33}
-> 
-```
+> ```
 
 Thus Section 160 is exponent-optimal among **all local identity-branch translations of
 the same five rigid blocks**, even though its leading coefficient is not proved

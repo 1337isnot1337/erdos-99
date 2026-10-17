@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_response_component_currency_coupling_2026-09-09.md) · source SHA-256 `16d4798edba2197e1580711ce35b3d75d1116e62f7d1f2f09c07d6ca6ca1c25e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-09654A9C1D2F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — RCC: response defect forces component-diameter / pinned-contact currency
@@ -103,7 +105,7 @@ In particular,
 \boxed{
 \frac{e_{BB}+2s_C}{D}
 \ge
-\frac1{\sqrt{1+\varepsilon}}-rac8D.
+\frac1{\sqrt{1+\varepsilon}}-\frac8D.
 }
 \tag{RCC.3}
 ```

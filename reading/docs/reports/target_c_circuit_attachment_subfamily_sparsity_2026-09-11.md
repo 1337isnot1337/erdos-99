@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_circuit_attachment_subfamily_sparsity_2026-09-11.md) · source SHA-256 `1eec657c1f9e4db2f83673e26f4af3783f78a6e7f35dafbd8c69f3d0c9bcd83b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-22159F2156D2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — circuit sparsity for unions of unloaded attachment components

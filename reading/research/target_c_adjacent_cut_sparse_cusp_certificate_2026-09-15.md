@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_adjacent_cut_sparse_cusp_certificate_2026-09-15.md) · source SHA-256 `2dd8104171f40abaa9c0a4f9d3b89b1a4f15308b1435a2d7c2fd3f32a5efd453`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

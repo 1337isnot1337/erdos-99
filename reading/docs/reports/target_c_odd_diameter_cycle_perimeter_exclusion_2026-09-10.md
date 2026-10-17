@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_odd_diameter_cycle_perimeter_exclusion_2026-09-10.md) · source SHA-256 `6470b99c0c3d3f066334cab317c1ec961c5b097bbaa250e009a0c85da540e013`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EA43B48CC5CC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — low pinned/contact surplus excludes every diameter cycle

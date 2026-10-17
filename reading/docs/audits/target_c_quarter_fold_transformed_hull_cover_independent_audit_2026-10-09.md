@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_quarter_fold_transformed_hull_cover_independent_audit_2026-10-09.md) · source SHA-256 `a648f9fd8dad383c3e8407387993bacf0b3a9c3f93bfc05dbf11618da1397507`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8AEA59D1F9F7","canonical":true,"claim_ids":["C-QUARTER-FOLD-TRANSFORMED-EIGHT-FACE-HULL-COVER"],"claim_statuses":{"C-QUARTER-FOLD-TRANSFORMED-EIGHT-FACE-HULL-COVER":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: transformed hull of an endpoint-feasible eight-face fold

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_global_pentagon_two_window_escape_2026-09-14.md) · source SHA-256 `ff734aa4e9099a8aedec93a87bae8a534dfd075f92b1613a7687fde041589a91`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "ec8ed4aa11be3735f8563dd6e86abc9a07aa3197", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_global_pentagon_two_window_escape_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "352935de5e87825581db52c2c5753249f556dc89389727cd961e73305102149d"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_arithmetic_one_deficit_uniform_window_independent_audit_2026-10-07.md) · source SHA-256 `9e62e2fb5e76ed82c186850ddbd6b7265aa37627a7175b959818ebe0b63a17a3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-597123669A15","canonical":true,"claim_ids":["C-ONE-DEFICIT-ARITHMETIC-WINDOW-OLER-CAP","C-ONE-DEFICIT-ARITHMETIC-WINDOW-SOURCE-EXCLUSION","C-ONE-DEFICIT-ARITHMETIC-WINDOW-STRICT-PACKET"],"claim_statuses":{"C-ONE-DEFICIT-ARITHMETIC-WINDOW-OLER-CAP":"canonical","C-ONE-DEFICIT-ARITHMETIC-WINDOW-SOURCE-EXCLUSION":"canonical","C-ONE-DEFICIT-ARITHMETIC-WINDOW-STRICT-PACKET":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit — arithmetic-profile one-deficit window

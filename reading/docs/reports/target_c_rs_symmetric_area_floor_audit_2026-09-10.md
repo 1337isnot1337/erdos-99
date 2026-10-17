@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rs_symmetric_area_floor_audit_2026-09-10.md) · source SHA-256 `a5b34c81927c513965737cb946352ae1a9fdc99b5611607e0cae4dfeb1664289`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3FE0E8A48F6B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — audit of the FSRS symmetric-area floor

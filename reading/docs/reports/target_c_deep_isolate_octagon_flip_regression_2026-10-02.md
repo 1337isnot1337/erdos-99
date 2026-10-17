@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_deep_isolate_octagon_flip_regression_2026-10-02.md) · source SHA-256 `4b4054db14e3525247f47e1fab42e80f9185872c3bb60f72530990547cdbce82`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2D4BB03CBE46","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — deep diameter slack does not supply a strict isolate repair

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_d6_approximate_orbit_stability_2026-09-14.md) · source SHA-256 `71cee4bcafee38cffb1bfdb50edc8df7a7faccbadb23f9790e6ebbfc591a7f83`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6280DCCB022D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — approximate sixfold affine-window stability

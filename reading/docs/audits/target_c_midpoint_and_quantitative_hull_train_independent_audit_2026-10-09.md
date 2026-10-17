@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_midpoint_and_quantitative_hull_train_independent_audit_2026-10-09.md) · source SHA-256 `cd008165a6d2587f1dcdb03453048ded333ac9c9075cc409d8fc243f4ecb4495`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-658205CD4E3D","canonical":true,"claim_ids":["C-ALL-BRANCH-HULL-TRAIN-DEPLETION","C-FS-DIAMETER-MIDPOINT-D2-3"],"claim_statuses":{"C-ALL-BRANCH-HULL-TRAIN-DEPLETION":"canonical","C-FS-DIAMETER-MIDPOINT-D2-3":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit of the sharper midpoint bound and quantitative hull-train depletion

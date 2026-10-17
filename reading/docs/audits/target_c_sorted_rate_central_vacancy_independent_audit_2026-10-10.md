@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_sorted_rate_central_vacancy_independent_audit_2026-10-10.md) · source SHA-256 `807e3643f42b95b1cafd63cda11ad3fbcc15393de70f9748bbec50d459ce4824`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D68C93BF1E67","canonical":true,"claim_ids":["C-SIX-SIDED-WALL-CENTRAL-VACANCY-CLASSIFICATION"],"claim_statuses":{"C-SIX-SIDED-WALL-CENTRAL-VACANCY-CLASSIFICATION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.234 — central-vacancy sorting classification

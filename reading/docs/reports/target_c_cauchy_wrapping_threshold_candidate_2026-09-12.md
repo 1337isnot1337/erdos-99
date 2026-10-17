@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cauchy_wrapping_threshold_candidate_2026-09-12.md) · source SHA-256 `1bf5b754c307748e0aa2d833b3de5abe49ac7c369d8d293d7a5c13a43fbbd0bc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D3AF1166D13A","canonical":true,"claim_ids":["C-WRAP-CAUCHY"],"claim_statuses":{"C-WRAP-CAUCHY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — Cauchy perimeter wrapping threshold

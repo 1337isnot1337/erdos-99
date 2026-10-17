@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_endpoint_route_excess_split_2026-09-12.md) · source SHA-256 `501a00cd4e4a00c2808dec432c6346d2c4cba4d77e0d39cd7e4e1c42bc1c7357`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

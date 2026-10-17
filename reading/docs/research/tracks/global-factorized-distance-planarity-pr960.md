@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/global-factorized-distance-planarity-pr960.md) · source SHA-256 `b3bee8319bcced4e37b0d1c3d30ace9906b2bd453dd1dcb2b8071b00a6f572ac`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Factorized transformations, planar replacements, and sharp-reserve regressions
 

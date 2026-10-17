@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_matching_circular_minor_transport_2026-08-31.md) · source SHA-256 `ecdd3bcba6319b8aa6c21be9a694c3f5285bf6e7abd53d75285768f6d0e36607`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-80F437152804","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C: diameter-matching circular-minor transport
@@ -463,7 +465,7 @@ There exists a diameter vertex `z` such that
 \boxed{
 \sum_{\substack{e\in H\\e\ni z}}\beta_e
 \ge
-1-rac{2\pi}{\kappa_0}D\varepsilon.
+1-\frac{2\pi}{\kappa_0}D\varepsilon.
 }
 \tag{C66.21}
 ```

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_seven_noroot_k4_dminus2_d0p3_projective_filters_2026-09-20.md) · source SHA-256 `b70f69af255615ce46f2bef26f31f131fb41b81e7953b8740322c41d02da4daf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "98e54a8e17a88a2dab66554fdc06897652f29ddb", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_seven_noroot_k4_dminus2_d0p3_projective_filters_2026-09-20.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "815e45fc876f0b7714cc0c01094e06e0c4a961135572623be98ad420e22c5782"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_tb1_exact_swap_fork_2026-10-01.md) · source SHA-256 `ced28064414306264ae1e94de3995cdf7edc2abfdfd3cf86b98006d60dd04c12`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CD9E9F215D06","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- exact TB1 contact-swap fork in an open witness cell
@@ -51,21 +51,23 @@ The finite translation of the whole middle strip by $`v_{\rm sw}`$ has the follo
 exact properties.
 
 1. Both boundary contact families remain unit contacts:
+   
    ```math
    a+v_{\rm sw}=-b,\qquad
    b+v_{\rm sw}=-a.
    \tag{5}
-   
    ```
+
    All other old contacts are unchanged.
 
 2. For every switching actual diameter, orient its diameter vector inward toward the
    translated strip and call it $`n_h`$, so $`|n_h|=D`$. Then
+   
    ```math
    \boxed{|n_h\cdot w|>{Dq\over2}.}
    \tag{6}
-   
    ```
+
 
 3. The TB1 certificate has $`n_h\cdot w>0`$. Hence exactly one of the following holds.
 
@@ -76,17 +78,19 @@ exact properties.
 4. In the ONE-SIGN case every moving old actual diameter strictly shortens under the
    exact finite swap. Consequently canonical global minimality and
    diameter-pair-minimality force a previously strict source pair $`xy`$ satisfying
+   
    ```math
    \boxed{1<|xy|\le1+{4K\over D}}
    \tag{7}
-   
    ```
+
    or
+   
    ```math
    \boxed{D-{4K\over D}\le|xy|<D.}
    \tag{8}
-   
    ```
+
 
 Thus every phase-changing TB1 cusp on the current fixed-star rectangle admits the
 finite source-level fork

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_disjoint_diameter_gap_outerwalk_collapse_2026-09-09.md) · source SHA-256 `fa329592905ddaef304ac6163a56cc86c274b486bee8def6aceeb045c5cf396f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-46CFB9DBDC89","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — disjoint-diameter angle doubling and outer-walk collapse
@@ -812,13 +812,14 @@ DG removes the generic small-`x_B` branch. A closing proof can now split cleanly
 
 1. **linear outer-walk phase:** convert `x_B=Omega(D)` into a strict boundary-capacity loss or a quantitative response mass;
 2. **near-constant-width phase:** use the simultaneous facts
+   
    ```math
    q/D\to\pi,
    \quad min\,w_F/D\to1,
    \quad h/D\ge3\pi/5,
    \quad Q+2s_Z\ge(\pi/5-o(1))D
-   
    ```
+
    to show that a triangle-free global optimum cannot carry the required linear exceptional-face/mixed-stress defect.
 
 The second branch is particularly rigid: the hull is asymptotically perimeter-maximal while the contact/mixed framework is quantitatively far from defect-free.

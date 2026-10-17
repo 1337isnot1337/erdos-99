@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_exterior_one_site_saturation_independent_audit_2026-10-07.md) · source SHA-256 `f9be133ac75dadb9e468745495f6c225b8d9e253593930e97c2edd92aa9bed40`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-45BF47F5B725","canonical":false,"claim_ids":["C-EXTERIOR-ONE-SITE-SATURATION"],"claim_statuses":{"C-EXTERIOR-ONE-SITE-SATURATION":"superseded"},"index":"docs/state/artifact-index.jsonl","status":"superseded","target":"target-c"} -->
 # Target C Audit.109 — exterior one-site saturation

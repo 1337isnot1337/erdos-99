@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_no_generic_triangle_free_density_gap_2026-09-11.md) · source SHA-256 `cc7c9bec8be1412bdb198d459cbd29f68c8ff7bed03f536fc11e10f1e5c2f1bb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2A9EF2B65837","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — no generic quadratic density loss for inactive points

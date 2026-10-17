@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_two_halfdisk_physical_interface_hostile_audit_2026-09-13.md) · source SHA-256 `818c92c4b7e95fbf8c2a926dc0dd87c1a0fa2b2a6c45712a9fe0b7be6c2a7355`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E50274A823EB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — two-half-disk physical boundary and interface locality

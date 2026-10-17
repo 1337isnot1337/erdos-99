@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_residual_cage_release_refill_independent_audit_2026-10-07.md) · source SHA-256 `d65f22d7de1f31553a6918b0480bbd3ce493f89db9a5bd7b7f2ab87f38a2aea8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DC3C5AB427A8","canonical":true,"claim_ids":["C-POSITIVE-CIRCUIT-STRICT-DIRECTION-TRANSVERSAL","C-POSITIVE-SPANNING-DELETION-REGRESSION","C-RESIDUAL-CAGE-RELEASE-REFILL","C-RESIDUAL-CAGE-TOPOLOGY-COST-REGRESSION"],"claim_statuses":{"C-POSITIVE-CIRCUIT-STRICT-DIRECTION-TRANSVERSAL":"canonical","C-POSITIVE-SPANNING-DELETION-REGRESSION":"regression","C-RESIDUAL-CAGE-RELEASE-REFILL":"superseded","C-RESIDUAL-CAGE-TOPOLOGY-COST-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent audit: residual-cage release and strict refill

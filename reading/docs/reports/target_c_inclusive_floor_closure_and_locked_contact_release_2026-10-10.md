@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_inclusive_floor_closure_and_locked_contact_release_2026-10-10.md) · source SHA-256 `25dcc76277cc3382b7334d2c2d748850dcd04a3ddbdc694d4f6729c6fd2ca218`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D33DAE46A3ED","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Inclusive floor closure and locked contact-preserving releases

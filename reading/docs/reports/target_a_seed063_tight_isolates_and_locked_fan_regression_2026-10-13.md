@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_a_seed063_tight_isolates_and_locked_fan_regression_2026-10-13.md) · source SHA-256 `b2f5c112443c57181670aec31d46c38f0d6aacef8318e29473c9a6e72e358337`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5BF32C3D460F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
 # Target A seed 63: Hall-tight isolates and a fully locked neutral response

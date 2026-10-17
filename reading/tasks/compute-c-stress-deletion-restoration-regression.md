@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/compute-c-stress-deletion-restoration-regression.md) · source SHA-256 `afd7c528d7c86b416c00538dcbf8896c90493411c19638e23fcd2cfb0e34840e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # compute-c-stress-deletion-restoration-regression
 

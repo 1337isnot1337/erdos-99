@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_giant_rattler_cavity_dichotomy_2026-08-31.md) · source SHA-256 `7d1c1881b90d60515b416f9ddff26685236828c540eec0bffceaba862005bf52`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-3A6B9D341C6C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_giant_rattler_cavity_dichotomy_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=184020d2e2c109ef07a53d7da5bb250e9d06c571; lifecycle=unreviewed; canonical=false -->
@@ -87,7 +89,7 @@ Using C50.1-C50.2 and multiplying by `2/sqrt3` gives:
 \boxed{
  z_f
 \le
-1+\frac{k_f}{2}+rac{k_f^2}{2\pi\sqrt3}.}
+1+\frac{k_f}{2}+\frac{k_f^2}{2\pi\sqrt3}.}
 \tag{C50.4}
 ```
 
@@ -171,7 +173,7 @@ then C50.9 gives
 
 ```math
 \eta D^2
-<14\pi D+rac{10}{\sqrt3}KD.
+<14\pi D+\frac{10}{\sqrt3}KD.
 ```
 
 Divide by `D` and rearrange:

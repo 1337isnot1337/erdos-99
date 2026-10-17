@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_full_source_delaunay_strain_independent_audit_2026-10-08.md) · source SHA-256 `4682af190672d76d9a26dd107b1623e02c09895c9bca190988a0bd58ece2077f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0BB12517F6BA","canonical":true,"claim_ids":["C-FULL-SOURCE-DELAUNAY-DEFECT-BUDGET","C-FULL-SOURCE-DELAUNAY-NEAR-NEIGHBOR-BUDGET","C-FULL-SOURCE-TWO-LOWER-BLOCKERS","C-HULL-COVERED-THIN-BOUNDARY-TRIANGLE-REGRESSION","C-LOWER-CLOSED-SET-SUPPORT-FRONT"],"claim_statuses":{"C-FULL-SOURCE-DELAUNAY-DEFECT-BUDGET":"canonical","C-FULL-SOURCE-DELAUNAY-NEAR-NEIGHBOR-BUDGET":"canonical","C-FULL-SOURCE-TWO-LOWER-BLOCKERS":"canonical","C-HULL-COVERED-THIN-BOUNDARY-TRIANGLE-REGRESSION":"regression","C-LOWER-CLOSED-SET-SUPPORT-FRONT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C Audit.164 — full-source Delaunay strain and lower-blocker fronts

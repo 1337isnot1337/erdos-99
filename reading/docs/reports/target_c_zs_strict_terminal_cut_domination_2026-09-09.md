@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zs_strict_terminal_cut_domination_2026-09-09.md) · source SHA-256 `72e457eed274c85369338635ecbcd69bb284c20e964e292de874d6586f1177b3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C7F7BEB3BB2A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 LEVEL I STATUS: STILL OPEN
@@ -79,28 +79,31 @@ M_B:=\Lambda-L_H.
 Then:
 
 1. the terminal defect has maximal affine kernel,
+   
    ```math
    \boxed{\ker M_B=\operatorname{span}\{\mathbf1,P_x,P_y\},\qquad
    \operatorname{rank}M_B=q-3;}
    \tag{ZS.1}
-   
    ```
+
 2. if `S subset B` and `|B\setminus S|>=3`, then the principal submatrix `M_B[S,S]` is positive definite;
 3. for every nonempty proper terminal set `S subsetneq B`, response domination across the cut is strict:
+   
    ```math
    \boxed{
    \sum_{b\in S,\ k\notin S}c_{bk}
    >
    \sum_{b\in S,\ k\notin S}\beta_{bk};}
    \tag{ZS.2}
-   
    ```
+
 4. in particular every loaded terminal has strict local response excess,
+   
    ```math
    \boxed{d_b>s_b\qquad(b\in B).}
    \tag{ZS.3}
-   
    ```
+
 
 Here `c_bk=-Lambda_bk`, `d_b=sum_{k!=b}c_bk`, and `s_b=sum_{k!=b}beta_bk`.
 

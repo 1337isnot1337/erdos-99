@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_bridge_hinge_interval_rank_2026-09-09.md) · source SHA-256 `6dcc4137f0d11fb5887d7adfec707aa56c9bdef7ee48bf95189c841f89923289`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-334DC3FDC35C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZHI: bridge-hinge interval rank and two-sided diameter blockers

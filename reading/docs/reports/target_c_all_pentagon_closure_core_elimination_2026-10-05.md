@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_all_pentagon_closure_core_elimination_2026-10-05.md) · source SHA-256 `3bcffcf76cdd806bd6acd53f648c24619e837a099545ea7166f2c90a91664c43`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CB8DFEB9D5D9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — eliminate every pentagon closure core and charge pure corank to higher faces

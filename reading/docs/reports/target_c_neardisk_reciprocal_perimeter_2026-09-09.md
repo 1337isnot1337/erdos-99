@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_neardisk_reciprocal_perimeter_2026-09-09.md) · source SHA-256 `fc05b8188695feba62908af0741a2eafc9015ea1c4d2b06b6a3b8c351a70e77f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3FF7AF8EABE5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_neardisk_reciprocal_perimeter_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=266bb7eac7e2a9b18a7390c7f80afb4b0fe6ec4b; lifecycle=unreviewed; canonical=false -->

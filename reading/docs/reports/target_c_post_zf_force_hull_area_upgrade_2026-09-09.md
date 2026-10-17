@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_post_zf_force_hull_area_upgrade_2026-09-09.md) · source SHA-256 `6bf3060aa2cc4e0014b84899394f716d35c608db3767e7446e71b4cbbe069d6d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -53,12 +55,9 @@ The same report proves the finite projective-circle packing lemma:
 
 > `h` pairwise `delta`-separated points on a circle of circumference `pi` contain two
 > points at projective distance at least
-> 
-
-```math
+> ```math
 > \min\{\pi/3,(h-1)\delta\}.
-> 
-```
+> ```
 
 If two diameter chords have projective angle `phi`, whether they share an endpoint or
 cross as disjoint diameter chords, the convex hull of their endpoints has area
@@ -162,7 +161,7 @@ Since `L_2/D<=lambda_2+o(1)`, the force-hull gap now obeys
 \boxed{
 \liminf\frac G{D^2}
 \ge
-\frac12\sin1-rac\pi4\lambda_2^2.
+\frac12\sin1-\frac\pi4\lambda_2^2.
 }
 \tag{ZA.4}
 ```

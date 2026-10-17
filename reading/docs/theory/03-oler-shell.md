@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/theory/03-oler-shell.md) · source SHA-256 `a6cf18f38fa01c6969e2aecd8211278a0dcd1530efb190551d815ed0e86c0521`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Shared theory: Oler shell and boundary surplus
 
@@ -230,24 +230,26 @@ Two immediate specializations of (21.1) are:
 
 1. If $`F`$ is a convex equilateral $`m`$-gon whose vertices are unit-separated, then
 
+   
    ```math
    \boxed{
    \operatorname{area}(F)\ge c_0(m-2).
    }
    \tag{21.10}
-   
    ```
+
 
 2. If $`C`$ is a convex pocket bounded by a chain of $`r`$ unit edges and its
    closing hull chord of length $`L`$, then
 
+   
    ```math
    \boxed{
    \operatorname{area}(C)\ge c_0(r-L).
    }
    \tag{21.11}
-   
    ```
+
 
 For (21.10), use $`N=m`$ and perimeter $`m`$ in (21.1).  For (21.11), use
 $`N=r+1`$ and perimeter $`r+L`$.  The vertices of a pocket are a subset of
@@ -760,12 +762,9 @@ and proving the reverse inequality for every sufficiently large triangle-free su
 The current Target B is no longer merely a generic ``sharp boundary-capacity theorem.'' A sufficient focused statement is:
 
 > **Joint outer-shell stability theorem.** For every sufficiently large triangle-free global minimizer in the normalized jammed/almost-rhombic regime, the compulsory train-end data satisfy a quantitative inequality coupling $`b_F`$, $`H_\infty`$, the indentation-pocket slacks, the convexification area, and the actual hull perimeter strongly enough to force
-> 
-
-```math
+> ```math
 > \mathscr O(A)\ge c_0\pi D+a_0.
-> 
-```
+> ```
 
 Equivalently, near equality in the local Oler cells must be incompatible at large scale with both the diametral-hull condition $`Q=V(\operatorname{conv}A)`$ and near equality in the isodiametric/perimeter bounds.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_short_unit_wall_zero_capacity_2026-10-05.md) · source SHA-256 `5dcf4747929241143dfa4bd4f20c9b676c00d57da4f51271491688f3c32670fd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "484b3fd60e55e78d0369e9682f9f68fc70267c41", "source_branch_refs": ["refs/heads/automation/target-c-short-unit-wall-zero-capacity-2026-10-05-v2"], "source_commit": "6756af64ff67d9dfd9cba059b6e27954aca1c8ee", "source_lifecycle": "not indexed", "source_path": "research/target_c_short_unit_wall_zero_capacity_2026-10-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "fb6f69bcae048bd23496249ccbfb29146f9e599231dac5b3da20197b667e5b93"} -->
 

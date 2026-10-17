@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_affine_lattice_boundary_vertex_exclusion_2026-09-11.md) · source SHA-256 `57641d938a7e3815fb9d3fd1301242130c5826113bb438c70f87d8cb4a3709b6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-563402BFA5FC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — boundary-vertex exclusion for unit-rhombic affine lattice cores

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_wrapping_defect_stability_consequences_2026-09-30.md) · source SHA-256 `f8925871503278c5a4bcbe69c8acd6c28c846275e889e6b63d6d5f6167d1f64e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-62C04E0F1527","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Wrapping-root defect stability: consequences

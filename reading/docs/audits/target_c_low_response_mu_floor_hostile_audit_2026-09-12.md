@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_low_response_mu_floor_hostile_audit_2026-09-12.md) · source SHA-256 `dfc735ccf9c8ccfddf5ea43467c4aab6085ec19e621b762622cecd80382e925a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DCD8A7C7D6A6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Target C low-response stress localization

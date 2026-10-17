@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tagged_nested_phase_bracket_rail_t18687_2026-09-17.md) · source SHA-256 `ccf7c5fe510417fe3dbdd218834681393b23950e0e1942d612504a213b9aada2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "742251928da5b937575ef1bd063aad7b2a55a41f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tagged_nested_phase_bracket_rail_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b4fc9cb58551c858bf09bf93dc5b1438146894cf501d27f8b920eb051f2e1eb4"} -->
 
@@ -160,10 +160,11 @@ Every `s` is tagged either `EA` or `TB1`.
 
 - At an `EA` position, `h_s` is one member of an actual exact-antipodal switching pair which positively generates the nonzero exact strip reaction `G_{i_s}`. Both pair bars retain the host-forced transverse margin `arcsin(0.4143)-o(1)` from the row/reaction axis.
 - At a `TB1` position, `h_s` blocks every unit local contact-opening tangent with first-order margin at least
+  
   ```math
   (0.4143-o(1))D.
-  
   ```
+
 
 No tag is lost in the local phase/bracket thinning.
 

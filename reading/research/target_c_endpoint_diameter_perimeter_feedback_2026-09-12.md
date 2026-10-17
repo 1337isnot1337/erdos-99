@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_endpoint_diameter_perimeter_feedback_2026-09-12.md) · source SHA-256 `f4ae2132b582e74bd247a8d6ea6b91a5b6f33271f7aa3cfd3bcdf289677c6ec5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "6b21856f505f76f5af1c09cc5c918cf8fe16c69e", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_endpoint_diameter_perimeter_feedback_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "970eda3855fe7d019fa44a9df6cb8d7091463517fdbdd41f51490d5d82f1929e"} -->
 

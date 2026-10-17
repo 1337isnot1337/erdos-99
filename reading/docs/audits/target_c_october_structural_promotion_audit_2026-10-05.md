@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_october_structural_promotion_audit_2026-10-05.md) · source SHA-256 `34234892e5ae2d41b421cff8050d34a5a7463cc3a88500eee55f53cb0eb931cc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6E34E9088A01","canonical":true,"claim_ids":["C-AUGMENTED-TRAIN-RANK","C-CONTACT-FACE-REGULARITY","C-FULLCORE-HULL-DEPLETION-FLOOR","C-FULLCORE-RESIDUAL-FLOOR"],"claim_statuses":{"C-AUGMENTED-TRAIN-RANK":"canonical","C-CONTACT-FACE-REGULARITY":"canonical","C-FULLCORE-HULL-DEPLETION-FLOOR":"canonical","C-FULLCORE-RESIDUAL-FLOOR":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent promotion audit — October Target C structural stack
@@ -69,11 +69,12 @@ The audit rechecked:
 - the distinguished outer-occurrence lemma in the presence of bridges and repeated outer-walk vertices;
 - $`B_{\rm bad}=x_B+m_B`$, not merely an upper bound;
 - the exact identity
+  
   ```math
   4\mu_DD+8c_I+18-2b-M_D-k-3m_B
   =2(Q-f)+2-d_D;
-  
   ```
+
 - the all-hull-side directional count from near-disk radial parametrization;
 - the order of limits: fixed phase width first, source limit second, width to zero last;
 - heredity of the endpoint pseudosegment/phase argument after restriction to the remaining actual trains.

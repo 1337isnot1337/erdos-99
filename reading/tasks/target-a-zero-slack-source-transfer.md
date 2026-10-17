@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/target-a-zero-slack-source-transfer.md) · source SHA-256 `f6f7432ed0cc2a259ed521b62be3934b1a6e1360fe70a73a08bed0d9b6fd14a9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # target-a-zero-slack-source-transfer
 

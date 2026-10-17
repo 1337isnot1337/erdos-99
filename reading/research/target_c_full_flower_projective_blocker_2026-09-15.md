@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_full_flower_projective_blocker_2026-09-15.md) · source SHA-256 `4acce32f0048de4fe33cccff55d86a175ccaf0d4645a3dd4c789ba8a46f66241`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C-II — fully rhombic pentagons are exact two-blockers in the train-crossing graph
 

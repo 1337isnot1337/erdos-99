@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_phase_star_atomic_gap_0009_2026-09-14.md) · source SHA-256 `672f28cfbddb736df4cd9079e5ddc2e9b0df7bb81b4924649037cfea68ef8452`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c3992ac706beb29f8a3fb593613abdd8f1be14a5", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_phase_star_atomic_gap_0009_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "489e43ee8822120c144beca71485622bbb147cbfaa90ef21d6bfeca78013f7a5"} -->
 

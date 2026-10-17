@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_convex_width_nearglobal_carrier_upgrade_2026-09-30.md) · source SHA-256 `3e1e4a45be6f134b1dd18927021e317118a0caf62c3c0303010d62711db4f62c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4EF9BF4EE168","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II - convex-width gap expands the near-global carrier branch

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_strict_rattler_absorption_preserves_diameter_graph_2026-09-11.md) · source SHA-256 `3a8893213f9c4b5766094bb006b754d9a026d94cb5e2ffb02f75a3b7b5ae6b1b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AB6D6B8410A2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — strict rattler absorption preserving the diameter graph

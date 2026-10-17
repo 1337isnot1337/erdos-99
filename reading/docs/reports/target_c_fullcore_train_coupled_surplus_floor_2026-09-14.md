@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_train_coupled_surplus_floor_2026-09-14.md) · source SHA-256 `d7be7d5f6b71cdc64f1c1e954065b40d34a355ed05a240bf76a825b270a43e33`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-70C13C7CCB86","canonical":true,"claim_ids":["C-FULLCORE-TRAIN-SURPLUS-FLOOR"],"claim_statuses":{"C-FULLCORE-TRAIN-SURPLUS-FLOOR":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Erdős Problem #99 — full-core train-coupled surplus floor

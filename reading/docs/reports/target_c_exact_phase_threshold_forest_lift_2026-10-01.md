@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_phase_threshold_forest_lift_2026-10-01.md) · source SHA-256 `3392d4b3b075aa92c18738b586f85d370169c0e9163607bde4e6aecede58fc30`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-220695C21558","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- threshold staircase forces physical layer splitting

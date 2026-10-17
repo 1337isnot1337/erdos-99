@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_force_carrying_robust_fork_t18687_2026-09-17.md) · source SHA-256 `eb55268f0e27b60009155d49f7576ab92230417e31b1bd668809636efcac6a73`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -42,12 +42,14 @@ Then there are families `S_D(rho)` and `E_D^{force}(rho)` satisfying
 Here:
 
 - every `i in S_D(rho)` is a non-antipodal TB1 interface with one switching diameter vector `n_i` satisfying
+  
   ```math
   n_i\cdot w\ge D\sin\rho
-  
   ```
+
   for every unit local contact-opening direction `w`;
 - every `i in E_D^{force}(rho)` has two actual switching diameter bars `h_i^-,h_i^+` whose projective angle is at least `rho`, whose positive cone strictly contains the exact axial reaction direction, and for which
+  
   ```math
   \boxed{
   G_i
@@ -56,8 +58,8 @@ Here:
   \lambda_i^-,\lambda_i^+>0.
   }
   \tag{FR.3}
-  
   ```
+
 
 For all sufficiently large `D`, every pair in `E_D^{force}(rho)` is vertex-disjoint and crossing.  Its four-endpoint hull contains the common disk
 

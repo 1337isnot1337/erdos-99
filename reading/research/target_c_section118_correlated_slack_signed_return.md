@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section118_correlated_slack_signed_return.md) · source SHA-256 `df07ef2447df141767ba74bdb21c74dd4debe4c410cf3e5318900ecb601700cf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

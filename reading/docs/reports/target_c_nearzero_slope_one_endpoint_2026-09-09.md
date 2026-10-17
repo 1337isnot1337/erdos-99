@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearzero_slope_one_endpoint_2026-09-09.md) · source SHA-256 `a9aae6310e4d2ade6145b238e92bd1ba8bdf2e692cc67405e1e90cff23f7c6f7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D6B33D2F2564","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — S1E: classification of the RCC slope-one near-zero endpoint

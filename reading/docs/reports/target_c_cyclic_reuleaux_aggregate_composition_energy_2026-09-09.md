@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_reuleaux_aggregate_composition_energy_2026-09-09.md) · source SHA-256 `f2f9e2e840d9a3ab823c67964c3accb35ad2531604ab1423f29d6d788eb6ea2b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AB02ECDD6D66","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — additive Reuleaux energy controls the full Reinhardt leaf composition

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_class_stress_2026-08-31.md) · source SHA-256 `55d066e2a0ff25b357c298e44aae53f072df9d1e8288cd85295faf8d26cbcaa3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 10 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

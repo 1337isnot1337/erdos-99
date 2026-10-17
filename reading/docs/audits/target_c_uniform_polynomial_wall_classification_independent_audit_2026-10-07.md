@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_uniform_polynomial_wall_classification_independent_audit_2026-10-07.md) · source SHA-256 `47afa61540b11e0b5aeda0712e517a45160dbc7dde8f57b32b817d62b37bde7a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F15C0DF99D0A","canonical":true,"claim_ids":["C-ARITHMETIC-SIX-WALL-POLYNOMIAL-MAXIMUM-CLASSIFICATION","C-ARITHMETIC-SIX-WALL-POLYNOMIAL-SOURCE-EXCLUSION"],"claim_statuses":{"C-ARITHMETIC-SIX-WALL-POLYNOMIAL-MAXIMUM-CLASSIFICATION":"canonical","C-ARITHMETIC-SIX-WALL-POLYNOMIAL-SOURCE-EXCLUSION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.107 — uniform arithmetic-wall maximum classification

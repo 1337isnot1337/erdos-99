@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_shallow_tooth_internal_penetration_hostile_audit_2026-09-14.md) · source SHA-256 `e002a981b344b74fb01082d0eb702d316d0de684a23c1a593284e14e80c91b38`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cec2c4b65c94f631d76e4b12d3f74577fc09f7e7", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_shallow_tooth_internal_penetration_hostile_audit_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ac3bac9c74a05ef629d6f098e06127b40fe014fb8d3e6f1075bf36ca75ecf1eb"} -->
 

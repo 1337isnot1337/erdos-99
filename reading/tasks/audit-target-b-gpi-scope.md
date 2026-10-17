@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/audit-target-b-gpi-scope.md) · source SHA-256 `96e468963182e2bcc04c2ec15285a71f7e6796bde4a18f6c0ed21efe5d8fb813`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # audit-target-b-gpi-scope
 

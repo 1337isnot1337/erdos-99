@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/65-primitive-loaded-split-audit.md) · source SHA-256 `d200d1bf676626677e901a3285898ad087f392f71d3f4c445334aa82e2ac8d5c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 6 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

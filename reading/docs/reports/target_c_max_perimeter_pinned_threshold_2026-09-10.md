@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_max_perimeter_pinned_threshold_2026-09-10.md) · source SHA-256 `d8188eba6580d1d0cba8f98c63933028a2da438e44b95f0b5cd004c8d5e03aea`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CAB72FC42C4F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_max_perimeter_pinned_threshold_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=135ee64e62c349eda096383be60936b84d524f72; lifecycle=unreviewed; canonical=false -->
@@ -508,21 +508,15 @@ another endpoint compactness argument.
 
 > **PD — perimeter-defect transfer.**  For every fixed `lambda_0<lambda_disk`, prove
 > that a post-ZF survivor satisfying
-> 
-
-```math
+> ```math
 > e_{BB}+2s_C\le\lambda_0D,
 > \qquad
 > \pi D-\operatorname{per}F\ge\epsilon D
-> 
-```
+> ```
 > for some fixed `epsilon>0` either obeys
-> 
-
-```math
+> ```math
 > b+Q>2h
-> 
-```
+> ```
 > or admits an `n`-point unit-separated competitor of diameter `<D`.
 
 Because ZF gives `b+Q=2h-2s_Z<=2h`, either conclusion closes that low-surplus

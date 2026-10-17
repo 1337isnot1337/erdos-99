@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zero_transfer_additive_cii_exclusion_2026-09-11.md) · source SHA-256 `403b52e48190a219ad448060ff1cc10439ab146c248c7fd0843afa61e6db4c95`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1A139A2F811F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 - additive exclusion of the zero-transfer C-II branch

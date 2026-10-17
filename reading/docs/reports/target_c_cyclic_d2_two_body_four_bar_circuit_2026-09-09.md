@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_two_body_four_bar_circuit_2026-09-09.md) · source SHA-256 `c4213567530a9bb20a50936ebf584400cd5bd6298e5349eaeb5c4ddffa54d416`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

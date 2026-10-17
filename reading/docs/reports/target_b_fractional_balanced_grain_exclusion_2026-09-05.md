@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_fractional_balanced_grain_exclusion_2026-09-05.md) · source SHA-256 `f8bbcd81a2c3cf3511e816b4ecda0a1e5f59165d57d159b18c3ad024a06bf40b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f90cb0eed4d237320daed6d5719867a1309a51b1", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_b_fractional_balanced_grain_exclusion_2026-09-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "edc65430bd4a1fbcc11b325cd4cafb9170ec7206708754d2c199e080c4bce2be"} -->
 

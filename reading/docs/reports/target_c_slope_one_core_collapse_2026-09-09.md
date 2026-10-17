@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_slope_one_core_collapse_2026-09-09.md) · source SHA-256 `32485f1110cfba9b9273cb5dc46ed873e0a980f8e8559d837e9922de37876eff`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

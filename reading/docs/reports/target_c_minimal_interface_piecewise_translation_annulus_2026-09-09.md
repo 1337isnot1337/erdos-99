@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_minimal_interface_piecewise_translation_annulus_2026-09-09.md) · source SHA-256 `11d7ced2751e826128cd3f7d4fe04ffd8f514ac011263f216e4a342005e20d19`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

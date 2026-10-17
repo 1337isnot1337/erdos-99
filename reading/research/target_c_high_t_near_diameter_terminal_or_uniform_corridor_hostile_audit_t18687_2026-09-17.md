@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_near_diameter_terminal_or_uniform_corridor_hostile_audit_t18687_2026-09-17.md) · source SHA-256 `25c1db422dcceb4c9fc75efbb8c1c31f69a915a1b77c47b227da9e6612ae4d89`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

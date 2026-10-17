@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_c97_terminal_twist_audit_2026-09-04.md) · source SHA-256 `b35513fffb024ebd162ecfe9707345f9b881afccf516d6c4a948045e06f584ef`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-96DF6FF573EF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Audit — Target C C97 terminal-twist / prefix contradiction

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_groemer_split_optimization_2026-09-09.md) · source SHA-256 `669e8111d10ac737d19c615a5eff3a7c59d67efe77b77d278ad0e14a1091e18f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 16 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

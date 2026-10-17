@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_aggregate_inactive_safe_lattice_repacking_hostile_audit.md) · source SHA-256 `e5fc5c90025165c81805193e41e9dd41d814b1b40127fc7e3ae5763185f7f11f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "dec1f8d64782f42f77c85c93e9579fe0f126bac2", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_aggregate_inactive_safe_lattice_repacking_hostile_audit.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b2d8cb91340e28d58348b4541ec4c68af91850a10fee92f4dbafc54290eea18a"} -->
 

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_eppstein_exact_component_addendum_2026-09-10.md) · source SHA-256 `d5f1bec0e9a9e6071e47c667e3bc2a93c0d0e9a6a5b59ec3b364c12e425abd7b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-485E00180639","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact Eppstein component-population addendum
@@ -233,7 +235,7 @@ Therefore
 ```math
 \frac AD
 =
-\mu_D-rac{s_B}{D}+O(D^{-1}).
+\mu_D-\frac{s_B}{D}+O(D^{-1}).
 \tag{3.1}
 ```
 
@@ -332,8 +334,7 @@ The low-`mu` force-bulk normal form is now
 \frac vn
 \le
 \frac4{\pi^2}
-\left(\mu-\frac{s_B}{D}
-ight)^2+o(1).
+\left(\mu-\frac{s_B}{D}\right)^2+o(1).
 }
 ```
 

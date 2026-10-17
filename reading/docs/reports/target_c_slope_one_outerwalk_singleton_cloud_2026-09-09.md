@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_slope_one_outerwalk_singleton_cloud_2026-09-09.md) · source SHA-256 `ab454d30946ba28500f7f8da5d5a6921892fe8d27146b46dd8826f99e3d6d6eb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-595E906DDC2E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — SOC: slope-one outer-walk floor and forced singleton harmonic cloud
@@ -116,7 +118,7 @@ At slope one,
 \boxed{
 \frac{c_I}{D}
 =
-\frac qD-1+rac{s_C}{D}+o(1).
+\frac qD-1+\frac{s_C}{D}+o(1).
 }
 \tag{SOC.11}
 ```

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_nearcircle_boundary_budget_2026-09-09.md) · source SHA-256 `a75e9d7f2f90e6421b8a0df27493b783670db460fd11b5e76014fb46ae255aae`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A7EB34AEE617","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact loaded-boundary / harmonic-diameter budget
@@ -49,7 +49,6 @@ S+R_I+s_B+2E_{BB}+3c_I+s_C
 =q+2x_B.
 }
 \tag{NBd.2}
-
 ```
 
 Thus in the PR #119 small-outer-walk endpoint,
@@ -71,7 +70,6 @@ S+R_I+s_B+2E_{BB}+3c_I+s_C
 \to\pi.
 }
 \tag{NBd.3}
-
 ```
 
 TD therefore has an immediate full-core consequence. If `zeta=0`, then
@@ -88,7 +86,6 @@ R_I+s_B+2E_{BB}+3c_I+s_C
 \le(\pi-2+o(1))D.
 }
 \tag{NBd.4}
-
 ```
 
 This does not close the branch, but it shows that the two diameter-scale harmonic carriers already consume more than `63%` of the complete loaded-boundary incidence budget.
@@ -214,7 +211,6 @@ E_{BB}+c_I+s_C
 =k+x_B-2.
 }
 \tag{4.1}
-
 ```
 
 Thus, up to the finite constant two, the mixed/diameter defect `k` is exactly the sum of

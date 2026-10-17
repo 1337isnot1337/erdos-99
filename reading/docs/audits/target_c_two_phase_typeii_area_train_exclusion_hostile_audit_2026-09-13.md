@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_two_phase_typeii_area_train_exclusion_hostile_audit_2026-09-13.md) · source SHA-256 `9128fb08bb95303a952a433507bef72a67e659cc977a313e76d2ffd6d2f12803`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-86009E390EBD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — retraction of full-core Type-II area/train tradeoff

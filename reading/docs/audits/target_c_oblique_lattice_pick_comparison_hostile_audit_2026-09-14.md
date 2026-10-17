@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_oblique_lattice_pick_comparison_hostile_audit_2026-09-14.md) · source SHA-256 `64c0ca3234d503af4ad032f9cefb92c41a65f939a10c319e64fb3c4fe32f347b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-44DA50C80A79","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — exact Pick comparison for one oblique affine source
@@ -53,11 +53,12 @@ is also valid, where $`b_\Lambda(K)`$ counts boundary lattice points once.
    are lattice points, so $`K`$ is a lattice polygon. Under the affine map
    sending $`u,v`$ to the coordinate basis, lattice area is Euclidean area
    divided by $`s`$. Pick's theorem therefore gives
+   
    ```math
    |K\cap\Lambda_\theta|
    =\frac{\operatorname{area}(K)}s+\frac{b_\Lambda(K)}2+1.
-   
    ```
+
    Since $`A\subset K\cap\Lambda_\theta`$, this is an upper bound for $`n`$.
 
 3. **Boundary bound.** Subdivide each edge of $`K`$ at successive lattice
@@ -67,19 +68,21 @@ is also valid, where $`b_\Lambda(K)`$ counts boundary lattice points once.
    perimeter-diameter inequality gives
    $`\operatorname{per}(K)\le\pi D`$, while the isodiametric inequality gives
    $`\operatorname{area}(K)\le\pi D^2/4`$. Hence
+   
    ```math
    n\le\frac{\pi D^2}{4s}+\frac{\pi D}{2}+1.
-   
    ```
+
 
 4. **Strict same-cardinality competitor.** For a unit triangular lattice and
    a translation $`t`$, let $`M(t)`$ count sites in the open disk of radius
    $`D/2`$. Translation averaging over one fundamental cell of area $`a_0`$
    gives
+   
    ```math
    \frac1{a_0}\int M(t)\,dt=\frac{\pi D^2}{4a_0}.
-   
    ```
+
    The strict hypothesis makes this average larger than $`n`$, so some
    translate has at least $`n+1`$ sites in the open disk. Select exactly $`n`$.
    The selected source is unit-separated and every pair has distance strictly
@@ -89,11 +92,12 @@ is also valid, where $`b_\Lambda(K)`$ counts boundary lattice points once.
 
 5. **Uniform condition.** The displayed uniform condition is exactly the
    rearrangement
+   
    ```math
    \frac{\pi D^2}{4s}+\frac{\pi D}{2}+1
    <\frac{\pi D^2}{4a_0}.
-   
    ```
+
    The source-specific condition is the same argument before applying the
    area and perimeter upper bounds.
 

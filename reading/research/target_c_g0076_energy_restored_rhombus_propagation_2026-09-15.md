@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_g0076_energy_restored_rhombus_propagation_2026-09-15.md) · source SHA-256 `dc62537ddb5f4cf2509a0b147a7df9ae65bdeafae937b1480c5667f7cda8c0fe`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 27 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_aggregate_detour_endpoint_floor_2026-09-13.md) · source SHA-256 `c6d019241199eafde648a98018fd7b6e493b35140226adbcc74a5866ae8f7384`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "fb6514aa242ca95f2d011b8640b24286ffdb9fbb", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_aggregate_detour_endpoint_floor_2026-09-13.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3080b802e836f1777c3640f20e0d59233f0f9a67992296248c2ced36768c0c44"} -->
 

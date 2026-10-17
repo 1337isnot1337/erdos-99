@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_collapsed_order_chamber_planar_obstruction_hostile_audit_2026-09-18.md) · source SHA-256 `10831b0469bb3ed7f9bce01f52057e541b6c6ce5668f2f14c75a4f30058d16b0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "bd8b961e380b635dea74c8fa9c8a6173b32543bb", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_collapsed_order_chamber_planar_obstruction_hostile_audit_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b391eb88ebe57678dcd3c6a890fc1bd535c7c3e9deeb13da43b0036b5c291930"} -->
 

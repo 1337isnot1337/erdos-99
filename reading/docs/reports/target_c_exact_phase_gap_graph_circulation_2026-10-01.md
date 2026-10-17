@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_phase_gap_graph_circulation_2026-10-01.md) · source SHA-256 `fa1c1ff87341ed06619f97a8941d9ebcbe5b1f4578488a9ae1128be5e257a681`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B7659CDF9C23","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- exact-phase gap graph KKT circulation

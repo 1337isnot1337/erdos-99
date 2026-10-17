@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_adjacent_cut_pareto_920_2026-09-15.md) · source SHA-256 `d50d08eba88312977632f1dcf64084afd2ea6be2f4a4e55cbbd9a5ee25563c44`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a824eda6e3c3b1beefbe9b7a7a57de843d5cd41f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_adjacent_cut_pareto_920_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "200b0be10ee49a0c2bb21b8ce32c230a73a385c86e2270e8affe81ecaa1aaa67"} -->
 

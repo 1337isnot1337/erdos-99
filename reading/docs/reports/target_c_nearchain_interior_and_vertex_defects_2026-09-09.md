@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearchain_interior_and_vertex_defects_2026-09-09.md) · source SHA-256 `48fda9ae747025b1bb96489d826d1d46739db121ad9d2c9d1fa7d030d037cf73`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1005F2079C1B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_nearchain_interior_and_vertex_defects_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=698daa3829458359e6a5f49d9d89b1b959a63e65; lifecycle=unreviewed; canonical=false -->

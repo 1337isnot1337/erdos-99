@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_free_terminal_quantitative_incidence_surplus_gap_2026-09-18.md) · source SHA-256 `ea0920ef762fd7e9eb104f631dde98f5c0d12ebff908b18ecba4ba4955d41d54`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c6ffdd4eacefd4291b4f3f695689caee25e14bb8", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_free_terminal_quantitative_incidence_surplus_gap_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "dcfe13bdcd24e8531454c70dd111614acd46f7094b6ac59ecef28bb0329456bf"} -->
 

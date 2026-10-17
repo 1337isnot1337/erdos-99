@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_near_diameter_path_unloaded_core_2026-09-09.md) · source SHA-256 `cc03dc8b609ffab59227ada06562658eb9c7c4993b6eede2203da7dc821be609`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-82D214D1CBC9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — diameter-lens exclusion and an unloaded near-chain core
@@ -190,10 +190,11 @@ Apply (L1). Since tan θ<κ_*, the resulting deficit is strictly positive. □
 3. Under the later C100 uniform-cone theorem, put b=β_za and ρ=(1−b)/b.
    If
 
+   
    ```math
    b>\frac1{1+\sin(\pi/12)},
-   
    ```
+
 
    then θ=arcsin ρ<π/12. A shortest separator path has no internal diameter
    endpoint. Thus **every** internal vertex is unloaded eventually in the C98–C102

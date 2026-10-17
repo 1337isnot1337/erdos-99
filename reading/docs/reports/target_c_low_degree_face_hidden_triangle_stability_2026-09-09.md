@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_low_degree_face_hidden_triangle_stability_2026-09-09.md) · source SHA-256 `598d18b146fd4204bd5f7a9abbb688062ff8dd1739358302667a10cafc1327bf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6411DA11FA83","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_low_degree_face_hidden_triangle_stability_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=e01c372ff95d19fba9ffb8de7a03b489bcbb835e; lifecycle=unreviewed; canonical=false -->

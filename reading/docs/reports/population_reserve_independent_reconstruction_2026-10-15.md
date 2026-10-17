@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/population_reserve_independent_reconstruction_2026-10-15.md) · source SHA-256 `280ad14b9ab8e265903cdbb55970934b6cde112e9fda511c9d361fa261b322eb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A79C6F204DD7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Population reserve: independent audit and an effective twelve-arc strengthening

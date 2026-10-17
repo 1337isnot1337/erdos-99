@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_uniform_harmonic_cells_global_diameter_access_2026-10-08.md) · source SHA-256 `cc59000e5334e54036401db71f4546245faad1b1e6350eba493d02ca15f0025e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-742748719B3B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 
@@ -31,12 +31,13 @@ The candidate conclusions are:
 1. Every angle of `P_I` is strictly greater than `pi/6`.
 2. There are fixed `c,alpha>0` such that, eventually and uniformly over
    every nonempty unloaded component,
+   
    ```math
    \operatorname{diam}(P_I)\ge cD,\qquad |A_I|\ge cD/3,\qquad
    \operatorname{area}(P_I)\ge\alpha D^2.
    \tag{UC1}
-   
    ```
+
    This holds in both C-II branches, without a Type-II premise.
 3. The number of unloaded components is bounded independently of `D`.
    The statement allows no unloaded component; it does not force a
@@ -81,12 +82,13 @@ the inactive-container branch remain open.
 - [Section 58](../targets/target-c/58-full-source-geometry-audit.md),
   `C-FS-GEOM`: one full-source circumcenter `o`, with
   `eta_D=3^(1/4)sqrt(D)` and `r_D=sqrt(D eta_D+eta_D^2)`, such that
+  
   ```math
   D/2-\eta_D<|b-o|<D/2+\eta_D,\qquad
   |(b+k)/2-o|<r_D
   \tag{UC2}
-  
   ```
+
   for every actual diameter endpoint and pair. In particular both
   `eta_D/D` and `r_D/D` tend to zero. This does not say `F` tends to
   the disk in the inactive-container branch.

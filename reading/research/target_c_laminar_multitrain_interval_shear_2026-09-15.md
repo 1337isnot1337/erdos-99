@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_laminar_multitrain_interval_shear_2026-09-15.md) · source SHA-256 `1073910412aefef2cab11e87ca03a9f13d8f89b92b229044f62f2a44ea4cf316`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C-II — exact laminar multi-train shear and interval diameter rows
 

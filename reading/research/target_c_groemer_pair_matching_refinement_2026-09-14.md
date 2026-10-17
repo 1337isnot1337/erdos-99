@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_groemer_pair_matching_refinement_2026-09-14.md) · source SHA-256 `d6d3549af436e82eccc02e6d624585b79518ee6b4cdd4dfa29e0ba2637987cfb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "0b1c4a187e57620b42b5c4f58f839e973aed8cbe", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_groemer_pair_matching_refinement_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "8ed71ffbc6c6f1a0a32fd013f4b12b0a478d5187a7c68f8c0d00c89bc7ccbd21"} -->
 

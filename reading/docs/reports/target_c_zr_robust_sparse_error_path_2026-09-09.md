@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_robust_sparse_error_path_2026-09-09.md) · source SHA-256 `55b3212a32b59d12d7148b07c9b0df041aadf34c3763a5ce85ebe85125ad10bd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 14 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

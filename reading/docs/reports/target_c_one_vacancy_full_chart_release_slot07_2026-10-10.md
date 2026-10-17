@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_one_vacancy_full_chart_release_slot07_2026-10-10.md) · source SHA-256 `61ab182a0460cfe47d0b52e6a65bfbc65c2fdd59890e354024307ebab510793c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A1E11F79CF6E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II: one actual vacancy releases a complete oblique chart

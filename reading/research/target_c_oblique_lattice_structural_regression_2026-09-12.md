@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_oblique_lattice_structural_regression_2026-09-12.md) · source SHA-256 `de5f976bb54aa030bb317ba3f3d5bf9da2c20ef8eb0ad3bfbc2c2819204bf7f3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4ecdcc5332abd0cf8e5ce61e99635d97f5a94390", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_oblique_lattice_structural_regression_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "1bca698ce485d948f1bc58f9db34aa1f74919f1a371a8f626f95f803b94803d3"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/62-attachment-incidence-currency-audit.md) · source SHA-256 `cc69a3b95317f24adcd64c5c514dc8016a7c7df53092a4dd594a652817be3b63`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — attachment-incidence currency audit
 

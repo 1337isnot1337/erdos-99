@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_subset_reflection_gap_obstruction_2026-10-02.md) · source SHA-256 `94ed16fb97c62854fb10fe30b8b16c0c197c05407d147bc8b5a0c02c97583539`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7383567A6F48","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- finite subset reflections and the signed gap obstruction

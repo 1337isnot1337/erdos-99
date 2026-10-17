@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_saturation_grid_lock_t18687_2026-09-17.md) · source SHA-256 `54b8c1f121e88a53f1411b76887aed215cbb64e1c368c347142ba176a039e6b7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 13 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -241,31 +241,34 @@ The births are distinct and lie strictly before the hub while all partners lie h
 we obtain the following endpoint-disjoint, hence pairwise-crossing, diameter subfamilies:
 
 - from `E_0`:
+  
   ```math
   \boxed{
   >\left({7/2500000\over4\,3^{1/8}}-o(1)\right)D^{1/4}
   }
   \tag{SG.19}
-  
   ```
+
   with coefficient `6.10179880010e-7`;
 - from the nested one-birth-host lane `E_1`:
+  
   ```math
   \boxed{
   >\left({7/5000000\over4\,3^{1/8}}-o(1)\right)D^{1/4}
   }
   \tag{SG.20}
-  
   ```
+
   with coefficient `3.05089940005e-7`;
 - after fixing one physical destination:
+  
   ```math
   \boxed{
   >\left({7/10000000\over4\,3^{1/8}}-o(1)\right)D^{1/4}
   }
   \tag{SG.21}
-  
   ```
+
   with coefficient `1.52544970003e-7`.
 
 Every retained bar still spans every row in `A_1`; thinning diameter endpoints does not change the train grid.

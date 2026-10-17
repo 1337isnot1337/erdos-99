@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_two_boundary_hole_triangular_refill_independent_audit_2026-10-09.md) · source SHA-256 `e45bdb4c3ab1c545c9d292a27083fb265d82a6f58a6b15b04219a0bf7c0ca6b8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-73BAC479B764","canonical":true,"claim_ids":["C-TRIANGULAR-TWO-BOUNDARY-HOLE-POPULATION","C-TRIANGULAR-TWO-BOUNDARY-HOLE-STRICT-REFILL"],"claim_statuses":{"C-TRIANGULAR-TWO-BOUNDARY-HOLE-POPULATION":"canonical","C-TRIANGULAR-TWO-BOUNDARY-HOLE-STRICT-REFILL":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: triangular two-boundary-hole refill

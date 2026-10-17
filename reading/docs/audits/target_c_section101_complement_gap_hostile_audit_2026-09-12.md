@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section101_complement_gap_hostile_audit_2026-09-12.md) · source SHA-256 `f6b2e7951db46e0c28c23096e80c972ea9e23b5c8d43c23077230ee4be4dc2ca`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3AD031E7EF66","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C Section 101 complement-gap hostile audit

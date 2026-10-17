@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rhombic_quarter_fold_dual_defect_slot02_2026-10-10.md) · source SHA-256 `12d3a2460d900a016be9944cbd6a3a3b842e6d33e6b09e0ae9c06c7602ebf9b8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-92FC5BCFE3F0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II: a four-unit dual defect budget for rhombic quarter-folds

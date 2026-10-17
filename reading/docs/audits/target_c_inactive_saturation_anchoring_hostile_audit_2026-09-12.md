@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_inactive_saturation_anchoring_hostile_audit_2026-09-12.md) · source SHA-256 `21a52b6873d22af325860e90564aed525f96123284c81696319ea458c673a0f2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EAD0B7182B59","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — inactive-chamber saturation and weak-component anchoring

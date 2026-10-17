@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_p1_rectangle_twin_completion_2026-09-09.md) · source SHA-256 `6bdd00bab62914a9dc0eccc09d35d1189934d96fbdbb57ae53f4a536c47d5bde`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9088814006A1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 — P1 is a unit-width rectangle tie with a twin-completion KKT core
@@ -44,51 +44,58 @@ Then:
 
 1. `a,b,c,d` form a rectangle;
 2. its diagonals are actual diameter pairs
+   
    ```math
    |a-c|=|b-d|=D;
    \tag{PR.2}
-   
    ```
+
 3. its other two sides are equal short antipodal pairs
+   
    ```math
    a-d=b-c,
    \qquad
    |a-d|=|b-c|=\sqrt{D^2-1};
    \tag{PR.3}
-   
    ```
+
 4. the projective diameter directions have exactly one gap
+   
    ```math
    \Delta_2=2\arcsin(1/D)
-   
    ```
+
    and all remaining `q-2` gaps equal
+   
    ```math
    \delta=2\arcsin(1/(2D));
-   
    ```
+
 5. both graphs
+   
    ```math
    T_{ad}:=H+ad,
    \qquad
    T_{bc}:=H+bc
    \tag{PR.4}
-   
    ```
+
    are maximal `q`-edge convex thrackles and hence each consists of one odd cycle plus direct leaves;
 6. if `C_ad,C_bc` are their unique odd cycles and
+   
    ```math
    J:=(C_{ad}\cap H)\cap(C_{bc}\cap H),
    \tag{PR.5}
-   
    ```
+
    then `J` is a path in the diameter tree and every KKT boundary coordinate lies on `J`;
 7. because the `d_H=1` KKT interval has two distinct coordinate facets,
+   
    ```math
    \boxed{|E(J)|\ge2.}
    \tag{PR.6}
-   
    ```
+
 
 Equivalently, every diameter edge outside the common twin-cycle path `J` is a full-`H` leaf edge and is beta-positive throughout the complete KKT segment.
 

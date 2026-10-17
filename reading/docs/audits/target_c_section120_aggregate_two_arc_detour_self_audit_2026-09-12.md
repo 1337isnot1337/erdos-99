@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section120_aggregate_two_arc_detour_self_audit_2026-09-12.md) · source SHA-256 `045ea6ac129cfe766766e4e284f5590ed79200f2df28d0fe4aaf1e5e1c4f0a8c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7EC4EB258F25","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — hostile self-audit of Section 120 aggregate two-arc detour

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_quarter_fold_eight_face_area_sharpness_independent_audit_2026-10-09.md) · source SHA-256 `d21850fdc095d91f2c4d1f0f1f24ed35c7be1b6fc4e5c0fc92fff6bf106c7807`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-590D6BB71569","canonical":true,"claim_ids":["C-QUARTER-FOLD-EIGHT-FACE-AREA-INFIMUM-SHARP"],"claim_statuses":{"C-QUARTER-FOLD-EIGHT-FACE-AREA-INFIMUM-SHARP":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: the eight-face area infimum is sharp

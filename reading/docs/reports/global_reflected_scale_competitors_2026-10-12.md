@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_reflected_scale_competitors_2026-10-12.md) · source SHA-256 `63f9abd9de3a50d6d52a5ca37354ef6e461425250fea379bd928fe6a6e7dff35`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F3C61ADE5F89","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Whole-source competitors by reflected coordinates and two scales

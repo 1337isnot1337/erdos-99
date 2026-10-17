@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_p1_power_two_eisenstein_exclusion_2026-09-10.md) · source SHA-256 `3de472d2403a37530e27f45201e9cac4097ca2c187339e94de6c6a07ef9f3eb1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B7CB396F1460","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 — P1 is impossible when `q-2` is a power of two
@@ -111,7 +111,6 @@ Equation (1.3) is exactly
 G_n(u):=C_n(2-u^2)-2u=0.
 }
 \tag{PE.3}
-
 ```
 
 The degree of `G_n` is `2n=m` and its leading coefficient is `(-1)^n`.
@@ -359,10 +358,11 @@ Possible next routes:
 
 1. classify irreducibility of `G_n` beyond powers of two;
 2. factor `n=2^r s` and use the Chebyshev composition
+   
    ```math
    C_n=C_s\circ C_{2^r}
-   
    ```
+
    together with the linear `-2u` perturbation;
 3. use modulo-three or modulo-five Newton polygons after a suitable translation;
 4. combine CF's exclusion of all cyclotomic factors with the fixed physical root interval to control noncyclotomic factors.

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_inactive_near_unit_matching_promotion_2026-09-12.md) · source SHA-256 `2f31c7d450b22ab97b0e23f7a42e86e11136f618448f8e6f78e9f8adf96be08f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-24A2E3036987","canonical":true,"claim_ids":["C-INACTIVE-NEAR-MATCHING"],"claim_statuses":{"C-INACTIVE-NEAR-MATCHING":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C near-unit isolate matching promotion audit

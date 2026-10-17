@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_global_straight_signed_penetration_injectivity_2026-09-15.md) · source SHA-256 `5de32ad24ee628bf0c945ef633d3a825804d1f0fc19d3dd23192a6db21eafc3f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 19 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/03-pinned-block-and-loaded-boundary-frontier.md) · source SHA-256 `1ce0a1fc17469e247e830e3289ce14b44289f81d7dbb55ae3594dddd93e485ba`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — pinned-block and loaded-boundary frontier
 

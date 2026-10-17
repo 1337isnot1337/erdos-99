@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_p2_even_m_schinzel_closure_2026-09-10.md) · source SHA-256 `5238c3fa85b5cd388f780aa111dd756cd4052f9c8c0e6171f08d8d8963cd3b78`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

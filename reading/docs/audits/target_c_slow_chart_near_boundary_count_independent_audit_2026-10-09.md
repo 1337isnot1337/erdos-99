@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_slow_chart_near_boundary_count_independent_audit_2026-10-09.md) · source SHA-256 `1fb54ff015d16d89fa8177e261487d9fba2fa872aa96508a24ce5006253554cc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-18D00681AB6C","canonical":true,"claim_ids":["C-SLOW-CHART-NEAR-BOUNDARY-COUNT"],"claim_statuses":{"C-SLOW-CHART-NEAR-BOUNDARY-COUNT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: slow charts near a curved boundary

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_reinhardt_rattler_depth_2026-09-09.md) · source SHA-256 `bbc10be73e70cdbf034869953cdd9c841959822a98a22d2676846d44247681cd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5CE9BA81D26D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact Reinhardt shell forces a uniform rattler boundary depth
@@ -417,12 +417,13 @@ The exact `d_H=0` cyclic endpoint now has three nested scales:
 1. full source diameter `D`;
 2. unit-spaced Reinhardt force shell on `partial R` with `q=Theta(D)` points;
 3. all `Theta(D^2)` C65 rattlers inside
+   
    ```math
    R_{-r_D},
    \qquad
    r_D=\sqrt3/2+o(1),
-   
    ```
+
    whose diameter is at most `D-sqrt3+o(1)`.
 
 The highest-value next target is a **sampled-boundary Oler improvement**: prove that a unit-separated set consisting of every unit-spaced Reinhardt boundary sample plus an interior set in `R_{-r_D}` has a linear correction strictly smaller than generic Oler allows.

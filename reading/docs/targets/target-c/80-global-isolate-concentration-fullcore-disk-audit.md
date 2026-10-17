@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md) · source SHA-256 `409ca3892cce1e5e3b8fa1be9e19dfc173edf9568e0d0cf2b2875703a41bb095`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — global isolate concentration or asymptotic full-core disk audit
 

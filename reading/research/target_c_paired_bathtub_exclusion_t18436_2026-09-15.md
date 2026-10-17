@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_paired_bathtub_exclusion_t18436_2026-09-15.md) · source SHA-256 `ce4bee716f710761d689713a1775db0ddc17e6fcb273237d0139a89d372a91c2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

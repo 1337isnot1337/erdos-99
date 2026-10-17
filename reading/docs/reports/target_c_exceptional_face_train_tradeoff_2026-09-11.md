@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exceptional_face_train_tradeoff_2026-09-11.md) · source SHA-256 `d94e0b1de558e029712c1c6953122d6b6b3ae0e7a83ca1a591ea0d2606ce3f15`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3369D12EA14A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exceptional-face area cannot share the train bonus

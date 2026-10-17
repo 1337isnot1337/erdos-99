@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_b_section120_boundary_backtracking.md) · source SHA-256 `1a4f2b87186a61cc6bc22e49c593a3e03914ec9bafc059160a83526150a051ad`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target B — Section 120: exact boundary backtracking for backward trains
 

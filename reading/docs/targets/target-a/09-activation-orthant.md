@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/09-activation-orthant.md) · source SHA-256 `5f60284a8f4d13bda37ce928dd4ce377a3137fb0d1846429effbb7ce1020983c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — exact activation-deactivation orthant
 
@@ -60,13 +60,10 @@ unit contact and a diameter pair.
 > forest. Every component of $`F`$ contains at most one vertex incident to an
 > initial active pair in $`E_0`$. Moreover, the terminal active-pair set is the
 > disjoint union
-> 
-
-```math
+> ```math
 > \boxed{C_\ell\cup H_\ell=E_0\,\dot\cup\,F.}
 > \tag{156.4}
-> 
-```
+> ```
 
 ### Proof
 
@@ -115,19 +112,14 @@ d_e=p_v-p_u,
 
 > **Theorem 156.2 (exact activation-deactivation orthant).** There is
 > $`\varepsilon>0`$ and an affine embedding
-> 
-
-```math
+> ```math
 > \Psi:[0,\varepsilon)^{F}\longrightarrow (\mathbb R^2)^N
 > \tag{156.7}
-> 
-```
+> ```
 > with $`\Psi(0)=A_\ell`$ such that every $`\Psi(\theta)`$ is a triangle-free
 > global minimizer of diameter $`D`$, every initial active pair remains active,
 > and, for each $`e\in F`$,
-> 
-
-```math
+> ```math
 > \boxed{
 > |e|_{\Psi(\theta)}=
 > \begin{cases}
@@ -135,8 +127,7 @@ d_e=p_v-p_u,
 > D(1-\theta_e),&e\text{ is a created diameter pair}.
 > \end{cases}}
 > \tag{156.8}
-> 
-```
+> ```
 > Consequently, any prescribed subset of the created active pairs can be made
 > strict while all remaining created pairs and all initial active pairs stay
 > exact.

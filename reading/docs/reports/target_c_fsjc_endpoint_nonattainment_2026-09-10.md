@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fsjc_endpoint_nonattainment_2026-09-10.md) · source SHA-256 `450f4baacd097159861ce3a738db573d94bad32cfb67a7ca1383080e40188e53`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-22427B1459F7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fsjc_endpoint_nonattainment_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=11c38e20bdf064ec4bd9abd74d1c74ec9bde1f68; lifecycle=unreviewed; canonical=false -->

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md) · source SHA-256 `4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EFDC9677E3A7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — train returns, shared grids, and rigidity-forced linkage (Worker Slot 03)

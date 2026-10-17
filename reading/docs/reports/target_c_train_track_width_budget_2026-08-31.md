@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_train_track_width_budget_2026-08-31.md) · source SHA-256 `5034ef8310b07e90c283eeb86aaa7e3011a3d3e868461e61ca2ae424cef0c3f9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8E979A7CE17B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C78: train-track width budget
@@ -362,7 +362,6 @@ Since every track has two boundary ends, C77 then gives
 \pi D-O(1).
 }
 \tag{C78.20}
-
 ```
 
 A near-capacity rhombic core therefore requires essentially `pi D` rhombic-boundary

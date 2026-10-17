@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_clean_endpoint_fullcore_boost_2026-09-09.md) · source SHA-256 `db4881daf502910ff536185ff3da44b16b880b85c06a28670023d8b5c1232ea1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CBEF0CB23C69","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — one-ended train exposure boosts the near-circle full-core branch

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rooted_direction_reentry_defect_2026-09-30.md) · source SHA-256 `51badf84868ee120f08e8f59ccb1f1ac2b9e4a15142182ed4856110cd1abb07d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-ABBEA1198F39","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — rooted diameter-direction re-entry defect

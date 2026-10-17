@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_nested_hexagon_packet_stress_independent_audit_2026-10-06.md) · source SHA-256 `144a67c17a894105913e2915240e55f2b4ed8f6409feca0a8b24e8c7dc5c1e6a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-85193030A3F7","canonical":true,"claim_ids":["C-NESTED-HEXAGON-STRESS-ENERGY-DEMAND"],"claim_statuses":{"C-NESTED-HEXAGON-STRESS-ENERGY-DEMAND":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: nested-hexagon stress and energy demand

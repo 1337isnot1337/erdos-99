@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/hull_train_preservation_reconciliation_2026-10-15.md) · source SHA-256 `01c77e5b8b510b4d62db8432db89f30a643f98283eab42507cf7cafe2e663a40`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-663DA438CB5E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Hull-train preservation and source reconciliation

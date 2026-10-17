@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_formal_integrability_gate_c1_closure_2026-08-31.md) · source SHA-256 `69f0991f6e05eab604866adc57f7a9b9f881d70296a2905944500eb70f2452b3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8B7B8E8C32F9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_formal_integrability_gate_c1_closure_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=26dd55ef187748f32700c77aad22aab960d5c561; lifecycle=unreviewed; canonical=false -->

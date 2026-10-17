@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_loaded_near_unit_hull_adjacency_2026-10-01.md) · source SHA-256 `38e58843277dc69ece407802c562af62e8b05b223465d6c697704b9e95521682`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-795FCD0B3DCF","canonical":true,"claim_ids":["C-LOADED-NEAR-UNIT-ADJACENCY"],"claim_statuses":{"C-LOADED-NEAR-UNIT-ADJACENCY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C-II — near-unit loaded pairs are hull sides

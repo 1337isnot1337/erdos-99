@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_low_mu_macroscopic_outer_shell_2026-09-10.md) · source SHA-256 `0a3d43d2cdfbf73f6ffcb9a00a6d816bdc699ce265d2baf2f5b024a435ba32bb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -347,8 +349,9 @@ At `p_0=303/100`, exact rational arithmetic gives
 \boxed{
 \frac{4002910960071}{6397127553500000}>0.
 }
-\tag{3.5}
+
 \end{aligned}
+\tag{3.5}
 ```
 
 The left-minus-right difference in (3.2) is strictly increasing for `p>=p_0`.

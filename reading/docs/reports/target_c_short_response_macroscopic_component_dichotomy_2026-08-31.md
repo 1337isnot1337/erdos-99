@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_short_response_macroscopic_component_dichotomy_2026-08-31.md) · source SHA-256 `53a578402297eccf677757109e6e4bf14ce6cd50791fed73a3e4026abb46f688`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-558224CEC489","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C44: short-response mass or one macroscopic harmonic component

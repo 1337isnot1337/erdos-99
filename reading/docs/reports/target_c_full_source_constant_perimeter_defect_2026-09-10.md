@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_full_source_constant_perimeter_defect_2026-09-10.md) · source SHA-256 `ea29ba864bf0fb226a2051bd57a081c2c799c1390a567b3e88becb2625d120f6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-91B24787F9FC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_full_source_constant_perimeter_defect_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=8e849b26d675c48dfac8a957af9f2476e2cb8348; lifecycle=unreviewed; canonical=false -->
@@ -268,16 +268,13 @@ packing-boundary term exposed by AV.
 
 > **ASR+ — saturated annulus with constant outer defect.**  In the AS low-surplus
 > regime, use
-> 
-
-```math
+> ```math
 > \pi D-P_K<\pi\sqrt3/2,
 > \quad
 > P_K-P_F=\Omega(D),
 > \quad
 > Z_{ext}=\frac2{\sqrt3}A_{ann}+O(D),
-> 
-```
+> ```
 > and `s_ext=1+O(D^{-1})` to obtain either a cardinality-preserving strict sub-`D`
 > rearrangement or an exact post-ZF boundary surplus.
 >

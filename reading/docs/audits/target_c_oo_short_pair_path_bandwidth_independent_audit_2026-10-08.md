@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_oo_short_pair_path_bandwidth_independent_audit_2026-10-08.md) · source SHA-256 `7e1d3121a04befb341fba6b0997ececc0a6c34cd0f05adea39d2c0397b1e0e7f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B5A192486F61","canonical":true,"claim_ids":["C-OO-SHORT-PAIR-PATH-BANDWIDTH"],"claim_statuses":{"C-OO-SHORT-PAIR-PATH-BANDWIDTH":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit of the Oler short-pair path-bandwidth theorem

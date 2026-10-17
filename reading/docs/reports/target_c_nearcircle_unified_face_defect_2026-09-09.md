@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearcircle_unified_face_defect_2026-09-09.md) · source SHA-256 `41d43480190ba433464c37fef528ceda73470c06386369f6b4df76456ccf6874`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 3 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-EF2FB8C0150F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_nearcircle_unified_face_defect_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=57b5f728bbeb84e8d2106ca6a034589c94492bf2; lifecycle=unreviewed; canonical=false -->
@@ -98,7 +100,6 @@ this also yields
 =2.1214689020\ldots .
 }
 \tag{UF.4}
-
 ```
 
 Thus the near-circle phase universally carries more than `1.10D` units of actual bounded-face degree defect and more than `2.12D` actual diameter edges, regardless of whether the positive core is asymptotically full or a quadratic rattler population survives.
@@ -262,7 +263,7 @@ Every inequality is therefore asymptotically an equality. In particular
 
 ```math
 \boxed{
-A_R-rac{\sqrt3}{2}R=o(D^2).
+A_R-\frac{\sqrt3}{2}R=o(D^2).
 }
 \tag{3.4}
 ```
@@ -416,7 +417,7 @@ and hence
 \ge
 A(\zeta)
 :=
-\frac\pi5+rac45\sqrt{\Delta-\zeta}.
+\frac\pi5+\frac45\sqrt{\Delta-\zeta}.
 }
 \tag{5.5}
 ```
@@ -534,7 +535,7 @@ Every convergent subsequence with core deficit `zeta` satisfies
 Let `zeta_*` be the unique solution of
 
 ```math
-\frac\pi5+rac45\sqrt{\Delta-\zeta}
+\frac\pi5+\frac45\sqrt{\Delta-\zeta}
 =
 \sqrt{\frac{2\pi\sqrt3}{5}\zeta}.
 \tag{7.2}

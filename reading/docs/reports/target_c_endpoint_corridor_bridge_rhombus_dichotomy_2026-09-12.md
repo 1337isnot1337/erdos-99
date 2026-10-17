@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_endpoint_corridor_bridge_rhombus_dichotomy_2026-09-12.md) · source SHA-256 `68144b4fa5e85ae1cff7838918d2473ef0d8386c22935a17c88d97e6f542fd20`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

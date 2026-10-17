@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_cyclic_d2_path_inference_audit_2026-09-10.md) · source SHA-256 `463ca91759918b974213e99ee8eae199179abf1ae567ec56a3c3dbc4b5ba3b26`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-86D77F35E038","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C audit — cyclic `d_H=2` path inference is not proved

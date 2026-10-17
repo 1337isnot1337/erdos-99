@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_two_max_phase_stability_exclusion_2026-09-05.md) · source SHA-256 `d937d2ce226a4779eadbab4c9c9429a0afabcb2130206460b339d059474a1bbd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c6b3e504cfdc211d1af85c8bc46124e95d6197a6", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_b_two_max_phase_stability_exclusion_2026-09-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ffc992d0bda71d5f1ae457384f8a396e1ddfe0c6f03812ae53909584181bcca9"} -->
 

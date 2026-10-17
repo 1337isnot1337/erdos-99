@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/63-loaded-hull-slack-audit.md) · source SHA-256 `1cd190adfdc04aa454ac42c25e6ba85214342617e55f1e57dc793fd420342480`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — loaded-hull slack audit
 

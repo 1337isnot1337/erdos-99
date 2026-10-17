@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_tamvakis_four_endpoint_barrier_2026-09-09.md) · source SHA-256 `24a54610ec6ba81ee6aa0416769f7dd8a33e4c728ffccc7760d9a705bc6ab02a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 8 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

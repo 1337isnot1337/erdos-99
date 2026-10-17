@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fs_matching_gap_exact_audit_2026-09-10.md) · source SHA-256 `8a53d0b7876b355373d7142503e978ff445f1d61c2087a42f81a9b7c8977d00e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5054E84B66A7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fs_matching_gap_exact_audit_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=ba30aed0eb6e3431e934e4084782791bd496c053; lifecycle=unreviewed; canonical=false -->

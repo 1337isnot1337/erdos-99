@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_reaction_free_block_capacity_2026-08-31.md) · source SHA-256 `22940ea6f0ee9638b508b89adf768a5fe935620925df5b7896571ef283261c7c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1E8321744CFB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C addendum: reaction-free blocks are pinned-rigid and pay bridge degree for internal diameter

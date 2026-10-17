@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_a_tube_only_cut_2026-09-08.md) · source SHA-256 `cea30509aebecd56b3cdf49eec38cd62ec033eee7e77e4a2b931040e66660eb2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E84BC68D64B9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
 # Target A — tube-only cut capacity

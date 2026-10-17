@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_near30_penetration_matching_hostile_audit_2026-09-15.md) · source SHA-256 `b9420675d35c8d292a8874bfed05946635517de54ef7da94fdb32d2a3f7eb402`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "97732d34e6e48e6e81a555f9247ce9bcae9854eb", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_near30_penetration_matching_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "468f33b24c8c56d3a524e01a3b4d6e6b48f02399b421bf13c01451847dcbb245"} -->
 

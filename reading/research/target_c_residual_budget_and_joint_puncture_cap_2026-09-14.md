@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_residual_budget_and_joint_puncture_cap_2026-09-14.md) · source SHA-256 `1f5ec6a5ab3209a89d0968b331b09e58f3b14aea0cdc0c4c80ebbf0f5ff24de5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "50b8d8e819d768bc26ebb7a68bc12eca5927d487", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_residual_budget_and_joint_puncture_cap_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a8139c878f5c77b23978513a203c72439f049b00cf57c08a020107045e6af3da"} -->
 

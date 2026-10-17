@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_threshold_transverse_fullspan_hostile_audit_2026-10-01.md) · source SHA-256 `1627e787570bb967ce64cedacc706c52ea70a0f563a4d1bffde6da28de6c9f25`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F12EEDA44B96","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- hostile audit of the threshold transverse full-span lift

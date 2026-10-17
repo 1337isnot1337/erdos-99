@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_aligned_swap_horn_and_axial_bracket_2026-10-01.md) · source SHA-256 `410f0816e3d36fa6a7f0cc646a6587002e45124c2b630e4a4e538f4b1c95dad5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5192AD2B069A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: aligned varying-amplitude swaps and axial brackets

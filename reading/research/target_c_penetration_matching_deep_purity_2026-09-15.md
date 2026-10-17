@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_penetration_matching_deep_purity_2026-09-15.md) · source SHA-256 `adecc44d05003ff4f8960172eea7425d62ddf0a851913aa8548cc0343a571a02`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

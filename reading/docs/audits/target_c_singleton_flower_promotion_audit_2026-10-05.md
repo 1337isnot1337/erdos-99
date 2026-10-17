@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_singleton_flower_promotion_audit_2026-10-05.md) · source SHA-256 `442a4f7008e8729f3e3d69b186b44c940a237383bbabb06f5150a4dac5810ef2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CF624260C6F4","canonical":true,"claim_ids":["C-BOUNDED-FACE-ENDPOINT-FAN","C-FULL-FLOWER-K-PAYMENT","C-FULL-FLOWER-PROJECTIVE-BLOCKER","C-GOOD-HULL-SINGLETON-CHARGE"],"claim_statuses":{"C-BOUNDED-FACE-ENDPOINT-FAN":"canonical","C-FULL-FLOWER-K-PAYMENT":"canonical","C-FULL-FLOWER-PROJECTIVE-BLOCKER":"canonical","C-GOOD-HULL-SINGLETON-CHARGE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent promotion audit — Target C bounded-face fans, flower blockers, and good-hull singleton charge

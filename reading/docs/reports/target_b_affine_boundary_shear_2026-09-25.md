@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_affine_boundary_shear_2026-09-25.md) · source SHA-256 `2036ec5cbce92e8b9929a2a808e5218a05e9645ea0df2ea58cfae33a2c8bebae`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 
@@ -71,14 +71,11 @@ $`b_\Lambda(K)=|\Lambda\cap\partial K|`$, counting each boundary point once.
 > $`|p-z_{j,p}|\le\varepsilon_j`$, with $`\sup_j\varepsilon_j<\infty`$.
 > Put $`K_j=\operatorname{conv}\{z_{j,p}:p\in A_j\}`$ and
 > $`a_j=\sin\theta_j`$. Then
-> 
-
-```math
+> ```math
 > b_{\Lambda_{\theta_j}}(K_j)=o(D_j),\qquad
 > D_j(a_j-a_0)\le4a_0\varepsilon_j+o(1).
 > \tag{1}
-> 
-```
+> ```
 > In particular, exact affine-lattice global minimizers satisfy
 > $`D_j(a_j-a_0)\to0`$. If $`\varepsilon_j\to0`$, the same conclusion holds.
 > For open oblique angles this is
@@ -201,14 +198,11 @@ deficit.
 > edge count, $`K=\operatorname{conv}A`$, and
 > $`M=|\Lambda_\theta\cap K|-|A|`$. With
 > $`G=\operatorname{area}(K)-aR`$ and $`E=(a-a_0)R`$,
-> 
-
-```math
+> ```math
 > \boxed{G+E-\frac{a_0B}{2}
 > =(a-a_0)(n-1)+aM-\frac a2b_{\Lambda_\theta}(K).}
 > \tag{6}
-> 
-```
+> ```
 > If such sources are global minimizers along a sequence with $`D\to\infty`$,
 > then $`M=o(D)`$, $`D(a-a_0)\to0`$, and the shell gap satisfies
 > $`a_0B/2-(G+E)=o(D)`$.

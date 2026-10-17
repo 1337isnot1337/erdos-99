@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_global_straight_event_unloaded_refinement_2026-09-15.md) · source SHA-256 `8b08c2458e55650918edd17f8fe66b256465477eaac0b6d086f610391d0aee80`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

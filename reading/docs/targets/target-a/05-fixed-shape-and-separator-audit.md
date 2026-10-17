@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/05-fixed-shape-and-separator-audit.md) · source SHA-256 `8db1828cdffd639736d3b1a5ad867e782fee431d5b54b73b92e712e0c6fbd9e9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — fixed-shape strain and cage-to-response audit
 
@@ -45,15 +45,12 @@ H_{L,\alpha}
 ```
 
 > **Theorem 148.1 (fixed-shape same-hull add-one theorem).** For every fixed $`\alpha>0`$ there is $`L_0(K,\alpha)`$ such that for every integer $`L\ge L_0(K,\alpha)`$, the same hull $`H_{L,\alpha}`$ contains a unit-separated set $`P^+_{L,\alpha}`$ with
-> 
-
-```math
+> ```math
 > \boxed{
 > |P^+_{L,\alpha}|=|P^{\rm str}_{L,\alpha}|+1.
 > }
 > \tag{148.4}
-> 
-```
+> ```
 
 ### Proof
 

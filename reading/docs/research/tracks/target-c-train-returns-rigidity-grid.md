@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-train-returns-rigidity-grid.md) · source SHA-256 `5152bc5fdc6c1a17322ef36449474fb566362e7da5a54a98e25475a9a3fc9e0f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C train returns and rigidity-forced grids
 

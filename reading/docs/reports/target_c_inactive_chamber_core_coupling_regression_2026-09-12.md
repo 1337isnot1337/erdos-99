@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_inactive_chamber_core_coupling_regression_2026-09-12.md) · source SHA-256 `072b4fe5aa59381a6968e5154b3637ba1749e0b30d96e4235a1dc35e63dc3b10`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F1B8526DDC40","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_inactive_chamber_core_coupling_regression_2026-09-12.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=398099865614ee39ea028fea00d589f50e8bc2ec; lifecycle=unreviewed; canonical=false -->

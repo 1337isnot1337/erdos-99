@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_detour_shear_regression_2026-09-14.md) · source SHA-256 `37794ef3e8518b88da80e75e1326dd012452c42fd223c5e61ad8e7ed23ca3995`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F0869713BA20","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fullcore_detour_shear_regression_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=14719348d4e3de5f84061c15f27d99300a5d241e; lifecycle=unreviewed; canonical=false -->

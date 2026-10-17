@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_open_cell_cut_divergence_condensation_2026-10-03.md) · source SHA-256 `1107f74e245baa872595cd8c8ac6860ec55d22e72796d36108229b261a66cf05`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C: open-cell cut divergence
 

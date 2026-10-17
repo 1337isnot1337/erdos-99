@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_direct_phase_pair_ordered_grid_2026-09-12.md) · source SHA-256 `10d2375f32ec2d0bf981635388237795efbcbb7140d20710966c078ffabe765d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "30f465971124dadd6a50737c34b4132e9d33118f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_direct_phase_pair_ordered_grid_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "9201decfd47ee08703fb208b44702180d69ffc2ee6234af8c3bdd322da1d9ef4"} -->
 

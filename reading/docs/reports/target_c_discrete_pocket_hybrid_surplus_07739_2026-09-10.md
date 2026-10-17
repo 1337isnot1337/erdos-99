@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_discrete_pocket_hybrid_surplus_07739_2026-09-10.md) · source SHA-256 `1f2fce3a1bb1ea499930e4892a8e35da4cc48e421bf77214ad9aaede417f65fe`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 3 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-0308F4CA4967","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — discrete pocket capacity raises the post-ZF surplus floor to 0.773954
@@ -571,7 +573,7 @@ FSJC already proves
 For completeness, the strict `>0.58` follows directly from the exact FSJC quadratic. At `lambda=29/50`, its left side is
 
 ```math
-\frac{54}{625}\pi^2-rac{21}{50}\pi+rac{841}{2500}<0
+\frac{54}{625}\pi^2-\frac{21}{50}\pi+\frac{841}{2500}<0
 ```
 
 using `pi<22/7` and `pi>3.14`; the resulting upper estimate is `-158/1225`.
@@ -659,7 +661,7 @@ because after squaring the last inequality reduces exactly to
 
 ```math
 \frac{(29/50)^3}{6}-\left(\frac{171}{1000}\right)^2
-=rac{9833}{3000000}>0.
+=\frac{9833}{3000000}>0.
 ```
 
 Thus `J'(y)<0` throughout the detour branch.
@@ -797,15 +799,17 @@ then every relaxed inequality above must be asymptotically sharp. In particular:
 3. `d_P/D -> lambda_DPH` and `e_BB/D -> lambda_DPH`;
 4. `s_C/D ->0`;
 5. from PC.2,
+   
    ```math
    d_H/D\to0,\qquad s_Z/D\to0,\qquad c_B/D\to0;
-   
    ```
+
 6. the DPC concentration step forces one outer pocket to carry asymptotically all `d_P`: if `M=max_P x_P`, then
+   
    ```math
    M/D\to\lambda_{DPH},
-   
    ```
+
    because `sum x_P^2<=M d_P` and equality in the quadratic leading term forces `M/d_P->1`.
 
 The last point gives a macroscopic outer-pocket contact chain. It is a useful structural target for the next run, but no contradiction from it is claimed here.

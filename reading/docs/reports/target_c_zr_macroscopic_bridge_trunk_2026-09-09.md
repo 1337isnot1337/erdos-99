@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_macroscopic_bridge_trunk_2026-09-09.md) · source SHA-256 `7fc5ebf1c5b7633edcc566fd71adcd4c1e84d04cefb4c7e17441c9b2c3d4dd21`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C3C583D64122","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZHT: the heavy chain fills into a consecutive macroscopic bridge trunk

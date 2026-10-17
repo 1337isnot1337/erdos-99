@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_scalar_and_regression_batch_hostile_audit_2026-09-13.md) · source SHA-256 `0881d9c192eaaf77b1ab8d2b3f52b5cd0c44eec46936b5b6c7d319b283dfa721`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9A1EE13D0184","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — remaining scalar and regression batch

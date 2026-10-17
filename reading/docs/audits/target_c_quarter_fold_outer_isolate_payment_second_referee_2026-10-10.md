@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_quarter_fold_outer_isolate_payment_second_referee_2026-10-10.md) · source SHA-256 `667f2f24c5c5b1290a480f5c84fbef1964dcd17588634b905a99bf9dc58d4595`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-474284C91D01","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C independent second referee — quarter-fold outer isolate payment

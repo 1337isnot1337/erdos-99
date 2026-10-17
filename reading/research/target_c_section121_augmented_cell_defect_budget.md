@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section121_augmented_cell_defect_budget.md) · source SHA-256 `48fc295871e9c1579df01d0315bcab1aaa85a6158fe96c5b42d8aaadf437a804`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "efba8059cc78b2a8faf0ce97baa16b49f1ab3276", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section121_augmented_cell_defect_budget.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f4229642a67ee2d3b56fb36735edaa4113eae7831c019f775f2cfb769126016e"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_adjacent_circumcenter_flank_ladder_t18687_2026-09-17.md) · source SHA-256 `f7ea0b36ed872aa9f93bb80a2524d738d3a2b253a65cb71c7e3043964cef4949`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 25 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

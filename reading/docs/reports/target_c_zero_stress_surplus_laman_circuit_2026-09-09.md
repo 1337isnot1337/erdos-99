@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zero_stress_surplus_laman_circuit_2026-09-09.md) · source SHA-256 `43d3033527cbb49c4de25afb5f042c093a3903e1e778f2d34472a913e13f62e1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D93B23A832A8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — zero mixed-stress surplus gives a Laman-circuit graph

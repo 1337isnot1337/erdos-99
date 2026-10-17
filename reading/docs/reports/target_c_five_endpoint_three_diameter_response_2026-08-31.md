@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_five_endpoint_three_diameter_response_2026-08-31.md) · source SHA-256 `8a1f1ba249ce8bb6523223df203228f4f78e66b2c2f7bace25a9a3dd49f0802d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5FB5FCCB3CCA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C: the five-endpoint three-diameter reduction

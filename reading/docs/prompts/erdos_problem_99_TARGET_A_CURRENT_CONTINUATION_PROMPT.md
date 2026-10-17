@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/prompts/erdos_problem_99_TARGET_A_CURRENT_CONTINUATION_PROMPT.md) · source SHA-256 `f5186419dc0128533836884fadc7bc269420a6aaa611e9f0ec50f89f09773a20`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Erdős Problem #99 — current Target A continuation
 

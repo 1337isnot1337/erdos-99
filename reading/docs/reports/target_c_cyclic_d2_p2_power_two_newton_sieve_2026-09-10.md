@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_p2_power_two_newton_sieve_2026-09-10.md) · source SHA-256 `3ab994926055f25d54d990b0f6d1132fb1e9bb301d9eff88c21dd6d5eea1c091`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-58A405EBD380","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic `d_H=2`, P2: power-of-two 2-adic Newton sieve
@@ -56,17 +56,19 @@ Combining with P2A:
 
 - if `r_m=m`, P2 is impossible;
 - if a P2 survivor exists with `r_m=m/2`, both staircase lengths are positive and
+  
   ```math
   \boxed{\max(L_A,L_B)\ge m/2+1,}
   \tag{P2N.3}
-  
   ```
+
   hence
+  
   ```math
   \boxed{|L_A-L_B|\ge2.}
   \tag{P2N.4}
-  
   ```
+
 
 Thus on the power-of-two subsequence the only arithmetic escape is an exact half-degree split of `H_m`, accompanied by a strictly unbalanced two-tree decomposition.
 

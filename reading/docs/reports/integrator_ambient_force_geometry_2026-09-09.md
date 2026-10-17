@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/integrator_ambient_force_geometry_2026-09-09.md) · source SHA-256 `751ee7b3157cf76f7b0d4f367d7d67d744a00e2d53cc318cbc9cdc1567f0214d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-65C564B51486","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99 — ambient roundness transports into every force hull

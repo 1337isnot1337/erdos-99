@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_nested_rail_host_or_death_plateau_t18687_2026-09-17.md) · source SHA-256 `9221d34929a3e2cf7fde8ae27b0d0b14a32bdcb5676308df658ac8b55e8638a7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "5b7f45eb5d91f510d2419c9be04b4792701e3c38", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_nested_rail_host_or_death_plateau_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "06d3d9440c7c4e73e77fc9dc4e1105972e3e695dd185e830eff996253d35c06b"} -->
 
@@ -91,11 +91,12 @@ such that
 
 1. every bar of `L_host` has its birth endpoint on one fixed pre-hub host arc and its partner endpoint on one fixed hubward host arc;
 2. every bar of `L_plateau` satisfies
+   
    ```math
    \boxed{b_s=b_*}
    \tag{HD.8}
-   
    ```
+
    and hence belongs to the same post-hub switching set `X_{b_*}`.
 
 In particular,

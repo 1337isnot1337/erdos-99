@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../docs/RESEARCH_WORKFLOW.md) · source SHA-256 `31a79565abd5efca335030695de24d77dd326cf3a525fbd347af6cb3a0c2913c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Scientific workflow
 

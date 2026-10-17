@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_subquadratic_chamber_hull_saturation_2026-09-11.md) · source SHA-256 `998c72f1706f137b4ddb44a3a42acaa61aeb6525b2146ec97642a12eb8ad9de6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4E2F880A796B","canonical":true,"claim_ids":["C-INACTIVE-HULL-STABILITY"],"claim_statuses":{"C-INACTIVE-HULL-STABILITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Erdős Problem #99 — convex-hull saturation inside the macroscopic inactive chamber

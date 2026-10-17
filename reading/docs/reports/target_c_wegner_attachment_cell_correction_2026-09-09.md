@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_wegner_attachment_cell_correction_2026-09-09.md) · source SHA-256 `bbfab93f53cf9b6f79750a54dfb1fe6224749f2316c8712145888d9449a50433`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BF6A5D95D4CF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Wegner boundary-order correction for harmonic attachment cells
@@ -83,7 +83,6 @@ For every convex hull `K` of `N>=2` unit-separated planar points,
 +\frac{2-\sqrt3}{4}W_N.
 }
 \tag{WG.3}
-
 ```
 
 Put

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_a_inner_source_capacity_defect_bound_2026-09-05.md) · source SHA-256 `8b116ad50697bcbdfd7d00ea87f0ede54e0c37366e9782178350c1a29f678e34`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "554a417b60002742988da446404c138ebf4b1f7d", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_a_inner_source_capacity_defect_bound_2026-09-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a8d6f544f176fc1ad3c741fe93190296292dc23d4bf5b14ae4ad2ac2426a572d"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/theory/README.md) · source SHA-256 `2f46b7c48602ba0175e3c642082b3a59b92a06b53a335f59917c7a11e328dc41`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Shared theory stack
 

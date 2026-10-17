@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_reciprocal_h5_reduction_2026-09-18.md) · source SHA-256 `763e41ec1dd65ba938880d1f98ac2eebf42de52ed23663a54a80c3e50b17ac06`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "aa9e324214a1ae7ff52dcfe82569c7210a05d809", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_reciprocal_h5_reduction_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "6f3bde1e4f5781d47411d7e083aa6dc9bfa24f17f604fce3277c3f8e4462d8be"} -->
 

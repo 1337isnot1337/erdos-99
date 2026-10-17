@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_dominant_leaf_partial_cube_stability_2026-09-05.md) · source SHA-256 `bee6c738d3b607ea524a86df829f1ad972e6a0125750a8a60c5bade04bf82f3f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-29051C8ADAAD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C99: dominant-leaf partial-cube stability

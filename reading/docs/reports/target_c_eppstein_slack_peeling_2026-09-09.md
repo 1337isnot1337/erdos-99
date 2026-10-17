@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_eppstein_slack_peeling_2026-09-09.md) · source SHA-256 `5c35db47eef12a712223de482da45d405b73dcaa505cdd5a8a21759d0df9a8ec`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-06A95777AEF3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZEP: exact Eppstein peeling slack and the square-grid equality regression

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/atomic_boundary_source_reconciliation_2026-10-15.md) · source SHA-256 `cdb28404f89dc815ea13417c596786de701dbb44a0c1133fc00b482b49933259`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "751fe693bb6a0629efd2fe93584337c857766a08", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/audits/atomic_boundary_source_reconciliation_2026-10-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4756e6808ffd42c242caa414d2056a7412f9e00a2125d184e71ddc182137c5b2"} -->
 

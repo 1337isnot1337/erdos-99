@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_p2_gaussian_capelli_normal_form_2026-09-10.md) · source SHA-256 `6e97985943b5fec55fb9124277a22d55393cc5720d7690e4d3d69fa327973c70`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_owner_component_anchoring_and_source_realized_sink_2026-10-10.md) · source SHA-256 `a8e3e9a42129eef055bbc6b494322fefaa749b2f373ea76631fe5d3fb7620eff`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E5AE020CD36C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — component anchoring, strict stress gain, and a source-realized owner sink

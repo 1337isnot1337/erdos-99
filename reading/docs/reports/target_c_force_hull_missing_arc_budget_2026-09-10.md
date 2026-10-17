@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_force_hull_missing_arc_budget_2026-09-10.md) · source SHA-256 `d445f605bfeb75b57bd9321c4724804848effedb86f5929e3f2d50c9b6934719`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A48489C667BC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_force_hull_missing_arc_budget_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=ccb92ecc7d5319af4921e2c58c09e61a7f9622bb; lifecycle=unreviewed; canonical=false -->

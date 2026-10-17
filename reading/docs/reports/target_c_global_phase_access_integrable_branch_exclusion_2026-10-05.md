@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_global_phase_access_integrable_branch_exclusion_2026-10-05.md) · source SHA-256 `48b9c5883ff1c697bc855b816fdb23123fcd8d2f05bb7f16b0a2adef92e0b06d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-398B64032790","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — global phase access closes the integrable-degree, small-residual branch

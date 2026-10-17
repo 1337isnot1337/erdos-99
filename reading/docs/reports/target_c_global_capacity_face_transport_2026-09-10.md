@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_global_capacity_face_transport_2026-09-10.md) · source SHA-256 `cca942f9afb9832d2aa0c76709a04c455d3b38908c96d8403c8df69c0bb9792c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AF01B5248F8E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_global_capacity_face_transport_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=39305a9fd226a972871c2999ba7acf58d9a95ac3; lifecycle=unreviewed; canonical=false -->

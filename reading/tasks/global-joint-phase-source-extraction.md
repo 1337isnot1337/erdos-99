@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/global-joint-phase-source-extraction.md) · source SHA-256 `d893a9c4a303a403e4dbe74d9cd6e5abacb0457abbf25b33141fb5ca416f13c1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # global-joint-phase-source-extraction
 

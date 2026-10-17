@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_paired_lens_surplus_09449_2026-09-10.md) · source SHA-256 `1ad9aeb13b962231f0a226ddde4484e8997412824680a0293794ad99e46fd8dd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 4 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-1C94DE66CF87","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — paired-lens coupling raises the explicit C-II surplus floor to 0.944988
@@ -329,7 +331,7 @@ If `c/lambda<=2/pi`, use `J<=1/(4pi)`:
 
 ```math
 (\lambda-\nu)^2J\left(\frac c{\lambda-\nu}\right)
-+rac{\nu^2}{4\pi}
++\frac{\nu^2}{4\pi}
 \le
 \frac{(\lambda-\nu)^2+\nu^2}{4\pi}
 \le\frac{\lambda^2}{4\pi}
@@ -360,8 +362,8 @@ using `pi<4`. Hence `T=lambda-nu>nu`, and
 \left[
 T^2J(c/T)+\frac{\nu^2}{4\pi}
 \right]
-=-\frac{T}{4\theta}+rac\nu{2\pi}
-<-rac{T}{2\pi}+rac\nu{2\pi}<0.
+=-\frac{T}{4\theta}+\frac\nu{2\pi}
+<-\frac{T}{2\pi}+\frac\nu{2\pi}<0.
 \tag{4.4}
 ```
 

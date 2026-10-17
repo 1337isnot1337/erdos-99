@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_paired_cap_spoke_global_comparison_2026-10-06.md) · source SHA-256 `1895d27ac006139bb164d48151ca2069cf2a6dd2464e2270f865e400782a9b8c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-244EEBA98887","canonical":false,"claim_ids":["C-PAIRED-CAP-SPOKE-NONGLOBAL-REGRESSION"],"claim_statuses":{"C-PAIRED-CAP-SPOKE-NONGLOBAL-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Target C: a saturated paired-cap source loses to an exact same-cardinality packing

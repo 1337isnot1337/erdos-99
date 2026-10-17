@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_boundary_zigzag_linear_reserve_2026-10-11.md) · source SHA-256 `5613444ab0f885161ffb81f31ef52f14d9c9a2c7a7fdfc6e7d43734cb4770e5d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8A94C71ECC92","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # A global boundary zigzag competitor with a linear population reserve

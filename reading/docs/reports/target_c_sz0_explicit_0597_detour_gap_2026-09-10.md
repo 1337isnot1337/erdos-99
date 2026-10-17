@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sz0_explicit_0597_detour_gap_2026-09-10.md) · source SHA-256 `b04860cedbd286b4781952330ae2143a58d719bb09d3eca60bde8e9f218eb483`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-09E6CE31250C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — explicit `0.597` circuit-phase surplus floor from DD detour capacity

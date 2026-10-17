@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zero_transfer_bridgeless_two_star_normal_form_2026-09-11.md) · source SHA-256 `e87e515fda1c6d2df1fba6f3777c3a06146de0d296a92a264404e453e6fdf524`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F6C40DD96939","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — zero transfer forces a bridgeless contact core and two-edge stars

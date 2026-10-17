@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_all_bridge_transverse_interval_balance_hostile_audit_2026-09-13.md) · source SHA-256 `857d1c7ea50c4b2623f5a840e2bba8d85331063467402e13aa552a8591aa2fe3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0FCAEF743359","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Target C all-bridge transverse interval balance

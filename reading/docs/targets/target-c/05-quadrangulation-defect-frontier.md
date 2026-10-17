@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/05-quadrangulation-defect-frontier.md) · source SHA-256 `959652c0e26e4b089483943d37b40d8277a5539d8f32bb6f5f2025d64565006e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — C42 quadrangulation-defect frontier
 

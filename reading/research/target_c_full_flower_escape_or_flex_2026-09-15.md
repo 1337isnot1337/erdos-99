@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_full_flower_escape_or_flex_2026-09-15.md) · source SHA-256 `26802f14d4128796c30010c872282dbdd79f99fbf13852b0e273151be13e2018`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "6fc9ecfee900bbe67ad9dac66ec9e63a604d46f8", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_full_flower_escape_or_flex_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "176fcd9cab9b2e6d5cd42b2c025c4141f2b9b5af4b752d783582e23837dd2218"} -->
 

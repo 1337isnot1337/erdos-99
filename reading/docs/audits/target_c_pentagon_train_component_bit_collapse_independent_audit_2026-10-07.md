@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_pentagon_train_component_bit_collapse_independent_audit_2026-10-07.md) · source SHA-256 `ddeef9c5cee6cbcd6bf3f3cb4e5510b35842ec22c92ddde5922b9a98c2ef16b6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-495A00D49347","canonical":true,"claim_ids":["C-PENTAGON-TRAIN-COMPONENT-BIT-COLLAPSE"],"claim_statuses":{"C-PENTAGON-TRAIN-COMPONENT-BIT-COLLAPSE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C: independent audit of pentagon train-component bit collapse

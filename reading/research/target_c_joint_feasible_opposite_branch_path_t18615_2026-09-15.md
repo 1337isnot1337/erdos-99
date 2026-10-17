@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_joint_feasible_opposite_branch_path_t18615_2026-09-15.md) · source SHA-256 `8f0ab1684c1dbc0ebf7a831824abdb1d422ae5ccea081ffafd5da44b95f03158`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

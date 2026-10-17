@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_macroscopic_component_stress_fraction_2026-08-31.md) · source SHA-256 `6140d090d354b1de084b23ef41004fa6cd42253e6398a1d979a428cbec26f94e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B9896D1513B7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_macroscopic_component_stress_fraction_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=7e3d1156c196dc7a894e26b05e1e9181e5d640d4; lifecycle=unreviewed; canonical=false -->

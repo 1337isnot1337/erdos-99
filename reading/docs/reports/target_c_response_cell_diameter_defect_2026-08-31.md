@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_response_cell_diameter_defect_2026-08-31.md) · source SHA-256 `d878e6bd3868dfb4377dbd58161aee30af0d63ea3051ec79a89c9127d49c54b0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AE5B1E785BA7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C47: C41 response defect localizes onto attachment-cell diameters

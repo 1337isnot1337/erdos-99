@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_phase_finite_barrier_and_coembedding_regression_2026-10-01.md) · source SHA-256 `86eb1939092631678d210bd23d6d00e5bacabac938021b08b1a0eab94d856feb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8D6A5FC268A7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: finite exact-phase motion requires the actual source embedding

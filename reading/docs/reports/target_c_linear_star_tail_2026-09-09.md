@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_linear_star_tail_2026-09-09.md) · source SHA-256 `d540255c54900c0345faea79b18c6fa434635040e6a9f018023b2e8b48038f12`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-501CF508A12A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_linear_star_tail_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=547c4a366b3eb8c6e0a319dd875342daa689c839; lifecycle=unreviewed; canonical=false -->

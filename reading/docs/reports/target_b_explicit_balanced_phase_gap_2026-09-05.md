@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_explicit_balanced_phase_gap_2026-09-05.md) · source SHA-256 `467bbeabbdfdb155f6277545b33979f16d01e93ae753eb2354225035fe62339d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "33eafa92587f94bdce8fba1d480ad9ebae5b2621", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_b_explicit_balanced_phase_gap_2026-09-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "46daa7cf7871d693781e11b3d01da7b10b66d3e4d3cd188d25ac2af4c7ba29fc"} -->
 

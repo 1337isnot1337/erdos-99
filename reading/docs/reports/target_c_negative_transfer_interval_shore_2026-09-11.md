@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_negative_transfer_interval_shore_2026-09-11.md) · source SHA-256 `7467ecc36eb4680af8d6d017e86bd8e519901c2c6ac67d3c619e096fa29c1a33`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-444FC3F188C8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 - strict-negative transfer has a small terminal shore

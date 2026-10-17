@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/target-c-factorized-planar-escape.md) · source SHA-256 `51d14caff59a98d1d8add798ca8852900f7d19447c7a73ae791230433449065d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C: escape factorized barriers with a planar global-source endpoint
 

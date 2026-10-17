@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section110_local_train_count_gap.md) · source SHA-256 `0e14405ec9f94ddcde89484230d58f057b360cf4d5bb033b1dfb30aaa4cc7a20`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — Section 110: exact local train count enlarges the phase/corridor gap
 

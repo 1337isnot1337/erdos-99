@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_macroscopic_train_alignment_2026-09-09.md) · source SHA-256 `36434bf652f836935644239aa11421c49a50e5f02d6730264d76af7cc6009b8c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 8 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

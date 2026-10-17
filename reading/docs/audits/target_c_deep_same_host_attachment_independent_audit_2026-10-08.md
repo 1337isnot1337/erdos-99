@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_deep_same_host_attachment_independent_audit_2026-10-08.md) · source SHA-256 `b274deab1b13a34bde99f194f1679816ceabfcfdf8d68bbb4ba09a600b11bcb4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B6686FDB4EF7","canonical":false,"claim_ids":["C-TYPEII-CAP-DEEP-SAME-HOST-ATTACHMENT"],"claim_statuses":{"C-TYPEII-CAP-DEEP-SAME-HOST-ATTACHMENT":"audited-working"},"index":"docs/state/artifact-index.jsonl","status":"audited-working","target":"target-c"} -->
 # Target C Audit.158 — deep same-host attachment from a cap-local grain

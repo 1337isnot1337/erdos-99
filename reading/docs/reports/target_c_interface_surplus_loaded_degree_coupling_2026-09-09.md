@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_interface_surplus_loaded_degree_coupling_2026-09-09.md) · source SHA-256 `e566e50485db81272e70b697db37f0c08e562209e3e3a8ff846e35379d03a71a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 13 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

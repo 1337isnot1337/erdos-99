@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_minimal_interface_internal_pentagon_density_2026-09-09.md) · source SHA-256 `d87ef0d6397e7acf611a1fab2bbe3361d0b7a613ab7da5911dae5165ee3e6882`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 12 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -273,7 +275,7 @@ Because `d_H=q-h` and `q=(pi+o(1))D`,
 h=q-d_H
 \ge q-(d_H+s_Z)
 \ge
-\left(\pi-rac{\pi-2-\sqrt\Delta}{2}-o(1)\right)D.
+\left(\pi-\frac{\pi-2-\sqrt\Delta}{2}-o(1)\right)D.
 ```
 
 The coefficient simplifies to
@@ -358,7 +360,7 @@ we have
 ```math
 \frac{h}{q}
 \ge
-1-rac{0.09463992336\ldots}{\pi}-o(1)
+1-\frac{0.09463992336\ldots}{\pi}-o(1)
 =0.969875\ldots-o(1).
 ```
 
@@ -406,16 +408,18 @@ IT remains useful because it is local to each dominant component and does not re
 The sharp equality branch now couples two highly constrained networks on the same `q~pi D` loaded shell:
 
 1. a diameter graph with edge deficit
+   
    ```math
    d_H\le0.09464D+o(D),
-   
    ```
+
    hence almost maximal convex-thrackle density;
 2. an internal contact complex containing at least
+   
    ```math
    0.76303D-o(D)
-   
    ```
+
    pentagonal bounded faces, with only `0.18928D+o(D)` total higher-degree excess above the pentagon baseline.
 
 A promising continuation is a near-extremal convex-thrackle classification coupled to the two half-disk attachment blocks. If near-maximality forces almost all loaded terminals into one odd-cycle-like diameter backbone, the KKT response and annular spoke structure may become one-dimensional enough to conflict with the two positive-density half-disk harmonic components.

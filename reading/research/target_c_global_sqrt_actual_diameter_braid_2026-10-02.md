@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_global_sqrt_actual_diameter_braid_2026-10-02.md) · source SHA-256 `8b981cf9551710928797f20c90264cc812b70f046e1cda5c0ac3692e5f63b2e2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "9252f21d030f2354f41c7fd8c6cdfe8f4ad2189e", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_global_sqrt_actual_diameter_braid_2026-10-02.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "db51c76da4e6b777388e57bfbb787a6548a5f42ddb8a4b734cf4aaa30f5479fd"} -->
 

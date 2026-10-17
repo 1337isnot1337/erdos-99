@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_refined_global_route_surplus_floor_hostile_audit_2026-09-13.md) · source SHA-256 `f36744eb79d2243fc19692e64a1cb3ef988e330b3f098cfa32485770d9bb43b1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CCBA2FA4207F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Target C refined global route-surplus floor

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_post_zf_loaded_hull_contact_slack_2026-09-09.md) · source SHA-256 `81419ff23f48218e66cf29019356a8e05735ae9dd05aab38fb1947b88595e147`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-A9AB888F16A9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — loaded hull-contact slack and primitive boundary dichotomy
@@ -341,7 +343,7 @@ Since `e_BB<=e_BB+2s_C`, LH.1 gives
 ```math
 \frac{x_B}{D}
 \ge
-\frac qD-rac{e_{BB}}D.
+\frac qD-\frac{e_{BB}}D.
 ```
 
 Together with DB, if `limsup (e_BB+2s_C)/D<=lambda<lambda_*`, then

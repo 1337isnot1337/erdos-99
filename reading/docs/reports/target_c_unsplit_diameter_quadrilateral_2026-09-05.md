@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_unsplit_diameter_quadrilateral_2026-09-05.md) · source SHA-256 `bb6a0de0942f693a8e1289d64842b80a2a7db4e61127ca02ffc49ae0c28f5f35`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-78A69A7E7B3A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C100: unsplit paired-diameter quadrilateral identities

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_marked_grid_corrugation_strict_competitor_2026-09-30.md) · source SHA-256 `4db56598509faa870298e6282a32135af749869d84f0784e50e4bf0153ed2897`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-FB44E1E56FF6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_marked_grid_corrugation_strict_competitor_2026-09-30.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=0a29f72004a28fc95314deb5d18eeb4deb12111f; lifecycle=unreviewed; canonical=false -->
@@ -34,11 +34,12 @@ the following properties.
 1. $`B_H\subseteq W`$.
 2. Each point of $`W`$ has distinct integer coordinates $`(i,j)`$, and
    its actual position is
+   
    ```math
    p_{ij}=p_0+X_i+Y_j.
    \tag{1.1}
-   
    ```
+
    The sequences are defined on integer intervals containing all coordinates
    used by $`W`$, and every increment
    $`a_i=X_{i+1}-X_i`$, $`b_j=Y_{j+1}-Y_j`$ has length one.

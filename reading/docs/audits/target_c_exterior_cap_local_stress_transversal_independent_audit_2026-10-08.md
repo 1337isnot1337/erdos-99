@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_exterior_cap_local_stress_transversal_independent_audit_2026-10-08.md) · source SHA-256 `8da03fef40db87ab64b61280b4d14a87b29e79021763c1f396e0399ae2cfc32f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-43D6F1B1DB6F","canonical":true,"claim_ids":["C-EXTERIOR-CAP-LOCAL-STRESS-TRANSVERSALS"],"claim_statuses":{"C-EXTERIOR-CAP-LOCAL-STRESS-TRANSVERSALS":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent Audit.150: localized stress transversals along an exterior-cap separator
@@ -38,11 +38,12 @@ Then:
 1. `R_t` is a nonempty subset of the unloaded core `V\\B`, and every `p in R_t` lies in the strip `t-1 < w dot p <= t`.
 2. For every normalized stress `(alpha,beta) in P`,
 
+   
    ```math
    \sum_{e\in C_t}\alpha_e d_e
    =\sum_{h\in H}\beta_h d_h\ge2g.
-   
    ```
+
 
    Hence `sum_{e in C_t} alpha_e >=2g`, since each unit-contact projection `d_e` is at most one.
 3. There is a nonempty `U_t subset R_t` with `|U_t|<=s_Z+1` such that every normalized stress has positive contact coefficient on at least one contact incident to `U_t`. Thus deleting `U_t` removes every normalized KKT stress and, by the canonical unloaded-transversal theorem, permits a strict reduced-source motion.

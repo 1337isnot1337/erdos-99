@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_open_cell_host_cap_attachment_depth_2026-10-04.md) · source SHA-256 `5193d8f6e0bef5d1edf05831b57a62d29c65fc9d96ed2e184e1fdcb9952e4065`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C: host-cap overlap forces a deep same-host harmonic attachment
 

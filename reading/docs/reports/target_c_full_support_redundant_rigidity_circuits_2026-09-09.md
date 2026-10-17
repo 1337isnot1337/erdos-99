@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_full_support_redundant_rigidity_circuits_2026-09-09.md) · source SHA-256 `cfcf33513470607006322fdf7b682d89e24ec727673982d9b97b3400d088e10d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8D4D08A7005C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_full_support_redundant_rigidity_circuits_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=37143384fb60bf054a5f8d13c0e97ea7dfdc25bc; lifecycle=unreviewed; canonical=false -->
@@ -228,10 +228,11 @@ Fix one unloaded component `I_r`, with
 - internal contacts `e_r`;
 - attachment contacts `t_r`;
 - pinned stress surplus
+  
   ```math
   s_r=e_r+t_r-2n_r-1\ge0.
-  
   ```
+
 
 Let
 

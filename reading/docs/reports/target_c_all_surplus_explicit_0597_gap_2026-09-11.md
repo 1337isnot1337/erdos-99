@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_all_surplus_explicit_0597_gap_2026-09-11.md) · source SHA-256 `f58f3abc983a838488aa9784d4abba1fd53cd7a4583288e47eb8d3cf28ea9c24`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-19825AFEDACB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — explicit `0.597` ordinary-surplus floor for every post-ZF branch

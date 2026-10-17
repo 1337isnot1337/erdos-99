@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/60-perfect-matching-exclusion-audit.md) · source SHA-256 `76e001e06be0fe9e4cb15ca37014e7cd42aa8325bd1bf5a07c7f22645530c70b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 12 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -26,11 +26,12 @@ Let `A` be the canonical contact-minimal, then diameter-pair-minimal triangle-fr
 - the loaded endpoint set `B` is exactly the force-hull vertex set;
 - `q:=|B|` and `h:=|H|`;
 - canonical ZR/ZF gives
+  
   ```math
   s_Z:=e+h-(2v-2)\ge0.
   \tag{M.1}
-  
   ```
+
 
 Assume in this module that the **full actual diameter graph `H` is a perfect matching**. Then every loaded endpoint has degree one in `H`, so
 

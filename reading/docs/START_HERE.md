@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../docs/START_HERE.md) · source SHA-256 `5731e96498e87c488d96367669edb4329b97c8b547f473dec10afd9012d5255c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Begin research
 

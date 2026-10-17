@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_dominant_orbit_outer_energy_hostile_audit_2026-09-15.md) · source SHA-256 `ce83aae44cf6a3625b88b5608e5f25fe22baafd521ec1669df6a10ac900d5a09`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "7312e492bc908445f7ece8b8bc79458ab311e8a7", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_dominant_orbit_outer_energy_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "89d58634f2fff2bc84940a1ce7bec4322e57d7240637328a3764e853ca4d2dc1"} -->
 

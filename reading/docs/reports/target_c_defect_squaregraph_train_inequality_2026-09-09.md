@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_defect_squaregraph_train_inequality_2026-09-09.md) · source SHA-256 `d2be8170874b5bc3842d0ce3fb7090c49668ddf3c413ef616f8a446bc9af1962`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 5 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-213080F802E3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — stopped trains give a defect-stable squaregraph inequality
@@ -81,11 +83,10 @@ Since `f_i<=Q_i`, a defect-only version is
 \ge
 \max\left\{
  a+\frac{Q_i}{2D},
- b-rac{2Q_i}{D}
+ b-\frac{2Q_i}{D}
 \right\}-o(1).
 }
 \tag{DS.4}
-
 ```
 
 The minimum of the right side occurs at
@@ -104,7 +105,6 @@ and equals
 =0.2976732681\ldots .
 }
 \tag{DS.5}
-
 ```
 
 Thus even after allowing the worst possible amount of exceptional-face degradation, each TS carrier pays at least `0.297673D` of internal Eppstein slack by the combined train/perimeter mechanism. More importantly, DS.3 retains the actual variables `f_i,Q_i`, which gives strict improvement in the near-squaregraph phase.
@@ -265,7 +265,7 @@ Using (4.2) and `delta_i/D->1` gives
 \frac{r_i}{D}
 \ge
 \left(\frac\pi4-\frac12\right)
-+rac{Q_i}{2D}
++\frac{Q_i}{2D}
 -o(1),
 }
 \tag{4.4}
@@ -287,11 +287,11 @@ DS.2 and (4.1) give
 \frac{r_i}{D}
 &\ge
 \frac{2\sqrt{n_i+f_i}-2}{D}
--rac{2f_i}{D}
--rac{\delta_i}{D}\\
+-\frac{2f_i}{D}
+-\frac{\delta_i}{D}\\
 &=
 \sqrt{\frac\pi{\sqrt3}}-1
--rac{2f_i}{D}
+-\frac{2f_i}{D}
 -o(1),
 \end{aligned}
 ```

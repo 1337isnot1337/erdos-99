@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_separable_distortion_obstruction_2026-10-12.md) · source SHA-256 `de71af209c8ea4753862de88d0a9029ab4d209dc4ce439096547ad8aad56a439`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-089B3ADFC540","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99 — a global obstruction to separable distance transformations

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_collapsed_destination_capacity_2026-09-18.md) · source SHA-256 `75847893fb9b83922476d6a7114caa5a798797883e3627b9a22d493ce84ae6de`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "91270505296d08af9973d4559682246b7ec7fd3f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_collapsed_destination_capacity_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d3b07549b3f022d43706ee1ce2a1e2ef21e8e0fd377f98f1a4c8b594a4f0843e"} -->
 

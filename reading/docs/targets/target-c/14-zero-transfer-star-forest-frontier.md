@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/14-zero-transfer-star-forest-frontier.md) · source SHA-256 `2afa8168cfd1cd5ca9e581a94225786f25f209c4564b6d7b476aad4748f66262`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — zero-transfer star-forest frontier
 

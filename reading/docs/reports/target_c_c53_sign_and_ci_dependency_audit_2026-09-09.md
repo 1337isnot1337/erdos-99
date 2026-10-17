@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_c53_sign_and_ci_dependency_audit_2026-09-09.md) · source SHA-256 `83688ce3e8ab9fd89eadf7e1b4db6a87675eea33ede5680f04b80716b9679a22`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A4A2FF23264F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — C53 interval signs and the C-I dependency audit

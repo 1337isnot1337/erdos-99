@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_separated_packet_release_independent_audit_2026-10-07.md) · source SHA-256 `4b0d46d90ec0656e572ac7f99784ac0db145ac83a0d0b93228eb976377bf375f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B12EF8503121","canonical":true,"claim_ids":["C-SEPARATED-PACKET-RELEASE-OBSTRUCTION"],"claim_statuses":{"C-SEPARATED-PACKET-RELEASE-OBSTRUCTION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.112 — separated packet contact release

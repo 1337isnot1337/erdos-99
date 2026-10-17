@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_maximal_cyclic_extreme_transfer_audit_2026-09-11.md) · source SHA-256 `6c51ebab70b89762bb42bc02baf12d3318dab303663e5c1dcc3fc9d3c5cf1a76`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7A880A680F81","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_maximal_cyclic_extreme_transfer_audit_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=d44e3809002a6dc70c57acfb27db73d11be3d889; lifecycle=unreviewed; canonical=false -->

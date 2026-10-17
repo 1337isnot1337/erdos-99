@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_paired_gap_joint_floor_0605623_2026-09-10.md) · source SHA-256 `e0d7e7eabad4fc02c0b659857396d5e1d39511366366e40a20efab907d7835fb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3ABD05F07685","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — paired cyclic gaps raise the post-ZF floor to 0.605623

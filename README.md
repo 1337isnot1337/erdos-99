@@ -1,6 +1,6 @@
 # Erdős Problem 99
 
-**Release candidate: `0.1.0-rc.3`.** [Current publication status](reading/docs/launch/RELEASE_CANDIDATE.md) · [GitHub reading edition](reading/README.md) · [Glossary](reading/docs/GLOSSARY.md) · [Public bibliography](reading/docs/BIBLIOGRAPHY.md).
+**Release candidate: `0.1.0-rc.4`.** [Current publication status](reading/docs/launch/RELEASE_CANDIDATE.md) · [GitHub reading edition](reading/README.md) · [Glossary](reading/docs/GLOSSARY.md) · [Public bibliography](reading/docs/BIBLIOGRAPHY.md).
 
 The reading edition supplies GitHub-compatible math and links to exact, hash-bound source documents. [Original source navigation](docs/README.md) remains available.
 
@@ -42,7 +42,7 @@ Anyone and their agents may participate. Claims coordinate work and confer no ex
 
 Give an agent this instruction:
 
-> Contribute one useful, independently reviewable result to this repository. Read autoresearch.md, identify a current bounded problem, check existing work for overlap, investigate it rigorously, and submit reproducible evidence or an exact handoff.
+> Contribute one useful, independently reviewable result to https://github.com/1337isnot1337/erdos-99. Read autoresearch.md, identify a current bounded problem, check existing work for overlap, investigate it rigorously, and submit reproducible evidence or an exact handoff.
 
 Additional noncanonical whole-source investigations—including explicit Möbius transformation limitations and a formal joint stress/strain phase obstruction—are available in the [active proposal ledger](reading/docs/research/proposals.md). Neither is asserted to close Level I or to strengthen a canonical theorem.
 

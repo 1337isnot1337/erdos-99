@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/25-contact-shield-sector-hall.md) · source SHA-256 `d922b306d598a062a6e59a0475ae52f234081e6d6fa390c93665bd76f4749e6c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -64,13 +64,10 @@ W_\Sigma=V(\Sigma)\sqcup R_\Sigma.
 > **Lemma 173.1 (finite contact shield).**  No response edge of `G-W_Sigma`
 > intersects `|Sigma|`.  Consequently every connected component of the induced graph
 > on
-> 
-
-```math
+> ```math
 > (X^*\sqcup Z)\setminus W_\Sigma
 > \tag{173.6}
-> 
-```
+> ```
 > is contained in one geometric component `D_i`.
 
 ### Proof
@@ -180,34 +177,26 @@ Hall's deficiency formula gives the explicit expression
 
 > **Theorem 173.2 (contact-shield sector Hall bound).**  For every finite unit-contact
 > shield `Sigma`,
-> 
-
-```math
+> ```math
 > \boxed{
 > \operatorname{rank}S
 > \le
 > |W_\Sigma|+
-u_\Sigma.
+> u_\Sigma.
 > }
 > \tag{173.17}
-> 
-```
+> ```
 > Consequently
-> 
-
-```math
+> ```math
 > \boxed{
 > \zeta=\dim\ker S
 > \ge
 > \delta_\Sigma-|W_\Sigma\setminus C^\partial|.
 > }
 > \tag{173.18}
-> 
-```
+> ```
 > In particular,
-> 
-
-```math
+> ```math
 > \boxed{
 > \zeta
 > \ge
@@ -215,7 +204,7 @@ u_\Sigma.
 > -4|V(\Sigma)|-|V(\Sigma)\setminus C^\partial|.
 > }
 > \tag{173.19}
-```
+> ```
 
 ### Proof
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_convex_geodesic_rhombus_limit_2026-09-30.md) · source SHA-256 `aae492c07ddc561a0a09de0f93744ec196c73f2ec5c347ab520a9ce628d999b2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5A6933F8BE17","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: convex geodesic rhombus limits are parallelograms

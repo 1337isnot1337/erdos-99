@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_phase_gap_graph_connectivity_2026-10-01.md) · source SHA-256 `dff7efd4a3c89d3dfbd6d735dac0701f237a52e09d4f1ec2f00162d86f545cc3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C1A665A66DD1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- exact-phase diameter rank is a connected gap graph

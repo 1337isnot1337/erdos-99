@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_favard_external_shell_2026-09-09.md) · source SHA-256 `46cad15b0a7b7cd9bfe1c84724323a7c329d77e2a5b0b38c8504b6d4b7f5db59`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-2EE0ACCCF6A5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Favard lens sharpening of the external force-hull phase
@@ -182,7 +184,7 @@ The global packing asymptotic `n/D^2->Delta` gives
 \boxed{
 \liminf\frac{Z_{ext}}{D^2}
 \ge
-\Delta-rac2{\sqrt3}\mathcal L(x).
+\Delta-\frac2{\sqrt3}\mathcal L(x).
 }
 \tag{FL.8}
 ```

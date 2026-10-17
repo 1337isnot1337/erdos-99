@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/REPORT_TEMPLATE.md) · source SHA-256 `4603ac9518bf7ae7f03bc01df1d97a7e25f846773a0aa75644a7e5e4e4ccb967`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Research report template
 

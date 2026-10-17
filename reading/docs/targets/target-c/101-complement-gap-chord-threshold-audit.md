@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/101-complement-gap-chord-threshold-audit.md) · source SHA-256 `4d6303fc2e1dbae15889af2a77312938fdbf939ddf4df6adc30115081b9aa0f6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -552,12 +552,13 @@ tight.  In particular:
 3. the complement-chord minimization is sharp, so after discarding zero-measure
    splitting the complement-gap vector is `(theta_8,phi_8,phi_8)`;
 4. the exact Section-82 correction currency satisfies
+   
    ```math
    s_D/D\to0,
    \qquad c_D/D\to0,
    \qquad Q_D/D\to0;
-   
    ```
+
 5. the three macroscopic outer contact routes across those complement gaps are
    asymptotically Euclidean geodesics.
 

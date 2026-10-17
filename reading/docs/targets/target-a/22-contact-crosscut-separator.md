@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/22-contact-crosscut-separator.md) · source SHA-256 `1c7050144616004d8b28561a5ce0bca9e680330de37a0f6c11418095f888db56`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -73,13 +73,10 @@ The two shores are disjoint, so this is a disjoint union.
 
 > **Lemma 170.1 (crosscut shielding).**  No response edge of `G-W_Q` intersects
 > `|Q|`.  Consequently every connected component of the induced graph on
-> 
-
-```math
+> ```math
 > (X^*\sqcup Z)\setminus W_Q
 > \tag{170.7}
-> 
-```
+> ```
 > lies entirely in `D_L` or entirely in `D_R`.
 
 ### Proof
@@ -157,9 +154,7 @@ directed `C^partial-to-O` path has all of its vertices except its final `O` endp
 `X^* sqcup Z`.
 
 > **Theorem 170.2 (contact-crosscut Menger bound).**  The Schur rank satisfies
-> 
-
-```math
+> ```math
 > \boxed{
 > \operatorname{rank}S
 > \le
@@ -168,13 +163,10 @@ directed `C^partial-to-O` path has all of its vertices except its final `O` endp
 > +\min\{|C_R|,|O_R|\}.
 > }
 > \tag{170.14}
-> 
-```
+> ```
 > Consequently the terminal vertices of the shield cancel exactly from the nullity
 > loss:
-> 
-
-```math
+> ```math
 > \boxed{
 > \zeta=\dim\ker S
 > \ge
@@ -183,12 +175,9 @@ directed `C^partial-to-O` path has all of its vertices except its final `O` endp
 > -|W_Q\setminus C^\partial|.
 > }
 > \tag{170.15}
-> 
-```
+> ```
 > Hence
-> 
-
-```math
+> ```math
 > \boxed{
 > \zeta
 > \ge
@@ -197,8 +186,7 @@ directed `C^partial-to-O` path has all of its vertices except its final `O` endp
 > -4|V(Q)|-|V(Q)\setminus C^\partial|.
 > }
 > \tag{170.16}
-> 
-```
+> ```
 > The earlier crude `5|V(Q)|` loss is recovered by discarding the information that
 > some crosscut vertices may themselves be Schur terminals.
 
@@ -267,21 +255,16 @@ s=\Delta_\Lambda-d_{\rm int}.
 
 > **Corollary 170.3 (crosscut-imbalance closure criterion).**  If a locked positive-
 > contact component supplies a crosscut `Q` for which
-> 
-
-```math
+> ```math
 > \boxed{
 > \max\{0,|C_L|-|O_L|\}
 > +\max\{0,|C_R|-|O_R|\}
 > \ge s+|W_Q\setminus C^\partial|,
 > }
 > \tag{170.22}
-> 
-```
+> ```
 > then Target A closes for that configuration.  It is enough to prove
-> 
-
-```math
+> ```math
 > \boxed{
 > \max\{0,|C_L|-|O_L|\}
 > +\max\{0,|C_R|-|O_R|\}
@@ -289,7 +272,7 @@ s=\Delta_\Lambda-d_{\rm int}.
 > s+4|V(Q)|+|V(Q)\setminus C^\partial|.
 > }
 > \tag{170.23}
-```
+> ```
 
 ### Proof
 

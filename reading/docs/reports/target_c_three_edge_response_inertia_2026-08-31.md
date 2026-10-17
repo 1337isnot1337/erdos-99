@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_three_edge_response_inertia_2026-08-31.md) · source SHA-256 `a07a79866ea97da0c7030a1ac57b5ea21e0946bd436ee332c9bfb038f14a1a64`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4EFCF9D651DA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C: response inertia budget
@@ -211,7 +211,7 @@ No PSD/Loewner comparison for general $`H_s`$ is used.
 | Three-edge forest spectrum | proved | Rank three plus the two affine eigenvalues and the trace formula. |
 | $`\rho_s`$ effective-resistance formula | proved | $`\operatorname{tr}(\Lambda^+L_H)`$. |
 | Universal $`\rho_s\le1`$ | not proved | This is the next exact geometric inequality. |
-| C-I fully closed | not proved | The $`|H_*|\ge3`$ shear separator remains. |
+| C-I fully closed | not proved | The $`\|H_*\|\ge3`$ shear separator remains. |
 | General KKT PSD | rejected | C30 permits negative modes and only counts them. |
 
 ## 6. Regressions and no-go results

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_superstable_bar_sap_2026-09-09.md) · source SHA-256 `e6fd27b64d4f8807307e9788f31d99cd7ebc435fe9853fe55087782c5441a325`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3BAC45892652","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZR/ZF superstable-bar and Strong Arnold consequences

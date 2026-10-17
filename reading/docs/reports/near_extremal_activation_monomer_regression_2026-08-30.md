@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/near_extremal_activation_monomer_regression_2026-08-30.md) · source SHA-256 `a2be769d611d5cad27b98bde010371e26c448e8356624094baf187ffd9a4224c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "fd54d3d528e314324bd036b36848f770a4c17420", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/near_extremal_activation_monomer_regression_2026-08-30.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "cabd91445a431a35b35c9d0f26fb5ca9187ae9a16260f46729f607635eb0902e"} -->
 
@@ -70,41 +70,47 @@ c=\frac{2\sqrt3}{\pi}.
 For every integer $`L\ge10`$, there is a finite triangle-free unit-separated configuration $`A_L`$, together with a one-point-at-a-time activation sequence ending at $`A_L`$, with the following properties.
 
 1. The two fixed anchors
+   
    ```math
    a_\pm=\pm L(0,1)
-   
-   ```
-   are the unique diameter pair throughout the activation sequence, so
-   ```math
-   \boxed{D_L=\operatorname{diam}A_L=2L.}
-   
    ```
 
+   are the unique diameter pair throughout the activation sequence, so
+   
+   ```math
+   \boxed{D_L=\operatorname{diam}A_L=2L.}
+   ```
+
+
 2. If $`n_L=|A_L|`$, then
+   
    ```math
    \boxed{
    \left|n_L-\frac{D_L^2}{c}\right|\le4D_L.
    }
    \tag{153.1}
-   
    ```
+
    Thus the construction lies at the sharp translated-triangular-lattice bulk scale up to boundary order.
 
 3. If $`H_L=\operatorname{conv}A_L`$ and $`P_L=\operatorname{per}H_L`$, then
+   
    ```math
    \boxed{B_{L-3}\subset H_L,}
    \tag{153.2}
-   
    ```
+
    and hence
+   
    ```math
    \boxed{0\le \pi D_L-P_L\le6\pi.}
    \tag{153.3}
-   
    ```
+
    In particular the perimeter deficit is bounded independently of $`L`$.
 
 4. Every activation move acts on a currently strict patch point, creates exactly one new unit contact, and preserves every earlier contact. The final activation edges form disjoint row paths. If $`R_L`$ is their bar-rigidity matrix, then
+   
    ```math
    \boxed{
    \operatorname{rank}R_L
@@ -112,8 +118,8 @@ For every integer $`L\ge10`$, there is a finite triangle-free unit-separated con
    =n_L-O(D_L).
    }
    \tag{153.4}
-   
    ```
+
 
 5. Relative to the unstrained triangular lattice, every patch point has exactly three strict conflict neighbors, namely the vertices of one elementary lattice triangle, throughout the sequence. The assignment to the lower-left lattice vertex is an injective matching saturating the entire patch shore. Consequently the corresponding patch monomer/transversal left nullity is exactly zero.
 

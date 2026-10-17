@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/04-post-v1.7-audited-addenda.md) · source SHA-256 `e8362f708ba26e0a7f8aaf87750d9372863989ff6cf91c69c0788ee98680b902`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — post-v1.7 audited addenda
 
@@ -59,13 +59,10 @@ line direction. Put
 ```
 
 > **Theorem 146.1 (witness complexity diverges as the gap closes).**
-> 
-
-```math
+> ```math
 > \boxed{\kappa_*(d)\longrightarrow\infty\qquad(d\downarrow0).}
 > \tag{146.3}
-> 
-```
+> ```
 > Equivalently, for every integer $`K`$ there is $`d_K>0`$ such that every positive-gain
 > finite rearrangement of every width-$`d`$ triangular gap packing with
 > $`0<d<d_K`$ deletes more than $`K`$ old centers.

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_loaded_face_incidence_identity_2026-09-09.md) · source SHA-256 `f306f3d7ed030c8baa08b9cdace4d8eb41a48c518ac5640b98682855e0665ced`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 10 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

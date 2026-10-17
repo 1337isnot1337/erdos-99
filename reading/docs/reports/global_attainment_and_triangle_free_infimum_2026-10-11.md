@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_attainment_and_triangle_free_infimum_2026-10-11.md) · source SHA-256 `f94a9bb4fa071c58070e8b9019482e8a77fe09874b96a6fe8aa2ee4f34b50780`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "5a930f477d866610f72811b0e8e187539cbf210f", "source_branch_refs": ["refs/heads/research/sol/global-e99-20261011"], "source_commit": "834219c1e2a0c2d43e710e714853ffb27c9023ad", "source_lifecycle": "unreviewed", "source_path": "docs/reports/global_attainment_and_triangle_free_infimum_2026-10-11.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c54b4a7cf5720823e0a83257664601681b8a04c614c67e20d86ff03d680cf9aa"} -->
 

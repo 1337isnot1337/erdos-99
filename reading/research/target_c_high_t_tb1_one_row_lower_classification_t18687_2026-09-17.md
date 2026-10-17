@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_one_row_lower_classification_t18687_2026-09-17.md) · source SHA-256 `97c5cbf3adc8d69fb638f69adbe47c371acbdf40560ce12799d332ce42a7ac66`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "89fc63e5a5b58b46a3ae2323f734a984645bf383", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_one_row_lower_classification_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "e4a574035ca5a6d77ced2a408cf35d108c33ed2eae8f561cb90aa2e7b4044320"} -->
 

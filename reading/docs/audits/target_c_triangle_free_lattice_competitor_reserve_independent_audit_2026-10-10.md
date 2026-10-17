@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_triangle_free_lattice_competitor_reserve_independent_audit_2026-10-10.md) · source SHA-256 `5134f4c246286fec50530e0c6855d6b370ed2b2252e8918680b8a0e1b177aa4a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9C5C9CB6A19C","canonical":true,"claim_ids":["C-TRIANGLE-FREE-PACKING-DENSITY-CAP-REGRESSION","C-TRIANGULAR-LATTICE-STRICT-D-COMPETITOR-RESERVE"],"claim_statuses":{"C-TRIANGLE-FREE-PACKING-DENSITY-CAP-REGRESSION":"regression","C-TRIANGULAR-LATTICE-STRICT-D-COMPETITOR-RESERVE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C Audit.245 — triangle-free lattice competitor reserve

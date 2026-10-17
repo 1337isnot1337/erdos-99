@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exterior_cap_population_cubic_bound_2026-09-30.md) · source SHA-256 `0dde70fa8fe07714fffd5cafa7c6b831206501faf2379be3d92172797ffa5888`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3F2D1FD883C7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: sharp cubic control of exterior cap population

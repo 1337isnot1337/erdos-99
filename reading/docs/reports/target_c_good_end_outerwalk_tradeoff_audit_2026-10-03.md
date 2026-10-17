@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_good_end_outerwalk_tradeoff_audit_2026-10-03.md) · source SHA-256 `6e1129fbc68330f2af9600c069bc707f6b1e7cbb27c0ac334cbaeced74e157e2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-79919906D127","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_good_end_outerwalk_tradeoff_audit_2026-10-03.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=208abfb0d31c6f35f2fe83562214bdd41f750245; lifecycle=unreviewed; canonical=false -->

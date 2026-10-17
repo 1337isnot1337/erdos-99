@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_thin_common_spine_ladder_t18687_2026-09-17.md) · source SHA-256 `0fe1c890ce3bb3047ea3526ef973dbbb5a7673804395dda4c2bb6d1152f39209`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 27 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

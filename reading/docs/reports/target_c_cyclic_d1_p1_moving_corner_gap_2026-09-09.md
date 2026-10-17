@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_p1_moving_corner_gap_2026-09-09.md) · source SHA-256 `28fbdaba247e0e166f2732e657978fa7b86eb680137e5d7b6d8939eb280ae8ce`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 11 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

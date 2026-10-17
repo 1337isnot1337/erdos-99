@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_bridge_deduplicated_longside_contacts_hostile_audit_2026-09-14.md) · source SHA-256 `ba26d1d7f839b584378e7033a9c86559c4cfcf07f14b4e2404aa02198b6dadba`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "53d6b7b03fb54b2d03b8a1554c32def6a9318365", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_bridge_deduplicated_longside_contacts_hostile_audit_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "57a784eb35194e22b96c123dc02f4069547d05612855323a347efabd645bf362"} -->
 

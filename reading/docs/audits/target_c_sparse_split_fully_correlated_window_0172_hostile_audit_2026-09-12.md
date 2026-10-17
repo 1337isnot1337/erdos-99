@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_sparse_split_fully_correlated_window_0172_hostile_audit_2026-09-12.md) · source SHA-256 `1de352ad4ac7b8594cb6b701da410c4285cac8c09c58f09bb34984e8b26d74fa`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DEB6B1499C76","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — fully correlated sparse-return window through `sigma=0.0172`

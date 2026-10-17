@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_shallow_tooth_apex_injectivity_2026-09-14.md) · source SHA-256 `c4461ce299696b4c57c94d518374fc82c7966b9e610a4e749757d855cb058877`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3f16e495d3056c6baee11d4b122834d42777c50f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_shallow_tooth_apex_injectivity_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c092e0ece089e12e595a7ca684e3877425aacc37541555cdade9e8d9bf65b2d6"} -->
 

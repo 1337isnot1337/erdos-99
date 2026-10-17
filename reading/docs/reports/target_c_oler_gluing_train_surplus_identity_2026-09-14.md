@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_oler_gluing_train_surplus_identity_2026-09-14.md) · source SHA-256 `4eeafb7437ae82e9ffb7077a358c49645b52166c8228e9af05bc2079a27c3b31`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EB8397EC4742","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact Oler gluing and the unavoidable train-surplus correction

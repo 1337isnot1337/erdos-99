@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_kkt_polar_polygon_2026-09-09.md) · source SHA-256 `b67a9ea017706e7dcae94e08a42952af145ed92e0118e76c3fb73d16d77a95f4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 6 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_uneven_wall_packet_independent_audit_2026-10-06.md) · source SHA-256 `473f56d4ea54a53950cc79ecaf7466125a017162dbb006eb55ee8357adb913cd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-885E0DDD5FE9","canonical":true,"claim_ids":["C-UNEVEN-CURVED-WALL-EXACT-CAPACITY-EXCLUSION","C-UNEVEN-WALL-CORNER-ROOT-REGRESSION","C-UNEVEN-WALL-GREEN-MIDDLE-MARGIN"],"claim_statuses":{"C-UNEVEN-CURVED-WALL-EXACT-CAPACITY-EXCLUSION":"canonical","C-UNEVEN-WALL-CORNER-ROOT-REGRESSION":"regression","C-UNEVEN-WALL-GREEN-MIDDLE-MARGIN":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent promotion audit — uneven convex-wall packet

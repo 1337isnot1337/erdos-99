@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_a_thin_shield_sector_population_2026-09-04.md) · source SHA-256 `e8bc2c050b222be284e41bb1cbbd007b41b10f4bee33527cbc4d31373a9dc9e9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "23ced1e94200c4686cb9db7844ec5d5f07d7ef87", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_a_thin_shield_sector_population_2026-09-04.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ed1b73509cba276b9c3c97d783725595132147813fd079275d33dbab184ca6b2"} -->
 

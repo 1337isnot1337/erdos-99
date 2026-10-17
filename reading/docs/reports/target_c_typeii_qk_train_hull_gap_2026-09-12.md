@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_typeii_qk_train_hull_gap_2026-09-12.md) · source SHA-256 `21caac10e3c1e7ae1281572a465994322f44ed154f4a0a5b2f6dff094a62a987`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-31619C9F9537","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — Type-II loaded-hull/train coupling

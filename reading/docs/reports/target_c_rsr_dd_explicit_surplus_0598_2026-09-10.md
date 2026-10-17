@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rsr_dd_explicit_surplus_0598_2026-09-10.md) · source SHA-256 `156c91b90efd8c009db465892b8a2d5dc70c96cdbf6c4a46fc22c96d36b29bd3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-654B71246451","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — RSR/DD optimizer gives a generic post-ZF surplus floor above 0.598
@@ -919,7 +921,7 @@ and both cavity bounds must be active:
 
 ```math
 \boxed{
-A-rac\pi4\lambda_{RD}^2
+A-\frac\pi4\lambda_{RD}^2
 =
 \frac{(\lambda_{RD}+p_{RD}-y_{RD})^2}{4\pi}
 =

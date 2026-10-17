@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_small_packet_upper_release_independent_audit_2026-10-09.md) · source SHA-256 `659aa2e0dd9ac9b1cc5fe6d3645f51d563c6d1a5514fdbb1ce6e060a60b44a0c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-759414393D80","canonical":true,"claim_ids":["C-SMALL-PACKET-DIAMETER-COVER-OBSTRUCTION","C-SMALL-PACKET-SIMULTANEOUS-UPPER-RELEASE"],"claim_statuses":{"C-SMALL-PACKET-DIAMETER-COVER-OBSTRUCTION":"canonical","C-SMALL-PACKET-SIMULTANEOUS-UPPER-RELEASE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: simultaneous upper release for small separated packets

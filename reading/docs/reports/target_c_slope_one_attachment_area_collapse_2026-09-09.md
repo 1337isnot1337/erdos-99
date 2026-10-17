@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_slope_one_attachment_area_collapse_2026-09-09.md) · source SHA-256 `37b977fb344acf25dec6c2b0f0040c648af21c9587027036ae690f259da481ee`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9DE8B5F3FC67","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — SAC: slope-one attachment cells have vanishing area and force a narrow diameter-density window

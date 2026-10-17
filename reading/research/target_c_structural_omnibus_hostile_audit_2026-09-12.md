@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_structural_omnibus_hostile_audit_2026-09-12.md) · source SHA-256 `fc8f103e34961a9b40e5b81d89850852f66ffa0f8763dc9c85bd9bb4def4ed40`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "0d9bdd33ac604f48122b5494eca647fd1b3af96b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_structural_omnibus_hostile_audit_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "49f4574a3a2dc1be0ed5194f60e7f2288654b73ba4383939ca2e9478a37386cc"} -->
 

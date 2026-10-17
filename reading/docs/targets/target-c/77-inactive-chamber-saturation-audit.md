@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/77-inactive-chamber-saturation-audit.md) · source SHA-256 `661bc785ff93d4c5081997366917c844c07d9e011a1b506f9717817448271e1f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — force-hull population and inactive-chamber saturation audit
 

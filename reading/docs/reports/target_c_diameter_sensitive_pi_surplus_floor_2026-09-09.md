@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_sensitive_pi_surplus_floor_2026-09-09.md) · source SHA-256 `ef18d996174421db2c207390dd76b8dcfdcc60a00a44ce2a8943b396bdbf34ab`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-569D5F419E9A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — diameter-sensitive PI optimization raises the surplus floor

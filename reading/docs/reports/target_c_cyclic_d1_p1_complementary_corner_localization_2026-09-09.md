@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_p1_complementary_corner_localization_2026-09-09.md) · source SHA-256 `a8464270fc7b7b9322465c55d956eede6510656fd44101de54cf35a33d4f3382`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4E04AD2A143A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 — P1 endpoint-zero diameters are complementary moving-corner chords

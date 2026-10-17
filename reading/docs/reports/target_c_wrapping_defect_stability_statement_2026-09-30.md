@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_wrapping_defect_stability_statement_2026-09-30.md) · source SHA-256 `3f77f184e2ee6a488daea9323ba5cb55944def78dd78d04496b88ce228a8b711`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A1A726D5E56B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Wrapping-root defect stability: statement

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_multirhombic_empty_pentagons_extended_range_2026-09-15.md) · source SHA-256 `3106c68535fb8887ef64543b1f2432e6fd1de0113d2715ebdfa24774b7f12461`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a3e579df15ece6777a9959141095d976602f697e", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_multirhombic_empty_pentagons_extended_range_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "7b08b02992f5a3f6f7d845eadae76b89f494b45676f867746778a57b714faa65"} -->
 

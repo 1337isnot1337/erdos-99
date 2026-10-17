@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section113_extended_stability_gap_hostile_audit_2026-09-12.md) · source SHA-256 `e8fc642123e5fb88598f3b0eaaac9112307d6a8cd2134ba62df4c35655b34e9a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-916681E0B1F2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — Section 113 full hostile audit

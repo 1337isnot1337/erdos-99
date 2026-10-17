@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/85-train-boundary-interface-currency-audit.md) · source SHA-256 `8618a1ae469f6f7c63a8afa4ef452f77edfacc3b00479282c977cfc43f28af79`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — train-boundary interface currency audit
 

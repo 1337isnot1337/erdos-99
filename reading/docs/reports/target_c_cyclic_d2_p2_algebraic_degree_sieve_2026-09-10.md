@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_p2_algebraic_degree_sieve_2026-09-10.md) · source SHA-256 `afd877b6be0e201b2e2e04f3835db386f465e0cb9b0cd2a568b02c72561e699e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-92D02481E30D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic `d_H=2`, P2: exact algebraic degree sieve
@@ -494,21 +494,24 @@ Factoring `H_m` over `Q` exactly for every
 produces the following uniform pattern:
 
 1. if
+   
    ```math
    m\not\equiv3\pmod6,
-   
    ```
+
    then `H_m` is irreducible of degree `m`;
 2. if
+   
    ```math
    m\equiv3\pmod6,
-   
    ```
+
    then
+   
    ```math
    H_m(X)=(X-1)J_m(X),
-   
    ```
+
    where `J_m` is irreducible of degree `m-1`.
 
 The linear factor is explained exactly:

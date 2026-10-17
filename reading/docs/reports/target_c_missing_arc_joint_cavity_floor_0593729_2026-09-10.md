@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_missing_arc_joint_cavity_floor_0593729_2026-09-10.md) · source SHA-256 `f84961e374bf20492ef834fe32b8cd64c706118ffdd2dc5ad6b1654e1bfa90d3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5BEF95AF1F4F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_missing_arc_joint_cavity_floor_0593729_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=febb9bd7dd1fc8d719444f72917c10e4d7b819b2; lifecycle=unreviewed; canonical=false -->

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_centered_fan_blocker_closure_2026-10-05.md) · source SHA-256 `39b99086bde574ec0226830d7f3f1ce55c10e21fa5004f4887ec53eca7a33dc1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — centered-fan blockers force a directed near-unit closure path
 
@@ -632,19 +632,21 @@ holds for that prefix.
 2. **Macroscopic face.**  The face $`G(p)`$ contains a path vertex $`x`$ with
    $`s(x)\ge D/10`$.  Since $`|p-x|\ge s(x)`$,
 
+   
    ```math
    \operatorname{diam}G(p)\ge D/10.
-   
    ```
+
 
    A closed polygonal curve has perimeter at least twice its diameter.  Every
    boundary edge of the physical contact face is a unit contact, so
 
+   
    ```math
    \boxed{\deg G(p)=\operatorname{per}G(p)\ge D/5.}
    \tag{7.2}
-   
    ```
+
 
 In the second alternative this one face contributes
 

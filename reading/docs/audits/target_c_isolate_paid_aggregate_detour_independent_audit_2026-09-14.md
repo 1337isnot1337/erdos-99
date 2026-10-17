@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_isolate_paid_aggregate_detour_independent_audit_2026-09-14.md) · source SHA-256 `6608d53ae8cb5a30e223fa94b41a5bf0854329a078f5c589b5be3e105333b8e0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-953BC4E8D194","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Independent audit — isolate-aware aggregate detour payment

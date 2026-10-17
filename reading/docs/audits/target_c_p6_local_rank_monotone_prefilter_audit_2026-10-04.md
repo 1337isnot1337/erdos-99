@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_p6_local_rank_monotone_prefilter_audit_2026-10-04.md) · source SHA-256 `13117ab4bb5566557c84a9828f45d8168520ef371080737f3f94cb38c8d3cb5c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A59AF7A82F4B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: p=6 local-rank tags are safe monotone prefilters

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_terminal_twist_prefix_contradiction_2026-09-05.md) · source SHA-256 `ff9bf2ae92c6fe98adb4a73907bd5a809d1a2ee29e84c911c9dcb07f345a4cba`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C7A465A28DA7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C97: terminal-twist / full-span-prefix contradiction

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_live_backbone_multishear_sharp_cusp_hostile_audit_2026-09-15.md) · source SHA-256 `15c036008e9d698d3b117605e48280d46e3cdf54032c2a0a58e7a027d7f46a30`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9A82C3694B7C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — sharp-cusp no-go for the live exact O--O multishear

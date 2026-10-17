@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_five_arc_eppstein_equality_audit_2026-09-10.md) · source SHA-256 `dbcb61b6d40e4f68b64cf9d5a409e5895720f9b0589f4b512e426ed8d0412517`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-09334C17CD3E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — audit of Eppstein near-equality at the five-arc endpoint

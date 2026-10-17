@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_isostatic_body_bar_reduction_2026-09-09.md) · source SHA-256 `3e3ae66be8084f28f7775d9bfb5a267dc3d5ad4a8c633fd96be1e987330454d8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-64DEC28DA193","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic tree phases reduce to two isostatic bodies joined by a rank-three four-bar circuit

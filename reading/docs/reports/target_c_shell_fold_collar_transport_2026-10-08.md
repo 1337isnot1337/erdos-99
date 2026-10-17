@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_shell_fold_collar_transport_2026-10-08.md) · source SHA-256 `2f2288bef21a59ead9ca8bf989df8a862a3a4c31b68ddbf08ee40696d15ab9a3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "7864fae4b6509fcf6347adb21f7ed0274e4a2f8d", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "8d524f86d10df71b39e332d03f059e98a1aed4e7", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_c_shell_fold_collar_transport_2026-10-08.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4d8ed2332f2d08e5ede2a13d2b412944a5dcd7216cef56a15d9f04499e6a2707"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_almost_accessible_transversal_face_codimension_2026-10-08.md) · source SHA-256 `49db97dc9056d90e40267c8ced0ba1a3148de618f0ff4d916b71e50909f96d01`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D46AB56198A3","canonical":true,"claim_ids":["C-ALMOST-ACCESSIBLE-STRESS-TRANSVERSAL"],"claim_statuses":{"C-ALMOST-ACCESSIBLE-STRESS-TRANSVERSAL":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C: almost-accessible transversals from exceptional-face codimension

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_paired_remainder_path_t1865_2026-09-15.md) · source SHA-256 `0750cefdfb85c36a860a19487bc307b4b5f540063233e20294c0972a9b25c961`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 25 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -249,22 +249,25 @@ L(z,t,\delta)
 On the live range:
 
 - `L` increases with `z`, because
+  
   ```math
   L_z=1-{F'(r_0)\over\lambda}>0;
-  
   ```
+
 - `L` decreases with `delta`, because
+  
   ```math
   L_\delta=2-{1\over\lambda}-{4F'(r_0)\over\lambda}<0
-  
   ```
+
   when `lambda<1/2`;
 - `L` decreases with `t`, since `U_0` increases with `t` and
+  
   ```math
   {\partial L\over\partial U_0}
   =-1+{2F'(r_0)\over\lambda}<0
-  
   ```
+
   by (PR.13).
 
 Therefore a uniform endpoint lower bound follows by using

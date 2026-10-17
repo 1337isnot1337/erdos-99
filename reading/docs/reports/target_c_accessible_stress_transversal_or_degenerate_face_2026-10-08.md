@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_accessible_stress_transversal_or_degenerate_face_2026-10-08.md) · source SHA-256 `ea2cec250f35fc49ad477af1a62a343f2555ca7edfdd46b5b1a191d76d4059cc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C2AF91A93C57","canonical":true,"claim_ids":["C-ACCESSIBLE-STRESS-FACE-DICHOTOMY","C-SEVEN-SITE-TAGGED-STRESS-MASS-REGRESSION"],"claim_statuses":{"C-ACCESSIBLE-STRESS-FACE-DICHOTOMY":"canonical","C-SEVEN-SITE-TAGGED-STRESS-MASS-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C: accessible stress transversals or a degenerate exceptional face

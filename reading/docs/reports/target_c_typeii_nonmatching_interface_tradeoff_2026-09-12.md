@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_typeii_nonmatching_interface_tradeoff_2026-09-12.md) · source SHA-256 `11748658ed884ae53d847c78d603057fd1e560e0c45768fde58b1a575d3f54f3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0596A5326EBD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — corrected Type-II nonmatching/interface tradeoff

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/target-c-capacity-collective-refill.md) · source SHA-256 `6e27c749dc6b783217024623edef496a029b3693b4a1e59f378e1c2df93b9844`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — vacancy and collective refill capacity
 

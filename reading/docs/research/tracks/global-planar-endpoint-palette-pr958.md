@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/global-planar-endpoint-palette-pr958.md) · source SHA-256 `5ebf975c7c31a99c16e1e190892df67975d795530aa5dbaa9ed57886972497e4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Global planar endpoint routes: colour lifts and finite palettes
 

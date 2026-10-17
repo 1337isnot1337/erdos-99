@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_sharp_all_residue_horn_budget_t18687_2026-09-17.md) · source SHA-256 `4923c281f74f4cf10bcf20d098d60fc8c5e2ae9dde52d478a018955cb2264d94`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 22 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_profile_b_aligned_incidence_regression_2026-09-22.md) · source SHA-256 `b68183d7f1dc15f53b0365209738a2b92959d4ad54f8af33c0ef8983201ca6df`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4607972cc8d53def21a8cfe06076fc64c5547a0b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_profile_b_aligned_incidence_regression_2026-09-22.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "9240e6105f1768d5579c0de13d28c12acc2916572459f534d79d47e6980fc970"} -->
 

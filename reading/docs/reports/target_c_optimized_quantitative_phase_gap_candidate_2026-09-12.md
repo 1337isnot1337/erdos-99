@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_optimized_quantitative_phase_gap_candidate_2026-09-12.md) · source SHA-256 `94d1315e481a795b0417c3118d33935eab32a46b2f110a8c1f38cd6914145e45`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DE228C892A14","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — optimized quantitative phase/corridor gap
@@ -243,15 +243,17 @@ technical companion to Section 104 proves the two required finite geometric esti
 - for good bases `1<=b<=1+h`, one inverse-phase family can use good tooth legs only
   over two base-direction windows whose combined endpoint-density contribution is at
   most
+  
   ```math
   w(h)+{13\over3}\sigma,
-  
   ```
+
   where
+  
   ```math
   w(h):={\pi\over3}-\arccos((1+h)/2).
-  
   ```
+
 
 Bad-base teeth cost at most `(sigma/h)D` phase endpoint occurrences.  The remaining
 Section-104 leakage coefficients are

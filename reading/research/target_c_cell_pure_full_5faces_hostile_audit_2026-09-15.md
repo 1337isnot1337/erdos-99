@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_cell_pure_full_5faces_hostile_audit_2026-09-15.md) · source SHA-256 `f15bb9a8e7cd45a992f469e74ce401f8d7c76d5126e2390920757313fd8d0ad5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "570ca10db1995e672c8557599c87b97fb3c1d22b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_cell_pure_full_5faces_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "7a1f7f4d93ff3a34b14ff1d53fbc90325e2ae7aed257c02da3bb1bc135718be5"} -->
 

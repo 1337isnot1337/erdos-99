@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_long_matching_crossing_extraction_2026-09-17.md) · source SHA-256 `10ffed01e16f148c44d0fd5e47e4a85e8eb37d8dd7776db4573c6ea2a0e28247`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "220db7bea3809920f02e7cef0f3fee2e533ec1db", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_long_matching_crossing_extraction_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "7084980ad88764b2471c43adb612bf20fd612f0bfc7bf7226f8af312930cd260"} -->
 
@@ -206,15 +206,12 @@ A graph of maximum degree `Delta` has an independent set of size at least `|E|/(
 
 > **Theorem LC.2 — crossing extraction from a long matching.**  
 > If `S` is unit-separated of diameter at most `D` and `E` is a matching with every edge length at least `L`, then `E` contains a pairwise-properly-crossing submatching of size at least
-> 
-
-```math
+> ```math
 > \boxed{
 > { |E| \over 2(2\sqrt{D^2-L^2}+1)^2+1 }.
 > }
 > \tag{LC.6}
-> 
-```
+> ```
 
 No convex-hull hypothesis is required.
 

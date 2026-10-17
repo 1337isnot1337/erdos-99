@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_annular_packing_matching_exclusion_2026-09-10.md) · source SHA-256 `bafc93039bac19a5827945505633286bc7eaeda86683bcd9bfd0cc197bc1feaa`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-15B1A8F79BC2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — annular packing excludes the post-ZF perfect-matching branch
@@ -71,12 +71,14 @@ proves, under the audited post-ZF stack, that if the full actual diameter graph 
 1. the positive contact core is a pure simply connected strict-rhombic disk;
 2. all contact-isolated source points lie outside the force hull `F`;
 3. if `v` is the core population, then
+   
    ```math
    v\le\frac{q^2}{16}+\frac q2+1,
-   
    ```
+
    with `q<=pi D`; and consequently
 4. the external population `Z_ext=n-v` satisfies
+   
    ```math
    \boxed{
    \liminf\frac{Z_{ext}}{D^2}
@@ -86,8 +88,8 @@ proves, under the audited post-ZF stack, that if the full actual diameter graph 
    \Delta:=\frac\pi{2\sqrt3}.
    }
    \tag{1.1}
-   
    ```
+
 
 The new September 10 FS-symmetry report proves for every unbounded post-ZF survivor sequence
 
@@ -520,19 +522,13 @@ The shortest continuation is no longer “exclude a perfect matching.” A stron
 One sufficient formulation is:
 
 > **Branched annular capacity theorem.** For every sufficiently large post-ZF survivor, use
-> 
-
-```math
+> ```math
 > r_H:=2h-q=x_B+Q+2s_Z\ge1
-> 
-```
+> ```
 > together with the full-source FS/PW geometry and the difference-body constraints to prove either
-> 
-
-```math
+> ```math
 > n-1\le\frac\pi{2\sqrt3}D^2
-> 
-```
+> ```
 > or construct an `n`-point unit-separated competitor of diameter `<D`.
 
 A more concrete near-matching subtarget is to prove a positive **linear** lower bound `r_H>=cD`; DB.1 would then force `h/D` above its minimum by a fixed amount, and FSDB's force-hull area constant would improve accordingly. MEX alone gives only `r_H>=1`, so such a linear upgrade is not claimed here.

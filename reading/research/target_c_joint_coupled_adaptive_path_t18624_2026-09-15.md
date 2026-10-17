@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_joint_coupled_adaptive_path_t18624_2026-09-15.md) · source SHA-256 `3f1aa6cc112ae5e67f7b73ba6c33d430c16d159bbcfd00850f8e6c0904537b04`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "8007ccc66211a5f47e8dd46c9c3ed0190095a503", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_joint_coupled_adaptive_path_t18624_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "fbad12f893e6c11d339638c00f4350dc936458d472f96eecbe80331886bf0d17"} -->
 

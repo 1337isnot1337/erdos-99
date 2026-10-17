@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_all_surplus_extension_audit_2026-09-11.md) · source SHA-256 `2759cfd0e5beb709e07702685100c139d3230f85fc62d4ecf633495538baa890`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8D3C3AFB8C21","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Audit correction for the cyclic all-surplus extension
@@ -49,22 +49,25 @@ The scalar correction below remains algebraically valid **conditional on the ear
 The independent audit separately certifies the following pieces:
 
 1. the odd diameter-cycle skeleton gives
+   
    ```math
    P_F=\pi D-O(\sqrt D)
-   
    ```
+
    without using outer pockets;
 2. FS.4 plus maximal-perimeter central-symmetral rigidity gives
+   
    ```math
    area(F)/D^2\to\pi/4;
-   
    ```
+
 3. the exact `s_Z` terms cancel in the full-source Oler bookkeeping;
 4. the independent full-source cell-slack theorem proves
+   
    ```math
    E=O(D)
-   
    ```
+
    in every C-II branch, without the cyclic detour.
 
 What does not survive is the assertion that the inward outer-contact region is negligible.

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cap_joint_cavity_floor_0593235_2026-09-10.md) · source SHA-256 `2ad3188b72cbafe1a81f962d170ce4e17fa02a63a68353eed2ae0b21fec378ee`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-FEB9D2B50C45","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — CAP/JC raises the post-ZF pinned/contact floor to 0.593235

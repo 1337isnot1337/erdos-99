@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_bad_crossing_ferrers_stability_2026-09-04.md) · source SHA-256 `62cd2d28a6c1b1aca278a709ee87aaf94c2aba99a00c5847f64de0dda83e0f38`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A01B1D10DC8C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C exact bad-crossing Ferrers stability

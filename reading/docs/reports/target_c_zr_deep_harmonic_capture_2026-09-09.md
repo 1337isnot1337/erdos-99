@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_deep_harmonic_capture_2026-09-09.md) · source SHA-256 `b9a08a3140e087a0646bb71e79f1d879e299e1482606d4be7ce078a94044937d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E469CE6C1692","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZHC: deep bridge mass collapses into one star-attached harmonic cell

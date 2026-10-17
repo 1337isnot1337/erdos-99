@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_p1_order_three_residue_exclusion_2026-09-10.md) · source SHA-256 `5bce2f944ee0cdf594908919dd14925abb7253321c3ca3f53c7fc44331149836`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-52C7388CD1FB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 LEVEL I STATUS: STILL OPEN
@@ -508,19 +508,13 @@ The complete mod-two classification leaves no unresolved 2-adic residue type. Th
 A concrete target is:
 
 > **Two-prime block incompatibility.** Let `M` be a noncyclotomic reciprocal irreducible factor of `F_m` with `deg M<=m-1`. If
-> 
-
-```math
+> ```math
 > \overline M^{(2)}=B^{2^k}
-> 
-```
+> ```
 > for a squarefree self-reciprocal `B|S_u` with no order-one/order-three block, prove that the mod-three factorization
-> 
-
-```math
+> ```math
 > \overline F_m^{(3)}=(Z^{m-1}+1)(Z^{m+1}+1)
-> 
-```
+> ```
 > cannot accommodate `M`.
 
 The first cases to attack are odd part `u=p` prime. Then the entire mod-two residue support lies over the single odd cyclotomic family `Phi_p`, and the degree of `M` is quantized by the Frobenius orbit size of `2` modulo `p`.

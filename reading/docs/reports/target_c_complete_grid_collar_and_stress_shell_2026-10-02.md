@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_complete_grid_collar_and_stress_shell_2026-10-02.md) · source SHA-256 `12d7a99aad408105f0e7f855b560b10d5a383dbcd55dada35f199107aa3566ee`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-76D1DB01C786","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: complete-grid collar matching and a genuine stress-shell regression

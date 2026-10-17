@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_selected_genericity_2026-09-09.md) · source SHA-256 `1adf50e5a3a6ced31c4bdf04240cc66dba8a942201b42cc52e218a2fd85468c1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 10 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

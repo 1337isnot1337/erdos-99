@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_c99_c100_nearchain_audit_2026-09-05.md) · source SHA-256 `95cb2032270f6e417b16700db457ca1d899d94552d8219803f0fbee2d6fde1c3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-322A06336476","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Audit — Target C C99/C100 dominant-leaf near-chain stability

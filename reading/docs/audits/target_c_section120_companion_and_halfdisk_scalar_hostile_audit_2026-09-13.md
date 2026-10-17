@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section120_companion_and_halfdisk_scalar_hostile_audit_2026-09-13.md) · source SHA-256 `9c99fc71856f5ae67e1a972235536d5e71915c52675ba66e70228841c144e71b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B545E1640A60","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Section-120 companions and two-half-disk scalar regressions

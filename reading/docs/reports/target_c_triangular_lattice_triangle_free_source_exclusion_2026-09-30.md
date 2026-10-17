@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_triangular_lattice_triangle_free_source_exclusion_2026-09-30.md) · source SHA-256 `6dae000b31b807556c5a5960cc70737c8103197b022c8ef2ec9ea72cf50fafa9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-72BED3D78183","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: exclude large triangle-free subsets of the triangular lattice

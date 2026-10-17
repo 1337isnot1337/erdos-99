@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_groemer_stability_explicit_surplus_2026-09-09.md) · source SHA-256 `280e874604a1b92f62a2cdd49c4e600f919966bc3bd70238f9ac3c326b97e88b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-C34771931AA3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_groemer_stability_explicit_surplus_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=f1ec9b6149cccee9ed83e7cf3c4517d480fd3aea; lifecycle=unreviewed; canonical=false -->
@@ -235,7 +237,7 @@ Hence
 ```math
 \liminf\frac G{D^2}
 \ge
-A_*-rac\pi4\lambda^2.
+A_*-\frac\pi4\lambda^2.
 \tag{GS.16}
 ```
 
@@ -251,7 +253,7 @@ In the same case GS.11 can still use the universal `p<=pi`, so
 Let `lambda_near` be the positive root of
 
 ```math
-A_*-rac\pi4\lambda^2
+A_*-\frac\pi4\lambda^2
 =
 \frac{(\lambda+\pi/2)^2}{4\pi}.
 \tag{GS.18}

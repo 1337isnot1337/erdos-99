@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_regular_odd_shell_stress_polygon_2026-09-09.md) · source SHA-256 `33d5c13049de6961a39710276418bf9974afd416b050f64241767bd354e3ef9e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 20 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -97,11 +97,12 @@ Its boundary zero patterns are exact:
 1. a relative-interior point has every `beta_j>0`;
 2. a relative-interior point of a polytope edge has exactly one zero diameter coefficient;
 3. a polytope vertex has exactly two zero diameter coefficients, and they are consecutive in the **vertex index**:
+   
    ```math
    \boxed{\beta_j=\beta_{j+1}=0.}
    \tag{RSP.4}
-   
    ```
+
 4. no nonzero normalized nonnegative stress has three zero diameter coefficients.
 
 In projective diameter-direction order, `H_j` and `H_{j+1}` are separated by exactly one diameter edge. Therefore deleting the two zero edges at a stress-polytope vertex splits the regular diameter cycle into

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_triangular_two_pin_strict_capacity_2026-10-05.md) · source SHA-256 `ac83868db308eefa21e107a2fb733c0803aa0c8dd849ae302e6a3d26d1642085`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-ACD3826933F8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — two deleted triangular wall pins need not create an extra strict site

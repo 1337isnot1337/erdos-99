@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_strict_turn_path_non_surrounding_independent_audit_2026-10-08.md) · source SHA-256 `e3003de1f625deb56794eeef486168f96ee81cb4f1ee5ddd56c02808c88700f2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-808EC70A335F","canonical":true,"claim_ids":["C-STRICT-TURN-PATH-CONTACT-NON-SURROUNDING"],"claim_statuses":{"C-STRICT-TURN-PATH-CONTACT-NON-SURROUNDING":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C independent audit: strict-turn convex path contacts do not surround

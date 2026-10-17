@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_typeii_near_port_grid_independent_audit_2026-10-08.md) · source SHA-256 `fadcc0c94b45b218f5b033e40aa74f107c8f41e83da19458e15ba69e4a2b5426`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3D57C98678D9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C Audit.136 — Type-II near-port grid and face-tail alternative

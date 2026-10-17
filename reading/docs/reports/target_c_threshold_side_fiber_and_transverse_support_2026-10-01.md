@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_threshold_side_fiber_and_transverse_support_2026-10-01.md) · source SHA-256 `7c88de80e657966aec2afa44b0578b9508bf293af6224e0d180eb3275eca925d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-07224CC17DF4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- threshold side-fiber accounting and opposite-shore switch filter

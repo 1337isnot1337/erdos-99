@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_p1_residue_degree_budget_2026-09-10.md) · source SHA-256 `0f6eac4a788b4a8479123b61fc535c482c57477a9e00265f514281fec5ad3dc4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F10F3FC640E0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — P1 residue-support degree budget and prime-cluster ramification cost

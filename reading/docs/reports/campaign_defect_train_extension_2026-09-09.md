@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/campaign_defect_train_extension_2026-09-09.md) · source SHA-256 `98c25016760f127f1e231eb4b54980d5b75caf3e15302ef74be61472f96d805c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1E0BC6EBFD51","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99: trains ending at exceptional faces

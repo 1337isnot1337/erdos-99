@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_bridge_cut_matching_event_bound_2026-09-09.md) · source SHA-256 `138b463775795cdfee44d090242d3adf1d72ddec7fb7597ab8bad1d774d215eb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-83AB8B36E9F7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — bridge-cut matching and a `2h-2` structural-event bound

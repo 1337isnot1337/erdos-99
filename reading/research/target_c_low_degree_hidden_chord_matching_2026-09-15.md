@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_low_degree_hidden_chord_matching_2026-09-15.md) · source SHA-256 `0be329385a2dc38ebaa72a8b54963261e39c8c34b0b6218c7365ec79a223eb7a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 6 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

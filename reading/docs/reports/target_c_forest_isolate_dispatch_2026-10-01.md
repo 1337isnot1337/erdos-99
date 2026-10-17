@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_forest_isolate_dispatch_2026-10-01.md) · source SHA-256 `e688b38aeebbe5f46fc87923be9ff67fc290c47dd156a1fb8a42c1f0e97b24b9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7FE50C7E45DA","canonical":true,"claim_ids":["C-LONG-PAIR-ISOLATE-DISPATCH"],"claim_statuses":{"C-LONG-PAIR-ISOLATE-DISPATCH":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — isolate dispatch with a diameter-component exception budget

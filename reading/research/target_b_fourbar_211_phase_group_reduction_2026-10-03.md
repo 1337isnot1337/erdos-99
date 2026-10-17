@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_b_fourbar_211_phase_group_reduction_2026-10-03.md) · source SHA-256 `8b49656382be010d326ed1ffe942013434c1c722911164637b374fc2d7b0078c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b39cdde780f91f6558b39bffecda55565cb3f93d", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_b_fourbar_211_phase_group_reduction_2026-10-03.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "359153e23fd03eb2b7dff20531adf6d19b39db9153bf6f4c1a5627f427b91b3f"} -->
 

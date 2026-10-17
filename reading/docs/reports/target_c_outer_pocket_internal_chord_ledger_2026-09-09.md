@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_outer_pocket_internal_chord_ledger_2026-09-09.md) · source SHA-256 `c2581470e23c540c780b75000d42e62af3a37a5e021f9fd9a16698d8492a70e1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7FB5DD765A26","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact outer-pocket / internal-loaded-chord ledger

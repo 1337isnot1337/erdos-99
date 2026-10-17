@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_original_family_outer_owner_capacity_independent_audit_2026-10-07.md) · source SHA-256 `9cdb02fea1dfe4bc62a212f6c918d53bff4e467f307a5a6e8e935d5d1deb3cc3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4F8E6F380ABE","canonical":true,"claim_ids":["C-OO-ORIGINAL-FAMILY-OWNER-CAPACITY"],"claim_statuses":{"C-OO-ORIGINAL-FAMILY-OWNER-CAPACITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.114 — original-family O–O owner capacity

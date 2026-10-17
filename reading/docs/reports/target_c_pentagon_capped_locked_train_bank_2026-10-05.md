@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_pentagon_capped_locked_train_bank_2026-10-05.md) · source SHA-256 `d8d28cc946bbfeda2c19238ce058cc03f9b286000478003eae3a12e82dce7e89`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0CA6240472B0","canonical":false,"claim_ids":["C-PENTAGON-CAPPED-LOCKED-TRAIN-BANK-REGRESSION"],"claim_statuses":{"C-PENTAGON-CAPPED-LOCKED-TRAIN-BANK-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Target C — frustrated pentagon train banks can still have no wall surplus

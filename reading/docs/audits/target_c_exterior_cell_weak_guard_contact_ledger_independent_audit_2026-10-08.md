@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_exterior_cell_weak_guard_contact_ledger_independent_audit_2026-10-08.md) · source SHA-256 `a156df4bd684eed4a39239e1f02e7bf33f07d020844b4a14466de094d9325f06`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-89E65B1AAE54","canonical":true,"claim_ids":["C-EXTERIOR-CELL-WEAK-GUARD-LEDGER"],"claim_statuses":{"C-EXTERIOR-CELL-WEAK-GUARD-LEDGER":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: weak guards and the exterior-cell contact ledger

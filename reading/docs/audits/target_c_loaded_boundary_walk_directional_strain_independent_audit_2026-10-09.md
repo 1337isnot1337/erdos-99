@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_loaded_boundary_walk_directional_strain_independent_audit_2026-10-09.md) · source SHA-256 `8dd90ec615839377974648598f9173a0c5cb48d5a3f8a38470c5c4a330fb12df`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3DBF8E489012","canonical":true,"claim_ids":["C-CANONICAL-LOADED-WALK-STRAIN","C-LOADED-WALK-DIRECTIONAL-STRAIN"],"claim_statuses":{"C-CANONICAL-LOADED-WALK-STRAIN":"canonical","C-LOADED-WALK-DIRECTIONAL-STRAIN":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.203 — directional strain on actual loaded boundary walks

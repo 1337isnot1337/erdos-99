@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_0021_physical_contact_normal_form_2026-09-15.md) · source SHA-256 `59f5cd49150d805459b1fc5045cf18fbe2142ca9c0c65acf03a08b438162cab5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 10 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

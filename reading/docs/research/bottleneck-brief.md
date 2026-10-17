@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/research/bottleneck-brief.md) · source SHA-256 `536d00397aafd8a73ce3a98d065340125db4eb3a9e2d98723f13a086276f2b51`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Current bottleneck
 
@@ -7,7 +7,7 @@
 
 | Route | Strongest accepted working position | Exact missing obligation | First useful bounded step |
 | --- | --- | --- | --- |
-| A | Canonical through Section 177; exact locked tube/right-deficiency and zero-slack source localization | Source-specific $`|O_{iso}|+\sum_i\max(0,|O_i|-|C_i|)\ge j_*+|T_Z|`$, or actual global Schur deficiency / strict competitor | Derive all terms for one three-channel fan, retaining basis penalty and disjoint sinks |
+| A | Canonical through Section 177; exact locked tube/right-deficiency and zero-slack source localization | Source-specific $`\|O_{iso}\|+\sum_i\max(0,\|O_i\|-\|C_i\|)\ge j_*+\|T_Z\|`$, or actual global Schur deficiency / strict competitor | Derive all terms for one three-channel fan, retaining basis penalty and disjoint sinks |
 | B | Scoped phase cuts, coherent-family exclusion and GPI $`\liminf\Delta\ge4\cdot10^{-17}\tau^2`$ | Joint shell estimate with multi-grain virtual/interface payment and $`(t+\chi-1)`$ | Build a two-grain incidence/payment ledger before attempting a global sum |
 | C-II | Core rigidity, force/hull, harmonic/grid and finite scope reductions | Source-realized finite face move/restoration or arbitrary macroscopic-container capacity with every source label | Write one finite candidate with all lower/upper pair and population ledgers; test the known obstruction |
 

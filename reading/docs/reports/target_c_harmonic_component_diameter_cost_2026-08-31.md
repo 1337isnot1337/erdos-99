@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_harmonic_component_diameter_cost_2026-08-31.md) · source SHA-256 `5488ff6f7ff1012459e3e4e0575dfd9269428b89615eff1af754d692f6801cfe`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2C520474A318","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_harmonic_component_diameter_cost_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=919863c58ec59be9fafebfb4eb5fc4aff168787f; lifecycle=unreviewed; canonical=false -->

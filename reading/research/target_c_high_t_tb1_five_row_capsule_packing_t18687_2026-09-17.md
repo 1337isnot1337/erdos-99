@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_five_row_capsule_packing_t18687_2026-09-17.md) · source SHA-256 `f7f6b6d6db9838b88fbc46bb9b3e79f767fa7708dc8f2eddc015f4ab1e24395a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C-II — exact capsule packing sharpens inverse-`D` near-unit bandwidth to five rows
 
@@ -15,35 +15,23 @@ The previous Oler argument proves that the centers of the rhombi crossed by an i
 That bound is not sharp for this capsule. A finite exact packing certificate proves the stronger statement below.
 
 > **Five-row capsule theorem.** Let
-> 
-
-```math
+> ```math
 > S_L:=([0,L]\times\{0\})+B(0,1/2).
-> 
-```
+> ```
 > If
-> 
-
-```math
+> ```math
 > L\le {21\over20},
-> 
-```
+> ```
 > and `X subset S_L` satisfies
-> 
-
-```math
+> ```math
 > |x-x'|\ge {\sqrt3\over2}
 > \qquad(x\ne x'),
-> 
-```
+> ```
 > then
-> 
-
-```math
+> ```math
 > \boxed{|X|\le5.}
 > \tag{FP.1}
-> 
-```
+> ```
 >
 > The number five is sharp already for `L=1`.
 
@@ -102,16 +90,18 @@ The segment `xy` meets every separating selected row. For every crossed row choo
 The previous center-capsule proof gives two facts that do not use TB1 or KKT stress:
 
 1. the midpoint centerline has length one and its midpoint is `c_j`, so
+   
    ```math
    \operatorname{dist}(c_j,xy)\le {1\over2};
-   
    ```
+
 2. every strict unit rhombus has inradius greater than `sqrt(3)/4`, and distinct selected rows use distinct contact faces with disjoint interiors, so
+   
    ```math
    |c_i-c_j|\ge {\sqrt3\over2}
    \qquad(i\ne j).
-   
    ```
+
 
 After a rigid motion taking `xy` to `[0,L] x {0}`, the `N` centers form a `sqrt(3)/2`-separated subset of `S_L`. Thus (FP.1) immediately implies `N<=5` whenever `L<=21/20`.
 

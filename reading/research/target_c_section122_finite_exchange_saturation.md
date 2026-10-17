@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section122_finite_exchange_saturation.md) · source SHA-256 `f89c56e1c6981f0e75eef52e7d687cf97162f06a420396c826aa30095c99c456`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — Section 122: contact minimality forces finite exchange saturation in inactive chambers
 

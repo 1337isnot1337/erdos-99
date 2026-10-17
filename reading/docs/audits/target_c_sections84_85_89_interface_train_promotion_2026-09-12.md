@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_sections84_85_89_interface_train_promotion_2026-09-12.md) · source SHA-256 `cacdec801fba58e796413285e4706917ff953b9ab48ea9d50516aba266667c8f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B560772C07D8","canonical":true,"claim_ids":["C-HARMONIC-TRAIN-BUDGET","C-TRAIN-INTERFACE-CURRENCY","C-TYPEII-INTERFACE-COLLAPSE"],"claim_statuses":{"C-HARMONIC-TRAIN-BUDGET":"canonical","C-TRAIN-INTERFACE-CURRENCY":"canonical","C-TYPEII-INTERFACE-COLLAPSE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C §§84–85 and §89 promotion audit

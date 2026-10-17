@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/ci/RELEASE_REVIEW.md) · source SHA-256 `59bb7b45502f7b89484746fca22c345004a516a58ca0c0181c6c44523bb6c6ba`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Hosted CI release review
 

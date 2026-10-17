@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/ci/README.md) · source SHA-256 `cd5510b57eb3b3d20c85481f26cb9625d28c46c055c9b68ff35a2dfc4ef422f1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Localized verification
 

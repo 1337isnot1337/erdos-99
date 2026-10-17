@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_mixed_gap_cauchy_threshold_candidate_2026-09-12.md) · source SHA-256 `7babc497c015b94f12e8c54e6327e20f075cb1040270e1b83fe35c478e46d9fd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -91,26 +91,29 @@ Canonical Sections 93--94 give finite gap information. If
 then
 
 1. every gap obeys
+   
    ```math
    g_{i,D}\ge\ell_D,
    \qquad D\ell_D\to2;
    \tag{99.7}
-   
    ```
+
 2. every gap obeys
+   
    ```math
    g_{i,D}\le\theta+o(1)
    \tag{99.8}
-   
    ```
+
    uniformly; and
 3. three distinct distinguished gaps obey
+   
    ```math
    g_{i_j,D}\ge\phi-o(1),
    \qquad j=1,2,3.
    \tag{99.9}
-   
    ```
+
 
 The three special lower bounds are the central forbidden arcs in the Section-88
 six-cluster geometry.

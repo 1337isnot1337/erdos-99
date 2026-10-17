@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_near_port_conditional_promotion_audit_2026-10-08.md) · source SHA-256 `2e7efbb61ac640b1d998f0ee2d3d09318398aaaf3ffa68c1ee6605511c2d1cd4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E6BF70C5B602","canonical":true,"claim_ids":["C-NEAR-PORT-DEFECT-TAIL-ALTERNATIVE","C-TYPEII-NEAR-PORT-GRID-EXTRACTION"],"claim_statuses":{"C-NEAR-PORT-DEFECT-TAIL-ALTERNATIVE":"canonical","C-TYPEII-NEAR-PORT-GRID-EXTRACTION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.175 — near-port grid and face-tail theorem integration

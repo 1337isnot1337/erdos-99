@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/erdos_problem_99_complete_working_report_SYNTHESIZED.md) · source SHA-256 `ca9fe28ff239dd485e8af885b1f1087694c30985668b7fe3c7c305cf38f5df17`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d9dd602abec9573b286732c169c2156e22c1dcf2", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/erdos_problem_99_complete_working_report_SYNTHESIZED.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "5bd000f7dfac62b57d6b59d2b0fc92f21482d1d2ecc97810e7c19b16c0f20103"} -->
 
@@ -175,22 +175,24 @@ Eppstein [6] proves:
 2. Every connected triangle-free penny graph containing a cycle has at least four non-articulation vertices of degree at most (2) [6, Lemma 2].
 3. If $`G`$ is connected with graph diameter $`d_G`$, then
 
+   
    ```math
    |E(G)|\le2|V(G)|-d_G-2
    \tag{2.3}
-   
    ```
+
 
    [6, Theorem 2].
 4. For arbitrary $`n`$-vertex triangle-free penny graphs,
 
+   
    ```math
    |E(G)|
    \le
    2n-\frac12\sqrt{2\pi\sqrt3\,n}+O(1)
    \tag{2.4}
-   
    ```
+
 
    [6, Theorem 4].
 
@@ -798,22 +800,24 @@ Assume $`\mathcal E_Q(A)=\{0\}`$. Then:
 1. Every contact edge admits a strictly positive pinned equilibrium stress.
 2. At every unpinned vertex $`p_i\notin Q`$,
 
+   
    ```math
    \sum_{j\sim i}c_{ij}(p_j-p_i)=0,
    \qquad c_{ij}>0.
    \tag{8.3}
-   
    ```
+
 
 3. The contact neighbors of every unpinned vertex affinely span the plane.
 4. Every unpinned vertex lies in the strict interior of the convex hull of its contact neighbors and has contact degree at least (3).
 5. The diameter endpoints are exactly the convex-hull vertices:
 
+   
    ```math
    \boxed{Q=V(\operatorname{conv}A).}
    \tag{8.4}
-   
    ```
+
 
 #### Proof
 
@@ -837,11 +841,12 @@ In the first-order-jammed triangle-free branch:
 
 1. If $`T`$ is a nontrivial tree contact component with $`n_T`$ vertices and $`q_T=|Q\cap V(T)|`$, then
 
+   
    ```math
    \boxed{n_T\le2q_T-2.}
    \tag{9.1}
-   
    ```
+
 
 2. All nontrivial tree components together contain at most $`2q=O(\sqrt n)`$ vertices.
 3. Every cyclic contact component contains at least four diameter endpoints.
@@ -2050,20 +2055,22 @@ Then:
 2. Fixing $`Q^\circ`$, the expansive cone of the core is zero.
 3. If the core has $`e`$ contact edges, then
 
+   
    ```math
    e\ge2(m-|Q^\circ|).
    \tag{12.1}
-   
    ```
+
 
 4. Under triangle-freeness,
 
+   
    ```math
    |Q^\circ|
    \ge\frac14\sqrt{2\pi\sqrt3\,m}-O(1).
    \tag{12.2}
-   
    ```
+
 
 #### Proof
 
@@ -2128,14 +2135,15 @@ Assume that a triangle-free minimizer exists for a fixed $`n`$. There is a trian
 1. $`K`$ is the unchanged nonisolated core of a contact-minimal triangle-free minimizer. If $`Q_K`$ denotes its original diameter endpoints, then the expansive cone of $`K`$ pinned at $`Q_K`$ is zero.
 2. Every contact component of $`\widehat A`$ contains a diameter endpoint, and
 
+   
    ```math
    \#\{\text{contact components}\},
    \quad
    \#\{\text{contact-isolated vertices}\}
    \le C_0\sqrt n.
    \tag{12.4}
-   
    ```
+
 
 3. Every contact edge of $`\widehat A`$ outside $`K`$ is a bridge. Thus every contact cycle and every nonbridge contact edge lies in $`K`$.
 4. If $`\widehat Q`$ is the full diameter-endpoint set of $`\widehat A`$, every velocity in $`\mathcal E_{\widehat Q}(\widehat A)`$ vanishes on $`V(K)`$. All surviving pinned flexibility is confined to the forest left after the fixed vertices $`V(K)\cup\widehat Q`$ are deleted.
@@ -2532,14 +2540,15 @@ Then:
 
 1. **Exact stress and moments.** $`A`$ carries a normalized proper mixed contact/diameter KKT stress satisfying (4.1)-(4.5) and the virtual-work identity (11.7). The two normalized edge-stress measures have the same midpoint barycenter $`\mu`$, satisfy the quartic identity (11.9), and obey
 
+   
    ```math
    \sum_C\frac{\alpha_{ij}}{D^2}|m_{ij}-\mu|^2
    \ge\frac{D^2-1}{12},
    \qquad
    \max_{\alpha_{ij}>0}|m_{ij}-\mu|
    \ge\frac{D-1}{2}.
-   
    ```
+
 
 2. **Second-order normality.** Every critical first-order direction has a direction-dependent normalized stress supported on its zero-derivative active edges and satisfying (11.3).
 
@@ -2550,82 +2559,91 @@ Then:
 
 4. **Jammed branch.** In the zero-cone branch:
 
+   
    ```math
    Q=V(\operatorname{conv}A),
-   
    ```
+
 
    every non-hull vertex is a strict convex combination of at least three unit-contact neighbors,
 
+   
    ```math
    |Q|=\Theta(\sqrt n),\qquad
    e^\circ\ge2(n-|Q|),\qquad
    |E(G(A))|=2n-\Theta(\sqrt n),
-   
    ```
+
 
    and its cyclomatic number is at least $`n-2|Q|+c=n-O(\sqrt n)`$. All nontrivial tree components together contain $`O(\sqrt n)`$ vertices, every cyclic component contains at least four diameter endpoints, and for $`n\ge44`$ at least one cyclic component exists.
 
 5. **Rhombic bulk.** In the zero-cone branch there are $`n-O(\sqrt n)`$ bounded unit-rhombus faces and
 
+   
    ```math
    \sum_{F\in\mathcal F_4}\left(\theta_F-\frac\pi3\right)=O(\sqrt n).
-   
    ```
+
 
    All but $`O(\sqrt n)`$ vertices have contact degree (4) and are incident only with these rhombi. For every fixed $`\varepsilon>0`$, all but $`O_\varepsilon(\sqrt n)`$ vertices are surrounded by rhombi with acute angles in
 
+   
    ```math
    60^\circ<\theta<60^\circ+\varepsilon.
-   
    ```
+
 
    If $`B_{\mathcal R}`$ is the boundary-edge count of the full rhombic face complex, then
 
+   
    ```math
    F_4\le\frac{B_{\mathcal R}^2}{16},
    \qquad
    B_{\mathcal R}D_{\mathcal R}
    \ge4\sum_F\sin\theta_F
    \ge2\sqrt3F_4+4\chi_*\sum_F\left(\theta_F-\frac\pi3\right).
-   
    ```
+
 
    At most two tracks have both ends on the convex hull, so at least $`2\sqrt n-O(1)`$ track ends enter the defect network. If the rhombi tile the whole convex hull, the configuration is the unit square.
 
    If a connected $`R`$-face subcomplex uses only two fixed edge directions, has regular boundary topology as in Theorem 10.12, and needs external support at only $`k`$ non-hull boundary incidences, then
 
+   
    ```math
    R\le(k+3)^2.
-   
    ```
+
 
    With no such incidences it is either one rhombus or the five-rhombus cross.
 
 6. **Existential normal forms.** If any triangle-free minimizer exists for a given $`n`$, there is a contact-minimal one for the same $`n,D(n)`$ in which every non-diameter nonisolated vertex is surrounded by (3)-(5) contacts, every contact vertex of degree (1) or (2) is diametral, all nontrivial tree components together contain $`O(\sqrt n)`$ vertices, and
 
+   
    ```math
    \kappa\ge\frac{n-z}{2}-C_0\sqrt n+c_*
-   
    ```
+
 
    for the cyclomatic number of the nonisolated contact graph.
 
    More strongly, one hybrid representative has only $`O(\sqrt n)`$ components and isolates and contains the unchanged contact-minimal core $`K`$, pointwise fixed under every pinned expansive motion. Every contact edge outside $`K`$ is a bridge. If $`u`$ unpinned vertices lie outside $`K`$ and the contracted bridge forest has $`r`$ fixed roots and $`c`$ components, then
 
+   
    ```math
    \dim\mathcal L_{\widehat Q}\ge u-r+c\ge u-|\widehat Q|+c.
-   
    ```
+
 
    Hence lineality $`O(\sqrt n)`$ already forces $`|V(K)|=n-O(\sqrt n)`$ and puts that core in the almost-rhombic regime.
 
 7. **Exact global block restriction.** Every additive Cartesian $`a\times b`$ rhombic train block in a global minimizer satisfies
 
+   
    ```math
    ab+\frac{4\sqrt3-6}{\pi}\Delta_{a,b}<\frac2\pi n.
-   
    ```
+
 
 8. **Exact limitations.** There are arbitrarily large triangle-free strict local diameter minima, arbitrarily large asymptotically dense triangle-free shell configurations carrying the full exact KKT stress, and arbitrarily large boundary-pinned jammed rhombic complexes with positive stress and total positive angular defect tending to zero. The 11-point sun additionally has a diametral convex hull, positive stress, zero hull-pinned cone, and five strict rhombi, yet no $`60^\circ`$ face. It is provably not global: a 12-point triangular-lattice set of diameter (3) is already smaller than its diameter $`\sqrt{5+2\sqrt5}`$.
 
@@ -3039,24 +3057,26 @@ Two immediate specializations of (21.1) are:
 
 1. If $`F`$ is a convex equilateral $`m`$-gon whose vertices are unit-separated, then
 
+   
    ```math
    \boxed{
    \operatorname{area}(F)\ge c_0(m-2).
    }
    \tag{21.10}
-   
    ```
+
 
 2. If $`C`$ is a convex pocket bounded by a chain of $`r`$ unit edges and its
    closing hull chord of length $`L`$, then
 
+   
    ```math
    \boxed{
    \operatorname{area}(C)\ge c_0(r-L).
    }
    \tag{21.11}
-   
    ```
+
 
 For (21.10), use $`N=m`$ and perimeter $`m`$ in (21.1).  For (21.11), use
 $`N=r+1`$ and perimeter $`r+L`$.  The vertices of a pocket are a subset of
@@ -3569,12 +3589,9 @@ and proving the reverse inequality for every sufficiently large triangle-free su
 The current Target B is no longer merely a generic ``sharp boundary-capacity theorem.'' A sufficient focused statement is:
 
 > **Joint outer-shell stability theorem.** For every sufficiently large triangle-free global minimizer in the normalized jammed/almost-rhombic regime, the compulsory train-end data satisfy a quantitative inequality coupling $`b_F`$, $`H_\infty`$, the indentation-pocket slacks, the convexification area, and the actual hull perimeter strongly enough to force
-> 
-
-```math
+> ```math
 > \mathscr O(A)\ge c_0\pi D+a_0.
-> 
-```
+> ```
 
 Equivalently, near equality in the local Oler cells must be incompatible at large scale with both the diametral-hull condition $`Q=V(\operatorname{conv}A)`$ and near equality in the isodiametric/perimeter bounds.
 

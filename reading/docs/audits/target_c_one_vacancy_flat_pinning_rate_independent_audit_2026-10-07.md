@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_one_vacancy_flat_pinning_rate_independent_audit_2026-10-07.md) · source SHA-256 `b30a40c20e8d27f396a547d83bd38c93f450850b2250b606178e2c05e7139c86`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

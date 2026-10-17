@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fsdb_low_defect_branch_2026-09-11.md) · source SHA-256 `4015696ae6241fadb837bf2da72bee1c397af6f9c68eb166cbf3b24667ea07d8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-D78808D86644","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fsdb_low_defect_branch_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=b5ff0ec76e123ca9c579ccd322a207049731c6d8; lifecycle=unreviewed; canonical=false -->
@@ -178,7 +180,7 @@ faces, bounded exceptional faces, and outer pockets. Combining (2.8), (2.11), an
 FSDB supplies (1.3). Since
 
 ```math
-\frac{2\rho+\sin(2\rho)}4-rac{\pi^2}{16}>0,
+\frac{2\rho+\sin(2\rho)}4-\frac{\pi^2}{16}>0,
 \tag{2.14}
 ```
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_face_coupled_quarter_fold_independent_audit_2026-10-07.md) · source SHA-256 `82b34c2e361173130069d179b6922c783fece4d613de2b670c27befc925c3a2e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-FD63E8F3C10B","canonical":true,"claim_ids":["C-FACE-COUPLED-QUARTER-FOLD-INTEGRATION","C-QUARTER-FOLD-CONVEX-FACE-CLASSIFICATION","C-QUARTER-FOLD-FOUR-TRANSITION-REGRESSION","C-QUARTER-FOLD-INACTIVE-DIAMETER-REGRESSION","C-QUARTER-FOLD-LOWER-COLLISION-REGRESSION","C-QUARTER-FOLD-SOURCE-COMPATIBILITY","C-QUARTER-FOLD-STRESS-CURRENCY-ENDPOINT"],"claim_statuses":{"C-FACE-COUPLED-QUARTER-FOLD-INTEGRATION":"canonical","C-QUARTER-FOLD-CONVEX-FACE-CLASSIFICATION":"canonical","C-QUARTER-FOLD-FOUR-TRANSITION-REGRESSION":"regression","C-QUARTER-FOLD-INACTIVE-DIAMETER-REGRESSION":"regression","C-QUARTER-FOLD-LOWER-COLLISION-REGRESSION":"regression","C-QUARTER-FOLD-SOURCE-COMPATIBILITY":"canonical","C-QUARTER-FOLD-STRESS-CURRENCY-ENDPOINT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C: independent audit of face-coupled quarter folds

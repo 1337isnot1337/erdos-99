@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_long_common_ladder_t18687_2026-09-15.md) · source SHA-256 `a054029473f055ceb02eea8ec29c6c417cf7c9565a65ab3c239da01675d789ab`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 21 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

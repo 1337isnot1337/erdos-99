@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_two_defect_cells_2026-09-09.md) · source SHA-256 `86649554245bdd69ac66dad63239f621bb44f53b99f74a6d41398513dee23fff`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 14 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

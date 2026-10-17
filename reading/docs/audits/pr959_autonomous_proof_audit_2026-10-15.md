@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/pr959_autonomous_proof_audit_2026-10-15.md) · source SHA-256 `30ce4ddc5721a402f0b98080c48d7c0ae5cecbf4b0e27393300983ec60ad34f1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9E0CA31F6AA4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # PR #959 source AI proof audit (provenance; noncanonical)

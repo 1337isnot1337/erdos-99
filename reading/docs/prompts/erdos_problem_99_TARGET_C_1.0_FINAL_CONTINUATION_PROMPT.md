@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/prompts/erdos_problem_99_TARGET_C_1.0_FINAL_CONTINUATION_PROMPT.md) · source SHA-256 `225e92409db64d760b0f480963aa911a9439cfbc0a149f72a0d3b7488c918f46`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Historical Target C prompt — compatibility pointer
 

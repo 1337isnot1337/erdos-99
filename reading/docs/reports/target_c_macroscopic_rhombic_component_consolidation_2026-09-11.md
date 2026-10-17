@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_macroscopic_rhombic_component_consolidation_2026-09-11.md) · source SHA-256 `e3489482c4f0e6f21d68aa3e2eaab7aba8bdd42a59f9843631ab4a71d54c52ed`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-150C013B4D78","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_macroscopic_rhombic_component_consolidation_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=db298f29c3b581214e236efd7eb5a9744ef467b8; lifecycle=unreviewed; canonical=false -->

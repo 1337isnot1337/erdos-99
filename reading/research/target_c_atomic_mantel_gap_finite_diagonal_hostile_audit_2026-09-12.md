@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_atomic_mantel_gap_finite_diagonal_hostile_audit_2026-09-12.md) · source SHA-256 `084824ff2079597017ac9afdaf8a7dcfa1eeba14f83c17dfa7ad7deaee9e4bb0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Hostile audit — all-regime atomic Mantel gap via finite diagonal
 

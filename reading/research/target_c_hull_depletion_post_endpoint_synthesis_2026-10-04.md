@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_hull_depletion_post_endpoint_synthesis_2026-10-04.md) · source SHA-256 `b08ef74af5ee0ee6466ed0ff33d5262e576da40aa18241211d7f9b4778ad0e91`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0F5AB1E395D8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — hull depletion plus post-endpoint defect synthesis
@@ -698,10 +698,11 @@ It already supplies, in either a macroscopic internal chamber or exterior cap,
 - finite exchange saturation;
 - fixed-depth protection; and
 - linearly many vertex-disjoint contact-isolated pairs at
+  
   ```math
   1+O(1/D).
-  
   ```
+
 
 This is stronger near-unit scale than (S.34), but the geometry is different:
 Type-I pairs are protected interior isolates, whereas the Type-II pairs in (S.34)

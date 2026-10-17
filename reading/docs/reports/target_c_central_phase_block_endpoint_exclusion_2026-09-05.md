@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_central_phase_block_endpoint_exclusion_2026-09-05.md) · source SHA-256 `86a41a6175b45594be2f90b1cf77bf42c251d14d742a2700830b08e0aa3a73f0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3BCDF54B2667","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C central-phase-block endpoint exclusion

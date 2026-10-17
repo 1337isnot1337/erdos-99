@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section130_complement_gap_cell_rigidity_hostile_audit_2026-09-12.md) · source SHA-256 `4595a6760d913d0e10e63b32afa44cf8b7efd310d0bba0674059cecfc934faad`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-22D93968BF33","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Target C complement-gap cell rigidity

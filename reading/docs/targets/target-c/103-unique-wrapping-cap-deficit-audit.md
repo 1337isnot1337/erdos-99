@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/103-unique-wrapping-cap-deficit-audit.md) · source SHA-256 `e46de65a5fbdd28f6890f1f4238cf9c546f7e7e1dd24bdd1e5d90ac090467b06`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

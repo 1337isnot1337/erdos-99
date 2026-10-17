@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/74-complete-grid-phase-collapse-audit.md) · source SHA-256 `a20e11a5dea529feb2423ba44b62cc861dc5a781861bdfd183aa47a839ba294f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — complete-grid phase-collapse audit
 

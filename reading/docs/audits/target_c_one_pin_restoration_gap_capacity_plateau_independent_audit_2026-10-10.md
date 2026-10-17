@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_one_pin_restoration_gap_capacity_plateau_independent_audit_2026-10-10.md) · source SHA-256 `ce709b3988db6bae2b1deb5aacc0d5ed755e86bf7781e77e167e6203b0702f7c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-996A15A014C9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C Audit.253 — restored-pin gap and near-triangular capacity plateau

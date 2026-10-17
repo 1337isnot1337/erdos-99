@@ -10,6 +10,11 @@ Unclosed source display delimiters are repaired only at paragraph boundaries and
 flagged on their pages. Paragraphs with ambiguous inline delimiters are shown as
 explicit source excerpts. These presentation notes preserve the underlying text
 and make source formatting damage visible rather than inventing an equation.
+Exact-source-bound TeX escape and punctuation corrections are disclosed on each
+affected page and in the [presentation repair ledger](../docs/publication/reading-tex-repairs.json).
+Deliberately truncated formula quotations remain literal text. Quoted and listed
+equations retain their Markdown containers; the mathematical payload does not
+include Markdown quote or table separators.
 
 Start with the [problem](docs/problem/statement.md), [current state](docs/STATE.md),
 [research map](docs/KNOWLEDGE_MAP.md), [glossary](docs/GLOSSARY.md), and

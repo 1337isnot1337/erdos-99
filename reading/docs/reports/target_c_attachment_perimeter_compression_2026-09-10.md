@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_attachment_perimeter_compression_2026-09-10.md) · source SHA-256 `18aa4d1a448255a393f652f6f9a31573040df959c33c1913a34a2951a964a59c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E5222888FB83","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — attachment-cell perimeter compression
@@ -276,12 +276,9 @@ Thus the outer-shell force-bulk endpoint can be narrowed to source points in the
 A Level I closure still requires a source-wide outer-shell theorem.  One sufficient form is:
 
 > **Outer-shell capacity with loaded-boundary cancellation.**  For the lexicographic post-ZF source, bound the source points in the outer contact face and outside the harmonic-cell interiors so that, after adding AP.6/C52, the total source satisfies
-> 
-
-```math
+> ```math
 > n\le \frac{\pi}{2\sqrt3}D^2+1.
-> 
-```
+> ```
 
 By the canonical strict translated-triangular-lattice comparison, this is impossible for a global minimizer.  An equivalent proof may construct an explicit `n`-point configuration of diameter `<D`.
 

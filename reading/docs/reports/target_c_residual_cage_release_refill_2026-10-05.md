@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_residual_cage_release_refill_2026-10-05.md) · source SHA-256 `7a974d9897c955ae89d4e0b10d502f0f9eabd9cb2cbfc7b0a5582c53762d8f74`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B3EB83949D93","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — finite residual-cage deletion and strict refill

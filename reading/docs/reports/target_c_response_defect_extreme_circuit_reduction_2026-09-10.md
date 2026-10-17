@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_response_defect_extreme_circuit_reduction_2026-09-10.md) · source SHA-256 `f33fe10efaad19dffd5146b998e13d1f758331a50e54bd879b4dcf10120c5c40`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-74DEC512A499","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 - response-defect minimization occurs on an extreme KKT circuit

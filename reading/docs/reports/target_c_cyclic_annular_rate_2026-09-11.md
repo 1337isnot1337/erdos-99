@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_annular_rate_2026-09-11.md) · source SHA-256 `cd8023391aed31622df896bfc556cd07ecdc746266c16ecccaa1a73540a29967`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C93C429CD6D7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # SUPERSEDED / CONDITIONAL — cyclic annular-rate reduction for contact-isolated points

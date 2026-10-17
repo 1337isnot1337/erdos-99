@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_collapsed_eleven_crossing_floor_hostile_audit_2026-09-22.md) · source SHA-256 `897eafd0f1d2af23af393da9a9151c17cd6423e712af4bfc873130403e9a5071`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "63ede82aa50f8dc81141ca585d1d4c837a5259a7", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_collapsed_eleven_crossing_floor_hostile_audit_2026-09-22.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "401ea5622d3bae4627ce1240c451639dd87dfd7ea8e91fed3cea06bd3d6b6eab"} -->
 

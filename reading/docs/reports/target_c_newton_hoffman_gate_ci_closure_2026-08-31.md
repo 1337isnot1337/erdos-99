@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_newton_hoffman_gate_ci_closure_2026-08-31.md) · source SHA-256 `6a8b820bab247a0fb3ab85a4cf4052c82cb242ed3bf161aff04054d5d4746c3e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-18B993FE7458","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C: Newton–Hoffman closure of Gate C-I

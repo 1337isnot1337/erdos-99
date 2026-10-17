@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_mixed_redundant_rigidity_edge_cuts_2026-09-09.md) · source SHA-256 `ae278e19c75781593bc753fa45d45caaf73609db8cbd6c36bebf9fc5e039bfbb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0696B7B15D93","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_mixed_redundant_rigidity_edge_cuts_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=e2273064f1e7b00e4a5d113af98f2adc10a922c3; lifecycle=unreviewed; canonical=false -->

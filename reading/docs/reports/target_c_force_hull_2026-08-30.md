@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_force_hull_2026-08-30.md) · source SHA-256 `ab136d47fc53dc9662d10c46c823cee242abc01b8036e47b1acd45aa308b5ca7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CA389CA9D692","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C: diametral saturation, terminal covering, and the KKT force hull
@@ -42,11 +42,12 @@ is not the almost-rhombic shell route.  They do not yet give a Level I contradic
 The canonical state still has two active endgames.
 
 - Target A closes if the exact Schur saving
+  
   ```math
   \operatorname{rank}S
   \le d_{\rm int}+|C^\partial|-\Delta_\Lambda
-  
   ```
+
   is proved, or if a strict sub-`D` competitor is constructed.
 - Target B closes by the exact shell/Oler surplus in its route map.
 

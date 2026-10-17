@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/prompts/historical/erdos_problem_99_1.7.10_FINAL_CONTINUATION_PROMPT.md) · source SHA-256 `255b36885caa488f837b37fcab7f8b7b601d49479acf955e07a656abd1108c7a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Erdős Problem #99 — continuation after source-labeled Schur-terminal transport
 
@@ -167,12 +167,9 @@ The shortest remaining theorem is now:
 > `C^partial_src`, the noncrossing source matching, the crossing-generated source
 > conflicts from Section 167, and the global minimum-diameter origin of `A` to prove
 > that every directed `C^partial-to-O` linkage omits at least
-> 
-
-```math
+> ```math
 > s=\Delta_\Lambda-d_{\rm int}
-> 
-```
+> ```
 > terminals, or else construct an `N`-point unit-separated configuration of diameter
 > `<D`.
 

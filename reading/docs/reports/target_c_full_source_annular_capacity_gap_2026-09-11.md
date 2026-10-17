@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_full_source_annular_capacity_gap_2026-09-11.md) · source SHA-256 `0b9766b06e868cc1a25f677710654986b1be4424e4f301c490caf29370e31158`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F9FA14B1BD2C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_full_source_annular_capacity_gap_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=a79890c407eb1e62022787151434e6f7bfda8e80; lifecycle=unreviewed; canonical=false -->
@@ -186,10 +186,11 @@ to all general C-II isolates does not produce the missing contradiction.
 Any one of the following would make (3.1) decisive:
 
 1. a force-hull area floor
+   
    ```math
    \frac{A_F}{D^2}>\frac{1-\Delta}{\kappa}=0.7853981633\ldots,
-   
    ```
+
    which is the disk value and is unavailable in the forest branch;
 2. a strict triangular-density loss for the contact-isolated points in either
    `F` or `K\\F` of at least `0.0197873937 D^2`;

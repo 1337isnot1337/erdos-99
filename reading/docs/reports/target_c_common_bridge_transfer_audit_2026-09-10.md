@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_common_bridge_transfer_audit_2026-09-10.md) · source SHA-256 `1c1d6d4207590ab42d159bac71f670436f8552d43052cbe373851d8b404dc810`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-516D4ECA619E","canonical":true,"claim_ids":["C-COMMON-BLOCK"],"claim_statuses":{"C-COMMON-BLOCK":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Erdős Problem #99 — common-bridge transfer exclusion: dependency and sign audit

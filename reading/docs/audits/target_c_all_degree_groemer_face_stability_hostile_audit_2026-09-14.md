@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_all_degree_groemer_face_stability_hostile_audit_2026-09-14.md) · source SHA-256 `6c705509fb5c95f4a298021e7cd8058cb0e57f4e2f4f6b452df9fe680e013ff5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

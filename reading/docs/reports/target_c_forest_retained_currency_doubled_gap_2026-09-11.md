@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_forest_retained_currency_doubled_gap_2026-09-11.md) · source SHA-256 `ec173465bcfa6f3c50690b73a8a370e1b161d38f25f1fe4bbd070dd23eb245bd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8C6A86023E24","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_forest_retained_currency_doubled_gap_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=c07ddaaae3e4b7694820c2b06d6821609f836b42; lifecycle=unreviewed; canonical=false -->

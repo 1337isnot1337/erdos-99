@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_actual_cut_finite_competitor_regression_2026-10-01.md) · source SHA-256 `96930e0cf234a648b053907e607a85583e48425b2017487cd37761b307779d5c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A26010C0F210","canonical":false,"claim_ids":["C-ACTUAL-CUT-FINITE-BARRIER-REGRESSION"],"claim_statuses":{"C-ACTUAL-CUT-FINITE-BARRIER-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Target C: an actual cut source with a finite competitor beyond its local barrier

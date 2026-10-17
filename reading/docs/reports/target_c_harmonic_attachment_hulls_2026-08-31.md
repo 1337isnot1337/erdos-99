@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_harmonic_attachment_hulls_2026-08-31.md) · source SHA-256 `dec6a6bec869c93d7164be9fcce1d34a4b9223c8742ca88a541e3d1b20c2b32f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F2152410F015","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_harmonic_attachment_hulls_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=532b53a06f3ed26ef162ad0bb3592203181c14b6; lifecycle=unreviewed; canonical=false -->

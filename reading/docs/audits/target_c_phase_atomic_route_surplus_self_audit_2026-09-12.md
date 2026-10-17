@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_phase_atomic_route_surplus_self_audit_2026-09-12.md) · source SHA-256 `467ee66e100ec87a34ddede865b5406736540a26c77fcf219872fc6b51716a1c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-37769EEEB3AD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — hostile self-audit of phase-atomic route surplus

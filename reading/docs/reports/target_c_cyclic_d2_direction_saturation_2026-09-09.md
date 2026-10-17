@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_direction_saturation_2026-09-09.md) · source SHA-256 `4dd33f3596e934dee07a6251362fda065a2fc8a1a402a11ce358e668eb447bc5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 14 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -39,24 +39,27 @@ Then for all sufficiently large `D`:
 2. the only consecutive direction pairs that are vertex-disjoint are the two component-switch pairs;
 3. every consecutive pair of edges inside one tree shares a terminal;
 4. if
+   
    ```math
    e=zy,\qquad e'=zw
-   
    ```
+
    are such consecutive within-tree edges with common endpoint `z`, then `y,w` are consecutive vertices of the unit contact shell;
 5. consequently
+   
    ```math
    |y-w|=1
-   
    ```
+
    and the projective direction gap is exactly
+   
    ```math
    \boxed{
    g(e,e')=\delta_D:=2\arcsin\frac1{2D}.
    }
    \tag{D2S.1}
-   
    ```
+
 
 Thus every within-tree direction transition is an exact local equality configuration: two diameter spokes at one endpoint and the unit shell edge joining their opposite endpoints.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_local_bounded_degree_host_corollary_hostile_audit.md) · source SHA-256 `c2fe22376f28f3668112828ff91ba8e00dcb1bccf32cebaf59be5fdeaad62289`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "487fef539ceff78ea01dffcbd4a29ac42c68ab26", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_local_bounded_degree_host_corollary_hostile_audit.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "90668b51c68382da0dd0cf96875470812e5e595b00f8d2265e776bac9dc863a2"} -->
 

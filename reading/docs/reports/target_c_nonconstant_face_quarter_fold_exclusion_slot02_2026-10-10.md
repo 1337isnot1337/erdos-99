@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nonconstant_face_quarter_fold_exclusion_slot02_2026-10-10.md) · source SHA-256 `1f7077efec74ff8372dc3ded578a1cd578f4beae1647e4e33d1dbcb99153711e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-73F983B2C2DC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II: exclude every nonconstant large face at a full quarter-fold

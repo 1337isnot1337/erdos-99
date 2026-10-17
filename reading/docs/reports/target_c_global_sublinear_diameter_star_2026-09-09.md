@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_global_sublinear_diameter_star_2026-09-09.md) · source SHA-256 `6347de6b6160e616924a04641683de1613e682d2b6c3b1e629abac4c457607be`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E9C95EF05384","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_global_sublinear_diameter_star_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=6b017a681ee275db985c2a5f54e519c48f358e8a; lifecycle=unreviewed; canonical=false -->
@@ -38,7 +38,6 @@ Then
 \Delta(H_{all})=O(D^{3/4}).
 }
 \tag{GD.1}
-
 ```
 
 In particular
@@ -48,7 +47,6 @@ In particular
 \Delta(H_{all})/D\to0.
 }
 \tag{GD.2}
-
 ```
 
 This holds for every sufficiently large global minimizer, with or without the triangle-free hypothesis. In the C65 normalization, `H_all=H`, so it applies directly to the complete KKT-visible diameter support.
@@ -129,7 +127,6 @@ Therefore the full source hull satisfies the finite deficit estimate
 \frac{\pi\sqrt3}{4}D.
 }
 \tag{GD.3}
-
 ```
 
 No triangle-free, KKT, or contact-graph hypothesis is used.
@@ -154,7 +151,6 @@ GD.3 gives immediately
 0\le\delta_{iso}(K)<\frac{\sqrt3}{D}.
 }
 \tag{2.1}
-
 ```
 
 Thus every global minimizer is quantitatively near the equality case of the planar isodiametric inequality at rate `D^{-1}` in relative area.
@@ -174,7 +170,6 @@ Applying their theorem to the convex hull `K`, there is a center `c` and an abso
 C_0D^{-1/2}.
 }
 \tag{3.1}
-
 ```
 
 Equivalently, with
@@ -250,7 +245,6 @@ For sufficiently small `rho`, the elementary bound `1-cos t >= c t^2` on a fixed
 =O(D^{-1/4}).
 }
 \tag{4.2}
-
 ```
 
 uniformly over **all** diameter pairs.

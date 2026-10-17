@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section127_interface_augmented_defect_dichotomy_hostile_audit_2026-09-12.md) · source SHA-256 `ab3e923759d0ca6ac1d39f041c5e962507dd7ff5c858696e8d9ae2b7058b69cf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-802BFCD3619E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Target C interface/augmented-defect dichotomy

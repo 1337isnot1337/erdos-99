@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_woodall_diameter_topology_2026-09-10.md) · source SHA-256 `3dce8109e6ce8c8e78c31121e38fb9773db34aa19af26e817bb2d718d6864fbd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A8D2F9C2EC82","canonical":true,"claim_ids":["C-WOODALL"],"claim_statuses":{"C-WOODALL":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Erdős Problem #99 — Woodall classification makes `d_H` an exact diameter-topology switch

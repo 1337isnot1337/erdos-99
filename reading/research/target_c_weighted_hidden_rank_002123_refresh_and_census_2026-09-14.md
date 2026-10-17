@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_weighted_hidden_rank_002123_refresh_and_census_2026-09-14.md) · source SHA-256 `85e78dcad7de6b19ddc61edbdbff2cfe6e5ac912f789a381c1cec86adab28f59`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "73d644145fa4097a4e84df58febe8a69860e8b24", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_weighted_hidden_rank_002123_refresh_and_census_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3083f07f05c0894ab152381c27ddebba41624b93b206c23ce791211b64a810c0"} -->
 

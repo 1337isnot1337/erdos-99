@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_convex_bank_train_capacity_2026-10-02.md) · source SHA-256 `6f3307766ad5664ba05e3e16f79bea0687fcef2783f5ef72dd126c465f424519`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CDF822218CA8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — convex bank capacity excludes zero-detour coherent train shores

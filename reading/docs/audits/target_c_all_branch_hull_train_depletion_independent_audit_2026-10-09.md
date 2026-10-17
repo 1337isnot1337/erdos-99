@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_all_branch_hull_train_depletion_independent_audit_2026-10-09.md) · source SHA-256 `1e1c6c5abc19ee4219a146f9422a6d6a86ca676fccafbe212aa9d7c6b5f7b392`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1F513BE69946","canonical":true,"claim_ids":["C-ALL-BRANCH-HULL-TRAIN-DEPLETION"],"claim_statuses":{"C-ALL-BRANCH-HULL-TRAIN-DEPLETION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit of all-branch hull-train depletion

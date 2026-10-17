@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearzero_series_extremality_2026-09-09.md) · source SHA-256 `a6b315a1f60bee35c4c2d448e539e52b27765ce108af73521e24093955a40607`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -383,7 +385,7 @@ Now
 \frac{A_i}{\mu}+\frac{\mu}{A_i}-2
 \right)
 &=
-1+rac{\mu}{L}\sum_i\frac1{A_i}-2\\
+1+\frac{\mu}{L}\sum_i\frac1{A_i}-2\\
 &=
 \frac{S_A}{L^2}\sum_i\frac1{A_i}-1.
 \end{aligned}

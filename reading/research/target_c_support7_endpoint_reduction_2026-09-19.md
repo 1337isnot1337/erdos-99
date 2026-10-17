@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_endpoint_reduction_2026-09-19.md) · source SHA-256 `9e8fb04bca58e7b55644c6d5d614669cf577c4b2255140a2f122d3b04e606004`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cedee75de46913142bc1dbe3d1a724cf6f9063a6", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_endpoint_reduction_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "6da6709d5d9d5ac2be7f1c9b68c217b9c76c3af0cd773630209c17d14052df1c"} -->
 

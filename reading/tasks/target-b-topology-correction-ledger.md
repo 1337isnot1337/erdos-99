@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/target-b-topology-correction-ledger.md) · source SHA-256 `b68a32b8751befbcada1a887411d2d0f7252ab323d802763c7367a9bd8d0b91a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # target-b-topology-correction-ledger
 

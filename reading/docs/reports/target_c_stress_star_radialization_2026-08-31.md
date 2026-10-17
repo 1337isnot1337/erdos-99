@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_stress_star_radialization_2026-08-31.md) · source SHA-256 `76c704c0ee72fb237e20e350c7fd5ea54162fc8ca84dff9cf065867cabd95ae2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-C6E7729FAB7D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C68: stress-star concentration forces radial contact stress
@@ -328,7 +330,7 @@ S_z\ge1-C_0D\varepsilon,
 where
 
 ```math
-\varepsilon=rac12\operatorname{tr}(\Lambda-L_H).
+\varepsilon=\frac12\operatorname{tr}(\Lambda-L_H).
 ```
 
 Substitute C68.17 into C68.12.

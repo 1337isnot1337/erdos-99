@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_circuit_bridge_cut_and_separator_geometry_2026-09-09.md) · source SHA-256 `24c5e1e271948f8c3dd196bc9262431377804816d33b7f76bd1bcbe49cc2f29c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EEE27731BABC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — circuit bridge-cut ledger and noncollinear separator theorem

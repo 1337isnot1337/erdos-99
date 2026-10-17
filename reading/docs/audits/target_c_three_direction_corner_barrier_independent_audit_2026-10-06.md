@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_three_direction_corner_barrier_independent_audit_2026-10-06.md) · source SHA-256 `2a5fbb4feb178a5d5d1f78cbf36c52ffff3f5aaaececde77aafe8cc4e47b20b4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-45E96F746D74","canonical":false,"claim_ids":["C-THREE-DIRECTION-SMOOTH-AFFINE-CORNER-REGRESSION"],"claim_statuses":{"C-THREE-DIRECTION-SMOOTH-AFFINE-CORNER-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent audit — three-direction affine packet corner barrier

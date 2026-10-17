@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_star_run_audit_2026-09-09.md) · source SHA-256 `5672d224fcb8136f1322a5a31aaa2d9e345810cd22b4e1d15fcb0b27a060ebc3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2BFB2DDC46AB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic ordinary-gap audit: path inference is false, star-run saturation survives

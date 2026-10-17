@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_minimal_interface_annular_saturation_2026-09-09.md) · source SHA-256 `d9b6070dfdb0cdb9ef4c59d9e141a61a55b16216bda2d10476b5ca0aba3aefff`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 24 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

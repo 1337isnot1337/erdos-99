@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sublinear_surplus_macroscopic_gap_2026-09-09.md) · source SHA-256 `fa7d351b717ec7612b50dfaf95ea905868cf5ebccccdb2f00761600ecb15afd3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-66604DAC7DB4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — sublinear post-ZF surplus forces a macroscopic force-hull gap
@@ -78,6 +80,7 @@ Summing (1.4), using `sum delta_r^2 <= L^2`, `c_I<=q`, and `q<=pi D`, gives
 &\le\boxed{
 \frac\pi4L^2+\pi L+\pi^2D.
 }
+\end{aligned}
 \tag{1.5}
 ```
 
@@ -136,7 +139,7 @@ then
 \boxed{
 \liminf\frac G{D^2}
 \ge a_0
-=rac12\sin(1/4)>0.
+=\frac12\sin(1/4)>0.
 }
 \tag{ZG.4}
 ```
@@ -234,17 +237,19 @@ for some fixed `g>0` and all sufficiently large indices. Then, after passing to 
 subsequence, at least one of the following holds:
 
 1. **macroscopic outer-face area**
+   
    ```math
    \boxed{H_{out}\ge(g/3)D^2;}
    \tag{ZG.6}
-   
    ```
+
 2. **giant bounded defect face:** there is a bounded nonquadrilateral face of perimeter
+   
    ```math
    \boxed{k_{max}\ge c_gD}
    \tag{ZG.7}
-   
    ```
+
    for an explicit constant `c_g>0` (for example any asymptotic constant below
    `2g/15` is valid with the crude bounds used here).
 

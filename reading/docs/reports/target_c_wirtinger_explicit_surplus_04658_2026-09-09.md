@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_wirtinger_explicit_surplus_04658_2026-09-09.md) · source SHA-256 `f3db0d7a0d5b944d53343caa233da72a59a2c7196c2b9b4d00c5377a83c805e5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-FF0623F40478","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Wirtinger detour raises the explicit pinned/contact floor to 0.4658

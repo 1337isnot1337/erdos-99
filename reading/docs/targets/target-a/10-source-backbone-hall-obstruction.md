@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/10-source-backbone-hall-obstruction.md) · source SHA-256 `5f53b96fdf9cd938b15e0d55009cc6c859f4b66eed2df6a73396c148ec28201b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — source-backbone Hall obstruction
 
@@ -65,18 +65,13 @@ xp\in E_\delta\iff |x-p|<\delta.
 ```
 
 > **Theorem 157.1 (diameter-cover Hall obstruction).** If
-> 
-
-```math
+> ```math
 > d+2\delta\le D,
 > \tag{157.5}
-> 
-```
+> ```
 > then every matching in $`J_\delta`$ has size at most
 > $`m-\tau_D(A)`$. Equivalently,
-> 
-
-```math
+> ```math
 > \boxed{
 > \max_{Q\subseteq X_m}
 > \bigl(|Q|-|N_P^\delta(Q)|\bigr)
@@ -84,25 +79,18 @@ xp\in E_\delta\iff |x-p|<\delta.
 > \ge\tau_D(A).
 > }
 > \tag{157.6}
-> 
-```
+> ```
 > If
-> 
-
-```math
+> ```math
 > N_-:=\min\{q:D(q)=D\},
 > \qquad p_N=N-N_-,
 > \tag{157.7}
-> 
-```
+> ```
 > then
-> 
-
-```math
+> ```math
 > \boxed{\tau_D(A)\ge p_N+1.}
 > \tag{157.8}
-> 
-```
+> ```
 
 ### Proof
 
@@ -162,40 +150,28 @@ bound is then available for every $`Q\subseteq X_m`$.
 
 > **Corollary 157.2 (exact backbone witness and rattler capture).** Under the
 > common placement of Section 155, there is a set $`Q\subseteq X_m`$ with
-> 
-
-```math
+> ```math
 > h:=|Q|-|N_P(Q)|
 > =m-\nu(J_1)
 > \ge\tau_D(A)
 > \ge p_N+1.
 > \tag{157.13}
-> 
-```
+> ```
 > It satisfies
-> 
-
-```math
+> ```math
 > \boxed{|N_R(Q)|\ge h-\widehat p_H.}
 > \tag{157.14}
-> 
-```
+> ```
 > Moreover
-> 
-
-```math
+> ```math
 > P_Q=(P\setminus N_P(Q))\cup Q
 > \tag{157.15}
-> 
-```
+> ```
 > is a unit-separated subset of $`H`$ with
-> 
-
-```math
+> ```math
 > \boxed{|P_Q|=m+h.}
 > \tag{157.16}
-> 
-```
+> ```
 
 ### Proof
 
@@ -268,25 +244,19 @@ gives (157.20).
 > placement $`X_m+\overline B(0,1)\subseteq H`$. Let $`C`$ be any vertex cover of
 > $`\mathcal D_P(A)`$. Then every $`Q\subseteq X_m`$ satisfies
 >
-> 
-
-```math
+> ```math
 > \boxed{|Q|-|N_A(Q)\cup C|\le-1.}
 > \tag{157.21}
-> 
-```
+> ```
 > Consequently, for a maximizing backbone witness from Corollary 157.2, with
 > $`h=|Q|-|N_P(Q)|`$,
 >
-> 
-
-```math
+> ```math
 > \boxed{|N_R(Q)|
 > \ge h-|C\setminus N_A(Q)|+1
 > \ge h-|C|+1.}
 > \tag{157.22}
-> 
-```
+> ```
 > In particular, choosing a minimum cover and using $`h\ge\tau_D(A)`$, every
 > such witness captures at least one strict rattler.
 

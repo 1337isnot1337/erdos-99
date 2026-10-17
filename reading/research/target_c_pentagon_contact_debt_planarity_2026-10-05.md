@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_pentagon_contact_debt_planarity_2026-10-05.md) · source SHA-256 `6649efff9fd5f4243ad09f882ec78b2dbda1ebfd32ee98431410a6d872832cef`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "f5f96b341b0893c9469dae12bdbe665ffc85fa67", "source_branch_refs": ["refs/heads/automation/target-c-pentagon-contact-debt-planarity-2026-10-05"], "source_commit": "c292562bb6c6117ca6acd12a53c9e61bc3bd1c02", "source_lifecycle": "not indexed", "source_path": "research/target_c_pentagon_contact_debt_planarity_2026-10-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c10b05bcf2b93a5100b1ac7b7eccdfcb6548c141ac2636e4ec6058145e181980"} -->
 

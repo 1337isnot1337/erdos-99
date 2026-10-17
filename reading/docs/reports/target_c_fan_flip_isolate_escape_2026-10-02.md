@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fan_flip_isolate_escape_2026-10-02.md) · source SHA-256 `aa64b1299a7e4f1bb4fc4a5e3c2f882e94272e6ba971d0666ff789ce92dc0d13`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CD1DD48A2F24","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — finite fan flips force core attachment or macroscopic isolate escape
@@ -305,22 +305,24 @@ in particular it is not restricted to the contact core.
 2. all of `S` consists of contact-isolated points, and there are `z in S`
    and `x in A\setminus(S\cup\{p\})` with
 
+   
    ```math
    D-\delta\le|z-x|<D,\qquad |z+w-x|\ge D,
    \qquad (z-a)\cdot u\le {\sqrt3\over2}D+\delta.
    \tag{18}
-   
    ```
+
 
    The component of this `z` contains a blocker `z_0 in Z`, and any
    near-contact path from `z_0` to `z` has at least
 
+   
    ```math
    { (1-\sqrt3/2)D-1-2\delta\over 1+\delta}
    =(1-\sqrt3/2)D-O(1)
    \tag{19}
-   
    ```
+
 
    edges. All its vertices are actual isolated source points, and every
    path edge is an inactive source pair within `1/D` of contact activity.

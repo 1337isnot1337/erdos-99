@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/quantitative_kuperberg_rate_refinement_2026-08-30.md) · source SHA-256 `54c28ac8710295156a0f189e79b177b381a122dcb1ee7b336247e72a499aecee`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -61,9 +61,7 @@ x_{j+1}\ge x_j+c x_j^q
 until `x_j >= d_*`. Once `d_*` is reached, Kuperberg monotonicity gives only `O(1)` additional stages to reach insertion width.
 
 > **Theorem R.1 (three-regime stage count).** As `d downarrow 0`, the number `k(d)` of Kuperberg widening stages needed to reach a fixed positive gap satisfies
-> 
-
-```math
+> ```math
 > \boxed{
 > k(d)=
 > \begin{cases}
@@ -73,7 +71,7 @@ until `x_j >= d_*`. Once `d_*` is reached, Kuperberg monotonicity gives only `O(
 > \end{cases}
 > }
 > \tag{R.4}
-```
+> ```
 
 ### Case `0<q<1`
 
@@ -208,9 +206,7 @@ R_k\le C A^k.
 Substituting Theorem R.1 yields:
 
 > **Corollary R.2 (support rate by semialgebraic exponent).** For sufficiently small aligned unit-separation gap width `d`,
-> 
-
-```math
+> ```math
 > \boxed{
 > W(d)\le
 > \begin{cases}
@@ -220,7 +216,7 @@ Substituting Theorem R.1 yields:
 > \end{cases}
 > }
 > \tag{R.11}
-```
+> ```
 
 The constants can change from line to line and absorb the paper-to-canonical factor-two scaling.
 

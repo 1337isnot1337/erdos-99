@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_degree_phase_gate_nearsimple_signed_hostile_audit_2026-09-15.md) · source SHA-256 `3c6cdbd5ad1f9196403d3de075f9efdf3e8d63696d1a22c5f9d8f92f36f3e9f2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b460435916c02ef0a45c214f227ca2013f63a7d3", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_degree_phase_gate_nearsimple_signed_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3e6579fe4febd5292baedd80c931d17a99be0a2a6e20dc6b6cff11091c0c3b6d"} -->
 
@@ -209,15 +209,17 @@ Two acute/right angles sum to at most `pi`, so they cannot realize `pi+tau` with
 `tau>0`. The only possibilities are:
 
 - one acute/right and one obtuse, giving exactly
+  
   ```math
   \tau=\delta_a-\delta_o>0;
-  
   ```
+
 - two obtuse, giving exactly
+  
   ```math
   \delta_1+\delta_2=\pi/3-\tau>\pi/6.
-  
   ```
+
 
 No other all-rhombic cubic case exists.
 

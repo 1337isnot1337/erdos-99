@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_phase_bin_star_multiplicity_2026-10-01.md) · source SHA-256 `dcc35ca5748cd97e26bad9f78bf5400c7dad8f7415efad4a056e83491dcf69d9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F1F7ABF9BA79","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- bounded star multiplicity inside an inverse-diameter phase bin

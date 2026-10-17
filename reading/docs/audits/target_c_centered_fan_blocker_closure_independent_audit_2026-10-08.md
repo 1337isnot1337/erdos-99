@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_centered_fan_blocker_closure_independent_audit_2026-10-08.md) · source SHA-256 `d0bcd14ea730e6ea5a6ace761b52af96ee6e056b2772fe431d9bd246d141d9e6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-37997D56E4BC","canonical":true,"claim_ids":["C-CENTERED-FAN-BLOCKER-DEPTH-PATH"],"claim_statuses":{"C-CENTERED-FAN-BLOCKER-DEPTH-PATH":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent Audit.152: centered-fan blocker paths reach macroscopic depth

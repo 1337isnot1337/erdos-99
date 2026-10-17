@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_convex_width_fixed_point_endpoint_exclusion_2026-09-30.md) · source SHA-256 `5afcb124e9a90d8ba85d13b6738cebf2a5aac7b62812ad93be3c8da83448df03`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-34AF64FDB833","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II - exclusion of the convex-width fixed-point endpoint

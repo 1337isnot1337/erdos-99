@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md) · source SHA-256 `43c490a092d644dd42831ec60359701c9c77106f927623c5fd7f0585ba83c83c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2730FC62EBF8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
 # Erdős Problem #99 — phase cuts and coherent crossing families

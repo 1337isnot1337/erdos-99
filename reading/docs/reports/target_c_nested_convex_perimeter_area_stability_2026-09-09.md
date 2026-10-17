@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nested_convex_perimeter_area_stability_2026-09-09.md) · source SHA-256 `9568702d4f72050a09779ec52ef9ea5ddac1e8fee66f2b0e2a37fefd9c55e385`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 5 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 18 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -66,7 +68,7 @@ A(F)/D^2
 \ge
 A_{PI}(y)
 \left[
-1+rac{(p-P_4^*)_+^2}{16\pi^2}
+1+\frac{(p-P_4^*)_+^2}{16\pi^2}
 \right]-o(1),
 }
 \tag{NCS.2}
@@ -283,7 +285,7 @@ A(K)
 \ge
 A(Q)
 \left[
-1+rac{(p-P_4^*)_+^2}{16\pi^2}
+1+\frac{(p-P_4^*)_+^2}{16\pi^2}
 \right].
 \tag{3.3}
 ```
@@ -315,7 +317,7 @@ Define
 
 ```math
 B(p):=
-1+rac{(p-P_4^*)_+^2}{16\pi^2}.
+1+\frac{(p-P_4^*)_+^2}{16\pi^2}.
 ```
 
 For fixed `p`, the NCS-enhanced PI area floor is
@@ -341,7 +343,7 @@ Thus the hardest density remains
 For completeness, the only modified derivative on the first half is
 
 ```math
-\frac{B(p)}2\cos y-rac{\lambda+y}{2\pi}.
+\frac{B(p)}2\cos y-\frac{\lambda+y}{2\pi}.
 ```
 
 On the entire perimeter range needed below, `B(p)<1.001`, while `y>=2rho`; the same strict negativity margin used in DJC remains overwhelming. No near-zero derivative issue is introduced by the tiny stability factor.
@@ -354,7 +356,7 @@ A_N(p)
 :=
 \frac12\sin\frac p2
 \left[
-1+rac{(p-P_4^*)_+^2}{16\pi^2}
+1+\frac{(p-P_4^*)_+^2}{16\pi^2}
 \right].
 }
 \tag{NCS.8}

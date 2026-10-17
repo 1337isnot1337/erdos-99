@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/12-toeout-kuperberg-improvement.md) · source SHA-256 `e4f5620b9f4a4ebe2fd46e1fda47adcd3bb0c435812f3dd4f59da373fa157592`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — toe-out Kuperberg improvement
 
@@ -282,17 +282,14 @@ radii scale by one half.  Since `W(d)` is the minimum support radius over all fi
 positive-gain aligned-gap witnesses, (160.15) gives the stronger canonical theorem
 
 > **Theorem 160.1 (explicit aligned support constant).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \limsup_{d\downarrow0}
 > d^3\log W(d)
 > \le\frac{\sqrt3\log3}{8}.
 > }
 > \tag{160.16}
-> 
-```
+> ```
 
 Equivalently, for every `\varepsilon>0` and all sufficiently small `d>0`,
 
@@ -343,9 +340,7 @@ W(r\alpha_L)=o(L).
 Theorem 160.1 now reaches a genuine borderline scale that Corollary 157.4 did not.
 
 > **Corollary 160.2 (borderline logarithmic strain).** If
-> 
-
-```math
+> ```math
 > \boxed{
 > \limsup_{L\to\infty}
 > \frac{\alpha_L^{-3}}{\log L}
@@ -353,18 +348,14 @@ Theorem 160.1 now reaches a genuine borderline scale that Corollary 157.4 did no
 > \frac{8r^3}{\sqrt3\log3},
 > }
 > \tag{160.20}
-> 
-```
+> ```
 > then, for all sufficiently large `L`,
-> 
-
-```math
+> ```math
 > \boxed{
 > \alpha_1(H_{L,\alpha_L})\ge |P_L|+1.
 > }
 > \tag{160.21}
-> 
-```
+> ```
 
 Indeed, (160.16) gives
 

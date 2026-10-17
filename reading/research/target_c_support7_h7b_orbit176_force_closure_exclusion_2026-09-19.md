@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_h7b_orbit176_force_closure_exclusion_2026-09-19.md) · source SHA-256 `0b6d2f7688694e1fc09b42bf4f838983eb0790a6aba218fbbbae023e44a17f43`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d22ab755d68e6804a08188328c7fb98fb6981cd9", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_h7b_orbit176_force_closure_exclusion_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2126fe6c6a32f5b9ccdabc7ff40dc2415e6c9004cb613097e620e5b61fb54f67"} -->
 

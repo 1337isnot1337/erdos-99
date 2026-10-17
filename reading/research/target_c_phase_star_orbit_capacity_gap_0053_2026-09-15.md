@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_phase_star_orbit_capacity_gap_0053_2026-09-15.md) · source SHA-256 `4031a31e9797e1f074161b1a65e5934dd334ace665d6e6fd39c57180c07d8696`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 31 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

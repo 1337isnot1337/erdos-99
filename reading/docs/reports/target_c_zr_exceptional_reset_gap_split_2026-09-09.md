@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_exceptional_reset_gap_split_2026-09-09.md) · source SHA-256 `d677747d0f60c407487d662038faa3929c800041e46d611a444132329c88ad66`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 13 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -195,16 +195,18 @@ A positive quadratic attachment-cell area gap is forced whenever
 Therefore the exceptional-reset branch splits further:
 
 1. if
+   
    ```math
    \theta\le\lambda_2<\lambda_*,
-   
    ```
+
    the source has a positive quadratic attachment-cell gap, which GU localizes to a macroscopic outer pocket or a bounded exceptional face of linear perimeter;
 2. if
+   
    ```math
    \lambda_2\ge\lambda_*,
-   
    ```
+
    the post-ZF contact/stress surplus itself is at least `0.7425...D` asymptotically.
 
 Thus a macroscopic reset cannot stay in a low-surplus/no-gap region.

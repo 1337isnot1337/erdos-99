@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_phase_nested_bundle_tree_2026-10-01.md) · source SHA-256 `cbebdbf6396c3120bdf9a67d11d13bbfd9236325889e38917cadb1151dc81857`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8BF2BF277956","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — exact-phase diameter rows form a nested opposed-bundle tree
@@ -55,11 +55,12 @@ Discard zero rows. Then the following conclusions hold.
    the negative-c intervals also form a chain.
 2. These two chains have exactly the same interval types. For each type I,
    independently,
+   
    ```math
    \boxed{\sum_{h:I_h=I}\beta_h c_h=0.}
    \tag{4}
-   
    ```
+
    Each interval type therefore contains at least two actual diameter edges with
    opposite strict transverse signs.
 3. If `rank M=m`, there are exactly m distinct interval types. Ordered from
@@ -68,11 +69,12 @@ Discard zero rows. Then the following conclusions hold.
 4. Consequently the simple support of the gap multigraph is a tree with m edges,
    obtained by recursive deletion of an extreme ordered gap vertex. The full
    multigraph consists of opposed parallel bundles on this tree. In particular,
+   
    ```math
    \boxed{|\{h:c_h\ne0,\ I_h\ne\varnothing\}|\ge2m.}
    \tag{5}
-   
    ```
+
 5. Every nonempty-support diameter crosses the same selected cut k, including
    the possible diameter parallel to u. The actual diameter subgraph with
    nonempty support is bipartite and has no cycles; cycles in the gap quotient

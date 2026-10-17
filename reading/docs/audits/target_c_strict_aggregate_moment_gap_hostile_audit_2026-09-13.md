@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_strict_aggregate_moment_gap_hostile_audit_2026-09-13.md) · source SHA-256 `2f2aceb03bc531315dbc930add55d7e14a3e5f842cc912f724e22c30ad8217f0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4BE792C45D05","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Target C strict aggregate moment gap

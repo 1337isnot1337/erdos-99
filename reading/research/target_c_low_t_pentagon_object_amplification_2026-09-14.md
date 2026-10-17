@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_low_t_pentagon_object_amplification_2026-09-14.md) · source SHA-256 `0b4226803f343c5776021b367f2c1590303d7fd25b56f9da740bd04af2e2dc3b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "6b359ad5630139c8bde5c8220a48c6a55e8bacad", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_low_t_pentagon_object_amplification_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3d74d98d7f76c9ee32cf483b9c57a05ee1238e123e1f36ba8e1d1cf293bc7996"} -->
 

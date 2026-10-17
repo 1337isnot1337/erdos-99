@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nm_gu_two_currency_dichotomy_2026-09-11.md) · source SHA-256 `6beeedd7b2e794fb3ed071d43d3e6a6bb9d0ebdef314d377447304656382d0d0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

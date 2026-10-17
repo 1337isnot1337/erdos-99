@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_contact_tangent_projected_stress_duality_hostile_audit_2026-09-18.md) · source SHA-256 `a3f2659eaaf8d967ff25cd57038315e0df48d2dfa5f638d424e4a96c163084b9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e96dc1b9ae30f25f991c0b97964089b3899b71b1", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_contact_tangent_projected_stress_duality_hostile_audit_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c85f836fe8793ac10bbdbc02fbf149f8cc44dc8d5b0bce9df1c9b0ba993a61be"} -->
 

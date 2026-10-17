@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_pr182_full_dependency_audit_2026-09-11.md) · source SHA-256 `8b6218335bbf0f371760a841642a47fe866b5cd2901c90757d573aa269604ab6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CA2184B47B89","canonical":true,"claim_ids":["C-PD","C-RSR-DD"],"claim_statuses":{"C-PD":"canonical","C-RSR-DD":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Erdős Problem #99 — independent full dependency audit of PR #182

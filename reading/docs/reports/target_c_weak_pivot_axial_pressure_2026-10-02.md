@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_weak_pivot_axial_pressure_2026-10-02.md) · source SHA-256 `55ed779dbee5e63b6849c8eceb172c942845a44426cc7d19e14679cdd1e8cf26`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4623F8727B01","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: a weak pivot forces macroscopic axial pressure

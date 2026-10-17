@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_bounded_variation_lattice_endpoint_count_independent_audit_2026-10-09.md) · source SHA-256 `2febf2285cd099800de7e54221754bb5ebad9ca133edf23f6c26f9195b3d578c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-30600E0A53EC","canonical":true,"claim_ids":["C-BOUNDED-VARIATION-LATTICE-ENDPOINT-COUNT","C-CURVED-BOUNDARY-LATTICE-LOCAL-CAPACITY"],"claim_statuses":{"C-BOUNDED-VARIATION-LATTICE-ENDPOINT-COUNT":"canonical","C-CURVED-BOUNDARY-LATTICE-LOCAL-CAPACITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.214 — bounded-variation lattice endpoint count

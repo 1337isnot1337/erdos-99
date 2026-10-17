@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_multibody_shunt_collapse_2026-08-31.md) · source SHA-256 `7ed9d842f2b915f035086dad4ec017ecc8475a49589285b0c8fbdad46ccc83c3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C4D14A84A89E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_multibody_shunt_collapse_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=f92908bd28dab3f9ad97b2ba74b922a0f5c6a3e3; lifecycle=unreviewed; canonical=false -->

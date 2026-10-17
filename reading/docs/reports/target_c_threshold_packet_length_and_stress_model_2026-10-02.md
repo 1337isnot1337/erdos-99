@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_threshold_packet_length_and_stress_model_2026-10-02.md) · source SHA-256 `c2057db1fb60f634ecca9f8cbe476623a0db96dd645d0626b1c75b48ac15dcad`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0536CA14406C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: long packet reactions and a consistent cut stress model

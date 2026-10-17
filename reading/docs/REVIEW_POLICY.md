@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../docs/REVIEW_POLICY.md) · source SHA-256 `e1ecede9fe4e811f02fd543298d75a92ffadfb43a8ebe12b5d1dcf6ed01363d1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Research review and theorem promotion
 

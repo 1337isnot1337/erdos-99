@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section127_interface_augmented_defect_dichotomy.md) · source SHA-256 `9ff0cc0899163228b68b5f493fc1de61699a2a347f417115adf28a977191ba45`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2aa6f4e1a92ddcfc7a601b5792b934f03e7e0b49", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section127_interface_augmented_defect_dichotomy.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "44f1ecd74a3139570cefd81de36bb44abb34ac872d947d052e9b1b7e91f7059e"} -->
 

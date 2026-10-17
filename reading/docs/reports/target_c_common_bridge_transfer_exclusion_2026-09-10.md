@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_common_bridge_transfer_exclusion_2026-09-10.md) · source SHA-256 `fc98a1c25b369ca93561a45084df073bd267849f38edf7c37c18c614bee2a467`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A78445F64670","canonical":true,"claim_ids":["C-COMMON-BLOCK"],"claim_statuses":{"C-COMMON-BLOCK":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Erdős Problem #99 — universal common contact bridge is incompatible with C56 transfer

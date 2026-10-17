@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_sections75_76_promotion_2026-09-12.md) · source SHA-256 `c91fa2ee5423d736a9bae676190efa01e71e5cf2e33e3e08619d7ed43e2e4e93`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-FCA6C815AA97","canonical":true,"claim_ids":["C-COMP-DEATOMIZATION","C-HOLE-GRID-DIAMETER"],"claim_statuses":{"C-COMP-DEATOMIZATION":"canonical","C-HOLE-GRID-DIAMETER":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Sections 75–76 promotion audit

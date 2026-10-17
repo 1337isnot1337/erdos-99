@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_bounded_variation_contact_port_counts_independent_audit_2026-10-09.md) · source SHA-256 `26bbd0d6babd39504c188af493cb43ef5b6d9c3a89c202857f044f1b426bcaeb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9308FD0CE136","canonical":true,"claim_ids":["C-BOUNDED-VARIATION-DOUBLE-PORT-COUNT","C-BOUNDED-VARIATION-LEAF-PORT-COUNT","C-NEAR-BOUNDARY-LATTICE-LOCAL-CAPACITY","C-POSITIVE-LEAF-ANCHOR-INNER-BALL-BOUNDARY"],"claim_statuses":{"C-BOUNDED-VARIATION-DOUBLE-PORT-COUNT":"canonical","C-BOUNDED-VARIATION-LEAF-PORT-COUNT":"canonical","C-NEAR-BOUNDARY-LATTICE-LOCAL-CAPACITY":"canonical","C-POSITIVE-LEAF-ANCHOR-INNER-BALL-BOUNDARY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.216 — contact ports into bounded-variation charts

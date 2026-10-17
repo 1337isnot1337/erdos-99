@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_qs_jc_explicit_floor_0590685_2026-09-10.md) · source SHA-256 `080b52c3fa1dca359138edf4ebafbd3aed8962c780a98c2c4d94c0afb15601c0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 41 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -130,7 +132,7 @@ the partial derivatives of `B` are
 ```math
 \boxed{
 B_a
-=s-rac{p f'(a)}{4q}-\frac\pi2 f'(a),
+=s-\frac{p f'(a)}{4q}-\frac\pi2 f'(a),
 }
 \tag{1.8}
 ```
@@ -157,7 +159,7 @@ QS gives `a>alpha(p)>1/2`, while the bounds established below give `q<5/12` and
 `p>14/5`; therefore
 
 ```math
--q+\frac{p}{4q}>-rac5{12}+\frac{14/5}{4(5/12)}>0,
+-q+\frac{p}{4q}>-\frac5{12}+\frac{14/5}{4(5/12)}>0,
 ```
 
 and `pi/2-a/4>0`.

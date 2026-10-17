@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fully_visible_response_psd_transport_2026-08-31.md) · source SHA-256 `e5c2903f0cff30640e91d8a533a232caf11c2b698b6fb5ab25c6d6f8fea75a31`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D9D2C9447DD6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fully_visible_response_psd_transport_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=8557c4d5f653cbae1b59ecb0f1b27e531105b466; lifecycle=unreviewed; canonical=false -->

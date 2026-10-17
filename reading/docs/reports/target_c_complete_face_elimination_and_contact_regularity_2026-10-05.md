@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_complete_face_elimination_and_contact_regularity_2026-10-05.md) · source SHA-256 `82a2fb5244b6760f2ba4860ffd2fa861e6a6a187030eaaeda45768a655c311bb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-FE92EE7D1B20","canonical":true,"claim_ids":["C-CONTACT-FACE-REGULARITY"],"claim_statuses":{"C-CONTACT-FACE-REGULARITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — complete exceptional-face elimination and regularity of every contact constraint

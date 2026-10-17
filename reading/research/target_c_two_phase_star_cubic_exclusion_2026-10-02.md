@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_two_phase_star_cubic_exclusion_2026-10-02.md) · source SHA-256 `c54d4cd37573943800f64865093727f3a94df7ba39c180809387c73b740d22d3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C: cubic diameter-star budget excludes two-phase bracing below defect pi/3
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_p1_second_order_residue_ramification_2026-09-10.md) · source SHA-256 `37cc79a5f2cc96308f4cbc39c3be37dbdb6ad7a631a2c3e13577cf9f103b46d7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -450,19 +450,21 @@ The proof uses only the local double-root factorization, the exact power-of-two 
 The arithmetic frontier is now split cleanly.
 
 1. **Prime odd part, `r>=2`:** maximal projective order is completely excluded.  The remaining primes satisfy
+   
    ```math
    f_p\le\frac{p-1}{4}.
-   
    ```
+
    The next target is to combine the number of distinct trace residue orbits with rational-factor/Galois constraints so that a global irreducible factor cannot choose only one small orbit.
 
 2. **Odd `r=1` branch:** resolve the coincident second-order terms explicitly.  For `p=5` direct local expansion suggests the same doubled ramification, but a uniform proof needs the exact coefficient of the valuation-one correction.
 
 3. **Composite odd part:** each used non-order-three divisor class of order `d` costs at least `2r f_d` degrees.  Combine this with the global budget
+   
    ```math
    \deg h\le\frac{r(u-1)}2
-   
    ```
+
    and the factorization of `S_u` into trace orbits.
 
 ---

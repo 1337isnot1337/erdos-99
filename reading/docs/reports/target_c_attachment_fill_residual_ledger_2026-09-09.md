@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_attachment_fill_residual_ledger_2026-09-09.md) · source SHA-256 `c19bc69b265d00698c12652f03da5f6cf48720bb39ef33771d3b844706afb247`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-FA22005235BF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — attachment-cell fill and residual-ledger cancellation
@@ -122,26 +122,29 @@ Work in the lexicographically normalized fully force-visible C-II source. Let
 The needed geometry is already proved in the repository:
 
 1. C36 gives
+   
    ```math
    I_r\subseteq P_r,
    \qquad a_r\ge3.
    \tag{1.1}
-   
    ```
+
 2. C49 proves
+   
    ```math
    \operatorname{int}P_r\cap\operatorname{int}P_s=\varnothing
    \quad(r\ne s).
    \tag{1.2}
-   
    ```
+
 3. C44/ZG gives
+   
    ```math
    \operatorname{diam}(A_r)=\operatorname{diam}(P_r)
    \le\delta_r+2.
    \tag{1.3}
-   
    ```
+
 
 No assumption that attachment sets are disjoint is needed. They may share loaded vertices; only cell interiors are used for area additivity.
 
@@ -307,7 +310,6 @@ a_0(v-q)
 -a_0(\pi-2)c_I.
 }
 \tag{3.5}
-
 ```
 
 ---

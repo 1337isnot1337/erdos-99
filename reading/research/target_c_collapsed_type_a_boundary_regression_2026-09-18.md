@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_collapsed_type_a_boundary_regression_2026-09-18.md) · source SHA-256 `9236bcfc1680303be67e21cc6c9b12e0959b0429338259237207c5d56b541ac7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4a3c118bad7847eb15ccd3877981bd1f60db44f3", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_collapsed_type_a_boundary_regression_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c49b53cb7cc7a93dbe7ed9f5b0dbc8ce19226ef2e5f73d137782ce391706d881"} -->
 

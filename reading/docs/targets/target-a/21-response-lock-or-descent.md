@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/21-response-lock-or-descent.md) · source SHA-256 `91ad1b256c3b71002415fc4f47c3c5353af80c06b5b20f6a1c30302c81f0fd5c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — actual-response lock or triangle-free descent
 
@@ -62,33 +62,30 @@ regime relevant to Problem #99.
 >
 > 1. **Triangle-free descent.**  There is a unit-separated set
 >    
-
-```math
+>    ```math
 >    X^{\rm tf}\subset K^*,
 >    \qquad |X^{\rm tf}|=m^*,
 >    \tag{169.4}
->    
-```
+>    ```
+
 >    with no unit equilateral triangle.  It is automatically a global optimum and
 >    
-
-```math
+>    ```math
 >    \boxed{\operatorname{diam}X^{\rm tf}=d.}
 >    \tag{169.5}
->    
-```
+>    ```
+
 > 2. **Actual-response lock.**  The point set `X^*` contains a unit equilateral
 >    triangle `T_*` such that
 >    
-
-```math
+>    ```math
 >    \boxed{
 >    a_{ij}(v)=0
 >    \qquad(ij\in E(T_*),\ v\in\mathcal C_{K^*}(X^*)).
 >    }
 >    \tag{169.6}
->    
-```
+>    ```
+
 >    Thus all three sides of `T_*` are fixed to first order by every infinitesimally
 >    feasible motion that remains in the actual response hull.
 
@@ -125,13 +122,10 @@ graph containing `T_*`.
 
 > **Corollary 169.2 (actual-response boundary transmission).**  The component `K_T`
 > contains at least two distinct points
-> 
-
-```math
+> ```math
 > u,v\in X^*\cap\partial K^*
 > \tag{169.7}
-> 
-```
+> ```
 > carrying nonzero facet reaction.  In particular there are positive-contact paths in
 > `X^*` from the locked triangle to two distinct vertices of the actual response hull.
 
@@ -144,25 +138,19 @@ The remaining coordinate-identification step is elementary but important.
 
 > **Lemma 169.3 (hull-boundary response points are response-boundary columns).**  Fix
 > a triangular-lattice phase generic for `X^*`, and use the response notation
-> 
-
-```math
+> ```math
 > Z=(\Lambda+v)\cap\operatorname{int}K^*,
 > \qquad
 > X^\circ=\{x\in X^*:N(x)\subseteq Z\},
 > \qquad
 > X^\partial=X^*\setminus X^\circ.
 > \tag{169.8}
-> 
-```
+> ```
 > Then
-> 
-
-```math
+> ```math
 > \boxed{X^*\cap\partial K^*\subseteq X^\partial.}
 > \tag{169.9}
-> 
-```
+> ```
 
 ### Proof
 
@@ -185,13 +173,10 @@ Combining the last two statements gives the promised scope correction.
 
 > **Corollary 169.4 (locked-support transport to the actual response boundary).**  In
 > the locked branch there are at least two distinct vertices
-> 
-
-```math
+> ```math
 > \boxed{u,v\in X^\partial}
 > \tag{169.12}
-> 
-```
+> ```
 > that lie in the positive-contact component of the locked response triangle and carry
 > nonzero `K^*`-facet reaction.
 
@@ -206,22 +191,16 @@ The following exact crossing observation is unconditional in the locked branch.
 
 > **Lemma 169.5 (response edge crossing a locked contact edge).**  Let `pq` be a unit
 > contact edge of `X^*`, and let `xy` be a response radial edge with
-> 
-
-```math
+> ```math
 > x\in X^*,\qquad y\in\Lambda+v,\qquad |x-y|<1,
 > \tag{169.13}
-> 
-```
+> ```
 > whose segment properly crosses the relative interior of `pq`.  If
 > `x notin {p,q}`, then
-> 
-
-```math
+> ```math
 > \boxed{|y-p|<1\quad\text{or}\quad |y-q|<1.}
 > \tag{169.14}
-> 
-```
+> ```
 
 ### Proof
 

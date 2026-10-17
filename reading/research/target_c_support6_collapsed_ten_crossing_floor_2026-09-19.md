@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_collapsed_ten_crossing_floor_2026-09-19.md) · source SHA-256 `cc4d2886233ea30361a07f80118b3f4e03f116cde99e0569c7ddf3a829915b3b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c0c6081689983f93fb3d82408b60306942be6f66", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_collapsed_ten_crossing_floor_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3bd6ad887cdef83c9367dca2ff23f8a29dc6ac9a62a806ec4b70a849537cddc6"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_explicit_perimeter_isolate_tradeoff_2026-09-10.md) · source SHA-256 `d93c1bd68ae71c5b42bde32ede12279aeb880f45be109d75d010ac34e69cf0b1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-424246FDFEB6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — explicit force-perimeter and external-isolate tradeoff
@@ -402,10 +402,11 @@ The post-ZF survivor set now has the following quantitative dichotomy:
 
 1. `liminf lambda_D>=lambda_disk`; or
 2. along any subsequence with `limsup lambda_D<=lambda_0<lambda_disk`, at least
+   
    ```math
    1-\left(p_+(\lambda_0)/\pi\right)^2
-   
    ```
+
    of all source points are external contact-isolates asymptotically.
 
 The second branch is not merely "many isolates": AS forces those points to saturate

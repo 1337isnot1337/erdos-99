@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_forest_double_gap_defect_currency_2026-09-11.md) · source SHA-256 `1222b22cbf7f52f5b0342a9f7b95e79ca1478f1da54d5775b814c91b6c76ed38`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-211BE41E76EC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_forest_double_gap_defect_currency_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=7bdf35dddc26e615e76af93e2985ea34221d00d4; lifecycle=unreviewed; canonical=false -->

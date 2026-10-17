@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_collapsed_mod2_cycle_obstruction_2026-09-19.md) · source SHA-256 `4bf8eaa2bfe00063c85cf9b69cf27ba9a4a43a9d479c4da16659e9097ada84ac`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "61b7615a685faac466247a633b36a435645fefc6", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_collapsed_mod2_cycle_obstruction_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b40cc50b664e38cc5961f30fc1ab5e7aac533f908295b84d05922db27531b2e8"} -->
 

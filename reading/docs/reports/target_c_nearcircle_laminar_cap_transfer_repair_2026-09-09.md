@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearcircle_laminar_cap_transfer_repair_2026-09-09.md) · source SHA-256 `ccfc4f2b4172c37228e968ba657b8200cc4f626740fc034a0eed3cf9f71a56c0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EC9826A1C917","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_nearcircle_laminar_cap_transfer_repair_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=a58c3fc66e014346853f305bf1efcce57542827e; lifecycle=unreviewed; canonical=false -->
@@ -112,7 +112,6 @@ Define one convex body
 K_j:=F_j\cap\bigcap_{a=1}^{m_j}H_{a,j}.
 }
 \tag{3.1}
-
 ```
 
 Because the maximal boundary intervals are disjoint, their caps have pairwise disjoint interiors. Every attachment cell lies in one of these maximal caps. Therefore
@@ -124,7 +123,6 @@ Because the maximal boundary intervals are disjoint, their caps have pairwise di
 \operatorname{area}(F_j)-\operatorname{area}(K_j).
 }
 \tag{3.2}
-
 ```
 
 This is the crucial repair: there is now only one convex body `K_j` to pass to the limit. No per-cell Hausdorff error is summed.
@@ -218,7 +216,6 @@ The area of the inscribed polygon is
 =\frac18\sum_i\sin g_i.
 }
 \tag{5.2}
-
 ```
 
 Put

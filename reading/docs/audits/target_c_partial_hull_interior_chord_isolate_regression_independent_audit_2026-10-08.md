@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_partial_hull_interior_chord_isolate_regression_independent_audit_2026-10-08.md) · source SHA-256 `6d4c95e7fd28f06dc5d9fdefd3e5ee9c04158ca6a7e992bd1d5b505eb7c99ac8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B080632151D7","canonical":false,"claim_ids":["C-PARTIAL-WALL-INTERIOR-CHORD-ISOLATE-REGRESSION"],"claim_statuses":{"C-PARTIAL-WALL-INTERIOR-CHORD-ISOLATE-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent audit — partial-wall interior-chord isolate regression

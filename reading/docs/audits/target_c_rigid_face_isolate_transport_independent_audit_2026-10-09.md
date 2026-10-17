@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_rigid_face_isolate_transport_independent_audit_2026-10-09.md) · source SHA-256 `46f52688a330d693376ce9bea6fe5f9987f08396654851e62ffde157e5e85e74`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B7D7C740170E","canonical":true,"claim_ids":["C-INTEGRATED-FOLD-RIGID-FACE-ISOLATE-TRANSPORT"],"claim_statuses":{"C-INTEGRATED-FOLD-RIGID-FACE-ISOLATE-TRANSPORT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: transport of isolates in rigid faces

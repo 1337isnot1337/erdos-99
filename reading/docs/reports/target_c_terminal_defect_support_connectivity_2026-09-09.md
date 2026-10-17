@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_terminal_defect_support_connectivity_2026-09-09.md) · source SHA-256 `f9361ac8bac1d5bd518147f56702da2507e37348bdb9fe6f2d64ee9a83863f04`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C32B664373E3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — maximal terminal defect rank forces 3-connected signed support

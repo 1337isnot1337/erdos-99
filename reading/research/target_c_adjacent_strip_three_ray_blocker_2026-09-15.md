@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_adjacent_strip_three_ray_blocker_2026-09-15.md) · source SHA-256 `e0b2df9311aae25d5498fb22520e5ca96f45c126609352bb86723df7d59b1645`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "212ae32edbc862464028cbdf48c2f20698217488", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_adjacent_strip_three_ray_blocker_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "baad88165914b734b333001a86866a441e6b96dcb6cb56f24158b36d5898819c"} -->
 
@@ -34,24 +34,28 @@ The canonical survivor has the following finite obstruction.
 ### Theorem TR — three-ray / antipodal-two-edge blocker
 
 1. If
+   
    ```math
    a+b\ne0,
-   
    ```
+
    then there is a subset of at most three rays from
+   
    ```math
    \boxed{\{a,b\}\cup\{-d_h:h\in H_{sw}\}}
    \tag{TR.1}
-   
    ```
+
    whose convex hull contains the origin.  At least one selected ray is a switching-diameter ray.  Hence the failure of a strict first-order contact-opening / diameter-shortening strip translation has a certificate using at most **three switching diameter edges**, and often only one or two.
 
 2. If
+   
    ```math
    b=-a,
-   
    ```
+
    then the first-order contact cone is degenerate, but the finite problem is stronger: every canonical survivor contains two switching diameter edges `h_+,h_-` with opposite transverse signs
+   
    ```math
    \boxed{
    d_{h_+}\cdot Ja>0,
@@ -59,18 +63,19 @@ The canonical survivor has the following finite obstruction.
    d_{h_-}\cdot Ja<0.
    }
    \tag{TR.2}
-   
    ```
+
    A switching diameter parallel to `a` cannot replace this pair; there is at most one such diameter edge and a second-order axial correction bypasses it.
 
 3. Independently of the two cases, the exact KKT strip resultant
+   
    ```math
    Aa+Bb
    =D\sum_{h\in H_{sw}}\beta_hd_h,
    \qquad A,B>0,\ \beta_h>0,
    \tag{TR.3}
-   
    ```
+
    admits a planar compressed certificate:
    - if `Aa+Bb!=0`, its direction lies in the cone of at most two switching diameter directions;
    - if `Aa+Bb=0`, the zero resultant lies in the convex hull of at most three switching diameter directions.

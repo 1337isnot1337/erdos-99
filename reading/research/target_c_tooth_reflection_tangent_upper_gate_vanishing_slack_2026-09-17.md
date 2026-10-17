@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_tangent_upper_gate_vanishing_slack_2026-09-17.md) · source SHA-256 `fb49e3b623c2c9cb04e9e7aeb0a823bd9b731f9e6f903b3b6e64bb113c5545cf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "db40f74e6a90d1bc6c13423687daf8960e7cd7d4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_tangent_upper_gate_vanishing_slack_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "1cd3b37c5477ef1416533553309f793dd46fe3eb6868e44e3f1ca83b07305541"} -->
 

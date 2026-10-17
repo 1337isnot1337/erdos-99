@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_two_phase_star_common_core_uniqueness_2026-10-01.md) · source SHA-256 `cdeb975851d8ac7a7c0aac934d7c97c69605b576e9ce8c77907a7ee8060ec4cc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D6D6F32FA9C1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- uniqueness of a two-phase diameter star near the rooted endpoint

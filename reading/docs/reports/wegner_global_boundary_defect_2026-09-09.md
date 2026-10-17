@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/wegner_global_boundary_defect_2026-09-09.md) · source SHA-256 `9799b117c93154ed87671735693e69abe8a56ca070e7cc513926db2dc2620f76`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 9 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-1144055F7305","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99 — Wegner improves the global boundary defect and plateau allowance
@@ -45,7 +47,6 @@ q_n
 \kappa\,[W_n-\pi D(n)]_+.
 }
 \tag{WG-G.1}
-
 ```
 
 Since
@@ -76,7 +77,6 @@ C_W
 =1.5586279167\ldots .
 }
 \tag{WG-G.2}
-
 ```
 
 The previous coefficient was
@@ -93,7 +93,6 @@ so the certified boundary-order gain is
 =0.0121684101\ldots .
 }
 \tag{WG-G.3}
-
 ```
 
 This also improves the asymptotic length of any fixed-diameter plateau from `pi D/2` to `C_W D`.
@@ -135,10 +134,9 @@ Substitution into (1.1), cancellation of `pi`, and division by four give
 \operatorname{area}(K)+\frac12\operatorname{per}(K)
 \ge
 \frac{\sqrt3}{2}(N-1)
-+rac{2-\sqrt3}{4}W_N.
++\frac{2-\sqrt3}{4}W_N.
 }
 \tag{1.2}
-
 ```
 
 Put
@@ -155,13 +153,12 @@ Oler in the same normalization is
 \operatorname{area}(K)+\frac{a_0}{2}\operatorname{per}(K)
 \ge a_0(N-1).
 \tag{1.3}
-
 ```
 
 Since
 
 ```math
-\frac12-rac{a_0}{2}=c_W,
+\frac12-\frac{a_0}{2}=c_W,
 ```
 
 combining the better of (1.2) and (1.3) gives
@@ -175,7 +172,6 @@ combining the better of (1.2) and (1.3) gives
 +c_W[W_N-\operatorname{per}(K)]_+.
 }
 \tag{1.4}
-
 ```
 
 This is the exact Oler+Wegner form used below.
@@ -221,11 +217,11 @@ From (1.4), monotonicity of the positive part, and (2.1)--(2.2),
 a_0(n-1)
 &\le
 \operatorname{area}(K)
-+rac{a_0}{2}\operatorname{per}(K)
++\frac{a_0}{2}\operatorname{per}(K)
 -c_W[W_n-\operatorname{per}(K)]_+\\
 &\le
 \frac\pi4D^2
-+rac{a_0\pi}{2}D
++\frac{a_0\pi}{2}D
 -c_W[W_n-\pi D]_+.
 \end{aligned}
 \tag{2.3}
@@ -237,8 +233,8 @@ Divide by `a_0`. Since
 \frac{\pi}{4a_0}=\Delta,
 \qquad
 \frac{c_W}{a_0}
-=rac{2-\sqrt3}{2\sqrt3}
-=rac1{\sqrt3}-\frac12
+=\frac{2-\sqrt3}{2\sqrt3}
+=\frac1{\sqrt3}-\frac12
 =\kappa,
 ```
 
@@ -249,11 +245,10 @@ we obtain
 n-1
 \le
 \Delta D^2
-+rac\pi2D
++\frac\pi2D
 -\kappa[W_n-\pi D]_+.
 }
 \tag{2.4}
-
 ```
 
 Subtract `Delta D^2`. This is WG-G.1.
@@ -274,7 +269,6 @@ so the complete finite sandwich is
 -\kappa[W_n-\pi D(n)]_+.
 }
 \tag{2.5}
-
 ```
 
 ---
@@ -432,8 +426,8 @@ Target A also uses
 ```math
 E(n)
 :=
-\Delta D(n)^2+rac\pi2D(n)-(n-1)
-=rac\pi2D(n)-q_n.
+\Delta D(n)^2+\frac\pi2D(n)-(n-1)
+=\frac\pi2D(n)-q_n.
 ```
 
 WG-G.1 is equivalent to

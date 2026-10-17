@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-b/120-boundary-backtracking-audit.md) · source SHA-256 `6b5515ed9aad992703cac1b539092487fe74d57fdaa0c58938300c1ac02e47a9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target B — Section 120 boundary-backtracking hostile audit
 

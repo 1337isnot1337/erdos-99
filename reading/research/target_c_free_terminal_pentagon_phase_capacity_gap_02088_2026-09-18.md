@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_free_terminal_pentagon_phase_capacity_gap_02088_2026-09-18.md) · source SHA-256 `a8b559fe6b7d4e129d12513cb0bc9c9b39beea04fbfee8a7e43e6513107a4ef0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C-II — failed route: exact pentagon phase capacity does not transfer to atomic windows
 

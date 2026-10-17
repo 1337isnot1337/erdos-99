@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_open_cell_projected_resultant_mountain_2026-10-04.md) · source SHA-256 `60e7e341116860e4415b0966daad2ea0b4ac7996d72f363ca87581a9d8cda769`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e018316133138525149afbb7620b4944b6f5b8d8", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_open_cell_projected_resultant_mountain_2026-10-04.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4d8a21a853c5453a995b4f9eca654ee88e6f4801ed23e3d3c2ecbb7c26b926b5"} -->
 

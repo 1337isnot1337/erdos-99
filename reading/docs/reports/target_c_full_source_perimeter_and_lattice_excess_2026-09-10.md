@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_full_source_perimeter_and_lattice_excess_2026-09-10.md) · source SHA-256 `0fdb728bd99fccd1e4a279395e6d250035607ca17e9dd480d539946f01219281`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0FE9461E394E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — full-source perimeter saturation and lattice-excess endpoint
@@ -340,12 +340,9 @@ Equation (GE.7) is a one-budget coupling between source width/perimeter deficit,
 The full-source NC route can now be stated without the redundant hull defects. A sufficient C-II theorem is
 
 > **Population-excess exclusion.** Every sufficiently large contact/diameter-lexicographically minimal triangle-free global source of diameter `D` satisfies
-> 
-
-```math
+> ```math
 > n-1\le\frac{\pi}{2\sqrt3}D^2.
-> 
-```
+> ```
 
 This contradicts the strict translated-lattice inequality for the same global source.
 

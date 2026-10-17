@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_lower_blocker_local_ladders_t18687_2026-09-17.md) · source SHA-256 `d1ec8173b6da3ef3fcf21570f2356154af53325ea2d4d1b8993d802ccd3b28f3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 26 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -33,30 +33,21 @@ Those two integer scales fit exactly. After fixing whether the other endpoint li
 The result is:
 
 > **LOWER local-ladder theorem.** The permanent LOWER branch contains more than
-> 
-
-```math
+> ```math
 > \left({\gamma\over16}-o(1)\right)D
-> 
-```
+> ```
 > blockers whose exact support intervals are pairwise disjoint and whose entire support windows each carry one local common train family of
-> 
-
-```math
+> ```math
 > (0.6436-o(1))D
-> 
-```
+> ```
 > columns with uniform inverse-`D` angular defect on every row of the window and common `0.01D` circumcenter flanks.
 >
 > Moreover one single complete stopped train belongs to the local common-column family of more than
-> 
-
-```math
+> ```math
 > \boxed{
 > \left(1.08295128110\ldots\times10^{-9}-o(1)\right)D
 > }
-> 
-```
+> ```
 > of these pairwise-disjoint blocker windows.
 
 Thus the remaining lower Horn obstruction is not merely path-local. A linear subfamily can be threaded by one common transverse train while every local blocker window is independently near-equilateral to inverse-`D` accuracy.

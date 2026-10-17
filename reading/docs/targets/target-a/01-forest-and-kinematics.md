@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/01-forest-and-kinematics.md) · source SHA-256 `53adf786af862e93ccc4d2463ed2ec5120ee482c592f21375c685bde8fed31e5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A: forest and component kinematics
 
@@ -976,26 +976,20 @@ needed and is not promoted.  The correct theorem is the following.
 > Let $`K=\ker\mathcal B\subseteq\mathcal L`$, $`k=\dim K`$, in a pure simply
 > connected strict-rhombic-disk global minimizer.  Then either
 >
-> 
-
-```math
+> ```math
 > k\le5,
 > \tag{53.1}
-> 
-```
+> ```
 >
 > or there exists a triangle-free pure-rhombic-disk global minimizer of the same
 > diameter $`D`$, arbitrarily close to the original (possibly the original itself),
 > whose train-angle realization space contains a local same-$`D`$ manifold of
 > dimension at least
 >
-> 
-
-```math
+> ```math
 > \boxed{k-5.}
 > \tag{53.2}
-> 
-```
+> ```
 >
 > If the construction reaches a strict-separation stage after at least one face has
 > been protected, the nearby minimizer may additionally be chosen with strictly
@@ -1147,23 +1141,17 @@ invisible train must be impossible.
 
 > **Theorem 54.1.**  For arbitrary integers $`2\le m<n`$, if
 >
-> 
-
-```math
+> ```math
 > D(m)=D(n)=D,
 > \tag{54.1}
-> 
-```
+> ```
 >
 > then
 >
-> 
-
-```math
+> ```math
 > \boxed{n-m<\frac\pi2D.}
 > \tag{54.2}
-> 
-```
+> ```
 
 ### Proof
 
@@ -1705,37 +1693,28 @@ rows; equilibrium is imposed only in the unpinned columns.
 
 > **Theorem 60.1 (rooted-forest rank/self-stress identity).**
 > One has
-> 
-
-```math
+> ```math
 > \boxed{
 > \ell=u-r+c+\sigma,
 > \qquad
 > 0\le\sigma\le r-c.
 > }
 > \tag{60.1}
-> 
-```
+> ```
 > Consequently
-> 
-
-```math
+> ```math
 > \boxed{
 > u-r+c\le\ell\le u,
 > \qquad
 > 0\le u-\ell=r-c-\sigma\le r-c.
 > }
 > \tag{60.2}
-> 
-```
+> ```
 > Since $`r\le |\widehat Q|\le\pi D`$,
-> 
-
-```math
+> ```math
 > \boxed{0\le u-\ell\le\pi D.}
 > \tag{60.3}
-> 
-```
+> ```
 
 ### Proof
 
@@ -1807,13 +1786,10 @@ Pin every nonroot vertex of $`S`$ having degree at least three in $`S`$.  Let $`
 be the total number of such newly pinned branch vertices.
 
 > **Lemma 61.1 (branch count).**
-> 
-
-```math
+> ```math
 > \boxed{b\le r-c.}
 > \tag{61.1}
-> 
-```
+> ```
 
 ### Proof
 
@@ -1836,25 +1812,19 @@ on each such path.
 > **Theorem 61.2 (root-skeleton exactification).**
 > There is a nearby triangle-free global minimizer of the same diameter carrying a
 > smooth exact-contact manifold $`\mathcal M`$ such that
-> 
-
-```math
+> ```math
 > \boxed{
 > \dim\mathcal M=u-b\ge u-r+c,
 > }
 > \tag{61.3}
-> 
-```
+> ```
 > while the number of old forest contacts made strict is at most
-> 
-
-```math
+> ```math
 > \boxed{
 > L_{\rm lost}\le r+b-c\le2(r-c).
 > }
 > \tag{61.4}
-> 
-```
+> ```
 
 ### Proof
 
@@ -2062,37 +2032,28 @@ forest flat, on which nonfixed old bars open quadratically.
 > Denote this strict-rattler set by $`\mathscr R`$. Its vertices have no unit contact,
 > no active diameter incidence, and strict slack in every constraint involving them.
 > Consequently
-> 
-
-```math
+> ```math
 > \boxed{
 > |\mathscr R|\ge v=u-b\ge u-r+c\ge\ell-(r-c),
 > }
 > \tag{62.7}
-> 
-```
+> ```
 > and the local same-$`D`$ minimizer set contains an open ball of dimension at least
-> 
-
-```math
+> ```math
 > \boxed{
 > 2|\mathscr R|\ge2(u-r+c)\ge2\ell-2(r-c).
 > }
 > \tag{62.8}
-> 
-```
+> ```
 > In particular, since $`r-c\le\pi D`$,
-> 
-
-```math
+> ```math
 > \boxed{
 > |\mathscr R|\ge\ell-\pi D,
 > \qquad
 > \dim_{\rm local}\mathcal O_D\ge2\ell-2\pi D.
 > }
 > \tag{62.9}
-> 
-```
+> ```
 
 ### Proof
 
@@ -2148,23 +2109,17 @@ Target A is no longer a linkage-regularity problem.
 > Let $`A`$ be a triangle-free $`n`$-point global minimizer of diameter $`D`$, with
 > $`K=\operatorname{conv}A`$.  Then $`A`$ is contained in a triangle-free global
 > minimizer $`A^+\subset K`$ of the same diameter satisfying
-> 
-
-```math
+> ```math
 > \boxed{|A^+\setminus A|<\frac\pi2D,}
 > \tag{63.1}
-> 
-```
+> ```
 > and
-> 
-
-```math
+> ```math
 > \boxed{
 > K\subseteq\bigcup_{p\in A^+}\overline B(p,1).
 > }
 > \tag{63.2}
-> 
-```
+> ```
 > If a specified finite subset of $`A`$ consists of strict rattlers, the added points
 > may be chosen generically so that those vertices remain non-diametral strict
 > rattlers.
@@ -2300,22 +2255,16 @@ language.
 > **Target A1 (saturated rattler-capacity theorem).**
 > Let $`A`$ be a triangle-free global minimizer of diameter $`D`$, normalized as in
 > Theorems 62.3 and 63.1.  Let $`\mathscr R\subset A`$ be the set of vertices satisfying
-> 
-
-```math
+> ```math
 > 1<|p-q|<D
 > \qquad(q\in A\setminus\{p\}).
 > \tag{64.1}
-> 
-```
+> ```
 > Put $`\rho=|\mathscr R|`$. Prove
-> 
-
-```math
+> ```math
 > \boxed{\rho=O(D).}
 > \tag{64.2}
-> 
-```
+> ```
 
 Since $`\rho\ge\ell-\pi D`$, this immediately gives $`\ell=O(D)`$ and closes the
 hybrid branch.
@@ -2365,26 +2314,20 @@ vertex set.
 
 > **Theorem 65.1 (component closure and Minkowski splitting).**
 > For every terminal component,
-> 
-
-```math
+> ```math
 > \boxed{
 > \sum_{j\in J_C}e_j=0.
 > }
 > \tag{65.2}
-> 
-```
+> ```
 > The vectors $`\{e_j:j\in J_C\}`$, in their inherited cyclic angular order, are the
 > edge vectors of a possibly degenerate convex polygon $`K_C`$.  Up to translation,
-> 
-
-```math
+> ```math
 > \boxed{
 > K=K_1+\cdots+K_{c(\Theta)}.
 > }
 > \tag{65.3}
-> 
-```
+> ```
 
 ### Proof
 
@@ -2431,29 +2374,23 @@ s_C=
 ```
 
 > **Theorem 66.1 (componentwise closure-corrected turn inequality).**
-> 
-
-```math
+> ```math
 > \boxed{
 > |E(C)|-|V(C)|+1
 > \le
 > \sum_{j\in J_C}t_j-s_C.
 > }
 > \tag{66.3}
-> 
-```
+> ```
 > Summing over components,
-> 
-
-```math
+> ```math
 > \boxed{
 > T-q+c(\Theta)
 > \le
 > \sum_jt_j-\sum_Cs_C.
 > }
 > \tag{66.4}
-> 
-```
+> ```
 
 ### Proof
 
@@ -2484,9 +2421,7 @@ vector-closure relations of the Minkowski summands; they are not supplied by a f
 kernel of $`\mathcal D`$.
 
 > **Theorem 66.2 (equality geometry of $`s_C`$).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \begin{array}{ll}
 > s_C=0
@@ -2501,8 +2436,7 @@ kernel of $`\mathcal D`$.
 > \end{array}
 > }
 > \tag{66.6}
-> 
-```
+> ```
 
 ### Proof
 

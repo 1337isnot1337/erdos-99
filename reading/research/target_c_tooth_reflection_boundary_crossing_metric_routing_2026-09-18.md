@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_boundary_crossing_metric_routing_2026-09-18.md) · source SHA-256 `de390b467af9c1163d0085191eb93eb3c86474a461bb80171bcc463e2b489b0b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "9b39a6817e4cad86cabec717cc805a618f1fb29b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_boundary_crossing_metric_routing_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f7b55caeabae028b3ec3fa01afdb68cc7d59b01a9bd2cacba81b326c81192ff3"} -->
 

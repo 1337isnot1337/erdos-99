@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_free_terminal_t_near_floor_near_contact_matching_2026-09-18.md) · source SHA-256 `612fcdb40df953f490232b0f3bcddb317f191a42d2a264f28040ddfa85ea8a0c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "15aaef95d6d709c158a5bc6ac9acd8ac81187419", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_free_terminal_t_near_floor_near_contact_matching_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "236cfdef3e9fa3e75da2c62d0a90cf67507f6a2dcdf83030bc6d84001123a577"} -->
 

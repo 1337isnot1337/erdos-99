@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_long_train_separator_and_disjoint_returns_independent_audit_2026-10-08.md) · source SHA-256 `943d36eeab06ec027fbac20f90ebd0051b63a6170f5bf8958004c386f1330d69`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4110538FF870","canonical":true,"claim_ids":["C-CORE-UNLOADED-SEPARATOR-AREA-BOUND","C-LONG-TRAIN-SEPARATOR-INEQUALITY","C-QUADRATIC-CORE-DISJOINT-TRAIN-RETURNS"],"claim_statuses":{"C-CORE-UNLOADED-SEPARATOR-AREA-BOUND":"canonical","C-LONG-TRAIN-SEPARATOR-INEQUALITY":"canonical","C-QUADRATIC-CORE-DISJOINT-TRAIN-RETURNS":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.180 — long-train separators and disjoint full-source returns

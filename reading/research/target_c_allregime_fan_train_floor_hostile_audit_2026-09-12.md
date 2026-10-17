@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_allregime_fan_train_floor_hostile_audit_2026-09-12.md) · source SHA-256 `38221a7c71d3e4356674805ee783281e98a3d66538b15000adff6e9339ed5360`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "0c8e454927ebe023555fde0e1c4d1326e273962b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_allregime_fan_train_floor_hostile_audit_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "6298bea8befe15d6b7d67ac60d98b31c61c55351bd25c938837f68da8b8c46fc"} -->
 

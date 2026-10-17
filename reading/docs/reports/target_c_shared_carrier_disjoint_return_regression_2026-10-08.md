@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_shared_carrier_disjoint_return_regression_2026-10-08.md) · source SHA-256 `cc5a6310450c8ffd5b701fe71e25b637f654109784fde06270ebd0f8b728e3ec`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-64CD1558FB7C","canonical":false,"claim_ids":["C-SHARED-CARRIER-DISJOINT-RETURN-COST-REGRESSION"],"claim_statuses":{"C-SHARED-CARRIER-DISJOINT-RETURN-COST-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Target C: a small common carrier need not support many disjoint returns

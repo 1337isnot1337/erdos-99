@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fsdb_joint_cavity_surplus_05882_2026-09-10.md) · source SHA-256 `d9206c50e452e4dff789067d5d6c9fe68ae12f3e9119706fc11088348f23faf6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0FECCD139BF5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fsdb_joint_cavity_surplus_05882_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=47512228a77ec399ab97a8d0fa8785b95305c339; lifecycle=unreviewed; canonical=false -->
@@ -404,10 +404,11 @@ A closing continuation should not merely iterate this scalar floor.  The shortes
 useful next theorem is one of the following equivalent types:
 
 1. prove a universal upper bound
+   
    ```math
    \limsup\frac{e_{BB}+2s_C}{D}<\lambda_{FSJC};
-   
    ```
+
 2. prove that the FSJC near-equality normal form `h/D -> pi/2` is incompatible with
    the post-ZF exact ledgers, mixed redundant rigidity, or FS.4 common-center geometry;
 3. strengthen the cavity upper bound in a way that excludes every

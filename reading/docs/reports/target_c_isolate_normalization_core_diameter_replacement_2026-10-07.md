@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_isolate_normalization_core_diameter_replacement_2026-10-07.md) · source SHA-256 `fc54cf764349260cc41f6b8507b99fcb6267c8d91bdafec5bef319613a0f3e44`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "7436dfced68ebe4bb42b06d423a63aab8aa22741", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "3457d175bafad554b71c442a3a3667b077025dcf", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_c_isolate_normalization_core_diameter_replacement_2026-10-07.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c3e1baac507b2ad0e28e5de1d69c5eb8db619e21a4d9370b5103d08df615828e"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_adjacent_cut_finite_cusp_hostile_audit_2026-09-15.md) · source SHA-256 `285dab6240c2b1a41372af5c914967c7af6bb94e70d8443e3230d279aa126cd2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "efbea54ada674bc46b3a383b75289f202726fe13", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_adjacent_cut_finite_cusp_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4d66b6209495691b2c370a332355ed84b310bb9e3a480b863739104162041b8e"} -->
 

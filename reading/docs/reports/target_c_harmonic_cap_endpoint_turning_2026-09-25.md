@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_harmonic_cap_endpoint_turning_2026-09-25.md) · source SHA-256 `b816a5cccd2e8b9d689c2402c2227e02bd6b622c237ef1d41fc5ae4f542bb1cd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-85E01791693F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_harmonic_cap_endpoint_turning_2026-09-25.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=92eb23cbca3cc4c4820b448c99afca30067b2dfa; lifecycle=unreviewed; canonical=false -->

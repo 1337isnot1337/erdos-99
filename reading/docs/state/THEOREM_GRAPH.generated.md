@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/state/THEOREM_GRAPH.generated.md) · source SHA-256 `8c72c67e3e3d81484deae9d9a543e27b2dd487141044c903aa811bbe095ef0a5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Generated theorem dependency graph
 

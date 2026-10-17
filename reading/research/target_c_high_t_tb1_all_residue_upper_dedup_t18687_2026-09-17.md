@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_all_residue_upper_dedup_t18687_2026-09-17.md) · source SHA-256 `fd69e9da1d51331d3f1c6b983341c74db05b73774bb8b9081d08a250c5350a9c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 17 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

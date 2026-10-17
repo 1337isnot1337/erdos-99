@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_one_corner_one_vacancy_independent_audit_2026-10-07.md) · source SHA-256 `a59efc1816323fb3d8eb6982561110ea5e31027047ee07983afdb6fe2646ca5c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-80A0A5A44E42","canonical":true,"claim_ids":["C-ONE-CORNER-ONE-VACANCY-OLER-RESIDUAL","C-ONE-CORNER-ONE-VACANCY-SOURCE-EXCLUSION","C-ONE-CORNER-ONE-VACANCY-STRICT-PACKET"],"claim_statuses":{"C-ONE-CORNER-ONE-VACANCY-OLER-RESIDUAL":"canonical","C-ONE-CORNER-ONE-VACANCY-SOURCE-EXCLUSION":"canonical","C-ONE-CORNER-ONE-VACANCY-STRICT-PACKET":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: one-corner, one-vacancy curved-wall packet

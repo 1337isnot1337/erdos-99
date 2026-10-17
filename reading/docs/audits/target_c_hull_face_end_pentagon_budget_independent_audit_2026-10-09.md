@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_hull_face_end_pentagon_budget_independent_audit_2026-10-09.md) · source SHA-256 `d6fe456189bb927beb9a2bf0aade3dbeff1cd88945e18f1ea124b5a878034040`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5399A3459330","canonical":true,"claim_ids":["C-ALL-BRANCH-HULL-FACE-END-BUDGET","C-HULL-TRAIN-FACE-END-NORMAL","C-SHORT-UNIT-POLYGON-DIRECTION-WINDOW"],"claim_statuses":{"C-ALL-BRANCH-HULL-FACE-END-BUDGET":"canonical","C-HULL-TRAIN-FACE-END-NORMAL":"canonical","C-SHORT-UNIT-POLYGON-DIRECTION-WINDOW":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit of the all-branch hull-face end and pentagon budget

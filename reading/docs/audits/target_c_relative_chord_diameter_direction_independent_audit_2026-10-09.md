@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_relative_chord_diameter_direction_independent_audit_2026-10-09.md) · source SHA-256 `b8b00551e589ea5a78192d05db4bbeb62ea682b2c06fd5861df03fd39399e065`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C370CB46FC24","canonical":true,"claim_ids":["C-ADDITIVE-CHART-RELATIVE-CHORD-BOUND","C-RELATIVE-CHORD-DIAMETER-COUNT","C-RELATIVE-CHORD-GROWING-CHART-EXCLUSION"],"claim_statuses":{"C-ADDITIVE-CHART-RELATIVE-CHORD-BOUND":"canonical","C-RELATIVE-CHORD-DIAMETER-COUNT":"canonical","C-RELATIVE-CHORD-GROWING-CHART-EXCLUSION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: relative-chord diameter direction exclusion

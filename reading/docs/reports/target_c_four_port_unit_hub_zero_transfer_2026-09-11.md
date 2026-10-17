@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_four_port_unit_hub_zero_transfer_2026-09-11.md) · source SHA-256 `3307599923aba5ce06a38bf3a46a6941ce97f2831e90b3a460635272f7a03aaa`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8167410A5BFC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_four_port_unit_hub_zero_transfer_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=e4180e89491de8f56979ec3bb7359e2004952653; lifecycle=unreviewed; canonical=false -->

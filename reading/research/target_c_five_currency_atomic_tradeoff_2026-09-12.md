@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_five_currency_atomic_tradeoff_2026-09-12.md) · source SHA-256 `2a8eed386885268e1ef8116be39dfa7c816c7ce801c956c17be593186d5b6316`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2a48eb108d47a7f1952f36603580888605a917c9", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_five_currency_atomic_tradeoff_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "21569898004bc594354067bf009a5d6217d3f4442821b21e9376f6fc24e3b8f3"} -->
 

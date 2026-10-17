@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_boundary_neighbor_shell_or_pdisjoint_transfer_2026-09-05.md) · source SHA-256 `b460d2e2e0364fbb027192067a91d4bf6bb8eca27d47caf898e8b116dccf626f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CFB18E0956C2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C: boundary-neighbor shell / P-disjoint transfer

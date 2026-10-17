@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_b_fourbar_211_case2_sign_coherent_shell_charge_2026-10-03.md) · source SHA-256 `33f6d2ccf57df5e9a5e2aeb7d2737131093f839287c66f5879e6462d17e63a82`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "755b2537187188697a9f155cc43bdfa540a9f8ce", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_b_fourbar_211_case2_sign_coherent_shell_charge_2026-10-03.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "59cf9a8c05ad906e7fc0170e958f02d809007ba8739d2444664deb2f7e2c842a"} -->
 

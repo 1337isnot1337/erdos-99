@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../CONTRIBUTING.md) · source SHA-256 `42fad0b59d21f29ecd6311beb7f519b0a345a746d5ada0afe666a85935950240`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Contributing
 

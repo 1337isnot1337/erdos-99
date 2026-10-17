@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_open_cell_block_transposition_2026-10-01.md) · source SHA-256 `1f2c7c2c133b4acfdb5c562579bb34956c32fb1d20bbed9cd71d322973a2730b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-FF6F95A6BC7A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- arbitrary block transposition inside one open witness cell
@@ -46,53 +46,59 @@ Then:
 
 1. every old unit contact is preserved exactly;
 2. the two boundary train directions are exchanged:
+   
    ```math
    u_p+\Delta=u_q,\qquad
    -u_q+\Delta=-u_p;
    \tag{4}
-   
    ```
+
 3. every moving old actual diameter, oriented from the fixed exterior into the
    translated slab as $`n_h`$, satisfies the exact non-grazing estimate
+   
    ```math
    \boxed{|n_h\cdot w|>{Ds\over2};}
    \tag{5}
-   
    ```
+
 4. at least one moving actual diameter has $`n_h\cdot w>0`$;
 5. consequently either
 
+   
    ```math
    \boxed{\text{TWO-SIGN: some moving actual diameter has }n_h\cdot w<0,}
    \tag{6}
-   
    ```
+
 
    or
 
+   
    ```math
    \boxed{\text{ONE-SIGN: every moving actual diameter has }n_h\cdot w>0.}
    \tag{7}
-   
    ```
+
 
 6. in the ONE-SIGN case every moving old diameter strictly shortens under the
    full finite transposition. Canonical minimality therefore forces a previously
    strict source pair $`xy`$ with
 
+   
    ```math
    \boxed{1<|xy|\le1+{4K\over D}}
    \tag{8}
-   
    ```
+
 
    or
 
+   
    ```math
    \boxed{D-{4K\over D}\le|xy|<D.}
    \tag{9}
-   
    ```
+
 
 Thus the adjacent TB1 swap is not intrinsically adjacent. Any two distinct phases
 inside the same open witness cell admit one exact finite block transposition with

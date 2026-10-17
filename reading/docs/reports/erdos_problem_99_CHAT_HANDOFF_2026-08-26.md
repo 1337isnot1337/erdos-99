@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/erdos_problem_99_CHAT_HANDOFF_2026-08-26.md) · source SHA-256 `8c3a26b3900110d71f33662b3c276f8c1ebc858b35d87da7ea202c16ce666e03`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "31796fed42be2694877e22e67606a4226058748d", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/erdos_problem_99_CHAT_HANDOFF_2026-08-26.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "04cbbba44daa7abd12ff91b9b051d25ae33a44c44bd3c507f94ae45cad463f1c"} -->
 
@@ -324,21 +324,24 @@ In the jammed triangle-free branch:
 - every hull vertex is diametral;
 - $`q=|Q|=\Theta(D)=\Theta(\sqrt n)`$;
 - the contact graph has
+  
   ```math
   e=2n-\Theta(\sqrt n);
-  
   ```
+
 - all but $`O(D)`$ bounded faces are strict unit rhombi;
 - a strict rhombus has angle
+  
   ```math
   \pi/3<\theta\le\pi/2;
-  
   ```
+
 - total angular defect
+  
   ```math
   \sum_F(\theta_F-\pi/3)=O(D);
-  
   ```
+
 - almost all vertices have degree four.
 
 Train tracks form a simple triangle-free pseudoline arrangement. If $`T`$ is the
@@ -1289,12 +1292,9 @@ The exact target is:
 > Show that the simultaneous existence of the huge two-well supply in the original
 > minimizer and the near-saturating inner-band conflict matching in the independent
 > scaffold is impossible for $`\rho/D\to\infty`$, or produces
-> 
-
-```math
+> ```math
 > |Q|-|N(Q)|\ge j.
-> 
-```
+> ```
 
 Promising subroutes:
 
@@ -1711,16 +1711,18 @@ Target A as closed and focus on Target B.
 The strongest next strategy is to exploit the exact tension between:
 
 - a **huge supply** in the original saturated minimizer:
+  
   ```math
   |M|=\rho/24-o(\rho),
-  
   ```
+
   with two-well local geometry; and
 - a **tiny demand** in the scaffold:
+  
   ```math
   j=O(D),
-  
   ```
+
   with an inner-band conflict matching deficient by at most $`j-1`$.
 
 Since $`\rho/D\to\infty`$, the supply/demand ratio diverges.

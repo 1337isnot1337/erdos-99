@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/TARGET_C_POST123_NAMESPACE_2026-09-12.md) · source SHA-256 `6b6d68aec160f82c749497121bce26a1d0ea6e3e077f2833af32730f85300dbe`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b72a2b7f437bba5610e59bb45846fb6393d3c60c", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/TARGET_C_POST123_NAMESPACE_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "cf9f1b5ca540f2716c57736e6e7bb5e54b6b06a1414087ef7ae57470a57dbe29"} -->
 

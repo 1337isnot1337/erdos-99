@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_zero_valid_pinned_closure_independent_audit_2026-10-07.md) · source SHA-256 `25adddb249e4d922caadcd23f16a8ed4f9e0d7d194bd13ff348821eebdbf3bf9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C1C2989E044E","canonical":true,"claim_ids":["C-ZERO-VALID-PINNED-CLOSURE"],"claim_statuses":{"C-ZERO-VALID-PINNED-CLOSURE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C: independent audit of zero-valid pinned 2-CNF closure certificates

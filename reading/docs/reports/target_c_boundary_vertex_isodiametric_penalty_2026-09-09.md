@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_boundary_vertex_isodiametric_penalty_2026-09-09.md) · source SHA-256 `3f112fe2d3c8272f87d9ca22d4278ad7c35ad94082f0453cf5dce47f34fd403b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7C6A3DF7044C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — BVP: boundary-vertex nesting costs a fixed isodiametric area gap
@@ -26,15 +26,17 @@ Let `P subset K` be planar compact convex sets such that
 2. every vertex of `P` is an extreme point of `K`;
 3. `diam(K)=1`;
 4. with
+   
    ```math
    r:=\operatorname{diam}(P),
-   
    ```
+
    one has
+   
    ```math
    \frac{12}{25}=0.48\le r\le\frac12.
-   
    ```
+
 
 Then
 

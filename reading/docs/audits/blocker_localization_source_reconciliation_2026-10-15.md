@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/blocker_localization_source_reconciliation_2026-10-15.md) · source SHA-256 `066e6e9275f76b6d975654fbd56359802df6bb8ead2ab5142239d5485ef35cab`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4246BD865F03","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Blocker-localization source reconciliation

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_independent_audit_2026-09-14.md) · source SHA-256 `a29bccfc6edacbef9042a887f38c6fcd6974b8cc11fd5af23f29ac4dee837325`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AFA8613E806D","canonical":true,"claim_ids":["C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION"],"claim_statuses":{"C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit — full-core floor endpoint unbalanced pseudosegment completion

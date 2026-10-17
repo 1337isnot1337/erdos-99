@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_common_bridge_full_diameter_pseudoforest_2026-08-31.md) · source SHA-256 `ee850313c0d1db96a1193fea3a522adf0061500af09500874ed42e057b6277cf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1A315CD76C68","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C addendum: a universal contact bridge makes the full core diameter graph a one-cap pseudoforest

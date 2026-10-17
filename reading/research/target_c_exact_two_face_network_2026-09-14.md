@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_exact_two_face_network_2026-09-14.md) · source SHA-256 `dd99667e193a23d80d5cf04d4bce99e7b9831e80f9d72ce20a9a509ca1ac23c3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "9c3b3fa52149db5dad548151bd8d25420486c4e4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_exact_two_face_network_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "0f27c82778b926e594416d399369d1265af6da949fc53192770244db3038f820"} -->
 

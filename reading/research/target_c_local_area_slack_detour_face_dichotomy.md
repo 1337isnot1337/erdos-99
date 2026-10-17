@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_local_area_slack_detour_face_dichotomy.md) · source SHA-256 `2e93fbb1ba572485392cc203bb495a2e16c800263b38cfe822c10d73274693c8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "8ccad776622b27b88b9c867e9b9e669bfb3ebde6", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_local_area_slack_detour_face_dichotomy.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f3e017a45bdab97dda1189b3cff0e08af453ebe48e920d1b1a190c6bc0e263a8"} -->
 

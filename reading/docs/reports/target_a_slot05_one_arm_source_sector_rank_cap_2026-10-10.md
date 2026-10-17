@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_a_slot05_one_arm_source_sector_rank_cap_2026-10-10.md) · source SHA-256 `45b461442185dc86b8991175853e09d33d59c077865d83dab65eafe0e56a5813`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "3ac4fe9047a0e9471837782d37257e9beb58cfc8", "source_head": "7be6a6b746e9cf6ea18145248b652c7a0f206dc4", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_a_slot05_one_arm_source_sector_rank_cap_2026-10-10.md", "source_pr": 953, "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "af9a6a671e5d7cd97a8884dc6d711fe415752821baa39f2d5894dd3965e8291c"} -->
 
@@ -538,16 +538,18 @@ resulting source-sector cap is tautological at the available scale.
    Target A global-optimum and hull hypotheses and does not refute the canonical
    source-gate theorem. The canonical common-lattice-neighbor fact does not repair
    this implication either. Let
+   
    ```math
    y=(0,0),\quad o=(1,0),\quad v=(1/2,\sqrt3/2),\quad
    w=(-1/2,\sqrt3/2),
-   
    ```
+
    be four vertices of a unit lattice lozenge, and set
+   
    ```math
    a=(1/10,1/10),\qquad c=(-4/5,1/10).
-   
    ```
+
    The point $`a`$ lies in the interior of that lozenge since
    $`a=t\,o+s\,w`$ with $`s=\sqrt3/15`$ and
    $`t=1/10+\sqrt3/30`$, both strictly between zero and one. Its complete strict
@@ -557,19 +559,21 @@ resulting source-sector cap is tautological at the available scale.
    $`(76+10\sqrt3)/100>84/100`$ and horizontal distance at least $`2/5`$,
    and for $`n=0,1`$ the only possibilities within distance one are respectively
    $`m=0,1`$ and $`m=-1,0`$. Moreover
+   
    ```math
    |a-y|=\sqrt2/10<1,\quad |a-o|=\sqrt{82}/10<1,\quad
    |a-v|^2=(92-10\sqrt3)/100<1,
-   
    ```
+
    and $`|a-w|^2=(112-10\sqrt3)/100<1`$. Thus $`y`$ is a strict common
    lattice neighbor of $`a`$, while $`o`$ is another strict lattice neighbor
    available as the $`O`$-endpoint. Yet
+   
    ```math
    |c-a|=9/10<1,\quad |c-y|=\sqrt{13/20}<1,\quad
    |c-o|=\sqrt{13}/2>1.
-   
    ```
+
    So even the Section-164 common-neighbor witness $`y`$, together with the full
    four-site source lozenge, does not force a direct $`C^\partial\!\to O`$ edge.
    This is still a local geometric regression, not a counterexample satisfying
@@ -580,10 +584,11 @@ resulting source-sector cap is tautological at the available scale.
    These four source points are unit-separated and triangle-free. The triangle
    $`H`$ has area $`1`$ and perimeter $`3+\sqrt5`$. The shared Oler inequality
    (Lemma 21.1) gives
+   
    ```math
    \alpha_1(H)\le 2/\sqrt3+(3+\sqrt5)/2+1<115/24<5,
-   
    ```
+
    so $`A^0`$ is maximum, with $`\alpha_1(H)=4`$. Let
    $`a=(0,0)`$, $`c=(-3/5,0)`$, and $`o=(3/5,0)`$. Both arms have length
    $`3/5`$, while $`|c-o|=6/5`$, so the two endpoints are mutually compatible.
@@ -629,7 +634,7 @@ absent, also remains open.
 | One-sided width-one boundary-layer count $`8d+1`$ | proved candidate | Steiner formula, inner-parallel coarea | Exact area packing argument included above |
 | Exterior width-one boundary-layer count $`8d+9`$ | proved candidate | Steiner formula, inner-parallel coarea | Outside and inside disk portions are both charged explicitly |
 | Zero-slack inner-source defect $`r\le8d+1`$ | unreviewed candidate | Theorem 168.3 and Lemma 2 | Improves the unreviewed $`12d+9`$ bound; still gives no relation between $`r`$ and $`s`$ |
-| Co-phased boundary-only response count $`|Z_\partial|\le8D+1`$ | unreviewed candidate | Corollary 168.2A and Lemma 2 applied to $`H`$ | Replaces the boundary packing constant $`12D+9`$ by $`8D+1`$ |
+| Co-phased boundary-only response count $`\|Z_\partial\|\le8D+1`$ | unreviewed candidate | Corollary 168.2A and Lemma 2 applied to $`H`$ | Replaces the boundary packing constant $`12D+9`$ by $`8D+1`$ |
 | Fan-size-independent source-sector rank cap (S1)–(S5) | regression | Sections 168, 175–177 and the boundary-layer bounds | (S1) is automatic from $`C+O\le16d+10<20d+25`$; (S3) is weaker than the canonical Section-175 sector cut |
 | Rotated triangle-core Voronoi tube (S6) | conditional candidate | Section 154 prescribed phase; mixed-area and mean-width formulas | Analytic bound; no numerical certificate |
 | Coarse 28d+26 closure threshold | regression | One-sided C/O boundary populations and $`s\ge0`$ | Its left side is at most $`24d+11`$, before the nonnegative tube cost |

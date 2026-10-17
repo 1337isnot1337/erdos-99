@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_iterative_minimax_phase_star_atomic_gap_0050_2026-09-14.md) · source SHA-256 `55114bc38cc15a8b531eec230a477f81012065c3478e0e1047ee7b46887857d2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Erdos Problem #99 - iterative-pruning minimax phase-star gap `0.0050`
 

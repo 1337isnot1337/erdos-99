@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fsjc_endpoint_disk_exclusion_2026-09-10.md) · source SHA-256 `f57ff40514ffd36ad10bee010a168b606ac7dfc293c947bcfd625f22eb7f13e2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4CF945C41322","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fsjc_endpoint_disk_exclusion_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=ef9ce099eb5612331c5887ee5500446da92a8d30; lifecycle=unreviewed; canonical=false -->

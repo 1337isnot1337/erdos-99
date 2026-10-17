@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_thrackle_cycle_leaf_completion_2026-09-09.md) · source SHA-256 `5a086c6c35786c0c79b0b063c6b3a94e0e22ccf1dca23d1e5278db12d1ae99b4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

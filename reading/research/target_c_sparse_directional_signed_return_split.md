@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_sparse_directional_signed_return_split.md) · source SHA-256 `5fa93bfd58bd9cf2f086f7427ce4c684736db8fb7f9eb684aa76f36ee4ad96fc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — sparse/directional splitting in whole-area signed return
 
@@ -37,11 +37,12 @@ where
 - `B_s` is a **sparse** class, controlled by total cardinality
   `N_s=|B_s|`; and
 - `B_d` is a **directional** class, controlled by
+  
   ```math
   M_d(\epsilon)
   :=\max_I |\{\tau\in\mathcal B_d:\phi_\tau\in I\}|,
-  
   ```
+
   where `I` ranges over projective direction intervals of width `epsilon`.
 
 Let

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_macroscopic_bridge_diagonal_2026-08-31.md) · source SHA-256 `c88205a40d43e82a85af964294110c4a8b81cb0e77ede35028f0086ba982945a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1F43BA4CB034","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_macroscopic_bridge_diagonal_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=735211395cc0c0f57be8cc6b8aff12b5e93783fb; lifecycle=unreviewed; canonical=false -->

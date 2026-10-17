@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_one_vacancy_oblique_grid_strictification_independent_audit_2026-10-09.md) · source SHA-256 `d8a3495ddc33a61365c8099140b4881097134ad7117c9a57c77495bd98c4a6cc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-C45A28A5A92D","canonical":true,"claim_ids":["C-OBLIQUE-ONE-VACANCY-STRICT-CAPACITY-GAP","C-OBLIQUE-ONE-VACANCY-STRICTIFICATION"],"claim_statuses":{"C-OBLIQUE-ONE-VACANCY-STRICT-CAPACITY-GAP":"regression","C-OBLIQUE-ONE-VACANCY-STRICTIFICATION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent audit: one vacancy in a fixed oblique rectangular grid
@@ -89,7 +91,7 @@ distance from the adjacent horizontal outer side. Set
 ```math
  z_{ij}=s_x Iu^*+s_yJ_0v^*,
 ```
-where $`s_x,s_y\in\{+1,-1}`$ point away from the two adjacent sides.
+where $`s_x,s_y\in\{+1,-1\}`$ point away from the two adjacent sides.
 Every remaining horizontal unit contact, including a contact to its
 outer wall, has outward radial component $`u\cdot\Delta z=1`$; every
 remaining vertical contact has $`v\cdot\Delta z=1`$. Their squared

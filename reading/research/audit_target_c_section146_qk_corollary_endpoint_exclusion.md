@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/audit_target_c_section146_qk_corollary_endpoint_exclusion.md) · source SHA-256 `7dea1e5761de29f77345d9d908ba71b564eac6ad4a4a174e3e614ea8e06ae430`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a9405f889bc663bf1b6d9e6e46698c588a853b7c", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/audit_target_c_section146_qk_corollary_endpoint_exclusion.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4e59a55fe9f3835116aa34599c0062b57402805b427167f54ad3df103ddd240c"} -->
 
@@ -18,11 +18,12 @@ The source makes two claims downstream of the audited-working structural omnibus
 §§142–146:
 
 1. §146.5 already implies the stronger scalar floor
+   
    ```math
    \liminf (q-k)/D\ge
    c_*={4\over9}(\pi+\sqrt{\pi/(2\sqrt3)});
-   
    ```
+
 2. no Type-II survivor sequence can attain equality at this floor.
 
 The second claim uses the equality structure of §142 and a new outer-edge direction

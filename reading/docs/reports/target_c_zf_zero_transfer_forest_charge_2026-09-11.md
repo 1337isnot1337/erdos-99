@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zf_zero_transfer_forest_charge_2026-09-11.md) · source SHA-256 `9012238b40004b2a881ecb192d8223325ee814d65e3162ceecd15ffba95dbc00`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-A51075B4DDAD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZF/zero-transfer forest charge
@@ -124,11 +126,11 @@ In the (s_Z=0) forest circuit phase the exact surplus variable is
 ```
 
 and the explicit detour theorem gives
-(liminf\nu_D\ge0.597+arepsilon_{597}). Therefore
+(liminf\nu_D\ge0.597+\varepsilon_{597}). Therefore
 
 ```math
 \frac LD=\nu_D+3\frac{d_H}{D}
-\ge0.597+arepsilon_{597}+\frac35-o(1),
+\ge0.597+\varepsilon_{597}+\frac35-o(1),
 ```
 
 which is (6). (square)

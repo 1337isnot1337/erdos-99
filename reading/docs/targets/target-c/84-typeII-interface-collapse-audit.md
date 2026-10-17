@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/84-typeII-interface-collapse-audit.md) · source SHA-256 `7668c73cc78818856483f50f6ef52e78d57152ff89012ef8e52a004862b11b15`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — Type-II inactive-interface collapse audit
 

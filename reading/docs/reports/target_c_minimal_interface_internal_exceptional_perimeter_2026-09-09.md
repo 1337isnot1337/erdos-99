@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_minimal_interface_internal_exceptional_perimeter_2026-09-09.md) · source SHA-256 `72f4db1c8e4cdf8ac8ea1f981ba8c473c72d26ed38a531791aa8bb36b4625330`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 13 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

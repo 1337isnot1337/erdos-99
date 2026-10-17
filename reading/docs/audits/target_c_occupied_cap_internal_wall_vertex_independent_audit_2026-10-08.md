@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_occupied_cap_internal_wall_vertex_independent_audit_2026-10-08.md) · source SHA-256 `c0f6cfbe9dd6099c26447ec85124c4ffd5c67cd559990d808ad057bea8fec71e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-ABA5FBC1686A","canonical":true,"claim_ids":["C-EXTERIOR-OCCUPIED-CAP-INTERNAL-WALL-VERTEX"],"claim_statuses":{"C-EXTERIOR-OCCUPIED-CAP-INTERNAL-WALL-VERTEX":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.160 — internal contact vertex in every occupied cap cell

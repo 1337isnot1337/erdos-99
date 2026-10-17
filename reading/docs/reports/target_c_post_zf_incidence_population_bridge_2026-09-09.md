@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_post_zf_incidence_population_bridge_2026-09-09.md) · source SHA-256 `2fa596ac28baaaed261359ab8bb14051b45acede2ee8dfc7fa45df3e63229207`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C43761FA448C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — post-ZF incidence and isolate-population bridge

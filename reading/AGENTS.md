@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../AGENTS.md) · source SHA-256 `8ee5bd8bd78258d15b1322c2daedf7599e98c4cac0f0c47850e5d4b970dc35d1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Research instructions
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_weighted_star_bridge_trunk_2026-09-09.md) · source SHA-256 `a16796d62ffca3152abc5cffc8cfbd667216fb64d4e41c667c870a3976334a63`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

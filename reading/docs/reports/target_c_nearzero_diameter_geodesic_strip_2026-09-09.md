@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearzero_diameter_geodesic_strip_2026-09-09.md) · source SHA-256 `f5a55c4e65f9c435f7ae6078a25fb322b1b169c564aca4b6c470c567583744f7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

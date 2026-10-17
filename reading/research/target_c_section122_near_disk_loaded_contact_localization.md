@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section122_near_disk_loaded_contact_localization.md) · source SHA-256 `2d622ce5381a58519693e7b0ef746e688e86981769067244e612a322ba3f4b17`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c1972f8060983ed8b9e88febb89d0c08ec54c3a7", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section122_near_disk_loaded_contact_localization.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "57cf588871ca56fe1798b3c0566414f65d0418d5d6cf58a5067be49bf6e3423c"} -->
 

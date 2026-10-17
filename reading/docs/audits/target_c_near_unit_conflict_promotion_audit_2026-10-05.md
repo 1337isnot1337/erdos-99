@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_near_unit_conflict_promotion_audit_2026-10-05.md) · source SHA-256 `5ff83bf2948e2d705ea4e6b6c73ab7d0327ee6d29cd75731ea8efc5860c40560`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1D4A6FA9E1B6","canonical":true,"claim_ids":["C-NEAR-UNIT-CONFLICT-GEOMETRY","C-OO-LOWER-BLOCKER-LOCALIZATION","C-OWNER-CONTRACTION-CYCLE-REGRESSION","C-UNARY-RHOMBUS-BLOCKER-REGRESSION"],"claim_statuses":{"C-NEAR-UNIT-CONFLICT-GEOMETRY":"canonical","C-OO-LOWER-BLOCKER-LOCALIZATION":"canonical","C-OWNER-CONTRACTION-CYCLE-REGRESSION":"regression","C-UNARY-RHOMBUS-BLOCKER-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent promotion audit — Target C near-unit conflict geometry and O–O blocker localization
@@ -70,10 +70,11 @@ Let the source points be partitioned among disjoint moving owners and fixed poin
 - every old unit contact remains exactly unit under **every** binary selection of owners;
 - every nonzero $`\Delta_i`$ has norm $`<1`$;
 - distinct nonzero translation vectors are mutually acute:
+  
   ```math
   \Delta_i\cdot\Delta_j>0.
-  
   ```
+
 
 ### 2.1 A contact edge cannot join two distinct moving owners
 

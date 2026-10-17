@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_adjacent_cut_backbone_542_2026-09-15.md) · source SHA-256 `d670490d22dad869d2cbba40620d0247eb0a396f3adc114fda9f2cef52a61ef3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3fac146511d6d53d957a692f4d6ad8544b56557e", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_adjacent_cut_backbone_542_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4eda2418ffe1b9890d7aea4f4138f7353085f34e4f7cb24a8a688581839a65b7"} -->
 

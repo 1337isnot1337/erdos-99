@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_free_terminal_t_transport_fan_transfer_2026-09-18.md) · source SHA-256 `bde109f0e08c238cc92f0710f2bb67eb49d94f45e80f7354932e0a6e5b4c7e13`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a073a663dae54ea194127db4075cfe066ccf542e", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_free_terminal_t_transport_fan_transfer_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "bf70bac9f0c348b311be35768a3593471778e4391c11011b681fd59d1664b5a5"} -->
 
@@ -188,22 +188,25 @@ This is exactly the second stability formula used in the transport/fan ladder.
 The remainder of the transport/fan proof uses only:
 
 1. the endpoint multigraph identities
+   
    ```math
    2E_{BB}+E_{BO}=4f+Q,
    \qquad
    E_{BO}+2L_O=b;
-   
    ```
+
 2. the superpentagon bound
+   
    ```math
    n_+\le Q-f;
-   
    ```
+
 3. the full-flower incidence inequality
+   
    ```math
    P_5-F_5^{full}\le2S;
-   
    ```
+
 4. terminality `b/D=pi+delta+o(1)`;
 5. the two scalar formulas (1.6) and (2.3).
 

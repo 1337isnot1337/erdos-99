@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_annular_voronoi_matching_exclusion_2026-09-10.md) · source SHA-256 `bc5021719945e35063154ad5e99b7c3a609c556614ce374a8c730246a2b875df`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-763A90CECDDF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — annular Voronoi capacity and direct FSDB matching exclusion
@@ -105,12 +105,13 @@ perfect matching, then:
 - every bounded contact face is a strict unit rhombus;
 - the force hull is tiled by those rhombi;
 - if `R` is the number of rhombi and `T` the train count, then
+  
   ```math
   T=q/2,
   \qquad
   R\le T^2/4=q^2/16;
-  
   ```
+
 - `q=per(F)<=pi D`.
 
 Before FSDB, this did not contradict any universal force-hull area lower bound.  FSDB
@@ -519,12 +520,9 @@ The next theorem should exploit the stronger FSDB force-hull area floor in the
 nonmatching branches.  A concrete target is:
 
 > **FSDB currency incompatibility.** Insert
-> 
-
-```math
+> ```math
 > A_{FS}=(2\rho+\sin2\rho)/4
-> 
-```
+> ```
 > into the existing attachment-cell, outer-pocket, exceptional-face, and Dirichlet
 > detour inequalities, and prove that the simultaneously required lower bounds on
 > `x_B+Q+2s_Z` and `e_BB+2s_C` exceed their joint geometric capacity.

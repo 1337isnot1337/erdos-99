@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_coupled_delaunay_container_transfer_independent_audit_2026-10-07.md) · source SHA-256 `acec71d205448e2f296f65659b28c1e9f784b4ad0f5655804e25e9bb1ed53386`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0043D9883A11","canonical":true,"claim_ids":["C-COUPLED-DELAUNAY-CONVEX-CONTAINER-TRANSFER"],"claim_statuses":{"C-COUPLED-DELAUNAY-CONVEX-CONTAINER-TRANSFER":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.108 — coupled Delaunay transfer for convex containers
@@ -51,21 +51,24 @@ Then:
 
 1. $`S\ge0`$, and the number of auxiliary additions in $`C`$ is at most $`\lfloor S\rfloor`$.
 2. $`B\le20p/\pi+25`$, and
+   
    ```math
    0\le\Sigma\le a_0S+28aB.
-   
    ```
+
 3. Among vertices of the contained-triangle complex, one can mark an exceptional set of size at most
+   
    ```math
    73B+\left(\frac{12}{\delta}+450\right)\Sigma,
-   
    ```
+
    so every other vertex whose distance from $`\partial C`$ exceeds two has a complete six-triangle Delaunay star in $`C`$; all six triangles are acute and have individual excess below $`1/100`$. If $`e_T=\operatorname{area}(T)-a`$, each such triangle satisfies
+   
    ```math
    L_T-1\le5e_T,\qquad
-|\alpha-\pi/3|\le50e_T
-   
+   |\alpha-\pi/3|\le50e_T
    ```
+
    for every side length $`L`$ and each angle $`\alpha`$ of $`T`$.
 
 All original source points remain in $`P`$, including contact-isolated points. This is a single coupled completion, so the geometric rows for different containers come from the same triangulation. Triangle excess in overlapping containers cannot be spent twice.

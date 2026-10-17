@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/107-wrapping-support-area-rigidity-audit.md) · source SHA-256 `805b0dc61f9a27c59980a8bbfe62e4cb216186e73218b108e0b02feb3c8dd403`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — wrapping support area rigidity
 
@@ -28,19 +28,13 @@ strong quantitative consequence without using Sections 104--106 as premises:
 
 > If a wrapping Type-II harmonic-cell limit has Section-101 scalar slack
 > `sigma(theta)<=10^{-3}`, then, in normalized coordinates,
-> 
-
-```math
+> ```math
 > \boxed{\operatorname{area}(\operatorname{conv}S)>0.473.}
-> 
-```
+> ```
 > Equivalently the finite carrier has
-> 
-
-```math
+> ```math
 > \boxed{\operatorname{area}(P_D)> (0.473-o(1))D^2.}
-> 
-```
+> ```
 
 For a locally rhombus-saturated carrier this gives at least `0.473D^2-o(D^2)` strict
 unit rhombi, more than twice the conservative `0.18D^2` count used in the current

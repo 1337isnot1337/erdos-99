@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_free_terminal_t_gap_00659_2026-09-18.md) · source SHA-256 `f4d4aa6cf687b1372b670195b3966eea03bad88c4d4ea2b28f28b909ee80331d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "0d8052a11c748616fb183256b03b7f0ce03c2b59", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_free_terminal_t_gap_00659_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2a1b5dd1bb97ffa23d4384e17907093037ced825e6ff2d54a0fcedf66b51bdaa"} -->
 

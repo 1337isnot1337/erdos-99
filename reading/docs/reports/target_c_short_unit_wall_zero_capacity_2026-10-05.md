@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_short_unit_wall_zero_capacity_2026-10-05.md) · source SHA-256 `3b33e018f6f6172366eba84f4985670021aa9b395f9f20bcc296ebf823b23075`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-41056CA4E2D4","canonical":true,"claim_ids":["C-SHORT-WALL-ZERO-CAPACITY"],"claim_statuses":{"C-SHORT-WALL-ZERO-CAPACITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C: short unit walls have zero wall-safe refill capacity

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rd_endpoint_singleton_layer_2026-09-10.md) · source SHA-256 `0cf42e3e1581628f21f1d2b5d3c0752d765cde7b83075c5378dcebef7cc1f723`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -180,7 +182,7 @@ At the endpoint,
 ```math
 \frac bD
 =
-2\frac hD-rac{Q+2s_Z}{D}
+2\frac hD-\frac{Q+2s_Z}{D}
 \to2y_{RD},
 \tag{2.3}
 ```

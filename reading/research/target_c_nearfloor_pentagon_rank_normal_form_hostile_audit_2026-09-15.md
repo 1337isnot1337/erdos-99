@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_nearfloor_pentagon_rank_normal_form_hostile_audit_2026-09-15.md) · source SHA-256 `b15d77a1daeec8bb5649159d2dc08004517d6bd1809e7a40902558527e8613b3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "869a0809b608a07d09e8c29c1339bc78eb820732", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_nearfloor_pentagon_rank_normal_form_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "94fd72701af6ecfb83e423abe225831f238a1309e58671edb16d07f5e71fbeea"} -->
 

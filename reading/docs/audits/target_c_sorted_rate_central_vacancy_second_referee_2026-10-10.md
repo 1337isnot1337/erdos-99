@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_sorted_rate_central_vacancy_second_referee_2026-10-10.md) · source SHA-256 `045f8a60b6f7a92dbbf3b3df39b8b785de9d00cb4d05c846d625a1a26fbab3f1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-56780884D4DE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C independent second referee — central-vacancy sorting classification

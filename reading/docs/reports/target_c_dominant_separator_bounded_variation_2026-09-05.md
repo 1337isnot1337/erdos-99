@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_dominant_separator_bounded_variation_2026-09-05.md) · source SHA-256 `9f5cb4049d17eb28f96ad22b97724661c74e7ea511c54e2ef3eaa295dcb43ba2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E41689BAEC81","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C102: bounded total variation of a dominant diameter's separator stack

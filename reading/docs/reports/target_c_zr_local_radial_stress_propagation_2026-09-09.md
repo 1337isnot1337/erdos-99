@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_local_radial_stress_propagation_2026-09-09.md) · source SHA-256 `cce0674ed79a347113c789737c0ae277ff750dc8263892fa111d2f7b48a9735c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 11 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

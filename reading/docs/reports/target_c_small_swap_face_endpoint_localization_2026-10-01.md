@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_small_swap_face_endpoint_localization_2026-10-01.md) · source SHA-256 `93e70a8ee4cc9db989eef9e1535127d693074e02befa3852c3dcafd4c764bb01`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1D2B6FF468DE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — small-swap contact blockers require a source face or a transverse train end

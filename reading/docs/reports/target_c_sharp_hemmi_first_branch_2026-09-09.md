@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sharp_hemmi_first_branch_2026-09-09.md) · source SHA-256 `34f6f55b6f0dab90c845919e2669acd4ca04fd9833c486cacee3f1ab184a9bdf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 21 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -441,7 +443,7 @@ Thus the universal minimum cannot occur for `p>=p_2`.
 At `p=p_c`, put
 
 ```math
-A_c:=rac12\sin\frac{p_c}{2}
+A_c:=\frac12\sin\frac{p_c}{2}
 =A_H(p_c),
 \qquad
 m_c:=\frac{p_c}{2}.

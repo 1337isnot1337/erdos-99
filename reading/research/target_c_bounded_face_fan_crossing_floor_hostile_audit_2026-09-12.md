@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_bounded_face_fan_crossing_floor_hostile_audit_2026-09-12.md) · source SHA-256 `3088555105fccbe028226bfc40ab52fb302a9a235edea4758f9b6a7c41c50059`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "89ef136f160b5a60564e9bc854e6a06aeedef96d", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_bounded_face_fan_crossing_floor_hostile_audit_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f239bc67b4a0cd74df8cee20cb3aa750188c9fda70af40edb5ff954876e05c93"} -->
 

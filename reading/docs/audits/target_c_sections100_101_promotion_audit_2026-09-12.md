@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_sections100_101_promotion_audit_2026-09-12.md) · source SHA-256 `a2446e2eb9cf6635f597aecac6acdba24c3f65938776c7136316e4c3b8e97e3d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-83935F63EF37","canonical":true,"claim_ids":["C-WRAP-COMPLEMENT-CHORD"],"claim_statuses":{"C-WRAP-COMPLEMENT-CHORD":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Section 101 promotion audit with Section 100 dependency recheck

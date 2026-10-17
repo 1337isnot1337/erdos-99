@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_curvature_degree_identity_2026-09-09.md) · source SHA-256 `3fb5eb35674a57ebea2e781fc782ee8d88d399da176809b3bfdde5b2f0971d37`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 8 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -70,15 +70,17 @@ Consequences:
 2. every diameter leaf (`d_i=1`) carries the minimum curvature `pi/q`;
 3. every branching excess `d_i-2>0` is exactly an equal amount of excess turning above the regular value;
 4. the leaf/branch balance
+   
    ```math
    \sum_i(d_i-2)=0
-   
    ```
+
    is the ordinary total-curvature identity
+   
    ```math
    \sum_i(\varphi_i-2\pi/q)=0.
-   
    ```
+
 
 This gives a direct bridge between the convex-thrackle caterpillar structure and the Reinhardt sign word: the gaps between consecutive selected side directions of `F` are precisely the diameter degrees.
 
@@ -235,20 +237,23 @@ The AS stress is an exact KKT equilibrium stress. Therefore the contact and diam
 Both arguments lie strictly between zero and `pi/2`.
 
 - Strict convexity gives
+  
   ```math
   0<\varphi_i/2<\pi/2.
-  
   ```
+
 - The diameter graph is not a star in the post-ZF regime, so
+  
   ```math
   1\le d_i<q,
-  
   ```
+
   and hence
+  
   ```math
   0<d_i\pi/(2q)<\pi/2.
-  
   ```
+
 
 Sine is strictly increasing on this interval. Therefore (3.1) gives
 

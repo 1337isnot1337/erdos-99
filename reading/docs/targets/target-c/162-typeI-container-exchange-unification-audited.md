@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/162-typeI-container-exchange-unification-audited.md) · source SHA-256 `c3dee7348f73d50963795a9b414e9ebff623666759e79ee1b79da5ac55d3a58d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — audited §162 unified Type-I inactive-container exchange normal form
 

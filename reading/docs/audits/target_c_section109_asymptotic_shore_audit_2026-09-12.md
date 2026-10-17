@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section109_asymptotic_shore_audit_2026-09-12.md) · source SHA-256 `fcf163fcb78afe587ba45d3a5cab690a82c19bfe4024ff964fcbf36486a1b8f0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AE8C314F7654","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — Section 109 asymptotic phase-shore audit

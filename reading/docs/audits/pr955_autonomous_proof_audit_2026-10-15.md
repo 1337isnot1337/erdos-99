@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/pr955_autonomous_proof_audit_2026-10-15.md) · source SHA-256 `69a42884e36eacc29fc987dd004bc2570bcc174402aad2ced478b1bf03f8e63f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BBD3B40A9B41","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # PR #955 substantive autonomous proof audit

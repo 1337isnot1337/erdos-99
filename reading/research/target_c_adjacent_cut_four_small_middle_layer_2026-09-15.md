@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_adjacent_cut_four_small_middle_layer_2026-09-15.md) · source SHA-256 `65013bfb86192843637ba19061a1929fdcfb8341464bf931aeca896dc47dacf3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4540c64d7e16c731e45b316402a07afe4ff59cfc", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_adjacent_cut_four_small_middle_layer_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "24bbe064b2a843157b407c6ec824b7ad3abfab5dc9b52c07aa4e3b3c7568e02e"} -->
 

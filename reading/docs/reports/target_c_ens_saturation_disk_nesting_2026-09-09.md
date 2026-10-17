@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_ens_saturation_disk_nesting_2026-09-09.md) · source SHA-256 `9bc430bb6382b50877601f65bfdaedd62fe6e1176d68e28d40c3d2c7bfa8e857`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-38651031BE0E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ESN: ENS saturation forces one attachment disk, then boundary nesting excludes it
@@ -771,12 +771,9 @@ Quantify the disk-nesting obstruction.
 A sufficient finite theorem is:
 
 > **boundary-vertex isodiametric penalty.** For each `0<r<1` there exists explicit `c(r)>0` such that if `P subset K`, `diam(K)=1`, `diam(P)<=r`, and every vertex of the polygon `P` is a vertex of `K`, then
-> 
-
-```math
+> ```math
 > area(P)\le\frac\pi4r^2-c(r).
-> 
-```
+> ```
 
 At `r=lambda_E`, any explicit positive `c(r)` can be fed back into the JC scalar optimization. A reasonably sized penalty would move the numerical floor substantially more than further EFAQ tuning.
 

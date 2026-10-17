@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_flat_pentagon_activation_matching_refinement_2026-09-14.md) · source SHA-256 `b94e5b6bcc59373c18df432da4244c3345e479f5600b5e40ae9d5286dbf2d5ab`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "0babe91d9c63ebd73f37132785dcf4a03f940f20", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_flat_pentagon_activation_matching_refinement_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "e94d96fed5dff581256654bd9c19e95648a93d511377ca0a65f56a34efcf71da"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_component_reciprocal_2026-08-31.md) · source SHA-256 `be1853b0c0ea541e74bd3b6e90cb5e547fdb41d1856764bdd213a3d7e29a2ffe`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

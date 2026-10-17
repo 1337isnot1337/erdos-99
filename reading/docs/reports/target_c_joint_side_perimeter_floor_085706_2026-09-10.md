@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_joint_side_perimeter_floor_085706_2026-09-10.md) · source SHA-256 `86210b0e04c4bcfa7deaac90a296efa4ecea16084d12b3a1a125bc41bf1a4524`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 3 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -216,7 +218,7 @@ Define the left-minus-right gap
 ```math
 H_\mu(C)
 :=
-A(C)-\frac\pi4\mu^2-rac{(B-C)^2}{36\pi}.
+A(C)-\frac\pi4\mu^2-\frac{(B-C)^2}{36\pi}.
 \tag{3.1}
 ```
 
@@ -289,7 +291,7 @@ Integrating (3.5)-(3.6) from zero gives
 
 ```math
 \varphi(C)
-\le\frac{C^3}{6}+rac{3C^5}{160}.
+\le\frac{C^3}{6}+\frac{3C^5}{160}.
 \tag{3.7}
 ```
 
@@ -297,7 +299,7 @@ For `C<=5/4`,
 
 ```math
 \frac{\varphi(C)}{C^2}
-\le\frac5{24}+rac{75}{2048}
+\le\frac5{24}+\frac{75}{2048}
 =
 \frac{1505}{6144}.
 \tag{3.8}

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/publication/scientific-reconciliation.md) · source SHA-256 `60f825805c922b8093bbaca4a0dac13bc0973e3988c249117d553079be76911d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Frozen scientific reconciliation and editorial audit
 

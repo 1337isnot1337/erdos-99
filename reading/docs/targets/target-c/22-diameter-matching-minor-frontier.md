@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/22-diameter-matching-minor-frontier.md) · source SHA-256 `b48090a824e8f3492ca7105254af14ff0048de19b957ed94668006219819c19c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — diameter-matching circular-minor frontier
 

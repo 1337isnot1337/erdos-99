@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/original_dirty_worktree_reconciliation_2026-10-15.md) · source SHA-256 `5bd86bcc76eb5d92551ba86687a719dd51587a414758b663b35acba079c5810c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a5dc43488e3bae01646894535f65b62b60a4305d", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/audits/original_dirty_worktree_reconciliation_2026-10-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "e07e6d3723b0ea5574fc4a3401e254efa03f2d7798145eb5e04d7f47b7d71993"} -->
 

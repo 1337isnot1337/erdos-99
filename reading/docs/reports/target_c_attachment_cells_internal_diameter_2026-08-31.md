@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_attachment_cells_internal_diameter_2026-08-31.md) · source SHA-256 `be3d197b5217a2d0a574a52fb40b8a4296505e0a1ceba0ba90129a6c7b9140f7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7C4F88AC9523","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C46: at most three harmonic attachment cells contain an internal full-diameter edge

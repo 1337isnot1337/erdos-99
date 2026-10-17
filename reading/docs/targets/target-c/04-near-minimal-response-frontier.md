@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/04-near-minimal-response-frontier.md) · source SHA-256 `70dc4ba595d8cb219d75781e00c8d797b5e20e0a59a5492e01a992973f8165da`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — near-minimal loaded-boundary response frontier after C45
 

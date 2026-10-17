@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_b_explicit_unique_max_phase_gap_audit_2026-09-05.md) · source SHA-256 `4b426b4df495b2a03c675dce71622a0d36c84f0e8338b045333400965668a0f2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a471b0e4615b3f5091c3fdd39adc56678d89f252", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/audits/target_b_explicit_unique_max_phase_gap_audit_2026-09-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c43cfef3c88d5006c51456991beaee78ebe65d955259eae8217a18e093a51344"} -->
 

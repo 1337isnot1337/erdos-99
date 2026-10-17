@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_a_seed066_coembedded_locked_fullrank_2026-10-13.md) · source SHA-256 `4ae3230a57b6222b86a7a18b9e0a148ebc3e21d38afbf6ad30c0ec7dc0cff4fc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DFDF669AC3B9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
 # Erdős Problem #99 — Seed 66: a coembedded locked, full-rank response regression
@@ -74,20 +74,22 @@ such that all of the following hold.
    velocity cone is `{0}`. In particular every unit triangle is universally locked.
    The labeled placement is locally isolated among feasible packings in this hull.
 3. In the actual radial conflict graph
+   
    ```math
    G_m\subseteq X_m\times Y_m,\quad
    Y_m=(\Lambda+v)\cap\operatorname{int}(K_m+\mathbb B),
    \quad xy\in E(G_m)\iff |x-y|<1,
-   
    ```
+
    put `Z_m=(Lambda+v) cap int K_m` and `O_m=Y_m\setminus Z_m`.
    Then
+   
    ```math
    |Z_m|=3m^2,\quad d_{\rm int}=0,\quad
    |C^\partial|=3m+1,\quad
    \boxed{\operatorname{rank}S_m=3m+1,\quad\zeta_m=0.}
-   
    ```
+
    These rank statements hold for **every assignment of nonzero real edge entries**
    to the incidence matrix, not only generic independent entries.
 4. There is a positive-contact three-spoke fan from an interior unit triangle to

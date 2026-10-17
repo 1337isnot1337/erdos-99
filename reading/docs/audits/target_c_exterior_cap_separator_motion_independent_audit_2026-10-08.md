@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_exterior_cap_separator_motion_independent_audit_2026-10-08.md) · source SHA-256 `da7630d9c6728a86ef1441f0c4db9e58baa8617d3777731e594747f3ea9994ee`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BEA8A9DED869","canonical":true,"claim_ids":["C-EXTERIOR-CAP-CORE-CONTACT-CUT","C-EXTERIOR-CAP-DIAMETER-SEPARATOR","C-EXTERIOR-CAP-FULL-SOURCE-STRIP-DESCENT"],"claim_statuses":{"C-EXTERIOR-CAP-CORE-CONTACT-CUT":"canonical","C-EXTERIOR-CAP-DIAMETER-SEPARATOR":"canonical","C-EXTERIOR-CAP-FULL-SOURCE-STRIP-DESCENT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: exterior-cap diameter separator and reduced-source motions

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_even_shell_underbraced_circuit_regression_2026-09-10.md) · source SHA-256 `85fbfefb83b1c7ecc5d431fecc393cc7d9e09ba7d8d270bd39702bc656e6e604`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-2487A7CA84EE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — regular even shells are 2D underbraced positive PSD circuits
@@ -38,7 +40,7 @@ diameter multipliers, and
 
 ```math
 \boxed{
-\sigma=rac N2-2.
+\sigma=\frac N2-2.
 }
 \tag{ESR.1}
 ```

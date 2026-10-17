@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_extreme_circuit_generic_singularity_2026-09-10.md) · source SHA-256 `47ce2b439f9ce4e46623a44c5abb4506edb1fbbdea5d98848e13d726127c81aa`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-58F56A3322D3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — generic-versus-singular classification of extreme positive circuits

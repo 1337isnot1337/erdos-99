@@ -1,9 +1,9 @@
-> Generated reading edition · [exact source](../../../docs/launch/PUBLICATION_AUDIT.md) · source SHA-256 `07e3145f53726c689a2abf40b511e5b3ec1e6cd331efee05bb32f517a21597b1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> Generated reading edition · [exact source](../../../docs/launch/PUBLICATION_AUDIT.md) · source SHA-256 `9c2ede6b2a48b89e1ceec7351cea27c4b50805413d154524366fb70674d85ce5`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Current publication candidate
 
-Candidate **0.1.0-rc.3** has **23 current task cards**. The
+Candidate **0.1.0-rc.4** has **23 current task cards**. The
 [current release summary](RELEASE_CANDIDATE.md) controls present publication
 status and points to the final-commit evidence. The narrative below is preserved
 history: its earlier task counts and uses of “current” refer to those snapshots.

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_extreme_circuit_train_branching_2026-09-10.md) · source SHA-256 `baa0ed0437158fe2a8fe897f6b23b442a0fa9ebee4df0860aa20310cafae7ec4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-34E25A9AD7B9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — train stability and DB feedback on extreme positive circuits
@@ -71,7 +73,7 @@ The EDB defect-dependent perimeter inequality gives the stronger feedback estima
 r_*
 \ge
 D\cos\bigl((h_*-1)a_D\bigr)
--\frac52\sigma_*-rac32,
+-\frac52\sigma_*-\frac32,
 \qquad
 a_D=\arcsin\frac1{2D}.
 }

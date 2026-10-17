@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_optimized_joint_train_superseded.md) · source SHA-256 `949d23fde0008ffcaa4c2adc357da0fcec8eba5d998fbcb4e1e64847615f00b9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "29dd776bb82387ca789455eab8f3a363dcf7bd22", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_optimized_joint_train_superseded.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b75627729ca3ade16415cae364035558227ad16c70911bb502d0d49a83a1f1fb"} -->
 

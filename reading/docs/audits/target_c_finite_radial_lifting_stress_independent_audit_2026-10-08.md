@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_finite_radial_lifting_stress_independent_audit_2026-10-08.md) · source SHA-256 `48443134c18b7660f99522c65d2063ce7de4472d43724ede8e45293b53ad98ab`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4ACDFD74B1F0","canonical":true,"claim_ids":["C-FINITE-SORTING-PACKET-RADIAL-LIFTING-STRESS"],"claim_statuses":{"C-FINITE-SORTING-PACKET-RADIAL-LIFTING-STRESS":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit — finite radial-lifting stresses for selected sorting packets

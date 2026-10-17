@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_reciprocal_h5_new_exclusions_hostile_audit_2026-09-18.md) · source SHA-256 `d9c54a5e08b6686de0adbaafcd124965887ff4103b000145a927ba51ae340fd2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "30339efce4fe8d798db86ecdd3ee21b587dc7ec4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_reciprocal_h5_new_exclusions_hostile_audit_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "e9efc4424692245d2f952019b5602a2b51f700a579ab7a401ee7db5ee4932130"} -->
 

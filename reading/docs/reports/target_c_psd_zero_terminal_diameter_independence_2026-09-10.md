@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_psd_zero_terminal_diameter_independence_2026-09-10.md) · source SHA-256 `3005771b83f3eb15652f94c8a4ca1740ec3601b8003bf61d9d06d4cbb56dfb60`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5E5B85F3D33F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — zero-excess response terminals form a degree-two independent set in the diameter thrackle

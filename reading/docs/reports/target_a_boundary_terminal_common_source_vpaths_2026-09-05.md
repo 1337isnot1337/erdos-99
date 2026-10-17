@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_a_boundary_terminal_common_source_vpaths_2026-09-05.md) · source SHA-256 `ba0412e4ee8996e6a23138af4be827d655e3afd3dc78aa1d46fcd3339aface4a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "6f578189d0a465310f8e7015cd63dcfc4b17cefc", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_a_boundary_terminal_common_source_vpaths_2026-09-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f04211aa5b27f5eaf9778da6b3a801b14f8b698724bd9b10628b70dbcedfb091"} -->
 

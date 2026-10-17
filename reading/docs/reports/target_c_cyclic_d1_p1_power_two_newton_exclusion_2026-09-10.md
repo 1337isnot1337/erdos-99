@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_p1_power_two_newton_exclusion_2026-09-10.md) · source SHA-256 `d3bc158b6a3b80ad960aba2ce81b68a40fb13e20999db255d869d079b067f7df`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -157,7 +159,7 @@ From (2.3),
 ```math
 \boxed{
 Q_n(Y)
-=igl((1+Y)^n+1\bigr)^2
+=\bigl((1+Y)^n+1\bigr)^2
 +4(1+Y)^{n-1}Y^2.
 }
 \tag{3.1}
@@ -462,19 +464,13 @@ This pattern has **not** been proved and is not used by PA. It is recorded as a 
 The most valuable arithmetic target is:
 
 > Let `n>=2`, and let `z=e^{i delta}` be the unique small-angle root selected by the P1 equation
-> 
-
-```math
+> ```math
 > \cos(n\delta/2)=2\sin(\delta/2).
-> 
-```
+> ```
 > Prove
-> 
-
-```math
+> ```math
 > [\mathbb Q(z):\mathbb Q]\ge n.
-> 
-```
+> ```
 
 Full irreducibility of `G_n` is stronger than necessary. It is enough to rule out any factor of degree `<n` containing the small-angle root.
 

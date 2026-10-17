@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_d2_p2_cyclotomic_trace_collapse_2026-09-10.md) · source SHA-256 `5762011acc9c653601328ef954c8a93f005fe361466c885bbd53cb43207d3285`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-327E601736A9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 — D2/P2 has only one extraneous cyclotomic trace
@@ -216,10 +216,11 @@ Check them in (2.2).
 - `r=3`: `c_3(2)=-1`, `mu(3)=-1`; the left side is `c_3(m)+98`, never zero.
 - `r=4`: `c_4(2)=-2`, `mu(4)=0`; the left side is `c_4(m)+34`, never zero.
 - `r=6`: `c_6(2)=-1`, `mu(6)=1`, `phi(6)=2`; the equation reduces to
+  
   ```math
   c_6(m)+2=0.
-  
   ```
+
 
 For a primitive sixth root `xi`,
 

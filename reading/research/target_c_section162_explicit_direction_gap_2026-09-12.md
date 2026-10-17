@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section162_explicit_direction_gap_2026-09-12.md) · source SHA-256 `19696acfb6e16d22fa6487c1e161d133fc31ca0f8788820bcfbd39ce14b887d1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c992744884df051135390fd8848acadf5beb4013", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section162_explicit_direction_gap_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "55e3db0c931a678522533b4f312867a6692dec6b2ac49c59d54eb76dc2bf5159"} -->
 

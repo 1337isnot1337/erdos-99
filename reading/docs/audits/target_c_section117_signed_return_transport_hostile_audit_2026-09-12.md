@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section117_signed_return_transport_hostile_audit_2026-09-12.md) · source SHA-256 `af2164fcedc331b6a38caa684f43e4401ceefc3dc798543b443855d7a0c2fa88`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-040484A0BCA6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — Section 117 signed-return transport hostile audit

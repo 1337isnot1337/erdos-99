@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_s1_q13_shell_regression_2026-09-10.md) · source SHA-256 `8c1ba5ecd2bf7a3a9c7926d5afe3dc326c9332f341b87a770bdfaab7c295b2d5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 14 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

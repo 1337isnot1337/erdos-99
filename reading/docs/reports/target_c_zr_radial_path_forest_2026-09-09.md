@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_radial_path_forest_2026-09-09.md) · source SHA-256 `745b9cdbc70a53b46cd422889048e93aed8ebc2b815fc615df3495da2b39b271`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

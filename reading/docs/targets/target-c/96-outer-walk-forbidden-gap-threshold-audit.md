@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/96-outer-walk-forbidden-gap-threshold-audit.md) · source SHA-256 `9001b412866b3735a849bb62a28fc7dd0a283cf57efac706fd97655c10d9389d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

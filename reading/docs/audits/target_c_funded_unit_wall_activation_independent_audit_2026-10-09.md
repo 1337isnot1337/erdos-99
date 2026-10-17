@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_funded_unit_wall_activation_independent_audit_2026-10-09.md) · source SHA-256 `2c09f71e8ed8048ceb95518d905b2e9402ae8bc6455fff398fccfc2fa7031e30`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2CCAD338F9E1","canonical":true,"claim_ids":["C-EXACT-OBLIQUE-WALL-POPULATION","C-TRIANGULAR-TWO-INTERIOR-HOLE-STRICTIFICATION","C-UNIT-WALL-PACKET-POPULATION-BOUND"],"claim_statuses":{"C-EXACT-OBLIQUE-WALL-POPULATION":"canonical","C-TRIANGULAR-TWO-INTERIOR-HOLE-STRICTIFICATION":"canonical","C-UNIT-WALL-PACKET-POPULATION-BOUND":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: funded unit-wall activation

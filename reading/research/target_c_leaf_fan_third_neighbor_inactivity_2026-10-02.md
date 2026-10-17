@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_leaf_fan_third_neighbor_inactivity_2026-10-02.md) · source SHA-256 `1a453ca113677e02cb363086add7b2d726ab8dae95b9941e553381c6d709cece`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "caf43c8ad2ddd0e34a37157bd8e1fec769a32c28", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_leaf_fan_third_neighbor_inactivity_2026-10-02.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "255552154f2752f1f0cb17a6065210ea9d9608d1eda001bdf3394106db184844"} -->
 

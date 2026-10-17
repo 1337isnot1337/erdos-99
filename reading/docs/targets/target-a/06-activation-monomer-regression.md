@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/06-activation-monomer-regression.md) · source SHA-256 `ba7d2617ee7a2f9eb0ee6bcf1e084a420d4eab72dee47170663a833f58d570d8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — activation/monomer compatibility regression
 
@@ -59,21 +59,19 @@ The anchor distance is $`D=8L`$.
 > 3. the new unit contacts form $`L`$ disjoint row paths and therefore have independent
 >    rigidity rows of total rank
 >    
-
-```math
+>    ```math
 >    L(L-1)=\frac{D^2}{64}-\frac D8;
 >    \tag{152.5}
->    
-```
+>    ```
+
 > 4. relative to the unstrained triangular lattice, every patch point has exact strict
 >    conflict neighborhood
 >    
-
-```math
+>    ```math
 >    N_\Lambda(p_{ij})=\{(i,j),(i+1,j),(i,j+1)\};
 >    \tag{152.6}
->    
-```
+>    ```
+
 >    throughout the activation sequence; and
 > 5. the assignment $`p_{ij}\mapsto(i,j)`$ is a matching saturating every patch point.
 >    Hence the corresponding monomer-scaffold left nullity is exactly zero.

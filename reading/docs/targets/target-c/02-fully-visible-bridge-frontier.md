@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/02-fully-visible-bridge-frontier.md) · source SHA-256 `fedd7ed7bc2c06977db8c17acaea1b33c8aa6a243eb2a3718a447602919d64bf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — fully force-visible bridge frontier through C39
 

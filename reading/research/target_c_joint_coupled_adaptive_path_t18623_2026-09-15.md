@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_joint_coupled_adaptive_path_t18623_2026-09-15.md) · source SHA-256 `3fee4c0ec5168d6075473677a8964cbe65b11ba6c3dc758bfaea1df84fca80de`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

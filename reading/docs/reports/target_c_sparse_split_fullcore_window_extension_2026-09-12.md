@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sparse_split_fullcore_window_extension_2026-09-12.md) · source SHA-256 `59f2bf8ca933efbaafc946cd22cfd5d0340f25986bb40030fc131b85504c5557`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-61ACE6FC9705","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — scalar extension of the sparse full-core exclusion

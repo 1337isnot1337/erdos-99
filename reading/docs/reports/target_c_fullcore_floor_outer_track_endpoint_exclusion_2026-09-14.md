@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_floor_outer_track_endpoint_exclusion_2026-09-14.md) · source SHA-256 `02e766889c7fdbea9e59cab03906e84d5324915ed041df25230d3c4c0ac719ed`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2D17F89212AF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fullcore_floor_outer_track_endpoint_exclusion_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=2e15b9c8adff32adcc5e0831218ff22be2bdbd76; lifecycle=unreviewed; canonical=false -->

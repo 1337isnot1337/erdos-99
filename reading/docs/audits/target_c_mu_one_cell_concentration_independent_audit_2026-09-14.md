@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_mu_one_cell_concentration_independent_audit_2026-09-14.md) · source SHA-256 `a1992180cfce68263fae64dae833f39d22503fd00c52c8577d0f83b8b612aafb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C9C12ED6C764","canonical":true,"claim_ids":["C-FULLCORE-MU-ONE-CELL"],"claim_statuses":{"C-FULLCORE-MU-ONE-CELL":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit — Target C-II μ=1 one-cell concentration

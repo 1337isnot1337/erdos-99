@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_one_boundary_pin_oblique_refill_2026-10-05.md) · source SHA-256 `e6b5cbafce8acfb2744b189c992e56768fe7bff2b37215fd92a9a3515f79727b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E4FDB3C26CA5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — one boundary label funds a robust full-interior oblique refill

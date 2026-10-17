@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_full_run_adversarial_synthesis_2026-09-14.md) · source SHA-256 `5c6d1d66ec0d60af8a6b9052c4637dffe337620247a6aa9fcbfd39a75feedefc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E645A7A5FA8D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_full_run_adversarial_synthesis_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=ed75d93619e1ca5c25d7d5ec97976075c0c0e6c9; lifecycle=unreviewed; canonical=false -->

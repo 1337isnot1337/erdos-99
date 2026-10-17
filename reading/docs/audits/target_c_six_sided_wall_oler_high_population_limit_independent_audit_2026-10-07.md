@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_six_sided_wall_oler_high_population_limit_independent_audit_2026-10-07.md) · source SHA-256 `9ad8ed1afdfc4dc1d6105b9f00c53d8de757fa4392b817accb5cd19e58b44ee3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9C7F5B37F2C1","canonical":true,"claim_ids":["C-SIX-SIDED-WALL-HIGHEST-POPULATION-LIMIT"],"claim_statuses":{"C-SIX-SIDED-WALL-HIGHEST-POPULATION-LIMIT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: Oler equality pins the highest wall population

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/README.md) · source SHA-256 `ed57d616d426c7c8bc7a38bf9c120a47870e67995a5c010144b4d6aa84c80e99`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — KKT force geometry, rigidity and finite realization
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/hexagon_capacity_regression.md) · source SHA-256 `c2bb831e223b7b045f40207364ed4cbb65b5e3a8973f9dc2d4f6a8d7da1efdba`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b368acfb5800c44200db465bbca25e231b138a97", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/hexagon_capacity_regression.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2377b7631d1e202adf1dd90aaedc7d790ac7f304d6bd8eb9f67b7240fd7683aa"} -->
 

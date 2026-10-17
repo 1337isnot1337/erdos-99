@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_free_terminal_degree_weighted_pentagon_seed_tradeoff_hostile_audit_2026-09-18.md) · source SHA-256 `9d4a51ca774cb8e9b7664969d60723febb7fb98e78f16953959e45c08d0de9cb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a2f31633f577e9da5646cc94d66035657af9a699", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_free_terminal_degree_weighted_pentagon_seed_tradeoff_hostile_audit_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f0fd8feceb9db72c2b54fea2e8326f506d5516664c8bb0525c891ec86be15b29"} -->
 

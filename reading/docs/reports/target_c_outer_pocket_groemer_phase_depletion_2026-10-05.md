@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_outer_pocket_groemer_phase_depletion_2026-10-05.md) · source SHA-256 `f72078b55ebc5d9f35a74922e1e1149321eeab9abf71e2e70e628463c92e601e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

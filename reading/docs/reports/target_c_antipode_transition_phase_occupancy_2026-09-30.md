@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_antipode_transition_phase_occupancy_2026-09-30.md) · source SHA-256 `c297ba2a8321b0c95016ea5886c88fc9ca169dd90febf38c946bd92e9ee04c67`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F424B7A54A11","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: exact antipode transitions and inverse-phase hull occupancy

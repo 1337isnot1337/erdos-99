@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_macroscopic_interface_face_collapse_2026-09-09.md) · source SHA-256 `559b473fc43c9563294c0ba1b8dcd91832ad38a39c70ee9c25d16c3c759dadcd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 15 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

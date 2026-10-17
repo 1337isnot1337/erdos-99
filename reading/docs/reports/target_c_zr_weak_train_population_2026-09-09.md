@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_weak_train_population_2026-09-09.md) · source SHA-256 `cd6064cb3d418c75f3bd798e615a71f411872060440f1d3a6290e6e6dc2d1fae`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 12 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

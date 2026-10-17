@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_finite_defect_kkt_strip_t18687_2026-09-15.md) · source SHA-256 `1b0cbb810a1d4b5583d66d455bb96046410a7de51e59f949eb8051e52713ce18`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3f29c4a2311ffe5aa8584e17a99cc6958431a01a", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_finite_defect_kkt_strip_t18687_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "617d90cc6b12e87f70363bef399c1571e54144b667958c37b40b67a7e1d8cbb8"} -->
 

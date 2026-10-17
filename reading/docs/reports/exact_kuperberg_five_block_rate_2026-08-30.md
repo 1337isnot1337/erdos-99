@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/exact_kuperberg_five_block_rate_2026-08-30.md) · source SHA-256 `27560100129be1bcfc4a9a19360f10f086b4393af5a313dc284a1fb8f5cc1147`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 22 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -25,7 +27,7 @@ In the paper normalization, where circles have radius one and nearest-neighbor c
 ```math
 \boxed{
 \delta(d)
-=\frac{\sqrt3}{72}d^4-rac1{72}d^5+O(d^6).
+=\frac{\sqrt3}{72}d^4-\frac1{72}d^5+O(d^6).
 }
 \tag{E.1}
 ```
@@ -547,22 +549,17 @@ d_c=\frac{d_p}{2}
 and all support radii are divided by two. Absorbing the fixed factors into constants gives:
 
 > **Theorem E.1 (explicit Kuperberg support exponent).** For the aligned triangular-lattice gap packing in canonical Section 150, there exist constants
-> 
-
-```math
+> ```math
 > C_1,C_2,d_*>0
-> 
-```
+> ```
 > such that
-> 
-
-```math
+> ```math
 > \boxed{
 > W(d)\le C_1\exp(C_2d^{-3})
 > \qquad(0<d<d_*).
 > }
 > \tag{E.29}
-```
+> ```
 
 For reference, the explicit canonical one-step gain obtained by scaling (E.19) is
 
@@ -609,26 +606,20 @@ Theorem E.1 gives
 Therefore:
 
 > **Corollary E.2 (explicit vanishing accumulated-strain regime).** If
-> 
-
-```math
+> ```math
 > \boxed{
 > \alpha_L^{-3}=o(\log L),
 > }
 > \tag{E.31}
-> 
-```
+> ```
 > then
-> 
-
-```math
+> ```math
 > \boxed{
 > \alpha_1(H_{L,\alpha_L})
 > \ge |P_L|+1
 > }
 > \tag{E.32}
-> 
-```
+> ```
 > for all sufficiently large `L`.
 
 This strictly extends canonical Theorem 148.1 from fixed positive accumulated strain to a concrete vanishing-strain class.
@@ -672,10 +663,11 @@ This report supersedes their unknown-exponent conclusions for the actual publish
 - `quantitative_kuperberg_support_rate_2026-08-30.md` proved that finite algebraicity would force some asymptotic upper class but left a rational exponent `q` unspecified.
 - `quantitative_kuperberg_rate_refinement_2026-08-30.md` split the resulting support rate according to whether `q<1`, `q=1`, or `q>1`.
 - The exact coordinate calculation here gives
+  
   ```math
   \boxed{q=4}
-  
   ```
+
   for the specific three-move Kuperberg mechanism and therefore the concrete support exponent `d^{-3}` in (E.29).
 
 The semialgebraic reports remain useful as an audit trail and as a method that would apply to variants of the block mechanism, but they are no longer the strongest rate statement.
@@ -687,12 +679,9 @@ The semialgebraic reports remain useful as an audit trail and as a method that w
 The remaining gap is now geometric rather than quantitative in the free model.
 
 > **Exterior-compatible Kuperberg embedding lemma.** Let a genuinely derived Target A monomer region contain an aligned gap corridor of width `d`. Prove that it contains a radius
-> 
-
-```math
+> ```math
 > R\ge C_1\exp(C_2d^{-3})
-> 
-```
+> ```
 > subregion on which the nested five-block moves above can be executed while every exterior source/scaffold point remains at distance at least one throughout; or replace this support requirement by a stronger protected finite rearrangement.
 
 A proof of this statement at an actual canonical gap scale with `R=o(D)` would feed directly into the strict smaller-diameter replacement route.

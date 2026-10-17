@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_coembedded_protected_cover_2026-09-14.md) · source SHA-256 `fb4a98c93c20ff223e947e7859be44079e48cb0bdb020afc765d1b4aeb312e34`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1C7B62A041B3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Co-embedded protected-erosion regression
@@ -85,10 +85,11 @@ A_R=B_R\cup Z_R.
 Then:
 
 1. $`|B_R|=6R`$, $`|Z_R|=1+3(R-2)(R-1)`$, and
+   
    ```math
    |A_R|=3R^2-3R+7.
-   
    ```
+
 
 2. $`A_R`$ is unit-separated and triangle-free. Its shell $`B_R`$ has a
    $`6R`$-edge unit-contact cycle.
@@ -97,36 +98,40 @@ Then:
    vertices.
 
 4. If $`C_R=H_R`$, then the one-unit inner parallel body is exactly
+   
    ```math
    (C_R)_{-1}=H_{R-2/\sqrt3},
-   
    ```
+
    and every point of the larger hexagon $`H_{R-1}`$ is within distance strictly
    less than one of a point of $`Z_R`$. In particular, every point of the eroded
    chamber is covered:
+   
    ```math
    H_{R-1}\subseteq\bigcup_{z\in Z_R}B(z,1)
    \quad\text{and}\quad
    (C_R)_{-1}\subseteq\bigcup_{z\in Z_R}\overline B(z,1).
-   
    ```
+
 
 5. The unscaled triangular-lattice capacity exceeds the strict interior population by
    only
+   
    ```math
    \bigl|\Lambda\cap H_R\bigr|-\bigl|\Lambda\cap H_{R-2}\bigr|=12R-6,
-   
    ```
+
    while $`Z_R`$ contains an explicit matching of
    $`m(2m+1)`$ pairs at distance $`h_R=1+1/(2R)`$, where
    $`m=\lfloor(R-3)/2\rfloor`$. This matching is quadratic in $`R`$.
 
    The full source is inclusion-maximal in $`C_R`$, because the shell covers
    $`H_R\setminus H_{R-1}`$. Its total deficit from the unscaled window capacity is
+   
    ```math
    \bigl|\Lambda\cap H_R\bigr|-|A_R|=6R-6.
-   
    ```
+
 
 This is a fixed-container feasible regression. It is not a global minimum-diameter
 certificate and does not assert that $`A_R`$ is a minimizer for its cardinality.
@@ -362,7 +367,7 @@ does not supply this remaining implication.
 | Full source is inclusion-maximal in $`H_R`$ | regression | the two preceding covers partition the container |
 | Linear capacity slack coexists with quadratic strict interior and near-unit matching | regression | exact formulas |
 | One-point protected exchange closes Type I | rejected mechanism | no strict descent or exact triangle follows |
-| The finite source is a global minimizer for $`|A_R|`$ | unproved/rejected as a claim | no global optimality certificate |
+| The finite source is a global minimizer for $`\|A_R\|`$ | unproved/rejected as a claim | no global optimality certificate |
 | Regression realizes every canonical C-II survivor | unproved | no realization theorem |
 | C-II is solved | false | aggregate detour and collective exchange remain open |
 

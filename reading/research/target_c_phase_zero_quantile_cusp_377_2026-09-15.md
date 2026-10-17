@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_phase_zero_quantile_cusp_377_2026-09-15.md) · source SHA-256 `5205bc334a0e80c7364ba3d4444ed4f69e502d8000f28c62c9be6b234310c248`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "9574db74360d019d669aeea15598f8549903eaf3", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_phase_zero_quantile_cusp_377_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "9c30573edc16eb6514e30eb93f52a3c38fa5acb18f9f1ed5c99341abf5565945"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/19-source-response-crossings.md) · source SHA-256 `768774bff9eda738bb564329f4692d105fb4371615da1c915bdbc75cac7a304f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — source-label crossings in the actual response graph
 
@@ -39,23 +39,17 @@ segments pairwise disjoint.
 ## 167.1 Every proper overlay crossing is another source conflict
 
 > **Theorem 167.1 (source-response crossing transport).** Let
-> 
-
-```math
+> ```math
 > xa\in M_A,
 > \qquad uy\in E(G),
 > \qquad x\ne u.
 > \tag{167.3}
-> 
-```
+> ```
 > If the closed segments `[x,a]` and `[u,y]` intersect, then
-> 
-
-```math
+> ```math
 > \boxed{|a-y|<1.}
 > \tag{167.4}
-> 
-```
+> ```
 > Thus every proper crossing of a source-matching segment with a response radial edge
 > is itself certified by an actual strict edge in the source-to-lattice conflict graph.
 
@@ -139,13 +133,10 @@ Take the source labeling from Corollary 165.4. For a labeled terminal
 > **Corollary 167.3 (crossing extraction on a Menger family).** If `sigma_c` meets a
 > response path `P` by properly crossing an edge of `P`, then there is a right vertex
 > `y in V(P) cap Y_in` with
-> 
-
-```math
+> ```math
 > \boxed{|a_c-y|<1.}
 > \tag{167.8}
-> 
-```
+> ```
 > Moreover `sigma_c` can properly cross at most four paths of any pairwise
 > vertex-disjoint Menger family that do not contain `c`.
 

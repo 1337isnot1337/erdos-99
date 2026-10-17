@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_complete_grid_joint_stress_light_cusps_2026-10-01.md) · source SHA-256 `e589bcfe64d90784c9a2b3be17b8bca943415e3a8edbdb56f93c002335270318`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2F39B32F95AA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- joint stress-light cusp extraction

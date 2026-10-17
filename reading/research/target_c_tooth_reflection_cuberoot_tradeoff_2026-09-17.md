@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_cuberoot_tradeoff_2026-09-17.md) · source SHA-256 `75c078e7efb02363df0be6ecbb3b6a3409057ae84cff5a3f46e3474ca183c0dc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 6 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -243,10 +243,11 @@ The proof gives more than the balanced dichotomy.
 For every ancestry with `U` upper gates:
 
 1. the lower gains contain one outer-face all-lower run with support span at least
+   
    ```math
    {D-O(\sqrt D)\over U+1};
-   
    ```
+
 2. the upper gates contain a matching of at least `U/4-O(1)` edges of deficit at most `2t_D/U`;
 3. that matching has a pairwise-crossing submatching of size bounded below by (CR.9).
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section124_tooth_transport_joint_puncture_self_audit.md) · source SHA-256 `776ea3c855054f4938db80c45585912c909bb4bd3d024e582235af8c69b3cc2c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3b5d5fe78872d867d6943d0331ba5c051fc4011d", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section124_tooth_transport_joint_puncture_self_audit.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "e87d5691108f064aba08c180f35ce39cf28a098a3521ea0df3d5c31ce0293ec0"} -->
 

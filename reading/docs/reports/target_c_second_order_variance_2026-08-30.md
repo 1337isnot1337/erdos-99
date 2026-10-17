@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_second_order_variance_2026-08-30.md) · source SHA-256 `c55f5648c343c4f3e9ca09f5d651b8c01f2354109782520304f29839f28d0548`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-059DA5480253","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C addendum: angular variance and the higher-order obstruction
@@ -431,15 +431,12 @@ A more targeted possible closure is the following angular inequality.
 > relative-interior weak-release mechanism `v` of a sufficiently large triangle-free
 > global minimizer, the actual strong contact network forces, for every normalized KKT
 > stress relevant to Theorem 11.1,
-> 
-
-```math
+> ```math
 > \operatorname{Var}_{H,\beta}(\omega)
 > \le
 > \operatorname{Var}_{C,\alpha}(\kappa),
 > \tag{C13.27}
-> 
-```
+> ```
 > with equality only for a motion whose strong diameter angular velocities are all
 > equal.
 

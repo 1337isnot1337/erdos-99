@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_acute_binary_sink_run_payment_independent_audit_2026-10-09.md) · source SHA-256 `494d9aed4956683e19c6857a19a0c7e4e67a22cb986d77dbad3e2fae4ad0c8ca`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 5 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 
@@ -65,37 +65,42 @@ The audited conclusions are:
 1. The (m+1) witnesses in the covering packet are distinct physical source
    pairs.
 2. For (D\ge7),
+   
    ```math
    u(S)+R(S)-m\ge1.
-   
    ```
+
    For pairwise disjoint binary sinks (S_a),
+   
    ```math
    \sum_a u(S_a)+\sum_a\bigl(R(S_a)-|S_a|\bigr)\ge t.
-   
    ```
+
 3. If the covering packet is entirely loaded-loaded, and it is enlarged to
    include one incoming and one outgoing implication witness at each endpoint
    of an internal incompatibility edge (ab), with every witness in this
    combined packet still loaded-loaded, then
+   
    ```math
    r_a\ge2,\qquad r_b\ge2,\qquad R(S)\ge m+2.
-   
    ```
+
    The same lower bound sums over pairwise disjoint such sinks.
 4. If the O--O cuts are, in addition, pairwise disjoint proper crosscuts in the
    canonical owner system of Audit.127, with train count (T_{OO}), then for
    any pairwise disjoint sink family and covering packets as above,
+   
    ```math
    T_{OO}+\sum_a u(S_a)\ge\sum_a(|S_a|+1).
-   
    ```
+
    If all selected packets are loaded-loaded and include the endpoint witnesses
    in item 3, the sharper conclusion is
+   
    ```math
    T_{OO}\ge\sum_a(|S_a|+2).
-   
    ```
+
 
 Items 1--3 do not require pairwise-disjoint cuts. Item 4 does. It is a finite
 owner-system theorem, not a global-minimizer theorem or a motion result.

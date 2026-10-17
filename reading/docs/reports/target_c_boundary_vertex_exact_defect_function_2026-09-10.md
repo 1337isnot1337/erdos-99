@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_boundary_vertex_exact_defect_function_2026-09-10.md) · source SHA-256 `632ded564bfa65da31326a13b41d01b0924d82e3c143f248ad5f3cb6485a6c52`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

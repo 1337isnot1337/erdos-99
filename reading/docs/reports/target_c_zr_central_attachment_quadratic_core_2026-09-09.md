@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_central_attachment_quadratic_core_2026-09-09.md) · source SHA-256 `8bf631ac03e0394aa39f2e5296aa2083dd93c53158563eca7f8241c7d31c1a9b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 8 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -187,7 +189,7 @@ For example, any fixed `sigma_eta` smaller than
 
 ```math
 \frac12\left[
-1-\sqrt{1-rac14\kappa(1-\kappa/2)}
+1-\sqrt{1-\frac14\kappa(1-\kappa/2)}
 \right]
 ```
 

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_consecutive_tooth_turn_budget_hostile_audit_2026-09-12.md) · source SHA-256 `8a452561d6ccdf7a5c0f071428ad2473542cd9280a1eb3000efc3b2254e1e938`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-8966C86E6B04","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — hostile audit of the consecutive-tooth turn budget
@@ -31,7 +33,7 @@ exterior hull turn. Both rays lie in the common interior wedge, so their smaller
 separation is
 
 ```math
- \gamma_i=\pi-\alpha_i-eta_i-eta_{i+1}\ge0.
+ \gamma_i=\pi-\alpha_i-\beta_i-\beta_{i+1}\ge0.
 \tag{1}
 ```
 

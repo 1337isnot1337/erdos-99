@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_full_source_cell_slack_and_inward_pockets_2026-09-11.md) · source SHA-256 `8b20dff5037e797f983469150fa4f241e83566379157cdded4cbd51e2e6dfae7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2109751E4F53","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_full_source_cell_slack_and_inward_pockets_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=528b3bbf2f799d6a6dbb7b23fa135342f7ace283; lifecycle=unreviewed; canonical=false -->

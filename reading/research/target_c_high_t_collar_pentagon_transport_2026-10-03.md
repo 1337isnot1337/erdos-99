@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_collar_pentagon_transport_2026-10-03.md) · source SHA-256 `980b892f97cd2edc3681622529e195d9ee74c4f56c7b3516379993ed42cd7224`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "7a4a970b8d026bf323efd2f834a9f4cb5029da4c", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_collar_pentagon_transport_2026-10-03.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "87464df313df17a39cc50c64581e67a559f5212d0e51f9c96800f3a7619e27ba"} -->
 

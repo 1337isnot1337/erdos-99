@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_bounded_face_convexity_2026-08-31.md) · source SHA-256 `8e8c24f46b2b82678f1a7daf59c12c7e2c182e30a3120a63365513d4c89e116a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5F13015CE50D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C51: every bounded force-visible contact face is a strict convex unit polygon

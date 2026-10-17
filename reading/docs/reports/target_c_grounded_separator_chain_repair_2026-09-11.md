@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_grounded_separator_chain_repair_2026-09-11.md) · source SHA-256 `42b0930dc44978ddc79156955ed28f158567f81e9d88d29516c70a121701558b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-51D7ABDCC648","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_grounded_separator_chain_repair_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=fbc87badf053b5596fa10aaf90a5d472c00383b2; lifecycle=unreviewed; canonical=false -->

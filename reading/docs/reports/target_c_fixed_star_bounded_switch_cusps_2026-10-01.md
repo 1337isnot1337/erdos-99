@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fixed_star_bounded_switch_cusps_2026-10-01.md) · source SHA-256 `5fd2f8e919c915cf4deb745741c9622bcd96c60ab5cecedffe56d0e425935d15`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0A13823D9C8E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- bounded switching cusps inside the fixed-star complete grid

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/research/onboarding-evaluation-2026-10-15.md) · source SHA-256 `1b252282e09a02c2d7af45d3d81fb4b2d0c5a78c0d9cd0fa6c0186f3da10a997`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Public outsider route evaluation, 2026-10-15
 

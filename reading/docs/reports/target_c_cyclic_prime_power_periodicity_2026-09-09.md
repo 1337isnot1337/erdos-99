@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_prime_power_periodicity_2026-09-09.md) · source SHA-256 `28e7a1b32a5a2cf621f9e237ded37dae1a6896d407e1b9022d6dbc38ec4e9cda`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

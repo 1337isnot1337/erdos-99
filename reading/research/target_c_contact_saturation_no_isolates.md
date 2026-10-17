@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_contact_saturation_no_isolates.md) · source SHA-256 `66e3742efb3238b5aa2c2491bf4f9b94c95d0e11739b7f7ad9e42c0257b1ef84`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — triangle-free minimizers admit a contact-saturated no-isolate representative
 

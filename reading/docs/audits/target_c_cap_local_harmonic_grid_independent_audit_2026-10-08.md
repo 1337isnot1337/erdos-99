@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_cap_local_harmonic_grid_independent_audit_2026-10-08.md) · source SHA-256 `4a6241d3e70412001e7a73fb12f8d9173c1443a3a468020932ef16799b29bdac`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1A3935193E82","canonical":false,"claim_ids":["C-TYPEII-CAP-LOCAL-HARMONIC-GRID"],"claim_statuses":{"C-TYPEII-CAP-LOCAL-HARMONIC-GRID":"audited-working"},"index":"docs/state/artifact-index.jsonl","status":"audited-working","target":"target-c"} -->
 # Target C Audit.157 — a fixed-area loaded cap contains a harmonic grid

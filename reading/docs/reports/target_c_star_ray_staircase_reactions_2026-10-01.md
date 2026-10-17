@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_star_ray_staircase_reactions_2026-10-01.md) · source SHA-256 `6a7dfa1047d6c701c4755967dff6a54059c4b2f2d31db4faa74ff72fcae9852f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 
@@ -85,10 +85,11 @@ unit direction $`u`$. Write $`Ju`$ for a counterclockwise quarter-turn. Assume:
    than $`\pi/3`$. They are full-span witnesses.
 4. For each $`h`$ with endpoint layers $`a<b`$, let $`n_h`$ point from layer $`a`$
    toward layer $`b`$. Its exact-phase derivative row is
+   
    ```math
    M_h=(n_h\cdot Ju)\mathbf1_{(a,b]}.
-   
    ```
+
    Rows with equal endpoint layers or zero transverse component are discarded.
 5. Positive actual diameter weights $`\beta_h>0`$ satisfy $`\beta^TM=0`$, and
    $`M`$ has rank $`m`$.

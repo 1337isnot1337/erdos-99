@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_dominant_pentagon_through_splicing_2026-09-15.md) · source SHA-256 `b567c562312438782fbde9cc62788fc843eccf331c09c2fbe3a9f31b27603b16`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 17 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

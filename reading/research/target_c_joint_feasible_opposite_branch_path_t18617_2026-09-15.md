@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_joint_feasible_opposite_branch_path_t18617_2026-09-15.md) · source SHA-256 `693a3ea318f1cf29248f7566ddaa3e46b29be002b3a7fb62883ed49812704157`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "7b1f390018e7d0ad80030a175ca7925683117645", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_joint_feasible_opposite_branch_path_t18617_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "31a77f406b53077e1ee394f2ad9436de3e21a0e46172839dc676ca1a6342c30f"} -->
 

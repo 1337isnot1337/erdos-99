@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md) · source SHA-256 `ef7cac24a834a83e76daffd4400a3618eac9093cd4d2dba654f6f6c1b3c8e044`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Erdős Problem #99 — complete-solution research run
 

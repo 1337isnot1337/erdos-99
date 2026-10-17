@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/literature-shell-stability-near-miss-audit.md) · source SHA-256 `267aa590cc457595fa0618b763c253cd1fe0825cfab13f741dee347655601ca4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # literature-shell-stability-near-miss-audit
 

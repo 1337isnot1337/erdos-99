@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-midpoint-anchor-atlas.md) · source SHA-256 `ca4abbf69861ee2c367bece626e3715eeaec03cdd837149453ca814d1d74eded`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C midpoint, anchor, and atlas track
 

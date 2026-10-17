@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_global_post_zf_rhombus_excess_via_annular_capacity_2026-09-11.md) · source SHA-256 `570e52616de915bab05e8ff5b95c4eadfb516bf658c84927094007d48dc9e0b9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9E075C4C0DEB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_global_post_zf_rhombus_excess_via_annular_capacity_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=6e986801097377f1ab776f4719ea7578f8ebf430; lifecycle=unreviewed; canonical=false -->

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_oo_fixed_star_pair_concentration_2026-10-01.md) · source SHA-256 `aacce3e608f09dd92246abfdccb4b3db577bb85fefaec7e61bbf2d6a21ebcb44`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-12D8337E3508","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- fixed-star-pair concentration for quadratic outer-train crossings

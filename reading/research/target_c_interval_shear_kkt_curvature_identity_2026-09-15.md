@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_interval_shear_kkt_curvature_identity_2026-09-15.md) · source SHA-256 `ccc253b9e72f87055060ce508896014eac24c1bbd92325925bf70916e2dd1de2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C-II — KKT-weighted curvature identity for laminar interval shears
 

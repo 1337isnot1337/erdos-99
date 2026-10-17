@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/72-primitive-shell-leaf-forcing-audit.md) · source SHA-256 `57a53f0c03656fa6afb4f4d36986d259b0499a9696fce851ba362064763b8029`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 # Target C — primitive-shell leaf-forcing dependency audit
 
@@ -286,7 +288,7 @@ The historical CY and CG support statements survive independent audit in the nar
 primitive-shell scope. Historical LF survives after the finite-dimensional correction
 
 ```math
-\boxed{\text{apply the `s_Z+1` nonleaf-edge bound only when }s_Z>0.}
+\boxed{\text{apply the `s\_Z+1` nonleaf-edge bound only when }s_Z>0.}
 ```
 
 This is an audited structural refinement, not a Level I closure and not an

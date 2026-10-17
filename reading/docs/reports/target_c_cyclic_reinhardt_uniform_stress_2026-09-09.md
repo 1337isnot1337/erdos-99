@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_reinhardt_uniform_stress_2026-09-09.md) · source SHA-256 `29c13a976dc3e893b7142ae683a84d9fe3e8c2eec57c982bcd8baf3b21e0fede`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-76EF7DDB27BF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact Reinhardt shell has a canonical uniform KKT stress

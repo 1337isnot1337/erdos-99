@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_disjoint_diameter_angle_2026-09-09.md) · source SHA-256 `f5a191f70d1fd7ce5123f0bc7dd03c481cbbb8d413e72037044ca44707150b27`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C2B3B2EC8D15","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — sharp angle separation for disjoint diameter chords

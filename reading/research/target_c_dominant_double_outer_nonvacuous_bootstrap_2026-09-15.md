@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_dominant_double_outer_nonvacuous_bootstrap_2026-09-15.md) · source SHA-256 `a9e1707a5a919762b945b3316d2e6ff1acc21162146e3d91f3ccf1c1bd19aa1e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 20 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_antipodal_exterior_cap_pairing_2026-09-25.md) · source SHA-256 `40d03e694318f912ee032917b83f7df35c8f2c8d7b4d55b46d81e8050c2afee0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C260F41AC9AA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — antipodal pairing of macroscopic exterior isolate caps

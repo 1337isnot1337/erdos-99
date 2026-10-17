@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_loaded_near_unit_cap_promotion_audit_2026-10-05.md) · source SHA-256 `de90ebd16c53936b9a06a15bfb10a3aa045537ace87f466724399eda45120b16`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C0B8427ADD8C","canonical":true,"claim_ids":["C-LOADED-HULL-CAP-BUDGET","C-LOADED-NEAR-UNIT-ADJACENCY"],"claim_statuses":{"C-LOADED-HULL-CAP-BUDGET":"canonical","C-LOADED-NEAR-UNIT-ADJACENCY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent promotion audit — loaded near-unit adjacency and loaded-hull cap budget

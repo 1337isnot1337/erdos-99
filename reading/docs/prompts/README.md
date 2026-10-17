@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/prompts/README.md) · source SHA-256 `5d1ed9850500abc1220c8dd601b9d7b7a89a7d243f078da8ca1e42a587060d6a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Current operational prompts
 

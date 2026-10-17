@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/fan_blocker_source_reconciliation_2026-10-15.md) · source SHA-256 `7c5a447531653d49661cddccd3119e7db9149827fead4efbcd119b92dd7a645f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8A846FDD3455","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Centered-fan blocker source reconciliation

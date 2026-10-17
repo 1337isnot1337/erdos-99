@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_two_copy_similarity_obstruction_2026-10-12.md) · source SHA-256 `b74d8e057fdeb64e3b26eb760058b4165ea68cf86e7d7efd814ab2dde9beb982`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D6643C9DCA8D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Global two-copy similarity replacement: an infinite obstruction

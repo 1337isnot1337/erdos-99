@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_dominant_edge_near_geodesic_path_2026-09-05.md) · source SHA-256 `9698be32382322296f941c5a50478e72e105b8ad3e0537fc1a4d6027a05fb964`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-31B8ED355D27","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C dominant-edge near-geodesic contact path

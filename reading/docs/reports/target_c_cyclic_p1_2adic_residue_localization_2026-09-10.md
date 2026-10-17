@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_p1_2adic_residue_localization_2026-09-10.md) · source SHA-256 `2f8a173fc42631688845bb83bb691b6521c0f441533b1609bb9291955d806822`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 24 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -537,12 +537,9 @@ Nonzero odd-order clusters genuinely remain. RL does not claim they are impossib
 The P1 arithmetic endpoint is now:
 
 > Let `m=2^k u`, `u>1` odd. The geometric trace factor `h` has degree at most `(m-1)/2`, and every mod-two reciprocal root has nontrivial order dividing `u`. Prove that no such factor of
-> 
-
-```math
+> ```math
 > G_m(T)=C_m(T)+4T-6
-> 
-```
+> ```
 > can contain the distinguished largest real P1 root.
 
 For prime odd part `p`, the residue support is reduced to the single cyclotomic family `Phi_p`. A useful next theorem would compute the 2-adic Newton polygon over the unramified trace extension attached to `p` and compare its required multiplicity with the exact `Phi_p^r` budget in `S_{pr}`.

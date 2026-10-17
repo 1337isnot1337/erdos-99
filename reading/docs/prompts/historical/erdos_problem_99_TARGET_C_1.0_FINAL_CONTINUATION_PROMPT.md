@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/prompts/historical/erdos_problem_99_TARGET_C_1.0_FINAL_CONTINUATION_PROMPT.md) · source SHA-256 `20d33cd0895ea0c695d1182192c2137af9d66ed5a6be2f715ff1d43797ed3e60`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Erdős Problem #99 — Target C continuation prompt v1.2
 

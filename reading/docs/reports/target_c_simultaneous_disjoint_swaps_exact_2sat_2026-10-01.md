@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_simultaneous_disjoint_swaps_exact_2sat_2026-10-01.md) · source SHA-256 `a141c3c3808d83e9685d8db6e77382dce6dd03cd4503f0b0484636351ab6a83d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-899DF0979598","canonical":true,"claim_ids":["C-DISJOINT-SWAP-2SAT"],"claim_statuses":{"C-DISJOINT-SWAP-2SAT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C: simultaneous disjoint finite swaps form an exact 2-SAT system

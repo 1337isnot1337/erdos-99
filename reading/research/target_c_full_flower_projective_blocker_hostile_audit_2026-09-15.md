@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_full_flower_projective_blocker_hostile_audit_2026-09-15.md) · source SHA-256 `963313ce2501bf5ac6fb630a1c85df4ae4e5e6610d6e6a3ca8ffbd7d7b19a919`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e35fc3ffe7519b618df96100c8edd519331dd530", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_full_flower_projective_blocker_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "dc32b364885e6275ae87462789e281a74c88cf40438531b589a8e7dd2c6883de"} -->
 

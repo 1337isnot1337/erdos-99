@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_component_stress_response_diameter_2026-09-09.md) · source SHA-256 `31414dfa0cedc9eea3591bd4119be2cf2098efd05992c3ae9ce34e197f7fc051`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F8831FD9902B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — HSR: harmonic component stress is controlled by response defect and attachment diameter

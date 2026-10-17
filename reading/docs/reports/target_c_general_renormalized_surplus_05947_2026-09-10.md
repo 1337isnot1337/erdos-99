@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_general_renormalized_surplus_05947_2026-09-10.md) · source SHA-256 `8ffbf89f3d5a9ab35f42bb0a7d15784eb8cd7f9ef1c0b2ba1d874a1881302abd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 4 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-24FE48C5CB8E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_general_renormalized_surplus_05947_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=23a0cb69f76ffd6bf0379f1459082bbcffa2987f; lifecycle=unreviewed; canonical=false -->
@@ -811,7 +813,7 @@ For rational `x<pi/2` in the range below define
 \underline\Phi(x)
 :=
 \frac14\left[
-x+1-rac12\left(\frac{11}{7}-x\right)^2
+x+1-\frac12\left(\frac{11}{7}-x\right)^2
 \right].
 \tag{7.6}
 ```
@@ -837,7 +839,7 @@ Define also
 so
 
 ```math
-J_u(m):=rac\pi4u^2+rac{(u+m)^2}{4\pi}
+J_u(m):=\frac\pi4u^2+\frac{(u+m)^2}{4\pi}
 <\overline J_u(m).
 \tag{7.9}
 ```
@@ -878,7 +880,7 @@ Since the actual `z=pi/2-y_0` is larger than `z_0` and cosine decreases here,
 ```math
 \sin y_0=\cos z
 \le\cos z_0
-\le1-\frac{z_0^2}{2}+rac{z_0^4}{24}.
+\le1-\frac{z_0^2}{2}+\frac{z_0^4}{24}.
 \tag{7.13}
 ```
 

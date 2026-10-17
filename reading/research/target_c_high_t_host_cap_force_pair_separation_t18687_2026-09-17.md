@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_host_cap_force_pair_separation_t18687_2026-09-17.md) · source SHA-256 `15156cb897b8a3224dda3ac63404fed0c01abd04d0c63ba9c90d5ce645b5e4c6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cb118e4e371c871368bc11eea914b4b653a46cc3", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_host_cap_force_pair_separation_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "875ec83bbd1c7ff648a14bc1ae4d924371eed69ebc0e82bb73ce4d656eb039ba"} -->
 

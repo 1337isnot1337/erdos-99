@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_radial_cut_transport_2026-08-31.md) · source SHA-256 `a4fa3153be5ed32552caeee59fcc3b0b67b22ba1dac4baf71b952baa74a50331`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3323D6E9BD0C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C72: radial coarea and graph-layer stress transport
@@ -75,25 +75,28 @@ Thus `D epsilon->0` forces the alpha-weighted contact network to asymptotically 
 There are two exact coarea forms.
 
 1. If `A_z(t)` is the total contact stress crossing the Euclidean radial cut `{r<t}`, then
+   
    ```math
    \boxed{T_z=\int_0^D A_z(t)\,dt.}
    \tag{C72.4}
-   
    ```
+
 2. If `ell(v)=d_C(z,v)`, `L=ceil(D)`, and `A_j` is the contact stress crossing the graph-distance ball `{ell<=j}`, then for every `0<=j<L`,
+   
    ```math
    \boxed{A_j\ge |g_z|-2D\delta_z.}
    \tag{C72.5}
-   
    ```
+
    Hence the stress on contacts that advance one graph level before level `L` obeys
+   
    ```math
    \boxed{
    A_\uparrow\ge L[|g_z|-2D\delta_z]_+.
    }
    \tag{C72.6}
-   
    ```
+
 
 Using C14,
 

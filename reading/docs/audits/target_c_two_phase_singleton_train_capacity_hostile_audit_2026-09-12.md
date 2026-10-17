@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_two_phase_singleton_train_capacity_hostile_audit_2026-09-12.md) · source SHA-256 `d1447a71efd9e97445faa1586fbb7394743e050b722e5643885a5df75a99bea9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BEDCF932EE1F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Target C two-phase singleton-train capacity

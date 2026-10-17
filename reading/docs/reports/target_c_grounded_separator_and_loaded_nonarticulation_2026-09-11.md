@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_grounded_separator_and_loaded_nonarticulation_2026-09-11.md) · source SHA-256 `110c76aeefca79a2f718fdad8cf30f05d760fab7c8138074d43c881278ec51ea`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-78C8F978E61E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_grounded_separator_and_loaded_nonarticulation_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=1022d5f21aeb972098aec032f0943ca1a1f63942; lifecycle=unreviewed; canonical=false -->
@@ -82,12 +82,13 @@ The promoted inputs are:
 - With the Laplacian convention of the
   [restoration audit, Section 4](target_c_c53_orientation_and_ci_restoration_2026-09-09.md),
   the actual stress matrix satisfies
+  
   ```math
   \Omega=L_C(\alpha)-L_{H_+}(\beta)\succeq0,
   \qquad \Omega\mathbf1=\Omega P_x=\Omega P_y=0.
   \tag{2.1}
-  
   ```
+
 - Distinct, vertex-disjoint source diameter chords have alternating hull endpoints.
 
 The degree statements are

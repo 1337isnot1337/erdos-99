@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_train_cut_hull_bank_2026-10-08.md) · source SHA-256 `15e2530cbae69f6c43cf0d8dea664e626ded9ce80b216dbccf9d1c98de9d58e9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1223F56A275E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: every train family has a cut-to-hull bank
@@ -87,11 +87,12 @@ supply the motion, simultaneous endpoint compatibility, or Level I.
   $`2T=b+4f+Q`$, $`T=q-k+2f`$.
 - [The positive reciprocal theorem](target_c_positive_reciprocal_internal_train_graph_2026-10-05.md),
   canonical `C-RECIPROCAL-TRAIN-GRAPH`: for any bounded endpoint set $`U`$,
+  
   ```math
   e(U)\le\sum_{j:\,|U_j|\ge2}(2|U_j|-3).
   \tag{CB4}
-  
   ```
+
   Its internal-column independence input is canonical
   [Lemma AR.2](target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md).
 - [Theory 01, Theorems 10.6 and 10.8](../theory/01-local-structure.md):

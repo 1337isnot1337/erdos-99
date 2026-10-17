@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_coherent_strip_exact_restoration_capacity_slot07_2026-10-10.md) · source SHA-256 `2af4a903a40411961bd2baf9afd107ca8e0d7ba47ed7ca118c15c80fa6116524`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CD03CC52BC3E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II: exact restoration capacity of a coherent rhombic strip

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_discrete_replacement_preservation_2026-10-15.md) · source SHA-256 `84dc414ecc9a7dd4ae6e946168314b80ec0051e653097140baa4b75416dfdfda`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D9935CD21E8D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Two global discrete-replacement sources: preservation audit

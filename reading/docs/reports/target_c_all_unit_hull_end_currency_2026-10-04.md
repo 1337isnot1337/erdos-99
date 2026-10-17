@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_all_unit_hull_end_currency_2026-10-04.md) · source SHA-256 `506b12c18a749590bfe5eedd1a43abfbb5c81213172cc6ab64e940f2c2ad8904`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D6BB0FD3F83C","canonical":true,"claim_ids":["C-FINITE-HULL-END-ANGULAR-DEFECT-BOUND","C-PENTAGON-FIVE-HULL-END-REGRESSION"],"claim_statuses":{"C-FINITE-HULL-END-ANGULAR-DEFECT-BOUND":"canonical","C-PENTAGON-FIVE-HULL-END-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C: all-unit-hull endpoint currency and a pentagon regression

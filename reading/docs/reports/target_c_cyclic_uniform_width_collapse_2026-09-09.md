@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_uniform_width_collapse_2026-09-09.md) · source SHA-256 `b3d17cb6be326c6c599b032abb3e50bac18b10d46ca9d88f7eb9700ad40370a8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8DC434EF0E29","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — every cyclic force hull is uniformly constant-width to order `1/D`
@@ -360,12 +360,13 @@ The dense source-packing lower bounds remain necessary for that additional contr
 ## 7. Comparison with previous stability statements
 
 - RP gave average width defect
+  
   ```math
   \int_0^\pi(D-w_F(\theta))d\theta
   =\pi D-q
   =\frac\pi{24D}+O(D^{-2}).
-  
   ```
+
 - Bonnesen/isodiametric stability from packing gives only much coarser primal Hausdorff control in the general cyclic branch.
 - UW upgrades the **difference-body / width function** to a uniform `O(D^-1)` estimate.
 - AD then converts that directly into `O(D^-1)` Euclidean length defects for every canonical short antipodal pair.

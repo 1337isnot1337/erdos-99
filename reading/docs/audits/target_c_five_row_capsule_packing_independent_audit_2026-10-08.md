@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_five_row_capsule_packing_independent_audit_2026-10-08.md) · source SHA-256 `6101e51dfc34b273483ff7a54414696b3b9ed37d89601d61f4cc9a87e76cbead`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C2525DCBD5F6","canonical":true,"claim_ids":["C-OO-SHORT-PAIR-PATH-BANDWIDTH-5","C-UNIT-CAPSULE-PACKING-5"],"claim_statuses":{"C-OO-SHORT-PAIR-PATH-BANDWIDTH-5":"canonical","C-UNIT-CAPSULE-PACKING-5":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit of the five-row capsule packing theorem

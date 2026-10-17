@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_inactive_contact_wall_repacking.md) · source SHA-256 `77aeb1e873bbf51e00aefa76fbea88dd7bad04eb558e08af71a95b9d5045057c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — contact-wall repacking for an internal inactive face
 

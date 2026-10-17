@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_2connected_strict_kalmanson_affine_kernel_2026-09-05.md) · source SHA-256 `651fc92c25e97425387180bcf0795fe4f665812b6125b254ec2a110af9c922ba`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8AC601967B66","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C: 2-connected response forces the affine C53 kernel

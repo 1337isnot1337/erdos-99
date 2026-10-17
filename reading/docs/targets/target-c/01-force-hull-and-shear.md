@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/01-force-hull-and-shear.md) · source SHA-256 `19a6693901b4aabc881a52365430014be76fea3b7021bd1e0b6479fd58787841`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — canonical force-hull and shear frontier
 

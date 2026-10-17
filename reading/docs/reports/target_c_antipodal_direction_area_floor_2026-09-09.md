@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_antipodal_direction_area_floor_2026-09-09.md) · source SHA-256 `07a677cfaf6bc0bcfab43b8fa2d227a160a8b9c81e73d692cd8630b9b947f2fe`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5F6FB3D0DE4A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ADA: antipodal diameter-direction measure gives a new force-hull area floor

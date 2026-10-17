@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_wide_dipole_central_diamond_t18687_2026-09-17.md) · source SHA-256 `687f6080a545f36c9be25bc99e7d86a41ed905b9abbe5c34acb861a51dbb347b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "22b5f9d5759a86074f490fd3e5bb6525a033ea23", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_wide_dipole_central_diamond_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "caf762dec253cdbc8b159d0e23832b09a180e49d2b9279b9880c84fe0a3e30f1"} -->
 

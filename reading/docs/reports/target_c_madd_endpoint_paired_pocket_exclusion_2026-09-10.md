@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_madd_endpoint_paired_pocket_exclusion_2026-09-10.md) · source SHA-256 `55e3d43d49016e396ffe6d3d06837d7d2096a3238e1f5ffa4d23f728e17b0648`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -285,7 +287,7 @@ maximal limiting vector is therefore `(2y_*-c,c,0,...)` up to permutation.
 The inequality is strictly stronger than the scalar DD relaxation because
 
 ```math
-(2y_*)^3-igl[(2y_*-c)^3+c^3\bigr]
+(2y_*)^3-\bigl[(2y_*-c)^3+c^3\bigr]
 =6y_*c(2y_*-c)>0.
 \tag{4.3}
 ```
@@ -376,7 +378,7 @@ scalar DD threshold. Therefore
 
 ```math
 \boxed{
-\Phi(y_*)-rac\pi4\lambda_{MADD}^2
+\Phi(y_*)-\frac\pi4\lambda_{MADD}^2
 =H_{scalar}.
 }
 \tag{6.1}

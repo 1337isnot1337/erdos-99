@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_pentagon_rhombus_dichotomy_2026-09-15.md) · source SHA-256 `1c5d0d928cf1b53762c5d2395d7ad256af182cde670495256b38702789871013`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "5d26e449d010b4af5aba0479c898ea4b593a06eb", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_pentagon_rhombus_dichotomy_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "15c31612e596d8e099f5776256199cab880a3699c69fbbf3a0d358e6af1a764f"} -->
 

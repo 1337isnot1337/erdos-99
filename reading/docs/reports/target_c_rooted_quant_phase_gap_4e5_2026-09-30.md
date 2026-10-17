@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rooted_quant_phase_gap_4e5_2026-09-30.md) · source SHA-256 `38e9f549fdf7c98e9fa367dd30eaa08ae56eaa7002af4db2c9c930b5195aaacc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7227F33EBDD1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- one-lift widening of the rooted quantitative phase window

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_sharp_matching_2026-09-17.md) · source SHA-256 `f6fb571ebb571297a949357bdf02d0c4f26a2efd83cef97ae459c0655314ac2d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "699912923cecb51463b8a4497f97ef18271c08ea", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_sharp_matching_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b4096eac845bab7a60b33195f213afb31ec21f7a01caca392e40de44a3fb0ab4"} -->
 

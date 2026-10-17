@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_dense_factorized_barrier_2026-10-12.md) · source SHA-256 `cea8009b28aeedeacad8e9731a8cae6964524e778382c404d6c55e95d38fa65f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-616855D04589","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Sharp population reserve and a finite transformation barrier do not imply globality
@@ -50,12 +50,13 @@ properties.
    Every other source label is a contact isolate and is retained.
 3. Its population `n_D` satisfies
 
+   
    ```math
    n_D-1-\frac{\pi D^2}{2\sqrt3}
    \ge\kappa_0D^{2/3}-CD^\theta.
    \tag{1}
-   
    ```
+
 
 4. Every finite-valued inversion/Möbius transformation, or any realized placement
    with positive endpoint-factor distances, has normalized diameter at least `D`.

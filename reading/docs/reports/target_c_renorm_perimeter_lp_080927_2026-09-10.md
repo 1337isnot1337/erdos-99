@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_renorm_perimeter_lp_080927_2026-09-10.md) · source SHA-256 `1c198ad11d1890e0ecea83c76a8937cfd95439b2e8d5906bca0e8f2842faf4fd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 4 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-D8B1B1FA98CE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — perimeter-capped renormalized pocket LP raises the floor to 0.80927
@@ -224,7 +226,7 @@ Hence every survivor limit must satisfy
 \boxed{
 \Phi(y)
 \le
-\frac\pi4\mu^2+rac{M(\mu,y)^2}{4\pi},
+\frac\pi4\mu^2+\frac{M(\mu,y)^2}{4\pi},
 \qquad 2\rho\le y\le\pi.
 }
 \tag{RL.3}
@@ -239,7 +241,7 @@ On the first branch define
 ```math
 F_1(\mu,y)
 :=
-\Phi(y)-\frac\pi4\mu^2-rac{(\mu+y)^2}{16\pi}.
+\Phi(y)-\frac\pi4\mu^2-\frac{(\mu+y)^2}{16\pi}.
 ```
 
 Then
@@ -337,7 +339,7 @@ The decimal is diagnostic only.
 The preceding RP audit established
 
 ```math
-\Phi(2\rho)>rac{154451}{250000}
+\Phi(2\rho)>\frac{154451}{250000}
 ```
 
 and, at `mu=4/5`,
@@ -345,7 +347,7 @@ and, at `mu=4/5`,
 ```math
 \frac\pi4\mu^2+
 \frac{(\mu+2\rho)^2}{16\pi}
-<rac{42781}{70000}.
+<\frac{42781}{70000}.
 ```
 
 Their exact difference is

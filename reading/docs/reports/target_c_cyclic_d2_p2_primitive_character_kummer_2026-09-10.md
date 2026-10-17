@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_p2_primitive_character_kummer_2026-09-10.md) · source SHA-256 `4ffcaae702d6a484e6ac02af63b0136d36deee127125b06480bae459ab3d7bbb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-06C2A6E14EA2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic `d_H=2`, P2: primitive-character Kummer rigidity on the Gaussian curve
@@ -331,10 +331,11 @@ is irreducible over `L` if
 
 1. `a` is not a `p`th power in `L` for every prime `p|k`; and
 2. if `4|k`, then `a` is not of the exceptional form
+   
    ```math
    -4b^4.
-   
    ```
+
 
 Take
 

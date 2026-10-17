@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-capacity-collective-refill.md) · source SHA-256 `959cfeb1c2a6901d53943fccef83f98f4dfd876ce43ccf60b76601bc106dfcd9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C vacancy, wall capacity, and collective refill
 

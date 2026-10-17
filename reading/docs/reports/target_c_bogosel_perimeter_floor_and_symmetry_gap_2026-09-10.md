@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_bogosel_perimeter_floor_and_symmetry_gap_2026-09-10.md) · source SHA-256 `b17f1ca707e938dd687c2a9a8b50c25a239d07bd8823a6326676a6d45ba01c0b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DE3A40C37D44","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — sharp disk reverse isoperimetry raises the C-II floor and excludes its endpoint

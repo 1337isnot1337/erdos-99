@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_gapwise_local_slack_payment_hostile_audit_2026-09-12.md) · source SHA-256 `ac234ccd85a7be7ead5a4731b8d3eefe9ad5cb60a2c268a257cb73f20afff63d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f9b80aedb8db64eb6436b323d4399d5b6419d5eb", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_gapwise_local_slack_payment_hostile_audit_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "5b82ea27d7a946053c75a628c33e8bdffbe13354f3a08d8c45493377d227fc38"} -->
 

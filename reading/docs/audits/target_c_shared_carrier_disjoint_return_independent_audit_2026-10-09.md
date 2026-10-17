@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_shared_carrier_disjoint_return_independent_audit_2026-10-09.md) · source SHA-256 `8b6eb1d014ed9816b62f5db7cc7b650523340aefcf95be1309ecc1264041ef4f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3F862A8F9EEC","canonical":false,"claim_ids":["C-SHARED-CARRIER-DISJOINT-RETURN-COST-REGRESSION"],"claim_statuses":{"C-SHARED-CARRIER-DISJOINT-RETURN-COST-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent audit: shared-carrier disjoint-return cost regression

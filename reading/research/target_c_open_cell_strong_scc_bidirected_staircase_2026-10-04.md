@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_open_cell_strong_scc_bidirected_staircase_2026-10-04.md) · source SHA-256 `f2c27fc87849163db8094cdfb2242854a29bde8dacd5c23619f5a88fa0763286`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C: strong open-cell SCC collapses to a bidirected staircase tree
 

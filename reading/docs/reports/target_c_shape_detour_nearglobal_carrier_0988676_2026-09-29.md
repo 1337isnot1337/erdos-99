@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_shape_detour_nearglobal_carrier_0988676_2026-09-29.md) · source SHA-256 `9364112f0723c96cc1b0500fe19ce751c657a399405782f8b353fe19dee398df`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6FBE4C3BD01C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — the new shape-detour gap forces a 0.988676 near-global carrier

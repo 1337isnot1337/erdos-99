@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fixed_angle_small_quadrilateral_2026-09-09.md) · source SHA-256 `f02107347ea8b66f9aa93ec5c2341393035b47d5b62a228627b550bd64a34b87`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 14 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -311,7 +313,7 @@ and
 
 ```math
 q^2\ge\cos^2\frac\pi{12}
-=rac{2+\sqrt3}{4}.
+=\frac{2+\sqrt3}{4}.
 ```
 
 The numerator in FAQ.11 is increasing in both `q^2` and `C` on this rectangle, because

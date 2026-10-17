@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_residual_square_grid_regression_2026-09-14.md) · source SHA-256 `fb3051c2fb7110d6157c60f4933310049c95ada59c88315899f4f331ab716a13`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1146CB9A65CB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — square-grid regression for the attachment-span residual
@@ -71,11 +71,12 @@ The following facts are finite and exact.
 3. Every $`x\in I_m`$ has all four grid neighbors in $`V_m`$. The four unit
    contact vectors sum to zero, so the positive unit-contact equilibrium
    equation holds at every unloaded vertex:
+   
    ```math
    \sum_{y\sim x}(y-x)=0.
    \tag{2.1}
-   
    ```
+
 4. Every $`a\in A_m`$ has a unit contact to $`I_m`$. Thus $`A_m`$ is the
    distinct loaded attachment set of the connected unloaded component $`I_m`$,
    and every unloaded point is contained in $`P_m:=\operatorname{conv}A_m`$.

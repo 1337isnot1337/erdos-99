@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_planarity_and_radius_barriers_2026-10-12.md) · source SHA-256 `02ba72cab64b73b6611a77c6d04af24c51ee3b345b58636e9d4b1acf61491593`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4193B848EBB4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Global replacement mechanisms: planarity and enclosing-radius barriers

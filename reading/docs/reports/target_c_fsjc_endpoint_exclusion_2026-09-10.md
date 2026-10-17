@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fsjc_endpoint_exclusion_2026-09-10.md) · source SHA-256 `e5e33f5bf80117bf09487dd05d6394f28db3bc42811b0762d3a4e5ff1d105891`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-697F9FF8140B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fsjc_endpoint_exclusion_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=cc52e84547c7fa76694f3d7699a9f688dda76f24; lifecycle=unreviewed; canonical=false -->
@@ -148,96 +148,109 @@ be the GU attachment-cell area gap.
 The proof uses the following already established report-level inputs.
 
 1. **FS.4.** If `o` is the full-source circumcenter and
+   
    ```math
    L_D=\sqrt{D\eta+\eta^2},\qquad \eta=3^{1/4}\sqrt D,
-   
    ```
+
    then for the relative-interior full-support stress
+   
    ```math
    d_H(F-o,-(F-o))\le2L_D=o(D).
    \tag{1.6}
-   
    ```
+
    The use of the relative-interior stress is essential: its positive diameter support
    is the full actual `H=H_*`, so this `F` is the same force hull used by DB, JC, and
    FSDB.
 2. **FSDB.** Along a subsequence with `h/D->y`,
+   
    ```math
    \liminf\frac{\operatorname{area}F}{D^2}
    \ge\Phi(y):=\frac{y+\sin y}{4}.
    \tag{1.7}
-   
    ```
+
 3. **GU/ZK component-area bound.** Put
+   
    ```math
    k=d_H+s_Z,
    \qquad
    L_2=6-3k+e_{BB}+2s_C.
    \tag{1.8}
-   
    ```
+
    Then
+   
    ```math
    \sum_r\operatorname{area}(P_r)
    \le\frac\pi4L_2^2+\pi L_2+\pi^2D.
    \tag{1.9}
-   
    ```
+
 4. **JC exact perimeter/cavity ledger.** One has
+   
    ```math
    E=x_B+P_F-q-a,
    \qquad P_F:=\operatorname{per}F,
    \tag{1.10}
-   
    ```
+
    and the exact inequalities
+   
    ```math
    \boxed{
    E+Q
    \le e_{BB}+h-3d_H-Q-4s_Z,
    }
    \tag{1.11}
-   
    ```
+
+   
    ```math
    \boxed{
    E+Q
    \le e_{BB}+P_F-h-3d_H-2s_Z.
    }
    \tag{1.12}
-   
    ```
+
    Moreover
+   
    ```math
    G\le H_{out}+A_{exc}+2q,
    \tag{1.13}
-   
    ```
+
    and
+   
    ```math
    H_{out}+A_{exc}
    \le\frac{(E+Q)^2}{4\pi}+o(D^2).
    \tag{1.14}
-   
    ```
+
 5. **Convex perimeter ceiling.** Since `diam(F)=D`,
+   
    ```math
    P_F\le\pi D.
    \tag{1.15}
-   
    ```
+
 6. **FSJC.** Every unbounded post-ZF sequence has
+   
    ```math
    \liminf\lambda\ge\lambda_*.
    \tag{1.16}
-   
    ```
+
    If `lambda->lambda_*`, then
+   
    ```math
    y\to\pi/2.
    \tag{1.17}
-   
    ```
+
 
 For audit, (1.11) and (1.12) rederive directly from JC.5. With
 `r_H=2h-q`, `d_H=q-h`, and `z=Q+2s_Z`, JC.5 gives
@@ -539,10 +552,11 @@ functions and Cauchy's perimeter formula:
 - diameter is continuous under Hausdorff convergence;
 - support functions, hence widths, converge uniformly;
 - perimeter
+  
   ```math
   P(K)=\int_0^\pi w_K(\theta)\,d\theta
-  
   ```
+
   is continuous under Hausdorff convergence;
 - area is continuous for convex bodies under Hausdorff convergence.
 
@@ -740,10 +754,11 @@ different:
 - it does not assume a matching;
 - at the forbidden FSJC endpoint one has `d_H=o(D)`, not `d_H=q/2`;
 - the endpoint diameter graph is highly branching:
+  
   ```math
   r_H=2h-q\sim\frac\pi2D;
-  
   ```
+
 - the contradiction comes from joint perimeter/cavity equality plus FS central
   symmetry, not from the pure-rhombic Mantel area ceiling.
 
@@ -826,10 +841,11 @@ following:
    `lambda_*D`;
 4. FS.4 gives `o(D)` half-turn asymmetry and the full-source common center;
 5. the full whole-source capacity contradiction
+   
    ```math
    n-1\le\frac\pi{2\sqrt3}D^2
-   
    ```
+
    is still not proved.
 
 A next closing theorem must control the genuinely higher-surplus regime. The natural

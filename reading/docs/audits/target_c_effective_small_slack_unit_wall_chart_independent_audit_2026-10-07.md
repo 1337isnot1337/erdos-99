@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_effective_small_slack_unit_wall_chart_independent_audit_2026-10-07.md) · source SHA-256 `8e96dddf515ea48998cfb76dc2176a9441528300673e31c62e2dd218a3c784cb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 7 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

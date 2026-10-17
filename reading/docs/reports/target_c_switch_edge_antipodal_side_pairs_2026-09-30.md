@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_switch_edge_antipodal_side_pairs_2026-09-30.md) · source SHA-256 `0ae0ec215d8696ffd2533e3e7b0988a645396a63c55d75a9c174192d2475a3fa`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E11FFD517FEA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — switch edges force paired antipodal hull sides

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section116_two_arc_companion.md) · source SHA-256 `d78b889939abf7e553f7f4ba26c4d72facf3f5319ef92a1086470f58175b466b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "05f4aa75c894492932e50fb0b46b0e00d2ef6fb2", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section116_two_arc_companion.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "0a7e9724cb5483c2c3705a2036d9789eb0008c7a9ca48fafcc9b60a718bd4820"} -->
 

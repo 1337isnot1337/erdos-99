@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_sorted_rate_energy_equality_independent_audit_2026-10-07.md) · source SHA-256 `dd373c26a6a1e3fe609ab30c1f3fb074b5790f311b52dd857d80264fa82b2086`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-92297DF7A3DF","canonical":false,"claim_ids":["C-SORTED-RATE-NESTED-ENERGY-EQUALITY-REGRESSION"],"claim_statuses":{"C-SORTED-RATE-NESTED-ENERGY-EQUALITY-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent audit: sorted-rate packet energy equality

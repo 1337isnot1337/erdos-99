@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_laminar_outer_train_multishear_2026-09-15.md) · source SHA-256 `b565ad6aa6a14537e25eb07fa83a0264a77c1f6bc149ff83c8e8e37a89e995c0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4F57A48BE71B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — exact finite multi-shear chart for noncrossing outer trains

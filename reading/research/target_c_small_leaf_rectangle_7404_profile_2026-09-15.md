@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_small_leaf_rectangle_7404_profile_2026-09-15.md) · source SHA-256 `366f3bec0eb881845f4373af9eee72a0aaef7729ac2b7d689296fd182132d749`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 10 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

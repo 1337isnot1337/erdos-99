@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_inverse_phase_mantel_component_2026-09-14.md) · source SHA-256 `a17548d33a7d752fef80663bcdd7ad5eee2e639e2dd3959135a52d656adf3557`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 4 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 10 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 
@@ -155,65 +157,71 @@ properties.
 
 1. **Only sublinear train population is discarded.**
 
+   
    ```math
    |\mathcal T_D\setminus(X_D'\cup Y_D')|=o(T_D),
    \qquad
    |X_D'|,|Y_D'|=\frac{T_D}{2}-o(T_D).
    \tag{2.2}
-   
    ```
+
 
 2. **The good graph is almost complete and robust.** Every edge of (H_D) is an
    actual strict-rhombus crossing with
 
+   
    ```math
    0<\delta_e\le\frac{K_D}{D},
    \tag{2.3}
-   
    ```
+
 
    and every vertex has
 
+   
    ```math
    \deg_{H_D}(v)\ge\frac{T_D}{2}-o(T_D).
    \tag{2.4}
-   
    ```
+
 
    In particular, (H_D) is connected and has graph diameter at most three.
 
 3. **All surviving reduced phases collapse.** There is an interval (J_D) such
    that
 
+   
    ```math
    x_\tau\in J_D\quad(\tau\in X_D'\cup Y_D'),
    \qquad
    |J_D|\le\frac{3K_D}{D}=o(1).
    \tag{2.5}
-   
    ```
+
 
 4. **The three labels are concentrated on the two Mantel shores.** If
    (n_0,n_1,n_2) are the sizes of the three label classes in (H_D), and
    (M_D^{\rm cls}\ge b_D^{\rm cls}\ge a_D^{\rm cls}) are those sizes in decreasing
    order, then
 
+   
    ```math
    M_D^{\rm cls}=\frac{T_D}{2}+o(T_D),
    \qquad
    a_D^{\rm cls}+b_D^{\rm cls}=\frac{T_D}{2}+o(T_D).
    \tag{2.6}
-   
    ```
+
 
 5. **The local cyclic-order bound is asymptotically saturated.**
 
+   
    ```math
    |E(H_D)|
    =M_D^{\rm cls}(a_D^{\rm cls}+b_D^{\rm cls})-o(T_D^2),
    \tag{2.7}
-   
    ```
+
 
    and all but (o(D^2)) strict-rhombus crossings of the full source are outside
    (H_D). The component has one (o(1))-coherent three-phase frame, and its
@@ -507,12 +515,12 @@ and possible-hole structure, so the hypotheses are not identical.
 The required next statement can be written without asymptotic ambiguity:
 
 > **Full-core near-extremal exclusion (missing).** There exist
-> (arepsilon_0>0) and (D_0<\infty) such that no canonical full-core global
+> (\varepsilon_0>0) and (D_0<\infty) such that no canonical full-core global
 > minimizer with (D\ge D_0) contains a connected train-crossing subgraph (H)
 > whose phase classes have (M\ge b\ge a), whose reduced phase diameter is at
-> most (arepsilon_0), whose crossing count satisfies
-> (|E(H)|\ge M(a+b)-arepsilon_0D^2), and for which the full source has at most
-> (arepsilon_0D^2) strict-rhombus crossings outside (H), while retaining all
+> most (\varepsilon_0), whose crossing count satisfies
+> (|E(H)|\ge M(a+b)-\varepsilon_0D^2), and for which the full source has at most
+> (\varepsilon_0D^2) strict-rhombus crossings outside (H), while retaining all
 > holes, exceptional faces, bridges, repeated boundary occurrences, and
 > contact-isolated source points.
 

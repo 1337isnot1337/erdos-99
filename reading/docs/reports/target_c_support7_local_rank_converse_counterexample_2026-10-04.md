@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_support7_local_rank_converse_counterexample_2026-10-04.md) · source SHA-256 `0a66b77d32cd158042fed34ce34687a3f2ddfc5e2e941495e002bf08c41c47de`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-21E49C79F54D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: counterexample to the support-only local-rank converse

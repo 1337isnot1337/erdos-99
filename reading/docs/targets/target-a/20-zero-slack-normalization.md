@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/20-zero-slack-normalization.md) · source SHA-256 `29050c565c02816f425e09f1a01598e1012b689d0508618465e406cf3918ca40`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — locked-transition or zero-slack response normalization
 
@@ -45,47 +45,43 @@ D(M)=D.
 >
 > 1. **Locked-transition branch.**  There are an integer `q` with
 >    
-
-```math
+>    ```math
 >    N<q\le M
 >    \tag{168.4}
->    
-```
+>    ```
+
 >    and a `q`-point unit-separated global optimum `P subset H` of diameter `D`
 >    containing a unit equilateral triangle `T_*` such that
 >    
-
-```math
+>    ```math
 >    \boxed{
 >    a_{ij}(v)=0
 >    \qquad(ij\in E(T_*),\ v\in\mathcal C_H(P)).
 >    }
 >    \tag{168.5}
->    
-```
+>    ```
+
 >    Thus all three sides of `T_*` are universally first-order locked in the actual
 >    fixed-hull feasible cone.
 >
 > 2. **Zero-slack triangle-free branch.**  There is a triangle-free global optimum
 >    
-
-```math
+>    ```math
 >    A^{\max}\subset H,
 >    \qquad |A^{\max}|=M,
 >    \qquad \operatorname{diam}A^{\max}=D,
 >    \tag{168.6}
->    
-```
+>    ```
+
 >    and therefore
 >    
-
-```math
+>    ```math
 >    \boxed{
 >    \alpha_1(H)-|A^{\max}|=0.
 >    }
 >    \tag{168.7}
->    
-```
+>    ```
+
 
 ### Proof
 
@@ -170,40 +166,28 @@ Y_{\rm in}=(\Lambda+v)\cap\operatorname{int}(K^*+\mathbb B).
 > vertex of `Y_in`.
 >
 > Consequently every actual Schur terminal
-> 
-
-```math
+> ```math
 > c\in C^\partial\subset X^*
 > \tag{168.16}
-> 
-```
+> ```
 > has a distinct label `a_c in A^0` satisfying
-> 
-
-```math
+> ```math
 > |c-a_c|<1,
 > \tag{168.17}
-> 
-```
+> ```
 > and there is a response-lattice vertex `y_c in Y_in` with
-> 
-
-```math
+> ```math
 > \boxed{
 > |c-y_c|<1,
 > \qquad |a_c-y_c|<1.
 > }
 > \tag{168.18}
-> 
-```
+> ```
 > Thus in the zero-slack branch
-> 
-
-```math
+> ```math
 > \boxed{C^\partial_{\rm src}=C^\partial;}
 > \tag{168.19}
-> 
-```
+> ```
 > the `widehat p_H` exceptional set of Corollary 165.4 disappears completely.
 
 ### Proof
@@ -255,13 +239,10 @@ Z_\partial
 
 > **Corollary 168.2A (boundary-exact co-phased source complex).**  In the zero-slack
 > branch,
-> 
-
-```math
+> ```math
 > \boxed{|Z_\partial|\le b\le12D+9.}
 > \tag{168.24}
-> 
-```
+> ```
 > Hence every response-lattice vertex outside an explicit boundary-order exceptional
 > set has a strict conflict with a source point `a in A^0` satisfying
 > `dist(a,partial H)>1`.  For every such deep source point its complete strict
@@ -322,12 +303,11 @@ Thus `0<=r<=m^*`.
 >
 > 1. **Plateau descent:** `r=0`.  Then
 >    
-
-```math
+>    ```math
 >    A^0\cap K^*
 >    \tag{168.28}
->    
-```
+>    ```
+
 >    is a triangle-free `m^*`-point global optimum of diameter `d`.  In particular a
 >    triangle-free counterexample has descended from the `D`-plateau to the right
 >    endpoint of the strictly smaller `d`-plateau.
@@ -335,40 +315,36 @@ Thus `0<=r<=m^*`.
 > 2. **Transverse source gates:** `r>0`.  Every matching saturating `X^*` into `A^0`
 >    has at least `r` edges
 >    
-
-```math
+>    ```math
 >    x_i a_i
 >    \qquad(1\le i\le r)
 >    \tag{168.29}
->    
-```
+>    ```
+
 >    whose source endpoints satisfy
 >    
-
-```math
+>    ```math
 >    a_i\in (K^*+\mathbb B)\setminus K^*.
 >    \tag{168.30}
->    
-```
+>    ```
+
 >    Their straight segments are pairwise disjoint and each segment meets
 >    `partial K^*`.  For a phase generic for `X^*` and `A^0`, at least
 >    
-
-```math
+>    ```math
 >    \boxed{\frac r5}
 >    \tag{168.31}
->    
-```
+>    ```
+
 >    of these gates can be selected with pairwise distinct response-lattice vertices
 >    `y_i in Y_in` such that
 >    
-
-```math
+>    ```math
 >    |x_i-y_i|<1,
 >    \qquad |a_i-y_i|<1.
 >    \tag{168.32}
->    
-```
+>    ```
+
 
 ### Proof
 

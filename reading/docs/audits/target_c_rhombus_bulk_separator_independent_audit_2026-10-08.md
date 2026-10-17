@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_rhombus_bulk_separator_independent_audit_2026-10-08.md) · source SHA-256 `06d60fa1e58ae9add0f5805e392ec967674a657fbb48290ac309f3df724f15a0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-04DAF63E6D2C","canonical":true,"claim_ids":["C-CONVEX-FACE-LOADED-RETURN-BOUND","C-PINNED-GRID-RETURN-SQRT-REGRESSION","C-RHOMBUS-BULK-LOADED-RETURN-BOUND","C-RHOMBUS-SEPARATOR-CAPACITY"],"claim_statuses":{"C-CONVEX-FACE-LOADED-RETURN-BOUND":"canonical","C-PINNED-GRID-RETURN-SQRT-REGRESSION":"regression","C-RHOMBUS-BULK-LOADED-RETURN-BOUND":"canonical","C-RHOMBUS-SEPARATOR-CAPACITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C Audit.133 — rhombus bulk separators and loaded returns

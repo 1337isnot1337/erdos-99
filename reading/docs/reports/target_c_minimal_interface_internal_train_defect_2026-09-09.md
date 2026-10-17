@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_minimal_interface_internal_train_defect_2026-09-09.md) · source SHA-256 `fae4f0b1d0b69106009a2ccf2f0d0a19d0bfa04041c1fe7b1bd1caa66163af22`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 13 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -220,10 +220,11 @@ Summing `i=1,2` and using nonnegativity of every minor-component defect gives IT
 IT.2 itself has a clear extremal pattern. To make `Q_i` approach its minimum coefficient, both inequalities must nearly saturate:
 
 1. `f_i<=Q_i` must satisfy
+   
    ```math
    Q_i-f_i=o(D),
-   
    ```
+
    so almost every unit of internal face defect is carried by pentagons (`deg=5`);
 2. DS.1 must nearly saturate its Mantel step, so the stopped-train crossing graph of `I_i` must be asymptotically extremal triangle-free at its leading `Theta(D^2)` crossing scale.
 

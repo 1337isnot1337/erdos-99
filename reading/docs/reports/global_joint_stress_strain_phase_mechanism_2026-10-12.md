@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_joint_stress_strain_phase_mechanism_2026-10-12.md) · source SHA-256 `ae5ede4071475cb9d957b4326dccc5ffcbc2d3297c66e340e3d0b3111d06638b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DDFC8A5AC13A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99 — a joint global stress/strain mechanism

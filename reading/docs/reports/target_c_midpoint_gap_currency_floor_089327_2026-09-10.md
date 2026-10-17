@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_midpoint_gap_currency_floor_089327_2026-09-10.md) · source SHA-256 `438cadf2c90a61305c6592a8c69cc804c06b0c75baf6698ff226ebd33eda2b2c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0C11EEBD671D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_midpoint_gap_currency_floor_089327_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=903a7fc2613c8f3d312ef312addf54e61bb7bae9; lifecycle=unreviewed; canonical=false -->

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_adjacent_switching_thrackle_order_hostile_audit_2026-09-15.md) · source SHA-256 `e99fa3eca4f5d9af222a30a53de81db45c36caae86e04a7eb4fb83923392ce95`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d00066b00698b2185d049ec40bc9bc3fcf984f33", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_adjacent_switching_thrackle_order_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "973d815a705b9483634f4aeabe5ae81fe0a97b24420cc39ca50d08d2906cbcef"} -->
 

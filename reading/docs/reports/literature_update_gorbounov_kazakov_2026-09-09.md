@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/literature_update_gorbounov_kazakov_2026-09-09.md) · source SHA-256 `4c33f113acc126e161ac937592f6e9d91de700bdc74e0a2a4c2b16b4f4b303d8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CBCE4133D583","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99 — literature update: Gorbounov–Kazakov circular-planar Kalmanson metrics

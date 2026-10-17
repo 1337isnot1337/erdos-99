@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearcircle_total_harmonic_diameter_cost_2026-09-09.md) · source SHA-256 `c7fbdf8c171553130534e563aab48c68aa094aa9e50025b744d97e5f45cc1640`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D780ED88A1B2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_nearcircle_total_harmonic_diameter_cost_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=cb52adb5ae2e86bcd988f6a228933487efb77373; lifecycle=unreviewed; canonical=false -->

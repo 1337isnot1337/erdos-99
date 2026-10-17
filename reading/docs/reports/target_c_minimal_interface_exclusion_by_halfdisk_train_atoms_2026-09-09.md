@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_minimal_interface_exclusion_by_halfdisk_train_atoms_2026-09-09.md) · source SHA-256 `44141b1b5df8d5e564e891f803a4a6e1bb41f6ffa985ca1f9291105b12e25cd1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

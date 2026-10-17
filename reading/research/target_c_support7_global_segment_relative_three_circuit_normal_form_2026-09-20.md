@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_three_circuit_normal_form_2026-09-20.md) · source SHA-256 `d826ad39bc0a720569b0f2348a10caf022c11575787a59e5b19b73301ea9698b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "7667efbb157e30a44547ef1a79b4f103ba55140a", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_three_circuit_normal_form_2026-09-20.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b8e4c9eba6b22cc2e91a91d100f8c3aaa9322be2d340081016db222f38a7c2c1"} -->
 

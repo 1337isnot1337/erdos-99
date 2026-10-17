@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_threshold_fan_rank_side_split_2026-10-01.md) · source SHA-256 `5fe18ef5147db8880624cb0046fffdba9b096c0a2249efb6d6b76a992ff8c00a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5DAE8768F2A0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — threshold boundary fan forces physical side-fiber rank

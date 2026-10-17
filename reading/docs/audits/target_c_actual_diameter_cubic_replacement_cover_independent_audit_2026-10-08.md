@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_actual_diameter_cubic_replacement_cover_independent_audit_2026-10-08.md) · source SHA-256 `870358502878740817993c9f49136bbe2300cb80977ce1609d19fe53abbe5b56`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-ED164F0DFCE1","canonical":true,"claim_ids":["C-ACTUAL-DIAMETER-CUBIC-MOMENT","C-CORE-DIAMETER-REPLACEMENT-COVER-COST"],"claim_statuses":{"C-ACTUAL-DIAMETER-CUBIC-MOMENT":"canonical","C-CORE-DIAMETER-REPLACEMENT-COVER-COST":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: actual-diameter cubic moment and replacement cover cost

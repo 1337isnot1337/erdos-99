@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section115_integrated_leakage_envelope.md) · source SHA-256 `ec9ddc5998cac26bafbd4f25c9f643f9c34e177e9d757968470553cdda813593`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

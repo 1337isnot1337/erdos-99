@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_uniform_oblique_lattice_corrugation_exclusion_2026-09-30.md) · source SHA-256 `ef66c8e744eff6c329160ca1d93601fe715ffabd20140f985ced7d82b5f5d1da`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-626995D9AA5D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: uniform exclusion of exact oblique-lattice sources

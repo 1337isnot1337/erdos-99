@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_qpd_jc_explicit_floor_058946_2026-09-10.md) · source SHA-256 `b01fa11e9f13e922984342978253690ab399f400e81409694b8c3793bfb63f31`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DA78A49B9CB9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — QPD/JC raises the explicit post-ZF floor to 0.589461

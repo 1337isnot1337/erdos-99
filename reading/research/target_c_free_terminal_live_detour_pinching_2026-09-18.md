@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_free_terminal_live_detour_pinching_2026-09-18.md) · source SHA-256 `713904d23f4651b32e7c34d6f5b67c966f0d3ce1dab5da3d80fb1c96c54fd243`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C-II — the live `0.00710` window is universally pinned to near-maximal outer detour
 

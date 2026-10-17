@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/launch/MIGRATION_SCANNER_REVIEW.md) · source SHA-256 `7cc4d29927decfb99bdc15975fe73aa4b5ed6044e70ff7b2693835e8fdbb7b06`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Exact mathematical grouping findings
 

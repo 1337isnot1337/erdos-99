@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_h7b_complete_metric_integrability_2026-09-19.md) · source SHA-256 `9d3018c44190fbe6eacb98c19a6bfddf7f230dcff95b200e4cdea1b3f44e30b7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "ba5d0c4ad4f51306b549cac058ea2b0058bbf16c", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_h7b_complete_metric_integrability_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3f591e73ac35c4ecbe5e6b86f4163b89b26aa2e58b3b06c1c307db4472f3b846"} -->
 

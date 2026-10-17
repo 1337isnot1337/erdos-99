@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-exact-phase-packet-fork.md) · source SHA-256 `c5d6bac44a0869264692c35897f8c0627941cd50ded421a27cca4454363dc929`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C exact-phase packet and cross-shore fork
 

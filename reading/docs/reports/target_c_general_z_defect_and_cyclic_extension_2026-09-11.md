@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_general_z_defect_and_cyclic_extension_2026-09-11.md) · source SHA-256 `531c265465c2925e458c718f5bbe5c3fa60628fcf6b1fe1be6ab92ec3630bdc8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0DAB470B5E73","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_general_z_defect_and_cyclic_extension_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=57266ee5b5f05d3e2697a65c0f73e40553786294; lifecycle=unreviewed; canonical=false -->

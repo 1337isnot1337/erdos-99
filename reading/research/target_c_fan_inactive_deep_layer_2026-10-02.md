@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_fan_inactive_deep_layer_2026-10-02.md) · source SHA-256 `68eb750a1157c2a0de5e8e3b6367974f9f81cb92f287d7a01e64606ef5ceb6b3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "7f8530a394fb7aa8648762ebc586106a81b7f246", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_fan_inactive_deep_layer_2026-10-02.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3f5f63b778483522e24ad66c67016617a748502c169a28259c150637a4858b0d"} -->
 
@@ -347,10 +347,11 @@ Every such vertex lies strictly inside a triangle whose vertices are loaded actu
 diameter endpoints:
 
 - a degree-three third-contact port lies in
+  
   ```math
   \operatorname{int}\operatorname{conv}\{a,p_-,p_+\};
-  
   ```
+
 - a degree-two flip blocker lies in the same type of triangle.
 
 Hence every one of these inactive points belongs to
@@ -505,10 +506,11 @@ The two realizations remain different.
 
 2. **Almost-contact realization.**  
    In the degree-two-heavy subbranch, there is a linear vertex-disjoint family
+   
    ```math
    1<|p-y|\le1+1/D
-   
    ```
+
    from loaded fan leaves to deep diameter-inactive points.
 
 The canonical deep inactive-pair theorem requires both endpoints of an isolate pair

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_contact_chain_safe_area_capacity.md) · source SHA-256 `e7f504be12601518f4aae9cf845d04e87e88decfc433f45f9d9e7c40f2172cbe`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f60f9a3639e14091ca689094e6cb525c4938f648", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_contact_chain_safe_area_capacity.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a3db19dbaab4c354badd87ab0a572d88f7cef83fb304f3db3e925742ff358b85"} -->
 

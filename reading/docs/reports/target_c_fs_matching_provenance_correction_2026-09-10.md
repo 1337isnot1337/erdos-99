@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fs_matching_provenance_correction_2026-09-10.md) · source SHA-256 `1cfca9950c556e68165660213023ec821b82c07d4c21eba2862386fdaa619223`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AB169210B03D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fs_matching_provenance_correction_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=2ef332de31ca80832fb9afdd867a0227fe17119b; lifecycle=unreviewed; canonical=false -->

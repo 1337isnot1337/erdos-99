@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/monotone_route_attachment_gap_correction_2026-10-15.md) · source SHA-256 `7dfdc82217262377128e56af3fe5b85ba7b63aeffc7ed47b89af316ed4a225eb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-752EFC350D1A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Monotone-route source reconciliation and attachment-gap correction

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_pentagon_adjacent_lower_h5_p1_exclusion_2026-09-19.md) · source SHA-256 `b2c05a32d8716ea875211f6edf768fb9a14c1bd9e5f888130e204cc267bb7c4a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c2333d76d835a8e88c366dec973a2fb7c39a68ae", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_pentagon_adjacent_lower_h5_p1_exclusion_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "0bffb24644c8f6ae000a13a997ffe62bfe472bc437fd5b2e368dcf886a9b39e1"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_surplus_diameter_scalar_composition_2026-09-12.md) · source SHA-256 `59448a6409dd72645d1386125ac9bb05c29fcea5db0383cdd966f78cb936d2fb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "99207ecf0d488482a49bb690f4066e7929cae87b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_surplus_diameter_scalar_composition_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "20b8b085e5ef42b47da8afc130f21467143e622d41de07b5f41d481107f300e6"} -->
 

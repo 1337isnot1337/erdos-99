@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_reflection_moment_obstruction_2026-10-12.md) · source SHA-256 `4e3e129da1129a659fae627fb7467beb557ca2f5ef4b45563e1666f84d0c7454`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0EE8A3655412","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # A global moment obstruction to macroscopic one-step reflected scaling

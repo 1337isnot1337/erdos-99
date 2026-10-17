@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearzero_offstar_support_floor_2026-09-09.md) · source SHA-256 `ca0445b68a011f41351efa953dbd34017329395b67461eef0fee614a28ed61cd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E22C31AE0AE7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — OSF: a near-zero beta star still leaves a linear off-star diameter support

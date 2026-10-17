@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_disjoint_attachment_cell_square_root_count_2026-10-09.md) · source SHA-256 `89b840f869d135f3ce509f8e248ce5a74c829d1aa15cbcefe5e12d54d115dced`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-984C1F3D5D1E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Disjoint attachment cells give a square-root harmonic-component count

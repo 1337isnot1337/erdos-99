@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_quadratic_core_cap_extraction_independent_audit_2026-10-09.md) · source SHA-256 `3b3c3554321dcca88eb5510b4080ba20e70a5c9ba57226dee2c42a6569c0f4c0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-FFB06BA281F9","canonical":true,"claim_ids":["C-QUADRATIC-CORE-CELL-BOUNDARY-STRIP-POPULATION","C-QUADRATIC-CORE-DEEP-CAP-GRID-RETURNS","C-QUADRATIC-CORE-LOADED-CHORD-CAP-EXTRACTION"],"claim_statuses":{"C-QUADRATIC-CORE-CELL-BOUNDARY-STRIP-POPULATION":"canonical","C-QUADRATIC-CORE-DEEP-CAP-GRID-RETURNS":"canonical","C-QUADRATIC-CORE-LOADED-CHORD-CAP-EXTRACTION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.189 — quadratic-core cap extraction and deep returns

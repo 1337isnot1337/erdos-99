@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_hostile_audit_2026-09-15.md) · source SHA-256 `0ecc90b876a568aa8ee9b57ad700fab712237083a8a072af4d19c3f91a480ba9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Hostile audit — branch-aware iterative-pruning atomic gap `0.0071`
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section118_sharp_correlated_slack_hostile_audit_2026-09-12.md) · source SHA-256 `400d6b7bb60e21baf5ddd2e0acfab4f5e4415f40c79de7d7ea784a13ea5e2a67`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E15A98D2AEB8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — Section 118 sharp correlated-slack hostile audit
@@ -48,10 +48,11 @@ No theorem-state mutation is made here. The canonical state remains
 The proof uses the following load-bearing inputs.
 
 1. Canonical Section 101 supplies
+   
    ```math
    M\le C\le2\alpha\le |S|\le U
-   
    ```
+
    and therefore the exact nonnegative decomposition of `U-M`.
 2. Canonical Sections 82 and 89 supply the exact bounded-face/outer-walk/train ledgers.
 3. Canonical Section 104 supplies the finite-cover base-spacing theorem and the

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_adjacent_cut_triple_small_hostile_audit_2026-09-15.md) · source SHA-256 `6e58fd6170ab6696924df14cadf73631ff82ccbe2f1eb3cade6197249334f4ef`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a1e29c41841e926088ea76216b6e3a0fdbef3146", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_adjacent_cut_triple_small_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f495fe8db7197c51846dd3f960c7e2d9e285be5f8c19cac8d7de86c2f1e10da5"} -->
 

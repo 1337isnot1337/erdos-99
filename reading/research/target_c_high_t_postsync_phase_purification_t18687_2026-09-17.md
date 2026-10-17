@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_postsync_phase_purification_t18687_2026-09-17.md) · source SHA-256 `37386393f1600a317ee02f8e73b3afe858396eacbdbe33bad4a3e67d75524016`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d47c686f772ae9720a52a1cd52cc159faa59e191", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_postsync_phase_purification_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ffa976c89885233b7f9d5db61d882cc85cdc63e3d733092564d28ea98401fe19"} -->
 

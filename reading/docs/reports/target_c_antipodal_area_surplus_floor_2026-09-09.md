@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_antipodal_area_surplus_floor_2026-09-09.md) · source SHA-256 `0d7a420f7fcd964e6bb364bf1cd9150cf6e50dbe8a3c76dc96891222758270c4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-662E941893F9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — AAS: antipodal force-hull area raises the generic post-ZF surplus floor to 0.5882283437

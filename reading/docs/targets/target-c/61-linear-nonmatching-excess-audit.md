@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/61-linear-nonmatching-excess-audit.md) · source SHA-256 `092d044ee5c0750f4656593a6f8062267af9fabd02a0381ca9d0f4e0adebe6f2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — linear nonmatching-excess audit
 

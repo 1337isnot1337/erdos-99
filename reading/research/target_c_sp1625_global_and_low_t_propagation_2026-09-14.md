@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_sp1625_global_and_low_t_propagation_2026-09-14.md) · source SHA-256 `e6f82a9bac2edae34e99ef615668e169969b38a523ee54e7c1269c9983cf8783`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "5ffc4c3e4414232c1cc3e2de1e0c661328cad2cb", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_sp1625_global_and_low_t_propagation_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "54c0863cb5d31ea930c136cb20013cb5687dfce61b487e26ccd21e5f7b6d7f19"} -->
 

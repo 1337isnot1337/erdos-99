@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_minimum_face_size_local_endpoint_independent_audit_2026-10-09.md) · source SHA-256 `80387b7887afd96cd1e8ab4541caf017eef5eaf495357be03e87e046c33b0346`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AA950DC3CAB0","canonical":true,"claim_ids":["C-QUARTER-FOLD-MINIMUM-FACE-SIZE"],"claim_statuses":{"C-QUARTER-FOLD-MINIMUM-FACE-SIZE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: boundary-local minimum face size for quarter-folds

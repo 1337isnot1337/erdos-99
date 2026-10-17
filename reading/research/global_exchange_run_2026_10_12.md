@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/global_exchange_run_2026_10_12.md) · source SHA-256 `001b81d3be7bd23a0c10976c873459bd7c0545563846f418ad1c92a8f98e609c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Global exchange run, 2026-10-12
 

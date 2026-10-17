@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_leaf_fan_stopped_train_and_collar_2026-10-02.md) · source SHA-256 `7ab7d76f59762041a16b4cc7124ef27414b8eb3789a93b3c326fd35253626886`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A09E01922265","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: leaf fans force stopped-train face currency

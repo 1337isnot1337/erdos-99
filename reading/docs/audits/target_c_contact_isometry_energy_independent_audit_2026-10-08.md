@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_contact_isometry_energy_independent_audit_2026-10-08.md) · source SHA-256 `33ce06e79d3bf3e7f3a4f54c48a805c8ddbb957f39a6d77f0980a4d36bfee1c1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EA64C386AD16","canonical":true,"claim_ids":["C-FINITE-CONTACT-ISOMETRY-DIAMETER-GAIN","C-FINITE-CONTACT-ISOMETRY-DIAMETER-REPLACEMENT"],"claim_statuses":{"C-FINITE-CONTACT-ISOMETRY-DIAMETER-GAIN":"canonical","C-FINITE-CONTACT-ISOMETRY-DIAMETER-REPLACEMENT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: contact-isometric stress energy and diameter replacement

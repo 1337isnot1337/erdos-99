@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_c53_orientation_and_ci_restoration_2026-09-09.md) · source SHA-256 `5e452d7051f929b53276921822a5f669083669327ba86ac28731eb766bc1d63d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-919E969AC4EA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — projective-orientation audit and restoration of the C-I proof

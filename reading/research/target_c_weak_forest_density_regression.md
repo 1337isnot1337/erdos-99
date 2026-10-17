@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_weak_forest_density_regression.md) · source SHA-256 `31f659aed2db27945cdbe97c7ca0b0c5c6ec0a2163faebb7b8aab79dd8d1b0ae`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "8f45f7aaf3d212b13aa1db7df1adf2fb7a88ff5f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_weak_forest_density_regression.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "009da8a542673d3e8fe627a6335450f008505f774815db1572c919b9c2a7d2d9"} -->
 

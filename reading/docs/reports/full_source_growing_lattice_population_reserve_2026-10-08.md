@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/full_source_growing_lattice_population_reserve_2026-10-08.md) · source SHA-256 `89ee0f2a1dba1dce57d055f15bd0c1b20a46935b2f347cca22cf24ccbaedd01c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "cbc775b76361534ecc4238598ef0784680b68733", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "3d4d6024cb5892580103450162b07cdaf1b513c7", "source_lifecycle": "unreviewed", "source_path": "docs/reports/full_source_growing_lattice_population_reserve_2026-10-08.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f166831af97d452701b9084ade15817df707d59e2d7e7299605928de37381c73"} -->
 

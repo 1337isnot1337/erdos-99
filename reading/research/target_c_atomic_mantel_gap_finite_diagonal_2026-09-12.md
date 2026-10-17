@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_atomic_mantel_gap_finite_diagonal_2026-09-12.md) · source SHA-256 `b0d5825d4435c8bd5b73e03f70710f5d12eef0d58e2c740bce11363031ba0e4c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -225,18 +225,20 @@ one sufficiently large member, with diameter `D_j`, so that simultaneously:
 1. Type-II normalized errors are at most `1/j`;
 2. the number `N_j` of complete trains whose directions lie in
    `U_{j,0} union U_{j,1} union U_{j,2}` satisfies
+   
    ```math
    {N_j\over D_j}=2s_2-o_j(1);
    \tag{2.2}
-   
    ```
+
 3. the number `R_j^{orb}` of actual strict-rhombus crossings between those selected
    trains satisfies
+   
    ```math
    {R_j^{orb}\over D_j^2}=s_2^2-o_j(1).
    \tag{2.3}
-   
    ```
+
 
 Choose the finite source far enough out that `D_j->infinity`. The three neighborhood
 widths tend to zero because they were chosen at most `1/j`.

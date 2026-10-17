@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_h6_order_hull_reduction_2026-09-19.md) · source SHA-256 `7d7f4254596abb8897feb5e7eeb9fc4abd266be88f35ca734fd8b0bf73e64679`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "41a20055beae2f345052440df5fbe226c6312470", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_h6_order_hull_reduction_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "754b064a3ba1c3a6f535b659aadae585bdf361054ca9e2e4458b5591fdd4d352"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/source_scaffold_response_transport_2026-08-30.md) · source SHA-256 `ba6b44bbf12264eb2b3fa9d8a6e315cc4f37c486d344c9cdf38e46ff42d2c07b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c76ebec794fcd04e2b2d439b500122f23cf2a520", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/source_scaffold_response_transport_2026-08-30.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "0c4a0a6ca63319b7b7fecbfd2cc0223c915dcc82d30641f8696f7fa410dbd269"} -->
 
@@ -125,10 +125,11 @@ Combining (R.6) with Section 164 on the actual response lattice proves:
 - consequently all but at most `widehat p_H` actual Schur terminals in `C^partial`
   have such distinct source labels;
 - at least
+  
   ```math
   \frac{\max\{0,|C^\partial|-\widehat p_H\}}5
-  
   ```
+
   Schur terminals can be selected with both distinct source labels and distinct
   response-lattice neighbors.
 
@@ -234,12 +235,9 @@ The exact remaining lemma can now be stated on the actual Schur graph:
 > noncrossing source matching, the crossing-generated source conflicts of Section 167,
 > and global minimum-diameter data to prove that every directed
 > `C^partial-to-O` linkage omits at least
-> 
-
-```math
+> ```math
 > s=\Delta_\Lambda-d_{\rm int}
-> 
-```
+> ```
 > terminals, or else construct an `N`-point unit-separated configuration of diameter
 > `<D`.
 

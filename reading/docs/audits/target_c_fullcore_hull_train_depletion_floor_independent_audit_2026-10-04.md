@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_fullcore_hull_train_depletion_floor_independent_audit_2026-10-04.md) · source SHA-256 `2df8a76474e1ca80746fe86d42ec72dfb29bbee91064c197342a801dd795627e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-11408206976A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Independent audit of PR #667: full-core hull-train depletion

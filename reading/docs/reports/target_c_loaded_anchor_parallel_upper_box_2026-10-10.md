@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_loaded_anchor_parallel_upper_box_2026-10-10.md) · source SHA-256 `8209ff78aef0f9a88157d47d2260ec8965fc4c496c08d415ade348ae8f1e3c0a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-894D4E050EB2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # A parallel upper box from local loaded-anchor coverage

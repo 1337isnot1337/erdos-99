@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/target-c-typeii-stress-mass-access.md) · source SHA-256 `b49176ff5254705b2aefc25b4f48214f46323c0cb844dd957a7abb6b83046d21`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # target-c-typeii-stress-mass-access
 

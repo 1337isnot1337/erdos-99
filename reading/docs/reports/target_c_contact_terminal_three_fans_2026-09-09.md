@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_contact_terminal_three_fans_2026-09-09.md) · source SHA-256 `5759389722a4fa767ec8f3289189e5e0573f944404034dbb61bc92e9a819b83c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4C0C74DF92AD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — every unloaded core vertex has a three-fan to loaded terminals

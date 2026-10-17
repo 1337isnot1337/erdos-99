@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_macroscopic_antipodal_cap_capacity_independent_audit_2026-10-09.md) · source SHA-256 `4166073347cbd615add7844b257bacfb2145f365769779201f922372a7f6c0a4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7BB2B44A9BCB","canonical":true,"claim_ids":["C-MACROSCOPIC-ANTIPODAL-CAP-PAIR-STRICT-CAPACITY"],"claim_statuses":{"C-MACROSCOPIC-ANTIPODAL-CAP-PAIR-STRICT-CAPACITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.183 — strict capacity for a macroscopic antipodal cap pair

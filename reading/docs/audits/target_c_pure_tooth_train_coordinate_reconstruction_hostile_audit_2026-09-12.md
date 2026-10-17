@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_pure_tooth_train_coordinate_reconstruction_hostile_audit_2026-09-12.md) · source SHA-256 `a159dae5a42b0f0258b9447078112879f1321c187c0db81bff892a39798f68f8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2090D9D077E1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: hostile audit of exact pure-tooth train coordinates

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../docs/literature_review.md) · source SHA-256 `9c4492912a5b2cc73da752fb580e9008c3a7f79733db6440fe5fd60ec97e1973`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Literature review for Erdős Problem #99
 

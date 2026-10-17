@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../research/target_c_pentagon_rank_threshold_2026-09-19.md) · source SHA-256 `d65a15f22f2a8f2074818a28bbf685e1c810b5656f2377b2063a9c500c97cbcc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "77b7f647af26c040149028429a145d2cfc786d9f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_pentagon_rank_threshold_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d8a0e1a5f7eda7c1d9161462e9f9e68ead288e9d8f745c2d73e4ef17fdc73e88"} -->
 
@@ -69,7 +71,7 @@ Then the exact identity
 \boxed{
 \frac25-x_2
 =
-\frac35C_0+rac15O_{02}+rac35O_{23}
+\frac35C_0+\frac15O_{02}+\frac35O_{23}
 }
 \tag{4}
 ```

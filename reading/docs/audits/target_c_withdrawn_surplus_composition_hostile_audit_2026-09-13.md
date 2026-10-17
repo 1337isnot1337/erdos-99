@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_withdrawn_surplus_composition_hostile_audit_2026-09-13.md) · source SHA-256 `d617e6260d7e6e388f0b4828de6939e539a778abbea2de6510e4c793fd0c78f3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-85090E90E2B3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — withdrawn surplus/diameter scalar composition

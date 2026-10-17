@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_three_dominant_flower_through_pair_hostile_audit_2026-09-15.md) · source SHA-256 `0f0b6d7a8a33a4f32f8c81b507045f941994c658a5e60a1d290787bff61ae54d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c56bc686f9cc2623adbe7e207096647f666a6342", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_three_dominant_flower_through_pair_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "0e5275a0e4d21eb3ac8b836054a5e74c3d6cddf02ca4c33b62c276cbd458c355"} -->
 

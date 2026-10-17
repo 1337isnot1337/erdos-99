@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_rank2_audit_2026-09-22.md) · source SHA-256 `8cb6f1c83c861dde4b0444bb77239a7a6dc61f89afa07d5cb09bd1b8bd204249`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "26ae2c3a14f3ff28cb01b66e96a3e138348bb621", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_rank2_audit_2026-09-22.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c3486757d6830c5dc9b1e97318d3db564353313ef86d8add29311db514fd4576"} -->
 

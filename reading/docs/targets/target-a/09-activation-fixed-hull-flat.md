@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/09-activation-fixed-hull-flat.md) · source SHA-256 `58aeb19dd14766ae4e8ee830c07cd39ade31b3a10c04ece4f5439e1ef126e47a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — activation bridge forest and fixed-hull affine flat
 
@@ -57,12 +57,11 @@ $`H^*`$ is full-dimensional, as in the large-cardinality Target A setting.
 >    graph of $`A_0`$ in at most one vertex.
 > 4. The rigidity rows of all created pairs are linearly independent:
 >    
-
-```math
+>    ```math
 >    \boxed{\operatorname{rank}R_{E_{\rm new}}=\ell.}
 >    \tag{156.4}
->    
-```
+>    ```
+
 
 ### Proof
 
@@ -123,33 +122,24 @@ v_x=0\quad(x\notin I),\\[2mm]
 
 > **Theorem 156.2 (fixed-hull activation flat).** There is a neighborhood
 > $`U`$ of zero in the linear space $`\mathcal L_{\rm act}`$ such that
-> 
-
-```math
+> ```math
 > A^*(v)=\{p_x+v_x:x\in A^*\}
 > \tag{156.7}
-> 
-```
+> ```
 > is, for every $`v\in U`$, a triangle-free global minimizer of the same
 > cardinality and diameter $`D`$, and
-> 
-
-```math
+> ```math
 > A^*(v)\subseteq H^*.
 > \tag{156.8}
-> 
-```
+> ```
 > Moreover
-> 
-
-```math
+> ```math
 > \boxed{
 > \dim\mathcal L_{\rm act}
 > \ge \max\{0,\ell-2b+d_D\}.
 > }
 > \tag{156.9}
-> 
-```
+> ```
 
 ### Proof
 
@@ -279,31 +269,23 @@ precise composition in the very-super-boundary subbranch.
 
 > **Corollary 156.3 (coembedded affine two-shadow family).** Suppose the initial
 > source has a specified strict-rattler set of size $`\rho=N-m`$, and suppose
-> 
-
-```math
+> ```math
 > \rho\ge\frac{\pi D}{2}
 > +\frac{4D}{c}\left(1+3\,3^{1/4}\sqrt D\right),
 > \qquad c=\frac{2\sqrt3}{\pi}.
 > \tag{156.17}
-> 
-```
+> ```
 > Apply monotone activation to that source and let $`A^*`$, $`H^*`$, and
 > $`\mathcal L_{\rm act}`$ be as above. Then an independently chosen smaller
 > optimum $`X_m`$, its unit collar, and a prescribed-phase inner scaffold
 > $`Y_{\rm in}`$ can be placed inside $`H^*`$. For every sufficiently small
 > $`v\in\mathcal L_{\rm act}`$,
-> 
-
-```math
+> ```math
 > \operatorname{conv}A^*(v)=H^*,
 > \tag{156.18}
-> 
-```
+> ```
 > and, with $`\widehat p_{H^*}=\alpha_1(H^*)-N`$,
-> 
-
-```math
+> ```math
 > \boxed{
 > \nu(X_m,A^*(v))\ge m-\widehat p_{H^*},
 > \qquad
@@ -311,8 +293,7 @@ precise composition in the very-super-boundary subbranch.
 > \ge |Y_{\rm in}|-\widehat p_{H^*}.
 > }
 > \tag{156.19}
-> 
-```
+> ```
 > Thus the super-boundary affine source family and both Hall shadows coexist in
 > one fixed container.
 

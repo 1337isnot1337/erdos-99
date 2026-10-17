@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_fan_reflection_capacity_loss_independent_audit_2026-10-07.md) · source SHA-256 `0bb290c8442e9ae5503b4c5dfc81d7ccbbee135c56d7835ca0406bcd87a127f1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0BA0EC9B17A5","canonical":false,"claim_ids":["C-FAN-REFLECTION-STRICT-CAPACITY-LOSS-REGRESSION"],"claim_statuses":{"C-FAN-REFLECTION-STRICT-CAPACITY-LOSS-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Target C fan-reflection strict-capacity-loss regression: independent audit

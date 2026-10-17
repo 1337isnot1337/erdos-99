@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_two_phase_loaded_hull_side_charge_hostile_audit_2026-09-13.md) · source SHA-256 `400c15c026e001f0db9865eb00aa2302a80536f655f34a9dfda8b1b79251d02b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BED67253F75E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Target C two-phase loaded-hull side charge

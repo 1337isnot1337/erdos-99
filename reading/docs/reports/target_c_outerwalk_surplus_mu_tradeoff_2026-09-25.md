@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_outerwalk_surplus_mu_tradeoff_2026-09-25.md) · source SHA-256 `c47988ba076f6d86e00382a6dfd938501727b928957f684990c9470bcd621b55`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9EF4A9B6AF4D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — a canonical-input full-core outer-walk/surplus tradeoff

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_strict_stopped_train_phase_gap.md) · source SHA-256 `51b90df5f91bd3e2d6ba56ca53abd38d35ec320e5175a7a5dd9b4809a23693c1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

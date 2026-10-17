@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_growing_fully_loaded_force_corridor_t18687_2026-09-17.md) · source SHA-256 `b198deeffe590361615d9e67704467ae4cdb60f84e40f0e260ed8976001fd1d5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cbf0b9c6e9bbc75718ba8750267351a4e196370b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_growing_fully_loaded_force_corridor_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a406ce7ddbc570ae8613d39ff4ea6fd636b5104fe239c02c4a5d8037ced92171"} -->
 
@@ -40,24 +40,27 @@ Here `c_H` is the sharpened coupled-host transverse constant.
 Assume the positive-density non-antipodal TB1 alternative does not occur. After passing to a subsequence, there exist
 
 - a sequence `rho_D>0` with
+  
   ```math
   \boxed{\rho_D\to0,
   \qquad \rho_DD^{1/4}\to\infty,}
   \tag{FC.2}
-  
   ```
+
 - and a consecutive one-sided interface block
+  
   ```math
   I_D^{\rm force}=[p_D,q_D]
   \tag{FC.3}
-  
   ```
+
   whose length
+  
   ```math
   \boxed{R_D:=q_D-p_D+1\to\infty,}
   \tag{FC.4}
-  
   ```
+
 
 such that every internal interface `i in I_D^{force}` simultaneously has the following properties.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md) · source SHA-256 `a815cfd48e4f208a1891b853726897069909704fa0f359dad9f828c12668d797`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-42DB85DAAB5F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C Audit.246 — mean midpoint tails and near-diameter localization

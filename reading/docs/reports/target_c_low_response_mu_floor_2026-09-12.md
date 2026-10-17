@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_low_response_mu_floor_2026-09-12.md) · source SHA-256 `4d7ab946aae05678753dda8dc4ee6d5cc5ee0409a2b74380b2dbc5a6db0603cf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CA5C87DD9A82","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — response defect localizes contact stress into near-diameter cells
@@ -74,25 +74,27 @@ The proof uses the following statements, with their current dispositions.
 
 1. The canonical C41 response identity decomposes the unscaled response defect as
 
+   
    ```math
    D^2\varepsilon_D
    =(D^2-1)S_{BB}+\sum_r E_r,
    \qquad
    E_r:=\sum_{s<t\in A_r}c^{(r)}_{st}(D^2-|s-t|^2)\ge0.
    \tag{LR.3}
-   
    ```
+
 
    Here `c^(r)` is the Kron response of `I_r`. Direct loaded-loaded contacts have
    unit length and give the first term.
 
 2. The component harmonic-coordinate energy identity is exact:
 
+   
    ```math
    S_r=\sum_{s<t\in A_r}c^{(r)}_{st}|s-t|^2.
    \tag{LR.4}
-   
    ```
+
 
    This is the HSR candidate report
    `target_c_component_stress_response_diameter_2026-09-09.md`; no lower bound on an
@@ -100,37 +102,41 @@ The proof uses the following statements, with their current dispositions.
 
 3. Canonical C40 gives
 
+   
    ```math
    L_r\le\delta_r+2,
    \tag{LR.5}
-   
    ```
+
 
    where `delta_r` is the contact-graph diameter of `I_r`.
 
 4. Canonical Section 62 gives the exact nonnegative ledger
 
+   
    ```math
    \sum_r\delta_r+R_I+s_B+3k=6+e_{BB}+2s_C.
    \tag{LR.6}
-   
    ```
+
 
    Hence
 
+   
    ```math
    \sum_r\delta_r\le \mu_DD+6.
    \tag{LR.7}
-   
    ```
+
 
 5. The full-source virial normalization is
 
+   
    ```math
    S_{BB}+\sum_r S_r=D^2.
    \tag{LR.8}
-   
    ```
+
 
    Contact-isolated source points have no positive contact stress and are not removed
    from the source; they simply do not occur in (LR.8)'s contact-edge partition.

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_negative_transfer_unbounded_forest_split_regression_2026-09-11.md) · source SHA-256 `297f61e6a5742863c27cc1691c373b8f3742c139ee3098e87dd086c1ebe0e980`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6AC0F2EA4A29","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Unbounded negative-split support in the Woodall forest class

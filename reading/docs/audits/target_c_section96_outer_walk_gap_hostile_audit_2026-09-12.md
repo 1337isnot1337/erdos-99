@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section96_outer_walk_gap_hostile_audit_2026-09-12.md) · source SHA-256 `f15301ff9900c73db9caac73d0a9b8761e17cfbc79b7bb9a91e7d15c24bb65d9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F047CD0A36ED","canonical":true,"claim_ids":["C-WRAP-OUTER-WALK-GAP"],"claim_statuses":{"C-WRAP-OUTER-WALK-GAP":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Section 96 hostile audit

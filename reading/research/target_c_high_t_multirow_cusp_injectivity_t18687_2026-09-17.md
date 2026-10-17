@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_multirow_cusp_injectivity_t18687_2026-09-17.md) · source SHA-256 `9a4841a2200beac1e73a3f0d723073754db525df6c7c0da82107cca2f9c18101`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "39022a4bbdf60265862bf81af6c556b91c981bb3", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_multirow_cusp_injectivity_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "41105ab1a1f6f46cf89adb3bb962b77f4cdd9421172afbe7208ef7ba17e42775"} -->
 

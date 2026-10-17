@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md) · source SHA-256 `1abf7b668e28e13ba460b213b9ce152a912c16403e258b61417ee5bf8e06aa3f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AC886134DD35","canonical":true,"claim_ids":["C-TYPEII-ATTACHMENT-COHERENT-PROPER-CAP","C-TYPEII-FACE-TAIL-PORT-MULTIPLICITY"],"claim_statuses":{"C-TYPEII-ATTACHMENT-COHERENT-PROPER-CAP":"canonical","C-TYPEII-FACE-TAIL-PORT-MULTIPLICITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.173 supplement — face-tail port multiplicity and prescribed-port caps

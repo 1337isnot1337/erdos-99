@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_a_right_deficiency_geometric_tube_2026-09-05.md) · source SHA-256 `139262981fff8d24a9b0a54b54ebc6e1ce96e5b5381b51e9c79ac769fd65dd33`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "696ca60a1fee6daef291bcde473f4068ab789d0f", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_a_right_deficiency_geometric_tube_2026-09-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "5dd4cac3001b2dcfa6827ed172f1321a889a58043faeaee83ae79355503738cc"} -->
 

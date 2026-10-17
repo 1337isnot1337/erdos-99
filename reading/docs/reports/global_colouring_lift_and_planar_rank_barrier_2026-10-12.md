@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_colouring_lift_and_planar_rank_barrier_2026-10-12.md) · source SHA-256 `ab1fc0f0d2cdd3b1f72b801a7b873d56f5db6bed68bfd231f29d88b5945538bc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4DE55BC9FA0D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99 — global colour lift and the planar rank barrier

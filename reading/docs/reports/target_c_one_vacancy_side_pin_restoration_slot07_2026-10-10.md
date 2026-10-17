@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_one_vacancy_side_pin_restoration_slot07_2026-10-10.md) · source SHA-256 `81fd50d508489c9454379be11eeb01e7efd4ffdb01ec7c1921a4150e929e755f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2755DC266ACB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II: one vacancy releases a coherent row and selected side pins

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_short_blocker_oler_bandwidth_t18687_2026-09-17.md) · source SHA-256 `d2ad07bd352354b7edef066ff3b6b9e3bad0647b592b5b437a138be35afbc6d4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C-II — Oler packing sharpens near-unit blocker bandwidth to six rows
 

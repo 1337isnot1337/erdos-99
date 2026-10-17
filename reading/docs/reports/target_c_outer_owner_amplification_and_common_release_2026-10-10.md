@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_outer_owner_amplification_and_common_release_2026-10-10.md) · source SHA-256 `8c7fd0295ab13dbb533d2ed00d426070e9a70fa4cc2bd7659936ec430613540d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-125DECAFF3AF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — upper-safe amplification and common contact release
@@ -87,10 +87,11 @@ Canonical inputs are:
   partners, the number of loaded endpoints with selected oriented normal in
   a window of half-width theta<pi/2 is at most
 
+  
   ```math
   F_D(\theta)=1+{D\sin\theta+2L_D\over\cos\theta}.
-  
   ```
+
 
 - `C-FS-DIAMETER-MIDPOINT-D2-3`, Audit.206: one common center has all actual
   diameter midpoints within L_D=7D^(2/3). This is full-source geometry.

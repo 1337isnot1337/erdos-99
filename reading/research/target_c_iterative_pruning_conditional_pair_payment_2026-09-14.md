@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_iterative_pruning_conditional_pair_payment_2026-09-14.md) · source SHA-256 `7ea4590a3e0d543b7bc4b10879208f189b45a4a40b94095c96b1af9a8097af8b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Erdős Problem #99 — iterative-pruning conditional per-pair payment
 

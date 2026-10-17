@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_blocker_localization_promotion_audit_2026-10-05.md) · source SHA-256 `8f87facd71a1ca53310386b91274839fb4b264bbafffc0d302753dbcbe26238f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2283945E2084","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Historical proposed audit — long-pair isolate dispatch and small-move blocker localization

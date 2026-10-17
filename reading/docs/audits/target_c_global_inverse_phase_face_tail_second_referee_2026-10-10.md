@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md) · source SHA-256 `9ed749f51f560af597875fc9fb7c2647395ce47a970583a9e3349df6f8e2bb38`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-886FE82FF93C","canonical":false,"claim_ids":["C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION"],"claim_statuses":{"C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION":"audited-working"},"index":"docs/state/artifact-index.jsonl","status":"audited-working","target":"target-c"} -->
 # Target C Audit.236 — second referee and repair of the inverse-phase face-tail exclusion
@@ -54,15 +54,17 @@ Then no such unbounded canonical sequence exists. The conclusion is conditional 
 
 - `C-RHOMBUS-POP` supplies the connected core, `F=conv(B)=conv(V)`, convex old contact faces, and the convex hull-augmented pockets. It also ensures the augmented graph and face-path quantities above are the canonical ones. The pockets are not contact cycles.
 - `C-CURVED-BOUNDARY-LATTICE-LOCAL-CAPACITY` says that for a finite unit-separated source of diameter `D`, its actual diameter-endpoint set `B`, and
+  
   ```math
   W=\bigcap_{a\in A}\overline B(a,D),
-  
   ```
+
   every `S subset B intersect closed_ball(c,r/2)` with `c in W`, `sqrt(D)<=r<=D`, and every point within `epsilon<=1/8` of one translate of a unit rhombic lattice satisfies
+  
   ```math
   |S|\le C\bigl(r\epsilon+(Dr)^{1/3}+1\bigr),
-  
   ```
+
   with absolute constants, uniformly in the source and lattice.
 - `C-ZRF` gives `h>=ceil(D)` for the number `h` of actual diameter edges; `C-WOODALL` gives `h<=q`, where `q=|B|`.
 

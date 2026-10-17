@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_complement_outer_train_bracing_energy_2026-09-15.md) · source SHA-256 `d14fcf3f86c824dbdcc613165fdc3cf0eb3a4b8ffae7ffdf9f5ede8ca8cf59a0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 24 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

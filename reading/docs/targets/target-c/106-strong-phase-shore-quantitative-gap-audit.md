@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/106-strong-phase-shore-quantitative-gap-audit.md) · source SHA-256 `73804e030dfdb95e0706d2800a62b0b1d10169f1d158b46f7951e61a28ddab2c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

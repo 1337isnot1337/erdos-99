@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_positive_reciprocal_internal_train_graph_2026-10-05.md) · source SHA-256 `6ccfaf7f997307f4e77ba8879ed716d37977fe3250c480b24b8d8ae4a939b26c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BE1091F26E3C","canonical":true,"claim_ids":["C-RECIPROCAL-TRAIN-GRAPH"],"claim_statuses":{"C-RECIPROCAL-TRAIN-GRAPH":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — positive reciprocal coordinates for every internal stopped train

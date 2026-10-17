@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_branch_ledger_common_hub_sparse_stress_2026-09-11.md) · source SHA-256 `109cdeec4cd3655a6d82972af3a1882ea033f893010d51ccb6bc043955dcce5f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-614BE5156FFC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — common hub and sparse-stress branch audit

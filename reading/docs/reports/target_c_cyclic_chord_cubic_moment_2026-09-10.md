@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_chord_cubic_moment_2026-09-10.md) · source SHA-256 `a799323ceef9c5aa2c9942e6ddbf8475a3209a7e8c06b5986c7f55fade49341a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-212E688F4C53","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic force-hull gaps bound the outer-pocket chord cubic mass

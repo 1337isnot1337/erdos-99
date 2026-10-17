@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_outer_flat_private_flex_amplification_2026-09-14.md) · source SHA-256 `2b968a6ee096fc4847c16174600e8885bdffc175c550e7a8e8f0cc50fc4ddcdb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3edc248ec2f48b636921fe4e0c79b9d0fd4fe0b0", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_outer_flat_private_flex_amplification_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3c8926bb1a0c0cb3fd0cc47e260277fedec6ca2beb270261837f6d1667a6573a"} -->
 

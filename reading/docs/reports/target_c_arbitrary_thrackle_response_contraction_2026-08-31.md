@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_arbitrary_thrackle_response_contraction_2026-08-31.md) · source SHA-256 `e464eee9cfcf8efa947383d1c11ae73163a6b3e9058abb0d35d7eb180495d3ee`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CA613948843D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C: arbitrary diameter-thrackle response contraction

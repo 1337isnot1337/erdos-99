@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_g0076_residual_stability_floor_1843555_hostile_audit_2026-09-15.md) · source SHA-256 `f1d9a03b7d678965e706f09f12e6d4b10a534624bf581d93d0683733c4c728b8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

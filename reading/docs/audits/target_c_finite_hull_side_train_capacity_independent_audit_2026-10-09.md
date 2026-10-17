@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_finite_hull_side_train_capacity_independent_audit_2026-10-09.md) · source SHA-256 `3a87a95abc5d50e42d409afab9b5d998a6d6557cd127f32eed25d2918e9b2ae3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0763D4D142C4","canonical":true,"claim_ids":["C-FINITE-HULL-SIDE-TRAIN-CAPACITY"],"claim_statuses":{"C-FINITE-HULL-SIDE-TRAIN-CAPACITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.232 — exact finite hull-side train capacity

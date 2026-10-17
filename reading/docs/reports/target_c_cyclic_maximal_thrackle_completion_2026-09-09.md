@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_maximal_thrackle_completion_2026-09-09.md) · source SHA-256 `14f70efe3664183aa0a08f6f7fd173b005eb37195654965a6ef2f53beffd98f6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DE4491489475","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — every cyclic diameter graph is a maximal convex thrackle with at most two short cycle chords
@@ -234,10 +234,11 @@ Therefore every zeroed nonleaf endpoint edge `e` sits in a four-block presentati
 
 - one actual length-`D` corner chord `e` whose KKT coefficient is zero at the selected endpoint;
 - one subdiameter maximal-completion corner chord `g` with
+  
   ```math
   |g|<D.
-  
   ```
+
 
 The two chords together lie on the odd cycle of the maximal completion.
 
@@ -273,15 +274,17 @@ Let `C_T` have odd length `nu`. Every cyclic phase admits a maximal completion w
 3. all `q-nu` pendant edges have length exactly `D`;
 4. the shell itself is equilateral with side length one;
 5. RP gives
+   
    ```math
    q=\pi D-\frac\pi{24D}+O(D^{-2});
-   
    ```
+
 6. UFB gives
+   
    ```math
    F=\operatorname{conv}A;
-   
    ```
+
 7. SL says `F` is a local diameter minimum among convex equilateral `q`-gons.
 
 For `d_H=0`, RE upgrades the zero-defect case to exact Reinhardt equality.

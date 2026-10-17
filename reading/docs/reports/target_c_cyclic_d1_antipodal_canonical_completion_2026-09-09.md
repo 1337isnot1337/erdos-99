@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_antipodal_canonical_completion_2026-09-09.md) · source SHA-256 `43621ef97020b1fb22062bc5311880ea1d0a5002219076684e197e725f05bb82`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B1301DDE4247","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 — canonical antipodal completion in the cyclic `d_H=1` S1 branch
@@ -36,19 +36,21 @@ Moreover:
 3. `g` lies on that unique odd cycle;
 4. `H=A(F)-g` is the spanning tree obtained by opening that odd cycle at the unique short antipodal chord;
 5. the short length is the explicit D1 quantity
+   
    ```math
    |g|
    =D\cos\frac{(s+2)\delta}{2}
    +\sqrt{1-D^2\sin^2\frac{(s+2)\delta}{2}},
-   
    ```
+
    with
+   
    ```math
    0<s<\frac{\Delta_2}{\delta}-2,
    \qquad
    \sqrt{D^2-1}<|g|<D.
-   
    ```
+
 
 Thus MT completion nonuniqueness disappears entirely in S1: the geometry of `F-F` itself selects the missing odd-cycle chord.
 

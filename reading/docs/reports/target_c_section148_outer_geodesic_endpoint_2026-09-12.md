@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_section148_outer_geodesic_endpoint_2026-09-12.md) · source SHA-256 `dfb9b1bedb32c70b453033ec33c3a3c7fdc40b35d42bcfd0586610150da534b8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-893C69089C90","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C §148 — outer-geodesic endpoint exclusion

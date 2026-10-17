@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rhombic_vacancy_hop_and_two_site_capacity_slot07_2026-10-10.md) · source SHA-256 `ef7ce6545acbd5ddf10de7a9c85f09bd6719b3d2263d4f3092834337a219dc8d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BEA253558A03","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II: exact rhombic vacancy hop and two-site capacity

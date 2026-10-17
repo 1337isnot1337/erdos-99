@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_factorized_distance_barrier_2026-10-12.md) · source SHA-256 `bd5e04fc103c1d172af746c44595c7c9efeec68918ba30d7f71f4d00339e54e2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2DFEAD12DFB0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Global factorized-distance transformations: an exact barrier
@@ -195,20 +195,22 @@ Exactly one of the following holds.
    endpoint-factor remetrizations are blocked globally.
 2. The directed graph is acyclic. There are half-integer values `z_i` satisfying
 
+   
    ```math
    z_i+z_j\ge1\quad(ij\in C),\qquad
    z_i+z_j\le-1\quad(ij\in H).
    \tag{4}
-   
    ```
+
 
    Consequently, for some sufficiently small `lambda>0`, the abstract pair lengths
 
+   
    ```math
    \widetilde d_{ij}=e^{\lambda(z_i+z_j)}|p_i-p_j|
    \tag{5}
-   
    ```
+
 
    are all at least one and all strictly below `D`. These are actual inequalities
    on the complete finite array, including pairs involving contact isolates. No

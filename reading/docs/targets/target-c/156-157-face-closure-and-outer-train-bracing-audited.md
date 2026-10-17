@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/156-157-face-closure-and-outer-train-bracing-audited.md) · source SHA-256 `f0a73278aff137b744cc30e7d31aac5809c947d0baeda451c6f4b2ae096f962f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — audited §§156–157 exceptional-face closure rank and two-sided outer-train bracing
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_phase_harmonic_rail_endpoint_lift_2026-10-01.md) · source SHA-256 `6552d5867f3d1b08bd5ee7650b75e75f44164abbb59c5f652ff7b64604123481`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-37586000F77D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — actual transverse rails require two loaded endpoints in every gap
@@ -56,21 +56,23 @@ Then:
 1. `y` is positive-weight harmonic at every vertex of `S` not in `B`;
 2. if `y` is nonconstant on `S`, then `B_S=B cap S` contains at least two
    distinct vertices and
+   
    ```math
    \min_{B_S}y=\min_S y<\max_S y=\max_{B_S}y;
    \tag{1}
-   
    ```
+
 3. with the actual outward diameter reaction
    `g_x=sum_{xy in H} beta_xy(p_x-p_y)`,
+   
    ```math
    \sum_{x\in S}g_x\cdot Ju=0,
    \qquad
    \sum_{x\in S}y_x(g_x\cdot Ju)
    =\sum_{xz\in C[S]}\alpha_{xz}(y_x-y_z)^2;
    \tag{2}
-   
    ```
+
 4. if `y` is constant on `S`, every vertex of `S` is loaded, under the
    canonical unloaded degree-at-least-three hypothesis.
 

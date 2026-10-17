@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_low_response_typeii_localized_train_hull_gap_self_audit_2026-09-12.md) · source SHA-256 `b0248d675920c84f541b18fb731b7827d2d8440a42af8765e1916f8da08482af`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "ffff474847f63ca7e19052ba440d2b872b0f6b1d", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_low_response_typeii_localized_train_hull_gap_self_audit_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "565f362b6f2a5be9f4c6eb42d9b367c5fab7bc090224b508226acb0bcdf3227e"} -->
 
@@ -33,10 +33,11 @@ under canonical Type II and `epsilon_D->0` survives the hostile audit.
 Two overstatements were found and repaired before this audit was written:
 
 1. C40 plus response selection gives only
+   
    ```math
    \liminf\delta_*/D\ge1,
-   
    ```
+
    not `delta_*/D->1`. The proof uses only the lower bound through `gamma>=1`.
 2. When loaded attachment edges are restored to `C[I_r]`, later edges need not remain
    in the *current* outer face after earlier inserted edges subdivide it. The correct
@@ -266,10 +267,11 @@ Current `main` has two nearby proof-only results.
 - The hostile-audited HSR report localizes low-response stress to at most six
   near-diameter cells and gives only the scalar `mu_D>=1-o(1)`.
 - The corrected TQ report proves
+  
   ```math
   \liminf(q-k)/D\ge M_*
-  
   ```
+
   in Type II without a response assumption.
 
 Neither proves LRTQ. The exact relation

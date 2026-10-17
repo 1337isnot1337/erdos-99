@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sz0_explicit_05981_detour_gap_2026-09-10.md) · source SHA-256 `87490799051257775bf4a9d58f0ca2995b8adf16ec0f8f856fbb9240ac04cc77`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-599BDCFC19DB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact `0.5981` circuit-phase surplus floor
@@ -213,7 +215,7 @@ For any rational `x` in the range used below, define the rational lower bound
 \underline\Phi(x)
 :=
 \frac14\left[
- x+1-rac12\left(\frac{11}{7}-x\right)^2
+ x+1-\frac12\left(\frac{11}{7}-x\right)^2
 \right].
 \tag{2.5}
 ```
@@ -306,7 +308,7 @@ c_R
 Trivially
 
 ```math
-\Phi(y_0)<\frac{y_0+1}{4}=rac{101}{160}.
+\Phi(y_0)<\frac{y_0+1}{4}=\frac{101}{160}.
 ```
 
 The exact rational comparison

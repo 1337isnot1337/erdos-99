@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_two_diameter_weak_contact_elimination_2026-08-31.md) · source SHA-256 `b129e164f7e16a3d2e1dfafe1012f73630be5d3012e81a88280bdd17c851eac5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E73683BF750A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C: elimination of the two-diameter weak-contact phase
@@ -19,19 +19,13 @@ This report closes the entire low-diameter-support part of Target C Gate C-I.
 
 > **Main theorem C25.**  Let `A` be a contact-minimal triangle-free global minimizer of
 > diameter `D>1`.  If `A` has a weak unit contact, then
-> 
-
-```math
+> ```math
 > \boxed{|H_*|\ge3.}
-> 
-```
+> ```
 > Equivalently, if `|H_*|<=2`, then every unit contact is strong:
-> 
-
-```math
+> ```math
 > \boxed{C=C_*.}
-> 
-```
+> ```
 
 The proof combines four ingredients.
 

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_two_semicircle_population_and_eppstein_cost_2026-09-09.md) · source SHA-256 `ef0b99f25366586240bac36eac69a31ca7c49df87c06b3ab3a10148b3c07a3da`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-DF4C8B5E2207","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cap-minimal full-core equality forces two half-density carriers and linear Eppstein slack
@@ -40,7 +42,6 @@ It proves that the two semicircle-scale cap-defining harmonic components are the
 \Delta=\frac\pi{2\sqrt3}.
 }
 \tag{TS.1}
-
 ```
 
 All other unloaded components together contain only `o(D^2)` vertices.
@@ -63,7 +64,6 @@ physical contacts to loaded terminals, and its internal Eppstein slack obeys
 \left(\frac\pi{2\sqrt2}-1-o(1)\right)D.
 }
 \tag{TS.3}
-
 ```
 
 Therefore the global ZK slack satisfies
@@ -75,7 +75,6 @@ R_I\ge
 = (0.2214414690\ldots-o(1))D.
 }
 \tag{TS.4}
-
 ```
 
 Inserted into NBd, the full-core cap-minimal endpoint leaves at most
@@ -86,7 +85,6 @@ Inserted into NBd, the full-core cap-minimal endpoint leaves at most
 =(0.9201511845\ldots+o(1))D
 }
 \tag{TS.5}
-
 ```
 
 for the combined currencies
@@ -155,7 +153,6 @@ TD's strict cap-efficiency optimization then gives two inclusion-maximal cap-def
 \delta_2/D\to1,
 }
 \tag{1.4}
-
 ```
 
 and their attachment arcs converge to complementary semicircles.
@@ -167,7 +164,6 @@ Since `S=delta_1+delta_2+sum_(r>=3) delta_r`, (1.4) and TS.0 imply
 S_{rest}:=\sum_{r\ge3}\delta_r=o(D).
 }
 \tag{1.5}
-
 ```
 
 ---
@@ -190,7 +186,6 @@ Applying Oler to the `n_r` unit-separated vertices of `I_r` and then the isodiam
 +\frac\pi2(\delta_r+2).
 }
 \tag{2.1}
-
 ```
 
 Sum (2.1) over `r>=3`. Since
@@ -209,7 +204,6 @@ and the total number of components satisfies `c_I=O(D)`, all constant and linear
 \sum_{r\ge3} n_r=o(D^2).
 }
 \tag{2.2}
-
 ```
 
 Combining with (1.3),
@@ -219,7 +213,6 @@ Combining with (1.3),
  n_1+n_2=(\Delta+o(1))D^2.
 }
 \tag{2.3}
-
 ```
 
 Thus the two cap-defining components carry asymptotically the entire force-visible bulk.
@@ -301,7 +294,7 @@ Eppstein's Theorem 4 states that an `m`-vertex triangle-free penny graph has at 
 
 ```math
 \boxed{
-2m-rac12\sqrt{2\pi\sqrt3\,m}+O(1)
+2m-\frac12\sqrt{2\pi\sqrt3\,m}+O(1)
 }
 \tag{4.1}
 ```
@@ -313,7 +306,7 @@ Each internal graph `C[I_i]` is a triangle-free penny graph: it is an induced su
 ```math
 e_i
 \le
-2n_i-rac12\sqrt{2\pi\sqrt3\,n_i}+O(1).
+2n_i-\frac12\sqrt{2\pi\sqrt3\,n_i}+O(1).
 \tag{4.2}
 ```
 
@@ -340,7 +333,6 @@ Insert (4.2):
 +1+s_i-O(1).
 }
 \tag{4.4}
-
 ```
 
 Using TS.1,
@@ -533,12 +525,9 @@ The two components each have asymptotically optimal packing density inside a sem
 The highest-value next theorem is therefore a **semicircle penny-graph stability theorem**:
 
 > for a triangle-free penny graph with `(Delta/2+o(1))D^2` vertices embedded in a diameter-`D` semicircular cap and with graph diameter `(1+o(1))D`, improve Eppstein's generic edge deficit
-> 
-
-```math
+> ```math
 > \frac\pi{2\sqrt2}D
-> 
-```
+> ```
 > by exploiting the one-sided cap boundary and the positive pinned equilibrium.
 
 A per-component improvement above

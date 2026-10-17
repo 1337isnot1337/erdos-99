@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_five_arc_pin_delay_09604_2026-09-10.md) · source SHA-256 `ee142b5f6f99d30a5151b491d13cb8d6b0959b22179a3c89b54651a9625ee119`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 3 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 22 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -444,7 +446,7 @@ It is concave because `phi` is convex.  Also `D(0)=0`.  At the other allowed end
 
 ```math
 D(C)
-=-\frac{\phi(C)}4+rac{7C^2}{36\pi}.
+=-\frac{\phi(C)}4+\frac{7C^2}{36\pi}.
 ```
 
 For `C<=51/40`, elementary integration of
@@ -458,7 +460,7 @@ gives
 ```math
 \frac{\phi(C)}{C^2}
 \le
-\frac C6+rac{C^3}{80}+rac{3C^5}{1120}
+\frac C6+\frac{C^3}{80}+\frac{3C^5}{1120}
 \le
 \frac{28377658153}{114688000000}
 <

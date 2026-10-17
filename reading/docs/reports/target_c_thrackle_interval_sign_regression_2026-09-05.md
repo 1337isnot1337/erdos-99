@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_thrackle_interval_sign_regression_2026-09-05.md) · source SHA-256 `73855e18ed8a3ad332290a212c01ae6e7a5eb5c76d4195bb3e33e2cb05c925a4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9F51A35CD025","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — regression against the arbitrary-thrackle PSD lemma

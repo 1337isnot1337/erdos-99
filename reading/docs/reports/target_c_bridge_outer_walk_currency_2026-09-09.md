@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_bridge_outer_walk_currency_2026-09-09.md) · source SHA-256 `737cd4ac05e91bfd064f1bd9448353a43240f13bbc84f036bcd71ba493cc846f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-607916E5E6D3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZOB: bridge stress forces exact outer-walk surplus

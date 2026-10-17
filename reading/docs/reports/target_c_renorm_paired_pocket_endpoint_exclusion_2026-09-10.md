@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_renorm_paired_pocket_endpoint_exclusion_2026-09-10.md) · source SHA-256 `1a82bb80be0e62cefb15b20ca525de300d40258322c9411ed8e3d084f3fcf473`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-771BE7CAFE2C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact remainder excludes the renormalized paired-pocket endpoint
@@ -113,7 +115,7 @@ RP derives the necessary inequality
 for every subsequential limit `y=h/D`.  The function
 
 ```math
-F_\mu(y)=\Phi(y)-\frac\pi4\mu^2-rac{(\mu+y)^2}{16\pi}
+F_\mu(y)=\Phi(y)-\frac\pi4\mu^2-\frac{(\mu+y)^2}{16\pi}
 ```
 
 is strictly concave.  At `mu=mu_RP`, the endpoint `y=pi` is exactly zero, while the
@@ -162,7 +164,7 @@ In particular, (1.2) gives
 ```math
 \frac XD
 =
-\mu_D+rac{d_H+s_Z}{D}-\frac{c_B+2s_C}{D}
+\mu_D+\frac{d_H+s_Z}{D}-\frac{c_B+2s_C}{D}
 =
 \mu_{RP}+\frac{d_H}{D}+o(1).
 \tag{2.6}

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_reciprocal_collinearity_2026-09-19.md) · source SHA-256 `dc0da77eda2b04d46a4bdd7d4b6bb41c79f07965430208ae15183276af466cf6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cf24b28fd12b0c6a142dbea10ce3edec287085f2", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_reciprocal_collinearity_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "88bed6d9baf3a751588a3c619f57ae40ea43d1519930a53284119bf678852d97"} -->
 

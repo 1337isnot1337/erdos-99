@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_loaded_anchor_sparse_packet_obstruction_independent_audit_2026-10-07.md) · source SHA-256 `926ab2780de971a4e4ff61a4c8401a46e81c7a6a689effabf45d1c7905707cd6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CFE5C364285F","canonical":true,"claim_ids":["C-LOADED-ANCHOR-SPARSE-PACKET-OBSTRUCTION"],"claim_statuses":{"C-LOADED-ANCHOR-SPARSE-PACKET-OBSTRUCTION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C loaded-anchor sparse-packet obstruction: independent audit

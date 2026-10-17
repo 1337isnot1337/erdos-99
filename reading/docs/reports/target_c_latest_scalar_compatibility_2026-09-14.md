@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_latest_scalar_compatibility_2026-09-14.md) · source SHA-256 `c941a0967a7f9bb0ed6bce5f1ce747dac84bd3da99653d6b65b659ac5057e443`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 5 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

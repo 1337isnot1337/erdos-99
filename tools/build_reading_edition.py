@@ -21,7 +21,12 @@ ROOT = Path(__file__).resolve().parents[1]
 EDITION = "reading"
 EXCLUDED = ("docs/archive/", "docs/research/migration/")
 ROOT_DOCUMENTS = {"AGENTS.md", "CONTRIBUTING.md", "autoresearch.md"}
+REPAIR_REGISTRY = "docs/publication/reading-tex-repairs.json"
 WORDING = {
+    "autoresearch.md": [
+        ("Contribute one useful, independently reviewable result to this repository.",
+         "Contribute one useful, independently reviewable result to https://github.com/1337isnot1337/erdos-99."),
+    ],
     "docs/problem/statement.md": [
         ("minimum pairwise distance (1)", "minimum pairwise distance exactly $1$"),
     ],
@@ -39,9 +44,28 @@ WORDING = {
 }
 
 
+def fenced_mask(text: str) -> str:
+    """Mask code inside quotes/lists as well as top-level fenced blocks."""
+    result = []
+    fence = None
+    for line in text.splitlines(keepends=True):
+        plain = re.sub(r"^(?:[ \t]*>[ \t]?)+", "", line)
+        match = re.match(r"^[ \t]*(`{3,}|~{3,})(.*?)(?:\n)?$", plain)
+        if fence is None and match and not (match[1][0] == "`" and "`" in match[2]):
+            fence = (match[1][0], len(match[1]))
+            result.append(re.sub(r"[^\r\n]", " ", line))
+        elif fence is not None:
+            result.append(re.sub(r"[^\r\n]", " ", line))
+            if re.fullmatch(rf"[ \t]*{re.escape(fence[0])}{{{fence[1]},}}[ \t]*(?:\n)?", plain):
+                fence = None
+        else:
+            result.append(line)
+    return "".join(result)
+
+
 def visible_text(text: str) -> str:
     """Mask code and comments while retaining character offsets."""
-    text = strip_fenced_code(text)
+    text = fenced_mask(text)
     mask = lambda value: re.sub(r"[^\r\n]", " ", value)
     text = re.sub(r"(?s)<!--.*?-->", lambda m: mask(m[0]), text)
     runs = list(re.finditer(r"(?<!`)`+(?!`)", text))
@@ -61,12 +85,13 @@ def visible_text(text: str) -> str:
     return text
 
 
-def math_delimiters(text: str, diagnostics: dict | None = None) -> tuple[str, int]:
+def math_delimiters(text: str, diagnostics: dict | None = None,
+                    literal_displays: tuple[str, ...] = ()) -> tuple[str, int]:
     """Protect TeX from Markdown unescaping; preserve formula content."""
     visible = visible_text(text)
     tokens = list(re.finditer(r"(?<!\\)\\[\[\]]|(?<![\\$])\$\$(?!\$)", visible))
     edits = []
-    pairs = repairs = 0
+    pairs = repairs = literal_count = 0
     i = 0
     while i < len(tokens):
         opening = tokens[i]
@@ -96,13 +121,33 @@ def math_delimiters(text: str, diagnostics: dict | None = None) -> tuple[str, in
         body = text[opening.end():end]
         line_start = text.rfind("\n", 0, opening.start()) + 1
         prefix = text[line_start:opening.start()]
-        indent = prefix if not prefix.strip() else ""
-        before = "" if not prefix.strip() else "\n\n"
+        container = re.fullmatch(r"(?P<quote>(?:[ \t]*>[ \t]?)*)(?P<indent>[ \t]*)", prefix)
+        block_prefix = prefix if container else ""
+        before = "" if container else "\n\n"
+        quote_depth = prefix.count(">") if container else 0
+        indent = container["indent"] if container else ""
+        payload = []
+        for line in body.split("\n"):
+            for _ in range(quote_depth):
+                line = re.sub(r"^[ \t]*>[ \t]?", "", line, count=1)
+            if indent and line.startswith(indent):
+                line = line[len(indent):]
+            payload.append(line)
+        body = "\n".join(payload).strip("\n")
+        language = "math"
+        if body.strip() in literal_displays:
+            language = "text"
+            literal_count += 1
         suffix_end = text.find("\n", consumed)
         suffix_end = len(text) if suffix_end < 0 else suffix_end
-        after = "" if not text[consumed:suffix_end].strip() else "\n\n"
-        fenced = (before + "```math" + ("" if body.startswith("\n") else "\n") + body
-                  + ("" if body.endswith("\n") else "\n") + indent + "```" + after)
+        after = "" if not text[consumed:suffix_end].strip() else "\n\n" + block_prefix
+        if container and indent:
+            # GitHub's math filter needs a loose list item around fenced math.
+            before = "\n" + block_prefix
+            after = after or "\n"
+        fenced = (before + "```" + language + "\n"
+                  + "\n".join(block_prefix + line for line in body.split("\n"))
+                  + "\n" + block_prefix + "```" + after)
         edits.append((opening.start(), consumed, fenced))
         pairs += 1
         i = next_i
@@ -169,7 +214,43 @@ def math_delimiters(text: str, diagnostics: dict | None = None) -> tuple[str, in
     if diagnostics is not None:
         diagnostics["repaired_source_delimiters"] = repairs
         diagnostics["source_excerpts"] = len(excerpts)
+        diagnostics["literal_math_excerpts"] = literal_count
     return text, pairs
+
+
+def repair_source(source: str, raw: str, digest: str, registry: dict) -> tuple[str, int, tuple[str, ...]]:
+    """Apply only reviewed, exact-source-bound presentation repairs."""
+    record = registry.get(source)
+    if record is None:
+        return raw, 0, ()
+    if record["source_sha256"] != digest:
+        raise ValueError("stale reading repair source: " + source)
+    count = 0
+    for replacement in record.get("replacements", []):
+        old, new, expected = replacement["old"], replacement["new"], replacement["count"]
+        if raw.count(old) != expected:
+            raise ValueError("stale reading replacement: " + source + ": " + repr(old))
+        raw = raw.replace(old, new)
+        count += expected
+    excerpts = tuple(record.get("literal_displays", []))
+    for excerpt in excerpts:
+        if raw.count(excerpt) != 1:
+            raise ValueError("stale literal math excerpt: " + source)
+    return raw, count, excerpts
+
+
+def table_math(text: str) -> str:
+    """Escape GFM cell separators inside math, retaining the rendered TeX pipe."""
+    result = []
+    visible = fenced_mask(text)
+    offset = 0
+    for line in text.splitlines(keepends=True):
+        check = visible[offset:offset + len(line)]
+        offset += len(line)
+        if check.lstrip().startswith("|"):
+            line = re.sub(r"\$`([^`]*?)`\$", lambda m: "$`" + re.sub(r"(?<!\\)\|", r"\\|", m[1]) + "`$", line)
+        result.append(line)
+    return "".join(result)
 
 
 def sources(root: Path) -> list[str]:
@@ -194,15 +275,18 @@ def relative_link(source: str, destination: str) -> str:
 
 
 def render(source: str, raw: str, available: set[str], root: Path,
-           source_sha256: str | None = None) -> tuple[str, int]:
-    text = raw
+           source_sha256: str | None = None, repair_registry: dict | None = None) -> tuple[str, int]:
+    digest = source_sha256 or hashlib.sha256(raw.encode()).hexdigest()
+    text, repair_count, literal_displays = repair_source(source, raw, digest, repair_registry or {})
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
     for old, new in WORDING.get(source, []):
         text = text.replace(old, new)
     if source == "docs/problem/literature_baseline.md":
         text = re.sub(r"\[([1-7])((?:, [^\]\n]+)?)\]",
                       lambda m: f"[{m[1]}{m[2]}](../BIBLIOGRAPHY.md#ref-{m[1]})", text)
     diagnostics = {}
-    text, pairs = math_delimiters(text, diagnostics)
+    text, pairs = math_delimiters(text, diagnostics, literal_displays)
+    text = table_math(text)
     destination = reading_path(source)
     edits = []
     for a, b, raw_target in markdown_destinations(text):
@@ -228,10 +312,17 @@ def render(source: str, raw: str, available: set[str], root: Path,
         edits.append((a, b, urlunsplit(("", "", rewritten, url.query, url.fragment))))
     for a, b, replacement in reversed(edits):
         text = text[:a] + replacement + text[b:]
-    digest = source_sha256 or hashlib.sha256(raw.encode()).hexdigest()
+    state_link = quote(relative_link(destination, reading_path("docs/STATE.md")), safe="/-._~")
     header = (f"> Generated reading edition · [exact source]({quote(relative_link(destination, source), safe='/-._~')}) "
               f"· source SHA-256 `{digest}`.\n"
-              "> Formatting and navigation only; the source and theorem ledger control mathematical status.\n\n")
+              f"> [Current theorem state]({state_link}) controls lifecycle and scope; historical claims retain their recorded status.\n\n")
+    if repair_count:
+        repair_link = quote(relative_link(destination, REPAIR_REGISTRY), safe="/-._~")
+        header += (f"> Presentation repairs: {repair_count} exact-source-bound TeX/escape correction(s); "
+                   f"[reviewed repair ledger]({repair_link}). Frozen source bytes are unchanged.\n\n")
+    if diagnostics["literal_math_excerpts"]:
+        header += (f"> Source excerpt note: {diagnostics['literal_math_excerpts']} deliberately truncated "
+                   "formula quotation(s) are displayed as literal text, with no reconstructed equation.\n\n")
     if diagnostics["repaired_source_delimiters"]:
         header += (f"> Source formatting note: {diagnostics['repaired_source_delimiters']} unbalanced display "
                    "delimiter(s) repaired at paragraph boundaries; consult the exact source.\n\n")
@@ -243,14 +334,18 @@ def render(source: str, raw: str, available: set[str], root: Path,
 
 def expected_files(root: Path) -> dict[str, str]:
     available = set(sources(root))
+    registry_path = root / REPAIR_REGISTRY
+    registry = json.loads(registry_path.read_text())["documents"] if registry_path.exists() else {}
+    if set(registry) - available:
+        raise ValueError("reading repair refers to a missing/excluded source")
     outputs = {}
     records = []
     total = 0
     for source in sorted(available):
         original = (root / source).read_bytes()
         digest = hashlib.sha256(original).hexdigest()
-        raw = original.decode("utf-8").replace("\r\n", "\n").replace("\r", "\n")
-        text, pairs = render(source, raw, available, root, source_sha256=digest)
+        raw = original.decode("utf-8")
+        text, pairs = render(source, raw, available, root, source_sha256=digest, repair_registry=registry)
         destination = reading_path(source)
         outputs[destination] = text
         total += pairs
@@ -269,6 +364,11 @@ Unclosed source display delimiters are repaired only at paragraph boundaries and
 flagged on their pages. Paragraphs with ambiguous inline delimiters are shown as
 explicit source excerpts. These presentation notes preserve the underlying text
 and make source formatting damage visible rather than inventing an equation.
+Exact-source-bound TeX escape and punctuation corrections are disclosed on each
+affected page and in the [presentation repair ledger](../docs/publication/reading-tex-repairs.json).
+Deliberately truncated formula quotations remain literal text. Quoted and listed
+equations retain their Markdown containers; the mathematical payload does not
+include Markdown quote or table separators.
 
 Start with the [problem](docs/problem/statement.md), [current state](docs/STATE.md),
 [research map](docs/KNOWLEDGE_MAP.md), [glossary](docs/GLOSSARY.md), and

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_trimmed_grid_phase_star_exclusion_2026-09-05.md) · source SHA-256 `4013536ad4ca97b13f9c0c7d39ca6911cec3f1fc8f1897cf406b5ae3eba3ab86`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6FBFFF44EE97","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
 # Erdős Problem #99 — Target B trimmed-grid phase-star exclusion

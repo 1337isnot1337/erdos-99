@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_halfdisk_groupwise_atomic_train_floor_hostile_audit_2026-09-12.md) · source SHA-256 `35513e757ed2cfe147376dabe2a126e74b735d57d5107ae3e2daf068f9be81bd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "484f1fa38a9eb6700249f21ad5fd008193a36318", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_halfdisk_groupwise_atomic_train_floor_hostile_audit_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d1a4988813e07c9c1a0c550809b5d8f7b8ee7bb2e8d3a515eb14171f469acb7c"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_joint_orbit_capacity_energy_g0050_hostile_audit_2026-09-15.md) · source SHA-256 `1a349d108940a61ce1309aba58c77fc3dfd5a23af220f9dd677445afcc8c4bf9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7585ACE156BB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — `g=0.0050` joint orbit-capacity / phase-energy floor

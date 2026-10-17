@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-b/01-jammed-rhombic-branch.md) · source SHA-256 `d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 # Target B: jammed almost-rhombic branch
 
@@ -1817,15 +1819,17 @@ post-synthesis addendum.
 The following are retained as established under their stated hypotheses:
 
 - the strict translated-lattice bound
+  
   ```math
   D(n)^2<\frac{2\sqrt3}{\pi}(n-1);
-  
   ```
+
 - the sharpened topology-corrected shell window and, in a pure rhombic disk,
+  
   ```math
   G+E<c_0B;
-  
   ```
+
 - the perimeter deficit $`\pi D-P=O(1)`$, isodiametric area deficit $`O(D)`$,
   and uniform width estimate $`\min w_K=D-O(D^{1/3})`$;
 - the exact support-depth, support-turning, pocket, and mixed-area identities;
@@ -3085,13 +3089,10 @@ $`K=\operatorname{conv}P`$ and $`D_P=\operatorname{diam}P`$.
 > **Theorem 46.1 (fixed-angle oblique-lattice exclusion).** For every
 > $`\delta\in(0,\pi/6)`$, there is $`N_\delta`$ such that no $`n`$-point global
 > minimizer can be a subset $`P\subset\Lambda_\theta`$ with
-> 
-
-```math
+> ```math
 > \theta\in[\pi/3+\delta,\ 2\pi/3-\delta]
 > \tag{46.2}
-> 
-```
+> ```
 > whenever $`n\ge N_\delta`$.
 
 ### Proof
@@ -3180,20 +3181,15 @@ For a finite $`n`$-point subset $`P\subset\Lambda`$, write
 $`K=\operatorname{conv}P`$ and $`D_P=\operatorname{diam}P`$.
 
 > **Theorem 47.1 (fixed affine-lattice exclusion).** Every such P satisfies
-> 
-
-```math
+> ```math
 > n a_\Lambda
 > \le \operatorname{area}\bigl(K+\mathbb B(0,R_\Lambda)\bigr)
 > \le \frac{\pi}{4}(D_P+2R_\Lambda)^2.
 > \tag{47.3}
-> 
-```
+> ```
 > If P is a global minimizer, then with
 > $`c=2\sqrt3/\pi`$,
-> 
-
-```math
+> ```math
 > \boxed{
 > a_\Lambda-\frac{\sqrt3}{2}
 > <
@@ -3201,8 +3197,7 @@ $`K=\operatorname{conv}P`$ and $`D_P=\operatorname{diam}P`$.
 > +\frac{\pi R_\Lambda^2}{n}.
 > }
 > \tag{47.4}
-> 
-```
+> ```
 > In particular, every fixed lattice with
 > $`a_\Lambda>\sqrt3/2`$ is excluded as the carrier of sufficiently large global
 > minimizers.
@@ -3260,9 +3255,7 @@ Define $`a_\Lambda`$ and $`R_\Lambda`$ as in (47.1)--(47.2), and put
 $`K=\operatorname{conv}P`$, $`D_P=\operatorname{diam}P`$.
 
 > **Theorem 48.1 (near-lattice cell bound).** Under (48.1),
-> 
-
-```math
+> ```math
 > \boxed{
 > n a_\Lambda
 > \le
@@ -3271,21 +3264,17 @@ $`K=\operatorname{conv}P`$, $`D_P=\operatorname{diam}P`$.
 > \frac{\pi}{4}\bigl(D_P+2R_\Lambda+2\varepsilon\bigr)^2.
 > }
 > \tag{48.2}
-> 
-```
+> ```
 > If P is a global minimizer, then with $`c=2\sqrt3/\pi`$,
-> 
-
-```math
+> ```math
 > \boxed{
 > a_\Lambda-\frac{\sqrt3}{2}
-<
+> <
 > \pi(R_\Lambda+\varepsilon)\sqrt{\frac cn}
 > +\frac{\pi(R_\Lambda+\varepsilon)^2}{n}.
 > }
 > \tag{48.3}
-> 
-```
+> ```
 
 ### Proof
 
@@ -3354,22 +3343,16 @@ for some integer $`k`$. Put $`S=\sum_i\varepsilon_i`$.
 
 > **Lemma 49.1 (mod-three phase-cycle charge).** If
 > $`S\not\equiv0\pmod3`$, then
-> 
-
-```math
+> ```math
 > \boxed{\sum_{i=0}^{m-1}\delta_i\ge\frac{\pi}{3}.}
 > \tag{49.4}
-> 
-```
+> ```
 > Consequently, if $`\eta_i=\sin\theta_i-\sqrt3/2`$ is the area surplus of
 > the $`i`$-th rhombus over the triangular value, then
-> 
-
-```math
+> ```math
 > \boxed{\sum_{i=0}^{m-1}\eta_i\ge2-\sqrt3.}
 > \tag{49.5}
-> 
-```
+> ```
 
 ### Proof
 
@@ -3436,12 +3419,11 @@ directions; the reverse-edge convention makes the gain antisymmetric.
 > 2. there is a map $`\lambda:V(H)\to\mathbb Z/3`$, unique up to an additive
 >    constant, such that
 >    
-
-```math
+>    ```math
 >    \gamma(\tau,\sigma)=\lambda(\sigma)-\lambda(\tau)\pmod3
 >    \tag{49.9}
->    
-```
+>    ```
+
 >    on every oriented edge of $`H`$.
 
 ### Proof
@@ -3545,23 +3527,17 @@ $`\gamma(\sigma,\tau)=-\gamma(\tau,\sigma)`$.
 > current degree is less than $`\lambda D`$.  For all sufficiently large $`D`$,
 > every connected component $`H`$ of the remaining graph has a potential
 > $`\ell:V(H)\to\mathbb Z/3`$ satisfying
-> 
-
-```math
+> ```math
 > \boxed{\gamma(\tau,\sigma)=\ell(\sigma)-\ell(\tau)\pmod3}
 > \tag{50.2}
-> 
-```
+> ```
 > on every oriented edge of $`H`$.  The number of deleted edges is at most
-> 
-
-```math
+> ```math
 > \boxed{
 > C_\delta D^{2-\eta}+C_T\lambda D^2.
 > }
 > \tag{50.3}
-> 
-```
+> ```
 > The number of retained components is at most $`C_T/\lambda+1`$.
 
 ### Proof
@@ -3611,13 +3587,10 @@ $`C_T/\lambda+1`$. $`\square`$
 > $`\tau\sigma`$ from $`\tau`$ to $`\sigma`$ when
 > $`\ell(\sigma)=\ell(\tau)+1`$ in $`\mathbb Z/3`$.  Every directed cycle in a
 > retained component has length at least
-> 
-
-```math
+> ```math
 > \boxed{\pi D^{\,1-\eta}.}
 > \tag{50.6}
-> 
-```
+> ```
 
 ### Proof
 
@@ -3635,14 +3608,11 @@ $`\delta_e\le D^{-1+\eta}`$, which gives (50.6). $`\square`$
 > **Lemma 50.3 (acyclic defect relaxation).** Suppose the canonical orientation
 > of a retained component $`H`$ is acyclic.  Then there is a train-angle velocity
 > $`v`$, supported on the trains of $`H`$, for which
-> 
-
-```math
+> ```math
 > \frac{d}{dt}\Big|_{t=0}\delta_e(\phi+tv)<0
 > \qquad(e\in E(H)).
 > \tag{50.7}
-> 
-```
+> ```
 > Every rhombic contact remains exactly unit along this variation.  For a fixed
 > finite disk, $`v`$ can be scaled so that all crossings outside $`H`$ remain
 > strict as well.
@@ -3670,30 +3640,21 @@ diameter gradients in train-angle coordinates.
 
 > **Proposition 50.4 (diameter certificate for blocked relaxation).** If no
 > train-angle velocity satisfies
-> 
-
-```math
+> ```math
 > B_Hv<0,
 > \qquad
 > G_Dv\le0,
 > \tag{50.8}
-> 
-```
+> ```
 > then there are vectors
-> 
-
-```math
+> ```math
 > \alpha\ge0,\quad \alpha\ne0,\qquad \beta\ge0
-> 
-```
+> ```
 > such that
-> 
-
-```math
+> ```math
 > \boxed{B_H^{\mathsf T}\alpha+G_D^{\mathsf T}\beta=0.}
 > \tag{50.9}
-> 
-```
+> ```
 > If $`H`$'s canonical orientation is acyclic, necessarily $`\beta\ne0`$.
 
 ### Proof
@@ -3747,25 +3708,19 @@ T_H=n_0+n_1+n_2.
 Orient every crossing from $`V_i`$ to $`V_{i+1}`$ modulo $`3`$.
 
 > **Theorem 51.1 (cyclic-order edge bound).** For all sufficiently large $`D`$,
-> 
-
-```math
+> ```math
 > \boxed{
 > |E(H)|\le\max_{i\in\{0,1,2\}} n_i(T_H-n_i).
 > }
 > \tag{51.2}
-> 
-```
+> ```
 > In particular, if $`n_i=(1/3+o(1))T_H`$ for all three classes, then
-> 
-
-```math
+> ```math
 > \boxed{
 > |E(H)|\le\left(\frac{2}{9}+o(1)\right)T_H^2.
 > }
 > \tag{51.3}
-> 
-```
+> ```
 
 ### Proof
 
@@ -3823,12 +3778,9 @@ only combinatorial shape compatible with exact maximal phase density.
 > **Theorem 52.1 (balanced equality classification).** Let $`G`$ be a tripartite
 > graph with classes $`A,B,C`$, each of size $`m`$, and no triangle with one
 > vertex in each class.  Then
-> 
-
-```math
+> ```math
 > |E(G)|\le 2m^2.
-> 
-```
+> ```
 > If equality holds, $`G`$ is bipartite: there is a two-colouring
 > of $`A\sqcup B\sqcup C`$ such that two vertices in different colours are
 > adjacent whenever they lie in different tripartite classes, and vertices of
@@ -3909,36 +3861,27 @@ family whose shear vanishes faster than the boundary scale.
 
 > **Proposition 53.1 (sub-boundary oblique-lattice competitors).** Let $`D\to\infty`$
 > and set
-> 
-
-```math
+> ```math
 > \theta_D=\frac\pi3+D^{-3}.
 > \tag{53.2}
-> 
-```
+> ```
 > Let $`u_D,v_D`$ be unit vectors with angle $`\theta_D`$, and let
 > $`\Lambda_D=\mathbb Zu_D+\mathbb Zv_D`$.  There is a finite set
 > $`A_D\subset\Lambda_D`$ with
-> 
-
-```math
+> ```math
 > \operatorname{diam}(A_D)<D,
 > \qquad
 > \min_{x\ne y\in A_D}|x-y|=1,
 > \tag{53.3}
-> 
-```
+> ```
 > no unit equilateral triangle, and
-> 
-
-```math
+> ```math
 > \boxed{
 > |A_D|\ge
 > \frac{\pi}{2\sqrt3}D^2-o(D).
 > }
 > \tag{53.4}
-> 
-```
+> ```
 
 ### Proof
 
@@ -3947,14 +3890,11 @@ $`\Lambda_D`$ are exactly $`\pm u_D,\pm v_D`$.  Indeed, for integer
 > coefficients $`(a,b)`$, vectors with $`ab\ge0`$ have squared length at least
 > one, with equality only for the four basis directions; for $`ab<0`$, writing
 > $`p=|a|,q=|b|`$,
-> 
-
-```math
+> ```math
 > |au_D+bv_D|^2=p^2+q^2-2pq\cos\theta_D
 > \ge2-2\cos\theta_D>1.
 > \tag{53.5}
-> 
-```
+> ```
 > Thus three lattice points cannot form a unit equilateral triangle: the two unit
 > vectors from one vertex would have to be two distinct members of
 > $`\{\pm u_D,\pm v_D\}`$, whose difference has length either
@@ -3962,13 +3902,10 @@ $`\Lambda_D`$ are exactly $`\pm u_D,\pm v_D`$.  Indeed, for integer
 
 > Translate the open disk $`B(0,D/2)`$ through one fundamental cell of $`\Lambda_D`$.
 > The average number of lattice points in the translated disk is
-> 
-
-```math
+> ```math
 > \frac{\pi D^2}{4\sin\theta_D}.
 > \tag{53.6}
-> 
-```
+> ```
 > Hence some translate contains at least this many lattice points.  Its finite
 > lattice subset has diameter strictly less than $`D`$, is unit-separated, and by
 > the preceding paragraph is triangle-free.
@@ -3984,13 +3921,10 @@ $`\Lambda_D`$ are exactly $`\pm u_D,\pm v_D`$.  Indeed, for integer
 > $`O(D)`$.  For large $`D`$ it therefore contains a unit-neighbor pair.
 > Consequently its minimum distance is exactly one.  Finally,
 > $`\sin\theta_D=\sqrt3/2+O(D^{-3})`$, so (52.6) gives
-> 
-
-```math
+> ```math
 > \frac{\pi D^2}{4\sin\theta_D}
 > =\frac{\pi}{2\sqrt3}D^2+O(D^{-1}),
-> 
-```
+> ```
 > which implies (52.4).  $`\square`$
 
 This proposition rules out a universal boundary-order density deficit for
@@ -4007,23 +3941,17 @@ The following elementary lemma is the relevant test.
 
 > **Lemma 54.1 (aligned two-wing determinant bound).** Let a point set of diameter
 > $`D`$ contain the six points
-> 
-
-```math
+> ```math
 > p,\quad p+U,\quad p+V,\quad p+U+V,\quad p+W,\quad p+U+W.
 > \tag{54.1}
-> 
-```
+> ```
 > If $`\det(U,V)`$ and $`\det(U,W)`$ have opposite signs, then
-> 
-
-```math
+> ```math
 > \boxed{
 > D^2\ge2\bigl(|\det(U,V)|+|\det(U,W)|\bigr).
 > }
 > \tag{54.2}
-> 
-```
+> ```
 > The same conclusion holds if the second four-point block is based at $`q`$
 > instead of $`p`$, provided $`q-p`$ is parallel to $`U`$.
 
@@ -4059,30 +3987,21 @@ The exact loss when the two bases are not aligned is also elementary.
 > **Lemma 54.2 (unresolved-base displacement penalty).** Suppose the first
 > four-point block in (54.1) is based at $`p`$, while the second is based at
 > $`q`$, with no assumption on $`Z=q-p`$.  Then
-> 
-
-```math
+> ```math
 > D^2\ge2\left|\det\bigl(U,V-W-Z\bigr)\right|.
 > \tag{54.5}
-> 
-```
+> ```
 > If $`\det(U,V)`$ and $`\det(U,W)`$ have opposite signs, then, with
 > $`S=|\det(U,V)|+|\det(U,W)|`$,
-> 
-
-```math
+> ```math
 > D^2\ge2\bigl(S-|\det(U,Z)|\bigr).
 > \tag{54.6}
-> 
-```
+> ```
 > The same four blocks also give $`D^2\ge2|\det(U,Z)|`$, and consequently
-> 
-
-```math
+> ```math
 > D^2\ge S.
 > \tag{54.7}
-> 
-```
+> ```
 
 ### Proof
 
@@ -4133,28 +4052,22 @@ Near-triangular phase coherence also controls its diagonal lengths.
 
 > **Lemma 55.1 (coherent-block norm bound).** Consider an additive
 > $`a\times b`$ block
-> 
-
-```math
+> ```math
 > p_{ij}=p+x_i+y_j,\qquad
 > 0\le i\le a,\qquad 0\le j\le b,
-> 
-```
+> ```
 > with unit increments $`u_i=x_i-x_{i-1}`$ and $`v_j=y_j-y_{j-1}`$.  Suppose
 > all $`u_i`$ lie within angle $`\alpha`$ of one direction $`u_*`$, all $`v_j`$
 > lie within angle $`\alpha`$ of one direction $`v_*`$, and the angle between
 > $`u_*,v_*`$ is within $`\beta`$ of either $`\pi/3`$ or $`2\pi/3`$.  Put
 > $`\varepsilon=\beta+2\alpha<\pi/6`$.  Then the block diameter satisfies
-> 
-
-```math
+> ```math
 > \boxed{
 > D^2\ge \cos^2\!\alpha\,
 > \left(a^2+b^2+2\cos\left(\frac{\pi}{3}+\varepsilon\right)ab\right).
-> \}
+> }
 > \tag{55.1}
-> 
-```
+> ```
 
 ### Proof
 
@@ -4218,13 +4131,10 @@ provided the two non-maximal phase classes remain on the quadratic scale.
 > additive $`M\times b`$ block occurs between the largest class and the larger
 > of the other two classes.  Fix $`\tau>0`$, assume $`b/M\ge\tau`$, and assume
 > the phase-star accounts for the quadratic core:
-> 
-
-```math
+> ```math
 > R=M(a+b)+o(M^2),
 > \tag{56.1}
-> 
-```
+> ```
 > and the two block directions have angular error $`o(1)`$ from the triangular
 > phase angles.  Then this core cannot occur in a global minimizer.
 

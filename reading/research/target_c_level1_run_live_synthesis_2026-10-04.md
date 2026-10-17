@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_level1_run_live_synthesis_2026-10-04.md) · source SHA-256 `626802e7caffadbde6365a7ce407acf870c053c307b30ed9fc465c6a5cefc124`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Source-ledger compatibility and finite endpoint constraints
 

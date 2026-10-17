@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/03-source-response.md) · source SHA-256 `b56ef3220026dc503d3dfb43ecf04eeb041a05f8b8944234624806712bfc91a4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A: source response and v1.7 frontier
 
@@ -73,27 +73,21 @@ rattler is automatic in the neighborhood.
 > **Theorem 112.1 (strict-rattler product germ).**  There are neighborhoods
 > $`U_C,U_R`$ such that the local triangle-free diameter-$`D`$ minimizer germ factors
 > as
-> 
-
-```math
+> ```math
 > \boxed{
 > \mathcal F_D^\triangle(A)\cap(U_C\times U_R)
 > =
 > \bigl(\mathcal F_{D,C}^\triangle(C)\cap U_C\bigr)\times U_R,
 > }
 > \tag{112.3}
-> 
-```
+> ```
 > and throughout this product neighborhood
-> 
-
-```math
+> ```math
 > \boxed{
 > \operatorname{diam}(C',R')=\operatorname{diam}(C').
 > }
 > \tag{112.4}
-> 
-```
+> ```
 
 In particular $`\{C\}\times U_R`$ is an open $`2|R|`$-dimensional family of
 triangle-free global minimizers of diameter exactly $`D`$.
@@ -146,9 +140,7 @@ The free right vertices are exactly $`O`$.
 
 > **Theorem 113.1 (contracted-transversal gammoid).**  For every
 > $`J\subseteq C^\partial`$,
-> 
-
-```math
+> ```math
 > \boxed{
 > J\text{ is independent after contracting }B
 > \iff
@@ -156,8 +148,7 @@ The free right vertices are exactly $`O`$.
 > \text{ to distinct vertices of }O.
 > }
 > \tag{113.2}
-> 
-```
+> ```
 
 Indeed, a matching of $`B\cup J`$ differs from $`\mu_0`$ by alternating cycles and
 vertex-disjoint augmenting paths from $`J`$ to right vertices unmatched by $`\mu_0`$,
@@ -246,34 +237,25 @@ direct subtraction yields
 
 > **Theorem 114.1 (response-corrected collar identity).**
 > Define
-> 
-
-```math
+> ```math
 > \Phi(v):=|\Gamma_t(v)|-\operatorname{rank}S(v).
 > \tag{114.7}
-> 
-```
+> ```
 > Then
-> 
-
-```math
+> ```math
 > \boxed{
 > d_{\rm sc}(v)-\Delta_\Lambda(v)
 > =\Phi(v)-\rho^\dagger.
 > }
 > \tag{114.8}
-> 
-```
+> ```
 > Equivalently,
-> 
-
-```math
+> ```math
 > \boxed{
 > \Phi(v)=|Y_0(v)|+h(G_v).
 > }
 > \tag{114.9}
-> 
-```
+> ```
 
 Thus Target A is exactly the existence of an admissible generic translate satisfying
 ```math
@@ -469,17 +451,14 @@ N_A(Q)
 ```
 
 > **Theorem 115.1 (continuum Hall inequality with plateau slack).**
-> 
-
-```math
+> ```math
 > \boxed{
 > |Q|-|N_A(Q)|\le p
 > \qquad
 > \text{for every finite unit-separated }Q\subseteq H.
 > }
 > \tag{115.5}
-> 
-```
+> ```
 
 ### Proof
 
@@ -552,15 +531,12 @@ t\sim t'\iff |t-t'|<1.
 ```
 
 > **Theorem 115.2 (cross-matching with plateau slack).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \nu(T,T')\ge |T|-p.
 > }
 > \tag{115.13}
-> 
-```
+> ```
 
 If $`\nu<|T|-p`$, Kőnig gives an independent set in the bipartite graph of size
 ```math
@@ -704,15 +680,12 @@ be the source plateau slack.  A sufficient closing theorem is:
 > **Source-to-response exchange theorem.**  If the scaffold survivor has
 > $`g>0`$, then the genuine source structure produces a finite unit-separated
 > $`Q\subseteq H`$ such that
-> 
-
-```math
+> ```math
 > \boxed{
 > |Q|-|N_A(Q)|\ge p+1.
 > }
 > \tag{117.9}
-> 
-```
+> ```
 
 Equation (117.9) contradicts Theorem 115.1.  Equivalently, one may produce a source
 subset and an alternative feasible placement whose old/new cross-matching loses more
@@ -858,13 +831,10 @@ Put
 ```
 
 > **Theorem 119.1 (source-hull capacity bound).**
-> 
-
-```math
+> ```math
 > \boxed{0\le \widehat p_H\le p<\frac{\pi D}{2}.}
 > \tag{119.5}
-> 
-```
+> ```
 
 Indeed, A itself shows $`\widehat N_H\ge N`$.  If $`q=\widehat N_H`$, a
 q-point packing in H has diameter at most D.  Monotonicity gives
@@ -893,14 +863,11 @@ is unit-separated and lies in H.  Its cardinality is therefore at most
 $`\widehat N_H`$.
 
 > **Theorem 119.2 (exact same-source Hall budget).**
-> 
-
-```math
+> ```math
 > \boxed{|Q|-|N_A(Q)|\le\widehat p_H}
 > \qquad(Q\subset H\text{ unit-separated}).
 > \tag{119.8}
-> 
-```
+> ```
 
 Thus v1.6.0 Theorem 115.1 may be sharpened from the global plateau allowance p to
 the exact capacity allowance of the genuine source hull.
@@ -984,13 +951,10 @@ Consequently $`\operatorname{diam}X< D`$ whenever $`|X|\ge N`$ would otherwise
 contradict $`D(N)=D`$.
 
 > **Theorem 120.1 (source self-container theorem).**
-> 
-
-```math
+> ```math
 > \boxed{\alpha_1(\operatorname{int}H)\le N-1.}
 > \tag{120.2}
-> 
-```
+> ```
 
 Hence every unit-separated $`X\subset H`$ with
 
@@ -1086,13 +1050,10 @@ gaps each at least $`\pi/3`$, forcing all six gaps to equal $`\pi/3`$ and hence 
 unit equilateral triangle.
 
 > **Theorem 121.1 (rattler retention under maximal triangle-free extension).**
-> 
-
-```math
+> ```math
 > \boxed{|R_B|\ge |R|-5k\ge |R|-5\widehat p_H.}
 > \tag{121.5}
-> 
-```
+> ```
 
 Thus a super-boundary strict-rattler population remains super-boundary.
 
@@ -1126,13 +1087,10 @@ Moreover, if some x had $`|x-b|>1`$ for all b, then adding x would create no uni
 edge and therefore no triangle.  Thus
 
 > **Corollary 121.2 (same-hull unit covering).**
-> 
-
-```math
+> ```math
 > \boxed{H\subseteq\bigcup_{b\in B}\overline B(b,1).}
 > \tag{121.8}
-> 
-```
+> ```
 
 This saturation is obtained in the genuine source hull.  It does not assert that
 the old contact-minimal core or hybrid bridge forest remains the contact normal form
@@ -1199,13 +1157,10 @@ at most M.  The whole shore $`X_{\max}`$ is independent of size M.  Hence
 $`\alpha(G)=M`$.  Koenig's theorem gives
 
 > **Theorem 122.1 (capacity endpoint matching).**
-> 
-
-```math
+> ```math
 > \boxed{\nu(P,X_{\max})=|P|=q.}
 > \tag{122.2}
-> 
-```
+> ```
 
 Thus every smaller packing in the same container can be injected into a
 capacity-maximizing packing by strict-conflict edges of length less than one.
@@ -1220,17 +1175,14 @@ has at most M points.  Taking $`Q=X_{\max}`$, Theorem 122.1 shows
 $`N_P(X_{\max})=P`$.  Therefore:
 
 > **Theorem 122.2 (exact fixed-container Hall slack).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \max_{\substack{Q\subseteq H\\ Q\text{ unit-separated}}}
 > \bigl(|Q|-|N_P(Q)|\bigr)
 > =M-|P|.
 > }
 > \tag{122.3}
-> 
-```
+> ```
 
 Applied to A this gives exact maximum Hall slack $`\widehat p_H`$.  Applied to B it
 gives exact maximum Hall slack $`\tau`$:
@@ -1374,17 +1326,14 @@ It is unit-separated, lies in H, and has exactly q+|A_0| points.  Since
 $`D(q)=D`$ and $`D(\cdot)`$ is nondecreasing,
 
 > **Theorem 124.1 (source-capacity plateau exchange theorem).**
-> 
-
-```math
+> ```math
 > \boxed{
 > |P_{A_0}|=q+|A_0|,
 > \qquad
 > \operatorname{diam}P_{A_0}=D(q+|A_0|)=D.
 > }
 > \tag{124.5}
-> 
-```
+> ```
 >
 > Thus every subset of the nonbasis capacity elements produces an explicit global
 > optimum at the corresponding intermediate cardinality.
@@ -1542,15 +1491,12 @@ and all extreme points of H belong to the original source A.
 > There is a triangle-free N-point global minimizer $`A^{\rm sat}\subset H`$ such
 > that every point of R remains at its original position and remains a genuine strict
 > rattler, while
-> 
-
-```math
+> ```math
 > \boxed{
 > H\subseteq\bigcup_{a\in A^{\rm sat}}\overline B(a,1).
 > }
 > \tag{125.2}
-> 
-```
+> ```
 
 This removes the boundary-order cardinality expenditure of Theorem 63.1 when only
 same-cardinality saturation and the strict-rattler population are needed.  It does
@@ -1609,17 +1555,14 @@ Since $`L\subseteq H`$, while every convex combination of source points can be
 matched coefficientwise to a convex combination of their images,
 
 > **Theorem 126.1 (capacity-shadow hull control).**
-> 
-
-```math
+> ```math
 > \boxed{
 > L\subseteq H\subseteq L+\delta\mathbb B,
 > \qquad
 > d_{\rm H}(H,L)\le\delta<1.
 > }
 > \tag{126.4}
-> 
-```
+> ```
 
 Consequently
 
@@ -1674,17 +1617,14 @@ while for an active source diameter edge ij,
 The virtual-work identity (11.7) cancels the weighted linear terms.  Therefore:
 
 > **Theorem 127.1 (finite-chord stress inequality).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \sum_{ij\in C}\alpha_{ij}|v_i-v_j|^2
 > \ge
 > \sum_{ij\in H_D}\beta_{ij}|v_i-v_j|^2.
 > }
 > \tag{127.4}
-> 
-```
+> ```
 
 More exactly,
 
@@ -2148,23 +2088,17 @@ global optimum in H.
 
 > **Theorem 135.1 (source-Hall-tight exchange flag).** For every
 > $`E\subseteq E_0`$,
-> 
-
-```math
+> ```math
 > \boxed{N_A(P_E)=A,}
 > \tag{135.2}
-> 
-```
+> ```
 > and consequently
-> 
-
-```math
+> ```math
 > \boxed{
 > |P_E|-|N_A(P_E)|=k+|E|.
 > }
 > \tag{135.3}
-> 
-```
+> ```
 
 ### Proof
 
@@ -2323,14 +2257,11 @@ product decreases every active diameter separation.
 > **Theorem 136.1 (simultaneous first-transition perturbation).**
 > Suppose that for every $`x\in U_\triangle`$ there is a vector $`u_x\in\mathbb R^2`$
 > such that
-> 
-
-```math
+> ```math
 > v\cdot u_x>0
 > \qquad(v\in\mathcal V_P(x)).
 > \tag{136.2}
-> 
-```
+> ```
 > Then $`P`$ has a triangle-free global optimum of the same cardinality and diameter
 > $`D`$.  More precisely, for all sufficiently small positive $`\epsilon`$, moving
 > each $`x\in U_\triangle`$ to $`x+\epsilon u_x`$ and leaving all other points fixed
@@ -2433,33 +2364,24 @@ K_{L,\epsilon}=\operatorname{conv}P_{L,\epsilon}.
 
 > **Theorem 136.2 (finite homothetic gap concentration).**
 > The set $`P_{L,\epsilon}`$ is triangle-free, has $`L^2`$ points, and
-> 
-
-```math
+> ```math
 > \operatorname{diam}P_{L,\epsilon}
 > =\operatorname{diam}K_{L,\epsilon}
 > =s\sqrt3\,(L-1).
 > \tag{136.8}
-> 
-```
+> ```
 > If
-> 
-
-```math
+> ```math
 > \epsilon\ge\frac1{L-1},
 > \tag{136.9}
-> 
-```
+> ```
 > then $`K_{L,\epsilon}`$ contains a unit-separated set of $`L^2+1`$ points,
 > namely
-> 
-
-```math
+> ```math
 > Q_L
 > =\{ie_1+je_2:0\le i,j\le L-1\}\cup\{Le_1\},
 > \tag{136.10}
-> 
-```
+> ```
 > and $`\operatorname{diam}Q_L\le\operatorname{diam}P_{L,\epsilon}`$.
 
 ### Proof
@@ -2555,12 +2477,9 @@ rearrangement; no uniform bound on their diameter as $`d\downarrow0`$ is asserte
 > 3. $`T_d\subset L`$.
 >
 > Then
-> 
-
-```math
+> ```math
 > (F\setminus S_d)\cup T_d
-> 
-```
+> ```
 > is unit-separated and has $`|F|+1`$ points in $`L`$.
 
 ### Proof
@@ -2643,19 +2562,17 @@ The edges in $`E_x`$ are exactly the unit triangles created by inserting $`x`$.
 >
 > 1. If the direction set
 >    
-
-```math
+>    ```math
 >    \{p-x:p\in C_x\}\subset\mathbb S^1
->    
-```
+>    ```
+
 >    is contained in a closed semicircle, there are a vector $`\xi\ne0`$ and
 >    $`\epsilon>0`$ such that, for every $`0<t<\epsilon`$,
 >    
-
-```math
+>    ```math
 >    (P\cup\{x+t\xi\})
->    
-```
+>    ```
+
 >    is unit-separated, has diameter at most $`D`$, and is triangle-free.
 >
 > 2. If the direction set is not contained in a closed semicircle, then $`x`$ is
@@ -2878,31 +2795,22 @@ R_L=\{ie_1+je_2:-L\le i,j\le L\}.
 > **Theorem 137.1 (finite homothetic-strain concentration).**  Fix
 > $`\eta>0`$.  There is $`L_0(\eta)`$ with the following property.  If
 > $`L\ge L_0(\eta)`$, $`\varepsilon>0`$, and
-> 
-
-```math
+> ```math
 > L\varepsilon\ge\eta,
 > \tag{137.4}
-> 
-```
+> ```
 > then, for
-> 
-
-```math
+> ```math
 > P_L=(1+\varepsilon)R_L,
 > \qquad
 > H_L=\operatorname{conv}P_L,
 > \tag{137.5}
-> 
-```
+> ```
 > there is a unit-separated set $`P_L^+\subset H_L`$ such that
-> 
-
-```math
+> ```math
 > \boxed{|P_L^+|=|P_L|+1.}
 > \tag{137.6}
-> 
-```
+> ```
 > Thus a homothetically strained triangular patch whose accumulated strain
 > $`L\varepsilon`$ stays bounded away from zero is not completely saturated even
 > relative to its own finite convex hull.
@@ -3123,27 +3031,25 @@ Every term in (138.5) is nonnegative on $`\mathcal C_H(P)`$.
 >
 > 1. There is $`v\in\mathcal C_H(P)`$ such that
 >    
-
-```math
+>    ```math
 >    \ell_T(v)>0
 >    \qquad(T\in\mathcal T(P)).
 >    \tag{138.6}
->    
-```
+>    ```
+
 >    For every sufficiently small $`t>0`$, the linearly perturbed configuration
 >    $`P_t=\{p_i+tv_i\}`$ is unit-separated, lies in $`H`$, and is triangle-free.
 > 2. There is a triangle $`T_\ast\in\mathcal T(P)`$ such that
 >    
-
-```math
+>    ```math
 >    \boxed{
 >    a_{ij}(v)=0
 >    \quad
 >    (ij\in E(T_\ast),\ v\in\mathcal C_H(P)).
 >    }
 >    \tag{138.7}
->    
-```
+>    ```
+
 >    Thus all three sides of $`T_\ast`$ are fixed to first order by every
 >    fixed-container infinitesimally feasible motion.
 
@@ -3362,13 +3268,10 @@ C=\{x_-,x_+\}.
 > **Proposition 139.1 (two-leaf caged circuit).**  The sets $`B`$ and $`C`$ are
 > internally unit-separated, $`B`$ is triangle-free, and the strict conflict graph
 > from $`C`$ to $`B`$ is the three-vertex path
-> 
-
-```math
+> ```math
 > x_- - b - x_+.
 > \tag{139.12}
-> 
-```
+> ```
 > Hence $`C`$ is a two-element transversal-matroid circuit whose contracted
 > right shore has one degree-two blocker.  Both possible leaf swaps create a unit
 > triangle, and the inserted leaf is infinitesimally pinned when the eight cage
@@ -3550,15 +3453,12 @@ new triangles at this transition.
 > $`\mathcal T_j(R)`$ contains exactly one point of $`R_j`$ and two points of
 > $`U_j`$.  The two $`X`$-points form a unit edge of the unit-contact graph of
 > $`X`$, and that edge has at least one endpoint in $`\Delta X_j`$.  Consequently
-> 
-
-```math
+> ```math
 > \boxed{
 > |\mathcal T_j(R)|\le 2e_X(\Delta X_j)\le 12|\Delta X_j|,
 > }
 > \tag{137.3}
-> 
-```
+> ```
 > where $`e_X(\Delta X_j)`$ is the number of unit edges of $`X`$ incident to
 > $`\Delta X_j`$.  In addition, the number of new unit contacts between
 > $`R_j`$ and $`\Delta X_j`$ is at most $`6|\Delta X_j|`$.
@@ -3646,13 +3546,10 @@ exists.
 
 > **Lemma 141.1 (active-boundary elimination).** A maximally active triangle-free
 > global minimizer has no strict rattler.  That is, it has no point $`r`$ satisfying
-> 
-
-```math
+> ```math
 > 1<|r-p|<D\qquad(p\in A\setminus\{r\}).
 > \tag{141.1}
-> 
-```
+> ```
 
 ### Proof
 
@@ -3734,13 +3631,10 @@ on the diameter boundary.
 
 > **Theorem 142.1 (finite monotone activation).** Let $`A_0`$ be any
 > triangle-free global minimizer of diameter $`D`$.  There is a finite sequence
-> 
-
-```math
+> ```math
 > A_0,A_1,\ldots,A_s
 > \tag{142.1}
-> 
-```
+> ```
 > of triangle-free global minimizers of the same diameter with the following
 > properties:
 >
@@ -3838,26 +3732,20 @@ Theorem 121.1 gives
 > **Theorem 143.1 (persistent unit-activation transfer).** There is a
 > triangle-free global minimizer $`B^\ast`$ with $`|B^\ast|=|B|`$ and
 > $`\operatorname{diam}B^\ast=D`$ for which at least
-> 
-
-```math
+> ```math
 > \boxed{
 > \max\{0,\rho-5\widehat p_H-2\pi D\}
 > }
 > \tag{143.3}
-> 
-```
+> ```
 > members of $`R_B`$ first become active through a unit contact.  In particular,
 > $`B^\ast`$ contains at least
-> 
-
-```math
+> ```math
 > \boxed{
 > \max\left\{0,\frac{\rho-5\widehat p_H-2\pi D}{2}\right\}
 > }
 > \tag{143.4}
-> 
-```
+> ```
 > distinct unit contacts created during the activation process, each with an
 > endpoint in $`R_B`$.
 
@@ -3902,13 +3790,10 @@ the same pair is the first pair for both endpoints.
 > forest in the final contact graph.  Every recorded edge has an endpoint in the
 > initial strict-rattler set.  If $`u`$ initial rattlers first activate through
 > unit contacts, then the forest has at least
-> 
-
-```math
+> ```math
 > \left\lceil\frac{u}{2}\right\rceil
 > \tag{144.1}
-> 
-```
+> ```
 > edges.
 
 ### Proof
@@ -3957,13 +3842,10 @@ for interpreting the remaining obstruction.
 > **Lemma 145.1 (forest rows are independent).** Let $`F`$ be any forest of
 > nonzero unit-contact edges in a planar configuration.  The rows of the
 > corresponding unit-distance rigidity matrix are linearly independent.  Hence
-> 
-
-```math
+> ```math
 > \boxed{\operatorname{rank}R_F=|E(F)|.}
 > \tag{145.1}
-> 
-```
+> ```
 
 ### Proof
 

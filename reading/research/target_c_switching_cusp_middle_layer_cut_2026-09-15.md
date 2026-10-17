@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_switching_cusp_middle_layer_cut_2026-09-15.md) · source SHA-256 `dbf6d84b902dd7acba78d2cb82c1b11e226ea7967177e1359fd2988e4bb4f74d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e9d93d2b1e2ea3ceb8c77aaf010f8eae03fef951", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_switching_cusp_middle_layer_cut_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "959d37c5798ad6204352c15587024b9f2476a86cc9eb0caa452ca48c40ce456d"} -->
 

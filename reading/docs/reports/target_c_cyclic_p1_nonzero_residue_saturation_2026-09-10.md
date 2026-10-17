@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_p1_nonzero_residue_saturation_2026-09-10.md) · source SHA-256 `1c3dc95814993fc36281510cc9f733123493c15b786e0f6299826348aa391666`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7E29FFAFBF42","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 LEVEL I STATUS: STILL OPEN
@@ -332,10 +332,11 @@ For every coefficient of degree `n<2r`, only terms with `j<=n` contribute.
 
 - If `j<=2r-2`, then the explicit factor `2^(2r-j)` is divisible by four.
 - If `j=2r-1`, its multiplier is
+  
   ```math
   \binom{2r}{2r-1}2=4r,
-  
   ```
+
   again divisible by four.
 
 Hence every coefficient of

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sharp_annular_simplicial_packing_2026-09-11.md) · source SHA-256 `a585af66bd3eeb2731cd8fa755a792b9e85f8b44035f27bfea67e3e542991c65`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0BFDD8A9F379","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 - sharp annular simplicial packing and loaded-terminal credit

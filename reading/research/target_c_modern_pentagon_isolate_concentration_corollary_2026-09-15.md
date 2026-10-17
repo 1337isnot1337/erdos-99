@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_modern_pentagon_isolate_concentration_corollary_2026-09-15.md) · source SHA-256 `d795e5d05af0b4cde56a0cfc25afda07da4057b637fdcfd620e44e49fec93634`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3b58d923f06c48a5704d3e88c5b20014c69e2062", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_modern_pentagon_isolate_concentration_corollary_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f733377e7b10b41f8565ee42a28c59a0393d4a32c1d7f154a14f2939decd1a3c"} -->
 

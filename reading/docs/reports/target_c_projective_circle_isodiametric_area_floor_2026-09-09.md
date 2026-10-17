@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_projective_circle_isodiametric_area_floor_2026-09-09.md) · source SHA-256 `a779e7234362b4a7a12f89e8b863f1a501cf1a0210e8ab9f4fcc1f931ca1f479`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-79CEDA7D0CF7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — projective-circle isodiametry raises the force-hull area floor
@@ -284,7 +286,7 @@ PI.11 yields:
 \liminf_{D\to\infty}
 \frac{\operatorname{area}(F)}{D^2}
 \ge
-A_{PI}:=rac12\sin(2\rho)
+A_{PI}:=\frac12\sin(2\rho)
 =0.497856636324211\ldots .
 }
 \tag{PI.14}

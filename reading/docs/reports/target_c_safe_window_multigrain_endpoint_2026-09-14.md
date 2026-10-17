@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_safe_window_multigrain_endpoint_2026-09-14.md) · source SHA-256 `f793c2d105172f2e43e2802993832ba3d6fe46d99e4fc67215bc475aa29148a7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D56AE224BFA6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — safe-window multi-grain endpoint certificate
@@ -75,17 +75,19 @@ number of train vertices and crossing edges in its surviving connected
 components. Assume the following normalized hypotheses.
 
 1. The carrier has at least
+   
    ```math
    (0.4703752-o(1))D^2
-   
    ```
+
    strict-rhombus crossing edges before pruning.
 
 2. The total number of complete trains is at most
+   
    ```math
    (1.8488+o(1))D.
-   
    ```
+
 
 3. The total positive reduced-phase defect is at most
    $`5.317D+o(D)`$. After deleting crossings with defect greater than

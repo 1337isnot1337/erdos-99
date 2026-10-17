@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_train_closure_all_orders_phasor_straight_ray_2026-09-18.md) · source SHA-256 `956c59f13760a596190d2020d6d3e30ad4c52655e580e8460dba2759e9ab3caf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "8662a8c5cb5f2e1745d76ff7f3fd211fbc5f1850", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_train_closure_all_orders_phasor_straight_ray_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "8eeb52dcd5ff9be810b2e4143fabdb9c185a7663c13d38aa7ed097c83aaf1aa5"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_upper_blocker_flexible_scale_localization_t18687_2026-09-17.md) · source SHA-256 `4341c2b60c7cd036feaac777dd6cd5d6c6a51ad403d08880299bfaf5a2a6534f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "5ceab0f3dc6781b204d3b4a5b369a463dc51cf58", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_upper_blocker_flexible_scale_localization_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "db9ee7ca5592b9ac14c5d93ec913041513df8887aeb3cf917e745dd9ad6c9e00"} -->
 
@@ -61,41 +61,26 @@ Every non-LOWER Horn branch contains an injectively owned upper family of densit
 Then for **every** choice of `L_D` satisfying (FL.1), one of the following holds for all sufficiently large `D`:
 
 > **COMMON-CUT:** one selected O--O row supports more than
-> 
-
-```math
+> ```math
 > \boxed{(c_{*,7}-o(1))L_D}
-> 
-```
+> ```
 > distinct upper blockers of one common type, SIGNED or THIN. Its full angular-defect cost satisfies
-> 
-
-```math
+> ```math
 > \boxed{F_j=O(D/L_D)=o(D).}
-> 
-```
+> ```
 >
 > **LOCAL-WINDOW:** one path window of at most
-> 
-
-```math
+> ```math
 > \boxed{2L_D+O(1)}
-> 
-```
+> ```
 > consecutive regions contains both endpoints of more than
-> 
-
-```math
+> ```math
 > \boxed{(c_{*,7}-o(1))L_D}
-> 
-```
+> ```
 > distinct upper blockers of one common type. Its full row-defect plus terminal-variation cost satisfies
-> 
-
-```math
+> ```math
 > \boxed{C_W=O(L_D)=o(D).}
-> 
-```
+> ```
 
 In either case the same purification argument leaves a common family of
 

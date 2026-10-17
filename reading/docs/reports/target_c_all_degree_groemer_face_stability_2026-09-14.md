@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_all_degree_groemer_face_stability_2026-09-14.md) · source SHA-256 `2f5e5d9c1ca68e89d98c5ca3af4ce72a42b545265db5465e872aab59b0d06f2b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F0069673BE15","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — all-degree Groemer face stability and the Type-II near-contact fork

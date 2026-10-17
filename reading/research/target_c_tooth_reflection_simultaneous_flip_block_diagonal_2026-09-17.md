@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_simultaneous_flip_block_diagonal_2026-09-17.md) · source SHA-256 `681cf6c8bdaee080a3a2fd5fdf683be189bd25fc4c5af93fa1e8f3da03d044d4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

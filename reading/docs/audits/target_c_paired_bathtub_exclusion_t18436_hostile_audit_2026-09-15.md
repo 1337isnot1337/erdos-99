@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_paired_bathtub_exclusion_t18436_hostile_audit_2026-09-15.md) · source SHA-256 `cac43ec6d473a2bfb8aca50832bec64242a6adc94812d129d4933cea384b73d4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A71CCE9C278C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — paired-bathtub exclusion of `t<=1.8436`

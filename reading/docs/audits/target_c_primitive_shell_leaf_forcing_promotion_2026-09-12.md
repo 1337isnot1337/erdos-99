@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_primitive_shell_leaf_forcing_promotion_2026-09-12.md) · source SHA-256 `10d9a59af6893150d870e255bfcec2a0c8ace21b3cf4fbd70087e88ce775bb0d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C99212E041F6","canonical":true,"claim_ids":["C-PRIMITIVE-SHELL-LF"],"claim_statuses":{"C-PRIMITIVE-SHELL-LF":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — primitive-shell leaf-forcing promotion audit

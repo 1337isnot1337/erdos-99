@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_train_cut_traffic_independent_audit_2026-10-09.md) · source SHA-256 `adbfa5d6bc062b6e9baff0753c94dfc8d0baa3f3132393d57d9e33a2a707c62b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F544D999283E","canonical":true,"claim_ids":["C-TRAIN-CUT-TRAFFIC-COMPRESSION"],"claim_statuses":{"C-TRAIN-CUT-TRAFFIC-COMPRESSION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.198 — finite train-cut traffic compression

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_block_aware_boundary_forest_trifork_2026-09-18.md) · source SHA-256 `25239a3b66f4dbc9457d0562fa152dba03a920a15a4e20bd39ae04b39748ce70`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -312,26 +312,30 @@ C_K^{\rm blk}:=\sqrt{\frac{\alpha_Kb_*}{6}}.
 Then `PAIR-REUSE` forces at least one of
 
 1. **BLOCK-FACE:**
+   
    ```math
    \beta(H)\ge(C_K^{\rm blk}-o(1))\sqrt D;
-   
    ```
+
 2. **BLOCK-TRUNK:** one compatible common component has actual two-normal endpoint
    displacement at least
+   
    ```math
    (C_K^{\rm blk}-o(1))\sqrt D;
-   
    ```
+
 3. **BLOCK-UPPER:** there is a vertex-disjoint matching of old fully inactive
    outer-face source pairs with
+   
    ```math
    |M_{\rm up}^{\rm blk}|\ge(C_K^{\rm blk}-o(1))\sqrt D,
-   
    ```
+
+   
    ```math
    \sum_{xy\in M_{\rm up}^{\rm blk}}(D-|x-y|)<h_*+o(1),
-   
    ```
+
    and at least the same number of distinct children in `A\setminus F`.
 
 Compared with the preceding gate-count coefficient

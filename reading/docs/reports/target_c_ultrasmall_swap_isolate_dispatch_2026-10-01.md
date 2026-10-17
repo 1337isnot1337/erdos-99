@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_ultrasmall_swap_isolate_dispatch_2026-10-01.md) · source SHA-256 `e6f9f7161f36c3412b33e3c28d8edd493fa04620d5d37ca14984a62a000e8c98`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-03A351C154DD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — sharp long-pair augmentation and isolate dispatch for small swaps
@@ -392,12 +392,13 @@ to these inactive edges. Sections 7–8 specifically block either unsupported up
    the cycle diameters remain, and every inactive pair stays strictly below 10.
    Nevertheless
 
+   
    ```math
    1<|p-z|<1001/1000,\qquad
    |p+\Delta-z|=(999/1000)|p-z|<1.
    \tag{15}
-   
    ```
+
 
    The amplitude is below 1/(2D). Thus upper-distance control, cyclic geometry,
    triangle-free old contacts, and old-contact preservation cannot alone exclude

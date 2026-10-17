@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_endpoint_face_angle_lemma_2026-10-01.md) · source SHA-256 `ed5fad2a9512ee74ca2fbf84e3e9f5e3d92ed999a77f3ea52b0ee914ade8b7e1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8D2F7F838617","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — endpoint face-angle lemma and phase-window bound

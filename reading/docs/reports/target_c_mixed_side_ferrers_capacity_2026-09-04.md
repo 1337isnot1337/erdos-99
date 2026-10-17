@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_mixed_side_ferrers_capacity_2026-09-04.md) · source SHA-256 `247b39567b7e95a8558cce078ebd4f8c419e20050475a2ab3672bb40b2dfe3f4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-35BB456B4F43","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_mixed_side_ferrers_capacity_2026-09-04.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=28d4ef364eb1f54f0a1c1d12892a5c89476a3a04; lifecycle=unreviewed; canonical=false -->

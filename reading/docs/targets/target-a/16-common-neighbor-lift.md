@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/16-common-neighbor-lift.md) · source SHA-256 `411c1dd9f972979029c541ef65c9c249722ac385369d4bb0bf6cdfd7a59c46c7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — triangular-lattice common-neighbor lift
 
@@ -30,31 +30,22 @@ lozenge containing `z` in its interior.
 
 > **Theorem 164.1 (common triangular-lattice neighbor).** Let `x` be generic with
 > respect to the unit triangular lattice, and let `a` be any point satisfying
-> 
-
-```math
+> ```math
 > |x-a|<1.
 > \tag{164.2}
-> 
-```
+> ```
 > Then
-> 
-
-```math
+> ```math
 > \boxed{N_\Lambda(x)\cap N_\Lambda(a)\ne\varnothing.}
 > \tag{164.3}
-> 
-```
+> ```
 > Equivalently, there is a lattice site `y` such that
-> 
-
-```math
+> ```math
 > |x-y|<1,
 > \qquad
 > |a-y|<1.
 > \tag{164.4}
-> 
-```
+> ```
 
 ### Proof
 
@@ -184,38 +175,29 @@ Section 155 gives a strict-conflict matching `M_X` from `X_m` into the genuine s
 
 > **Theorem 164.2 (source-certified scaffold matching).** There are
 > pairwise vertex-disjoint triples
-> 
-
-```math
+> ```math
 > (x_i,a_i,y_i)
 > \in X_m\times A\times Y_{\rm in},
 > \qquad 1\le i\le q,
 > \tag{164.19}
-> 
-```
+> ```
 > such that
-> 
-
-```math
+> ```math
 > \boxed{
 > |x_i-a_i|<1,
 > \quad |a_i-y_i|<1,
 > \quad |x_i-y_i|<1,
 > }
 > \tag{164.20}
-> 
-```
+> ```
 > and
-> 
-
-```math
+> ```math
 > \boxed{
 > q\ge\frac{m-p}{5}
 > >\frac m5-\frac{\pi D}{10}.
 > }
 > \tag{164.21}
-> 
-```
+> ```
 > In particular, the edges `x_i y_i` form a matching in the compatible
 > `X_m--Y_in` scaffold conflict graph, and every one of those scaffold edges has a
 > distinct genuine-source mediator `a_i` that strictly conflicts with both endpoints.
@@ -262,24 +244,18 @@ regime `t>1`, so the radius-one source-backbone theorem applies.
 
 > **Corollary 164.3 (rattler-certified scaffold supply).** Among the triples in the
 > construction above one may choose at least
-> 
-
-```math
+> ```math
 > \boxed{
 > q_R\ge\frac{\max\{0,\tau-p\}}5
 > }
 > \tag{164.24}
-> 
-```
+> ```
 > pairwise vertex-disjoint triples
-> 
-
-```math
+> ```math
 > x_i-r_i-y_i,
 > \qquad r_i\in R,
 > \tag{164.25}
-> 
-```
+> ```
 > satisfying all three strict inequalities in (164.20).
 
 ### Proof

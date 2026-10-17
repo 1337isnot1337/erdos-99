@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_additive_response_separator_obstruction_2026-08-31.md) · source SHA-256 `7b63a7b17b7e61fa99f5ff35491ab7f0eeb5b0f125a33e86503f9d135598ef48`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DE7149C55F0C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C: additive response is impossible with six or more force-visible terminals

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_positive_prefix_thrackle_collapse_2026-09-01.md) · source SHA-256 `b6f34b9294914e5e5a9a42f806f8f1d1f69bf83ea0c94429aa8ccf26c9ae62ff`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F896532565E4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C87: positive prefix-thrackle collapse

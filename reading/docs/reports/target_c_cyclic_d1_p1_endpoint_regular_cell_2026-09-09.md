@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_p1_endpoint_regular_cell_2026-09-09.md) · source SHA-256 `a724c1c9565b07da14902f566a2e7697ba6acb5b6778be2fe973ffe0aa5ce999`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E53BA7A83275","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 — corrected P1 endpoint regular-cell theorem
@@ -27,32 +27,36 @@ Let `e=sp` be a P1 KKT-endpoint zeroed diameter edge. Let `H-e=A\sqcup B` be its
 2. its two incident ordinary unit Minkowski edges change opposite endpoints of `sp` because `e` lies on the common odd-cycle core of both P1 antipodal refinements;
 3. if the `p`-event changes `p` to its shell neighbor `p'`, then `p' in A`; if the `s`-event changes `s` to its shell neighbor `s'`, then `s' in B`;
 4. consequently the shell sides `pp'` and `ss'` are two of the four contact-cycle transitions of the cut, and
+   
    ```math
    |p's|=|ps'|=D;
    \tag{RC.1}
-   
    ```
+
 5. the two neighboring diameter directions are exactly one minimum gap
+   
    ```math
    \delta=2\arcsin\frac1{2D}
-   
    ```
+
    on either side of `e` in projective direction order;
 6. the four points `p,p',s',s` form, after choosing the common side of the diameter line, the exact isosceles diameter-lens cell
+   
    ```math
    |pp'|=|ss'|=1,
    \qquad
    |sp|=|p's|=|ps'|=D,
-   
    ```
+
    and
+   
    ```math
    |p's'|=D-\frac1D,
    \qquad
    p's'\parallel sp.
    \tag{RC.2}
-   
    ```
+
 
 If the relevant `B`-block at `p` and `A`-block at `s` are non-singletons, the only transition choices are the moving sides `f=pq` and `h=rs`; then `p'=q`, `s'=r`, and the original formulas
 

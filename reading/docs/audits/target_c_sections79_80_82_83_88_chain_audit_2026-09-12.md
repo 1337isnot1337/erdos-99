@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_sections79_80_82_83_88_chain_audit_2026-09-12.md) · source SHA-256 `6bc2faa43167f7c7373df84e8aa219dec487136a49ddd19915d9648f620f49ac`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4A8A00F09D74","canonical":true,"claim_ids":["C-HARMONIC-CARRIER-QUAD","C-HARMONIC-CELL-TILING","C-HARMONIC-WRAPPING"],"claim_statuses":{"C-HARMONIC-CARRIER-QUAD":"canonical","C-HARMONIC-CELL-TILING":"canonical","C-HARMONIC-WRAPPING":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — Sections 79, 80, 82, 83, and 88 chain audit

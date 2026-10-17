@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../research/target_c_degree2_fan_exceptional_face_payment_2026-10-02.md) · source SHA-256 `ad120ff6dae94c3cebb3451fa1ed123a818f00e69cf06ea2c676045d81dc48f4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 # Target C: degree-two diameter-leaf fans pay exceptional-face currency
 
@@ -17,10 +19,11 @@ Work in the canonical post-ZF source. Let
 - $`b`$ be the occurrence-counted outer positive-contact-face boundary walk;
 - $`x_B=b-q`$;
 - $`Q`$ be the bounded nonquadrilateral face excess
+  
   ```math
   Q=\sum_{G\ {\rm exceptional}}(\deg G-4).
-  
   ```
+
 
 Consider the exact same-carrier good diameter-leaf fans from the current
 low-$`x_B`$, square-root-matching branch. Let $`U`$ be the number of internal
@@ -529,17 +532,18 @@ when $`x_B=O(\sqrt D)`$.
 
 Combine this with the current degree-three harmonic-return theorem
 ```math
-\texttt{research/target_c_leaf_fan_port_harmonic_return_2026-10-02.md}.
+\texttt{research/target\_c\_leaf\_fan\_port\_harmonic\_return\_2026-10-02.md}.
 ```
 
 In the low-$`x_B`$, square-root-matching branch, the fan population therefore has the
 following reduced alternatives:
 
 1. **exceptional-face branch**
+   
    ```math
    Q\ge(1/10-o(1))D;
-   
    ```
+
 2. **off-carrier harmonic-return branch:** a linear family of canonical fan
    attachment incidences has nonlocal loaded returns with fixed radial support depth;
 3. **large harmonic-cell branch:** one $`\Omega(\sqrt D)`$-diameter attachment cell

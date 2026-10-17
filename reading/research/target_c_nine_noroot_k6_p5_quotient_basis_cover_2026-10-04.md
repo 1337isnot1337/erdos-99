@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_nine_noroot_k6_p5_quotient_basis_cover_2026-10-04.md) · source SHA-256 `aa2575b4e930b28c07b7049b201cafdaaf64142bd71accc3a3c1b3188d3209fc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4aecbbac2eb71c36fc5eaa72d5bda50197fa85ae", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_nine_noroot_k6_p5_quotient_basis_cover_2026-10-04.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "9a753ffe1d8aac7890bc5210f0053ab27b86315f1cac117f85621e36bf0b2347"} -->
 

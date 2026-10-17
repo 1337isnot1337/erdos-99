@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_multigrain_endpoint_capacity_2026-09-12.md) · source SHA-256 `c0bf8ad8b3bbd609702881a1187c68b1c759c17efd897ad9a263fef6f7890501`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c90eb5abe2e2b620d6f90571ce380d2e6f67cfed", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_multigrain_endpoint_capacity_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b4b96a22910b83c0ef3c933b0909047eae75f359b1d26063916d49cdefde5aff"} -->
 

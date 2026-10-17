@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearcircle_central_hole_macroscopic_component_2026-09-09.md) · source SHA-256 `54c4562dd0735d7e60e9738ae20f81abd444e603e8602dba5a669ed32d56f631`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-67A50F87EE8E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_nearcircle_central_hole_macroscopic_component_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=2a1897697a93669ca2c51e2c2e9ea06d1ae89c48; lifecycle=unreviewed; canonical=false -->
@@ -104,7 +104,6 @@ B^\circ\left(0,\frac12\sqrt{1-\mu^2}\right)
 =\varnothing.
 }
 \tag{1.1}
-
 ```
 
 ### Proof
@@ -229,7 +228,6 @@ then
 \frac\pi4\mu^2.
 }
 \tag{CH.4}
-
 ```
 
 This upper bound is independent of `c_I`, `S=sum delta_r`, or how the component diameter is distributed. It is strictly stronger than the isodiametric-sum bound in the near-circle regime.
@@ -268,7 +266,6 @@ Hence
  a_0(\Delta-\zeta).
 }
 \tag{4.2}
-
 ```
 
 Since
@@ -289,7 +286,6 @@ this is
 \left(1-\frac\zeta\Delta\right).
 }
 \tag{4.3}
-
 ```
 
 ---

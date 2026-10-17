@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_degree5_outer_rotation_boundary_normal_form_2026-09-14.md) · source SHA-256 `826963eba93ce917a6e49f71d8413acb82272285298789da3433ae342c2dfa82`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b634ff5a405c57708488456c410cd59afc1a30a6", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_degree5_outer_rotation_boundary_normal_form_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "e8cf526e1d791ca1831604d74dc870a0ec513a3c71b692f30bd5430f2bc64e37"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_singleton_line_geometry_2026-09-22.md) · source SHA-256 `6f8c47404ff96ae8044cb9f3709c79f3978a67d1aef8b412560c97b057c1de19`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "52c26b18acf0cb4517b15e6048223800929f85fb", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_singleton_line_geometry_2026-09-22.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b150ae336133acea56b459aa3cbe139e53505f3dcbc964d5d81c6f6c205eddf3"} -->
 

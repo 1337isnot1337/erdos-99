@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_one_corner_one_vacancy_nonaffine_packet_2026-10-06.md) · source SHA-256 `90e61b1337b8d1947464730f84abb23ad154e14295f40c1264437a7a719cc5d0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-24DBD0FF7980","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: one corner and one vacant target site give a strict packet

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/64-extreme-circuit-transfer-audit.md) · source SHA-256 `e73be2d819b3ed60148206c2be6cb26fbbe0726dbf7f1d160be49a54a2ee52cd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — extreme-circuit transfer audit
 

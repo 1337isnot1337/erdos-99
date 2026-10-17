@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_regular_hexagon_kalmanson_closure_2026-08-31.md) · source SHA-256 `fd43a58a9290f215663d1df3adabdca01c7e5df5b6eb9aa0fb876aad5b5b3580`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5DBAB6192F79","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C selected-stress Kalmanson lemma for the regular six-endpoint matching

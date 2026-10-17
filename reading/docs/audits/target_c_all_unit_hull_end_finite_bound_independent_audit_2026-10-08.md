@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_all_unit_hull_end_finite_bound_independent_audit_2026-10-08.md) · source SHA-256 `5b5394960db06fe385ccbf2d30f8ea8dd9230e8b892810b8fff0e8beb981bd36`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EA36147E2364","canonical":true,"claim_ids":["C-FINITE-HULL-END-ANGULAR-DEFECT-BOUND","C-PENTAGON-FIVE-HULL-END-REGRESSION"],"claim_statuses":{"C-FINITE-HULL-END-ANGULAR-DEFECT-BOUND":"canonical","C-PENTAGON-FIVE-HULL-END-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent audit of PR #663: finite hull-end depletion and pentagon regression

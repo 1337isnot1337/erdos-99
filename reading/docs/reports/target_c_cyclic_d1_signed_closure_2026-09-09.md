@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_signed_closure_2026-09-09.md) · source SHA-256 `174de996210a390786b3981f32c3b4759f1ed4c7a9f17504a259a01a6c55ea2f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

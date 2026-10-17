@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_isolate_host_face_degree7_2026-09-15.md) · source SHA-256 `2b7bbdb17dcb3709df24b44984400790e1d59b5440e9758c14abaeaf5a0ff1fc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "1b0157ba594548b047da6ff15fd56fbbc19121bb", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_isolate_host_face_degree7_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "30a68496a9c3d87ab730a289257e8d95deba625a10402d2da3fa0c0d1e999302"} -->
 

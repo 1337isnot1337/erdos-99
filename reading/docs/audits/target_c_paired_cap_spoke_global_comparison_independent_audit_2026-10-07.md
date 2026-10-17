@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_paired_cap_spoke_global_comparison_independent_audit_2026-10-07.md) · source SHA-256 `bc6bbd031431da0c3e92fd7f466d9177dc9391797d62b84d48b2e0018fee6c70`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3FE10E06DD6A","canonical":false,"claim_ids":["C-PAIRED-CAP-SPOKE-NONGLOBAL-REGRESSION"],"claim_statuses":{"C-PAIRED-CAP-SPOKE-NONGLOBAL-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent audit: paired exterior-cap source and strict smaller-diameter comparison

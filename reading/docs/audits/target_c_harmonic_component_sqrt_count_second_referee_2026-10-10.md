@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_harmonic_component_sqrt_count_second_referee_2026-10-10.md) · source SHA-256 `31767f698d4354ce7764e3d5b1a40f26fe8fa705635297a4a7e85126b3b9e3da`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-70BBC912FFBE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C independent second referee — harmonic component square-root count

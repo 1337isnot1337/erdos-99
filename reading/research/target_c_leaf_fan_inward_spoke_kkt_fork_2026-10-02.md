@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_leaf_fan_inward_spoke_kkt_fork_2026-10-02.md) · source SHA-256 `c857a12abc902b3a1986bfe68f204f8ef8be857e76195030303637c7ea662bda`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C: inward-spoke / stress-flat fork inside an exact diameter-leaf fan
 

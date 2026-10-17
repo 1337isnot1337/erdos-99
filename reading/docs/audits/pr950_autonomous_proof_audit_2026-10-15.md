@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/pr950_autonomous_proof_audit_2026-10-15.md) · source SHA-256 `8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-047AD4339705","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # PR 950 autonomous proof audit and endpoint-cut repair

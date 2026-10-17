@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_multigrain_interface_perimeter_2026-09-05.md) · source SHA-256 `d67b5da56e26148eff484a5e95ce8f8bdab6df56b635b753ee99af14bdd16692`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3746e959022112aaceff899406af33cf5fefbd64", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_b_multigrain_interface_perimeter_2026-09-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "0a3f21474e964fbe9e6da3124198d2d2fcf0d07230fd3fd43babc7d32e94d9ff"} -->
 

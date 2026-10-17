@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/five_block_local_optimality_2026-08-30.md) · source SHA-256 `aca39d6ac7f9ac4ff76b4670447745f201955584644b4bb89e4436ce6af48e78`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c3e1c069d6dc9f2b765f54864d4add57d9c4019a", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/five_block_local_optimality_2026-08-30.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f8ce4734aec871073e18feb670dcb3d6121522f2bf79ff0a4dcbbd49eea24f40"} -->
 

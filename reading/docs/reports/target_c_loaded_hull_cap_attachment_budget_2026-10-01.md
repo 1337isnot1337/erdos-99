@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_loaded_hull_cap_attachment_budget_2026-10-01.md) · source SHA-256 `23856695a5b9ba31044f666fa10dc6edd3d9f7a797b69afc8461c90a43bd5149`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C73F3915E20A","canonical":true,"claim_ids":["C-LOADED-HULL-CAP-BUDGET"],"claim_statuses":{"C-LOADED-HULL-CAP-BUDGET":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — loaded-hull cap attachment budget

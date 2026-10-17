@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_scalar_ledger_compatibility_2026-09-14.md) · source SHA-256 `73e743240a602ad7dc3b68f2ade1d3b0f66b48baafc0a1e331845a21d62b8adb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-194DE1FE1661","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C-II scalar-ledger compatibility audit

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_e43_constrained_fixed_angle_quadrilateral_2026-09-09.md) · source SHA-256 `00ed04ea77c5ce201596f389031836070387ab6fe9d514c162310139c088a921`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 30 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_reinhardt_exact_collapse_2026-09-09.md) · source SHA-256 `1a07f3ff7814068e14e4819f435e2f231b2a675a019ba89427931e4836c982af`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EF15A8A43F18","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic unicyclic phase collapses to exact Reinhardt equality
@@ -518,10 +518,11 @@ The `d_H=0` cyclic source now satisfies simultaneously:
 2. `F-F` is exactly the regular `2q`-gon of circumradius `D`;
 3. all `q` projective diameter directions are spaced exactly by `pi/q`;
 4. every local exterior angle obeys
+   
    ```math
    \theta_b=\deg_H(b)\pi/q;
-   
    ```
+
 5. the normalized KKT polytope is two-dimensional (`s_Z=2`);
 6. every normalized stress keeps all cycle contacts positive and has maximal scalar rank by CY/CG;
 7. the full source still contains `n-q=Theta(D^2)` contact-isolated points in the C65 representative.

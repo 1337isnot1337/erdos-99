@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_swarm_defect_charge_hostile_audit_2026-10-02.md) · source SHA-256 `c719e34ff5826a5ec76b405895b137d7d8677a109b35cf3da069cdbae202b500`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A6DD7DF86ABC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — independent audit of the all-cell convex-bank defect charge

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_attachment_fill_macroscopic_component_correction_2026-09-09.md) · source SHA-256 `36481d775ef5cf4d304a9ab4eb8aca4605887b5084c5b060e4ef71ce39d0542c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-81923D1E427B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — correction to AR: positive-density core forces a macroscopic harmonic component
@@ -316,7 +316,6 @@ Combine MC.6 with (5.5):
 \frac{1-\zeta/\Delta}{\pi}.
 }
 \tag{MC.7}
-
 ```
 
 At the UF crossover

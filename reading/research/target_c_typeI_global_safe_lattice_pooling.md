@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_typeI_global_safe_lattice_pooling.md) · source SHA-256 `2c1ff39f5139fb2c26701d60d2333c7f60a8b7ca7a273f908e319f514624bf60`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "74576836d6a8eb74a49322433ca86353fcdc64ac", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_typeI_global_safe_lattice_pooling.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "1b927436164a6cb3c41abbfd7989c7c30d0cb93f14b6f37962f39c49c89db148"} -->
 

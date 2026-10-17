@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_eppstein_zf_surplus_diameter_coupling_2026-09-11.md) · source SHA-256 `a95dc5ca9f177dc2e653ed8abe42f78f6c0d677ba9563d79675bb7442a4f8f04`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AB776F7EE86A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Eppstein–ZF surplus-to-diameter coupling
@@ -197,11 +197,12 @@ For the three required branches:
 
 * If $`s_Z/D\to\sigma>0`$ and the contact-isolated population is subquadratic,
   then
+  
   ```math
   q/D\ge\pi/2+\sigma+d_H/D-o(1).
   \tag{4.3}
-  
   ```
+
   This rules out interpreting a linear $`s_Z`$ as a purely sparse-diameter
   phenomenon. It does not authorize a release: a row omitted by an extreme
   stress may remain strong under the relative-interior stress.

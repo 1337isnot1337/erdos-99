@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_finite_mixed_core_rigidity_independent_audit_2026-10-07.md) · source SHA-256 `7abe5490ec53f3aab6fea5918db9a9f1869f2b7d483552a83c9f7cddc3e93cba`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5292A4F9B534","canonical":true,"claim_ids":["C-MIXED-CORE-FINITE-RIGIDITY"],"claim_statuses":{"C-MIXED-CORE-FINITE-RIGIDITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: finite rigidity of the mixed contact/diameter core

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_local_diameter_coordinates_promotion_audit_2026-10-05.md) · source SHA-256 `738a0fb7348f4e5ad70ccc341bfbe05b2edf6713a40160c4bb955b341b614b01`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0CEAA832F690","canonical":true,"claim_ids":["C-CONTACT-DIAMETER-COORDINATES"],"claim_statuses":{"C-CONTACT-DIAMETER-COORDINATES":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent promotion audit — Target C local active-diameter coordinates
@@ -324,16 +324,18 @@ Audit.55 forces explicit linear physical/train currencies. Audit.54 supplies a s
 The present theorem adds an exact local dichotomy inside the contact manifold.
 
 - A basis of
+  
   ```math
   m=q-k-1
-  
   ```
+
   old active diameter excesses is a complete local coordinate system.
 - The entire leftover local obstruction is carried by exactly
+  
   ```math
   s_Z+1
-  
   ```
+
   residual active diameter edges.
 - Attempting to make all basis coordinates nonpositive forces positive residual diameter excess, already at first order and in the exact nonlinear weighted identity.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/activation_monomer_regression_2026-08-30.md) · source SHA-256 `2999f15760b7aee4c9f7cb8e732755b4a3056faae48291db6a338f4d01179377`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-582D2B734BAF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Exact activation-forest/monomer-scaffold regression
@@ -54,18 +54,20 @@ that:
    $`D=8L`$;
 2. every old active pair persists and each move creates exactly one new unit pair;
 3. the new unit pairs are the $`L`$ disjoint row paths, with
+   
    ```math
    |F_{\rm act}|=L(L-1)=\frac{D^2}{64}-\frac D8;
    \tag{3}
-   
    ```
+
 4. relative to the unstrained triangular lattice, every $`p_{ij}`$ has exact strict
    conflict neighborhood
+   
    ```math
    N(p_{ij})=\{(i,j),(i+1,j),(i,j+1)\};
    \tag{4}
-   
    ```
+
    throughout the activation sequence; and
 5. the map $`p_{ij}\mapsto(i,j)`$ is a matching saturating the patch shore. Hence
    its scaffold transversal nullity is exactly zero.

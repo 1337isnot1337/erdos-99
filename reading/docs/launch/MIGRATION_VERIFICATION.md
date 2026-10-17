@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/launch/MIGRATION_VERIFICATION.md) · source SHA-256 `bfeb988cd1cec4c5f1a19c2ddcb9316fa6e7c34c6491a6bb69c70b3106dc0f29`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Migration and release verification
 

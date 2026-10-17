@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_sections107_108_full_geometric_hostile_audit_2026-09-12.md) · source SHA-256 `2099f2eb908877a4a7f62507ad6696cb240783bebf4351e87321737c51760b2d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CC0A8BDAD1CC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — Sections 107–108 full geometric hostile audit

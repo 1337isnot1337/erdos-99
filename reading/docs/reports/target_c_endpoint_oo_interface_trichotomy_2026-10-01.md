@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_endpoint_oo_interface_trichotomy_2026-10-01.md) · source SHA-256 `8ebafe1218004c9e131b35dbddae131b40f525cbaa43ca5da7ae6c1ad5737fe6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6077686F2A0E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- endpoint O-O / inactive-interface trichotomy
@@ -52,11 +52,12 @@ For any fixed $`0<\xi<\kappa^2`$, one of the following holds:
 1. at least $`\xi D^2`$ edges of $`G_\partial`$ join two global outer-to-outer
    stopped trains; or
 2. at least
+   
    ```math
    \left(\frac{\kappa^2-\xi}{2C_T}-o(1)\right)D
    \tag{2}
-   
    ```
+
    distinct train-end edge occurrences from one fixed Section-90 phase shore lie
    on actual bounded nonquadrilateral faces of the full positive-contact core.
    All these occurrences have projective directions in one interval of width
@@ -70,17 +71,19 @@ the three-way reduction:
 
 - at least $`\kappa^2D/(8C_T)`$ split-star global O-O trains on one phase shore; or
 - fixed distinct diameter vertices $`v\ne w`$ brace O-O families $`A_v,B_w`$ with
+  
   ```math
   e(A_v,B_w)\ge\frac{\kappa^2}{4C_K^2}D^2,\qquad
   |A_v|,|B_w|\ge\frac{\kappa^2}{4C_K^2C_T}D,
-  
   ```
+
   where $`C_K=\lfloor4K\rfloor+2`$; or
 - at least
+  
   ```math
   \left(\frac{\kappa^2}{4C_T}-o(1)\right)D
-  
   ```
+
   distinct global inactive-face boundary occurrences lie in one inverse-diameter
   phase window.
 

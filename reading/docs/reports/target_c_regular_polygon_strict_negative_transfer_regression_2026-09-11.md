@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_regular_polygon_strict_negative_transfer_regression_2026-09-11.md) · source SHA-256 `6103a4fcb1bfaa6b3385c60ea858cacd69af9e653f8b59b6faebe076c61eb40e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C255C3FC3BF4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: regular polygon realizes the strict-negative transfer phase

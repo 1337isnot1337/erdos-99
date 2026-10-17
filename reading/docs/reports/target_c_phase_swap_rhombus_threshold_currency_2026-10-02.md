@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_phase_swap_rhombus_threshold_currency_2026-10-02.md) · source SHA-256 `b6d511effca7b4bf5f0c5832ea137a2310d60f78bc78c7bb32f3c3d16a0e5faa`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E8F0D7EC4AC2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — phase-swap blockers spend quadratic crossing omissions

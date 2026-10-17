@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_m23_endpoint_structural_propagation_2026-09-14.md) · source SHA-256 `bb1eb5439539790b599d8c90a15f496b5abddc18f7dc276380ca700fee6244f2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 23 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

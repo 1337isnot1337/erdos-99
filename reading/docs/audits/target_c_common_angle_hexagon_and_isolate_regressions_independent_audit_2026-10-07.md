@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_common_angle_hexagon_and_isolate_regressions_independent_audit_2026-10-07.md) · source SHA-256 `446c4adb88f8c7e28b33bfff6fa87a0ac7d7f5eed29d6e5b1cecd100c9717e78`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5161FCF4FFE8","canonical":false,"claim_ids":["C-COMMON-ANGLE-HEXAGON-NONHORN-REGRESSION","C-RETAINED-ISOLATE-COMMON-ANGLE-UPPER-REGRESSION"],"claim_statuses":{"C-COMMON-ANGLE-HEXAGON-NONHORN-REGRESSION":"regression","C-RETAINED-ISOLATE-COMMON-ANGLE-UPPER-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent audit: common-angle hexagon closure and isolate upper check

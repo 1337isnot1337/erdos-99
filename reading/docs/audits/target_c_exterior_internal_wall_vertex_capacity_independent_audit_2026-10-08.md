@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_exterior_internal_wall_vertex_capacity_independent_audit_2026-10-08.md) · source SHA-256 `a2137764277594b1a6fa8061a60e918eaa35b7357e23977f4b0b8bd9598f9fde`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5AAE792D8B7D","canonical":true,"claim_ids":["C-EXTERIOR-INTERNAL-WALL-ONE-GUARD-CAPACITY"],"claim_statuses":{"C-EXTERIOR-INTERNAL-WALL-ONE-GUARD-CAPACITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: one unguarded internal wall vertex in an exterior cell

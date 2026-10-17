@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_explicit_rhombic_train_gap_independent_audit_2026-09-14.md) · source SHA-256 `2d3d0bcddcbbc6de17f136967cbfc187c24ebcf07f33cbe7055852925ad1a6e0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-FFEF3BF5881F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Independent audit — explicit rhombic-train Mantel gap

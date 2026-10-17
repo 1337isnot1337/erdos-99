@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/level_i_closure_run_2026_10_07.md) · source SHA-256 `a2f3730ac3b8d8cf0136fff8847447bd3bd48a7e75c4c6f85af4913fb8639a39`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "eb0c3fd4835d25f1f1b7b825ccc0b9d1f215ad02", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "12f6833725f281ce39a6d04ebcb45630b3a6768f", "source_lifecycle": "not indexed", "source_path": "research/level_i_closure_run_2026_10_07.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a61f31fea8111e856e2e08e8bbef6c97fa51ca202f5740511885f2cd853c51e4"} -->
 

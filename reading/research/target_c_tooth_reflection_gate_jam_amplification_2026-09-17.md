@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_gate_jam_amplification_2026-09-17.md) · source SHA-256 `096a2ac8417816366f54649837b069722c4bb6b0cae74d18c7b04d607d5a1368`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 9 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

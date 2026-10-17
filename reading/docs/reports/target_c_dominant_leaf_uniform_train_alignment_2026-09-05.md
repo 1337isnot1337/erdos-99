@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_dominant_leaf_uniform_train_alignment_2026-09-05.md) · source SHA-256 `d77b1e67ff5be52e6a933a34ca1a585fd6b055e91d1fc035fd505970604a4ca7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CCF44C14A01A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C100: uniform alignment and nesting of a dominant diameter's separators

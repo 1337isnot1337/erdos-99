@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_hull_side_exact_train_capacity_audit_2026-10-04.md) · source SHA-256 `d0169556e724ed33adedcc55beaae354b6d31e296c6f6d0a278fcad34391273b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-94AC16B801A9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: exact hull-side train capacity and the empty October high-t branch

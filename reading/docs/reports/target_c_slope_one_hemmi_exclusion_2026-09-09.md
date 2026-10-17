@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_slope_one_hemmi_exclusion_2026-09-09.md) · source SHA-256 `d4d84d15b0943bba68f466f95d0b2ca8a2df2db0ef95f86a8afc4329aec98526`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-280B255D8CB1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — SHX: sharp Hemmi geometry excludes the RCC slope-one endpoint
@@ -204,11 +206,12 @@ p\ge p_{req}(y):=y-1+\sqrt{4\pi A_{PI}(y)}.}
 SOD gives `y>=1.5336`. On the entire SOD interval, `p_req` is increasing. Indeed:
 
 - for `y<=pi/2`,
+  
   ```math
   p_{req}'(y)
   =1+\frac{\pi\cos y}{\sqrt{2\pi\sin y}}>1;
-  
   ```
+
 - for `y>=pi/2`, `A_PI=1/2`, so `p_req'(y)=1`.
 
 Thus
@@ -403,7 +406,7 @@ p\in[p_2,\pi],
 A(F)/D^2
 \ge
 \frac p2\cos\frac\pi{12}
--rac{\sqrt3}{2}.
+-\frac{\sqrt3}{2}.
 }
 \tag{SHX.12}
 ```

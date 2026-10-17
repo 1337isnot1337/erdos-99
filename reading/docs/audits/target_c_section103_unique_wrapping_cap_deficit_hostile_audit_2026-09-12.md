@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section103_unique_wrapping_cap_deficit_hostile_audit_2026-09-12.md) · source SHA-256 `880bae6dcb7154653247db2d94b2f4aaf3bf9ddf67f64f038dbdc546a34bab31`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B23E5F538839","canonical":true,"claim_ids":["C-UNIQUE-WRAP-CAP-DEFICIT"],"claim_statuses":{"C-UNIQUE-WRAP-CAP-DEFICIT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — Section 103 unique-wrapping cap-deficit hostile audit
@@ -38,18 +38,20 @@ The proof uses only already-canonical facts:
 - Section 83 / `C-HARMONIC-CELL-TILING`: harmonic attachment cells are pairwise
   interior-disjoint, their total area is `pi D^2/4-o(D^2)` in the full-core branch,
   and
+  
   ```math
   \sum_r\sqrt{\operatorname{area}(P_{r,D})}=O(D);
-  
   ```
+
 - Section 88 / `C-HARMONIC-WRAPPING`: every cap-type finite macroscopic limit family
   of diameter at most `mu<1` has total normalized area at most
+  
   ```math
   \mathcal C(\mu)
   ={1\over8}\left[2\pi-k_\mu\sin\theta_\mu-\sin r_\mu\right]
   <{\pi\over4};
-  
   ```
+
 - audit.42 Section 102 is not needed to prove the concentration theorem itself; it is
   only a downstream use of the explicit constants.
 

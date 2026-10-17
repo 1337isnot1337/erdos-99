@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/88-harmonic-wrapping-diameter-audit.md) · source SHA-256 `f4012bcc6a63c668d30692e78006d8035ffed9ba0a9b31de766d71c08e985d80`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — harmonic wrapping and near-disk cell-diameter audit
 

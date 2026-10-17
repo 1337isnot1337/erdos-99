@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/research/README.md) · source SHA-256 `337a412698a275382cafb917615e30c6e1528f2e99189aeb4c296860958bbd6e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Living research director
 

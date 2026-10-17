@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_joint_diameter_cover_exchange_2026-10-12.md) · source SHA-256 `b804a22586186c7162cbff4f028b0b2ec3185e0353f9eb47dcd7d77e57a7e8cd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A339F24C029F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Global joint diameter-cover exchange

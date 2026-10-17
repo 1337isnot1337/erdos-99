@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_close_normal_shared_skeleton_2026-09-18.md) · source SHA-256 `921c9fb61f8718af4178d59cbd7f74abac08c32f8eac219b5d1bd8a6a44e59e7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 6 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

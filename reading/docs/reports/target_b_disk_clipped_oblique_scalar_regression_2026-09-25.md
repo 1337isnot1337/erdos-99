@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_disk_clipped_oblique_scalar_regression_2026-09-25.md) · source SHA-256 `cfad5efc72080e319e13cd1c035cc3d2360699c2200e6f2b8a981765468337a9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c3a82a9c8705b3ff0cdf2f18d7c996ef13d607a4", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_b_disk_clipped_oblique_scalar_regression_2026-09-25.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c6fcd30308d63dffb7b50ff2821c4b554ab4824b602f05b4b25da9919a4ec53b"} -->
 
@@ -76,13 +76,14 @@ unit-separated planar sets `A` of size `n`, with diameter `D` and convex hull
    rhombi;
 5. if `V_miss` is the noncrossing determinant mass of the two-direction
    train system of `U`, then
+   
    ```math
    V_{\rm miss}\ge
    \left({2\over\sqrt3}-{\pi\over4}-o(1)\right)D^2,
    \qquad {2\over\sqrt3}-{\pi\over4}>0.
    \tag{2.1}
-   
    ```
+
 6. every sufficiently small shear chosen as in (2.4), including rational
    angle cosines, has at most two active diameter pairs, while its hull has
    `Omega(sqrt(D))` vertices, all with unit contacts. Its pinned

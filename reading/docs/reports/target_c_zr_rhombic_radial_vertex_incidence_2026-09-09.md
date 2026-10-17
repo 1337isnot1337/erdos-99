@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_rhombic_radial_vertex_incidence_2026-09-09.md) · source SHA-256 `a67c7984f0e4bc3a98a37b2ded5d3b30fcbb12cf37795edf168cd84e5f1bbe4b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 11 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_profile_first_stress_correction_independent_audit_2026-10-07.md) · source SHA-256 `3bf628906bd200f063e3b9b0d91a597cbb309c91e6419c156c86ded43a302da9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CBFFC4B07475","canonical":true,"claim_ids":["C-SIX-SIDED-WALL-ACTIVE-ROW-RANK","C-SIX-SIDED-WALL-PRINCIPAL-STRESS-CORRECTION"],"claim_statuses":{"C-SIX-SIDED-WALL-ACTIVE-ROW-RANK":"canonical","C-SIX-SIDED-WALL-PRINCIPAL-STRESS-CORRECTION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit — fixed-profile active-row rank and principal stress correction

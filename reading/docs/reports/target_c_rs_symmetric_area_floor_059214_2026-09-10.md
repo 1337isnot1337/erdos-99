@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rs_symmetric_area_floor_059214_2026-09-10.md) · source SHA-256 `8fbdd2b231a8a58eb5d7f0606821b42678fd5140ffabb8c7f21bfc508a15d923`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BFE1CD7B65E4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — symmetric force-hull area raises the post-ZF floor
@@ -1089,11 +1089,12 @@ attachment-cell budget, and JC's source cavity upper bound.
 ## 12. Failed routes and no-go results
 
 1. **Exact whole-source Oler reversal.**  The identity
+   
    ```math
    \delta_K+\mathscr O_A
    =c_0P-\frac\pi4\left(\frac{2\sqrt3}{\pi}(n-1)-D^2\right)
-   
    ```
+
    shows that the requested reverse inequality is exactly the finite lower bound
    `D^2 >= (2sqrt(3)/pi)(n-1)`.  FS.1--FS.4 alone do not supply this discrete
    packing-number jump.

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cq_joint_cavity_floor_0593385_2026-09-10.md) · source SHA-256 `68516d151159adbf352054fa0ddba3b7a62a495ff15f8e0716ec63789636d16e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-399220ECC431","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — quadratic cyclic stability raises the post-ZF floor to 0.593386

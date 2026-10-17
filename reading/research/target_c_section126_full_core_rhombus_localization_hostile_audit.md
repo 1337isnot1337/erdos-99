@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section126_full_core_rhombus_localization_hostile_audit.md) · source SHA-256 `95f167b7c3e45f5217c974d7e7cc26d0f326244ac0139e5a15b6920ff2fe4443`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d79eb1b37ec68c39ce899a93f8dc85f4cd337e6a", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section126_full_core_rhombus_localization_hostile_audit.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "aa50238982242786ec97f0e7030a0968d730c712db2441cc1f8d121f996d9d7b"} -->
 

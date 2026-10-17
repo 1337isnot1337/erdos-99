@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_post_zf_train_branching_zero_transfer_2026-09-11.md) · source SHA-256 `d5964196675ef9969b55bcc6d683ab05b181362952d29bea7ea56451de869484`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DCAFC5CA7E9F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — post-ZF branching currency and the zero-transfer forest

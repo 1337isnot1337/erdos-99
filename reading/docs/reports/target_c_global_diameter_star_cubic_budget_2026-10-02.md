@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_global_diameter_star_cubic_budget_2026-10-02.md) · source SHA-256 `a69c5960552d0b2dfa209603f46ebd21c5e1f7ad4fe39482964d0ba52d6767b7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3B1ED5A18AE1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — an additive cubic budget for every actual diameter star
@@ -43,11 +43,12 @@ The new universal result needs only the following inputs.
 3. For a global minimizer, the canonical complete-source area allowance
    from [Section 58, §1](../targets/target-c/58-full-source-geometry-audit.md):
    with `K=conv(A)`,
+   
    ```math
    0\le\delta_K:=\pi D^2/4-\operatorname{area}K
    <{\pi\sqrt3\over4}D.                                      \tag{1}
-   
    ```
+
    Its dependencies are finite Oler, strict translated-lattice comparison,
    and `per(K)<=pi D`. This premise is canonical and does not use C-I, ZR/ZF,
    a full-core hypothesis, or contact minimality.

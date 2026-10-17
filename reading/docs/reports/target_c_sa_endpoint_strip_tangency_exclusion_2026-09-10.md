@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sa_endpoint_strip_tangency_exclusion_2026-09-10.md) · source SHA-256 `ca127b99a9f59b09809c7f3243c5eb6ca9c088baf6c7f2de266604a105c38e74`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-AE90744654B7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — strip/tangency incompatibility excludes the SA/JC endpoint
@@ -160,7 +162,7 @@ The actual-perimeter JC capacity and SJ localization give
 By the defining SJ equality,
 
 ```math
-A_*-rac\pi4\lambda_{SA}^2
+A_*-\frac\pi4\lambda_{SA}^2
 =
 \frac{(\lambda_{SA}+y_*)^2}{4\pi}.
 \tag{2.5}

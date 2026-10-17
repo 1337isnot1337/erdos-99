@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_common_angle_active_diameter_amplitude_independent_audit_2026-10-07.md) · source SHA-256 `06564dfaec7963464a6138df44984cd497dd07b736334f7fee46cf4b627a6991`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2984AA18C6BF","canonical":true,"claim_ids":["C-COMMON-ANGLE-ACTIVE-DIAMETER-AMPLITUDE-GAP"],"claim_statuses":{"C-COMMON-ANGLE-ACTIVE-DIAMETER-AMPLITUDE-GAP":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C: independent audit of the common-angle active-diameter amplitude gap

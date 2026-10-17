@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_inactive_diameter_cubic_moment_2026-10-04.md) · source SHA-256 `013ea08980a06e05c77ea99cf98f15479d750dba429091e0bed7cfac3f00d172`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EDE884D168AE","canonical":true,"claim_ids":["C-GLOBAL-NEAR-DIAMETER-PHASE-PURITY","C-INACTIVE-NEAR-DIAMETER-CUBIC-BUDGET","C-INACTIVE-NEAR-DIAMETER-DEGREE-REGRESSION","C-INVERSE-D-SCALE-PACKET-MATCHING"],"claim_statuses":{"C-GLOBAL-NEAR-DIAMETER-PHASE-PURITY":"canonical","C-INACTIVE-NEAR-DIAMETER-CUBIC-BUDGET":"canonical","C-INACTIVE-NEAR-DIAMETER-DEGREE-REGRESSION":"regression","C-INVERSE-D-SCALE-PACKET-MATCHING":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C: a global cubic budget for inverse-D near-diameter pairs

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_thin_phase_cone_uniqueness_t18687_2026-09-17.md) · source SHA-256 `c47318980678e807887b4f1e3e9fadd9367725da0ee4f97ff88f68cd4bf76532`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 16 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -31,12 +31,9 @@ Second, Theorem DT puts every oriented midpoint step of a train with transverse 
 The row phase and the two possible column phases divide the projective direction circle into exactly three such `pi/3` sectors. After deleting the bounded number of THIN chords lying in inverse-`D` neighborhoods of the three sector boundaries, a constant fraction of the logarithmic braid lies in one open sector. This gives an exact fork:
 
 > **THIN phase-cone uniqueness theorem.** In the macroscopic four-guard normal form there is a pairwise-crossing sub-braid
-> 
-
-```math
+> ```math
 > F_D^{uniq}
-> 
-```
+> ```
 > of size `Theta(log D)` such that one of the following holds uniformly for every chord in the sub-braid:
 >
 > 1. **ROW-UNIQUE:** the chord meets every retained selected row exactly once; or

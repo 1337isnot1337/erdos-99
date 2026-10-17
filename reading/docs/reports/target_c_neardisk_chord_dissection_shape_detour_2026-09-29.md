@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_neardisk_chord_dissection_shape_detour_2026-09-29.md) · source SHA-256 `1da627d2f7a73dc9640a7d5ab1a45a9826798dcea1584b3fe9507cb6b11148d5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-68135CFE7C0C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_neardisk_chord_dissection_shape_detour_2026-09-29.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=aa17984fda7e8a1fc5accf8744f0976fa68c98fb; lifecycle=unreviewed; canonical=false -->

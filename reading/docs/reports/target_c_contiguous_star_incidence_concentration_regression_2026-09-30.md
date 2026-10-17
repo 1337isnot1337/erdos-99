@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_contiguous_star_incidence_concentration_regression_2026-09-30.md) · source SHA-256 `eb45f85ef22f83e642cc6a4b966ca3bd27142433e0ba0fa4bf396f29b1d826a7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1305569AD66E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: concentrated incidence in near-disk contiguous diameter stars

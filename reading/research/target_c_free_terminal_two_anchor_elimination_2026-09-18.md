@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_free_terminal_two_anchor_elimination_2026-09-18.md) · source SHA-256 `2d23cc935b031b60230fd716cfb8601e102988f3108ea08136564a08b6681d4b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C-II — two-anchor elimination either integrates the full train flex or leaves an internal 3-core
 
@@ -24,10 +24,11 @@ This gives an exact dichotomy:
 1. the elimination reaches every bounded exceptional face, in which case the contact
    realization space contains a smooth train-angle manifold of dimension `T-2f`, and
    its non-Euclidean dimension is exactly
+   
    ```math
    T-2f-1=(q-k)-1=h-s_Z-1;
-   
    ```
+
 2. or the process stalls on a nonempty induced set `U` of bounded exceptional faces in
    which every face has at least three B--B transport neighbors inside `U`, while all
    trains from that face to the outer/solved side lie in at most one projective

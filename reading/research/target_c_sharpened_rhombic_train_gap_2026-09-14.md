@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_sharpened_rhombic_train_gap_2026-09-14.md) · source SHA-256 `ec63df24b67afde6e608bcde3da45706b2db561bb4f9dfe66a56143298b844a4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "501ddc59cec974e7f5f8841474ab118d80f9e7d7", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_sharpened_rhombic_train_gap_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d4ba2ee33a1cafd89ebc9798ad75f4f4f5faf80f1fbca6790b8dcc3395b3f615"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/compute-b-two-grain-interface-regressions.md) · source SHA-256 `61f772062f161491ff99bf599a7a57c60d6bc3725f453974dd08bf08cb1d1f7f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # compute-b-two-grain-interface-regressions
 

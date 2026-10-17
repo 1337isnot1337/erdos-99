@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/109-asymptotically-sharp-phase-shores-audit.md) · source SHA-256 `030adb56eceb6396b339b065550a3952774a84991c9ed2fded78fecd34bf631f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — baseline inverse-phase shore extraction
 

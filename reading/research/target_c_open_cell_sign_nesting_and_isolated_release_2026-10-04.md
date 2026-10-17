@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_open_cell_sign_nesting_and_isolated_release_2026-10-04.md) · source SHA-256 `b30e68b131e45f7bc114eba61f19d7b315542ab2ba239d10ad8c17fe12977dca`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C: open-cell sign nesting and isolated-slab release
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_attachment_tiling_defect_2026-09-10.md) · source SHA-256 `5269430b9cfd61ab76923ff0dc4f33d3557edd609e6669dfdb92a3695273b23a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-81101C539ACA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact attachment tiling defect after PA
@@ -304,10 +304,11 @@ A contact-isolated source point cannot lie in a strict unit rhombus by the C49/C
 It also cannot lie in one of the triangular pockets. Let the triangle have two sides of length one and base length `ell`, with `1<ell<2`. The covering radius of its three vertices over the triangle is strictly less than one:
 
 - if the triangle is acute, its circumradius is
+  
   ```math
   R=\frac1{2\sqrt{1-\ell^2/4}}<1
-  
   ```
+
   because acuteness here implies `ell<sqrt(2)`;
 - if it is right or obtuse, the farthest point from the nearest vertex occurs no farther than half the longest side, and `ell/2<1`.
 

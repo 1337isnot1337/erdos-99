@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_hidden_edge_rsr_dd_explicit_surplus_0598366_2026-09-10.md) · source SHA-256 `ad9e0bd0fea9f6c2b7e6b45f9907516a81838a005a8913ca3fba6bb390e2bd8f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -389,7 +391,7 @@ Discarding the positive final term in (4.5),
 ```math
 F_y
 >
-1-rac{91}{100}-\frac{45}{784}
+1-\frac{91}{100}-\frac{45}{784}
 =
 \boxed{\frac{639}{19600}>0.}
 \tag{4.10}

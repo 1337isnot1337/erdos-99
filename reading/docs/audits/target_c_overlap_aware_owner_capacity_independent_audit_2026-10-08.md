@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_overlap_aware_owner_capacity_independent_audit_2026-10-08.md) · source SHA-256 `5ef20be7acb2d2e657cbfc12f22f415d4505094b5ce3578da5a07a1c7f629c2a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B248C3CED18A","canonical":true,"claim_ids":["C-OO-OVERLAP-AWARE-ROOT-RUN-CAPACITY"],"claim_statuses":{"C-OO-OVERLAP-AWARE-ROOT-RUN-CAPACITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: overlap-aware owner root/run capacity

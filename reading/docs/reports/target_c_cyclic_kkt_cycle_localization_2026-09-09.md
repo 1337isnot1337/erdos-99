@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_kkt_cycle_localization_2026-09-09.md) · source SHA-256 `03861b1e00677bde0ef1d059730b538e36d98e80f05a2a14782214dc70419f57`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 9 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -130,11 +132,12 @@ where
 
 - `U` is a signed permutation matrix;
 - `S` is the antiperiodic difference operator
+  
   ```math
   (Sz)_t=z_{t+1}-z_t,
   \qquad z_q=-z_0.
-  
   ```
+
 
 Order the contact weights according to the corresponding transition rows and put
 
@@ -426,7 +429,7 @@ Thus:
 
 ```math
 \boxed{
-\text{every KKT extreme in the `d_H=0` equality class has a diameter forest support.}
+\text{every KKT extreme in the `d\_H=0` equality class has a diameter forest support.}
 }
 \tag{6.2}
 ```

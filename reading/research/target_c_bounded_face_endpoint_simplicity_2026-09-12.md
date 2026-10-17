@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_bounded_face_endpoint_simplicity_2026-09-12.md) · source SHA-256 `7bc377c455d215ffc7a57b7b52d328ce5244323e7f5734aed3cd8540a1774afc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2b48510071d9c20f6399ab457095e34e88a6c222", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_bounded_face_endpoint_simplicity_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f99fe319273d97c8179b611e38c3ac7801226b570fb1deaebc056bceeb3570e4"} -->
 

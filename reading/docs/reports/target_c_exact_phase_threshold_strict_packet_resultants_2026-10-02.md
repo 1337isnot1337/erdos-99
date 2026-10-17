@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_phase_threshold_strict_packet_resultants_2026-10-02.md) · source SHA-256 `204f16bb5b540a2aab2e34f5a3303ac99f21e993edc412a60d17aeb4166a055b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-074CF0B1E689","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- strict threshold packet resultants and one-peak KKT cuts

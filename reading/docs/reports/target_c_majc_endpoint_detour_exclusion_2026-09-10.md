@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_majc_endpoint_detour_exclusion_2026-09-10.md) · source SHA-256 `73ed874f146a9f4950c2d91e93fa43d00e062beeb5937ca97f72cd656c8e95af`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A5C4E213A8B0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_majc_endpoint_detour_exclusion_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=f32254176f3bf2237ec52a353cd8d69d4a6632fb; lifecycle=unreviewed; canonical=false -->

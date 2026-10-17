@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_unconditional_max_aperture_corridor_t18687_2026-09-17.md) · source SHA-256 `1f31ed3f4ed329b4c5aa4a0d167b62604613e9f4ff8ac3bef1298a1401d7e3cb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

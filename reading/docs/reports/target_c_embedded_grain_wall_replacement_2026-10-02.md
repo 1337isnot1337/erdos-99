@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_embedded_grain_wall_replacement_2026-10-02.md) · source SHA-256 `265a8fcd62b956fc549a9a90c11e9528916d6ebf00af06be1fa12eee16f8f3a5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-658A4B17C603","canonical":true,"claim_ids":["C-EMBEDDED-WALL-REFILL"],"claim_statuses":{"C-EMBEDDED-WALL-REFILL":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — exact finite replacement inside an embedded rhombic grain

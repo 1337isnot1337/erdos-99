@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_full_source_voronoi_defect_spacing_debit_2026-10-08.md) · source SHA-256 `50fe68821570c358a240cd75ba8c149dca59f6c45f4a3ad3556cd993f7c9c51e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "e1ec0eda3590643daf2a4fef4d8542ee7174abb5", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "871c56111c479d536b17a51d21fcd04fa86d8931", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_c_full_source_voronoi_defect_spacing_debit_2026-10-08.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "790afc3b6f832f27dd29d64cc6f1769d38235ba4f446a79f8d65a6388603c2f0"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_local_phase_bracket_fusion_t18687_2026-09-17.md) · source SHA-256 `2c868296f9a89967c073f364d8fe0c06d751b704374d46ea78afe1fa0ddea197`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a252bd07adf7a4960b13e3820d4e3d01a034e68f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_local_phase_bracket_fusion_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "301b850f7f7e2d1cd2332f64c3d1a5fc5ebe43342ed3f6c32d034403800e97bb"} -->
 

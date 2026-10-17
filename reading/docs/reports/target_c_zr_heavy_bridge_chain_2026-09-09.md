@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_heavy_bridge_chain_2026-09-09.md) · source SHA-256 `5e3665298f59a866e98025e5e446cf17db8a11c5a658b3af50872bb5548219cc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F724A8F6378B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — bridge-dominant stress forces a long heavy chain
@@ -95,16 +95,18 @@ where `w_e` is the total active diameter weight crossing the bridge cut.
 Under (1.1):
 
 1. **Bounded heavy-antichain width.** Every antichain of eta-heavy bridge edges has cardinality at most
+   
    ```math
    \boxed{
    W_\eta:=\left\lfloor\frac{2}{c_\eta}\right\rfloor
    =\left\lfloor\frac{8\pi}{\eta}\right\rfloor.
    }
    \tag{ZBC1}
-   
    ```
 
+
 2. **Linear nested chain.** The eta-heavy bridge edges contain a single chain in the bridge-tree ancestor order of length `L_eta` satisfying
+   
    ```math
    \boxed{
    L_\eta
@@ -114,8 +116,8 @@ Under (1.1):
    \frac{\eta^2}{16\pi}D.
    }
    \tag{ZBC2}
-   
    ```
+
    The last displayed lower bound is understood as a real lower bound; the integer chain length is at least its ceiling when necessary.
 
 Now also assume the C66 near-zero phase and `D epsilon -> 0`. Root the bridge tree at the contact block containing `z`. Then for all sufficiently large `D`:
@@ -123,25 +125,28 @@ Now also assume the C66 near-zero phase and `D epsilon -> 0`. Root the bridge tr
 3. **Every eta-heavy cut is crossed by the stress star.** Every eta-heavy bridge is crossed by at least one active diameter edge incident to `z`.
 
 4. **One diameter edge crosses the entire heavy chain.** If
+   
    ```math
    e_1<e_2<\cdots<e_{L_\eta}
    \tag{2.1}
-   
    ```
+
    is a deepest-oriented eta-heavy chain, there exists an actual diameter edge `zk in H` such that the bridge-tree path from the block of `z` to the block of `k` contains all `e_1,...,e_{L_eta}`.
 
 5. **Near-zero geometric refinement.** Combining with ZBL, the chain can be chosen so that every chain bridge has
+   
    ```math
    \operatorname{dist}(z,\ell_{e_j})=o(D),
    \tag{2.2}
-   
    ```
+
    and for every fixed `xi>0`, all but `o(D)` of its bridges satisfy
+   
    ```math
    \bigl||u_j-z|-|v_j-z|\bigr|>1-\xi.
    \tag{2.3}
-   
    ```
+
 
 Thus one actual diameter pair has a contact bridge-tree route containing a linear number of `Theta_eta(D)`-stress, macroscopically radial bridge edges.
 
@@ -324,16 +329,13 @@ The global face endpoint remains
 For the bridge-dominant near-zero branch, ZBC sharpens the geometric substitute to:
 
 > **BC — deep radial diameter-route exclusion.** For every fixed `eta>0`, no sufficiently large lexicographically normalized triangle-free global minimizer can have an actual diameter pair `z,k` whose bridge-tree route contains `Omega_eta(D)` contact bridges satisfying
-> 
-
-```math
+> ```math
 > \alpha_e=\Omega_\eta(D),
 > \qquad
 > \operatorname{dist}(z,\ell_e)=o(D),
 > \qquad
 > \bigl||u-z|-|v-z|\bigr|=1-o(1)
-> 
-```
+> ```
 > for all but `o(D)` of them, while the intervening loaded/transverse structure carries only `o(1)` total non-star diameter weight.
 >
 > It is enough to derive an `Omega(1/D)` response defect, a strict sub-`D` competitor, or the face inequality (5.1).

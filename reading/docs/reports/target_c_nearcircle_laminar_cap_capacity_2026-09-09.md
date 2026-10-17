@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearcircle_laminar_cap_capacity_2026-09-09.md) · source SHA-256 `0ffb09c5008b4ccfb23070415c4340d4d0c9d01d4661e03bf10efb954be99853`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-354FEE267642","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_nearcircle_laminar_cap_capacity_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=c376078579c6425be2ab9b091cca99a91546ac58; lifecycle=unreviewed; canonical=false -->
@@ -284,7 +284,6 @@ Therefore:
 \le\mathcal C(\mu).
 }
 \tag{LC.5}
-
 ```
 
 This is the noncrossing refinement of CH.4.

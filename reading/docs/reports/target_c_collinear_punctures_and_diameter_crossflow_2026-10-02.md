@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_collinear_punctures_and_diameter_crossflow_2026-10-02.md) · source SHA-256 `09c38a1c302a6b2d571ba9252e8937730d117beb25ef8a35bf53cc1b9a338aca`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3FC66397D3CC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — source seam diameter budget and collinear crossflow

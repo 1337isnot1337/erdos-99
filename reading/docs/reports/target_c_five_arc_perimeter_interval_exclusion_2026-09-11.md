@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_five_arc_perimeter_interval_exclusion_2026-09-11.md) · source SHA-256 `148fd583fed1ea69c1235203239fda1b3d7ef623cbe4fabead1d8f9ffb6159e4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DE9E6E3F288D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Five-arc attachment phase: a full interval excluded by perimeter capacity

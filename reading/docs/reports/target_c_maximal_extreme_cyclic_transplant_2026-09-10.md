@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_maximal_extreme_cyclic_transplant_2026-09-10.md) · source SHA-256 `c4dd2edc095123cf44a3cd072f35dbb2bb968ebb94004972bf693f305407d008`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D65C47915FEE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_maximal_extreme_cyclic_transplant_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=61187266eeb9e6425ff55252916de2e78d56b4cc; lifecycle=unreviewed; canonical=false -->

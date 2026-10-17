@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section121_local_face_globalization.md) · source SHA-256 `e67b97b3c3399819ea6324b062751811254252de4a06ec11dbba897c502f7f2b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c2b5751b11eb230a831de3438825120dafeac7d0", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section121_local_face_globalization.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "7bf8f1fd7987df97a0ee62e5b1cbd3ca086a1756b0a87c3aa9ed35440403a8d7"} -->
 

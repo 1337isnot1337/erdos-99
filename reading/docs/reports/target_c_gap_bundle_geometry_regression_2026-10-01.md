@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_gap_bundle_geometry_regression_2026-10-01.md) · source SHA-256 `f0bb98edff05d8603b3788dd7d68957be07f15547f03dfdcb17bcbfdffdef814`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-20E8B3C5C18D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_gap_bundle_geometry_regression_2026-10-01.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=d43e02c466413b4bfe243cf03b2cd62731381cce; lifecycle=unreviewed; canonical=false -->

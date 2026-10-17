@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearcircle_no_loaded_chords_2026-09-09.md) · source SHA-256 `59a0cee3e6b60b69e1748e7b2cd2d4244c20cb0f170aed8434947cbd8747e379`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-671E8FD131F6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_nearcircle_no_loaded_chords_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=58e61418cd901140e118d25d694a100365a11e69; lifecycle=unreviewed; canonical=false -->

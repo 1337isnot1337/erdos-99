@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sorting_radial_lifting_finite_stress_checkpoint_2026-10-07.md) · source SHA-256 `15c1e7e97fe8be17cf9bf4546a2cd35f8a104f673bf11391e67ae42fa637a139`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A042C91956A5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: finite radial-lifting stress checkpoint

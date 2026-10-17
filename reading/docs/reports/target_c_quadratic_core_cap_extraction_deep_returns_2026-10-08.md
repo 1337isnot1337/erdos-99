@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_quadratic_core_cap_extraction_deep_returns_2026-10-08.md) · source SHA-256 `d950294d1cdbd8d2fd88d944c0921af51a77cbd56e53f63ddb8132ec8622285e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "4844913807b6e907541ca446a0a36a673fdc2d45", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "eca2414c17be705857e3922d9302393e7bd0265f", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_c_quadratic_core_cap_extraction_deep_returns_2026-10-08.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "35cedb4005ef51cf38b12ee1fc672b33a7a7f4ee428a93758b1f4376fa2cead3"} -->
 
@@ -80,11 +80,12 @@ No such step is proved here; the subquadratic-core branch remains separate.
 - [Audit.133](../audits/target_c_rhombus_bulk_separator_independent_audit_2026-10-08.md):
   any `R` actual rhombi in `I` yield at least `ceil(F(R))` vertex-disjoint
   contact paths to distinct actual attachments, where
+  
   ```math
   F(R)={\sqrt{25+4cR}-5\over2c},\qquad c={8\pi\over\sqrt3}.
   \tag{CE1}
-  
   ```
+
 - The additional Type-II corollary in Section 6 uses
   [Section 80](../targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md)
   for rhombic saturation of `F` and

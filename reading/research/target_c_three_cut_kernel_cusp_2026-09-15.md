@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_three_cut_kernel_cusp_2026-09-15.md) · source SHA-256 `f7e9d15d937288e2b748a1340729603936e0b99ff6c7e9dd8a0766be788c5cb7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

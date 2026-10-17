@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_lb154_lossless_global_propagation_2026-09-14.md) · source SHA-256 `b816902428ae65a4103acb05cd237db39a78eb15cef52a5512db3866d77b413d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "6f2b51af74c6c213dcdac268f3e26291d306ccc9", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_lb154_lossless_global_propagation_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "8ed7403ebbb217306ff314daf19c22684983d8169350c61c69e415c0e696b020"} -->
 

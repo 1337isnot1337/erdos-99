@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_free_terminal_live_complement_or_detour_2026-09-18.md) · source SHA-256 `c4c5c65503b3d43f44d1a057da8f196337cfaf81ee9afedb7158c29c39accee6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "159dfc35623810ab952e17c86bd6d82994213ea4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_free_terminal_live_complement_or_detour_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a90a542d24222c39fa8c382dd5e709b1858b6ad6d8fa3621b701f5e735983b04"} -->
 

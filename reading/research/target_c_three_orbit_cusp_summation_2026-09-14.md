@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_three_orbit_cusp_summation_2026-09-14.md) · source SHA-256 `757e95eb756decdb81d22016240edce9e05618ca4a6f3efb89ff4d2a16d95df9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "aac805f3e568017e944754928a5b95b15d63c784", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_three_orbit_cusp_summation_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "db89414115c7fc12778d901516d2e3dd49e1187b0eb64d70b67bb94969099d95"} -->
 

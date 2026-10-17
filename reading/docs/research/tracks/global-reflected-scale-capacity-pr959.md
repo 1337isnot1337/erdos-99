@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/global-reflected-scale-capacity-pr959.md) · source SHA-256 `4312297cee845524b50bea4989ca8536dc17329ee7a289d834853b2680ff3035`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Reflected-scale endpoints and capacity regressions (source PR #959)
 

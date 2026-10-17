@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_good_hull_singleton_face_charge_2026-10-05.md) · source SHA-256 `c666a87981822f85eb157d46eedb7066047f924c69e0af8be1c924f2d70b0d62`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-18BD6F82422C","canonical":true,"claim_ids":["C-GOOD-HULL-SINGLETON-CHARGE"],"claim_statuses":{"C-GOOD-HULL-SINGLETON-CHARGE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C-II: good-hull singleton face charge
@@ -89,10 +89,11 @@ The finite charge uses only:
 2. the current-main exact hull-side occurrence audit:
    every unit loaded-hull side is a good distinguished outer interval and the
    total terminal-occurrence capacity of bad outer intervals is
+   
    ```math
    B_{\rm bad}=x_B+m_B;
-   
    ```
+
 3. canonical stopped-train geometry: every bounded quadrilateral contact face
    is a strict unit rhombus, and a singleton train edge belongs to no strict
    rhombus.

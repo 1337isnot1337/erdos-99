@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_inactive_container_augmentation_obstruction.md) · source SHA-256 `2f32a79503ce3f1e53e4e68552ab0bdf6bf9bcc789571ea2211b50aa4bacd7f1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 14 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

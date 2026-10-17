@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fs_cyclic_area_perimeter_2026-09-10.md) · source SHA-256 `0976f8438bdac9c46684239eae6548a1887989679b28b114a16f8eff86efa2cf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B801CCF87A83","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fs_cyclic_area_perimeter_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=48ca95324b34a6ab29bd74b03b6e8363979daccd; lifecycle=unreviewed; canonical=false -->

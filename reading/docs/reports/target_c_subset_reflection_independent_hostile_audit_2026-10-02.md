@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_subset_reflection_independent_hostile_audit_2026-10-02.md) · source SHA-256 `2df5e5d5e197f8aa2eaa2e53253aea908f9ac89fb5f9b1da9e7b0c5a00ca909c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-ED87C16728B2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- independent hostile audit of subset reflections

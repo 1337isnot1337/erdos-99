@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_one_deficit_sector_peeling_independent_audit_2026-10-07.md) · source SHA-256 `03e39d757b7129e265ececb681503d3edec3af4bf6f0d931bf8cce72e089f086`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A6F2F48ADC03","canonical":true,"claim_ids":["C-ONE-DEFICIT-ALL-M-SOURCE-EXCLUSION","C-ONE-DEFICIT-ALL-M-STRICT-PACKET","C-ONE-DEFICIT-PROFILE-ROOT","C-SIX-SIDED-WALL-OLER-POPULATION-CAP"],"claim_statuses":{"C-ONE-DEFICIT-ALL-M-SOURCE-EXCLUSION":"canonical","C-ONE-DEFICIT-ALL-M-STRICT-PACKET":"canonical","C-ONE-DEFICIT-PROFILE-ROOT":"canonical","C-SIX-SIDED-WALL-OLER-POPULATION-CAP":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit — Target C all-M one-deficit sector peeling

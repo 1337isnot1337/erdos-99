@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_outer_detour_oler_endpoint_regression.md) · source SHA-256 `e648bf368d18bd3c39b11d9a90001c91266eca6b86b494ade38434ea41498489`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "6a0a4bf3e71863d84ccd93a376799674aeea9f83", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_outer_detour_oler_endpoint_regression.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f7eb249019c8ea5b3787ed66161a6de2bb8436a668d9a8e04b04c4c088429e1d"} -->
 

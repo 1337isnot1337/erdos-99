@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_phase_threshold_edgewise_kkt_balance_2026-10-02.md) · source SHA-256 `71208b1e14d84c69afee63335d12c15c02f690ff2f97fa7e518c5162f519cfbf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C1E0FE63F482","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — edgewise KKT balance in the threshold staircase

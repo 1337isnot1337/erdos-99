@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_singleton_star_response_stress_2026-09-09.md) · source SHA-256 `8c3d355d9042466b3e05148c86c60e423c5c797e3c44835b539e5c06c2eb351d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1C6FEAC6C58E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — SSR: singleton harmonic stars convert mechanical stress into uniformly short response

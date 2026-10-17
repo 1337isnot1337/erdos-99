@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-iterative-pruning-atomic-gap.md) · source SHA-256 `c002e2c9ce67f05b16bb433b42f7e62e1924da207df3bad6348f5e7898c3af4d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C-II — iterative-pruning pair payment and matched atomic gap
 

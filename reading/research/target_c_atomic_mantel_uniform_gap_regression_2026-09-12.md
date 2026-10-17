@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_atomic_mantel_uniform_gap_regression_2026-09-12.md) · source SHA-256 `731157d93597e3e8697413c9b69725d835942ed81c150729f3202137b30397c3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — regression: endpoint nonattainment does not automatically give a uniform atomic-mass gap
 

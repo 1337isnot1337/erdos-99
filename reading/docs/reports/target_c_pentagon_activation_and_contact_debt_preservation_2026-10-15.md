@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_pentagon_activation_and_contact_debt_preservation_2026-10-15.md) · source SHA-256 `fd875ab6a3f146c7314b780fa62cd607eb41b204fb4174c96b44384b14422472`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E07F9CE44E38","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: preserved pentagon activation and contact-debt obstructions

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_flat_center_edge_trichotomy_2026-09-14.md) · source SHA-256 `820b718197d5606ab4c3977807a13c3416810d03f0bce7859275f5bec99b916f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "acc101825bfefaffbe7b9f0fe18471a16714dcf4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_flat_center_edge_trichotomy_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "054ef7020ec3611cf4c6fe0fcc7f03d6a81d04f32d8e59bdde8b54e55e34af7a"} -->
 

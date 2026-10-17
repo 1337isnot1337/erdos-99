@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_chain_prefix_kkt_circulation_2026-09-01.md) · source SHA-256 `d2cd1790bd46646b9df2e2bfbca7e7538d452a45f516fed1ffb2592d2fe669c1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BB887429B149","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C84: KKT circulation on the chain prefix graph

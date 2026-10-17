@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_g0077_atomic_and_residual_floor_hostile_audit_2026-09-15.md) · source SHA-256 `9e8a9a6384659209ad40ad59687e7fdfe97f62e365aeae8f7e917587162a1dc4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-64C5442AA2A2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — matched `g=0.0077` and residual-coupled floor `1.843577`

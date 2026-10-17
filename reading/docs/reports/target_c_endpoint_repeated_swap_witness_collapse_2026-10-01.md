@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_endpoint_repeated_swap_witness_collapse_2026-10-01.md) · source SHA-256 `9e669569a3476343a927e2dd9881ace22ad6664dc444e4fc1c3a5e332c541fd4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DA73645EFD6D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- repeated endpoint-swap witnesses collapse to an ultra-near-unit row rail
@@ -39,30 +39,33 @@ Then:
 
 1. one unordered source pair can be selected at at most two retained interfaces;
 2. if the same pair is selected at two distinct interfaces, then
+   
    ```math
    \boxed{
    |xy|-1=O_K(D^{-2})
    }
    \tag{3}
-   
    ```
+
    in the near-unit case, or
+   
    ```math
    \boxed{
    D-|xy|=O_K(D^{-2})
    }
    \tag{4}
-   
    ```
+
    in the near-diameter case;
 3. every twice-selected pair also satisfies
+   
    ```math
    \boxed{
    d_{\mathbb{RP}^1}([xy],[u_*])=O_K(D^{-1}),
    }
    \tag{5}
-   
    ```
+
    where $`[u_*]`$ is the common row-direction window;
 4. the family of all twice-selected pairs is already a matching;
 5. for fixed $`K`$, only $`O_K(1)`$ source pairs can satisfy simultaneously

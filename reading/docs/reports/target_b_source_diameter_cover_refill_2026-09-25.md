@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_source_diameter_cover_refill_2026-09-25.md) · source SHA-256 `36c470527f506afb31c22698ca42eb91211b9caa1b6d2eecaf8edcfd508903a9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cf73d2d0c000f170278351eb806782301d3e6ada", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_b_source_diameter_cover_refill_2026-09-25.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "aa31ca2bb5815bdeadcdd5239cfe31dc74eff9ea319bd013152d13d45c30e3ff"} -->
 

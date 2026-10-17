@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/23-locked-crosscut-existence.md) · source SHA-256 `7733ac57c9c8f05b641d983b2698700a57b2b4821300dbd8098b9ba69d2fd972`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — locked stress forces a proper response crosscut
 
@@ -120,23 +120,17 @@ arc.
 > **Theorem 171.3 (locked contact crosscut exists).**  If `m^*>3`, the positive-
 > contact component `K_T` contains a locked contact crosscut in the sense of Section
 > 169: a simple positive-contact path
-> 
-
-```math
+> ```math
 > Q=(q_0,\ldots,q_L)
 > \tag{171.4}
-> 
-```
+> ```
 > with
-> 
-
-```math
+> ```math
 > q_0,q_L\in\partial K^*,
 > \qquad
 > |Q|\setminus\{q_0,q_L\}\subset\operatorname{int}K^*.
 > \tag{171.5}
-> 
-```
+> ```
 
 ### Proof
 
@@ -182,9 +176,7 @@ the actual-response locked branch for every `m^*>3`.
 
 > **Corollary 171.4 (locked-branch crosscut bound).**  There is a positive-contact
 > crosscut `Q` for which
-> 
-
-```math
+> ```math
 > \boxed{
 > \zeta
 > \ge
@@ -193,16 +185,12 @@ the actual-response locked branch for every `m^*>3`.
 > -|W_Q|,
 > }
 > \tag{171.8}
-> 
-```
+> ```
 > with
-> 
-
-```math
+> ```math
 > \boxed{|W_Q|\le5|V(Q)|.}
 > \tag{171.9}
-> 
-```
+> ```
 
 The remaining locked-branch obligation is now purely quantitative.  Proper-crosscut
 existence is no longer open.  One must derive enough side imbalance relative to the

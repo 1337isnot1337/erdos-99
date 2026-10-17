@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearchain_atomic_shell_2026-09-04.md) · source SHA-256 `e2881c0bf485d78fc26e34c77fbea4434a1116dfbfaf76fe9d502964a41783aa`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-04ADDCA32F32","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_nearchain_atomic_shell_2026-09-04.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=1273c77a52cc53ef4160169d3be7bce026448c34; lifecycle=unreviewed; canonical=false -->

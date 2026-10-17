@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/17-plateau-response-lift.md) · source SHA-256 `07a55cd61e593aa17d68a984982809bd7c4cf6f064c513e7a5cd7226d6fe2777`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — plateau-endpoint source/response lift
 
@@ -52,23 +52,17 @@ p=\widehat p_H=\alpha_1(H)-N,
 ## 165.1 Uniform alignment for the whole `d`-plateau
 
 > **Theorem 165.1 (plateau-wide hull alignment).** Let `q` be any cardinality with
-> 
-
-```math
+> ```math
 > D(q)=d,
 > \tag{165.5}
-> 
-```
+> ```
 > and let `X_q` be any `q`-point global optimum of diameter `d`, with
 > `K_q=conv X_q`. After aligning a circumcenter of `K_q` with the circumcenter of `H`
 > used in Section 155,
-> 
-
-```math
+> ```math
 > \boxed{K_q+\mathbb B\subseteq H.}
 > \tag{165.6}
-> 
-```
+> ```
 > Thus every optimum on the entire `d`-plateau is placeable inside the genuine source
 > hull with a full unit collar.
 
@@ -208,34 +202,23 @@ The full response conflict graph has left shore `X^*` and right shore
 `Y_in=Z sqcup O` before the Schur contraction.
 
 > **Theorem 165.2 (response-shore source certification).** There is a subset
-> 
-
-```math
+> ```math
 > X_{\rm src}\subseteq X^*
 > \tag{165.23}
-> 
-```
+> ```
 > with
-> 
-
-```math
+> ```math
 > \boxed{|X_{\rm src}|\ge m^*-p}
 > \tag{165.24}
-> 
-```
+> ```
 > and an injection
-> 
-
-```math
+> ```math
 > \sigma:X_{\rm src}\longrightarrow A
 > \tag{165.25}
-> 
-```
+> ```
 > such that, for every `x in X_src`, there is a lattice site
 > `y_x in Y_in` satisfying
-> 
-
-```math
+> ```math
 > \boxed{
 > |x-\sigma(x)|<1,
 > \qquad
@@ -244,8 +227,7 @@ The full response conflict graph has left shore `X^*` and right shore
 > |\sigma(x)-y_x|<1.
 > }
 > \tag{165.26}
-> 
-```
+> ```
 > In particular every vertex of `X^*` except at most `p` is incident to a genuine
 > response-scaffold edge that shares a strict source conflict with a distinct source
 > point.
@@ -263,21 +245,15 @@ The lattice sites `y_x` need not be distinct. Using the response-graph lattice-s
 degree bound gives a disjoint subfamily.
 
 > **Corollary 165.3 (vertex-disjoint response certificates).** There are at least
-> 
-
-```math
+> ```math
 > \boxed{q_{\rm resp}\ge\frac{m^*-p}{5}}
 > \tag{165.27}
-> 
-```
+> ```
 > pairwise vertex-disjoint triples
-> 
-
-```math
+> ```math
 > (x_i,a_i,y_i)\in X^*\times A\times Y_{\rm in}
 > \tag{165.28}
-> 
-```
+> ```
 > satisfying all three strict inequalities in (165.26).
 
 ### Proof
@@ -305,44 +281,32 @@ The Schur response `S` has precisely the boundary nonbasis columns `C^partial`.
 
 > **Corollary 165.4 (almost every Schur terminal has a source certificate).** There is
 > a subset
-> 
-
-```math
+> ```math
 > C^\partial_{\rm src}\subseteq C^\partial
 > \tag{165.31}
-> 
-```
+> ```
 > with
-> 
-
-```math
+> ```math
 > \boxed{
 > |C^\partial\setminus C^\partial_{\rm src}|\le p
 > }
 > \tag{165.32}
-> 
-```
+> ```
 > such that each `c in C^partial_src` has a distinct source label `a_c in A` and at
 > least one response-lattice neighbor `y_c in Z sqcup O` with
-> 
-
-```math
+> ```math
 > |c-a_c|<1,
 > \qquad |c-y_c|<1,
 > \qquad |a_c-y_c|<1.
 > \tag{165.33}
-> 
-```
+> ```
 > Moreover at least
-> 
-
-```math
+> ```math
 > \boxed{
 > \frac{\max\{0,|C^\partial|-p\}}5
 > }
 > \tag{165.34}
-> 
-```
+> ```
 > Schur terminals admit such certificates with pairwise distinct source labels and
 > pairwise distinct lattice neighbors.
 
@@ -369,13 +333,10 @@ the source-backbone theorem.
 
 > **Lemma 165.5 (diameter-cover obstruction for `X^*`).** Any strict-conflict matching
 > from `X^*` into `P` uses at most
-> 
-
-```math
+> ```math
 > \boxed{m-\tau}
 > \tag{165.36}
-> 
-```
+> ```
 > source-backbone vertices.
 
 ### Proof
@@ -398,26 +359,20 @@ vertex-cover number. $`\square`$
 
 > **Corollary 165.6 (plateau-amplified rattler certification).** A source matching
 > `X^*->A` of size at least `m^*-p` contains at least
-> 
-
-```math
+> ```math
 > \boxed{
 > r_*\ge\max\{0,\tau-p+\ell\}
 > }
 > \tag{165.37}
-> 
-```
+> ```
 > edges ending in genuine strict rattlers, where `ell=m^*-m`. Consequently the actual
 > plateau-terminalized response graph contains at least
-> 
-
-```math
+> ```math
 > \boxed{
 > q_R^*\ge\frac{\max\{0,\tau-p+\ell\}}5
 > }
 > \tag{165.38}
-> 
-```
+> ```
 > pairwise vertex-disjoint source-certified scaffold edges whose source mediators are
 > strict rattlers.
 
@@ -464,12 +419,9 @@ This is still not (165.41). The remaining exact lemma can now be stated more nar
 > source labels and common-neighbor certificates on `C^partial_src`, together with the
 > global minimum-diameter origin of `A`, force every directed `C^partial->O` linkage to
 > lose at least
-> 
-
-```math
+> ```math
 > \Delta_\Lambda-d_{\rm int}
-> 
-```
+> ```
 > terminals, or else yield an `N`-point unit-separated set of diameter `<D`.
 
 A proof based only on the cardinality of the certificates is invalid: Sections 152 and

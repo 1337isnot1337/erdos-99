@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section104_quantitative_phase_gap_hostile_audit_2026-09-12.md) · source SHA-256 `ea2272661d3facc5b5d4f51855503450bd587c2c0e63e359f4efac190fad02c2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1C23A892965C","canonical":true,"claim_ids":["C-WRAP-QUANT-PHASE-GAP"],"claim_statuses":{"C-WRAP-QUANT-PHASE-GAP":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — Section 104 quantitative phase-gap hostile audit
@@ -423,16 +423,18 @@ corridors are bounded by:
 - teeth in the two tiny spans adjacent to `G_1`: `20sigma/3`;
 - bad-base teeth with base excess `h=1/2000`: `sigma/h=2000sigma`;
 - good-base teeth on the main region:
+  
   ```math
   w_h+2C_{tail}
   \le w_h+13\sigma/3,
-  
   ```
+
   where
+  
   ```math
   w_h=\pi/3-\arccos((1+h)/2)<0.000289.
-  
   ```
+
 
 The total is
 

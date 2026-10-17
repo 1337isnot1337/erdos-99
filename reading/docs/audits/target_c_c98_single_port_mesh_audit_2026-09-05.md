@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_c98_single_port_mesh_audit_2026-09-05.md) · source SHA-256 `1e40de41ae59fe0e9e6b121b04b78529aec34457b094980ec7c3ed3a14f99230`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-97B6DB4DA5FD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Audit — Target C C98 single-port mesh defect

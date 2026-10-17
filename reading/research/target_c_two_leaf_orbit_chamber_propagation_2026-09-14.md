@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_two_leaf_orbit_chamber_propagation_2026-09-14.md) · source SHA-256 `076e968e371383b4b914a48d2a3de4e2dd582f11a5f3023fe28488373a899b9e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "43c94ee487043aef2e00a979bc8be670ae34cc64", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_two_leaf_orbit_chamber_propagation_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "dc2805994869dda8f89196c59e898dfdd31e57890f661d424df5261915583e20"} -->
 

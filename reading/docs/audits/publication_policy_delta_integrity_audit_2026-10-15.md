@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/publication_policy_delta_integrity_audit_2026-10-15.md) · source SHA-256 `deda1270436dfbbefa2c09437d4360a909d89508ecbe2d755fc367f206b31833`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-774AA2447CC2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Publication policy delta: retained integrity audit

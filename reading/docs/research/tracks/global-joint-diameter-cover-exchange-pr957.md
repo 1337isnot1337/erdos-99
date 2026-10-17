@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/global-joint-diameter-cover-exchange-pr957.md) · source SHA-256 `4c53d693639bd3fda80f7330490bd6f98fe8371851880ec760b17c9cbde48263`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Joint diameter-cover exchange and whole-source regressions
 

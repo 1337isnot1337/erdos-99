@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_forest_double_diameter_gap_2026-09-11.md) · source SHA-256 `ea8aff531118fa3401df43d7aa06e23c5d6cd0b8df91fe23554fbf1b61cbc8d9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-278B52705132","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — doubled direction gaps force outer-walk excess in the forest circuit branch

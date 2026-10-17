@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../research/target_c_two_phase_bad_corridor_boundary_charge_2026-09-13.md) · source SHA-256 `1412cf6e8053f02d9f6a5f461deb2fbd29c8340abd067e1bae392f15e79eadac`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d0673307fb0f5e032be47f89a2144a9ebfeb64d1", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_two_phase_bad_corridor_boundary_charge_2026-09-13.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d8ddb7bbb9cc5ace91deca1e5cb2f3dacb35a5d784d174aa4e7af0d1cdbea4ba"} -->
 
@@ -160,8 +162,7 @@ Applying (BC.3), and writing `U=\sum_iU_i`, yields
 
 ```math
 \boxed{
- \sum_{i\ {
-m bad}}H_i
+ \sum_{i\ {\rm bad}}H_i
  \le 5(1+o(1))U+o(D).
 }
 \tag{BC.8}

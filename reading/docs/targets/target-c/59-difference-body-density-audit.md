@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/59-difference-body-density-audit.md) · source SHA-256 `12d835829fb18cdf09663cda0e8f169b510c616a8d37ff55ea3e42b6ac5831ca`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — independent difference-body density and symmetry audit
 

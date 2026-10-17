@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/target-c-macroscopic-container-capacity.md) · source SHA-256 `775f50bd6147fbd62d5183ee01554f4a2bdcfca0118ff4627441626fe9c27ce2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # target-c-macroscopic-container-capacity
 

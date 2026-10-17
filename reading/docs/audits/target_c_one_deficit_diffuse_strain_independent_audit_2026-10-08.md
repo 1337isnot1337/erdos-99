@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_one_deficit_diffuse_strain_independent_audit_2026-10-08.md) · source SHA-256 `37ba24d11db759a2fd59dcf5e0c4f1e0a7bd4c07951e1311dc140ad8aff05d3c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0879DEC6130B","canonical":false,"claim_ids":["C-ONE-DEFICIT-DIFFUSE-STRAIN-NONGLOBAL-REGRESSION"],"claim_statuses":{"C-ONE-DEFICIT-DIFFUSE-STRAIN-NONGLOBAL-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Target C Audit.156 — one-point Oler slack with diffuse strain is not global optimality

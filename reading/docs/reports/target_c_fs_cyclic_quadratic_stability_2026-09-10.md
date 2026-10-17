@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fs_cyclic_quadratic_stability_2026-09-10.md) · source SHA-256 `cc68d7c56d9eea6e035ece9b6c54afd47f47ffde98c6841594fb2abc7ee56db5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-02D544ECEAC6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fs_cyclic_quadratic_stability_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=e7958330ba25d6401daf1178cc435567024ad921; lifecycle=unreviewed; canonical=false -->

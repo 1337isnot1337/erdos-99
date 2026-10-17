@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearcircle_fullcore_edge_density_2026-09-09.md) · source SHA-256 `51ed7cd085d5df1f41919722ab20859a0a821e5abc780566fc649ccf150a3e0b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7CF0E04BDE32","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_nearcircle_fullcore_edge_density_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=482f412ec495c630de4f23e23440bc3610cce9be; lifecycle=unreviewed; canonical=false -->

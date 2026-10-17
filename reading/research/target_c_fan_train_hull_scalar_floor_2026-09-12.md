@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_fan_train_hull_scalar_floor_2026-09-12.md) · source SHA-256 `b98b604952bc02e2cd4e1248d39ad1384bf10d72d0391efa0c36c6699bb9038b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "67d4026d54f8f737ffd8586b79a41bcf65230abf", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_fan_train_hull_scalar_floor_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "61162edcd16c8b70a459a6152b6cb5a7e14d51df3511aef0d6de3478c6507da4"} -->
 

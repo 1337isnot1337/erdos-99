@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_completion_two_unit_side_regression_2026-09-12.md) · source SHA-256 `5f3e5794ce9745ad0ca2a9fe42a35441a8791772264caef64593d38b126b2fec`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2d6d6a1f448c904d3fd1f699c6d1064ba23ebc2a", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_completion_two_unit_side_regression_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "017edbacd2e14ae329dd37184715eae4aacdb3c7603d9b47d06d2edb4d473f78"} -->
 

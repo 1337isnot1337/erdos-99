@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_bounded_face_endpoint_fan_2026-09-12.md) · source SHA-256 `c9496cf21ea271f7e722f320fbe2af7a2bef0047175ba5782ee1504300c0cffa`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — bounded-face train endpoint fans are crossing-free
 

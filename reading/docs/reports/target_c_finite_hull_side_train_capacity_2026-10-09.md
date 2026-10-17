@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_finite_hull_side_train_capacity_2026-10-09.md) · source SHA-256 `2594b3bd61b48266a2f02f58ce6eadc494815f5bc8fffc24f9def5dd02b0df0e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-603A2FAFC2A9","canonical":true,"claim_ids":["C-FINITE-HULL-SIDE-TRAIN-CAPACITY"],"claim_statuses":{"C-FINITE-HULL-SIDE-TRAIN-CAPACITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C: exact finite hull-side train-capacity bound

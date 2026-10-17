@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/campaign_zero_transfer_and_narrow_paths_2026-09-09.md) · source SHA-256 `306324fb6318bebeecfee91b6bf47fa42995089638fc13c3205d6f01a7224d72`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C59E9469EA46","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99: zero transfer, rigidity, and narrow diameter paths

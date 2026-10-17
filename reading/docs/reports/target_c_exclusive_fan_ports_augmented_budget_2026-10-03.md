@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exclusive_fan_ports_augmented_budget_2026-10-03.md) · source SHA-256 `ee582320ddac0ed472c1bbbddb6bd33fbadc95b59027feec491bf1a037703698`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A64E0BABD08F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: exclusive fan ports strengthen the augmented defect budget

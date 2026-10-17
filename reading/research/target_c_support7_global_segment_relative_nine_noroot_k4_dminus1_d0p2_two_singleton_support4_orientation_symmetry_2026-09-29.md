@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_two_singleton_support4_orientation_symmetry_2026-09-29.md) · source SHA-256 `db6a17c5e9f43acfee761e87e071f27915645f12bf9c9593ca7afa5d416e7d0d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c90cda423b94215ab53232e50e7a8579e0829f5b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_two_singleton_support4_orientation_symmetry_2026-09-29.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "1427255c2c75a298e09bb2a813d0dfb9bc75e8121236b654cdbcdafddc54c4b8"} -->
 

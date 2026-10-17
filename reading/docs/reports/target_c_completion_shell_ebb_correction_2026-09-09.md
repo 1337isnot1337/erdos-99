@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_completion_shell_ebb_correction_2026-09-09.md) · source SHA-256 `ac58ffbf4ae7b98646b539e7218ae235ceac43e7b41f7e46fc8d3cbc23034913`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

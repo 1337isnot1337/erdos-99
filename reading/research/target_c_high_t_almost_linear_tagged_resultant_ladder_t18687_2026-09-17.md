@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_almost_linear_tagged_resultant_ladder_t18687_2026-09-17.md) · source SHA-256 `64a59a9958c47599f4095cd5d675e21e4f142b08a983ffe966e239b1bb57badb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 17 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

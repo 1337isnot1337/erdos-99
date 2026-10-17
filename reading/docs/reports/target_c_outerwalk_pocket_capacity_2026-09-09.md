@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_outerwalk_pocket_capacity_2026-09-09.md) · source SHA-256 `cf5b9fc843bbdb11c2a32c4b3fe2c7c5a9d2eea59ba570933342158f04d433a4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BC0ED2838082","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact outer-walk pocket-capacity theorem

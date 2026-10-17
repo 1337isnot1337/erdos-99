@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_quantitative_near_endpoint_v_cover_2026-09-30.md) · source SHA-256 `b16854435f9479dbcd3cbda441799b0a51896c837ca5a1acfee9e9e2deacc703`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CB9918235D30","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — quantitative near-endpoint diameter-V cover

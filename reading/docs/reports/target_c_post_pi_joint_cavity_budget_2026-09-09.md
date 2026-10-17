@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_post_pi_joint_cavity_budget_2026-09-09.md) · source SHA-256 `17febb95f068f97c98ae0297be57e5e20e3d187ce7c667edc029856b6c89cfd6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2875B8001BBD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — joint pocket/face cavity budget sharpens the pinned-surplus floor

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_four_pair_response_contraction_2026-08-31.md) · source SHA-256 `4821f00059780c8dd4951d24e7190aaa53dc44d794e3a76556b2c137e06835e4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1C0BBD127DA4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_four_pair_response_contraction_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=c59d797999d35d414bcae0a84ddcf80d4aae73d5; lifecycle=unreviewed; canonical=false -->

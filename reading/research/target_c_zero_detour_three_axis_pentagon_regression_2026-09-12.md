@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_zero_detour_three_axis_pentagon_regression_2026-09-12.md) · source SHA-256 `9493c25bc5b6914dfc252dc20cc2cc56cf9e7008fc9a02e9476afa7f23d2e477`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — three-axis pentagon regression at the zero-detour atomic endpoint
 

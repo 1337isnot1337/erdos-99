@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/100-wrapping-angular-measure-threshold-audit.md) · source SHA-256 `64bdc7c2acc38da75a75bf2a52102f32c9884ada186eed25ca4253413673b825`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 16 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

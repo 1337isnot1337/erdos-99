@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_force_source_width_gap_2026-09-10.md) · source SHA-256 `2f799fb6ca231c6950df2f5682cda88437badb20f270223f51f8336dabb2dfbe`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1FA7962BEAC2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_force_source_width_gap_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=81355e579c72d04914560022a19ba4b6ff98607b; lifecycle=unreviewed; canonical=false -->

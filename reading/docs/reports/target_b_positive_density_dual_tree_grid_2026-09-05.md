@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_positive_density_dual_tree_grid_2026-09-05.md) · source SHA-256 `085e09f7cd4f2c77199179f64d98a496aab95f8b2f4f48f0c90fee5b41ad99a8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EB22AF50DBB3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
 # Erdos Problem #99 - Target B positive-density dual-tree grid extraction

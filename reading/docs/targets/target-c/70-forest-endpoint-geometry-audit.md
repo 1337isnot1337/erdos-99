@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/70-forest-endpoint-geometry-audit.md) · source SHA-256 `353798b0cb60fd552be6bb8fc29a26306b3b84918fbcc436c838848b3b985e93`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — sharp forest endpoint geometry audit
 
@@ -13,19 +13,21 @@ section numbering or theorem-state snapshot.
 The result has two layers.
 
 1. Every Woodall-forest subsequence with `q/D -> x` satisfies
+   
    ```math
    \liminf {\operatorname{area}(F)\over D^2}\ge {x+\sin x\over4},
    \qquad
    \liminf {r_o(F)\over D}\ge {1\over2}\sin(x/2).
-   
    ```
+
 2. At the sharp Section-66 endpoint,
+   
    ```math
    q/D\to2\kappa,
    \quad e_{BB}/D,x_B/D\to\kappa,
    \quad \kappa=2\cos\kappa,
-   
    ```
+
    there are `(kappa-o(1))D` **distinct** unloaded vertices in an `o(1)` force-hull
    boundary layer, each on a two-edge outer detour over a nonunit loaded hull side of
    length `2-o(1)`. Each has an extra unit contact with inward normal component

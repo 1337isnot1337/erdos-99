@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/campaign_zm_zs_reconciliation_2026-09-09.md) · source SHA-256 `b8f1376b91ae323f6e574f5f9e81270db78e5867309ec41a64f73e08e71e2980`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b88f368fb5ea6de46e7fc5501041f30dfb7d0a00", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/campaign_zm_zs_reconciliation_2026-09-09.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2fe94bc98736952b5abc87b8c255344938df2ca112d221a543cd303943344712"} -->
 
@@ -22,20 +22,23 @@
 Two report-level results landed independently on September 9:
 
 - ZS, in `target_c_zf_boundary_surplus_collapse_2026-09-09.md`, proves after ZF that
+  
   ```math
   q\ge h\ge\delta\ge\lceil D\rceil
-  
   ```
+
   and therefore
+  
   ```math
   \sigma_B=2q-\delta-2\ge\lceil D\rceil-2.
-  
   ```
+
 - ZM, in `campaign_boundary_defect_matching_2026-09-09.md`, proves that the non-diameter response graph contains a terminal-disjoint matching `J` with
+  
   ```math
   |J|\ge q/16.
-  
   ```
+
 
 The ZM report still states only the older C33 consequence `|J|>=(ceil(D)+2)/32` and proposes C44 Branch B as one possible next route. Both statements need reconciliation with ZS.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_typeii_aggregate_payment_independent_audit_2026-09-14.md) · source SHA-256 `afa60bb4b4a47e3f4866c45e7c7197ceaf70f851bd5dc0158ac25fd988672b61`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-34A7F8D6EB0B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Independent audit — Type-II aggregate payment and inactive exchange

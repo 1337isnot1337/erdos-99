@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/problem/statement.md) · source SHA-256 `cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Problem statement
 

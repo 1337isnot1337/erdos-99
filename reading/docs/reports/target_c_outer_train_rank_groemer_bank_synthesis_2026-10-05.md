@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_outer_train_rank_groemer_bank_synthesis_2026-10-05.md) · source SHA-256 `9fa8f6cf50dc90451b20464569632420f6cb116944f74af05582ce8b45d4cdbb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-10D6BFB2C2DA","canonical":true,"claim_ids":["C-OUTER-TRAIN-DETERMINATION"],"claim_statuses":{"C-OUTER-TRAIN-DETERMINATION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — outer-train determination removes the nonunit-hull escape

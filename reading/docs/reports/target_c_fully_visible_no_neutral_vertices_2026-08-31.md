@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fully_visible_no_neutral_vertices_2026-08-31.md) · source SHA-256 `ae901c3b256e8e3dc420701a3f2ce7bbba8d2815a4df401b483157aad6870cf6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0EF64375DDAE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C addendum: fully force-visible contact cores have no neutral degree-two vertices

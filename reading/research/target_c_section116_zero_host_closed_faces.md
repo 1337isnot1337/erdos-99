@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section116_zero_host_closed_faces.md) · source SHA-256 `4f2f8b0977246e620ab92f5d5712f3b781411a26c407770d1f0c881a199e4ff6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — Section 116: zero-displacement hosts absorb every defect-face train end
 

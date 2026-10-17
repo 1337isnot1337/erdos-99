@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_trunk_forces_linear_surplus_2026-09-09.md) · source SHA-256 `e395285fc72b9337ea53791f09d6c82309598a6d08e02d33841f8d1d7dc9f5a0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -220,7 +222,7 @@ and proves the upgraded force-hull gap bound
 ```math
 \liminf\frac G{D^2}
 \ge
-\frac12\sin1-rac\pi4\lambda_2^2.
+\frac12\sin1-\frac\pi4\lambda_2^2.
 \tag{4.2}
 ```
 

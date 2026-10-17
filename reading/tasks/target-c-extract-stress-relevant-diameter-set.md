@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/target-c-extract-stress-relevant-diameter-set.md) · source SHA-256 `f3f0768519cad76d6a1e7c920cf67650a5a6bf1cb0642d4a560530109a169fbb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # target-c-extract-stress-relevant-diameter-set
 

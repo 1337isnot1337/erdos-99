@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_oriented_train_symmetry_defect_2026-10-02.md) · source SHA-256 `7f33c92cec76e3bb0ea8a2fd7b7844a8b4a592935b4b94a7d42fa9cf38cfebb4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AD4B2D443169","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — oriented train pairing forces a quantitative carrier asymmetry defect

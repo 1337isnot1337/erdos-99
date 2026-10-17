@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-quarter-folds-bent-arrays.md) · source SHA-256 `49e336e2933551af00289be2bf631ece9230613a2127f0b582ca95319348bf50`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C track: quarter-fold endpoints and complete bent arrays
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_typeI_safe_area_saturation_barrier.md) · source SHA-256 `d14717228fb484eb688fa6dbbda07451e44cd0336fb21b2ab53e051516d826fe`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "866331d34c63357095be6a2938eac75a2d854534", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_typeI_safe_area_saturation_barrier.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "cda20682b6508139c59e1ee7566dee12dc71d3c6ee487e68f5b2698b44eecb5a"} -->
 

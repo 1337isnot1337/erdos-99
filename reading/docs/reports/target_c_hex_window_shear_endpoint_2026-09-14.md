@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_hex_window_shear_endpoint_2026-09-14.md) · source SHA-256 `3a361247cc95c57eaaf1c1f037bec5123ea5c252a77f22d8597a6dc8da7523c5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EC9E34CA6C66","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_hex_window_shear_endpoint_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=7c45761ed32dc530ab486de54c643a8c3268b0ea; lifecycle=unreviewed; canonical=false -->
@@ -41,10 +41,11 @@ $`(i,j)\mapsto iu+jv`$. Then:
    $`\pm u,\pm v`$, hence is bipartite and triangle-free;
 3. $`|H_R|=1+3R(R+1)`$;
 4. its exact squared diameter is
+   
    ```math
    D_{\rm shear}^2=8R^2(1-c)>4R^2;
-   
    ```
+
 5. the equilateral choice $`c=1/2`$, with the same index set and cardinality, is
    unit-separated and has diameter $`D_{\rm tri}=2R`$, and its contact graph contains
    unit equilateral triangles.

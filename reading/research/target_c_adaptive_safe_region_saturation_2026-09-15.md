@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_adaptive_safe_region_saturation_2026-09-15.md) · source SHA-256 `c55083d2bb177dd27aa813a3ecf90d8f851adec9acc06348fac49099db64e90f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -78,17 +78,19 @@ No convexity of `S` is assumed.
 Assume `A` has at least one unit contact. Then:
 
 1. if `E_C(R)=emptyset`,
+   
    ```math
    \boxed{\operatorname{area}S\le a_0|R|;}
    \tag{AS.4}
-   
    ```
+
 2. if `E_C(R)\ne emptyset`,
+   
    ```math
    \boxed{\operatorname{area}S\le a_0\max\{|R|-1,0\}.}
    \tag{AS.5}
-   
    ```
+
 
 In the second case `R` is necessarily nonempty, so the maximum notation only records
 the singleton endpoint cleanly.

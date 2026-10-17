@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_punctured_return_master_self_audit_2026-09-12.md) · source SHA-256 `bd1987b27c1a528ca7633fd2fb25964dbc578f1ef002349ecd8a55c89dac7634`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-829C78895BA0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — hostile self-audit of the global punctured-return master

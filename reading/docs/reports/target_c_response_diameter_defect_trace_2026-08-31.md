@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_response_diameter_defect_trace_2026-08-31.md) · source SHA-256 `5bd6227eea1e6531ad2f65dd3a1e8e91c7f2bc8ad8e3c54a66ade0415a9ed777`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8FE844BFE0E1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C41: the circular-planar response has a strict diameter-defect trace

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_train_cut_hull_bank_independent_audit_2026-10-08.md) · source SHA-256 `40a9e1faceb5b5519e8652a4741b61874d2acdbe8bcec0d4f95fce453016851e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1A28930623FE","canonical":true,"claim_ids":["C-QUADRATIC-CORE-TRAIN-BANK","C-TRAIN-CUT-HULL-BANK"],"claim_statuses":{"C-QUADRATIC-CORE-TRAIN-BANK":"canonical","C-TRAIN-CUT-HULL-BANK":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.179 — cut-to-hull train banks and their contact carrier

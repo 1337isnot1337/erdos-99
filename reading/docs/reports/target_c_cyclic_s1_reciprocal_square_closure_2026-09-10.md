@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_s1_reciprocal_square_closure_2026-09-10.md) · source SHA-256 `6db0d84cd89736b2a136d51a683795e3b849fa2e8bde777ec9f6c38a21321c93`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 22 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -644,21 +644,15 @@ This makes the next proof target precise and finite.
 The shortest S1 closing statement is now:
 
 > For every sufficiently large `m`, every length-`m` Littlewood polynomial `Q`, and every S1 point `z=e^{i delta}` with
-> 
-
-```math
+> ```math
 > 0<s=q_R-q<s_P(D),
-> 
-```
+> ```
 > the simultaneous equations
-> 
-
-```math
+> ```math
 > Q(z)=Q^*(z),
 > \qquad
 > F_m(z)=(z-1)^2Q(z)^2
-> 
-```
+> ```
 > are impossible.
 
 A promising proof split is:

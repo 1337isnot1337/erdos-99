@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_deep_response_series_2026-09-09.md) · source SHA-256 `ce9b3ab18a0cc3136e812b62f95961c01d0dec8db9eed6dac7d346cbdc5ccb1f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C5D7A1E6F156","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZHS: deep harmonic response forces a non-tiny bridge series
@@ -306,10 +306,11 @@ the revised ZHC/ZHS cell contains one actual diameter route with simultaneously:
 - reciprocal bridge-stress sum at most `36pi D/p_eta`;
 - route bridge stress at least `[p_eta eta^2/(144pi)]D`;
 - at least `eta D/4` bridge edges with
+  
   ```math
   \alpha_e\ge\frac{p_\eta\eta}{144\pi}>0;
-  
   ```
+
 - the whole harmonic cell carrying `(p_eta/18-o(1))D^2` contact stress.
 
 Therefore, unless a macroscopic amount of the cell's quadratic stress lies on much heavier bridge edges, almost all of its stress must lie in the intervening two-edge-connected blocks. The bridge-dominant near-zero problem has become a route-local block-stress problem inside one unloaded harmonic cell.

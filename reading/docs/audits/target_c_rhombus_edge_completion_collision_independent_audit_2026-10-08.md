@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_rhombus_edge_completion_collision_independent_audit_2026-10-08.md) · source SHA-256 `fbe1b5dce072ba796189bcad5aae5cd7af9903509d26f074241160b27fd10bc9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A572EACDB307","canonical":false,"claim_ids":["C-RHOMBUS-EDGE-COMPLETION-COLLISION-REGRESSION"],"claim_statuses":{"C-RHOMBUS-EDGE-COMPLETION-COLLISION-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent audit — strict rhombus edge-completion collision

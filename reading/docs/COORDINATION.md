@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../docs/COORDINATION.md) · source SHA-256 `8eccef5e1c16feb6fa52ddc132fcca8f5cdb17b026e7f4e3c752b8eef04ae7e9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Open coordination
 

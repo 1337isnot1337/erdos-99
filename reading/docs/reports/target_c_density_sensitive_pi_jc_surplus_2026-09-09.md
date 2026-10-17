@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_density_sensitive_pi_jc_surplus_2026-09-09.md) · source SHA-256 `02bbf2851c904142d16cf8b1b7c6f4687f15d9e29571491a243966dd98a6ceaf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 21 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -278,7 +280,7 @@ Also
 
 ```math
 F_\lambda
-=-\frac\pi2\lambda-rac{\lambda+y}{2\pi}<0.
+=-\frac\pi2\lambda-\frac{\lambda+y}{2\pi}<0.
 ```
 
 Implicit differentiation gives

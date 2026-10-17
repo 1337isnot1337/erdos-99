@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_near_coherent_one_vacancy_pinning_regression_slot07_2026-10-10.md) · source SHA-256 `56891e8f8e3af9a64b02d10ee3b7e7387f8d3238008851304a8b8646f5b46c53`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C18D2BBA98D5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II: arbitrarily small train variation can pin one-vacancy grids

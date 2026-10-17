@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/target-c-face-coupled-move.md) · source SHA-256 `8fa6a96cafd9c57ddacaa5a6629dbdfcc528f794eb823c742f1926470ece7d28`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # target-c-face-coupled-move
 

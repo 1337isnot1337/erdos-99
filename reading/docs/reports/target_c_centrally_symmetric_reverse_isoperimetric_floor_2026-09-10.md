@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_centrally_symmetric_reverse_isoperimetric_floor_2026-09-10.md) · source SHA-256 `6ac2ddc60aeadf6f224b17b07c57900fb0e561dd65d44d4ceb9e7e98b085075a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2FDE4B762E23","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — centrally symmetric reverse isoperimetry sharpens C-II again

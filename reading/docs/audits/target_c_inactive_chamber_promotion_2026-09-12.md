@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_inactive_chamber_promotion_2026-09-12.md) · source SHA-256 `f306ce5eb5db824952d42c127da71c4d4543ebaf887b2be2485807d47ea7739e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-28C6B2C29CAD","canonical":true,"claim_ids":["C-INACTIVE-CHAMBER"],"claim_statuses":{"C-INACTIVE-CHAMBER":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Section 77 promotion audit

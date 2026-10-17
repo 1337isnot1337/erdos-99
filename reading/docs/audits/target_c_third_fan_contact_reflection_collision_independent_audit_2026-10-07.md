@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_third_fan_contact_reflection_collision_independent_audit_2026-10-07.md) · source SHA-256 `01cf06e32e12048e965e57f07346d57be59f33239ff0d847d4ba69d2715d34fe`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B3CED042B34C","canonical":false,"claim_ids":["C-THIRD-CONTACT-FAN-REFLECTION-COLLISION-REGRESSION"],"claim_statuses":{"C-THIRD-CONTACT-FAN-REFLECTION-COLLISION-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Target C third-contact fan reflection collision: independent audit

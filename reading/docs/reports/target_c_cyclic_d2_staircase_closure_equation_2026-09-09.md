@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_staircase_closure_equation_2026-09-09.md) · source SHA-256 `2d565d167a4532a313a61ec1cd0874e6827a5887d85348506a03ce6b214f169c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 15 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

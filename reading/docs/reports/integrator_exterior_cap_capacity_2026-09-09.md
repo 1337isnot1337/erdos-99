@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/integrator_exterior_cap_capacity_2026-09-09.md) · source SHA-256 `bedc15cdaf5d82cd38a6be3b029f724ab979c7a7c583bbaa14be925dcab5cf3d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-869730602C2C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99 — exact exterior-cap capacity transport

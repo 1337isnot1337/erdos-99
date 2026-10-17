@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_b_coupled_phase_sum_bootstrap_2026-10-03.md) · source SHA-256 `7e21f6f1b2ddc4c0454cf97dd661e7ed0fc74b418eeffda769b2c6c0ff2666b2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "20b350fee815d656e15b7a04e74955e7bef52ae1", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_b_coupled_phase_sum_bootstrap_2026-10-03.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b9194ba945a2cb64115df85330140d00b09d1730506501e68fd23b46383dc292"} -->
 

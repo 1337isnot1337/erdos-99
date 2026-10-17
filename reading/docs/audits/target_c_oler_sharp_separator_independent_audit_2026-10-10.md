@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_oler_sharp_separator_independent_audit_2026-10-10.md) · source SHA-256 `c3432f43913f46dd06a5187b7b47b0c297a7d5ee265a73e8548bd327b152eea9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AB8493A5CDE7","canonical":true,"claim_ids":["C-CORE-UNLOADED-SEPARATOR-AREA-BOUND","C-LONG-TRAIN-SEPARATOR-INEQUALITY","C-QUADRATIC-CORE-DISJOINT-TRAIN-RETURNS"],"claim_statuses":{"C-CORE-UNLOADED-SEPARATOR-AREA-BOUND":"canonical","C-LONG-TRAIN-SEPARATOR-INEQUALITY":"canonical","C-QUADRATIC-CORE-DISJOINT-TRAIN-RETURNS":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.235 — Oler-sharpened separator and return bounds

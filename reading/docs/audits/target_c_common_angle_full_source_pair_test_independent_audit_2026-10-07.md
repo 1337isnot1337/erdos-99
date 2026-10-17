@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_common_angle_full_source_pair_test_independent_audit_2026-10-07.md) · source SHA-256 `9066e5507c4e2b132955767b86c525ef8ff67f6b6a2cedccf2c779bd3c4d08b2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0E9ABD5CB6AB","canonical":true,"claim_ids":["C-COMMON-ANGLE-ALGEBRAIC-FULL-SOURCE-PAIR-TEST"],"claim_statuses":{"C-COMMON-ANGLE-ALGEBRAIC-FULL-SOURCE-PAIR-TEST":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: common-angle full-source pair test

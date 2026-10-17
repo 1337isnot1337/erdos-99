@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_two_halfdisk_scalar_regression_2026-09-12.md) · source SHA-256 `ae5cba9e1ad288dd3cb9d360ff8816a0128d511b610b539e3b4a7a0918a92347`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — two-half-disk scalar regression after perimeter rigidity
 

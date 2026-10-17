@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_p1_common_path_run_equation_2026-09-09.md) · source SHA-256 `1012e72535f11cfb0baf32cdd1ecdc244fe01c504991891433812c982553af26`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 13 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -53,21 +53,24 @@ Then, after orienting the projective diameter order consistently along either tw
 
 1. the two `J`-edges incident to `v_i` are the two extreme edges of the contiguous H-star at `v_i`;
 2. their projective direction gap is exactly
+   
    ```math
    \boxed{r_i\delta,
    \qquad
    \delta=2\arcsin\frac1{2D};}
    \tag{PRE.2}
-   
    ```
+
 3. if
+   
    ```math
    R_0=0,
    \qquad
    R_j=r_1+\cdots+r_j,
-   
    ```
+
    then for some `theta`
+   
    ```math
    \boxed{
    \frac{y-x}{D}
@@ -75,43 +78,48 @@ Then, after orienting the projective diameter order consistently along either tw
    \sum_{j=0}^{L-1}(-1)^j e^{iR_j\delta};
    }
    \tag{PRE.3}
-   
    ```
+
 4. the parity and endpoint metric are linked exactly:
+   
    ```math
    \boxed{
    L\text{ odd}\iff |x-y|=1,
    }
    \tag{PRE.4}
-   
    ```
+
+   
    ```math
    \boxed{
    L\text{ even}\iff |x-y|=\sqrt{D^2-1};
    }
    \tag{PRE.5}
-   
    ```
+
 5. therefore the sparse run polynomial
+   
    ```math
    P_J(z)=\sum_{j=0}^{L-1}(-1)^j z^{R_j},
    \qquad z=e^{i\delta},
-   
    ```
+
    satisfies
+   
    ```math
    \boxed{|P_J(z)|=2\sin(\delta/2)}
    \quad(L\text{ odd}),
    \tag{PRE.6}
-   
    ```
+
    and
+   
    ```math
    \boxed{|P_J(z)|=\sqrt{1-4\sin^2(\delta/2)}}
    \quad(L\text{ even}).
    \tag{PRE.7}
-   
    ```
+
 
 Moreover the interior run exponent obeys
 

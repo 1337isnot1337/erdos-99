@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zero_transfer_additive_promotion_2026-09-11.md) · source SHA-256 `0c6fca62ad2a0a0448fdeafc138d23940d18606beccac794bae5bb7c7e84547c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3F124163F5D2","canonical":true,"claim_ids":["C-ZTA"],"claim_statuses":{"C-ZTA":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — audit and promotion of the zero-transfer equality exclusion

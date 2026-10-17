@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rsr_dirichlet_detour_joint_gap_2026-09-10.md) · source SHA-256 `02d03f7eb44c7f079969965c76345c252331f00e7779c6d683604c96811f6b0e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B80C6EC70D3F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — RSR plus Dirichlet detour gives a strictly stronger generic post-ZF floor

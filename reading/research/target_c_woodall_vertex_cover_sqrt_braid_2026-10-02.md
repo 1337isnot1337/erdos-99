@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_woodall_vertex_cover_sqrt_braid_2026-10-02.md) · source SHA-256 `9c1a537a97abe0d24a0a9446245613fc42fd51c526bea0d26b717b08147104ce`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C: Woodall vertex covers double the square-root diameter braid constant
 

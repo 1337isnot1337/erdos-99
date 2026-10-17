@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_support_atlas_obstruction_2026-09-26.md) · source SHA-256 `897e2b4ab1b47b63889c1b2f1c7bcbb1b4cc004ab857bf79d4f3e6bbbdedf6a6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-42BE90DAAF7C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — global loaded-chord exclusion and diameter-support atlas obstruction

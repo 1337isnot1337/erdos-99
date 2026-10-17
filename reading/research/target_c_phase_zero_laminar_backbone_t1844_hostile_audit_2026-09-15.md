@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_phase_zero_laminar_backbone_t1844_hostile_audit_2026-09-15.md) · source SHA-256 `80d07867d1246a2866082c64fcf2c5ca9aa5cfc1cdb8e4a3580bf8b2c25e3ca7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d3e490e183dc229020483c039764a7d6c46d7d91", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_phase_zero_laminar_backbone_t1844_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "5cf2a91c04b1853dea5a56667ddb8054f990f56e8b4086a43f69e48b88c3bf17"} -->
 

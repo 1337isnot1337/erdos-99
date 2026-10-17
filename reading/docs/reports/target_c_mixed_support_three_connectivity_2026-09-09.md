@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_mixed_support_three_connectivity_2026-09-09.md) · source SHA-256 `5154c7c834d30f1768fcc447820bf031cf79cefa64733d0b09f6b354b836ff08`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-FE73FCEC908A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_mixed_support_three_connectivity_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=f82dc8f0785f279bf79883e22035e4be6446ddc9; lifecycle=unreviewed; canonical=false -->

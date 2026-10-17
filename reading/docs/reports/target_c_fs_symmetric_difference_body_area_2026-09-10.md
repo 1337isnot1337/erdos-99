@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fs_symmetric_difference_body_area_2026-09-10.md) · source SHA-256 `37534b37bdcb8ee81ee49bce0cdaaf20c0d9854addc88cb5b40eeb21f2ca3bf9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0E3494E82B46","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fs_symmetric_difference_body_area_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=4dfe22b7c6b2ad3657bed736353e3bc27d1065b0; lifecycle=unreviewed; canonical=false -->
@@ -398,13 +398,10 @@ For the perfect-matching subbranch, the immediate sufficient theorem is:
 
 > **Annular finite-packing theorem.** If `F subset K` are convex planar bodies with
 > `per(F)+per(K)=O(D)`, and `S subset K\setminus F` is unit-separated, then
-> 
-
-```math
+> ```math
 > |S|\le\frac2{\sqrt3}
 > \bigl(\operatorname{area}K-\operatorname{area}F\bigr)+o(D^2).
-> 
-```
+> ```
 
 Combined with (3.1), this would give
 

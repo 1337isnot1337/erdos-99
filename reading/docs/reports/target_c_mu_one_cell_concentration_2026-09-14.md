@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_mu_one_cell_concentration_2026-09-14.md) · source SHA-256 `3219725fdfff3edcc886ac78ec55cbc0d97762e2abaa16f7cf4b5c17ac3462d6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A1DD590E9A7D","canonical":true,"claim_ids":["C-FULLCORE-MU-ONE-CELL"],"claim_statuses":{"C-FULLCORE-MU-ONE-CELL":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Erdős Problem #99 — Target C-II equality-budget one-cell concentration

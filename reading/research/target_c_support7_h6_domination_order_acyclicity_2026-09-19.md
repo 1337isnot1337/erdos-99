@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_h6_domination_order_acyclicity_2026-09-19.md) · source SHA-256 `21e95dac8500d19896e28f25b74a0281d02a7897ba096ffc393af005025d4f65`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "6f7406eed6e34bf5d1934ba0a014c538dff1fcfb", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_h6_domination_order_acyclicity_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "50352fcc2f86fe9ecf0c23e6451afd2b4364918098ad162ff10696dcd36693e5"} -->
 

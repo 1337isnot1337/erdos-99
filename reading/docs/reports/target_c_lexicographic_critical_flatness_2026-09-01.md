@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_lexicographic_critical_flatness_2026-09-01.md) · source SHA-256 `9288bd368d8a8e4d58e1893edb84dfac05ac58483a46db276ebd6ef93a2cfecd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7410900FE058","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_lexicographic_critical_flatness_2026-09-01.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=7f5dd9dfb568babf0e16869f8ff9c5fa9168e651; lifecycle=unreviewed; canonical=false -->

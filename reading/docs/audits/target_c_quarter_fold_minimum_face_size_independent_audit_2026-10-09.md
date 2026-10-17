@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_quarter_fold_minimum_face_size_independent_audit_2026-10-09.md) · source SHA-256 `39f9c94c1f735f10daec0b2720b0a9a0c6e890a62a1669a884705b9f25409a8a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F93DC944F16D","canonical":true,"claim_ids":["C-QUARTER-FOLD-MINIMUM-FACE-SIZE"],"claim_statuses":{"C-QUARTER-FOLD-MINIMUM-FACE-SIZE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: endpoint-feasible quarter-folds need eight-sided faces

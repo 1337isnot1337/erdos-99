@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_coupled_paired_remainder_path_t18687_2026-09-15.md) · source SHA-256 `7802d00e5b7f202681e4cbbf6ee80ca293a9db803bcc4ad0d613932c6542faff`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 20 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -19,16 +19,18 @@
 Two independently useful repairs of the high-`t` path argument can be combined.
 
 1. The **paired-remainder** theorem keeps the energy forced by the unpaired part of the retained dominant occurrence measure:
+   
    ```math
    E_{pair}+F(z-2P)\le\delta+o(1),
    \qquad F(s)=s-6\sin(s/6).
-   
    ```
+
 2. The **coupled/adaptive** theorem prevents a source from simultaneously taking minimum retained mass and maximum detour. Above the minimum-detour feasibility point `(d_0,z_0)`, it forces
+   
    ```math
    z-z_0\ge c(\delta-d_0)-o(1)
-   
    ```
+
    with an explicit positive slope, while a source-adaptive terminal-energy threshold preserves the physical opposite-branch conclusion.
 
 At

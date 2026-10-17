@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_ps_exclusion_2026-09-09.md) · source SHA-256 `9d0b0b45300c43d6528aeff86a5afb0e5dc9bcc8903466d4e602f924a97af8fd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 25 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

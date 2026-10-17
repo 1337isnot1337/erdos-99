@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/08-prescribed-phase-alignment.md) · source SHA-256 `de6abaaaac9207cb295129edc4b578e5afed484af2baa3038071575330eb1e07`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — prescribed-phase shadow and very-super-boundary alignment
 

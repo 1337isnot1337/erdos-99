@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_two_carrier_defect_ejection_2026-09-09.md) · source SHA-256 `6a4d563930e793339bdbb58065592096f78ae91adca46d5869da4cfb5a7cbeb5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D97D635B7BA9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cap-minimal full-core ledger ejects two diameter units of face defect from the giant carriers
@@ -34,7 +34,6 @@ one has
 Q\ge Q_{int}+(2-o(1))D.
 }
 \tag{TE.1}
-
 ```
 
 Equivalently,
@@ -44,7 +43,6 @@ Equivalently,
 Q-Q_{int}\ge(2-o(1))D.
 }
 \tag{TE.2}
-
 ```
 
 Thus at least two full source-diameter units of exceptional-face defect are forced **outside** the interiors of the two positive-density semicircle carriers.
@@ -100,7 +98,6 @@ Insert (1.1)--(1.2) into (1.3), discard `s_B>=0`, and rearrange:
 \left(\frac\pi2-1+o(1)\right)D.
 }
 \tag{1.4}
-
 ```
 
 This is already stronger than the SI bound `Q_int<=(pi-2+o(1))D` because it keeps the component-count and pinned-stress currencies instead of discarding them.
@@ -131,7 +128,6 @@ in the near-circle branch. Hence
  k=c_I+s_C+o(D).
 }
 \tag{2.2}
-
 ```
 
 Since `c_I>=0`,
@@ -150,7 +146,6 @@ Equation (1.4) therefore yields
 -\frac12Q_{int}.
 }
 \tag{2.3}
-
 ```
 
 No stress coefficient lower bound enters this estimate.
@@ -236,7 +231,6 @@ TE.2 is therefore the exact asymptotic alternative
 Q_{small}+Q_B\ge(2-o(1))D.
 }
 \tag{4.2}
-
 ```
 
 TS proves the small components carry only `o(D^2)` vertices, but this does **not** yet imply `Q_small=o(D)`: a linear collection of bounded-size exceptional components can carry linear face defect while having subquadratic population.

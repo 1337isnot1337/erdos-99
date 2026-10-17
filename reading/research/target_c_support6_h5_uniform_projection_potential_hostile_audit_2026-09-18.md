@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_h5_uniform_projection_potential_hostile_audit_2026-09-18.md) · source SHA-256 `9fc9f154b7a5afde7f9fb6980854c37343bc5fd08436179816de21b9fd7d3236`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "022c74d44e90b7a1dfd3184526517d2fc2b299ef", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_h5_uniform_projection_potential_hostile_audit_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "802383d693886143ad55d134375a7e9f733d157d4d1fb788e5b0daf3020de909"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/71-extreme-attachment-geometry-audit.md) · source SHA-256 `435eb27b87645f4f5b594fb00a6aebde206c6d2e9d9c2d7fa776e05462740b1a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — extreme-circuit attachment geometry audit
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section121_aggregate_detour_payment_self_audit_2026-09-12.md) · source SHA-256 `76cd746740a4e503767642d4203bf3d48fe2dcc1ba646f7cf8dbfd7bb98781c2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-36910E332E6F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — hostile self-audit of Section 121 aggregate detour payment

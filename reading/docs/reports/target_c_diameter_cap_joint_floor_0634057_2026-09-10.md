@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_cap_joint_floor_0634057_2026-09-10.md) · source SHA-256 `11cd2239e953163ebccb3cc89c38b91843d8ed31d18efa006603f72c80810480`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-7DA1B6578E1F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — diameter-capped pockets raise the post-ZF floor to 0.634058
@@ -283,7 +285,7 @@ Therefore
 ```math
 H_D'(y)>
 \frac25\cdot\frac75
-=\frac{14}{25}>rac12.
+=\frac{14}{25}>\frac12.
 \tag{4.2}
 ```
 
@@ -357,7 +359,7 @@ Using `3141/1000<pi<22/7`, substitution of `R=5/8` into the left side of (5.2) g
 
 ```math
 Q_R(8/5,5/8)
-<-rac{316089095263}{1378125000000}<0.
+<-\frac{316089095263}{1378125000000}<0.
 ```
 
 Since `Q_R` increases in `R`,

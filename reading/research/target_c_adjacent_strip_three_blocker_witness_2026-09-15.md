@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_adjacent_strip_three_blocker_witness_2026-09-15.md) · source SHA-256 `a5b9bc0fb970bac9d83f91b4099dca6272e796be7803ff387219d391f35ef93a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "255acb9221cd0927ad28b5deeb21ef0e48149540", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_adjacent_strip_three_blocker_witness_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a0cf06d7928d3254970008c1203ff27a278d4340c8bfbacc567c6a37930895eb"} -->
 

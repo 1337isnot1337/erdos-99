@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_2026-09-14.md) · source SHA-256 `f75a992756669d6ef46b4539b849c117052ac6b84121a597665c3c1200352502`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

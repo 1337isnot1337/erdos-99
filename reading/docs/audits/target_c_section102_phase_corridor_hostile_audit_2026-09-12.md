@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section102_phase_corridor_hostile_audit_2026-09-12.md) · source SHA-256 `84d1161482ffb4cd3b8eba3078d1dcc8260d19ad95481abbcf521316e32560a5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D3A9A075EC98","canonical":true,"claim_ids":["C-PHASE-CORRIDOR-ENDPOINT-EXCLUSION"],"claim_statuses":{"C-PHASE-CORRIDOR-ENDPOINT-EXCLUSION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — Section 102 phase/corridor endpoint-exclusion hostile audit

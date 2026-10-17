@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_flat_center_kkt_stress_leakage_2026-09-14.md) · source SHA-256 `89b1f6b32d7619673458539dfcd4925a55b37d829a2edbf2c564600927776821`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DA423307166D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_flat_center_kkt_stress_leakage_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=db29dd2bddee80885bce634b757d2422305dbf01; lifecycle=unreviewed; canonical=false -->

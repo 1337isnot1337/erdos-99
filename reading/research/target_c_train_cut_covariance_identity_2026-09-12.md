@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_train_cut_covariance_identity_2026-09-12.md) · source SHA-256 `e1afa5e7360315d43e8c7041ea484270a53b310ea329150dbc9df1ee52120550`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "9ac5c4cba11f020d94f7c55d969eeece54ff1563", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_train_cut_covariance_identity_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "6f6cce0c48fde050be5c6cc60d6ba5939ea105dd515c3b7d4ffc0c9db034486f"} -->
 

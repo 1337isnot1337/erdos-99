@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_singleton_oo_clause_range_independent_audit_2026-10-08.md) · source SHA-256 `1eb13b8220ad93f4c4750a4398d15c53cbb91ce7b6be4d25d465adcad57d291b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0BC5F7E1874E","canonical":true,"claim_ids":["C-OO-SINGLETON-BAD-TERMINAL-CAPACITY"],"claim_statuses":{"C-OO-SINGLETON-BAD-TERMINAL-CAPACITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: singleton O--O charge and clause-range claim

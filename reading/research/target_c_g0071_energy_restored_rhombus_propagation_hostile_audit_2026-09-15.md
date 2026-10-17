@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_g0071_energy_restored_rhombus_propagation_hostile_audit_2026-09-15.md) · source SHA-256 `fa85bdaae4e97c1910a42d7bfd9a9edda4755ebe07e546d6be7f45d56c4efcb1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2a255a3373c31833a68ce3f6eba4c73f90f31d67", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_g0071_energy_restored_rhombus_propagation_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "53fd68b33dee322f4f8b0665cf6e4c8ccb7a75daea9cd94bae870c80832779f7"} -->
 

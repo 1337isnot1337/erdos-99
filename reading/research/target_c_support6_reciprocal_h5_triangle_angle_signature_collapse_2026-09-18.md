@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_reciprocal_h5_triangle_angle_signature_collapse_2026-09-18.md) · source SHA-256 `32e475570ebf37ce7080c685d3b19b28fd6f43285470c7bc1fcc4bdb663859dd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f5ce381b0d184773345b54c2e28db9014538f4a3", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_reciprocal_h5_triangle_angle_signature_collapse_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b1bf5ef031632fd56047a60138f33869b3b12395cc8eb288ee171ae3771a2e74"} -->
 
@@ -91,10 +91,11 @@ There is no metric approximation here.  Reversing exactly one raw ray adds `pi` 
 The signs `chi_i(a,b)` are already determined by the current exact sign/order data:
 
 - at the ground vertex, the six raw rays occur in the strict order
+  
   ```math
   1,6,5,2,3,4
-  
   ```
+
   inside a cone of width `<pi/3`, so their pairwise orientation signs are read directly from that order;
 - at a non-ground vertex, the exact force cycle is a regular five-ray tournament: the cross product from any force ray to each of the next two force rays is positive, and to each of the preceding two is negative.  Multiplication by the two edge signs recovers the raw orientation sign.
 

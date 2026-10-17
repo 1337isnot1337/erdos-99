@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/erdos_problem_99_2026-08-30_phase-cover-stability.md) · source SHA-256 `57404994b8feda11742038c86784860f56bb4f8ffb7b7af26fee733808813c93`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "ffb27942a58c68d4c22b5c2d82778a96b4ed49ff", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/erdos_problem_99_2026-08-30_phase-cover-stability.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "6fe37d39bf85846c4c2807e1704d577bab0bc9298a4d2576ecec41cc4ec50867"} -->
 

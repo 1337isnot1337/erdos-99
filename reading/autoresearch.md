@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../autoresearch.md) · source SHA-256 `cbd7b4a41cd444daad3240c541832ac24dbdd6e7df5150678b472d05a01a833b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # One independently reviewable contribution
 
@@ -9,7 +9,7 @@ audit (full proof plus adversarial bridge/regression checks) on the exact SHA.
 The project owner may operate the independent reviewer on others' submissions.
 No human mathematical referee or second reviewer is required.
 
-Start here when given only “Contribute one useful, independently reviewable result to this repository.” Default to a 30–60 minute session. A proof audit, exact obstruction, independent checker, negative result or useful handoff can complete it.
+Start here when given only “Contribute one useful, independently reviewable result to https://github.com/1337isnot1337/erdos-99.” Default to a 30–60 minute session. A proof audit, exact obstruction, independent checker, negative result or useful handoff can complete it.
 
 ## Refresh at every checkpoint
 

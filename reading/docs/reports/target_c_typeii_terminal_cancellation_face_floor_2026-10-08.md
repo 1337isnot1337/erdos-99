@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_typeii_terminal_cancellation_face_floor_2026-10-08.md) · source SHA-256 `577dd853f756401e267688d3d9bc9992f74c55ef66cd87fecf9752b163c9c160`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A9595E742E2B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 
@@ -120,11 +120,12 @@ remain open. This is a scoped branch exclusion, not Level I closure.
 - [Audit.131](../audits/target_c_atomic_one_end_train_boundary_independent_audit_2026-10-08.md):
   count every actual rhombus track and every contact edge incident to no
   rhombus as a singleton train. Their exact number $`\mathcal T_D`$ is
+  
   ```math
   2\mathcal T_D=b+Q+4f,\qquad \mathcal T_D=q-k+2f.
   \tag{FC4}
-  
   ```
+
 - [Theory 01, Theorem 10.6](../theory/01-local-structure.md):
   actual tracks have two terminals, at most one crossing per pair, and
   terminal-midpoint distance at most their number $`d_\tau`$ of crossed

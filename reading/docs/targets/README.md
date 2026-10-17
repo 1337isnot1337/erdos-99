@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/targets/README.md) · source SHA-256 `c05f204a705613356ec4e0cc61979121eb16f07ffb4f80d8dc63a856bdc9df2a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Endgame route map
 

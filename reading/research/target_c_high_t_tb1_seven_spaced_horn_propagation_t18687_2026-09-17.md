@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_seven_spaced_horn_propagation_t18687_2026-09-17.md) · source SHA-256 `bbef6b5aef7dde0a5cf024e2a165dbae10714dc4004a8001bcac28302a909ee5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cb135653fb24b393e5f16238de237cced6e2ff8e", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_seven_spaced_horn_propagation_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d3cb536a636e3062ffc0abc03b72c472e9cc6e1d133ff31b24fd1a299b38414c"} -->
 

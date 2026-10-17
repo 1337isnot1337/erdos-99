@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_typeI_local_hall_density_hostile_audit_2026-09-15.md) · source SHA-256 `386deb7f5c5746446f91236cbe1b706a74baaa539f9b8996679fab9a16e02556`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "ea70c4ce652879bef67e9e01ace052ca87a72637", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_typeI_local_hall_density_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c98fc4d59ce4dc9bec4459c8665b4fece1e611263f4503da2d331352809ff373"} -->
 

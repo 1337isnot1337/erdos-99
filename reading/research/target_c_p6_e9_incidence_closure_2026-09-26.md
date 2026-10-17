@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_p6_e9_incidence_closure_2026-09-26.md) · source SHA-256 `6bd51322965ce108eaa5e9d1ddf935eeaedaa4581529a8867a5f2d879f339bb6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b077d0c1b0761430f8e89e3b291eb4377762f516", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_p6_e9_incidence_closure_2026-09-26.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "cc7544b108025df3e9de6d2d5d00fb229348ca4b752742d17545f496fc4da293"} -->
 

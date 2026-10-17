@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/research/proposals.md) · source SHA-256 `3fd6af991bc7e220c4cdd1955b09e31988c20d34777554cd7cf1f710befe7c39`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Active noncanonical research
 

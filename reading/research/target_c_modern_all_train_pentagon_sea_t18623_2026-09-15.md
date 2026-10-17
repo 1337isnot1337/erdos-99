@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_modern_all_train_pentagon_sea_t18623_2026-09-15.md) · source SHA-256 `c05b9f9596a8e29f02af899b95335e65cd326fd1297a994e329acef6bb6f0e9f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

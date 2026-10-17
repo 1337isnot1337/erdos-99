@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_convex_width_section122_feedback_2026-09-30.md) · source SHA-256 `9edf8a1594ceed4c7d10146b3e6f2023a8d9ed7da834d2bf01e95dae40c39b83`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9585D80DA2DC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II - convex-width / Section-122 feedback

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/publication/provenance.md) · source SHA-256 `17d69911d5a3bd33ec815c6ad1f7e59fc626be85a3b9be6f7324c234a20e5af4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Source provenance and publication edits
 

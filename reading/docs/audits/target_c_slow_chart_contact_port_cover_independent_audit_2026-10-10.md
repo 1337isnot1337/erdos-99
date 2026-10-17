@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_slow_chart_contact_port_cover_independent_audit_2026-10-10.md) · source SHA-256 `4f40354d0af913209245992c18e88680ccf65973d68265ef085c32d4329a9391`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1E42CFFD6E98","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C Audit.254 — slow-chart contact-port cover exclusion

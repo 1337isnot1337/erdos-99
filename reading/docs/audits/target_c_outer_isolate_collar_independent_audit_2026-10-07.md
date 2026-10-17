@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_outer_isolate_collar_independent_audit_2026-10-07.md) · source SHA-256 `e1388a8556fdc5b844b2d778b4c1a31038f5efb0e60ff184609b299c096c4112`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3987D8C7908B","canonical":true,"claim_ids":["C-OO-OUTER-ISOLATE-COLLAR-BOUND"],"claim_statuses":{"C-OO-OUTER-ISOLATE-COLLAR-BOUND":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.105 — outer-isolate blocker collars

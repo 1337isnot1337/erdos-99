@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_extreme_circuit_completion_topology_2026-09-10.md) · source SHA-256 `b2d1b70eb8245f90075e3cc15c8bd700734eba76016102d9dab19dd0a28d0fba`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3FF535CAC3BD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — extreme-circuit completion budget and selected Woodall topology

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/toeout_kuperberg_improvement_2026-08-30.md) · source SHA-256 `a09e57ab2f90809794049bd4bc237b1fe287ee37aeeaf0a623bf0e8d67dbdbcd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "1f07ce132fc995e07443acaae9b27fbcf37d1cbe", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/toeout_kuperberg_improvement_2026-08-30.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "307798c012e15aca45a07700899dbed71dce0d7fdeb223ffc7fff5cab9016e0c"} -->
 
@@ -300,14 +300,11 @@ strain and does not itself make a Section 157 witness exterior-compatible.
 > **Exterior-compatible finite-gap lemma after Section 160.** At an aligned gap scale
 > actually arising in a global Target A monomer domain, prove that a toe-out nested
 > witness of support
-> 
-
-```math
+> ```math
 > \exp\left[
 > \left(\frac{\sqrt3\log3}{8}+o(1)\right)d^{-3}
 > \right]
-> 
-```
+> ```
 > can be protected from every exterior source/scaffold blocker with support `o(D)`,
 > or construct a different finite architecture with gain order below four.
 

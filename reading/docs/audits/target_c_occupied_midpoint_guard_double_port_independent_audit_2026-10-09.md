@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_occupied_midpoint_guard_double_port_independent_audit_2026-10-09.md) · source SHA-256 `200ba12d77e46ffd12e4146e73436322acee10dd44c1b09525719b5a505e9e9b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7E5DEF8BB9B6","canonical":true,"claim_ids":["C-FULLY-OCCUPIED-CHART-CONTACT-PORT-SCARCITY","C-FULLY-OCCUPIED-CHART-DOUBLE-PORT-COUNT"],"claim_statuses":{"C-FULLY-OCCUPIED-CHART-CONTACT-PORT-SCARCITY":"canonical","C-FULLY-OCCUPIED-CHART-DOUBLE-PORT-COUNT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: occupied midpoint guards for bounded-variation charts
@@ -15,10 +15,11 @@
 ## Exact claims
 
 1. **Arbitrary-source double-port theorem.** Let (A_D) be finite unit-separated planar sources with diameter (D\to\infty). For each source, suppose at most a fixed (J) finite rectangular additive charts are supplied,
+   
    ```math
    p_{ij}=p_{00}+iu_0+jv_0+a_i+b_j,
-   
    ```
+
    where (u_0,v_0) are unit vectors with angle in ([\pi/3,2\pi/3]), the total shore variation is at most a fixed (M), and **every integer position in each rectangle is occupied by a distinct actual point of (A_D)**. Count actual diameter endpoints (p) that have two distinct actual unit neighbors occupying positions in one such chart. The number of distinct counted endpoints is (O_{J,M}(D^{4/5})). Other source points are unrestricted and retained. No optimality or KKT assumption is needed.
 
 2. **Canonical contact-port corollary.** On an unbounded canonical post-ZF triangle-free C-II sequence, under the same fixed-family fully occupied chart hypothesis, call a loaded endpoint chart-covered if it is a contact leaf whose sole actual unit neighbor occupies a chart site, or if it has two distinct actual unit neighbors in one chart. Then the covered population is (O_{J,M}(D^{4/5})), and at least (D-O_{J,M}(D^{4/5})) loaded endpoints remain uncovered. The contact-leaf clause uses positivity of its actual contact in a normalized full-source KKT stress, supplied for canonical core edges by `C-MIXED-CORE-ONE-ROW-REDUNDANCY`; the linear lower bound uses (q\ge h\ge\lceil D\rceil) from `C-ZRF` and `C-WOODALL`.

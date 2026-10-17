@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_difference_body_defect_split_2026-09-09.md) · source SHA-256 `7cbf36ad46e7bc57baaafcbbec118e386034a0e4a9823dc15117c3751e087342`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A09C2281B3A1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic diameter defect splits exactly into parallel-side and short-antipodal defects

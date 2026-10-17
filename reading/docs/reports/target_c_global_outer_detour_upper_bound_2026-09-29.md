@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_global_outer_detour_upper_bound_2026-09-29.md) · source SHA-256 `ce6d995f98a148c0a351c8bddf64a0c22b71c19adf75482f22de17135e3f90e0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-ABE82E88D4FC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_global_outer_detour_upper_bound_2026-09-29.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=52d7dc5ca0df051065069508c960816fc132b1b3; lifecycle=unreviewed; canonical=false -->

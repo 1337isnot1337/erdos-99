@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_b_virtual_zonotope_missing_crossing_audit_2026-09-05.md) · source SHA-256 `4c628764fa370d809601c78f2314caa1bc08794de4588cfb7dd4b59d8adce16d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3f69d98d0803c82844fd6c413b772892bd83b1e5", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/audits/target_b_virtual_zonotope_missing_crossing_audit_2026-09-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "af48aa4feb2ba30e7d37e87bf9786232327e6fafd3ff7747d549b4bc343b370e"} -->
 

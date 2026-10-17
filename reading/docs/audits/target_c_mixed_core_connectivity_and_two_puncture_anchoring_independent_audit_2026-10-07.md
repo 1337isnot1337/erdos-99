@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_mixed_core_connectivity_and_two_puncture_anchoring_independent_audit_2026-10-07.md) · source SHA-256 `4bda830e31ed81b58b1063bbd7850583c1cda65a6ec274c6c0a2043746928e52`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2B737E3D9B5F","canonical":true,"claim_ids":["C-MIXED-CORE-ONE-ROW-REDUNDANCY","C-MIXED-CORE-THREE-VERTEX-CONNECTIVITY","C-TWO-PUNCTURE-LOADED-ANCHORING"],"claim_statuses":{"C-MIXED-CORE-ONE-ROW-REDUNDANCY":"canonical","C-MIXED-CORE-THREE-VERTEX-CONNECTIVITY":"canonical","C-TWO-PUNCTURE-LOADED-ANCHORING":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: mixed-core connectivity and two-puncture loading

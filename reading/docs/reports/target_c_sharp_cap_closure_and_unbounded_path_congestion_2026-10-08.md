@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sharp_cap_closure_and_unbounded_path_congestion_2026-10-08.md) · source SHA-256 `2c08e17b61bdc57d4b1901a8be372c8e6c95957b4f9a9a6108a578bdb2adee0b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-595A0A1630F0","canonical":false,"claim_ids":["C-FAN-PATH-COMMON-TRUNK-REGRESSION"],"claim_statuses":{"C-FAN-PATH-COMMON-TRUNK-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Target C: sharper finite cap closure and unbounded fan-path congestion

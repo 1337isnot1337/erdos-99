@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_global_outer_train_exact_multishear_hostile_audit_2026-09-15.md) · source SHA-256 `f25080966ce8998194168431f2fff4b246f3e189e2ff282435a03c574edae59e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Hostile audit — exact simultaneous finite shear for arbitrary O--O trains
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/15-two-shadow-planarity.md) · source SHA-256 `06e5080f576dd695f4196adc225525b9f314bf65685fd1f509ce3d15f77de8f8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — planar two-shadow transport
 
@@ -23,13 +23,10 @@ scaffold sites rather than arbitrary lattice sites in the source hull.
 > **Theorem 163.1 (short matching segments are disjoint).** Let `U,V` be finite
 > unit-separated subsets of the plane, and let `M` be a matching between them such
 > that
-> 
-
-```math
+> ```math
 > |u-v|<1\qquad(uv\in M).
 > \tag{163.1}
-> 
-```
+> ```
 > Then the closed straight segments `[u,v]`, `uv in M`, are pairwise disjoint.
 
 ### Proof
@@ -77,24 +74,18 @@ and `M_Y` any strict-conflict matching between `Y` and `A`.
 
 > **Theorem 163.2 (crossing-to-scaffold transport).** Each of `M_X` and `M_Y` is a
 > noncrossing straight-line matching. Suppose
-> 
-
-```math
+> ```math
 > xa\in M_X,
 > \qquad
 > yb\in M_Y,
 > \qquad a\ne b,
 > \tag{163.4}
-> 
-```
+> ```
 > and `[x,a]` intersects `[y,b]`. Then
-> 
-
-```math
+> ```math
 > \boxed{|x-y|<1.}
 > \tag{163.5}
-> 
-```
+> ```
 > Therefore `y in Y_in`, and `xy` is an edge of the canonical strict-conflict graph
 > `G` between `X_m` and `Y_in`.
 
@@ -151,34 +142,25 @@ The second inequality is available in the Section-155 common placement.
 > **Theorem 163.3 (common-source V-path theorem).** There are subsets
 > `X' subset X_m`, `Y' subset Y`, a bijection `pi:X'->Y'`, and pairwise distinct
 > mediators `a_x in A` such that
-> 
-
-```math
+> ```math
 > |x-a_x|<1,
 > \qquad
 > |\pi(x)-a_x|<1,
 > \qquad
 > |x-\pi(x)|<2
 > \tag{163.9}
-> 
-```
+> ```
 > for every `x in X'`, while
-> 
-
-```math
+> ```math
 > \boxed{|X'|\ge m-p-E.}
 > \tag{163.10}
-> 
-```
+> ```
 > Consequently
-> 
-
-```math
+> ```math
 > \boxed{|X_m\setminus X'|\le p+E
 > <\frac{5\pi}{3}D+1.}
 > \tag{163.11}
-> 
-```
+> ```
 
 ### Proof
 
@@ -217,19 +199,14 @@ d=\operatorname{diam}K_m<D.
 The canonical perimeter bound gives `P_m<=pi d`.
 
 > **Lemma 163.4 (width-one lattice-collar bound).** The number of lattice sites
-> 
-
-```math
+> ```math
 > \mathcal C_2
 > =\Lambda'\cap\left((K_m+2\mathbb B)
 > \setminus\operatorname{int}(K_m+\mathbb B)\right)
 > \tag{163.14}
-> 
-```
+> ```
 > satisfies
-> 
-
-```math
+> ```math
 > \boxed{
 > |\mathcal C_2|
 > \le\frac{8P_m}{\pi}+24
@@ -237,8 +214,7 @@ The canonical perimeter bound gives `P_m<=pi d`.
 > <8D+24.
 > }
 > \tag{163.15}
-> 
-```
+> ```
 
 ### Proof
 
@@ -270,17 +246,14 @@ which is (163.15). $`\square`$
 > **Corollary 163.5 (canonical inner V-path family).** The family in Theorem 163.3
 > can be restricted to subsets `X'' subset X_m`, `Y'' subset Y_in` with a bijection
 > and distinct source mediators satisfying (163.9), while
-> 
-
-```math
+> ```math
 > \boxed{
 > |X_m\setminus X''|
 > \le p+E+\frac{8P_m}{\pi}+24
 > <\left(\frac{5\pi}{3}+8\right)D+25.
 > }
 > \tag{163.16}
-> 
-```
+> ```
 
 ### Proof
 
@@ -317,49 +290,35 @@ conflict radius one.
 
 > **Theorem 163.6 (rattler-mediated common shadows).** The matchings in
 > Theorem 163.3 can be chosen so that there are at least
-> 
-
-```math
+> ```math
 > \boxed{q\ge\max\{0,\tau-p-E\}}
 > \tag{163.19}
-> 
-```
+> ```
 > pairwise vertex-disjoint triples
-> 
-
-```math
+> ```math
 > x_i-r_i-y_i,
 > \qquad
 > x_i\in X_m,
 > \quad r_i\in R,
 > \quad y_i\in Y,
 > \tag{163.20}
-> 
-```
+> ```
 > satisfying
-> 
-
-```math
+> ```math
 > |x_i-r_i|<1,
 > \qquad
 > |r_i-y_i|<1,
 > \qquad
 > |x_i-y_i|<2.
 > \tag{163.21}
-> 
-```
+> ```
 > In particular,
-> 
-
-```math
+> ```math
 > q>\tau-\frac{5\pi}{3}D-1.
 > \tag{163.22}
-> 
-```
+> ```
 > After requiring `y_i in Y_in`, at least
-> 
-
-```math
+> ```math
 > \boxed{
 > q_{\rm in}
 > \ge\max\left\{0,
@@ -367,17 +326,13 @@ conflict radius one.
 > \right\}
 > }
 > \tag{163.23}
-> 
-```
+> ```
 > such triples remain, and hence
-> 
-
-```math
+> ```math
 > q_{\rm in}>
 > \tau-\left(\frac{5\pi}{3}+8\right)D-25.
 > \tag{163.24}
-> 
-```
+> ```
 
 ### Proof
 

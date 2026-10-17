@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fs_quantitative_perimeter_area_tradeoff_2026-09-10.md) · source SHA-256 `0f55c1b9b3db071ddc5cfd5d7487203e468f15207fa68e9f7e6b4b9aa1b0873e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AE704DD03CD5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fs_quantitative_perimeter_area_tradeoff_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=3b2f812139b1eae8f59a10637bec916e7c563cfa; lifecycle=unreviewed; canonical=false -->

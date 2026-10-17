@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_laminar_outer_train_multishear_hostile_audit_2026-09-15.md) · source SHA-256 `aa1daafe745e861c5de320ff224489d0018092caa28d126e62682fc1b93a66fb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DA4C860F93FA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — finite multi-shear chart for noncrossing outer trains

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/cage_or_cophased_lattice_shadow_2026-08-30.md) · source SHA-256 `40bce10b477dac7727c31631de0350772b8a172d08c9f63110f4a4ed345ed2e6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4a7d719b193c84929596d6949c826bfcb4ab976e", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/cage_or_cophased_lattice_shadow_2026-08-30.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "eea65be7a640e1e005d8df9f1bc2343d621f494e4ef85c08ccd38df9407a0678"} -->
 
@@ -76,62 +78,48 @@ r_\Lambda=\frac1{\sqrt3}.
 Here $`a_0`$ is the area of a Voronoi cell and $`r_\Lambda`$ is the covering radius. Rotations and translations of $`\Lambda`$ have the same constants.
 
 > **Theorem 155 candidate (prescribed-phase lattice shadow).**  Let $`H\subset\mathbb R^2`$ be a compact convex body with area $`A_H`$, perimeter $`P_H`$, and diameter $`D`$. Let
-> 
-
-```math
+> ```math
 > B\subset H,
 > \qquad |B|=M=\alpha_1(H),
-> 
-```
+> ```
 > be a capacity-maximizing unit-separated set. Fix **any** rotated and translated unit triangular lattice $`\Lambda'`$, and put
-> 
-
-```math
+> ```math
 > Y=\Lambda'\cap H.
-> 
-```
+> ```
 > Then:
 >
 > 1. the strict conflict graph on $`Y\sqcup B`$, with $`y\sim b\iff |y-b|<1`$, has a matching saturating every vertex of $`Y`$;
 > 2. for every lattice phase,
 >    
-
-```math
+>    ```math
 >    \boxed{
 >    |Y|\ge \frac{A_H-r_\Lambda P_H}{a_0};
 >    }
 >    \tag{155.1}
->    
-```
+>    ```
+
 > 3. consequently
 >    
-
-```math
+>    ```math
 >    \boxed{
 >    0\le M-|Y|
 >    \le \frac76P_H+1
 >    \le \frac{7\pi}{6}D+1.
 >    }
 >    \tag{155.2}
->    
-```
+>    ```
+
 >
 > Therefore for every prescribed triangular-lattice phase there is a subset
 > $`B'\subseteq B`$ and a bijection
-> 
-
-```math
+> ```math
 > \mu:Y\longrightarrow B'
-> 
-```
+> ```
 > satisfying
-> 
-
-```math
+> ```math
 > \boxed{|y-\mu(y)|<1\qquad(y\in Y),}
 > \tag{155.3}
-> 
-```
+> ```
 > while at most $`(7/6)P_H+1=O(D)`$ points of $`B`$ are unmatched.
 
 ### Proof
@@ -220,7 +208,7 @@ Subtract (155.1):
 \begin{aligned}
 M-|Y|
 &\le
-\frac{P_H}{2}+1+rac{r_\Lambda}{a_0}P_H\\
+\frac{P_H}{2}+1+\frac{r_\Lambda}{a_0}P_H\\
 &=\left(\frac12+\frac23\right)P_H+1\\
 &=\frac76P_H+1.
 \end{aligned}
@@ -255,22 +243,16 @@ The standard boundary-tube argument gives
 ```
 
 > **Corollary 155.2 (co-phased deep monomer/dimer complex).**  Under the hypotheses of Theorem 155, assume the lattice phase is generic. For every
-> 
-
-```math
+> ```math
 > b\in B\setminus B_\partial,
-> 
-```
+> ```
 > its strict neighborhood in $`Y`$ is its complete neighborhood in the infinite triangular lattice and therefore has size exactly three or four. Its convex hull is respectively one elementary lattice triangle or one unit lozenge, the point $`b`$ lies in the interior of that cell, and distinct source-cell interiors are disjoint.
 >
 > Moreover every lattice site in $`Y`$ has at least one source conflict, and all but at most
-> 
-
-```math
+> ```math
 > \boxed{4|B_\partial|\le48D+36}
 > \tag{155.8}
-> 
-```
+> ```
 > sites of $`Y`$ belong to the neighborhood of at least one deep source cell.
 
 ### Proof
@@ -286,60 +268,48 @@ Thus a zero-slack source has, in **every generic prescribed triangular-lattice p
 The source-capacity flag and the fixed-container locked-triangle theorem can be iterated.
 
 > **Theorem 156 candidate (finite cage-or-capacity terminalization).**  Let
-> 
-
-```math
+> ```math
 > A\subset H=\operatorname{conv}A
-> 
-```
+> ```
 > be a triangle-free global minimizer with
-> 
-
-```math
+> ```math
 > |A|=N,
 > \qquad
 > \operatorname{diam}A=D,
-> 
-```
+> ```
 > and put
-> 
-
-```math
+> ```math
 > M=\alpha_1(H).
-> 
-```
+> ```
 > Then at least one of the following holds.
 >
 > 1. **Locked-transition branch.** There is a unit-separated global optimum
 >    
-
-```math
+>    ```math
 >    P\subset H,
 >    \qquad N<|P|\le M,
 >    \qquad \operatorname{diam}P=D,
->    
-```
+>    ```
+
 >    containing a unit equilateral triangle $`T_*`$ whose three sides satisfy
 >    
-
-```math
+>    ```math
 >    a_{ij}(v)=0
 >    \qquad(ij\in E(T_*),\ v\in\mathcal C_H(P)).
 >    \tag{156.1}
->    
-```
+>    ```
+
 >    Thus $`T_*`$ is universally first-order locked by the actual fixed-container feasible cone.
 >
 > 2. **Zero-slack triangle-free branch.** There is a triangle-free global optimum
 >    
-
-```math
+>    ```math
 >    B_*\subset H,
 >    \qquad |B_*|=M=\alpha_1(H),
 >    \qquad \operatorname{diam}B_*=D.
 >    \tag{156.2}
->    
-```
+>    ```
+
 >    In particular its exact source-hull slack is zero. Therefore Theorem 155 and Corollary 155.2 apply to $`B_*`$ for every prescribed, respectively every generic, triangular-lattice phase.
 
 ### Proof
@@ -419,14 +389,11 @@ Theorem 156 reduces the first two to an exhaustive pair. Theorem 155 sharpens th
 A successful closing theorem can therefore be stated more concretely.
 
 > **Co-phased source/scaffold transport target.** In the zero-slack branch of Theorem 156, choose the same generic triangular-lattice phase for the source shadow and the Target A scaffold. Use the two co-phased monomer/dimer complexes, together with global minimum-diameter optimality and the exact plateau/scaffold parameters, to force
-> 
-
-```math
+> ```math
 > \boxed{
 > \dim\ker S\ge\Delta_\Lambda-d_{\rm int}
 > }
-> 
-```
+> ```
 > or construct an $`N`$-point unit-separated configuration of diameter strictly below $`D`$.
 
 The local monomer and dimer regressions remain binding: a proof must use the global coupling, not merely the fact that both sides use the same two cell motifs.

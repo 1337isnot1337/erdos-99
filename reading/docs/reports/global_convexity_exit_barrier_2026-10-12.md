@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_convexity_exit_barrier_2026-10-12.md) · source SHA-256 `690421f3df83c23f72f57359a024afece7449c7069b2effab73ae049c98e5e31`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8B9D890FA1BD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Global convexity exit barriers and dense triangle-free traps

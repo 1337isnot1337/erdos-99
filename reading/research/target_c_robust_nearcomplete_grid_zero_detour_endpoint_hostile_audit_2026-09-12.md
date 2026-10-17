@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_robust_nearcomplete_grid_zero_detour_endpoint_hostile_audit_2026-09-12.md) · source SHA-256 `31c3bd6d9515f1eca08557eb8b7c2d7a28bf468389c2bb6c0155d9ae80f21e09`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "9911205bcc0819450e8558310f2e6736ca8b26e3", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_robust_nearcomplete_grid_zero_detour_endpoint_hostile_audit_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "109d8ea74ccf6901662b180e6bda8cada53eb3800ca39571ee161a526feb9b4d"} -->
 

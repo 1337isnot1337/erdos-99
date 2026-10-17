@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_outer_isolate_singleton_composition_independent_audit_2026-10-08.md) · source SHA-256 `5d3353476fc5b6be292d138982006a1ac1ed6aaf66d79a5babda2a2f4a5acd4f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5C0C14A5E156","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C Audit.129 — outer-isolate singleton-composition crosswalk

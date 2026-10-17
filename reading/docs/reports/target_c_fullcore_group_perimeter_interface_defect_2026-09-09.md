@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_group_perimeter_interface_defect_2026-09-09.md) · source SHA-256 `d975cdeaa8fb8e154f73c9d33a4158110b40dda71d2df1c1532bb52a890c3443`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-32FF3BB6D683","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fullcore_group_perimeter_interface_defect_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=20b871accb897917673ebf6c0c6a08eec3b64a03; lifecycle=unreviewed; canonical=false -->

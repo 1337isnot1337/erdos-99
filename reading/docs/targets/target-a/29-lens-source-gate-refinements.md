@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/29-lens-source-gate-refinements.md) · source SHA-256 `ee1d31457082639f55a90b1474bfc92753c0a7dc4fc828a65bdd2fe5643ca550`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — independently audited lens and source-gate refinements
 

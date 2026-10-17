@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_g0050_physical_boundary_propagation_2026-09-14.md) · source SHA-256 `3a9b80bc3444bf010521eba0ed5475487ecd73f2be2b1237ae6743a891181867`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Erdős Problem #99 — matched `g=0.0050` physical boundary propagation
 

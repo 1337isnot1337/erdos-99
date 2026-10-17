@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_atomic_endpoint_incidence_2026-09-10.md) · source SHA-256 `1e8d532d30ccb28b9b46847eed98a34d7b94e2665b82f0944c04b03b7a3fea74`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5CB4456266E2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic outer-direction equidistribution and atomic train endpoint capacity

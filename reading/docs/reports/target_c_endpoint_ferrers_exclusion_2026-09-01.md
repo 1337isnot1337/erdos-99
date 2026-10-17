@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_endpoint_ferrers_exclusion_2026-09-01.md) · source SHA-256 `6121819cf54c3da52271c9ac45cf0cdbe339f1b43727c7ef095e9e39b30cb491`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7D6EB18AE2FC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C91: exclude the C89 endpoint by four Ferrers walls

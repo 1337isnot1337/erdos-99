@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearzero_explicit_slope_gap_2026-09-09.md) · source SHA-256 `a99fb8d915877e5b2e66bed15c4a84a84a3c16187eef64a381c2eef1be1ee827`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D8788A48874A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — QSG: an explicit gap above RCC slope one in the near-zero response phase

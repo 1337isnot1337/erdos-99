@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearzero_long_response_carriers_2026-09-09.md) · source SHA-256 `e72739fd98c48ed224f7ad8be16be990d4f96df8d6c93250f348fa576fc84e92`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AC24806334A7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — NLC: near-zero response is carried by at most three depth-D harmonic branches

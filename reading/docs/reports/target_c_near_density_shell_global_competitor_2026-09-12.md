@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_near_density_shell_global_competitor_2026-09-12.md) · source SHA-256 `de782c06538bbf0fccdde2097f1c280dc711b7975b72e3e1d606e30db19393a7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-68C644B7C160","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_near_density_shell_global_competitor_2026-09-12.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=5f57f3fd6191b878b120c3d6655d3ef6683acddb; lifecycle=unreviewed; canonical=false -->

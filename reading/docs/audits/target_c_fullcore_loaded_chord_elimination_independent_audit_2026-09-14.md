@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_fullcore_loaded_chord_elimination_independent_audit_2026-09-14.md) · source SHA-256 `c525c80ab61ae7d1416c3850741c3a1a3671349eae688e9a88458a40482882d5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-21A2AAE6BA75","canonical":true,"claim_ids":["C-FULLCORE-LOADED-CHORD"],"claim_statuses":{"C-FULLCORE-LOADED-CHORD":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit — full-core loaded-chord elimination

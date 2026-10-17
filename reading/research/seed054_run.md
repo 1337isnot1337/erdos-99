@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/seed054_run.md) · source SHA-256 `9a896512c081d417942006f66a88ac3765f74671400efae91ee4064556738f89`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "78469d47b960e144ee592ac73ba6ff22b657c1ad", "source_head": "3a80b4bd2d75a439835ab26a863521816a0f39d1", "source_lifecycle": "not indexed", "source_path": "research/seed054_run.md", "source_pr": 967, "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "38908df90f1044b474362e282a5641fa5a95282a30820ea047f321fca135245a"} -->
 

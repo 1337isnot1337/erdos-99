@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_nine_coordinate_weight_profile_parity_check_criterion_2026-09-28.md) · source SHA-256 `a7ba2779a2813c578f1271ecc866db50da1dbe92e6b3fdc30a2ab862515f0316`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "476db5b98b422a2e1336be56d9251c2b0d566437", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_nine_coordinate_weight_profile_parity_check_criterion_2026-09-28.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "81246479e493472d7cdff5fb48276b9e33bdbbe3478ec7c530040eadfa39e4b5"} -->
 

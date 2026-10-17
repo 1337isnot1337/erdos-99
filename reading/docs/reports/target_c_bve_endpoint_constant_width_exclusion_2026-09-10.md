@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_bve_endpoint_constant_width_exclusion_2026-09-10.md) · source SHA-256 `733508a849cd34886dfdf37a806301f04f148d86f476d79577023e00039fa979`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C27F87D706FB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — constant-width boundary rigidity excludes the exact BVE feedback endpoint

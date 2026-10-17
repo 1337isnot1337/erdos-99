@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_singleton_anchored_groemer_gate_2026-09-14.md) · source SHA-256 `839f3f510792d1bf75daf83199c2455fa290b3cd374d5debec0311a16bbb5683`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "72d0bc65e667a77780b531251bc29a3d630c0224", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_singleton_anchored_groemer_gate_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "e61653b9090fa5b305e5ab2f171ea60619a48471b92627525b603d6f4a3a6755"} -->
 

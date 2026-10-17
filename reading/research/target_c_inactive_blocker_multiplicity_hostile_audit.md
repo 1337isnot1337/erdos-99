@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_inactive_blocker_multiplicity_hostile_audit.md) · source SHA-256 `25a7db17693f9b8e11b83a95d6c6cbd9dc9b0db1c9a3a8a829c538168acf4c10`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "9d85418ca59390e00666885c2fdad22996a4e8a5", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_inactive_blocker_multiplicity_hostile_audit.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "19a4a737ef7c489b83a868c86f97911a5ae952036d8a85bb9bddeb33f3a2c833"} -->
 

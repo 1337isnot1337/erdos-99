@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_small_leaf_center_fan_7404_hostile_audit_2026-09-15.md) · source SHA-256 `7ed9065cbe996f2a2f3efe9fcc091d64b4a7444cbe6e88be49d959e63eca9358`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f7d1a3e35e8a51d3c25e0b3a9a036543978389a7", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_small_leaf_center_fan_7404_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "fb50268deac373f2df19df57be38342a2264a4adf1b82b9a5d0bd08248a2b0cb"} -->
 

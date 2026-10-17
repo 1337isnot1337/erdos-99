@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_split_budget_pair_payment_2026-09-14.md) · source SHA-256 `4dd6d3e289a4fefd65d04f0c068498abdd66eaf2407e4379f3c24d0a9761a98c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Erdős Problem #99 — split-budget sharpening of the atomic per-pair payment
 

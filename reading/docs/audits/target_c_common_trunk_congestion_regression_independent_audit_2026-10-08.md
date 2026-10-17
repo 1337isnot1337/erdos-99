@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_common_trunk_congestion_regression_independent_audit_2026-10-08.md) · source SHA-256 `07c9ad97081d8c6897c4b8314a8e46cf79f59bcdd4decd1257f5317acc459167`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-57862741A3FD","canonical":false,"claim_ids":["C-CIRCUMCIRCLE-CENTERED-DISK-CAP-SHARPNESS-REGRESSION","C-FAN-PATH-COMMON-TRUNK-REGRESSION"],"claim_statuses":{"C-CIRCUMCIRCLE-CENTERED-DISK-CAP-SHARPNESS-REGRESSION":"regression","C-FAN-PATH-COMMON-TRUNK-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent Audit.168: cap sharpness and common-trunk fan congestion

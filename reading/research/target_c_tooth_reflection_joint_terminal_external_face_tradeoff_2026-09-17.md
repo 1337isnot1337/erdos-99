@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_joint_terminal_external_face_tradeoff_2026-09-17.md) · source SHA-256 `a8e430a4ad50f85a9e922a3921f531f26b81ade8c7236a42ae4a6959c6fe6f46`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "259d98251b3c6399919cac7fb44ac097295f10fa", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_joint_terminal_external_face_tradeoff_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c8c53ca242f11a200f61fc63e4fb22374b71096b944bb8add23ab63d8d8642db"} -->
 
@@ -139,10 +139,11 @@ Let
 
 - `B` be the number of maximal consecutive upper blocks;
 - `m` be the number of thick upper gates at the exact threshold
+  
   ```math
   \tau_D=D-\sqrt{D^2-1};
-  
   ```
+
 - `M` be the size of a maximum vertex-disjoint matching among the thin upper gates;
 - `R` be the number of maximal all-lower runs.
 

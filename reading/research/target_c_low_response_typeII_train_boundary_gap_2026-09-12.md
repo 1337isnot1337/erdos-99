@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_low_response_typeII_train_boundary_gap_2026-09-12.md) · source SHA-256 `66ea30aafe322054deb2a5deca4b34359933353b3de7a0136f4ee15473e83f36`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "5191e008dacab36e023395675de60a72c4cde81e", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_low_response_typeII_train_boundary_gap_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "e5e30066919bc560e9a25f968c95483d7bf33faa01a1f795e2e49582275c3ce3"} -->
 

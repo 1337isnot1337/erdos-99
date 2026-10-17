@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_symmetric_area_perimeter_joint_cavity_2026-09-10.md) · source SHA-256 `99b6a9f5b35fe433cd6e71ffcff0f5dd3f023b92d7998b37c51d6edc23dcd194`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EEEDA03CB2EA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — symmetric area/perimeter coupling strengthens the post-ZF cavity obstruction

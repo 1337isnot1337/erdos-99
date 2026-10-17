@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_relative_chord_diameter_direction_exclusion_2026-10-07.md) · source SHA-256 `9b57a1ba61569c684f1fc1a79c8b21eee9d2e89b344261ed0d796f6431fec769`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-329D33AED974","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: relative chord arithmetic and diameter-direction exclusion

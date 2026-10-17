@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/research/research-priority-log.md) · source SHA-256 `b546d528697e6569b2918d5de8f879f45f10b309dfd2cc68d12f45ba90a08a1a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Scientific priority decisions
 

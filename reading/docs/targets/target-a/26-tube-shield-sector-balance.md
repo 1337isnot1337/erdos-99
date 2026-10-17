@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/26-tube-shield-sector-balance.md) · source SHA-256 `15e470ca494ddf19b5a7fe80a558b2cff01bab824539a0367a2b628436367798`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -46,13 +48,10 @@ W_\Sigma^0=V(\Sigma)\sqcup T_\Sigma.
 > **Lemma 174.1 (eleven lattice sites per contact edge).**  If `e` is any unit
 > segment in the plane, then the unit triangular lattice has at most eleven sites at
 > distance strictly below one from `e`.  Consequently
-> 
-
-```math
+> ```math
 > \boxed{|T_\Sigma|\le11|E(\Sigma)|.}
 > \tag{174.4}
-> 
-```
+> ```
 
 ### Proof
 
@@ -68,7 +67,7 @@ inequality to the unit-separated lattice sites in `S_e`, with
 \begin{aligned}
 |\Lambda\cap S_e|
 &\le
-\frac{\pi+2}{a_0}+rac{2\pi+2}{2}+1\\
+\frac{\pi+2}{a_0}+\frac{2\pi+2}{2}+1\\
 &=
 (\pi+2)\left(1+\frac2{\sqrt3}\right)
 <12.
@@ -159,13 +158,10 @@ Z_i=(Z\setminus\widehat W_\Sigma)\cap D_i.
 ```
 
 > **Lemma 174.3 (exact sector basis balance).**  For every `i`,
-> 
-
-```math
+> ```math
 > \boxed{|B_i|=|Z_i|.}
 > \tag{174.13}
-> 
-```
+> ```
 
 ### Proof
 
@@ -198,16 +194,14 @@ X_i=B_i\sqcup C_i^\circ\sqcup C_i^\partial.
 ```
 
 > **Proposition 174.4 (local population identity).**  For every sector,
-> 
-
-```math
+> ```math
 > \boxed{
 > |C_i^\partial|-|O_i|
 > =
 > |X_i|-|Z_i|-|O_i|-|C_i^\circ|.
 > }
 > \tag{174.17}
-```
+> ```
 
 ### Proof
 
@@ -223,9 +217,7 @@ Menger path that starts in `C_i^partial` must end at a distinct sink in the disj
 set `O_i`.
 
 > **Theorem 174.5 (tube-shield sector nullity).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \operatorname{rank}S
 > \le
@@ -234,12 +226,9 @@ set `O_i`.
 > \sum_{i=1}^k\min\{|C_i^\partial|,|O_i|\}.
 > }
 > \tag{174.18}
-> 
-```
+> ```
 > Consequently
-> 
-
-```math
+> ```math
 > \boxed{
 > \zeta
 > \ge
@@ -249,12 +238,9 @@ set `O_i`.
 > |\widehat W_\Sigma\setminus C^\partial|.
 > }
 > \tag{174.19}
-> 
-```
+> ```
 > By Proposition 174.4 this is equivalently
-> 
-
-```math
+> ```math
 > \boxed{
 > \zeta
 > \ge
@@ -266,7 +252,7 @@ set `O_i`.
 > |\widehat W_\Sigma\setminus C^\partial|.
 > }
 > \tag{174.20}
-```
+> ```
 
 ### Proof
 
@@ -304,9 +290,7 @@ The remaining quantitative statement can now be posed directly in the monomer/di
 language:
 
 > **Three-sector population theorem.**  For the stress-generated fan, prove
-> 
-
-```math
+> ```math
 > \sum_i
 > \max\{0,
 > |X_i|-|Z_i|-|O_i|-|C_i^\circ|
@@ -314,8 +298,7 @@ language:
 > \ge
 > s+|\widehat W_\Sigma\setminus C^\partial|,
 > \tag{174.23}
-> 
-```
+> ```
 > or derive a strict-diameter competitor.
 
 Equation (174.23) is sufficient for the exact Target A endpoint by Theorem 174.5.  In

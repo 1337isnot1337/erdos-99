@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/90-dense-inverse-phase-crossing-core-audit.md) · source SHA-256 `f2bd8ce7d24a4677e74e7a6126ef3b52417cba4d9f07d2758450bc3ceaeeecc0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — dense inverse-diameter phase core without Fox--Pach
 

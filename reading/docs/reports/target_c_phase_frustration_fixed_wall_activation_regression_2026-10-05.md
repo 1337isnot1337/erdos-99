@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_phase_frustration_fixed_wall_activation_regression_2026-10-05.md) · source SHA-256 `eb69036df1200192f7ace6694a1fcc16599c023127e8f914911ca81fbb028a0b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DBA05D070909","canonical":false,"claim_ids":["C-FIXED-WALL-ACTIVATION-REGRESSION"],"claim_statuses":{"C-FIXED-WALL-ACTIVATION-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Target C — actual loaded pentagon blocks fixed-wall activation of residual

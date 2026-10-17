@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/ci/PUBLIC_LOCALIZED_CI.md) · source SHA-256 `04854ab36e886a08fa0e9c9a07e3818fec019f1165e873c845c9ab38e5dd8027`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Localized public E99 CI (staged; disabled until explicit rollout)
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_typeii_aggregate_payment_and_exchange_2026-09-14.md) · source SHA-256 `21dd59a9ca86b88cba2137c462796df6eabba9e2a4ef48a1016bb9c1d57f2b61`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-966C604F8050","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Type-II aggregate payment and inactive-exchange audit

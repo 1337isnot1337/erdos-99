@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/state/STATUS.generated.md) · source SHA-256 `66b7fdd1a548a1c975ce70d7f0ad3c492eca3eb091602ccb1970ac497f925e3c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Generated theorem-state summary
 

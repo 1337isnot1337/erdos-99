@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rooted_endpoint_route_phase_exclusion_2026-09-30.md) · source SHA-256 `178cd3dbdf9c18a8d540bd142daba263201f19e5fd25206c7f6a5422aabef39f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-91731A271734","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- rooted endpoint route-phase exclusion

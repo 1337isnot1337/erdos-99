@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_outer_corridor_total_slack_2026-09-17.md) · source SHA-256 `49b77cd807597d44163b5b02ebd7ffcd9707e201414a84b866d1614d1fb39774`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "ab762f72867e8398830ea586dd7302736c46bea4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_outer_corridor_total_slack_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f52146b8835ee31a3edf1c6784bc6f33f54ca335888dce888b43c61e410715b2"} -->
 

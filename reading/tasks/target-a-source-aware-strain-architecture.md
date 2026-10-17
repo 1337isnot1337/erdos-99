@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/target-a-source-aware-strain-architecture.md) · source SHA-256 `540481dab96dbabfc27a54096a9fc9898fe438fce5e2dbcec8ce8db7504fcb77`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # target-a-source-aware-strain-architecture
 

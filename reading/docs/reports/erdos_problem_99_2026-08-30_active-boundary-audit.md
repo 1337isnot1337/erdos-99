@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/erdos_problem_99_2026-08-30_active-boundary-audit.md) · source SHA-256 `864734f5a73be5dc69c2f210e926235249625baafe547536e98a30650cb25a0f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

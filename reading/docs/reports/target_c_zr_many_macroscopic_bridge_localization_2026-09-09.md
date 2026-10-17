@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_many_macroscopic_bridge_localization_2026-09-09.md) · source SHA-256 `83927f38cce68dc887e47e27ff4316287082bf32912d4335008fbcc2d5b27124`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-1A168CA453AB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — many macroscopic bridges localize in the near-zero ZR phase
@@ -50,24 +52,26 @@ S_{\rm br}:=\sum_{e\text{ bridge of }C}\alpha_e.
 C27 gives two exact inputs:
 
 - the bridge-block tree has at most
+  
   ```math
   m_{\rm br}\le2|B_+|-3\le2\pi D-3
   \tag{1.3}
-  
   ```
+
   contact bridges;
 - every bridge `e` satisfies
+  
   ```math
   \alpha_e\le Dw_e\le D,
   \tag{1.4}
-  
   ```
+
   where `w_e` is the total active diameter weight crossing its cut.
 
 Let
 
 ```math
-\varepsilon=rac12\operatorname{tr}(\Lambda-L_H)
+\varepsilon=\frac12\operatorname{tr}(\Lambda-L_H)
 \tag{1.5}
 ```
 
@@ -148,27 +152,30 @@ and call a contact bridge **eta-heavy** when
 Then:
 
 1. **Linearly many heavy bridges.** If `N_eta` is the number of eta-heavy bridges,
+   
    ```math
    \boxed{
    N_\eta
    \ge
    \eta D-c_\eta(2\pi D-3)
    =
-   \frac{\eta}{2}D+rac{3\eta}{4\pi}.
+   \frac{\eta}{2}D+\frac{3\eta}{4\pi}.
    }
    \tag{ZBL1}
-   
    ```
+
    In particular `N_eta>=eta D/2`.
 
 2. **Exact torque localization for every bridge.** Let `e=uv` be any contact bridge and let `H_e` be its crossing active diameter edges. For any diameter vertex `z`, define the crossing mass not incident to `z` by
+   
    ```math
    \tau_e(z):=
    \sum_{\substack{h\in H_e\\z\notin V(h)}}\beta_h.
    \tag{2.3}
-   
    ```
+
    If `ell_e` is the infinite line through `u,v`, then
+   
    ```math
    \boxed{
    \alpha_e\,\operatorname{dist}(z,\ell_e)
@@ -176,10 +183,11 @@ Then:
    D^2\tau_e(z).
    }
    \tag{ZBL2}
-   
    ```
 
+
 3. **Near-zero stress-star localization.** For the C66 center `z`, every eta-heavy bridge satisfies
+   
    ```math
    \boxed{
    \frac{\operatorname{dist}(z,\ell_e)}D
@@ -189,17 +197,19 @@ Then:
    \frac{4\pi C_0}{\eta}\,D\varepsilon.
    }
    \tag{ZBL3}
-   
    ```
+
    Hence if `D epsilon -> 0`, all eta-heavy bridge lines pass within `o(D)` of the same point `z`.
 
 4. **Near-unit radial progress on almost every heavy bridge.** Fix `xi in (0,1)`. Let `N_{eta,xi}^{bad}` count eta-heavy bridges `uv` satisfying
+   
    ```math
    |r_u-r_v|\le1-\xi.
    \tag{2.4}
-   
    ```
+
    Then
+   
    ```math
    \boxed{
    N_{\eta,\xi}^{bad}
@@ -209,20 +219,22 @@ Then:
    \frac{C_0}{c_\eta\xi(2-\xi)}D^2\varepsilon.
    }
    \tag{ZBL4}
-   
    ```
+
    Therefore, if `D epsilon -> 0`,
+   
    ```math
    N_{\eta,\xi}^{bad}=o(D),
    \tag{2.5}
-   
    ```
+
    while `N_eta>=eta D/2`. For every fixed `xi>0`, all but `o(D)` of the linearly many eta-heavy bridges satisfy
+   
    ```math
    |r_u-r_v|>1-\xi.
    \tag{2.6}
-   
    ```
+
 
 ### Proof of ZBL1
 
@@ -440,14 +452,11 @@ The global scalar endpoint remains
 For the bridge-dominant near-zero subbranch, the shortest geometric substitute is now:
 
 > **BR — radial macroscopic bridge exclusion.** For every fixed `eta>0`, no sufficiently large lexicographically normalized triangle-free global minimizer can simultaneously have
-> 
-
-```math
+> ```math
 > S_{\rm br}\ge\eta D^2,
 > \qquad
 > D\varepsilon=o(1),
-> 
-```
+> ```
 > together with a C66 star center `z` for which a linear family of contact bridges has stress `Theta_eta(D)`, supporting-line distance `o(D)` from `z`, and radial progress `1-o(1)`, while the ZBR-required nonconcurrent crossing diameter bars carry vanishing aggregate non-star weight.
 >
 > It is enough to derive an `Omega(1/D)` response-defect lower bound, a strict sub-`D` competitor, or the face inequality (5.1).

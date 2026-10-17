@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/audit_target_c_iterative_minimax_gap_0050_2026-09-14.md) · source SHA-256 `b16aeb1095cbb90bb7df17223821eedaffc53703b232ac4046bceefd2c08ec45`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Independent hostile audit — iterative-pruning matched atomic gap `0.0050`
 

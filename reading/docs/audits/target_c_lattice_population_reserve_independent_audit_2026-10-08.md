@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_lattice_population_reserve_independent_audit_2026-10-08.md) · source SHA-256 `7bb836f294fda77364119c144aa8d2efc0d1443247c03acbf7c6e22f8d86a502`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-555ECE44F892","canonical":true,"claim_ids":["C-GLOBAL-POPULATION-EXCESS-SQRT-RESERVE"],"claim_statuses":{"C-GLOBAL-POPULATION-EXCESS-SQRT-RESERVE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.165 — translated triangular-lattice population reserve

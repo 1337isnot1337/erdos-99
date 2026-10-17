@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_nonlinear_multishear_isolation_t18687_2026-09-17.md) · source SHA-256 `5f6a9f8477036ff578936a8a83edbd8b530e82b5b6ee57737d6969cf5ea6a6f6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "bfc22d75d8ffac32ab499c92161a92870c363e52", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_nonlinear_multishear_isolation_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a06aaafb1936149a5264316b3b3115515cbcf0ba40f3643e4e9a2799e703aa71"} -->
 

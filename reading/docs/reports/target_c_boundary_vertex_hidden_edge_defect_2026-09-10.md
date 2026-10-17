@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_boundary_vertex_hidden_edge_defect_2026-09-10.md) · source SHA-256 `b01f4e6cd3f1643242959bf31abcb3c575374261055d622a1bf0e5ae6f4c8dc6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DDA2C161AB0A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — a hidden boundary edge strengthens the attachment-cell isodiametric defect

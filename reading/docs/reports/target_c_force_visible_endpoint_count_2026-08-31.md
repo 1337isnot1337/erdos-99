@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_force_visible_endpoint_count_2026-08-31.md) · source SHA-256 `fd7e71e01ed93adf9b4821627ef80ae0de4c7b278a1e9c35397c1e2f85b8a47d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8132E11ACCAC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C34: fully force-visible sources have linearly many positive diameter endpoints

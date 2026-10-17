@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_near_unit_atlas_port_scarcity_independent_audit_2026-10-09.md) · source SHA-256 `d977d03d3506e850ce81e259567342a318641b7de40517593741a657693f61a6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2ABFCD11BEF1","canonical":true,"claim_ids":["C-NEAR-UNIT-ATLAS-PORT-SCARCITY","C-THREE-PORT-REPEATED-ANCHOR-DIRECTION-BOUND"],"claim_statuses":{"C-NEAR-UNIT-ATLAS-PORT-SCARCITY":"canonical","C-THREE-PORT-REPEATED-ANCHOR-DIRECTION-BOUND":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.211 — repeated-anchor and near-unit port scarcity

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_dominant_oo_dual_tree_region_saturation_t1860_2026-09-15.md) · source SHA-256 `b288546945e4a7b8f6d16d701b401c34d7a7ef7529a35ac73e9426c6f4f8c86c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "84492fbd5fc0a20afbb43de1772c993f36472da9", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_dominant_oo_dual_tree_region_saturation_t1860_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "9ed6e5a8348c8d4c4e172ff1092c74eb4294e9e9f02e212df8f2b4ca58d6b33a"} -->
 

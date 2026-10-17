@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_train_mantel_phase_star_endpoint_2026-09-14.md) · source SHA-256 `85666aeabb0f209e1f96d0014c5bf0b5569ebb30f544cedb7714ad2666648bdc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

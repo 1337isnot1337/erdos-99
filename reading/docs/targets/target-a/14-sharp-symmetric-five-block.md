@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/14-sharp-symmetric-five-block.md) · source SHA-256 `296af3860efef18e844eaada048e6709c29decedb7e070ced580b223d3e0ddd3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — sharp symmetric five-block coefficient
 
@@ -70,23 +70,17 @@ Only these seven inequalities are needed below.
 ## 162.1 First scaling: all variables are `O(d)`
 
 > **Lemma 162.1.** Every feasible family satisfying (162.1)–(162.2) obeys
-> 
-
-```math
+> ```math
 > a,b,c,e,v=O(d).
 > \tag{162.4}
-> 
-```
+> ```
 > Moreover
-> 
-
-```math
+> ```math
 > \frac ad,\frac cd,\frac ed,\frac vd\longrightarrow0,
 > \qquad
 > 0\le\liminf\frac bd\le\limsup\frac bd\le1.
 > \tag{162.5}
-> 
-```
+> ```
 
 ### Proof
 
@@ -155,13 +149,10 @@ left side. Hence
 ```
 
 > **Lemma 162.2.** One has
-> 
-
-```math
+> ```math
 > \boxed{a,c,e=O(d^2),\qquad v=O(d^4).}
 > \tag{162.9}
-> 
-```
+> ```
 
 ### Proof
 
@@ -262,16 +253,13 @@ This proves the sharp upper bound.
 
 > **Theorem 162.3 (sharp symmetric five-block coefficient).** For every feasible
 > reflection-symmetric local translation family (162.1)–(162.2),
-> 
-
-```math
+> ```math
 > \boxed{
 > \limsup_{d\downarrow0}\frac{v(d)}{d^4}
 > \le\frac{\sqrt3}{9}.
 > }
 > \tag{162.16}
-> 
-```
+> ```
 > The analytic toe-out branch of Section 160 attains equality. Consequently its
 > leading quartic coefficient is optimal over the entire reflection-symmetric
 > rigid-translation class.

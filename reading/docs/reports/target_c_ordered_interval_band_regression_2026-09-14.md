@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_ordered_interval_band_regression_2026-09-14.md) · source SHA-256 `ca0d0e27fdb5e01a0ad9ebaf7aac2dd66f7b0c5879d34ff64ba28aaa57226ba3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 3 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-985F41E43AE6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ordered interval-band regression against aggregate grid closure
@@ -79,7 +81,7 @@ Then:
 5. every complete biclique (K_{k,ell}) in this graph satisfies
 
    [
-   k+ellle m+1=rac{2D}{sqrt3}+1.
+   k+ellle m+1=\frac{2D}{sqrt3}+1.
    \tag{2.2}
    ]
 
@@ -87,7 +89,7 @@ Consequently, no theorem using only the Section-90/91 graph properties can
 force a complete grid with shore sum
 
 [
-rac{2D}{sqrt3}+cD
+\frac{2D}{sqrt3}+cD
 ]
 
 for any fixed (c>0).
@@ -132,7 +134,7 @@ deg(b_j)ge t.
 The edge count is at least the minimum (A)-degree times (|A_t|), so
 
 [
-E_tge3t(2t+1)ge6t^2=rac38m^2.
+E_tge3t(2t+1)ge6t^2=\frac38m^2.
 	ag{2.6}
 ]
 

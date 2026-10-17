@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_internal_chamber_weak_component_anchoring.md) · source SHA-256 `d4d403da02f3111ffe7beb53f21726527ad160f29c9c4abbe6d495e33ae87114`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — maximal weak-contact components in an internal chamber must anchor to the old core
 

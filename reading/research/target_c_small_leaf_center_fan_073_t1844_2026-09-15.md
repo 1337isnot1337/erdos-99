@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_small_leaf_center_fan_073_t1844_2026-09-15.md) · source SHA-256 `fdc2dcdd443fcf43db662d9a8f4df89dce95e89ed94ed7d608dfd2df6313a981`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 20 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

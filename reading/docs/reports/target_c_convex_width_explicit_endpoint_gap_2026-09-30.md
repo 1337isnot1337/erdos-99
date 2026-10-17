@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_convex_width_explicit_endpoint_gap_2026-09-30.md) · source SHA-256 `67c02df9510226f7e7ba0f3a81c384f6277f6642c48d10811f5444b6af9fa61f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6A4993E346E1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II - explicit quantitative gap above the convex-width fixed point

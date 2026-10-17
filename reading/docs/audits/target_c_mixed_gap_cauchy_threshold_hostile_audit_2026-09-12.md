@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_mixed_gap_cauchy_threshold_hostile_audit_2026-09-12.md) · source SHA-256 `933389f81b904339c4d3c929db16e8185495aabd5b8c819a447de791bec9e7e8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B5029F12EA2F","canonical":true,"claim_ids":["C-WRAP-MIXED-CAUCHY"],"claim_statuses":{"C-WRAP-MIXED-CAUCHY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C mixed-gap Cauchy threshold hostile audit

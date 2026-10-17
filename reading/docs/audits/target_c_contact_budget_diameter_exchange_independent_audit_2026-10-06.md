@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md) · source SHA-256 `f89b587fe6aa451666666b347bbe0ef31cab5b1da98b4d373ad0bcb7b5e6ef5e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AC3A3A2E5A42","canonical":true,"claim_ids":["C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT","C-ONE-SITE-CONTACT-SURROUND","C-TWO-CONTACT-PACKET-OPENING"],"claim_statuses":{"C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT":"canonical","C-ONE-SITE-CONTACT-SURROUND":"canonical","C-TWO-CONTACT-PACKET-OPENING":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit — finite contact-budget / diameter exchange endpoint

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_atomic_one_end_train_boundary_independent_audit_2026-10-08.md) · source SHA-256 `4501c5afc2eaaafe0f76cc636126db37d5a379115161802289be5a94544f0493`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6D2203BA18D3","canonical":true,"claim_ids":["C-ATOMIC-ONE-END-TRAIN-BOUNDARY"],"claim_statuses":{"C-ATOMIC-ONE-END-TRAIN-BOUNDARY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.131 — one-ended train boundary budget

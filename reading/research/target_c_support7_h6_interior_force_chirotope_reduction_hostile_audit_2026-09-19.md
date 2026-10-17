@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_h6_interior_force_chirotope_reduction_hostile_audit_2026-09-19.md) · source SHA-256 `b93fc563f34cfe68c78ae80e5a81fd66719e95ff93fc00a7ada9206a89f70af7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e5cf7711665322eaa68a249c0ce7d204f0fb8cd9", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_h6_interior_force_chirotope_reduction_hostile_audit_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "51c6e8ae92a86143140818cf9593f99265cd98678ca55d5f9d06864119be6f6b"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_profile_wall_sorting_classification_independent_audit_2026-10-07.md) · source SHA-256 `9d67a3abf8aa088ca5334df868822433fe85b0c4581f20b5cf318dac75a03221`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5A4F1C453D9C","canonical":true,"claim_ids":["C-SIX-SIDED-WALL-FIXED-CLASS-EXCLUSION","C-SIX-SIDED-WALL-PROFILE-SORTING-CLASSIFICATION"],"claim_statuses":{"C-SIX-SIDED-WALL-FIXED-CLASS-EXCLUSION":"canonical","C-SIX-SIDED-WALL-PROFILE-SORTING-CLASSIFICATION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit — finite classification of the highest wall population

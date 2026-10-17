@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_musquash_reuleaux_bridge_2026-09-09.md) · source SHA-256 `1f3bc0ecc8e9c9abefdd2798a2a254cf88b037ed967b7a03505adeaa1e23afb8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C091D3289BA9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact Reuleaux leaf composition of the `d_H=0` shell

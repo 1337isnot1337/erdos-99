@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_bv_rsr_dd_explicit_surplus_05983_2026-09-10.md) · source SHA-256 `0cf52661a51a05616a4f77b06679704ddc11565be6b467a2abc8836b0da1c0d8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

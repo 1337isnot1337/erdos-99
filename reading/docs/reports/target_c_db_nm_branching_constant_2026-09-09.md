@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_db_nm_branching_constant_2026-09-09.md) · source SHA-256 `2075bd72ed96222b96abbe5c72a081e66e74b5a7e2d985ad0418d24291e2d592`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8C96E43E072E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — sharp DB+NM diameter-branching constant
@@ -272,11 +272,12 @@ Hence the optimum at fixed `y` is:
 
 - if `u(y)>=y/3`, use `f'=y/3`, `x=0`, giving `r=y/3`;
 - if `u(y)<y/3`, saturate `f'=u(y)` and pay the remainder with `x`, giving
+  
   ```math
   r=u(y)+\frac{y-3u(y)}2
    =\cos(y/2).
-  
   ```
+
 
 Thus the exact asymptotic optimum permitted by DB+NM is
 

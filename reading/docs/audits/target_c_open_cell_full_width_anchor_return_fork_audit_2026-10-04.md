@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_open_cell_full_width_anchor_return_fork_audit_2026-10-04.md) · source SHA-256 `f8c0e980a9b72b5060e4486d643f4bc974a1b7af008ce632caab2a0caf092c2b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E68CA406913E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Independent audit — strong open-cell full-width anchor / return fork
@@ -33,43 +33,49 @@ H_*\ge A_G/D.
 The audited new conclusions are:
 
 1. there is a second loaded attachment $`b_*\in A_\cap`$ with
+   
    ```math
    |a_*-b_*|\ge A_G/D;
-   
    ```
+
 2. canonical Section 120 applied to these two actual attachment vertices gives
+   
    ```math
    L_\cap+P_{{\rm exc},\cap}-2|a_*-b_*|
    \ge(4-2\sqrt3)\frac{A_G}{D};
-   
    ```
+
 3. hence, with $`\kappa=2-\sqrt3`$, at least one of
+   
    ```math
    P_{{\rm exc},\cap}\ge\kappa\frac{A_G}{D}
    \tag{A.1}
-   
    ```
+
    and
+   
    ```math
    L_\cap-2|a_*-b_*|
    \ge\kappa\frac{A_G}{D}
    \tag{A.2}
-   
    ```
+
    holds;
 4. in branch (A.1), canonical Section 123 gives
+   
    ```math
    e_{BB}-k\ge\frac{2-\sqrt3}{10}\frac{A_G}{D};
    \tag{A.3}
-   
    ```
+
 5. in branch (A.2), one of the two actual occurrence-counted outer routes between
    $`a_*,b_*`$ has excess over its Euclidean chord at least
+   
    ```math
    \frac{2-\sqrt3}{2}\frac{A_G}{D}.
    \tag{A.4}
-   
    ```
+
 
 For $`A_G=\Omega(D^2)`$, every displayed right-hand side is $`\Omega(D)`$.
 

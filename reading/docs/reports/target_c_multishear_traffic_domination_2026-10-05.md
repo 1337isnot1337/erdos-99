@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_multishear_traffic_domination_2026-10-05.md) · source SHA-256 `450d2712b3f24bb25e842502636d61e61f93d56111b92e820f6973c9ad066644`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9D20AE47BD77","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — exact traffic domination and equality modes in finite multishear

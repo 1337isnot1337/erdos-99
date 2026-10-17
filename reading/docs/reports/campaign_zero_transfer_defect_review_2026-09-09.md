@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/campaign_zero_transfer_defect_review_2026-09-09.md) · source SHA-256 `754c86a81b6572358aaa071c4bcc0c31572fd173c25610060107a56da4c980ee`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-FC8D4568C39F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99: consolidated campaign review

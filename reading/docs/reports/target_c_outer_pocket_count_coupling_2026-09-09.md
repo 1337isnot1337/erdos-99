@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_outer_pocket_count_coupling_2026-09-09.md) · source SHA-256 `b9ffadc70d09b6de88e9aa9534e8d9dec7a339a9cadba28ae8c24b90e247f296`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7A9C79D297BA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — outer-pocket count and complexity coupling
@@ -47,15 +47,17 @@ Since every missing hull side forces the corresponding outer-walk interval to ha
 OP proves:
 
 - the number of new convex outer pockets is
+  
   ```math
   p=a;
-  
   ```
+
 - if `k_P` is the number of graph-boundary edges of pocket `P`, then
+  
   ```math
   \sum_P k_P=B+2a-q,
-  
   ```
+
   where `B=b=q+x_B`.
 
 Therefore

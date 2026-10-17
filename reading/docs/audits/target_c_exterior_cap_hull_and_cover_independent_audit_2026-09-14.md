@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_exterior_cap_hull_and_cover_independent_audit_2026-09-14.md) · source SHA-256 `424bf60a24a415a0120bc718cff28f37e5e9d292742ec6865c8cb4807df70b9a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E4E28D4D9D44","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Independent audit — exterior-cap hull stability and erosion covering

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_one_deficit_isolate_accounting_independent_audit_2026-10-10.md) · source SHA-256 `0af6c8478f5cf5e0446ed2f4bd51693e4728a88772f9e9f857e7771d6343af6d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F28469852DC2","canonical":true,"claim_ids":["C-ONE-DEFICIT-ALL-M-SOURCE-EXCLUSION"],"claim_statuses":{"C-ONE-DEFICIT-ALL-M-SOURCE-EXCLUSION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit — one-deficit wall isolate accounting

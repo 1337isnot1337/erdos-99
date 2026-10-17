@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/wrapping-angular-measure-hostile-audit-2026-09-12.md) · source SHA-256 `07ec8374a1bcaa794fbdf793b59010b76ff2b573810a9e632afa133ec02b9507`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — Section 100 wrapping angular-measure hostile audit
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_harmonic_cell_grid_localization_promotion_2026-09-12.md) · source SHA-256 `37c348d5326df36df16a16d5e17e857977e23fd291c7f13d8f122bb8ebf7cf39`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CDAF5A7D06C8","canonical":true,"claim_ids":["C-HARMONIC-GRID-LOCAL"],"claim_statuses":{"C-HARMONIC-GRID-LOCAL":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Section 78 promotion audit

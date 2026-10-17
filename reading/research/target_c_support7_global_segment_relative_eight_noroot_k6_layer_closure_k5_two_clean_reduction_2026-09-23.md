@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_eight_noroot_k6_layer_closure_k5_two_clean_reduction_2026-09-23.md) · source SHA-256 `570f9fb85be43ccfa82315734edf56fc95c4d4e54d54fcf69fa228cea58cd18c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3f15b69311a37ebdf78e06bedd1e862c7955e879", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_eight_noroot_k6_layer_closure_k5_two_clean_reduction_2026-09-23.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "47550231a003648e36c3f7396bb791795dcdc9a252f805898fb5870d5a53bbf4"} -->
 

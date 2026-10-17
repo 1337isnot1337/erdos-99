@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md) · source SHA-256 `158394e6106e12d46cb1a404e24cfabf3df629849b2956004c2bc0a1beabed78`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6ECD86C6A2BC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C Audit.202 — global inverse-phase and vanishing face-tail exclusion

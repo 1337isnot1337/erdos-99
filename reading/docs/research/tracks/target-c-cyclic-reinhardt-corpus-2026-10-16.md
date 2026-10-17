@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-cyclic-reinhardt-corpus-2026-10-16.md) · source SHA-256 `67ad0e3d8809295e8bd64f47423541147d2dd3ffbda77871a5a2fdf55c47005e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Source excerpt note: 4 deliberately truncated formula quotation(s) are displayed as literal text, with no reconstructed equation.
 
 > Source formatting note: 10 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -105,7 +107,7 @@ The canonical theorem-state manifest remains authoritative. This route does not 
 
  satisfies the exact variable-step harmonic recurrence 
 
-```math
+```text
  \boxed{ y_{i+2} = \…
 ```
 
@@ -311,7 +313,7 @@ The canonical theorem-state manifest remains authoritative. This route does not 
 
  then 
 
-```math
+```text
  \boxed{ \lim…
 ```
 
@@ -385,7 +387,7 @@ The canonical theorem-state manifest remains authoritative. This route does not 
 
  Moreover, fix any $`\delta_0<\pi/3`$. If the internal vertex has contact degree exactly three, if $`\alpha_{P,1},\alpha_{P,2}`$ are the positive KKT coefficients of the two path edges, and $`\gamma_P`$ is the coefficient of the unique third contact edge, then for every triangular pocket with $`\delta_P\le\delta_0`$, 
 
-```math
+```text
  \boxed{ \gamma_P \le c(\delta…
 ```
 
@@ -631,7 +633,7 @@ The canonical theorem-state manifest remains authoritative. This route does not 
 
  Using R2, this yields the phase-specific asymptotics 
 
-```math
+```text
  \boxed{ 0\le D-w_F(\theta) \le \…
 ```
 

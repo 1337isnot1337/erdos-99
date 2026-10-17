@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_branchwise_response_beta_matching_2026-09-09.md) · source SHA-256 `d36b687e9c7b0d2544d8679966576668e82b3d7557d81d44e011bc4e8dd9cc92`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_paired_remainder_bathtub_2026-09-15.md) · source SHA-256 `2e249c56cfc0da704ceb7cee12cac75aa5fd3a501c248e1d57e335eb824865dd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_atomic_orbit_sharp_detour_independent_audit_2026-10-08.md) · source SHA-256 `7f32b7a8d71883dbe56517e96a0c2286444ad41a3cd9bda5b3f85c6420488211`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-25A2E49DD194","canonical":true,"claim_ids":["C-ATOMIC-ORBIT-SHARP-DETOUR","C-ATOMIC-ORBIT-TRAIN-OBSTRUCTION"],"claim_statuses":{"C-ATOMIC-ORBIT-SHARP-DETOUR":"canonical","C-ATOMIC-ORBIT-TRAIN-OBSTRUCTION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.132 — sharp atomic-orbit detour

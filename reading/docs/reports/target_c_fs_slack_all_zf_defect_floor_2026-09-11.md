@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fs_slack_all_zf_defect_floor_2026-09-11.md) · source SHA-256 `28ba8c124e6b140750846e4151faadfd3bf7d70638e78161a3a7e3792ae5ebf1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-16019D53344E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fs_slack_all_zf_defect_floor_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=09fd2aff25e9fdd7a4845d0a36f48b55e04d2589; lifecycle=unreviewed; canonical=false -->

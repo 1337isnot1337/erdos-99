@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_monotone_corridor_linear_outer_currency_2026-09-18.md) · source SHA-256 `d85dfc06ccbf56afaa0a8ae2a08fc60b0da756206911c65beefa40171b6eee14`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 3 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "42712e303506ef5892dd8d39e7139d8795f22c4f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_monotone_corridor_linear_outer_currency_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "59114a19f6dc61494220dcaeb6239944aec12518e49f79ebc440f5a7ed0c695d"} -->
 
@@ -29,22 +31,25 @@ such that:
 3. the complete chain is strictly monotone in the module support direction `N`;
 4. every parent edge is shorter than `sqrt(3)` and obeys the old-face localization theorem;
 5. with `sigma_j=|z_j-z_{j+1}|-1`, the total slack satisfies
+   
    ```math
    \sum_j\sigma_j\le t_D<h_*+D^{-1/3},
    \qquad h_*={\sqrt{303}\over52};
-   
    ```
+
 6. its support-depth span
+   
    ```math
    S_D:=a_{z_\ell}-a_{z_0}
-   
    ```
+
    satisfies, for every `omega_D -> infinity` with `omega_D=o(D^(1/4))`,
+   
    ```math
    S_D\ge {D\over2}-3^{1/8}D^{3/4}-\omega_D\sqrt D-O(\sqrt D).
    \tag{MC.0}
-   
    ```
+
 
 Because the **whole parent chain** is support-monotone, each convex OP pocket can spend its directional width only once over the entire ancestry. This removes the upper-gate/run factor completely.
 
@@ -253,12 +258,9 @@ If the chain leaves and later revisits the same pocket, global support monotonic
 ```math
 \begin{aligned}
 G_{\rm in}
-&\le\sum_{P\ {
-m visited}}w_N(P)\\
-&\le\sum_{P\ {
-m visited}}\ell_P\\
-&=\sum_{P\ {
-m visited}}(\ell_P-1)+p_C\\
+&\le\sum_{P\ {\rm visited}}w_N(P)\\
+&\le\sum_{P\ {\rm visited}}\ell_P\\
+&=\sum_{P\ {\rm visited}}(\ell_P-1)+p_C\\
 &\le x_B+r_C.
 \end{aligned}
 \tag{MC.17}

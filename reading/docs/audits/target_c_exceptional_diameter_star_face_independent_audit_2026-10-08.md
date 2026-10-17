@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_exceptional_diameter_star_face_independent_audit_2026-10-08.md) · source SHA-256 `5c05ea10d81ded2d6efe9ff738f61b0da17459178c6c64a63c351339bf633f55`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6E12905439EB","canonical":true,"claim_ids":["C-DIAMETER-STAR-STRESS-CHAIN-CLASSIFICATION","C-NONSTAR-DIAMETER-CYCLE-STRESS-REGRESSION","C-STAR-EXCEPTIONAL-FACE-ONE-UNLOADED-TRANSVERSAL","C-TWO-EDGE-STAR-TRIANGLE-HYPOTHESIS-REGRESSION"],"claim_statuses":{"C-DIAMETER-STAR-STRESS-CHAIN-CLASSIFICATION":"canonical","C-NONSTAR-DIAMETER-CYCLE-STRESS-REGRESSION":"regression","C-STAR-EXCEPTIONAL-FACE-ONE-UNLOADED-TRANSVERSAL":"canonical","C-TWO-EDGE-STAR-TRIANGLE-HYPOTHESIS-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent audit: exceptional diameter-star face

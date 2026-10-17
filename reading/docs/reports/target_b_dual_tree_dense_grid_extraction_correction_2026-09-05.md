@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_dual_tree_dense_grid_extraction_correction_2026-09-05.md) · source SHA-256 `1d0efd88648462f9cb8c83a2a4627db9b9760b504684ff88c6d6fe19fe7ce61e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C258B480E227","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
 # Erdős Problem #99 — Target B dual-tree correction for dense coherent grid extraction

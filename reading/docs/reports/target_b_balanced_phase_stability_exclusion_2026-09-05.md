@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_balanced_phase_stability_exclusion_2026-09-05.md) · source SHA-256 `e97160e75d88c5639f589460dc7b92aecae7856647e63c0cad9d1cd5dcf94e26`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BA27A63D6904","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
 # Erdős Problem #99 — Target B balanced phase stability exclusion

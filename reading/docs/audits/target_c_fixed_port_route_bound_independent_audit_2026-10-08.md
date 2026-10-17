@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_fixed_port_route_bound_independent_audit_2026-10-08.md) · source SHA-256 `f914d607114e70a2a7388ad038a82b3df5f0fd81f745ac0b436c50de34f214ad`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CABC7F437B0D","canonical":true,"claim_ids":["C-BOUNDED-FACE-PORT-ROUTE-BUDGET","C-FIXED-PORT-CONTACT-ROUTE-BOUND","C-RHOMBUS-BOUNDARY-ROUTE-FACTOR-TWO-REGRESSION"],"claim_statuses":{"C-BOUNDED-FACE-PORT-ROUTE-BUDGET":"canonical","C-FIXED-PORT-CONTACT-ROUTE-BOUND":"canonical","C-RHOMBUS-BOUNDARY-ROUTE-FACTOR-TWO-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C Audit.134 — fixed-port contact routes and face-defect payment

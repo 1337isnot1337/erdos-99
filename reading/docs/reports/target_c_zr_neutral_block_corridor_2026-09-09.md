@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_neutral_block_corridor_2026-09-09.md) · source SHA-256 `0bb1e4ee424f898242e6e8b509e9f0e14e1fa27acccf9d447e613a644bb24111`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B6D087CA84A7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZHN: almost every macroscopic trunk block is a bounded near-neutral high-stress corridor

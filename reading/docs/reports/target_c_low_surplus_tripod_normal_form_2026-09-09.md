@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_low_surplus_tripod_normal_form_2026-09-09.md) · source SHA-256 `5eb0233d91e7a9a015c6eb235014da4cb8634c3f791e076c01d6a18d75d869fe`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9ED813C0F0A8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_low_surplus_tripod_normal_form_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=21e57b50eda2a83191adfcc01872f77ba44012e8; lifecycle=unreviewed; canonical=false -->

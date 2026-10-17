@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearcircle_diameter_star_collapse_2026-09-09.md) · source SHA-256 `40f6d50a513c21580c45fb21a13b9daa7bf527e08cd8f1b9c65f44b6617439d2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-774BC6D737C8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_nearcircle_diameter_star_collapse_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=e1a3a09fb36ded3134f3389de9bb12d2232b91ca; lifecycle=unreviewed; canonical=false -->
@@ -87,7 +87,6 @@ Let `angle_j(u,v)` denote the smaller error from antipodality in the disk-center
 |\pi-\angle(u,v)|\longrightarrow0.
 }
 \tag{1.1}
-
 ```
 
 Otherwise a sequence of diameter pairs with error bounded below would have a non-antipodal limit pair at distance one in `B_{1/2}`, impossible.

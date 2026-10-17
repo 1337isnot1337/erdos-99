@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_detour_explicit_surplus_0465_2026-09-09.md) · source SHA-256 `dc80e0590301dfdb71ba1a8895df7e6de9044c6550844fd45a77eb01a6da8bbb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-E3A79F8C7B57","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — pocket detour raises the explicit pinned/contact floor to 0.465
@@ -76,7 +78,7 @@ Also `P_F>=q>=h`, because the `q` consecutive hull sides are unit-separated and 
 PI gives
 
 ```math
-A_{PI}:=rac12\sin(2\rho)
+A_{PI}:=\frac12\sin(2\rho)
 =0.4978566363242109995\ldots,
 \tag{DE.5}
 ```
@@ -313,7 +315,7 @@ L(\lambda)
 U(\lambda)
 :=
 C_E(\pi+2R(\lambda))^{3/2}\sqrt{2R(\lambda)}
-+rac{R(\lambda)^2}{\pi}.
++\frac{R(\lambda)^2}{\pi}.
 }
 \tag{DE.27}
 ```

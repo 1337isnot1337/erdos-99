@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_global_container_fullcore_dichotomy_promotion_2026-09-12.md) · source SHA-256 `33d777f23f364096dbdc5454c2af94364e882614d58a6bc9be9996680c21d636`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C84BDE6027C2","canonical":true,"claim_ids":["C-FULLCORE-NEAR-DISK","C-INACTIVE-DICHOTOMY"],"claim_statuses":{"C-FULLCORE-NEAR-DISK":"canonical","C-INACTIVE-DICHOTOMY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C §§79–80 promotion audit

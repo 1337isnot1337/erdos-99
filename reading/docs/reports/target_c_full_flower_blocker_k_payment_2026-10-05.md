@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_full_flower_blocker_k_payment_2026-10-05.md) · source SHA-256 `21ce5f82452c197bcd6d0fdca14ff602a24c98e0134b6fbef0216b87786491f9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-70983A90468E","canonical":true,"claim_ids":["C-FULL-FLOWER-K-PAYMENT"],"claim_statuses":{"C-FULL-FLOWER-K-PAYMENT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C: full-flower blocker converts loaded-rank currency into train defects

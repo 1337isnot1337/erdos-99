@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/prompts/erdos_problem_99_1.7.3_FINAL_CONTINUATION_PROMPT.md) · source SHA-256 `87763243167fea2f4772c3c6dda728e228d6859e24aa67b92e957a0475beaf3d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Erdős Problem #99 — Target A continuation after fixed-hull activation audit
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_adjacent_strip_two_bar_tangent_certificate_2026-09-15.md) · source SHA-256 `4264b7266d5a762663d33e222ff255191493d7019b5c12ffadcd9175b71a9ec1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "dbae472ac6df206d4851eb12ead1a185c114eabc", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_adjacent_strip_two_bar_tangent_certificate_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ebe411e4afb1818092e0a550f3cf9ee8190cdf5e0cb5b4614f11167f2f952365"} -->
 
@@ -205,10 +205,11 @@ Finite intervals on a line have Helly number two. Hence either
 
 1. some `I_h` is already empty; or
 2. there are two edges `h_1,h_2` with
+   
    ```math
    I_{h_1}\cap I_{h_2}=\varnothing.
-   
    ```
+
 
 Take `J={h}` in the first case and `J={h_1,h_2}` in the second. By the definition of the `I_h`, this is precisely (TB.5).
 

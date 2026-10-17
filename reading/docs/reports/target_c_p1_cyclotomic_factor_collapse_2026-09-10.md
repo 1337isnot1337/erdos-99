@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_p1_cyclotomic_factor_collapse_2026-09-10.md) · source SHA-256 `ed435128a54243913c7c2c6626886cd98ae968f075ad5dcfa7ced1bb5788a5bb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-56D3B8B2E842","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 — P1 cyclotomic factor collapse by Ramanujan sums
@@ -53,7 +53,6 @@ For every integer `m>=1`,
 r=6\ \text{and}\ 6\mid m.
 }
 \tag{CF.3}
-
 ```
 
 Thus the complete cyclotomic part of `F_m` is
@@ -67,7 +66,6 @@ Thus the complete cyclotomic part of `F_m` is
 \end{cases}
 }
 \tag{CF.4}
-
 ```
 
 The physical P1 root has `0<delta<pi/m`, hence for every sufficiently large Target C source it is not a primitive sixth root. Therefore its minimal polynomial is a **noncyclotomic reciprocal factor** of `F_m`.
@@ -174,7 +172,6 @@ or
 c_r(m)+4\mu(r)=3\phi(r).
 }
 \tag{2.3}
-
 ```
 
 This trace identity is much stronger than testing individual roots.
@@ -226,11 +223,12 @@ We now check these five possibilities in the exact trace identity.
 - `r=3`: `mu(3)=-1`, `phi(3)=2`, and `c_3(m)<=2`; the left side is at most `-2`, never `6`.
 - `r=4`: `mu(4)=0`, `phi(4)=2`, and `|c_4(m)|<=2`; it cannot equal `6`.
 - `r=6`: `mu(6)=1`, `phi(6)=2`, so (2.3) requires
+  
   ```math
   c_6(m)=2.
   \tag{3.5}
-  
   ```
+
 
 The sum `c_6(m)` is the sum of two unit complex numbers. Equality to `2` forces both summands to equal `1`, equivalently every primitive sixth root satisfies `xi^m=1`. Thus
 
@@ -290,7 +288,6 @@ z^{-m}F_m(z)=H_m(y),
 H_m(y):=C_m(y)+4y-6.
 }
 \tag{4.1}
-
 ```
 
 The cyclotomic factor `Phi_6(z)=z(z+z^{-1}-1)` corresponds exactly to the linear trace factor
@@ -308,7 +305,6 @@ H_m(y)\text{ has a trace-cyclotomic factor iff }6\mid m,
 \text{ in which case it is exactly }y-1.
 }
 \tag{4.3}
-
 ```
 
 No other root-of-unity trace can occur.

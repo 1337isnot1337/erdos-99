@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_s1_subset_product_identity_2026-09-10.md) · source SHA-256 `aa1d9f79e78fe809988a4a296c6da2345aa951df99acbe97c91615f6649a96fc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B3A2C9772328","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic S1 closure as an exact subset-product/run-boundary identity
@@ -537,15 +537,17 @@ The remaining S1 problem now has three concrete attacks.
 1. **Run-boundary/KKT spine.**  CS says both KKT endpoint facets lie on retained cycle edges of `A(F)-g`.  Translate those marked cycle edges into marked sign-run boundaries of `A_+` and combine the two EU/WT endpoint cuts with SI.9.
 
 2. **Small-value rigidity.**  Classify admissible run-boundary polynomials satisfying
+   
    ```math
    |A_+(e^{i\delta})|=2\sin(\delta/2)
-   
    ```
+
    in the D1 interval
+   
    ```math
    0<s<\Delta_2/\delta-2.
-   
    ```
+
    The arbitrary-polynomial problem is false; the admissible maximal-thrackle run word is the essential restriction.
 
 3. **Deformation to the P1 boundary.**  SI.3 shows S1 lies in the same algebraic family as P1.  Prove that any S1 admissible sign word preserving local shell optimality can be continued in `s` until `P(z)=0`, contradicting the completed P1 exclusion, unless it reaches the Reinhardt `s=0` endpoint first.  The obstruction must be a discrete run change or a KKT support singularity; both are now identifiable.

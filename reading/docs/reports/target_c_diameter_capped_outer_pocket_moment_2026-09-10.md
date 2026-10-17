@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_capped_outer_pocket_moment_2026-09-10.md) · source SHA-256 `49b291abf45de19411a669912d4d7f1bceeec3ea9240581fee218b0a9039295b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -317,7 +319,7 @@ Indeed `u` increases and
 so
 
 ```math
-u(8/5)<\frac85-\frac{34}{25}=rac6{25}<\frac14.
+u(8/5)<\frac85-\frac{34}{25}=\frac6{25}<\frac14.
 ```
 
 At `z=0`, put

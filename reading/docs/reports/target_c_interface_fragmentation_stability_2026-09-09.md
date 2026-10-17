@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_interface_fragmentation_stability_2026-09-09.md) · source SHA-256 `98e78c90bcaa256e1aa36e6d086705de59d4d44ee085a906c2e73c14771478a6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 21 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -380,17 +380,20 @@ The relative-isoperimetric proof gives the following useful qualitative dichotom
 Fix `eta>0`. Then there exists `epsilon_eta>0` such that every sufficiently large full-core near-circle survivor satisfies at least one of:
 
 1. in each dominant semicircle group there is an attachment cell of area at least
+   
    ```math
    \left(\frac\pi8-\eta\right)D^2;
-   
    ```
+
 2. the loaded-interface defect satisfies
+   
    ```math
    \boxed{
    Q_B\ge(2+\epsilon_eta-o(1))D.
    }
    \tag{6.1}
    ```
+
 
 Indeed, failure of the first alternative in either group raises `P_A` by a fixed multiple of `D`; FS.1 transfers that perimeter excess one-for-one into `Q_B`.
 

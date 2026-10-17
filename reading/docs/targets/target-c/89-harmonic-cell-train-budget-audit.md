@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/89-harmonic-cell-train-budget-audit.md) · source SHA-256 `93277145cc54828a36ca6fe5b0b66da48207b7f712bad2786e9b8556b6ea5c47`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — exact harmonic-cell train-budget sharpening
 

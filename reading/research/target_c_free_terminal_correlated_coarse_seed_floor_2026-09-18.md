@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_free_terminal_correlated_coarse_seed_floor_2026-09-18.md) · source SHA-256 `62371eb692ac3a4c5e988709ac16c30a66b606b41afdd9f7f8732855b7676759`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d51a1d163bcdcd5445f8126f6ec0fa36dbf1f355", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_free_terminal_correlated_coarse_seed_floor_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c22c296dc3915cca704b5dda1f6117565a9968ae2b098c448c7c8f1dda8247a5"} -->
 

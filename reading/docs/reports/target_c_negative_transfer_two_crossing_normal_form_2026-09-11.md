@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_negative_transfer_two_crossing_normal_form_2026-09-11.md) · source SHA-256 `94feeed63f2771534d3b7c72f95088252549caa3911d85393d7fb53f4c0a71cc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-174393B84608","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — two-crossing negative response splits have a terminal normal form

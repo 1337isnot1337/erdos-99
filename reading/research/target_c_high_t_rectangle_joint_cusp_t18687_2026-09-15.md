@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_rectangle_joint_cusp_t18687_2026-09-15.md) · source SHA-256 `9a88f748bde245709a990de8d808783124ffb4f4645f0c93ca887436668758e6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

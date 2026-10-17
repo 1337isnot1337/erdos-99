@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/92-wrapping-perimeter-diameter-audit.md) · source SHA-256 `a7454eadb551c139212b67531f6f5b0f68cbc496e627a22bed699e112c38bb54`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 12 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/quantitative_kuperberg_support_rate_2026-08-30.md) · source SHA-256 `d0c3ba237fe3bb8a94628cd470c467c5fd59d2925f103f556499a8b3ba48b947`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -106,12 +106,9 @@ The original proof does not give an asymptotic formula for `delta(D_g)`.
 The missing rate is already constrained strongly by the finite geometry of the five-block move.
 
 > **Lemma QK.1 (semialgebraic one-step gain).** There is `D_0>0` such that the maximal Kuperberg one-step gain
-> 
-
-```math
+> ```math
 > \delta:(0,D_0)\to(0,\infty)
-> 
-```
+> ```
 > for the aligned five-block mechanism is a semialgebraic function.
 
 ### Proof
@@ -182,33 +179,29 @@ We use two standard facts from semialgebraic geometry.
 
 1. **Tarski--Seidenberg / semialgebraic choice.** Projections of semialgebraic sets are semialgebraic, and a nonempty semialgebraic fiber relation admits a semialgebraic selection. A convenient explicit statement is Yehuda John Levy, “Uniformly Supported Approximate Equilibria in Families of Games,” *Journal of Mathematical Economics* 98 (2022), Theorem 2.3.
 2. **Growth dichotomy.** If `f:(0,epsilon)->R` is semialgebraic and nowhere zero, then
+   
    ```math
    f(t)=a t^q+o(t^q)
-   
    ```
+
    for some `a != 0` and rational `q`. One explicit statement is Jae Hyoung Lee and Tien-Son Pham, “Openness, Hölder Metric Regularity and Hölder Continuity Properties of Semialgebraic Set-Valued Maps,” Lemma 2.2.
 
 > **Theorem QK.2 (power-law Kuperberg gain).** There are constants
-> 
-
-```math
+> ```math
 > c_*>0,
 > \qquad
 > q\in\mathbb Q_{>0},
 > \qquad
 > D_*\in(0,D_0)
-> 
-```
+> ```
 > such that
-> 
-
-```math
+> ```math
 > \boxed{
 > \delta(D_g)\ge c_*D_g^q
 > \qquad(0<D_g<D_*).
 > }
 > \tag{QK.5}
-```
+> ```
 
 ### Proof
 
@@ -263,21 +256,15 @@ for fixed constants `A_0,B_0`, independent of `m` and of the gap width. All actu
 The middle upward block produced by one stage is still a rigid translate of a perfect triangular block of size `N-1`, and the widened gap lies along its base. A basal subtriangle of `T_{N-1}` whose distance from the two sloping sides is a fixed positive fraction of `N` has both width and height `Theta(N)`. Hence:
 
 > **Lemma QK.3 (uniform nesting).** There are integers
-> 
-
-```math
+> ```math
 > A\ge2,
 > \qquad B\ge0,
-> 
-```
+> ```
 > such that whenever
-> 
-
-```math
+> ```math
 > N\ge Am+B,
 > \tag{QK.6}
-> 
-```
+> ```
 > the widened middle `Delta_{N-1}` block contains, along an interior portion of its base and with all relevant exterior-neighbor rows present, a translated copy of the complete five-block template of parameter `m` for the next widening stage.
 
 ### Proof
@@ -359,23 +346,18 @@ At the final stage the local gap has width at least `2`, so the Kuperberg constr
 Rescale center distances by `1/2`. Canonical gap width `d` corresponds to `D_g=2d`, and support radii scale by `1/2`. Absorbing fixed factors into the constants gives:
 
 > **Theorem QK.4 (stretched-exponential aligned support bound).** For the aligned unit-triangular-lattice gap packing used in Sections 148 and 150, there exist constants
-> 
-
-```math
+> ```math
 > C_1,C_2,d_0>0,
 > \qquad q\in\mathbb Q_{>0},
-> 
-```
+> ```
 > such that
-> 
-
-```math
+> ```math
 > \boxed{
 > W(d)\le C_1\exp(C_2d^{-q})
 > \qquad(0<d<d_0).
 > }
 > \tag{QK.12}
-```
+> ```
 
 This is the first audited asymptotic upper class for `W(d)` obtained from the Kuperberg proof. It is compatible with the canonical lower-complexity theorem `kappa_*(d)->infinity`.
 
@@ -434,19 +416,13 @@ W(r\alpha_L)
 Hence:
 
 > **Corollary QK.5 (vanishing accumulated strain closure for fixed shape).** There exists a rational `q>0`, depending only on the fixed Kuperberg local mechanism, such that for every fixed full-dimensional convex triangular-lattice polygon `K` and every positive sequence `alpha_L` satisfying
-> 
-
-```math
+> ```math
 > \alpha_L^{-q}=o(\log L),
-> 
-```
+> ```
 > the hull of
-> 
-
-```math
+> ```math
 > \left(1+\frac{\alpha_L}{L}\right)(\Lambda\cap LK)
-> 
-```
+> ```
 > contains a unit-separated set with one additional point for all sufficiently large `L`.
 
 This strictly extends Theorem 148.1, which handled fixed positive accumulated strain. It does **not** assert anything for strains decaying as a power of `L`, and it still does not protect the rearrangement from exterior blockers in an embedded source/scaffold monomer domain.
@@ -519,12 +495,9 @@ for some rational `q>0`.
 This does **not** close the actual embedded monomer branch. The exact remaining geometric lemma is now sharper:
 
 > **Exterior-compatible support lemma.** Show that a monomer region produced by the genuine source/scaffold geometry contains, after deleting/protecting only the exact boundary-order obstruction set, an aligned gap corridor of width `d` and radius at least
-> 
-
-```math
+> ```math
 > C_1\exp(C_2d^{-q}),
-> 
-```
+> ```
 > or prove a stronger finite replacement directly.
 
 The stretched-exponential scale is large, so this may still be too expensive for the actual vanishing gap generated by Target A. But the previous undefined function `W(d)` has been replaced by a concrete asymptotic class.

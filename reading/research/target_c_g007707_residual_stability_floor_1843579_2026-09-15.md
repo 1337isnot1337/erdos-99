@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_g007707_residual_stability_floor_1843579_2026-09-15.md) · source SHA-256 `f3176f0b00b9ed557e6c9befdb8af79ad715d46ac86d9768293ab46332ba1deb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 12 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

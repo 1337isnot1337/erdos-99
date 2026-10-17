@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_single_port_mesh_defect_2026-09-04.md) · source SHA-256 `4edfe190e763934bbd3eda1c77a6af9eaa80ef76cfebc77148ca6def943a6592`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-91AA5C6604B1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C98 candidate: single-port mesh defect forces one-leaf concentration

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/102-phase-corridor-endpoint-exclusion-audit.md) · source SHA-256 `b0df36244445c8454b6a1c69f414f6af0107438eee6b511680d972b281895aa9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 9 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -262,6 +262,7 @@ The same nonnegative-slack argument gives the following endpoint stability facts
 
 1. The three complement-gap outer routes have lengths equal to their endpoint chords
    up to `o(D)`.  Thus their lengths are
+   
    ```math
    \mu_8D+o(D),
    \qquad
@@ -269,8 +270,8 @@ The same nonnegative-slack argument gives the following endpoint stability facts
    \qquad
    \sin\theta_8D+o(D).
    \tag{102.16}
-   
    ```
+
 2. Their path excesses above the corresponding chord lengths are individually
    `o(D)`.
 3. Only `o(D)` ordinary attachment intervals have outer-route length other than two,

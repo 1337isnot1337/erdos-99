@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_external_rattler_floor_2026-09-09.md) · source SHA-256 `d10bc0a423dfbe98ad4460d1d48a55407a8eeefdc4a6b1590070e42bb1db3399`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 6 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-6FDE6FD015D3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — external force-hull population floor from ZF and OP
@@ -91,7 +93,7 @@ Every post-ZF C65 survivor satisfies
 \boxed{
 Z_{ext}
 \ge
-n-rac{2h^2}{\pi\sqrt3}-h-1.
+n-\frac{2h^2}{\pi\sqrt3}-h-1.
 }
 \tag{ZX.1}
 ```
@@ -103,8 +105,8 @@ By (1.1) and OP,
 ```math
 Z_{ext}
 \ge
-n-rac{2}{\sqrt3}\operatorname{area}(F)
--rac12\operatorname{per}(F)-1.
+n-\frac{2}{\sqrt3}\operatorname{area}(F)
+-\frac12\operatorname{per}(F)-1.
 ```
 
 Use (2.2) and `per(F)<=2h`. QED.
@@ -136,7 +138,7 @@ Divide ZX.1 by `D^2`.
 \boxed{
 \liminf\frac{Z_{ext}}{D^2}
 \ge
-\Delta-rac{2x^2}{\pi\sqrt3}.
+\Delta-\frac{2x^2}{\pi\sqrt3}.
 }
 \tag{ZX.2}
 ```
@@ -167,7 +169,7 @@ At `x=tau_*`, ZX.2 gives
 
 ```math
 \boxed{
-\Delta-rac{2\tau_*^2}{\pi\sqrt3}
+\Delta-\frac{2\tau_*^2}{\pi\sqrt3}
 =0.1038019123\ldots .
 }
 \tag{ZX.4}
@@ -188,7 +190,7 @@ PR #112 independently proves, from stopped trains and Mantel,
 ```math
 \liminf\frac{n-v}{D^2}
 \ge
-\Delta-rac14(3x-4\cos(x/2))^2.
+\Delta-\frac14(3x-4\cos(x/2))^2.
 ```
 
 That lower bound concerns **all** points outside the positive core and remains positive until

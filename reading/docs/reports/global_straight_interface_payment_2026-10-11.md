@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_straight_interface_payment_2026-10-11.md) · source SHA-256 `25354623c3559f78e5d8be5369a9c0f55cebd2c8c7efcb1bdd5ad79193430832`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2C7494B3907E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Straight lattice interfaces pay their boundary-row credits

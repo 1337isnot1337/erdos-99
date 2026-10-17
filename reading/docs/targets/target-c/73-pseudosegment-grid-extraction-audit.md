@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md) · source SHA-256 `5185283ec35ab657bb030f75a901e00cdb5fcf1433501e5535143c2ca91bbd6a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — pseudosegment grid-extraction audit
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_p1_quadratic_residue_obstruction_2026-09-10.md) · source SHA-256 `cdc1a88ae61c186aa5aab47ccc89776edeebea5b8625fbc49bd5d9dbe2c25bea`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -209,15 +209,17 @@ The valid arithmetic stack on this PR is therefore:
 
 1. **PA:** if `n=q-2` is a power of two, the shifted reciprocal polynomial has one 2-adic Newton segment of slope `-1/n`, forcing algebraic degree at least `n`; this contradicts the degree-`n-1` Littlewood annihilator.
 2. **TR:** for arbitrary `n`, a P1 Littlewood root forces the distinguished trace root `t` to have degree at most
+   
    ```math
    \left\lfloor\frac{n-1}{2}\right\rfloor.
-   
    ```
+
 3. **Open:** prove the distinguished factor of
+   
    ```math
    H_n(T)=D_n(T,1)+4T-6
-   
    ```
+
    has degree at least `ceil(n/2)`, or exploit additional sign-word structure not already encoded by `H_n=0`.
 
 The QR square route is removed from that frontier.

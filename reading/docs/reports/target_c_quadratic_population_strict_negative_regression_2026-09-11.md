@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_quadratic_population_strict_negative_regression_2026-09-11.md) · source SHA-256 `3ba152f999c7f5d5ba24e15d5c676d6dc2b50cf264b491d206d70786e4f7f139`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CDDA6C6EB20F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: quadratic-population strict-negative response regression

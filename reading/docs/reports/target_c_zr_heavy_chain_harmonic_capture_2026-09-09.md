@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_heavy_chain_harmonic_capture_2026-09-09.md) · source SHA-256 `04bc64dbc3f646a8464031f650b6e2c9ce32d80cf5a270a31cb732b59efe191d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3A2435B82015","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZHH: one harmonic cell captures a macroscopic bridge chain

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_macroscopic_face_return_depth_independent_audit_2026-10-07.md) · source SHA-256 `d8a285dba5ea55fc5f04ff0a4992e5dc3c0a7cef2bf20f3d44610b9b288a0f1c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3BCD66ABB9C7","canonical":true,"claim_ids":["C-PHYSICAL-FACE-DEPTH-POPULATION","C-SUBQUADRATIC-MACROFACE-NEAR-LOAD-CONTACTS"],"claim_statuses":{"C-PHYSICAL-FACE-DEPTH-POPULATION":"canonical","C-SUBQUADRATIC-MACROFACE-NEAR-LOAD-CONTACTS":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: physical-face return depth

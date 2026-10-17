@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_joint_bulk_defect_separator_capacity_2026-10-05.md) · source SHA-256 `b2a229c3947e3c79b3ae3bec69eeb7e98ed8ab37514d10be9e34b5e4eaf89a93`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 3 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

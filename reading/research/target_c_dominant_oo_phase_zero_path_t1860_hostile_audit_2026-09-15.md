@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_dominant_oo_phase_zero_path_t1860_hostile_audit_2026-09-15.md) · source SHA-256 `f30bafbef7025f1d78cef3fa51e9acd89dc3987a99610b51884a14940692a28e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2e2b498cd82916e540cb7a1813ed27aa2f20f505", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_dominant_oo_phase_zero_path_t1860_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2c04f4330eaa22561e857be02775a32ca55dbc6c34db08258926538ad88de46b"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section114_stability_envelope.md) · source SHA-256 `39a49a31b77c53569670e0d364017c78f7438c2e739161c4954dc4775b946063`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — Section 114: optimized stability envelope of the aggregate phase route
 
@@ -22,16 +22,18 @@ capacity, and tooth-leakage cutoff are optimized together.
 This section does two things.
 
 1. It gives a conservative finite theorem through
+   
    ```math
    \boxed{\sigma\le1.46\times10^{-3}}.
-   
    ```
+
 2. It records the limiting **decoupled scalar envelope** of the present argument.  The
    envelope closes only up to
+   
    ```math
    \sigma_{\rm env}=1.4756731748\ldots\times10^{-3}.
-   
    ```
+
    This is not a no-go theorem for all refinements: it is the barrier obtained when the
    current area lower bound, train upper bound, joint-shore counting theorem, leakage
    formula, and corridor-mismatch bound are used only through their separate scalar

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_joint_swap_horn_and_loaded_defects_2026-10-01.md) · source SHA-256 `d143bc1b129759e2a4c29614a25aa8e6cb2bd6f9be9530b2a15ff67d1dfc2c8e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7CFE1216AB27","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — simultaneous small swaps and loaded shore defects

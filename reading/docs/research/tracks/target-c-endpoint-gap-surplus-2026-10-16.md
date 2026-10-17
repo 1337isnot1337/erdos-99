@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-endpoint-gap-surplus-2026-10-16.md) · source SHA-256 `11493ebc9122a1e43ba63ac3393475a8244419a2ab2cf3a7999cfd537c7e2d95`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C shard 2: endpoint gaps, dominant diameters, and surplus routes
 

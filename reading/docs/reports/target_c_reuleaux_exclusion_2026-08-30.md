@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_reuleaux_exclusion_2026-08-30.md) · source SHA-256 `32a40dd81aa6f7357adb8ac39d4a0cc25f9c8435104d11a6bc9cf79ec5e29294`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-124A38BC09F5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C addendum: Reuleaux exclusion of diametral triangles
@@ -351,12 +351,9 @@ A quantitative stability version would be substantially stronger:
 > **Target C8 (Reuleaux stability gap).**  Prove that there exist absolute
 > `\varepsilon>0` and `n_0` such that every normalized KKT stress of every global
 > minimizer with `n\ge n_0` satisfies
-> 
-
-```math
+> ```math
 > P_*\ge(\sqrt3+\varepsilon)D.
-> 
-```
+> ```
 
 A compactness route is plausible: if `P_*/D\to\sqrt3`, the local equality analysis in
 C14 forces almost all positive diameter-reaction mass into three approximately

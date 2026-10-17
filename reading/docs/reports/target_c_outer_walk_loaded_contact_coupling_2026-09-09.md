@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_outer_walk_loaded_contact_coupling_2026-09-09.md) · source SHA-256 `e406e0afde29dc2cc7487e92ef9fa24b235e044cf5a970b36d1789fcb02f3816`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-721004770081","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — outer-walk excess versus loaded-loaded contact coupling

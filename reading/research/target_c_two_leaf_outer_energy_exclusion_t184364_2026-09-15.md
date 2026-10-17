@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_two_leaf_outer_energy_exclusion_t184364_2026-09-15.md) · source SHA-256 `cff65cd76d9e245df2bf3dfdb487523296ed5d4add3d2edbcc39864c554a704a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 13 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

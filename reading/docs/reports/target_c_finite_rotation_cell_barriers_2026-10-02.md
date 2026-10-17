@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_finite_rotation_cell_barriers_2026-10-02.md) · source SHA-256 `d19bcc9fe6a829fef840997ce425c3aedd88c5271181c51f51cc45394186c127`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DEDB57344382","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — finite rotation walls and erosion-coordinate localization
@@ -228,10 +228,11 @@ Assume the following exact finite hypotheses.
    actual diameter with vector `Du`.
 2. The selected actual contact-preserving endpoint map has coordinates
    `theta_i in (-pi,pi)`, and an old diameter with support interval `I` changes by
+   
    ```math
    r_h\longmapsto r_h+\sum_{i\in I}(R_{\theta_i}u-u).        \tag{R.8}
-   
    ```
+
    All other selected coordinates are fixed. This assumption must be proved on
    the actual source cuts before applying the theorem to a carrier or chart.
 3. There are interval types

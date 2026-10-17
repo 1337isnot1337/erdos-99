@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_annular_matching_competitor_2026-10-11.md) · source SHA-256 `c564b3577562e3aeec1bf4ea2e7a800e4014fad6d5ebe7a2844daad6a3d61e5c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-654AA3F0DE12","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Global diameter comparison by matching in an annular conflict graph

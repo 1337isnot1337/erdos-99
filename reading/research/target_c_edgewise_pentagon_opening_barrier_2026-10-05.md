@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_edgewise_pentagon_opening_barrier_2026-10-05.md) · source SHA-256 `8de5d889c465c888aa5c49714d339a0a08023839fdfc9a275495ab3066f70900`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "a93868ee2ad4d3e6f8725e946f45c186bf4c4cd9", "source_branch_refs": ["refs/heads/automation/target-c-edgewise-pentagon-opening-barrier-2026-10-05"], "source_commit": "17e7722c76a29fee095ceaa293d405ce1e55e736", "source_lifecycle": "not indexed", "source_path": "research/target_c_edgewise_pentagon_opening_barrier_2026-10-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "10af3cd8ef7905b4aef6ca8263134399606a97a8bac13a7335e43b64498da1c4"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_two_phase_boundary_occurrence_charge_hostile_audit_2026-09-13.md) · source SHA-256 `860241bb3cbd57c4e4746ac29696f953665de76d06d4b7bde48bb7ab3c9d0361`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3c1978f31e52e642c6a0f702c3a1209ac00dd661", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_two_phase_boundary_occurrence_charge_hostile_audit_2026-09-13.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "54cc07a0ce3b15c640bd571734ffa126a851931b3dd49f183f5448bfac3ed064"} -->
 

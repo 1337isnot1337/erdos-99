@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_p1_algebraic_degree_obstruction_2026-09-10.md) · source SHA-256 `f0a88031bbeefd0259296039d52899a2bb93c46f20e31379c09d48b8c074758b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-38383D0278FB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 - P1 fixed-angle closure forces an anomalously low algebraic degree
@@ -19,11 +19,12 @@
 The P1 endpoint already has two exact equations:
 
 1. its geometric angle `delta` is fixed by
+   
    ```math
    (q-2)\frac\delta2\text{ through }
    \cos\left((q-2)\frac\delta2\right)=2\sin\frac\delta2;
-   
    ```
+
 2. the remaining `q-2` primal side vectors give a Littlewood polynomial of degree
    `q-3` vanishing at `z=e^{i delta}`.
 
@@ -466,10 +467,11 @@ Prove the ADG closing lemma.
 The most promising exact formulations are:
 
 1. prove
+   
    ```math
    H_m(Y)/(Y-1)^{[6\mid m]}
-   
    ```
+
    irreducible over `Q`;
 2. prove only that every noncyclotomic factor of `H_m` having a real root in the
    physical interval near `2` has degree `>(m-1)/2`;

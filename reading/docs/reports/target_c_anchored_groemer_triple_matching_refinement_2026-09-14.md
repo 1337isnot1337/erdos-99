@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_anchored_groemer_triple_matching_refinement_2026-09-14.md) · source SHA-256 `c704cd2e9e7fd7b71a33040ea37b3bf7b90e07b286c7727ee673fb785ee2a85b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-571834594F74","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — pair-incidence extraction for anchored Groemer triples

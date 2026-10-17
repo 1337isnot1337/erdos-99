@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_star_ray_staircase_hostile_audit_2026-10-01.md) · source SHA-256 `13fe456659b5766b7fced94fcd28efd9c95a1d8ae3d03f1a9ee825af77b12226`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-554A319E0457","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II: independent hostile audit of the star-ray staircase

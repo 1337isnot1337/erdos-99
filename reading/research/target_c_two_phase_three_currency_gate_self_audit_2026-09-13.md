@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_two_phase_three_currency_gate_self_audit_2026-09-13.md) · source SHA-256 `7fcd413b11448c12955546aa0afeae0252aae2c5a5887c3a0faba13176dd9147`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "1b63d959561b0754139fbaa795c924f255d760ed", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_two_phase_three_currency_gate_self_audit_2026-09-13.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "aa32dd8cb31bacee0e6f6824407f67e1e620838a9d19759c4a761e87be10d751"} -->
 

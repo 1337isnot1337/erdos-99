@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_central_plane_upper_gate_dichotomy_2026-09-17.md) · source SHA-256 `924883ccdcf294206bb1be01dd61776c7df411fa9ceedc0597901ed5733d988d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cf0f1c1912db79f266950e3a8f844242d9fefc6c", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_central_plane_upper_gate_dichotomy_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d6e637b88fed5d72ad1d383eb8a5e873352a5ffb93cae8b770fdfb54d9ca462e"} -->
 

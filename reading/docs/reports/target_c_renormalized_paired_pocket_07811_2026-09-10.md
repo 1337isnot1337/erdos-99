@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_renormalized_paired_pocket_07811_2026-09-10.md) · source SHA-256 `cb69cc94801acec476b8ecd3d4009d7092ed32be5a4afdce3b75a48eebe5f9aa`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CCDB9C34489C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — paired outer-pocket capacity raises the all-phase renormalized surplus above 0.7811

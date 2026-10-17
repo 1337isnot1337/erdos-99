@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_parametric_outer_shell_threshold_2026-09-10.md) · source SHA-256 `9898af7818cd80a034ed22949b41494f57a6743871672fe6bd822abfecf1b7e8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7BD3B9D37FF4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact parametric threshold for the inactive outer-shell phase
@@ -408,10 +408,11 @@ A full C-II closure can now target the two disjoint mechanisms:
 1. prove a finite rearrangement / boundary-order packing theorem excluding PT-L for
    one fixed `u` below `u_pi`; and
 2. prove a topology/response upper bound
+   
    ```math
    \mu_D<u_\pi-o(1)
-   
    ```
+
    excluding PT-H.
 
 Either improvement to the second threshold immediately enlarges the first outer-shell

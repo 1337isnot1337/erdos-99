@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_no_diameter_contact_geodesic_audit_2026-09-05.md) · source SHA-256 `657bef767fc1416dbe194d4efc1f70380d1f801c1115385c3224ea0ba2f4bc87`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-405E74C6D948","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Audit — Target C strict diameter contact-distance gap

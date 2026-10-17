@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_free_terminal_live_universal_flex_reservoir_2026-09-18.md) · source SHA-256 `96e9000d3f59e289011b7a3c417fbe66ea353a9aa9916c5b4e5e8d060e3f193e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e05f21ed8aea6de0371b4960f47c57612075414e", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_free_terminal_live_universal_flex_reservoir_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "6a9bdd1aab985010599ecc5d69e16c764f9de0eaa1b9894f0adf64d785bf638a"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_degree3_fan_forcing_2026-10-02.md) · source SHA-256 `8d05ca776d97f6047192f9b0942363a520d7f17c867ca3b4538046376b2caae9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "0e242106a89e7ade4c2665d1e39179ae470584d8", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_degree3_fan_forcing_2026-10-02.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "35600be9440487d1e8762d977ac7e0be54d4e0c7268512c5acc36b36270194fb"} -->
 

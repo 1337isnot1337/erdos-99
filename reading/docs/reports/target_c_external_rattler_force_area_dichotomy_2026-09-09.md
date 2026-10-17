@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_external_rattler_force_area_dichotomy_2026-09-09.md) · source SHA-256 `3071fc1740f30e179ce0d2574d15180009ea37552cb80103d9c6f60015768ca9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-94BD84F5F9FC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — external rattlers pay the force-hull area deficit

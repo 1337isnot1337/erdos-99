@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_tree_endpoint_unification_2026-09-09.md) · source SHA-256 `3823cd112352281644b0f0c38f83e5136b73c7fdc8aaaa0ede7247ac1e3376dd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-06BF898834C2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic `d_H=1` zeroed edges force four-block corner cuts
@@ -40,17 +40,19 @@ Then:
 
 1. `T_A,T_B` are nontrivial trees covering all `q` terminals;
 2. their bipartition classes form four nonempty cyclic blocks, after relabeling,
+   
    ```math
    \boxed{A_0\mid B_0\mid A_1\mid B_1;}
    \tag{EU.1}
-   
    ```
+
 3. the four cycle contacts crossing the `A|B` cut satisfy the endpoint reciprocal parallelogram
+   
    ```math
    \boxed{v_i+v_k=v_j+v_\ell,\qquad v_r=\alpha_r t_r;}
    \tag{EU.2}
-   
    ```
+
 4. the zeroed actual diameter chord `e=uv` joins opposite corners of the four-block partition. In particular `u` and `v` are endpoints of their respective color blocks.
 
 The selected positive diameter support at `s` may be a proper subgraph of

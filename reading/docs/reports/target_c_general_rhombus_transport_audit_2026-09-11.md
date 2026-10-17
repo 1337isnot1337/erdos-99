@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_general_rhombus_transport_audit_2026-09-11.md) · source SHA-256 `0e04bd6e0f5568963786d194aef94c2cdecf6687714dfc51e0a85066f1546777`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8C03C7B91CA6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_general_rhombus_transport_audit_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=2d899c965ea21a6a9d7d2886bd5b1d53a0504241; lifecycle=unreviewed; canonical=false -->

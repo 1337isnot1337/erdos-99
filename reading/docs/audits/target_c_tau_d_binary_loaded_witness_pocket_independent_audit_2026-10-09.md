@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_tau_d_binary_loaded_witness_pocket_independent_audit_2026-10-09.md) · source SHA-256 `83e5bbea8d1c60b143c02f03551c50b996ae7515a9c5b6f97e5dd59ad0f49c60`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8CD0F39752A5","canonical":true,"claim_ids":["C-TAU-D-BINARY-OWNER-SIDE-POCKET-BUDGET"],"claim_statuses":{"C-TAU-D-BINARY-OWNER-SIDE-POCKET-BUDGET":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.213 — tau-D binary loaded-owner side pocket budget

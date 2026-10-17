@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_near_triangular_chart_double_port_localization_independent_audit_2026-10-09.md) · source SHA-256 `80296f8058e0ce7781a5d4647ec92a584133e3b262b533b147638e0a4b8c8536`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EBDDB9EE9EA2","canonical":true,"claim_ids":["C-NEAR-TRIANGULAR-CHART-DOUBLE-PORT-LOCALIZATION"],"claim_statuses":{"C-NEAR-TRIANGULAR-CHART-DOUBLE-PORT-LOCALIZATION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: near-triangular double-port localization

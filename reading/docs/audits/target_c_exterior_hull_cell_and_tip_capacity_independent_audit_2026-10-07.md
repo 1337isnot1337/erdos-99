@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_exterior_hull_cell_and_tip_capacity_independent_audit_2026-10-07.md) · source SHA-256 `6e3d0f63378597c995c6f3ecce83550f10dbbc82178aca82833b6edddba29dce`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DA13946F3430","canonical":true,"claim_ids":["C-EXTERIOR-CAP-ACUTE-LOADED-TIPS","C-EXTERIOR-CAP-LOW-ANGLE-GUARD-REDUNDANCY","C-EXTERIOR-CAP-SHARED-TIP-GLUING-REGRESSION","C-EXTERIOR-CAP-STRICT-PACKET-CAPACITY","C-EXTERIOR-HULL-AUGMENTED-CELLS","C-EXTERIOR-ONE-UNIT-SIDE-HULL-TIP-SHIELD","C-EXTERIOR-WALL-HALF-TURN-PIN-REGRESSION"],"claim_statuses":{"C-EXTERIOR-CAP-ACUTE-LOADED-TIPS":"canonical","C-EXTERIOR-CAP-LOW-ANGLE-GUARD-REDUNDANCY":"canonical","C-EXTERIOR-CAP-SHARED-TIP-GLUING-REGRESSION":"regression","C-EXTERIOR-CAP-STRICT-PACKET-CAPACITY":"canonical","C-EXTERIOR-HULL-AUGMENTED-CELLS":"canonical","C-EXTERIOR-ONE-UNIT-SIDE-HULL-TIP-SHIELD":"canonical","C-EXTERIOR-WALL-HALF-TURN-PIN-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C independent audit: exterior hull cells and loaded-tip capacity

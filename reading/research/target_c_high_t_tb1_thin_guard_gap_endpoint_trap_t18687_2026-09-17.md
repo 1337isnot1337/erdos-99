@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_thin_guard_gap_endpoint_trap_t18687_2026-09-17.md) · source SHA-256 `7895e32a5159930a7972311887e05a30b4cfa322ab45d4974d718acf9ef3baa8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

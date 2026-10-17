@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_explicit_anti_reuleaux_kneser_poulsen_2026-09-09.md) · source SHA-256 `618c646c2a29418488bbaa609e716a49815976647564a2d5a32af68f7fe68751`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 16 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -137,7 +139,7 @@ The common intersection is a curvilinear equilateral triangle. Its three corner 
 I(r)
 =
 \frac{\sqrt3}{4}s_r^2
-+rac32\bigl(\alpha_r-\sin\alpha_r\bigr).
++\frac32\bigl(\alpha_r-\sin\alpha_r\bigr).
 }
 \tag{E43.5}
 ```

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_second_order_pocket_rigidity_2026-09-11.md) · source SHA-256 `215f316a49caab47fdca566ce4abd5aa10266d6c2a6fc3f3c20ede5f01e74fe1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5945D6C0AE38","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — second-order rigidity of the cyclic atomic endpoint

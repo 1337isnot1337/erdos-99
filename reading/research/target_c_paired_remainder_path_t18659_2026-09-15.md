@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_paired_remainder_path_t18659_2026-09-15.md) · source SHA-256 `8179039b5ab9babcfe3f71fe2a970fe619e57b5762239611bee6a5e12e384b2b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "22791502eca3e100891171c7265fcc5ae34f6915", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_paired_remainder_path_t18659_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c886b5f8bbcebe59c44106429f54143e76ed8eb017457252b0019d5928ca88b8"} -->
 

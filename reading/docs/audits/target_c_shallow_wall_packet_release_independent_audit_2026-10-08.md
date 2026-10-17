@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_shallow_wall_packet_release_independent_audit_2026-10-08.md) · source SHA-256 `5a5becacbaaf6a4ff5e4774b2c3f0f9c1535466c1477d5a79edef0bf09707616`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AF6BEB84F0FF","canonical":true,"claim_ids":["C-EXTERIOR-SHALLOW-WALL-RELEASE-CAPACITY","C-LARGER-TURN-COLLECTIVE-TRANSLATION-REGRESSION"],"claim_statuses":{"C-EXTERIOR-SHALLOW-WALL-RELEASE-CAPACITY":"canonical","C-LARGER-TURN-COLLECTIVE-TRANSLATION-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent audit: shallow-wall packet release and collective-translation regression

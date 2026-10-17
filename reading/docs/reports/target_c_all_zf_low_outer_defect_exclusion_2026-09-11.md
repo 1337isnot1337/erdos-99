@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_all_zf_low_outer_defect_exclusion_2026-09-11.md) · source SHA-256 `97ab9c7333d6f8709da06612ca5650983cbbc0bb911f0ffb01cdc3cf7b88b1cc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-07CDEAA9A5DF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — all-ZF exclusion of sublinear outer/face defect

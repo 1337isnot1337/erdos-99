@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_three_cut_kernel_cusp_1086_hostile_audit_2026-09-15.md) · source SHA-256 `f13962f04ff537f66cca6d348b30d9d0ef535d511f1015ce65d0f3563e174663`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "36c8fd1ca85e3ed7f8fb31d19f6acbc866247568", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_three_cut_kernel_cusp_1086_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f38b93a1ba4d34eba9a670d093c5fd997849a80bc01af5dae8b445c224bb634e"} -->
 

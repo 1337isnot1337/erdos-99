@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_vacancy_funded_unit_wall_activation_2026-10-05.md) · source SHA-256 `372a10ce01e1aa8c5a70b39c215b070164eaf851383739d0d0129acd0b1d753b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E101C71471F3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — vacancy-funded contact loss behind actual unit walls

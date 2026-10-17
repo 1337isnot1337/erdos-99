@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_laminar_multitrain_interval_shear_hostile_audit_2026-09-15.md) · source SHA-256 `7df128c5c49038dc1a13f9d1fafddb8aaad6bae4ff44d2ba92fbcec597bd34ea`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Hostile audit — laminar multi-train interval shear
 

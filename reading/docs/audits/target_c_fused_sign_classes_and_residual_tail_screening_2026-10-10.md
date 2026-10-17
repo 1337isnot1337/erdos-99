@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_fused_sign_classes_and_residual_tail_screening_2026-10-10.md) · source SHA-256 `4caea380df1a8c409596b5b42f21727f7851a5dd1c3f656e432e55a36425c0dc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-53B2C78707E5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C independent audit disposition — sign classes and residual-closure tails

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_fullcore_diameter_budget_floor_independent_audit_2026-09-14.md) · source SHA-256 `d675f302e29a002cdf7a6e4561b43455991eca35940ee2d4c4913653bc0bb941`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-94BFB8411971","canonical":true,"claim_ids":["C-FULLCORE-DIAMETER-BUDGET-FLOOR"],"claim_statuses":{"C-FULLCORE-DIAMETER-BUDGET-FLOOR":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit — Target C-II full-core diameter-budget floor

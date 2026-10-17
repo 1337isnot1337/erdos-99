@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_joint_perimeter_density_groemer_2026-09-09.md) · source SHA-256 `6075b3a687fa80f5139c01c63fb688f383fa35fcc65c1d93e703383150fad235`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 36 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

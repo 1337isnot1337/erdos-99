@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_four_terminal_nontrivial_block_2026-08-31.md) · source SHA-256 `e00b97f2f025c719f8c780aa62ae6e75d3e4822097529bd62d71e472dd238521`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-588096315A95","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_four_terminal_nontrivial_block_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=4c4863f5373f07349002ee3fa31ea08435c22525; lifecycle=unreviewed; canonical=false -->

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_pr191_dependency_audit_2026-09-11.md) · source SHA-256 `ce4a328d2a6b1f63904fb3554ab37c0c7353ce58f149f7c9e49442f67c62b747`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-56C5DE7D7F98","canonical":true,"claim_ids":["C-CYCLIC-STRUCTURAL"],"claim_statuses":{"C-CYCLIC-STRUCTURAL":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Erdős Problem #99 — independent dependency audit of PR #191

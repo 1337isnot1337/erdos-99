@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_unloaded_stress_transversal_2026-10-05.md) · source SHA-256 `44cfcce1e5b298a32fffe9a24ed4bbeba67c3caa4af69337f176c8eb4a5f6221`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0A70E2577845","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — the residual stress cage can be cut at unloaded vertices

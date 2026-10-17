@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/83-attachment-cell-disjoint-tiling-audit.md) · source SHA-256 `673c14dddf11cf82e39e5b295f499f887bad42149021949871d894ba28b605b1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — harmonic attachment-cell disjointness and tiling audit
 

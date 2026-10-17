@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_attachment_perimeter_and_cyclic_exceptional_floor_2026-09-11.md) · source SHA-256 `2afc64da088d4eb1900d3d8c315c0196fdb6f8de5f081ebb148354066e659bab`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BC71FA06957D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — linear attachment perimeter and a universal cyclic exceptional-face floor

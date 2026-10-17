@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/123-augmented-cell-defect-budget-audit.md) · source SHA-256 `ac5542e41c65ff22c6cd378ccea89336c7227f15734b7f74a11f05be4e03ddcf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — augmented-cell defect budget globalizes local exceptional perimeter
 

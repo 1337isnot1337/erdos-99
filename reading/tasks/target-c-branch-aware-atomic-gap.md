@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/target-c-branch-aware-atomic-gap.md) · source SHA-256 `7126327fb944fa531ccd7272ad617975acf15dd28e01819810e4a93cfbfc6c08`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — propagate the branch-aware atomic gap
 

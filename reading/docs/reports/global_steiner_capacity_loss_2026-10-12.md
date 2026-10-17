@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_steiner_capacity_loss_2026-10-12.md) · source SHA-256 `80e31ee8ee8c6d7434148a8ec5d2fe7439a31495a07a19b9c79724690a5a3213`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E46DE5394D85","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Steiner symmetrization can lose exact packing capacity

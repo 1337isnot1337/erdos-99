@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_typeii_qk_train_hull_gap_hostile_audit_2026-09-12.md) · source SHA-256 `6629dba5968f622f6d2a4cd814e23dbb9aa8967e00240cedc39c67c45798104b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CF6FD99D2EAE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Target C loaded-hull/train floor

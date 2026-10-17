@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_terminal_or_wide_return_dichotomy_t18687_2026-09-17.md) · source SHA-256 `b3ed7f415a7b114115ae3bad9547e7cf8c08e85f93318d88f54b7000ce4139ba`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "41228bf5fd9186b8bd9cd33773d507ab5d8a6cb4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_terminal_or_wide_return_dichotomy_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f91e9c1a9b72e7e074a79b50210af2ddabc4328ee0239e17b904bbbd9341e808"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_exceptional_singleton_two_window_gate_2026-09-14.md) · source SHA-256 `12dbd6ad29a55e24ac261a6394edad672b210fd3a29d95198b5936edf1c81dd1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c1df7a886044c89972338d0450715713a8a80235", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_exceptional_singleton_two_window_gate_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d98445148bc4b11792697d74de7d5bfa470a9590751db8798bf017523dcd9c18"} -->
 

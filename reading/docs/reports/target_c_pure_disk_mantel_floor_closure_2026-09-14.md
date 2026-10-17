@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_pure_disk_mantel_floor_closure_2026-09-14.md) · source SHA-256 `7d84db43681f3d4f0c2be093365855931609384e48c53da4d8f43ea9075bab88`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-709BBF07C31F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — pure-disk closure of the full-core Mantel-floor endpoint

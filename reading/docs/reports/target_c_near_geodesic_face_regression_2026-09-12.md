@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_near_geodesic_face_regression_2026-09-12.md) · source SHA-256 `98069d5ed9c48566da428db50e80d8fcc3ca985973f57e985bfd8acafc2e63ad`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F6BE51D8D40B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_near_geodesic_face_regression_2026-09-12.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=65d6d59a24ad878aced2ca105c0571d7b4831c7e; lifecycle=unreviewed; canonical=false -->

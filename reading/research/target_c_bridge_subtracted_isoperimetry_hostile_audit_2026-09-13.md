@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_bridge_subtracted_isoperimetry_hostile_audit_2026-09-13.md) · source SHA-256 `cf0b513b5821b29f81d498ca2a64639ac6686710e11056579d7fc9fb2e40965b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "7115333268cea1f2d07e3ae8a869e3951984d6f0", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_bridge_subtracted_isoperimetry_hostile_audit_2026-09-13.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ec09562dd1f1a62149f6ae1157455b2dec0fa0939f9b37de8ec52aec862aca71"} -->
 

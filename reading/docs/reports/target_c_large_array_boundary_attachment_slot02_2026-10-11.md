@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_large_array_boundary_attachment_slot02_2026-10-11.md) · source SHA-256 `f2225a9ceebddb2b3318ed948bb94d247f2a61c9e73db80d7ce3567093e037c6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-85AD449A16C4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II: large actual bent arrays need linearly many external contacts

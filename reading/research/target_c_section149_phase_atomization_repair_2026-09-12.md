@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section149_phase_atomization_repair_2026-09-12.md) · source SHA-256 `33a5ba867d4e593874928e7aa2dbeb4e88e49412f4c35e73eebdd59629bbcf23`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "5efe59cd28a3d7b57751ed6ebbb102710db8b75b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section149_phase_atomization_repair_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "108997119ef206f067243986e0fdd98769bcad6cccd8184304d0d8dfc2cf17c1"} -->
 

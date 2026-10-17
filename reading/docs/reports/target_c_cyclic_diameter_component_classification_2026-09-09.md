@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_diameter_component_classification_2026-09-09.md) · source SHA-256 `87fdd6b7629b1db40a3663d05a1a47d346310f3a5630f18c21b104653eb10faa`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AFA0D18A6E72","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact diameter-component classification in the cyclic endpoint
@@ -151,10 +151,11 @@ In particular:
 1. every full-H diameter edge separates the tree into two connected vertex sets;
 2. each side occupies at most two cyclic intervals on the force-hull order;
 3. LF gives at least
+   
    ```math
    s_Z+1=2
-   
    ```
+
    full diameter edges joining nonleaf vertices;
 4. whenever such a nonleaf tree edge has zero coefficient at an endpoint of the one-dimensional normalized KKT segment, its two tree-cut sides must both occupy exactly two cyclic intervals;
 5. the four resulting boundary contact-force vectors satisfy the TC reciprocal parallelogram relation.

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md) · source SHA-256 `c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-212DE83C2067","canonical":true,"claim_ids":["TB-DENSE-GRID"],"claim_statuses":{"TB-DENSE-GRID":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-b"} -->
 # Erdős Problem #99 — independent audit of Target B dense-grid, penetration, and interpolation chain

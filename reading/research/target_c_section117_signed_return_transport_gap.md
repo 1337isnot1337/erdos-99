@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section117_signed_return_transport_gap.md) · source SHA-256 `d29e7df538122ae456c50f13a158d152c361b44ea39d8a172d00645fad05cb20`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — Section 117: signed-return area transport uses the whole rhombic core
 

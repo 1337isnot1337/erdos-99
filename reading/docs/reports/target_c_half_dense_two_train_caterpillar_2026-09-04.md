@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_half_dense_two_train_caterpillar_2026-09-04.md) · source SHA-256 `f83f2d8e5f3d7e9df26bbc2d65eef30687ac238354a4d12c1aa4846df57de193`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D21A8C94CE94","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_half_dense_two_train_caterpillar_2026-09-04.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=11f2e1480350fa519f089f492f5abbe79473b058; lifecycle=unreviewed; canonical=false -->

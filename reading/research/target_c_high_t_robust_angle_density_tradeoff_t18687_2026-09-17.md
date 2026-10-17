@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_robust_angle_density_tradeoff_t18687_2026-09-17.md) · source SHA-256 `b48add5602ac798494d189e0b4a6d0784340a8cc9087cb55da505c7378ff6bc1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "31138cbe68273e04375fbc9433390cc08a6d5329", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_robust_angle_density_tradeoff_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "669b555c9a7cba4ab85a3ef55d9d77419b702d488450714190afdb81fccb1822"} -->
 
@@ -59,10 +59,11 @@ Consequently
 The geometry on the two sides has the same prescribed absolute scale `rho`:
 
 - every member of `S_D(rho)` has
+  
   ```math
   n_i\cdot w\ge D\sin\rho
-  
   ```
+
   for every unit local contact-opening tangent `w`;
 - every member of `E_D^{wide}(rho)` is, for sufficiently large `D`, a genuine pair of vertex-disjoint crossing actual diameter chords whose projective crossing angle is at least `rho`.
 

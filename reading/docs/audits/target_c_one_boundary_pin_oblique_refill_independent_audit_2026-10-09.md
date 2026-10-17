@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_one_boundary_pin_oblique_refill_independent_audit_2026-10-09.md) · source SHA-256 `580e60cea139b5e83c5aa51df2120eaafe84e665b8a0f3bcebb69a8575d7a319`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-690EC0C075F0","canonical":true,"claim_ids":["C-OBLIQUE-ONE-PIN-STRICT-REFILL","C-ONE-PIN-OBLIQUE-WALL-OLER-RESIDUAL","C-ONE-PIN-OBLIQUE-WALL-POPULATION","C-TRIANGULAR-ONE-PIN-DISPLACEMENT-GAP-REGRESSION","C-UNIT-SIDE-CROSSING-SEPARATION"],"claim_statuses":{"C-OBLIQUE-ONE-PIN-STRICT-REFILL":"canonical","C-ONE-PIN-OBLIQUE-WALL-OLER-RESIDUAL":"canonical","C-ONE-PIN-OBLIQUE-WALL-POPULATION":"canonical","C-TRIANGULAR-ONE-PIN-DISPLACEMENT-GAP-REGRESSION":"regression","C-UNIT-SIDE-CROSSING-SEPARATION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C Audit.187 — one-pin oblique full-interior refill

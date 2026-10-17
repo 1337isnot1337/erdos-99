@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_bounded_variation_chart_port_scarcity_independent_audit_2026-10-09.md) · source SHA-256 `6fe7e1a4bf1b9ca34a955a0187508bcc3d980bf7f29494fc03e5f9ed09571bcc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-652F2AB17613","canonical":true,"claim_ids":["C-ACTUAL-DIAMETER-ENDPOINT-STRIP-BOUND","C-BOUNDED-VARIATION-CHART-PORT-SCARCITY"],"claim_statuses":{"C-ACTUAL-DIAMETER-ENDPOINT-STRIP-BOUND":"canonical","C-BOUNDED-VARIATION-CHART-PORT-SCARCITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.212 — bounded-variation chart port scarcity

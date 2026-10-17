@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md) · source SHA-256 `944b5b3e155586f0edc78e22eeb9bdfb3f954e4e7cbfbd51afa2f2768c125d58`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8664DD3819F2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Global Level I: attainment and an explicit one-contact approximation

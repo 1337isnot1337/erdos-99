@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/07-activation-stress-invariance.md) · source SHA-256 `74ad9ea0044a413c07a2130fc70241ae56eca7d0ef7c4ca885971e81fde9e920`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — KKT-stress invariance under monotone activation
 
@@ -63,22 +63,18 @@ $`\sum_{C_i}\alpha_{uv}=D^2`$, so $`\mathcal K_i`$ is a compact convex polytope.
 >    normalized KKT stress of $`A_{i+1}`$;
 > 2. restriction to the old active pairs gives a canonical bijection
 >    
-
-```math
+>    ```math
 >    \boxed{\mathcal K_{i+1}\cong\mathcal K_i,}
 >    \tag{153.3}
->    
-```
+>    ```
+
 >    whose inverse extends a stress by assigning multiplier zero to $`e_i`$.
 >
 > Consequently
-> 
-
-```math
+> ```math
 > \boxed{\mathcal K_s\cong\mathcal K_0,}
 > \tag{153.4}
-> 
-```
+> ```
 > and every active pair created anywhere in the activation sequence has multiplier
 > zero in every normalized KKT stress of the terminal configuration $`A_s`$.
 

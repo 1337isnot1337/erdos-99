@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_partition_perimeter_stability_2026-09-09.md) · source SHA-256 `825b4d5ecd9577b6ccfcec53a8311262798fd89db7b08ab0a3b77fca5c7d70ba`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E312B3110C3F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fullcore_partition_perimeter_stability_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=e1ca17adb7f35f9c26db2c393e5c51e366f03e11; lifecycle=unreviewed; canonical=false -->

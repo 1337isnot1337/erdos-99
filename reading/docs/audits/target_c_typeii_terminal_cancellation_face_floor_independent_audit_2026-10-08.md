@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md) · source SHA-256 `2abaff04ce431afe7c2857f4a843f1525bafb2a61c4dc38978e2af6629715682`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AF6484C9929B","canonical":true,"claim_ids":["C-TYPEII-ATOMIC-SEPARATE-FACE-FLOOR"],"claim_statuses":{"C-TYPEII-ATOMIC-SEPARATE-FACE-FLOOR":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.174 — terminal cancellation face floor

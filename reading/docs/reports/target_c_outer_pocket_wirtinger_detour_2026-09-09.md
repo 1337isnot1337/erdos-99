@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_outer_pocket_wirtinger_detour_2026-09-09.md) · source SHA-256 `9f3ae14d141260157b36a61db104a32820b8642b848e96689fba499b0bdc7647`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C056974BA3E0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Wirtinger sharpening of outer-pocket detour area
@@ -281,6 +281,7 @@ Every qualitative OD consequence survives with the smaller constant. In particul
 
 - if `b-P_F=o(D)`, then `H_out=o(D^2)`;
 - if `H_out>=gamma D^2` and `x_B+a<=LD`, then
+  
   ```math
   \boxed{
   \frac{b-P_F}{D}
@@ -288,8 +289,8 @@ Every qualitative OD consequence survives with the smaller constant. In particul
   \frac{\pi^2\gamma^2}{2L^3}.
   }
   \tag{WD.13}
-  
   ```
+
 
 The second formula is obtained by squaring WD.11 and rearranging.
 

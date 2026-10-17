@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_exact_difference_body_normal_form_2026-09-09.md) · source SHA-256 `a86be1b8ea225f40214b2bb0c3d83a775a7e5336dd717b2a685b4a75c276736c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DEC31DE08127","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact one-defect difference-body normal form for the cyclic `d_H=1` phase
@@ -271,10 +271,11 @@ edges:
 
 - `q-2` unit edges, each subtending angle `delta`;
 - one length-two edge, subtending angle
+  
   ```math
   \Delta_2=2\arcsin(1/D).
-  
   ```
+
 
 The half-circle angle sum is therefore
 

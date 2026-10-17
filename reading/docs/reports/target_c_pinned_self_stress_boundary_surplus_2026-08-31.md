@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_pinned_self_stress_boundary_surplus_2026-08-31.md) · source SHA-256 `e32adca28d3b81244dc5f6e2ce08ac45f6ce798097128254766a32f9c920d961`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0A6E1BF15A6B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C33: pinned positive self-stress sharpens the loaded-boundary count

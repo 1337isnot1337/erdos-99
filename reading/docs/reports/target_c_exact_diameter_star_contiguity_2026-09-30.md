@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_diameter_star_contiguity_2026-09-30.md) · source SHA-256 `5014deda8388b7236a260f3a963aaf030b20db9e7fbaf65835b7490a7a16e252`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-17B2DB88C121","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: exact contiguity of diameter stars
@@ -21,17 +21,19 @@ directions of the diameter edges on $`\mathbb R/\pi\mathbb Z`$.
 1. Every vertex's incident edges form one cyclic interval of that order.
 2. If $`H`$ is not a star, every interval is proper. With the notation of
    `target_c_rooted_direction_reentry_defect_2026-09-30.md`, exactly
+   
    ```math
    t_v=1\quad(v\in B),\qquad R_D=0,\qquad m_D=d_H.
-   
    ```
+
 3. In the non-star case, every consecutive direction pair with a shared
    endpoint $`v`$, say $`vx,vy`$, generates a hull side $`xy`$. These
    generated sides are distinct. There are exactly
+   
    ```math
    2h-q=q-2d_H
-   
    ```
+
    such sides. Exactly $`2d_H`$ sides of $`F`$ are not generated.
 
 No separation assumption, global minimality, near-disk limit, stress theorem,

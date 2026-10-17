@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/erdos_problem_99_1.6.0.md) · source SHA-256 `ff4b2e7de3c6789323ae823b5be08d168439dedc52ade7febbbe2cf4ee48c765`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-15C49142E4A7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99 — Canonical Working Report v1.6.0
@@ -79,15 +79,17 @@ The promoted Target A results include:
   deficiency**, with every successive overlap Hall-tight;
 - the full fixed-basis tight core contracts exactly, leaving a fully matchable
   residual and the invariant
+  
   ```math
   g=\Delta_\Lambda-d_{\rm sc};
-  
   ```
+
 - every hypothetical survivor has
+  
   ```math
   d_{\rm sc}=O(D)
-  
   ```
+
   with an explicit coefficient;
 - all dimers together with either complete monomer orientation form an independent
   transversal set and may be contracted without losing any scaffold nullity;
@@ -95,10 +97,11 @@ The promoted Target A results include:
   directed-contour formulas;
 - terminalizing the smaller optimum at the right endpoint of its diameter plateau
   makes its interior lattice conflict graph right-Hall-tight:
+  
   ```math
   \nu(G_0)=|Z|;
-  
   ```
+
 - after exact interior contraction, all live matching obstruction is boundary-order;
 - after contracting dimers and one monomer phase, an exact phase-pure quotient has
   only $`O(D)`$ nonloop ground elements;
@@ -107,12 +110,13 @@ The promoted Target A results include:
   orientation;
 - the full quadratic matching problem admits an exact boundary Schur complement
   $`S`$, with
+  
   ```math
   d_{\rm sc}=d_{\rm int}+|C^\partial|-\operatorname{rank}S,
   \qquad
   h(G)=|O|-\operatorname{rank}S;
-  
   ```
+
 - source strict rattlers are almost all independent over the source core in a
   natural triangular-lattice transversal matroid: their conditional nullity is
   $`O(D)`$;
@@ -201,48 +205,55 @@ supersede their frontier language.
 The promoted Target A refinements are:
 
 1. if `R=Y_in`, `y=|R|`, `nu=nu(G)`,
+   
    ```math
    d_{\rm sc}=\max_{S\subseteq X_m}(|S|-|N(S)|)=m-\nu
-   
    ```
+
    is the left Hall nullity and
+   
    ```math
    \Delta_\Lambda=N-|Y|\ge1
-   
    ```
+
    is the exact lattice-population deficit, then
+   
    ```math
    \boxed{h(G)-j=d_{\rm sc}-\Delta_\Lambda};
-   
    ```
+
    hence Target A is exactly `d_sc >= Delta_Lambda`;
 2. every selected monomer--dimer cell family `S` satisfies the exact cell-complex
    identity
+   
    ```math
    |S|-|N(S)|=\frac{m_3(S)-b(S)}2-\chi(S)
-   
    ```
+
    and the exact local incidence-charge identity
+   
    ```math
    |S|-|N(S)|
    =\frac1{12}\sum_{v\in N(S)}(4p_v(S)+3q_v(S)-12);
-   
    ```
+
 3. a positive-deficiency maximizer of minimum cardinality is a Hall core: every
    lattice vertex has selected incidence degree at least two and every connected
    incidence component has positive deficiency;
 4. on such a core the only zero local phase-charge states are
+   
    ```math
    (p_v,q_v)=(3,0)\quad\text{and}\quad(0,4),
-   
    ```
+
    corresponding exactly to monomer and dimer crystalline cancellation phases;
 5. if `U=N_G(X_m)` and `z=|Y_in setminus U|`, then Hall deficiency has the exact cell-peeling
    representation
+   
    ```math
    \boxed{h(G)=z+\max_{\rm deletion\ sequences}\sum_i(\pi_i-1)};
-   
    ```
+
 6. the matchable cell subsets form a transversal matroid of rank `nu`; every
    fundamental circuit has Hall deficiency exactly one and therefore net local phase
    charge exactly `12`;
@@ -253,47 +264,52 @@ The promoted Target A refinements are:
    available; and
 8. the preferred v1.4.1 Target A endpoint is the exact global scaffold phase-charge
    inequality
+   
    ```math
    \boxed{
    \max_{S\subseteq X_m}
    \sum_{v\in N(S)}(4p_v(S)+3q_v(S)-12)
    \ge12\Delta_\Lambda,
    }
-   
    ```
+
    equivalently `d_sc>=Delta_Lambda`, equivalently the peeling inequality
    `z+max sum(pi_i-1)>=j`, equivalently the older `h(G)>=j` statement.
 
 The promoted Target B refinements are:
 
 1. the cyclic hypothesis in the old two-direction conclusion is unnecessary:
+   
    ```math
    \boxed{s_C=1\Longrightarrow C\text{ uses exactly two train directions}};
-   
    ```
+
 2. if an `s_C=1` terminal component is a tree, then
+   
    ```math
    \boxed{|V(C)|\le10,\qquad |E(C)|\le9};
-   
    ```
+
 3. if `k_{1t}` is the number of `s_C=1` tree components that are strict-backward
    origins, origin concentration gives
+   
    ```math
    k_{1t}\le r_\alpha+1,
-   
    ```
+
    and `k_{1t}<=r_alpha` in the proper-origin case;
 4. consequently the total train population in such origin components is at most
    `9(r_alpha+1)`, or `9r_alpha` in the proper-origin case; and
 5. if `A_{1t}` denotes the span of the projected active-bar average functionals
    arising from blockers whose origins lie in `s_C=1` trees, then
+   
    ```math
    \boxed{
    \operatorname{rank}\overline{\mathcal B}_{\xi,1t}
    \le8k_{1t}+\operatorname{rank}\mathcal A_{1t}.
    }
-   
    ```
+
    Thus unbounded train multiplicity is removed from the `s_C=1` tree class. The
    surviving tree-specific obstruction is repeated-bar diversity through
    `rank A_{1t}`.
@@ -311,11 +327,12 @@ The following v1.4.1 warnings are binding:
   are **not** automatically cyclic/Ferrers systems;
 - the new tree bound does not control the active-bar average span `A_{1t}`; and
 - the exact pure Target B endpoint remains
+  
   ```math
   \operatorname{rank}\overline{\mathcal B}_\xi+I+r
   \le T-q-r_\alpha,
-  
   ```
+
   followed by exact topology-corrected transport.
 
 ## Version 1.4.0 audit policy
@@ -341,24 +358,27 @@ The promoted Target A additions are:
 5. the radial conflict graph is planar and every lattice-side vertex has degree at
    most five;
 6. the full-complex Euler identity
+   
    ```math
    \delta=m_3+2m_4+\gamma-s-g
-   
    ```
+
    and, for every induced Hall subgraph,
+   
    ```math
    |Q|-|N(Q)|
    =\gamma_Q-\mu_Q-b_1(Q)+b_3(Q)+2b_4(Q)
-   
    ```
+
    are exact;
 7. a maximum-deficiency Hall set of minimum cardinality has no degree-one left
    vertices, giving the exact leafless formula
+   
    ```math
    h(G)=\max_{b_1(Q)=0}
    \bigl(\gamma_Q-\mu_Q+b_3(Q)+2b_4(Q)\bigr);
-   
    ```
+
 8. the full complex admits exact face-shell identities separating monomer gaps,
    dimer shared edges, outer boundary, and nontriangular gap excess; and
 9. the new Target A endpoint is the **monomer--dimer cycle-cut rigidity lemma**
@@ -387,12 +407,13 @@ The promoted Target B additions are:
    independent until all components are used, and all-component selection has rank
    exactly `c(Theta)-1`;
 6. if `k_org` is the number of distinct strict-backward origin components, then
+   
    ```math
    r_\alpha\ge\min\{k_{\rm org},c(\Theta)-1\},
    \qquad
    k_{\rm org}\le r_\alpha+1,
-   
    ```
+
    with the sharper `k_org<=r_alpha` whenever `r_alpha<c(Theta)-1`; and
 7. strict-backward origins are proved only to satisfy `s_C>0`.  **They are not
    proved to be cyclic.**  In particular, `s_C=1` tree components remain a live
@@ -418,11 +439,12 @@ The following v1.4 warnings are binding:
   it does not by itself prove the internal `xi` coforest inequality;
 - `s_C=1` trees cannot be silently merged into the cyclic two-family case;
 - the pure Target B residual remains
+  
   ```math
   \operatorname{rank}\overline{\mathcal B}_\xi+I+r
   \le T-q-r_\alpha,
-  
   ```
+
   followed by exact topology-corrected transport; and
 - no width-one-annulus gammoid or plateau-terminalization theorem is part of v1.4.0
   unless separately proved and audited.  Such language is a research target, not a
@@ -447,19 +469,21 @@ The promoted v1.3 additions are:
    $`2\pi/\sqrt3`$ and the stronger $`t`$-dependent form;
 3. the **deep Voronoi containment theorem** and the sharp local Delaunay clearance
    inequality
+   
    ```math
    \operatorname{area}(T)-\frac{\sqrt3}{4}
    \ge\frac{\sqrt3}{6}\sum_{v\in T}\mu_T(v),
-   
    ```
+
    with exact equality side multisets $`\{1,1,1\}`$ and
    $`\{1,1,\sqrt3\}`$;
 4. the global nearest-neighbor clearance budget
+   
    ```math
    \sum_{p\in A}\delta(p)
    <\left(24+\frac\pi2\right)D+18;
-   
    ```
+
 5. the degree-six nearest-neighbor graph bound, the matching estimate
    $` |M|\ge\rho/24-D-3/4 `$, and the fact that the selected matching edges are
    strong Gabriel edges that can be included simultaneously in a Delaunay triangulation;
@@ -469,12 +493,13 @@ The promoted v1.3 additions are:
    $`\{1,1,1\}`$ or $`\{1,1,\sqrt3\}`$;
 7. the **exact Hall--Kőnig conflict-graph theorem** for the independently constructed
    scaffold,
+   
    ```math
    m+|Y|-\nu\le N-1,
    \qquad
    |S|-|N(S)|\le\rho-1;
-   
    ```
+
 8. the resulting **inner-band near-perfect conflict matching**: after removing the
    conflict-free safe-collar sites, all but at most $`\rho-k-1=O(D)`$ remaining
    lattice sites can be matched injectively to distinct conflicting points of the
@@ -809,22 +834,24 @@ Eppstein [6] proves:
 2. Every connected triangle-free penny graph containing a cycle has at least four non-articulation vertices of degree at most (2) [6, Lemma 2].
 3. If $`G`$ is connected with graph diameter $`d_G`$, then
 
+   
    ```math
    |E(G)|\le2|V(G)|-d_G-2
    \tag{2.3}
-   
    ```
+
 
    [6, Theorem 2].
 4. For arbitrary $`n`$-vertex triangle-free penny graphs,
 
+   
    ```math
    |E(G)|
    \le
    2n-\frac12\sqrt{2\pi\sqrt3\,n}+O(1)
    \tag{2.4}
-   
    ```
+
 
    [6, Theorem 4].
 
@@ -1432,22 +1459,24 @@ Assume $`\mathcal E_Q(A)=\{0\}`$. Then:
 1. Every contact edge admits a strictly positive pinned equilibrium stress.
 2. At every unpinned vertex $`p_i\notin Q`$,
 
+   
    ```math
    \sum_{j\sim i}c_{ij}(p_j-p_i)=0,
    \qquad c_{ij}>0.
    \tag{8.3}
-   
    ```
+
 
 3. The contact neighbors of every unpinned vertex affinely span the plane.
 4. Every unpinned vertex lies in the strict interior of the convex hull of its contact neighbors and has contact degree at least (3).
 5. The diameter endpoints are exactly the convex-hull vertices:
 
+   
    ```math
    \boxed{Q=V(\operatorname{conv}A).}
    \tag{8.4}
-   
    ```
+
 
 #### Proof
 
@@ -1471,11 +1500,12 @@ In the first-order-jammed triangle-free branch:
 
 1. If $`T`$ is a nontrivial tree contact component with $`n_T`$ vertices and $`q_T=|Q\cap V(T)|`$, then
 
+   
    ```math
    \boxed{n_T\le2q_T-2.}
    \tag{9.1}
-   
    ```
+
 
 2. All nontrivial tree components together contain at most $`2q=O(\sqrt n)`$ vertices.
 3. Every cyclic contact component contains at least four diameter endpoints.
@@ -2684,20 +2714,22 @@ Then:
 2. Fixing $`Q^\circ`$, the expansive cone of the core is zero.
 3. If the core has $`e`$ contact edges, then
 
+   
    ```math
    e\ge2(m-|Q^\circ|).
    \tag{12.1}
-   
    ```
+
 
 4. Under triangle-freeness,
 
+   
    ```math
    |Q^\circ|
    \ge\frac14\sqrt{2\pi\sqrt3\,m}-O(1).
    \tag{12.2}
-   
    ```
+
 
 #### Proof
 
@@ -2762,14 +2794,15 @@ Assume that a triangle-free minimizer exists for a fixed $`n`$. There is a trian
 1. $`K`$ is the unchanged nonisolated core of a contact-minimal triangle-free minimizer. If $`Q_K`$ denotes its original diameter endpoints, then the expansive cone of $`K`$ pinned at $`Q_K`$ is zero.
 2. Every contact component of $`\widehat A`$ contains a diameter endpoint, and
 
+   
    ```math
    \#\{\text{contact components}\},
    \quad
    \#\{\text{contact-isolated vertices}\}
    \le C_0\sqrt n.
    \tag{12.4}
-   
    ```
+
 
 3. Every contact edge of $`\widehat A`$ outside $`K`$ is a bridge. Thus every contact cycle and every nonbridge contact edge lies in $`K`$.
 4. If $`\widehat Q`$ is the full diameter-endpoint set of $`\widehat A`$, every velocity in $`\mathcal E_{\widehat Q}(\widehat A)`$ vanishes on $`V(K)`$. All surviving pinned flexibility is confined to the forest left after the fixed vertices $`V(K)\cup\widehat Q`$ are deleted.
@@ -3166,14 +3199,15 @@ Then:
 
 1. **Exact stress and moments.** $`A`$ carries a normalized proper mixed contact/diameter KKT stress satisfying (4.1)-(4.5) and the virtual-work identity (11.7). The two normalized edge-stress measures have the same midpoint barycenter $`\mu`$, satisfy the quartic identity (11.9), and obey
 
+   
    ```math
    \sum_C\frac{\alpha_{ij}}{D^2}|m_{ij}-\mu|^2
    \ge\frac{D^2-1}{12},
    \qquad
    \max_{\alpha_{ij}>0}|m_{ij}-\mu|
    \ge\frac{D-1}{2}.
-   
    ```
+
 
 2. **Second-order normality.** Every critical first-order direction has a direction-dependent normalized stress supported on its zero-derivative active edges and satisfying (11.3).
 
@@ -3184,82 +3218,91 @@ Then:
 
 4. **Jammed branch.** In the zero-cone branch:
 
+   
    ```math
    Q=V(\operatorname{conv}A),
-   
    ```
+
 
    every non-hull vertex is a strict convex combination of at least three unit-contact neighbors,
 
+   
    ```math
    |Q|=\Theta(\sqrt n),\qquad
    e^\circ\ge2(n-|Q|),\qquad
    |E(G(A))|=2n-\Theta(\sqrt n),
-   
    ```
+
 
    and its cyclomatic number is at least $`n-2|Q|+c=n-O(\sqrt n)`$. All nontrivial tree components together contain $`O(\sqrt n)`$ vertices, every cyclic component contains at least four diameter endpoints, and for $`n\ge44`$ at least one cyclic component exists.
 
 5. **Rhombic bulk.** In the zero-cone branch there are $`n-O(\sqrt n)`$ bounded unit-rhombus faces and
 
+   
    ```math
    \sum_{F\in\mathcal F_4}\left(\theta_F-\frac\pi3\right)=O(\sqrt n).
-   
    ```
+
 
    All but $`O(\sqrt n)`$ vertices have contact degree (4) and are incident only with these rhombi. For every fixed $`\varepsilon>0`$, all but $`O_\varepsilon(\sqrt n)`$ vertices are surrounded by rhombi with acute angles in
 
+   
    ```math
    60^\circ<\theta<60^\circ+\varepsilon.
-   
    ```
+
 
    If $`B_{\mathcal R}`$ is the boundary-edge count of the full rhombic face complex, then
 
+   
    ```math
    F_4\le\frac{B_{\mathcal R}^2}{16},
    \qquad
    B_{\mathcal R}D_{\mathcal R}
    \ge4\sum_F\sin\theta_F
    \ge2\sqrt3F_4+4\chi_*\sum_F\left(\theta_F-\frac\pi3\right).
-   
    ```
+
 
    At most two tracks have both ends on the convex hull, so at least $`2\sqrt n-O(1)`$ track ends enter the defect network. If the rhombi tile the whole convex hull, the configuration is the unit square.
 
    If a connected $`R`$-face subcomplex uses only two fixed edge directions, has regular boundary topology as in Theorem 10.12, and needs external support at only $`k`$ non-hull boundary incidences, then
 
+   
    ```math
    R\le(k+3)^2.
-   
    ```
+
 
    With no such incidences it is either one rhombus or the five-rhombus cross.
 
 6. **Existential normal forms.** If any triangle-free minimizer exists for a given $`n`$, there is a contact-minimal one for the same $`n,D(n)`$ in which every non-diameter nonisolated vertex is surrounded by (3)-(5) contacts, every contact vertex of degree (1) or (2) is diametral, all nontrivial tree components together contain $`O(\sqrt n)`$ vertices, and
 
+   
    ```math
    \kappa\ge\frac{n-z}{2}-C_0\sqrt n+c_*
-   
    ```
+
 
    for the cyclomatic number of the nonisolated contact graph.
 
    More strongly, one hybrid representative has only $`O(\sqrt n)`$ components and isolates and contains the unchanged contact-minimal core $`K`$, pointwise fixed under every pinned expansive motion. Every contact edge outside $`K`$ is a bridge. If $`u`$ unpinned vertices lie outside $`K`$ and the contracted bridge forest has $`r`$ fixed roots and $`c`$ components, then
 
+   
    ```math
    \dim\mathcal L_{\widehat Q}\ge u-r+c\ge u-|\widehat Q|+c.
-   
    ```
+
 
    Hence lineality $`O(\sqrt n)`$ already forces $`|V(K)|=n-O(\sqrt n)`$ and puts that core in the almost-rhombic regime.
 
 7. **Exact global block restriction.** Every additive Cartesian $`a\times b`$ rhombic train block in a global minimizer satisfies
 
+   
    ```math
    ab+\frac{4\sqrt3-6}{\pi}\Delta_{a,b}<\frac2\pi n.
-   
    ```
+
 
 8. **Exact limitations.** There are arbitrarily large triangle-free strict local diameter minima, arbitrarily large asymptotically dense triangle-free shell configurations carrying the full exact KKT stress, and arbitrarily large boundary-pinned jammed rhombic complexes with positive stress and total positive angular defect tending to zero. The 11-point sun additionally has a diametral convex hull, positive stress, zero hull-pinned cone, and five strict rhombi, yet no $`60^\circ`$ face. It is provably not global: a 12-point triangular-lattice set of diameter (3) is already smaller than its diameter $`\sqrt{5+2\sqrt5}`$.
 
@@ -3673,24 +3716,26 @@ Two immediate specializations of (21.1) are:
 
 1. If $`F`$ is a convex equilateral $`m`$-gon whose vertices are unit-separated, then
 
+   
    ```math
    \boxed{
    \operatorname{area}(F)\ge c_0(m-2).
    }
    \tag{21.10}
-   
    ```
+
 
 2. If $`C`$ is a convex pocket bounded by a chain of $`r`$ unit edges and its
    closing hull chord of length $`L`$, then
 
+   
    ```math
    \boxed{
    \operatorname{area}(C)\ge c_0(r-L).
    }
    \tag{21.11}
-   
    ```
+
 
 For (21.10), use $`N=m`$ and perimeter $`m`$ in (21.1).  For (21.11), use
 $`N=r+1`$ and perimeter $`r+L`$.  The vertices of a pocket are a subset of
@@ -4203,12 +4248,9 @@ and proving the reverse inequality for every sufficiently large triangle-free su
 The current Target B is no longer merely a generic ``sharp boundary-capacity theorem.'' A sufficient focused statement is:
 
 > **Joint outer-shell stability theorem.** For every sufficiently large triangle-free global minimizer in the normalized jammed/almost-rhombic regime, the compulsory train-end data satisfy a quantitative inequality coupling $`b_F`$, $`H_\infty`$, the indentation-pocket slacks, the convexification area, and the actual hull perimeter strongly enough to force
-> 
-
-```math
+> ```math
 > \mathscr O(A)\ge c_0\pi D+a_0.
-> 
-```
+> ```
 
 Equivalently, near equality in the local Oler cells must be incompatible at large scale with both the diametral-hull condition $`Q=V(\operatorname{conv}A)`$ and near equality in the isodiametric/perimeter bounds.
 
@@ -6046,15 +6088,17 @@ post-synthesis addendum.
 The following are retained as established under their stated hypotheses:
 
 - the strict translated-lattice bound
+  
   ```math
   D(n)^2<\frac{2\sqrt3}{\pi}(n-1);
-  
   ```
+
 - the sharpened topology-corrected shell window and, in a pure rhombic disk,
+  
   ```math
   G+E<c_0B;
-  
   ```
+
 - the perimeter deficit $`\pi D-P=O(1)`$, isodiametric area deficit $`O(D)`$,
   and uniform width estimate $`\min w_K=D-O(D^{1/3})`$;
 - the exact support-depth, support-turning, pocket, and mixed-area identities;
@@ -8259,26 +8303,20 @@ needed and is not promoted.  The correct theorem is the following.
 > Let $`K=\ker\mathcal B\subseteq\mathcal L`$, $`k=\dim K`$, in a pure simply
 > connected strict-rhombic-disk global minimizer.  Then either
 >
-> 
-
-```math
+> ```math
 > k\le5,
 > \tag{53.1}
-> 
-```
+> ```
 >
 > or there exists a triangle-free pure-rhombic-disk global minimizer of the same
 > diameter $`D`$, arbitrarily close to the original (possibly the original itself),
 > whose train-angle realization space contains a local same-$`D`$ manifold of
 > dimension at least
 >
-> 
-
-```math
+> ```math
 > \boxed{k-5.}
 > \tag{53.2}
-> 
-```
+> ```
 >
 > If the construction reaches a strict-separation stage after at least one face has
 > been protected, the nearby minimizer may additionally be chosen with strictly
@@ -8430,23 +8468,17 @@ invisible train must be impossible.
 
 > **Theorem 54.1.**  For arbitrary integers $`2\le m<n`$, if
 >
-> 
-
-```math
+> ```math
 > D(m)=D(n)=D,
 > \tag{54.1}
-> 
-```
+> ```
 >
 > then
 >
-> 
-
-```math
+> ```math
 > \boxed{n-m<\frac\pi2D.}
 > \tag{54.2}
-> 
-```
+> ```
 
 ### Proof
 
@@ -8988,37 +9020,28 @@ rows; equilibrium is imposed only in the unpinned columns.
 
 > **Theorem 60.1 (rooted-forest rank/self-stress identity).**
 > One has
-> 
-
-```math
+> ```math
 > \boxed{
 > \ell=u-r+c+\sigma,
 > \qquad
 > 0\le\sigma\le r-c.
 > }
 > \tag{60.1}
-> 
-```
+> ```
 > Consequently
-> 
-
-```math
+> ```math
 > \boxed{
 > u-r+c\le\ell\le u,
 > \qquad
 > 0\le u-\ell=r-c-\sigma\le r-c.
 > }
 > \tag{60.2}
-> 
-```
+> ```
 > Since $`r\le |\widehat Q|\le\pi D`$,
-> 
-
-```math
+> ```math
 > \boxed{0\le u-\ell\le\pi D.}
 > \tag{60.3}
-> 
-```
+> ```
 
 ### Proof
 
@@ -9090,13 +9113,10 @@ Pin every nonroot vertex of $`S`$ having degree at least three in $`S`$.  Let $`
 be the total number of such newly pinned branch vertices.
 
 > **Lemma 61.1 (branch count).**
-> 
-
-```math
+> ```math
 > \boxed{b\le r-c.}
 > \tag{61.1}
-> 
-```
+> ```
 
 ### Proof
 
@@ -9119,25 +9139,19 @@ on each such path.
 > **Theorem 61.2 (root-skeleton exactification).**
 > There is a nearby triangle-free global minimizer of the same diameter carrying a
 > smooth exact-contact manifold $`\mathcal M`$ such that
-> 
-
-```math
+> ```math
 > \boxed{
 > \dim\mathcal M=u-b\ge u-r+c,
 > }
 > \tag{61.3}
-> 
-```
+> ```
 > while the number of old forest contacts made strict is at most
-> 
-
-```math
+> ```math
 > \boxed{
 > L_{\rm lost}\le r+b-c\le2(r-c).
 > }
 > \tag{61.4}
-> 
-```
+> ```
 
 ### Proof
 
@@ -9345,37 +9359,28 @@ forest flat, on which nonfixed old bars open quadratically.
 > Denote this strict-rattler set by $`\mathscr R`$. Its vertices have no unit contact,
 > no active diameter incidence, and strict slack in every constraint involving them.
 > Consequently
-> 
-
-```math
+> ```math
 > \boxed{
 > |\mathscr R|\ge v=u-b\ge u-r+c\ge\ell-(r-c),
 > }
 > \tag{62.7}
-> 
-```
+> ```
 > and the local same-$`D`$ minimizer set contains an open ball of dimension at least
-> 
-
-```math
+> ```math
 > \boxed{
 > 2|\mathscr R|\ge2(u-r+c)\ge2\ell-2(r-c).
 > }
 > \tag{62.8}
-> 
-```
+> ```
 > In particular, since $`r-c\le\pi D`$,
-> 
-
-```math
+> ```math
 > \boxed{
 > |\mathscr R|\ge\ell-\pi D,
 > \qquad
 > \dim_{\rm local}\mathcal O_D\ge2\ell-2\pi D.
 > }
 > \tag{62.9}
-> 
-```
+> ```
 
 ### Proof
 
@@ -9431,23 +9436,17 @@ Target A is no longer a linkage-regularity problem.
 > Let $`A`$ be a triangle-free $`n`$-point global minimizer of diameter $`D`$, with
 > $`K=\operatorname{conv}A`$.  Then $`A`$ is contained in a triangle-free global
 > minimizer $`A^+\subset K`$ of the same diameter satisfying
-> 
-
-```math
+> ```math
 > \boxed{|A^+\setminus A|<\frac\pi2D,}
 > \tag{63.1}
-> 
-```
+> ```
 > and
-> 
-
-```math
+> ```math
 > \boxed{
 > K\subseteq\bigcup_{p\in A^+}\overline B(p,1).
 > }
 > \tag{63.2}
-> 
-```
+> ```
 > If a specified finite subset of $`A`$ consists of strict rattlers, the added points
 > may be chosen generically so that those vertices remain non-diametral strict
 > rattlers.
@@ -9583,22 +9582,16 @@ language.
 > **Target A1 (saturated rattler-capacity theorem).**
 > Let $`A`$ be a triangle-free global minimizer of diameter $`D`$, normalized as in
 > Theorems 62.3 and 63.1.  Let $`\mathscr R\subset A`$ be the set of vertices satisfying
-> 
-
-```math
+> ```math
 > 1<|p-q|<D
 > \qquad(q\in A\setminus\{p\}).
 > \tag{64.1}
-> 
-```
+> ```
 > Put $`\rho=|\mathscr R|`$. Prove
-> 
-
-```math
+> ```math
 > \boxed{\rho=O(D).}
 > \tag{64.2}
-> 
-```
+> ```
 
 Since $`\rho\ge\ell-\pi D`$, this immediately gives $`\ell=O(D)`$ and closes the
 hybrid branch.
@@ -9648,26 +9641,20 @@ vertex set.
 
 > **Theorem 65.1 (component closure and Minkowski splitting).**
 > For every terminal component,
-> 
-
-```math
+> ```math
 > \boxed{
 > \sum_{j\in J_C}e_j=0.
 > }
 > \tag{65.2}
-> 
-```
+> ```
 > The vectors $`\{e_j:j\in J_C\}`$, in their inherited cyclic angular order, are the
 > edge vectors of a possibly degenerate convex polygon $`K_C`$.  Up to translation,
-> 
-
-```math
+> ```math
 > \boxed{
 > K=K_1+\cdots+K_{c(\Theta)}.
 > }
 > \tag{65.3}
-> 
-```
+> ```
 
 ### Proof
 
@@ -9714,29 +9701,23 @@ s_C=
 ```
 
 > **Theorem 66.1 (componentwise closure-corrected turn inequality).**
-> 
-
-```math
+> ```math
 > \boxed{
 > |E(C)|-|V(C)|+1
 > \le
 > \sum_{j\in J_C}t_j-s_C.
 > }
 > \tag{66.3}
-> 
-```
+> ```
 > Summing over components,
-> 
-
-```math
+> ```math
 > \boxed{
 > T-q+c(\Theta)
 > \le
 > \sum_jt_j-\sum_Cs_C.
 > }
 > \tag{66.4}
-> 
-```
+> ```
 
 ### Proof
 
@@ -9767,9 +9748,7 @@ vector-closure relations of the Minkowski summands; they are not supplied by a f
 kernel of $`\mathcal D`$.
 
 > **Theorem 66.2 (equality geometry of $`s_C`$).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \begin{array}{ll}
 > s_C=0
@@ -9784,8 +9763,7 @@ kernel of $`\mathcal D`$.
 > \end{array}
 > }
 > \tag{66.6}
-> 
-```
+> ```
 
 ### Proof
 
@@ -10257,52 +10235,37 @@ C_{\rm col}
 
 > **Theorem 71.1 (compatible-collar dichotomy).**
 > One has
-> 
-
-```math
+> ```math
 > \boxed{
 > \rho<C_{\rm col}D
 > }
 > \tag{71.5}
-> 
-```
+> ```
 > or else $`t>1`$ and there is a translated unit triangular-lattice set
 > $`S`$ such that
-> 
-
-```math
+> ```math
 > X:=X_m\cup S
 > \subset
 > \operatorname{int}(K_m+t\mathbb B),
 > \tag{71.6}
-> 
-```
+> ```
 > $`X`$ is unit-separated,
-> 
-
-```math
+> ```math
 > \boxed{\operatorname{diam}(X)<D,}
 > \tag{71.7}
-> 
-```
+> ```
 > and
-> 
-
-```math
+> ```math
 > \boxed{
 > |X|>N-C_{\rm col}D+\frac{2\pi}{\sqrt3}.
 > }
 > \tag{71.8}
-> 
-```
+> ```
 > In particular, the weaker but cleaner statement
-> 
-
-```math
+> ```math
 > |X|>N-C_{\rm col}D
 > \tag{71.9}
-> 
-```
+> ```
 > always holds in the second alternative.
 
 ### Proof
@@ -10505,13 +10468,10 @@ b:=|B_\partial|.
 
 > **Lemma 72.1 (deep Voronoi containment).**
 > If $`p\notin B_\partial`$, then its Voronoi cell satisfies
-> 
-
-```math
+> ```math
 > \boxed{V_p\subset K.}
 > \tag{72.3}
-> 
-```
+> ```
 
 ### Proof
 
@@ -10544,9 +10504,7 @@ For a Delaunay triangle $`T`$ and a vertex $`v\in T`$, define
 
 > **Theorem 72.2 (local clearance inequality).**
 > If $`T`$ has all side lengths at least $`1`$ and circumradius at most $`1`$, then
-> 
-
-```math
+> ```math
 > \boxed{
 > \operatorname{area}(T)-\frac{\sqrt3}{4}
 > \ge
@@ -10554,21 +10512,17 @@ For a Delaunay triangle $`T`$ and a vertex $`v\in T`$, define
 > \sum_{v\in T}\mu_T(v).
 > }
 > \tag{72.5}
-> 
-```
+> ```
 > The coefficient $`\sqrt3/6`$ is sharp. Equality holds exactly for the ordered side
 > multisets
-> 
-
-```math
+> ```math
 > \boxed{
 > \{1,1,1\}
 > \quad\text{or}\quad
 > \{1,1,\sqrt3\}.
 > }
 > \tag{72.6}
-> 
-```
+> ```
 
 ### Proof
 
@@ -10706,17 +10660,14 @@ and be farther than $`1`$ from every site, contradicting unit covering.
 Combining (72.12)--(72.18) yields the global theorem.
 
 > **Theorem 72.3 (global clearance budget).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \sum_{p\in A}\delta(p)
 > <
 > \left(24+\frac{\pi}{2}\right)D+18.
 > }
 > \tag{72.19}
-> 
-```
+> ```
 
 Put
 
@@ -10777,21 +10728,16 @@ $`|N[u]\cup N[v]|\le12`$ selected rattlers. Therefore:
 > **Theorem 73.1 (deep near-unit matching).**
 > There is a matching $`M`$ of nearest-neighbor edges, every edge containing a deep
 > strict rattler, such that
-> 
-
-```math
+> ```math
 > \boxed{
 > |M|
 > \ge
 > \frac{\rho}{24}-D-\frac34,
 > }
 > \tag{73.4}
-> 
-```
+> ```
 > and
-> 
-
-```math
+> ```math
 > \boxed{
 > 1<|p-q|
 > \le
@@ -10799,8 +10745,7 @@ $`|N[u]\cup N[v]|\le12`$ selected rattlers. Therefore:
 > \qquad(pq\in M).
 > }
 > \tag{73.5}
-> 
-```
+> ```
 
 ## 73.2 Strong Gabriel/Delaunay promotion
 
@@ -10848,36 +10793,27 @@ $`\sqrt3/4`$ exceeds $`\eta`$.
 
 > **Theorem 73.2 (matched two-well structure).**
 > If $`\rho/D\to\infty`$, choose
-> 
-
-```math
+> ```math
 > \eta=\sqrt{\frac D\rho}.
 > \tag{73.9}
-> 
-```
+> ```
 > Then
-> 
-
-```math
+> ```math
 > \boxed{
 > \frac{\rho}{24}-o(\rho)
 > }
 > \tag{73.10}
-> 
-```
+> ```
 > pairwise vertex-disjoint strong Delaunay edges have length $`1+o(1)`$, and both
 > incident Delaunay triangles have side triples at distance $`o(1)`$ from
-> 
-
-```math
+> ```math
 > \boxed{
 > \mathcal E
 > :=
 > \bigl\{\{1,1,1\},\ \{1,1,\sqrt3\}\bigr\}.
 > }
 > \tag{73.11}
-> 
-```
+> ```
 
 ### Proof of the stability conclusion
 
@@ -10949,25 +10885,19 @@ Let $`\nu`$ be its maximum matching size.
 
 > **Theorem 74.1 (exact Hall--Kőnig conflict inequality).**
 > Every surviving triangle-free global minimizer satisfies
-> 
-
-```math
+> ```math
 > \boxed{
 > m+|Y|-\nu\le N-1.
 > }
 > \tag{74.4}
-> 
-```
+> ```
 > Equivalently, for every $`S\subseteq Y`$,
-> 
-
-```math
+> ```math
 > \boxed{
 > |S|-|N_G(S)|\le\rho-1.
 > }
 > \tag{74.5}
-> 
-```
+> ```
 
 ### Proof
 
@@ -11029,17 +10959,14 @@ Hall's deficiency theorem therefore yields:
 
 > **Corollary 74.2 (inner-band near-perfect conflict matching).**
 > There is a matching from $`Y_{\rm in}`$ into $`X_m`$ that leaves at most
-> 
-
-```math
+> ```math
 > \boxed{
 > j-1=\rho-k-1
 > <
 > C_{\rm col}D-\frac{2\pi}{\sqrt3}-1
 > }
 > \tag{74.10}
-> 
-```
+> ```
 > inner-band lattice sites unmatched.
 
 This matching is a matching of **conflicts**, not a placement of missing points. It
@@ -11052,15 +10979,12 @@ The preceding theorem identifies an exact finite contradiction criterion.
 
 > **Target 74.A (inner-band Hall surplus).**
 > Produce some $`Q\subseteq Y_{\rm in}`$ satisfying
-> 
-
-```math
+> ```math
 > \boxed{
 > |Q|-|N_G(Q)|\ge\rho-k=j.
 > }
 > \tag{74.11}
-> 
-```
+> ```
 
 Then $`Y_0\cup Q`$ has deficiency at least $`\rho`$, so (74.5) fails. Equivalently,
 the conflict graph contains an independent set of at least $`N`$ vertices, yielding an
@@ -11080,24 +11004,27 @@ facts hold simultaneously:
 1. a compatible strict sub-$`D`$ scaffold already contains
    $`N-O(D)`$ points;
 2. the exact remaining demand is
+   
    ```math
    1\le j=\rho-k
    <C_{\rm col}D-\frac{2\pi}{\sqrt3};
    \tag{75.1}
-   
    ```
+
 3. the original saturated minimizer satisfies
+   
    ```math
    \sum_{p\in A}\delta(p)=O(D);
    \tag{75.2}
-   
    ```
+
 4. it carries
+   
    ```math
    \frac{\rho}{24}-o(\rho)
    \tag{75.3}
-   
    ```
+
    disjoint strong-Delaunay near-unit edges with two-well neighborhoods; and
 5. the independently constructed scaffold conflict graph has an inner-band matching
    missing only at most $`j-1=O(D)`$ lattice sites.
@@ -11122,23 +11049,17 @@ capacity in the independently positioned scaffold.
 > theorem).**
 > In the simultaneous setting of Sections 71--74, prove that a super-boundary
 > survivor cannot satisfy both
-> 
-
-```math
+> ```math
 > |M|=\frac{\rho}{24}-o(\rho)
 > \tag{75.5}
-> 
-```
+> ```
 > with two-well Delaunay neighborhoods in the original saturated minimizer and the
 > inner-band conflict deficiency bound
-> 
-
-```math
+> ```math
 > |Q|-|N_G(Q)|\le j-1
 > \quad\text{for all }Q\subseteq Y_{\rm in}
 > \tag{75.6}
-> 
-```
+> ```
 > in the independently constructed scaffold.
 >
 > It is enough to force one of:
@@ -11439,13 +11360,10 @@ Thus there is no boundary truncation of any left conflict neighborhood.
 
 > **Theorem 79.1 (exact triangular-lattice blocker classification).**
 > For every $`x\in X_m`$,
-> 
-
-```math
+> ```math
 > \boxed{|N_G(x)|\in\{3,4\}.}
 > \tag{79.7}
-> 
-```
+> ```
 > If $`|N_G(x)|=3`$, then $`C_x`$ is an elementary unit equilateral triangle.
 > If $`|N_G(x)|=4`$, then $`C_x`$ is a unit lozenge.
 
@@ -11546,23 +11464,17 @@ neighborhood is therefore a unit lozenge. $`\square`$
 
 > **Theorem 79.2 (exact monomer--dimer packing).**
 > For every $`x\in X_m`$,
-> 
-
-```math
+> ```math
 > \boxed{x\in\operatorname{int}C_x.}
 > \tag{79.16}
-> 
-```
+> ```
 > If $`x\ne x'`$, then
-> 
-
-```math
+> ```math
 > \boxed{
 > \operatorname{int}C_x\cap\operatorname{int}C_{x'}=\varnothing.
 > }
 > \tag{79.17}
-> 
-```
+> ```
 > Consequently the cells $`C_x`$ form an exact monomer--dimer packing on the
 > honeycomb dual of the elementary triangular tiling: a degree-three blocker occupies
 > one elementary triangle and a degree-four blocker occupies two adjacent elementary
@@ -11638,23 +11550,17 @@ Let
 ## 80.1 Full-complex Euler identity
 
 > **Theorem 80.1.**
-> 
-
-```math
+> ```math
 > \boxed{\mu(G)=s+g}
 > \tag{80.2}
-> 
-```
+> ```
 > and
-> 
-
-```math
+> ```math
 > \boxed{
 > \delta=m_3+2m_4+\gamma-s-g.
 > }
 > \tag{80.3}
-> 
-```
+> ```
 
 ### Proof
 
@@ -11737,16 +11643,13 @@ Write $`\gamma_Q`$ and $`\mu_Q`$ for its component and cyclomatic numbers, and l
 $`b_d(Q)`$ count left vertices of degree $`d`$ in $`H_Q`$.
 
 > **Theorem 80.2 (exact Hall charge).** For every $`Q\subseteq Y_{\rm in}`$,
-> 
-
-```math
+> ```math
 > \boxed{
 > |Q|-|N(Q)|
 > =\gamma_Q-\mu_Q-b_1(Q)+b_3(Q)+2b_4(Q).
 > }
 > \tag{80.11}
-> 
-```
+> ```
 
 ### Proof
 
@@ -11784,17 +11687,14 @@ h(G)=\max_{Q\subseteq Y_{\rm in}}\bigl(|Q|-|N(Q)|\bigr).
 
 > **Theorem 80.3 (leafless maximizing Hall set).** A maximizing $`Q`$ can be chosen
 > with $`b_1(Q)=0`$. Consequently
-> 
-
-```math
+> ```math
 > \boxed{
 > h(G)=
 > \max_{\substack{Q\subseteq Y_{\rm in}\\ b_1(Q)=0}}
 > \bigl(\gamma_Q-\mu_Q+b_3(Q)+2b_4(Q)\bigr).
 > }
 > \tag{80.16}
-> 
-```
+> ```
 
 ### Proof
 
@@ -11829,34 +11729,25 @@ be the number of lattice cell-edge incidences on the boundary of gap $`i`$, and 
 ```
 
 > **Theorem 80.4 (face-shell identities).**
-> 
-
-```math
+> ```math
 > \boxed{
 > g=m_3+2\delta-2\gamma-\eta-\frac{b_\infty}{2},
 > }
 > \tag{80.19}
-> 
-```
-> 
-
-```math
+> ```
+> ```math
 > \boxed{
 > s=2m_4-3\delta+3\gamma+\eta+\frac{b_\infty}{2}.
 > }
 > \tag{80.20}
-> 
-```
+> ```
 > In particular,
-> 
-
-```math
+> ```math
 > \boxed{
 > s\ge2m_4-3j+3+3\gamma.
 > }
 > \tag{80.21}
-> 
-```
+> ```
 
 ### Proof
 
@@ -11933,17 +11824,14 @@ Using Theorem 80.3, the exact remaining statement is:
 > **Target A v1.4 (monomer--dimer cycle-cut rigidity).**
 > For every scaffold arising from a super-boundary triangle-free global minimizer,
 > prove
-> 
-
-```math
+> ```math
 > \boxed{
 > \max_{\substack{Q\subseteq Y_{\rm in}\\b_1(Q)=0}}
 > \bigl(\gamma_Q-\mu_Q+b_3(Q)+2b_4(Q)\bigr)
 > \ge j.
 > }
 > \tag{81.5}
-> 
-```
+> ```
 
 If (81.5) holds, $`X_m\cup Y`$ contains $`N`$ mutually unit-separated points in the
 open body $`L`$, while
@@ -12056,13 +11944,10 @@ a_{hC}
 
 > **Theorem 82.1 (strict stochasticity).** For every active diameter bar $`h`$ and
 > every terminal component $`C`$,
-> 
-
-```math
+> ```math
 > \boxed{a_{hC}>0.}
 > \tag{82.4}
-> 
-```
+> ```
 
 ### Proof
 
@@ -12099,9 +11984,7 @@ have **full support**, not merely nonnegative support.
 > **Theorem 82.2 (atomic one-direction component).** If $`s_C=0`$, then $`C`$ has
 > exactly two terminal vertices and one train edge $`\tau`$. Its Minkowski summand is
 > a unit segment parallel to $`u_\tau`$. For every active diameter bar $`h`$,
-> 
-
-```math
+> ```math
 > \boxed{
 > d_{h\tau}\ne0,
 > \qquad
@@ -12109,8 +11992,7 @@ have **full support**, not merely nonnegative support.
 > =D|e_h\cdot u_\tau|>0.
 > }
 > \tag{82.7}
-> 
-```
+> ```
 > In particular, an $`s_C=0`$ component can never be the origin component of a
 > strict-backward blocker row.
 
@@ -12161,13 +12043,10 @@ This statement must not be strengthened to "cyclic" without a new theorem.
 > minimal-face equality kernel $`K`$ is nonzero. Then the selected active-bar
 > potentials all coincide. In the notation of the harmonic--Dirichlet reduction,
 > the terminal-potential count is therefore
-> 
-
-```math
+> ```math
 > \boxed{r=1.}
 > \tag{82.11}
-> 
-```
+> ```
 
 ### Proof
 
@@ -12224,19 +12103,14 @@ f_h(t)=\frac12|r_h(t)|^2.
 ## 83.1 Exact second variation
 
 > **Theorem 83.1 (component-rotation variance formula).**
-> 
-
-```math
+> ```math
 > \boxed{
 > f_h'(0)=-D^2\sum_Cb_{hC}\alpha_C.
 > }
 > \tag{83.4}
-> 
-```
+> ```
 > If $`f_h'(0)=0`$, then
-> 
-
-```math
+> ```math
 > \boxed{
 > f_h''(0)
 > =-D^2\left[
@@ -12245,8 +12119,7 @@ f_h(t)=\frac12|r_h(t)|^2.
 > \right].
 > }
 > \tag{83.5}
-> 
-```
+> ```
 > Because every $`a_{hC}>0`$, equality in (83.5) holds if and only if all
 > $`\alpha_C`$ are equal.
 
@@ -12306,24 +12179,18 @@ L_h(\alpha)=-\sum_Cb_{hC}\alpha_C.
 
 > **Theorem 83.2 (positive spanning).** The active covectors $`L_h`$ positively span
 > $`V_\alpha^*`$. Equivalently,
-> 
-
-```math
+> ```math
 > \boxed{
 > \{[\alpha]\in V_\alpha:L_h(\alpha)\le0\text{ for every active }h\}
 > =\{0\}.
 > }
 > \tag{83.12}
-> 
-```
+> ```
 > Consequently their linear rank is exactly
-> 
-
-```math
+> ```math
 > \boxed{c-1,}
 > \tag{83.13}
-> 
-```
+> ```
 > and if $`c\ge2`$, at least $`c`$ nonzero active restrictions are required for
 > positive spanning.
 
@@ -12383,30 +12250,21 @@ k_{\rm org}=|\mathcal O|.
 > - If $`k=c`$, their rank is exactly $`c-1`$.
 >
 > Therefore
-> 
-
-```math
+> ```math
 > \boxed{
 > r_\alpha\ge\min\{k_{\rm org},c-1\},
 > }
 > \tag{83.16}
-> 
-```
-> 
-
-```math
+> ```
+> ```math
 > \boxed{k_{\rm org}\le r_\alpha+1,}
 > \tag{83.17}
-> 
-```
+> ```
 > and if $`r_\alpha<c-1`$, then
-> 
-
-```math
+> ```math
 > \boxed{k_{\rm org}\le r_\alpha.}
 > \tag{83.18}
-> 
-```
+> ```
 
 ### Proof
 
@@ -12528,16 +12386,13 @@ r_\alpha+
 The exact residual theorem is still
 
 > **Target B v1.4 (internal coforest with origin budget).** Prove
-> 
-
-```math
+> ```math
 > \boxed{
 > \operatorname{rank}\overline{\mathcal B}_\xi+I+r
 > \le T-q-r_\alpha.
 > }
 > \tag{84.5}
-> 
-```
+> ```
 
 The stronger component-count-only sufficient form remains
 
@@ -12849,23 +12704,17 @@ while
 Subtracting $`j`$ from (88.6) and using (88.7) gives the exact duality identity
 
 > **Theorem 88.1 (dual Hall/lattice-deficit identity).**
-> 
-
-```math
+> ```math
 > \boxed{
 > h(G)-j=d_{\rm sc}-\Delta_\Lambda.
 > }
 > \tag{88.8}
-> 
-```
+> ```
 > Consequently the Target A contradiction is equivalent to
-> 
-
-```math
+> ```math
 > \boxed{d_{\rm sc}\ge\Delta_\Lambda.}
 > \tag{88.9}
-> 
-```
+> ```
 
 Thus the older right-deficiency target $`h(G)\ge j`$ and the new left-nullity target
 $`d_{\rm sc}\ge N-|Y|`$ are exactly the same one-integer theorem.
@@ -12903,16 +12752,13 @@ V=|N(S)|,
 Solving for $`V`$ gives
 
 > **Theorem 89.1 (cell-complex Hall formula).**
-> 
-
-```math
+> ```math
 > \boxed{
 > |S|-|N(S)|
 > =\frac{m_3(S)-b(S)}2-\chi(S).
 > }
 > \tag{89.3}
-> 
-```
+> ```
 
 At a lattice vertex $`v\in N(S)`$, define
 
@@ -12935,9 +12781,7 @@ m_4(S)=\frac14\sum_{v\in N(S)}q_v(S).
 Subtracting $`|N(S)|`$ yields the exact local phase decomposition.
 
 > **Theorem 89.2 (integer phase-charge formula).**
-> 
-
-```math
+> ```math
 > \boxed{
 > |S|-|N(S)|
 > =\sum_{v\in N(S)}
@@ -12945,20 +12789,14 @@ Subtracting $`|N(S)|`$ yields the exact local phase decomposition.
 > =\frac1{12}\sum_{v\in N(S)}\omega_v(S),
 > }
 > \tag{89.6}
-> 
-```
+> ```
 > where
-> 
-
-```math
+> ```math
 > \boxed{\omega_v(S)=4p_v(S)+3q_v(S)-12.}
 > \tag{89.7}
-> 
-```
+> ```
 > Consequently
-> 
-
-```math
+> ```math
 > \boxed{
 > d_{\rm sc}
 > =\max_{S\subseteq X}
@@ -12968,8 +12806,7 @@ Subtracting $`|N(S)|`$ yields the exact local phase decomposition.
 > \sum_{v\in N(S)}\omega_v(S).
 > }
 > \tag{89.8}
-> 
-```
+> ```
 
 ## 89.1 Minimum Hall cores
 
@@ -13020,15 +12857,12 @@ Solving
 over nonnegative integers in this range gives exactly two states:
 
 > **Corollary 89.4 (only zero-charge phases).**
-> 
-
-```math
+> ```math
 > \boxed{\omega_v=0
 > \Longleftrightarrow
 > (p_v,q_v)=(3,0)\ \text{or}\ (0,4).}
 > \tag{89.12}
-> 
-```
+> ```
 
 Thus the only locally Hall-neutral bulk incidence phases are three incident monomers
 and four incident dimers. Every other core vertex carries a nonzero integer interface
@@ -13077,17 +12911,14 @@ Every residual subset $`S\subseteq X`$ can be obtained by some deletion sequence
 and the value in (90.3) depends only on the residual set. Maximizing gives:
 
 > **Theorem 90.1 (exact Hall-peeling identity).**
-> 
-
-```math
+> ```math
 > \boxed{
 > h(G)
 > =z+\max_{\rm cell\ deletion\ sequences}
 > \sum_i(\pi_i-1).
 > }
 > \tag{90.4}
-> 
-```
+> ```
 
 Deleting one scaffold point costs one point and frees exactly $`\pi_i`$ lattice sites
 at that step. Hall deficiency is therefore the maximum cumulative net gain from cell
@@ -13119,16 +12950,13 @@ exactly one:
 By Theorem 89.2,
 
 > **Corollary 90.2 (charge-12 fundamental circuits).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \sum_{v\in N(C_x)}
 > \bigl(4p_v(C_x)+3q_v(C_x)-12\bigr)=12.
 > }
 > \tag{90.7}
-> 
-```
+> ```
 
 There are $`|X\setminus B|=d_{\rm sc}`$ nonbasis elements and hence
 $`d_{\rm sc}`$ fundamental-circuit certificates of unit nullity. However:
@@ -13188,17 +13016,14 @@ Thus the exact new Target A statement is:
 > from a super-boundary triangle-free global minimizer, prove that there exists
 > $`S\subseteq X_m`$ such that every lattice vertex of $`N(S)`$ has selected
 > incidence degree at least two and
-> 
-
-```math
+> ```math
 > \boxed{
 > \sum_{v\in N(S)}
 > \bigl(4p_v(S)+3q_v(S)-12\bigr)
 > \ge12\bigl(N-|Y|\bigr).
 > }
 > \tag{91.5}
-> 
-```
+> ```
 
 The local obstruction is now exact. There are only two zero-charge incidence phases:
 
@@ -13338,13 +13163,10 @@ n_1+n_2\le8.
 Adding at most two branching vertices gives:
 
 > **Theorem 92.2 (bounded `s_C=1` tree).**
-> 
-
-```math
+> ```math
 > \boxed{|V(C)|\le10,\qquad |E(C)|\le9.}
 > \tag{92.9}
-> 
-```
+> ```
 
 The bound is sharp for the abstract terminal-direction/Minkowski data. For example,
 with $`u=(1,0)`$, $`v=(0,1)`$, take the ten convexly ordered edge vectors
@@ -13442,27 +13264,21 @@ $`8k_{1\rm t}`$ rank, and the remaining bar-average terms contribute at most
 $`\operatorname{rank}\mathcal A_{1\rm t}`$.
 
 > **Theorem 93.1 (`s_C=1` tree-origin rank bound).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \operatorname{rank}\overline{\mathcal B}_{\xi,1\rm t}
 > \le
 > 8k_{1\rm t}+\operatorname{rank}\mathcal A_{1\rm t}.
 > }
 > \tag{93.7}
-> 
-```
+> ```
 > Hence
-> 
-
-```math
+> ```math
 > \operatorname{rank}\overline{\mathcal B}_{\xi,1\rm t}
 > \le
 > 8(r_\alpha+1)+\operatorname{rank}\mathcal A_{1\rm t},
 > \tag{93.8}
-> 
-```
+> ```
 > with $`8r_\alpha`$ in place of $`8(r_\alpha+1)`$ in the proper-origin case.
 
 Thus `s_C=1` tree origins can no longer hide unbounded train multiplicity. The
@@ -13664,24 +13480,18 @@ U_A:=\bigcup_{e\in A}C_e.
 
 > **Theorem 97.1 (tight fundamental-circuit unions).**
 > For every $`A\subseteq X\setminus B`$,
-> 
-
-```math
+> ```math
 > \boxed{f(U_A)=|A|.}
 > \tag{97.3}
-> 
-```
+> ```
 > Consequently
-> 
-
-```math
+> ```math
 > \boxed{
 > \sum_{v\in N(U_A)}
 > \bigl(4p_v(U_A)+3q_v(U_A)-12\bigr)=12|A|.
 > }
 > \tag{97.4}
-> 
-```
+> ```
 
 ### Proof
 
@@ -13823,13 +13633,10 @@ N^0-|Y^0|
 > The entire scaffold nullity can be extracted as one fixed-basis tight core
 > $`U\cup W`$. After deleting that core, the residual left side is fully matchable,
 > and the exact surviving lattice-population gap is
-> 
-
-```math
+> ```math
 > \boxed{g=\Delta_\Lambda-d_{\rm sc}.}
 > \tag{97.22}
-> 
-```
+> ```
 
 A hypothetical Target A survivor has
 ```math
@@ -13969,9 +13776,7 @@ over the selected cells. Therefore $`\mathcal I_+`$ is independent. Symmetricall
 is independent.
 
 > **Theorem 98.1 (phase-selective independence).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \mathcal D\cup\mathcal M_+,
 > \quad
@@ -13979,8 +13784,7 @@ is independent.
 > \text{ are independent in }\mathcal M_{\rm sc}.
 > }
 > \tag{98.7}
-> 
-```
+> ```
 
 If $`m_\pm=|\mathcal M_\pm|`$, contraction by either independent phase preserves the
 entire nullity:
@@ -14087,17 +13891,14 @@ triangle, contradicting disjoint cell interiors.
 > **Theorem 98.2 (six layered phase-anchor DAGs).**
 > Each of the three anchor presentations for either monomer orientation is a planar
 > directed acyclic graph, and for every anchor $`a`$
-> 
-
-```math
+> ```math
 > \boxed{
 > d_{\rm sc}=m_- -\lambda_a,
 > \qquad
 > h(G)=|T_a|-\lambda_a
 > }
 > \tag{98.17}
-> 
-```
+> ```
 > in the $`+`$-contraction, with the symmetric statement for the $`-`$-contraction.
 
 ## 98.4 Exact directed-contour formula
@@ -14531,9 +14332,7 @@ d_{\partial,-}^{(+)}
 ```
 
 > **Theorem 100.1 (phase-pure boundary decomposition).**
-> 
-
-```math
+> ```math
 > \boxed{
 > d_{\rm sc}
 > =
@@ -14542,12 +14341,9 @@ d_{\partial,-}^{(+)}
 > +d_{\partial,-}^{(+)}.
 > }
 > \tag{100.13}
-> 
-```
+> ```
 > Symmetrically,
-> 
-
-```math
+> ```math
 > \boxed{
 > d_{\rm sc}
 > =
@@ -14556,8 +14352,7 @@ d_{\partial,-}^{(+)}
 > +d_{\partial,+}^{(-)}.
 > }
 > \tag{100.14}
-> 
-```
+> ```
 
 The complete residual ground set obeys
 ```math
@@ -14718,15 +14513,12 @@ b_h\ge3q,
 we obtain the exact quantized gap:
 
 > **Theorem 101.1 (convexification-gap theorem).**
-> 
-
-```math
+> ```math
 > \boxed{
 > g_H\ge2r+q+1.
 > }
 > \tag{101.9}
-> 
-```
+> ```
 
 In particular, no positive Hall core has a convex occupied cell complex.
 
@@ -14793,9 +14585,7 @@ Combining with (101.7) and $`\varepsilon\ge7`$ yields:
 
 > **Corollary 101.2 (strong biphasic circuit kernel).**
 > Every scaffold Hall circuit satisfies
-> 
-
-```math
+> ```math
 > \boxed{
 > m_3\ge14,
 > \qquad
@@ -14804,8 +14594,7 @@ Combining with (101.7) and $`\varepsilon\ge7`$ yields:
 > m_-\ge6.
 > }
 > \tag{101.18}
-> 
-```
+> ```
 
 This does not sum convexification gaps over overlapping circuits.
 
@@ -14879,18 +14668,13 @@ A[O,B]A[Z,B]^{-1}A[Z,C^\partial].
 Block Gaussian elimination gives:
 
 > **Theorem 102.1 (boundary-response rank theorem).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \nu(G)=|Z|+\operatorname{rank}S,
 > }
 > \tag{102.9}
-> 
-```
-> 
-
-```math
+> ```
+> ```math
 > \boxed{
 > d_{\rm sc}
 > =
@@ -14899,19 +14683,15 @@ Block Gaussian elimination gives:
 > -\operatorname{rank}S,
 > }
 > \tag{102.10}
-> 
-```
-> 
-
-```math
+> ```
+> ```math
 > \boxed{
 > h(G)
 > =
 > |O|-\operatorname{rank}S.
 > }
 > \tag{102.11}
-> 
-```
+> ```
 
 Thus the entire quadratic matching problem contracts to an
 $`O(D)`$-by-$`O(D)`$ exact boundary response matrix.
@@ -15174,20 +14954,14 @@ forest edge has length $`<\sqrt3`$.
 > **Lemma 103.1 (unit-edge crossing barrier).**
 > Let $`ab`$ be a unit segment. Suppose a segment $`pq`$ crosses the relative interior
 > of $`ab`$, while
-> 
-
-```math
+> ```math
 > |p-a|,|p-b|,|q-a|,|q-b|\ge1.
-> 
-```
+> ```
 > Then
-> 
-
-```math
+> ```math
 > \boxed{|p-q|\ge\sqrt3.}
 > \tag{103.14}
-> 
-```
+> ```
 
 ### Proof
 
@@ -15377,25 +15151,19 @@ transversal nullity over the source core:
 Conditional nullity is at most total nullity, so
 
 > **Theorem 104.1 (source almost-independence).**
-> 
-
-```math
+> ```math
 > \boxed{
 > 0\le\eta_R<\pi D+1.
 > }
 > \tag{104.12}
-> 
-```
+> ```
 > Equivalently,
-> 
-
-```math
+> ```math
 > \boxed{
 > r_{M_A/B}(R)>\rho-\pi D-1.
 > }
 > \tag{104.13}
-> 
-```
+> ```
 
 Thus a super-boundary strict-rattler population is **not** forced to create
 super-boundary Hall nullity in the source lattice transversal. All but $`O(D)`$
@@ -15602,17 +15370,14 @@ Therefore Target A is exactly:
 > **Target A v1.5.0 (source-specific boundary-response theorem).**
 > For the plateau-terminalized scaffold extracted from a genuine super-boundary
 > triangle-free global minimizer,
-> 
-
-```math
+> ```math
 > \boxed{
 > \operatorname{rank}S
 > \le
 > d_{\rm int}+|C^\partial|-\Delta_\Lambda.
 > }
 > \tag{106.12}
-> 
-```
+> ```
 
 Equivalently,
 ```math
@@ -15800,28 +15565,31 @@ The following v1.5.0 results survive re-derivation without correction:
 
 1. The fixed-basis tight-union theorem (97.3)--(97.14).
 2. The full tight-core contraction and exact residual gap
+   
    ```math
    g=\Delta_\Lambda-d_{\rm sc}.
-   
    ```
+
 3. The boundary-order estimates (97.28)--(97.32).
 4. Phase-selective independence and exact nullity preservation (98.7)--(98.14).
 5. The six phase-anchor layered DAG presentations and the directed Menger/contour
    formulas (98.17)--(98.21).
 6. Right-endpoint plateau saturation, the exact interior matching
+   
    ```math
    \nu(G_0)=|Z|,
-   
    ```
+
    and the deep-nullity/boundary-linkage split (99.14)--(99.26).
 7. The two-sided plateau endpoint normalization (99.27)--(99.33).
 8. The phase-pure boundary-minor decomposition (100.13)--(100.15).
 9. The exterior degree/interface theorem (100.16)--(100.23).
 10. The quantized convexification-gap theorem and the circuit bounds
+    
     ```math
     m_3\ge14,\qquad m_+\ge6,\qquad m_-\ge6.
-    
     ```
+
 11. The Schur response theorem (102.9)--(102.12) and the two-phase matroid
     connectivity interpretation (102.14)--(102.19).
 
@@ -16277,27 +16045,21 @@ rattler is automatic in the neighborhood.
 > **Theorem 112.1 (strict-rattler product germ).**  There are neighborhoods
 > $`U_C,U_R`$ such that the local triangle-free diameter-$`D`$ minimizer germ factors
 > as
-> 
-
-```math
+> ```math
 > \boxed{
 > \mathcal F_D^\triangle(A)\cap(U_C\times U_R)
 > =
 > \bigl(\mathcal F_{D,C}^\triangle(C)\cap U_C\bigr)\times U_R,
 > }
 > \tag{112.3}
-> 
-```
+> ```
 > and throughout this product neighborhood
-> 
-
-```math
+> ```math
 > \boxed{
 > \operatorname{diam}(C',R')=\operatorname{diam}(C').
 > }
 > \tag{112.4}
-> 
-```
+> ```
 
 In particular $`\{C\}\times U_R`$ is an open $`2|R|`$-dimensional family of
 triangle-free global minimizers of diameter exactly $`D`$.
@@ -16350,9 +16112,7 @@ The free right vertices are exactly $`O`$.
 
 > **Theorem 113.1 (contracted-transversal gammoid).**  For every
 > $`J\subseteq C^\partial`$,
-> 
-
-```math
+> ```math
 > \boxed{
 > J\text{ is independent after contracting }B
 > \iff
@@ -16360,8 +16120,7 @@ The free right vertices are exactly $`O`$.
 > \text{ to distinct vertices of }O.
 > }
 > \tag{113.2}
-> 
-```
+> ```
 
 Indeed, a matching of $`B\cup J`$ differs from $`\mu_0`$ by alternating cycles and
 vertex-disjoint augmenting paths from $`J`$ to right vertices unmatched by $`\mu_0`$,
@@ -16450,34 +16209,25 @@ direct subtraction yields
 
 > **Theorem 114.1 (response-corrected collar identity).**
 > Define
-> 
-
-```math
+> ```math
 > \Phi(v):=|\Gamma_t(v)|-\operatorname{rank}S(v).
 > \tag{114.7}
-> 
-```
+> ```
 > Then
-> 
-
-```math
+> ```math
 > \boxed{
 > d_{\rm sc}(v)-\Delta_\Lambda(v)
 > =\Phi(v)-\rho^\dagger.
 > }
 > \tag{114.8}
-> 
-```
+> ```
 > Equivalently,
-> 
-
-```math
+> ```math
 > \boxed{
 > \Phi(v)=|Y_0(v)|+h(G_v).
 > }
 > \tag{114.9}
-> 
-```
+> ```
 
 Thus Target A is exactly the existence of an admissible generic translate satisfying
 ```math
@@ -16673,17 +16423,14 @@ N_A(Q)
 ```
 
 > **Theorem 115.1 (continuum Hall inequality with plateau slack).**
-> 
-
-```math
+> ```math
 > \boxed{
 > |Q|-|N_A(Q)|\le p
 > \qquad
 > \text{for every finite unit-separated }Q\subseteq H.
 > }
 > \tag{115.5}
-> 
-```
+> ```
 
 ### Proof
 
@@ -16756,15 +16503,12 @@ t\sim t'\iff |t-t'|<1.
 ```
 
 > **Theorem 115.2 (cross-matching with plateau slack).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \nu(T,T')\ge |T|-p.
 > }
 > \tag{115.13}
-> 
-```
+> ```
 
 If $`\nu<|T|-p`$, Kőnig gives an independent set in the bipartite graph of size
 ```math
@@ -16908,15 +16652,12 @@ be the source plateau slack.  A sufficient closing theorem is:
 > **Source-to-response exchange theorem.**  If the scaffold survivor has
 > $`g>0`$, then the genuine source structure produces a finite unit-separated
 > $`Q\subseteq H`$ such that
-> 
-
-```math
+> ```math
 > \boxed{
 > |Q|-|N_A(Q)|\ge p+1.
 > }
 > \tag{117.9}
-> 
-```
+> ```
 
 Equation (117.9) contradicts Theorem 115.1.  Equivalently, one may produce a source
 subset and an alternative feasible placement whose old/new cross-matching loses more

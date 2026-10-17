@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_strict_fullcore_interface_corollaries_2026-09-09.md) · source SHA-256 `8d6d99a31cf54c47ddd0ba7882dee1c72e6cf7b9b85ae4d0d2fee9388acbbf02`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F3131F85B0A3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — strict full-core interface gap propagates to stress and diameter support

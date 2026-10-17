@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_d6_symmetric_affine_window_comparison_2026-09-14.md) · source SHA-256 `095f555118a87d1b30ef8a8224d05dabd7a7d3cc5b299c9ff7b583a3ad34b656`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 
@@ -82,17 +82,19 @@ Then:
    unit-contact graph is a subgraph of the square grid and is triangle-free.
 2. If (D_c=\operatorname{diam}A_c(S)) and (D_{\rm eq}) is the diameter of
    the same index set under the equilateral metric (q_{1/2}), then
+   
    ```math
    \boxed{
    D_c^2\ge {4-2c\over3}\,D_{\rm eq}^2.
    }
-   
    ```
+
 3. Since (c<1/2), the factor is (>1), and hence
+   
    ```math
    \boxed{D_{\rm eq}<D_c.}
-   
    ```
+
    The equilateralized source has the same cardinality and remains unit-separated.
 
 Therefore no non-equilateral (D_6)-difference-symmetric affine source in this

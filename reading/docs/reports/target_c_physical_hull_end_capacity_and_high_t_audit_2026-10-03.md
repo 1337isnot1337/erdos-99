@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_physical_hull_end_capacity_and_high_t_audit_2026-10-03.md) · source SHA-256 `9c1222c7db54a7fa9cb1a489c724a65902236997be4fac60dda07451e8b22535`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F64592A29AAB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — physical hull-end capacity and the high-t hypothesis audit

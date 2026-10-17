@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_near_lattice_loaded_hull_exclusion_2026-09-25.md) · source SHA-256 `815c4495fbfe12eaa7cbbc52aeb4a831118d0893615b1a45666fa9a7ebba160d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6A191BDFBF7D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_near_lattice_loaded_hull_exclusion_2026-09-25.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=9212cf111587a425ebcc604be31560995936c765; lifecycle=unreviewed; canonical=false -->

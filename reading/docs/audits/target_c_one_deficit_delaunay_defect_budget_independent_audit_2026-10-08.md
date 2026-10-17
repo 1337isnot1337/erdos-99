@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_one_deficit_delaunay_defect_budget_independent_audit_2026-10-08.md) · source SHA-256 `bc2c99c5a327b7c539735c8192108ad5e5b2d89ab3f61f51341f0d6d113643b2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 
@@ -30,15 +30,17 @@ Oler's finite inequality gives $`\sigma_0\ge0`$. Complete (X) to a maximal unit-
 The promoted statements are:
 
 1. **General defect budget (`C-UNIT-WALL-DELAUNAY-DEFECT-BUDGET`).** The completion has $`k\le\sigma_0/a_0`$. A Delaunay triangulation restricted to $`F`$ has $`2(z+k)+b-2`$ triangular faces, each with nonnegative area excess $`\sigma_T=\operatorname{area}(T)-a`$, with $`\sum_T\sigma_T=\sigma`$. If $`H`$ is the number of right or obtuse faces, then
+   
    ```math
    H\le \frac{4\sigma}{\delta},\qquad \delta=\frac{2-\sqrt3}{4}.
-   
    ```
+
    The union of all faces with $`\sigma_T\ge1/100`$ and all right/obtuse faces, together with interior vertices of non-six valence not already incident to those faces, has at most
+   
    ```math
    \left(450+\frac{12}{\delta}\right)\sigma
-   
    ```
+
    vertices. Every other triangle is acute, has all sides in $`[1,11/10)`$, and satisfies $`\max_e(|e|-1)\le5\sigma_T`$ and $`|\angle-\pi/3|\le50\sigma_T`$; every interior vertex outside the exceptional set has valence six.
 2. **One-deficit alternative (`C-UNIT-WALL-ONE-DEFICIT-DICHOTOMY`).** If $`0\le\sigma_0\le a_0+1/1000`$, a maximal completion adds zero or one point. If it adds one, the completed cloud has residual slack at most $`1/1000`$ and the canonical low-slack unit-wall chart theorem applies. If it adds none, the old cloud is saturated inside $`F`$, and one can choose its auxiliary-plane Delaunay triangulation with at most 51 right/obtuse faces, at most 137 defective faces, and at most 541 exceptional vertices as defined above.
 

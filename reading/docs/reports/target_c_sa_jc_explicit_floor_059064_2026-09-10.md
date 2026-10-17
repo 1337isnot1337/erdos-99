@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sa_jc_explicit_floor_059064_2026-09-10.md) · source SHA-256 `65ea3d2fd1a064c60aed77a58c82e24348efb9855b7a4ddb6a145b9296424308`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9D4C00332382","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — support-area/JC raises the explicit post-ZF floor to 0.590643

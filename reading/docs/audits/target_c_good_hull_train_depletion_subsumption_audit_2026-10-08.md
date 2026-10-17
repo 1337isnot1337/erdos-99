@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_good_hull_train_depletion_subsumption_audit_2026-10-08.md) · source SHA-256 `e11ee9bc4f19c8cba8a5df3320010011e8e18d1d6c9d0136505d8ff15ee5b47a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BC658F5CEDE1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C Audit.135 — PR #666 good-hull train depletion candidate

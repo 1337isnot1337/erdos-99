@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sz0_renormalized_surplus_gap_2026-09-10.md) · source SHA-256 `4b6c7aed7dfe14af26206631165c09bc29d038bf38362707cc9114a3a998b170`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8910EE3A79BE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — the `s_Z=0` circuit phase pays three units per diameter-component defect

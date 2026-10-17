@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section126_pure_tooth_train_shear_self_audit.md) · source SHA-256 `9ac68bbf14739d9f658a01f539f78235ea0029cf54d0056ff68494c776d4fbd0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "68d913536a9f062f481a75d6249209f51d0100bd", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section126_pure_tooth_train_shear_self_audit.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "51b6f88724b775b1ebab2f923333ee5214b9eb9febf5de0a115bbe485553bdf2"} -->
 

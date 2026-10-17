@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_complete_array_diameter_forest_slot02_2026-10-11.md) · source SHA-256 `2050d7aa775b47ac0ebe01cbd2994b8848661b28c31876718621af10b7eda259`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3C9F1FD6D089","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II: the actual diameter graph of a complete bent rhombic array is a forest

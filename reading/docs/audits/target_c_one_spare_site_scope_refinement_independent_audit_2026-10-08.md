@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_one_spare_site_scope_refinement_independent_audit_2026-10-08.md) · source SHA-256 `b9aafcdfc1c6ae7b3ad855ec57c2876eb258566f2ddcc26872c070ded6c2821b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4B16E4E33603","canonical":true,"claim_ids":["C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT"],"claim_statuses":{"C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: strict-packet contact loss and the one-spare-site endpoint

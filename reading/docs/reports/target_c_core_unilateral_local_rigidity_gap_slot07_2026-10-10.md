@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_core_unilateral_local_rigidity_gap_slot07_2026-10-10.md) · source SHA-256 `807b5ca23e786a96c43ba5ae5a1fc643e05afc1af80f038b99a201924fb6d2ef`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D96B18829DF6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II: unilateral local-rigidity gap for stress transversals

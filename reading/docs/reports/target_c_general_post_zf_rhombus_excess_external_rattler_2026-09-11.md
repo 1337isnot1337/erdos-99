@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_general_post_zf_rhombus_excess_external_rattler_2026-09-11.md) · source SHA-256 `90cc25220efe337a115a208b8323bcfbc7eef9a6fa332a5096c36ebc8f5c0967`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-74773F99EE3C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_general_post_zf_rhombus_excess_external_rattler_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=88ab6ccb3fc83331544540b69425e682afe76db2; lifecycle=unreviewed; canonical=false -->
@@ -299,7 +301,7 @@ Rearrangement proves
 E+\left(\frac{\pi D^2}{4}-\operatorname{area}F\right)
 <
 \frac{\sqrt3}{2}Z_{ext}
-+rac{\sqrt3}{4}\operatorname{per}F.
++\frac{\sqrt3}{4}\operatorname{per}F.
 }
 \tag{GR.3}
 ```

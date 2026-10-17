@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_full_force_hull_perimeter_coupling_2026-09-11.md) · source SHA-256 `9acce34c10141f4f3458dc67cd9524a79836497397304e2b8b2aae1ccc8a2b78`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-66EB67AF9A45","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_full_force_hull_perimeter_coupling_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=08ac8044d66c9426eeea026e973fb823536de0fc; lifecycle=unreviewed; canonical=false -->

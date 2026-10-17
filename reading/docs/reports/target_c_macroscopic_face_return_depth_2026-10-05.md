@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_macroscopic_face_return_depth_2026-10-05.md) · source SHA-256 `364a03dcbf95893cbad5e223a2a418bc1fe25e3bec38bb01bfd07415deb3e75a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AA632E4F0858","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — deep macroscopic physical faces force a quadratic contact core

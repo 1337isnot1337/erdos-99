@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_h5_terminal_rotation_genus_2026-09-18.md) · source SHA-256 `cbb3c5ab4d7cb6b3d582c58e0e0abd69abe2681e0a3f5d2a3b5a9f409784e26a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2224e9004b84645b66d2af92df534bc2f27df805", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_h5_terminal_rotation_genus_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "8891e5a3c14cf1357c854ee479b0c33555a3a4580829d6063de266ebbdaa22f0"} -->
 

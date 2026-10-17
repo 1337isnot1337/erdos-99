@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_low_degree_residual_near_contact_extension_2026-09-15.md) · source SHA-256 `e5bab10a8dbc6e3ddb9891b4e7e20018f7dc6965514e6293eeef13e17600767f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e8a5b4c7236b243b8f6588a6feb30c8f6895ffe4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_low_degree_residual_near_contact_extension_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "fff38374c0d65f3c33bfad18457b1cf1bccd32b0c43e30ecd828cae729ddfb2e"} -->
 

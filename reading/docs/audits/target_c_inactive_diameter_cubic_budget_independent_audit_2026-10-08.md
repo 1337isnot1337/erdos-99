@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_inactive_diameter_cubic_budget_independent_audit_2026-10-08.md) · source SHA-256 `fd822a57b6de15ace8513babbe694cfa253d88bacff8bcd6b9e3feb37402ac8e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B41BD5D0BEC7","canonical":true,"claim_ids":["C-GLOBAL-NEAR-DIAMETER-PHASE-PURITY","C-INACTIVE-NEAR-DIAMETER-CUBIC-BUDGET","C-INACTIVE-NEAR-DIAMETER-DEGREE-REGRESSION","C-INVERSE-D-SCALE-PACKET-MATCHING"],"claim_statuses":{"C-GLOBAL-NEAR-DIAMETER-PHASE-PURITY":"canonical","C-INACTIVE-NEAR-DIAMETER-CUBIC-BUDGET":"canonical","C-INACTIVE-NEAR-DIAMETER-DEGREE-REGRESSION":"regression","C-INVERSE-D-SCALE-PACKET-MATCHING":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent audit of PR #664: inactive inverse-D cubic budget

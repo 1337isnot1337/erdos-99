@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_stress_transversal_reinsertion_2026-09-12.md) · source SHA-256 `63e2b083df2c1e3040dedc45cf75214e51046c727c57b44a5b20872b4799348c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D6561B4BB738","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: stress-transversal deletion and protected reinsertion

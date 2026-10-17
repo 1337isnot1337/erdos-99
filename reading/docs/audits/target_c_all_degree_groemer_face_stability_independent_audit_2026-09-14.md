@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_all_degree_groemer_face_stability_independent_audit_2026-09-14.md) · source SHA-256 `04072217889560fdfc287b5203885ef178f057ab85f49339caedc676fa3a9161`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E5FA8DCD5D05","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Independent audit - all-degree Groemer face stability

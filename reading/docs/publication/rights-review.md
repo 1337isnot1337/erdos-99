@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/publication/rights-review.md) · source SHA-256 `8b8bdb2284181a97205c21c4fed0b190cf97792d828f927882ac0aa2ca98d053`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Source rights and publication provenance — Gate 1
 

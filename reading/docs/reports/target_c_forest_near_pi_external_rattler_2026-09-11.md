@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_forest_near_pi_external_rattler_2026-09-11.md) · source SHA-256 `0919ba63fd0459eb4eb48b30e0e81d082989e57dfeef51e2e97c19c72534b4c2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4C27D79C5129","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_forest_near_pi_external_rattler_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=b99332cc9b900540def3be1913b800fe05a46380; lifecycle=unreviewed; canonical=false -->

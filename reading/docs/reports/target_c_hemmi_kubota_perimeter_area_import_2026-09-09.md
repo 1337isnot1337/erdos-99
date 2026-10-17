@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_hemmi_kubota_perimeter_area_import_2026-09-09.md) · source SHA-256 `06dc2736c02cdd4875ff7c6bfec13e98e343fa02d3071baa0c765727cb4aa453`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 15 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -134,7 +136,7 @@ The right side is increasing in `p`. At the threshold,
 6\sin\frac\pi{12}\cos\frac\pi{12}
 -\frac{\sqrt3}{2}\\
 &=
-3\sin\frac\pi6-rac{\sqrt3}{2}\\
+3\sin\frac\pi6-\frac{\sqrt3}{2}\\
 &=
 \boxed{\frac{3-\sqrt3}{2}}.
 \end{aligned}

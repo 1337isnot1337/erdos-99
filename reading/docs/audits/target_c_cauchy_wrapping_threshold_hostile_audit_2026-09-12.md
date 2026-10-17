@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_cauchy_wrapping_threshold_hostile_audit_2026-09-12.md) · source SHA-256 `0a2c453496335972aa590a9b1db236539a30f5213cb599d80770cf95ac436336`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2D9A4A9C8A89","canonical":true,"claim_ids":["C-WRAP-CAUCHY"],"claim_statuses":{"C-WRAP-CAUCHY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Cauchy wrapping-threshold hostile audit

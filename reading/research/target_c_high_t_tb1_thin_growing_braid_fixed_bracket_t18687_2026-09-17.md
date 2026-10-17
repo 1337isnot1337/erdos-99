@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_thin_growing_braid_fixed_bracket_t18687_2026-09-17.md) · source SHA-256 `c2b25eccdec29cfaadb2de3da3ef8af585f281d1e7dea63be5a495cc404d40b3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2a17dd77c260378be04717216c4b551b60f76e44", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_thin_growing_braid_fixed_bracket_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "95c9d12c2e8a9659a055e533c424722851620acf441c847c87278fa9e03711ec"} -->
 
@@ -564,10 +564,11 @@ All retained rows have one common projective phase to `O(D^-1)`. Consequently ea
 
 1. **central-threading:** every intersection with every retained row lies between the same fixed trains `b_D^-`, `b_D^+`;
 2. **angle-separated:** its projective direction has
+   
    ```math
    \sin\theta(e,u_*)\ge0.02-o(1)
-   
    ```
+
    from the common row phase.
 
 Because `|F_D|=r_D->infinity`, one of these classes contains an unbounded sub-braid. In the angle-separated case, a further two-way projective-side split leaves an unbounded sub-braid on one common side of the row phase.

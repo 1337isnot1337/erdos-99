@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_outer_pocket_dirichlet_dual_detour_2026-09-09.md) · source SHA-256 `05ca12ba5ffa53b9fd84c6d0dcb93f1e4e4be7afcd7e80b4fd1465e8c782a643`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1C88DB966B1B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Dirichlet-dual sharpening of outer-pocket detour area

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_external_annulus_capacity_2026-09-11.md) · source SHA-256 `061951d1bc28d3a0fbab53e0d3036a093d354bba8a041cd91fb9093d98f52f84`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-F06132C6131F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — external-annulus capacity for a force core
@@ -141,13 +143,14 @@ source points outside $`F`$. In the perfect-matching branch:
 2. the core-size bound is EA.1;
 3. the full-source and force-hull diameters are at most $`D`$;
 4. FSDB gives
+   
    ```math
    \liminf\frac{\operatorname{area}F}{D^2}
    \ge A_{FS}:=\frac{2\rho+\sin(2\rho)}4,
    \qquad \rho=\cos\rho.
    \tag{EA.7}
-   
    ```
+
 
 Theorem EA and the isodiametric inequality for $`K`$ give
 
@@ -175,7 +178,7 @@ we obtain
 ```math
 \Delta
 \le
-\frac{\pi^2}{16}+1-rac{4A_{FS}}\pi.
+\frac{\pi^2}{16}+1-\frac{4A_{FS}}\pi.
 \tag{EA.11}
 ```
 

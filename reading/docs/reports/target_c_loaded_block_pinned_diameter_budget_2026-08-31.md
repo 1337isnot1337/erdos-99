@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_loaded_block_pinned_diameter_budget_2026-08-31.md) · source SHA-256 `05797956e4d2ffb0685a721e2c86b9c79296984440d3dc640a3dc96e2bb0b227`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8DA7170B7199","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_loaded_block_pinned_diameter_budget_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=7fdd8404e7667df40c6d3b9112d36c5454eff40a; lifecycle=unreviewed; canonical=false -->

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/README.md) · source SHA-256 `8c82eccb1adddb8655e58f62709b14d0177aa023fc7a32484d3babee57fb82f5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CE7E0549E166","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Independent audits

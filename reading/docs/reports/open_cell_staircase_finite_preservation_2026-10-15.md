@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/open_cell_staircase_finite_preservation_2026-10-15.md) · source SHA-256 `55ab16cbac81ee328699262ce054b4f2d6448e2b19ccc96abcf4c63fcee5b3cb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cf77d6e61f0fabe413242ecd15533e5e41d1223a", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/open_cell_staircase_finite_preservation_2026-10-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ec81b7e426ad59ead886875f9caf4afae0b2838617e36cbcecea9907802c3105"} -->
 

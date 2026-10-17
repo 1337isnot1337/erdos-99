@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_positive_pinned_face_tail_independent_audit_2026-10-08.md) · source SHA-256 `bd82ddac403affb91ddbccd1635d845d534f2b89bec9112a6d5474c9c3f3c8c3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-3901E738FD3A","canonical":false,"claim_ids":["C-POSITIVE-PINNED-RIGIDITY-FACE-TAIL-REGRESSION"],"claim_statuses":{"C-POSITIVE-PINNED-RIGIDITY-FACE-TAIL-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent audit: positive pinned rigidity does not control face tails

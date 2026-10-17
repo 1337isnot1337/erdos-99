@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/target-b-multigrain-transfer.md) · source SHA-256 `ef8f8317eb9554212c3d67622ec59ccfe7c64adddc847589fbe8ce0c9102f8b4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # target-b-multigrain-transfer
 

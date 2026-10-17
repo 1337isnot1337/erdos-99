@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_minimal_k5_reciprocal_exclusion_2026-09-18.md) · source SHA-256 `5362f8aef5fd462f771af1e94ff31e9c427aa011aa4460c2181e9ce949ddc1c4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e193ecaad2c606d3d0254997836d3d8210439de4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_minimal_k5_reciprocal_exclusion_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "0f36f6d5329bc4eec70649c6c8fcb590a05ee4830b2171a4cc826e959f99830a"} -->
 
@@ -243,17 +243,19 @@ or in the reverse order.  In either orientation, raw positions two and four are 
 Therefore, at every non-ground vertex `i=1,...,5`, for either chosen global sign color:
 
 - if that color has local degree two, its neighbors are exactly
+  
   ```math
   \boxed{\{i-2,i+2\}};
   \tag{3.3}
-  
   ```
+
 - if that color has local degree three, its neighbors are exactly
+  
   ```math
   \boxed{\{i-1,i+1,i+3\}}.
   \tag{3.4}
-  
   ```
+
 
 All indices are modulo six.
 

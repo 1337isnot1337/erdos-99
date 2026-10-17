@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_joint_direction_perimeter_area_floor_2026-09-10.md) · source SHA-256 `6876341aa5ede3b93bffc19e3fb13e52287c71af4b3b238f6c573015f6a42faf`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-B7EBA97202B3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_joint_direction_perimeter_area_floor_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=a7dd79f73a3be57943780d1652bb1f1145c29282; lifecycle=unreviewed; canonical=false -->
@@ -724,7 +726,7 @@ gives
 
 ```math
 \sin\rho=\sqrt{1-\rho^2}>
-\frac{\sqrt{1131}}{50}>rac23.
+\frac{\sqrt{1131}}{50}>\frac23.
 ```
 
 Since `pi>3`,
@@ -870,16 +872,13 @@ This is the next exact target:
 
 > **JD endpoint exclusion.**  Exclude every unbounded post-ZF survivor sequence for
 > which
-> 
-
-```math
+> ```math
 > h/D\to2\rho,
 > \qquad
 > P_F/D\to4\rho,
 > \qquad
 > (e_{BB}+2s_C)/D\to\lambda_{JD},
-> 
-```
+> ```
 > by combining the one-gap diameter-direction concentration with the diameter-graph
 > caterpillar/shared-endpoint structure, reciprocal equilibrium, or a finite strict
 > sub-`D` rearrangement.

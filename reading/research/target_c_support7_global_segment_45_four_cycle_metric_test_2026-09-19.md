@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_global_segment_45_four_cycle_metric_test_2026-09-19.md) · source SHA-256 `6ef63f67d1169d4323b998f93b5433ac9487a0c6bcbbb610702d09a795466bb0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "5ac6b27c4f6271944c52ab1cbb8dec020fa82ff8", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_45_four_cycle_metric_test_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "e5b80363bb117a735c4c672330e4fa8cd5bfbe41a9039bd28ba3721ba8e42bfa"} -->
 

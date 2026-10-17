@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rattler_defect_face_localization_2026-08-31.md) · source SHA-256 `0679ea2fb715f6e9a3a05d190b32cda3bc497c7f1b47c6efa24932f18fb84095`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C665926733F5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C49: KKT-invisible points are confined to O(D)-boundary defect faces

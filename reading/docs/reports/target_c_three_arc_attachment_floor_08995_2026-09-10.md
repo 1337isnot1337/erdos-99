@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_three_arc_attachment_floor_08995_2026-09-10.md) · source SHA-256 `294c87f08ab1fd846c63ae7447cbaae94bc2bd33a56ba5ed00c105c345ec1592`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -53,12 +53,9 @@ The new geometric theorem is:
 
 > If `S` is any subset of the circle of radius `1/2` and
 > `diam(S)<=z in [z_0,z_5)`, then
-> 
-
-```math
+> ```math
 > area(conv S)\le W_3(z).
-> 
-```
+> ```
 > Equality in the wrapping class is approached by three equal circular arcs,
 > separated by three equal gaps.
 

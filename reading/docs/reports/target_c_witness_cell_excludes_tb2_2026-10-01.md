@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_witness_cell_excludes_tb2_2026-10-01.md) · source SHA-256 `6f43622539557d7abe81131bff4d2024340108d29c71a18a3e7dbff59080f82f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5AD965A4AB9C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- witness cells eliminate the genuine two-bar strip branch

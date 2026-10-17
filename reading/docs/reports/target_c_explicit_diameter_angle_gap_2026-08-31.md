@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_explicit_diameter_angle_gap_2026-08-31.md) · source SHA-256 `f21996527a907a74107b56e2773257e42448fb00f50eac0f61abff2d028e493b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-4BE768702C8B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C addendum: explicit diameter-angle gap from a three-disk container
@@ -130,10 +132,11 @@ from `b`, so it lies outside `K_theta`.  Hence the boundary of `K_theta` consist
 
 1. the radius-one arc centered at `y` from `b` to `p`, of central angle `pi/3`;
 2. the radius-one arc centered at `b` from `r` to `p`, of central angle
+   
    ```math
    \phi=\frac{2\pi}{3}-\theta;
-   
    ```
+
 3. the radius-one arc centered at `z` from `r` to `b`, again of central angle `pi/3`.
 
 This immediately gives the perimeter
@@ -165,7 +168,7 @@ while each of the two `pi/3` segments has area
 The sine terms cancel, leaving
 
 ```math
-\frac\phi2+rac\pi3-\frac{\sqrt3}{2}
+\frac\phi2+\frac\pi3-\frac{\sqrt3}{2}
 =
 \frac{2\pi}{3}-\frac{\sqrt3}{2}-\frac\theta2.
 ```

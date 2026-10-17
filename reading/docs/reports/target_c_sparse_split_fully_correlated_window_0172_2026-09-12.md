@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sparse_split_fully_correlated_window_0172_2026-09-12.md) · source SHA-256 `1b79d797103d250cf3bb3552ca667479e0468dc1aec747bf6191b816d8e1e8c8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 9 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

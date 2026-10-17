@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_oo_dual_path_region_saturation_without_exact_phase_2026-09-15.md) · source SHA-256 `c82170d97a30bbc44ce9c2147ecbecc81e520146eca99561c4848df0f7b322a0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

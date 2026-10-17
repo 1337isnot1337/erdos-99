@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_finite_atlas_single_port_scarcity_independent_audit_2026-10-09.md) · source SHA-256 `525d4f8febbf5c9c1fd725ebfc9a3b939e0796727e9d1180718db08f4afd93a9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2E957AFCE925","canonical":true,"claim_ids":["C-FINITE-ATLAS-SINGLE-PORT-SCARCITY"],"claim_statuses":{"C-FINITE-ATLAS-SINGLE-PORT-SCARCITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.210 — finite-atlas single-port scarcity

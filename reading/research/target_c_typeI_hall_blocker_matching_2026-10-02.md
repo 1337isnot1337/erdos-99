@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_typeI_hall_blocker_matching_2026-10-02.md) · source SHA-256 `0fde3534915db5703fe306936399789d4ffe143b6e08c31a6972be7f80113c71`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C-II — Hall blocker matching in a protected inactive chamber
 

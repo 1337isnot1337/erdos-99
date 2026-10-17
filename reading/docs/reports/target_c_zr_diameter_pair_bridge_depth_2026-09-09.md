@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_diameter_pair_bridge_depth_2026-09-09.md) · source SHA-256 `54340ea36ade97aed0dd53ff8760a0308c78b72bfd0b3682381dee581e503322`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CDC253BBCCFA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — bridge dominance forces one diameter pair to cross linearly many bridges

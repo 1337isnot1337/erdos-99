@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_strict_aggregate_moment_gap_2026-09-13.md) · source SHA-256 `79ee5f71aba6e68ed377773c7132b4e70ea465a65c1e696e7e544a4e4021ac09`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "1ef3c91d2941074e9c46c0af9a870df08073f731", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_strict_aggregate_moment_gap_2026-09-13.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a2c478743fae93ecd4409882fa6b2255b280377cf1c3abfb3d12413d9f564502"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_iterative_six_pair_atomic_gap_0035_2026-09-14.md) · source SHA-256 `0fbf854656ab9c9efc691090fcd9e1c65f2f6315eb543590ae73f3454842e1c6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "64522eb193cb723f8fe2bd4228eda30d9b47447c", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_iterative_six_pair_atomic_gap_0035_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "963399518d1be64d047f06c03825a3f64b6a0a55e65ea8c7105b53f406caf168"} -->
 

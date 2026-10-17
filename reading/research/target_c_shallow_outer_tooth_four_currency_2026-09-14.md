@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_shallow_outer_tooth_four_currency_2026-09-14.md) · source SHA-256 `38829ad669e26f2e3fcb2a44c539489cdf0c414642fadfb481214b9b0610559a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "81e43624238afe5aed149c53c733543edf975718", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_shallow_outer_tooth_four_currency_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "62de37b45c61c86f6c30f33c278909bf2cdb316c47cc6d915a143a72ec572957"} -->
 
@@ -83,6 +83,7 @@ The local geometry carried by the two new currencies is quantitative:
    positive contact bars, and if `alpha_a,alpha_b` are its two tooth-side contact
    multipliers while `alpha_y` is the third-contact multiplier, then
 
+   
    ```math
    \boxed{
    {\alpha_y\over\min(\alpha_a,\alpha_b)}
@@ -91,20 +92,21 @@ The local geometry carried by the two new currencies is quantitative:
    :={\sin\epsilon\over\sin(\pi/3-\epsilon)};
    }
    \tag{OT.5}
-   
    ```
+
 
 2. every pair `uv in P_4^{tooth}(epsilon)` is a genuine inactive source pair with a
    common unit-contact neighbor and
 
+   
    ```math
    \boxed{
    1<|u-v|\le
    h_\epsilon:=2\sin\left({\pi/3+\epsilon\over2}\right).
    }
    \tag{OT.6}
-   
    ```
+
 
 The coefficient `2/3` in (OT.4) is not a generic conflict-graph loss.  It comes from an
 exact geometric multiplicity bound: each degree-four shallow tooth apex generates

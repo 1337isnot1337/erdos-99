@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/68-punctured-packing-phase-audit.md) · source SHA-256 `b43bc3fbdab2918315721fa0c3c7057527fc86057a0c994ac33e8eb493aaccdd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — punctured packing / global phase audit
 
@@ -21,11 +21,12 @@ Retain the canonical Section 67 notation.  Let
 - `D=diam(A)`;
 - `R_4` be the number of bounded quadrilateral faces of the positive contact core;
 - for every such face `R`,
+  
   ```math
   \epsilon_R:=\operatorname{area}(R)-a_0>0,
   \qquad a_0={\sqrt3\over2};
-  
   ```
+
 - `E_4=sum_R epsilon_R`; and
 - `c_0=sqrt(3)/4=a_0/2`.
 

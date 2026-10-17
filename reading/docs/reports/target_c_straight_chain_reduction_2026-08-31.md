@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_straight_chain_reduction_2026-08-31.md) · source SHA-256 `977dc985094875e1bfebb61880be4bf1b010ac5a9463ffd28978a1049608ec6c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7AD749371862","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C addendum: exact straight-chain reduction
@@ -175,31 +175,34 @@ be the number of unit contacts in the corresponding neutral chain and let
 The skeleton has the following exact properties.
 
 1. Every skeleton edge is realized by the straight segment `[a,b]` and
+   
    ```math
    \boxed{|a-b|=L_E\in\mathbb Z_{\ge1}.}
    \tag{C21.12}
-   
    ```
+
 2. The straight-line skeleton is plane.  Distinct edge interiors are disjoint.
 3. At every nonreaction skeleton vertex `a`,
+   
    ```math
    \boxed{
    \sum_{E=ab}\alpha_E\frac{a-b}{L_E}=0.
    }
    \tag{C21.13}
-   
    ```
+
    At a reaction vertex `b in B_+`, the same left side equals the canonical diameter
    reaction `g_b`.
 4. The normalized contact virial becomes
+   
    ```math
    \boxed{
    
    \sum_{E\in E(\mathscr S)}L_E\alpha_E=D^2.
    }
    \tag{C21.14}
-   
    ```
+
 
 #### Proof
 

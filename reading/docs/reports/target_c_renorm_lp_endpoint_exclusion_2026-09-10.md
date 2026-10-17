@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_renorm_lp_endpoint_exclusion_2026-09-10.md) · source SHA-256 `a11cda2250bdfbb4246899d4b8593457d0a377b61db21baad6a184e1495d3e60`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E86D5E49443B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — FSDB flat-side stability excludes the `mu_rho` endpoint

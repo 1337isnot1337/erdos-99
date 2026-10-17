@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_h5_m5_nullity5_support_weight_reduction_2026-09-25.md) · source SHA-256 `9caeaf1966d6c669c7f2cf474c07df1e4e9c2393fbbe944e7d0e7cd1bfcb651a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f3990a39910ce2b571f28c072d8b844ad89c6dfc", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_h5_m5_nullity5_support_weight_reduction_2026-09-25.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ca944691dccf2c9f6b4a4837b7f8d44b2a182a49b98cf5f20d494d555b1f5af9"} -->
 

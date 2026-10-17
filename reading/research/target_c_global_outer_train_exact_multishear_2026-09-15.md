@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_global_outer_train_exact_multishear_2026-09-15.md) · source SHA-256 `234ccd07283ae588eb612baa0c49384b2bdaa51f7682138686b1ab3bc5e80525`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C-II — exact simultaneous finite shear for arbitrary outer-to-outer trains
 

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_deep_cell_attachment_matching_2026-09-09.md) · source SHA-256 `fb82d6693d953febaa09b4d64e661f6a35db67c0a055ab5d601f9f1513921d6a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-0924D4F2B17A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZHA: a deep harmonic cell has linearly many attachments and short response pairs
@@ -290,7 +292,7 @@ ZHA1 and ZHA4 improve the corresponding attachment and short-matching bounds to
 and
 
 ```math
-\boxed{|J_*|\ge\frac{\eta^2}{32\pi}D-rac12.}
+\boxed{|J_*|\ge\frac{\eta^2}{32\pi}D-\frac12.}
 \tag{ZHA12}
 ```
 

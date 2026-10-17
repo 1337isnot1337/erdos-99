@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_bounded_pentagon_no_parallel_sides_2026-09-18.md) · source SHA-256 `88b604141fcb7c62049273c10836a3a37338187d6b94deed5a2f46c36b7b01a0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C-II — bounded unit-contact pentagon faces have no parallel side pair
 

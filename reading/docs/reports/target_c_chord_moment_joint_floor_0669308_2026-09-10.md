@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_chord_moment_joint_floor_0669308_2026-09-10.md) · source SHA-256 `e525399ec45d491cd9ef9c0ad4ca9f031ef162d17a7d02bf9938cabca46b7dfc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

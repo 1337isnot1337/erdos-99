@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section120_anisotropic_two_arc_return.md) · source SHA-256 `4e54b7bc0b93e28e2f6dd1ccca79a12f2a29e6dc4cc582fff01776c147e64579`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — Section 120: anisotropic two-arc signed return
 

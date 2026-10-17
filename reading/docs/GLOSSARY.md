@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../docs/GLOSSARY.md) · source SHA-256 `34c82a498756ec183af62e1e0c682bc0b5c62529dde3d4ea4e6b9d093d39bb6f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Glossary
 

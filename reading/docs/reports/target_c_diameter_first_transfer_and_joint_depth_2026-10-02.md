@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_diameter_first_transfer_and_joint_depth_2026-10-02.md) · source SHA-256 `7fdf408ae3b2aacd59f4e5306176b2d9894d534e926e181af82775d22b4c19f9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B9401F4A74F3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — diameter-first rigidity transfer and quadratic joint blockers

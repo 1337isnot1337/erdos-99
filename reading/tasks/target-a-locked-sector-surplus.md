@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/target-a-locked-sector-surplus.md) · source SHA-256 `97d7b76dd386743e1f6d9db0675afe51019b46498d3b86464eb71372ff460508`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # target-a-locked-sector-surplus
 

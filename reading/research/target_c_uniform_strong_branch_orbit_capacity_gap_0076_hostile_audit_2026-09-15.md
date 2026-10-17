@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_uniform_strong_branch_orbit_capacity_gap_0076_hostile_audit_2026-09-15.md) · source SHA-256 `14dfe5443ad8ea13cbe1f346e75873a5906843572d119ebacd90e150b5de6c88`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b79fcc2ba6f73a37424daeaa500f283b29fcca2a", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_uniform_strong_branch_orbit_capacity_gap_0076_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d2e331baee97ba625b56d48b77a29dc4b4f71bf76f9b9c31227221e8d21c22a9"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_p1_complete_ramification_exclusion_2026-09-10.md) · source SHA-256 `9c4bedb4ba829091f9f3a40cdec76194d0c29235c4b2c565c18799f1fdb3a9f7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 21 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -32,14 +32,16 @@ z=e^{i\delta}
 be the P1 arithmetic parameter. The P1 geometry and signed shell closure imply simultaneously:
 
 1. a Littlewood annihilator
+   
    ```math
    P(Z)=\sum_{j=0}^{m-1}\varepsilon_jZ^j,
    \qquad \varepsilon_j\in\{\pm1\},
    \qquad P(z)=0;
    \tag{PRX.1}
-   
    ```
+
 2. the reciprocal geometric equation
+   
    ```math
    \boxed{
    F_m(z)=0,
@@ -47,8 +49,8 @@ be the P1 arithmetic parameter. The P1 geometry and signed shell closure imply s
    F_m(Z)=(Z^m+1)^2+4Z^{m-1}(Z-1)^2.
    }
    \tag{PRX.2}
-   
    ```
+
 
 No algebraic number `z` can satisfy both conditions in the P1 parameter range. Therefore
 

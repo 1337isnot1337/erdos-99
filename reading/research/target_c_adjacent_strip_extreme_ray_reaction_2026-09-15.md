@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_adjacent_strip_extreme_ray_reaction_2026-09-15.md) · source SHA-256 `35250272e4d73223988eb9f70267d417f6af4484c9f04c633facec5f09edd006`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2b648bb1567c4126cb9e8d27ed75ace859cbdaed", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_adjacent_strip_extreme_ray_reaction_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "53ba874d162d745dd6814ceed36dad8e3c7c923309f4a347e24ef9a0bead28f2"} -->
 
@@ -50,21 +50,24 @@ G=Aa+Bb
 Then:
 
 - if there is one switching edge `h`, trivially
+  
   ```math
   G=\beta_hn_h;
   \tag{ER.2}
-  
   ```
+
 - if there are at least two switching edges, the direction of `G` lies strictly between
   the two extreme angles,
+  
   ```math
   \boxed{
   \theta_-<\arg G<\theta_+,
   }
   \tag{ER.3}
-  
   ```
+
   and there are unique positive scalars `lambda_-,lambda_+` such that
+  
   ```math
   \boxed{
   G=\lambda_-n_{h_-}+\lambda_+n_{h_+},
@@ -72,8 +75,8 @@ Then:
   \lambda_-,\lambda_+>0.
   }
   \tag{ER.4}
-  
   ```
+
 
 Thus the two angular-extreme switching diameter bars always provide a canonical exact
 force certificate. This does **not** exclude a separate one-bar representation by an

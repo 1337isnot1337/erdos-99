@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_oblique_lattice_pick_comparison_2026-09-14.md) · source SHA-256 `e78b307c7ea57a4172834861344a75a60107ed8cc9bbb7c01ba88c1fd2e2db5e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 4 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

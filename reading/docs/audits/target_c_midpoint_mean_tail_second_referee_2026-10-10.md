@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md) · source SHA-256 `1a9ab31c0fa492cc56b4c625b279654a69005ad2d531a02da553b707da2a3d52`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-443896D300E0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C independent second referee — midpoint-tail counting bridge

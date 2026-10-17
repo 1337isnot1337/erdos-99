@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/audit-target-c-typeii-face-floor.md) · source SHA-256 `0cb9babc43eb25421fd28ab572c1861a7b2ef5de3d8648ceacb11b87b48439c0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # audit-target-c-typeii-face-floor
 

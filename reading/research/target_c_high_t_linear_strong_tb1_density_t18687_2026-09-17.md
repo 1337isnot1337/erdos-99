@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_linear_strong_tb1_density_t18687_2026-09-17.md) · source SHA-256 `78f84f0460d04be188249677aab0b48ded8bd1fb12972b4744feda43d707957c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_uniform_strong_branch_0076_scope_repair_2026-09-15.md) · source SHA-256 `89935723cb2863d87184f2c5a2eed014487920a8e29a4303f1411f7267b7a7d2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 6 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -74,18 +74,20 @@ The candidate's Sections 1--4 remain valid.  In particular:
 
 - on `W/3<=C<=W/2`, both center/leaf pairs lie in the strong `1/10` branch;
 - the strong capacity
+  
   ```math
   \Phi_{1/10}(W,C)
   =C(W-C)-{1\over10}{3C-W\over C}
    \left({W+C\over2}-K\right)^2
-  
   ```
+
   is strictly concave and has a unique maximizer `C_*(W)` in `(W/3,W/2)`;
 - the strong branch remains valid through
+  
   ```math
   C_s(W)=W-{W-K\over r_*}>W/2.
-  
   ```
+
 
 The exact certificate places `C_s(W)` well below `K` throughout the contradiction
 interval.  The smallest separation at the worst endpoint is still about `0.1546`, so

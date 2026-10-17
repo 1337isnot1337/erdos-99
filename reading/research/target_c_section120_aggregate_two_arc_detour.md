@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section120_aggregate_two_arc_detour.md) · source SHA-256 `420d0147c3d5beaf9d639110f9debf3f4c43c96af14f310c30cc3a9443562626`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b7c4dd6650220580384843662fff0b18e0f35e6a", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section120_aggregate_two_arc_detour.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "851865968de4e66b8caee26ac44e7e7656109bca84af7fc5b688965bf809aeec"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_profile_b_puncture_dimension_regression_2026-10-04.md) · source SHA-256 `709733023e65084625a14e1e4e2c80007f07ffb9f04d6e777924b32ea16e217d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A2254270982A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C Profile B puncture-dimension limitation (exact regression)

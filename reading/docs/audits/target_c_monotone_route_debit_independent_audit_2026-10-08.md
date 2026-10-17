@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_monotone_route_debit_independent_audit_2026-10-08.md) · source SHA-256 `f72859b832fdc9826bfda30d4c4262ababddc51c380711667d6024ef686e1e5e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C93C5BF5C633","canonical":true,"claim_ids":["C-ATTACHMENT-TRIANGLE-DEBIT-REGRESSION","C-MONOTONE-POSITIVE-CONTACT-ROUTE-DEBIT","C-RHOMBIC-PATH-ROUTE-EXCESS-SHARP-REGRESSION"],"claim_statuses":{"C-ATTACHMENT-TRIANGLE-DEBIT-REGRESSION":"regression","C-MONOTONE-POSITIVE-CONTACT-ROUTE-DEBIT":"canonical","C-RHOMBIC-PATH-ROUTE-EXCESS-SHARP-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent audit: monotone contact routes and their exact defect currency

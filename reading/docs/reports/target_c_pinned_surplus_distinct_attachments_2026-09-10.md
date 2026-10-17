@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_pinned_surplus_distinct_attachments_2026-09-10.md) · source SHA-256 `b10c391049b117d1dd782dd63ec35b8636c03c1829869f2cf8ad51cd85aa9666`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A259D18BDE39","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — pinned surplus is bounded by distinct attachment excess

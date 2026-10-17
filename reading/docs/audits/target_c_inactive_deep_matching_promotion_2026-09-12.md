@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_inactive_deep_matching_promotion_2026-09-12.md) · source SHA-256 `ba4808e8ecb871dc5604188340c7b3c7c661c96307a5e4f61dba412191db4f98`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B49974A38923","canonical":true,"claim_ids":["C-INACTIVE-DEEP-MATCHING"],"claim_statuses":{"C-INACTIVE-DEEP-MATCHING":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C deep near-unit isolate matching promotion audit

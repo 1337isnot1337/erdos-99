@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-frozen-813-source-main-corpus-2026-10-16.md) · source SHA-256 `d2ca3bb88ab3e53cecb5dc1dbaec90012a801b451f82aeab03d58de7c35f6374`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Frozen Target C source-main corpus: 813 report dispositions
 

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_full_source_lattice_conflict_deletion_reserve_2026-10-09.md) · source SHA-256 `a8e0334ad495eb5e4eefda1d1b4a1a5a1bf3a14e5851ef46e99cd4d2bfca70a2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-8C2BF4386344","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # A two-thirds-power global population reserve by lattice conflict deletion
@@ -130,8 +132,9 @@ By (2.1), applied with an open inner and closed outer count,
  &\le {\pi\over a_0}\{(D+2\delta)^2-D^2\}
        +C_{disk}\{(D+2\delta)^{2/3}+D^{2/3}\}\\
  &\le K_0D^{2/3},\qquad
- K_0=8\pi/a_0+3C_{disk}. \tag{3.2}
+ K_0=8\pi/a_0+3C_{disk}. 
  \end{aligned}
+\tag{3.2}
 ```
 
 We used `D+2delta<=2D`, `c<=1`, and `D>=2`. Difference
@@ -194,8 +197,9 @@ Then (3.4) and the exact mean count give
  &\ge {\pi D^2\over4a_0}
         +(A_1c-K_1c^{3/2})D^{2/3}
         +\pi\delta^2/a_0\\
- &\ge {\pi D^2\over4a_0}+\kappa D^{2/3}. \tag{4.2}
+ &\ge {\pi D^2\over4a_0}+\kappa D^{2/3}. 
  \end{aligned}
+\tag{4.2}
 ```
 
 Choose a translation for which the integer `N-E` is at least

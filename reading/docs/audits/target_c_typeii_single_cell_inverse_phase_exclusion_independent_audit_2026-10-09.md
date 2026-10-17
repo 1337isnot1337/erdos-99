@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_typeii_single_cell_inverse_phase_exclusion_independent_audit_2026-10-09.md) · source SHA-256 `fc874ce3d970e8014659f135350c4cd5935e0eb53d66b86600b20ba11aa9c6c0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BEC3B93F3A54","canonical":true,"claim_ids":["C-SLOW-LATTICE-DIAMETER-ENDPOINT-BOUND","C-TYPEII-SINGLE-CELL-INVERSE-PHASE-EXCLUSION"],"claim_statuses":{"C-SLOW-LATTICE-DIAMETER-ENDPOINT-BOUND":"canonical","C-TYPEII-SINGLE-CELL-INVERSE-PHASE-EXCLUSION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.201 — curved-boundary lattice capacity and Type-II single-cell phase exclusion

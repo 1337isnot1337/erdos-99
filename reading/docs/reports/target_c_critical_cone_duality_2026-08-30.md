@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_critical_cone_duality_2026-08-30.md) · source SHA-256 `47511d395c8c3791bf8a6694d8ea339dfe02f22820f4f32318ed587e26ed3d00`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-986E98C9A325","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C addendum: critical-cone duality and diameter shear
@@ -498,21 +498,15 @@ statement is now:
 > **Target C3 (diameter-shear elimination).**  For every sufficiently large
 > contact-minimal, diametrally saturated, triangle-free global minimizer, prove either
 > 
-> 
-
-```math
+> ```math
 > C_*=C,
-> 
-```
+> ```
 > 
 > or find a strictly weak-releasing `v\in\mathcal K_D(A)` with
 > 
-> 
-
-```math
+> ```math
 > \Omega(v)=0.
-> 
-```
+> ```
 > 
 > The second alternative contradicts contact minimality by Theorem C7.  Therefore a
 > proof of Target C3 would force every unit contact into the support of the maximal KKT

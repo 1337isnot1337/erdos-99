@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_terminal_long_pocket_anchor_regression_independent_audit_2026-10-08.md) · source SHA-256 `37d9ca336ef9c3f3f32274d2b2154b8f97b6d84733ab9b2a94b68bd242cb8d5a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-69C775B68E70","canonical":false,"claim_ids":["C-TERMINAL-LONG-POCKET-ANCHOR-REGRESSION"],"claim_statuses":{"C-TERMINAL-LONG-POCKET-ANCHOR-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent audit — three-edge pocket anchor regression

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../docs/BIBLIOGRAPHY.md) · source SHA-256 `79d381cf83b436630142fbce9fb9bf4192f958eb4ed96c0005c84ff74cd80a09`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Public bibliography
 

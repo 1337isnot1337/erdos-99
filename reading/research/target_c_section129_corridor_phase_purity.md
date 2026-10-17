@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section129_corridor_phase_purity.md) · source SHA-256 `56cd238217a75d7458d0e7fcfbdfc9dd2f8b7ba314226e0a8f1f2967a352672d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "8d18d3b80dbfedcd24b6219a282d1dd3b43e8cef", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section129_corridor_phase_purity.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "dca6fe36a60a30af3b0f965fb44d81a2148cc50ff9d23228cb38fe18a6efa550"} -->
 

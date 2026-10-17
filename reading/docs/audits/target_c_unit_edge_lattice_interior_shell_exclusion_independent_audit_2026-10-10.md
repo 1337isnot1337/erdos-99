@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_unit_edge_lattice_interior_shell_exclusion_independent_audit_2026-10-10.md) · source SHA-256 `1fc0ef474e21ea1c4a356c63f9255cc8c669b31ffa4f74bfbd902ca4860fd293`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-641E7B0D30BC","canonical":true,"claim_ids":["C-UNIT-EDGE-HULL-SINGLE-LATTICE-INTERIOR-RADIAL-EXCESS"],"claim_statuses":{"C-UNIT-EDGE-HULL-SINGLE-LATTICE-INTERIOR-RADIAL-EXCESS":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.244 — unit-edge hulls with a single lattice interior

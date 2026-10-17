@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_clean_train_defect_and_shape_2026-09-09.md) · source SHA-256 `9c316092fb90daf19fe9e82b00a48974fc497c88727b7ff8076ea76aee82e103`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-743B0F18F622","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — clean-train defect and diameter-direction shape bounds

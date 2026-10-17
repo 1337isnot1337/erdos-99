@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_host_tagged_full_nested_rail_t18687_2026-09-17.md) · source SHA-256 `df65c1a81e8ad72ded18b9d16132b56baea24ad0b0c1dc57fc0d4ba01e9ca43c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 19 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -172,11 +172,12 @@ No additional geometric deletion was used after selecting `Z_D^A`. Hence every E
 2. an omitted second switching diameter bar of opposite transverse sign;
 3. a positive two-ray exact representation of `G_i`;
 4. the host-forced individual transverse margin
+   
    ```math
    d_{\mathbb{RP}^1}([d_i^\pm],[u_i])
    \ge\arcsin(0.4143)-o(1).
-   
    ```
+
 
 Every TB1-tagged rail position retains the fixed host blocking estimate (TR.5).
 

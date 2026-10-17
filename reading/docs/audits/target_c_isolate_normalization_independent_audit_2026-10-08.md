@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_isolate_normalization_independent_audit_2026-10-08.md) · source SHA-256 `bfcb8f58c6419b62692405ff440cd9fc650fb6263bbcb676cb17fb69935f4153`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-349A53AB9CE5","canonical":true,"claim_ids":["C-CORE-DIAMETER-REPLACEMENT-AFTER-ISOLATE-NORMALIZATION","C-FULL-SOURCE-ISOLATE-NORMALIZATION"],"claim_statuses":{"C-CORE-DIAMETER-REPLACEMENT-AFTER-ISOLATE-NORMALIZATION":"canonical","C-FULL-SOURCE-ISOLATE-NORMALIZATION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: full-source isolate normalization and core diameter replacements

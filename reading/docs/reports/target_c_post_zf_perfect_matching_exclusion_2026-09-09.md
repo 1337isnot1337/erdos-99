@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_post_zf_perfect_matching_exclusion_2026-09-09.md) · source SHA-256 `2c0d6543713fa4fadd43bf3d713153e856849cf5f906023d6b9274573b91f007`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2F84A6528AE3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — post-ZF perfect-matching diameter branch is impossible
@@ -284,12 +284,9 @@ If MB/ZE/ZT/ZF are promoted, MC should replace the perfect-matching external-she
 The natural stability problem is now exact:
 
 > **Near-matching train stability.** Show that a post-ZF survivor with
-> 
-
-```math
+> ```math
 > 2h-q=x_B+Q+2s_Z=o(D)
-> 
-```
+> ```
 > inherits enough of the alternating train-end structure of MC to force either a train triangle or a linear number of contact/face defects.
 
 Since the left side is literally the total diameter degree excess above one, this is equivalent to saying that all but `o(D)` loaded terminals are diameter leaves.

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_quarter_fold_eight_face_isolate_bound_independent_audit_2026-10-09.md) · source SHA-256 `e2c585702621d87d15276f36536df494922af288acb3ea506fffb7f88ebdec4a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-778BC219F537","canonical":true,"claim_ids":["C-PARALLELOGRAM-UNIT-GUARD-CENTER-BOUND","C-QUARTER-FOLD-EIGHT-FACE-ISOLATE-BOUND"],"claim_statuses":{"C-PARALLELOGRAM-UNIT-GUARD-CENTER-BOUND":"canonical","C-QUARTER-FOLD-EIGHT-FACE-ISOLATE-BOUND":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: guarded parallelograms and eight-face isolate count

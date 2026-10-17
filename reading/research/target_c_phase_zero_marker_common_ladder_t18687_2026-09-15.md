@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_phase_zero_marker_common_ladder_t18687_2026-09-15.md) · source SHA-256 `cf6f9bb5530a9a35bf4d54e786776c8de17b2efeba9f59e1d31139d8714f9fd1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d9abe498f984f22c0ea94690a26c41fb83a4a509", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_phase_zero_marker_common_ladder_t18687_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2836bbab92540b1eeb670dffbeb451f0f0db3775017a6da41fac400b722c55e1"} -->
 

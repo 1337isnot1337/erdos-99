@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_odd_cyclic_quadratic_regression_2026-09-11.md) · source SHA-256 `ab2d14acada22f4d9802e7c5638f4a3ee299d2df01911e199700f9b6941efbcb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9F2E4BA771D1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: odd cyclic quadratic-population strict-negative regression

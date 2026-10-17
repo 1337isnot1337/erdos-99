@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_contact_manifold_local_diameter_coordinates_2026-10-05.md) · source SHA-256 `3a510fb41b57938bbc7b7d03504d2a9f63a3b1e499f0f2d0641bebae552823b1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DAB2B4D3C8E3","canonical":true,"claim_ids":["C-CONTACT-DIAMETER-COORDINATES"],"claim_statuses":{"C-CONTACT-DIAMETER-COORDINATES":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C: local diameter coordinate normal form

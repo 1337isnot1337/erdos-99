@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_all_degree_groemer_face_stability_2026-09-14.md) · source SHA-256 `bc030d4e399be76716ce4877c526bf6df4a8e6549be2104c6bd6d3282f5e95ee`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "ba6f4984aa79b38a46f1fcd9b7874e550ca0a966", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_all_degree_groemer_face_stability_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4ce2c69031526da7cd63d831ac4f1f586c5869af1bb256e0bbdd7fb17eb1f5bc"} -->
 

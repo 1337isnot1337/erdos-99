@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_loaded_interface_two_unit_defect_2026-09-09.md) · source SHA-256 `7e1c0d0f0d7cd4ac2208f2469370b692cb2c8c97c7947a0940d44087dda1882f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F7AC32FC5C42","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_loaded_interface_two_unit_defect_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=86d956469e0af0b1b0f8fde3fafc0da51329c91b; lifecycle=unreviewed; canonical=false -->
@@ -43,7 +43,6 @@ Then the cap-minimal full-core branch satisfies
 Q_B\ge(2-o(1))D.
 }
 \tag{LI.1}
-
 ```
 
 Thus the remaining obstruction is now a genuinely loaded-boundary/interface phenomenon. Neither the two dense carrier interiors nor the graph-small harmonic components can absorb the mandatory two units of defect.
@@ -66,7 +65,6 @@ Euler and face-edge incidence give exactly
 ```math
  e_r=2n_r-2-\frac{k_r+Q_r}{2}.
 \tag{1.1}
-
 ```
 
 Therefore
@@ -77,7 +75,6 @@ Therefore
 =\frac{k_r+Q_r}{2}-\delta_r.
 }
 \tag{LI.2}
-
 ```
 
 Since `k_r>=0`,
@@ -87,7 +84,6 @@ Since `k_r>=0`,
  r_r\ge\frac{Q_r}{2}-\delta_r.
 }
 \tag{1.2}
-
 ```
 
 This elementary inequality is enough to eliminate the small-component defect escape.
@@ -117,7 +113,6 @@ Hence
 S_{small}:=\sum_{r\ge3}\delta_r=o(D).
 }
 \tag{2.1}
-
 ```
 
 Put
@@ -134,7 +129,6 @@ R_{small}:=\sum_{r\ge3}r_r
 \ge\frac12Q_{small}-o(D).
 }
 \tag{2.2}
-
 ```
 
 No population estimate is needed for this step.
@@ -169,7 +163,6 @@ R_I
 +\frac12Q_{all-int}.
 }
 \tag{LI.3}
-
 ```
 
 This is the key improvement over TE.
@@ -209,7 +202,6 @@ and insert LI.3. Discard `s_B>=0`:
 \left(\frac\pi2-1+o(1)\right)D.
 }
 \tag{4.1}
-
 ```
 
 ZU plus NC gives
@@ -217,7 +209,6 @@ ZU plus NC gives
 ```math
  k:=d_H+s_Z=c_I+s_C+o(D).
 \tag{4.2}
-
 ```
 
 Because `c_I>=0`,
@@ -236,7 +227,6 @@ Thus
 -\frac12Q_{all-int}.
 }
 \tag{4.3}
-
 ```
 
 ---

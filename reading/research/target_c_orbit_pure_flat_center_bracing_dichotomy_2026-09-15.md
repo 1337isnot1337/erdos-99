@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_orbit_pure_flat_center_bracing_dichotomy_2026-09-15.md) · source SHA-256 `db7166d02115708c1fd7f127abb0dfb897903183940378cd0b2af6e83eb4019f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

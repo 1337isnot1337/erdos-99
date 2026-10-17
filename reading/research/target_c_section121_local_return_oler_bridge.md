@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section121_local_return_oler_bridge.md) · source SHA-256 `220f6779896198468a3b864689b96b5a6f2a2caae95442aac4f35fd7f02024b8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — Section 121: local harmonic return-to-Oler bridge
 

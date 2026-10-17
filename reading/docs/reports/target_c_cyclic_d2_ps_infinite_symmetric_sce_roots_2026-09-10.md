@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_ps_infinite_symmetric_sce_roots_2026-09-10.md) · source SHA-256 `8a80632668a313b8bd15d679bff215b1a69f503d503bfa21dca18c795d553fe8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 23 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -55,17 +55,19 @@ D_k>1
 for which the exact SCE equations hold in the genuine PS regime:
 
 1. the first defect cell is parallel,
+   
    ```math
    G_1=\Delta_2:=2\arcsin(1/D_k);
-   
    ```
+
 2. the second defect cell is strictly short,
+   
    ```math
    2\delta<G_2<\Delta_2,
    \qquad
    \delta:=2\arcsin(1/(2D_k));
-   
    ```
+
 3. the second midpoint offset is nonzero;
 4. the complete complex SCE closure holds exactly.
 

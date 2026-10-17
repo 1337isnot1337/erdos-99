@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_half_depth_fan_forest_independent_audit_2026-10-08.md) · source SHA-256 `eb6882c24db5ca114be5d769b9b2e0d115a6213e4fedbebbabbec845babb194b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-FADEA00A4952","canonical":true,"claim_ids":["C-CANONICAL-FAN-FOREST-BLOCKER-MATCHING","C-CANONICAL-HALF-DEPTH-BLOCKER-PATH","C-CIRCUMCIRCLE-BLOCKER-CLOSURE","C-CIRCUMCIRCLE-UPPER-PAIR-SAFETY","C-FAN-CONTACT-HULL-FOREST","C-FAN-KKT-MULTIPLIER-BUDGET"],"claim_statuses":{"C-CANONICAL-FAN-FOREST-BLOCKER-MATCHING":"canonical","C-CANONICAL-HALF-DEPTH-BLOCKER-PATH":"canonical","C-CIRCUMCIRCLE-BLOCKER-CLOSURE":"canonical","C-CIRCUMCIRCLE-UPPER-PAIR-SAFETY":"canonical","C-FAN-CONTACT-HULL-FOREST":"canonical","C-FAN-KKT-MULTIPLIER-BUDGET":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent Audit.166: circumcircle blocker depth, fan forests, and stress budgets

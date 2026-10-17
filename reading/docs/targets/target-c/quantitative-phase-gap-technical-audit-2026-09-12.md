@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/quantitative-phase-gap-technical-audit-2026-09-12.md) · source SHA-256 `f61e9e102ee38b8d5fa2cdc754bd6b1d387724a4dbc0d2ab9bb14802eea24550`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — Section 104 technical audit: micro bases and direction windows
 
@@ -11,11 +11,12 @@ This note supplies the two finite geometric estimates in Section 104 that are ea
 to overstate if one argues only from Hausdorff pictures:
 
 1. the micro-base excess bound
+   
    ```math
    \limsup {1\over D}\sum_{\rm micro\ bases}(|p_k-p_{k+1}|-1)
    \le {|S|\over2}-\alpha;
-   
    ```
+
 2. the tangent-window length bound used to count good-base tooth legs.
 
 No smoothness of the finite force hull or attachment polygon is assumed.

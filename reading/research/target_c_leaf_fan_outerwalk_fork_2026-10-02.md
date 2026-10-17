@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_leaf_fan_outerwalk_fork_2026-10-02.md) · source SHA-256 `a38a8681b798c8af79ef9ac40ef6d318c8030b13cb1528063e5d9842ec0b590b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C: outer-walk currency versus exact diameter-leaf fans
 

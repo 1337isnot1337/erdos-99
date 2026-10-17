@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_typeii_face_tail_port_multiplicity_2026-10-08.md) · source SHA-256 `1b5b6d6345c976c6662b6612a704779b28dee702e604ef1b597d88b1cf6ef335`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6E974B927D40","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 
@@ -34,12 +34,13 @@ The candidate proves:
 1. For every fixed `lambda>0` and `eta>0` there is a fixed `rho>0`
    such that eventually fewer than `eta D` attachment incidences
    `(a,I)` fail
+   
    ```math
    \operatorname{dist}_I(a,z)<\lambda D
    \quad\text{for every }z\in I\cap\overline B(a,\rho D).
    \tag{PM1}
-   
    ```
+
    The count is over all harmonic components.
 2. In the macroscopic cell supplied by Section 78, for every fixed
    `lambda>0` at least `cD` actual attachments have same-component

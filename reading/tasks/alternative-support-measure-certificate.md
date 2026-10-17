@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/alternative-support-measure-certificate.md) · source SHA-256 `d0a9055d78730850aaab6b98494760f87b6f0cb7b7de0bb45508162f3352d73b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # alternative-support-measure-certificate
 

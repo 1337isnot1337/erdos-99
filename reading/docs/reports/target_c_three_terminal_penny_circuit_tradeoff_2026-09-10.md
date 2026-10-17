@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_three_terminal_penny_circuit_tradeoff_2026-09-10.md) · source SHA-256 `b8f33b29000237d3e6a3fd887705fe773c15e63cad66e53d2c72f9b6560af0e7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BCBB90EAD18F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — three-terminal penny deficit and extreme-circuit diameter/flex tradeoff

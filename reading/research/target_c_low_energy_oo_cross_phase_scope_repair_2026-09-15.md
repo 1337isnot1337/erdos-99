@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_low_energy_oo_cross_phase_scope_repair_2026-09-15.md) · source SHA-256 `8b9bfe10556597f476a7b5aa109466d1aca09b34ea711057884ef63ddd801b49`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 10 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

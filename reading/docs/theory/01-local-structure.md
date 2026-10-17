@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/theory/01-local-structure.md) · source SHA-256 `75c539b2281046c49d6c303bda845cb7fb2643d0d9a1106d64e4f737117c54fb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Theory notes: local structure
 
@@ -547,22 +547,24 @@ Assume $`\mathcal E_Q(A)=\{0\}`$. Then:
 1. Every contact edge admits a strictly positive pinned equilibrium stress.
 2. At every unpinned vertex $`p_i\notin Q`$,
 
+   
    ```math
    \sum_{j\sim i}c_{ij}(p_j-p_i)=0,
    \qquad c_{ij}>0.
    \tag{8.3}
-   
    ```
+
 
 3. The contact neighbors of every unpinned vertex affinely span the plane.
 4. Every unpinned vertex lies in the strict interior of the convex hull of its contact neighbors and has contact degree at least (3).
 5. The diameter endpoints are exactly the convex-hull vertices:
 
+   
    ```math
    \boxed{Q=V(\operatorname{conv}A).}
    \tag{8.4}
-   
    ```
+
 
 #### Proof
 
@@ -586,11 +588,12 @@ In the first-order-jammed triangle-free branch:
 
 1. If $`T`$ is a nontrivial tree contact component with $`n_T`$ vertices and $`q_T=|Q\cap V(T)|`$, then
 
+   
    ```math
    \boxed{n_T\le2q_T-2.}
    \tag{9.1}
-   
    ```
+
 
 2. All nontrivial tree components together contain at most $`2q=O(\sqrt n)`$ vertices.
 3. Every cyclic contact component contains at least four diameter endpoints.

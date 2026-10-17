@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_phase_fixed_angle_reaction_braid_2026-10-01.md) · source SHA-256 `b4cd53e128b8512a7ba29da1e0c7d3d15e7f3e238651cad417f06d7c96b5665a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E1B5750443B2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- fixed-angle reaction braid on an exact-phase shore

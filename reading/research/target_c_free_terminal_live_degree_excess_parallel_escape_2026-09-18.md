@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_free_terminal_live_degree_excess_parallel_escape_2026-09-18.md) · source SHA-256 `38343f8eba701aacb33a6d06d58cf08c1f5459068e24c7a00d7f57efce2424cd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d1589f4ce3a017265fe32fc350ff88c78b8729aa", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_free_terminal_live_degree_excess_parallel_escape_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ffcc3f9e83530f5b003d87f449d480b8f175c8e70553c59a54a2fb5bfe890e8f"} -->
 

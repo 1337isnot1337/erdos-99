@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_weak_wall_refill_capacity_independent_audit_2026-10-08.md) · source SHA-256 `737faeb951908c6a5c089ed765f32089bf0b752de11f01aacb1bda02306ab807`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-048ECDDE436D","canonical":true,"claim_ids":["C-NEAR-TRIANGULAR-WALL-CAPACITY-PLATEAU-REGRESSION","C-NONCONTACT-WALL-WEAK-SHIELD","C-POST-DESCENT-WEAK-WALL-REFILL","C-UNIT-SEPARATED-MOVING-WALL-CROSSING-BARRIER"],"claim_statuses":{"C-NEAR-TRIANGULAR-WALL-CAPACITY-PLATEAU-REGRESSION":"regression","C-NONCONTACT-WALL-WEAK-SHIELD":"canonical","C-POST-DESCENT-WEAK-WALL-REFILL":"canonical","C-UNIT-SEPARATED-MOVING-WALL-CROSSING-BARRIER":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent audit: weak-wall refill and capacity plateau

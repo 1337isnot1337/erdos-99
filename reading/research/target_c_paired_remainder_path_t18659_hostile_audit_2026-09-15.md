@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_paired_remainder_path_t18659_hostile_audit_2026-09-15.md) · source SHA-256 `63a8cca3432c5dfdfd7c5c3b72189ad6418fc8363bf3e0bde76683d5f8ad40d1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "64bec2a2e8a6268177f4306ecc48cb87a9595364", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_paired_remainder_path_t18659_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "1942caa67021ffaa87b940006ce70ebd69b924f6e79165cd3663e79ecd63df8c"} -->
 

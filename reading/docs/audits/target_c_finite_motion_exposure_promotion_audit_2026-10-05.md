@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_finite_motion_exposure_promotion_audit_2026-10-05.md) · source SHA-256 `ddedf6ff9b0e9a3116f200625c2bd10a74bd851182362ce4cda631c9b0643253`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-354CE0B8BCDC","canonical":true,"claim_ids":["C-CENTERED-FAN-REFLECTIONS","C-TRANSLATION-LENS-EXPOSURE"],"claim_statuses":{"C-CENTERED-FAN-REFLECTIONS":"canonical","C-TRANSLATION-LENS-EXPOSURE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent promotion audit — finite fan reflections and translation-lens exposure
@@ -28,6 +28,7 @@ Let $`A`$ be a finite unit-separated planar source of diameter $`D\ge5`$. A sele
 - one actual diameter partner $`a_p`$;
 - exactly two unit-contact neighbors $`p_-,p_+`$;
 - the exact fan geometry
+  
   ```math
   |p-a_p|
   =
@@ -36,8 +37,8 @@ Let $`A`$ be a finite unit-separated planar source of diameter $`D\ge5`$. A sele
   |p_+-a_p|
   =
   D.
-  
   ```
+
 
 Let $`S`$ be an independent set of such leaves. Suppose their actual diameter midpoints
 ```math

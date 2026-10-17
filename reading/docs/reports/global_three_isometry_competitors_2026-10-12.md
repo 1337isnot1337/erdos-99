@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_three_isometry_competitors_2026-10-12.md) · source SHA-256 `11ddb9d39f44e9513831e7d40ca55693b62f8c187542c777a48a22f04788fc73`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6CBDCF3FFA63","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Three rigid motions and an unbounded full-source replacement benchmark

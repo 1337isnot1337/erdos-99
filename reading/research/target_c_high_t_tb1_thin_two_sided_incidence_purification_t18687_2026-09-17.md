@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_thin_two_sided_incidence_purification_t18687_2026-09-17.md) · source SHA-256 `0dcd05f2bd472c4a0ac54d765c76c34175eca1fbc2dfeed7cebc83990ff29342`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "ddbb16875b3207b853434460ed7b91f23a9c335d", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_thin_two_sided_incidence_purification_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "981b507aef1d2dfc459b69a936d7252186c7065f6d16dd32b07ac3b699342293"} -->
 
@@ -36,61 +36,43 @@ A finite bipartite-pattern argument removes most of that arbitrariness without m
 Then a diverging sub-braid and diverging phase-pure subfences can be selected so that `chi` is constant on each whole side.
 
 > **Two-sided incidence-purification theorem.** Let `F_D` be the braid and let `L_D,R_D` be phase-pure left and right fixed train subfences from the logarithmic braid/fence theorem. There are subsets
-> 
-
-```math
+> ```math
 > F_D'\subset F_D,\qquad L_D'\subset L_D,\qquad R_D'\subset R_D
-> 
-```
+> ```
 > of common size
-> 
-
-```math
+> ```math
 > \boxed{
 > s_D=\left({1\over4}-o(1)\right)\log_2\log D
 > }
 > \tag{IP.2}
-> 
-```
+> ```
 > and bits
-> 
-
-```math
+> ```math
 > \sigma_L,\sigma_R\in\{0,1\}
-> 
-```
+> ```
 > such that
-> 
-
-```math
+> ```math
 > \boxed{
 > \chi(e,b)=\sigma_L
 > \quad(e\in F_D',\ b\in L_D')
 > }
 > \tag{IP.3}
-> 
-```
+> ```
 > and
-> 
-
-```math
+> ```math
 > \boxed{
 > \chi(e,b)=\sigma_R
 > \quad(e\in F_D',\ b\in R_D').
 > }
 > \tag{IP.4}
-> 
-```
+> ```
 >
 > Thus the arbitrary braid/fence incidence matrix collapses to four exact global cases:
-> 
-
-```math
+> ```math
 > (\sigma_L,\sigma_R)\in
 > \{(0,0),(1,0),(0,1),(1,1)\}.
 > \tag{IP.5}
-> 
-```
+> ```
 
 At the concrete half-exponent choice from the parent theorem, all selected objects still coexist on the same
 

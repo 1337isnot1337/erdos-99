@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_free_blockers_outer_face_2026-09-17.md) · source SHA-256 `1721617bdcad8bb58345373f1e0b09e62e76e2616fe2ea4b70e0b8bb5d64eaae`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 5 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

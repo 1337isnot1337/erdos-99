@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_selected_support_regression_2026-09-09.md) · source SHA-256 `faf6e1a2316ae18ade9fdb0f3ef3d772052ebe9a45c29220aeb3b009b083f950`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9326ADF9D299","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic `d_H=2`: selected-support stress signs cannot close the phase
@@ -32,10 +32,11 @@ has a normalized KKT stress whose positive support consists of
 - all `q` unit shell contacts;
 - exactly `q-2` of its `q` actual diameter edges;
 - a diameter support graph
+  
   ```math
   \boxed{K_2\sqcup P_{q-2};}
-  
   ```
+
 - strictly positive contact coefficients on every shell side;
 - strictly positive diameter coefficients on every selected diameter edge;
 - a maximal-rank PSD scalar stress matrix with affine kernel only.

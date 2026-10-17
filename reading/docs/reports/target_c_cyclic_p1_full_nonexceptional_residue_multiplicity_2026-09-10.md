@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_p1_full_nonexceptional_residue_multiplicity_2026-09-10.md) · source SHA-256 `d171eb624d8ddd8f49fc428512223092d73d1c7a788931eea8c70414085ae3d4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 20 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

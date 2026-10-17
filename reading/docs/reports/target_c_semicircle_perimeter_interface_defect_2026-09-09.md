@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_semicircle_perimeter_interface_defect_2026-09-09.md) · source SHA-256 `5f37aeac6edf2548f50a457074cc56f5fd86d7d326e3d9f19722085235e7289f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 6 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-3F6CE6727654","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — semicircle carrier perimeter forces linear loaded-interface face defect
@@ -60,7 +62,6 @@ Q_{int}
 (\pi-2+o(1))D.
 }
 \tag{SI.2}
-
 ```
 
 UF at the full-core endpoint gives
@@ -75,7 +76,6 @@ Q
 =(1.3901687762\ldots-o(1))D.
 }
 \tag{SI.3}
-
 ```
 
 Every bounded face of the full contact graph that is not internal to an unloaded component is incident to a loaded terminal. Therefore, if `Q_B` denotes the total degree excess of bounded faces incident to `B_+`,
@@ -91,12 +91,11 @@ Combining SI.2--SI.3 yields the explicit interface obligation
 Q_B
 \ge
 \left[
-2-\frac{4\pi}{5}+rac45\sqrt\Delta-o(1)
+2-\frac{4\pi}{5}+\frac45\sqrt\Delta-o(1)
 \right]D
 =(0.2485761226\ldots-o(1))D.
 }
 \tag{SI.4}
-
 ```
 
 Thus the cap-minimal full-core survivor cannot hide all of its linear exceptional-face defect inside the two dense half-disk carriers. A definite linear amount must live on the loaded boundary/interface itself.
@@ -182,7 +181,6 @@ Perimeter is continuous under Hausdorff convergence of planar convex bodies, so
 1+\frac\pi2.
 }
 \tag{1.4}
-
 ```
 
 The `1` is the flat diameter edge of the limiting semicircle and `pi/2` is its half-circular arc.
@@ -213,7 +211,6 @@ Combining with (1.4),
 1+\frac\pi2-o(1).
 }
 \tag{2.2}
-
 ```
 
 This is stronger in the present semicircle geometry than Eppstein's shape-free isoperimetric outer-face lower bound.
@@ -253,10 +250,9 @@ Eliminating `f_i` yields the exact identity
 ```math
 \boxed{
  e_i
-=2n_i-2-rac{k_i+Q_i}{2}.
+=2n_i-2-\frac{k_i+Q_i}{2}.
 }
 \tag{SI.5}
-
 ```
 
 This is the component-level version of the familiar global triangle-free face ledger.
@@ -279,7 +275,6 @@ Insert SI.5:
 =\frac{k_i+Q_i}{2}-\delta_i.
 }
 \tag{4.1}
-
 ```
 
 TS gives `delta_i/D->1`, while (2.2) gives `k_i/D>=1+pi/2-o(1)`. Hence
@@ -292,7 +287,6 @@ TS gives `delta_i/D->1`, while (2.2) gives `k_i/D>=1+pi/2-o(1)`. Hence
 +\frac{Q_i}{2}.
 }
 \tag{4.2}
-
 ```
 
 Summing `i=1,2` and discarding all other nonnegative `r_r` gives SI.1:
@@ -474,7 +468,7 @@ UF gives in the near-circle branch
 ```math
 \frac QD
 \ge
-\frac\pi5+rac45\sqrt{\Delta-\zeta}-o(1).
+\frac\pi5+\frac45\sqrt{\Delta-\zeta}-o(1).
 ```
 
 At full core `zeta=0`,
@@ -483,7 +477,7 @@ At full core `zeta=0`,
 \boxed{
 \frac QD
 \ge
-\frac\pi5+rac45\sqrt\Delta-o(1).
+\frac\pi5+\frac45\sqrt\Delta-o(1).
 }
 \tag{8.1}
 ```
@@ -494,9 +488,9 @@ Subtract SI.2 using (7.4):
 \begin{aligned}
 \frac{Q_B}{D}
 &\ge
-\frac\pi5+rac45\sqrt\Delta-(\pi-2)-o(1)\\
+\frac\pi5+\frac45\sqrt\Delta-(\pi-2)-o(1)\\
 &=
-2-\frac{4\pi}{5}+rac45\sqrt\Delta-o(1).
+2-\frac{4\pi}{5}+\frac45\sqrt\Delta-o(1).
 \end{aligned}
 ```
 

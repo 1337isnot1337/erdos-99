@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_post_zf_cyclic_endpoint_stress_polytope_2026-09-09.md) · source SHA-256 `9789e0b114104d3e4f057ba39915f48b5147b4b327390a964ce7c61801c97e70`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 16 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_paired_gap_cubic_capacity_2026-09-10.md) · source SHA-256 `4bce611fd089f661d6df24a6391c45882549166b551d50d00989e538aa2eac84`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9DE1FC330303","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — paired cyclic gaps constrain the DD cubic moment

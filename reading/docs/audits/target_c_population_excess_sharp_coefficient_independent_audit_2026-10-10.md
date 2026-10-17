@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_population_excess_sharp_coefficient_independent_audit_2026-10-10.md) · source SHA-256 `e795de8e2d3f65592921cf39a2c4462da9e4269e7beb24a2c8d014c745836a41`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-618AB04808AD","canonical":true,"claim_ids":["C-GLOBAL-POPULATION-EXCESS-ASYMPTOTIC-COEFFICIENT"],"claim_statuses":{"C-GLOBAL-POPULATION-EXCESS-ASYMPTOTIC-COEFFICIENT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.243 — explicit asymptotic coefficient for the population reserve

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_global_switch_caterpillar_monotone_resultants_t18687_2026-09-17.md) · source SHA-256 `a7416599628dda00ef82d46153fd8c239a73102f2a0c1005a709dcc60dbd7293`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

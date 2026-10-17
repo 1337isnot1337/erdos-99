@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fixed_star_stress_light_cusps_2026-10-01.md) · source SHA-256 `4014a32eeb27aad097050777811c6f105faa1ec64481a14c63bc6ca83d68beea`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9C799633F928","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fixed_star_stress_light_cusps_2026-10-01.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=70aab133c2e3e05a7b6ce8f4c3f12ae5e0d257b9; lifecycle=unreviewed; canonical=false -->

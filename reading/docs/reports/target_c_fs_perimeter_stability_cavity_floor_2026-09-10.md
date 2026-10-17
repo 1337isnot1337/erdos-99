@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fs_perimeter_stability_cavity_floor_2026-09-10.md) · source SHA-256 `0b87b770e88dbf103669e1a050c2b5a18bf49bddaf4419c95fef6e44a2a89574`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7548F05BBBB0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fs_perimeter_stability_cavity_floor_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=ff15a8339ce66fe679de1d05750fa0c9427a3d62; lifecycle=unreviewed; canonical=false -->
@@ -774,16 +774,13 @@ the scalar optimizer.
 
 > **PS endpoint incompatibility.** Exclude every unbounded post-ZF survivor sequence
 > with
-> 
-
-```math
+> ```math
 > \frac{e_{BB}+2s_C}{D}\to\lambda_{PS},
 > \quad
 > \frac hD\to y_0,
 > \quad
 > \frac{P_F}{D}\to2y_0,
-> 
-```
+> ```
 > by combining the equality conditions in Lemma PS.1, FS.4, FSDB, GU, and JC, or
 > construct a strict sub-`D` competitor.
 

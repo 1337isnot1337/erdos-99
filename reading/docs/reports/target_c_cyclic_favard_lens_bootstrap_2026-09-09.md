@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_favard_lens_bootstrap_2026-09-09.md) · source SHA-256 `571fac9ecb0fb1530caf13f26af349b3b76dd16970fa852aa0256dda4743c835`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 19 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

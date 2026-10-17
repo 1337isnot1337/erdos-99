@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_extreme_loaded_terminal_inheritance_2026-09-10.md) · source SHA-256 `c4411386c8a3c10e5a4ba8c07004fba595775673b0f633b3406b9afb9ee67c23`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-675D8627F67A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — loaded-terminal inheritance for extreme positive circuits

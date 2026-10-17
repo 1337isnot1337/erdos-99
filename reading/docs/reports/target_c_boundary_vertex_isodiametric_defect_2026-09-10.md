@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_boundary_vertex_isodiametric_defect_2026-09-10.md) · source SHA-256 `9f789bce9e4a65078d17e70b0e659c58d5e5fbd987c43c576dd8273b9d6ad337`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

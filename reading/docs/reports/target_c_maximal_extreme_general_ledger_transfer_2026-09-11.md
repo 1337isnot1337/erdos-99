@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_maximal_extreme_general_ledger_transfer_2026-09-11.md) · source SHA-256 `906d68679dc872808ceca39119dbc9034f34495521a802dab4fc22d761a57430`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0E6BE01F1F1B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_maximal_extreme_general_ledger_transfer_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=20f59747b9c0d91a80603233b52f335d3fb13482; lifecycle=unreviewed; canonical=false -->

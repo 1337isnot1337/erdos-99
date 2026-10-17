@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_universal_outer_supported_finite_manifold_2026-09-14.md) · source SHA-256 `2d1e2ca6625426c1d88f170819643659af460ce5fa4c907998145d45561b117d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e0c8c473f10c07eee02bdb74a475e27083315d5a", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_universal_outer_supported_finite_manifold_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "bac6e0633ae90fd49840bf802594b7aacded07975d283f8c07b4be4219f6af53"} -->
 

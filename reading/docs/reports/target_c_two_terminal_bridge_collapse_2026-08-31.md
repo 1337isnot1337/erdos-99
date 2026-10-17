@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_two_terminal_bridge_collapse_2026-08-31.md) · source SHA-256 `3a2e47d6036e7c919ac0614ec08e1550540b7a3bcdefa0bfab15ee00fed34efd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6331540B52A9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C addendum: two-terminal bridge collapse and reaction budget
@@ -236,11 +236,12 @@ Let `K` be a nonempty vertex set in the positive contact component.  Assume:
 
 1. the induced positive-contact graph `C_+[K]` is connected;
 2. exactly two positive-contact edges leave `K`, say
+   
    ```math
    aa',\qquad bb',
    \tag{C22.15}
-   
    ```
+
    with `a,b in K` and `a',b' notin K`; and
 3. `K cap B_+` is empty.
 

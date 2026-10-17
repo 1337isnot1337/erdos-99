@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_six_endpoint_sign_cone_regression_2026-08-31.md) · source SHA-256 `e3ed66a15dbef79ab46ad8d294c4315f86c60ba19d6f3d1ff9ebea0df183740a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-52222279AB14","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C: six-endpoint sign-cone regression

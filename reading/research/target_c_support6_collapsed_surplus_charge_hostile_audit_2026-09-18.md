@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_collapsed_surplus_charge_hostile_audit_2026-09-18.md) · source SHA-256 `8c491ad5f194ce40909f7a263d0ef509daf143a0e945c17324d3385c25dce359`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "55786585e5ead514005a973403a5d54fb96de8f1", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_collapsed_surplus_charge_hostile_audit_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "e7f2d58be28ebe37e6234e4932bd1fcb1e8926d6126d519be837efe69bd2b6c9"} -->
 

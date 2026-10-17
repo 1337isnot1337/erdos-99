@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_short_unit_wall_zero_capacity_promotion_audit_2026-10-05.md) · source SHA-256 `b920d0e04e244e30d73e1b7bc9b00e81075367e97374f2954c05af08e74d22eb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-59F0E269BB18","canonical":true,"claim_ids":["C-SHORT-WALL-ZERO-CAPACITY"],"claim_statuses":{"C-SHORT-WALL-ZERO-CAPACITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent promotion audit — short unit-wall zero-capacity theorem

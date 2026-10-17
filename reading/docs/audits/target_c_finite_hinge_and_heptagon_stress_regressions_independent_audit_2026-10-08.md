@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_finite_hinge_and_heptagon_stress_regressions_independent_audit_2026-10-08.md) · source SHA-256 `b4de6361f02b2459f52eee6418460312455018372c6754d65a6783db3e2e1100`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8FA0E7BA966B","canonical":false,"claim_ids":["C-HEPTAGON-PSD-STRESS-FINITE-COMPETITOR-REGRESSION","C-TWO-POINT-HINGE-RANK-FINITE-FLEX-REGRESSION"],"claim_statuses":{"C-HEPTAGON-PSD-STRESS-FINITE-COMPETITOR-REGRESSION":"regression","C-TWO-POINT-HINGE-RANK-FINITE-FLEX-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent audit: finite hinge and heptagon stress regressions

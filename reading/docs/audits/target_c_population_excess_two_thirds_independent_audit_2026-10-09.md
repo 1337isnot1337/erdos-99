@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_population_excess_two_thirds_independent_audit_2026-10-09.md) · source SHA-256 `ba943494a1b8bf7e26b1ab36df093be51d41cbfa7bd737524c595337d5b5fa02`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E2759D9C2661","canonical":true,"claim_ids":["C-GLOBAL-POPULATION-EXCESS-TWO-THIRDS-RESERVE"],"claim_statuses":{"C-GLOBAL-POPULATION-EXCESS-TWO-THIRDS-RESERVE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.199 — two-thirds global population reserve

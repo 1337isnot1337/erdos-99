@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_all_surplus_extension_2026-09-11.md) · source SHA-256 `8d1e0f7adbd1e7476f24d768239c61cafa7042eb61fc529cf76894638a049216`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AB49E50DD703","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 - cyclic Reuleaux and atomic transport for arbitrary mixed surplus
@@ -27,14 +27,11 @@ The resulting all-surplus theorem is:
 > **Theorem CX.**  Let an unbounded sequence of lexicographically normalized
 > triangle-free C-II survivors have Woodall cyclic diameter topology, so `d_H=0`
 > but `s_Z` is arbitrary.  Put
-> 
-
-```math
+> ```math
 > \lambda_D={e_{BB}+2s_C\over D},\qquad
 > \kappa_D={s_Z\over D},\qquad
 > \nu_D={e_{BB}+2s_C-3s_Z\over D}=\lambda_D-3\kappa_D.
-> 
-```
+> ```
 > Then:
 > 1. `P_F=pi D-O(sqrt(D))`, `b-P_F=O(sqrt(D))`, and
 >    `area(F)/D^2 -> pi/4`;
@@ -44,24 +41,22 @@ The resulting all-surplus theorem is:
 >    inequalities in Section 6 below;
 > 5. in particular
 >    
-
-```math
+>    ```math
 >    \liminf \lambda_D\ge
 >    \lambda_A=
 >    {\pi\over\sqrt{\pi^2+
 >    (5/4-\sqrt{\pi/(2\sqrt3)})^2}}
 >    =0.9955405845835427\ldots;
->    
-```
+>    ```
+
 > 6. equality at `lambda_A` is impossible even when `s_Z` is not identically zero.
 >    Hence there are absolute `epsilon_CX>0` and `D_0` such that every sufficiently
 >    large cyclic post-ZF survivor satisfies
 >    
-
-```math
+>    ```math
 >    {e_{BB}+2s_C\over D}\ge\lambda_A+\epsilon_{CX}.
->    
-```
+>    ```
+
 
 This is a genuine extension of the September 10 atomic result: it covers the positive
 mixed-surplus cyclic branch, including sequences with `s_Z>0` and regular-shell-type

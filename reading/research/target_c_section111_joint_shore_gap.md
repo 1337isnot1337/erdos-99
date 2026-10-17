@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section111_joint_shore_gap.md) · source SHA-256 `0e01dd96da311251153293d2c474673c66cd51c01ecd1d3ad9901ed1150b3185`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

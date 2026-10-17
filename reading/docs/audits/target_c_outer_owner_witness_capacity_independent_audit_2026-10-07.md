@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_outer_owner_witness_capacity_independent_audit_2026-10-07.md) · source SHA-256 `6d931987d6a6c2a3ff8d7c3d1a159b46b03b98d264fd2aac342bde1d9be8fea4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-41F4346A9F94","canonical":true,"claim_ids":["C-OO-LOWER-WITNESS-OWNER-CAPACITY"],"claim_statuses":{"C-OO-LOWER-WITNESS-OWNER-CAPACITY":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.106 — outer-owner lower-witness capacity

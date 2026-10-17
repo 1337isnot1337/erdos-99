@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_interface_budget_collective_chamber_2026-09-14.md) · source SHA-256 `c16e9b07323d560757ed22fb781ddd65f3063c75059a59f32ce75e9cf464b802`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0631B22417F7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_interface_budget_collective_chamber_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=3066c4af3bdd31321f6bd68568ddb8eff3f5aa8c; lifecycle=unreviewed; canonical=false -->

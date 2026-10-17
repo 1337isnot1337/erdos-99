@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_b_local_virtual_area_interface_audit_2026-09-05.md) · source SHA-256 `ee9b02d4248c2ffa014e7502742133ebde26cd5495c0a1dad38a86f07820bbea`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a3bd3a75fe29a77c74cc14c1229d82ce4392c379", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/audits/target_b_local_virtual_area_interface_audit_2026-09-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "21db29dc1c040d74fddb094bf7e6c5cbcb48b8fa567f9ddb09201ab993e6b517"} -->
 

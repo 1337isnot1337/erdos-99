@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_reinhardt_force_bulk_closure_2026-09-09.md) · source SHA-256 `7713635d0bb3ff08dcb1fba3ab07b2fef283cdf2adbc028785bb0dacae48740c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-18C18FE66D37","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact cyclic Reinhardt phase has no external force-hull population
@@ -302,10 +302,11 @@ No regularity of `R` is used. Each force-hull side still cuts a radius-`D` unit-
 The exact `d_H=0` cyclic survivor is now reduced to:
 
 - a unit-side Reinhardt polygon `F=conv A` with
+  
   ```math
   D=1/(2\sin(\pi/(2q)));
-  
   ```
+
 - a positive contact graph consisting only of its boundary cycle;
 - a canonical uniform full-support stress from US;
 - `n-q=Theta(D^2)` actual source points strictly inside `F`, all contact-isolated in the C65 representative;

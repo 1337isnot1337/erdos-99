@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_one_deficit_isolate_accounting_second_referee_2026-10-10.md) · source SHA-256 `0b1d2611ed51dc22117a35f67ce8a3620f4b41bc075f827d9f55f8973c475493`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F80457D8F1E2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C second referee — one-deficit source exchange and isolate accounting

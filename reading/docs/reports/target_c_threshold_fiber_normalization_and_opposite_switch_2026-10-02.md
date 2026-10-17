@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_threshold_fiber_normalization_and_opposite_switch_2026-10-02.md) · source SHA-256 `8b9ed5958a01d567184a948028992eb9304f3d5952494d31cdf94d4f18530ea7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E4D0A5DA7249","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- normalize threshold fiber splitting and couple it to the opposite shore
@@ -64,20 +64,22 @@ The only facts imported are:
 - the simple threshold gap graph T is a tree on 0,...,m;
 - every simple edge {a,b}, a<b, has two distinct physical diameter
   representatives
+  
   ```math
   L_aU_b,\qquad L_bU_a;
-  
   ```
+
 - all those representatives and the parallel full-support diameter h_0 cross one
   common retained train;
 - the resulting physical graph F is a forest;
 - for the two shores A,B of the complete O--O rectangle, every actual diameter
   edge h satisfies
+  
   ```math
   t_A(h)+t_B(h)\le2,
   \tag{2}
-  
   ```
+
   where t_A,t_B count internal adjacent selected interfaces at which signed cut
   incidence changes.
 

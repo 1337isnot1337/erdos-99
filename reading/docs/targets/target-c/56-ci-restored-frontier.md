@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/56-ci-restored-frontier.md) · source SHA-256 `7289f07ee1afbf24584c8c6a7d8c7df20a63598e86f5aa106eb657f530c1d551`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — C-I restored; C-II remains the global gate
 

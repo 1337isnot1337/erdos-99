@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_post_descent_weak_wall_refill_capacity_plateau_2026-10-08.md) · source SHA-256 `43e0b4b0414b5e9fa87ae31bb20b4bc162af73ac4e085d9b70c740c69cc38910`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-270DA1D0C535","canonical":true,"claim_ids":["C-NEAR-TRIANGULAR-WALL-CAPACITY-PLATEAU-REGRESSION","C-NONCONTACT-WALL-WEAK-SHIELD","C-POST-DESCENT-WEAK-WALL-REFILL","C-UNIT-SEPARATED-MOVING-WALL-CROSSING-BARRIER"],"claim_statuses":{"C-NEAR-TRIANGULAR-WALL-CAPACITY-PLATEAU-REGRESSION":"regression","C-NONCONTACT-WALL-WEAK-SHIELD":"canonical","C-POST-DESCENT-WEAK-WALL-REFILL":"canonical","C-UNIT-SEPARATED-MOVING-WALL-CROSSING-BARRIER":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C: weak wall refill after descent and a capacity plateau

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_endpoint_outer_walk_geodesic_collapse_mu4_2026-09-12.md) · source SHA-256 `623da2e2037a1ba8e5d9d7add588de71950673d0dbe7af450bca24c824f9e6da`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7719BC1E31F3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C — Section-96 endpoint outer-walk geodesic collapse at `mu_4`

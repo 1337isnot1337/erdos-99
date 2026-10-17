@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_angular_surplus_bounded_variation_chart_independent_audit_2026-10-09.md) · source SHA-256 `be577aa3325026703aa20904d5ad3a7f954ac75768d34ddeedf6951c5e25367f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-77784B652D48","canonical":true,"claim_ids":["C-ANGULAR-SURPLUS-BOUNDED-SHORE-VARIATION","C-TYPEII-ACTUAL-RHOMBUS-CHART-EXCLUSION"],"claim_statuses":{"C-ANGULAR-SURPLUS-BOUNDED-SHORE-VARIATION":"canonical","C-TYPEII-ACTUAL-RHOMBUS-CHART-EXCLUSION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.215 — angular surplus forces bounded chart variation

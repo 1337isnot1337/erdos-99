@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/README.md) · source SHA-256 `2865f3e52893aaf6b7d0ad45a4133894896698241f9de9cb3a5e74251c64aa1a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — source capacity and bridge-forest route
 
@@ -201,21 +201,24 @@ separator/source refinements.
    `Y_in` has a source match, every Schur terminal has a distinct source label, and all
    but at most `12D+9` response-lattice vertices see a deep source monomer/lozenge
    cell. Section 176 sharpens the source geometry further:
+   
    ```math
    r=m^*-|A^0\cap K^*|\le12d+9,
-   
    ```
+
    and for any finite contact shield the saturating source matching is sector-local
    outside at most
+   
    ```math
    5|V(\Sigma)|+12d+9
-   
    ```
+
    response vertices. Section 177 additionally gives at least
+   
    ```math
    \frac1{10}\max\{0,|C^\partial|+|O|-20d-25\}
-   
    ```
+
    pairwise disjoint actual `C^partial-A^0-O` source gates. These gates are a
    transport resource, not Schur nullity by themselves.
 2. **Actual-response locked branch.** A locked unit triangle can be taken in the

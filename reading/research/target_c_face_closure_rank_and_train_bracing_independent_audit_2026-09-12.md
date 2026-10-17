@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_face_closure_rank_and_train_bracing_independent_audit_2026-09-12.md) · source SHA-256 `2ea7a32bf6f36ad0444cc9ea94dd4fc367f084dd32b7764d0a271179f82586bb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "700c2fc1fa4183ad9b3d1de853ef428eaeb72441", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_face_closure_rank_and_train_bracing_independent_audit_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "16c9274dabff6ae93819a495e450b4548c0dcd0e42c51ca2410951b81ee71168"} -->
 

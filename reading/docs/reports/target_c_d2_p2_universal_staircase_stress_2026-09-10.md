@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_d2_p2_universal_staircase_stress_2026-09-10.md) · source SHA-256 `b680719f151ef630de5f1acea8347aecf3f6cb1eae6e760184bbd8abe3fe9c90`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -39,23 +39,26 @@ Then `0<c_D<1`.
 For every P2 survivor with both staircase bodies nontrivial, the unique positive KKT stress, under the normalization `alpha=1` on the four transition contacts, is:
 
 1. every shell contact internal to one of the four blocks has
+   
    ```math
    \boxed{\alpha=c_D;}
    \tag{US.2}
-   
    ```
+
 2. in either diameter-direction block, every interior diameter state has
+   
    ```math
    \boxed{\beta_{\rm int}=\frac{c_D}{D^2};}
    \tag{US.3}
-   
    ```
+
 3. each extreme diameter state adjacent to a cross-tree switch has
+   
    ```math
    \boxed{\beta_{\rm end}=\frac{1+c_D/2}{D^2}.}
    \tag{US.4}
-   
    ```
+
 
 If one tree is the one-edge `K_2` component, its single diameter state is both extremes and has
 

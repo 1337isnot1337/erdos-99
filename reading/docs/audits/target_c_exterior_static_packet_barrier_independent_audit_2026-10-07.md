@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_exterior_static_packet_barrier_independent_audit_2026-10-07.md) · source SHA-256 `3e55eb4e54a619ac808207b9733d357a8dc76b619a9614dbf2dcbb455a4babe3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BDC0CB5E5AF4","canonical":true,"claim_ids":["C-EXTERIOR-STATIC-PACKET-BARRIER"],"claim_statuses":{"C-EXTERIOR-STATIC-PACKET-BARRIER":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.110 — exterior static-packet barrier

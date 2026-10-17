@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_four_endpoint_three_diameter_response_2026-08-31.md) · source SHA-256 `994a43aeb5369400b7f8c79ef3ded64a72cf8841bc03e50fddb22578581250ef`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0CE14B464EF7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_four_endpoint_three_diameter_response_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=a347bf528d2d6aca92fb9aebb15051ab86f2beb9; lifecycle=unreviewed; canonical=false -->

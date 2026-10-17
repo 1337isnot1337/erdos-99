@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_curved_wall_independent_audit_2026-10-06.md) · source SHA-256 `651126d56d55b0eca7c0e95c5a9e8d8adfa0798a6dc8a74cead2aa6d3312b1c5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-ADA0260F528E","canonical":true,"claim_ids":["C-CURVED-WALL-BLOCKER-POPULATION","C-CURVED-WALL-ISOLATE-PRESERVING-RELEASE","C-CURVED-WALL-NONISOLATE-BLOCKER-REGRESSION"],"claim_statuses":{"C-CURVED-WALL-BLOCKER-POPULATION":"canonical","C-CURVED-WALL-ISOLATE-PRESERVING-RELEASE":"canonical","C-CURVED-WALL-NONISOLATE-BLOCKER-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent promotion audit — curved unit-wall inward release

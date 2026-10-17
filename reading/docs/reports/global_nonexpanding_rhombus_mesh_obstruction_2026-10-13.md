@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_nonexpanding_rhombus_mesh_obstruction_2026-10-13.md) · source SHA-256 `c022585deda5378ee06b0137f85fd27e2c63c8ebd73f0350d7410df590cb6045`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "58b9ebcd96253241332b445086ff6c224c6ba77b", "source_head": "3a80b4bd2d75a439835ab26a863521816a0f39d1", "source_lifecycle": "unreviewed", "source_path": "docs/reports/global_nonexpanding_rhombus_mesh_obstruction_2026-10-13.md", "source_pr": 967, "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "8375175cc2dacc94dcf5fcd97af1ffe461dce2bc6a01281fff28fc25616bed79"} -->
 
@@ -144,11 +144,12 @@ A_k=V_k\cup\{p\},\qquad p=u/10,
 - there exists an independent `n_k`-point unit-separated set of diameter
   at most `2(R_k-1)<D_k`;
 - along this unbounded family,
+  
   ```math
   \lim_{k\to\infty}\frac{n_k}{D_k^2}
   =\frac{\pi}{2\sqrt3}.
-  
   ```
+
 
 Thus asymptotically triangular density and failure of every pairwise
 nonexpanding endpoint do not imply global optimality. The theorem makes no

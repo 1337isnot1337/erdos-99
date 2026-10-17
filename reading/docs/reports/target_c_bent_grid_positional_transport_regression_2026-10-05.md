@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_bent_grid_positional_transport_regression_2026-10-05.md) · source SHA-256 `18dd781c15c890bb16c6c05ba446b550dc707884873fa0de8fc6b211042f6d59`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-474B8475D298","canonical":false,"claim_ids":["C-BENT-GRID-REDUCED-POSITIONAL-TRANSPORT-REGRESSION"],"claim_statuses":{"C-BENT-GRID-REDUCED-POSITIONAL-TRANSPORT-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Target C — small train angles do not give vanishing positional transport

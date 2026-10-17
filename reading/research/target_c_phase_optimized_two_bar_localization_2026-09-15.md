@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_phase_optimized_two_bar_localization_2026-09-15.md) · source SHA-256 `d1a1e36e592d811c91aca98b0f85920c94727d5ec35e54dd4ca973ff0e725166`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "1b109ca07c76503e01554a9359a477ee0b73e1a7", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_phase_optimized_two_bar_localization_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "5ab71d09125054799cbb2ed4e9bcf60bf9e46bf83953edc64de887676d72496e"} -->
 

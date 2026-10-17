@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_collapsed_global_train_obstruction_hostile_audit_2026-09-19.md) · source SHA-256 `14b2737ed882639deafa2d2b252236d73457d089d8020a0dcbfbb8208cf95797`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "28e63969bebe37022155ec47b2325db843f22be4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_collapsed_global_train_obstruction_hostile_audit_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "6b5adac9ecb42e3d4b577b84e809732489d74e202e9f655657e8183142b24f01"} -->
 

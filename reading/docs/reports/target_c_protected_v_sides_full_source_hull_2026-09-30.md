@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_protected_v_sides_full_source_hull_2026-09-30.md) · source SHA-256 `a4ba23a2a890420f0fa93b4fbb3cfe352494e6dfa5ef7ae2157e5c2cb964e300`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4F0C6E60F150","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: short diameter-V sides protect the entire source hull

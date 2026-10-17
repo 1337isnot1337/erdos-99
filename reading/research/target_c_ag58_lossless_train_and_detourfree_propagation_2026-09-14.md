@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_ag58_lossless_train_and_detourfree_propagation_2026-09-14.md) · source SHA-256 `aca2fa31858308fbdcff0b306febc86e2bdc2d1bb119c1f5fb08fa3bcc640460`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "af47f7a8a62fe9f1d8ca5135f1b2927e3ff8032e", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_ag58_lossless_train_and_detourfree_propagation_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3007a415a71b7ad4248c1a25c87aa8a00fb3ae1a9c63fb155f57ae543958d23a"} -->
 

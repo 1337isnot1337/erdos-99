@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rooted_endpoint_phase_dispersion_rate_repair_2026-09-30.md) · source SHA-256 `333197e8789e5ae2fcfffe866ab2899dc8356ef68c919139f76e2f04be794063`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-532A034EEB45","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II: rate-free repair for rooted endpoint phase dispersion

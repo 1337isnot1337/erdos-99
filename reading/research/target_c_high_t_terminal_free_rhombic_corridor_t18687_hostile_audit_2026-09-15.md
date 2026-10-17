@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_terminal_free_rhombic_corridor_t18687_hostile_audit_2026-09-15.md) · source SHA-256 `fad11b41d6084454b9d42bf471b9e09ccb3aadf88b9c4ebd2506efb2ec86dc48`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "1b0b793cccaec9c04735f76bb099c51a0bcd5413", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_terminal_free_rhombic_corridor_t18687_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "be1821804672eb1f80f722e4c40a7993bb02c0761392428cea8a69bfad7a17c7"} -->
 

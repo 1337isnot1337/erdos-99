@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_quadratic_population_harmonic_component_2026-09-09.md) · source SHA-256 `bbf43d673a8b7427ab56c150c453537a0fa115a3eb34f8534c08a9831c22ff3d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9B8B140E5E19","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — positive-density core forces a quadratic-population harmonic component
@@ -39,7 +39,6 @@ Then
 \frac{r^2}{4\pi^2\Delta}.
 }
 \tag{QP.1}
-
 ```
 
 In the UF notation `r=Delta-zeta`, this is
@@ -52,7 +51,6 @@ In the UF notation `r=Delta-zeta`, this is
 \frac{(\Delta-\zeta)^2}{4\pi^2\Delta}.
 }
 \tag{QP.2}
-
 ```
 
 At the UF worst crossover `zeta_*=0.5572837714...`, the certified component density is
@@ -60,7 +58,6 @@ At the UF worst crossover `zeta_*=0.5572837714...`, the certified component dens
 ```math
 \boxed{0.0034139990\ldots D^2.}
 \tag{QP.3}
-
 ```
 
 At the asymptotically full-core endpoint it is at least
@@ -71,7 +68,6 @@ At the asymptotically full-core endpoint it is at least
 =0.0229720373\ldots D^2.
 }
 \tag{QP.4}
-
 ```
 
 The constants are conservative. The point is qualitative but strong: the live harmonic obstruction contains an actual positive-density two-dimensional contact component, not only a long sparse spine.

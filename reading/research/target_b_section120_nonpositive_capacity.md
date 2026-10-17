@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_b_section120_nonpositive_capacity.md) · source SHA-256 `7707437133ad1d75ba317b1393fdec5e455e0052935c5881aa6c24e2dc36e6c8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "188efaacc5ad545bf147d434aebbada6bfe9cd27", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_b_section120_nonpositive_capacity.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "eee520a132eda5b7e93b3e41ff2d7b31451beb9fda0bfa01d41824f1f6064773"} -->
 

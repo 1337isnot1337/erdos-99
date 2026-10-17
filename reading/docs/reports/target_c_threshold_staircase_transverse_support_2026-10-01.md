@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_threshold_staircase_transverse_support_2026-10-01.md) · source SHA-256 `005414f8612e8126484615c98337b4c085f54409cf387afdb65fc7aff8e4e362`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-09F6D76BBF3C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- threshold staircase couples to the opposite O--O shore
@@ -128,31 +128,35 @@ switch-budget theorem.
 For every actual diameter representative over an A-staircase cell $`C=(a,b)`$:
 
 1. If
+   
    ```math
    0<a<b<m,
    \tag{4}
-   
    ```
+
    then its two endpoints have B-layers $`0,n`$. Hence its B-support is full:
    it crosses every selected B-cut and
+   
    ```math
    t_B(h)=0.
    \tag{5}
-   
    ```
 
+
 2. If $`C`$ is proper and touches exactly one A-extreme,
+   
    ```math
    a=0<b<m\qquad\hbox{or}\qquad 0<a<b=m,
    \tag{6}
-   
    ```
+
    then $`t_A(h)=1`$, so the joint switch bound
+   
    ```math
    t_A(h)+t_B(h)\le2
    \tag{7}
-   
    ```
+
    gives $`t_B(h)\le1`$. Its B-support is therefore empty, full, a prefix, or a
    suffix. It cannot be a proper two-sided B-interval.
 
@@ -242,20 +246,22 @@ cells. Then:
 2. one of those two endpoint sheets lies in B-layer $`0`$, the other in B-layer
    $`n`$;
 3. consequently
+   
    ```math
    \boxed{
    |V(F_{\rm int})\cap\{\ell_B=0\}|\ge I+1,\qquad
    |V(F_{\rm int})\cap\{\ell_B=n\}|\ge I+1;
    }
    \tag{11}
-   
    ```
+
 4. in particular
+   
    ```math
    \boxed{|V(F_{\rm int})|\ge2I+2.}
    \tag{12}
-   
    ```
+
 
 More exactly, for each gap vertex $`k\in V(T_{\rm int})`$, let
 $`\nu_k^L,\nu_k^U`$ be the numbers of distinct selected physical endpoints in
@@ -368,22 +374,25 @@ phase this improves to
 More importantly, since $`I+s=m`$, one of the following holds exactly:
 
 1. transverse extreme-fiber concentration:
+   
    ```math
    I\ge m/2,
-   
    ```
+
    and each B-extreme layer contains at least
+   
    ```math
    \boxed{m/2+1}
-   
    ```
+
    distinct selected physical diameter endpoints;
 
 2. one-sided boundary staircase:
+   
    ```math
    s>m/2,
-   
    ```
+
    and more than half of the simple A-gap edges form one initial star run
    incident to the same extreme gap vertex $`0`$ or $`m`$.
 
@@ -534,10 +543,11 @@ exactly one of the following two classes:
 
 1. it is full-support on A; or
 2. it has
+   
    ```math
    t_A=t_B=1,
-   
    ```
+
    hence is one of the four shared-switch corner types from the joint-switch
    theorem.
 

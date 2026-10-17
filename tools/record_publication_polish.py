@@ -11,7 +11,7 @@ REASONS = {
     ".gitattributes": "Allow the exact archived audit file's pre-existing terminal blank line without changing its bytes.",
     "tools/verify_frozen_target_c_813_migration.py": "Describe the narrowly checked operational selector edit in the shared owner-manifest lineage.",
     "README.md": "Route readers through the generated math edition; expose glossary, bibliography and current release summary.",
-    "CITATION.cff": "Identify the dated 0.1.0-rc.3 release candidate.",
+    "CITATION.cff": "Identify the dated 0.1.0-rc.4 release candidate.",
     "scripts/choose_research_task.py": "Resolve prerequisite IDs through the generated authoritative graph rather than literal proof prose.",
     "docs/launch/GATE_2_VERIFICATION.md": "Replace stale PR16 status and document direct newcomer/reading checks.",
     "docs/launch/READINESS.md": "Prepend current publication status; preserve the complete previous narrative.",

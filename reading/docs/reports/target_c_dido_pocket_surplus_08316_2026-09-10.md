@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_dido_pocket_surplus_08316_2026-09-10.md) · source SHA-256 `2152876cd7c11567067c9174bd2e85e6375e1122732834459bc9330aff927657`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 9 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-79B0CDCCA1EA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — sharp Dido pocket envelope raises the post-ZF surplus floor to 0.831687
@@ -501,7 +503,7 @@ where `theta<=pi/2`. Hence
 ```math
 \frac{d}{d\nu}(\cdots)
 \le
--rac{\lambda-\nu}{\pi}+rac\nu{2\pi}
+-\frac{\lambda-\nu}{\pi}+\frac\nu{2\pi}
 =
 \frac{-\lambda+3\nu/2}{\pi}.
 \tag{5.5}
@@ -611,7 +613,7 @@ For `theta<=pi/4`, both displayed contributions make the sum positive because `2
 
 ```math
 \frac\pi4\,2\sin\frac\pi4
-=rac{\pi\sqrt2}{4}>1,
+=\frac{\pi\sqrt2}{4}>1,
 ```
 
 whereas the second is greater than `-1`. Thus (6.5) holds throughout.
@@ -643,7 +645,7 @@ For every fixed `lambda>0.58`, the necessary function `F_lambda(y)` has a unique
 ```math
 \boxed{
 \frac{g(y_\lambda)}\lambda
-=1-rac{\sin\theta_\lambda}{\theta_\lambda},
+=1-\frac{\sin\theta_\lambda}{\theta_\lambda},
 \qquad
 0<\theta_\lambda<\frac\pi2.
 }
@@ -676,7 +678,7 @@ At `lambda=0.58`, one has `m(lambda)>0`. Indeed `rho>0.7`, because `cos(0.7)>=1-
 ```math
 2\rho>1.4,
 \qquad
-\sin(2\rho)>\sin(1.4)>1.4-rac{1.4^3}{6}>0.9,
+\sin(2\rho)>\sin(1.4)>1.4-\frac{1.4^3}{6}>0.9,
 ```
 
 so
@@ -689,8 +691,8 @@ Also
 
 ```math
 \frac\pi4+\widehat f(z)
-\le\frac\pi4+rac1{2\pi}
-<\frac{11}{14}+rac16
+\le\frac\pi4+\frac1{2\pi}
+<\frac{11}{14}+\frac16
 =\frac{20}{21}.
 ```
 
@@ -698,7 +700,7 @@ Hence
 
 ```math
 F_{0.58}(y)
->0.575-rac{20}{21}(0.58)^2>0.
+>0.575-\frac{20}{21}(0.58)^2>0.
 \tag{7.2}
 ```
 
@@ -729,7 +731,7 @@ satisfying
 ```math
 \boxed{
 \frac{g(y_*)}{\lambda_{DIDO}}
-=1-rac{\sin\theta_*}{\theta_*},
+=1-\frac{\sin\theta_*}{\theta_*},
 }
 \tag{7.4}
 ```

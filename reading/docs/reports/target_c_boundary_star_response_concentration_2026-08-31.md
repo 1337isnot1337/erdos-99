@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_boundary_star_response_concentration_2026-08-31.md) · source SHA-256 `f240a0e0c83be9e4f16571385109bc5d13f31f02b81ca64d56fb7cb55bdfabf7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AA20F42D5220","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C70: mechanical stress-star concentration forces boundary-response starization

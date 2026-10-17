@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../docs/KNOWLEDGE_MAP.md) · source SHA-256 `f11f1966f60aaf1c324feb556fe597c31232e8400cf163a99fdf734a4ce17f90`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Research map
 

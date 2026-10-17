@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_train_population_dichotomy_2026-09-09.md) · source SHA-256 `a0dac7c415690f3afb9069edc007c49457e1b74977ba19757be243f5191fa236`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 4 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-D746BB355615","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — train/perimeter core-population dichotomy
@@ -249,7 +251,7 @@ Along every subsequence with `h/D->x`,
 \boxed{
 \liminf\frac{n-v}{D^2}
 \ge
-\Delta-rac14\left(3x-4\cos\frac x2\right)^2.
+\Delta-\frac14\left(3x-4\cos\frac x2\right)^2.
 }
 \tag{ZP.7}
 ```
@@ -282,7 +284,7 @@ At the smallest diameter-edge density allowed by the new perimeter bootstrap, `x
 
 ```math
 \boxed{
-\Delta-rac14A(\tau_*)^2
+\Delta-\frac14A(\tau_*)^2
 =0.3606528479\ldots .
 }
 \tag{ZP.9}
@@ -302,12 +304,14 @@ n-v=o(D^2).
 The reviewed proof of DF establishes two facts in this branch:
 
 1. after scaling by `D`, the force/contact-core hull converges to the disk of diameter one, hence
+   
    ```math
    \frac{\operatorname{per}(F)}D\longrightarrow\pi;
    \tag{5.2}
-   
    ```
+
 2. the exceptional-face count obeys
+   
    ```math
    \liminf\frac fD
    \ge
@@ -317,8 +321,8 @@ The reviewed proof of DF establishes two facts in this branch:
    \sqrt\Delta-\frac\pi4
    =0.166914643466509\ldots .
    \tag{5.3}
-   
    ```
+
 
 Since `Q>=f`, `b>=per(F)`, and a ZF survivor has `b+Q<=2h`,
 
@@ -327,7 +331,7 @@ Since `Q>=f`, `b>=per(F)`, and a ZF survivor has `b+Q<=2h`,
 \ge
 \frac{b}{D}+\frac{Q}{D}
 \ge
-\frac{\operatorname{per}(F)}D+rac fD.
+\frac{\operatorname{per}(F)}D+\frac fD.
 ```
 
 Take lower limits.
@@ -340,7 +344,7 @@ Every post-ZF sequence with `n-v=o(D^2)` satisfies
 \boxed{
 \liminf\frac hD
 \ge
-\frac\pi2+rac12
+\frac\pi2+\frac12
 \left(\sqrt\Delta-\frac\pi4\right)
 =1.6542536485\ldots .
 }

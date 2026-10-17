@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/problem/literature_archit_das_stress_rhombic_audit_2026-10-08.md) · source SHA-256 `554b1ec5a0aa25342eb319a0879d2fb2c4fb25046cbc13eeb4dabf9a64c362c7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Independent audit of new literature: Das, stress and rhombic reductions (2026)
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/audit-target-a-section175-177.md) · source SHA-256 `0edd4ba9556273cb3221f826e96c26837851f2f1cbd099d8511966f32ec7e334`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # audit-target-a-section175-177
 

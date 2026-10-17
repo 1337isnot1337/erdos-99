@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_full_source_voronoi_spacing_debit_independent_audit_2026-10-08.md) · source SHA-256 `0f90714a15ee3513ccdbb7a1f152e6a4cf9917295522d7ffdd21bcb23df98aab`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-9AC44B910DDA","canonical":true,"claim_ids":["C-CANONICAL-NEAR-ISOLATE-POPULATION-BOUND","C-CONTACT-MINIMAL-HULL-COVERAGE","C-CONVEX-POLYGON-ANGULAR-AREA-BOUND","C-FULL-SOURCE-SPACING-DEBIT","C-UNIT-VORONOI-CELL-AREA-SURPLUS"],"claim_statuses":{"C-CANONICAL-NEAR-ISOLATE-POPULATION-BOUND":"canonical","C-CONTACT-MINIMAL-HULL-COVERAGE":"canonical","C-CONVEX-POLYGON-ANGULAR-AREA-BOUND":"canonical","C-FULL-SOURCE-SPACING-DEBIT":"canonical","C-UNIT-VORONOI-CELL-AREA-SURPLUS":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.163 — full-source Voronoi population bounds

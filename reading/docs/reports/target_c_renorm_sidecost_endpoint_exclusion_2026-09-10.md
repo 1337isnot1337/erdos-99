@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_renorm_sidecost_endpoint_exclusion_2026-09-10.md) · source SHA-256 `ed65a4b58538894902e7ccc9a6c4ba99a116d05ec9afe52ec8395eb78fc87866`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-728E3401BA52","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — taut-side saturation excludes the `mu_SC` endpoint
@@ -68,7 +70,7 @@ The defining scalar equality is
 \boxed{
 \Phi(y_*)
 =
-\frac\pi4\mu_{SC}^2+rac{m_*^2}{4\pi},
+\frac\pi4\mu_{SC}^2+\frac{m_*^2}{4\pi},
 }
 \tag{1.5}
 ```

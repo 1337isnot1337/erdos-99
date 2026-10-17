@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_h7b_nonnegative_closure_defect_2026-09-19.md) · source SHA-256 `f5cbec81de626d6e77caaac3daf20601c24f37d98031fc2bcf1b37ffcdd3dd80`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b1b9b4b4b394e2da111da2f800897d9282be83c0", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_h7b_nonnegative_closure_defect_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "cbf8898b75b5f5b7c60ebad994fe9d8dc25c6bb2c82b5809646f2c8f6cce1de3"} -->
 

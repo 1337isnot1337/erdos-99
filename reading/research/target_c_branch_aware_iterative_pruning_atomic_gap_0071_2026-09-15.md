@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_2026-09-15.md) · source SHA-256 `efe39d4523271be966ad4264959f8fa04474df6832d9bcd9fcc5513151b47ba6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

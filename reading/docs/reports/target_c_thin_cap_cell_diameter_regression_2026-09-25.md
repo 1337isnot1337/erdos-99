@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_thin_cap_cell_diameter_regression_2026-09-25.md) · source SHA-256 `d196592f0b9f27e1b4bb017ce5812923cce61af487fda34b0d4bb5f562aa68d0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7809076E5F73","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — thin cap cells separate diameter budget from rhombus area
@@ -62,6 +62,7 @@ vertices of `F_q`, such that:
 4. one cell has diameter exactly `D_q` and area
    `pi D_q^2/4-O(D_q)`, while all other cells together have area `O(D_q)`;
 5. nevertheless
+   
    ```math
    \frac1{D_q}\sum_r\operatorname{diam}(P_{r,q})\longrightarrow1+c,
    \qquad
@@ -69,8 +70,8 @@ vertices of `F_q`, such that:
      \frac{\operatorname{area}(P_{r,q})}
           {\operatorname{diam}(P_{r,q})}
        \longrightarrow\frac\pi4.
-   
    ```
+
 
 The polygon-dissection deficit of Section 123 is zero for this partition:
 `q-2-sum_r(a_r-2)=0`, where `a_r` is the number of vertices of `P_r`.

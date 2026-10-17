@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md) · source SHA-256 `54c93dfec11d5b3ef7aea5cb65fc4624c2758e9e911fe9c73fe99f00542e36e1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5AF8246B929B","canonical":true,"claim_ids":["C-ALMOST-ACCESSIBLE-STRESS-TRANSVERSAL"],"claim_statuses":{"C-ALMOST-ACCESSIBLE-STRESS-TRANSVERSAL":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: almost-accessible stress transversal

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_p1_sign_residue_law_2026-09-10.md) · source SHA-256 `034b43b887a8439ca72061edf0dadcdf0ca57a53bf6e9dcadd1b7482ba2168a2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 20 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -575,10 +575,11 @@ The remaining arithmetic problem has acquired an extra exact constraint:
 2. `B` divides the explicit sign-residue polynomial in SRL.2;
 3. `h(2)=1`, so `D^{-2}=2-Y` is a norm-one algebraic unit;
 4. modulo three, `M` divides
+   
    ```math
    (Z^{m-1}+1)(Z^{m+1}+1).
-   
    ```
+
 
 For `r=1`, every surviving factor has `deg M<=m-3`. The shortest next theorem is to combine SRL.2 with the restricted star-run/sign-change structure from the cyclic tree geometry, rather than treating `Q` as an arbitrary `0/1` polynomial.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_unreviewed_findings_hostile_audit_2026-09-13.md) · source SHA-256 `1b0e24d6a67d7412aa2f2bf8a33b8c3f135287bfa422aefcaa7221129e5c1f61`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E6EA510B8930","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — three unreviewed Target C-II findings

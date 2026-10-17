@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_s1_q13_kkt_psd_regression_2026-09-10.md) · source SHA-256 `a1313b6c1169966d126958c4565d5e4c8a620f43ed05e25f57ee8f8caf56b22b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-24F04EF50937","canonical":false,"claim_ids":["C-S1-Q13"],"claim_statuses":{"C-S1-Q13":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Erdős Problem #99 — a q=13 S1 shell survives closure, full KKT, rigidity, and PSD

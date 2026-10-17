@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_collective_wall_capacity_independent_audit_2026-10-06.md) · source SHA-256 `4b1c479561506b2cbc7cea6cd5fbecd35b00823284cda302cac8b7af84ab9eb4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5E2C7541EF5C","canonical":true,"claim_ids":["C-COLLECTIVE-WALL-DELETION-BANK","C-COLLECTIVE-WALL-EXTERIOR-SHIELD","C-HEPTAGON-WALL-CAPACITY-REGRESSION"],"claim_statuses":{"C-COLLECTIVE-WALL-DELETION-BANK":"canonical","C-COLLECTIVE-WALL-EXTERIOR-SHIELD":"canonical","C-HEPTAGON-WALL-CAPACITY-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C independent audit: collective wall shield and capacity limit

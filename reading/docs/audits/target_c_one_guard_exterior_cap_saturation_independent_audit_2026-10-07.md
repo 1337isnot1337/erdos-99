@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_one_guard_exterior_cap_saturation_independent_audit_2026-10-07.md) · source SHA-256 `0f9b223d2589ac1ec07111bc930981f88f6f1d7f6d157491e7d7df4725554466`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E06BC5F2CBCF","canonical":true,"claim_ids":["C-ONE-GUARD-EXTERIOR-CAP-SATURATION"],"claim_statuses":{"C-ONE-GUARD-EXTERIOR-CAP-SATURATION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.113 — one-guard exterior-cap saturation

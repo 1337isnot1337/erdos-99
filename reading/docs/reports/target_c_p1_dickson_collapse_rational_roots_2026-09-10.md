@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_p1_dickson_collapse_rational_roots_2026-09-10.md) · source SHA-256 `17f58aec3fbcd4c90c0a7dba3be1f26a43d86fd09f840f4f04a48ce9d7f213f4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F53DFCF59DCB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 — P1 even case collapses to a Dickson linear perturbation
@@ -63,7 +63,6 @@ G_n(u)=(-1)^nC_{2n}(u)-2u
       =(-1)^nC_m(u)-2u.
 }
 \tag{DC.1}
-
 ```
 
 Define
@@ -73,7 +72,6 @@ Define
 J_m(u):=(-1)^{m/2}C_m(u)-2u.
 }
 \tag{DC.2}
-
 ```
 
 Then every even-`m` P1 source satisfies `J_m(1/D)=0`.
@@ -88,7 +86,6 @@ For even `m=2n`, `J_m` has a rational root if and only if `3|n`. In that case it
 \boxed{
 u=(-1)^{n/3}\in\{+1,-1\}.}
 \tag{DC.3}
-
 ```
 
 Equivalently,

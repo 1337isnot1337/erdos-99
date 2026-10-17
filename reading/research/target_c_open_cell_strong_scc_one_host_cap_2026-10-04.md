@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_open_cell_strong_scc_one_host_cap_2026-10-04.md) · source SHA-256 `19784796af2b6276f8cdd41204fa4e96c2dab17ed477a3fb5fa4ccc2da8c13ad`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "9402b55402c56a8376652c6b6ea2c04f3322a65a", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_open_cell_strong_scc_one_host_cap_2026-10-04.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "fac552ffce61c61db54462b1efb6eb972c6f404026af81d8ca635ef119e3cac9"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_pseudosegment_grid_promotion_2026-09-12.md) · source SHA-256 `939bacbeab9d30bbdbae89ee6771c97814600d02b05cf962ba098851a43b4ce1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6B8F96362F37","canonical":true,"claim_ids":["C-PSEUDO-GRID"],"claim_statuses":{"C-PSEUDO-GRID":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — Section 73 pseudosegment-grid promotion audit
@@ -24,22 +24,25 @@ The theorem uses crossing pairs, not arbitrary intersections, and the shore boun
 1. Canonical Theorem 10.6 in `docs/theory/01-local-structure.md` applies to an arbitrary finite edge-to-edge strict-rhombus complex, including one with holes. Every local train centerline is a simple arc, every two centerlines cross at most once, no train closes, and every rhombus is one train-pair crossing. Its train-crossing graph is triangle-free.
 2. Therefore a Section-69 physical grain with `R` retained rhombi and `T` local train segments gives exactly `R` crossing pairs among `T` pseudosegments.
 3. Fox--Pach with `eta=R/T^2` yields all-crossing shores `C_1,C_2` with
+   
    ```math
    |C_1|,|C_2|\ge c_{PS}R/T.
-   
    ```
+
 4. The triangle-free train-crossing graph automatically makes each shore internally pairwise noncrossing: a crossing inside one shore plus any curve in the opposite shore would form a crossing triangle.
 5. Section 69 gives `2T=P`. On the quadratic branch it supplies one grain with `R>=rD^2` and `P<=CD`, so `T<=CD/2` and hence
+   
    ```math
    |C_1|,|C_2|\ge(2c_{PS}r/C)D.
-   
    ```
+
 6. The phase purification is valid once the Section-69 bin shift is endpoint-safe. All train vertices of one physical grain lie in one retained train component and therefore one phase bin of width `epsilon<pi/6`. Same-label train directions differ by at most `epsilon`, while a strict unit-rhombus crossing has projective separation `>pi/3`; same-label trains cannot cross.
 7. Choosing the largest label class in `C_1` loses at most a factor three. That label is forbidden in `C_2`; choosing the larger of the remaining two labels loses at most a factor two. Therefore the phase-pure shores satisfy the safe symmetric bound
+   
    ```math
    |A|,|B|\ge(c_{PS}/3)R/T=Omega(D).
-   
    ```
+
 8. Holes never enter the pseudosegment-density step. They remain relevant only to the next common-order/penetration theorem.
 
 ## Section-69 endpoint convention repair

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_quarter_fold_face_obstructions_slot02_2026-10-10.md) · source SHA-256 `e441995708568951a3dd5eafcd162bf398669a46eaab99c91f142efc46e18f2f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-498E42B6834E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II: bowed eight-face exclusion and short-arc parity

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exterior_cap_one_sided_exchange_2026-09-14.md) · source SHA-256 `636249c32e0f0776a3f22b12d070ced3ef4490ff842ddbfe5dc48fd8fd0215c2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1B82189FEB1F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — one-sided protected exchange for exterior caps
@@ -81,12 +81,13 @@ Assume:
 * $`\operatorname{diam}C\le D`$;
 * $`C`$ has nonempty interior, and $`A\setminus Z`$ contains a nonisolated source; and
 * $`C`$ has isolate-only Oler slack
+  
   ```math
   \sigma=\frac{\operatorname{area}C}{a_0}
           +\frac{\operatorname{per}C}{2}+1-z.
   \tag{OC.3}
-  
   ```
+
 
 The second item is the precise exterior-cap assignment condition. Sources on the
 closing chord are retained outside $`Z`$; sources on the outer cap arc are included

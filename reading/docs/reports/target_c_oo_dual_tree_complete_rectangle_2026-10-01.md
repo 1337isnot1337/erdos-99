@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_oo_dual_tree_complete_rectangle_2026-10-01.md) · source SHA-256 `ddd010a6f06d49429fc1bf43e4a2edf873788beb5ca964f2dc54ebad5d911048`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-98707198A849","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- dense outer-train crossings force a global complete rectangle

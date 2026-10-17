@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_hull_train_depletion_floor_2026-10-04.md) · source SHA-256 `608c950615ff8abd49a72be3c72e89c9019ecc3e834921280add7d31c825433b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-E1E433166E7C","canonical":true,"claim_ids":["C-FULLCORE-HULL-DEPLETION-FLOOR"],"claim_statuses":{"C-FULLCORE-HULL-DEPLETION-FLOOR":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C: diffuse hull trains give a stronger global full-core surplus floor
@@ -203,8 +205,9 @@ Using (4), the exact train count and `f<=Q`,
 ```math
 \begin{aligned}
 M_D&\le t_DD+2Q-q+m+2\\
-   &=5t_DD-3b+x_B+m+2.                                  \tag{13}
+   &=5t_DD-3b+x_B+m+2.                                  
 \end{aligned}
+\tag{13}
 ```
 
 Since `b>=P_F` and `P_F/D -> pi`, equations (12)--(13) prove (1).

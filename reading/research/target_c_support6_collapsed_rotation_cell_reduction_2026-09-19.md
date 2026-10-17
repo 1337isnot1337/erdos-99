@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_collapsed_rotation_cell_reduction_2026-09-19.md) · source SHA-256 `18fe0f26dd69f5b24785447f75220f6a43a16a4b82ada7d12beffdc1b120c0dc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "af26559b59e6dec526a42601f497a4d78a5888fa", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_collapsed_rotation_cell_reduction_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f4c04fb66216d3ffc82a713e8eb40d22efe4310a1d4a9296e0e0bd9660eb8b07"} -->
 
@@ -249,15 +249,17 @@ with integer `c`. Hence each fixed edge orientation and local order choice defin
 Let the positive-anchor faces be `P={0,1,2}` and the negative-anchor faces be `N={3,4,5}`. A perfect matching on the six faces has an odd number of `P--N` edges. Hence, up to relabeling within `P` and within `N`, there are only two types:
 
 1. all three matching edges are cross-sign, represented by
+   
    ```math
    M_X=\{03,14,25\};
-   
    ```
+
 2. exactly one matching edge is cross-sign, with one `P--P` and one `N--N` edge, represented by
+   
    ```math
    M_M=\{01,23,45\}.
-   
    ```
+
 
 For either type there are exactly 38 Eulerian `2`-in/`2`-out orientations of `K_6\setminus M`.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/93-full-gap-wrapping-diameter-audit.md) · source SHA-256 `79a60834643959065a89eafeed0791d2aa25eec65b8aab1dc0aa1484e3e721f0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 30 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

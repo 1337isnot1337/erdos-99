@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_h7b_full_angle_verifier_repair_2026-09-19.md) · source SHA-256 `cb7eb7e3e6a874deb450867ef0016f9dff823c8bd91d5651fa1b9a91e8f4b8ee`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "06a8ab6fe172ce9843eb65e9baa3327c41f69fd7", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_h7b_full_angle_verifier_repair_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "94aa1670882ec1a7c674edc76a7c814cd775f0b507a0c7fedf4d2663c50298ba"} -->
 

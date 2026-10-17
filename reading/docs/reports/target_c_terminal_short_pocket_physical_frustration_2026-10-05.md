@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_terminal_short_pocket_physical_frustration_2026-10-05.md) · source SHA-256 `63d1081a2cccd7eacc01a32483cac1c8a9cc471709cb81e46a9072fe1c0f7d96`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-24DA9008224B","canonical":true,"claim_ids":["C-TERMINAL-PHYSICAL-FRUSTRATION"],"claim_statuses":{"C-TERMINAL-PHYSICAL-FRUSTRATION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — terminal short pockets force physical unit-wall frustration

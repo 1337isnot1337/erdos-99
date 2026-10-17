@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../docs/STATE.md) · source SHA-256 `c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Authoritative theorem state
 

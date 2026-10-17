@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_central_support_area_floor_059336_2026-09-10.md) · source SHA-256 `7c0c417802ff034ed50b667101a6eb4723cfaed8abb91b65fe677a5182de2ec8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C0E447FFCF7C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — central support-function area raises the post-ZF surplus floor to 0.593361
@@ -462,18 +462,20 @@ We now maximize `F(y,p,lambda)` over `p` for fixed `y` and fixed `lambda<1`. The
 - For `p<=2y` and `Psi(p)<=Phi(y)`, one has `M=Phi(y)` and `m=p-y`; hence `F` strictly increases with `p`.
 - For `p>=2y` while `Psi(p)<=Phi(y)`, one has `m=y` and `M=Phi(y)`; hence `F` is constant in `p`.
 - For `p<=2y` and `Psi(p)>Phi(y)`, one has `M=Psi(p)` and `m=p-y`. Since
+  
   ```math
   4\pi\Psi(p)=2p^2-\pi^2,
-  
   ```
+
   differentiation gives
+  
   ```math
   \partial_pF
   =2(\lambda+p-y)-4p
   =2(\lambda-y-p)<0,
   \tag{4.3}
-  
   ```
+
   because every relevant threshold is `<1` while `y+p>1`. The bound threshold `<1` follows directly from `M<=pi/4`: at `lambda=1`, the left side of (3.7) is positive.
 - For `p>=2y` and `Psi(p)>Phi(y)`, `m=y` is fixed while `M=Psi(p)` increases, so `F` strictly decreases.
 

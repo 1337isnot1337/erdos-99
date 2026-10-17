@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/global-population-lattice-interface-pr956.md) · source SHA-256 `d7f0e845a295893ed306c612558c532006f7d237f5a9e6ccc0279f29e9f2b258`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Global population reserve, lattice defect, and interface payment
 

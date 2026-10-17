@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_multigrain_endpoint_capacity_2026-09-12.md) · source SHA-256 `4355729cd33db28ca806c52c8379d1db80f284f9911963f15dc104080ca9c807`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-AB296D8872A8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_multigrain_endpoint_capacity_2026-09-12.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=6f5ddc991425bc027eddba8b54a7dac5b86a8c4a; lifecycle=unreviewed; canonical=false -->

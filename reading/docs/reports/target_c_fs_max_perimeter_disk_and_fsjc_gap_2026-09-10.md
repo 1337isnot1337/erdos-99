@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fs_max_perimeter_disk_and_fsjc_gap_2026-09-10.md) · source SHA-256 `5da36e58c7ba9ede79f7326442c2b2baef90d19418f61d3759bfe16178743e6a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7FEEE7D61BF3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fs_max_perimeter_disk_and_fsjc_gap_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=9ef927f3ad26257c539819c3faca18ec57275572; lifecycle=unreviewed; canonical=false -->

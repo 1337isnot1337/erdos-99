@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_open_cell_full_width_anchor_return_fork_2026-10-04.md) · source SHA-256 `d7b424f22aa41a740b24dc244aaa0b9daf920bfb20d15c3c0948213deb593691`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B3F063CAB89F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: full-width attachment separation and anchored return fork

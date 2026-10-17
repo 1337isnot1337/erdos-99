@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/18-common-neighbor-sdr-regression.md) · source SHA-256 `d585a57280fa391816a3354d07af96f618c7e1a3cf640f36d0f8a9445f9c2629`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — common-neighbor SDR regression
 
@@ -45,17 +45,14 @@ X=\{x_1,x_2\},
 > `A` are unit-separated, the pairing `x_i-a_i` is a strict-conflict matching, and
 > for each `i` the two endpoints have exactly one common strict lattice neighbor,
 > namely the origin:
-> 
-
-```math
+> ```math
 > \boxed{
 > N_\Lambda(x_1)\cap N_\Lambda(a_1)
 > =N_\Lambda(x_2)\cap N_\Lambda(a_2)
 > =\{0\}.
 > }
 > \tag{166.4}
-> 
-```
+> ```
 > Consequently no injective assignment can choose a distinct common lattice neighbor
 > for both matched pairs.
 

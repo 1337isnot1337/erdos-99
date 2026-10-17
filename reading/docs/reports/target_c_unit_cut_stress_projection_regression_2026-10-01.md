@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_unit_cut_stress_projection_regression_2026-10-01.md) · source SHA-256 `28f21c2e3c8216bb001e9c4c3a27e63a65ca8653515ad3080c4b31ad1a408baa`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-8CD70C3B3ACA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II — unit-cut stress projection and its two-shore shell regression

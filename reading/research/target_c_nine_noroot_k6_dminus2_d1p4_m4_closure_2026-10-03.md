@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_nine_noroot_k6_dminus2_d1p4_m4_closure_2026-10-03.md) · source SHA-256 `8fcc32c9d613b1b2280ea10a7ba961fae92006254afb23123e1c0687771c3d3f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "55b8c307ea2c0e6eb2ea9d378ba5103a527e9460", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_nine_noroot_k6_dminus2_d1p4_m4_closure_2026-10-03.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "98d2078e9c24403619b338d0e455f61b8f19e8c393656c907ad0ff1f7e559a77"} -->
 

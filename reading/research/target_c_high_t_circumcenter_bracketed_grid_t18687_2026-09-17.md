@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_circumcenter_bracketed_grid_t18687_2026-09-17.md) · source SHA-256 `d192acea4a1baec86de8e18b047618a68efdf6fcaa0f9161eedec739c1447225`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_near_unit_faces_and_pure_conflict_paths_2026-10-01.md) · source SHA-256 `17890622dad2864e752408e4fc43348f0803f5a42db3af5377704517cd81be05`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D746BDE3FD07","canonical":true,"claim_ids":["C-NEAR-UNIT-CONFLICT-GEOMETRY","C-OO-LOWER-BLOCKER-LOCALIZATION","C-OWNER-CONTRACTION-CYCLE-REGRESSION","C-UNARY-RHOMBUS-BLOCKER-REGRESSION"],"claim_statuses":{"C-NEAR-UNIT-CONFLICT-GEOMETRY":"canonical","C-OO-LOWER-BLOCKER-LOCALIZATION":"canonical","C-OWNER-CONTRACTION-CYCLE-REGRESSION":"regression","C-UNARY-RHOMBUS-BLOCKER-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C-II — near-unit blockers lie in contact faces; pure conflicts form source paths

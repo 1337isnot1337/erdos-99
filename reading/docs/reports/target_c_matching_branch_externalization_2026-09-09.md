@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_matching_branch_externalization_2026-09-09.md) · source SHA-256 `5c80f5b180dc62650a67b7ec2e89eb084675ffb68ad07167de6c4a1ee26d3cda`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-878A9DB9BEF3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — post-ZF diameter-matching branch externalization
@@ -363,7 +365,7 @@ For an exact six-vertex family, choose
 Let the six successive unit edge directions be
 
 ```math
-0,\ a,\ \frac{2\pi}{3},\ \frac{2\pi}{3}+a,\ rac{4\pi}{3},\ rac{4\pi}{3}+a.
+0,\ a,\ \frac{2\pi}{3},\ \frac{2\pi}{3}+a,\ \frac{4\pi}{3},\ \frac{4\pi}{3}+a.
 \tag{8.1}
 ```
 
@@ -454,12 +456,9 @@ The branch reduction depends on report-level ZF/ZE/ZT/OP. If that stack is promo
 The matching branch now asks for a quantitatively specific external theorem:
 
 > **Matching-shell exclusion.** A triangle-free global minimum-diameter source cannot consist of a post-ZF pure-rhombic matching core together with at least
-> 
-
-```math
+> ```math
 > \left(\frac\pi{2\sqrt3}-\frac{\pi^2}{16}-o(1)\right)D^2
-> 
-```
+> ```
 > fully inactive source points outside that core's convex hull.
 
 Potential inputs unavailable to generic convex geometry are:

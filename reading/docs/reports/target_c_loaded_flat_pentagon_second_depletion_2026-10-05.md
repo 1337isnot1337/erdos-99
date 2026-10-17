@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_loaded_flat_pentagon_second_depletion_2026-10-05.md) · source SHA-256 `4159c6703e3bd9ae63b0126bf4894f67e16ed7bc67cecb684e543b8b31c4269b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-BD4BC02420D3","canonical":true,"claim_ids":["C-LOADED-FLAT-PENTAGON-DEPLETION"],"claim_statuses":{"C-LOADED-FLAT-PENTAGON-DEPLETION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C — loaded flat pentagons give a physical second-depletion bank

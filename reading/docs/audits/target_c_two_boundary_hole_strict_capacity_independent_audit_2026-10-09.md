@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_two_boundary_hole_strict_capacity_independent_audit_2026-10-09.md) · source SHA-256 `473a7388fd87f7656e6687989b8e5dccb9071c363c40bf8127351a84ae29e676`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C574AE181173","canonical":false,"claim_ids":["C-TRIANGULAR-TWO-BOUNDARY-HOLE-CAPACITY-REGRESSION"],"claim_statuses":{"C-TRIANGULAR-TWO-BOUNDARY-HOLE-CAPACITY-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent audit: strict capacity after two triangular boundary holes

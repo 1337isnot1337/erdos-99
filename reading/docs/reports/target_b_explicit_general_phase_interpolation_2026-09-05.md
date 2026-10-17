@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_explicit_general_phase_interpolation_2026-09-05.md) · source SHA-256 `966cf3e23f3ac2c3d47875781f702653aec42f7205ff05ba8c3cee59f5b60ae2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-D1618F69CC1E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
 # Erdos Problem #99 - Target B explicit general coherent-phase interpolation

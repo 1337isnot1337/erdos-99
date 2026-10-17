@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_deep_far_cap_grid_independent_audit_2026-10-08.md) · source SHA-256 `133818e3fa79ba327494e264b9603e5867b76f0f6081fb22d7c3ffec3deeb764`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B625364A5605","canonical":false,"claim_ids":["C-DEEP-FAR-COMPLETE-GRID-LOADED-RETURNS"],"claim_statuses":{"C-DEEP-FAR-COMPLETE-GRID-LOADED-RETURNS":"audited-working"},"index":"docs/state/artifact-index.jsonl","status":"audited-working","target":"target-c"} -->
 # Target C Audit.137 — deep/far cap grid and loaded returns

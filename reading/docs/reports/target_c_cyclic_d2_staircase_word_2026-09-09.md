@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d2_staircase_word_2026-09-09.md) · source SHA-256 `dc9f2709a3e7a24c61feb95baff8ed449a39cc0616fc235d65e8475c6c515d13`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 3 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -62,16 +62,18 @@ with exactly `m-1` `U`-steps and `n-1` `V`-steps.
 Geometrically:
 
 - a `U`-step
+  
   ```math
   u_i v_j\to u_{i+1}v_j
-  
   ```
+
   certifies the unit shell side `u_i u_{i+1}` with common diameter center `v_j`;
 - a `V`-step
+  
   ```math
   u_i v_j\to u_i v_{j+1}
-  
   ```
+
   certifies the unit shell side `v_j v_{j+1}` with common diameter center `u_i`.
 
 Conversely the ordered edge set of `T` is exactly the set of lattice vertices visited by this staircase word.

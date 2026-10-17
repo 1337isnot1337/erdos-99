@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_harmonic_internal_outer_face_hostile_audit_2026-09-12.md) · source SHA-256 `93bad405c2451852b95374ec6e595d211509e8d0e63d7ff78dac4913d68366d6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5FC137F72642","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Target C harmonic internal outer-face lemma

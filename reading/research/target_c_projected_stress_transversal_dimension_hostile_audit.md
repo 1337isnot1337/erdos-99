@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_projected_stress_transversal_dimension_hostile_audit.md) · source SHA-256 `a55a9d3097cbf4f6499547ea22ceac9aa58220f7d3c6e7ca43ac89eacf1fc735`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "bd95c0a79d8956ec0b0310518a6f38371916cbeb", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_projected_stress_transversal_dimension_hostile_audit.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a0b0b778bcc80f56efb5457c235acb2a2b625629a37fa4a66ceb0f0b9d20f629"} -->
 

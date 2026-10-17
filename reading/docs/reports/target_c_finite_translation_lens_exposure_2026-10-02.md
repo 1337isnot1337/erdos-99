@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_finite_translation_lens_exposure_2026-10-02.md) · source SHA-256 `67af3d55cb8356d443782189735e651a42bc48514f0e7267a30e40f3d9a052a6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1BF092985DB5","canonical":true,"claim_ids":["C-TRANSLATION-LENS-EXPOSURE"],"claim_statuses":{"C-TRANSLATION-LENS-EXPOSURE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C-II — finite translation lenses localize upper blockers

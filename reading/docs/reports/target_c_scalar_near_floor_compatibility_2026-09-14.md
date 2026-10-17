@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_scalar_near_floor_compatibility_2026-09-14.md) · source SHA-256 `9d4ee986c7dc492e1247637714edca0080f7fda32cc63054cf9ff79f956ffc4b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5C764E41C786","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — scalar compatibility arbitrarily close above the C-II train floor
@@ -68,21 +68,23 @@ assignments to the scalar variables in the current full-core package such that:
    $`e_{BB}=q-m_B`$;
 2. the near-disk scalar perimeter inequalities hold;
 3. the two train-floor inequalities
+   
    ```math
    \frac{q-k}{D}\ge\frac{p}{2D}+\frac{Q}{2D},
    \qquad
    \frac{q-k}{D}+2\frac fD\ge2\sqrt{\frac{R_4}{D^2}}
-   
    ```
+
    hold with strict room;
 4. the exact two-cell augmented Euler/dissection identities hold, including the
    Section-123 payment and nonnegative local defect variables;
 5. the Section-122 expression is positive and satisfies its canonical lower demand;
 6. the normalized surplus obeys
+   
    ```math
    \mu_{\rm TC}<\mu_D<\mu_{\rm TC}+\eta.
-   
    ```
+
 
 The assignment is scalar only. It is not claimed to be realizable by one convex
 force hull and one planar contact source.

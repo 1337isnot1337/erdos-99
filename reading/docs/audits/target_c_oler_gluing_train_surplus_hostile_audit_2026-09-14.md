@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_oler_gluing_train_surplus_hostile_audit_2026-09-14.md) · source SHA-256 `d2a3fbc2bc22eadda2c1986ca434b2c3e8e2dc5e19c0b7961ba627188632171a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1A16FF45C6E6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — exact Oler gluing and train-surplus correction

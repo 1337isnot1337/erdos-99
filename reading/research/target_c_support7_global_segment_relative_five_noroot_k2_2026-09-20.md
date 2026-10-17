@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_five_noroot_k2_2026-09-20.md) · source SHA-256 `97fcb472cde6bec3228eba4199227024064b270b1feb41789a36d2217dae5ed3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4a7b91afc06992bc62d33d964af62cd4f187c0e3", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_five_noroot_k2_2026-09-20.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2cbd4766f0b6f11df420319adb981e6266f145b81e92d6c05f9edc9c79ed8c5e"} -->
 

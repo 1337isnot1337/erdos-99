@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_secondary_diameter_visibility_2026-08-31.md) · source SHA-256 `0cde62af4f70318817c7cd44ac661fbaabe71bbdc1e51d6289cd11ae00e3a21f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1448A484DA71","canonical":false,"claim_ids":["C-SECONDARY-DIAMETER-VISIBILITY"],"claim_statuses":{"C-SECONDARY-DIAMETER-VISIBILITY":"superseded"},"index":"docs/state/artifact-index.jsonl","status":"superseded","target":"target-c"} -->
 # Erdős Problem #99 — Target C: secondary normalization makes every diameter pair force-visible

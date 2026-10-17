@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_dominant_oo_pair_staircase_2026-09-15.md) · source SHA-256 `df1f92eedf61d6f6e4e20b8bdb2ff55dff3d3c3b73bb22ac70200c5aec6ec33b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 13 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

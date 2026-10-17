@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_reciprocal_h5_pentagram_sign_exclusion_2026-09-18.md) · source SHA-256 `60b16cee71aeb1901461521fc8a6671878dc784d931137f594f1eafba5961ad0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "48bbb669f1d6e851aba3ce8130832cbd221b6808", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_reciprocal_h5_pentagram_sign_exclusion_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "9472df7ce3ae33077b2631df832ccabbafb5d0771bd5bb0a9f14961e69e31754"} -->
 

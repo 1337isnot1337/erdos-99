@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_ordered_interval_biclique_statement_repair_2026-09-12.md) · source SHA-256 `2cae3713d59f64eaef1b68a8a0da8149f275ab31837ea4ac048b9189a84c95cd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "fe2689a49b6b215fe6ddc5ca7764b5b51c60c73f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_ordered_interval_biclique_statement_repair_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "697d909791c1463765819169a84fa32f39cff5021209cebfeee3cdb0b39c4674"} -->
 

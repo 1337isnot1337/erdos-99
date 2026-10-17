@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/research/obstructions.md) · source SHA-256 `0e1f1bc0f6cd7b6fe5ad95bf0344d314121c2815c12d32b8ac962f3d3b16a358`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Current scoped obstructions
 

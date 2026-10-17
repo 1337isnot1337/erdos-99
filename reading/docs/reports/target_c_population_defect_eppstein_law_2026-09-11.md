@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_population_defect_eppstein_law_2026-09-11.md) · source SHA-256 `a430743e11fb67af12e7d8af13bbd7a3ba13c10c73cd74694b9b4a963da58d5d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DB3969E7B608","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — population-defect law for the post-ZF C-II source

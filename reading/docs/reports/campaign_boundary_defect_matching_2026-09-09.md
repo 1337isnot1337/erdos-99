@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/campaign_boundary_defect_matching_2026-09-09.md) · source SHA-256 `44ffc63d2eb2e8d8dd39a6d283cf569ad21cad6be6ae07894e1885387f30f512`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e6f881a1276f3e2196b3ef6d807b1c31add508c5", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/campaign_boundary_defect_matching_2026-09-09.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2667ff491b48b847cc633833a74c629894fffca1a153b75b149514c03d3e868d"} -->
 
@@ -491,12 +491,9 @@ The face/rank endpoint remains unchanged:
 The shortest new response-side lemma is:
 
 > **ZM mass lemma.** There is a function `mu(D)` strong enough for the C44/C64 phase split, ideally `mu(D)>=c/D` and preferably `mu(D)>=c>0`, such that every sufficiently large C-II survivor has a ZM matching `J` of non-diameter response pairs satisfying
-> 
-
-```math
+> ```math
 > \sum_{ij\in J}c_{ij}\ge\mu(D).
-> 
-```
+> ```
 
 The theorem must use the actual unit-contact embedding/global-minimum hypothesis. Positivity of the response support alone cannot supply such a bound because individual positive conductances may tend to zero.
 

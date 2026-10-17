@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_h7b_triangle_simplex_reduction_2026-09-19.md) · source SHA-256 `ef01652c2d20328d250c91fae17d896ccb8d219ba211af1e9eeaa6a21fa0507c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f7b779d41c1c7c113050191bb968f88f2d05aa5b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_h7b_triangle_simplex_reduction_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "18494e557d0ae7018f268d581415cbe20a6959ba2d3f8bdb7839234b1589292a"} -->
 

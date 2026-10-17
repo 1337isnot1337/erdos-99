@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_quadrangulation_cell_area_capacity_2026-08-31.md) · source SHA-256 `5e685cdb30496cc50ccbf61d56aebfae86597c95e1c06d19f7dadef8abad2a39`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4F249B658A29","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C48: quadrangulation plus attachment cells gives an O(D)-error core-capacity bound

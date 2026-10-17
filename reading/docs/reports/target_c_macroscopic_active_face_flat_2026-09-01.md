@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_macroscopic_active_face_flat_2026-09-01.md) · source SHA-256 `e4da27b42de8ce1a5b07c7588b01a6bec32e4d464e96581b3b168a17d240e6a9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C6B729314F23","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_macroscopic_active_face_flat_2026-09-01.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=d5f63685138795b61e2d944e53b8a47c4b14c005; lifecycle=unreviewed; canonical=false -->

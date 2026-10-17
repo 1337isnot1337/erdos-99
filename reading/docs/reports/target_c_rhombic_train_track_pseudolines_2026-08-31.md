@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rhombic_train_track_pseudolines_2026-08-31.md) · source SHA-256 `a4b6557c37ba9aedca129ba2ebbfc20acbe049430d0f8b75523ab9cd0d474cd4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-97455706D51C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C77: strict-rhombus train-track pseudolines

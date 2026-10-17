@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_correlated_augmented_defect_hostile_audit_2026-09-12.md) · source SHA-256 `8c484b6082d0e593fa982f4bc29dbe51e7fb6d1c837d6b76674a9cf14705fe7a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-78BBD87E48B3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Target C correlated augmented-defect currencies

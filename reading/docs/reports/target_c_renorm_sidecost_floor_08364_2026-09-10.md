@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_renorm_sidecost_floor_08364_2026-09-10.md) · source SHA-256 `8d1e2ea33a66f7806186f6fc98498032d54fd3a6aaeb3133e2f265f91942a4e0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

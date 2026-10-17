@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_vanishing_mass_coercive_kernel_t18687_2026-09-17.md) · source SHA-256 `bbcc8d27ba492a87ce20fceb5d46efc67b5091e21a8a20a2b47dcb6b06e49915`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "7ce8c08b9fef8fd1db0644abab33cb9abe1eb277", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_vanishing_mass_coercive_kernel_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "fff835e625d63f449416a0c0e7700f043eb048a01de7fad12828c76526998cb4"} -->
 

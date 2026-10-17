@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md) · source SHA-256 `c46e90b1975345be2704b4df3085d63f5b84b15402ae6f9214a49faa3e3f32f7`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B416A414FB53","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C Audit.247 — sharper positive-leaf anchor localization

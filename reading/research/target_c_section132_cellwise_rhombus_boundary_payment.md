@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section132_cellwise_rhombus_boundary_payment.md) · source SHA-256 `02c0eca59472dc6777c4f4c9a072c4cc8aaea7f0a83e2bf8f5316fcbb704e953`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "6618a43b0993e4e7170d40299e187f689f619b9f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section132_cellwise_rhombus_boundary_payment.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "5ef4b70e2de89d537d33f723ce725883abcf671defd2358471c4e6048c2e8c1e"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_low_diameter_prestress_2026-08-31.md) · source SHA-256 `2961ca6371070160b11f5d524ed34f22f8e6f2957a3524c586d54e36ca159a1f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-229B936DAFA0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_low_diameter_prestress_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=281ebfb039db70f7cb9e5ba82607f55f3ce35ebd; lifecycle=unreviewed; canonical=false -->
@@ -186,17 +186,19 @@ boundary matrix `M` when `|H_s|<=2`.
 Two standard electrical facts will be used:
 
 1. `Lambda` is a Laplacian/M-matrix, so
+   
    ```math
    \Lambda_{ij}\le0\qquad(i\ne j);
    \tag{C20.9}
-   
    ```
+
 2. because `C_s` is connected, the response matrix has
+   
    ```math
    \ker\Lambda=\operatorname{span}\{\mathbf1\}.
    \tag{C20.10}
-   
    ```
+
 
 Both follow directly from Kron reduction of a connected positive-conductance graph.
 

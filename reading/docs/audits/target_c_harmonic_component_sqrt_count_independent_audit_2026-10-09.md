@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_harmonic_component_sqrt_count_independent_audit_2026-10-09.md) · source SHA-256 `ed53a2cf185d4e9d990eea48ee7494821827952f4eaa55c8cdd585b0bfbeea4d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-962698C8BDA8","canonical":true,"claim_ids":["C-HARMONIC-COMPONENT-SQRT-COUNT"],"claim_statuses":{"C-HARMONIC-COMPONENT-SQRT-COUNT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.200 — square-root harmonic-component count

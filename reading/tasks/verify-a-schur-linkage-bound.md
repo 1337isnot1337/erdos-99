@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/verify-a-schur-linkage-bound.md) · source SHA-256 `7bc51974976ae8bfb33c6c43b3dac7d55084357ad7b96b880da2d074722dbd21`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # verify-a-schur-linkage-bound
 

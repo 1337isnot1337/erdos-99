@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_mixed_flower_matching_splice_deficit_2026-09-15.md) · source SHA-256 `713a1b8a19b9f924628f34c52bdbe07fc39567b9bf19fc0ad38dd9c7bd7d1e04`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_wegner_packing_upgrade_2026-09-09.md) · source SHA-256 `2b98d79cbea175a0ee64d15045439a0ff6f0e0e5841dbde83c5323d7d49529c9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-1DD5C53C100B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Wegner finite-packing upgrade in the exact cyclic Reinhardt branch

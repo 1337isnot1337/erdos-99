@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_oler_gluing_train_surplus_identity_2026-09-14.md) · source SHA-256 `b9cc95849a7796011bd175d447bbf3e0ba8f24506c07f7a7fcf6188acdf79dc6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "ed97e56122756599b1d40383b9e9646b0f6b4bbe", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_oler_gluing_train_surplus_identity_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "edb0e019c9f7604aa73f7e77453240a6c73f901ca18cd19e94ceb0c5f19e0747"} -->
 

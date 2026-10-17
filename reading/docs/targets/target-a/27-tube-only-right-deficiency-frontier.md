@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/27-tube-only-right-deficiency-frontier.md) · source SHA-256 `0399e4947619293dfda7818c8961c18a48cf762c2f8c5e0d8e956099ca08db29`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — tube-only right-deficiency frontier
 
@@ -80,21 +80,15 @@ s=\Delta_\Lambda-d_{\rm int}.
 
 > **Lemma 175.1 (nine-site unit tube).** For every unit segment `e` and every unit
 > triangular lattice `Lambda`,
-> 
-
-```math
+> ```math
 > \#\{y\in\Lambda:\operatorname{dist}(y,e)<1\}\le9.
 > \tag{175.7}
-> 
-```
+> ```
 > Consequently
-> 
-
-```math
+> ```math
 > \boxed{|T_\Sigma|\le9|E(\Sigma)|.}
 > \tag{175.8}
-> 
-```
+> ```
 
 ### Proof
 
@@ -167,16 +161,13 @@ starts at a distinct terminal in one `C_i` and ends at a distinct sink in the
 corresponding `O_i`.
 
 > **Theorem 175.3 (tube-only Schur cut).**
-> 
-
-```math
+> ```math
 > \boxed{
 > \operatorname{rank}S
 > \le |T_\Sigma|+\sum_i\min\{|C_i|,|O_i|\}.
 > }
 > \tag{175.11}
-> 
-```
+> ```
 
 If
 
@@ -228,16 +219,13 @@ Subtract (175.11) from this identity. Since
 the exterior tube population cancels exactly.
 
 > **Theorem 175.4 (contact-fan right-deficiency bound).**
-> 
-
-```math
+> ```math
 > \boxed{
 > h(G)=|O|-\operatorname{rank}S
 > \ge O_{\rm iso}+Q_\Sigma-|T_Z|.
 > }
 > \tag{175.16}
-> 
-```
+> ```
 
 Combining with (175.6) gives the current locked-branch closing criterion
 

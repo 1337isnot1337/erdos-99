@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_affine_core_diameter_shell_exclusion_2026-10-02.md) · source SHA-256 `27040e6dbae64d476daacae3dbc2a4993d8815afaa96d78f8f7042d52f1272b0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-F3344EE60EF9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- exact single-lattice core excluded by the active-diameter shell

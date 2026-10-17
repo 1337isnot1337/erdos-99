@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/94-three-forbidden-gap-wrapping-audit.md) · source SHA-256 `bf19c7d13e7b14896f6bb0dde8778906120e954d44f812f22891795cc0213d68`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 24 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -392,10 +392,11 @@ Thus the rigorous Type-II carrier threshold becomes
 A sequence approaching `mu_3` must asymptotically saturate both sides of (94.16)--(94.17). In particular:
 
 1. the attachment density satisfies
+   
    ```math
    {a\over D}\to\sin\theta_3=3\theta_3-2\pi;
-   
    ```
+
 2. the six allowed Section-88 boundary clusters are saturated at unit-separation density;
 3. the three forbidden middle arcs have asymptotic angular length `phi_3=2pi-2theta_3`;
 4. all remaining `Theta(D)` cyclic attachment gaps are asymptotically at the minimum `2/D` angular scale in aggregate; and

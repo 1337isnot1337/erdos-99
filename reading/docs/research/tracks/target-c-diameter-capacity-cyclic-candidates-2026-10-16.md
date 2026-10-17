@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-diameter-capacity-cyclic-candidates-2026-10-16.md) · source SHA-256 `ca4e6657c26862b0dcbd0754b681de7bbed4f575d23f6aa60a0805cfdd0a6166`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C shard 2: cyclic, capacity, and diameter candidates
 

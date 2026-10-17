@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_nearcircle_contact_curvature_dichotomy_2026-09-09.md) · source SHA-256 `09974c0327d7307b1c30f8168d12fa68bb00babf8635c42cc2d3f1718131121e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0CD25205E1D8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_nearcircle_contact_curvature_dichotomy_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=2c149e07284637ffe65c297e8ba6594ae898f579; lifecycle=unreviewed; canonical=false -->

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/research/research-family-status.md) · source SHA-256 `669edba719155f55a435032fc6e9f30b76fde98e26553b2e9a5efc7755e02f28`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Research-family status
 

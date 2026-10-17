@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_leaf_fan_hostile_audit_2026-10-02.md) · source SHA-256 `08398710b37e34285ea8b524678b66b33d4ebc04a07559ba2827f6800b5284df`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2841003AB64C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_leaf_fan_hostile_audit_2026-10-02.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=ccbabaad3e187d3a3554c541837a634179a37561; lifecycle=unreviewed; canonical=false -->

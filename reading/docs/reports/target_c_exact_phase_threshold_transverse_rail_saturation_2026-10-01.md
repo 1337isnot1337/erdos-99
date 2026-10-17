@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md) · source SHA-256 `5af0523286fc97315a44519797cc7be8c5a0e9083e201d9070e844209052164e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C994C1DD3A84","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- threshold staircase saturates the transverse extreme rails
@@ -44,14 +44,15 @@ Then:
    cross every $`\sigma_j`$;
 5. if $`c(F)`$ is the number of nontrivial components and $`n_j`$ is the number
    of distinct vertices of $`F`$ in $`A`$-layer $`j`$, then
+   
    ```math
    \boxed{
    (n_0-1)+(n_m-1)+
    \sum_{j=1}^{m-1}(n_j-2)=c(F)+1.
    }
    \tag{1}
-   
    ```
+
 
 There is also a quantitative two-shore fork. Let $`e_{\rm int}`$ be the number
 of tree edges of $`T`$ with both endpoints internal.
@@ -59,10 +60,11 @@ of tree edges of $`T`$ with both endpoints internal.
 - If $`e_{\rm int}\ge m/2`$, at least $`m`$ distinct selected actual-diameter
   bars have full support on all of $`B`$.
 - If $`e_{\rm int}<m/2`$, one of the two extreme $`A`$-layers contains
+  
   ```math
   \Omega(D^{1/4})
-  
   ```
+
   distinct selected diameter vertices.
 
 Thus the threshold staircase cannot hide all of its forced physical splitting from

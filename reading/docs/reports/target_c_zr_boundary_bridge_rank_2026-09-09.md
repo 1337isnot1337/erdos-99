@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_boundary_bridge_rank_2026-09-09.md) · source SHA-256 `1fdd6873f30f9c61e38b2a741795bc9053567ccc12fce0a416cde570b80f6c6b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-42E91C06A863","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — ZR bridge response and body-bar rank
@@ -33,10 +33,11 @@ The genuinely new result below concerns **contact bridges**. A physical contact 
 
 - rank-one electrical transfer across the bridge;
 - strict electrical/mechanical cut sandwich
+  
   ```math
   w_e<C_e\le\alpha_e\le Dw_e;
-  
   ```
+
 - at least two nonparallel crossing diameter bars for a singleton side;
 - full three-dimensional relative body-bar rank, hence at least three nonconcurrent crossing diameter bars, when both sides are nonsingleton.
 
@@ -118,48 +119,53 @@ C_e=
 Under the preceding hypotheses:
 
 1. **Rank-one electrical transfer.**
+   
    ```math
    \boxed{\operatorname{rank}\Lambda_{B_X,B_Y}=1.}
    \tag{ZBR1}
-   
    ```
+
    Equivalently, the nonnegative cross-conductance block factors as
+   
    ```math
    c_{bk}=\kappa x_b y_k
    \qquad
    (b\in B_X,\ k\in B_Y)
    \tag{2.1}
-   
    ```
+
    for nonnegative vectors `x,y` and some `kappa>0`.
 
 2. **Exact bridge sandwich.**
+   
    ```math
    \boxed{
    w_e<C_e\le\alpha_e\le Dw_e.
    }
    \tag{ZBR2}
-   
    ```
+
 
 3. **Singleton bridge side.** If one contact side is a singleton, then at least two active diameter bars cross the bridge cut, and their directions are nonparallel.
 
 4. **Nonsingleton bridge body-bar rank.** If `|X|,|Y|>=2`, orient every `h=x_hy_h in H_e` from `X` to `Y`, put `r_h=x_h-y_h`, and associate the relative-body constraint row
+   
    ```math
    \ell_h=
    \bigl(r_{h,x},r_{h,y},r_h\cdot Jx_h\bigr)
    \in\mathbb R^3.
    \tag{2.2}
-   
    ```
+
    Then
+   
    ```math
    \boxed{
    \operatorname{rank}\{\ell_h:h\in H_e\}=3.
    }
    \tag{ZBR3}
-   
    ```
+
    Consequently:
    - `|H_e|>=3`;
    - some three crossing diameter supporting lines are not concurrent and are not all parallel;
@@ -351,12 +357,9 @@ The shortest Level I scalar endpoint remains
 For the bridge-dominant subbranch, the next precise theorem is:
 
 > **BM3 — weighted nonconcurrent bridge exclusion.** For every fixed `c>0`, no sufficiently large lexicographically normalized triangle-free C-II global minimizer has a contact bridge `e` with `alpha_e>=cD` such that
-> 
-
-```math
+> ```math
 > w_e<C_e\le\alpha_e\le Dw_e,
-> 
-```
+> ```
 > the cross response block has rank one, the crossing diameter body-bar rows have rank three, and the mechanically necessary nonconcurrent bars outside the dominant stress star are allowed arbitrarily small positive `beta` weights.
 >
 > It is enough to derive either an absolute C41 response defect, an `Omega(1/D)` defect in the relevant near-zero scaling, the global face inequality (4.1), or a strict sub-`D` competitor.

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-b/README.md) · source SHA-256 `599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target B — jammed shell-stability route
 

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_common_lower_run_trunk_cycle_fork_2026-09-17.md) · source SHA-256 `7219c7944b37c59bab0561f8c5c60caeea43edfdc86421981bc78c0e9711b114`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 11 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -136,8 +138,7 @@ this is at least
 
 ```math
 \boxed{
-\Omega\left({D^{1/8}\over(Z_D+1)^{1/4}}
-ight)
+\Omega\left({D^{1/8}\over(Z_D+1)^{1/4}}\right)
 \longrightarrow\infty
 }
 \tag{TC.6}

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_extreme_boundary_slack_transfer_2026-09-10.md) · source SHA-256 `d869a2a335fad9043f535639b351bbe61f2d16dca187f93c2b8804b1616d0e92`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-90F72FD23C23","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic extreme boundary-slack transfer removes the `kappa` loss
@@ -234,7 +236,7 @@ we have `xi<=lambda`. Eliminating `xi,phi,r` exactly as in AE yields
 \boxed{
 \lambda
 \ge
-F(w):=rac45
+F(w):=\frac45
 \left(
  w+\sqrt{\frac{\pi^2-w^2}{2\pi\sqrt3}}
 \right).

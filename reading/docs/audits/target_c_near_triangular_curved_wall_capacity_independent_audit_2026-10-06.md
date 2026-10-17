@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_near_triangular_curved_wall_capacity_independent_audit_2026-10-06.md) · source SHA-256 `3dfb22d35095db8a7e5b1a26dbe52a4ef324dcdc5c41453c0e68b537798097b3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E82433421949","canonical":true,"claim_ids":["C-CURVED-WALL-OLER-POPULATION-BOUND","C-NEAR-TRIANGULAR-CURVED-WALL-EXCLUSION"],"claim_statuses":{"C-CURVED-WALL-OLER-POPULATION-BOUND":"canonical","C-NEAR-TRIANGULAR-CURVED-WALL-EXCLUSION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent promotion audit — near-triangular curved-wall capacity exchange

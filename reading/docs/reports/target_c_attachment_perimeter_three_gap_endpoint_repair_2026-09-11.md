@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_attachment_perimeter_three_gap_endpoint_repair_2026-09-11.md) · source SHA-256 `7a59c68deabb73f398fc0fbc8c230cacb1d9c1fe25c51f8fd77db8aa6ad6c518`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B5EB3C97391E","canonical":true,"claim_ids":["C-MU-09604"],"claim_statuses":{"C-MU-09604":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Erdős Problem #99 — three-gap attachment-perimeter repair of the five-component endpoint

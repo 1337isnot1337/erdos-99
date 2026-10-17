@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_lossless_interface_and_train_split_2026-09-14.md) · source SHA-256 `30bd19a81789885cfeace6123c7373baf6e5dfcf6e517fc8e4be65f766f79d93`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f122477af937a7704a6c13fa7e24ed7147279996", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_lossless_interface_and_train_split_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "30b11be5fbba9261736b85c77cdd3e2f8a16f9c007d798dccb7fa69800f25bf1"} -->
 
@@ -397,19 +397,21 @@ Thus
 This yields a clean asymptotic dichotomy after passing to a subsequence:
 
 1. **singleton branch:**
+   
    ```math
    \liminf {S\over D}
    \ge0.455432159494861\ldots;
    \tag{LI.29}
-   
    ```
+
 2. **rhombic-slack branch:**
+   
    ```math
    \liminf {\sigma_R\over D}
    \ge0.910864318989722\ldots .
    \tag{LI.30}
-   
    ```
+
 
 In the second branch, with
 

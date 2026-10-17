@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_sorted_rate_packet_classification_2026-10-06.md) · source SHA-256 `964e7d9dacd942e8dd5114217f271e79454a9222069fb8e125e882f281271fe4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-240D361F8E97","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C: sorted-rate packets and the highest curved-wall population

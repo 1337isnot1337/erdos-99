@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_positive_quotient_circuit_pivot_2026-09-10.md) · source SHA-256 `27b118fa1c1410ac35be38fda7babff65bce68fd605e1a0a575b4285ae5e71c5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6F97B0A134BF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — positive quotient-circuit pivots between extreme KKT stresses
@@ -78,31 +78,35 @@ such that:
 
 1. the images of `T` in the quotient row space `span(E)/W` form a positive vector-matroid circuit;
 2. the coordinate face of `K` supported on
+   
    ```math
    U:=S\cup T
-   
    ```
+
    is a two-dimensional pointed cone;
 3. its two extreme rays are `c` and a second extreme KKT stress `c'`;
 4. `c'` is strictly positive on every row of `T`;
 5. if
+   
    ```math
    A:=S\setminus\operatorname{supp}c',
    \qquad a:=|A|,
-   
    ```
+
    then `a>=1`,
+   
    ```math
    \operatorname{supp}c'=(S\setminus A)\cup T,
    \tag{QP.3}
-   
    ```
+
    and its exact rank-gap parameter is
+   
    ```math
    \boxed{\kappa'=\kappa-t+a.}
    \tag{QP.4}
-   
    ```
+
 
 After normalization by `sum_H beta=1`, `c` and `c'` are adjacent vertices of the ES
 KKT polytope.

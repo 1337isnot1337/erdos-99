@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_normalized_contact_isometry_interpolation_independent_audit_2026-10-08.md) · source SHA-256 `8c358cbb9749ccf31828298806f0ca4aced3b8d75ac8a295a23cbd82ebb361e3`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A7FD7BE58B92","canonical":true,"claim_ids":["C-CONTACT-ISOMETRY-SPARSE-STRESS-BARRIER","C-NORMALIZED-CONTACT-ISOMETRY-INTERPOLATION-THRESHOLD","C-TWO-VALUED-SLAB-INTERPOLATION-BLOCKER"],"claim_statuses":{"C-CONTACT-ISOMETRY-SPARSE-STRESS-BARRIER":"canonical","C-NORMALIZED-CONTACT-ISOMETRY-INTERPOLATION-THRESHOLD":"canonical","C-TWO-VALUED-SLAB-INTERPOLATION-BLOCKER":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: normalized contact-isometry interpolation barriers

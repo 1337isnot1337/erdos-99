@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_dcjc_endpoint_one_gap_moment_exclusion_2026-09-10.md) · source SHA-256 `4f1ca5b81ed644abdd432bb2a73d6ce69049199358a488efeeff5c01289c14f6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

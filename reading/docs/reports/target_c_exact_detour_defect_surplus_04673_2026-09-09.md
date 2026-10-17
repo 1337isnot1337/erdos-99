@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_detour_defect_surplus_04673_2026-09-09.md) · source SHA-256 `1799d5994b9216197ff2664b0176c65d2b0da5546410e2f617b4493f67b71161`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-326DC0CF7AC1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — exact detour/defect coupling raises the pinned/contact floor to 0.4673
@@ -405,7 +407,7 @@ F'(\nu)
 -
 \frac{C_W}{2}
 \frac{(\pi-\lambda)^{3/2}}{\sqrt B}
-+rac{B}{2\pi}.
++\frac{B}{2\pi}.
 \tag{ED.32}
 ```
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_atomic_gap_shore_balance_00059_2026-09-15.md) · source SHA-256 `404b82d869f8f5f8ccf48265e31bd35fe92fdc5cdf4135f712c9c0defe04940c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d32be42cda60bef0d7d3c7c3d410b99d6fe8a485", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_atomic_gap_shore_balance_00059_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b8a7091ece2f2d4c26b2ea404cefa63b5db790bf547dfda01652059ac50c8f09"} -->
 

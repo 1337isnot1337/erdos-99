@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_no_diameter_contact_geodesic_2026-09-05.md) · source SHA-256 `a3697e9b28597af5e8c82b6b495b8dbbdf403404392ac4b5d4dd76ecaf04fc92`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E6F8475EEABA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C: no exact diameter contact geodesic in the pure-rhombic C65 source

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_nine_noroot_k6_deletion_reduction_2026-10-03.md) · source SHA-256 `09ed8e477884f6da322a81e0201b0bb2a7037e30f4781919e86daf61542fc96f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "567ae6db35a842f6236df2ce7ddec73695ab8490", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_nine_noroot_k6_deletion_reduction_2026-10-03.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "6dcce4d43c3997a78ea1ae2fa2d0691339d53fc05ce453dd3bd73e78f890da8c"} -->
 

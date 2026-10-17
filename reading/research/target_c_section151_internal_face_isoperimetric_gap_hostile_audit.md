@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section151_internal_face_isoperimetric_gap_hostile_audit.md) · source SHA-256 `e090ba22017126ae06f0d825a05a4e0d948608ec1f6100d1231e91134b58024f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3a4c3a22814a96336e6f05fda1d918ca77e1fa8d", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section151_internal_face_isoperimetric_gap_hostile_audit.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4f54f85a8361a0334a9ceae95d901b95b9146bbf04d4b2b0b4a818315ff3cc60"} -->
 

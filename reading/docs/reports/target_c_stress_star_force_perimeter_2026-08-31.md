@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_stress_star_force_perimeter_2026-08-31.md) · source SHA-256 `6af9b871c6605c2f5feb1dc6bd4055c5a757b61b68f3f1a0fcc847174f0b9c68`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-F76CF5996A82","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C69: stress-star mass forces a reciprocal-perimeter gap
@@ -39,8 +41,7 @@ Consequently the C66 star center satisfies
 \boxed{
 P_*
 \ge
-D\left(1+\frac{\sqrt3}{2}
-ight)
+D\left(1+\frac{\sqrt3}{2}\right)
 -
 \frac{\sqrt3\pi}{\kappa_0}D^2\varepsilon.
 }

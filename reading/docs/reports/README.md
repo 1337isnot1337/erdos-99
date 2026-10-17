@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/README.md) · source SHA-256 `cf904988c113d39487273c6a4d802ba814f0cb63a3401e18528cd1a1d4eddb5b`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Supporting mathematical reports
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_atomic_gap_00042_refinement_2026-09-14.md) · source SHA-256 `a963f5de11c314b82f02450fe77e2431167ddc859e0f8c2628d307a546dbb1d2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e9858af8cb61fc8b5d3f3254a1284032cb13bb3c", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_atomic_gap_00042_refinement_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "26774cb30629defce0fbc1add83e03794427b1e71d658eba428d2e6b3c006472"} -->
 

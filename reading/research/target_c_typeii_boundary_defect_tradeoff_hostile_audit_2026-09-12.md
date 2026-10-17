@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_typeii_boundary_defect_tradeoff_hostile_audit_2026-09-12.md) · source SHA-256 `28e5bdd1c46bdb0bec00a55c24147dadfb8dac188608bcf356833516c2cf3261`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c9cf5da181ff9f6df281857c0bbf8df293ae715f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_typeii_boundary_defect_tradeoff_hostile_audit_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c99c133d0d296f1ee805713f67e1f7d4972897cb45af6aff1102c8e3c0916f17"} -->
 

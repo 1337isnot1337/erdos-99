@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-a/11-activation-coloops-and-locked-boundary.md) · source SHA-256 `eb6899fe13346d481493548bb9a5f59c129472c7067428fed275b7c2d4d2b00e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target A — activation coloops and locked-boundary stress
 
@@ -43,22 +43,20 @@ functional as
 > 1. $`E_{\rm new}`$ is a forest, every one of its components meets $`V_0`$ in at
 >    most one vertex, and
 >    
-
-```math
+>    ```math
 >    \boxed{\operatorname{rank}\{\mathsf r_e:e\in E_0\cup E_{\rm new}\}
 >    =\operatorname{rank}\{\mathsf r_e:e\in E_0\}+\ell.}
 >    \tag{158.1}
->    
-```
+>    ```
+
 > 2. The edge-derivative map on the activation forest is onto: after fixing all
 >    velocities on $`V_0`$, and one arbitrary root in each activation component
 >    disjoint from $`V_0`$, the values
 >    
-
-```math
+>    ```math
 >    \mathsf r_e(v)_{e\in E_{\rm new}}
->    
-```
+>    ```
+
 >    can be prescribed arbitrarily.
 > 3. There is a velocity $`v`$ and $`t_0>0`$ such that, for every
 >    $`0<t<t_0`$, $`A^*+tv`$, where $`A^*=A_\ell`$, is a triangle-free global
@@ -183,22 +181,16 @@ a_e(v)=0\qquad(e\in E(T),\ v\in\mathcal C_H(P)).
 > **Theorem 159.1 (boundary-transmitting locked-triangle certificate).** There are
 > coefficients $`\alpha_{ij}\ge0`$ on the unit-contact edges and
 > $`\mu_{if}\ge0`$ on active facet incidences such that
-> 
-
-```math
+> ```math
 > \alpha_e>0\quad(e\in E(T)),
-> 
-```
+> ```
 > and, at every vertex $`p_i`$,
-> 
-
-```math
+> ```math
 > \boxed{
 > \sum_{j:ij\in E_1(P)}\alpha_{ij}(p_i-p_j)
 > -\sum_{f:n_f\cdot p_i=c_f}\mu_{if}n_f=0.}
 > \tag{159.1}
-> 
-```
+> ```
 > If $`K`$ is the connected component of the positive-contact graph containing $`T`$,
 > then at least two distinct points of $`P\cap\partial H`$ in $`K`$ carry nonzero
 > facet reaction. In particular, $`K`$ contains contact paths from $`T`$ to two

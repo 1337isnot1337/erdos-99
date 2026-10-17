@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_tooth_reflection_blocker_matching_2026-09-17.md) · source SHA-256 `9caf7c5ceaf9ad62cc7f59005d03d1dbfdecd4619ea249d431610a5e24df48ce`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "08d7a680b3b655e4447d8e51c3649b4f0e0febc6", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_blocker_matching_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f0dce22b895252559d599f82c62c0bf4e6bb8892e564862000ce6f39372aefe9"} -->
 

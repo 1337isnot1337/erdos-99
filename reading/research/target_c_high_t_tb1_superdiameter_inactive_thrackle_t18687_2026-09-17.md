@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_superdiameter_inactive_thrackle_t18687_2026-09-17.md) · source SHA-256 `758077b428562c76c030247d36e220da1cb9c4946a74e100bf5db4bea7949b82`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 33 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -21,12 +23,9 @@ The exact-swap slack-ratio theorem allows the relative slack threshold `tau` to 
 The geometric input is independent of TB1 and is sharp.
 
 > **Superdiameter-thrackle lemma.** Let `S` be a unit-separated planar set of diameter `D>1`. Join every source pair `xy` satisfying
-> 
-
-```math
+> ```math
 > |xy|>\sqrt{D^2-1}.
-> 
-```
+> ```
 > Then every two such segments meet: they either share a source endpoint or cross properly.
 
 The threshold cannot be improved in general. The `1 x sqrt(D^2-1)` rectangle has two vertex-disjoint opposite sides of length exactly `sqrt(D^2-1)` which do not cross, while its diagonals have length `D`.
@@ -135,7 +134,7 @@ Therefore
 &=|x-y|^2
 +2|x-y|\,u\cdot(z-x)
 +|z-x|^2\\
-&>|D^2-1}+0+1
+&>(D^2-1)+0+1
 =D^2,
 \end{aligned}
 \tag{STH.4}

@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_slope_one_detour_density_gap_2026-09-09.md) · source SHA-256 `b2149110ab37d20742b0802cbbf918cfdda03d9de21f8d6d50fc5ecf81ae7404`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 2 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-F6E1FED24B16","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — SOD: outer-pocket detour raises the slope-one diameter-density floor to 1.5336
@@ -186,7 +188,7 @@ Hence
 
 ```math
 \frac{b-P_F}{D}
-=2y-p-rac QD-rac{2s_Z}{D}+o(1)
+=2y-p-\frac QD-\frac{2s_Z}{D}+o(1)
 \le2y-p+o(1).
 ```
 

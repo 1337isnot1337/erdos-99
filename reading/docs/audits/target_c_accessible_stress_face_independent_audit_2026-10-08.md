@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_accessible_stress_face_independent_audit_2026-10-08.md) · source SHA-256 `dbcd256a41c9a7be8bcb94867ab03b23d29dea7b5ad8bc7220b2fa39a8cff336`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-26F60AE4DD5E","canonical":true,"claim_ids":["C-ACCESSIBLE-STRESS-FACE-DICHOTOMY","C-SEVEN-SITE-TAGGED-STRESS-MASS-REGRESSION"],"claim_statuses":{"C-ACCESSIBLE-STRESS-FACE-DICHOTOMY":"canonical","C-SEVEN-SITE-TAGGED-STRESS-MASS-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent audit: accessible stress-face dichotomy

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_zr_adaptive_directed_corridor_2026-09-09.md) · source SHA-256 `064c4ad72ef43fe264f78fd16f9c8bc093839f6c0141197ecd1f3b3a500bc676`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 9 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_density_preserving_fused_rail_t18687_2026-09-17.md) · source SHA-256 `b82e75e88458d61edc5aee6db0acb1a82e194380caf09b39d34b4162b025b9d6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 14 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -289,10 +289,11 @@ Then:
 - interface loss is `O(D^{1-a})=o(D)`;
 - column loss is `O(D^{1-b})=o(D)`;
 - retained angular defect is
+  
   ```math
   O(D^{a+b-1})=o(1).
-  
   ```
+
 
 Thus every choice `a,b>0`, `a+b<1` preserves the full leading rail and column densities while forcing the local ladder defect to zero. The symmetric choice `a=b=1/3` makes all three normalized errors of order `D^-1/3`.
 

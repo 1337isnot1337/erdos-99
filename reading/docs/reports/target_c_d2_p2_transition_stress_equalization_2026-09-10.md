@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_d2_p2_transition_stress_equalization_2026-09-10.md) · source SHA-256 `94daea09fe77f26fbfb36f47c638b620b0bbfe369a7b0911addd5fd3396f4b13`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EDB1A47B4E79","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdos Problem #99 — cyclic D2/P2 forces equal stress on all four transition contacts
@@ -72,7 +72,6 @@ Consequently
 \alpha_1=\alpha_2=\alpha_3=\alpha_4>0.
 }
 \tag{P2E.4}
-
 ```
 
 Equivalently, the four distinguished cycle resistances `r_j=1/alpha_j` are also equal.

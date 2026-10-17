@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_shell_d1_p1_s1_dependency_audit_2026-09-11.md) · source SHA-256 `ca2289ce7e0699b63b2ec821b8a0c5ddb56b4711178453af6a3da9ca93a08157`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 12 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

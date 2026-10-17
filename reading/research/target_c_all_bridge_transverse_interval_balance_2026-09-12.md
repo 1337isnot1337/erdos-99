@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_all_bridge_transverse_interval_balance_2026-09-12.md) · source SHA-256 `a82af09058ea84ee8182f16d281eb5584e417a5a174331ad16a5c3845576b55a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "780696671aec95f035ba65c297fa76735d1ac11e", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_all_bridge_transverse_interval_balance_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "1d99067f7cf79ae9dd710406979bae672d63e81aff619a18d4be1dd9f25d9684"} -->
 

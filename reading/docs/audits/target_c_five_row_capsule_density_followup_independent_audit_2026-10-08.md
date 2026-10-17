@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_five_row_capsule_density_followup_independent_audit_2026-10-08.md) · source SHA-256 `5acda0e339633926eb14e479ab732ef076cf6f4883a94e6d028ed369c16094e2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4218CCBA996D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Independent Audit.151: five-row capsule consequences for high-t density claims

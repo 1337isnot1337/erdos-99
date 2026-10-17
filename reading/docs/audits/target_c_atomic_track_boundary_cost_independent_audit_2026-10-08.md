@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_atomic_track_boundary_cost_independent_audit_2026-10-08.md) · source SHA-256 `dc0f996227a196cba153366e667ac1bf0d900b587d4831cc4fa50db0ac1ee419`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 3 paragraph(s) with malformed inline math are preserved as explicit source excerpts rather than guessed equations.
 

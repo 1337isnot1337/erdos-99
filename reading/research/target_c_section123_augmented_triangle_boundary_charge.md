@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section123_augmented_triangle_boundary_charge.md) · source SHA-256 `13c8f929aec7a6d93bedaaee6af8b8ca886f33bc10873aaae90de92fba964092`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2e42d0e050d3a2d0ab103ecf039c85a269777322", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section123_augmented_triangle_boundary_charge.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "745f053134d4d31bb5ee7c665067e6082cecc74b109077b09b02c57f9105ed90"} -->
 

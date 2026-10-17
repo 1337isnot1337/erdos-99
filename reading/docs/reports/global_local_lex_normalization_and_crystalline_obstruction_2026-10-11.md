@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_local_lex_normalization_and_crystalline_obstruction_2026-10-11.md) · source SHA-256 `ee604bf943883cbb30b69a52d68fbacfe7a906257b95c3f477b59254caf35858`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "7e9fc01926f74fb3358fa47bdcc8a4d8bafeb1a8", "source_branch_refs": ["refs/heads/research/sol/global-e99-20261011"], "source_commit": "c17f8d5eed95f1df57262587219a2c0673365aa7", "source_lifecycle": "unreviewed", "source_path": "docs/reports/global_local_lex_normalization_and_crystalline_obstruction_2026-10-11.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "7ba2bf9678fd53714c3671a6bced51a289f00e940816b8cf9f85bdba68a6a3e8"} -->
 

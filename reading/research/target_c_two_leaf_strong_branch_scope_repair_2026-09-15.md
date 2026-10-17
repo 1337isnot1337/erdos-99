@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_two_leaf_strong_branch_scope_repair_2026-09-15.md) · source SHA-256 `ac33d794287234e760a47ec40fe22ba487bf1e6d3cd4ca74681d0188b89fcd04`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "bc52b6253aae8a6b2ca4a588c1bd9e0580603b8c", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_two_leaf_strong_branch_scope_repair_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ec95ff3e3c536297e3b0bc02c1711847ab5b17e11e12000040e0761decd0bd71"} -->
 

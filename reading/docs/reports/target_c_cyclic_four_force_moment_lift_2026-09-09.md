@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_four_force_moment_lift_2026-09-09.md) · source SHA-256 `fdfba237136f60dd29506080f34a2296c52e7c29c6d7ce292d56f2d9abfb6d28`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5F160B3C541B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — four-block tree cuts satisfy an exact force-and-moment wrench relation

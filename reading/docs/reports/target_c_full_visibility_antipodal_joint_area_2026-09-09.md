@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_full_visibility_antipodal_joint_area_2026-09-09.md) · source SHA-256 `09d55fb4a57aec2c497c37ce3c03d44f006b7b06b0833c4b42f7532be8577662`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 15 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

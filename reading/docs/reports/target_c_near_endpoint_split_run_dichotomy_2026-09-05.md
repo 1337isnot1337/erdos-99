@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_near_endpoint_split_run_dichotomy_2026-09-05.md) · source SHA-256 `8ae44e5f22735c5a2c736776b50be90836d88d7fa58821791311d929f4db978c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-56D5238D0C07","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_near_endpoint_split_run_dichotomy_2026-09-05.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=dd478e129fc9e506f586ecf2acdf165179f80abf; lifecycle=unreviewed; canonical=false -->

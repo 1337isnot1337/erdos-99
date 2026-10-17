@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_block_translation_two_bar_t18687_2026-09-16.md) · source SHA-256 `2e427d3b50ea7a33243cf9cf2cca2c02f2478bd2e63bebbdb16fcc52535a1e21`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "8cfa566e213df44bcffb74814bce274d63b68224", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_block_translation_two_bar_t18687_2026-09-16.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ff586141828af852491edf44fa3ea757ac4d34da1be1d0d59a1c2a4f3c471ba8"} -->
 

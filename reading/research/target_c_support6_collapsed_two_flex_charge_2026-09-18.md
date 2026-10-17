@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support6_collapsed_two_flex_charge_2026-09-18.md) · source SHA-256 `5f058fd04fb4c1bfb936295eabadbc21f4764ec9722dbe39a86f864525ded69a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4b3d2c92f48fcf27d2c6ae0cd7ddfe8b83478f32", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_collapsed_two_flex_charge_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "10da021da3187ed31e3a31024d0d309029c46596a37ed859cbdb45be1edc5ca7"} -->
 

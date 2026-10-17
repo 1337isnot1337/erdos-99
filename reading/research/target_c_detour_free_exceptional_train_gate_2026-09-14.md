@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_detour_free_exceptional_train_gate_2026-09-14.md) · source SHA-256 `421ed90e05589fada57900a8a2db76f9989782ce8b3adb24fe917b69cd381f46`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "22193aacf9842a88694bc39b49a16f829934f4ac", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_detour_free_exceptional_train_gate_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "654b393ce54eb47543c706631617ef0ec97f1361302ccdab700cf1a7c6c91e7b"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/prompts/erdos_problem_99_SOL_XHIGH_FULL_SOLUTION_PROMPT.md) · source SHA-256 `c1993bcb908e619e1b916dad97749a7de8c9a6170769da266d186b6f3f61e4cc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Erdős Problem #99 — sol xhigh full-settlement run
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_local_quarter_fold_hull_cover_independent_audit_2026-10-09.md) · source SHA-256 `f9cd28d4b5a5f6f600e0ddfb7428ed60ede44d11382184ee1fd70fcfef2d8b5a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E8A1FC1E0477","canonical":true,"claim_ids":["C-QUARTER-FOLD-TRANSFORMED-EIGHT-FACE-HULL-COVER"],"claim_statuses":{"C-QUARTER-FOLD-TRANSFORMED-EIGHT-FACE-HULL-COVER":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: local hull cover for an integrated eight-face fold

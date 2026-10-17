@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_fullcore_train_coupled_surplus_floor_independent_audit_2026-09-14.md) · source SHA-256 `a86656a078ff710588bc4e6551088ce7a025086731148747d20f42e45a576af1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-CA6AC6E61C76","canonical":true,"claim_ids":["C-FULLCORE-TRAIN-SURPLUS-FLOOR"],"claim_statuses":{"C-FULLCORE-TRAIN-SURPLUS-FLOOR":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit — full-core train-coupled surplus floor

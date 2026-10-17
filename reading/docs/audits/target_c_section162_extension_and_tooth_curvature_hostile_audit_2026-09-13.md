@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section162_extension_and_tooth_curvature_hostile_audit_2026-09-13.md) · source SHA-256 `3ceec82375e4a86c288f7903e509b2d86c8910d6435206b31892f807caf8a830`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-17AEC399420A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Section-162 extension and triangular-tooth curvature

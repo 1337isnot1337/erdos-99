@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_attachment_cell_diameter_square_budget_2026-09-13.md) · source SHA-256 `f43a53ff5aa5e249e31f2e9942534bf88cf1cb06cb8c6fd5f25d06b66f264c5d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "182d699e5af4328ebc3be053138b1065362d721c", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_attachment_cell_diameter_square_budget_2026-09-13.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "5c4e6f2a8445d80024e0a21f84481290f44797d5c3e875182fcb7e98f0265b54"} -->
 

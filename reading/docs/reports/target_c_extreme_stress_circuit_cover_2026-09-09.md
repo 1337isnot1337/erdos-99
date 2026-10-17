@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_extreme_stress_circuit_cover_2026-09-09.md) · source SHA-256 `a261ddcac6b0a1b2964861d9bc2ba84b3a4c165db1ad94040f558289ef01e450`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4DEF4DD5F63E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — extreme KKT stresses form a rigidity-circuit cover

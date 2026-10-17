@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_linear_host_or_death_plateau_t18687_2026-09-17.md) · source SHA-256 `608ed5c729d5916ab2ef9868e7e05f764bd4f940b34038051cb3b6867e7600fa`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -113,11 +113,12 @@ where
 
 1. every bar in `L_host` joins the fixed pre-hub birth host arc to one fixed hubward host arc and retains the strict support nesting;
 2. every bar in `L_plateau` satisfies
+   
    ```math
    \boxed{b_s=b_*}
    \tag{LHD.11}
-   
    ```
+
    and therefore belongs to the same post-hub switching set `X_{b_*}`.
 
 Thus

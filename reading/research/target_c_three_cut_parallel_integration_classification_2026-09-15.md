@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_three_cut_parallel_integration_classification_2026-09-15.md) · source SHA-256 `49d1d94d93fe93e1364bd746d921c209441489c48797de1acbae94396cd3ba96`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "7dd56a5591e5a2e0217cc04d9cf8dedb1837b069", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_three_cut_parallel_integration_classification_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b813b25c146d1e3c2fc51af676dbb78a720276d610dafc09c15477a34b6d26d8"} -->
 

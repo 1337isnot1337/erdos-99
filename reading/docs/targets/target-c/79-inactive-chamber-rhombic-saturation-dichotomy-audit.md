@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/targets/target-c/79-inactive-chamber-rhombic-saturation-dichotomy-audit.md) · source SHA-256 `a7dc0a2a7a52359fa3f78396dab35e9580ef371bc1d2ccc5ac1aaefbd7651847`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C — inactive-chamber / rhombic-saturation dichotomy audit
 

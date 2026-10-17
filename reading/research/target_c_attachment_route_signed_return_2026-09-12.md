@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_attachment_route_signed_return_2026-09-12.md) · source SHA-256 `fdb8f58f12442b75ea4294f062c1b05cf6c5f0e2dee0ade25d155116bb6ddd03`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C-II: attachment-route signed return
 

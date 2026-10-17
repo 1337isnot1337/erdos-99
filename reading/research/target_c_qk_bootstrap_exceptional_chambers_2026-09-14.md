@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_qk_bootstrap_exceptional_chambers_2026-09-14.md) · source SHA-256 `2f7d83bc25aba2050329ad30304792bfd7cbe5f158fec9668139f687b3d31309`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "90b855337d237aa892d340be05b55efeab9085ed", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_qk_bootstrap_exceptional_chambers_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f0b26cf1cc41ddec878ebeb5632daecb7f3222aca6e9cf375cfa264c647557e7"} -->
 
@@ -23,14 +23,16 @@
 Two recent proof-only inputs can be composed more strongly than in the current notes:
 
 1. AG42 gives
+   
    ```math
    {T-q/2\over D}\ge C_* -o(1),
    \qquad
    C_*:=2\sqrt{\Delta_2}+0.00042;
    \tag{QB.1}
-   
    ```
+
 2. the §171 AG42 refinement gives
+   
    ```math
    {q-k\over D}\ge t_* -o(1),
    \qquad
@@ -38,8 +40,8 @@ Two recent proof-only inputs can be composed more strongly than in the current n
    \quad
    C_{146}={4\over9}(\pi+\sqrt{\Delta_2}).
    \tag{QB.2}
-   
    ```
+
 
 The first input by itself already forces linearly many bounded nonquadrilateral contact
 faces. The second replaces the much weaker difference-body lower bound on `q` when the

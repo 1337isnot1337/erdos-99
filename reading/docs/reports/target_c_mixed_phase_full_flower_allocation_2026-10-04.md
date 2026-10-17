@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_mixed_phase_full_flower_allocation_2026-10-04.md) · source SHA-256 `58740d3a3b11c252b3a3231bcef1b61bec83b88b4aa232400f31e0d2c20b18fc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5FA9170B1DDE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_mixed_phase_full_flower_allocation_2026-10-04.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=fc265f18e2abc48c85f8fd2da1b1f433f92fbd59; lifecycle=unreviewed; canonical=false -->

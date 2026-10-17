@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_triangular_tooth_curvature_2026-09-12.md) · source SHA-256 `a187a915631d301b4dce492c595df50a7b1a5fce735e31a2778b1ee7f6afa581`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b67fad918f8e3f86569bf486a6124da0711a25ca", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_triangular_tooth_curvature_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "38cc9bed0488e50432630e21184bb7fdad2b27f3d2b5957e8d12f994ab22593f"} -->
 

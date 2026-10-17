@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_a_one_source_arm_per_contact_edge_2026-10-03.md) · source SHA-256 `572671d08cdc4592f1d73a2af1d123b996b15ee46e4936bec53bf2c238022621`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f605c8a79435cb44146e46e3819e978b3764556d", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_a_one_source_arm_per_contact_edge_2026-10-03.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "689db44ba530df0b10cf176a40d4a14094f0c2ea8787e53300508cdc68b07140"} -->
 

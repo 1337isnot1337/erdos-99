@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_section149_atomic_orbit_hostile_audit_2026-09-12.md) · source SHA-256 `41378ee0062650e2e348d6a807dd346de9c490f11abd552cfbc24a17f2de58af`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-DB1700803BBE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Hostile audit — Target C Section 149 atomic phase-orbit step

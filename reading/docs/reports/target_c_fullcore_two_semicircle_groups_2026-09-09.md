@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_two_semicircle_groups_2026-09-09.md) · source SHA-256 `77ccdaf686952cfd31f9ff8955d6baa226ad7d9fa4ba62f65de6e21bac43a831`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 3 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-86FE74A88880","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_fullcore_two_semicircle_groups_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=1f1d8442d5d2e35923ec5f625bc19f3bd3756202; lifecycle=unreviewed; canonical=false -->
@@ -39,7 +41,6 @@ Grouping every harmonic component under the inclusion-maximal cap containing its
 \qquad i=1,2,
 }
 \tag{HG.1}
-
 ```
 
 where
@@ -100,7 +101,6 @@ Therefore
 \to\frac\pi4.
 }
 \tag{HG.2}
-
 ```
 
 Thus the harmonic attachment cells asymptotically fill the entire force-hull disk in area.
@@ -132,7 +132,7 @@ the radius-`1/2` cap areas sum to
 ```math
 \sum_j\frac18(\theta_j-\sin\theta_j)
 =
-\frac18\sum_j\theta_j-rac18\sum_j\sin\theta_j.
+\frac18\sum_j\theta_j-\frac18\sum_j\sin\theta_j.
 \tag{2.1}
 ```
 
@@ -194,7 +194,7 @@ The group diameter sum is at most global `S=O(D)` and `c_{I,i}<=c_I=o(D)`, so th
 \limsup\frac{N_i}{D^2}
 \le
 \frac{\pi/8}{a_0}
-=rac\Delta2.
+=\frac\Delta2.
 \tag{3.2}
 ```
 
@@ -250,7 +250,6 @@ Hence
 \qquad i=1,2.
 }
 \tag{4.1}
-
 ```
 
 Thus two diameter-scale harmonic components exist without assuming `S/D->2`.
@@ -294,7 +293,7 @@ The coefficient simplifies to
 
 ```math
 c_E\sqrt{\Delta/2}
-=rac\pi{2\sqrt2}.
+=\frac\pi{2\sqrt2}.
 ```
 
 Therefore
@@ -306,7 +305,6 @@ Therefore
 \left(\frac\pi{2\sqrt2}-o(1)\right)D,
 }
 \tag{HG.3}
-
 ```
 
 and globally
@@ -319,7 +317,6 @@ S+R_I
 = (2.2214414690\ldots-o(1))D.
 }
 \tag{HG.4}
-
 ```
 
 This bound is weaker than SI/TS in the cap-minimal equality branch but holds throughout the full-core near-circle branch.
@@ -344,7 +341,6 @@ Insert HG.4:
 = (0.9201511845\ldots+o(1))D.
 }
 \tag{6.1}
-
 ```
 
 HBd also gives
@@ -364,7 +360,6 @@ Q
 (1.3012902846\ldots-o(1))D.
 }
 \tag{6.2}
-
 ```
 
 UF's exposed-train bound `1.390168...D` is stronger numerically, but HG.4 is structurally different: it comes entirely from the two half-density harmonic groups and the penny-graph edge deficit.

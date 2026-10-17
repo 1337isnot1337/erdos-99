@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../tasks/target-b-phase-deficit-competitor.md) · source SHA-256 `d0c1489d7020b5b56b758e7403068dc8ef79cdfe7bd5f5707e24a0101c2102f4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # target-b-phase-deficit-competitor
 

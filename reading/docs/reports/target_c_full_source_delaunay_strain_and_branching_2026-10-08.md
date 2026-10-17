@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_full_source_delaunay_strain_and_branching_2026-10-08.md) · source SHA-256 `22e830500cf097702c66ff9d9ed4b5b2d48ef288e899eb12de803dd5d546d177`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "10b96629ea26d8b37576a943f4edd442b89380c4", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "4a2505e7adfef864f0fd572aa4ff3366b734bf55", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_c_full_source_delaunay_strain_and_branching_2026-10-08.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "5d3308597879966a95a03bc58ff8c3dea92827c5a9efe93ade5d1f3a0c25b1ae"} -->
 

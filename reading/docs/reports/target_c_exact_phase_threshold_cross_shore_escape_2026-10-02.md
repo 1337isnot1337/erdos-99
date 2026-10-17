@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_exact_phase_threshold_cross_shore_escape_2026-10-02.md) · source SHA-256 `cc0601f888662d1d38acb527823d0cf25661e1e71ebc41e5f165caeb059e331e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E7CABC15F7F7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C-II -- threshold internal staircase admits a two-cut cross-shore escape
@@ -41,14 +41,16 @@ Then one of the following holds.
 2. **Two-cut escape.** There are two trains $`\sigma_p,\sigma_q\in B`$ and real
    coefficients $`\gamma_p,\gamma_q`$ such that the exact two-coordinate
    $`B`$-multishear
+   
    ```math
    \theta_p=t\gamma_p,\qquad
    \theta_q=t\gamma_q,\qquad
    \theta_j=0\quad(j\ne p,q)
-   
    ```
+
    preserves every old contact exactly, preserves unit separation for all
    sufficiently small $`t`$, and satisfies
+   
    ```math
    \boxed{
    \frac{d}{dt}|r_h(t)|^2\Big|_{t=0}
@@ -56,13 +58,14 @@ Then one of the following holds.
    \qquad(h\in\mathcal H_{\rm int}),
    }
    \tag{1}
-   
    ```
+
    where, orienting $`h`$ from its lower to higher $`A`$-layer,
+   
    ```math
    c_h=r_h\cdot Ju\ne0.
-   
    ```
+
 
 Thus every diameter row whose two distinct $`A`$-endpoint layers are internal can be
 made strictly shorter simultaneously by an exact contact-preserving motion using

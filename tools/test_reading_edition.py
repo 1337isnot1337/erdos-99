@@ -5,10 +5,42 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from build_reading_edition import expected_files, math_delimiters, render
+from build_reading_edition import expected_files, math_delimiters, render, repair_source
 
 
 class ReadingEditionTests(unittest.TestCase):
+    def test_quote_markers_stay_outside_the_equation(self):
+        output, _ = math_delimiters("> Claim.\n> \\[\n> F_D^{uniq}\n> \\]\n\nNext.\n")
+        self.assertIn("> ```math\n> F_D^{uniq}\n> ```", output)
+        self.assertNotIn("\n```math\n>", output)
+
+    def test_underindented_source_math_retains_the_list_and_following_proof(self):
+        output, _ = math_delimiters("1. Claim.\n   \\[\n   L-1\\le5e\n|a|\\le50e\n   \\]\n\n## Proof\nText.\n")
+        self.assertIn("   ```math\n   L-1\\le5e\n   |a|\\le50e\n   ```", output)
+        self.assertIn("\n\n## Proof\nText.", output)
+
+    def test_real_greater_than_is_not_a_quote_marker(self):
+        output, _ = math_delimiters("\\[\nx\n> y\n\\]\n")
+        self.assertIn("```math\nx\n> y\n```", output)
+
+    def test_table_pipes_are_escaped_without_changing_formula(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            output, _ = render("docs/a.md", "| Term | Scope |\n| --- | --- |\n| $|A|$ | every label |\n", set(), Path(tmp))
+        self.assertIn("$`\\|A\\|`$", output)
+
+    def test_repairs_fail_on_changed_source_or_occurrence_count(self):
+        registry = {"a.md": {"source_sha256": "pinned", "replacements": [{"old": "bad", "new": "good", "count": 1}]}}
+        self.assertEqual(repair_source("a.md", "bad", "pinned", registry)[0], "good")
+        with self.assertRaisesRegex(ValueError, "stale reading repair source"):
+            repair_source("a.md", "bad", "changed", registry)
+        with self.assertRaisesRegex(ValueError, "stale reading replacement"):
+            repair_source("a.md", "bad bad", "pinned", registry)
+
+    def test_truncated_formula_is_a_literal_excerpt(self):
+        output, _ = math_delimiters("\\[\\boxed{ x=…\\]", literal_displays=("\\boxed{ x=…",))
+        self.assertIn("```text", output)
+        self.assertNotIn("```math", output)
+
     def test_formula_bytes_are_preserved_and_code_examples_are_untouched(self):
         source = "Text \\(a+b\\).\n\n\\[\nx^2 + \\sqrt{3}\n\\]\n\n`\\(literal\\)`\n```python\n'\\[fixture\\]'\n```\n"
         output, pairs = math_delimiters(source)

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_common_hub_transfer_regression_2026-09-11.md) · source SHA-256 `a220ff5c3d21258a3bb2f6ee756c23ff1c078312f7b2fc8d83e6a0cd86902e3a`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-A4DE3D500DEE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — common hub does not inherit bridge-transfer positivity

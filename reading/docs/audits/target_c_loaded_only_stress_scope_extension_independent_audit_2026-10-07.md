@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_loaded_only_stress_scope_extension_independent_audit_2026-10-07.md) · source SHA-256 `9def718fbe3e7aab9e2b7663d7a6616ffdfbe3677907571b72f1d38a2b717de9`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6109EE730595","canonical":true,"claim_ids":["C-LOADED-EXTERIOR-CAP-CHORD-THRESHOLD","C-LOADED-ONLY-STRESS-CYCLE-OBSTRUCTION"],"claim_statuses":{"C-LOADED-EXTERIOR-CAP-CHORD-THRESHOLD":"canonical","C-LOADED-ONLY-STRESS-CYCLE-OBSTRUCTION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.111 — loaded cap chord and stress-cycle scope

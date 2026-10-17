@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_two_side_polynomial_refill_independent_audit_2026-10-09.md) · source SHA-256 `ee9a73f573d9b75904838e0607fc113981e77c4e8bb4bd68f8f859877e27fcf5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5FF0E3FB7A3C","canonical":true,"claim_ids":["C-OBLIQUE-TWO-SIDE-POLYNOMIAL-STRICT-REFILL","C-OBLIQUE-TWO-SIDE-POLYNOMIAL-WALL-OLER-RESIDUAL","C-OBLIQUE-TWO-SIDE-POLYNOMIAL-WALL-POPULATION"],"claim_statuses":{"C-OBLIQUE-TWO-SIDE-POLYNOMIAL-STRICT-REFILL":"canonical","C-OBLIQUE-TWO-SIDE-POLYNOMIAL-WALL-OLER-RESIDUAL":"canonical","C-OBLIQUE-TWO-SIDE-POLYNOMIAL-WALL-POPULATION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit: polynomial-margin two-side oblique refill

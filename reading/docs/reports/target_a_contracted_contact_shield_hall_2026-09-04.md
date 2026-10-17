@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_a_contracted_contact_shield_hall_2026-09-04.md) · source SHA-256 `9432d5c127259871743106117155c3875a554ce9c6cba070ca7b3990ae192e87`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "5ecf10fbc70f871ac77b454e5190c167865d6fe6", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_a_contracted_contact_shield_hall_2026-09-04.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d890fb7d9ba56ed18def9de9bc9907aca86b56ba1d2f2ea0cf80614432780790"} -->
 

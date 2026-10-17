@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_mantel_phase_star_refinement_2026-09-14.md) · source SHA-256 `45001ccf588572965f64e7a254b36e8205888212cc0e8be39eab7311611d6a93`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -293,14 +293,11 @@ Combining Sections 2--3 gives the following report-level theorem.
 > (mathcal M_D\subset X_D^*) and
 > (mathcal U_D\sqcupmathcal V_D\subset Y_D^*) such that
 >
-> 
-
-```math
+> ```math
 > |\mathcal M_D|=\frac{T_D}{2}-o(T_D),
 > \qquad
 > |\mathcal U_D|+|\mathcal V_D|=\frac{T_D}{2}-o(T_D),
-> 
-```
+> ```
 >
 > the two shores are internally pairwise noncrossing, and each center-to-leaf
 > pair has (o(T_D^2)) missing actual crossings relative to its complete

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_b_seed084_near_disk_seamed_grain_regression_2026-10-13.md) · source SHA-256 `f7cfb96f91950723b9dae50da2abd6a190376d1011986d2bc2dc7283444ac938`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-6625E591347E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
 # Target B: near-disk seamed grains inside the strict scalar shell window
@@ -82,62 +82,69 @@ having all the following properties.
    `K_k` tends to the disk of diameter one. Uniformly in direction,
    `w(K_k)=D_k-O(1)`, `pi D_k-per(K_k)=O(1)`, and
    `pi D_k^2/4-area(K_k)=O(D_k)`. Also
+   
    ```math
    n_k={\pi\over2\sqrt3}D_k^2+O(D_k),\qquad
    D_k^2<{2\sqrt3\over\pi}(n_k-1).
    \tag{2.1}
-   
    ```
+
 3. Let `R_k` be the rhombus count, `B_k` its boundary-edge occurrence
    count, `chi_k` the Euler characteristic of the actual rhombic complex,
    and `t_k` the source population outside that complex. Then
+   
    ```math
    n_k=R_k+B_k/2+\chi_k+t_k,\quad
    G_k=O(D_k),\quad E_k=o(1),\quad
    B_k=O(D_k),\quad |\chi_k|+t_k=O(D_k).
    \tag{2.2}
-   
    ```
+
    In particular the *strict* shell upper side holds:
+   
    ```math
    G_k+E_k<c_0B_k+a_0(t_k+\chi_k-1).
    \tag{2.3}
-   
    ```
+
    The usual Oler lower side holds too, since the sources are unit-separated.
 4. For the actual rhombic trains in the two chart regions, put
+   
    ```math
    M_{\rm inter}=
    \sum_{\tau\text{ in lower},\ \sigma\text{ in upper}}
        |\det(u_\tau,u_\sigma)|.
-   
    ```
+
    All these pairs are physically noncrossing. Their mass satisfies
+   
    ```math
    {M_{\rm inter}\over D_k^2}\longrightarrow
       {1\over2}+{1\over\sqrt3}>0.
    \tag{2.4}
-   
    ```
+
    Each chart contains a macroscopic coherent train component; neither
    relies on a vanishing-deficit endpoint. If `M>=b` are its two direction
    populations and `R_j` its rhombus count, then
+   
    ```math
    {Mb-R_j\over M^2}\longrightarrow
    {4\sqrt3+6-3\pi\over7\sqrt3+12}\in(1/8,1/6).
    \tag{2.5}
-   
    ```
+
    Here train counts refer to all rhombic trains in each chart region;
    any boundary components outside its macroscopic component affect the
    normalized quantities by `o(1)`.
 5. There is an explicitly identified unit-separated triangular-lattice
    source `A_k^0` with **the same number of labels** and
+   
    ```math
       \operatorname{diam}(A_k^0)<D_k.
    \tag{2.6}
-   
    ```
+
    Thus every `A_k` is rigorously nonglobal.
 
 Consequently, for every fixed constant `C`, the proposed estimate

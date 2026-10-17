@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_global_inverse_phase_face_tail_exclusion_2026-10-09.md) · source SHA-256 `5061a85a1810c8626123837d7901b3aa7ef1d1db3216a207ca67aaedcb18eb43`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-4C21CDB00D9E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Inverse-phase geometry, curved loaded boundaries, and exceptional faces
@@ -521,11 +523,12 @@ There are two actual-source applications.
    actual unit paths between the consecutive polygon vertices.
    The planar triangle-free Euler identity is
 
+   
    ```math
     L_r^0+Q_r^0=4a_r-6-2s_r,
     \qquad s_r=e_r+t_r-2|I_r|-1\ge0.
-   
    ```
+
 
    Hence `L_r^0<=4a_r<=4pi D`. Canonical Audit.173 supplies one
    fixed positive coefficient `gamma` with `a_r>=gamma D`, uniformly
@@ -909,8 +912,9 @@ It follows that
  &=\int h^2-2A(K)\\
  &\le\pi D^2/2+8pi eta^2-2A(K)\\
  &<8pi eta^2+2c_0pi D
-   ={17pi\sqrt3\over2}D=:C_ED. \tag{11.2}
+   ={17pi\sqrt3\over2}D=:C_ED. 
  \end{aligned}
+\tag{11.2}
 ```
 
 For `D>=7`, `h<=R<=D`. Convexity says `h''+h` is a nonnegative

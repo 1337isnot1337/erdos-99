@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_pentagon_capped_locked_train_bank_independent_audit_2026-10-07.md) · source SHA-256 `7eb2ee71036727507109da103a148ea24cc3ff32fecdd1f7b74559a1233e6186`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-42109523E6C1","canonical":false,"claim_ids":["C-PENTAGON-CAPPED-LOCKED-TRAIN-BANK-REGRESSION"],"claim_statuses":{"C-PENTAGON-CAPPED-LOCKED-TRAIN-BANK-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"regression","target":"target-c"} -->
 # Independent audit: pentagon-capped locked train-bank regression

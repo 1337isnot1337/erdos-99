@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_midpoint_bulk_braid_run_2026-10-02.md) · source SHA-256 `51414a41a568acb5e02312effd9139c43ed4efa8b18699140c560fd3f156e671`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "589a6f6ac0d3d0648dd1465bc4e2f3d69e87fa02", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_midpoint_bulk_braid_run_2026-10-02.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a6477d18ac40489183459214fe8f76ff385fd7ae06c8f394b4bb7b5c475e3a0b"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/integrator_joint_cavity_exclusion_2026-09-09.md) · source SHA-256 `fe9ab7658ee75b0f3a10e96ebdc02c8975703e67cbc8d6b84de4012e17ebaa90`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C3B36082BFC5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
 # Erdős Problem #99 — ambient-force geometry strengthens the joint cavity exclusion

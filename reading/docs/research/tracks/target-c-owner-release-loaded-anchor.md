@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-owner-release-loaded-anchor.md) · source SHA-256 `e0cad527638492744ad077082882e307b7b29b1a900d3dd630bc6c7cf7ad44d0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C owner release, loaded anchors, and floor closure
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_inactive_chamber_near_contact_regression_2026-09-12.md) · source SHA-256 `665439755c4c08252d9d30a84e0220582e429b30dd723e0505ecfa8fd9e617c0`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-4EED4FDCBA78","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_inactive_chamber_near_contact_regression_2026-09-12.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=b0d0f9e70c240f4b8aea844c1bde8753c5499378; lifecycle=unreviewed; canonical=false -->

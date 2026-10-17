@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_low_t_outer_pentagon_train_gate_2026-09-14.md) · source SHA-256 `970197c92d6d90b7bafc9f2013f2f60c28ff4fab26ad09787995d8b98162b8f6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "0a4ccbd7adc0245bf86996d6c381e2e5b014e045", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_low_t_outer_pentagon_train_gate_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ec3c159aa22d6223a8aedebd065b86c2f358ebffd30a33ceee59d05a133216ea"} -->
 

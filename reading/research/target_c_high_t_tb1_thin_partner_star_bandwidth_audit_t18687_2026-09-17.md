@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_thin_partner_star_bandwidth_audit_t18687_2026-09-17.md) · source SHA-256 `d2fb5594b510a1a077dcfdc3d3751d0c078b7e81106c842303d1e062f50a0fb8`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2a2a8e522778948b65986ac424ad7b4fa9d967a2", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_thin_partner_star_bandwidth_audit_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "085f4a716a2ec8b5124afb52a584250ae70088a8d73221c0bded42894f7c3b44"} -->
 

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_odd_shell_folds_independent_audit_2026-10-08.md) · source SHA-256 `9320bbabfdf8a6b5c3bcecbaca1629033129c87a805e59d944fdfa42e631943e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-12E7BED49517","canonical":true,"claim_ids":["C-ODD-SHELL-CLEARANCE-FOLD-ENDPOINT","C-ODD-SHELL-COLLAR-TRANSPORT-ENDPOINT","C-ODD-SHELL-TWO-ISOLATE-FOLD-REGRESSION"],"claim_statuses":{"C-ODD-SHELL-CLEARANCE-FOLD-ENDPOINT":"canonical","C-ODD-SHELL-COLLAR-TRANSPORT-ENDPOINT":"canonical","C-ODD-SHELL-TWO-ISOLATE-FOLD-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Target C independent audit: odd-shell finite folds and fixed-cloud obstruction

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/activation_fixed_hull_flat_2026-08-30.md) · source SHA-256 `8f542597f1da1c8f4620b93f9c25f1cc7a121c4ff71c5b158660268b4102109e`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "9aa2a2eb18dfed14338f2886b089495e39dc6848", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/activation_fixed_hull_flat_2026-08-30.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "bafe7c3de755792b8c6d1d35c5c9d160d15cbe6f6d50a299ea4367ed4e5202a4"} -->
 
@@ -84,15 +84,17 @@ activations. Then:
    in it whose vectors give triangle-free global minimizers inside the fixed hull
    $`H^*`$ by direct affine displacement.
 3. Its dimension obeys
+   
    ```math
    \boxed{
    \dim\mathcal L_{\rm act}
    \ge\max\{0,\ell-2b+d_D\}.
    }
    \tag{R2.1}
-   
    ```
+
 4. If $`R_0`$ is a specified set of $`r_0`$ initial strict rattlers, then
+   
    ```math
    \boxed{
    \dim\mathcal L_{\rm act}
@@ -103,8 +105,8 @@ activations. Then:
    \right\}.
    }
    \tag{R2.2}
-   
    ```
+
 
 After the Section 121 maximal triangle-free extension, one may take
 $`r_0=|R_B|\ge\rho-5\widehat p_H`$. Thus the activated terminal

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_live_backbone_interval_rank_hostile_audit_2026-09-15.md) · source SHA-256 `f1b2cd8783dec036856fa1b0a5179c6b0fd8bc20431e04112052bf80193e68e4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b292de65d8fe315eeb4a6179e7567b584c552ccf", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_live_backbone_interval_rank_hostile_audit_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "0a271a3674b171ee3c58931bd3c75d38eff64e7b169bac41f390b599f0b5fae2"} -->
 

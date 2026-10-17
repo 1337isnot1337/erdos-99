@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/global_discrete_isometry_blocker_closure_2026-10-12.md) · source SHA-256 `ab286686679068ae782e79149ce4420e41e43c0f9fd371a214d62c2a87bbee99`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e407548de3570f86857f4d60faedd411deba4a12", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/global_discrete_isometry_blocker_closure_2026-10-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f6cad41fcd649de78fedb1ec01e68351b2ca6b81ddf1a9ba7777d08e3313dc64"} -->
 

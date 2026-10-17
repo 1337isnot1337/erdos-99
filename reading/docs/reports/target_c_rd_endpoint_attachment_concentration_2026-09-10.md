@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_rd_endpoint_attachment_concentration_2026-09-10.md) · source SHA-256 `e577cc34f00df696b62eecbab65f7482a0ee90d95e65b4e1f2478c9e886b0c39`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 > Source formatting note: 4 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -378,7 +380,7 @@ From (2.5),
 ```math
 \operatorname{area}K_*
 \le\frac\pi4(\delta_*+2)^2
-=rac\pi4\lambda_{RD}^2D^2+o(D^2).
+=\frac\pi4\lambda_{RD}^2D^2+o(D^2).
 \tag{5.1}
 ```
 

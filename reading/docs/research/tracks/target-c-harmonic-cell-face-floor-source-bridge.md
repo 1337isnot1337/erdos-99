@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-harmonic-cell-face-floor-source-bridge.md) · source SHA-256 `09bec68e4d093eb028eb911daeb886f604e59d37b854633973aee2e371af0d79`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Target C harmonic cells, face-tail access, and the surviving endpoint
 

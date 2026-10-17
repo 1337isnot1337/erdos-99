@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_uniform_anti_reuleaux_triple_gap_2026-08-31.md) · source SHA-256 `7f72af295d3bcfee032df10a7679ab486eecbc432e3051b1a07de177e0b4bca4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-C8C03A5C88EC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — Target C C43: uniform anti-Reuleaux gap for every source triple

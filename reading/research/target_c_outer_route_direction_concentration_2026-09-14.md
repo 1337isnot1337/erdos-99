@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_outer_route_direction_concentration_2026-09-14.md) · source SHA-256 `c62bc9905331054d2ca7a13a87db95c9ee9f6d27caf2f7b086d3c9858823bbf6`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c9f42d2dcd212c4c0349d9216cb621d843679ffc", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_outer_route_direction_concentration_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "8e03930569cc9bf4975e4951c8bf251101c4c66cabb96a5627498836c2ece66c"} -->
 

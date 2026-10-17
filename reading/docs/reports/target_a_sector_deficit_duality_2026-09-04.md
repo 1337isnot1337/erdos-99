@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_a_sector_deficit_duality_2026-09-04.md) · source SHA-256 `afc643ad56d2e77e315c530b1efc70cd6426663015e6e8856fad851b01e5cdcd`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4062632c468675ad34416163aecd88256b80501f", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_a_sector_deficit_duality_2026-09-04.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b9ea4ebd455b04fc036935c23a43b68d3b99d9fa02b8a9b6903022db0d295b11"} -->
 

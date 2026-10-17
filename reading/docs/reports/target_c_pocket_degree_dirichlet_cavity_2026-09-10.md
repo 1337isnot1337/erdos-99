@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_pocket_degree_dirichlet_cavity_2026-09-10.md) · source SHA-256 `ebd287e5fd65a75db7bf50052326a397eb1473f9811bf2cbb15a6365f8a61151`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-9F35E9A60889","canonical":true,"claim_ids":["C-PD"],"claim_statuses":{"C-PD":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Erdős Problem #99 — pocket-degree Dirichlet cavity theorem
@@ -383,7 +385,7 @@ r\ge a,
 Since
 
 ```math
-\frac1{\sqrt6}>rac1{4\pi},
+\frac1{\sqrt6}>\frac1{4\pi},
 \tag{4.5}
 ```
 

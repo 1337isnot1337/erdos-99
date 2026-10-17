@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_d1_p1_anchored_endpoint_cut_2026-09-09.md) · source SHA-256 `1876ed7cb3298528f61df2b9985e590dfae32200b7bd6b7d8a60edfca0320193`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 7 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -39,10 +39,11 @@ This report proves two stronger facts.
 
 1. Each rectangle diagonal `ac,bd` is incident to a full-`H` leaf. Hence its beta coefficient is positive throughout the entire KKT interval.
 2. Every zeroed KKT endpoint edge therefore separates the rectangle vertices as
+   
    ```math
    \boxed{\{a,c\}\mid\{b,d\},}
-   
    ```
+
    so the two parallel unit hull sides `ab,cd` are permanently two of the four TC transition contacts.
 
 This converts every P1 KKT endpoint into a four-force wrench system anchored on the same exact rectangle.

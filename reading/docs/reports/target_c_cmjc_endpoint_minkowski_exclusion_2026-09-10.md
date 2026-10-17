@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cmjc_endpoint_minkowski_exclusion_2026-09-10.md) · source SHA-256 `0ad0af08c922fccbaf3fade376df5acc9c82547ae32f6f97fef2536bef6848f4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-370E10CB6670","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — CMJC endpoint excluded by strict chord/detour Minkowski geometry

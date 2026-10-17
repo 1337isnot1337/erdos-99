@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_support7_ground_sign_exact_classification_2026-09-19.md) · source SHA-256 `f47e1b8a60c7333147e6086d2b2dde573e526b36aeacd775056f3e58bc088a74`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "9af5760ecb130a8d13dc9af044ffeb3cb390d894", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_ground_sign_exact_classification_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "0bfd3c002360fa10263be5db9d524219956765a4c5a256d6418a5ccbc9b2e15c"} -->
 

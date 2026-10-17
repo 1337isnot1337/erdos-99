@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_exterior_cap_one_sided_exchange_independent_audit_2026-09-14.md) · source SHA-256 `b17c5512b4b1bd1ab472b19bd943966d566207c1d7cc0b196a914df5175d5665`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-E5C4C7D99B5F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Independent audit — one-sided protected exchange for exterior caps
@@ -26,18 +26,20 @@ assume:
 4. $`C`$ has nonempty interior and $`A\setminus Z`$ contains a nonisolated
    source; and
 5. with $`a_0=\sqrt3/2`$ and
+   
    ```math
    \sigma=\frac{\operatorname{area}(C)}{a_0}
           +\frac{\operatorname{per}(C)}2+1-|Z|,
-   
    ```
+
    the slack exceeds
+   
    ```math
    \frac{\operatorname{area}(C)}{a_0}\left(1-\frac1{\lambda^2}\right)
    +\frac{D}{a_0\lambda}+\frac{\operatorname{per}(C)}2+2
    \tag{A.1}
-   
    ```
+
    for some $`\lambda>1`$.
 
 If $`A\setminus Z`$ contains a nonisolated source, these assumptions are

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_diameter_support_crosscut_hub_independent_audit_2026-10-08.md) · source SHA-256 `7e2f38dc36f9777fcf18210c7eb4f8a64c8775eebb8da3e41094883ba0cd4010`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-EE4A3718E7B5","canonical":true,"claim_ids":["C-CROSSCUT-HUB-ENDPOINT-SHORE-REGRESSION","C-DIAMETER-SUPPORT-CROSSCUT-HUB"],"claim_statuses":{"C-CROSSCUT-HUB-ENDPOINT-SHORE-REGRESSION":"regression","C-DIAMETER-SUPPORT-CROSSCUT-HUB":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
 # Independent audit: diameter support hub for a proper crosscut tree

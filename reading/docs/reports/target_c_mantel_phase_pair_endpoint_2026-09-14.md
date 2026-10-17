@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_mantel_phase_pair_endpoint_2026-09-14.md) · source SHA-256 `f58608bb6addd8ed19f4c3770fa9db1a56093e6cb964cd925595e75d68b35799`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-04FDCD60C121","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_mantel_phase_pair_endpoint_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=9c7eb6cefb969430ea3daf332cc670826e7f6790; lifecycle=unreviewed; canonical=false -->
@@ -308,21 +308,24 @@ Assume:
 2. every A--B crossing is simple and has one common crossing sign;
 3. after phase cleaning, all train directions have lifts alpha_a and beta_b
    satisfying
+   
    ```math
    \beta_b-\alpha_a=L+\delta_{ab},\qquad 0<\delta_{ab}<L
-   
    ```
+
    whenever a and b cross, and every pair obeys
+   
    ```math
    \alpha_a<\beta_b;
-   
    ```
+
 4. the number M of missing A--B pairs is o(D^2);
 5. the total phase defect over the actual A--B crossings satisfies
+   
    ```math
    \sum_{ab\ {\rm crossing}}\delta_{ab}\le C D
-   
    ```
+
    for one fixed C.
 
 Then the convex hull of the source rhombus centers contains two points at

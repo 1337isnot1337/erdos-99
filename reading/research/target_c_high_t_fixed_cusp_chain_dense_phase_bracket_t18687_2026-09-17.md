@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_fixed_cusp_chain_dense_phase_bracket_t18687_2026-09-17.md) · source SHA-256 `3c47b8784dd230c81b52f6af5d1fc05d0755668c3e7542f114eb68284327cecc`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "ce4f969e063a6b7440243ca5ad0b87d096970f59", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_fixed_cusp_chain_dense_phase_bracket_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4016041df3d71012ea2c9fd59ec1f717c4557168affe903001cb1f18b6c3a8e4"} -->
 

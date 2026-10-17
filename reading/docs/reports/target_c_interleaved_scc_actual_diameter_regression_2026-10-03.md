@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_interleaved_scc_actual_diameter_regression_2026-10-03.md) · source SHA-256 `748b802519e8c3095d3e09bb03d097eef21d90e7faea929afe60d67a1bd61df2`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-ADF6E5B3F7EF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_interleaved_scc_actual_diameter_regression_2026-10-03.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=cefd362dbc9526ef3968a2a3925ec5a1cab62eb4; lifecycle=unreviewed; canonical=false -->

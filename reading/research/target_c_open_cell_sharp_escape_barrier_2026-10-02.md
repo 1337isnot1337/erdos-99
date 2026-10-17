@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_open_cell_sharp_escape_barrier_2026-10-02.md) · source SHA-256 `d935d346e179f20c90cac5110b2cd367fa7cdd454ff91347242a7da7d0980cfb`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "795123f7133d153accb965203d10c95e2297a7c9", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_open_cell_sharp_escape_barrier_2026-10-02.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "dcbbcffbfa69c6289bc8efe265e1c0e8f90c6359308f2f87217a9152c7c26581"} -->
 

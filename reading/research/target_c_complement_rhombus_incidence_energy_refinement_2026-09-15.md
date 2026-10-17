@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_complement_rhombus_incidence_energy_refinement_2026-09-15.md) · source SHA-256 `8e96d8c56bd0e79a0a086ee60d8f50b215f55bd56bb349deaaf61bbeccedd914`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 18 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 

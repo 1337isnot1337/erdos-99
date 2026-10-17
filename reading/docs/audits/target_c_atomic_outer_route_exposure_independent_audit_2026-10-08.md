@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_atomic_outer_route_exposure_independent_audit_2026-10-08.md) · source SHA-256 `f8a1ce7cced743f83c14c2ff88a3c22186a99f76e17581bed337320ea4a378ad`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-0746B4DCCF42","canonical":true,"claim_ids":["C-ATOMIC-OUTER-ROUTE-EXPOSURE"],"claim_statuses":{"C-ATOMIC-OUTER-ROUTE-EXPOSURE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.130 — atomic outer-route exposure

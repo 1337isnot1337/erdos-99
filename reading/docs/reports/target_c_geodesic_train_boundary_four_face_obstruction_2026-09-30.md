@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_geodesic_train_boundary_four_face_obstruction_2026-09-30.md) · source SHA-256 `1c7f893a173ded3feff6b0985a343572c671bb5abd1b4b1f7e23058b0cdfd13d`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2658536E05FB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_geodesic_train_boundary_four_face_obstruction_2026-09-30.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=61da3f67d83aac613a153f31ddc58385e78cb387; lifecycle=unreviewed; canonical=false -->

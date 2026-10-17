@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_post_zf_difference_body_perimeter_2026-09-09.md) · source SHA-256 `2409c7d151654bf855edff2ee16dea7eb16bfac2723f5c0fe30e7e5fa89264af`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-628A5B0F10DE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — post-ZF difference-body perimeter theorem
@@ -353,7 +355,7 @@ Hence `h/D` is bounded. Take any subsequence on which
 Since
 
 ```math
-a_D=rac1{2D}+O(D^{-3}),
+a_D=\frac1{2D}+O(D^{-3}),
 ```
 
 we have

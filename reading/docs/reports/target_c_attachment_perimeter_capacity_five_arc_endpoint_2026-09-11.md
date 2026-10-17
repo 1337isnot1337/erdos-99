@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_attachment_perimeter_capacity_five_arc_endpoint_2026-09-11.md) · source SHA-256 `6e89b40d5558ff265e1b07abfee21dd68e007213c29bc7c7e54f06648293a5f4`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-7B00F6C7C8DF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — attachment-perimeter capacity excludes the five-arc endpoint

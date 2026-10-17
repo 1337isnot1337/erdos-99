@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_general_six_wall_first_profile_compatibility_independent_audit_2026-10-07.md) · source SHA-256 `142f544b62b07c91a6f9b5d1c7b24fca8cd5ab10bd3a4c873c390e0240384401`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-087DCFC234A7","canonical":true,"claim_ids":["C-GENERAL-SIX-WALL-FIRST-PROFILE-COMPATIBILITY","C-GENERAL-SIX-WALL-FULL-CHART-PINNING-RATE","C-GENERAL-SIX-WALL-OLER-LIMIT"],"claim_statuses":{"C-GENERAL-SIX-WALL-FIRST-PROFILE-COMPATIBILITY":"canonical","C-GENERAL-SIX-WALL-FULL-CHART-PINNING-RATE":"canonical","C-GENERAL-SIX-WALL-OLER-LIMIT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Independent audit — Oler localization and first-profile compatibility

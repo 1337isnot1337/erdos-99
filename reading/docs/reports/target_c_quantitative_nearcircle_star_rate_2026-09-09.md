@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_quantitative_nearcircle_star_rate_2026-09-09.md) · source SHA-256 `7d43ff39291ea4874a252e6ff2530d11cc56b33390a17ad377741e23004f1d0c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 3 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-D9D7D4119965","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — quantitative near-circle diameter-star collapse
@@ -44,8 +46,7 @@ and the complete actual diameter graph obeys
 \boxed{
 \frac{\Delta(H)}D
 \le
-C\left(\eta_P^{1/8}+D^{-1/4}
-ight)
+C\left(\eta_P^{1/8}+D^{-1/4}\right)
 }
 \tag{QR.1}
 ```
@@ -66,22 +67,18 @@ hence
 \frac{\Delta(H)}D
 =O\left(
 \left(\frac{x_B+1}{D}\right)^{1/8}
-
-ight).
+\right).
 }
 \tag{QR.2}
-
 ```
 
 The exponent is weak but explicit. A macroscopic LC attachment block of size `mu D` therefore requires at least
 
 ```math
 \boxed{
-\Omega\left(\left(\frac{D}{x_B+1}\right)^{1/8}
-ight)
+\Omega\left(\left(\frac{D}{x_B+1}\right)^{1/8}\right)
 }
 \tag{QR.3}
-
 ```
 
 distinct opposite-side diameter carriers.
@@ -156,7 +153,6 @@ Hence
 M\le D\sqrt{\eta_P}.
 }
 \tag{QR.4}
-
 ```
 
 This is an elementary finite estimate; no external stability theorem is used here.
@@ -190,7 +186,6 @@ Using `P<=pi D` and QR.4,
 C_1\left(\sqrt{\eta_P}+\eta_P+D^{-1}\right)
 }
 \tag{2.2}
-
 ```
 
 for an absolute constant `C_1`.
@@ -249,7 +244,6 @@ C_2\left(
 \right).
 }
 \tag{3.4}
-
 ```
 
 In particular, as `eta_P->0`,
@@ -274,7 +268,6 @@ Therefore there is a center `c` and an absolute constant `C_3` such that
 C_3\,\delta_{iso}^{1/2}.
 }
 \tag{4.1}
-
 ```
 
 Using (3.5), put
@@ -345,7 +338,6 @@ For small `rho`, this gives
 \phi\le C_5\sqrt\rho.
 }
 \tag{5.2}
-
 ```
 
 uniformly over every actual diameter edge.
@@ -357,7 +349,6 @@ For one fixed terminal `z`, every diameter partner is therefore contained in a s
 O\left(\eta_P^{1/8}+D^{-1/4}\right).
 }
 \tag{5.3}
-
 ```
 
 ---
@@ -422,7 +413,6 @@ expanding the monotone sine near `pi/2` in (7.2) yields the safe rate
 \pi D-q=O(x_B+1).
 }
 \tag{7.3}
-
 ```
 
 A direct nonasymptotic proof uses `sin y >= 2y/pi` for `0<=y<=pi/2` after writing `(q-2)a_D=pi/2-y`; the `O(1)` terms absorb the `a_D-1/(2D)` and `d_H(1-cos a_D)` corrections.
@@ -435,7 +425,6 @@ Thus
 =O\left(\frac{x_B+1}{D}\right).
 }
 \tag{7.4}
-
 ```
 
 Insert (7.4) into QR.1 to obtain QR.2.

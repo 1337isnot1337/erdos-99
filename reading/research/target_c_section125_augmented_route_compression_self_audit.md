@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_section125_augmented_route_compression_self_audit.md) · source SHA-256 `c301bde1a812b35d947157b8ffd77854fa24e0ea03a1660e137d1a6bcb6dd417`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f0edbd17f83e3ce76de803659c4a8b6c0d4ee091", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section125_augmented_route_compression_self_audit.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b2620ff3a053528dbc7de1c6aec09add19b8ad2189acd96eab5559adfc51b643"} -->
 

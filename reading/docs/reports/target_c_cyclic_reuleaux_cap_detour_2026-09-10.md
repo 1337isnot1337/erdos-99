@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_reuleaux_cap_detour_2026-09-10.md) · source SHA-256 `53e590c9b32bfc500f585bb9cbe6e56ed058d845eeb4750b2b03c9a6a38fed5f`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-5F2A53469783","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — cyclic Reuleaux caps collapse outer-pocket capacity

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/audits/target_c_antipodal_exterior_cap_pairing_independent_audit_2026-10-07.md) · source SHA-256 `aeffa6539fd521838695aa74330825cc1aef083856ddfd7fb4466f7244be79c5`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-2146051EED8C","canonical":true,"claim_ids":["C-ANTIPODAL-EXTERIOR-CAP-PAIRING"],"claim_statuses":{"C-ANTIPODAL-EXTERIOR-CAP-PAIRING":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C Audit.115 — antipodal pairing of macroscopic exterior caps

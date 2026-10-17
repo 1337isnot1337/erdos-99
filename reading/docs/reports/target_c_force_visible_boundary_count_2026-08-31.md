@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_force_visible_boundary_count_2026-08-31.md) · source SHA-256 `8b93005ec3c2b452021309fc7fe5704b10bde2b26d637161720f12926daf599c`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-794B84850256","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_force_visible_boundary_count_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=9f8c1e31384ba43872d4fef09d392b7df6674f06; lifecycle=unreviewed; canonical=false -->

@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../research/target_c_high_t_tb1_global_lower_four_row_ladders_t18687_2026-09-17.md) · source SHA-256 `e1b92ede5eb6b4cca7f6626679f99591e2633d2c5bc152f9d3c4a86f67d72590`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 6 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -44,45 +44,33 @@ Assume GLOBAL LOWER is the winning type. Every retained near-unit blocker has ex
 The old LOWER ladder theorem first chose one residue class and one support orientation to make support intervals disjoint. That loss is unnecessary. The all-residue construction retains an injective owner layer for the distinct LOWER blockers. Depth at most four plus injective ownership implies that any selected row is contained in at most eight blocker supports. Hence the global phase and terminal-variation budgets can be spent directly on the full GLOBAL LOWER winner.
 
 > **Global four-row LOWER ladder theorem.** On the GLOBAL LOWER winner there are more than
-> 
-
-```math
+> ```math
 > \boxed{
 > \left({s_0\over48}-o(1)\right)D
 > =(5.14973958333\ldots\times10^{-8}-o(1))D
 > }
 > \tag{GL.3}
-> 
-```
+> ```
 > good near-unit blockers whose support has at most four selected rows and whose whole support carries a common family of
-> 
-
-```math
+> ```math
 > (0.6436-o(1))D
-> 
-```
+> ```
 > complete trains with uniform inverse-`D` angular defect on every support row.
 >
 > One fixed complete stopped train belongs to the common-column family of more than
-> 
-
-```math
+> ```math
 > \boxed{
 > (1.08295128111\ldots\times10^{-8}-o(1))D
 > }
 > \tag{GL.4}
-> 
-```
+> ```
 > such four-row windows. A pairwise-disjoint subfamily with the same fixed train still has more than
-> 
-
-```math
+> ```math
 > \boxed{
 > (1.35368910139\ldots\times10^{-9}-o(1))D
 > }
 > \tag{GL.5}
-> 
-```
+> ```
 > members.
 
 ---

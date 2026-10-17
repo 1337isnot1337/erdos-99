@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_centered_fan_simultaneous_reflections_2026-10-02.md) · source SHA-256 `5a39dd0904fd4564bbb552a13d0322d43052fea76aa328e85b9b20cbe7f73f25`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B83A9F8D0B8D","canonical":true,"claim_ids":["C-CENTERED-FAN-REFLECTIONS"],"claim_statuses":{"C-CENTERED-FAN-REFLECTIONS":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
 # Target C: simultaneous fan reflections and injective inactive blockers

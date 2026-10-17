@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_full_settlement_run_2026-09-10.md) · source SHA-256 `606b4aca774d35d2ab0718a8d502e85b410241e0b842dc2154094b189291de20`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 4 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-95ED6B83FC92","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_full_settlement_run_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=bf760a64872369d1d3735e03367aad310126833e; lifecycle=unreviewed; canonical=false -->
@@ -38,24 +40,27 @@ For every post-ZF survivor define
 Then:
 
 1. **all-phase coefficient-three renormalization:**
+   
    ```math
    \boxed{
    \liminf_{D\to\infty}\mu_D>0.5947;
    }
    \tag{0.2}
-   
    ```
+
 2. **exact force-bulk population conversion:** if along a subsequence
    `mu_D->mu` and `s_B/D->sigma_B`, then
+   
    ```math
    \boxed{
    \limsup\frac vn
    \le\frac4{\pi^2}(\mu-\sigma_B)^2;
    }
    \tag{0.3}
-   
    ```
+
 3. **exact outer-shell phase threshold:** put
+   
    ```math
    \boxed{
    u_\pi=
@@ -63,13 +68,14 @@ Then:
    =0.6932725422\ldots .
    }
    \tag{0.4}
-   
    ```
+
    For every fixed `u<u_pi`, every sequence with `mu_D<=u+o(1)` has more than
+   
    ```math
    1-\frac{4u^2}{\pi^2}-o(1)
-   
    ```
+
    of the whole source in C65 fully inactive rattlers, while the source hull gains
    linear perimeter/support beyond the positive force hull.
 
@@ -412,7 +418,7 @@ with `rho=cos rho`.  The last inequality is exact from
 For `A>0,m>=0`, let `R(A,m)` be the least nonnegative `u` satisfying
 
 ```math
-A\le\frac\pi4u^2+rac{(u+m)^2}{4\pi}.
+A\le\frac\pi4u^2+\frac{(u+m)^2}{4\pi}.
 ```
 
 The RSJ calculus gives
@@ -727,7 +733,7 @@ In particular `k_r<=2a_r`.
 Eppstein's Lemmas 3--4 give the finite outer-face isoperimetric estimate
 
 ```math
-n_r\le k_r+rac{k_r^2}{2\pi\sqrt3}.
+n_r\le k_r+\frac{k_r^2}{2\pi\sqrt3}.
 \tag{3.5}
 ```
 
@@ -824,7 +830,7 @@ Strict translated triangular-lattice comparison gives
 Oler gives
 
 ```math
-\operatorname{area}K+rac{\sqrt3}{4}P_K
+\operatorname{area}K+\frac{\sqrt3}{4}P_K
 \ge\frac{\sqrt3}{2}(n-1).
 \tag{4.4}
 ```
@@ -922,7 +928,7 @@ This is a quadratic in `p` with positive leading coefficient, and `g_u(2)<0`.
 At `p=pi`, using `Psi(pi)=pi/4`, the inequality `g_u(pi)>0` is equivalent to
 
 ```math
-(\pi^2+1)u^2+\pi u-rac{3\pi^2}{4}<0.
+(\pi^2+1)u^2+\pi u-\frac{3\pi^2}{4}<0.
 \tag{4.12}
 ```
 
@@ -1260,10 +1266,11 @@ bound on the internal component-face currency was derived from it.
 - arithmetic: exact rational/integer
 - cells: 470
 - proposition certified:
+  
   ```math
   \nu=(e_{BB}+2s_C-3d_H)/D>0.5981+o(1)
-  
   ```
+
   in the circuit phase
 - weakest localization margin:
   `133924761/9620843750000000>0`

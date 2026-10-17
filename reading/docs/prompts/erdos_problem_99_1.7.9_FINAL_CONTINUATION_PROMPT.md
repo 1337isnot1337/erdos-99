@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/prompts/erdos_problem_99_1.7.9_FINAL_CONTINUATION_PROMPT.md) · source SHA-256 `e289d7bbecb948fbde2f78af190e6ed5204f0b1847ba3250ab924c2290889cc1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Erdős Problem #99 — continuation after Section 162 sharp symmetric coefficient
 
@@ -57,39 +57,44 @@ strictly below `D(N)`.
   identify source rattlers with Schur terminals.
 - Section 160 constructs the strongest current free five-block gap branch. In paper
   units
+  
   ```math
   \delta_{\rm toe}(d)=\frac{\sqrt3}{9}d^4-\frac29d^5+O(d^6),
-  
   ```
+
   and in canonical units
+  
   ```math
   \boxed{\limsup_{d\downarrow0}d^3\log W(d)\le\frac{\sqrt3\log3}{8}}.
-  
   ```
+
   For fixed-shape `K` with `r B subset K`,
+  
   ```math
   \boxed{\limsup_{L\to\infty}\frac{\alpha_L^{-3}}{\log L}
   <\frac{8r^3}{\sqrt3\log3}}
-  
   ```
+
   is sufficient for same-hull add-one.
 - Section 161 proves exponent optimality for arbitrary local rigid translations of the
   same five blocks: `V_5^{loc}(d)=Theta(d^4)`. Thus local simultaneous/asymmetric
   rescheduling cannot produce a cubic or quadratic gain.
 - Section 162 proves the stronger coefficient theorem in the full reflection-symmetric
   translation class:
+  
   ```math
   \boxed{
   \limsup_{d\downarrow0}\frac{v(d)}{d^4}\le\frac{\sqrt3}{9}.
   }
-  
   ```
+
   Section 160 attains equality. Equality forces
+  
   ```math
   b/d\to1,\quad a/d^2\to1/4,\quad c/d^2\to1/2,\quad
   e/d^2\to\sqrt3/6.
-  
   ```
+
   Therefore the Section 160 leading toe-out profile and coefficient are asymptotically
   optimal among all local reflection-symmetric rigid translations.
 
@@ -101,10 +106,11 @@ Do not claim that any of these statements alone proves Target A.
    actual source/scaffold monomer domain and prove all exterior blockers stay clear,
    with an exact strict-diameter certificate. Compare the available protected radius
    directly with
+   
    ```math
    \exp\left[\left(\frac{\sqrt3\log3}{8}+o(1)\right)d^{-3}\right].
-   
    ```
+
 2. **Genuinely different lower-order gap architecture.** If a better support exponent
    is necessary, change the finite block/contact architecture or allowed motion class
    and prove a one-step gain `omega(d^4)`. Rotations, internal deformation, a nonlocal

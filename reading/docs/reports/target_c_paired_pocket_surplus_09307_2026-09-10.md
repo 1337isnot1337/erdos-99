@@ -1,5 +1,7 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_paired_pocket_surplus_09307_2026-09-10.md) · source SHA-256 `a26dfb2012f485557e8bd8c5eebbb359d42f3aad9683558830d026b05d1aaea1`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 5 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
 
 <!-- theorem-state: {"artifact_id":"ART-65020AB0EE7D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Erdős Problem #99 — opposite-pocket pairing raises the post-ZF surplus floor above 0.930749
@@ -458,14 +460,14 @@ Also `H(0)=pi/4>0`, while at `lambda=1`,
 
 ```math
 A(1)=\frac\pi6+\frac{\sqrt3}{8}
-<\frac\pi4+rac1{4\pi}=B.
+<\frac\pi4+\frac1{4\pi}=B.
 ```
 
 The last strict inequality follows already from `pi>3` and `sqrt3<2`:
 
 ```math
 B-A(1)
-=rac\pi{12}+rac1{4\pi}-rac{\sqrt3}{8}>0.
+=\frac\pi{12}+\frac1{4\pi}-\frac{\sqrt3}{8}>0.
 ```
 
 Therefore there is a unique root
@@ -566,7 +568,7 @@ On the other hand, PP.1 and GU give
 ```math
 \liminf\frac G{D^2}
 \ge
-A(\lambda_{PP})-rac\pi4\lambda_{PP}^2
+A(\lambda_{PP})-\frac\pi4\lambda_{PP}^2
 =
 \frac{\lambda_{PP}^2}{4\pi}>0,
 \tag{7.8}

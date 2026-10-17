@@ -1,5 +1,5 @@
 > Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_path_stress_recurrence_2026-09-09.md) · source SHA-256 `d5d48edfdf9964dc4085a9fc17e20375748cb4147ad02c4d4265e79c0bb8b507`.
-> Formatting and navigation only; the source and theorem ledger control mathematical status.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 > Source formatting note: 1 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
 
@@ -59,18 +59,21 @@ Then:
 
 1. Every contact on the `i`th LC path has coefficient exactly `sigma_i`.
 2. Every pendant diameter edge lying between `t_i` and `t_{i+1}` has coefficient
+   
    ```math
    \boxed{\beta_h=\frac{\sigma_i}{D^2}.}
    \tag{PS.3}
-   
    ```
+
 3. If
+   
    ```math
    d_i:=\sigma_{i-1}-\sigma_i,
    \tag{PS.4}
-   
    ```
+
    then the coefficient `beta_i` of the cycle diameter edge at `t_i` is
+   
    ```math
    \boxed{
    \beta_i
@@ -81,14 +84,16 @@ Then:
    \right).
    }
    \tag{PS.5}
-   
    ```
+
 4. The alternating jump sequence
+   
    ```math
    y_i:=(-1)^i d_i
-   
    ```
+
    satisfies the exact variable-step harmonic recurrence
+   
    ```math
    \boxed{
    y_{i+2}
@@ -100,28 +105,31 @@ Then:
    y_i.
    }
    \tag{PS.6}
-   
    ```
+
 5. Under the normalization
+   
    ```math
    \sum_{h\in H}\beta_h=1,
-   
    ```
+
    the path stresses satisfy
+   
    ```math
    \boxed{\sum_i\ell_i\sigma_i=D^2,}
    \tag{PS.7}
-   
    ```
+
    and the total KKT mass on the unique diameter cycle is
+   
    ```math
    \boxed{
    \sum_{i=0}^{r-1}\beta_i
    =\frac1{D^2}\sum_{i=0}^{r-1}\sigma_i.
    }
    \tag{PS.8}
-   
    ```
+
 
 Thus the complete nonnegative KKT polygon is equivalently an `r`-variable positive path-stress family satisfying one variable-step harmonic recurrence and the cycle inequalities `beta_i>=0` from PS.5.
 
