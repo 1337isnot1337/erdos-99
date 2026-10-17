@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2167,
-  "math_pairs_normalized": 71613,
+  "source_documents": 2168,
+  "math_pairs_normalized": 71621,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -2845,6 +2845,13 @@
       "reading_path": "reading/docs/reports/target_a_contracted_contact_shield_hall_2026-09-04.md",
       "reading_sha256": "dd49a038b4f03ca45124f29f677fb40bd6bae6ea020505aa28a94c9c1a4a51bc",
       "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/reports/target_a_independent_schur_linkage_2026-10-17.md",
+      "source_sha256": "abb381e795052fa2d6de401e9f700faf8c8f72aaf860b966fc5d0867f4645045",
+      "reading_path": "reading/docs/reports/target_a_independent_schur_linkage_2026-10-17.md",
+      "reading_sha256": "7d90accb9bbff1efe3cd3744b115443a305ad5ee493687c47905500aaf29883e",
+      "math_pairs_normalized": 8
     },
     {
       "source": "docs/reports/target_a_inner_source_capacity_defect_bound_2026-09-05.md",
