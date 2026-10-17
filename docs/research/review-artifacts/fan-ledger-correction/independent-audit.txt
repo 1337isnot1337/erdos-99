@@ -1,0 +1,308 @@
+# Independent AI-agent audit: corrected seed-63 full-tube ledger
+
+## Verdict and exact scope
+
+**PASS for the corrected fixed-fixture mathematics at local commit
+`d585826bbe4e7ebc720706231820906f90832b30`.** The optimum of the raw full-tube
+right-deficiency bound is **1 over Section-102 admissible bases** for every
+integer `M>=5`. The predecessor matching attains it. The value `M-1` is
+correct over the larger class of `Z`-perfect matchings when the **full**
+nonbasis Schur complement is retained. The submitted relaxed witness omits
+`M-2` mandatory incidence-deep columns and is not Section-102 admissible.
+
+The original PR #87 and PR #92 canonical-admissibility conclusion fails.
+The correction properly supersedes that conclusion while preserving the
+valid geometry, full-matrix rank, and relaxed optimization results.
+
+This is an independent **AI-agent mathematical audit**, not human peer review.
+It does not promote any result into the canonical theorem stack. The claim
+is a supplied chamber/fan/phase regression. It provides no canonical source
+demand, original flexible source, eventual global-minimizer result, or
+Target A/Level I closure.
+
+Reviewer: `/root/correction_audit`, GPT-6 Astra Pro. This fresh agent did not
+produce, edit, or verify the submitted proof or checker before this review.
+The reviewer has not edited repository files or mutated GitHub. All scripts,
+snapshots, and notes were initially created in `/tmp/erdos99-correction-audit/`.
+The durable publication package is intended to contain this record as
+`independent-audit.txt`, the prior reconstruction as
+`preproof-reconstruction.txt`, and the portable checker and historical
+results as `independent-replay.py` and `independent-evidence.json` under
+`docs/research/review-artifacts/fan-ledger-correction/`.
+
+The integrating agent is preparing a public commit. A final scope-binding
+addendum is required once that exact public SHA is supplied. The only
+package changes observed after the local reviewed commit are table-label
+formatting in README and its corresponding SHA-256 pin; they do not change
+the mathematics or checker. This was independently confirmed by the diff.
+
+## Inputs and independence procedure
+
+Read `AGENTS.md`, `docs/REVIEW_POLICY.md`, and the authoritative state first.
+For the mathematics, the review began from:
+
+- Section 102 of `docs/targets/target-a/02-scaffold-and-hall.md`;
+- Section 113 of `docs/targets/target-a/03-source-response.md`;
+- Sections 174 and 175 in the two canonical tube/shield modules;
+- Section 4 of the seed-63 predecessor report, for the actual fixture.
+
+Before reading the corrected package argument and checker, I derived the
+incidence-deep set, mandatory basis inclusion, tube sets, the admissible
+upper bound, and a separate relaxed witness. These notes are preserved in
+`preproof-reconstruction.md`. Search snippets had exposed the claimed
+numerical optima, which is disclosed; the derivation did not rely on the
+proposed proof or checker.
+
+Then I read all of `research-packages/target-a-fan-tube-ledger/README.md`,
+`verify.py`, `TASK.json`, `SOURCES.json`, `VERIFY.json`, `evidence.json`, and
+the corrected audit disposition. I compared the original PR #87 checker at
+`33a4aaa016d0a219e2f9e8e7a92c87ff4aa77afb` and original PR #92 audit at
+`96e54788d1a42d246dba0a60ab5e8a81fc5aea4a`.
+
+The seven package source pins were independently checked against Git blobs
+at their recorded commits. Frozen copies of the six package files and the
+corrected audit are preserved under `submitted/` at the local reviewed SHA.
+
+## Complete proof reconstruction
+
+### 1. Geometry, collar, and incidence depth
+
+Use lattice coordinates with `q(a,b)=a^2+ab+b^2` and phase
+`v=(1/5,1/7)`. The source is
+`X={(i,j):i,j>=0,i+j<=M}`. The three strict neighbors of a source label
+are row labels `x`, `x-(1,0)`, and `x-(0,1)`. Their squared distances are
+`109/1225`, `669/1225`, and `739/1225`. Checking the other unit lattice
+directions excludes them. All other nonzero integer differences have
+`q>=3`, since this form is zero or one modulo three, and `|v|<1/3` keeps
+them farther than one.
+
+The complete collar consists of
+`Z={(i,j):i,j>=0,i+j<=M-1}` and the three disjoint exterior strips
+`(-1,j)`, `(i,-1)`, `(i,M-i)`, with each range from zero through `M`.
+The half-plane distance bounds exclude labels with a coordinate at most
+`-2` or sum at least `M+1`. The remaining exceptional corner labels have
+squared distances `2524/1225`, `1264/1225`, and `1404/1225`, all above one.
+Every listed row is a strict source neighbor. Thus no exterior sinks have
+been omitted, and `|O|=3M+3`.
+
+Most importantly, Section 102 defines depth by **incidence**:
+
+`X^circ={x:N(x) subseteq Z}={(i,j):i,j>=1,i+j<=M-1}`.
+
+The identity row matching makes the entire deep restriction independent.
+Its only column basis is therefore the whole deep set. A Section-102 basis
+must contain every one of these columns. Geometric distance greater than
+one from the hull is sufficient for depth but is not its definition.
+
+### 2. The complete fan tube and basis closure
+
+The fan consists of the triangle `(1,1),(2,1),(1,2)`, the two short spokes
+to `(0,1)` and `(2,0)`, and the vertical chain ending at `(1,M-1)`.
+It has `M+2` vertices and unit edges and gives the four stated geometric
+sectors. Exact projection gives the local tube tables in the README.
+Their exhaustion outside the finite box is justified by
+`q(w)>=3 max(|w_1|,|w_2|)^2/4`; no numerical truncation hypothesis is used.
+
+Taking their translated union gives exactly
+
+`T_Z={(0,j):0<=j<=M-1} union {(1,j):0<=j<=M-2} union {(2,0),(2,1)}`
+
+and `T_O={(-1,1),(2,-1),(1,M-1)}`. Hence `|T_Z|=2M+1` and `|T_O|=3`.
+
+Every matched row of a basis source on the fan belongs to the tube, since
+it is a strict response neighbor of that fan point. Thus removing all fan
+sources, all tube rows, and all matched source partners of `T_Z` is exactly
+the Section-174 basis closure. Surviving basis partners and interior rows
+remain in the same geometric sector. In the two displayed matchings all
+surviving basis and interior row counts are `(0,g,0,0)`, where
+`g=(M^2-3M-2)/2`.
+
+### 3. Witness matchings and admissibility
+
+The predecessor's two row-shift chains are disjoint, use strict conflict
+edges, and terminate at distinct top-side sources. It contains every deep
+source and omits all three boundary fan endpoints. It is admissible.
+
+The submitted relaxed matching also has disjoint image ranges and is
+`Z`-perfect. Its complement is the fan except `(1,1)`, so all `M+1`
+nonbasis sources are on the fan. However, it omits
+`{(2,1)} union {(1,j):2<=j<=M-2}`, exactly `M-2` incidence-deep columns.
+At `M=5` the omitted set is `(1,2),(1,3),(2,1)`, while the historical
+geometric-distance predicate has an empty deep set. This is a concrete
+counterexample to that old admissibility test.
+
+I independently found another relaxed witness before reading the submitted
+matching. It fixes `(0,0),(1,0)`, maps `(0,j)` to `(0,j+1)` for `j>=1`,
+maps `(1,j)` to `(2,j)` for `j>=1`, and maps `(i,j)` to `(i+1,j)` for
+`i>=2`. It has the same relaxed optimum but a different omitted deep set.
+This is an additional check of the class distinction, not a needed new
+component of the submitted proof.
+
+### 4. All-basis optimum
+
+For an arbitrary `Z`-perfect matching, retain **all** nonbasis sources in
+the sector terminal counts for the relaxed comparison. The exterior
+partition and `a-max(a-b,0)=min(a,b)` give
+
+`Xi-|T_Z|=|O|-|T_O|-|T_Z|-sum_i min(|C_i|,|O_i|)<=M-1`.
+
+The relaxed witness has no surviving nonbasis source in any sector and
+attains `M-1`. The full-Schur linkage proof uses all nonbasis sources, so
+the tube interception and sector cut apply without falsely discarding
+omitted deep columns.
+
+Now impose Section 102. All `M+1` nonbasis sources are boundary terminals.
+Only three boundary sources lie on the fan. Let `t` be the number of these
+three that are nonbasis. Each exterior row is a leaf with one source
+neighbor. The three exterior tube rows attach precisely to the boundary
+fan endpoints. Every surviving boundary terminal therefore has a distinct
+exterior sink outside the tube in its sector. Its sink survives because
+its source is a nonbasis column and is not removed as a matching partner.
+Thus `|O_i|>=|C_i|`, and closure removes a nonbasis source only on the fan.
+Consequently
+
+`sum_i min(|C_i|,|O_i|)=M+1-t`, so `Xi-|T_Z|=t-2<=1`.
+
+The predecessor has `t=3` and attains equality. This proves the optimum for
+**every** admissible basis and its matching for every `M>=5`; the finite
+search is supplementary.
+
+The explicit predecessor ledger is `C_i=(0,M-3,1,0)`,
+`O_i=(0,2M-4,2,0)`, and `|O_iso|=M+2`. The relaxed ledger is
+`C_i=0`, `O_i=(0,2M-5,0,0)`, and `|O_iso|=M+5`. Directly applying the
+unique exterior source-neighbor rule verifies all endpoints of those ranges
+and their complete disjoint partition of `O`.
+
+### 5. Full versus boundary Schur response
+
+The injective diagonal conflict matching saturates the entire source, so
+the full generic incidence matrix has rank `|X|`. For either displayed
+`Z`-perfect matching, block elimination gives full Schur rank
+`|X|-|Z|=M+1` and actual right deficiency `|O|-(M+1)=2M+2`.
+The symmetric-difference linkage argument is valid and gives the same
+rank. This concerns independent edge indeterminates, not an all-ones
+specialization.
+
+For the predecessor, the full complement is exactly `C^partial`, so the
+canonical boundary formula applies. For the relaxed witness, the
+boundary-only block has just three columns and rank three; its omitted
+deep block has rank `M-2`, and those columns are **not loops**. Using
+`|O|-rank(S_boundary)` there would give `3M`, while actual `h` is `2M+2`.
+The corrected package retains the full complement and labels the canonical
+interface false. This resolves the load-bearing error.
+
+The admissible cut's loss relative to the actual deficiency is
+`(2M+2)-1=2M+1`; the relaxed full-Schur cut loses `M+3`.
+
+## Focused replays and adversarial tests actually run
+
+Environment: Python `3.12.14`, standard library only. The declared locked
+Python 3.14 replay belongs to the integrating agent. That agent reports
+normal and optimized runs passed under locked Python `3.14.7` with
+byte-identical evidence and valid metadata/source pins; those are separately
+reported integration results, not runs performed by this reviewer.
+
+Commands executed from `/workspace/scratch/eae2ea921155/repo`:
+
+```sh
+python research-packages/target-a-fan-tube-ledger/verify.py > /tmp/erdos99-correction-audit/submitted-normal.json
+python -O research-packages/target-a-fan-tube-ledger/verify.py > /tmp/erdos99-correction-audit/submitted-optimized.json
+python /tmp/erdos99-correction-audit/independent_replay.py > /tmp/erdos99-correction-audit/independent-evidence.json
+python scripts/research_package.py --package research-packages/target-a-fan-tube-ledger --check-only
+```
+
+Both submitted verifier runs exited zero and were compared in Python with
+the exact reviewed Git blob of `evidence.json`; both were byte-identical.
+The verifier bytes were separately compared with the reviewed Git blob and
+were identical. Output SHA-256:
+`a50f8ed5dd71243b7db653d058a93b964dd1a6462d8dc95e488f2cdabec1fba3`.
+The saved evidence has 36 ledgers, 72 ledger-failure controls, and 18
+admissibility-failure controls at `M=5,...,20,24,32`.
+
+The independent script imports no repository code and passed in 2.815
+seconds. It uses integer coordinates scaled by 35, denominator-cleared
+segment-distance comparisons, direct linear sector regions, a separate
+augmenting matching algorithm, and exact Fraction elimination. Results:
+
+- The three local tube tables agree when independently enumerated in the
+  larger box `[-5,5]^2`.
+- All 21 independent geometry/ledger cases pass: three matchings each at
+  `M=4,5,6,7,10,21,33`. The sizes outside the package replay are extra
+  controls and do not expand its claimed domain.
+- At `M=5`, all 54,264 column subsets of basis size were tested. Exactly
+  29,636 admit a `Z`-perfect matching. Of these, 3,643 are admissible;
+  their cut-value counts are `-2:713`, `-1:1692`, `0:1062`, `1:176`.
+  None exceeds one. The relaxed maximum is four. One independently found
+  matching per basis was evaluated; exhaustive enumeration of every
+  matching of each basis was not performed and is not needed for the
+  universal proof.
+- Exact Schur specializations at `M=5,6` give predecessor full/boundary
+  ranks `6/6` and `7/7`. For the submitted relaxed witness the full ranks
+  are `6,7`, boundary ranks are `3,3`, and omitted-deep ranks are `3,4`.
+  The false boundary-only right-deficiency values would be `15,18`,
+  against actual values `12,14`. All edge entries in these checks are
+  nonzero integers and arithmetic is exact.
+- All seven source SHA-256 pins match their exact committed Git blobs.
+
+The package metadata command returned `metadata-valid` with no unresolved
+files and explicitly no mathematical approval. It ran against the current
+working tree, which had only editorial README/pin changes within this
+package; exact-commit pin coverage comes from the independent script.
+No full theorem-certificate suite was run by this audit.
+
+### Portable independent replay
+
+The published independent checker requires only Python's standard library,
+the Git executable, and a checkout containing the selected commit and the
+historical commits pinned by its SOURCES file. It imports no submitted
+checker, third-party library, or other repository Python module. Its only
+file inputs are the package's SOURCES manifest and its seven declared
+Git-blob inputs; there are no hidden external data dependencies.
+
+The original run used the historical local commit above. Before publication,
+the audit checker was made portable by adding `--repo` and `--sha` options;
+these default to discovering the repository from the current directory and
+resolving `HEAD`. No mathematical logic changed. The portable script was
+rerun with explicit `--repo /workspace/scratch/eae2ea921155/repo --sha
+d585826bbe4e7ebc720706231820906f90832b30`. Its parsed evidence was identical
+to the saved historical evidence after excluding only elapsed wall time.
+
+From a public repository checkout, reproduce against the final published
+source commit with:
+
+```sh
+python docs/research/review-artifacts/fan-ledger-correction/independent-replay.py --repo . --sha PUBLIC_SHA > /tmp/fan-independent-public.json
+```
+
+Here `PUBLIC_SHA` must be replaced by the exact SHA in the final binding
+record. The script resolves and reports that commit, then reads all pinned
+inputs through Git at their declared revisions. It does not rely on mutable
+working-tree copies or the historical scratch directory. The Git history
+must include the source commits; a shallow checkout may need to fetch them.
+
+An initial run of the independent script stopped because it read an
+in-flight working-tree SOURCES file while hashing the frozen README blob.
+This was a mixed-revision audit-input error, not a failure of the submitted
+package. The audit script was corrected to read SOURCES through `git show`
+at the exact reviewed commit; the subsequent seven pin checks all passed.
+
+## Limitations and remaining obligations
+
+This review checks the supplied phase, complete collar, fan, matching,
+sector bookkeeping, all-basis proof, full Schur interface, and stated
+finite controls. It does not re-audit the predecessor's stronger
+fixed-container capacity, positive stress, fixed-hull lock, or explicit
+large-M nonglobal competitor theorem; none is load-bearing for the
+corrected optimization proof.
+
+The two earlier canonical tube modules are used at their exact stated
+interfaces. This review does not reconstruct the entire prior global
+plateau/stress/source chain. The package does not invoke that chain to
+claim its chamber is an actual global source. The missing canonical
+theorem remains a joint source-demand and sink-population inequality for
+an actual plateau response, or a strict whole-source competitor.
+
+No load-bearing mathematical gap remains in the corrected fixed-fixture
+claim. The remaining operational step for this record is to bind this
+review to the final public SHA after checking its diff from the reviewed
+local commit.

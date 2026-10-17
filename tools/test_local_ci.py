@@ -237,10 +237,106 @@ class Repository(unittest.TestCase):
         self.package('alpha',deps=['research-packages/beta']); self.package('beta',deps=['research-packages/alpha'])
         self.commit(); self.full()
 
-    def test_workload_cap(self):
+    def over_budget_plan(self):
         self.package('beta'); self.package('gamma'); self.base=self.commit()
         for name in ('alpha','beta','gamma'): self.write(f'research-packages/{name}/README.md','changed\n')
-        self.commit(); self.full()
+        self.commit()
+        return self.plan()
+
+    def test_workload_cap_defers_without_changing_scientific_scope(self):
+        p = self.over_budget_plan()
+        self.assertEqual(p['level'], 'targeted-replay', p)
+        self.assertEqual(p['packages'], [f'research-packages/{name}' for name in ('alpha', 'beta', 'gamma')])
+        self.assertEqual(p['affected_packages'], p['packages'])
+        self.assertEqual(p['workload_seconds'], 15)
+        self.assertEqual(p['replay_schedule'], 'deferred-budget')
+        self.assertEqual(p['scheduling_reasons'], ['automatic replay package cap exceeded'])
+        self.assertEqual(p['reasons'], [])
+        self.assertEqual(p['errors'], [])
+        self.assertNotEqual(p['dependency_closure'], 'not-established')
+        self.assertFalse(p['replay_allowed'])
+        self.assertFalse(p['full_verified'])
+        with patch('tools.localized_ci.replay.execute') as execute_package, \
+             self.assertRaisesRegex(Invalid, 'no partial replay'):
+            replay(self.root, p, self.output)
+        execute_package.assert_not_called()
+
+    def test_time_budget_defers_the_complete_targeted_set(self):
+        self.package('beta'); self.base = self.commit()
+        for name in ('alpha', 'beta'):
+            self.write(f'research-packages/{name}/README.md', 'changed\n')
+        self.commit()
+        with patch('tools.localized_ci.plan.MAX_SECONDS', 9):
+            p = self.plan()
+        self.assertEqual(p['level'], 'targeted-replay', p)
+        self.assertEqual(p['packages'], ['research-packages/alpha', 'research-packages/beta'])
+        self.assertEqual(p['workload_seconds'], 10)
+        self.assertEqual(p['replay_schedule'], 'deferred-budget')
+        self.assertEqual(p['scheduling_reasons'], ['automatic replay time cap exceeded'])
+        self.assertFalse(p['replay_allowed'])
+
+    def test_exact_automatic_budget_is_allowed(self):
+        self.package('beta')
+        for name in ('alpha', 'beta'):
+            relative = f'research-packages/{name}/VERIFY.json'
+            verifier = self.read_json(relative)
+            verifier['commands'][0]['timeout_seconds'] = 120
+            self.json(relative, verifier)
+        self.base = self.commit()
+        for name in ('alpha', 'beta'):
+            self.write(f'research-packages/{name}/README.md', 'changed\n')
+        self.commit()
+        p = self.plan()
+        self.assertEqual(p['level'], 'targeted-replay', p)
+        self.assertEqual(p['workload_seconds'], 240)
+        self.assertEqual(p['replay_schedule'], 'ready')
+        self.assertEqual(p['scheduling_reasons'], [])
+        self.assertTrue(p['replay_allowed'])
+
+    def test_time_limit_changes_preserve_the_scientific_contract(self):
+        relative = 'research-packages/alpha/VERIFY.json'
+        for seconds, schedule in ((1, 'ready'), (120, 'ready'), (121, 'deferred-budget')):
+            with self.subTest(seconds=seconds):
+                verifier = self.read_json(relative)
+                verifier['commands'][0]['timeout_seconds'] = seconds
+                self.json(relative, verifier)
+                self.commit()
+                p = self.plan()
+                self.assertEqual(p['level'], 'targeted-replay', p)
+                self.assertEqual(p['packages'], ['research-packages/alpha'])
+                self.assertEqual(p['workload_seconds'], seconds)
+                self.assertEqual(p['replay_schedule'], schedule)
+                self.assertEqual(p['errors'], [])
+                self.assertEqual(p['reasons'], [])
+                self.assertEqual(p['replay_allowed'], schedule == 'ready')
+                if seconds == 121:
+                    self.assertEqual(p['scheduling_reasons'],
+                                     ['research-packages/alpha: automatic per-package time cap exceeded'])
+
+    def test_invalid_time_limits_still_require_review(self):
+        relative = 'research-packages/alpha/VERIFY.json'
+        for timeout in (0, -1, True, '5'):
+            with self.subTest(timeout=timeout):
+                verifier = self.read_json(relative)
+                verifier['commands'][0]['timeout_seconds'] = timeout
+                self.json(relative, verifier)
+                self.commit()
+                p = self.full()
+                self.assertTrue(any('positive integer' in error for error in p['errors']))
+
+    def test_cli_reports_deferred_replay_without_a_full_scope_claim(self):
+        self.over_budget_plan()
+        github_output = Path(self.temp.name) / 'github-output'
+        with contextlib.redirect_stdout(io.StringIO()):
+            status = local_ci_main(['--root', str(self.root), '--base-ref', self.base,
+                                    '--require-localized', '--output', str(self.output),
+                                    '--github-output', str(github_output)])
+        self.assertEqual(status, 3)
+        p = json.loads((self.output / 'plan.json').read_text(encoding='utf-8'))
+        self.assertEqual(p['level'], 'targeted-replay')
+        self.assertEqual(len(p['packages']), 3)
+        self.assertEqual(github_output.read_text(encoding='utf-8'),
+                         'replay=false\nlevel=targeted-replay\nreplay_schedule=deferred-budget\n')
 
     def test_dynamic_import(self):
         self.package('alpha',code='module = __import__("os")\n'); self.commit(); self.full()
@@ -578,12 +674,22 @@ class ProtocolSyntax(unittest.TestCase):
     def test_duplicate_json_keys(self):
         with self.assertRaises(Invalid): strict_json('{"version":1,"version":2}')
 
+    def test_long_relative_paths_keep_component_and_traversal_checks(self):
+        relative = 'docs/archive/' + '/'.join(['a' * 80] * 3) + '/proof.md'
+        self.assertGreater(len(relative), 240)
+        self.assertEqual(path(relative), relative)
+        self.assertEqual(path('a' * 255), 'a' * 255)
+        for invalid in (relative + '/../outside', 'docs/' + 'a' * 256 + '/proof.md'):
+            with self.subTest(path=invalid), self.assertRaises(Invalid):
+                path(invalid)
+
     def test_workflow_permissions_and_gates(self):
         import yaml
         workflow=yaml.safe_load((ROOT/'.github/workflows/theorem-state.yml').read_text(encoding='utf-8'))
         self.assertEqual(set(workflow.get('on',workflow.get(True))),{'pull_request'})
         self.assertEqual(workflow['permissions'],{'contents':'read'})
         self.assertIn('draft == false',workflow['jobs']['plan']['if'])
+        self.assertNotIn('E99_PUBLIC_CI', workflow['jobs']['plan']['if'])
         self.assertIn('E99_PUBLIC_PACKAGE_REPLAY',workflow['jobs']['replay']['if'])
         self.assertNotIn('strategy',workflow['jobs']['replay'])
         for job in workflow['jobs'].values():
@@ -597,6 +703,16 @@ class ProtocolSyntax(unittest.TestCase):
         self.assertNotIn('pull_request_target',text)
         self.assertNotIn('secrets.',text)
         self.assertNotIn('run_theorem_certificates.py',text)
+        planning = next(step for step in workflow['jobs']['plan']['steps'] if step.get('id') == 'plan')
+        self.assertIn('control/tools/local_ci.py', planning['run'])
+        self.assertIn('--integrity', planning['run'])
+        self.assertNotIn('--require-localized', planning['run'])
+        report = next(step for step in workflow['jobs']['plan']['steps']
+                      if step.get('name') == 'Report verification scope and pending replay')
+        self.assertIn('replay_schedule', report['env']['REPLAY_SCHEDULE'])
+        self.assertIn('All listed packages remain required', report['run'])
+        self.assertIn('Targeted replay remains pending', report['run'])
+        self.assertNotIn('exit 3', report['run'])
 
 if __name__=='__main__':
     unittest.main()

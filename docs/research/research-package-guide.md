@@ -46,15 +46,17 @@ inputs or dependencies remain explicit full-verification obligations; do not alt
 the protocol merely to turn a draft green. Full repository replay belongs to the
 merging agent when required. Neither metadata nor a finite replay promotes claims.
 
-An **Open next questions** entry gives the exact question, why it matters, a
-feasible first action and its blocker. If no next question is justified, say so.
+An **Open next questions** entry names the downstream claim or decision and
+the exact quantity the extension can affect. State its changed hypothesis and
+what either outcome enables. Then give one feasible first action and its blocker.
+If no useful next question is justified, say so.
 Update the existing investigation thread and link this package; no extra session
 report is required. [Archive publication](research-archive-intake.md) and independent
 scientific acceptance remain distinct.
 
-Hosted rollout remains governed by the existing owner gates. The first stage is
-local metadata, failure-control and planner checks; record environment and timings.
-Only a separately authorized canary can establish actual hosted behavior. Scope
-selection must retain unknown/dependency impact, sandbox refusal must remain
-visible, and observed queue/setup/replay cost must fit a declared budget before
-expansion. This change enables no paid jobs or repository variables.
+Ordinary non-draft PRs run trusted structural checks and report verification scope.
+Package execution remains separately opt-in through `E99_PUBLIC_PACKAGE_REPLAY`.
+Record the actual environment and timings; local tests do not establish hosted behavior.
+Unknown dependency impact remains explicit. A replay above the automatic budget
+stays targeted and deferred, with every required package listed. Sandbox refusal
+remains visible and never permits an unisolated fallback.

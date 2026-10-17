@@ -1,4 +1,4 @@
-# Localized public E99 CI (staged; disabled until explicit rollout)
+# Localized public E99 CI
 
 This is the public-repository adaptation of E99's scoped verification architecture.
 It intentionally has **no dependency on the private E99 Git repository**, its
@@ -17,13 +17,14 @@ not assert any theorem to be proved merely because its CI passed.
 - **Tier 1, localized replay:** Opt-in packages under
   `research-packages/<id>/{TASK,SOURCES,VERIFY}.json` and README declare exact
   inputs and reproducible commands. Only affected packages and transitive
-  dependents are eligible. At most two packages, 240 seconds of declared work,
+  dependents are eligible. At most two packages, 120 declared seconds per package
+  and 240 seconds of declared work,
   one serial job; no matrix. Replay requires bubblewrap namespace isolation and
   Python 3.14. It never exposes credentials, network or dynamic installation.
 - **Tier 2, comprehensive verification or explicit independent AI-agent impact audit:**
   Canonical mathematics, theorem-state/route changes, shared verification code,
   historical/unpackaged research inputs, unknown closure, malformed manifests,
-  removed inputs, unsafe Git ancestry and overload require this gate. Tier 2 is
+  removed inputs and unsafe Git ancestry require this gate. Tier 2 is
   NOT scheduled automatically. Required full certificate replay belongs to the
   merging agent on the final integration candidate, not to each contributing
   agent before submission. Contributors reproduce their own evidence and
@@ -32,31 +33,45 @@ not assert any theorem to be proved merely because its CI passed.
 
 Output classifications: `fast-only`, `targeted-replay`, and
 `full-verification-required`. `full_verified` is always `false` for Tier 0
-and Tier 1. Planning success is not proof that a replay ran. An affected
-package whose replay switch is off fails the plan job.
+and Tier 1. Planning success is not proof that a replay ran.
 
-## Owner-controlled activation and cost containment
+Automatic scheduling is reported separately:
 
-Workflow: `.github/workflows/public-research-integrity.yml`.
+| `replay_schedule` | Meaning |
+|---|---|
+| `not-required` | No package replay was selected. |
+| `ready` | The complete required package set fits the automatic budget; execution still needs its separate switch. |
+| `deferred-budget` | The complete set exceeds the automatic budget and remains pending. |
+| `requires-review` | Scientific impact or integrity cannot be resolved by targeted replay. |
 
-Both repository variables are intentionally **unset**:
+An over-budget set retains `level: targeted-replay`, every required `packages`
+entry and its full `workload_seconds`. It does not become a full-theorem change
+or receive a partial automatic pass. `--require-localized` exits with status 3
+for either a full-verification handoff or budget-deferred targeted work.
 
-- `E99_PUBLIC_CI`: authorizes one Tier 0 job on each non-draft PR.
-- `E99_PUBLIC_PACKAGE_REPLAY`: separately authorizes bounded Tier 1 replay.
+## Hosted execution and cost containment
 
-Until the owner enables them, both hosted jobs skip. There is no push trigger,
+Workflow: `.github/workflows/theorem-state.yml`.
+
+Tier 0 runs automatically on non-draft PRs. The former `E99_PUBLIC_CI` variable
+does not gate these structural checks. Tier 1 remains separately enabled by
+`E99_PUBLIC_PACKAGE_REPLAY == 'true'` and runs only when the entire selected set
+fits the automatic budget.
+
+The planning summary states which verification remains pending. Its green status
+means structural checks passed, not that targeted or full replay passed.
+There is no push trigger,
 cron, large matrix, full-certificate automatic run, or paid-runner setting change.
 Standard GitHub-hosted runners only.
 
-Before enabling Tier 0, check available included minutes and spending limits,
-confirm hosted Python 3.14.7 and the locked wheels, and validate that unprivileged
-bubblewrap namespaces work. Test a real public fork PR: the workflow fetches
-the fork's exact head and the repository's current base ancestry.
-If the sandbox is unavailable, fail closed; do not remove isolation.
-Do not require a check that is skipped or blocked.
+The workflow uses Python 3.14.7 and the trusted locked wheels. It installs
+Bubblewrap if missing; the runtime probe rejects unavailable namespaces.
+The fork's exact head and current base ancestry are fetched separately from the
+trusted control checkout. There is no unisolated fallback. Actual hosted runs
+must establish runtime availability; enabling the workflow is not canary evidence.
 
-After one controlled, measured Tier 0 canary, separately consider package replay.
-Keep full-verification/review requirements visible rather than silently green.
+Optional package execution remains separate from structural checks. Keep its
+pending results and any full-verification requirement visible in the handoff.
 
 Per-PR cancellation does not cap concurrent PRs across a repository. With
 hundreds of independent PRs, even inexpensive plan jobs can queue.

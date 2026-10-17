@@ -1,7 +1,7 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2168,
+  "source_documents": 2170,
   "math_pairs_normalized": 71621,
   "documents": [
     {
@@ -121,6 +121,13 @@
       "source_sha256": "0f5b5c6d078206831c55993931b7267664f781883518cedf7c8d1fd92754c7ed",
       "reading_path": "reading/docs/audits/target_a_boundary_terminal_common_source_vpaths_audit_2026-09-05.md",
       "reading_sha256": "8034307f95c467454f7ee380176ff26e8aa8ac66a54034be193b0226a546dfdb",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/target_a_fan_tube_ledger_independent_audit_2026-10-17.md",
+      "source_sha256": "6b77be6470e83aa1ccb6dc725c42c93a1c6e47b54ae6b1a0dd9cc014ff2eb078",
+      "reading_path": "reading/docs/audits/target_a_fan_tube_ledger_independent_audit_2026-10-17.md",
+      "reading_sha256": "1d576785b22e16e994280faf96f079df2b17b047007a1dd4722304b5e675343e",
       "math_pairs_normalized": 0
     },
     {
@@ -10289,9 +10296,9 @@
     },
     {
       "source": "docs/research/bottleneck-brief.md",
-      "source_sha256": "536d00397aafd8a73ce3a98d065340125db4eb3a9e2d98723f13a086276f2b51",
+      "source_sha256": "90eadcfab8e97d1c294f73950de41102f9bbd6c380ed7f71e2f7495aaa15a5b0",
       "reading_path": "reading/docs/research/bottleneck-brief.md",
-      "reading_sha256": "5f67d5c1193d5ac90b6f44aa915cfef043b306171e628c924c992abd6b9d02df",
+      "reading_sha256": "077e17742f0c5e11b982bcd680c68686dc14cd3a2a79f722e0f3fa51d4a5a300",
       "math_pairs_normalized": 10
     },
     {
@@ -10320,6 +10327,13 @@
       "source_sha256": "669edba719155f55a435032fc6e9f30b76fde98e26553b2e9a5efc7755e02f28",
       "reading_path": "reading/docs/research/research-family-status.md",
       "reading_sha256": "85c13991e9060ad78d1d62f85e438b4ca42ee4b1808177652e7058ff5283a24f",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/research/run-reconciliation-2026-10-17.md",
+      "source_sha256": "72d092762ad2a53d6e0ae931c5c832b5dcfd38da7306f46fa11ec871c907e2f1",
+      "reading_path": "reading/docs/research/run-reconciliation-2026-10-17.md",
+      "reading_sha256": "2874bae0b784525eac6e123f43a72da95a8259e467dbd82013a9751f7fceaf4f",
       "math_pairs_normalized": 0
     },
     {
@@ -15327,6 +15341,10 @@
       "reading_path": "reading/tasks/audit-target-a-section175-177.md"
     },
     {
+      "source": "tasks/audit-target-b-gpi-diagonal.md",
+      "reading_path": "reading/tasks/audit-target-b-gpi-diagonal.md"
+    },
+    {
       "source": "tasks/audit-target-b-gpi-scope.md",
       "reading_path": "reading/tasks/audit-target-b-gpi-scope.md"
     },
@@ -15409,6 +15427,10 @@
     {
       "source": "tasks/verify-a-schur-linkage-bound.md",
       "reading_path": "reading/tasks/verify-a-schur-linkage-bound.md"
+    },
+    {
+      "source": "tasks/verify-a-source-capacity-coupling.md",
+      "reading_path": "reading/tasks/verify-a-source-capacity-coupling.md"
     }
   ]
 }

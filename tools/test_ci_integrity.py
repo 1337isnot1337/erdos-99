@@ -47,6 +47,22 @@ class PublicIntegrityTests(unittest.TestCase):
         self.commit()
         self.assertEqual(validate(self.root,self.base),[])
 
+    def test_unchanged_long_archive_path_does_not_block_documentation(self):
+        relative = 'docs/archive/' + '/'.join(['historical-' + 'a' * 70] * 3) + '/proof.md'
+        self.assertGreater(len(relative), 240)
+        archived = self.root / relative
+        try:
+            archived.parent.mkdir(parents=True)
+            archived.write_text('# Retained historical proof\n', encoding='utf-8')
+        except OSError as exc:
+            if exc.errno == errno.ENAMETOOLONG or getattr(exc, 'winerror', None) == 206:
+                self.skipTest(f'filesystem does not support this long-path fixture: {exc}')
+            raise
+        self.base = self.commit()
+        (self.root / 'README.md').write_text('# Revised\n', encoding='utf-8')
+        self.commit()
+        self.assertEqual(validate(self.root, self.base), [])
+
     def test_broken_local_link_is_rejected(self):
         (self.root/"README.md").write_text("[broken](missing-document.md)\n")
         self.commit()

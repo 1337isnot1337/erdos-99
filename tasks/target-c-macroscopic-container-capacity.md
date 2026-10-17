@@ -1,10 +1,17 @@
 # target-c-macroscopic-container-capacity
 
+**Investigation:** `target-c-macroscopic-container-capacity-successor-20261017`. **Status:** open. Source: `e396ea07887dd0528b817ce4e656ff0e6b01f8fb`.
+
+Downstream use: The capacity must restore the complete population and reach a valid C-II endpoint. Linear Oler slack alone does not imply even one available site.
+
+Prior evidence:
+- [author-checked](https://github.com/1337isnot1337/erdos-99/blob/beddec1de9620741f2a7baff8584afa0b2bd094f/docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md) at `beddec1de9620741f2a7baff8584afa0b2bd094f`: Submitted fixed-wall example has linear Oler slack and zero insertion capacity. Remaining: No universal source extraction or moved-wall restoration theorem.
+
 **Track / priority:** target-c / direct frontier; selection weight 3 (attention only).
 
 ## Exact objective
 
-Can the macroscopic inactive-container branch yield a source-preserving equal-cardinality packet or finite move after the fixed-wall capacity barriers, without losing the actual loaded core or any contact isolate?
+Can a specified wall motion create positive full-source capacity in the macroscopic-container branch while preserving every source label and upper/lower pair constraint?
 
 ## Definitions, hypotheses and complete prerequisites
 
@@ -31,7 +38,7 @@ Advances only the stated route obligation; global closure still requires all can
 
 ## Approach and first bounded experiment
 
-Choose one exact container class and one proposed deletion/refill rule. Compute the full-source strict capacity with fixed walls, then allow the smallest specified wall motion and test whether the capacity changes while every isolate and old diameter pair remains feasible.
+Start from PR #97 and the existing fixed-wall barriers. Specify which wall or guard moves, its allowed displacement, and the exact deleted/restored labels. Calculate the capacity change and every newly active pair; stop if the proposal only increases Oler slack.
 
 Methods: convex-container and Oler accounting with all labels, exact moved-core packet feasibility
 

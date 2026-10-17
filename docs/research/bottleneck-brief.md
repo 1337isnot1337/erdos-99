@@ -4,13 +4,15 @@
 
 | Route | Strongest accepted working position | Exact missing obligation | First useful bounded step |
 | --- | --- | --- | --- |
-| A | Canonical through Section 177; exact locked tube/right-deficiency and zero-slack source localization | Source-specific $|O_{iso}|+\sum_i\max(0,|O_i|-|C_i|)\ge j_*+|T_Z|$, or actual global Schur deficiency / strict competitor | Derive all terms for one three-channel fan, retaining basis penalty and disjoint sinks |
-| B | Scoped phase cuts, coherent-family exclusion and GPI $\liminf\Delta\ge4\cdot10^{-17}\tau^2$ | Joint shell estimate with multi-grain virtual/interface payment and $(t+\chi-1)$ | Build a two-grain incidence/payment ledger before attempting a global sum |
+| A | Canonical through Section 177; exact locked tube/right-deficiency and zero-slack source localization | Source-specific $|O_{iso}|+\sum_i\max(0,|O_i|-|C_i|)\ge j_*+|T_Z|$, or actual global Schur deficiency / strict competitor | Derive joint demand, phase and sink terms for an actual response after the corrected seed-63 basis optimum |
+| B | Scoped phase cuts, coherent-family exclusion and GPI $\liminf\Delta\ge4\cdot10^{-17}\tau^2$ | Joint shell estimate with multi-grain virtual/interface payment and $(t+\chi-1)$ | Realize the submitted shared-interface budget in one two-grain rhombic disk |
 | C-II | Core rigidity, force/hull, harmonic/grid and finite scope reductions | Source-realized finite face move/restoration or arbitrary macroscopic-container capacity with every source label | Write one finite candidate with all lower/upper pair and population ledgers; test the known obstruction |
+
+Read the [current run dispositions](run-reconciliation-2026-10-17.md) before choosing a starter experiment. Completed scoped audits have named successors.
 
 These are research priorities, not theorem-success probabilities. Re-deriving an existing scoped bound is useful only as a genuinely independent audit or verifier. Locked stress does not imply global nullity; one-grain deficit does not imply shell stability; infinitesimal or bit feasibility does not imply finite full-source motion.
 
-The [23 task cards](../../tasks/README.md) include direct route bridges, independent audits, finite computations, shared geometric/analytic dependencies and alternative approaches. Their weights are retained from the source to diversify attention. Proposed adjacent results are [noncanonical snapshots](proposals.md), never new accepted premises. [Family status](research-family-status.md) states which restricted shortcuts are blocked and which changed hypotheses would justify revisiting them.
+The [25 task cards](../../tasks/README.md) include direct route bridges, independent audits, finite computations, shared geometric/analytic dependencies and alternative approaches. Their weights are retained from the source to diversify attention. Proposed adjacent results are [noncanonical snapshots](proposals.md), never new accepted premises. [Family status](research-family-status.md) states which restricted shortcuts are blocked and which changed hypotheses would justify revisiting them.
 
 ## Global population reserve, lattice extraction, and paid interfaces
 

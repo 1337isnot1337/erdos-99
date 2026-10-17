@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "inputs": [
+    "docs/targets/target-a/02-scaffold-and-hall.md",
+    "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+    "docs/targets/target-a/26-tube-shield-sector-balance.md",
+    "docs/reports/target_a_seed063_tight_isolates_and_locked_fan_regression_2026-10-13.md",
+    "research-packages/target-a-fan-tube-ledger/verify.py",
+    "research-packages/target-a-fan-tube-ledger/README.md",
+    "research-packages/target-a-fan-tube-ledger/evidence.json"
+  ],
+  "domain": "All-M proof for integers M>=5 at phase (1/5,1/7); exact replay at M=5,...,20,24,32 for the admissible predecessor and an explicitly inadmissible relaxed optimum, with incidence-depth rejection controls.",
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/target-a-fan-tube-ledger/verify.py"
+      ],
+      "timeout_seconds": 60
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "affected_packages": [],
+  "base": "42d8dba8b2239a22296ab9ca6bc4cc694e138e02",
+  "changes": [
+    {
+      "path": "docs/reports/target_a_independent_schur_linkage_2026-10-17.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/state/artifact-index.jsonl",
+      "status": "M"
+    },
+    {
+      "path": "reading/docs/reports/target_a_independent_schur_linkage_2026-10-17.md",
+      "status": "A"
+    },
+    {
+      "path": "reading/manifest.json",
+      "status": "M"
+    },
+    {
+      "path": "research/README.md",
+      "status": "M"
+    },
+    {
+      "path": "research/target_a_schur_linkage_2026_10_17.json",
+      "status": "A"
+    },
+    {
+      "path": "research/verify_target_a_schur_linkage_2026_10_17.py",
+      "status": "A"
+    }
+  ],
+  "dependency_closure": "not-established",
+  "errors": [],
+  "full_verified": false,
+  "head": "61056f30aadc8e3ecb1f1496e488cbe7a2adda9c",
+  "level": "full-verification-required",
+  "limits": {
+    "packages": 2,
+    "seconds": 240
+  },
+  "merge_base": "42d8dba8b2239a22296ab9ca6bc4cc694e138e02",
+  "packages": [],
+  "reasons": [
+    "legacy mathematical input has no complete dependency closure: docs/reports/target_a_independent_schur_linkage_2026-10-17.md",
+    "unknown/unpackaged impact: docs/reports/target_a_independent_schur_linkage_2026-10-17.md",
+    "canonical/foundation/generated state changed: docs/state/artifact-index.jsonl",
+    "unknown/unpackaged impact: docs/state/artifact-index.jsonl",
+    "legacy mathematical input has no complete dependency closure: research/target_a_schur_linkage_2026_10_17.json",
+    "unknown/unpackaged impact: research/target_a_schur_linkage_2026_10_17.json",
+    "legacy mathematical input has no complete dependency closure: research/verify_target_a_schur_linkage_2026_10_17.py",
+    "unknown/unpackaged impact: research/verify_target_a_schur_linkage_2026_10_17.py"
+  ],
+  "replay_allowed": false,
+  "version": 1,
+  "workload_seconds": 0
+}

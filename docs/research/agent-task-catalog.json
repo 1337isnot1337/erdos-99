@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "catalogue_revision": "public-frontier.7",
-  "reviewed_on": "2026-10-16",
-  "reviewed_base_commit": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+  "catalogue_revision": "public-frontier.8",
+  "reviewed_on": "2026-10-17",
+  "reviewed_base_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
   "reviewed_state_version": "2026-10-15.publication.2",
   "problem_status": "open",
   "purpose": "Bounded candidate tasks derived from the canonical E99 frontier; not a theorem ledger, novelty index, or work reservation service.",
@@ -20,9 +20,11 @@
     "default_track_diversification": "sample distinct tracks without replacement, then one weighted card from each selected track",
     "forced_track": "sample cards without replacement within the requested track",
     "seed": "32 hexadecimal digits; deterministic SHA-256 counter stream",
-    "scope_key": "stable digest of task ID and selected method; it excludes seed and base commit",
+    "scope_key": "Digest of investigation ID, exact source, domain and question; excludes seed and checkout base.",
     "reservation": false,
-    "novelty_claim": false
+    "novelty_claim": false,
+    "eligibility": "Load coordination before the draw; random producers use open investigations without active exact claims. Named retrieval and explicit reviewers retain their stated scope.",
+    "controlled_batch": "Assign distinct producer investigations in one batch; intentional overlap requires an explicit reviewer role."
   },
   "tracks": [
     {
@@ -66,14 +68,110 @@
       "description": "Exploratory routes that avoid the main A/B/C proof machinery while naming a global endpoint."
     }
   ],
-  "open_pr_snapshot_date": "2026-10-17T19:36:43.874727+00:00",
+  "open_pr_snapshot_date": "2026-10-17T22:44:44Z",
   "open_pr_snapshot": [
     {
-      "number": 78,
-      "title": "Independently check finite Target A Schur linkages and tube cuts",
-      "url": "https://github.com/1337isnot1337/erdos-99/pull/78",
-      "head_sha": "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda",
-      "updated_at": "2026-10-17T18:58:25Z",
+      "number": 98,
+      "title": "Add exact zero-slack matching overlap regression",
+      "head_sha": "2e4a3e1e73877df4f4756fcb4c7d331dcda1327f",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/98",
+      "updated_at": "2026-10-17T21:55:06Z",
+      "markers": {}
+    },
+    {
+      "number": 97,
+      "title": "Target C: linear Oler slack with zero fixed-wall capacity",
+      "head_sha": "beddec1de9620741f2a7baff8584afa0b2bd094f",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/97",
+      "updated_at": "2026-10-17T21:31:41Z",
+      "markers": {}
+    },
+    {
+      "number": 96,
+      "title": "research: independently audit finite Target A Schur/linkage verifier",
+      "head_sha": "6819b4f862508fe843f7a385e2cff992ecf23420",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/96",
+      "updated_at": "2026-10-17T21:31:13Z",
+      "markers": {}
+    },
+    {
+      "number": 95,
+      "title": "[Target C] Add sparse exceptional stress-mass regression",
+      "head_sha": "058df6dc46ba033597d99d6aa4ec6834810b9eb7",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/95",
+      "updated_at": "2026-10-17T21:30:29Z",
+      "markers": {}
+    },
+    {
+      "number": 94,
+      "title": "research: audit Target B GPI/MCP2 scope",
+      "head_sha": "01be955ed9209f1d4a096148e61851837fa190d4",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/94",
+      "updated_at": "2026-10-17T21:26:14Z",
+      "markers": {}
+    },
+    {
+      "number": 93,
+      "title": "research: audit Target B GPI scope and fixed-lambda bounds",
+      "head_sha": "dfdc8b5747cf0e6cadb1237118a28ea09e087296",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/93",
+      "updated_at": "2026-10-17T21:26:11Z",
+      "markers": {}
+    },
+    {
+      "number": 92,
+      "title": "audit: reconstruct Target A seed-63 tube ledger",
+      "head_sha": "96e54788d1a42d246dba0a60ab5e8a81fc5aea4a",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/92",
+      "updated_at": "2026-10-17T21:25:45Z",
+      "markers": {}
+    },
+    {
+      "number": 91,
+      "title": "Independent companion audit: Target C Type-II floor",
+      "head_sha": "2d4f2b7930570e989f3f8c76d27fc9aca23f32ac",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/91",
+      "updated_at": "2026-10-17T21:24:49Z",
+      "markers": {}
+    },
+    {
+      "number": 90,
+      "title": "Audit Target C Type-II separate-face floor",
+      "head_sha": "3f419d3b6415ade701e00b7fd3dc2a013f8064d6",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/90",
+      "updated_at": "2026-10-17T21:20:04Z",
+      "markers": {}
+    },
+    {
+      "number": 89,
+      "title": "research: exact full-tube ledger for the locked hexagonal fan",
+      "head_sha": "aa111eedcd3bc190f991aeaa7f42299948551207",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/89",
+      "updated_at": "2026-10-17T20:52:20Z",
+      "markers": {}
+    },
+    {
+      "number": 88,
+      "title": "research: bound deletions needed for total separability of global minimizers",
+      "head_sha": "70398c397bfc76e9db65154318ef8a6041458c88",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/88",
+      "updated_at": "2026-10-17T20:44:22Z",
+      "markers": {}
+    },
+    {
+      "number": 87,
+      "title": "research: exact optimum over bases for the Target A fan tube",
+      "head_sha": "33a4aaa016d0a219e2f9e8e7a92c87ff4aa77afb",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/87",
+      "updated_at": "2026-10-17T20:44:20Z",
+      "markers": {}
+    },
+    {
+      "number": 86,
+      "title": "research: sharpen Target B shared-interface crossing budget",
+      "head_sha": "a392a910899b06d20df6c7c29010896223ebfa70",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/86",
+      "updated_at": "2026-10-17T20:41:42Z",
       "markers": {}
     }
   ],
@@ -83,7 +181,7 @@
       "track": "target-a",
       "selection_weight": 5,
       "frontier_relation": "current-frontier",
-      "question": "For the actual response optimum and a canonical stress-generated shield, can the Section-175 right-deficiency endpoint be closed by proving the required exterior-sink and sector population surplus, or by producing a strict sub-D competitor?",
+      "question": "For an actual plateau response with a Section-102 admissible basis, what joint source-demand, phase and sink-population inequality can force Xi >= j_* + |T_Z|?",
       "assumptions": [
         "Use the actual plateau-terminalized response X* and the canonical three-channel locked fan when the locked branch is invoked.",
         "Keep the Section-175 tube, sector sets, isolated exterior sinks, and j_* bookkeeping as defined in the active Target A modules.",
@@ -117,7 +215,7 @@
           "claim": "lens shielding retains a basis-sensitive penalty and can have overlapping exterior sink sets"
         }
       ],
-      "starting_experiment": "Specialize the exact inequality to the three-channel fan. Write every term in the right-deficiency identity with disjoint source sets, then test whether the known translation-average or straight-crosscut tube bound can reach the required integer surplus without discarding a boundary-order term.",
+      "starting_experiment": "Start from the corrected seed-63 admissible optimum 1 and the seed-66 pointwise phase obstruction. Name the actual source and its demand before choosing phase. Derive one inequality retaining the deep restriction, distinct sinks and the phase-dependent tube cost.",
       "expected_evidence": [
         "A complete proof of the exact Section-175 surplus inequality under canonical hypotheses, including all overlap and integer terms.",
         "Or a certified counterexample to a proposed stronger intermediate inequality, with its missing hypothesis identified.",
@@ -152,14 +250,41 @@
         "python tools/check_public.py",
         "python tools/task_context.py target-a-locked-sector-surplus"
       ],
-      "existing_checks": []
+      "existing_checks": [
+        {
+          "source_commit": "33a4aaa016d0a219e2f9e8e7a92c87ff4aa77afb",
+          "evidence": "research-packages/target-a-fan-tube-ledger/README.md",
+          "scope": "Seed-63 full-tube ledger; the submitted canonical-admissibility claim is corrected in the current package. Admissible optimum 1; relaxed optimum M-1.",
+          "status": "regression",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "Actual source demand and phase selection are absent.",
+          "first_useful_action": "Read research-packages/target-a-fan-tube-ledger/README.md, including Section-102 depth."
+        },
+        {
+          "source_commit": "aa111eedcd3bc190f991aeaa7f42299948551207",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/aa111eedcd3bc190f991aeaa7f42299948551207/research-packages/target-a-full-tube-fan-ledger/README.md",
+          "scope": "Submitted seed-66 fixed-phase ledger and basis-independent upper bound 3; not a sharp all-basis optimization.",
+          "status": "author-checked",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "Review before relying on its all-parameter claim; source-demand extraction remains open.",
+          "first_useful_action": "Use the phase obstruction to specify the joint ledger, rather than optimize another isolated basis."
+        }
+      ],
+      "downstream_use": "A positive result must pay the actual j_* demand; a negative result must identify a source hypothesis that rules out the supplied nonglobal regressions.",
+      "investigation": {
+        "id": "target-a-locked-sector-surplus-successor-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Actual plateau source; Section-102 basis; joint demand and phase-dependent Section-175 full-tube ledger.",
+        "question": "For an actual plateau response with a Section-102 admissible basis, what joint source-demand, phase and sink-population inequality can force Xi >= j_* + |T_Z|?",
+        "status": "open"
+      }
     },
     {
       "id": "target-a-zero-slack-source-transfer",
       "track": "target-a",
       "selection_weight": 4,
       "frontier_relation": "current-frontier",
-      "question": "Can the boundary-order source localization and genuine-source gates in the zero-slack branch be converted into Schur deficiency or a strict source-cardinality competitor without identifying independently chosen matchings?",
+      "question": "Can one source-capacitated coupling theorem join the actual Section-168 source and response matchings while retaining their overlap and exact exceptional-set cost?",
       "assumptions": [
         "Use the actual zero-slack source A^0 and plateau-endpoint response X* with the exact Section-168 matching hypotheses.",
         "The Section-176/177 exceptional sets are boundary-order and must remain explicit when the target is an exact rank or integer inequality.",
@@ -193,7 +318,7 @@
           "claim": "source matching localization does not by itself relate r to Schur demand s"
         }
       ],
-      "starting_experiment": "Write a two-matching incidence diagram with separate source-image sets. Mark each sector-good, shield-crossing, and exterior label, then derive the exact maximum loss before any Hall or rank step. Test the proposed implication on small bipartite instances with shared-neighbor collisions.",
+      "starting_experiment": "Use the five-source overlap regression in PR #98 as a failure control. Specify an actual zero-slack source and both incidence maps. Derive the minimum joint source-capacity deficit; test the proposed bound before converting it to Schur demand.",
       "expected_evidence": [
         "A simultaneous source/response coupling theorem with exact exceptional-set terms.",
         "Or an exact finite regression disproving a proposed coupling lemma and specifying the needed additional hypothesis.",
@@ -234,7 +359,25 @@
         "python tools/check_public.py",
         "python tools/task_context.py target-a-zero-slack-source-transfer"
       ],
-      "existing_checks": []
+      "existing_checks": [
+        {
+          "source_commit": "2e4a3e1e73877df4f4756fcb4c7d331dcda1327f",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/2e4a3e1e73877df4f4756fcb4c7d331dcda1327f/docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+          "scope": "Submitted five-source matching-overlap example: separate matchings do not supply joint source capacity.",
+          "status": "author-checked",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "No actual zero-slack source or Schur realization.",
+          "first_useful_action": "Review the fixture, then encode the actual source capacities."
+        }
+      ],
+      "downstream_use": "The coupling must bound the source-specific Schur demand or yield a same-cardinality competitor. Another arbitrary matching collision does not advance that implication.",
+      "investigation": {
+        "id": "target-a-zero-slack-source-transfer-successor-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Actual Section-168 source and response matchings, with one unit of capacity per source label.",
+        "question": "Can one source-capacitated coupling theorem join the actual Section-168 source and response matchings while retaining their overlap and exact exceptional-set cost?",
+        "status": "open"
+      }
     },
     {
       "id": "target-a-source-aware-strain-architecture",
@@ -307,14 +450,22 @@
         "python tools/check_public.py",
         "python tools/task_context.py target-a-source-aware-strain-architecture"
       ],
-      "existing_checks": []
+      "existing_checks": [],
+      "investigation": {
+        "id": "target-a-source-aware-strain-architecture-current-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Sections 157 and 160-162 establish sharp scale behavior only for their specified five-block rigid-translation architecture.; Any proposed motion must be realized in the actual full source or be paired with an explicit embedding theorem.; A gain in a lattice gap packing alone is peripheral until it changes the canonical global endpoint.",
+        "question": "Can a concrete nonlocal or exterior-compatible motion architecture improve on the sharp local five-block support bound while preserving every source constraint needed by the global Schur or diameter endpoint?",
+        "status": "open"
+      },
+      "downstream_use": "Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation."
     },
     {
       "id": "target-b-multigrain-transfer",
       "track": "target-b",
       "selection_weight": 5,
       "frontier_relation": "current-frontier",
-      "question": "Can the promoted single-dominant-component phase deficit be globalized across several macroscopic coherent grains while retaining physical crossings, deleted/interface crossings, and virtual noncrossing determinant mass?",
+      "question": "Can the shared-interface crossing budget be realized by two retained coherent components in one pure rhombic disk, with virtual determinant mass and deleted-edge costs retained?",
       "assumptions": [
         "Work in the pure simply connected rhombic disk scope of the canonical Target B chain before generalizing topology.",
         "Use fixed Section-50 lambda before taking D to infinity wherever MCP2 requires it.",
@@ -345,7 +496,7 @@
           "claim": "the earlier phase-core and boundary-order reductions do not supply a multi-grain sum"
         }
       ],
-      "starting_experiment": "Write a grain-indexed ledger for physical crossings, deleted interfaces, and virtual determinant mass. First test two grains with a shared interface and derive the exact cross-term that prevents summing the one-grain GPI bound; only then propose a global inequality.",
+      "starting_experiment": "Review PR #86, then construct one actual rhombic disk with two retained components. Map every physical crossing, shared deleted edge and virtual term into its ledger. Compare the paid lower bound with the exact shell endpoint.",
       "expected_evidence": [
         "A proof of a sum inequality with every interface and topology error displayed and a uniform remainder adequate for the exact shell endpoint.",
         "Or an exact finite counterexample to the proposed naive additivity rule, followed by a corrected coupling quantity."
@@ -384,7 +535,25 @@
         "python tools/check_public.py",
         "python tools/task_context.py target-b-multigrain-transfer"
       ],
-      "existing_checks": []
+      "existing_checks": [
+        {
+          "source_commit": "a392a910899b06d20df6c7c29010896223ebfa70",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/a392a910899b06d20df6c7c29010896223ebfa70/docs/reports/target_b_interface_capacity_2026-10-17.md",
+          "scope": "Submitted shared-interface inequality R >= G + max(p1,p2,p1+p2-K), with finite incidence checks.",
+          "status": "author-checked",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "Geometric realization and payment of virtual mass are not established.",
+          "first_useful_action": "Review the inequality and map it to an actual rhombic disk before using it."
+        }
+      ],
+      "downstream_use": "The result must show whether the sharp abstract budget can pay the shell inequality on actual geometry. Re-enumerating the abstract counters is complete.",
+      "investigation": {
+        "id": "target-b-multigrain-transfer-successor-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Two actual Section-50 retained components in a pure simply connected rhombic disk; all three crossing ledgers.",
+        "question": "Can the shared-interface crossing budget be realized by two retained coherent components in one pure rhombic disk, with virtual determinant mass and deleted-edge costs retained?",
+        "status": "open"
+      }
     },
     {
       "id": "target-b-topology-correction-ledger",
@@ -454,7 +623,15 @@
         "python tools/check_public.py",
         "python tools/task_context.py target-b-topology-correction-ledger"
       ],
-      "existing_checks": []
+      "existing_checks": [],
+      "investigation": {
+        "id": "target-b-topology-correction-ledger-current-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "The required global expression is G+E >= (sqrt(3)/4)B + (sqrt(3)/2)(t+chi-1).; Count boundary components, holes, and component terms with the canonical sign convention from Target B.; A proof for a simply connected disk is not a proof for general topology.",
+        "question": "Can the outer-shell inequality be proved on finite rhombic cell complexes with holes and multiple components while retaining exactly the correction (t+chi-1), rather than importing a disk-only estimate?",
+        "status": "open"
+      },
+      "downstream_use": "Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation."
     },
     {
       "id": "target-b-phase-deficit-competitor",
@@ -529,7 +706,15 @@
         "python tools/check_public.py",
         "python tools/task_context.py target-b-phase-deficit-competitor"
       ],
-      "existing_checks": []
+      "existing_checks": [],
+      "investigation": {
+        "id": "target-b-phase-deficit-competitor-current-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Use the exact Target B phase potential and geometry in the current route; do not replace it by arbitrary graph phases.; All source points and all active diameter constraints of the proposed competitor must be checked.; A nonnegative first-order derivative or a local shell energy decrease alone does not produce a finite competitor.",
+        "question": "In a phase-imbalanced survivor, can the phase potential be integrated into an actual equal-cardinality competitor of diameter strictly below D while preserving every unit-separation constraint and active diameter bound?",
+        "status": "open"
+      },
+      "downstream_use": "Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation."
     },
     {
       "id": "target-c-face-coupled-move",
@@ -658,14 +843,22 @@
           "status": "proof-only candidate"
         }
       ],
-      "existing_checks": []
+      "existing_checks": [],
+      "investigation": {
+        "id": "target-c-face-coupled-move-current-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Use the contact-minimal, then diameter-pair-minimal canonical source with C=C_* and H=H_*.; Retain every source point, including all contact-isolated points, in the move and every feasibility check.; Check every old unit contact, every full-source noncontact lower pair, every actual diameter upper pair, all at-most-d_H inactive upper exceptions, and each unary rhombus test.; At diameter D retain triangle-freeness and strictly decrease the lexicographic pair (unit contacts, actual diameter pairs); unchanged contacts with fewer diameter pairs suffice. Check every previously inactive upper pair. A strict sub-D competitor need not remain triangle-free.",
+        "question": "Can the surviving full-core outer-to-bounded or bounded-to-bounded train/face system be converted into a source-realized finite move or discrete replacement that improves the contact/diameter-pair lexicographic count at D while remaining triangle-free or gives a same-cardinality strict sub-D competitor?",
+        "status": "open"
+      },
+      "downstream_use": "Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation."
     },
     {
       "id": "target-c-typeii-stress-mass-access",
       "track": "target-c",
       "selection_weight": 4,
       "frontier_relation": "current-frontier",
-      "question": "Can the unweighted Type-II route from actual diameter edges to coherent grids be strengthened to control the positive KKT diameter mass on the exceptional edges, or can that mass itself be used to force the finite-move endpoint?",
+      "question": "Can global minimality convert concentrated exceptional diameter stress into a full-source feasible descent or rule out that concentration under a proved additional hypothesis?",
       "assumptions": [
         "Work only in the canonical C-II Type-II near-disk branch and retain the exact hypotheses of the grid and face-tail theorems.",
         "The exceptional set has size eta D, but no canonical theorem makes its positive KKT mass small.",
@@ -706,7 +899,7 @@
           "claim": "do not infer Schur or source-specific nullity from planarity or generic rank alone"
         }
       ],
-      "starting_experiment": "For a fixed normalized stress, write the mass of actual diameter edges by route class (grid-accessible, face-tail, exceptional). Test the strongest bound derivable from the canonical inequalities without assuming a uniform stress gap, then identify which class must be charged by the finite move.",
+      "starting_experiment": "Review PR #95 and retain its sparse-edge full-mass fixture. For one proposed globality-specific lemma, write the exact stress-supported direction and every lower/upper pair inequality. Test inactive upper pairs and finite integration before using edge counts as mass bounds.",
       "expected_evidence": [
         "A stress-weighted endpoint-access or face-charge inequality with exact scope and no unproved lower bound on individual stress coefficients.",
         "Or an exact stress family showing why unweighted edge counts cannot control the required mass."
@@ -753,7 +946,25 @@
           "status": "unreviewed research; packet counts do not bound the Type-II exceptional stress mass"
         }
       ],
-      "existing_checks": []
+      "existing_checks": [
+        {
+          "source_commit": "058df6dc46ba033597d99d6aa4ec6834810b9eb7",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/058df6dc46ba033597d99d6aa4ec6834810b9eb7/docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md",
+          "scope": "Submitted nonglobal family places all normalized diameter mass on o(D) exceptional edges.",
+          "status": "author-checked",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "Global minimality is not supplied; a full-source finite descent remains open.",
+          "first_useful_action": "Review the fixture and identify which use of global minimality changes its conclusion."
+        }
+      ],
+      "downstream_use": "A result must extract stress-relevant motion or a globality-specific exclusion. An unweighted o(D) exceptional-edge count cannot pay a stress-mass term.",
+      "investigation": {
+        "id": "target-c-typeii-stress-mass-access-successor-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Canonical full-core Type-II source, normalized KKT stress, all source labels and every lower/upper pair.",
+        "question": "Can global minimality convert concentrated exceptional diameter stress into a full-source feasible descent or rule out that concentration under a proved additional hypothesis?",
+        "status": "open"
+      }
     },
     {
       "id": "target-c-extract-stress-relevant-diameter-set",
@@ -838,14 +1049,22 @@
         "python tools/check_public.py",
         "python tools/task_context.py target-c-extract-stress-relevant-diameter-set"
       ],
-      "existing_checks": []
+      "existing_checks": [],
+      "investigation": {
+        "id": "target-c-extract-stress-relevant-diameter-set-current-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "The target source is contact-minimal, then diameter-pair-minimal, with all contact isolates retained.; Audit 171 is used only after a nonempty actual loaded set W is supplied; it does not itself extract W.; If the one-star refinement is used, prove its actual diameter support has the stated star scope.",
+        "question": "Can one extract from a canonical source a stress-relevant loaded set W to which the supplied-W stress deletion theorem applies, while controlling the exceptional diameter-edge mass and preserving all source labels?",
+        "status": "open"
+      },
+      "downstream_use": "Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation."
     },
     {
       "id": "target-c-macroscopic-container-capacity",
       "track": "target-c",
       "selection_weight": 3,
       "frontier_relation": "current-frontier",
-      "question": "Can the macroscopic inactive-container branch yield a source-preserving equal-cardinality packet or finite move after the fixed-wall capacity barriers, without losing the actual loaded core or any contact isolate?",
+      "question": "Can a specified wall motion create positive full-source capacity in the macroscopic-container branch while preserving every source label and upper/lower pair constraint?",
       "assumptions": [
         "Keep the macroscopic-container branch separate from the full-core Type-II branch.",
         "Any replacement checks all full-source lower constraints and actual-diameter upper constraints, including retained isolates.",
@@ -884,7 +1103,7 @@
           "claim": "A boundary-only cellulation by one pentagon and a one-cell rhombus chain has zero strict wall-safe capacity. Length alone does not certify surplus; source embedding and all source labels still require proof."
         }
       ],
-      "starting_experiment": "Choose one exact container class and one proposed deletion/refill rule. Compute the full-source strict capacity with fixed walls, then allow the smallest specified wall motion and test whether the capacity changes while every isolate and old diameter pair remains feasible.",
+      "starting_experiment": "Start from PR #97 and the existing fixed-wall barriers. Specify which wall or guard moves, its allowed displacement, and the exact deleted/restored labels. Calculate the capacity change and every newly active pair; stop if the proposal only increases Oler slack.",
       "expected_evidence": [
         "A uniform capacity or finite-move theorem under explicit geometric extraction hypotheses, plus a proof those hypotheses hold in the canonical branch.",
         "Or an exact counterexample to a proposed fixed-wall or moved-core capacity inference."
@@ -926,7 +1145,25 @@
         "python tools/check_public.py",
         "python tools/task_context.py target-c-macroscopic-container-capacity"
       ],
-      "existing_checks": []
+      "existing_checks": [
+        {
+          "source_commit": "beddec1de9620741f2a7baff8584afa0b2bd094f",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/beddec1de9620741f2a7baff8584afa0b2bd094f/docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
+          "scope": "Submitted fixed-wall example has linear Oler slack and zero insertion capacity.",
+          "status": "author-checked",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "No universal source extraction or moved-wall restoration theorem.",
+          "first_useful_action": "Review the obstruction and state a concrete permitted wall motion."
+        }
+      ],
+      "downstream_use": "The capacity must restore the complete population and reach a valid C-II endpoint. Linear Oler slack alone does not imply even one available site.",
+      "investigation": {
+        "id": "target-c-macroscopic-container-capacity-successor-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Moved wall or guard in the actual macroscopic-container branch; same cardinality and all source-pair constraints.",
+        "question": "Can a specified wall motion create positive full-source capacity in the macroscopic-container branch while preserving every source label and upper/lower pair constraint?",
+        "status": "open"
+      }
     },
     {
       "id": "audit-target-a-section175-177",
@@ -997,7 +1234,15 @@
         "python tools/check_public.py",
         "python tools/task_context.py audit-target-a-section175-177"
       ],
-      "existing_checks": []
+      "existing_checks": [],
+      "investigation": {
+        "id": "audit-target-a-section175-177-current-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Treat the exact active theorem modules as the source; do not import pre-175 tube constants or claim the global Target A theorem is closed.; Check the full canonical response graph and basis matching hypotheses where used.; The audit result is a classification of the audited implication, not theorem promotion.",
+        "question": "Independently audit the exact implication from the Section-175 tube-only Schur cut and Section-177 alternatives to the stated locked-branch closure conditions, checking the rank, nullity, and sink-overlap bookkeeping line by line.",
+        "status": "open"
+      },
+      "downstream_use": "Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation."
     },
     {
       "id": "audit-target-b-gpi-scope",
@@ -1035,7 +1280,7 @@
           "claim": "MCP2 uses fixed Section-50 lambda before D tends to infinity"
         }
       ],
-      "starting_experiment": "Build a dependency table from each GPI hypothesis through the fixed-lambda summation and limit. Test every parameter quantifier against the displayed conclusion and identify any implicit uniformity or dominant-grain assumption.",
+      "starting_experiment": "This exact objective is complete. Read its recorded disposition, then use audit-target-b-gpi-diagonal. Reopen only for a changed source or a named discrepancy.",
       "expected_evidence": [
         "A concise independent derivation with exact quantifier order and a list of conclusions that do not follow.",
         "Or a specific hypothesis gap or algebraic error supported by a reproducible check."
@@ -1061,13 +1306,49 @@
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
       "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
-      "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
+      "remaining_if_successful": "No further work on this completed source/domain. The separate successor is audit-target-b-gpi-diagonal; the route endpoint remains open.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py audit-target-b-gpi-scope"
       ],
-      "existing_checks": []
+      "existing_checks": [
+        {
+          "source_commit": "dfdc8b5747cf0e6cadb1237118a28ea09e087296",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/dfdc8b5747cf0e6cadb1237118a28ea09e087296/docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md",
+          "scope": "Fixed-lambda and fixed-positive-tau scope of the canonical MCP2/GPI chain; no multi-grain or varying-tau conclusion.",
+          "status": "agent-audited",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "No canonical promotion or acceptance outside this exact scope.",
+          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with audit-target-b-gpi-diagonal."
+        },
+        {
+          "source_commit": "01be955ed9209f1d4a096148e61851837fa190d4",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/01be955ed9209f1d4a096148e61851837fa190d4/docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md",
+          "scope": "Fixed-lambda and fixed-positive-tau scope of the canonical MCP2/GPI chain; no multi-grain or varying-tau conclusion.",
+          "status": "agent-audited",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "PR #94 also contains a distinct unreviewed diagonal estimate, assigned to audit-target-b-gpi-diagonal.",
+          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with audit-target-b-gpi-diagonal."
+        }
+      ],
+      "investigation": {
+        "id": "audit-target-b-gpi-scope-completed-20261017",
+        "source_commit": "dfdc8b5747cf0e6cadb1237118a28ea09e087296",
+        "domain": "Fixed-lambda and fixed-positive-tau scope of the canonical MCP2/GPI chain; no multi-grain or varying-tau conclusion.",
+        "question": "Independently verify the exact scope and limiting order in the promoted GPI/MCP2 chain, including fixed lambda, retained components, and the distinction between one dominant grain and the full shell endpoint.",
+        "status": "completed"
+      },
+      "completion": {
+        "scope": "Fixed-lambda and fixed-positive-tau scope of the canonical MCP2/GPI chain; no multi-grain or varying-tau conclusion.",
+        "evidence_prs": [
+          93,
+          94
+        ],
+        "successor_task": "audit-target-b-gpi-diagonal",
+        "reopen_when": "The relevant source changes or a concrete discrepancy is identified; record the new source/domain/question."
+      },
+      "downstream_use": "Retain completed coverage so new workers start at the unresolved successor instead of repeating this audit."
     },
     {
       "id": "audit-target-c-typeii-face-floor",
@@ -1105,7 +1386,7 @@
           "claim": "the higher-(q-k)/D Type-II range and Type-I ledger terms remain"
         }
       ],
-      "starting_experiment": "Recompute the dimensionless constants from the promoted inequalities using exact symbolic expressions, then check each normalization and limit against the face and outer-walk definitions in the audit.",
+      "starting_experiment": "This exact objective is complete. Read its recorded disposition, then use target-c-typeii-stress-mass-access. Reopen only for a changed source or a named discrepancy.",
       "expected_evidence": [
         "An independent derivation of the coefficient inequalities and strict numerical comparison with exact constants.",
         "Or an exact hypothesis/normalization discrepancy with a correction limited to its actual scope."
@@ -1131,20 +1412,56 @@
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
       "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
-      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with a triangle-free endpoint at D with lexicographically fewer contacts/actual-diameter pairs or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
+      "remaining_if_successful": "No further work on this completed source/domain. The separate successor is target-c-typeii-stress-mass-access; the route endpoint remains open.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py audit-target-c-typeii-face-floor"
       ],
-      "existing_checks": []
+      "existing_checks": [
+        {
+          "source_commit": "3f419d3b6415ade701e00b7fd3dc2a013f8064d6",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/3f419d3b6415ade701e00b7fd3dc2a013f8064d6/docs/audits/target_c_typeii_separate_face_floor_recheck_2026-10-17.md",
+          "scope": "Canonical full-core Type-II separate-face coefficient reconstruction at the unchanged cited source.",
+          "status": "agent-audited",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "No canonical promotion or acceptance outside this exact scope.",
+          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with target-c-typeii-stress-mass-access."
+        },
+        {
+          "source_commit": "2d4f2b7930570e989f3f8c76d27fc9aca23f32ac",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/2d4f2b7930570e989f3f8c76d27fc9aca23f32ac/docs/audits/target_c_typeii_face_floor_independent_reconstruction_2026-10-17.md",
+          "scope": "Canonical full-core Type-II separate-face coefficient reconstruction at the unchanged cited source.",
+          "status": "agent-audited",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "No canonical promotion or acceptance outside this exact scope.",
+          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with target-c-typeii-stress-mass-access."
+        }
+      ],
+      "investigation": {
+        "id": "audit-target-c-typeii-face-floor-completed-20261017",
+        "source_commit": "3f419d3b6415ade701e00b7fd3dc2a013f8064d6",
+        "domain": "Canonical full-core Type-II separate-face coefficient reconstruction at the unchanged cited source.",
+        "question": "Independently reconstruct the Type-II separate-face floor and verify the coefficient conversion that excludes only the positive one-cell collar range, while retaining every source point and the stated asymptotic scope.",
+        "status": "completed"
+      },
+      "completion": {
+        "scope": "Canonical full-core Type-II separate-face coefficient reconstruction at the unchanged cited source.",
+        "evidence_prs": [
+          90,
+          91
+        ],
+        "successor_task": "target-c-typeii-stress-mass-access",
+        "reopen_when": "The relevant source changes or a concrete discrepancy is identified; record the new source/domain/question."
+      },
+      "downstream_use": "Retain completed coverage so new workers start at the unresolved successor instead of repeating this audit."
     },
     {
       "id": "compute-b-two-grain-interface-regressions",
       "track": "exact-computation",
       "selection_weight": 2,
       "frontier_relation": "finite-model-only",
-      "question": "In the smallest exact two-grain crossing models with a shared or deleted interface, is naive addition of the one-grain phase deficits false, and what explicit interface term repairs the model inequality?",
+      "question": "Does a smallest explicitly realized two-grain rhombic disk saturate or improve the submitted shared-interface budget after all virtual crossing terms are included?",
       "assumptions": [
         "The model is finite and combinatorial; it is not automatically realizable by a global planar packing.",
         "Use exact integer/rational arithmetic and publish the enumerated domain.",
@@ -1170,7 +1487,7 @@
           "claim": "several macroscopic grains may share quadratic crossing mass while density-only grids miss the cancellation threshold"
         }
       ],
-      "starting_experiment": "Define a two-grain finite incidence model with explicit physical, deleted-interface, and virtual crossing counters. Exhaust the smallest shore sizes and emit a minimal exact instance where the proposed additive rule fails, if one exists.",
+      "starting_experiment": "Build one rational rhombic cellulation with its retained train components and deleted interfaces. Derive counters from that geometry, then compare with PR #86. Emit either a realizable saturation case or a proved geometric restriction on its abstract extremizers.",
       "expected_evidence": [
         "A runnable enumerator, exact input/output fixture, and minimal counterexample or bounded proof for the declared model.",
         "A clear statement of whether and what geometric realization theorem would be needed to transfer the model to Target B."
@@ -1205,7 +1522,25 @@
         "python tools/check_public.py",
         "python tools/task_context.py compute-b-two-grain-interface-regressions"
       ],
-      "existing_checks": []
+      "existing_checks": [
+        {
+          "source_commit": "a392a910899b06d20df6c7c29010896223ebfa70",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/a392a910899b06d20df6c7c29010896223ebfa70/docs/reports/target_b_interface_capacity_2026-10-17.md",
+          "scope": "Submitted shared-interface inequality R >= G + max(p1,p2,p1+p2-K), with finite incidence checks.",
+          "status": "author-checked",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "Geometric realization and payment of virtual mass are not established.",
+          "first_useful_action": "Review the inequality and map it to an actual rhombic disk before using it."
+        }
+      ],
+      "downstream_use": "Decide whether the abstract sharp examples are geometrically relevant to Target B, and whether a stronger realizable budget is possible.",
+      "investigation": {
+        "id": "compute-b-two-grain-interface-regressions-successor-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Finite rational rhombic disks; counters derived from an embedded cellulation, not freely assigned labels.",
+        "question": "Does a smallest explicitly realized two-grain rhombic disk saturate or improve the submitted shared-interface budget after all virtual crossing terms are included?",
+        "status": "open"
+      }
     },
     {
       "id": "compute-c-stress-deletion-restoration-regression",
@@ -1277,7 +1612,15 @@
         "python tools/check_public.py",
         "python tools/task_context.py compute-c-stress-deletion-restoration-regression"
       ],
-      "existing_checks": []
+      "existing_checks": [],
+      "investigation": {
+        "id": "compute-c-stress-deletion-restoration-regression-current-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "A finite rational realization must be provided; abstract graphs alone do not establish planar source feasibility.; Retain contact-isolated points in the source and test all pairwise lower constraints and actual diameter upper constraints.; A bounded counterexample only rejects the proposed restoration rule at its stated scope.",
+        "question": "For small exact unit-contact and diameter systems satisfying the supplied-W stress-deletion hypotheses, can a proposed same-cardinality restoration rule fail after every lower and upper pair constraint is checked?",
+        "status": "open"
+      },
+      "downstream_use": "Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation."
     },
     {
       "id": "verify-a-schur-linkage-bound",
@@ -1314,7 +1657,7 @@
           "claim": "lens sink sets may overlap and require a different coarse Hall graph"
         }
       ],
-      "starting_experiment": "Implement vertex-capacitated max-flow for small oriented response graphs, and compare it with exact symbolic rank of a generic sparse matrix on the same edge set. Add negative fixtures for paths entering a shield outside the claimed tube and for overlapping sink sectors.",
+      "starting_experiment": "This exact objective is complete. Read its recorded disposition, then use verify-a-source-capacity-coupling. Reopen only for a changed source or a named discrepancy.",
       "expected_evidence": [
         "An independently implemented exact verifier with positive cases and meaningful negative controls.",
         "A precise mapping from each finite graph condition to the theorem hypothesis it checks and a list of unverified geometric steps."
@@ -1335,15 +1678,13 @@
         947,
         953
       ],
-      "potential_open_overlap_prs": [
-        78
-      ],
+      "potential_open_overlap_prs": [],
       "priority": "independent evidence",
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
       "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
-      "remaining_if_successful": "For the actual source and response, establish rank(S)<=d_int+|C^partial|-Delta_Lambda (d_sc>=Delta_Lambda); in the locked branch the exact Section-175 surplus is |O_iso|+sum_i max(0,|O_i|-|C_i|)>=j_*+|T_Z|. Any untouched zero-slack/global-realization branch remains.",
+      "remaining_if_successful": "No further work on this completed source/domain. The separate successor is verify-a-source-capacity-coupling; the route endpoint remains open.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
         "python tools/check_public.py",
@@ -1352,21 +1693,47 @@
       "existing_checks": [
         {
           "source_commit": "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda",
-          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/9f230b2f900bf050a27ce7430ae7b3fed8ef8eda/docs/reports/target_a_independent_schur_linkage_2026-10-17.md",
-          "scope": "PR #78 author reports an independent finite rank/linkage and tube-cut checker on all 9,216 declared supports and 234,176 tube/shield cases; this submission has not received independent review.",
-          "status": "author-checked",
+          "evidence": "docs/research/review-artifacts/pr78/independent-audit.txt",
+          "scope": "The exact finite Schur/linkage domain submitted in PR #78; reviewed before its merge. PR #96 is supplementary reconstruction of the same bytes.",
+          "status": "agent-audited",
           "state_version": "2026-10-15.publication.2",
-          "remaining": "Independent review of the pinned checker and its adversarial controls; no source-specific global surplus or geometric competitor is supplied.",
-          "first_useful_action": "Review the finite flow/rank comparison and failure controls at the exact PR #78 head before writing another checker."
+          "remaining": "No canonical promotion or acceptance outside this exact scope.",
+          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with verify-a-source-capacity-coupling."
+        },
+        {
+          "source_commit": "6819b4f862508fe843f7a385e2cff992ecf23420",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/6819b4f862508fe843f7a385e2cff992ecf23420/docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+          "scope": "The exact finite Schur/linkage domain submitted in PR #78; reviewed before its merge. PR #96 is supplementary reconstruction of the same bytes.",
+          "status": "agent-audited",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "No canonical promotion or acceptance outside this exact scope.",
+          "first_useful_action": "Read docs/research/run-reconciliation-2026-10-17.md; continue with verify-a-source-capacity-coupling."
         }
-      ]
+      ],
+      "investigation": {
+        "id": "verify-a-schur-linkage-bound-completed-20261017",
+        "source_commit": "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda",
+        "domain": "The exact finite Schur/linkage domain submitted in PR #78; reviewed before its merge. PR #96 is supplementary reconstruction of the same bytes.",
+        "question": "Can a small independent checker verify the finite directed-linkage and rank inequalities used by the Section-175 Schur cut, including sector-local paths after shield deletion?",
+        "status": "completed"
+      },
+      "completion": {
+        "scope": "The exact finite Schur/linkage domain submitted in PR #78; reviewed before its merge. PR #96 is supplementary reconstruction of the same bytes.",
+        "evidence_prs": [
+          78,
+          96
+        ],
+        "successor_task": "verify-a-source-capacity-coupling",
+        "reopen_when": "The relevant source changes or a concrete discrepancy is identified; record the new source/domain/question."
+      },
+      "downstream_use": "Retain completed coverage so new workers start at the unresolved successor instead of repeating this audit."
     },
     {
       "id": "literature-shell-stability-near-miss-audit",
       "track": "literature",
       "selection_weight": 1,
       "frontier_relation": "literature-supporting",
-      "question": "Does a published planar packing or convex-body stability theorem, under its exact hypotheses, imply any missing piece of Target B's joint outer-shell inequality beyond the canonical Oler and hole-correction inputs?",
+      "question": "Does a primary-source finite-packing stability theorem with weaker hypotheses than total separability control the Target B shell deficit while retaining holes, grain interfaces and the required error order?",
       "assumptions": [
         "Search for primary sources or reliable exact transcriptions and record normalization, domain regularity, topology, and equality hypotheses.",
         "The relevant object is a finite rhombic shell with phase and topology corrections, not an infinite packing density alone.",
@@ -1400,7 +1767,7 @@
           "claim": "literature theorem hypotheses and normalization must be checked exactly"
         }
       ],
-      "starting_experiment": "Search specifically for stability refinements of Oler-type finite packing inequalities and planar convex-body shell estimates. Build a comparison table of theorem hypotheses against the Target B domain, including holes, multiple grains, phase crossings, and error order.",
+      "starting_experiment": "Read PR #88 at its pinned head and record why its total-separability bound does not yield the shell endpoint. Choose one different theorem or a precise convex-grain application. Check the separation and partition hypotheses, sum all area/perimeter interface costs, and compare the residual with the exact shell deficit before starting another literature search.",
       "expected_evidence": [
         "A bibliography with verified primary-source statements and exact constants/hypotheses.",
         "A proof that a theorem applies to a named canonical subcase, or a concise near-miss record identifying the first unsupported hypothesis."
@@ -1432,7 +1799,25 @@
         "python tools/check_public.py",
         "python tools/task_context.py literature-shell-stability-near-miss-audit"
       ],
-      "existing_checks": []
+      "existing_checks": [
+        {
+          "source_commit": "70398c397bfc76e9db65154318ef8a6041458c88",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/70398c397bfc76e9db65154318ef8a6041458c88/docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md",
+          "scope": "Submitted total-separability bound for global minimizers and the necessary linear deletion cost; its hypothesis does not hold for arbitrary triangle-free sources.",
+          "status": "author-checked",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "Independent proof review and a valid application to the actual shell or convex-grain decomposition.",
+          "first_useful_action": "Inspect the exact separability and global-normalization hypotheses before seeking a distinct shell estimate."
+        }
+      ],
+      "investigation": {
+        "id": "literature-shell-transfer-after-separability-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "One primary-source finite-packing theorem or convex-grain application beyond the PR #88 total-separability transfer; all interface costs retained.",
+        "question": "Does a primary-source finite-packing stability theorem with weaker hypotheses than total separability control the Target B shell deficit while retaining holes, grain interfaces and the required error order?",
+        "status": "open"
+      },
+      "downstream_use": "Decide whether a specific external theorem supplies a missing shell term. Re-deriving the completed separable-Oler normalization cannot improve the current transfer."
     },
     {
       "id": "alternative-support-measure-certificate",
@@ -1528,7 +1913,15 @@
         "python tools/check_public.py",
         "python tools/task_context.py alternative-support-measure-certificate"
       ],
-      "existing_checks": []
+      "existing_checks": [],
+      "investigation": {
+        "id": "alternative-support-measure-certificate-current-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "The conclusion must retain the global-minimizer quantifier and construct or certify a same-cardinality diameter improvement.; A triangle-free packing density cap with o(D^(2/3)) excess is false; any successful bound must respect the canonical triangle-free lattice reserve.; Do not identify a source with an independent lattice scaffold without a proved co-embedding or transport theorem.",
+        "question": "Can a support-function or measure-dual inequality that uses global minimum-diameter optimality, rather than a contact-stress or phase decomposition, force a strict sub-D competitor for every sufficiently large triangle-free global minimizer?",
+        "status": "open"
+      },
+      "downstream_use": "Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation."
     },
     {
       "id": "alternative-contact-graph-boundary-entropy",
@@ -1623,7 +2016,15 @@
         "python tools/check_public.py",
         "python tools/task_context.py alternative-contact-graph-boundary-entropy"
       ],
-      "existing_checks": []
+      "existing_checks": [],
+      "investigation": {
+        "id": "alternative-contact-graph-boundary-entropy-current-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "The graph must be the actual unit-contact graph of a unit-separated source, not an arbitrary planar graph.; A graph edge bound alone cannot imply a geometric finite motion or global optimality comparison.; The target is a strict-diameter or exact contact-minimality contradiction with all source labels retained.",
+        "question": "Can a contact-graph-only Euler deficit, augmented by a precise geometric boundary-turning statistic, force a source-preserving replacement in every large triangle-free global minimizer without invoking KKT stress or rhombic phase energy?",
+        "status": "open"
+      },
+      "downstream_use": "Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation."
     },
     {
       "id": "global-joint-phase-source-extraction",
@@ -1697,7 +2098,15 @@
         "python3 tools/task_context.py global-joint-phase-source-extraction",
         "python3 tools/check_public.py"
       ],
-      "existing_checks": []
+      "existing_checks": [],
+      "investigation": {
+        "id": "global-joint-phase-source-extraction-current-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Start with an arbitrary triangle-free global minimizer, not only a lattice disk or a preselected grain chart.; The unreviewed global joint stress/strain report proves only a conditional fixed-frame continuum statement; a rotated compatible laminate refutes a frame-free extension.; Retain every source point, all actual diameter pairs, every unit lower constraint, seam work and boundary terms. The goal is a genuine source-level implication.",
+        "question": "Can the exact formal fixed-frame joint stress/strain incompatibility be extracted from every sufficiently large triangle-free global minimum-diameter source, with controlled grain rotations, seam and boundary work, all contact isolates and an actual same-cardinality strict-sub-D consequence, or can the necessary source-extraction bridge be falsified?",
+        "status": "open"
+      },
+      "downstream_use": "Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation."
     },
     {
       "id": "target-c-threshold-packet-cross-shore",
@@ -1784,7 +2193,15 @@
         "python3 research/verify_target_c_laminar_multitrain_interval_shear.py",
         "python3 tools/task_context.py target-c-threshold-packet-cross-shore"
       ],
-      "existing_checks": []
+      "existing_checks": [],
+      "investigation": {
+        "id": "target-c-threshold-packet-cross-shore-current-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Use the destination canonical Target C source scope; C-II remains open.; Use only the exact hypotheses of the threshold staircase, edgewise packet, and multishear reports.; Keep the nonexact-opposite-shore escape separate from the double-exact-phase complete-grid branch.; Do not infer a uniform lower bound on individual packet resultants from positivity or packet counts.; Retain every source label, including contact isolates, and check every lower and upper pair constraint for any proposed endpoint.",
+        "question": "Under the exact threshold-staircase hypotheses, can the opposite-shore cut equations force exact phase or a uniform aggregate packet-resultant payment, or can boundary/layer rows absorb the internal packet load?",
+        "status": "open"
+      },
+      "downstream_use": "Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation."
     },
     {
       "id": "target-c-capacity-collective-refill",
@@ -1888,7 +2305,15 @@
           "role": "all source branch paths and exact treatment"
         }
       ],
-      "existing_checks": []
+      "existing_checks": [],
+      "investigation": {
+        "id": "target-c-capacity-collective-refill-current-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Use the destination theorem-state manifest as the sole authority for canonical claims and C-II status.; Treat all eight branch reports as unreviewed candidates; finite verifiers do not promote analytic claims.; Retain every source label, including contact isolates, and check every lower pair and every actual or inactive diameter upper pair.; At diameter D preserve triangle-freeness and strictly improve the contact/actual-diameter-pair lexicographic objective.",
+        "question": "Can any fixed-frame vacancy/refill theorem be extracted at sufficient scale from every canonical C-II source to give a same-cardinality competitor or admissible strict endpoint after accounting for exact capacity barriers and every lower and upper pair constraint?",
+        "status": "open"
+      },
+      "downstream_use": "Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation."
     },
     {
       "id": "target-c-branch-aware-atomic-gap",
@@ -2008,7 +2433,201 @@
           "role": "Exact source commit/blob/hash and per-file import disposition."
         }
       ],
-      "existing_checks": []
+      "existing_checks": [],
+      "investigation": {
+        "id": "target-c-branch-aware-atomic-gap-current-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Use destination theorem-state as the only canonical lifecycle authority.; The 0.0071 train/rhombic gap is an unreviewed proof candidate; source hostile-audit PASS is provenance only.; The 0.0050 Section-171 output has not been propagated to 0.0071.; Retain the full-core Type-II scope, strict-rhombus transfer hypotheses, contact isolates, and every lower/upper pair condition in any finite endpoint.",
+        "question": "Can the unreviewed 0.0071 full-core Type-II matched train-measure gap be propagated through Section 171, outer energy, complement-rhombus incidence, and low-t structure with every exact branch hypothesis retained?",
+        "status": "open"
+      },
+      "downstream_use": "Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation."
+    },
+    {
+      "id": "audit-target-b-gpi-diagonal",
+      "track": "independent-audit",
+      "selection_weight": 1,
+      "frontier_relation": "audit-of-canonical-result",
+      "question": "Does PR #94 justify lambda_D=D^(-kappa), 0<kappa<(1-eta)/2, with uniform constants and valid angular-error summation, while keeping GPI restricted to fixed positive tau?",
+      "assumptions": [
+        "Use the exact canonical dependency audit and current Target B route map.",
+        "Do not strengthen the one-component GPI theorem or treat audited-working reports as premises.",
+        "The deliverable is an independent scope audit or a precise counterexample to an overbroad paraphrase.",
+        "The diagonal estimate is unreviewed; the common scope audit does not accept it."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim_id": "TB-DENSE-GRID",
+          "claim": "TB-DENSE-GRID canonical entry and exact scope"
+        },
+        {
+          "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+          "claim": "promoted MCP2 and GPI statements"
+        },
+        {
+          "path": "docs/targets/target-b/README.md",
+          "claim": "global multi-grain obstruction"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-b/README.md",
+          "claim": "GPI does not supply multi-grain globalization or the full topology correction"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim": "MCP2 uses fixed Section-50 lambda before D tends to infinity"
+        }
+      ],
+      "starting_experiment": "Check out PR #94 at 01be955ed9209f1d4a096148e61851837fa190d4. Independently reconstruct the Section-50/PC3 constants, the graph-diameter and zero-gain-cycle condition, and the sum of angular errors. Test the exponent boundary and reject any use of fixed-tau GPI for tau_D tending to zero.",
+      "expected_evidence": [
+        "A concise independent derivation with exact quantifier order and a list of conclusions that do not follow.",
+        "Or a specific hypothesis gap or algebraic error supported by a reproducible check."
+      ],
+      "stopping_condition": "Stop if the work drifts into proving the full Target B inequality; this card audits only the canonical input chain and its scope.",
+      "methods": [
+        "independent symbolic derivation",
+        "quantifier and dependency audit"
+      ],
+      "overlap_terms": [
+        "GPI",
+        "MCP2",
+        "fixed lambda",
+        "dominant component",
+        "multi-grain scope"
+      ],
+      "source_proposal_numbers": [
+        949
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "independent evidence",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py audit-target-b-gpi-diagonal"
+      ],
+      "existing_checks": [
+        {
+          "source_commit": "01be955ed9209f1d4a096148e61851837fa190d4",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/01be955ed9209f1d4a096148e61851837fa190d4/docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md",
+          "scope": "Separate diagonal estimate beyond the completed fixed-lambda scope audit.",
+          "status": "author-checked",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "Uniform constants, propagation conditions and error summation require independent proof review.",
+          "first_useful_action": "Audit the exact pinned report and its named dependencies."
+        }
+      ],
+      "downstream_use": "Decide whether the diagonal estimate is reusable. Then compare its quantitative gain with deletion/interface loss before claiming a shell improvement.",
+      "investigation": {
+        "id": "audit-target-b-gpi-diagonal-successor-20261017",
+        "source_commit": "01be955ed9209f1d4a096148e61851837fa190d4",
+        "domain": "Only the new diagonal estimate in PR #94; the completed fixed-parameter scope audit is prior evidence.",
+        "question": "Does PR #94 justify lambda_D=D^(-kappa), 0<kappa<(1-eta)/2, with uniform constants and valid angular-error summation, while keeping GPI restricted to fixed positive tau?",
+        "status": "open"
+      }
+    },
+    {
+      "id": "verify-a-source-capacity-coupling",
+      "track": "independent-verification",
+      "selection_weight": 1,
+      "frontier_relation": "finite-verification-only",
+      "question": "Can an exact source-capacitated checker test a proposed Section-168 coupling using both actual incidence maps, without identifying independent matchings?",
+      "assumptions": [
+        "The checker verifies finite graph instances and stated algebraic matrices; it does not prove the geometric shield hypotheses or the global theorem.",
+        "Use exact integer/rational arithmetic and make all vertex capacities and source/sink sets explicit.",
+        "Preserve the difference between path-count rank upper bounds and a source-specific Schur nullity theorem."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+          "claim": "Section-175 Schur cut and sector-local path argument"
+        },
+        {
+          "path": "docs/targets/target-a/26-tube-shield-sector-balance.md",
+          "claim": "Section-174 basis matching and sector separation hypotheses"
+        },
+        {
+          "path": "docs/RESEARCH_WORKFLOW.md",
+          "claim": "certificate registration and computational scope"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-a/README.md",
+          "claim": "generic matrix rank or planarity does not give the source-specific Schur nullity"
+        },
+        {
+          "path": "docs/targets/target-a/29-lens-source-gate-refinements.md",
+          "claim": "lens sink sets may overlap and require a different coarse Hall graph"
+        }
+      ],
+      "starting_experiment": "Reuse the reviewed finite Schur/path implementation from PR #78. Add a separate layer with one capacity per source label and the two stated incidence maps. Encode the PR #98 overlap case as a failure control, then require an actual-source fixture before claiming geometric applicability.",
+      "expected_evidence": [
+        "An independently implemented exact verifier with positive cases and meaningful negative controls.",
+        "A precise mapping from each finite graph condition to the theorem hypothesis it checks and a list of unverified geometric steps."
+      ],
+      "stopping_condition": "Stop if the checker is presented as validating arbitrary canonical response geometry, or if graph rank is substituted for the stated Schur matrix without a proof.",
+      "methods": [
+        "independent max-flow implementation",
+        "exact symbolic matrix rank and cross-check fixtures"
+      ],
+      "overlap_terms": [
+        "Schur linkage",
+        "vertex-disjoint path",
+        "tube interception",
+        "exact sparse rank",
+        "Section 175 verifier"
+      ],
+      "source_proposal_numbers": [
+        947,
+        953
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "independent evidence",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "For the actual source and response, establish rank(S)<=d_int+|C^partial|-Delta_Lambda (d_sc>=Delta_Lambda); in the locked branch the exact Section-175 surplus is |O_iso|+sum_i max(0,|O_i|-|C_i|)>=j_*+|T_Z|. Any untouched zero-slack/global-realization branch remains.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py verify-a-source-capacity-coupling"
+      ],
+      "existing_checks": [
+        {
+          "source_commit": "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda",
+          "evidence": "docs/research/review-artifacts/pr78/independent-audit.txt",
+          "scope": "Completed independent finite Schur/linkage proof and checker audit, with merger-owned replay.",
+          "status": "agent-audited",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "Actual source-capacity coupling was outside the reviewed domain.",
+          "first_useful_action": "Reuse the reviewed machinery instead of implementing it again."
+        },
+        {
+          "source_commit": "2e4a3e1e73877df4f4756fcb4c7d331dcda1327f",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/2e4a3e1e73877df4f4756fcb4c7d331dcda1327f/docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+          "scope": "Submitted separate-matching overlap regression.",
+          "status": "author-checked",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "Actual source realization remains open.",
+          "first_useful_action": "Preserve distinct source capacities and use the fixture as a negative control."
+        }
+      ],
+      "downstream_use": "Test whether a proposed coupling pays the true joint source demand. The checker must expose which geometric realization hypothesis is still absent.",
+      "investigation": {
+        "id": "verify-a-source-capacity-coupling-successor-20261017",
+        "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+        "domain": "Finite source-capacity layer with two explicit incidence maps; the old Schur/linkage finite domain is already reviewed.",
+        "question": "Can an exact source-capacitated checker test a proposed Section-168 coupling using both actual incidence maps, without identifying independent matchings?",
+        "status": "open"
+      }
     }
   ],
   "priority_revision": "public-frontier.3"

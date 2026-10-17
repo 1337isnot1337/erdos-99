@@ -1,0 +1,1233 @@
+{
+  "elapsed_seconds": 2.815,
+  "exact_schur": [
+    {
+      "M": 5,
+      "actual_h": 12,
+      "arithmetic": "exact Fractions, nonzero integer edge specialization, seed 990005",
+      "basis": "predecessor",
+      "boundary_rank": 6,
+      "full_rank": 6,
+      "incorrect_boundary_only_h": 12,
+      "omitted_deep_rank": 0
+    },
+    {
+      "M": 5,
+      "actual_h": 12,
+      "arithmetic": "exact Fractions, nonzero integer edge specialization, seed 990005",
+      "basis": "relaxed",
+      "boundary_rank": 3,
+      "full_rank": 6,
+      "incorrect_boundary_only_h": 15,
+      "omitted_deep_rank": 3
+    },
+    {
+      "M": 6,
+      "actual_h": 14,
+      "arithmetic": "exact Fractions, nonzero integer edge specialization, seed 990006",
+      "basis": "predecessor",
+      "boundary_rank": 7,
+      "full_rank": 7,
+      "incorrect_boundary_only_h": 14,
+      "omitted_deep_rank": 0
+    },
+    {
+      "M": 6,
+      "actual_h": 14,
+      "arithmetic": "exact Fractions, nonzero integer edge specialization, seed 990006",
+      "basis": "relaxed",
+      "boundary_rank": 3,
+      "full_rank": 7,
+      "incorrect_boundary_only_h": 18,
+      "omitted_deep_rank": 4
+    }
+  ],
+  "exhaustive": {
+    "M": 5,
+    "admissible_histogram": {
+      "-2": 713,
+      "-1": 1692,
+      "0": 1062,
+      "1": 176
+    },
+    "attempted_bases": 54264,
+    "limitation": "One independently found matching per basis; not every matching of each basis.",
+    "matchable_bases": 29636,
+    "relaxed_histogram": {
+      "-2": 1938,
+      "-1": 8721,
+      "0": 11822,
+      "1": 5835,
+      "2": 1212,
+      "3": 105,
+      "4": 3
+    }
+  },
+  "independence": "No repository Python code imported or edited.",
+  "ledgers": [
+    {
+      "Ci": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "M": 4,
+      "Oi": [
+        0,
+        3,
+        2,
+        0
+      ],
+      "Oiso": 7,
+      "Xi": 10,
+      "admissible": true,
+      "basis": "predecessor",
+      "missing_deep": [],
+      "t": 3,
+      "value": 1
+    },
+    {
+      "Ci": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 4,
+      "Oi": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "Oiso": 10,
+      "Xi": 12,
+      "admissible": false,
+      "basis": "submitted_relaxed",
+      "missing_deep": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "t": 5,
+      "value": 3
+    },
+    {
+      "Ci": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 4,
+      "Oi": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "Oiso": 10,
+      "Xi": 12,
+      "admissible": false,
+      "basis": "independently_derived_relaxed",
+      "missing_deep": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "t": 5,
+      "value": 3
+    },
+    {
+      "Ci": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "M": 5,
+      "Oi": [
+        0,
+        6,
+        2,
+        0
+      ],
+      "Oiso": 7,
+      "Xi": 12,
+      "admissible": true,
+      "basis": "predecessor",
+      "missing_deep": [],
+      "t": 3,
+      "value": 1
+    },
+    {
+      "Ci": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 5,
+      "Oi": [
+        0,
+        5,
+        0,
+        0
+      ],
+      "Oiso": 10,
+      "Xi": 15,
+      "admissible": false,
+      "basis": "submitted_relaxed",
+      "missing_deep": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "t": 6,
+      "value": 4
+    },
+    {
+      "Ci": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 5,
+      "Oi": [
+        0,
+        5,
+        0,
+        0
+      ],
+      "Oiso": 10,
+      "Xi": 15,
+      "admissible": false,
+      "basis": "independently_derived_relaxed",
+      "missing_deep": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "t": 6,
+      "value": 4
+    },
+    {
+      "Ci": [
+        0,
+        3,
+        1,
+        0
+      ],
+      "M": 6,
+      "Oi": [
+        0,
+        8,
+        2,
+        0
+      ],
+      "Oiso": 8,
+      "Xi": 14,
+      "admissible": true,
+      "basis": "predecessor",
+      "missing_deep": [],
+      "t": 3,
+      "value": 1
+    },
+    {
+      "Ci": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 6,
+      "Oi": [
+        0,
+        7,
+        0,
+        0
+      ],
+      "Oiso": 11,
+      "Xi": 18,
+      "admissible": false,
+      "basis": "submitted_relaxed",
+      "missing_deep": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "t": 7,
+      "value": 5
+    },
+    {
+      "Ci": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 6,
+      "Oi": [
+        0,
+        7,
+        0,
+        0
+      ],
+      "Oiso": 11,
+      "Xi": 18,
+      "admissible": false,
+      "basis": "independently_derived_relaxed",
+      "missing_deep": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "t": 7,
+      "value": 5
+    },
+    {
+      "Ci": [
+        0,
+        4,
+        1,
+        0
+      ],
+      "M": 7,
+      "Oi": [
+        0,
+        10,
+        2,
+        0
+      ],
+      "Oiso": 9,
+      "Xi": 16,
+      "admissible": true,
+      "basis": "predecessor",
+      "missing_deep": [],
+      "t": 3,
+      "value": 1
+    },
+    {
+      "Ci": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 7,
+      "Oi": [
+        0,
+        9,
+        0,
+        0
+      ],
+      "Oiso": 12,
+      "Xi": 21,
+      "admissible": false,
+      "basis": "submitted_relaxed",
+      "missing_deep": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "t": 8,
+      "value": 6
+    },
+    {
+      "Ci": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 7,
+      "Oi": [
+        0,
+        9,
+        0,
+        0
+      ],
+      "Oiso": 12,
+      "Xi": 21,
+      "admissible": false,
+      "basis": "independently_derived_relaxed",
+      "missing_deep": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "t": 8,
+      "value": 6
+    },
+    {
+      "Ci": [
+        0,
+        7,
+        1,
+        0
+      ],
+      "M": 10,
+      "Oi": [
+        0,
+        16,
+        2,
+        0
+      ],
+      "Oiso": 12,
+      "Xi": 22,
+      "admissible": true,
+      "basis": "predecessor",
+      "missing_deep": [],
+      "t": 3,
+      "value": 1
+    },
+    {
+      "Ci": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 10,
+      "Oi": [
+        0,
+        15,
+        0,
+        0
+      ],
+      "Oiso": 15,
+      "Xi": 30,
+      "admissible": false,
+      "basis": "submitted_relaxed",
+      "missing_deep": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "t": 11,
+      "value": 9
+    },
+    {
+      "Ci": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 10,
+      "Oi": [
+        0,
+        15,
+        0,
+        0
+      ],
+      "Oiso": 15,
+      "Xi": 30,
+      "admissible": false,
+      "basis": "independently_derived_relaxed",
+      "missing_deep": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "t": 11,
+      "value": 9
+    },
+    {
+      "Ci": [
+        0,
+        18,
+        1,
+        0
+      ],
+      "M": 21,
+      "Oi": [
+        0,
+        38,
+        2,
+        0
+      ],
+      "Oiso": 23,
+      "Xi": 44,
+      "admissible": true,
+      "basis": "predecessor",
+      "missing_deep": [],
+      "t": 3,
+      "value": 1
+    },
+    {
+      "Ci": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 21,
+      "Oi": [
+        0,
+        37,
+        0,
+        0
+      ],
+      "Oiso": 26,
+      "Xi": 63,
+      "admissible": false,
+      "basis": "submitted_relaxed",
+      "missing_deep": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          1,
+          17
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          1,
+          19
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "t": 22,
+      "value": 20
+    },
+    {
+      "Ci": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 21,
+      "Oi": [
+        0,
+        37,
+        0,
+        0
+      ],
+      "Oiso": 26,
+      "Xi": 63,
+      "admissible": false,
+      "basis": "independently_derived_relaxed",
+      "missing_deep": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          1,
+          17
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          1,
+          19
+        ]
+      ],
+      "t": 22,
+      "value": 20
+    },
+    {
+      "Ci": [
+        0,
+        30,
+        1,
+        0
+      ],
+      "M": 33,
+      "Oi": [
+        0,
+        62,
+        2,
+        0
+      ],
+      "Oiso": 35,
+      "Xi": 68,
+      "admissible": true,
+      "basis": "predecessor",
+      "missing_deep": [],
+      "t": 3,
+      "value": 1
+    },
+    {
+      "Ci": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 33,
+      "Oi": [
+        0,
+        61,
+        0,
+        0
+      ],
+      "Oiso": 38,
+      "Xi": 99,
+      "admissible": false,
+      "basis": "submitted_relaxed",
+      "missing_deep": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          1,
+          17
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          1,
+          19
+        ],
+        [
+          1,
+          20
+        ],
+        [
+          1,
+          21
+        ],
+        [
+          1,
+          22
+        ],
+        [
+          1,
+          23
+        ],
+        [
+          1,
+          24
+        ],
+        [
+          1,
+          25
+        ],
+        [
+          1,
+          26
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          1,
+          28
+        ],
+        [
+          1,
+          29
+        ],
+        [
+          1,
+          30
+        ],
+        [
+          1,
+          31
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "t": 34,
+      "value": 32
+    },
+    {
+      "Ci": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 33,
+      "Oi": [
+        0,
+        61,
+        0,
+        0
+      ],
+      "Oiso": 38,
+      "Xi": 99,
+      "admissible": false,
+      "basis": "independently_derived_relaxed",
+      "missing_deep": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          1,
+          17
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          1,
+          19
+        ],
+        [
+          1,
+          20
+        ],
+        [
+          1,
+          21
+        ],
+        [
+          1,
+          22
+        ],
+        [
+          1,
+          23
+        ],
+        [
+          1,
+          24
+        ],
+        [
+          1,
+          25
+        ],
+        [
+          1,
+          26
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          1,
+          28
+        ],
+        [
+          1,
+          29
+        ],
+        [
+          1,
+          30
+        ],
+        [
+          1,
+          31
+        ]
+      ],
+      "t": 34,
+      "value": 32
+    }
+  ],
+  "local_tubes": {
+    "(-1, 1)": [
+      [
+        -2,
+        1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "(0, 1)": [
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "(1, 0)": [
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "result": "PASS",
+  "reviewed_commit": "d585826bbe4e7ebc720706231820906f90832b30",
+  "source_pins": [
+    {
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "path": "docs/targets/target-a/02-scaffold-and-hall.md",
+      "sha256": "18b0297422f207a1b3afdea166b413ccd86d9a5d9c26d26da9794d3e6ac39548"
+    },
+    {
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+      "sha256": "0399e4947619293dfda7818c8961c18a48cf762c2f8c5e0d8e956099ca08db29"
+    },
+    {
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "path": "docs/targets/target-a/26-tube-shield-sector-balance.md",
+      "sha256": "15e470ca494ddf19b5a7fe80a558b2cff01bab824539a0367a2b628436367798"
+    },
+    {
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "path": "docs/reports/target_a_seed063_tight_isolates_and_locked_fan_regression_2026-10-13.md",
+      "sha256": "b2f5c112443c57181670aec31d46c38f0d6aacef8318e29473c9a6e72e358337"
+    },
+    {
+      "commit": "d585826bbe4e7ebc720706231820906f90832b30",
+      "path": "research-packages/target-a-fan-tube-ledger/verify.py",
+      "sha256": "9bb3ff34ec011f2b3748c6857d631701e194d07a6d8d38af00fbc1f3a74d9bd8"
+    },
+    {
+      "commit": "d585826bbe4e7ebc720706231820906f90832b30",
+      "path": "research-packages/target-a-fan-tube-ledger/README.md",
+      "sha256": "ad54b3f63595135bbf7ac335fc53dc67e6c546de828867d7deb08b54e310cfd5"
+    },
+    {
+      "commit": "d585826bbe4e7ebc720706231820906f90832b30",
+      "path": "research-packages/target-a-fan-tube-ledger/evidence.json",
+      "sha256": "a50f8ed5dd71243b7db653d058a93b964dd1a6462d8dc95e488f2cdabec1fba3"
+    }
+  ]
+}

@@ -26,12 +26,46 @@ migration notes, PR comments, closed Issues and remote changed-file inventories 
 not searched. Refresh before submission and read matched sources/hypotheses.
 A title, keyword, missing match or advisory marker never establishes novelty.
 
-Claims are optional for a short session after overlap checking. Claim an accepted
-handoff or likely-overlapping/multi-session scope when useful. Anyone may start an
-unclaimed task. Claims expire within seven days and confer no ownership;
-independent audits may overlap. Use the existing investigation thread and release
-or close your claim on completion. Do not create a new report just to announce a
-status update.
+The picker loads this snapshot **before** drawing. It excludes completed or held
+catalogue investigations, open exact submissions and unexpired exact-scope claims
+for the requested role.
+An investigation identifies its source commit, domain and question; its card is
+only the broader family. Different methods or random seeds do not create a new
+investigation. Keyword matches remain leads rather than exclusion rules.
+Old task-only markers lack enough information to exclude a whole family.
+
+Use `--task TASK_ID` to retrieve an explicit assignment, even when its investigation
+is completed, active or awaiting review. Its current state and exclusion reasons
+remain visible. `--role reviewer` declares a deliberate independent audit.
+An `awaiting-review` investigation is available only through explicit retrieval;
+it is not silently returned to the general research pool.
+
+Claims are optional for a short isolated session after overlap checking. For a
+batch, a routine audit or likely-overlapping work, announce the exact investigation
+before substantive work. Anyone may start an unclaimed task. Claims expire within
+seven days and confer no ownership; deliberate independent audits may overlap.
+Use the existing investigation thread and release or close your claim on
+completion. Do not create a new report just to announce a status update.
+
+## Assign a controlled batch
+
+One controller can prepare all slots from the same coordination snapshot:
+
+```sh
+python scripts/choose_research_task.py --batch 4 \
+  --assign target-a-locked-sector-surplus:producer \
+  --assign target-a-locked-sector-surplus:reviewer \
+  --coordination-cache ~/.cache/erdos99/overlap.json --json
+```
+
+Each slot records its role, exact investigation and selection state. The two
+explicit slots above intentionally share a scope. Randomly filled slots use
+different investigations, including across cards; duplicate producer assignments
+are rejected. An explicit reviewer waits for the producer's artifact and pins the
+actual reviewed head before starting the audit. The controller gives each worker
+its slot and announces assignments before launch; workers do not draw again.
+The command only prints assignments. It does not post, reserve work, or prevent
+another independent controller from racing it. Recheck live overlap at launch.
 
 ## Structured handoffs
 
@@ -40,17 +74,27 @@ Optional markers make handoffs discoverable in the tool and picker:
 ```text
 E99-STATUS: HANDOFF
 E99-TASK-ID: verify-a-schur-linkage-bound
+E99-INVESTIGATION-ID: finite-schur-source-audit
+E99-SCOPE-ID: EXACT_SCOPE_KEY_FROM_THE_PICKER
 E99-SOURCE-SHA: FULL_40_CHARACTER_SOURCE_SHA
+E99-DOMAIN: Exact source, objects and finite or quantified domain
+E99-QUESTION: One bounded question
+E99-ROLE: reviewer
 E99-REMAINING: One exact missing implication and its hypotheses
 E99-NEXT-ACTION: One feasible proof reconstruction or bounded experiment
 ```
 
 Add a public artifact link, exact command/inputs, actual evidence status and
-limitations. Mark local-only evidence explicitly. Use `E99-STATUS: DONE` or
-`RELEASED` when the request ends. Keep the opening post's current summary accurate;
+limitations. Mark local-only evidence explicitly. Use `E99-STATUS: DONE` when this
+exact investigation is completed, or `RELEASED` when you stop claiming it without
+completing it. Finishing a scoped investigation never closes the global theorem.
+Keep the opening post's current summary accurate;
 read the latest thread even when a structured lead appears. Prose-only handoffs
-remain valid. A CLAIM may also include `E99-SCOPE-ID` and timezone-aware
-`E99-CLAIM-EXPIRES` no more than seven days away. The selector's `--claim-template`
+remain valid. A CLAIM includes timezone-aware `E99-CLAIM-EXPIRES` no more than seven
+days away. Reply in that investigation's root comment, or repeat its exact scope
+and role markers; a DONE on another comment in a shared hub closes nothing else.
+Old caches without reply roots keep ambiguous status changes separate.
+The selector's `--claim-template`
 prints a draft only; it never posts or reserves work.
 
 ## Authority and permissions

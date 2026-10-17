@@ -1,10 +1,18 @@
 # target-a-locked-sector-surplus
 
+**Investigation:** `target-a-locked-sector-surplus-successor-20261017`. **Status:** open. Source: `e396ea07887dd0528b817ce4e656ff0e6b01f8fb`.
+
+Downstream use: A positive result must pay the actual j_* demand; a negative result must identify a source hypothesis that rules out the supplied nonglobal regressions.
+
+Prior evidence:
+- [regression](../research-packages/target-a-fan-tube-ledger/README.md) at `33a4aaa016d0a219e2f9e8e7a92c87ff4aa77afb`: Seed-63 full-tube ledger; the submitted canonical-admissibility claim is corrected in the current package. Admissible optimum 1; relaxed optimum M-1. Remaining: Actual source demand and phase selection are absent.
+- [author-checked](https://github.com/1337isnot1337/erdos-99/blob/aa111eedcd3bc190f991aeaa7f42299948551207/research-packages/target-a-full-tube-fan-ledger/README.md) at `aa111eedcd3bc190f991aeaa7f42299948551207`: Submitted seed-66 fixed-phase ledger and basis-independent upper bound 3; not a sharp all-basis optimization. Remaining: Review before relying on its all-parameter claim; source-demand extraction remains open.
+
 **Track / priority:** target-a / direct frontier; selection weight 5 (attention only).
 
 ## Exact objective
 
-For the actual response optimum and a canonical stress-generated shield, can the Section-175 right-deficiency endpoint be closed by proving the required exterior-sink and sector population surplus, or by producing a strict sub-D competitor?
+For an actual plateau response with a Section-102 admissible basis, what joint source-demand, phase and sink-population inequality can force Xi >= j_* + |T_Z|?
 
 ## Definitions, hypotheses and complete prerequisites
 
@@ -30,7 +38,7 @@ Advances only the stated route obligation; global closure still requires all can
 
 ## Approach and first bounded experiment
 
-Specialize the exact inequality to the three-channel fan. Write every term in the right-deficiency identity with disjoint source sets, then test whether the known translation-average or straight-crosscut tube bound can reach the required integer surplus without discarding a boundary-order term.
+Start from the corrected seed-63 admissible optimum 1 and the seed-66 pointwise phase obstruction. Name the actual source and its demand before choosing phase. Derive one inequality retaining the deep restriction, distinct sinks and the phase-dependent tube cost.
 
 Methods: sector-by-sector exact accounting, max-flow/Hall reduction with a source-specific surplus lemma
 

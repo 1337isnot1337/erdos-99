@@ -1,5 +1,15 @@
 # audit-target-b-gpi-scope
 
+**Investigation:** `audit-target-b-gpi-scope-completed-20261017`. **Status:** completed. Source: `dfdc8b5747cf0e6cadb1237118a28ea09e087296`.
+
+Downstream use: Retain completed coverage so new workers start at the unresolved successor instead of repeating this audit.
+
+This scope is complete. Continue with [audit-target-b-gpi-diagonal](audit-target-b-gpi-diagonal.md).
+
+Prior evidence:
+- [agent-audited](https://github.com/1337isnot1337/erdos-99/blob/dfdc8b5747cf0e6cadb1237118a28ea09e087296/docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md) at `dfdc8b5747cf0e6cadb1237118a28ea09e087296`: Fixed-lambda and fixed-positive-tau scope of the canonical MCP2/GPI chain; no multi-grain or varying-tau conclusion. Remaining: No canonical promotion or acceptance outside this exact scope.
+- [agent-audited](https://github.com/1337isnot1337/erdos-99/blob/01be955ed9209f1d4a096148e61851837fa190d4/docs/reports/target_b_gpi_mcp2_quantifier_audit_2026-10-17.md) at `01be955ed9209f1d4a096148e61851837fa190d4`: Fixed-lambda and fixed-positive-tau scope of the canonical MCP2/GPI chain; no multi-grain or varying-tau conclusion. Remaining: PR #94 also contains a distinct unreviewed diagonal estimate, assigned to audit-target-b-gpi-diagonal.
+
 **Track / priority:** independent-audit / independent evidence; selection weight 2 (attention only).
 
 ## Exact objective
@@ -29,7 +39,7 @@ Advances only the stated route obligation; global closure still requires all can
 
 ## Approach and first bounded experiment
 
-Build a dependency table from each GPI hypothesis through the fixed-lambda summation and limit. Test every parameter quantifier against the displayed conclusion and identify any implicit uniformity or dominant-grain assumption.
+This exact objective is complete. Read its recorded disposition, then use audit-target-b-gpi-diagonal. Reopen only for a changed source or a named discrepancy.
 
 Methods: independent symbolic derivation, quantifier and dependency audit
 
@@ -55,7 +65,7 @@ The task-context command lists certificate commands for the direct and transitiv
 
 ## Remaining lemma and limitations
 
-Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.
+No further work on this completed source/domain. The separate successor is audit-target-b-gpi-diagonal; the route endpoint remains open.
 
 No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.
 

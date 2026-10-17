@@ -6,7 +6,7 @@ import re
 import subprocess
 from pathlib import Path
 
-from .packages import Invalid, MAX_BLOB, MAX_PACKAGES, MAX_SECONDS, discover, load_package
+from .packages import Invalid, MAX_BLOB, MAX_PACKAGES, MAX_PACKAGE_SECONDS, MAX_SECONDS, discover, load_package
 
 try:
     from ..ci_document_scope import is_workflow_document, mathematical_inputs
@@ -154,11 +154,18 @@ def domain_signature(snapshot, inputs):
     return signatures
 
 
+def verification_contract(verify):
+    """Keep the checked inputs, environment, commands and domain separate from time limits."""
+    return {**verify, 'commands': [command['argv'] for command in verify['commands']]}
+
+
 def make_plan(root: Path, base=None, head='HEAD', event=None):
     result = {'version': 1, 'level': 'full-verification-required', 'full_verified': False,
               'dependency_closure': 'not-established', 'reasons': [], 'errors': [],
               'packages': [], 'replay_allowed': False, 'workload_seconds': 0,
-              'limits': {'packages': MAX_PACKAGES, 'seconds': MAX_SECONDS}, 'changes': []}
+              'replay_schedule': 'requires-review', 'scheduling_reasons': [],
+              'limits': {'packages': MAX_PACKAGES, 'seconds': MAX_SECONDS,
+                         'package_seconds': MAX_PACKAGE_SECONDS}, 'changes': []}
     try:
         base, head, start, changes = endpoints(root, base, head, event)
         result.update(base=base, head=head, merge_base=start, changes=changes)
@@ -237,7 +244,7 @@ def make_plan(root: Path, base=None, head='HEAD', event=None):
             if d in target_packages and target is not old:
                 target_pkg = target_packages[d]
                 def contract(p):
-                    return p['sources'], p['verify'], p['task']['scope']
+                    return p['sources'], verification_contract(p['verify']), p['task']['scope']
                 if (d not in before or contract(target_pkg) != contract(before[d])) and contract(target_pkg) != contract(pkg):
                     result['reasons'].append(f'{d}: affected package changed on target base; rebase/review required')
             if pkg['unresolved']:
@@ -252,18 +259,31 @@ def make_plan(root: Path, base=None, head='HEAD', event=None):
                 for key in ('scope', 'classification'):
                     if previous['task'][key] != pkg['task'][key]:
                         result['reasons'].append(f'{d}: task {key} changed')
-                if previous['verify'] != pkg['verify']:
+                if verification_contract(previous['verify']) != verification_contract(pkg['verify']):
                     result['reasons'].append(f'{d}: verification contract changed')
             result['packages'].append(d)
             result['workload_seconds'] += pkg['seconds']
-        if len(result['packages']) > MAX_PACKAGES or result['workload_seconds'] > MAX_SECONDS:
-            result['reasons'].append('automatic replay workload cap exceeded')
         if result['errors'] or result['reasons']:
             result['level'] = 'full-verification-required'
         else:
             result['level'] = 'targeted-replay' if affected else 'fast-only'
             result['dependency_closure'] = 'declared-inputs-only; static tripwires and filesystem isolation required'
-            result['replay_allowed'] = bool(affected)
+            # A queue budget does not change mathematical impact or discard part
+            # of the required affected set. Defer the entire set when it cannot
+            # fit the automatic job; a maintainer must arrange its complete replay.
+            if len(result['packages']) > MAX_PACKAGES:
+                result['scheduling_reasons'].append('automatic replay package cap exceeded')
+            if result['workload_seconds'] > MAX_SECONDS:
+                result['scheduling_reasons'].append('automatic replay time cap exceeded')
+            for directory in result['packages']:
+                if after[directory]['seconds'] > MAX_PACKAGE_SECONDS:
+                    result['scheduling_reasons'].append(
+                        f'{directory}: automatic per-package time cap exceeded')
+            if result['scheduling_reasons']:
+                result['replay_schedule'] = 'deferred-budget'
+            else:
+                result['replay_schedule'] = 'ready' if affected else 'not-required'
+                result['replay_allowed'] = bool(affected)
     except (Invalid, OSError, ValueError, KeyError, TypeError, RecursionError, subprocess.SubprocessError) as exc:
         result['errors'].append(f'cannot safely classify impact: {exc}')
     return result

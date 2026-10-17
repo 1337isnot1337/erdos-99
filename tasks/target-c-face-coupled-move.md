@@ -1,5 +1,9 @@
 # target-c-face-coupled-move
 
+**Investigation:** `target-c-face-coupled-move-current-20261017`. **Status:** open. Source: `e396ea07887dd0528b817ce4e656ff0e6b01f8fb`.
+
+Downstream use: Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation.
+
 **Track / priority:** target-c / direct frontier; selection weight 5 (attention only).
 
 ## Exact objective

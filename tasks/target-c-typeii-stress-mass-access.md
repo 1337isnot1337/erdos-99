@@ -1,10 +1,17 @@
 # target-c-typeii-stress-mass-access
 
+**Investigation:** `target-c-typeii-stress-mass-access-successor-20261017`. **Status:** open. Source: `e396ea07887dd0528b817ce4e656ff0e6b01f8fb`.
+
+Downstream use: A result must extract stress-relevant motion or a globality-specific exclusion. An unweighted o(D) exceptional-edge count cannot pay a stress-mass term.
+
+Prior evidence:
+- [author-checked](https://github.com/1337isnot1337/erdos-99/blob/058df6dc46ba033597d99d6aa4ec6834810b9eb7/docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md) at `058df6dc46ba033597d99d6aa4ec6834810b9eb7`: Submitted nonglobal family places all normalized diameter mass on o(D) exceptional edges. Remaining: Global minimality is not supplied; a full-source finite descent remains open.
+
 **Track / priority:** target-c / direct frontier; selection weight 4 (attention only).
 
 ## Exact objective
 
-Can the unweighted Type-II route from actual diameter edges to coherent grids be strengthened to control the positive KKT diameter mass on the exceptional edges, or can that mass itself be used to force the finite-move endpoint?
+Can global minimality convert concentrated exceptional diameter stress into a full-source feasible descent or rule out that concentration under a proved additional hypothesis?
 
 ## Definitions, hypotheses and complete prerequisites
 
@@ -35,7 +42,7 @@ Source PR #950 adds an **unreviewed** route candidate: positive-length returns f
 
 ## Approach and first bounded experiment
 
-For a fixed normalized stress, write the mass of actual diameter edges by route class (grid-accessible, face-tail, exceptional). Test the strongest bound derivable from the canonical inequalities without assuming a uniform stress gap, then identify which class must be charged by the finite move.
+Review PR #95 and retain its sparse-edge full-mass fixture. For one proposed globality-specific lemma, write the exact stress-supported direction and every lower/upper pair inequality. Test inactive upper pairs and finite integration before using edge counts as mass bounds.
 
 Methods: weighted incidence and stress-mass accounting, exact finite stress-polytope examples
 

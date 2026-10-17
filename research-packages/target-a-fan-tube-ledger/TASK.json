@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "target-a-fan-tube-ledger",
+  "classification": "regression",
+  "scope": {
+    "statement": "Compute the seed-63 tube ledger and distinguish the Section-102 admissible optimum from the relaxed Z-perfect matching optimum.",
+    "domain": "All-M proof for integers M>=5 at phase (1/5,1/7); exact replay at M=5,...,20,24,32 for the admissible predecessor and an explicitly inadmissible relaxed optimum, with incidence-depth rejection controls.",
+    "limitations": "Supplied nonglobal chamber family; no canonical source demand j_star, original flexible source, global extraction, zero-slack resolution, canonical promotion or Level I closure. Finite execution is not the all-M proof."
+  },
+  "result": "The Section-102 admissible optimum is 1, attained by the predecessor. The relaxed Z-perfect matching optimum M-1 omits M-2 required deep columns. Full generic right deficiency is 2M+2. Declared replay: 36 ledgers, 72 ledger failure controls and 18 admissibility failure controls.",
+  "remaining_questions": [
+    "Extract a joint demand and exterior-sink population ledger for an actual plateau response under global source hypotheses; a basis change alone cannot repair this fixed full-tube cut."
+  ]
+}

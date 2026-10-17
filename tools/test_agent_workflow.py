@@ -26,10 +26,10 @@ def snapshot(**extra):
                 source="live-read-only", pulls=[], issues=[], discussions=[], coverage={}, **extra)
 
 
-def row(number=1, body="", kind="pulls", updated="2026-10-17T00:00:00Z"):
+def row(number=1, body="", kind="pulls", updated="2026-10-17T00:00:00Z", **identity):
     return dict(number=number, title="A different title", body=body, kind=kind,
                 url="https://example.invalid/work", updated_at=updated,
-                markers=coordination.markers(body))
+                markers=coordination.markers(body)) | identity
 
 
 class OverlapTests(unittest.TestCase):
@@ -48,11 +48,46 @@ class OverlapTests(unittest.TestCase):
         self.assertIn("seven-day-limit", coordination.claim_status(
             row(body="E99-CLAIM-EXPIRES: 2099-01-01T00:00:00Z")))
 
-    def test_latest_done_releases_a_discussion_handoff(self):
+    def test_done_reply_closes_only_its_investigation_root(self):
         data = snapshot()
-        data["discussions"] = [row(body="E99-STATUS: HANDOFF\nE99-REMAINING: bridge"),
-                               row(body="E99-STATUS: DONE", kind="discussion-comment",
-                                   updated="2026-10-17T01:00:00Z")]
+        data["discussions"] = [
+            row(body="E99-STATUS: HANDOFF\nE99-TASK-ID: first", kind="discussion-comment", thread_id="root-a"),
+            row(body="E99-STATUS: HANDOFF\nE99-TASK-ID: second", kind="discussion-comment", thread_id="root-b"),
+            row(body="E99-STATUS: DONE", kind="discussion-reply", thread_id="root-a",
+                updated="2026-10-17T01:00:00Z")]
+        self.assertEqual([lead["task_id"] for lead in coordination.handoff_leads(data)], ["second"])
+
+    def test_legacy_discussion_status_without_a_root_stays_separate(self):
+        data = snapshot()
+        data["discussions"] = [
+            row(body="E99-STATUS: HANDOFF", kind="discussion-comment", url="https://example.invalid/#comment-a"),
+            row(body="E99-STATUS: DONE", kind="discussion-comment", url="https://example.invalid/#comment-b",
+                updated="2026-10-17T01:00:00Z")]
+        self.assertEqual(len(coordination.handoff_leads(data)), 1)
+
+    def test_two_scopes_in_one_comment_root_end_independently(self):
+        data = snapshot()
+        data["discussions"] = [
+            row(body="E99-STATUS: HANDOFF\nE99-SCOPE-ID: first", kind="discussion-comment", thread_id="root"),
+            row(body="E99-STATUS: HANDOFF\nE99-SCOPE-ID: second", kind="discussion-reply", thread_id="root"),
+            row(body="E99-STATUS: DONE\nE99-SCOPE-ID: second", kind="discussion-reply", thread_id="root",
+                updated="2026-10-17T01:00:00Z")]
+        self.assertEqual([lead["scope_key"] for lead in coordination.handoff_leads(data)], ["first"])
+
+    def test_reviewer_completion_does_not_close_producer_handoff(self):
+        data = snapshot()
+        data["discussions"] = [
+            row(body="E99-STATUS: HANDOFF\nE99-SCOPE-ID: same\nE99-ROLE: producer",
+                kind="discussion-comment", thread_id="root"),
+            row(body="E99-STATUS: DONE\nE99-ROLE: reviewer", kind="discussion-reply", thread_id="root",
+                updated="2026-10-17T01:00:00Z")]
+        self.assertEqual([lead["role"] for lead in coordination.handoff_leads(data)], ["producer"])
+
+    def test_active_claim_is_not_also_an_available_handoff(self):
+        data = snapshot()
+        data["issues"] = [row(body="E99-STATUS: HANDOFF\nE99-SCOPE-ID: scope"),
+                          row(body="E99-STATUS: CLAIM\nE99-SCOPE-ID: scope",
+                              updated="2026-10-17T01:00:00Z")]
         self.assertEqual(coordination.handoff_leads(data), [])
 
     def test_handoff_reports_the_exact_remaining_action(self):
@@ -141,6 +176,8 @@ class OverlapTests(unittest.TestCase):
         with patch.object(coordination, "graphql", side_effect=response):
             records = coordination._discussions(REPOSITORY)
         self.assertEqual([r["body"] for r in records], ["start","comment","first reply","last reply"])
+        self.assertEqual([r["thread_id"] for r in records], ["d", "c", "c", "c"])
+        self.assertEqual([r["thread_url"] for r in records], ["u", "c", "c", "c"])
         self.assertTrue(any(c.get("cursor") == "discussion-next" for c in calls))
         self.assertTrue(any(c.get("cursor") == "comment-next" for c in calls))
         self.assertTrue(any(c.get("cursor") == "reply-next" for c in calls))

@@ -50,7 +50,8 @@ def main(argv=None):
     parser.add_argument('--github-output', type=Path)
     parser.add_argument('--integrity', action='store_true')
     parser.add_argument('--replay', action='store_true')
-    parser.add_argument('--require-localized', action='store_true', help='exit 3 when comprehensive verification/review is required')
+    parser.add_argument('--require-localized', action='store_true',
+                        help='exit 3 when impact needs full review or required replay exceeds the automatic budget')
     args = parser.parse_args(argv)
     if bool(args.base_ref) == bool(args.event_file):
         parser.error('choose exactly one of --base-ref or --event-file')
@@ -63,7 +64,8 @@ def main(argv=None):
         plan['errors'].append(str(exc))
     plan['errors'].extend(security(root, plan))
     if plan['errors']:
-        plan.update(level='full-verification-required', replay_allowed=False)
+        plan.update(level='full-verification-required', replay_allowed=False,
+                    replay_schedule='requires-review')
     output = args.output or Path(tempfile.gettempdir()) / 'e99-local-ci'
     if args.integrity:
         try:
@@ -73,7 +75,8 @@ def main(argv=None):
         except (Invalid, OSError, subprocess.SubprocessError) as exc:
             plan['errors'].append(f'Tier 0 failed: {exc}')
     if plan['errors']:
-        plan.update(level='full-verification-required', replay_allowed=False)
+        plan.update(level='full-verification-required', replay_allowed=False,
+                    replay_schedule='requires-review')
     # Publish output even on failure. Job status must not hide review requirements.
     output.mkdir(parents=True, exist_ok=True)
     (output / 'plan.json').write_text(json.dumps(plan, indent=2, sort_keys=True) + '\n', encoding='utf-8', newline='\n')
@@ -81,6 +84,7 @@ def main(argv=None):
         with args.github_output.open('a', encoding='utf-8', newline='\n') as handle:
             handle.write('replay=' + str(plan['replay_allowed']).lower() + '\n')
             handle.write('level=' + plan['level'] + '\n')
+            handle.write('replay_schedule=' + plan['replay_schedule'] + '\n')
     if args.replay:
         try:
             # Integrity fields are observational, not part of dependency authorization.
@@ -97,7 +101,9 @@ def main(argv=None):
     print(json.dumps(plan, indent=2, sort_keys=True))
     if plan['errors']:
         return 1
-    return 3 if args.require_localized and plan['level'] == 'full-verification-required' else 0
+    needs_handoff = (plan['level'] == 'full-verification-required'
+                     or plan['replay_schedule'] == 'deferred-budget')
+    return 3 if args.require_localized and needs_handoff else 0
 
 if __name__ == '__main__':
     raise SystemExit(main())

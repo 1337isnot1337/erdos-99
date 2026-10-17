@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "baseline_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+  "inputs": [
+    {
+      "path": "docs/targets/target-a/02-scaffold-and-hall.md",
+      "sha256": "18b0297422f207a1b3afdea166b413ccd86d9a5d9c26d26da9794d3e6ac39548",
+      "identity": "Section-102 incidence depth and deep-first basis",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+      "sha256": "0399e4947619293dfda7818c8961c18a48cf762c2f8c5e0d8e956099ca08db29",
+      "identity": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "docs/targets/target-a/26-tube-shield-sector-balance.md",
+      "sha256": "15e470ca494ddf19b5a7fe80a558b2cff01bab824539a0367a2b628436367798",
+      "identity": "docs/targets/target-a/26-tube-shield-sector-balance.md",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "docs/reports/target_a_seed063_tight_isolates_and_locked_fan_regression_2026-10-13.md",
+      "sha256": "b2f5c112443c57181670aec31d46c38f0d6aacef8318e29473c9a6e72e358337",
+      "identity": "docs/reports/target_a_seed063_tight_isolates_and_locked_fan_regression_2026-10-13.md",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/verify.py",
+      "sha256": "9bb3ff34ec011f2b3748c6857d631701e194d07a6d8d38af00fbc1f3a74d9bd8",
+      "identity": "independent-exact-checker",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/README.md",
+      "sha256": "55309cc95d01366db9825e070c5097e122a75282aeab2d5a587b324cb9e14e7a",
+      "identity": "all-M-proof-and-scope",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/evidence.json",
+      "sha256": "a50f8ed5dd71243b7db653d058a93b964dd1a6462d8dc95e488f2cdabec1fba3",
+      "identity": "generated-complete-finite-ledgers",
+      "generated_from": [
+        "research-packages/target-a-fan-tube-ledger/verify.py"
+      ]
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}

@@ -1,10 +1,16 @@
 # literature-shell-stability-near-miss-audit
 
+**Investigation:** `literature-shell-transfer-after-separability-20261017`. **Status:** open. Source: `e396ea07887dd0528b817ce4e656ff0e6b01f8fb`.
+
+Downstream use: Decide whether a specific external theorem supplies a missing shell term. Re-deriving the completed separable-Oler normalization cannot improve the current transfer.
+
 **Track / priority:** literature / scoped exploration; selection weight 1 (attention only).
+
+Prior evidence: [author-checked PR #88](https://github.com/1337isnot1337/erdos-99/blob/70398c397bfc76e9db65154318ef8a6041458c88/docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md). Submitted total-separability bound for global minimizers and the necessary linear deletion cost; its hypothesis does not hold for arbitrary triangle-free sources. Remaining: Independent proof review and a valid application to the actual shell or convex-grain decomposition.
 
 ## Exact objective
 
-Does a published planar packing or convex-body stability theorem, under its exact hypotheses, imply any missing piece of Target B's joint outer-shell inequality beyond the canonical Oler and hole-correction inputs?
+Does a primary-source finite-packing stability theorem with weaker hypotheses than total separability control the Target B shell deficit while retaining holes, grain interfaces and the required error order?
 
 ## Definitions, hypotheses and complete prerequisites
 
@@ -30,7 +36,7 @@ Advances only the stated route obligation; global closure still requires all can
 
 ## Approach and first bounded experiment
 
-Search specifically for stability refinements of Oler-type finite packing inequalities and planar convex-body shell estimates. Build a comparison table of theorem hypotheses against the Target B domain, including holes, multiple grains, phase crossings, and error order.
+Read PR #88 at its pinned head and record why its total-separability bound does not yield the shell endpoint. Choose one different theorem or a precise convex-grain application. Check the separation and partition hypotheses, sum all area/perimeter interface costs, and compare the residual with the exact shell deficit before starting another literature search.
 
 Methods: primary-source literature search, hypothesis-by-hypothesis transfer audit
 

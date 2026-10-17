@@ -1,5 +1,69 @@
 {
-  "schema_version": 1,
+  "entries": {
+    "78": [
+      {
+        "base_commit": "42d8dba8b2239a22296ab9ca6bc4cc694e138e02",
+        "checked_at": "2026-10-17T20:27:08.700507+00:00",
+        "coverage": "All seven changed files and modes; complete finite proof and five negative controls; independent polynomial/path replay over 16384 supports and 65536 terminal subsets; submitted normal and optimized checker; predecessor; final integration candidate 61056f30aadc8e3ecb1f1496e488cbe7a2adda9c tree 8d264c307176b208a5ec61bd13143843d1e1385a; all 94 registered certificates; corpus integrity and localized impact. Exact submitted head remains unchanged.",
+        "evidence": [
+          {
+            "commit": "dddd5a2038671a4aa1b8c2e0a307d9fd13944026",
+            "path": "docs/research/review-artifacts/pr78/independent-audit.txt",
+            "sha256": "6285363943687e2e3b803233a0bdff5f9cab0068604a310a434e63ef9f549782"
+          },
+          {
+            "commit": "dddd5a2038671a4aa1b8c2e0a307d9fd13944026",
+            "path": "docs/research/review-artifacts/pr78/independent-replay.py",
+            "sha256": "96c27220938d74a36a93d32d2c5c0f717bb78065615347bd36daf16d28724dc0"
+          },
+          {
+            "commit": "dddd5a2038671a4aa1b8c2e0a307d9fd13944026",
+            "path": "docs/research/review-artifacts/pr78/independent-replay-output.json",
+            "sha256": "f51ade24621dcb92d7ebdfd4bfa479c9e24e2803cdc914887d331ea0d5c59e41"
+          },
+          {
+            "commit": "dddd5a2038671a4aa1b8c2e0a307d9fd13944026",
+            "path": "docs/research/review-artifacts/pr78/merger-receipt.json",
+            "sha256": "d874f3de2cdd88535a0c81fdfa2592088302df21067d1c626e58cb9a94381db8"
+          },
+          {
+            "commit": "dddd5a2038671a4aa1b8c2e0a307d9fd13944026",
+            "path": "docs/research/review-artifacts/pr78/REPLAY.txt",
+            "sha256": "ed1b4a5b73df4828e9af5e1dae205faf8c3072fe9902b54899ca1252ce87491d"
+          }
+        ],
+        "head_sha": "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda",
+        "lane": "validated-research",
+        "policy_version": 1,
+        "reason": "Independent AI finite proof/checker audit PASS; merger-owned full replay passed; publication carries no canonical promotion.",
+        "remaining": "No geometric/source realization, full-source motion or global-minimizer theorem is accepted. Genuine-source fan surplus |O_iso| + sum_i max(0, |O_i|-|C_i|) >= j_*+|T_Z| or a same-cardinality unit-separated strict-diameter competitor is still needed; zero-slack and Level I remain open. Merge requires a final live head/base guard and resulting-tree comparison.",
+        "review_status": "scope_verified",
+        "status": "ready_to_integrate",
+        "watch_paths": {
+          "docs/REVIEW_POLICY.md": "100644 blob 320b7e5ef832ea1f17bbae0c6e8ae134737a849f\tdocs/REVIEW_POLICY.md",
+          "docs/research/review-artifacts/pr78/REPLAY.txt": "missing",
+          "docs/research/review-artifacts/pr78/independent-audit.txt": "missing",
+          "docs/research/review-artifacts/pr78/independent-replay-output.json": "missing",
+          "docs/research/review-artifacts/pr78/independent-replay.py": "missing",
+          "docs/research/review-artifacts/pr78/merger-receipt.json": "missing",
+          "docs/targets/target-a/02-scaffold-and-hall.md": "100644 blob 72fafd979a92a42e04d2224833567893cebff201\tdocs/targets/target-a/02-scaffold-and-hall.md",
+          "docs/targets/target-a/03-source-response.md": "100644 blob 5f11b6753fa38a295e696cc272bd603c72c121a1\tdocs/targets/target-a/03-source-response.md",
+          "docs/targets/target-a/25-contact-shield-sector-hall.md": "100644 blob ef1390d91225d5cfe06ce839e0c78dc7662b66d9\tdocs/targets/target-a/25-contact-shield-sector-hall.md",
+          "docs/targets/target-a/26-tube-shield-sector-balance.md": "100644 blob 16495aeedfac98e9856ab40a4bce7d1ee73e9fef\tdocs/targets/target-a/26-tube-shield-sector-balance.md",
+          "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md": "100644 blob 8fe4159ababa3bc2900ee5d7bbc166603522ebf8\tdocs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+          "docs/targets/target-a/29-lens-source-gate-refinements.md": "100644 blob 130009dc27d728c7754caccf2f1e764c225006c5\tdocs/targets/target-a/29-lens-source-gate-refinements.md"
+        },
+        "watch_prs": {},
+        "integration": {
+          "status": "merged",
+          "merge_commit": "76b9adaaf01c14155571780de3008168b0004887",
+          "tested_tree": "8d264c307176b208a5ec61bd13143843d1e1385a",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/pull/78#issuecomment-6240519437",
+          "note": "The ready_to_integrate fields above are the preserved pre-merge review receipt. Its final publication guard is complete; the recorded scientific limitations remain."
+        }
+      }
+    ]
+  },
   "repository": "1337isnot1337/erdos-99",
-  "entries": {}
+  "schema_version": 1
 }
