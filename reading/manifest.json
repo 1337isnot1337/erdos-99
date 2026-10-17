@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2168,
-  "math_pairs_normalized": 71621,
+  "source_documents": 2169,
+  "math_pairs_normalized": 71653,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -122,6 +122,13 @@
       "reading_path": "reading/docs/audits/target_a_boundary_terminal_common_source_vpaths_audit_2026-09-05.md",
       "reading_sha256": "8034307f95c467454f7ee380176ff26e8aa8ac66a54034be193b0226a546dfdb",
       "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+      "source_sha256": "585d984a913b92dbe9d7d6dd63d02ad1c77a20f0caa35ff3fa0ffb35274c3502",
+      "reading_path": "reading/docs/audits/target_a_zero_slack_matching_image_overlap_regression_2026-10-17.md",
+      "reading_sha256": "21fa16132b8cca86ff92eec283cfc013b15ad09ccc1a2f05c6490733b077480c",
+      "math_pairs_normalized": 32
     },
     {
       "source": "docs/audits/target_b_explicit_balanced_phase_gap_audit_2026-09-05.md",
