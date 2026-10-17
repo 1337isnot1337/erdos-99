@@ -11,7 +11,9 @@
     "docs/research/agent-task-catalog.json",
     "research-packages/target-a-full-tube-fan-ledger/verify.py",
     "docs/targets/target-a/02-scaffold-and-hall.md",
-    "docs/targets/target-a/03-source-response.md"
+    "docs/targets/target-a/03-source-response.md",
+    "research-packages/target-a-full-tube-fan-ledger/README.md",
+    "research-packages/target-a-full-tube-fan-ledger/evidence.json"
   ],
   "domain": "Proof: every integer m>=2 at v=(1/1000,2/1000),(1/50,1/25),(1/100,2/25). Replay: m=2,...,12 at these three phases plus m=32 at the first phase; nine primitive tubes and 441 independent rational distance comparisons.",
   "environment": {

@@ -77,6 +77,18 @@
       "identity": "docs/targets/target-a/03-source-response.md",
       "generated_from": [],
       "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "research-packages/target-a-full-tube-fan-ledger/README.md",
+      "sha256": "2c805c002a7f654cef3e7b8310b27658ec85181069d0208e611cd276122cea23",
+      "identity": "complete-all-m-counting-proof",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/target-a-full-tube-fan-ledger/evidence.json",
+      "sha256": "536fc5c16377c98961a8240b0450d9b6749667f733c2b35d62998527837638e3",
+      "identity": "saved-deterministic-geometric-ledger",
+      "generated_from": []
     }
   ],
   "packages": [],

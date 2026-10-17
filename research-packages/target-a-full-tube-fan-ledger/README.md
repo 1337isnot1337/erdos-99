@@ -61,6 +61,8 @@ axial, with metric `Q(i,j)=i^2+ij+j^2`. No statement about every translation,
 rotation or the straight-crosscut alternative
 is made. The phase-average corollary below distinguishes the averaged estimate
 from a pointwise cost; it makes no claim about the joint averaged surplus.
+The detailed sector ledger uses the own-row basis; the separate all-basis
+upper bound below does not require that choice.
 
 | Quantity | Exact value |
 | --- | ---: |
@@ -80,7 +82,8 @@ from a pointwise cost; it makes no claim about the joint averaged surplus.
 | `Xi=|O_iso|+Q_Sigma` | `6m-2` |
 | Raw tube expression `Xi-|T_Z|` | `6-3m` |
 | Actual right deficiency `|O|-rank S` | `6m+3` |
-| Tube rank-cut slack | `9m-3` |
+| Tube rank-cut slack for the own-row basis | `9m-3` |
+| Raw tube upper bound over all admissible bases | `3` |
 
 Thus the raw Section-175 tube expression is nonpositive for this entire family,
 and its rank upper bound is `12m-2`, exceeding the trivial terminal cut `3m+1`
@@ -254,7 +257,33 @@ Subtracting the actual Schur rank `3m+1` proves the stated cut slack `9m-3`.
 This completes the all-`m` counting argument for the three specified phases.
 Its mathematical status remains unreviewed.
 
-### 4. Exact obstruction to pointwise use of the averaged tube cost
+### 4. Basis-independent upper bound
+
+A concurrent contribution, [PR #87](https://github.com/1337isnot1337/erdos-99/pull/87)
+at `33a4aaa016d0a219e2f9e8e7a92c87ff4aa77afb`, optimizes the full-tube bound over
+bases for the **seed-63 triangular chamber**. Its proof emphasizes the following
+identity, also obtained directly from the Section-175 disjoint shore partition:
+
+`Xi-|T_Z| = |O|-|T_O|-|T_Z|-sum_i min(|C_i|,|O_i|)`.
+
+Indeed `(u-v)_+=u-min(u,v)`, and
+`|O|=|T_O|+|O_iso|+sum_i |O_i|`. These equalities apply after any admissible
+basis closure; the geometry fixes `O` and `T`. Our independently counted hexagonal
+values therefore give, **for every admissible basis matching** at the three
+specified phases,
+
+`Xi-|T_Z| = 3-sum_i min(|C_i|,|O_i|) <= 3`.
+
+The actual right deficiency is basis independent and equals `6m+3`, so every
+such raw tube cut loses at least `6m` relative to the true value. No sharp optimum
+or attaining basis for the hexagonal fixture is claimed. The own-row basis gives
+the previously computed `6-3m`. This corollary prevents interpreting that loss
+solely as an accidental choice of basis. It still supplies no canonical `j_*`.
+PR #87's exact optimum `M-1` concerns a different chamber, fan and phase; no
+proof or implementation from it is imported. The simple identity is reconstructed
+above, with credit for the concurrent comparison that prompted this corollary.
+
+### 5. Exact obstruction to pointwise use of the averaged tube cost
 
 For this fixed fan, Section 175.21 gives the full-translation average estimate
 
@@ -356,7 +385,8 @@ They are reused with attribution, not claimed as new results.
 The [earlier independent checker](../../docs/reports/target_a_independent_schur_linkage_2026-10-17.md)
 already exhausts small abstract Schur/tube supports. The contribution here is
 geometric full-tube population accounting on the predecessor's same response
-family. Sections [174](../../docs/targets/target-a/26-tube-shield-sector-balance.md),
+family. Concurrent PR #87 is credited in part 4 for the all-basis comparison;
+its triangular-family result is distinct from this hexagonal-family ledger. Sections [174](../../docs/targets/target-a/26-tube-shield-sector-balance.md),
 [175](../../docs/targets/target-a/27-tube-only-right-deficiency-frontier.md) and
 [177](../../docs/targets/target-a/29-lens-source-gate-refinements.md) supply the
 canonical definitions. Their full statements/proofs were read; no full audit of
