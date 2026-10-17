@@ -1,0 +1,31 @@
+{
+  "schema": "hosted-migration-namespace-attempt-v1",
+  "candidate_commit": "932d14bd57ec95824cd45714862d78ffec87c278",
+  "candidate_tree": "edd4db0d69a98b4969c95ea4332edea14c8c7f54",
+  "workflow_path": ".github/workflows/migration-namespace-canary.yml",
+  "workflow_blob": "0db51fcefd1dedf2c4883c7cc739b82d9378e8ee",
+  "run_id": 38994873888,
+  "run_url": "https://github.com/1337isnot1337/erdos-99/actions/runs/38994873888",
+  "run_status": "completed",
+  "run_conclusion": "failure",
+  "jobs": [
+    {
+      "job_id": 117285111305,
+      "job_url": "https://github.com/1337isnot1337/erdos-99/actions/runs/38994873888/job/117285111305",
+      "name": "exact-namespace-tests",
+      "conclusion": "failure",
+      "runner_id": 0,
+      "runner_name": "",
+      "steps": [],
+      "created_at": "2026-10-17T02:25:40Z",
+      "completed_at": "2026-10-17T02:25:42Z"
+    }
+  ],
+  "tests_executed": false,
+  "namespace_tests_passed": false,
+  "runner_allocated": false,
+  "failure_reason": "The API shows runner_id=0, an empty runner name and zero steps. It does not expose a more specific allocation failure reason through the available endpoint.",
+  "gate2_verified": false,
+  "release_verified": false,
+  "deprecation_ready": false
+}

@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "status": "PASS_FINAL_MARKDOWN_PATHS_INCREMENTAL_GIT_WITH_PLANNED_STATUS",
+  "candidate_commit": "932d14bd57ec95824cd45714862d78ffec87c278",
+  "candidate_tree": "edd4db0d69a98b4969c95ea4332edea14c8c7f54",
+  "base_connector_tree": "1e403500677db988c463b9980f8bce5c1f1115dd",
+  "base_connector_receipt": "docs/research/migration/2026-10-16/integration/reference-navigation-rebuild.json",
+  "markdown_documents": 4943,
+  "unchanged_markdown_documents": 4937,
+  "changed_markdown_documents": [
+    {
+      "path": "docs/research/migration/2026-10-16/integration/README.md",
+      "git_blob_sha1": "e110e36a693466bdc0e1097ddefc013254bb0759",
+      "links": 1,
+      "counts": {
+        "resolved_file": 1
+      }
+    },
+    {
+      "path": "docs/research/migration/2026-10-16/integration/SOURCE_MAIN_PRESERVATION.md",
+      "git_blob_sha1": "e62c11008b9cb1e563c0ec3dca7e43ef383b98e6",
+      "links": 2,
+      "counts": {
+        "resolved_file": 2
+      }
+    },
+    {
+      "path": "docs/research/migration/2026-10-16/integration/STATUS.md",
+      "git_blob_sha1": "7ec1d741038558189871736527c3d93d64741ebd",
+      "links": 8,
+      "counts": {
+        "resolved_file": 8
+      }
+    },
+    {
+      "path": "docs/research/migration/2026-10-16/integration/historical-reference-map.md",
+      "git_blob_sha1": "8ad7181f5272a24cd330e70fbb68aa0195f248ef",
+      "links": 3484,
+      "counts": {
+        "resolved_file": 3479,
+        "resolved_directory": 5
+      }
+    },
+    {
+      "path": "docs/research/migration/2026-10-16/integration/reference-recovery.md",
+      "git_blob_sha1": "834d7a2a08b187084804b1da0432111d0c93d507",
+      "links": 5,
+      "counts": {
+        "resolved_file": 5
+      }
+    },
+    {
+      "path": "docs/research/migration/2026-10-16/ref-reconciliation/README.md",
+      "git_blob_sha1": "463cf6da41487733fb9b969c2ff13fac7c27d079",
+      "links": 9,
+      "counts": {
+        "resolved_file": 9
+      }
+    }
+  ],
+  "changed_reference_counts": {
+    "resolved_file": 3504,
+    "resolved_directory": 5
+  },
+  "changed_references_checked": 3509,
+  "historical_reference_map": {
+    "git_blob_sha1": "8ad7181f5272a24cd330e70fbb68aa0195f248ef",
+    "rows": 1759,
+    "mapping_rows_by_status": {
+      "exact_source_target_preserved": 755,
+      "same_snapshot_preserved_target": 222,
+      "current_destination_directory": 5,
+      "pinned_source_main_target_preserved": 721,
+      "current_destination_target": 9,
+      "corrected_historical_filename": 3,
+      "other_historical_target_version_unverified": 10
+    },
+    "exact_source_blob_rows_verified": 1476,
+    "immutable_snapshot_blob_rows_verified": 232
+  },
+  "errors": [],
+  "deprecation_ready": false,
+  "release_verified": false,
+  "mathematical_proof": false,
+  "limits": [
+    "This incremental Git-object audit reuses the prior verified scan for 4,937 unchanged Markdown blobs and checks all six added or changed Markdown files.",
+    "Every newly checked Markdown blob was verified against its Git SHA-1. Map destinations and source/snapshot blob identities were checked against the final tree.",
+    "This is a structural connector-based check, not execution of the Python scanner or final Gate 2.",
+    "One previously recorded missing historical threshold verifier remains explicit; no archived document bytes were changed."
+  ],
+  "planned_updates_checked": {
+    "status_path": "docs/research/migration/2026-10-16/integration/STATUS.md",
+    "status_blob": "2994273a64926386e71ee498a3b367943c17339d",
+    "hosted_receipt_path": "docs/research/migration/2026-10-16/integration/hosted-namespace-attempt.json",
+    "hosted_receipt_blob": "8fa37032ca8c74a7f16101280f9f97b3907d3d7b",
+    "all_status_links_resolved": [
+      {
+        "link": "README.md",
+        "target": "docs/research/migration/2026-10-16/integration/README.md",
+        "present": true,
+        "git_blob_sha1": "e110e36a693466bdc0e1097ddefc013254bb0759"
+      },
+      {
+        "link": "SOURCE_MAIN_PRESERVATION.md",
+        "target": "docs/research/migration/2026-10-16/integration/SOURCE_MAIN_PRESERVATION.md",
+        "present": true,
+        "git_blob_sha1": "e62c11008b9cb1e563c0ec3dca7e43ef383b98e6"
+      },
+      {
+        "link": "../ref-reconciliation/README.md",
+        "target": "docs/research/migration/2026-10-16/ref-reconciliation/README.md",
+        "present": true,
+        "git_blob_sha1": "463cf6da41487733fb9b969c2ff13fac7c27d079"
+      },
+      {
+        "link": "reference-recovery.md",
+        "target": "docs/research/migration/2026-10-16/integration/reference-recovery.md",
+        "present": true,
+        "git_blob_sha1": "834d7a2a08b187084804b1da0432111d0c93d507"
+      },
+      {
+        "link": "historical-reference-map.md",
+        "target": "docs/research/migration/2026-10-16/integration/historical-reference-map.md",
+        "present": true,
+        "git_blob_sha1": "8ad7181f5272a24cd330e70fbb68aa0195f248ef"
+      },
+      {
+        "link": "integrity-policy.json",
+        "target": "docs/research/migration/2026-10-16/integration/integrity-policy.json",
+        "present": true,
+        "git_blob_sha1": "0b4235302a697098f52daa7bf275cdf01d35ef29"
+      },
+      {
+        "link": "hosted-namespace-attempt.json",
+        "target": "docs/research/migration/2026-10-16/integration/hosted-namespace-attempt.json",
+        "present": true,
+        "git_blob_sha1": "8fa37032ca8c74a7f16101280f9f97b3907d3d7b"
+      },
+      {
+        "link": "../../../../launch/MIGRATION_VERIFICATION.md",
+        "target": "docs/launch/MIGRATION_VERIFICATION.md",
+        "present": true,
+        "git_blob_sha1": "e9abed89f278425fc01386c876ba6da4100ce9bd"
+      },
+      {
+        "link": "../ref-reconciliation/known-missing-dirty-identities.jsonl",
+        "target": "docs/research/migration/2026-10-16/ref-reconciliation/known-missing-dirty-identities.jsonl",
+        "present": true,
+        "git_blob_sha1": "f3a6387fb33fb0d93c6d1817db94ff4bd715b7bc"
+      }
+    ],
+    "hosted_namespace_result": "No test steps executed; no Gate 2 or namespace pass inferred.",
+    "scope": "These exact planned objects were checked against candidate tree plus the planned JSON addition. Other subsequent additions must be JSON only to reuse this Markdown result."
+  }
+}

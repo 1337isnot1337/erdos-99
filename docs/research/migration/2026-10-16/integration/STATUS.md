@@ -48,6 +48,10 @@ the named verifier/discovery replays. Public integrity reported zero errors.
 Four namespace tests could not execute in that sandbox because namespace
 operations were denied.
 
+The [hosted namespace attempt](hosted-namespace-attempt.json) on the recovered
+candidate also failed before runner allocation: zero steps ran. It provides no
+namespace-test result. The available API does not expose a more specific cause.
+
 Those outcomes are earlier diagnostic evidence, not a passing receipt for this
 reconstructed candidate. The environment disconnected during upload and is
 unavailable. Work was recovered from GitHub objects, pinned source inventories,
