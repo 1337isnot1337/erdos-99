@@ -1,0 +1,2130 @@
+{
+  "canonical_global_source": false,
+  "canonical_j_star_supplied": false,
+  "classification": "exact finite evidence; unreviewed all-M proof in README",
+  "counts": {
+    "ledgers": 36,
+    "negative_controls": 72
+  },
+  "finite_sizes": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    24,
+    32
+  ],
+  "ledgers": [
+    {
+      "B_i": [
+        0,
+        4,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "M": 5,
+      "O": 18,
+      "O_i": [
+        0,
+        6,
+        2,
+        0
+      ],
+      "O_iso": 7,
+      "T_O": 3,
+      "T_Z": 11,
+      "X_i": [
+        0,
+        6,
+        1,
+        0
+      ],
+      "Xi": 12,
+      "Z": 15,
+      "Z_i": [
+        0,
+        4,
+        0,
+        0
+      ],
+      "actual_h": 12,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 4,
+      "bound_slack": 11,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 12,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          3,
+          0
+        ]
+      },
+      "fan_vertices": 7,
+      "generic_rank_S": 6,
+      "source_labels": 21
+    },
+    {
+      "B_i": [
+        0,
+        4,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 5,
+      "O": 18,
+      "O_i": [
+        0,
+        5,
+        0,
+        0
+      ],
+      "O_iso": 10,
+      "T_O": 3,
+      "T_Z": 11,
+      "X_i": [
+        0,
+        4,
+        0,
+        0
+      ],
+      "Xi": 15,
+      "Z": 15,
+      "Z_i": [
+        0,
+        4,
+        0,
+        0
+      ],
+      "actual_h": 12,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 4,
+      "bound_slack": 8,
+      "certified_h_lower_bound": 4,
+      "controls": {
+        "direct_sink_only_missing_rows": 12,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          4,
+          4,
+          0
+        ]
+      },
+      "fan_vertices": 7,
+      "generic_rank_S": 6,
+      "source_labels": 21
+    },
+    {
+      "B_i": [
+        0,
+        8,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        3,
+        1,
+        0
+      ],
+      "M": 6,
+      "O": 21,
+      "O_i": [
+        0,
+        8,
+        2,
+        0
+      ],
+      "O_iso": 8,
+      "T_O": 3,
+      "T_Z": 13,
+      "X_i": [
+        0,
+        11,
+        1,
+        0
+      ],
+      "Xi": 14,
+      "Z": 21,
+      "Z_i": [
+        0,
+        8,
+        0,
+        0
+      ],
+      "actual_h": 14,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 5,
+      "bound_slack": 13,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 14,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          4,
+          0
+        ]
+      },
+      "fan_vertices": 8,
+      "generic_rank_S": 7,
+      "source_labels": 28
+    },
+    {
+      "B_i": [
+        0,
+        8,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 6,
+      "O": 21,
+      "O_i": [
+        0,
+        7,
+        0,
+        0
+      ],
+      "O_iso": 11,
+      "T_O": 3,
+      "T_Z": 13,
+      "X_i": [
+        0,
+        8,
+        0,
+        0
+      ],
+      "Xi": 18,
+      "Z": 21,
+      "Z_i": [
+        0,
+        8,
+        0,
+        0
+      ],
+      "actual_h": 14,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 5,
+      "bound_slack": 9,
+      "certified_h_lower_bound": 5,
+      "controls": {
+        "direct_sink_only_missing_rows": 14,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          5,
+          5,
+          0
+        ]
+      },
+      "fan_vertices": 8,
+      "generic_rank_S": 7,
+      "source_labels": 28
+    },
+    {
+      "B_i": [
+        0,
+        13,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        4,
+        1,
+        0
+      ],
+      "M": 7,
+      "O": 24,
+      "O_i": [
+        0,
+        10,
+        2,
+        0
+      ],
+      "O_iso": 9,
+      "T_O": 3,
+      "T_Z": 15,
+      "X_i": [
+        0,
+        17,
+        1,
+        0
+      ],
+      "Xi": 16,
+      "Z": 28,
+      "Z_i": [
+        0,
+        13,
+        0,
+        0
+      ],
+      "actual_h": 16,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 6,
+      "bound_slack": 15,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 16,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          5,
+          0
+        ]
+      },
+      "fan_vertices": 9,
+      "generic_rank_S": 8,
+      "source_labels": 36
+    },
+    {
+      "B_i": [
+        0,
+        13,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 7,
+      "O": 24,
+      "O_i": [
+        0,
+        9,
+        0,
+        0
+      ],
+      "O_iso": 12,
+      "T_O": 3,
+      "T_Z": 15,
+      "X_i": [
+        0,
+        13,
+        0,
+        0
+      ],
+      "Xi": 21,
+      "Z": 28,
+      "Z_i": [
+        0,
+        13,
+        0,
+        0
+      ],
+      "actual_h": 16,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 6,
+      "bound_slack": 10,
+      "certified_h_lower_bound": 6,
+      "controls": {
+        "direct_sink_only_missing_rows": 16,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          6,
+          6,
+          0
+        ]
+      },
+      "fan_vertices": 9,
+      "generic_rank_S": 8,
+      "source_labels": 36
+    },
+    {
+      "B_i": [
+        0,
+        19,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        5,
+        1,
+        0
+      ],
+      "M": 8,
+      "O": 27,
+      "O_i": [
+        0,
+        12,
+        2,
+        0
+      ],
+      "O_iso": 10,
+      "T_O": 3,
+      "T_Z": 17,
+      "X_i": [
+        0,
+        24,
+        1,
+        0
+      ],
+      "Xi": 18,
+      "Z": 36,
+      "Z_i": [
+        0,
+        19,
+        0,
+        0
+      ],
+      "actual_h": 18,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 7,
+      "bound_slack": 17,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 18,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          6,
+          0
+        ]
+      },
+      "fan_vertices": 10,
+      "generic_rank_S": 9,
+      "source_labels": 45
+    },
+    {
+      "B_i": [
+        0,
+        19,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 8,
+      "O": 27,
+      "O_i": [
+        0,
+        11,
+        0,
+        0
+      ],
+      "O_iso": 13,
+      "T_O": 3,
+      "T_Z": 17,
+      "X_i": [
+        0,
+        19,
+        0,
+        0
+      ],
+      "Xi": 24,
+      "Z": 36,
+      "Z_i": [
+        0,
+        19,
+        0,
+        0
+      ],
+      "actual_h": 18,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 7,
+      "bound_slack": 11,
+      "certified_h_lower_bound": 7,
+      "controls": {
+        "direct_sink_only_missing_rows": 18,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          7,
+          7,
+          0
+        ]
+      },
+      "fan_vertices": 10,
+      "generic_rank_S": 9,
+      "source_labels": 45
+    },
+    {
+      "B_i": [
+        0,
+        26,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        6,
+        1,
+        0
+      ],
+      "M": 9,
+      "O": 30,
+      "O_i": [
+        0,
+        14,
+        2,
+        0
+      ],
+      "O_iso": 11,
+      "T_O": 3,
+      "T_Z": 19,
+      "X_i": [
+        0,
+        32,
+        1,
+        0
+      ],
+      "Xi": 20,
+      "Z": 45,
+      "Z_i": [
+        0,
+        26,
+        0,
+        0
+      ],
+      "actual_h": 20,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 8,
+      "bound_slack": 19,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 20,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          7,
+          0
+        ]
+      },
+      "fan_vertices": 11,
+      "generic_rank_S": 10,
+      "source_labels": 55
+    },
+    {
+      "B_i": [
+        0,
+        26,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 9,
+      "O": 30,
+      "O_i": [
+        0,
+        13,
+        0,
+        0
+      ],
+      "O_iso": 14,
+      "T_O": 3,
+      "T_Z": 19,
+      "X_i": [
+        0,
+        26,
+        0,
+        0
+      ],
+      "Xi": 27,
+      "Z": 45,
+      "Z_i": [
+        0,
+        26,
+        0,
+        0
+      ],
+      "actual_h": 20,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 8,
+      "bound_slack": 12,
+      "certified_h_lower_bound": 8,
+      "controls": {
+        "direct_sink_only_missing_rows": 20,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          8,
+          8,
+          0
+        ]
+      },
+      "fan_vertices": 11,
+      "generic_rank_S": 10,
+      "source_labels": 55
+    },
+    {
+      "B_i": [
+        0,
+        34,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        7,
+        1,
+        0
+      ],
+      "M": 10,
+      "O": 33,
+      "O_i": [
+        0,
+        16,
+        2,
+        0
+      ],
+      "O_iso": 12,
+      "T_O": 3,
+      "T_Z": 21,
+      "X_i": [
+        0,
+        41,
+        1,
+        0
+      ],
+      "Xi": 22,
+      "Z": 55,
+      "Z_i": [
+        0,
+        34,
+        0,
+        0
+      ],
+      "actual_h": 22,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 9,
+      "bound_slack": 21,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 22,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          8,
+          0
+        ]
+      },
+      "fan_vertices": 12,
+      "generic_rank_S": 11,
+      "source_labels": 66
+    },
+    {
+      "B_i": [
+        0,
+        34,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 10,
+      "O": 33,
+      "O_i": [
+        0,
+        15,
+        0,
+        0
+      ],
+      "O_iso": 15,
+      "T_O": 3,
+      "T_Z": 21,
+      "X_i": [
+        0,
+        34,
+        0,
+        0
+      ],
+      "Xi": 30,
+      "Z": 55,
+      "Z_i": [
+        0,
+        34,
+        0,
+        0
+      ],
+      "actual_h": 22,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 9,
+      "bound_slack": 13,
+      "certified_h_lower_bound": 9,
+      "controls": {
+        "direct_sink_only_missing_rows": 22,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          9,
+          9,
+          0
+        ]
+      },
+      "fan_vertices": 12,
+      "generic_rank_S": 11,
+      "source_labels": 66
+    },
+    {
+      "B_i": [
+        0,
+        43,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        8,
+        1,
+        0
+      ],
+      "M": 11,
+      "O": 36,
+      "O_i": [
+        0,
+        18,
+        2,
+        0
+      ],
+      "O_iso": 13,
+      "T_O": 3,
+      "T_Z": 23,
+      "X_i": [
+        0,
+        51,
+        1,
+        0
+      ],
+      "Xi": 24,
+      "Z": 66,
+      "Z_i": [
+        0,
+        43,
+        0,
+        0
+      ],
+      "actual_h": 24,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 10,
+      "bound_slack": 23,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 24,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          9,
+          0
+        ]
+      },
+      "fan_vertices": 13,
+      "generic_rank_S": 12,
+      "source_labels": 78
+    },
+    {
+      "B_i": [
+        0,
+        43,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 11,
+      "O": 36,
+      "O_i": [
+        0,
+        17,
+        0,
+        0
+      ],
+      "O_iso": 16,
+      "T_O": 3,
+      "T_Z": 23,
+      "X_i": [
+        0,
+        43,
+        0,
+        0
+      ],
+      "Xi": 33,
+      "Z": 66,
+      "Z_i": [
+        0,
+        43,
+        0,
+        0
+      ],
+      "actual_h": 24,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 10,
+      "bound_slack": 14,
+      "certified_h_lower_bound": 10,
+      "controls": {
+        "direct_sink_only_missing_rows": 24,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          10,
+          10,
+          0
+        ]
+      },
+      "fan_vertices": 13,
+      "generic_rank_S": 12,
+      "source_labels": 78
+    },
+    {
+      "B_i": [
+        0,
+        53,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        9,
+        1,
+        0
+      ],
+      "M": 12,
+      "O": 39,
+      "O_i": [
+        0,
+        20,
+        2,
+        0
+      ],
+      "O_iso": 14,
+      "T_O": 3,
+      "T_Z": 25,
+      "X_i": [
+        0,
+        62,
+        1,
+        0
+      ],
+      "Xi": 26,
+      "Z": 78,
+      "Z_i": [
+        0,
+        53,
+        0,
+        0
+      ],
+      "actual_h": 26,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 11,
+      "bound_slack": 25,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 26,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          10,
+          0
+        ]
+      },
+      "fan_vertices": 14,
+      "generic_rank_S": 13,
+      "source_labels": 91
+    },
+    {
+      "B_i": [
+        0,
+        53,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 12,
+      "O": 39,
+      "O_i": [
+        0,
+        19,
+        0,
+        0
+      ],
+      "O_iso": 17,
+      "T_O": 3,
+      "T_Z": 25,
+      "X_i": [
+        0,
+        53,
+        0,
+        0
+      ],
+      "Xi": 36,
+      "Z": 78,
+      "Z_i": [
+        0,
+        53,
+        0,
+        0
+      ],
+      "actual_h": 26,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 11,
+      "bound_slack": 15,
+      "certified_h_lower_bound": 11,
+      "controls": {
+        "direct_sink_only_missing_rows": 26,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          11,
+          11,
+          0
+        ]
+      },
+      "fan_vertices": 14,
+      "generic_rank_S": 13,
+      "source_labels": 91
+    },
+    {
+      "B_i": [
+        0,
+        64,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        10,
+        1,
+        0
+      ],
+      "M": 13,
+      "O": 42,
+      "O_i": [
+        0,
+        22,
+        2,
+        0
+      ],
+      "O_iso": 15,
+      "T_O": 3,
+      "T_Z": 27,
+      "X_i": [
+        0,
+        74,
+        1,
+        0
+      ],
+      "Xi": 28,
+      "Z": 91,
+      "Z_i": [
+        0,
+        64,
+        0,
+        0
+      ],
+      "actual_h": 28,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 12,
+      "bound_slack": 27,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 28,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          11,
+          0
+        ]
+      },
+      "fan_vertices": 15,
+      "generic_rank_S": 14,
+      "source_labels": 105
+    },
+    {
+      "B_i": [
+        0,
+        64,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 13,
+      "O": 42,
+      "O_i": [
+        0,
+        21,
+        0,
+        0
+      ],
+      "O_iso": 18,
+      "T_O": 3,
+      "T_Z": 27,
+      "X_i": [
+        0,
+        64,
+        0,
+        0
+      ],
+      "Xi": 39,
+      "Z": 91,
+      "Z_i": [
+        0,
+        64,
+        0,
+        0
+      ],
+      "actual_h": 28,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 12,
+      "bound_slack": 16,
+      "certified_h_lower_bound": 12,
+      "controls": {
+        "direct_sink_only_missing_rows": 28,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          12,
+          12,
+          0
+        ]
+      },
+      "fan_vertices": 15,
+      "generic_rank_S": 14,
+      "source_labels": 105
+    },
+    {
+      "B_i": [
+        0,
+        76,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        11,
+        1,
+        0
+      ],
+      "M": 14,
+      "O": 45,
+      "O_i": [
+        0,
+        24,
+        2,
+        0
+      ],
+      "O_iso": 16,
+      "T_O": 3,
+      "T_Z": 29,
+      "X_i": [
+        0,
+        87,
+        1,
+        0
+      ],
+      "Xi": 30,
+      "Z": 105,
+      "Z_i": [
+        0,
+        76,
+        0,
+        0
+      ],
+      "actual_h": 30,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 13,
+      "bound_slack": 29,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 30,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          12,
+          0
+        ]
+      },
+      "fan_vertices": 16,
+      "generic_rank_S": 15,
+      "source_labels": 120
+    },
+    {
+      "B_i": [
+        0,
+        76,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 14,
+      "O": 45,
+      "O_i": [
+        0,
+        23,
+        0,
+        0
+      ],
+      "O_iso": 19,
+      "T_O": 3,
+      "T_Z": 29,
+      "X_i": [
+        0,
+        76,
+        0,
+        0
+      ],
+      "Xi": 42,
+      "Z": 105,
+      "Z_i": [
+        0,
+        76,
+        0,
+        0
+      ],
+      "actual_h": 30,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 13,
+      "bound_slack": 17,
+      "certified_h_lower_bound": 13,
+      "controls": {
+        "direct_sink_only_missing_rows": 30,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          13,
+          13,
+          0
+        ]
+      },
+      "fan_vertices": 16,
+      "generic_rank_S": 15,
+      "source_labels": 120
+    },
+    {
+      "B_i": [
+        0,
+        89,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        12,
+        1,
+        0
+      ],
+      "M": 15,
+      "O": 48,
+      "O_i": [
+        0,
+        26,
+        2,
+        0
+      ],
+      "O_iso": 17,
+      "T_O": 3,
+      "T_Z": 31,
+      "X_i": [
+        0,
+        101,
+        1,
+        0
+      ],
+      "Xi": 32,
+      "Z": 120,
+      "Z_i": [
+        0,
+        89,
+        0,
+        0
+      ],
+      "actual_h": 32,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 14,
+      "bound_slack": 31,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 32,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          13,
+          0
+        ]
+      },
+      "fan_vertices": 17,
+      "generic_rank_S": 16,
+      "source_labels": 136
+    },
+    {
+      "B_i": [
+        0,
+        89,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 15,
+      "O": 48,
+      "O_i": [
+        0,
+        25,
+        0,
+        0
+      ],
+      "O_iso": 20,
+      "T_O": 3,
+      "T_Z": 31,
+      "X_i": [
+        0,
+        89,
+        0,
+        0
+      ],
+      "Xi": 45,
+      "Z": 120,
+      "Z_i": [
+        0,
+        89,
+        0,
+        0
+      ],
+      "actual_h": 32,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 14,
+      "bound_slack": 18,
+      "certified_h_lower_bound": 14,
+      "controls": {
+        "direct_sink_only_missing_rows": 32,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          14,
+          14,
+          0
+        ]
+      },
+      "fan_vertices": 17,
+      "generic_rank_S": 16,
+      "source_labels": 136
+    },
+    {
+      "B_i": [
+        0,
+        103,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        13,
+        1,
+        0
+      ],
+      "M": 16,
+      "O": 51,
+      "O_i": [
+        0,
+        28,
+        2,
+        0
+      ],
+      "O_iso": 18,
+      "T_O": 3,
+      "T_Z": 33,
+      "X_i": [
+        0,
+        116,
+        1,
+        0
+      ],
+      "Xi": 34,
+      "Z": 136,
+      "Z_i": [
+        0,
+        103,
+        0,
+        0
+      ],
+      "actual_h": 34,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 15,
+      "bound_slack": 33,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 34,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          14,
+          0
+        ]
+      },
+      "fan_vertices": 18,
+      "generic_rank_S": 17,
+      "source_labels": 153
+    },
+    {
+      "B_i": [
+        0,
+        103,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 16,
+      "O": 51,
+      "O_i": [
+        0,
+        27,
+        0,
+        0
+      ],
+      "O_iso": 21,
+      "T_O": 3,
+      "T_Z": 33,
+      "X_i": [
+        0,
+        103,
+        0,
+        0
+      ],
+      "Xi": 48,
+      "Z": 136,
+      "Z_i": [
+        0,
+        103,
+        0,
+        0
+      ],
+      "actual_h": 34,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 15,
+      "bound_slack": 19,
+      "certified_h_lower_bound": 15,
+      "controls": {
+        "direct_sink_only_missing_rows": 34,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          15,
+          15,
+          0
+        ]
+      },
+      "fan_vertices": 18,
+      "generic_rank_S": 17,
+      "source_labels": 153
+    },
+    {
+      "B_i": [
+        0,
+        118,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        14,
+        1,
+        0
+      ],
+      "M": 17,
+      "O": 54,
+      "O_i": [
+        0,
+        30,
+        2,
+        0
+      ],
+      "O_iso": 19,
+      "T_O": 3,
+      "T_Z": 35,
+      "X_i": [
+        0,
+        132,
+        1,
+        0
+      ],
+      "Xi": 36,
+      "Z": 153,
+      "Z_i": [
+        0,
+        118,
+        0,
+        0
+      ],
+      "actual_h": 36,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 16,
+      "bound_slack": 35,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 36,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          15,
+          0
+        ]
+      },
+      "fan_vertices": 19,
+      "generic_rank_S": 18,
+      "source_labels": 171
+    },
+    {
+      "B_i": [
+        0,
+        118,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 17,
+      "O": 54,
+      "O_i": [
+        0,
+        29,
+        0,
+        0
+      ],
+      "O_iso": 22,
+      "T_O": 3,
+      "T_Z": 35,
+      "X_i": [
+        0,
+        118,
+        0,
+        0
+      ],
+      "Xi": 51,
+      "Z": 153,
+      "Z_i": [
+        0,
+        118,
+        0,
+        0
+      ],
+      "actual_h": 36,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 16,
+      "bound_slack": 20,
+      "certified_h_lower_bound": 16,
+      "controls": {
+        "direct_sink_only_missing_rows": 36,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          16,
+          16,
+          0
+        ]
+      },
+      "fan_vertices": 19,
+      "generic_rank_S": 18,
+      "source_labels": 171
+    },
+    {
+      "B_i": [
+        0,
+        134,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        15,
+        1,
+        0
+      ],
+      "M": 18,
+      "O": 57,
+      "O_i": [
+        0,
+        32,
+        2,
+        0
+      ],
+      "O_iso": 20,
+      "T_O": 3,
+      "T_Z": 37,
+      "X_i": [
+        0,
+        149,
+        1,
+        0
+      ],
+      "Xi": 38,
+      "Z": 171,
+      "Z_i": [
+        0,
+        134,
+        0,
+        0
+      ],
+      "actual_h": 38,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 17,
+      "bound_slack": 37,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 38,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          16,
+          0
+        ]
+      },
+      "fan_vertices": 20,
+      "generic_rank_S": 19,
+      "source_labels": 190
+    },
+    {
+      "B_i": [
+        0,
+        134,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 18,
+      "O": 57,
+      "O_i": [
+        0,
+        31,
+        0,
+        0
+      ],
+      "O_iso": 23,
+      "T_O": 3,
+      "T_Z": 37,
+      "X_i": [
+        0,
+        134,
+        0,
+        0
+      ],
+      "Xi": 54,
+      "Z": 171,
+      "Z_i": [
+        0,
+        134,
+        0,
+        0
+      ],
+      "actual_h": 38,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 17,
+      "bound_slack": 21,
+      "certified_h_lower_bound": 17,
+      "controls": {
+        "direct_sink_only_missing_rows": 38,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          17,
+          17,
+          0
+        ]
+      },
+      "fan_vertices": 20,
+      "generic_rank_S": 19,
+      "source_labels": 190
+    },
+    {
+      "B_i": [
+        0,
+        151,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        16,
+        1,
+        0
+      ],
+      "M": 19,
+      "O": 60,
+      "O_i": [
+        0,
+        34,
+        2,
+        0
+      ],
+      "O_iso": 21,
+      "T_O": 3,
+      "T_Z": 39,
+      "X_i": [
+        0,
+        167,
+        1,
+        0
+      ],
+      "Xi": 40,
+      "Z": 190,
+      "Z_i": [
+        0,
+        151,
+        0,
+        0
+      ],
+      "actual_h": 40,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 18,
+      "bound_slack": 39,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 40,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          17,
+          0
+        ]
+      },
+      "fan_vertices": 21,
+      "generic_rank_S": 20,
+      "source_labels": 210
+    },
+    {
+      "B_i": [
+        0,
+        151,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 19,
+      "O": 60,
+      "O_i": [
+        0,
+        33,
+        0,
+        0
+      ],
+      "O_iso": 24,
+      "T_O": 3,
+      "T_Z": 39,
+      "X_i": [
+        0,
+        151,
+        0,
+        0
+      ],
+      "Xi": 57,
+      "Z": 190,
+      "Z_i": [
+        0,
+        151,
+        0,
+        0
+      ],
+      "actual_h": 40,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 18,
+      "bound_slack": 22,
+      "certified_h_lower_bound": 18,
+      "controls": {
+        "direct_sink_only_missing_rows": 40,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          18,
+          18,
+          0
+        ]
+      },
+      "fan_vertices": 21,
+      "generic_rank_S": 20,
+      "source_labels": 210
+    },
+    {
+      "B_i": [
+        0,
+        169,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        17,
+        1,
+        0
+      ],
+      "M": 20,
+      "O": 63,
+      "O_i": [
+        0,
+        36,
+        2,
+        0
+      ],
+      "O_iso": 22,
+      "T_O": 3,
+      "T_Z": 41,
+      "X_i": [
+        0,
+        186,
+        1,
+        0
+      ],
+      "Xi": 42,
+      "Z": 210,
+      "Z_i": [
+        0,
+        169,
+        0,
+        0
+      ],
+      "actual_h": 42,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 19,
+      "bound_slack": 41,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 42,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          18,
+          0
+        ]
+      },
+      "fan_vertices": 22,
+      "generic_rank_S": 21,
+      "source_labels": 231
+    },
+    {
+      "B_i": [
+        0,
+        169,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 20,
+      "O": 63,
+      "O_i": [
+        0,
+        35,
+        0,
+        0
+      ],
+      "O_iso": 25,
+      "T_O": 3,
+      "T_Z": 41,
+      "X_i": [
+        0,
+        169,
+        0,
+        0
+      ],
+      "Xi": 60,
+      "Z": 210,
+      "Z_i": [
+        0,
+        169,
+        0,
+        0
+      ],
+      "actual_h": 42,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 19,
+      "bound_slack": 23,
+      "certified_h_lower_bound": 19,
+      "controls": {
+        "direct_sink_only_missing_rows": 42,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          19,
+          19,
+          0
+        ]
+      },
+      "fan_vertices": 22,
+      "generic_rank_S": 21,
+      "source_labels": 231
+    },
+    {
+      "B_i": [
+        0,
+        251,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        21,
+        1,
+        0
+      ],
+      "M": 24,
+      "O": 75,
+      "O_i": [
+        0,
+        44,
+        2,
+        0
+      ],
+      "O_iso": 26,
+      "T_O": 3,
+      "T_Z": 49,
+      "X_i": [
+        0,
+        272,
+        1,
+        0
+      ],
+      "Xi": 50,
+      "Z": 300,
+      "Z_i": [
+        0,
+        251,
+        0,
+        0
+      ],
+      "actual_h": 50,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 23,
+      "bound_slack": 49,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 50,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          22,
+          0
+        ]
+      },
+      "fan_vertices": 26,
+      "generic_rank_S": 25,
+      "source_labels": 325
+    },
+    {
+      "B_i": [
+        0,
+        251,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 24,
+      "O": 75,
+      "O_i": [
+        0,
+        43,
+        0,
+        0
+      ],
+      "O_iso": 29,
+      "T_O": 3,
+      "T_Z": 49,
+      "X_i": [
+        0,
+        251,
+        0,
+        0
+      ],
+      "Xi": 72,
+      "Z": 300,
+      "Z_i": [
+        0,
+        251,
+        0,
+        0
+      ],
+      "actual_h": 50,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 23,
+      "bound_slack": 27,
+      "certified_h_lower_bound": 23,
+      "controls": {
+        "direct_sink_only_missing_rows": 50,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          23,
+          23,
+          0
+        ]
+      },
+      "fan_vertices": 26,
+      "generic_rank_S": 25,
+      "source_labels": 325
+    },
+    {
+      "B_i": [
+        0,
+        463,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        29,
+        1,
+        0
+      ],
+      "M": 32,
+      "O": 99,
+      "O_i": [
+        0,
+        60,
+        2,
+        0
+      ],
+      "O_iso": 34,
+      "T_O": 3,
+      "T_Z": 65,
+      "X_i": [
+        0,
+        492,
+        1,
+        0
+      ],
+      "Xi": 66,
+      "Z": 528,
+      "Z_i": [
+        0,
+        463,
+        0,
+        0
+      ],
+      "actual_h": 66,
+      "basis": "predecessor",
+      "basis_independent_cut_upper_bound": 31,
+      "bound_slack": 65,
+      "certified_h_lower_bound": 1,
+      "controls": {
+        "direct_sink_only_missing_rows": 66,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          2,
+          30,
+          0
+        ]
+      },
+      "fan_vertices": 34,
+      "generic_rank_S": 33,
+      "source_labels": 561
+    },
+    {
+      "B_i": [
+        0,
+        463,
+        0,
+        0
+      ],
+      "C_i": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "M": 32,
+      "O": 99,
+      "O_i": [
+        0,
+        59,
+        0,
+        0
+      ],
+      "O_iso": 37,
+      "T_O": 3,
+      "T_Z": 65,
+      "X_i": [
+        0,
+        463,
+        0,
+        0
+      ],
+      "Xi": 96,
+      "Z": 528,
+      "Z_i": [
+        0,
+        463,
+        0,
+        0
+      ],
+      "actual_h": 66,
+      "basis": "optimal",
+      "basis_independent_cut_upper_bound": 31,
+      "bound_slack": 35,
+      "certified_h_lower_bound": 31,
+      "controls": {
+        "direct_sink_only_missing_rows": 66,
+        "unclosed_sector_B_minus_Z": [
+          2,
+          31,
+          31,
+          0
+        ]
+      },
+      "fan_vertices": 34,
+      "generic_rank_S": 33,
+      "source_labels": 561
+    }
+  ],
+  "local_unit_edge_tube_tables": {
+    "(-1, 1)": [
+      [
+        -2,
+        1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "(0, 1)": [
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "(1, 0)": [
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "phase": [
+    "1/5",
+    "1/7"
+  ],
+  "result": "PASS",
+  "sector_order": [
+    "AB",
+    "BC",
+    "CA",
+    "triangle"
+  ]
+}

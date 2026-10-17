@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "target-a-fan-tube-ledger",
+  "classification": "regression",
+  "scope": {
+    "statement": "Compute the complete seed-63 full-tube sector ledger and optimize its raw Section-175 right-deficiency bound over all admissible basis matchings for a fixed fan and lattice phase.",
+    "domain": "All-M proof for integers M>=5 at phase (1/5,1/7); exact replay at M=5,...,20,24,32 for predecessor and optimal deep-first bases, complete collar, all sectors and vertex-capacitated linkage.",
+    "limitations": "Supplied nonglobal chamber family; no canonical source demand j_star, original flexible source, global extraction, zero-slack resolution, canonical promotion or Level I closure. Finite execution is not the all-M proof."
+  },
+  "result": "For every integer M>=5, the fixed fan/phase has maximum raw full-tube right-deficiency bound M-1 over every admissible basis. An explicit deep-first basis attains it; actual h=2M+2. The predecessor basis gives 1. Exact finite replay covers 36 ledgers and 72 control instances.",
+  "remaining_questions": [
+    "Extract a joint demand and exterior-sink population ledger for an actual plateau response under global source hypotheses; a basis change alone cannot repair this fixed full-tube cut."
+  ]
+}

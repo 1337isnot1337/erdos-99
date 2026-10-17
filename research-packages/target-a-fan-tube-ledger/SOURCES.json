@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "baseline_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+  "inputs": [
+    {
+      "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+      "sha256": "0399e4947619293dfda7818c8961c18a48cf762c2f8c5e0d8e956099ca08db29",
+      "identity": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "docs/targets/target-a/26-tube-shield-sector-balance.md",
+      "sha256": "15e470ca494ddf19b5a7fe80a558b2cff01bab824539a0367a2b628436367798",
+      "identity": "docs/targets/target-a/26-tube-shield-sector-balance.md",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "docs/reports/target_a_seed063_tight_isolates_and_locked_fan_regression_2026-10-13.md",
+      "sha256": "b2f5c112443c57181670aec31d46c38f0d6aacef8318e29473c9a6e72e358337",
+      "identity": "docs/reports/target_a_seed063_tight_isolates_and_locked_fan_regression_2026-10-13.md",
+      "generated_from": [],
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/verify.py",
+      "sha256": "f931aa6f06b210da2b3e5cb85a5511bda30602c5b1c88d364f055371cc8b3a6b",
+      "identity": "independent-exact-checker",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/README.md",
+      "sha256": "4e3a8c5e568f07a9c1a8fb381e8b0e0c0d50b44e91840a51dd3564acbb1c2cf5",
+      "identity": "all-M-proof-and-scope",
+      "generated_from": []
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/evidence.json",
+      "sha256": "29c460a113c60279d473c94bb88d4284362ae0536230242c3b1a0c7a567807db",
+      "identity": "generated-complete-finite-ledgers",
+      "generated_from": [
+        "research-packages/target-a-fan-tube-ledger/verify.py"
+      ]
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}
