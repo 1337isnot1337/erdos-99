@@ -24,8 +24,11 @@ not assert any theorem to be proved merely because its CI passed.
   Canonical mathematics, theorem-state/route changes, shared verification code,
   historical/unpackaged research inputs, unknown closure, malformed manifests,
   removed inputs, unsafe Git ancestry and overload require this gate. Tier 2 is
-  NOT scheduled automatically. Full theorem verification must be supplied by
-  the separately audited public mathematical corpus.
+  NOT scheduled automatically. Required full certificate replay belongs to the
+  merging agent on the final integration candidate, not to each contributing
+  agent before submission. Contributors reproduce their own evidence and
+  report full replay as deferred. Workflow-only changes retain their structural
+  checks. See [verification ownership](README.md#verification-ownership).
 
 Output classifications: `fast-only`, `targeted-replay`, and
 `full-verification-required`. `full_verified` is always `false` for Tier 0

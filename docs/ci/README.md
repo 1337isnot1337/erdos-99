@@ -20,6 +20,41 @@ The recorded environment is Linux x86_64. Native Windows and macOS verification
 has not yet been recorded. A local result applies to the platform, dependencies
 and checks that actually ran.
 
+## Verification ownership
+
+**The contributing agent owns evidence reproduction and focused checks.** Run
+`python tools/check_public.py`, `git diff --check`, tests for changed behavior,
+and the new or changed verifiers or experiments needed to support the result.
+Use `python tools/local_ci.py --base-ref origin/main` to report verification
+scope. Leave the repository-wide theorem certificate suite to the merging
+agent, including after rebases. A contributor need not clear
+`full-verification-required` before opening a PR.
+Record the suite as **deferred to the merging agent**, together with the
+planner's classification, focused results and unresolved scope. Planner errors
+must be fixed or disclosed; deferring replay does not turn an error into a pass.
+
+**The merging agent owns required full replay.** Resolve verification scope on
+the final integration candidate containing the PR and current main. Canonical,
+shared-foundation and unresolved `full-verification-required` impact requires
+the full suite before merge:
+
+```text
+python tools/run_theorem_certificates.py
+python tools/check_public.py
+```
+
+Record the candidate commit and tree, PR head, base commit, environment, exact
+commands, exit status and results in the PR or merge-review record. Merge the
+tested tree. If mathematical inputs, verification code, dependencies or the
+verification environment change after a pass, repeat the affected checks on
+the new candidate. Contributors need not duplicate this full replay.
+
+Workflow-only changes retain their structural-check exemption. An impact
+review may establish that scope, but declared mathematical inputs always take
+priority over a workflow path or filename. A pending full replay is never a
+full-verification pass. The independent AI-agent proof and adversarial audit
+required for consequential canonical promotion remains a separate obligation.
+
 ## Verification levels
 
 Tier 0 runs trusted metadata, theorem/task/generated-view consistency, public links, changed-file security and package planning. `python tools/check_public.py` checks the current corpus; it proves no mathematical theorem. Migration checks and import-manifest pinning have been removed.
@@ -39,7 +74,7 @@ See `tools/local_ci.py` and `tools/localized_ci/`.
 checks use `python tools/check_public.py` directly. Contributors can use the
 ordinary checks without installing the Linux replay backend.
 
-Tier 2 is explicit: `python tools/run_theorem_certificates.py`, followed by `python tools/check_public.py` and appropriate tooling tests. Canonical, shared-foundation, removed-input, changed verifier-domain and unknown impacts report `full-verification-required`; this is not a full pass. Do not silently replace it with targeted success.
+Tier 2 is explicit and owned by the merging agent: `python tools/run_theorem_certificates.py`, followed by `python tools/check_public.py` and appropriate tooling tests. Canonical, shared-foundation, removed-input, changed verifier-domain and unknown impacts report `full-verification-required`; contributors hand off that requirement rather than running the full suite for submission. This is not a full pass. Do not silently replace it with targeted success.
 
 ## Hosted CI
 

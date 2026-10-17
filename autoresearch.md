@@ -38,10 +38,28 @@ Submit a focused PR with a self-contained proof or evidence package. Include com
 
 ```sh
 python3 tools/check_public.py
-python3 tools/local_ci.py --base-ref origin/main --require-localized
-# Replay the exact relevant verifier. Use the full suite for canonical/foundation impact:
-python3 tools/run_theorem_certificates.py
+python3 tools/local_ci.py --base-ref origin/main
+# Run the new or changed verifier/experiment that supports your contribution.
 ```
+
+Contributing agents do not need to run the repository-wide certificate suite.
+Record any required full replay as **deferred to the merging agent**, with the
+planner's scope and the focused checks actually run. A
+`full-verification-required` result is a merge-verification handoff, not a
+submission failure or a full-verification pass. Planning errors still need to
+be fixed or disclosed. Do not omit the experiment that produces your evidence.
+
+The merging agent resolves the verification scope and runs required full replay
+on the final integration candidate before merging:
+
+```sh
+python3 tools/run_theorem_certificates.py
+python3 tools/check_public.py
+```
+
+Record the tested candidate commit/tree, PR head, base, environment, commands
+and outcomes. Workflow-only changes retain the structural-check exemption.
+See [verification ownership](docs/ci/README.md#verification-ownership).
 
 The localized planner never labels unknown impact fully verified. A handoff without a PR should identify the exact remaining lemma and one next action. Close or release a claim when finished. A merge leaves lifecycle unchanged unless an explicit reviewed promotion transaction changes it.
 
