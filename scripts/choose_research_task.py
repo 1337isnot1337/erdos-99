@@ -14,9 +14,9 @@ import sys
 from typing import Any
 
 try:
-    from scripts.research_coordination import query_open_work, overlap_for_task, claim_text
+    from scripts.research_coordination import DEFAULT_CACHE, REPOSITORY, query_open_work, overlap_for_task, claim_text, handoff_leads, validate_snapshot
 except ModuleNotFoundError:
-    from research_coordination import query_open_work, overlap_for_task, claim_text
+    from research_coordination import DEFAULT_CACHE, REPOSITORY, query_open_work, overlap_for_task, claim_text, handoff_leads, validate_snapshot
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -169,6 +169,25 @@ def validate_catalog(catalog: Any, root: Path = ROOT) -> None:
         for pr in overlap_prs:
             if type(pr) is not int or pr <= 0:
                 raise CatalogError(f"task {task_id} has an invalid PR overlap pointer")
+        checks = task.get("existing_checks", [])
+        if not isinstance(checks, list):
+            raise CatalogError(f"task {task_id}.existing_checks must be an array")
+        for check in checks:
+            if not isinstance(check, dict):
+                raise CatalogError("existing check must be an object")
+            for key in ("scope", "remaining", "first_useful_action", "state_version"):
+                _require_text(check.get(key), "existing check " + key)
+            source = check.get("source_commit", "")
+            if not re.fullmatch(r"[0-9a-f]{40}", source):
+                raise CatalogError("existing check needs a full source SHA")
+            if check.get("status") not in ("author-checked", "agent-audited", "regression", "rejected"):
+                raise CatalogError("existing check has an unknown evidence status")
+            evidence = check.get("evidence", "")
+            if evidence.startswith("https://"):
+                if not evidence.startswith(f"https://github.com/{REPOSITORY}/blob/{source}/"):
+                    raise CatalogError("remote evidence must pin this repository and exact source SHA")
+            else:
+                _check_repo_file(root, evidence, "existing check evidence")
     empty_tracks = sorted(track_id for track_id, count in by_track.items() if count == 0)
     if empty_tracks:
         raise CatalogError(f"tracks without tasks: {', '.join(empty_tracks)}")
@@ -316,6 +335,7 @@ def make_result(catalog: dict[str, Any], seed: str, suggestions: list[dict[str, 
         "status": "SUGGESTIONS_ONLY_NOT_RESERVED",
         "selection_nonce": seed.lower(),
         "catalogue_revision": catalog["catalogue_revision"],
+        "priority_revision": catalog.get("priority_revision"),
         "catalogue_reviewed_base_commit": catalog["reviewed_base_commit"],
         "catalogue_reviewed_state_version": reviewed_state,
         "checkout_commit": _git_head(ROOT),
@@ -338,6 +358,7 @@ def _format_text(result: dict[str, Any]) -> str:
     ]
     lines.extend([f"Overlap source: {result.get('overlap_status', 'not queried')}",
                   result.get("overlap_warning", "")])
+    lines.append("Handoffs first: " + json.dumps(result.get("handoff_leads", [])))
     if result["warning"]:
         lines.append(f"WARNING: {result['warning']}")
     for index, task in enumerate(result["suggestions"], 1):
@@ -351,6 +372,8 @@ def _format_text(result: dict[str, Any]) -> str:
                 f"   Overlap leads: PRs {[r['number'] for r in task.get('current_overlap', {}).get('pulls', [])]}; issues {[r['number'] for r in task.get('current_overlap', {}).get('issues', [])]}",
                 f"   Start: {task['starting_experiment']}",
                 f"   Stop: {task['stopping_condition']}",
+                f"   Prior checks: {json.dumps(task['existing_checks']) if task.get('existing_checks') else 'unknown'}",
+                f"   Coverage note: {task.get('coverage_warning', 'Unknown coverage is not novelty.')}",
             ]
         )
     lines.extend(
@@ -371,9 +394,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--json", action="store_true", help="print the complete machine-readable selection")
     parser.add_argument("--live-overlap", action="store_true", help="read current PRs/issues using gh; never reserves work")
     parser.add_argument("--overlap-snapshot", type=Path, help="saved read-only query JSON for offline use")
+    parser.add_argument("--coordination-cache", type=Path, help="reuse a saved overlap/handoff cache; --live-overlap refreshes it")
     parser.add_argument("--claim-template", action="store_true", help="print claim and handoff text for one suggestion; does not create an issue")
     args = parser.parse_args(argv)
-    if args.live_overlap and args.overlap_snapshot:
+    if args.overlap_snapshot and (args.live_overlap or args.coordination_cache):
         parser.error("choose live query or offline snapshot")
     seed = args.seed if args.seed is not None else secrets.token_hex(16)
     try:
@@ -383,21 +407,28 @@ def main(argv: list[str] | None = None) -> int:
         result = make_result(catalog, seed, suggestions)
         if args.live_overlap:
             try:
-                snapshot = query_open_work()
+                snapshot = query_open_work(cache=args.coordination_cache or DEFAULT_CACHE, refresh=True)
             except (OSError, ValueError, subprocess.SubprocessError) as exc:
                 raise CatalogError("Live overlap query failed; use --overlap-snapshot or the explicitly dated offline catalogue, then refresh before claiming.") from exc
         elif args.overlap_snapshot:
-            snapshot = json.loads(args.overlap_snapshot.read_text())
-            if snapshot.get("schema_version") != 1 or snapshot.get("repository") != "1337isnot1337/e-99":
-                raise CatalogError("invalid overlap snapshot")
-            snapshot["source"] = "offline-saved-query"
+            if not args.overlap_snapshot.is_file():
+                raise CatalogError("overlap snapshot is missing")
+            snapshot = query_open_work(cache=args.overlap_snapshot, offline=True)
+        elif args.coordination_cache:
+            snapshot = query_open_work(cache=args.coordination_cache, offline=True)
         else:
             snapshot = {"source": "offline-catalogue-snapshot", "queried_at": catalog.get("open_pr_snapshot_date", catalog["reviewed_on"]),
                         "pulls": catalog["open_pr_snapshot"], "issues": []}
         result["overlap_status"] = snapshot["source"]
         result["overlap_warning"] = "Suggestions are not claims. Offline data can be stale and cannot establish that no claim exists."
+        result["handoff_leads"] = handoff_leads(snapshot)
+        result["handoff_first_required"] = bool(result["handoff_leads"]) and not args.task
         for task in suggestions:
             task["current_overlap"] = overlap_for_task(task, snapshot)
+            task["existing_checks"] = task.get("existing_checks", [])
+            task["coverage_warning"] = "Prior evidence covers only its pinned sources and stated scope; unknown coverage is not novelty."
+            if any(check["state_version"] != result["checkout_state_version"] for check in task["existing_checks"]):
+                task["coverage_warning"] += " The current state differs from a prior check; reassess applicability."
     except (OSError, json.JSONDecodeError, CatalogError, TypeError, KeyError) as exc:
         parser.error(str(exc))
         return 2

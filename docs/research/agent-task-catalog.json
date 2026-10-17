@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "catalogue_revision": "public-frontier.6",
+  "catalogue_revision": "public-frontier.7",
   "reviewed_on": "2026-10-16",
   "reviewed_base_commit": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
   "reviewed_state_version": "2026-10-15.publication.2",
@@ -66,8 +66,17 @@
       "description": "Exploratory routes that avoid the main A/B/C proof machinery while naming a global endpoint."
     }
   ],
-  "open_pr_snapshot_date": "2026-10-16",
-  "open_pr_snapshot": [],
+  "open_pr_snapshot_date": "2026-10-17T19:36:43.874727+00:00",
+  "open_pr_snapshot": [
+    {
+      "number": 78,
+      "title": "Independently check finite Target A Schur linkages and tube cuts",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/78",
+      "head_sha": "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda",
+      "updated_at": "2026-10-17T18:58:25Z",
+      "markers": {}
+    }
+  ],
   "tasks": [
     {
       "id": "target-a-locked-sector-surplus",
@@ -142,7 +151,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py target-a-locked-sector-surplus"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "target-a-zero-slack-source-transfer",
@@ -223,7 +233,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py target-a-zero-slack-source-transfer"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "target-a-source-aware-strain-architecture",
@@ -295,7 +306,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py target-a-source-aware-strain-architecture"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "target-b-multigrain-transfer",
@@ -371,7 +383,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py target-b-multigrain-transfer"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "target-b-topology-correction-ledger",
@@ -440,7 +453,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py target-b-topology-correction-ledger"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "target-b-phase-deficit-competitor",
@@ -514,7 +528,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py target-b-phase-deficit-competitor"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "target-c-face-coupled-move",
@@ -642,7 +657,8 @@
           "role": "complete-grid alternative and bounded joint-switch result",
           "status": "proof-only candidate"
         }
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "target-c-typeii-stress-mass-access",
@@ -736,7 +752,8 @@
           "role": "adjacent threshold-staircase packet route; distinct hypotheses from the canonical Type-II stress-mass task",
           "status": "unreviewed research; packet counts do not bound the Type-II exceptional stress mass"
         }
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "target-c-extract-stress-relevant-diameter-set",
@@ -820,7 +837,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py target-c-extract-stress-relevant-diameter-set"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "target-c-macroscopic-container-capacity",
@@ -907,7 +925,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py target-c-macroscopic-container-capacity"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "audit-target-a-section175-177",
@@ -977,7 +996,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py audit-target-a-section175-177"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "audit-target-b-gpi-scope",
@@ -1046,7 +1066,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py audit-target-b-gpi-scope"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "audit-target-c-typeii-face-floor",
@@ -1115,7 +1136,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py audit-target-c-typeii-face-floor"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "compute-b-two-grain-interface-regressions",
@@ -1182,7 +1204,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py compute-b-two-grain-interface-regressions"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "compute-c-stress-deletion-restoration-regression",
@@ -1253,7 +1276,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py compute-c-stress-deletion-restoration-regression"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "verify-a-schur-linkage-bound",
@@ -1311,7 +1335,9 @@
         947,
         953
       ],
-      "potential_open_overlap_prs": [],
+      "potential_open_overlap_prs": [
+        78
+      ],
       "priority": "independent evidence",
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
@@ -1322,6 +1348,17 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py verify-a-schur-linkage-bound"
+      ],
+      "existing_checks": [
+        {
+          "source_commit": "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda",
+          "evidence": "https://github.com/1337isnot1337/erdos-99/blob/9f230b2f900bf050a27ce7430ae7b3fed8ef8eda/docs/reports/target_a_independent_schur_linkage_2026-10-17.md",
+          "scope": "PR #78 author reports an independent finite rank/linkage and tube-cut checker on all 9,216 declared supports and 234,176 tube/shield cases; this submission has not received independent review.",
+          "status": "author-checked",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "Independent review of the pinned checker and its adversarial controls; no source-specific global surplus or geometric competitor is supplied.",
+          "first_useful_action": "Review the finite flow/rank comparison and failure controls at the exact PR #78 head before writing another checker."
+        }
       ]
     },
     {
@@ -1394,7 +1431,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py literature-shell-stability-near-miss-audit"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "alternative-support-measure-certificate",
@@ -1489,7 +1527,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py alternative-support-measure-certificate"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "alternative-contact-graph-boundary-entropy",
@@ -1583,7 +1622,8 @@
       "reproduction": [
         "python tools/check_public.py",
         "python tools/task_context.py alternative-contact-graph-boundary-entropy"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "global-joint-phase-source-extraction",
@@ -1656,7 +1696,8 @@
         "python3 research/verify_global_separable_distortion_obstruction.py",
         "python3 tools/task_context.py global-joint-phase-source-extraction",
         "python3 tools/check_public.py"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "target-c-threshold-packet-cross-shore",
@@ -1742,7 +1783,8 @@
       "reproduction": [
         "python3 research/verify_target_c_laminar_multitrain_interval_shear.py",
         "python3 tools/task_context.py target-c-threshold-packet-cross-shore"
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "target-c-capacity-collective-refill",
@@ -1845,7 +1887,8 @@
           "path": "docs/research/migration/2026-10-16/ledger/source-branch-files.jsonl",
           "role": "all source branch paths and exact treatment"
         }
-      ]
+      ],
+      "existing_checks": []
     },
     {
       "id": "target-c-branch-aware-atomic-gap",
@@ -1964,7 +2007,8 @@
           "path": "docs/research/migration/2026-10-16/ledger/source-main-files.jsonl",
           "role": "Exact source commit/blob/hash and per-file import disposition."
         }
-      ]
+      ],
+      "existing_checks": []
     }
   ],
   "priority_revision": "public-frontier.3"

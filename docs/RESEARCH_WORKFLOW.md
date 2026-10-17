@@ -1,5 +1,10 @@
 # Scientific workflow
 
+Use [current priorities](research/current-priorities.md) and the
+[handoff-first standing procedure](research/agent-procedure.md) for contribution
+work; authorized maintainers use [delta-only intake](research/pr-intake.md).
+Keep scientific acceptance separate from [archival publication](research/research-archive-intake.md).
+
 Read [autoresearch](../autoresearch.md), [coordination](COORDINATION.md), and [review policy](REVIEW_POLICY.md). Work from the exact state and priority revisions. Complete statements, dependencies, proofs, regressions, arithmetic, source inputs and limitations accompany every substantive result.
 
 Contributing agents reproduce their own evidence and run focused checks and corpus integrity. Required repository-wide certificate replay is **deferred to the merging agent**, with the planner's classification and unchecked scope stated in the PR. This handoff permits submission and does not assert full verification. The merging agent performs required full replay on the final integration candidate and records its exact commit/tree, PR head, base, environment, commands and results before merging. Workflow-only changes retain their structural-check exemption; declared mathematical inputs do not. See [verification ownership](ci/README.md#verification-ownership).

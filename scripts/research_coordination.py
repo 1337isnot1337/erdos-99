@@ -1,109 +1,253 @@
-#!/usr/bin/env python3
-"""Read-only GitHub overlap queries and reproducible issue/handoff text."""
+"""Read-only, body-aware overlap snapshots and advisory handoff leads.
+
+Workflow design informed by CrocSwap/integer-mult-bounds (Apache-2.0),
+commit 463113d675af7410ac91d53a4fed51ec6494eb9a. Independently implemented here.
+"""
 from __future__ import annotations
 
 import datetime as dt
 import json
+from pathlib import Path
 import re
-import subprocess
 
-REPOSITORY = "1337isnot1337/erdos-99"
+try:
+    from scripts.workflow_common import REPOSITORY, ROOT, atomic_json, git, gh, graphql, now, pages, timestamp
+except ModuleNotFoundError:
+    from workflow_common import REPOSITORY, ROOT, atomic_json, git, gh, graphql, now, pages, timestamp
+
+DEFAULT_CACHE = Path.home() / ".cache/erdos99/overlap.json"
+GROUPS = ("pulls", "issues", "discussions", "closed_pulls")
 
 
-def query_open_work(repository: str = REPOSITORY) -> dict:
+def markers(body):
+    return {key: value.strip() for key, value in
+            re.findall(r"(?m)^E99-([A-Z-]+):[^\S\r\n]*([^\r\n]+)", body)}
+
+
+def claim_status(row):
+    marked = row.get("markers", {})
+    if not marked:
+        return "not-a-marked-claim"
+    try:
+        expiry = dt.datetime.fromisoformat(marked["CLAIM-EXPIRES"].replace("Z", "+00:00"))
+        if expiry.tzinfo is None:
+            raise ValueError("timezone missing")
+        return "active" if expiry > now() else "expired"
+    except (KeyError, ValueError):
+        return "expiry-unknown; check manually"
+
+
+def _row(item, kind):
+    body = item.get("body") or ""
+    return dict(number=item["number"], title=item["title"], body=body,
+                url=item.get("html_url", item.get("url")), kind=kind,
+                updated_at=item.get("updated_at", item.get("updatedAt")),
+                head_sha=item.get("head", {}).get("sha"), markers=markers(body))
+
+
+def _connection(node_id, node_type, field):
+    cursor = None
+    while True:
+        query = """query($id:ID!,$cursor:String){node(id:$id){... on TYPE{
+          FIELD(first:100,after:$cursor){nodes{id body url updatedAt}
+          pageInfo{hasNextPage endCursor}}}}}""".replace("TYPE", node_type).replace("FIELD", field)
+        connection = graphql(query, id=node_id, cursor=cursor)["node"][field]
+        yield from connection["nodes"]
+        if not connection["pageInfo"]["hasNextPage"]:
+            break
+        cursor = connection["pageInfo"]["endCursor"]
+
+
+def _discussions(repository):
+    owner, name = repository.split("/")
+    cursor, records = None, []
+    while True:
+        query = """query($owner:String!,$name:String!,$cursor:String){repository(owner:$owner,name:$name){
+          discussions(first:100,after:$cursor){nodes{id number title body url updatedAt}
+          pageInfo{hasNextPage endCursor}}}}"""
+        connection = graphql(query, owner=owner, name=name, cursor=cursor)["repository"]["discussions"]
+        for discussion in connection["nodes"]:
+            records.append(_row(discussion, "discussion"))
+            for comment in _connection(discussion["id"], "Discussion", "comments"):
+                records.append(_row({**discussion, **comment}, "discussion-comment"))
+                for reply in _connection(comment["id"], "DiscussionComment", "replies"):
+                    records.append(_row({**discussion, **reply}, "discussion-reply"))
+        if not connection["pageInfo"]["hasNextPage"]:
+            return records
+        cursor = connection["pageInfo"]["endCursor"]
+
+
+def validate_snapshot(snapshot, repository=REPOSITORY):
+    if (not isinstance(snapshot, dict) or snapshot.get("schema_version") not in (1, 2)
+            or snapshot.get("repository") != repository):
+        raise ValueError("overlap snapshot belongs to another repository or schema")
+    for group in GROUPS:
+        if not isinstance(snapshot.get(group, []), list):
+            raise ValueError("invalid overlap records")
+        for row in snapshot.get(group, []):
+            if (not isinstance(row, dict) or type(row.get("number")) is not int
+                    or not isinstance(row.get("title"), str)
+                    or not isinstance(row.get("body", ""), str)
+                    or not isinstance(row.get("markers", {}), dict)
+                    or any(not isinstance(value, str) for value in row.get("markers", {}).values())):
+                raise ValueError("invalid overlap record fields")
+    checked = snapshot.get("queried_at")
+    if not isinstance(checked, str):
+        raise ValueError("missing cache timestamp")
+    return snapshot
+
+
+def query_open_work(repository=REPOSITORY, *, cache=None, refresh=False,
+                    offline=False, include_closed=False, max_age=300):
     if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository):
         raise ValueError("invalid repository")
-    records = {}
-    for kind in ("pulls", "issues"):
-        raw = subprocess.check_output(
-            ["gh", "api", "--paginate", "--slurp",
-             f"repos/{repository}/{kind}?state=open&per_page=100"],
-            stderr=subprocess.PIPE, timeout=60, text=True,
-        )
-        pages = json.loads(raw)
-        rows = []
-        for page in pages:
-            for item in page:
-                if kind == "issues" and "pull_request" in item:
-                    continue
-                body = item.get("body") or ""
-                # Retain coordination markers, never private issue bodies.
-                markers = {}
-                for key in ("TASK-ID", "SCOPE-ID", "CLAIM-EXPIRES"):
-                    match = re.search(rf"(?m)^E99-{key}:\s*(\S+)", body)
-                    if match:
-                        markers[key] = match[1]
-                claim_status = "not-a-marked-claim"
-                if markers:
-                    try:
-                        expiry = dt.datetime.fromisoformat(markers["CLAIM-EXPIRES"].replace("Z", "+00:00"))
-                        if expiry.tzinfo is None:
-                            raise ValueError("timezone missing")
-                        claim_status = "active" if expiry > dt.datetime.now(dt.timezone.utc) else "expired"
-                    except (KeyError, ValueError):
-                        claim_status = "expiry-unknown; check manually"
-                rows.append({"claim_status": claim_status, "number": item["number"], "title": item["title"],
-                             "url": item["html_url"], "updated_at": item["updated_at"],
-                             "head_sha": item.get("head", {}).get("sha"),
-                             "markers": markers})
-        records[kind] = sorted(rows, key=lambda x: x["number"])
-    owner, name = repository.split('/')
-    info = json.loads(subprocess.check_output(['gh', 'api', f'repos/{repository}'], text=True, timeout=60))
-    records['discussions'] = []
-    availability = 'disabled'
-    if info.get('has_discussions'):
-        availability = 'enabled'
-        cursor = None
-        while True:
-            query = '''query($owner:String!,$name:String!,$cursor:String){repository(owner:$owner,name:$name){discussions(first:100,after:$cursor,orderBy:{field:UPDATED_AT,direction:DESC}){nodes{number title url updatedAt}pageInfo{hasNextPage endCursor}}}}'''
-            argv = ['gh','api','graphql','-f','query='+query,'-f','owner='+owner,'-f','name='+name]
-            if cursor: argv += ['-f','cursor='+cursor]
-            page = json.loads(subprocess.check_output(argv,text=True,timeout=60))['data']['repository']['discussions']
-            records['discussions'].extend(dict(r,markers={}) for r in page['nodes'])
-            if not page['pageInfo']['hasNextPage']: break
-            cursor = page['pageInfo']['endCursor']
-    return {"schema_version": 1, "repository": repository, "source": "live-read-only",
-            "discussions_availability": availability,
-            "queried_at": dt.datetime.now(dt.timezone.utc).isoformat(), **records}
+    saved = None
+    if cache is not None and Path(cache).exists():
+        saved = validate_snapshot(json.loads(Path(cache).read_text(encoding="utf-8")), repository)
+    if saved is not None:
+        checked = dt.datetime.fromisoformat(saved["queried_at"].replace("Z", "+00:00"))
+        if checked.tzinfo is None or checked > now() + dt.timedelta(seconds=60):
+            raise ValueError("invalid cache timestamp")
+        age = (now() - checked).total_seconds()
+        if offline or (not refresh and age <= max_age and
+                       (not include_closed or "closed_pulls" in saved)):
+            saved["source"] = "offline-saved-query" if offline else "cached-read-only"
+            saved["warnings"] = []
+            if include_closed and "closed_pulls" not in saved:
+                saved["warnings"].append("Requested closed-PR coverage is unavailable in this offline snapshot.")
+            if saved.get("schema_version") == 1:
+                saved["warnings"].append("Legacy snapshot: body/comment coverage was not recorded.")
+            for group in GROUPS:
+                for row in saved.get(group, []):
+                    row["claim_status"] = claim_status(row)
+            return saved
+    if offline:
+        return dict(schema_version=2, repository=repository, source="offline-no-remote-data",
+                    queried_at=None, coverage={}, pulls=[], issues=[], discussions=[],
+                    discussions_availability="unknown", warnings=["No remote snapshot is available; remote overlap is unknown."])
+    records, coverage = {}, {}
+    for group in ("pulls", "issues", "closed_pulls"):
+        if group == "closed_pulls" and not include_closed:
+            continue
+        endpoint = "pulls" if group == "closed_pulls" else group
+        state = "closed" if group == "closed_pulls" else "open"
+        records[group] = [_row(item, group) for item in pages(
+            f"repos/{repository}/{endpoint}?state={state}&per_page=100")
+            if group != "issues" or "pull_request" not in item]
+        coverage[group] = dict(fetched_at=timestamp(), complete_pagination=True,
+                               records=len(records[group]), fields="titles and bodies")
+    enabled = gh(f"repos/{repository}").get("has_discussions", False)
+    records["discussions"] = _discussions(repository) if enabled else []
+    coverage["discussions"] = dict(fetched_at=timestamp(), complete_pagination=True,
+                                   available=enabled, records=len(records["discussions"]),
+                                   fields="bodies, comments and replies")
+    snapshot = dict(schema_version=2, repository=repository, source="live-read-only",
+                    queried_at=timestamp(), coverage=coverage,
+                    discussions_availability="enabled" if enabled else "disabled", **records)
+    for group in GROUPS:
+        for row in snapshot.get(group, []):
+            row["claim_status"] = claim_status(row)
+    if cache is not None:
+        atomic_json(cache, snapshot)
+    return snapshot
 
 
-def overlap_for_task(task: dict, snapshot: dict) -> dict:
-    terms = [task["id"].lower(), task["scope_key"].lower(),
-             *[s.lower() for s in task["overlap_terms"]]]
-    potential_prs = set(task.get("potential_open_overlap_prs", []))
+def local_records(root=ROOT):
+    records = []
+    for path in git(root, "ls-files", "-z").split("\0"):
+        if (not path or path.startswith(("docs/archive/", "docs/research/migration/"))
+                or not path.startswith(("docs/research/", "docs/reports/", "docs/audits/", "research/", "research-packages/", "tasks/"))
+                or not (path.endswith(".md") or Path(path).name in ("TASK.json", "SOURCES.json"))):
+            continue
+        source = Path(root) / path
+        if source.is_symlink() or not source.is_file():
+            continue
+        body = source.read_text(encoding="utf-8")
+        records.append(dict(kind="local-note", title=path, path=path, body=body,
+                            markers=markers(body), url=None))
+    return records
+
+
+def search(records, terms):
+    terms = [term.lower() for term in terms if term.strip()]
+    matches = []
+    for row in records:
+        body = row.get("body", "")
+        text = row.get("title", "") + " " + body + " " + " ".join(row.get("markers", {}).values())
+        found = [term for term in terms if term in text.lower()]
+        if found:
+            positions = [body.lower().find(term) for term in found if term in body.lower()]
+            start = max(0, min(positions, default=0) - 100)
+            matches.append({k: v for k, v in row.items() if k != "body"} |
+                           dict(matched_terms=found, excerpt=body[start:start + 500]))
+    return matches
+
+
+def handoff_leads(snapshot):
+    """Advisory pointers only; read the current thread before accepting work."""
+    leads, latest = [], {}
+    for group in ("pulls", "issues", "discussions"):
+        for row in snapshot.get(group, []):
+            status = row.get("markers", {}).get("STATUS", "").upper()
+            if status:
+                key = (group, row["number"])
+                updated = row.get("updated_at") or ""
+                if updated >= latest.get(key, ("", ""))[0]:
+                    latest[key] = (updated, status)
+    for group in ("pulls", "issues", "discussions"):
+        for row in snapshot.get(group, []):
+            marked = row.get("markers", {})
+            if latest.get((group, row["number"]), (None, None))[1] in ("DONE", "RELEASED", "CLOSED"):
+                continue
+            if marked.get("STATUS", "").upper() == "HANDOFF":
+                leads.append(dict(surface=group, number=row["number"], url=row["url"],
+                                  title=row["title"], task_id=marked.get("TASK-ID"),
+                                  remaining=marked.get("REMAINING"), next_action=marked.get("NEXT-ACTION"),
+                                  source_sha=marked.get("SOURCE-SHA")))
+    return leads
+
+
+def overlap_for_task(task, snapshot):
+    terms = [task["id"], task.get("scope_key", task["id"]), *task["overlap_terms"]]
     matches = {}
-    for kind in ("pulls", "issues", "discussions"):
-        matches[kind] = [r for r in snapshot.get(kind, []) if any(
-            term in (r["title"] + " " + " ".join(r.get("markers", {}).values())).lower()
-            for term in terms) or (kind == "pulls" and r["number"] in potential_prs)]
-    return {"source": snapshot.get("source", "offline"),
-            "queried_at": snapshot.get("queried_at"), **matches,
-            "limits": "Catalogue PR pointers and title/marker matches are leads; manually compare objects, hypotheses, files and drafts."}
+    for group in GROUPS:
+        matches[group] = search(snapshot.get(group, []), terms)
+        seen = {row["number"] for row in matches[group]}
+        if group == "pulls":
+            matches[group] += [{k: v for k, v in row.items() if k != "body"}
+                              for row in snapshot.get(group, [])
+                              if row["number"] in task.get("potential_open_overlap_prs", [])
+                              and row["number"] not in seen]
+    return dict(source=snapshot.get("source", "offline"), queried_at=snapshot.get("queried_at"),
+                coverage=snapshot.get("coverage", {}),
+                discussions_availability=snapshot.get("discussions_availability", "unknown"), **matches,
+                limits="Keyword and catalogue matches are leads; compare exact objects, hypotheses, files and drafts. No match establishes novelty.")
 
 
-def claim_text(result: dict, task: dict, now: dt.datetime | None = None) -> str:
-    now = now or dt.datetime.now(dt.timezone.utc)
-    expiry = (now + dt.timedelta(days=7)).isoformat()
+def claim_text(result, task, now=None):
+    checked = now or dt.datetime.now(dt.timezone.utc)
+    expiry = (checked + dt.timedelta(days=7)).isoformat()
     return f"""CLAIM — {task['id']}
 E99-TASK-ID: {task['id']}
 E99-SCOPE-ID: {task['scope_key']}
 E99-CLAIM-EXPIRES: {expiry}
+E99-STATUS: CLAIM
 Base commit: {result['checkout_commit']}
 State version: {result['checkout_state_version']}
+Priority revision: {result.get('priority_revision')}
 Exact question: {task['question']}
 Method: {task['selected_method']}
-Dependencies: {', '.join(r['path'] for r in task['canonical_dependencies'])}
+Dependencies: {', '.join(ref['path'] for ref in task['canonical_dependencies'])}
 Stopping condition: {task['stopping_condition']}
 Owner / branch: <claimant and branch>
-Overlap comparison: <links and exact scope differences; check live PRs and issues>
-Status: exploratory; suggestion only until posted as a claim issue
+Overlap comparison: <links and exact scope differences>
 
-HANDOFF
-Claim classification: unreviewed candidate (change only with evidence)
-Exact new statement / hypotheses: <complete statement>
-Proof or certificate and reproduction command: <paths, inputs, arithmetic, command>
-Binding regressions checked: <results and limits>
-Remaining obligation / next step: <one exact step>
-Attribution / AI assistance: <contributors and roles>
+For a handoff, update this thread with:
+E99-STATUS: HANDOFF
+E99-SOURCE-SHA: <exact source SHA>
+E99-REMAINING: <one exact unresolved implication>
+E99-NEXT-ACTION: <one feasible next step>
+Evidence / command: <public artifact, inputs, arithmetic and actual results>
+Limitations / attribution / AI role: <scope and credit>
 Independent review requested at commit: <exact head SHA and scope>
 """
