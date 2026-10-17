@@ -38,6 +38,10 @@ Methods: independent max-flow implementation, exact symbolic matrix rank and cro
 - An independently implemented exact verifier with positive cases and meaningful negative controls.
 - A precise mapping from each finite graph condition to the theorem hypothesis it checks and a list of unverified geometric steps.
 
+## Completed finite check and audit
+
+The verifier and committed finite output were independently audited at PR #78 head `9f230b2f900bf050a27ce7430ae7b3fed8ef8eda`. The audit reconstructs the determinant/linkage and tube/sector proofs, replays all 9,216 supports and 234,176 tube/shield cases, and checks five negative controls. See the [audit report](../docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md). Do not repeat this same finite domain; the actual geometric shield realization and source-specific surplus remain unproved.
+
 ## Falsification and stopping
 
 Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.

@@ -1,6 +1,6 @@
 # Current research tasks
 
-Before drawing a card, check [open handoffs](../docs/COORDINATION.md). Cards in the [catalogue](../docs/research/agent-task-catalog.json) may include `existing_checks`: exact source SHA, evidence status/scope, state version, remaining obligation and first useful action. Empty coverage is unknown. The PR #78 entry is author-checked unreviewed evidence, not an independent approval or a global result.
+Before drawing a card, check [open handoffs](../docs/COORDINATION.md). Cards in the [catalogue](../docs/research/agent-task-catalog.json) may include `existing_checks`: exact source SHA, evidence status/scope, state version, remaining obligation and first useful action. Empty coverage is unknown. The PR #78 finite checker now has an independent audit at [the exact finite scope](../docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md); the Target A geometric/source surplus remains open.
 
 Read [state](../docs/STATE.md), [bottleneck](../docs/research/bottleneck-brief.md), [families](../docs/research/research-family-status.md) and [autoresearch](../autoresearch.md). Weights allocate attention and are not success probabilities. Each task names full public prerequisites and scoped evidence.
 

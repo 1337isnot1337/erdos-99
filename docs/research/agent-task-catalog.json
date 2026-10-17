@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "catalogue_revision": "public-frontier.7",
-  "reviewed_on": "2026-10-16",
-  "reviewed_base_commit": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+  "catalogue_revision": "public-frontier.8",
+  "reviewed_on": "2026-10-17",
+  "reviewed_base_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
   "reviewed_state_version": "2026-10-15.publication.2",
   "problem_status": "open",
   "purpose": "Bounded candidate tasks derived from the canonical E99 frontier; not a theorem ledger, novelty index, or work reservation service.",
@@ -66,14 +66,38 @@
       "description": "Exploratory routes that avoid the main A/B/C proof machinery while naming a global endpoint."
     }
   ],
-  "open_pr_snapshot_date": "2026-10-17T19:36:43.874727+00:00",
+  "open_pr_snapshot_date": "2026-10-17T21:05:35.743989+00:00",
   "open_pr_snapshot": [
     {
-      "number": 78,
-      "title": "Independently check finite Target A Schur linkages and tube cuts",
-      "url": "https://github.com/1337isnot1337/erdos-99/pull/78",
-      "head_sha": "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda",
-      "updated_at": "2026-10-17T18:58:25Z",
+      "number": 89,
+      "title": "research: exact full-tube ledger for the locked hexagonal fan",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/89",
+      "head_sha": "aa111eedcd3bc190f991aeaa7f42299948551207",
+      "updated_at": "2026-10-17T20:52:20Z",
+      "markers": {}
+    },
+    {
+      "number": 88,
+      "title": "research: bound deletions needed for total separability of global minimizers",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/88",
+      "head_sha": "70398c397bfc76e9db65154318ef8a6041458c88",
+      "updated_at": "2026-10-17T20:44:22Z",
+      "markers": {}
+    },
+    {
+      "number": 87,
+      "title": "research: exact optimum over bases for the Target A fan tube",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/87",
+      "head_sha": "33a4aaa016d0a219e2f9e8e7a92c87ff4aa77afb",
+      "updated_at": "2026-10-17T20:44:20Z",
+      "markers": {}
+    },
+    {
+      "number": 86,
+      "title": "research: sharpen Target B shared-interface crossing budget",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/86",
+      "head_sha": "a392a910899b06d20df6c7c29010896223ebfa70",
+      "updated_at": "2026-10-17T20:41:42Z",
       "markers": {}
     }
   ],
@@ -1335,9 +1359,7 @@
         947,
         953
       ],
-      "potential_open_overlap_prs": [
-        78
-      ],
+      "potential_open_overlap_prs": [],
       "priority": "independent evidence",
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
@@ -1346,6 +1368,8 @@
       "remaining_if_successful": "For the actual source and response, establish rank(S)<=d_int+|C^partial|-Delta_Lambda (d_sc>=Delta_Lambda); in the locked branch the exact Section-175 surplus is |O_iso|+sum_i max(0,|O_i|-|C_i|)>=j_*+|T_Z|. Any untouched zero-slack/global-realization branch remains.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
+        "python research/verify_target_a_schur_linkage_2026_10_17.py --check research/target_a_schur_linkage_2026_10_17.json",
+        "python -O research/verify_target_a_schur_linkage_2026_10_17.py --check research/target_a_schur_linkage_2026_10_17.json",
         "python tools/check_public.py",
         "python tools/task_context.py verify-a-schur-linkage-bound"
       ],
@@ -1353,11 +1377,20 @@
         {
           "source_commit": "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda",
           "evidence": "https://github.com/1337isnot1337/erdos-99/blob/9f230b2f900bf050a27ce7430ae7b3fed8ef8eda/docs/reports/target_a_independent_schur_linkage_2026-10-17.md",
-          "scope": "PR #78 author reports an independent finite rank/linkage and tube-cut checker on all 9,216 declared supports and 234,176 tube/shield cases; this submission has not received independent review.",
+          "scope": "PR #78 author reports an independent finite rank/linkage and tube-cut checker on all 9,216 declared supports and 234,176 tube/shield cases; this author check is not itself an independent audit.",
           "status": "author-checked",
           "state_version": "2026-10-15.publication.2",
-          "remaining": "Independent review of the pinned checker and its adversarial controls; no source-specific global surplus or geometric competitor is supplied.",
-          "first_useful_action": "Review the finite flow/rank comparison and failure controls at the exact PR #78 head before writing another checker."
+          "remaining": "No geometric shield realization, source-specific global surplus, or strict-diameter competitor is established.",
+          "first_useful_action": "Derive the actual fan surplus or construct a source-preserving strict-D competitor; do not repeat this finite domain."
+        },
+        {
+          "source_commit": "9f230b2f900bf050a27ce7430ae7b3fed8ef8eda",
+          "evidence": "docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+          "scope": "Independent reconstruction of generic Schur minors, transversal-matroid linkages, unit-capacity cuts/contraction, and tube/sector bounds; replayed all 9,216 supports, 234,176 tube/shield cases, and five negative controls.",
+          "status": "agent-audited",
+          "state_version": "2026-10-15.publication.2",
+          "remaining": "The audit is finite/nongeometric; actual shield realization, source surplus, zero-slack transfer, and the global minimizer quantifiers remain open.",
+          "first_useful_action": "Work on the actual-source surplus inequality or a fully checked strict-diameter competitor."
         }
       ]
     },

@@ -1,7 +1,7 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2168,
+  "source_documents": 2169,
   "math_pairs_normalized": 71621,
   "documents": [
     {
@@ -121,6 +121,13 @@
       "source_sha256": "0f5b5c6d078206831c55993931b7267664f781883518cedf7c8d1fd92754c7ed",
       "reading_path": "reading/docs/audits/target_a_boundary_terminal_common_source_vpaths_audit_2026-09-05.md",
       "reading_sha256": "8034307f95c467454f7ee380176ff26e8aa8ac66a54034be193b0226a546dfdb",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+      "source_sha256": "4099a516644885546de892b009d5de269bd908aa773e9713eccc8e76298963bc",
+      "reading_path": "reading/docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md",
+      "reading_sha256": "6650f8c8ccfb07a86adea3cfeab89f805c21b91114228f72a952a73869989926",
       "math_pairs_normalized": 0
     },
     {
