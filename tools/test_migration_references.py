@@ -151,6 +151,29 @@ class ReferenceTests(unittest.TestCase):
         with self.assertRaises(ReferenceError):
             require_recorded_blobs(tree)
 
+    def test_git_replacement_cannot_change_reported_commit_contents(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            def git(*args):
+                return subprocess.run(['git', '-C', str(root), *args], check=True, capture_output=True).stdout
+            git('init', '-q')
+            git('config', 'user.name', 'Migration Test')
+            git('config', 'user.email', 'migration-test@example.invalid')
+            (root / 'a.md').write_text('original\n')
+            git('add', 'a.md')
+            git('commit', '-qm', 'original')
+            original = git('rev-parse', 'HEAD').decode().strip()
+            (root / 'a.md').write_text('replacement\n')
+            git('add', 'a.md')
+            git('commit', '-qm', 'replacement')
+            replacement = git('rev-parse', 'HEAD').decode().strip()
+            git('replace', original, replacement)
+            self.assertEqual(git('show', original + ':a.md').decode(), 'replacement\n')
+            reader = GitReader(root)
+            commit, tree = reader.tree(original)
+            self.assertEqual(commit, original)
+            self.assertEqual(reader.text(tree, 'a.md'), 'original\n')
+
     def test_missing_evidence_blocks(self):
         with self.assertRaises(ReferenceError):
             require_recorded_blobs({})
