@@ -13,6 +13,9 @@ The [navigation receipt](reference-navigation-receipt.json) records an earlier c
 That scan had zero active first-party path gaps.
 Its local commit and counts survive in the retained tool history.
 The local runtime later became unavailable before the original receipt and generated map were uploaded.
+A fresh connector-based structural rebuild recovered the [historical reference map](historical-reference-map.md).
+That rebuild verified all 4,823 unique Markdown Git blobs for 4,938 documents.
+Its exact tree and limited scope are recorded in the [connector rebuild receipt](reference-navigation-rebuild.json).
 The receipts here explicitly distinguish reconstructed records from byte-identical recovered artifacts.
 The rebuilt scanner requires a fresh run against the final merged tree.
 

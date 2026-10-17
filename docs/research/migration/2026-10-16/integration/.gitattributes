@@ -1,0 +1,2 @@
+# Preserve the exact whitespace of inert historical source snapshots.
+*.source -whitespace

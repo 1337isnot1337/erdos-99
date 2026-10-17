@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "classification": "Historical exact source recovery; no theorem promotion.",
-  "reconstruction_note": "Recreated from pinned source Git objects after the local environment became unavailable. Original Git blob identities are retained; the original local SHA-256 receipt was unavailable.",
+  "reconstruction_note": "Recreated from pinned source Git objects after the local environment became unavailable. Source Git blob identities are retained; SHA-256 values were recomputed from the fetched exact source bytes.",
   "entries": [
     {
       "source_path": "docs/maintenance/issue-986-dirty-worktree-dispositions.json",
@@ -9,7 +9,8 @@
       "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
       "git_blob_sha1": "04fefa6502ead10b0a997af379c073c910b762a7",
       "mode": "100644",
-      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency.",
+      "sha256": "6080d28c0667f7aaf0e540f84390bfe0d46400575663821e75a9a27d1a665d2d"
     },
     {
       "source_path": "docs/reports/global_discrete_replacement_preservation_2026-10-15.md",
@@ -17,7 +18,8 @@
       "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
       "git_blob_sha1": "ffecd6bc0e36e26653587a6fbdcc8911275d4c7e",
       "mode": "100644",
-      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency.",
+      "sha256": "84dc414ecc9a7dd4ae6e946168314b80ec0051e653097140baa4b75416dfdfda"
     },
     {
       "source_path": "docs/prompts/erdos_problem_99_SOL_XHIGH_FULL_SOLUTION_PROMPT.md",
@@ -25,7 +27,8 @@
       "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
       "git_blob_sha1": "699b94c2ce9658faaf90e798b5ff00d0822fd8d8",
       "mode": "100644",
-      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency.",
+      "sha256": "c1993bcb908e619e1b916dad97749a7de8c9a6170769da266d186b6f3f61e4cc"
     },
     {
       "source_path": "docs/prompts/erdos_problem_99_1.7.10_FINAL_CONTINUATION_PROMPT.md",
@@ -33,7 +36,8 @@
       "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
       "git_blob_sha1": "c51a9b13fc023262ee1fe93fa8279b2123b5c63b",
       "mode": "100644",
-      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency.",
+      "sha256": "3a38fe91df210b940bb0376b6e883124c12bc88b0958017c75efce9601ba5943"
     },
     {
       "source_path": "research/verify_global_three_isometries_2026_10_12.py",
@@ -41,7 +45,8 @@
       "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
       "git_blob_sha1": "6e0b5afe492a14d5b4ef7c26b05c6a2b61f952d8",
       "mode": "100644",
-      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency.",
+      "sha256": "7b24f25dfc5ea3f9b2ba69e05974d38eb57184d9edd8710f596e11eddf028200"
     },
     {
       "source_path": "research/verify_target_c_oblique_lattice_pick_comparison.py",
@@ -49,7 +54,8 @@
       "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
       "git_blob_sha1": "67ed66c6c49462ccf26f71a2e83cfae2149dbed6",
       "mode": "100644",
-      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency.",
+      "sha256": "d86c38672f7c7ab9d8bcd07ea2d394b7286b6ec8e3a1b986a070cfb0b9a47d05"
     },
     {
       "source_path": "docs/prompts/historical/erdos_problem_99_1.7.10_FINAL_CONTINUATION_PROMPT.md",
@@ -57,7 +63,8 @@
       "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
       "git_blob_sha1": "cbf6cebff8419b0517d13904d7a63079947db57b",
       "mode": "100644",
-      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency.",
+      "sha256": "255b36885caa488f837b37fcab7f8b7b601d49479acf955e07a656abd1108c7a"
     },
     {
       "source_path": "docs/reports/global_mixed_exchange_and_diameter_cut_2026-10-12.md",
@@ -65,7 +72,8 @@
       "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
       "git_blob_sha1": "5264badb4c23186975ca2a6b648134c440b2ebfa",
       "mode": "100644",
-      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency.",
+      "sha256": "2500066177ea855347938180e211f9fdb72b7596b016ded277476a2230d59540"
     },
     {
       "source_path": "docs/reports/global_three_isometry_competitors_2026-10-12.md",
@@ -73,7 +81,8 @@
       "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
       "git_blob_sha1": "e9ec219719394c98a75c536d4919cdeb7c8a7e02",
       "mode": "100644",
-      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency.",
+      "sha256": "11ddb9d39f44e9513831e7d40ca55693b62f8c187542c777a48a22f04788fc73"
     },
     {
       "source_path": "research/verify_global_mixed_exchange_2026_10_12.py",
@@ -81,7 +90,8 @@
       "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
       "git_blob_sha1": "e45d2fc1a67ca6ed67caae840c62f1bab94a8b28",
       "mode": "100644",
-      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency.",
+      "sha256": "43d104355e9e7303445c4735724b27a5ee18c8aea64137af163fd2efd628096d"
     },
     {
       "source_path": "research/verify_global_discrete_isometry_2026_10_12.py",
@@ -89,7 +99,8 @@
       "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
       "git_blob_sha1": "2ad661ae68e320f48e6b1983f7f09952631672e8",
       "mode": "100644",
-      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency.",
+      "sha256": "169383dad85c970988d7c4b7fe91ea67ff2d98deb591eacbda8374f140aefc9e"
     },
     {
       "source_path": "research/explore_global_three_isometries_2026_10_12.py",
@@ -97,7 +108,8 @@
       "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
       "git_blob_sha1": "18827292149a96552dbe76b8d78c294af88aebef",
       "mode": "100644",
-      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency.",
+      "sha256": "eb141ab1d41278102d3dec54a3f8bed55eed31eb27ab8502b4b119ff17b75d1d"
     }
   ]
 }

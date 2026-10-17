@@ -19,6 +19,11 @@ import stat
 import sys
 import time
 
+try:
+    from tools.review_migration_gitleaks import review_combined_history_gitleaks, review_tree_gitleaks
+except ModuleNotFoundError:
+    from review_migration_gitleaks import review_combined_history_gitleaks, review_tree_gitleaks
+
 
 # A reviewed scanner match, not a Gitleaks allowlist. The unmodified scanner
 # still runs over all reachable history and its raw report/exit are retained.
@@ -148,7 +153,7 @@ def main():
     child_env['PYTHONPYCACHEPREFIX'] = str(output / 'pycache')
     receipt['python_import_controls'] = 'Inherited Python path/home/startup overrides removed; fresh external bytecode cache'
 
-    def run(name, argv, *, clearance=False, history_report=None):
+    def run(name, argv, *, clearance=False, history_report=None, tree_report=None):
         started = time.monotonic()
         with (output / (name + '.log')).open('wb') as log:
             proc = subprocess.run(argv, cwd=root, stdout=log, stderr=subprocess.STDOUT,
@@ -159,15 +164,16 @@ def main():
         record['verification_passed'] = proc.returncode == 0
         # Exit 1 denotes detected findings. Invocation failures and every other
         # finding remain failures; never change or discard the raw exit code.
-        if proc.returncode == 1 and history_report is not None:
-            review = review_history_gitleaks(root, history_report)
+        if proc.returncode == 1 and (history_report is not None or tree_report is not None):
+            review = (review_tree_gitleaks(root, tree_report, candidate) if tree_report is not None
+                      else review_combined_history_gitleaks(root, history_report, review_history_gitleaks))
             if review is not None:
                 record['finding_review'] = review
                 record['verification_passed'] = True
         receipt['commands'].append(record)
         (output / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
         print(f'{name}: exit={proc.returncode}, seconds={record["seconds"]}' +
-              ('; exact historical fixture findings reviewed as false positives' if 'finding_review' in record else ''), flush=True)
+              ('; exact committed findings reviewed as false positives' if 'finding_review' in record else ''), flush=True)
 
     python = sys.executable
     run('environment', [python, '-m', 'pip', 'check'])
@@ -185,7 +191,8 @@ def main():
         executable = str(args.gitleaks.resolve())
         run('gitleaks-version', [executable, 'version'])
         run('gitleaks-tree', [executable, 'dir', '--no-banner', '--redact', '--report-format', 'json',
-                              '--report-path', str(output / 'gitleaks-tree.json'), '.'])
+                              '--report-path', str(output / 'gitleaks-tree.json'), '.'],
+            tree_report=output / 'gitleaks-tree.json')
         run('gitleaks-history', [executable, 'git', '--no-banner', '--redact', '--report-format', 'json',
                                  '--report-path', str(output / 'gitleaks-history.json'), '--log-opts=' + GITLEAKS_HISTORY_LOG_OPTIONS, '.'],
             history_report=output / 'gitleaks-history.json')
