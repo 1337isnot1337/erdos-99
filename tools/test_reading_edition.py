@@ -1,10 +1,11 @@
 """Presentation transformations preserve formula bodies and source artifacts."""
 import hashlib
+import json
 from pathlib import Path
 import tempfile
 import unittest
 
-from build_reading_edition import math_delimiters, render
+from build_reading_edition import expected_files, math_delimiters, render
 
 
 class ReadingEditionTests(unittest.TestCase):
@@ -68,3 +69,17 @@ class ReadingEditionTests(unittest.TestCase):
         self.assertIn("```math\nx=y\n```\n", output)
         self.assertIn("```text\nThis proves it. \\(square)\n```", output)
         self.assertNotIn("````text\n```", output)
+
+    def test_source_hash_binds_raw_crlf_bytes_while_the_view_uses_lf(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "docs").mkdir()
+            original = b"# Test\r\n\r\n\\[\r\nx=y\r\n\\]\r\n"
+            (root / "docs/example.md").write_bytes(original)
+            outputs = expected_files(root)
+            record = json.loads(outputs["reading/manifest.json"])["documents"][0]
+            self.assertEqual(record["source_sha256"], hashlib.sha256(original).hexdigest())
+            self.assertIn(record["source_sha256"], outputs["reading/docs/example.md"])
+            self.assertNotIn("\r", outputs["reading/docs/example.md"])
+            self.assertIn("```math\nx=y\n```", outputs["reading/docs/example.md"])
+            self.assertEqual((root / "docs/example.md").read_bytes(), original)

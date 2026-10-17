@@ -2358,9 +2358,9 @@
     },
     {
       "source": "docs/launch/GATE_2_VERIFICATION.md",
-      "source_sha256": "45bbcd866ddcaa3f37dee6d97d2f233870857f6d7bdaa18ea3f9a846a3638035",
+      "source_sha256": "a5ae76450ca1448708d11482b3ee58b872a71399e4b2f45e60e9d5bcb2b33a6d",
       "reading_path": "reading/docs/launch/GATE_2_VERIFICATION.md",
-      "reading_sha256": "fd3b8ed7d65af0417f23c811a426769fd08c509d991577939b5009321b5d48d9",
+      "reading_sha256": "5df0ceb97c59d04e37f11f123a8106a83969a5906c2f4be3c7b12d74618a65aa",
       "math_pairs_normalized": 0
     },
     {
@@ -2379,16 +2379,16 @@
     },
     {
       "source": "docs/launch/PUBLICATION_AUDIT.md",
-      "source_sha256": "8c79f887a0cbca65a68b1ea2a6245ab310448e13d640988bbbd642fff394d04f",
+      "source_sha256": "07e3145f53726c689a2abf40b511e5b3ec1e6cd331efee05bb32f517a21597b1",
       "reading_path": "reading/docs/launch/PUBLICATION_AUDIT.md",
-      "reading_sha256": "b006e0497b97ee333afb0d0f095a93c703b2518767e2ee31d480c311a404bf52",
+      "reading_sha256": "d350435681e705f839670e422a9fae7b76968999fabe673ad326a0d6aca4aa42",
       "math_pairs_normalized": 0
     },
     {
       "source": "docs/launch/READINESS.md",
-      "source_sha256": "09e49d69bf5b3c41bd0ca44b8e05ef8ece7f3608cafa0db28c765dd9cb80297d",
+      "source_sha256": "afd7dfb4de67ef7f0403b73f63259fdf831d212924dc2235e45e49ca4bdbf95a",
       "reading_path": "reading/docs/launch/READINESS.md",
-      "reading_sha256": "c258df4080dbed4d64ae5467661fc030edfc742ae5628f6af9c5bded431daacf",
+      "reading_sha256": "5db172cc0dceae55fb03718c802f74f9cb955a6a18b774045654c189826885e0",
       "math_pairs_normalized": 0
     },
     {
@@ -2400,9 +2400,9 @@
     },
     {
       "source": "docs/launch/RELEASE_CANDIDATE.md",
-      "source_sha256": "2f6d00aaf25d2d35b1ebeb5d82d1ba9b01bba14548fcba2001956ec2d46ed616",
+      "source_sha256": "47864d67020dee81afa15b4cabe07d1c6526f80dd0caeb82c27442a72bc9acf5",
       "reading_path": "reading/docs/launch/RELEASE_CANDIDATE.md",
-      "reading_sha256": "8e8418ed8061fd2b4b65564d074a821affe2b4def5c9370f4bf71f83b9969114",
+      "reading_sha256": "2d549b6e41ac55fe3656e0eb83a87481d115c6a0f8f119a568edc1dd14bcbfbc",
       "math_pairs_normalized": 0
     },
     {
@@ -14993,9 +14993,9 @@
     },
     {
       "source": "research/target_c_tooth_reflection_common_lower_run_trunk_cycle_fork_2026-09-17.md",
-      "source_sha256": "252d8172a1eb2fc04a0540802bebea851d4c039977a6b685856486f32cb0223d",
+      "source_sha256": "7219c7944b37c59bab0561f8c5c60caeea43edfdc86421981bc78c0e9711b114",
       "reading_path": "reading/research/target_c_tooth_reflection_common_lower_run_trunk_cycle_fork_2026-09-17.md",
-      "reading_sha256": "4688eeca976eed399569fde5b65c5fcbf23802763ba9d1c2873a957b54f38506",
+      "reading_sha256": "de3ca5d1cb135cdb5d0a3a89363ddd65ef995bb7b901f210c45790c064901e0f",
       "math_pairs_normalized": 29
     },
     {
@@ -15042,9 +15042,9 @@
     },
     {
       "source": "research/target_c_tooth_reflection_monotone_corridor_linear_outer_currency_2026-09-18.md",
-      "source_sha256": "20a3fdfee935aab08016e0cdf3a60aadf8b63944bf59652c91b07efbf58cf3f0",
+      "source_sha256": "d85dfc06ccbf56afaa0a8ae2a08fc60b0da756206911c65beefa40171b6eee14",
       "reading_path": "reading/research/target_c_tooth_reflection_monotone_corridor_linear_outer_currency_2026-09-18.md",
-      "reading_sha256": "dbaf98543fa4326cc3821de294ae6653ba5b0460cb61c24e4ab101dcb17720fb",
+      "reading_sha256": "0a21af6655f70cf8f20a808a1e4c845234cafaa15b6b6989cbf133722185ca4f",
       "math_pairs_normalized": 46
     },
     {
@@ -15217,9 +15217,9 @@
     },
     {
       "source": "research/target_c_two_phase_bad_corridor_boundary_charge_2026-09-13.md",
-      "source_sha256": "d927cb9a62a13941d44c1d91b864613e5feac7ab2df074e7c304e33e359a6ae7",
+      "source_sha256": "1412cf6e8053f02d9f6a5f461deb2fbd29c8340abd067e1bae392f15e79eadac",
       "reading_path": "reading/research/target_c_two_phase_bad_corridor_boundary_charge_2026-09-13.md",
-      "reading_sha256": "ed0b1410e56a59bf4d56bea8b8e2ab06e7d171330d82a127ff5e05131e3b42cc",
+      "reading_sha256": "afaef75a1af4ba7666f63e56203c52ab3213405af2fd2cb8225a94757873685a",
       "math_pairs_normalized": 19
     },
     {

@@ -1,4 +1,4 @@
-> Generated reading edition · [exact source](../../research/target_c_tooth_reflection_monotone_corridor_linear_outer_currency_2026-09-18.md) · source SHA-256 `20a3fdfee935aab08016e0cdf3a60aadf8b63944bf59652c91b07efbf58cf3f0`.
+> Generated reading edition · [exact source](../../research/target_c_tooth_reflection_monotone_corridor_linear_outer_currency_2026-09-18.md) · source SHA-256 `d85dfc06ccbf56afaa0a8ae2a08fc60b0da756206911c65beefa40171b6eee14`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
 <!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "42712e303506ef5892dd8d39e7139d8795f22c4f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_monotone_corridor_linear_outer_currency_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "59114a19f6dc61494220dcaeb6239944aec12518e49f79ebc440f5a7ed0c695d"} -->

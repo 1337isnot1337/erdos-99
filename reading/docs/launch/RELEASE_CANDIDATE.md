@@ -1,7 +1,7 @@
-> Generated reading edition · [exact source](../../../docs/launch/RELEASE_CANDIDATE.md) · source SHA-256 `2f6d00aaf25d2d35b1ebeb5d82d1ba9b01bba14548fcba2001956ec2d46ed616`.
+> Generated reading edition · [exact source](../../../docs/launch/RELEASE_CANDIDATE.md) · source SHA-256 `47864d67020dee81afa15b4cabe07d1c6526f80dd0caeb82c27442a72bc9acf5`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
-# Publication candidate 0.1.0-rc.2
+# Publication candidate 0.1.0-rc.3
 
 This is an open research corpus. **LEVEL I STATUS: STILL OPEN.**
 Target A, Target B, and C-II remain open; C-I is closed within its recorded scope.

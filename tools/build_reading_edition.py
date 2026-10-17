@@ -193,7 +193,8 @@ def relative_link(source: str, destination: str) -> str:
     return posixpath.relpath(destination, posixpath.dirname(source))
 
 
-def render(source: str, raw: str, available: set[str], root: Path) -> tuple[str, int]:
+def render(source: str, raw: str, available: set[str], root: Path,
+           source_sha256: str | None = None) -> tuple[str, int]:
     text = raw
     for old, new in WORDING.get(source, []):
         text = text.replace(old, new)
@@ -227,7 +228,7 @@ def render(source: str, raw: str, available: set[str], root: Path) -> tuple[str,
         edits.append((a, b, urlunsplit(("", "", rewritten, url.query, url.fragment))))
     for a, b, replacement in reversed(edits):
         text = text[:a] + replacement + text[b:]
-    digest = hashlib.sha256(raw.encode()).hexdigest()
+    digest = source_sha256 or hashlib.sha256(raw.encode()).hexdigest()
     header = (f"> Generated reading edition · [exact source]({quote(relative_link(destination, source), safe='/-._~')}) "
               f"· source SHA-256 `{digest}`.\n"
               "> Formatting and navigation only; the source and theorem ledger control mathematical status.\n\n")
@@ -246,12 +247,14 @@ def expected_files(root: Path) -> dict[str, str]:
     records = []
     total = 0
     for source in sorted(available):
-        raw = (root / source).read_text()
-        text, pairs = render(source, raw, available, root)
+        original = (root / source).read_bytes()
+        digest = hashlib.sha256(original).hexdigest()
+        raw = original.decode("utf-8").replace("\r\n", "\n").replace("\r", "\n")
+        text, pairs = render(source, raw, available, root, source_sha256=digest)
         destination = reading_path(source)
         outputs[destination] = text
         total += pairs
-        records.append({"source": source, "source_sha256": hashlib.sha256(raw.encode()).hexdigest(),
+        records.append({"source": source, "source_sha256": digest,
                         "reading_path": destination, "reading_sha256": hashlib.sha256(text.encode()).hexdigest(),
                         "math_pairs_normalized": pairs})
     outputs[EDITION + "/README.md"] = """# GitHub reading edition
@@ -290,7 +293,7 @@ def check(root: Path) -> list[str]:
     errors = ["unexpected reading file: " + p for p in sorted(actual - expected.keys())]
     for path, text in expected.items():
         target = root / path
-        if target.is_symlink() or not target.is_file() or target.read_text() != text:
+        if target.is_symlink() or not target.is_file() or target.read_bytes() != text.encode("utf-8"):
             errors.append("stale or missing reading page: " + path)
     return errors
 
@@ -313,7 +316,7 @@ def main() -> int:
         target.parent.mkdir(parents=True, exist_ok=True)
         if any(p.is_symlink() for p in (target, *target.parents) if p.is_relative_to(root)):
             raise ValueError("refusing symlinked output: " + path)
-        target.write_text(text)
+        target.write_bytes(text.encode("utf-8"))
     manifest = json.loads(outputs[EDITION + "/manifest.json"])
     print(json.dumps({k: v for k, v in manifest.items() if k != "documents"}))
     return 0
