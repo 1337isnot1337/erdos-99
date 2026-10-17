@@ -1,4 +1,4 @@
-> Generated reading edition · [exact source](../../../docs/reports/target_a_independent_schur_linkage_2026-10-17.md) · source SHA-256 `8659550e5f214e7532fe42dbf718b985c1a1b3cd69b7143c538436de4607af7a`.
+> Generated reading edition · [exact source](../../../docs/reports/target_a_independent_schur_linkage_2026-10-17.md) · source SHA-256 `d4c334900e85ff7f565d7264d35e90bcc2cb6483dda8f372a892b9aa0d77e436`.
 > [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 <!-- theorem-state: {"artifact_id":"ART-B2A3C8D0227E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
@@ -23,6 +23,13 @@ selection, not a resumption of an earlier mathematical assignment. The task-spec
 overlap query at `2026-10-17T18:38:13Z` returned no matching PRs, issues, or
 discussions; separate open-PR/open-issue lists were empty. These observations
 establish queried coordination state, not ownership or novelty.
+
+The pre-submission refresh at `2026-10-17T18:46:22Z` found upstream
+`3e0f53e0dc6ef2f3472a594ea74f9f9cfa5fb358`. Its only change from the starting
+base is bold formatting in the root README. State/priority/catalogue versions,
+task cards and mathematical prerequisites are unchanged. The contribution
+was rebased onto this refreshed main. Repeated live PR/issue queries were
+empty; Discussions are enabled and the task-specific query had no matches.
 
 The objective is a separately implemented finite check of Sections 102, 113,
 174 and 175: compare generic Schur rank with vertex-disjoint alternating
@@ -80,7 +87,8 @@ The rank distribution is 704 supports of rank one and 8,512 of rank two.
 Of the supports, 2,304 contain the directed alternating cycle on the two
 matched pairs; acyclicity is not assumed.
 
-The rank-one count also has an independent hand derivation. If the direct
+The same originating agent also derived the rank-one count analytically,
+separately from the implementation. If the direct
 `C--O` support has a size-two matching, the Schur rank is two. Otherwise both
 terminals have exactly the same singleton exterior neighborhood `{o}`;
 there are two choices for `o`. Write `o'` for the other sink. Rank remains
@@ -273,6 +281,15 @@ submission head are recorded with the PR. The checker is noncanonical supporting
 outside the registered theorem-certificate set; no manifest premise depends
 on it. A localized planner result requiring comprehensive verification is
 not reported as a localized pass.
+
+The full replay completed with **94 of 94 registered certificates passing**.
+The localized planner returned exit 3, `full-verification-required`, with no
+planner errors: the new unpackaged evidence and generated artifact index do
+not have a declared localized dependency closure. The independent checker
+was run normally and with `-O`, with identical saved evidence. The initial
+corpus check found stale generated reading pages; regeneration includes
+the pre-existing stale `autoresearch.md` mirror and changes no
+mathematical source statement. The exact final integrity outcome is in the PR.
 
 ## Frontier effect and exact handoff
 
