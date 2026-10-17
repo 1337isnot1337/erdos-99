@@ -69,3 +69,5 @@ The reading edition supplies GitHub-compatible math and links to exact, hash-bou
 
 
 Original project code and exposition use [Apache-2.0](LICENSE), subject to [NOTICE](NOTICE) and source-specific notices. Third-party papers and page/text extractions are excluded; bibliographic links identify external sources. [Publication audit](reading/docs/launch/PUBLICATION_AUDIT.md) records the exact release gate and any outstanding limits. [CITATION.cff](CITATION.cff) supplies citation metadata.
+
+Inspired by Douglas Colkitt's [https://github.com/CrocSwap/integer-mult-bounds](https://github.com/CrocSwap/integer-mult-bounds) ! Check it out.
