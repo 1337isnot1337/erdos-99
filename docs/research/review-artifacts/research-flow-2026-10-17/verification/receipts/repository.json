@@ -1,0 +1,120 @@
+{
+  "candidate_commit": "3c45a937314c058884535c76871f120ef71baf59",
+  "candidate_tree": "67bb73ab2b0a257b5ed0e0c9cc7106d8af5bb837",
+  "base_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+  "mode": "repository",
+  "python": "3.14.7 (main, Sep 29 2026, 15:01:40) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "started_utc": "2026-10-17T22:59:48.785374+00:00",
+  "dependencies": {
+    "attrs": "26.1.0",
+    "jsonschema": "4.26.0",
+    "jsonschema-specifications": "2025.9.1",
+    "mpmath": "1.3.0",
+    "numpy": "2.5.4",
+    "PyYAML": "6.0.3",
+    "referencing": "0.37.0",
+    "rpds-py": "2026.9.1",
+    "scipy": "1.18.1",
+    "sympy": "1.14.0"
+  },
+  "checks": [
+    {
+      "name": "public-corpus",
+      "command": [
+        "/workspace/scratch/eae2ea921155/venv-verification/bin/python",
+        "tools/check_public.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 143.34,
+      "budget_seconds": 240,
+      "log": "../logs/erdos99-final-public-corpus.log",
+      "historical_log": "/tmp/erdos99-final-public-corpus.log",
+      "log_sha256": "ca8e04c30a1f2584fd399ad241dbc47f726d89a03466349c2c5eb4b1cccd2260",
+      "log_bytes": 198
+    },
+    {
+      "name": "trusted-integrity",
+      "command": [
+        "/workspace/scratch/eae2ea921155/venv-verification/bin/python",
+        "tools/ci_integrity.py",
+        "--root",
+        ".",
+        "--base-ref",
+        "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 128.275,
+      "budget_seconds": 240,
+      "log": "../logs/erdos99-final-trusted-integrity.log",
+      "historical_log": "/tmp/erdos99-final-trusted-integrity.log",
+      "log_sha256": "cd5f84b85f30217d23d4c404a4789b7205b990bd968114db9ed92a35f9cf043a",
+      "log_bytes": 72
+    },
+    {
+      "name": "focused-tests",
+      "command": [
+        "/workspace/scratch/eae2ea921155/venv-verification/bin/python",
+        "-m",
+        "unittest",
+        "tools.test_task_selector",
+        "tools.test_agent_workflow",
+        "tools.test_local_ci",
+        "tools.test_ci_integrity",
+        "-q"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 39.183,
+      "budget_seconds": 240,
+      "log": "../logs/erdos99-final-focused-tests.log",
+      "historical_log": "/tmp/erdos99-final-focused-tests.log",
+      "log_sha256": "d177027f3d8af013e8907d9355255260938929f306c27100892023bc00541fe6",
+      "log_bytes": 112
+    },
+    {
+      "name": "package-metadata",
+      "command": [
+        "/workspace/scratch/eae2ea921155/venv-verification/bin/python",
+        "scripts/research_package.py",
+        "--package",
+        "research-packages/target-a-fan-tube-ledger",
+        "--check-only"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.269,
+      "budget_seconds": 60,
+      "log": "../logs/erdos99-final-package-metadata.log",
+      "historical_log": "/tmp/erdos99-final-package-metadata.log",
+      "log_sha256": "17854dc60a4e02bc26a4678205ac77d63c06f44a3cd7f42a31965e1e83fed85d",
+      "log_bytes": 459
+    },
+    {
+      "name": "verification-plan",
+      "command": [
+        "/workspace/scratch/eae2ea921155/venv-verification/bin/python",
+        "tools/local_ci.py",
+        "--base-ref",
+        "origin/main",
+        "--output",
+        "/tmp/erdos99-final-plan"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.031,
+      "budget_seconds": 120,
+      "log": "../logs/erdos99-final-verification-plan.log",
+      "historical_log": "/tmp/erdos99-final-verification-plan.log",
+      "log_sha256": "5cba07f1a32fb46bfddaa9cc1737c936dccc8cec82d0e86dbb1cb4128ff9e0f4",
+      "log_bytes": 11178
+    }
+  ],
+  "finished_utc": "2026-10-17T23:05:04.063304+00:00",
+  "unchanged_candidate": true,
+  "passed": true,
+  "bundle_provenance": {
+    "historical_receipt_path": "/tmp/erdos99-final-repository-receipt.json",
+    "original_receipt": "original/repository.json",
+    "original_receipt_sha256": "2256d3f8ab685d361324effc2103a3d90765a5352099ef92dc7d7635bdc959f5",
+    "normalization": "Only bundle provenance and check log references/checksums were added; original runtime commands and candidate identities are preserved.",
+    "log_paths_relative_to": "this receipt file"
+  }
+}

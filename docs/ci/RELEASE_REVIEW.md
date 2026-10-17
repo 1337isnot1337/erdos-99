@@ -73,11 +73,30 @@ The public-fork approval endpoint cannot validate future public behavior while
 the destination is private; it returned the documented private-repository
 validation error at inspection.
 
-No successful hosted canary is established by this configuration change. Enabling
-ordinary PR checks cannot resolve account restrictions or change spending
-limits. Record the actual run ID and source SHA to establish current hosted
-execution; keep any failed allocation or unavailable sandbox distinct from a
-scientific verification result.
+Current hosted execution was established while integrating
+[PR #99](https://github.com/1337isnot1337/erdos-99/pull/99), merged as
+`1dd10cdb1ecdd79be6285860ba3a17d6d946d79e`:
+
+- [Run 39078255252](https://github.com/1337isnot1337/erdos-99/actions/runs/39078255252)
+  failed during private-loopback setup. Its 72 control tests included five
+  isolation skips, so 67 executed successfully.
+- [Run 39078673224](https://github.com/1337isnot1337/erdos-99/actions/runs/39078673224)
+  passed isolated Python startup and all 72 control tests, with no skips.
+  It then failed because trusted base `e396ea0` rejected an unchanged
+  243-character archive path. The corrected parser preserves component-length,
+  traversal and symlink checks. This run is not a passing integration check.
+
+The [integration receipts](../research/review-artifacts/research-flow-2026-10-17/verification/README.txt)
+preserve all 94 certificate results, full logs, exact tested trees, the separate
+budget recheck and the observed hosted failures. The
+[public-SHA binding](../research/review-artifacts/fan-ledger-correction/PUBLIC_BINDING.txt)
+completes the independent mathematical audit.
+
+The receipt PR linked from PR #99 records its own post-integration hosted run ID,
+tested head, trusted base and final result. That run uses the corrected trusted
+control. A successful structural job does not establish a mathematical theorem
+or imply that optional package replay ran. Earlier skips and failed allocation
+remain historical failures; no billing, spending or package-replay setting changed.
 
 ## Local release verification
 

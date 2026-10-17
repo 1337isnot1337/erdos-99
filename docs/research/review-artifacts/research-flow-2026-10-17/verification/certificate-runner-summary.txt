@@ -1,0 +1,190 @@
+certificate-runner: selection=94/94 (full verification requested)
+certificate-runner: RUN research/target_c_five_arc_pin_threshold_check.py <- C-MU-09604
+certificate-runner: PASS research/target_c_five_arc_pin_threshold_check.py
+certificate-runner: RUN research/target_c_s1_q13_shell_regression.py <- C-S1-Q13
+certificate-runner: PASS research/target_c_s1_q13_shell_regression.py
+certificate-runner: RUN research/verify_binary_contact_swap_2sat.py <- C-DISJOINT-SWAP-2SAT
+certificate-runner: PASS research/verify_binary_contact_swap_2sat.py
+certificate-runner: RUN research/verify_centered_fan_reflections_2026_10_02.py <- C-CENTERED-FAN-REFLECTIONS
+certificate-runner: PASS research/verify_centered_fan_reflections_2026_10_02.py
+certificate-runner: RUN research/verify_exact_phase_gap_finite_barrier.py <- C-ACTUAL-CUT-FINITE-BARRIER-REGRESSION
+certificate-runner: PASS research/verify_exact_phase_gap_finite_barrier.py
+certificate-runner: RUN research/verify_growing_lattice_population_reserve_2026_10_08.py <- C-GLOBAL-POPULATION-EXCESS-SQRT-RESERVE
+certificate-runner: PASS research/verify_growing_lattice_population_reserve_2026_10_08.py
+certificate-runner: RUN research/verify_loaded_near_unit_hull_adjacency_2026_10_01.py <- C-LOADED-NEAR-UNIT-ADJACENCY
+certificate-runner: PASS research/verify_loaded_near_unit_hull_adjacency_2026_10_01.py
+certificate-runner: RUN research/verify_near_unit_face_conflicts_2026_10_01.py <- C-NEAR-UNIT-CONFLICT-GEOMETRY, C-OO-LOWER-BLOCKER-LOCALIZATION, C-OWNER-CONTRACTION-CYCLE-REGRESSION, C-UNARY-RHOMBUS-BLOCKER-REGRESSION
+certificate-runner: PASS research/verify_near_unit_face_conflicts_2026_10_01.py
+certificate-runner: RUN research/verify_pr182_heplus_05983685.py <- C-RSR-DD
+certificate-runner: PASS research/verify_pr182_heplus_05983685.py
+certificate-runner: RUN research/verify_s1_q13_kkt_endpoints.py <- C-S1-Q13
+certificate-runner: PASS research/verify_s1_q13_kkt_endpoints.py
+certificate-runner: RUN research/verify_target_c_accessible_stress_faces_2026_10_08.py <- C-ACCESSIBLE-STRESS-FACE-DICHOTOMY, C-SEVEN-SITE-TAGGED-STRESS-MASS-REGRESSION
+certificate-runner: PASS research/verify_target_c_accessible_stress_faces_2026_10_08.py
+certificate-runner: RUN research/verify_target_c_actual_loaded_augmented_star_2026_10_05.py <- C-AUGMENTED-TRAIN-RANK, C-RECIPROCAL-TRAIN-GRAPH
+certificate-runner: PASS research/verify_target_c_actual_loaded_augmented_star_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_all_unit_hull_end_currency_2026_10_04.py <- C-FINITE-HULL-END-ANGULAR-DEFECT-BOUND, C-PENTAGON-FIVE-HULL-END-REGRESSION
+certificate-runner: PASS research/verify_target_c_all_unit_hull_end_currency_2026_10_04.py
+certificate-runner: RUN research/verify_target_c_anisotropic_two_arc_return_120.py <- C-ANISOTROPIC-TWO-ARC-RETURN
+certificate-runner: PASS research/verify_target_c_anisotropic_two_arc_return_120.py
+certificate-runner: RUN research/verify_target_c_audit55_singleton_flower_ledger_2026_10_05.py <- C-FULL-FLOWER-K-PAYMENT, C-GOOD-HULL-SINGLETON-CHARGE
+certificate-runner: PASS research/verify_target_c_audit55_singleton_flower_ledger_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_augmented_train_phase_rank_2026_10_05.py <- C-AUGMENTED-TRAIN-RANK, C-FULLCORE-RESIDUAL-FLOOR
+certificate-runner: PASS research/verify_target_c_augmented_train_phase_rank_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_bent_grid_transport_2026_10_05.py <- C-BENT-GRID-REDUCED-POSITIONAL-TRANSPORT-REGRESSION
+certificate-runner: PASS research/verify_target_c_bent_grid_transport_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_binary_crossing_scope_2026_10_06.py <- C-CROSSING-MULTISHEAR-INDEPENDENT-OWNER-REGRESSION
+certificate-runner: PASS research/verify_target_c_binary_crossing_scope_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_cap_closure_path_congestion_2026_10_08.py <- C-FAN-PATH-COMMON-TRUNK-REGRESSION
+certificate-runner: PASS research/verify_target_c_cap_closure_path_congestion_2026_10_08.py
+certificate-runner: RUN research/verify_target_c_capped_wall_actual_diameter_escape_2026_10_06.py <- C-CAPPED-WALL-ACTUAL-DIAMETER-ESCAPE-REGRESSION
+certificate-runner: PASS research/verify_target_c_capped_wall_actual_diameter_escape_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_cauchy_wrapping_threshold.py <- C-WRAP-CAUCHY
+certificate-runner: PASS research/verify_target_c_cauchy_wrapping_threshold.py
+certificate-runner: RUN research/verify_target_c_collective_shallow_wall_release_2026_10_08.py <- C-LARGER-TURN-COLLECTIVE-TRANSLATION-REGRESSION
+certificate-runner: PASS research/verify_target_c_collective_shallow_wall_release_2026_10_08.py
+certificate-runner: RUN research/verify_target_c_collective_wall_capacity_audit_2026_10_06.py <- C-HEPTAGON-WALL-CAPACITY-REGRESSION
+certificate-runner: PASS research/verify_target_c_collective_wall_capacity_audit_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_common_angle_train_endpoint_2026_10_06.py <- C-COMMON-ANGLE-HEXAGON-NONHORN-REGRESSION, C-RETAINED-ISOLATE-COMMON-ANGLE-UPPER-REGRESSION
+certificate-runner: PASS research/verify_target_c_common_angle_train_endpoint_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_complement_chord_threshold.py <- C-WRAP-COMPLEMENT-CHORD
+certificate-runner: PASS research/verify_target_c_complement_chord_threshold.py
+certificate-runner: RUN research/verify_target_c_complete_face_closure_elimination_2026_10_05.py <- C-CONTACT-FACE-REGULARITY
+certificate-runner: PASS research/verify_target_c_complete_face_closure_elimination_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_curved_wall_audit_2026_10_06.py <- C-CURVED-WALL-BLOCKER-POPULATION, C-CURVED-WALL-ISOLATE-PRESERVING-RELEASE, C-CURVED-WALL-NONISOLATE-BLOCKER-REGRESSION
+certificate-runner: PASS research/verify_target_c_curved_wall_audit_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_embedded_grain_replacement_2026_10_02.py <- C-EMBEDDED-WALL-REFILL
+certificate-runner: PASS research/verify_target_c_embedded_grain_replacement_2026_10_02.py
+certificate-runner: RUN research/verify_target_c_exceptional_star_face_2026_10_08.py <- C-NONSTAR-DIAMETER-CYCLE-STRESS-REGRESSION, C-TWO-EDGE-STAR-TRIANGLE-HYPOTHESIS-REGRESSION
+certificate-runner: PASS research/verify_target_c_exceptional_star_face_2026_10_08.py
+certificate-runner: RUN research/verify_target_c_exterior_cap_separator_refill_2026_10_06.py <- C-EXTERIOR-CAP-MOVED-CORE-REFILL-NONGLOBAL-REGRESSION
+certificate-runner: PASS research/verify_target_c_exterior_cap_separator_refill_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_exterior_loaded_tip_pairing_2026_10_06.py <- C-EXTERIOR-CAP-SHARED-TIP-GLUING-REGRESSION, C-EXTERIOR-WALL-HALF-TURN-PIN-REGRESSION
+certificate-runner: PASS research/verify_target_c_exterior_loaded_tip_pairing_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_face_coupled_quarter_folds_2026_10_07.py <- C-QUARTER-FOLD-FOUR-TRANSITION-REGRESSION, C-QUARTER-FOLD-INACTIVE-DIAMETER-REGRESSION, C-QUARTER-FOLD-LOWER-COLLISION-REGRESSION
+certificate-runner: PASS research/verify_target_c_face_coupled_quarter_folds_2026_10_07.py
+certificate-runner: RUN research/verify_target_c_fan_octagon_capacity_loss_2026_10_05.py <- C-FAN-REFLECTION-STRICT-CAPACITY-LOSS-REGRESSION
+certificate-runner: PASS research/verify_target_c_fan_octagon_capacity_loss_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_finite_core_rigidity_2026_10_02.py <- C-HEPTAGON-PSD-STRESS-FINITE-COMPETITOR-REGRESSION, C-TWO-POINT-HINGE-RANK-FINITE-FLEX-REGRESSION
+certificate-runner: PASS research/verify_target_c_finite_core_rigidity_2026_10_02.py
+certificate-runner: RUN research/verify_target_c_forest_isolate_dispatch_2026_10_01.py <- C-LONG-PAIR-ISOLATE-DISPATCH
+certificate-runner: PASS research/verify_target_c_forest_isolate_dispatch_2026_10_01.py
+certificate-runner: RUN research/verify_target_c_full_source_delaunay_budget_2026_10_08.py <- C-FULL-SOURCE-DELAUNAY-DEFECT-BUDGET, C-FULL-SOURCE-DELAUNAY-NEAR-NEIGHBOR-BUDGET, C-FULL-SOURCE-TWO-LOWER-BLOCKERS, C-HULL-COVERED-THIN-BOUNDARY-TRIANGLE-REGRESSION, C-LOWER-CLOSED-SET-SUPPORT-FRONT
+certificate-runner: PASS research/verify_target_c_full_source_delaunay_budget_2026_10_08.py
+certificate-runner: RUN research/verify_target_c_global_face_return_quotas_2026_10_04.py <- C-GLOBAL-FACE-RETURN-QUOTAS
+certificate-runner: PASS research/verify_target_c_global_face_return_quotas_2026_10_04.py
+certificate-runner: RUN research/verify_target_c_half_depth_fan_forest_2026_10_08.py <- C-CANONICAL-FAN-FOREST-BLOCKER-MATCHING, C-CANONICAL-HALF-DEPTH-BLOCKER-PATH, C-CIRCUMCIRCLE-BLOCKER-CLOSURE, C-CIRCUMCIRCLE-UPPER-PAIR-SAFETY, C-FAN-CONTACT-HULL-FOREST, C-FAN-KKT-MULTIPLIER-BUDGET
+certificate-runner: PASS research/verify_target_c_half_depth_fan_forest_2026_10_08.py
+certificate-runner: RUN research/verify_target_c_hub_owner_systems_2026_10_06.py <- C-ABSTRACT-OWNER-HORN-PACKET, C-OWNER-REGION-TREE-RECURRENCE
+certificate-runner: PASS research/verify_target_c_hub_owner_systems_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_hull_side_train_capacity_2026_10_04.py <- C-FINITE-HULL-SIDE-TRAIN-CAPACITY, C-FULLCORE-HULL-DEPLETION-FLOOR
+certificate-runner: PASS research/verify_target_c_hull_side_train_capacity_2026_10_04.py
+certificate-runner: RUN research/verify_target_c_inactive_diameter_cubic_moment_2026_10_04.py <- C-GLOBAL-NEAR-DIAMETER-PHASE-PURITY, C-INACTIVE-NEAR-DIAMETER-CUBIC-BUDGET, C-INACTIVE-NEAR-DIAMETER-DEGREE-REGRESSION, C-INVERSE-D-SCALE-PACKET-MATCHING
+certificate-runner: PASS research/verify_target_c_inactive_diameter_cubic_moment_2026_10_04.py
+certificate-runner: RUN research/verify_target_c_integrated_envelope_115.py <- C-INTEGRATED-TOOTH-LEAKAGE
+certificate-runner: PASS research/verify_target_c_integrated_envelope_115.py
+certificate-runner: RUN research/verify_target_c_isolate_diameter_normalization_2026_10_07.py <- C-FULL-SOURCE-ISOLATE-NORMALIZATION
+certificate-runner: PASS research/verify_target_c_isolate_diameter_normalization_2026_10_07.py
+certificate-runner: RUN research/verify_target_c_joint_bulk_separator_2026_10_05.py <- C-JOINT-BULK-FACE-SEPARATOR
+certificate-runner: PASS research/verify_target_c_joint_bulk_separator_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_large_near_triangular_wall_lock_2026_10_05.py <- C-LARGE-WALL-LOCK-REGRESSION
+certificate-runner: PASS research/verify_target_c_large_near_triangular_wall_lock_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_linear_nonmatching_excess.py <- C-LINEAR-NONMATCH
+certificate-runner: PASS research/verify_target_c_linear_nonmatching_excess.py
+certificate-runner: RUN research/verify_target_c_loaded_flat_pentagon_second_depletion_2026_10_05.py <- C-LOADED-FLAT-PENTAGON-DEPLETION
+certificate-runner: PASS research/verify_target_c_loaded_flat_pentagon_second_depletion_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_loaded_hull_cap_budget_2026_10_05.py <- C-LOADED-HULL-CAP-BUDGET
+certificate-runner: PASS research/verify_target_c_loaded_hull_cap_budget_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_loaded_pentagon_wall_regression_2026_10_05.py <- C-FIXED-WALL-ACTIVATION-REGRESSION
+certificate-runner: PASS research/verify_target_c_loaded_pentagon_wall_regression_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_local_return_oler_121.py <- C-LOCAL-RETURN-OLER-BRIDGE
+certificate-runner: PASS research/verify_target_c_local_return_oler_121.py
+certificate-runner: RUN research/verify_target_c_mixed_gap_cauchy_threshold.py <- C-WRAP-MIXED-CAUCHY
+certificate-runner: PASS research/verify_target_c_mixed_gap_cauchy_threshold.py
+certificate-runner: RUN research/verify_target_c_monotone_cap_routes_2026_10_04.py <- C-ATTACHMENT-TRIANGLE-DEBIT-REGRESSION, C-RHOMBIC-PATH-ROUTE-EXCESS-SHARP-REGRESSION
+certificate-runner: PASS research/verify_target_c_monotone_cap_routes_2026_10_04.py
+certificate-runner: RUN research/verify_target_c_near_triangular_curved_wall_capacity_audit_2026_10_06.py <- C-CURVED-WALL-OLER-POPULATION-BOUND, C-NEAR-TRIANGULAR-CURVED-WALL-EXCLUSION
+certificate-runner: PASS research/verify_target_c_near_triangular_curved_wall_capacity_audit_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_nested_hexagon_stress_audit_2026_10_06.py <- C-NESTED-HEXAGON-STRESS-ENERGY-DEMAND
+certificate-runner: PASS research/verify_target_c_nested_hexagon_stress_audit_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_odd_shell_single_vertex_barriers_2026_10_06.py <- C-REGULAR-SHELL-BARRIER-NONGLOBAL-FAMILY, C-REGULAR-SHELL-BLOCKER-PAYMENT
+certificate-runner: PASS research/verify_target_c_odd_shell_single_vertex_barriers_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_one_corner_vacancy_packet_2026_10_06.py <- C-ONE-CORNER-ONE-VACANCY-OLER-RESIDUAL, C-ONE-CORNER-ONE-VACANCY-SOURCE-EXCLUSION, C-ONE-CORNER-ONE-VACANCY-STRICT-PACKET
+certificate-runner: PASS research/verify_target_c_one_corner_vacancy_packet_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_one_deficit_diffuse_strain_2026_10_07.py <- C-ONE-DEFICIT-DIFFUSE-STRAIN-NONGLOBAL-REGRESSION
+certificate-runner: PASS research/verify_target_c_one_deficit_diffuse_strain_2026_10_07.py
+certificate-runner: RUN research/verify_target_c_one_deficit_nonuniform_profiles_2026_10_07.py <- C-ONE-DEFICIT-ALL-M-STRICT-PACKET
+certificate-runner: PASS research/verify_target_c_one_deficit_nonuniform_profiles_2026_10_07.py
+certificate-runner: RUN research/verify_target_c_one_deficit_sector_peeling_audit_copy_2026_10_07.py <- C-ONE-DEFICIT-ALL-M-STRICT-PACKET
+certificate-runner: PASS research/verify_target_c_one_deficit_sector_peeling_audit_copy_2026_10_07.py
+certificate-runner: RUN research/verify_target_c_one_deficit_strict_root_packet_2026_10_07.py <- C-ONE-DEFICIT-EXACT-CURVATURE-PACKETS, C-ONE-DEFICIT-EXACT-CURVATURE-SOURCE-EXCLUSION
+certificate-runner: PASS research/verify_target_c_one_deficit_strict_root_packet_2026_10_07.py
+certificate-runner: RUN research/verify_target_c_one_vacancy_flat_pinning_2026_10_07.py <- C-ONE-VACANCY-FLAT-PINNING-RATE
+certificate-runner: PASS research/verify_target_c_one_vacancy_flat_pinning_2026_10_07.py
+certificate-runner: RUN research/verify_target_c_one_vertex_wall_shield_2026_10_06.py <- C-ONE-VERTEX-CONVEX-WALL-SHIELD, C-TWO-WALL-DELETION-EXTERIOR-SHIELD-REGRESSION
+certificate-runner: PASS research/verify_target_c_one_vertex_wall_shield_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_outer_train_rank_groemer_bank_2026_10_05.py <- C-OUTER-TRAIN-DETERMINATION
+certificate-runner: PASS research/verify_target_c_outer_train_rank_groemer_bank_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_outer_walk_gap_threshold.py <- C-WRAP-OUTER-WALK-GAP
+certificate-runner: PASS research/verify_target_c_outer_walk_gap_threshold.py
+certificate-runner: RUN research/verify_target_c_paired_cap_spoke_comparison_2026_10_06.py <- C-PAIRED-CAP-SPOKE-NONGLOBAL-REGRESSION
+certificate-runner: PASS research/verify_target_c_paired_cap_spoke_comparison_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_paired_six_cluster_density.py <- C-WRAP-ANGULAR-MEASURE
+certificate-runner: PASS research/verify_target_c_paired_six_cluster_density.py
+certificate-runner: RUN research/verify_target_c_pentagon_capped_lock_2026_10_05.py <- C-PENTAGON-CAPPED-LOCKED-TRAIN-BANK-REGRESSION
+certificate-runner: PASS research/verify_target_c_pentagon_capped_lock_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_pentagon_wall_disjoint_bulk_2026_10_05.py <- C-PENTAGON-WALL-DISJOINT-BULK
+certificate-runner: PASS research/verify_target_c_pentagon_wall_disjoint_bulk_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_phase_corridor_endpoint_exclusion.py <- C-PHASE-CORRIDOR-ENDPOINT-EXCLUSION
+certificate-runner: PASS research/verify_target_c_phase_corridor_endpoint_exclusion.py
+certificate-runner: RUN research/verify_target_c_positive_pinned_face_tail_2026_10_04.py <- C-POSITIVE-PINNED-RIGIDITY-FACE-TAIL-REGRESSION
+certificate-runner: PASS research/verify_target_c_positive_pinned_face_tail_2026_10_04.py
+certificate-runner: RUN research/verify_target_c_post_descent_capacity_plateau_2026_10_08.py <- C-NEAR-TRIANGULAR-WALL-CAPACITY-PLATEAU-REGRESSION
+certificate-runner: PASS research/verify_target_c_post_descent_capacity_plateau_2026_10_08.py
+certificate-runner: RUN research/verify_target_c_principal_stress_formula_audit_2026_10_07.py <- C-SIX-SIDED-WALL-PRINCIPAL-STRESS-CORRECTION
+certificate-runner: PASS research/verify_target_c_principal_stress_formula_audit_2026_10_07.py
+certificate-runner: RUN research/verify_target_c_profile_first_stress_correction_2026_10_07.py <- C-SIX-SIDED-WALL-PRINCIPAL-STRESS-CORRECTION
+certificate-runner: PASS research/verify_target_c_profile_first_stress_correction_2026_10_07.py
+certificate-runner: RUN research/verify_target_c_profile_sorting_packets_2026_10_07.py <- C-SIX-SIDED-WALL-PROFILE-SORTING-CLASSIFICATION
+certificate-runner: PASS research/verify_target_c_profile_sorting_packets_2026_10_07.py
+certificate-runner: RUN research/verify_target_c_quantitative_phase_gap.py <- C-WRAP-QUANT-PHASE-GAP
+certificate-runner: PASS research/verify_target_c_quantitative_phase_gap.py
+certificate-runner: RUN research/verify_target_c_radial_lifting_support_audit_2026_10_08.py <- C-FINITE-SORTING-PACKET-RADIAL-LIFTING-STRESS
+certificate-runner: PASS research/verify_target_c_radial_lifting_support_audit_2026_10_08.py
+certificate-runner: RUN research/verify_target_c_reciprocal_internal_train_graph_2026_10_05.py <- C-RECIPROCAL-TRAIN-GRAPH
+certificate-runner: PASS research/verify_target_c_reciprocal_internal_train_graph_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_shared_carrier_disjoint_return_2026_10_08.py <- C-SHARED-CARRIER-DISJOINT-RETURN-COST-REGRESSION
+certificate-runner: PASS research/verify_target_c_shared_carrier_disjoint_return_2026_10_08.py
+certificate-runner: RUN research/verify_target_c_shell_fold_collar_transport_2026_10_08.py <- C-ODD-SHELL-COLLAR-TRANSPORT-ENDPOINT
+certificate-runner: PASS research/verify_target_c_shell_fold_collar_transport_2026_10_08.py
+certificate-runner: RUN research/verify_target_c_sorted_rate_packets_2026_10_06.py <- C-SORTED-RATE-NESTED-ENERGY-EQUALITY-REGRESSION
+certificate-runner: PASS research/verify_target_c_sorted_rate_packets_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_sorting_radial_lifting_stress_2026_10_07.py <- C-FINITE-SORTING-PACKET-RADIAL-LIFTING-STRESS
+certificate-runner: PASS research/verify_target_c_sorting_radial_lifting_stress_2026_10_07.py
+certificate-runner: RUN research/verify_target_c_stability_envelope_114.py <- C-STABILITY-ENVELOPE
+certificate-runner: PASS research/verify_target_c_stability_envelope_114.py
+certificate-runner: RUN research/verify_target_c_terminal_oo_geometry_2026_10_06.py <- C-BINARY-LOADED-WITNESS-POCKET-BUDGET, C-OO-TERMINAL-TRAIN-POPULATION, C-TERMINAL-LONG-POCKET-ANCHOR-REGRESSION
+certificate-runner: PASS research/verify_target_c_terminal_oo_geometry_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_terminal_short_pocket_physical_frustration_2026_10_05.py <- C-TERMINAL-PHYSICAL-FRUSTRATION
+certificate-runner: PASS research/verify_target_c_terminal_short_pocket_physical_frustration_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_three_direction_corner_barrier_audit_2026_10_06.py <- C-THREE-DIRECTION-SMOOTH-AFFINE-CORNER-REGRESSION
+certificate-runner: PASS research/verify_target_c_three_direction_corner_barrier_audit_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_translation_lens_exposure_2026_10_02.py <- C-TRANSLATION-LENS-EXPOSURE
+certificate-runner: PASS research/verify_target_c_translation_lens_exposure_2026_10_02.py
+certificate-runner: RUN research/verify_target_c_two_wave_shell_fold_2026_10_08.py <- C-ODD-SHELL-CLEARANCE-FOLD-ENDPOINT, C-ODD-SHELL-TWO-ISOLATE-FOLD-REGRESSION
+certificate-runner: PASS research/verify_target_c_two_wave_shell_fold_2026_10_08.py
+certificate-runner: RUN research/verify_target_c_uneven_wall_packet_audit_2026_10_06.py <- C-UNEVEN-CURVED-WALL-EXACT-CAPACITY-EXCLUSION, C-UNEVEN-WALL-CORNER-ROOT-REGRESSION, C-UNEVEN-WALL-GREEN-MIDDLE-MARGIN
+certificate-runner: PASS research/verify_target_c_uneven_wall_packet_audit_2026_10_06.py
+certificate-runner: RUN research/verify_target_c_unique_wrapping_cap_deficit.py <- C-UNIQUE-WRAP-CAP-DEFICIT
+certificate-runner: PASS research/verify_target_c_unique_wrapping_cap_deficit.py
+certificate-runner: RUN research/verify_target_c_unit_capsule_five_row_packing_2026_10_08.py <- C-UNIT-CAPSULE-PACKING-5
+certificate-runner: PASS research/verify_target_c_unit_capsule_five_row_packing_2026_10_08.py
+certificate-runner: RUN research/verify_target_c_unit_pentagon_capacity_2026_10_05.py <- C-UNIT-PENTAGON-PERIMETER-CAPACITY
+certificate-runner: PASS research/verify_target_c_unit_pentagon_capacity_2026_10_05.py
+certificate-runner: RUN research/verify_target_c_voronoi_spacing_debit_2026_10_08.py <- C-CANONICAL-NEAR-ISOLATE-POPULATION-BOUND, C-FULL-SOURCE-SPACING-DEBIT
+certificate-runner: PASS research/verify_target_c_voronoi_spacing_debit_2026_10_08.py
+certificate-runner: RUN research/verify_target_c_wrapping_angular_measure_threshold.py <- C-WRAP-ANGULAR-MEASURE
+certificate-runner: PASS research/verify_target_c_wrapping_angular_measure_threshold.py
+certificate-runner: RUN research/verify_target_c_zero_state_horn_closure_2026_10_05.py <- C-ZERO-VALID-PINNED-CLOSURE
+certificate-runner: PASS research/verify_target_c_zero_state_horn_closure_2026_10_05.py
+certificate-runner: OK (94 selected of 94 unique certificates)

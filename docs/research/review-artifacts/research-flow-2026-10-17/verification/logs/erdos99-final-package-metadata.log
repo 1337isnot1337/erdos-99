@@ -1,0 +1,12 @@
+{
+  "status": "metadata-valid",
+  "package": "research-packages/target-a-fan-tube-ledger",
+  "classification": "regression",
+  "unresolved": [],
+  "declared_seconds": 60,
+  "declared_package_dependencies": [],
+  "full_verified": false,
+  "replay_authorized": false,
+  "executed_commands": false,
+  "limits": "Metadata and source-pin check only; no replay or mathematical approval. The Git-blob planner and isolated backend remain authoritative for replay."
+}

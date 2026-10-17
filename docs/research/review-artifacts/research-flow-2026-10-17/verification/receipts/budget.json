@@ -1,0 +1,52 @@
+{
+  "candidate_commit": "d7e5871ca14e66bf6a98fa3c89b512c4282f6a02",
+  "candidate_tree": "aacdfc6d80435bd5e210a14b3f8f190bbdf7f8c4",
+  "prior_full_tested_commit": "3c45a937314c058884535c76871f120ef71baf59",
+  "scope": "Only integrity timeout 120 -> 180 and matching documentation; proof, data, package replay budgets and commands unchanged.",
+  "checks": [
+    {
+      "name": "bounded-integrity-180",
+      "command": [
+        "/workspace/scratch/eae2ea921155/venv-verification/bin/python",
+        "tools/ci_integrity.py",
+        "--root",
+        ".",
+        "--base-ref",
+        "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 133.266,
+      "budget_seconds": 180,
+      "log": "../logs/erdos99-final-bounded-integrity-180.log",
+      "historical_log": "/tmp/erdos99-final-bounded-integrity-180.log",
+      "log_sha256": "cd5f84b85f30217d23d4c404a4789b7205b990bd968114db9ed92a35f9cf043a",
+      "log_bytes": 72
+    },
+    {
+      "name": "ci-tests-budget-followup",
+      "command": [
+        "/workspace/scratch/eae2ea921155/venv-verification/bin/python",
+        "-m",
+        "unittest",
+        "tools.test_local_ci",
+        "-q"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 23.21,
+      "budget_seconds": 180,
+      "log": "../logs/erdos99-final-ci-tests-budget-followup.log",
+      "historical_log": "/tmp/erdos99-final-ci-tests-budget-followup.log",
+      "log_sha256": "35236181f26795854326475a5c7d49721a9650078382e5d4faaefce8951882d4",
+      "log_bytes": 111
+    }
+  ],
+  "unchanged_candidate": true,
+  "passed": true,
+  "bundle_provenance": {
+    "historical_receipt_path": "/tmp/erdos99-final-budget-receipt.json",
+    "original_receipt": "original/budget.json",
+    "original_receipt_sha256": "7e480ab6e1af184fccc2b8dc9e8812aea64645e06d867a838f56db499db4128d",
+    "normalization": "Only bundle provenance and check log references/checksums were added; original runtime commands and candidate identities are preserved.",
+    "log_paths_relative_to": "this receipt file"
+  }
+}

@@ -1,0 +1,32 @@
+INDEPENDENT STATIC REVIEW: PROFILE-ONLY FOLLOWUP
+
+Reviewed local commit: 221fa2bbcfa58567df17e9cebbb3f4d11bf038d0
+Tree: fd8bdc3484464778783805b05d006527b11bfa51
+Public mapping supplied by integrating agent: bbc2052917a9ec588dbccf9374f28d5414970c11
+Parent local commit: d7e5871ca14e66bf6a98fa3c89b512c4282f6a02
+Reviewer: independent collaborating agent /root/erdos_results
+Result: PASS within this static workflow-boundary review; no boundary regression found.
+
+Reviewed all three changed files:
+.github/workflows/theorem-state.yml
+  Both jobs install distro bubblewrap and apparmor-profiles, conditionally load
+  the fixed packaged bwrap-userns-restrict profile, and require an isolated
+  Python startup probe imported from the trusted base checkout (control).
+  The probe does not import candidate code. A reported isolation failure aborts.
+docs/ci/RELEASE_REVIEW.md
+  Describes the conditional setup and required probe.
+tools/test_local_ci.py
+  Adds workflow assertions for the fixed profile path, trusted-control import,
+  runtime probe, and absence of candidate setup, global sysctl writes, network
+  sharing, or capability additions.
+
+The diff does not change the sandbox_prefix implementation, replay limits,
+package commands, event gates, permission declaration, or theorem certificates.
+The inspected sandbox prefix still uses --unshare-all, --cap-drop ALL,
+--clearenv, read-only source/runtime mounts, and no unisolated fallback.
+This review does not independently attest to the packaged profile's contents;
+it establishes the repository's control/data boundary and fail-closed probe.
+
+No tests or hosted job were run for this review. Hosted profile installation and
+namespace startup outcomes must be added from the actual hosted run. Earlier
+local test skips are not converted into successful namespace-execution evidence.

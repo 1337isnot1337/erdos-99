@@ -1,0 +1,377 @@
+{
+  "affected_packages": [
+    "research-packages/target-a-fan-tube-ledger"
+  ],
+  "base": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+  "changes": [
+    {
+      "path": ".github/workflows/theorem-state.yml",
+      "status": "M"
+    },
+    {
+      "path": "AGENTS.md",
+      "status": "M"
+    },
+    {
+      "path": "docs/COORDINATION.md",
+      "status": "M"
+    },
+    {
+      "path": "docs/audits/target_a_fan_tube_ledger_independent_audit_2026-10-17.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/ci/PUBLIC_LOCALIZED_CI.md",
+      "status": "M"
+    },
+    {
+      "path": "docs/ci/README.md",
+      "status": "M"
+    },
+    {
+      "path": "docs/ci/RELEASE_REVIEW.md",
+      "status": "M"
+    },
+    {
+      "path": "docs/research/agent-procedure.md",
+      "status": "M"
+    },
+    {
+      "path": "docs/research/agent-task-catalog.json",
+      "status": "M"
+    },
+    {
+      "path": "docs/research/bottleneck-brief.md",
+      "status": "M"
+    },
+    {
+      "path": "docs/research/pr-intake-state.json",
+      "status": "M"
+    },
+    {
+      "path": "docs/research/pr-ledger.json",
+      "status": "M"
+    },
+    {
+      "path": "docs/research/priority-state.json",
+      "status": "M"
+    },
+    {
+      "path": "docs/research/research-package-guide.md",
+      "status": "M"
+    },
+    {
+      "path": "docs/research/research-priority-log.md",
+      "status": "M"
+    },
+    {
+      "path": "docs/research/review-artifacts/fan-ledger-correction/independent-audit.txt",
+      "status": "A"
+    },
+    {
+      "path": "docs/research/review-artifacts/fan-ledger-correction/independent-evidence.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/research/review-artifacts/fan-ledger-correction/independent-replay.py",
+      "status": "A"
+    },
+    {
+      "path": "docs/research/review-artifacts/fan-ledger-correction/preproof-reconstruction.txt",
+      "status": "A"
+    },
+    {
+      "path": "docs/research/review-artifacts/pr78/REPLAY.txt",
+      "status": "A"
+    },
+    {
+      "path": "docs/research/review-artifacts/pr78/corpus-result.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/research/review-artifacts/pr78/independent-audit.txt",
+      "status": "A"
+    },
+    {
+      "path": "docs/research/review-artifacts/pr78/independent-replay-output.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/research/review-artifacts/pr78/independent-replay.py",
+      "status": "A"
+    },
+    {
+      "path": "docs/research/review-artifacts/pr78/localized-plan.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/research/review-artifacts/pr78/merger-receipt.json",
+      "status": "A"
+    },
+    {
+      "path": "docs/research/review-artifacts/research-flow-2026-10-17/engineering-review.txt",
+      "status": "A"
+    },
+    {
+      "path": "docs/research/run-reconciliation-2026-10-17.md",
+      "status": "A"
+    },
+    {
+      "path": "docs/state/artifact-index.jsonl",
+      "status": "M"
+    },
+    {
+      "path": "reading/docs/audits/target_a_fan_tube_ledger_independent_audit_2026-10-17.md",
+      "status": "A"
+    },
+    {
+      "path": "reading/docs/research/bottleneck-brief.md",
+      "status": "M"
+    },
+    {
+      "path": "reading/docs/research/run-reconciliation-2026-10-17.md",
+      "status": "A"
+    },
+    {
+      "path": "reading/manifest.json",
+      "status": "M"
+    },
+    {
+      "path": "reading/tasks/audit-target-b-gpi-diagonal.md",
+      "status": "A"
+    },
+    {
+      "path": "reading/tasks/verify-a-source-capacity-coupling.md",
+      "status": "A"
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/README.md",
+      "status": "A"
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/SOURCES.json",
+      "status": "A"
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/TASK.json",
+      "status": "A"
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/VERIFY.json",
+      "status": "A"
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/evidence.json",
+      "status": "A"
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/verify.py",
+      "status": "A"
+    },
+    {
+      "path": "scripts/choose_research_task.py",
+      "status": "M"
+    },
+    {
+      "path": "scripts/new_research_package.py",
+      "status": "M"
+    },
+    {
+      "path": "scripts/research_coordination.py",
+      "status": "M"
+    },
+    {
+      "path": "tasks/README.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/alternative-contact-graph-boundary-entropy.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/alternative-support-measure-certificate.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/audit-target-a-section175-177.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/audit-target-b-gpi-diagonal.md",
+      "status": "A"
+    },
+    {
+      "path": "tasks/audit-target-b-gpi-scope.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/audit-target-c-typeii-face-floor.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/compute-b-two-grain-interface-regressions.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/compute-c-stress-deletion-restoration-regression.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/global-joint-phase-source-extraction.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/literature-shell-stability-near-miss-audit.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/target-a-locked-sector-surplus.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/target-a-source-aware-strain-architecture.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/target-a-zero-slack-source-transfer.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/target-b-multigrain-transfer.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/target-b-phase-deficit-competitor.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/target-b-topology-correction-ledger.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/target-c-branch-aware-atomic-gap.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/target-c-capacity-collective-refill.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/target-c-extract-stress-relevant-diameter-set.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/target-c-face-coupled-move.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/target-c-macroscopic-container-capacity.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/target-c-threshold-packet-cross-shore.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/target-c-typeii-stress-mass-access.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/verify-a-schur-linkage-bound.md",
+      "status": "M"
+    },
+    {
+      "path": "tasks/verify-a-source-capacity-coupling.md",
+      "status": "A"
+    },
+    {
+      "path": "tools/local_ci.py",
+      "status": "M"
+    },
+    {
+      "path": "tools/localized_ci/packages.py",
+      "status": "M"
+    },
+    {
+      "path": "tools/localized_ci/plan.py",
+      "status": "M"
+    },
+    {
+      "path": "tools/localized_ci/replay.py",
+      "status": "M"
+    },
+    {
+      "path": "tools/test_agent_workflow.py",
+      "status": "M"
+    },
+    {
+      "path": "tools/test_ci_integrity.py",
+      "status": "M"
+    },
+    {
+      "path": "tools/test_local_ci.py",
+      "status": "M"
+    },
+    {
+      "path": "tools/test_task_selector.py",
+      "status": "M"
+    }
+  ],
+  "dependency_closure": "not-established",
+  "errors": [],
+  "full_verified": false,
+  "head": "3c45a937314c058884535c76871f120ef71baf59",
+  "level": "full-verification-required",
+  "limits": {
+    "package_seconds": 120,
+    "packages": 2,
+    "seconds": 240
+  },
+  "merge_base": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+  "packages": [
+    "research-packages/target-a-fan-tube-ledger"
+  ],
+  "reasons": [
+    "shared verification infrastructure changed: .github/workflows/theorem-state.yml",
+    "legacy mathematical input has no complete dependency closure: docs/audits/target_a_fan_tube_ledger_independent_audit_2026-10-17.md",
+    "unknown/unpackaged impact: docs/audits/target_a_fan_tube_ledger_independent_audit_2026-10-17.md",
+    "unknown/unpackaged impact: docs/research/agent-task-catalog.json",
+    "unknown/unpackaged impact: docs/research/pr-intake-state.json",
+    "unknown/unpackaged impact: docs/research/pr-ledger.json",
+    "unknown/unpackaged impact: docs/research/priority-state.json",
+    "unknown/unpackaged impact: docs/research/review-artifacts/fan-ledger-correction/independent-audit.txt",
+    "unknown/unpackaged impact: docs/research/review-artifacts/fan-ledger-correction/independent-evidence.json",
+    "unknown/unpackaged impact: docs/research/review-artifacts/fan-ledger-correction/independent-replay.py",
+    "unknown/unpackaged impact: docs/research/review-artifacts/fan-ledger-correction/preproof-reconstruction.txt",
+    "unknown/unpackaged impact: docs/research/review-artifacts/pr78/REPLAY.txt",
+    "unknown/unpackaged impact: docs/research/review-artifacts/pr78/corpus-result.json",
+    "unknown/unpackaged impact: docs/research/review-artifacts/pr78/independent-audit.txt",
+    "unknown/unpackaged impact: docs/research/review-artifacts/pr78/independent-replay-output.json",
+    "unknown/unpackaged impact: docs/research/review-artifacts/pr78/independent-replay.py",
+    "unknown/unpackaged impact: docs/research/review-artifacts/pr78/localized-plan.json",
+    "unknown/unpackaged impact: docs/research/review-artifacts/pr78/merger-receipt.json",
+    "unknown/unpackaged impact: docs/research/review-artifacts/research-flow-2026-10-17/engineering-review.txt",
+    "unknown/unpackaged impact: docs/research/run-reconciliation-2026-10-17.md",
+    "canonical/foundation/generated state changed: docs/state/artifact-index.jsonl",
+    "unknown/unpackaged impact: docs/state/artifact-index.jsonl",
+    "legacy mathematical input has no complete dependency closure: scripts/choose_research_task.py",
+    "unknown/unpackaged impact: scripts/choose_research_task.py",
+    "legacy mathematical input has no complete dependency closure: scripts/new_research_package.py",
+    "unknown/unpackaged impact: scripts/new_research_package.py",
+    "legacy mathematical input has no complete dependency closure: scripts/research_coordination.py",
+    "unknown/unpackaged impact: scripts/research_coordination.py",
+    "shared verification infrastructure changed: tools/local_ci.py",
+    "shared verification infrastructure changed: tools/localized_ci/packages.py",
+    "shared verification infrastructure changed: tools/localized_ci/plan.py",
+    "shared verification infrastructure changed: tools/localized_ci/replay.py",
+    "shared verification infrastructure changed: tools/test_agent_workflow.py",
+    "shared verification infrastructure changed: tools/test_ci_integrity.py",
+    "shared verification infrastructure changed: tools/test_local_ci.py",
+    "shared verification infrastructure changed: tools/test_task_selector.py"
+  ],
+  "replay_allowed": false,
+  "replay_schedule": "requires-review",
+  "scheduling_reasons": [],
+  "version": 1,
+  "workload_seconds": 60
+}

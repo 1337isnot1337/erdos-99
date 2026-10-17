@@ -1,0 +1,39 @@
+{
+  "candidate_commit": "d7e5871ca14e66bf6a98fa3c89b512c4282f6a02",
+  "candidate_tree": "aacdfc6d80435bd5e210a14b3f8f190bbdf7f8c4",
+  "prior_full_tested_commit": "3c45a937314c058884535c76871f120ef71baf59",
+  "scope": "Only integrity timeout 120 -> 180 and matching documentation; proof, data, package replay budgets and commands unchanged.",
+  "checks": [
+    {
+      "name": "bounded-integrity-180",
+      "command": [
+        "/workspace/scratch/eae2ea921155/venv-verification/bin/python",
+        "tools/ci_integrity.py",
+        "--root",
+        ".",
+        "--base-ref",
+        "e396ea07887dd0528b817ce4e656ff0e6b01f8fb"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 133.266,
+      "budget_seconds": 180,
+      "log": "/tmp/erdos99-final-bounded-integrity-180.log"
+    },
+    {
+      "name": "ci-tests-budget-followup",
+      "command": [
+        "/workspace/scratch/eae2ea921155/venv-verification/bin/python",
+        "-m",
+        "unittest",
+        "tools.test_local_ci",
+        "-q"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 23.21,
+      "budget_seconds": 180,
+      "log": "/tmp/erdos99-final-ci-tests-budget-followup.log"
+    }
+  ],
+  "unchanged_candidate": true,
+  "passed": true
+}
