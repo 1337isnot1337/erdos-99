@@ -81,5 +81,4 @@ The theorem does not use the canonical ZR/ZF affine-kernel theorem and does not 
 ```text
 
 Promote only `C-ONE-VACANCY-FLAT-PINNING-RATE` with no canonical dependencies. Record the verifier as exact finite support, not as the universal proof. The result can be used to normalize convergent curved-wall vacancy-chart sequences to scale \(\theta\), but supplies no arbitrary-cloud extraction, no exclusion of the top wall populations, and no Level I consequence by itself. Target C C-II remains open and its global endpoint is unchanged.
-
 ```

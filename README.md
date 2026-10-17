@@ -1,6 +1,6 @@
 # Erdős Problem 99
 
-**Release candidate: `0.1.0-rc.1`.** [Current publication status](reading/docs/launch/RELEASE_CANDIDATE.md) · [GitHub reading edition](reading/README.md) · [Glossary](reading/docs/GLOSSARY.md) · [Public bibliography](reading/docs/BIBLIOGRAPHY.md).
+**Release candidate: `0.1.0-rc.2`.** [Current publication status](reading/docs/launch/RELEASE_CANDIDATE.md) · [GitHub reading edition](reading/README.md) · [Glossary](reading/docs/GLOSSARY.md) · [Public bibliography](reading/docs/BIBLIOGRAPHY.md).
 
 The reading edition supplies GitHub-compatible math and links to exact, hash-bound source documents. [Original source navigation](docs/README.md) remains available.
 

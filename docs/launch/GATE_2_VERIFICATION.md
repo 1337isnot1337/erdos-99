@@ -118,7 +118,7 @@ attestation reconciliation are recorded in Gate 1. Historical schema URLs and
 scanner regex literals remain reviewed reference warnings. Each final release
 receipt verifies the resulting commit, including this repair.
 
-## Publication candidate 0.1.0-rc.1
+## Publication candidate 0.1.0-rc.2
 
 The release gate also runs the documented task selector and verifies every page
 of the [GitHub reading edition](../../reading/README.md). Reading pages are

@@ -24,7 +24,6 @@
 1. **Arbitrary-source port count.** Let (A_D\) be any sequence of finite unit-separated planar sources with diameter (D\to\infty\), and let (B_D\) be the set of actual diameter endpoints. For each source, supply at most a fixed (J\) charts
 ```
 
-
    ```math
    \phi_D(\lambda)=\lambda+g_D(\lambda),\qquad \lambda\in X_D\subset\Lambda_D,
    
@@ -33,14 +32,14 @@
    ```math
    |g_D(\lambda)-g_D(\mu)|\le (K/D)|\lambda-\mu|
    
+   ```
 
 
 **Source formatting excerpt (unbalanced inline math in the original):**
 
-````text
-   ```
+```text
    for one fixed (K\). The chart domains may be arbitrary subsets of their lattices and may vary with (D\). Count distinct (p\in B_D\) having two distinct actual unit neighbors that are both images in one chart. Then the count is (O_{J,K}(D^{4/5})\). All other source points are unrestricted and retained; no global optimality, triangle-free, or KKT hypothesis is used.
-````
+```
 
 
 
@@ -64,7 +63,6 @@
 Fix one chart and one counted endpoint (p\), with distinct chart anchors (a=\lambda_a+g(\lambda_a)) and (b=\lambda_b+g(\lambda_b)). Unit separation and the two unit contacts give
 ```
 
-
 ```math
 1\le |b-a|\le2.
 ```
@@ -75,7 +73,6 @@ Fix one chart and one counted endpoint (p\), with distinct chart anchors (a=\lam
 ```text
 For large (D\), the map $`\phi_D`$ is lower Lipschitz:
 ```
-
 
 ```math
 |\phi_D(\lambda)-\phi_D(\mu)|\ge(1-K/D)|\lambda-\mu|.
@@ -92,7 +89,6 @@ Thus distinct anchors have distinct labels, and
 Write $`\lambda_b-\lambda_a=iu+jv`$, with (u,v\) the chart basis, and let (w_0=iu+jv\), (w=b-a\). The basis Gram matrix has least eigenvalue (1-|\cos\theta|\ge1/2\), so
 ```
 
-
 ```math
 |iu+jv|^2\ge(i^2+j^2)/2.
 ```
@@ -104,19 +100,17 @@ Write $`\lambda_b-\lambda_a=iu+jv`$, with (u,v\) the chart basis, and let (w_0=i
 Consequently (i^2+j^2\le 8+O_K(D^{-1})\), hence (0<i^2+j^2\le8\) for all sufficiently large (D\). There are exactly 24 such integer pairs: four each with squared coordinate norm (1,2,4,8), and eight with squared norm (5). Every nonzero vector of a unit rhombic lattice in this angle range has norm at least one. The Lipschitz displacement also gives
 ```
 
-
 ```math
 |w-w_0|\le (K/D)|\lambda_b-\lambda_a|=O_K(D^{-1}).
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 The two unit circles through (a,b\) place (p) at one of
 ```
-
 
 ```math
 p-a=F_\pm(w):=\frac w2\pm\frac{Jw}{|w|}\sqrt{1-|w|^2/4},
@@ -129,19 +123,17 @@ p-a=F_\pm(w):=\frac w2\pm\frac{Jw}{|w|}\sqrt{1-|w|^2/4},
 where (J\) is a quarter-turn. For each of the 24 possible ((i,j)\), define the chart-basis offset
 ```
 
-
 ```math
 f_{ij,\pm}=\frac{w_0}{2}\pm\frac{Jw_0}{|w_0|}
 \sqrt{\max(0,1-|w_0|^2/4)}.
+```
 
 
 **Source formatting excerpt (unbalanced inline math in the original):**
 
-````text
-```
+```text
 This gives at most 48 offsets per chart. The actual and reference vectors both have norms at least one and are bounded above; normalization is Lipschitz on this annulus. Also (x\mapsto\sqrt{\max(0,x)}\) is one-half-Hölder. Hence
-````
-
+```
 
 ```math
 |F_\pm(w)-f_{ij,\pm}|=O_K(D^{-1/2}).
@@ -174,7 +166,6 @@ Every actual diameter endpoint is strictly exposed in the full-source convex hul
 Within a patch and fixed chart, choose a reference first anchor (a_0=\lambda_0+g(\lambda_0)\). Since both anchors are unit distance from their loaded endpoints, any other first anchor (a\) in that patch satisfies (|a-a_0|\le r+2\). The lower-Lipschitz bound implies (|\lambda_a-\lambda_0|=O(r)\), so
 ```
 
-
 ```math
 |g(\lambda_a)-g(\lambda_0)|=O_K(r/D).
 ```
@@ -189,7 +180,6 @@ After also fixing the finite offset, all assigned endpoints in this patch lie wi
 ```text
 of one translate of the chart's reference rhombic lattice. For sufficiently large (D\), $`\epsilon\le1/8`$. Apply canonical `C-CURVED-BOUNDARY-LATTICE-LOCAL-CAPACITY` to each unit-separated endpoint group in the patch:
 ```
-
 
 ```math
 O\bigl(r\epsilon+(Dr)^{1/3}+1\bigr)=O_K(D^{3/5}).

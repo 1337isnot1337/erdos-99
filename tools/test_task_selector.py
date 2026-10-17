@@ -19,7 +19,11 @@ class PublishedSelectorTests(unittest.TestCase):
             cwd=ROOT, capture_output=True, text=True, check=True,
         )
         data = json.loads(result.stdout)
-        self.assertTrue(data)
+        self.assertEqual(data["status"], "SUGGESTIONS_ONLY_NOT_RESERVED")
+        self.assertEqual(len(data["suggestions"]), 1)
+        catalog = json.loads((ROOT / "docs/research/agent-task-catalog.json").read_text())
+        self.assertIn(data["suggestions"][0]["id"], {task["id"] for task in catalog["tasks"]})
+        self.assertTrue(data["state_matches_reviewed_snapshot"])
 
     def test_known_claim_cannot_be_assigned_to_an_unrelated_existing_proof(self):
         catalog = json.loads((ROOT / "docs/research/agent-task-catalog.json").read_text())

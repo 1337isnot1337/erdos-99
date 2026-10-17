@@ -130,10 +130,10 @@ chord of length
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 The side is contained in this chord, proving (2.2). \(\square)
 ```
 

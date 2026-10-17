@@ -242,10 +242,10 @@ the disjointly assigned subfamilies gives
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 Therefore a persistent (\Omega(D)) face-defect tail cannot be supported by
 (N_D=o(D)) clusters with \(\sum_jr_{D,j}=o(D)). This excludes both a single
 submacroscopic concentration and any such sublinear cluster cover, including

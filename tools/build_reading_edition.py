@@ -124,19 +124,35 @@ def math_delimiters(text: str, diagnostics: dict | None = None) -> tuple[str, in
     # Do not invent mathematical boundaries where an inherited inline marker
     # is malformed. Preserve that paragraph as an explicit source excerpt.
     visible = visible_text(text)
+    fence_ranges = []
+    fence_start = fence_length = 0
+    fence_char = None
+    offset = 0
+    for line in text.splitlines(keepends=True):
+        if fence_char is None:
+            match = re.match(r"^ {0,3}(`{3,}|~{3,})(.*?)(?:\r?\n)?$", line)
+            if match and not (match[1][0] == "`" and "`" in match[2]):
+                fence_start, fence_length, fence_char = offset, len(match[1]), match[1][0]
+        elif re.fullmatch(rf" {{0,3}}{re.escape(fence_char)}{{{fence_length},}}[ \t]*(?:\r?\n)?", line):
+            fence_ranges.append((fence_start, offset + len(line)))
+            fence_char = None
+        offset += len(line)
     excerpts = set()
     for match in re.finditer(r"(?<!\\)\\[()]", visible):
-        previous = list(re.finditer(r"\n[ \t]*\n|(?m:^#{1,6}[^\n]*\n)", visible[:match.start()]))
+        previous = list(re.finditer(r"\n[ \t]*\n|(?m:^#{1,6}[^\n]*\n)", text[:match.start()]))
         start = previous[-1].end() if previous else 0
-        following = re.search(r"\n[ \t]*\n|(?m:^#{1,6}[ \t])", visible[match.end():])
+        start = max([start] + [b for _, b in fence_ranges if b <= match.start()])
+        following = re.search(r"\n[ \t]*\n|(?m:^#{1,6}[ \t])", text[match.end():])
         end = match.end() + following.start() if following else len(text)
+        end = min([end] + [a for a, _ in fence_ranges if a >= match.end()])
         excerpts.add((start, end))
     for a, b in sorted(excerpts, reverse=True):
         body = text[a:b]
         longest = max((len(m[0]) for m in re.finditer(r"`+", body)), default=0)
         fence = "`" * max(3, longest + 1)
         replacement = ("\n\n**Source formatting excerpt (unbalanced inline math in the original):**\n\n"
-                       + fence + "text\n" + body + "\n" + fence + "\n\n")
+                       + fence + "text\n" + body
+                       + ("" if body.endswith("\n") else "\n") + fence + "\n\n")
         text = text[:a] + replacement + text[b:]
 
     # Existing dollar math needs the same protection: bare \{ is otherwise

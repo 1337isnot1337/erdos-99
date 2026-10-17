@@ -1,9 +1,9 @@
-> Generated reading edition · [exact source](../../../docs/launch/READINESS.md) · source SHA-256 `2792eb77273802a3a202a9b283718a866db7ef703d2fbed0bbe3aa0fde05e926`.
+> Generated reading edition · [exact source](../../../docs/launch/READINESS.md) · source SHA-256 `09e49d69bf5b3c41bd0ca44b8e05ef8ece7f3608cafa0db28c765dd9cb80297d`.
 > Formatting and navigation only; the source and theorem ledger control mathematical status.
 
 # Current publication candidate
 
-Candidate **0.1.0-rc.1** has **23 current task cards**. The
+Candidate **0.1.0-rc.2** has **23 current task cards**. The
 [current release summary](RELEASE_CANDIDATE.md) controls present publication
 status and points to the final-commit evidence. The narrative below is preserved
 history: its earlier task counts and uses of “current” refer to those snapshots.

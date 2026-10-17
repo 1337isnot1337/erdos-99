@@ -158,7 +158,6 @@ $`(\Delta_2-\eta)D^2-o(D^2)`$ edges and at most
 $`(a+\eta)D+o(D)`$ vertices. Mantel's inequality gives
 ```
 
-
 ```math
 \Delta_2-\eta\le\frac{(a+\eta)^2}{4}.
 ```
@@ -202,7 +201,6 @@ $`\liminf(5Q+x_B+m)/D\ge4s_2`$. Substituting
 $`Q=2(q-k)-b`$, (b=p+z), (x_B=g+z), and (m=g+z-u_B\) gives the
 exact identity
 ```
-
 
 ```math
 5Q+x_B+m=10(q-k)-5p+2g-3z-u_B.

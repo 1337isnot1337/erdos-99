@@ -155,7 +155,6 @@ For any old lower witness, the relative displacement changes by at most (s),
 so its old length satisfies (1<|pq|\le1+s\). For (D\ge7),
 ```
 
-
 ```math
 s<\gamma_D<\frac1{2D-1}\le\frac1{13}<\frac1{12},
 ```

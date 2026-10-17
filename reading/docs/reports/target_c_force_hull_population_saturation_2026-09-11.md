@@ -152,10 +152,10 @@ N_F\ge A_F/a_0-O(D).
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 Oler applied to all of (A\) in (K) gives (FH.3a), while (1) gives its matching
 boundary-order lower bound. Subtracting (FH.3) from this two-sided whole-source
 estimate proves (FH.3b).

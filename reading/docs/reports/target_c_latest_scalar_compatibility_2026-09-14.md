@@ -86,16 +86,15 @@ which is strictly above the current train-coupled floor. Indeed (\pi<22/7) and
 \(\sqrt3>5/3) imply
 ```
 
-
 ```math
 \mu_{TC}<\frac{58}{35}<2.09999.
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 The near-disk perimeter annotation is also scalar-compatible: (q/D=8/5<\pi),
 and the hull-walk excess (x_B=q-4) exceeds
 \((\pi-8/5)D<(54/35)D). This is only a scalar perimeter decomposition; no
@@ -134,15 +133,15 @@ The exact augmented payment inequality is met with equality:
 ```math
 \sum_r(L_r+P_{{\rm exc},r}-2a_r)
 =10(e_{BB}-k-d_{\rm tile})-4\sum_rM_r,
+```
 
 
 **Source formatting excerpt (unbalanced inline math in the original):**
 
-````text
-```
+```text
 where (M_r=7D/8-4). Also
 \(sum_rP_{{\rm exc},r}=5D/4\le10(e_{BB}-k)).
-````
+```
 
 
 

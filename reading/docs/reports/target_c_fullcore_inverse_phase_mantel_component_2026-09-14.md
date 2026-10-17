@@ -90,10 +90,10 @@ Since
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 The canonical phase-circle cut deletes (O(D)) crossing relations and supplies
 real reduced phases (x_\tau) in one interval of length (pi/3), labels
 \(\ell(\tau)\in\mathbb Z/3\mathbb Z), and, on every retained oriented crossing,
@@ -237,10 +237,10 @@ e_D:=|E(G_D^\circ)|=R_D-O(D).
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 The exact train-track theorem makes (G_D^\circ) simple and triangle-free. Put
 \(v=T_D\). By (1.2) and (1.4),
 ```
@@ -442,10 +442,10 @@ Cauchy--Schwarz gives
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 Hence every label is concentrated, up to (o(T_D)) trains, on one Mantel shore.
 At least one label is concentrated on each shore, because both shores have
 \(T_D/2-o(T_D)) vertices. With only three labels, the labels split between the
@@ -464,10 +464,10 @@ The good graph has
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 Combining (2.6) and (2.20) gives (2.7). Since (R_D=T_D^2/4+o(D^2)), the number
 of full-source rhombus crossings not in (H_D) is (o(D^2)). This completes the
 proof. \(\square\)
@@ -626,5 +626,4 @@ it would not close C-II or Level I.
    `docs/targets/target-c/91-explicit-ordered-grid-audit.md`, the canonical Sections
    122--123, and the Target-B near-extremal reports only for their exact pure-disk
    hypotheses.
-
 ```

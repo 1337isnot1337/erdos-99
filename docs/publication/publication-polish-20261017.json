@@ -13,8 +13,8 @@
       },
       "after": {
         "mode": "100644",
-        "git_blob_sha1": "73268bdcdb7df602831b88c554bd33687fdbe6eb",
-        "sha256": "bd3003014a09a5c3a50e31139d134e68ca5e5b29cbcd72c8e1083e4cc474b24b",
+        "git_blob_sha1": "52f5087389b5086c4078a901116bf63a673624c9",
+        "sha256": "5c6f62e55a3f570615fd1004a76795c4542165898d2ed5b5f3ad0db61fee4d9a",
         "bytes": 6681
       },
       "preserved_original": "docs/archive/publication-polish-20261017/README.md.source",
@@ -30,12 +30,12 @@
       },
       "after": {
         "mode": "100644",
-        "git_blob_sha1": "82f09fbc27290aa8532c0277766dafc754064477",
-        "sha256": "6c929bf09826a73d913c2763c08d7660aeea7e672e17d65149b63ab863d9c19a",
+        "git_blob_sha1": "2949a2533495ee1cbefb99fb431b3245694cc100",
+        "sha256": "10f1c7368eff626f897d7ccba79c8eb08c56b24fd6632ce633a13886c7ce76f2",
         "bytes": 432
       },
       "preserved_original": "docs/archive/publication-polish-20261017/CITATION.cff.source",
-      "reason": "Identify the dated 0.1.0-rc.1 release candidate."
+      "reason": "Identify the dated 0.1.0-rc.2 release candidate."
     },
     {
       "path": "scripts/choose_research_task.py",
@@ -64,8 +64,8 @@
       },
       "after": {
         "mode": "100644",
-        "git_blob_sha1": "b5b0e342e3231ce655ef932532742733b314f1a6",
-        "sha256": "5b97a5da39def3236359e44a53ab892463bc92bc9380928dbfb3ac525d182676",
+        "git_blob_sha1": "bb4aee49a3818e3dec23e645dfd4db4e78045a80",
+        "sha256": "45bbcd866ddcaa3f37dee6d97d2f233870857f6d7bdaa18ea3f9a846a3638035",
         "bytes": 7404
       },
       "preserved_original": "docs/archive/publication-polish-20261017/docs/launch/GATE_2_VERIFICATION.md.source",
@@ -81,8 +81,8 @@
       },
       "after": {
         "mode": "100644",
-        "git_blob_sha1": "d6715722cde804e7b8763745124244431224348b",
-        "sha256": "2792eb77273802a3a202a9b283718a866db7ef703d2fbed0bbe3aa0fde05e926",
+        "git_blob_sha1": "20e452fbf2e58cc0dde9e0a79bd576c6ac82236e",
+        "sha256": "09e49d69bf5b3c41bd0ca44b8e05ef8ece7f3608cafa0db28c765dd9cb80297d",
         "bytes": 8882
       },
       "preserved_original": "docs/archive/publication-polish-20261017/docs/launch/READINESS.md.source",
@@ -98,8 +98,8 @@
       },
       "after": {
         "mode": "100644",
-        "git_blob_sha1": "55194ca2d693dffdb718ed7406344d37d9af4112",
-        "sha256": "8465fa9e17809e6533fa272aeeeca4e877e9626c9eb4aad9aab4b5fe5a9ef42f",
+        "git_blob_sha1": "abca6f178e464bf5635ebda11128ba04001aadc9",
+        "sha256": "8c79f887a0cbca65a68b1ea2a6245ab310448e13d640988bbbd642fff394d04f",
         "bytes": 15152
       },
       "preserved_original": "docs/archive/publication-polish-20261017/docs/launch/PUBLICATION_AUDIT.md.source",

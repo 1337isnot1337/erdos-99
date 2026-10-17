@@ -61,3 +61,10 @@ class ReadingEditionTests(unittest.TestCase):
         self.assertIn("```text\nThis has an incomplete \\(x+y) marker.", output)
         self.assertIn("Next paragraph.", output)
         self.assertEqual(diagnostics["source_excerpts"], 1)
+
+    def test_source_excerpt_does_not_consume_a_preceding_math_fence(self):
+        source = "\\[\nx=y\n\\]\nThis proves it. \\(square)\n"
+        output, _ = math_delimiters(source)
+        self.assertIn("```math\nx=y\n```\n", output)
+        self.assertIn("```text\nThis proves it. \\(square)\n```", output)
+        self.assertNotIn("````text\n```", output)

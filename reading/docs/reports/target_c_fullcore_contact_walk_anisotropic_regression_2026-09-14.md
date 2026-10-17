@@ -227,10 +227,10 @@ at most two of one of its lattice vertices. Thus, for an absolute constant (C),
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 More directly, rounding the two real lattice coordinates independently gives a
 lattice point within distance at most one. Applying this to
 \((R-2)e) and \(-(R-2)e), for any unit vector (e), gives
@@ -450,5 +450,4 @@ detour.
    contact outer walk.
 5. **Files to read next:** `docs/targets/target-c/CURRENT.md`, canonical Sections
    122–123, the promoted train-surplus report, and the active Target A/B endpoints.
-
 ```

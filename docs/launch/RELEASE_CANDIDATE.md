@@ -1,4 +1,4 @@
-# Publication candidate 0.1.0-rc.1
+# Publication candidate 0.1.0-rc.2
 
 This is an open research corpus. **LEVEL I STATUS: STILL OPEN.**
 Target A, Target B, and C-II remain open; C-I is closed within its recorded scope.

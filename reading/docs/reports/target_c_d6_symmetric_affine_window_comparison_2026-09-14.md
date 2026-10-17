@@ -158,10 +158,10 @@ because (|S|\ge2). Then
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 Because (c<1/2), ((4-2c)/3>1). Also (D_{\rm eq}>0), so
 (D_{\rm eq}<D_c). The equilateralized set is unit-separated because
 (q_{1/2}(i,j)\ge1) for every nonzero integer pair. It has exactly (|S|) points,

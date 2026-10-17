@@ -259,10 +259,10 @@ K_{02}-K_{12}>0,
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 contradicting the circular-planar inequality (C50.9). Hence `rho<=1`, proving
 (C50.5). The semidefinite conclusion (C50.7) is exactly the C30 three-edge-forest
 response-inertia alternative. \(square)

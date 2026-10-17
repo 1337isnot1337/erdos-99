@@ -253,7 +253,7 @@
       "source": "docs/audits/target_c_acute_binary_sink_run_payment_independent_audit_2026-10-09.md",
       "source_sha256": "494d9aed4956683e19c6857a19a0c7e4e67a22cb986d77dbad3e2fae4ad0c8ca",
       "reading_path": "reading/docs/audits/target_c_acute_binary_sink_run_payment_independent_audit_2026-10-09.md",
-      "reading_sha256": "aa52c4b93c3709215c97ee762b26f24dc07e90f61ef3448ec2b6674eb85111cd",
+      "reading_sha256": "3d669df7fbf1de29cbcdf45f6cbe6bf9b8255c23c2d670c355ed10cc0135ffe4",
       "math_pairs_normalized": 34
     },
     {
@@ -358,7 +358,7 @@
       "source": "docs/audits/target_c_atomic_track_boundary_cost_independent_audit_2026-10-08.md",
       "source_sha256": "dc0f996227a196cba153366e667ac1bf0d900b587d4831cc4fa50db0ac1ee419",
       "reading_path": "reading/docs/audits/target_c_atomic_track_boundary_cost_independent_audit_2026-10-08.md",
-      "reading_sha256": "60a2b976173c2bc098b7be25459c5a69ab4375cf2788cc0196305c59e6abf45f",
+      "reading_sha256": "3c52657520c5aad449d2f09638a94ed064d3d1327be774f1eea2c1c6d77d5364",
       "math_pairs_normalized": 31
     },
     {
@@ -1436,7 +1436,7 @@
       "source": "docs/audits/target_c_one_vacancy_flat_pinning_rate_independent_audit_2026-10-07.md",
       "source_sha256": "b30a40c20e8d27f396a547d83bd38c93f450850b2250b606178e2c05e7139c86",
       "reading_path": "reading/docs/audits/target_c_one_vacancy_flat_pinning_rate_independent_audit_2026-10-07.md",
-      "reading_sha256": "7bb570d1568aca09594ee0a034a20c4544a9e898d643063294990f03dbb8adb2",
+      "reading_sha256": "bab81dd75b422547d7e114f1d0cdf79185bfa8d682d0180fdb61e5fed359619e",
       "math_pairs_normalized": 14
     },
     {
@@ -2038,7 +2038,7 @@
       "source": "docs/audits/target_c_slow_chart_double_port_count_independent_audit_2026-10-09.md",
       "source_sha256": "169d0e52f0900e5898e17fb9d131b5c437f5d5d190897d1d03e8727080297b3b",
       "reading_path": "reading/docs/audits/target_c_slow_chart_double_port_count_independent_audit_2026-10-09.md",
-      "reading_sha256": "402468d9841e562c737dfb4a7c8be49268c9ff97b97e78b433770cb9ccb350ec",
+      "reading_sha256": "4a992c8f08edaebb9819fc7118add442eb9eb38e52a84d5738f29facbee2bf38",
       "math_pairs_normalized": 20
     },
     {
@@ -2358,9 +2358,9 @@
     },
     {
       "source": "docs/launch/GATE_2_VERIFICATION.md",
-      "source_sha256": "5b97a5da39def3236359e44a53ab892463bc92bc9380928dbfb3ac525d182676",
+      "source_sha256": "45bbcd866ddcaa3f37dee6d97d2f233870857f6d7bdaa18ea3f9a846a3638035",
       "reading_path": "reading/docs/launch/GATE_2_VERIFICATION.md",
-      "reading_sha256": "078ea401c126921afa9737ccab4ec4651f29bbf38a20b71bde5b6c1b22e76632",
+      "reading_sha256": "fd3b8ed7d65af0417f23c811a426769fd08c509d991577939b5009321b5d48d9",
       "math_pairs_normalized": 0
     },
     {
@@ -2379,16 +2379,16 @@
     },
     {
       "source": "docs/launch/PUBLICATION_AUDIT.md",
-      "source_sha256": "8465fa9e17809e6533fa272aeeeca4e877e9626c9eb4aad9aab4b5fe5a9ef42f",
+      "source_sha256": "8c79f887a0cbca65a68b1ea2a6245ab310448e13d640988bbbd642fff394d04f",
       "reading_path": "reading/docs/launch/PUBLICATION_AUDIT.md",
-      "reading_sha256": "6806ba35f5f19531cc5a90a3ebea56a0acda8593aa0ea761515c1d1b4d85d126",
+      "reading_sha256": "b006e0497b97ee333afb0d0f095a93c703b2518767e2ee31d480c311a404bf52",
       "math_pairs_normalized": 0
     },
     {
       "source": "docs/launch/READINESS.md",
-      "source_sha256": "2792eb77273802a3a202a9b283718a866db7ef703d2fbed0bbe3aa0fde05e926",
+      "source_sha256": "09e49d69bf5b3c41bd0ca44b8e05ef8ece7f3608cafa0db28c765dd9cb80297d",
       "reading_path": "reading/docs/launch/READINESS.md",
-      "reading_sha256": "15b7065fdc0cd462cd6fe5492d9a7fc54968526d05242bf78e41d70d2eb77e66",
+      "reading_sha256": "c258df4080dbed4d64ae5467661fc030edfc742ae5628f6af9c5bded431daacf",
       "math_pairs_normalized": 0
     },
     {
@@ -2400,9 +2400,9 @@
     },
     {
       "source": "docs/launch/RELEASE_CANDIDATE.md",
-      "source_sha256": "e8f5c19151413e27c08db8431e47e32049c218ab5e17a1917abe1df62c54508f",
+      "source_sha256": "2f6d00aaf25d2d35b1ebeb5d82d1ba9b01bba14548fcba2001956ec2d46ed616",
       "reading_path": "reading/docs/launch/RELEASE_CANDIDATE.md",
-      "reading_sha256": "62cf2fbb3c1b37f6ee56039ac80908ebc97818d1f673eb281256d3230ce5fc2b",
+      "reading_sha256": "8e8418ed8061fd2b4b65564d074a821affe2b4def5c9370f4bf71f83b9969114",
       "math_pairs_normalized": 0
     },
     {
@@ -5041,7 +5041,7 @@
       "source": "docs/reports/target_c_d6_symmetric_affine_window_comparison_2026-09-14.md",
       "source_sha256": "095f555118a87d1b30ef8a8224d05dabd7a7d3cc5b299c9ff7b583a3ad34b656",
       "reading_path": "reading/docs/reports/target_c_d6_symmetric_affine_window_comparison_2026-09-14.md",
-      "reading_sha256": "420580bb2cc6faef3b3036d633da183a54b6a175ae8499334f39e36afe523f18",
+      "reading_sha256": "d6cb9d4174fe84c9221cd8bdb62aee6afc7889a872563eaada100fbbfb043073",
       "math_pairs_normalized": 11
     },
     {
@@ -6049,7 +6049,7 @@
       "source": "docs/reports/target_c_force_hull_population_saturation_2026-09-11.md",
       "source_sha256": "18fd81eba2ac2b961379c0642a9561edec39c3273f73eea601df8dab28dda007",
       "reading_path": "reading/docs/reports/target_c_force_hull_population_saturation_2026-09-11.md",
-      "reading_sha256": "6506fd7d0be21d1b3d8c27c0e95c11c6af4a18a725d7b5d4c6323a383ec117a4",
+      "reading_sha256": "b8254416c23b763fe40ef9b738f19f299bc8ecd014c55bf3d1f783702da9be5e",
       "math_pairs_normalized": 14
     },
     {
@@ -6420,7 +6420,7 @@
       "source": "docs/reports/target_c_fullcore_contact_walk_anisotropic_regression_2026-09-14.md",
       "source_sha256": "f2179c71da31e861160f7d5851f3a719140ea8f9452eac873d768f6b56bdbad9",
       "reading_path": "reading/docs/reports/target_c_fullcore_contact_walk_anisotropic_regression_2026-09-14.md",
-      "reading_sha256": "c7883cd96c4a3aa907265ac1e1090d12f5cfdac8daa9ababcf95e31db1289520",
+      "reading_sha256": "804270cfbbdaf2bc967993edc222003594aa928de6dce223b4a70d90ddc247ac",
       "math_pairs_normalized": 34
     },
     {
@@ -6469,7 +6469,7 @@
       "source": "docs/reports/target_c_fullcore_high_surplus_endpoint_side_gap_2026-09-14.md",
       "source_sha256": "d51f1ff5d8010a2879e2f826bcc7a21d814e2c7a87f55cd2c457022d435f5c0a",
       "reading_path": "reading/docs/reports/target_c_fullcore_high_surplus_endpoint_side_gap_2026-09-14.md",
-      "reading_sha256": "20e39fc04c6ac637505b471ab6716b831dba2960f19caef4a26ca07f90be87b2",
+      "reading_sha256": "12b1b8f419959a2810074c4fa2f290e640280b1a2ecd909d08d30ccd821e18d0",
       "math_pairs_normalized": 77
     },
     {
@@ -6483,7 +6483,7 @@
       "source": "docs/reports/target_c_fullcore_inverse_phase_mantel_component_2026-09-14.md",
       "source_sha256": "a17548d33a7d752fef80663bcdd7ad5eee2e639e2dd3959135a52d656adf3557",
       "reading_path": "reading/docs/reports/target_c_fullcore_inverse_phase_mantel_component_2026-09-14.md",
-      "reading_sha256": "8fbd5f99d4ed5d75d2caa117dbe09ac74398e0e050c3d7246bafcb7d1052fd17",
+      "reading_sha256": "d2b69fcf886aa2e24b7121a536ecb6674f2711a92edf1026c34aed4320fbb930",
       "math_pairs_normalized": 34
     },
     {
@@ -6546,7 +6546,7 @@
       "source": "docs/reports/target_c_fullcore_train_mantel_phase_star_endpoint_2026-09-14.md",
       "source_sha256": "85666aeabb0f209e1f96d0014c5bf0b5569ebb30f544cedb7714ad2666648bdc",
       "reading_path": "reading/docs/reports/target_c_fullcore_train_mantel_phase_star_endpoint_2026-09-14.md",
-      "reading_sha256": "6a61f9620c28e89d74288fa8245d3fc4e9e2db1d501286bb48d75dcd42cee20a",
+      "reading_sha256": "c52f81f961eb89087f1eb189a86a1a02c5d0b753c9141976ddfb9ad2fd5fe83b",
       "math_pairs_normalized": 23
     },
     {
@@ -6924,7 +6924,7 @@
       "source": "docs/reports/target_c_joint_bulk_defect_separator_capacity_2026-10-05.md",
       "source_sha256": "b2a229c3947e3c79b3ae3bec69eeb7e98ed8ab37514d10be9e34b5e4eaf89a93",
       "reading_path": "reading/docs/reports/target_c_joint_bulk_defect_separator_capacity_2026-10-05.md",
-      "reading_sha256": "416fd98695bb88b373818c04aa990ae5ac84fb62651aab1ca9544554acecf052",
+      "reading_sha256": "dc51bdeb64a79058cb86e23cee4d8cf8b8c544474c36bee1aad7bc88558d4871",
       "math_pairs_normalized": 18
     },
     {
@@ -6987,7 +6987,7 @@
       "source": "docs/reports/target_c_latest_scalar_compatibility_2026-09-14.md",
       "source_sha256": "c941a0967a7f9bb0ed6bce5f1ce747dac84bd3da99653d6b65b659ac5057e443",
       "reading_path": "reading/docs/reports/target_c_latest_scalar_compatibility_2026-09-14.md",
-      "reading_sha256": "b994d3ae7d66014b2a1f2db9c8cfdd4ccf6109de6c6550b0c5ec3ea591f65d1a",
+      "reading_sha256": "3d0a24fdbbf6e85849131d6828a77fda6e4c825a19dd8ebba81a0b57af6eb8b8",
       "math_pairs_normalized": 15
     },
     {
@@ -8401,7 +8401,7 @@
       "source": "docs/reports/target_c_pure_rhombic_zf_exclusion_2026-09-11.md",
       "source_sha256": "7fe22200233ec3d86bdff47395c884dac966cddd289f2250339af0aff05dd39f",
       "reading_path": "reading/docs/reports/target_c_pure_rhombic_zf_exclusion_2026-09-11.md",
-      "reading_sha256": "9354e4314814019dda8a202b8e904eb7c345ff0605535782a14b2bb07740a044",
+      "reading_sha256": "3ec911ff462628e7643c57389dd5b2506b1c8a483db7afece21926381f5fdb05",
       "math_pairs_normalized": 19
     },
     {
@@ -9066,7 +9066,7 @@
       "source": "docs/reports/target_c_six_endpoint_kalmanson_closure_2026-08-31.md",
       "source_sha256": "1a624f77612457726e941298b70c7dae1526f8fa73ce74ec274452db490dfabf",
       "reading_path": "reading/docs/reports/target_c_six_endpoint_kalmanson_closure_2026-08-31.md",
-      "reading_sha256": "0fcceaa5ddb248eff5258905463c2ce66ee0cfc823b38ba7208dd71c4fd15397",
+      "reading_sha256": "5c818e0f0def3c03e0c1d9ecd471a85872371da72dc60677d4c0203c54334e10",
       "math_pairs_normalized": 81
     },
     {

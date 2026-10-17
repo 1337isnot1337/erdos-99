@@ -221,10 +221,10 @@ v=\Delta_2D^2+O(D).
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 In the C-II pure-core branch,
 (PR.5) and (PR.6), together with the convex-hull diameter bound
 \(q\le\pi D+O(1)), give

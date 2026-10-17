@@ -121,10 +121,10 @@ Thus the squeeze in (2.1)--(2.2) is asymptotically sharp:
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 The exact numerical value is orientation only; the proof uses the symbolic identity
 \(pi+5f_{
 m TC}=4\sqrt{\Delta_2}).
@@ -154,10 +154,10 @@ give
 ```
 
 
+
 **Source formatting excerpt (unbalanced inline math in the original):**
 
 ```text
-
 This is stronger than merely knowing that the train graph has positive crossing
 density: it approaches equality in the exact Mantel bound
 \(R_D\le T_D^2/4\).
@@ -244,14 +244,14 @@ because (U,V\le M). Thus (e_{UV}\le x+y), and
  E=e_{MU}+e_{MV}+e_{UV}
  =M(U+V)-x-y+e_{UV}
  \le M(U+V).
+```
 
 
 **Source formatting excerpt (unbalanced inline math in the original):**
 
-````text
-```
+```text
 This proves (3.4). \(square)
-````
+```
 
 
 
