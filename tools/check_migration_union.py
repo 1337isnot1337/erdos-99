@@ -10,7 +10,7 @@ import argparse
 from collections import Counter, defaultdict
 import hashlib
 import json
-from pathlib import Path, PurePosixPath
+from pathlib import Path
 import re
 import subprocess
 import sys
@@ -33,6 +33,7 @@ DISPOSITIONS = (
 FROZEN = ROOT + "frozen-target-c-813-dispositions.jsonl"
 HEX40 = re.compile(r"[0-9a-f]{40}\Z")
 HEX64 = re.compile(r"[0-9a-f]{64}\Z")
+FROZEN_SCHEMA = "erdos-99-frozen-target-c-813-disposition/v1"
 
 
 class AuditError(ValueError):
@@ -55,6 +56,9 @@ def digest(kind: str, data: bytes) -> str:
 def source_record(row: dict[str, Any]) -> tuple[str, tuple[str, str, str]]:
     path = safe_path(row["source_path"])
     blob = row.get("source_git_blob_sha1", row.get("source_blob"))
+    if ("source_git_blob_sha1" in row and "source_blob" in row
+            and row["source_git_blob_sha1"] != row["source_blob"]):
+        raise AuditError(f"Conflicting source blob identities: {path}")
     mode, sha256 = row.get("source_mode"), row.get("source_sha256")
     if not isinstance(blob, str) or not HEX40.fullmatch(blob):
         raise AuditError(f"Invalid source blob: {path}")
@@ -63,6 +67,46 @@ def source_record(row: dict[str, Any]) -> tuple[str, tuple[str, str, str]]:
     if not isinstance(sha256, str) or not HEX64.fullmatch(sha256):
         raise AuditError(f"Invalid source SHA-256: {path}")
     return path, (mode, blob, sha256)
+
+
+def frozen_record(row: dict[str, Any], records: dict[str, tuple[str, str, str]],
+                  source_tree: str = SOURCE_TREE) -> tuple[str, dict[str, Any]]:
+    """Read the committed nested v1 schema and bind it to the source inventory.
+
+    A destination hash alone must never discharge an unrelated source identity.
+    Source modes come from the reconstructed pinned Git tree; the frozen schema
+    records the destination mode rather than duplicating the source mode.
+    """
+    if row.get("schema_version") != FROZEN_SCHEMA:
+        raise AuditError("Unsupported frozen disposition schema")
+    source, destination = row.get("source"), row.get("destination")
+    if not isinstance(source, dict) or not isinstance(destination, dict):
+        raise AuditError("Frozen disposition requires source and destination objects")
+    path, target = safe_path(source.get("path")), safe_path(destination.get("path"))
+    identity = records.get(path)
+    if identity is None:
+        raise AuditError(f"Frozen source path is absent from the pinned inventory: {path}")
+    mode, blob, sha256 = identity
+    if (mode not in ("100644", "100755")
+            or source.get("git_blob_sha1") != blob or source.get("sha256") != sha256
+            or ("mode" in source and source["mode"] != mode)):
+        raise AuditError(f"Frozen source identity mismatch: {path}")
+    if (source.get("repository") != "1337isnot1337/e-99"
+            or source.get("commit") != SOURCE or source.get("tree") != source_tree):
+        raise AuditError(f"Frozen source snapshot mismatch: {path}")
+    if destination.get("repository") != "1337isnot1337/erdos-99":
+        raise AuditError(f"Frozen destination repository mismatch: {target}")
+    for obj, field in ((source, "bytes"), (destination, "final_bytes")):
+        size = obj.get(field)
+        if type(size) is not int or size < 0:
+            raise AuditError(f"Invalid frozen byte count {field}: {path}")
+    for field, pattern in (("final_git_blob_sha1", HEX40), ("final_sha256", HEX64)):
+        value = destination.get(field)
+        if not isinstance(value, str) or not pattern.fullmatch(value):
+            raise AuditError(f"Invalid frozen destination {field}: {target}")
+    if destination.get("final_mode") not in ("100644", "100755"):
+        raise AuditError(f"Unsupported frozen destination mode: {target}")
+    return path, dict(destination, path=target, source_bytes=source["bytes"])
 
 
 def tree_hash(records: dict[str, tuple[str, str, str]]) -> str:
@@ -117,7 +161,7 @@ class Git:
         self.cache: dict[str, bytes] = {}
 
     def run(self, *args: str) -> bytes:
-        result = subprocess.run(["git", "-C", str(self.path), *args],
+        result = subprocess.run(["git", "--no-replace-objects", "-C", str(self.path), *args],
                                 stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False)
         if result.returncode:
             raise AuditError(result.stderr.decode("utf-8", "replace").strip())
@@ -206,13 +250,27 @@ def audit(repo: Git, candidate: str, baseline: str = BASE,
     for p, (mode, oid) in tree.items():
         if mode in ("100644", "100755"):
             by_blob[oid].append(p)
-    frozen = {}
-    for row in repo.rows(base, FROZEN):
-        p, target = row["source_path"], safe_path(row["destination_path"])
-        if p in frozen or p not in records:
+    frozen, frozen_seen = {}, set()
+    frozen_rows = repo.rows(base, FROZEN)
+    if len(frozen_rows) != frozen_count:
+        errors.append({"frozen_manifest_count": len(frozen_rows), "expected": frozen_count})
+    for row in frozen_rows:
+        p, destination = frozen_record(row, records, source_tree)
+        target = destination["path"]
+        if p in frozen_seen:
             raise AuditError("Invalid or repeated frozen source path")
-        expected = row["destination_sha256"]
-        if target not in tree or hashlib.sha256(repo.blob(tree[target][1])).hexdigest() != expected:
+        frozen_seen.add(p)
+        source_oid = records[p][1]
+        if source_oid in by_blob:
+            source_data = repo.blob(source_oid)
+            if (len(source_data) != destination["source_bytes"]
+                    or hashlib.sha256(source_data).hexdigest() != records[p][2]):
+                raise AuditError(f"Frozen source byte identity mismatch: {p}")
+        expected_entry = (destination["final_mode"], destination["final_git_blob_sha1"])
+        if tree.get(target) != expected_entry or base.get(target) != expected_entry:
+            errors.append({"frozen_identity_mismatch": target})
+        elif (len(repo.blob(tree[target][1])) != destination["final_bytes"]
+              or hashlib.sha256(repo.blob(tree[target][1])).hexdigest() != destination["final_sha256"]):
             errors.append({"frozen_hash_mismatch": target})
         else:
             frozen[p] = target
@@ -266,6 +324,7 @@ def audit(repo: Git, candidate: str, baseline: str = BASE,
         "schema_version": 1, "candidate_commit": candidate, "baseline_commit": baseline,
         "source_commit": SOURCE, "reconstructed_source_tree": tree_hash(records),
         "source_files": len(records), "coverage_counts": dict(Counter(r["status"] for r in coverage)),
+        "frozen_manifest_count": len(frozen_rows), "frozen_verified_count": len(frozen),
         "ownership_disagreements": disagreements,
         "duplicate_disposition_sources": sorted(p for p, agents in assigned.items() if len(agents) > 1),
         "backlog_without_worker_disposition": unassigned, "duplicate_payloads": duplicates,
@@ -320,3 +379,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

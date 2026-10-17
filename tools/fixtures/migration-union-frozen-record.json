@@ -1,0 +1,102 @@
+{
+  "artifact_id": "ART-8AC601967B66",
+  "authority_note": "Migration preserves research and evidence only. Destination theorem-state.yaml remains authoritative; this record does not promote any claim.",
+  "destination": {
+    "coordinator_transformations": [],
+    "disposition": "integrated_as_noncanonical_research",
+    "final_bytes": 11237,
+    "final_git_blob_sha1": "49efd4860f390a4dc8847d7ccd461df405cd1585",
+    "final_mode": "100644",
+    "final_sha256": "651fc92c25e97425387180bcf0795fe4f665812b6125b254ec2a110af9c922ba",
+    "frozen_baseline_commit": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+    "generated_header_updated": false,
+    "path": "docs/reports/target_c_2connected_strict_kalmanson_affine_kernel_2026-09-05.md",
+    "path_present_at_baseline": false,
+    "pre_coordinator_hash_matched_records": [
+      {
+        "field": "destination_sha256",
+        "record": "worker",
+        "sha256": "651fc92c25e97425387180bcf0795fe4f665812b6125b254ec2a110af9c922ba"
+      },
+      {
+        "field": "source_sha256",
+        "record": "worker",
+        "sha256": "651fc92c25e97425387180bcf0795fe4f665812b6125b254ec2a110af9c922ba"
+      },
+      {
+        "field": "destination_same_path_sha256",
+        "record": "central-artifact",
+        "sha256": "651fc92c25e97425387180bcf0795fe4f665812b6125b254ec2a110af9c922ba"
+      },
+      {
+        "field": "planned_public_sha256",
+        "record": "central-artifact",
+        "sha256": "651fc92c25e97425387180bcf0795fe4f665812b6125b254ec2a110af9c922ba"
+      },
+      {
+        "field": "planned_public_sha256_before_generated_artifact_header",
+        "record": "central-artifact",
+        "sha256": "651fc92c25e97425387180bcf0795fe4f665812b6125b254ec2a110af9c922ba"
+      },
+      {
+        "field": "public_sha256",
+        "record": "central-artifact",
+        "sha256": "651fc92c25e97425387180bcf0795fe4f665812b6125b254ec2a110af9c922ba"
+      },
+      {
+        "field": "source_sha256",
+        "record": "central-artifact",
+        "sha256": "651fc92c25e97425387180bcf0795fe4f665812b6125b254ec2a110af9c922ba"
+      }
+    ],
+    "pre_coordinator_sha256": "651fc92c25e97425387180bcf0795fe4f665812b6125b254ec2a110af9c922ba",
+    "pre_coordinator_tree_commit": "0ac22c4709f00afdbc5a84d0eb30810e953d2305",
+    "relation_to_source": "full report retained at the assigned destination path; any mathematical relation to other reports is recorded separately and does not justify omission",
+    "repository": "1337isnot1337/erdos-99",
+    "worker_transformations": []
+  },
+  "frozen_index": 0,
+  "provenance": {
+    "central_source_artifact_record": "docs/research/migration/2026-10-16/ledger/source-main-artifacts.jsonl",
+    "central_source_file_record": "docs/research/migration/2026-10-16/ledger/source-main-files.jsonl",
+    "worker_records": [
+      {
+        "line": 1,
+        "path": "docs/research/migration/2026-10-16/shards/shard-1-reconciliation.jsonl",
+        "shard": 1
+      },
+      {
+        "line": 1,
+        "path": "docs/research/migration/2026-10-16/shards/01/batch-01/dispositions.jsonl",
+        "shard": 1
+      }
+    ]
+  },
+  "schema_version": "erdos-99-frozen-target-c-813-disposition/v1",
+  "science": {
+    "assumptions_scope_and_dependencies": null,
+    "classification": null,
+    "dependencies": [],
+    "independent_destination_mathematical_audit": "not performed; source status remains unreviewed unless source artifact lifecycle explicitly says otherwise",
+    "obstructions_and_next_proof_obligations": null,
+    "relations_to_other_results": null,
+    "reported_result_or_scope": "Strict Kalmanson inequalities from a 2-connected positive-contact circular network; a 12-row sign table; exact stress-kernel chain; remaining C54 cut-vertex/block-tree issue.",
+    "title": "docs/reports/target_c_2connected_strict_kalmanson_affine_kernel_2026-09-05.md",
+    "validation_scope": null
+  },
+  "shard": 1,
+  "shard_owner": "worker-shard-1",
+  "source": {
+    "bytes": 11237,
+    "canonical": false,
+    "commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "git_blob_sha1": "49efd4860f390a4dc8847d7ccd461df405cd1585",
+    "lifecycle": "unreviewed",
+    "path": "docs/reports/target_c_2connected_strict_kalmanson_affine_kernel_2026-09-05.md",
+    "repository": "1337isnot1337/e-99",
+    "sha256": "651fc92c25e97425387180bcf0795fe4f665812b6125b254ec2a110af9c922ba",
+    "source_claim_ids": [],
+    "target": "target-c",
+    "tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891"
+  }
+}

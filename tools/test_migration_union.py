@@ -1,4 +1,5 @@
 """Regression tests for combined, source-identity migration coverage."""
+import copy
 import hashlib
 import json
 from pathlib import Path
@@ -7,6 +8,7 @@ import tempfile
 import unittest
 
 import check_migration_union as audit
+import repair_migration_union as repair
 
 
 def identity(path, data):
@@ -15,9 +17,25 @@ def identity(path, data):
             "source_sha256": hashlib.sha256(data).hexdigest()}
 
 
+def frozen_disposition(path, source_data, destination_data, source_tree, target=None):
+    """Use the committed nested ledger format, including its identity fields."""
+    return {
+        "schema_version": audit.FROZEN_SCHEMA,
+        "source": {"path": path, "repository": "1337isnot1337/e-99",
+                   "commit": audit.SOURCE, "tree": source_tree,
+                   "git_blob_sha1": audit.digest("blob", source_data),
+                   "sha256": hashlib.sha256(source_data).hexdigest(), "bytes": len(source_data)},
+        "destination": {"path": target or path, "repository": "1337isnot1337/erdos-99",
+                        "final_mode": "100644", "final_bytes": len(destination_data),
+                        "final_git_blob_sha1": audit.digest("blob", destination_data),
+                        "final_sha256": hashlib.sha256(destination_data).hexdigest()},
+    }
+
+
 class Fixture:
-    def __init__(self, directory, source, frozen=()):
+    def __init__(self, directory, source, frozen=(), frozen_files=None):
         self.root = Path(directory)
+        self.root.mkdir(parents=True, exist_ok=True)
         self.source = source
         self.rows = [identity(p, b) for p, b in source.items()]
         self.source_tree = audit.tree_hash(dict(audit.source_record(r) for r in self.rows))
@@ -27,6 +45,8 @@ class Fixture:
         self.git.run("config", "user.email", "migration-test@example.invalid")
         self.write("sentinel.txt", b"accepted destination must stay unchanged\n")
         self.write(audit.FROZEN, self.jsonl(list(frozen)))
+        for path, data in (frozen_files or {}).items():
+            self.write(path, data)
         self.base = self.commit("baseline")
         for agent, path in enumerate(audit.ASSIGNMENTS, 1):
             field = ("agent", "assigned_agent", "owner")[agent - 1]
@@ -114,6 +134,19 @@ class MigrationTests(unittest.TestCase):
             self.assertFalse(report["source_main_preservation_passed"])
             self.assertIn("baseline_files_changed", report["errors"][0])
 
+    def test_replace_refs_cannot_hide_a_changed_baseline(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            fx = Fixture(tmp, {"research/a.py": b"a"})
+            fx.write("research/a.py", b"a")
+            good = fx.commit("complete candidate")
+            fx.write("sentinel.txt", b"changed accepted baseline")
+            bad = fx.commit("corrupt candidate")
+            fx.git.run("replace", bad, good)
+            report, _ = audit.audit(fx.git, bad, fx.base, fx.source_tree, 1, 0)
+            self.assertEqual(report["candidate_commit"], bad)
+            self.assertFalse(report["source_main_preservation_passed"])
+            self.assertIn("baseline_files_changed", report["errors"][0])
+
     def test_missing_target_is_not_resolved_by_sibling_owner_label(self):
         with tempfile.TemporaryDirectory() as tmp:
             fx = Fixture(tmp, {"research/a.py": b"a"})
@@ -143,24 +176,150 @@ class MigrationTests(unittest.TestCase):
 
     def test_frozen_transformation_never_replaced_by_source_text(self):
         old, new = b"old unsupported rate", b"corrected scoped bound"
-        frozen = [{"source_path": "docs/report.md", "destination_path": "docs/report.md",
-                   "destination_sha256": hashlib.sha256(new).hexdigest()}]
+        source = {"docs/report.md": old}
+        tree = audit.tree_hash(dict(audit.source_record(identity(p, b)) for p, b in source.items()))
+        frozen = [frozen_disposition("docs/report.md", old, new, tree)]
         with tempfile.TemporaryDirectory() as tmp:
-            fx = Fixture(tmp, {"docs/report.md": old}, frozen)
-            fx.write("docs/report.md", new)
+            fx = Fixture(tmp, source, frozen, {"docs/report.md": new})
             report, replay = fx.check()
             self.assertTrue(report["source_main_preservation_passed"])
             self.assertNotIn("docs/report.md", replay)
             self.assertEqual(report["coverage_counts"], {"verified_frozen_transformation": 1})
 
     def test_invalid_frozen_hash_is_a_failure(self):
-        frozen = [{"source_path": "docs/report.md", "destination_path": "docs/report.md",
-                   "destination_sha256": "0" * 64}]
+        row = identity("docs/report.md", b"old")
+        tree = audit.tree_hash(dict([audit.source_record(row)]))
+        frozen = [frozen_disposition("docs/report.md", b"old", b"new", tree)]
+        frozen[0]["destination"]["final_sha256"] = "0" * 64
         with tempfile.TemporaryDirectory() as tmp:
-            fx = Fixture(tmp, {"docs/report.md": b"old"}, frozen)
-            fx.write("docs/report.md", b"new")
+            fx = Fixture(tmp, {"docs/report.md": b"old"}, frozen, {"docs/report.md": b"new"})
             report, _ = fx.check()
             self.assertFalse(report["source_main_preservation_passed"])
+
+    def test_real_committed_frozen_record_schema(self):
+        # Exact first JSONL record from the pinned 813-report ledger at
+        # f282d53169df4d507117893bfdcc99f663855923; do not flatten this fixture.
+        fixture = Path(__file__).parent / "fixtures/migration-union-frozen-record.json"
+        row = json.loads(fixture.read_text(encoding="utf-8"))
+        source = row["source"]
+        records = {source["path"]: ("100644", source["git_blob_sha1"], source["sha256"])}
+        path, destination = audit.frozen_record(row, records)
+        self.assertEqual(path, source["path"])
+        self.assertEqual(destination["path"], row["destination"]["path"])
+        self.assertEqual(destination["final_bytes"], 11237)
+        self.assertEqual(destination["final_git_blob_sha1"], source["git_blob_sha1"])
+
+    def test_malformed_or_unbound_frozen_identity_rejected(self):
+        source = identity("docs/report.md", b"old")
+        records = dict([audit.source_record(source)])
+        tree = audit.tree_hash(records)
+        row = frozen_disposition("docs/report.md", b"old", b"new", tree)
+        cases = (
+            (None, "schema_version", "unknown/v2"),
+            (None, "source", []),
+            ("source", "path", "docs/unrelated.md"),
+            ("source", "path", "../unsafe.md"),
+            ("source", "git_blob_sha1", "0" * 40),
+            ("source", "sha256", "0" * 64),
+            ("source", "mode", "100755"),
+            ("source", "commit", "0" * 40),
+            ("source", "tree", "0" * 40),
+            ("source", "repository", "other/repo"),
+            ("source", "bytes", -1),
+            ("source", "bytes", True),
+            ("destination", "repository", "other/repo"),
+            ("destination", "path", "../unsafe.md"),
+            ("destination", "final_git_blob_sha1", "bad"),
+            ("destination", "final_sha256", "bad"),
+            ("destination", "final_mode", "120000"),
+            ("destination", "final_bytes", "3"),
+        )
+        for section, field, value in cases:
+            bad = copy.deepcopy(row)
+            (bad[section] if section else bad)[field] = value
+            with self.subTest(section=section, field=field), self.assertRaises(audit.AuditError):
+                audit.frozen_record(bad, records, tree)
+
+    def test_frozen_destination_mode_blob_and_size_are_checked(self):
+        source = {"docs/report.md": b"old"}
+        tree = audit.tree_hash(dict([audit.source_record(identity("docs/report.md", b"old"))]))
+        for field, value in (("final_mode", "100755"),
+                             ("final_git_blob_sha1", "0" * 40), ("final_bytes", 100)):
+            row = frozen_disposition("docs/report.md", b"old", b"new", tree)
+            row["destination"][field] = value
+            with self.subTest(field=field), tempfile.TemporaryDirectory() as tmp:
+                fx = Fixture(tmp, source, [row], {"docs/report.md": b"new"})
+                report, _ = fx.check()
+                self.assertFalse(report["source_main_preservation_passed"])
+                self.assertEqual(report["frozen_verified_count"], 0)
+
+    def test_frozen_source_byte_size_is_bound_when_source_is_preserved(self):
+        tree = audit.tree_hash(dict([audit.source_record(identity("docs/report.md", b"old"))]))
+        row = frozen_disposition("docs/report.md", b"old", b"new", tree)
+        row["source"]["bytes"] = 100
+        with tempfile.TemporaryDirectory() as tmp:
+            fx = Fixture(tmp, {"docs/report.md": b"old"}, [row], {"docs/report.md": b"new"})
+            fx.write("archive/old.md", b"old")
+            with self.assertRaisesRegex(audit.AuditError, "source byte identity"):
+                fx.check()
+
+    def test_duplicate_frozen_source_rejected_even_if_first_target_is_bad(self):
+        tree = audit.tree_hash(dict([audit.source_record(identity("docs/report.md", b"old"))]))
+        row = frozen_disposition("docs/report.md", b"old", b"new", tree)
+        row["destination"]["final_sha256"] = "0" * 64
+        with tempfile.TemporaryDirectory() as tmp:
+            fx = Fixture(tmp, {"docs/report.md": b"old"}, [row, row], {"docs/report.md": b"new"})
+            with self.assertRaisesRegex(audit.AuditError, "repeated frozen source"):
+                fx.check()
+
+    def test_conflicting_inventory_blob_aliases_rejected(self):
+        row = identity("research/a.py", b"a")
+        row["source_blob"] = "0" * 40
+        with self.assertRaisesRegex(audit.AuditError, "Conflicting source blob"):
+            audit.source_record(row)
+
+    def test_recovery_round_trip_uses_frozen_schema_without_overwriting_it(self):
+        source = {"docs/report.md": b"old unsupported rate", "research/check.py": b"exact checker\n"}
+        records = dict(audit.source_record(identity(p, b)) for p, b in source.items())
+        tree = audit.tree_hash(records)
+        row = frozen_disposition("docs/report.md", source["docs/report.md"], b"accepted correction", tree)
+        with tempfile.TemporaryDirectory() as tmp:
+            fx = Fixture(Path(tmp) / "destination", source, [row],
+                         {"docs/report.md": b"accepted correction"})
+            report, _ = fx.check()
+            source_root = Path(tmp) / "source"
+            source_git = audit.Git(source_root)
+            source_root.mkdir()
+            source_git.run("init", "-q")
+            source_git.run("config", "user.name", "Migration test")
+            source_git.run("config", "user.email", "migration-test@example.invalid")
+            for path, data in source.items():
+                target = source_root / path
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(data)
+            source_git.run("add", "--all")
+            source_git.run("commit", "-qm", "pinned source")
+            plan = repair.prepare(source_git, report, source_git.resolve("HEAD"), tree)
+            self.assertEqual([r["source_path"] for r in plan], ["research/check.py"])
+            written = repair.apply_plan(fx.root, plan)
+            self.assertEqual(written, [repair.ARCHIVE + "research/check.py.source"])
+            self.assertEqual(repair.apply_plan(fx.root, plan), [])
+            final, _ = fx.check()
+            self.assertTrue(final["source_main_preservation_passed"])
+            self.assertEqual(final["frozen_verified_count"], 1)
+            self.assertEqual((fx.root / "docs/report.md").read_bytes(), b"accepted correction")
+            self.assertEqual((fx.root / written[0]).stat().st_mode & 0o777, 0o644)
+
+    def test_repair_preflight_rejects_corrupt_payload_before_any_write(self):
+        def item(path, data):
+            return dict(identity(path, data), destination=repair.ARCHIVE + path + ".source", data=data)
+        with tempfile.TemporaryDirectory() as tmp:
+            good = item("research/a.py", b"a")
+            bad = item("research/b.py", b"b")
+            bad["data"] = b"corrupt"
+            with self.assertRaisesRegex(audit.AuditError, "payload identity mismatch"):
+                repair.apply_plan(Path(tmp), [good, bad])
+            self.assertFalse((Path(tmp) / good["destination"]).exists())
 
     def test_reference_exclusion_does_not_execute_or_copy_paper(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -206,3 +365,4 @@ class MigrationTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
