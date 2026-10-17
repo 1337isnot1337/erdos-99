@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2168,
-  "math_pairs_normalized": 71621,
+  "source_documents": 2169,
+  "math_pairs_normalized": 71708,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -3937,6 +3937,13 @@
       "reading_path": "reading/docs/reports/target_c_contact_opening_cage_transversal_2026-10-05.md",
       "reading_sha256": "a9e83ec381664abefecf222cad6375ca03070ea3a9b55bb6607d686255cc5744",
       "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
+      "source_sha256": "e89ab07f491ce279c5466f13b13f32cda18dd0c3267b5694e4fc0dfa5467efb7",
+      "reading_path": "reading/docs/reports/target_c_contact_rhombic_grid_linear_oler_zero_capacity_2026-10-17.md",
+      "reading_sha256": "b16f6c247687ca4fa4b20f8b0a5eb55170d644c706c1814522d837200b19448b",
+      "math_pairs_normalized": 87
     },
     {
       "source": "docs/reports/target_c_contact_terminal_three_fans_2026-09-09.md",
