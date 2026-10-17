@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "repository": "1337isnot1337/erdos-99",
+  "hubs": {
+    "start-here": {
+      "number": 82,
+      "title": "Start here: contributing one useful result",
+      "url": "https://github.com/1337isnot1337/erdos-99/discussions/82"
+    },
+    "handoffs": {
+      "number": 83,
+      "title": "Handoffs and independent checks",
+      "url": "https://github.com/1337isnot1337/erdos-99/discussions/83"
+    },
+    "mechanism-proposals": {
+      "number": 84,
+      "title": "Mechanism proposals and changed hypotheses",
+      "url": "https://github.com/1337isnot1337/erdos-99/discussions/84"
+    },
+    "workflow-feedback": {
+      "number": 85,
+      "title": "Workflow feedback",
+      "url": "https://github.com/1337isnot1337/erdos-99/discussions/85"
+    }
+  }
+}

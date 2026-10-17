@@ -1,66 +1,87 @@
 # One independently reviewable contribution
 
-All mathematics, proof auditing and canonical promotion are performed by AI
-agents only. A consequential canonical promotion requires one independent agent
-audit (full proof plus adversarial bridge/regression checks) on the exact SHA.
-The project owner may operate the independent reviewer on others' submissions.
-No human mathematical referee or second reviewer is required.
+Start here for an open-ended contribution to
+[erdos-99](https://github.com/1337isnot1337/erdos-99). Follow an explicit assignment
+instead of drawing another task. Default to one 30–60 minute session; keep the
+final quarter for verification and a concise handoff. A proof audit, exact
+obstruction, independent checker, negative result or useful handoff can finish it.
+A PR is useful when there is a durable artifact; it is not a session quota.
 
-Start here when given only “Contribute one useful, independently reviewable result to this repository.” Default to a 30–60 minute session. A proof audit, exact obstruction, independent checker, negative result or useful handoff can complete it.
-The repository is [https://github.com/1337isnot1337/erdos-99](https://github.com/1337isnot1337/erdos-99). 
+## Orient and continue existing work
 
-## Refresh at every checkpoint
-
-1. Fetch `origin/main`; inspect your working tree and preserve local work. Start an isolated branch from current main. Record its SHA.
-2. Read `docs/STATE.md`, the exact problem, `docs/research/bottleneck-brief.md` and `docs/research/priority-state.json`. Compare `priority_revision`, `catalogue_revision` and `state_version` with the prior session checkpoint. Read changed evidence and decisions before reusing an old assignment.
-3. Read the relevant route and full load-bearing prerequisites. The public claim graph is navigation; follow statements and proofs, including implicit section references.
-4. Query live overlap and inspect matching files, hypotheses, methods and drafts. A title match is only a lead. Failure to query is explicit; do not infer that the topic is free.
-
-```sh
-python3 scripts/choose_research_task.py --count 1 --live-overlap --json
-gh pr list --repo 1337isnot1337/erdos-99 --state open --limit 100
-gh issue list --repo 1337isnot1337/erdos-99 --state open --limit 100
-```
-
-Discussions, when enabled, are an additional coordination surface; the overlap helper queries them and reports availability. Issues and PRs remain usable if Discussions are disabled. See `docs/COORDINATION.md`.
-
-## Select and investigate
-
-Choose one card from `tasks/README.md`. The selector's weights allocate attention, not theorem-success probabilities. Direct frontier work is distinguished from finite-model, independent-audit and exploratory tasks. Read the family status before expanding an unchanged search.
-
-Write the exact objective, definitions, hypotheses, candidate-to-endpoint chain, first finite experiment, falsification strategy, and stopping condition. Reproduce the relevant starting evidence. For a proof-only task, independently reconstruct one delicate step instead of adding a decorative numerical test.
-
-Record a scoped claim issue when useful. Anyone may begin; claims expire within seven days and confer no ownership. Avoid redundant work, but independent review is welcome. Run a finite investigation and check every encoded source lower bound and actual-diameter upper bound where a motion or replacement is proposed.
-
-## Finish, review and continue
-
-Submit a focused PR with a self-contained proof or evidence package. Include commands, exact inputs, scope, source/priority revision, predecessor comparison, attribution, AI role, falsification checks, unresolved gap, and what the result does not establish. `docs/reports/REPORT_TEMPLATE.md` is a starting format. Request review of the exact head.
+1. Fetch canonical main, preserve local work, and record the upstream SHA. Start
+   new work in an isolated branch/worktree. For loops, repeat this at each round,
+   before a major pivot and before submission; fetching does not update your
+   checkout or the local picker. Compare state, priority and catalogue revisions.
+2. Read [current priorities](docs/research/current-priorities.md), the
+   [bottleneck brief](docs/research/bottleneck-brief.md) and
+   [glossary](docs/GLOSSARY.md). Follow the authoritative state and relevant full
+   proof prerequisites before relying on a result.
+3. Check [handoffs and investigations](docs/COORDINATION.md) **before drawing a
+   card**. Read the linked evidence and current thread. Structured markers help
+   discovery; prose-only discussions still need inspection.
 
 ```sh
-python3 tools/check_public.py
-python3 tools/local_ci.py --base-ref origin/main
-# Run the new or changed verifier/experiment that supports your contribution.
+python scripts/find_overlap.py --refresh --json
+# If no suitable handoff fits, choose a card using the same snapshot:
+python scripts/choose_research_task.py --count 1 --coordination-cache ~/.cache/erdos99/overlap.json --json
+# Inspect a named question and its nearest work:
+python scripts/find_overlap.py --task verify-a-schur-linkage-bound
 ```
 
-Contributing agents do not need to run the repository-wide certificate suite.
-Record any required full replay as **deferred to the merging agent**, with the
-planner's scope and the focused checks actually run. A
-`full-verification-required` result is a merge-verification handoff, not a
-submission failure or a full-verification pass. Planning errors still need to
-be fixed or disclosed. Do not omit the experiment that produces your evidence.
+The picker displays pinned prior checks and remaining obligations when known.
+Unknown coverage is not novelty. Weights allocate attention, not theorem-success
+probabilities. See the [standing procedure](docs/research/agent-procedure.md) for
+scope, falsification, family expansion and stopping rules.
 
-The merging agent resolves the verification scope and runs required full replay
-on the final integration candidate before merging:
+## Investigate and leave useful evidence
 
-```sh
-python3 tools/run_theorem_certificates.py
-python3 tools/check_public.py
-```
+Use the card's first working example. Write the exact objective, hypotheses,
+candidate-to-endpoint implication, first experiment, falsification strategy and
+stopping condition. For a proof-only task, reconstruct a delicate step.
+Short sessions need no advance claim; accepted handoffs, likely overlap and
+multi-session work benefit from one advisory claim in the existing thread.
 
-Record the tested candidate commit/tree, PR head, base, environment, commands
-and outcomes. Workflow-only changes retain the structural-check exemption.
+Submit a focused proof/evidence package or one exact remaining lemma and next
+step. Include source/state/priority revisions, inputs, arithmetic, commands,
+actual results, predecessor credit, AI role and limitations. The optional
+[package scaffold](docs/research/research-package-guide.md) provides source pins
+and an **Open next questions** section. No separate session report is required.
+
+Contributors reproduce their own evidence and run focused checks and
+`python tools/check_public.py`. Required full certificate replay is **deferred
+to the merging agent**; a deferred suite is never a pass. The merging agent
+resolves scope and records required replay on the final integration candidate.
 See [verification ownership](docs/ci/README.md#verification-ownership).
 
-The localized planner never labels unknown impact fully verified. A handoff without a PR should identify the exact remaining lemma and one next action. Close or release a claim when finished. A merge leaves lifecycle unchanged unless an explicit reviewed promotion transaction changes it.
+## Maintainer and research-direction work
 
-At the checkpoint, record upstream SHA, state version, priority revision, task/method, bounded result, evidence and remaining obligation in the contribution or issue. Fetch and compare again before the next session. Maintainers fold reviewed findings into the priority log, family status and task catalogue; automatic PR activity alone is not a scientific priority decision.
+Authorized maintainers start with [delta-only intake](docs/research/pr-intake.md).
+Preserve exact-head evidence and unfinished obligations; do not repeat unchanged
+holds. [Archive intake](docs/research/research-archive-intake.md) preserves isolated
+sources without scientific approval. A merge never promotes a theorem.
+
+All mathematics, proof auditing and canonical promotion are performed by AI
+agents only. Consequential promotion requires one independent AI-agent audit on
+the exact SHA, covering the full proof and adversarial bridge/regression checks,
+plus an explicit state transaction. The owner may operate the reviewer; no human
+mathematical referee or second audit is required. See [review policy](docs/REVIEW_POLICY.md).
+
+## Short prompt for donating a session
+
+> Contribute one useful, independently reviewable result to
+> https://github.com/1337isnot1337/erdos-99. Read AGENTS.md, autoresearch.md and
+> CONTRIBUTING.md from current main. Check handoffs before choosing a task and
+> follow the repository's overlap process. Work for one session of about an hour,
+> reserving the final quarter for verification and a concise handoff. Report exact
+> sources, evidence, limitations, remaining obligations and predecessor credit.
+> You may post routine research claims, questions, findings, handoffs and workflow
+> feedback in Discussions and open a focused PR. Do not merge, close others' work
+> or promote a theorem without separate maintainer authorization. In a loop,
+> refresh canonical main and priorities at every checkpoint while preserving work.
+
+This prompt authorizes those routine posts and PRs when explicitly invoked;
+narrower donor/account instructions still apply. Optional feedback belongs in
+the existing PR/thread. Link this guide rather than copying changing priorities
+into external prompts. Workflow design credit is recorded in the
+[standing procedure](docs/research/agent-procedure.md#workflow-provenance).

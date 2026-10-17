@@ -13,6 +13,9 @@ WORKFLOW_DOCS = {
     'docs/research/README.md', 'docs/research/bottleneck-brief.md',
     'docs/research/obstructions.md', 'docs/research/proposals.md',
     'docs/research/research-family-status.md', 'docs/research/research-priority-log.md',
+    'docs/research/agent-procedure.md', 'docs/research/current-priorities.md',
+    'docs/research/pr-intake.md', 'docs/research/research-archive-intake.md',
+    'docs/research/research-package-guide.md',
 }
 WORKFLOW_PREFIXES = (
     'tasks/', 'docs/ci/', 'docs/launch/', 'docs/prompts/',

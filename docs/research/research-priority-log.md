@@ -1,5 +1,19 @@
 # Scientific priority decisions
 
+## Coordination supplement — 2026-10-17; priority revision remains public-frontier.3
+
+Catalogue `public-frontier.7` adds source-bound prior-check coverage and a fresh
+open-PR snapshot. PR #78 at `9f230b2f900bf050a27ce7430ae7b3fed8ef8eda` is linked
+as author-checked unreviewed finite evidence on the independent Schur/linkage card;
+independent review and the global source bridge remain open. All other cards have
+explicitly unknown coverage. State `2026-10-15.publication.2`, track/task weights,
+canonical premises and family decisions are unchanged. This is coordination
+metadata, not a scientific allocation decision or mathematical promotion.
+
+The handoff-first workflow, body-aware search and delta-intake cache preserve
+exact sources and unfinished obligations. The empty initial ledger does not
+retrospectively review old contributions. See [standing procedure](agent-procedure.md).
+
 ## Catalogue supplement — 2026-10-16; priority revision remains public-frontier.3
 
 The frozen source-main atomic-gap stack adds the direct C-II task

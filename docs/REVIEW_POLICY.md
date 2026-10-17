@@ -39,6 +39,13 @@ records.
 
 ## Ordinary research submissions
 
+Authorized reviewers start with [delta-only intake](research/pr-intake.md).
+Record exact-head coverage/evidence in its ledger and preserve unfinished
+obligations. [Archive intake](research/research-archive-intake.md) is a distinct
+source-preservation lane with `partially_reviewed` scientific status; lane names
+never bypass required verification or authorize shared-code changes. Scheduling
+state cannot certify a proof or promote a claim.
+
 Exploratory reports, independent checks, computational tools, and negative results can
 be merged as useful research artifacts without moving the frontier. Reviewers check
 scope and provenance in proportion to the claim and record the appropriate lifecycle

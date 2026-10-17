@@ -1,0 +1,22 @@
+# Current priorities and how to join
+
+Read the [bottleneck brief](bottleneck-brief.md) for the exact missing route
+obligations and first bounded steps. The [priority state](priority-state.json)
+and [task catalogue](agent-task-catalog.json) carry the current revisions and
+allocation; this page does not freeze a second copy of weights or theorem status.
+[STATE](../STATE.md) and the manifest remain authoritative.
+
+Start with [open handoffs and investigations](../COORDINATION.md). A concrete
+missing-lemma or independent-check request takes precedence over a generic card
+when it fits your expertise. Otherwise draw from the catalogue. Read prior-check
+coverage, source pins and remaining obligations before repeating an experiment.
+Unknown coverage is not evidence of novelty.
+
+Direct frontier work, independent audits/checkers, finite models, literature and
+alternative approaches all remain useful. A bounded result should identify how
+it affects an actual route obligation or falsifies a tempting inference. See
+[family status](research-family-status.md) before expanding an unchanged search.
+
+Reviewed findings feed the [priority log](research-priority-log.md), affected cards
+and family status. Merged archives and automatic PR counts do not make scientific
+priority decisions. Maintainer queue work follows [delta-only intake](pr-intake.md).

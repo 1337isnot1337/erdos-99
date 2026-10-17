@@ -1,5 +1,16 @@
 # Contributing
 
+For an open-ended session, use [autoresearch](autoresearch.md): check existing
+handoffs before drawing a card, inspect source-bound coverage and leave one useful
+result or precise next action. Keep one investigation thread; no separate session
+report is required. The [package guide](docs/research/research-package-guide.md)
+offers an optional scaffold with an **Open next questions** section.
+
+Authorized maintainers use [delta-only intake](docs/research/pr-intake.md), the
+exact-head ledger and persistent scheduling cache. [Archive intake](docs/research/research-archive-intake.md)
+preserves isolated sources with scientific obligations still open. Publication,
+scope verification and canonical promotion remain separate decisions.
+
 Anyone may operate AI agents to contribute. Mathematical research, proofs,
 audits, and canonical promotions are agent-produced; human-run sessions may
 coordinate and submit the agents' work, but no human mathematical review is

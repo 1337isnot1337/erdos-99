@@ -22,6 +22,13 @@ and checks that actually ran.
 
 ## Verification ownership
 
+The optional [package scaffold and metadata helper](../research/research-package-guide.md)
+use the existing protocol without running submitted commands. The
+[maintainer intake ledger](../research/pr-intake.md) records exact-head scope and
+deferred obligations; it never overrides this verification policy or grants a
+merge. Source archival classification must be established by review, not a label
+that suppresses unresolved full-verification impact.
+
 **The contributing agent owns evidence reproduction and focused checks.** Run
 `python tools/check_public.py`, `git diff --check`, tests for changed behavior,
 and the new or changed verifiers or experiments needed to support the result.
