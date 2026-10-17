@@ -1,0 +1,131 @@
+{
+  "arithmetic": "integer flow/cuts/injections and signed polynomials in independent edge variables",
+  "classification": "unreviewed exact finite verification; no geometric or global claim",
+  "counts": {
+    "disjoint_sink_cases": 176984,
+    "matching_contraction_checks": 9216,
+    "overlapping_sink_cases": 57192,
+    "separator_checks": 9216,
+    "strict_charge_improvements": 150408,
+    "supports": 9216,
+    "supports_with_basis_alternating_cycle": 2304,
+    "terminal_subset_checks": 36864,
+    "tube_shield_cases": 234176
+  },
+  "domain": {
+    "basis": [
+      0,
+      1
+    ],
+    "condition": "each terminal has at least one direct exterior-sink neighbor",
+    "fixed_edges": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        5
+      ]
+    ],
+    "interior": [
+      4,
+      5
+    ],
+    "optional_edges": [
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "sinks": [
+      6,
+      7
+    ],
+    "terminals": [
+      2,
+      3
+    ]
+  },
+  "generic_schur_rank_counts": {
+    "1": 704,
+    "2": 8512
+  },
+  "negative_controls": {
+    "equal_weight_specialization": {
+      "generic_rank": 2,
+      "specialized_rank": 1
+    },
+    "lost_capacity_after_matching_contraction": {
+      "contracted_edge_flow": 3,
+      "contracted_vertex_flow": 2,
+      "original_vertex_flow": 2
+    },
+    "missing_terminal_interception": {
+      "invalid_cut_upper": 1,
+      "true_rank": 2
+    },
+    "overlapping_sector_sinks": {
+      "coarse_hall_lower": 0,
+      "invalid_disjoint_sink_lower": 2,
+      "true_right_deficiency": 0
+    },
+    "wrong_matching_orientation": {
+      "symbolic_rank": 2,
+      "wrong_flow": 1
+    }
+  },
+  "status": "PASS"
+}

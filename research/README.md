@@ -14,6 +14,19 @@ Locally reproducible, independently reimplemented, and mathematically reviewed a
 
 Use `python tools/task_context.py TASK-ID` to list the chosen task's transitive certificate prerequisites. New evidence packages include exact inputs, arithmetic, bounds, environment, commands, inspectable output, negative controls and explicit limitations. New proposal scripts outside the canonical registry remain unreviewed.
 
+## Independent Target A finite Schur/linkage checker
+
+The [2026-10-17 report](../docs/reports/target_a_independent_schur_linkage_2026-10-17.md)
+and standard-library checker independently compare symbolic Schur minors,
+vertex flow, exhaustive injections, separators and matched-pair contraction
+on 9,216 supports, plus 234,176 tube/shield cases. Replay with
+`python3 research/verify_target_a_schur_linkage_2026_10_17.py --check
+research/target_a_schur_linkage_2026_10_17.json`.
+Shared-sink, terminal-interception, contraction-capacity, orientation and
+equal-weight controls expose the scope boundaries. This is unreviewed finite
+evidence outside the theorem-certificate registry; it does not establish
+geometric realization, source surplus or Target A closure.
+
 ## Additional noncanonical whole-source verifiers
 
 Two source-identical formal/global-obstruction reports postdate the pinned canonical corpus and are available through [current research proposals](../docs/research/proposals.md). They do **not** add to the 94 registered theorem certificates and must not be treated as canonical premises.
