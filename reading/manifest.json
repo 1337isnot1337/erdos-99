@@ -1,7 +1,7 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2168,
+  "source_documents": 2169,
   "math_pairs_normalized": 71621,
   "documents": [
     {
@@ -135,6 +135,13 @@
       "source_sha256": "4b426b4df495b2a03c675dce71622a0d36c84f0e8338b045333400965668a0f2",
       "reading_path": "reading/docs/audits/target_b_explicit_unique_max_phase_gap_audit_2026-09-05.md",
       "reading_sha256": "0f288f82360777841c7ffa99691fd32b8514e94e33add1754e28b588931de713",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md",
+      "source_sha256": "6777fd8c89349c4b9fc8d9f678ffd057babd624a5d56d3c1c092ea2862dc79c8",
+      "reading_path": "reading/docs/audits/target_b_gpi_scope_independent_audit_2026-10-17.md",
+      "reading_sha256": "9d8e3017aeb942e39de16187067e2972f5cacf350b731edb6cbe0cd2977bdd81",
       "math_pairs_normalized": 0
     },
     {
