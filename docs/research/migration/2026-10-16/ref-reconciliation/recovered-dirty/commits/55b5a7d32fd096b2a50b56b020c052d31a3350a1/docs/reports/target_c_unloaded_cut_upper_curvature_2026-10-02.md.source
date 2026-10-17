@@ -1,0 +1,407 @@
+# Target C-II — positive contact curvature at finite upper witnesses
+
+```text
+positive old contact equilibrium + a single exact-phase unit cut
+-> one/two unloaded farthest endpoints pay finite curvature charges 1 / 4
+-> below the two-unloaded threshold, an upper witness forces an old
+   internal loaded pair with squared deficit <= 2D|Delta|-2, or an isolate
+-> an internal loaded-pair margin rules out the entire upper fork
+-> still required: prove that margin on an actual canonical cut, or handle
+   the surviving internal loaded pairs/isolates and strict lower blockers.
+```
+
+**Date:** 2026-10-02.  
+**Continuation starting HEAD:** `55b5a7d3`.  
+**Run base:** `0031d1d932d07ad657bf5efa34cfd16a3d249b02`.  
+**State version:** `2026-09-14.audit.51`.  
+**Branch:** `swarm/sol/diameter-rotation-cells-20261002`; PR #630.  
+**Classification:** proved candidates awaiting independent audit/promotion;
+artifact lifecycle **unreviewed**. The sufficient margin theorem is conditional
+on its explicit hypotheses. The finite equality packets are **regressions**
+against stronger local projection/charge claims.  
+**Level I / C-II:** **OPEN**. No canonical-state change.  
+**Certificate:** [exact verifier](../../research/verify_target_c_translation_lens_exposure_2026_10_02.py).
+
+## 1. Actual-source hypotheses and dependencies
+
+Let `P` be an actual finite unit-separated source of diameter `D`. Let `H` be
+its old actual diameter pairs and let `B` be their endpoint set. Let `Z` be its
+contact-isolated points. Assume strictly positive weights on **every** old unit
+contact, such that every point outside `B` satisfies the unloaded contact
+equilibrium
+
+\[
+\sum_{j:\,|p_x-p_j|=1}\alpha_{xj}(p_x-p_j)=0.                 \tag{U.1}
+\]
+
+This is the unloaded row of [Theory 01, Theorem 4.1](../theory/01-local-structure.md),
+with the full-support regime from [Target C §56](../targets/target-c/56-ci-restored-frontier.md).
+No force equation at a loaded point, positive diameter multiplier, positive
+stress floor, PSD, or source population estimate is needed here.
+
+Partition **all** source points into `S,T`. Every old contact crossing this
+cut has vector `u=(1,0)` from `T` to `S`. Translate `S` by
+
+\[
+\Delta=v-u,\qquad v=R_\theta u,\qquad 0<\theta<\pi/2.
+\]
+
+Fix `T`. Put `q=|Delta|=2sin(theta/2)`, `Q=q^2`, and assume `D>q`.
+All old contacts remain unit contacts exactly. Every source point, including
+every isolate, is retained. We do **not** assume that new lower or upper
+constraints are feasible.
+
+The new claims concern a cross pair `x in S,y in T` attaining the **global**
+new diameter `M>=D`. Write
+
+\[
+r'=p'_x-p'_y,\qquad r=p_x-p_y=r'-\Delta,
+\quad \beta=M^2-D^2\ge0.                                  \tag{U.2}
+\]
+
+An upper violation necessarily has such a cross pair because internal
+distances are unchanged. For `M=D`, select a newly active cross pair; an
+unchanged internal diameter is not an instance of the witness hypotheses.
+
+Only U.4/U.5 additionally assume that **every old crossing diameter strictly
+shortens**. They use the finite lens/exposure lemmas in the preceding
+[translation report](target_c_finite_translation_lens_exposure_2026-10-02.md).
+Those are unpromoted proved candidates, checked and restated where used.
+No TB1 extraction, virtual carrier, train graph, or phase normal form is an
+unqualified premise. A slab with two different boundary contact directions
+does not satisfy the single-cut hypothesis here.
+
+## 2. One unloaded endpoint: exact finite charge
+
+### Proposition U.1
+
+If at least one endpoint of the global farthest cross pair is unloaded and
+nonisolated, then
+
+\[
+\boxed{r'\cdot u\le-\tfrac12,\qquad
+r'\cdot v\ge\tfrac{1+\beta}{2},\qquad
+r'\cdot\Delta\ge1+\tfrac\beta2,\qquad Dq\ge1.}             \tag{U.3}
+\]
+
+**Proof.** First take `x in S` unloaded and nonisolated. At a global farthest
+pair, every internal unit neighbor `j in S` satisfies
+
+\[
+|r'-(p'_x-p'_j)|\le M,
+\quad\text{hence }r'\cdot(p'_x-p'_j)\ge\tfrac12.           \tag{U.4}
+\]
+
+If there were no cut contact at `x`, its nonempty internal contact sum in
+(U.1), paired with `r'`, would contradict (U.4). Thus `x` is a cut endpoint.
+Write `a>0` for its total cut-contact weight and `A>0` for its internal
+contact weight. Equation (U.1) gives
+
+\[
+\sum_{j\in S}\alpha_{xj}(p_x-p_j)=-a u.
+\]
+
+The triangle inequality gives `A>=a`. Pairing with `r'` in (U.4) yields
+`-a r'·u>=A/2`, and therefore `r'·u<=-1/2`.
+
+The actual outside unit neighbor is `f=x-u in T`; no two distinct neighbors
+can occupy that position. The old source pair `f,y`, internal to `T`, has
+vector
+
+\[
+p_f-p_y=r-u=r'-v.
+\]
+
+Its distance is at most `D`, so
+`2r'·v>=M^2+1-D^2=beta+1`. Subtracting the first projection bound gives
+`r'·Delta>=1+beta/2`.
+
+If instead `y in T` is unloaded and nonisolated, use its outward diameter
+vector `-r'` and cut vector `-u` in (U.4). Its outside neighbor `g=y+u in S`
+gives the same internal vector `x-g=r'-v` and the same conclusions.
+
+Finally `r'·Delta<=Mq`. Since `M>=D>q`,
+
+\[
+2Mq-\beta
+=2Dq+(M-D)(2q-M-D)\le2Dq.                                \tag{U.5}
+\]
+
+The charge inequality implies `2Mq-beta>=2`, proving `Dq>=1`. ∎
+
+This proof excludes unloaded nonisolated endpoints with no cut contact
+without dropping them from the source. It supplies no inequality for a
+contact isolate.
+
+### Direction window
+
+With `u=(1,0)`, (U.3) also gives
+
+\[
+\frac{(1+\beta)/2-M\sin\theta}{\cos\theta}
+\le r'_x\le-\tfrac12,
+\qquad r'_y>0.                                           \tag{U.6}
+\]
+
+The lower bound follows from `r'·v>= (1+beta)/2` and `r'_y<=M`.
+For `Dtheta` bounded and `D->infinity`, `M<=D+q` and (U.6) force
+`r'_x=O(1)` and `r'_y=M-O(1/D)`. Thus this witness direction is within
+`O(1/D)` of `+Ju`. This is an actual endpoint restriction, not activity of
+the old witness pair or a diameter-direction count.
+
+## 3. Two unloaded endpoints: neighbor-pair curvature
+
+### Proposition U.2
+
+If both endpoints are unloaded and nonisolated, then
+
+\[
+\boxed{r'\cdot u\le-1,\qquad
+r'\cdot\Delta\ge4-\tfrac Q2+\tfrac\beta2,
+\qquad Dq\ge4-\tfrac Q2.}                                \tag{U.7}
+\]
+
+**Proof.** U.1 provides positive cut and internal weights at both endpoints.
+Let `kappa_x=a_x/A_x` and `kappa_y=a_y/A_y`, each in `(0,1]`. Choose internal
+neighbors `j in S,k in T` independently with probabilities proportional to
+their positive contact weights. Their unit offsets have means
+
+\[
+\mathbb E(p'_j-p'_x)=\kappa_xu,\qquad
+\mathbb E(p'_k-p'_y)=-\kappa_yu.
+\]
+
+Every neighbor pair has distance at most the global diameter `M`. Expanding
+and averaging its squared distance gives
+
+\[
+M^2+2(\kappa_x+\kappa_y)r'\cdot u
++2+2\kappa_x\kappa_y\le M^2.
+\]
+
+Thus
+
+\[
+r'\cdot u\le-\frac{1+\kappa_x\kappa_y}{\kappa_x+\kappa_y}
+\le-1,
+\]
+
+where the last inequality is `(1-kappa_x)(1-kappa_y)>=0`.
+
+The old outside neighbors `f=x-u in T`, `g=y+u in S` form an old source
+pair, of vector
+
+\[
+p_g-p_f=2u-r=u+v-r'.
+\]
+
+Its old distance is at most `D`, hence
+
+\[
+r'\cdot(u+v)\ge\frac{\beta+|u+v|^2}{2}
+=\frac\beta2+2-\frac Q2.
+\]
+
+Subtracting `2r'·u<=-2` yields the charge in (U.7). Pair it with
+`r'·Delta<=Mq` and (U.5) to obtain the final bound. ∎
+
+In particular, if `theta=C/D+o(1/D)` with fixed `C<4`, two nonisolated
+unloaded endpoints cannot produce the global upper fork for large `D`.
+This is stronger than the one-endpoint threshold; it uses all internal
+neighbor **pairs**, rather than counting neighbors or only one equilibrium
+row. It does not cover loaded endpoints or isolates.
+
+## 4. Propagation to an old internal loaded pair
+
+### Proposition U.3 — one unloaded, one loaded endpoint
+
+Suppose exactly one witness endpoint is unloaded and nonisolated, while
+the other is loaded. In the packet of the loaded endpoint there is an old
+support vertex `z` which is loaded or contact-isolated, such that its pair
+with that loaded endpoint has squared deficit
+
+\[
+\boxed{D^2-|p_z-p_y|^2\le 2Dq-2}                         \tag{U.8}
+\]
+
+when `y in T` is loaded; interchange packet/endpoint names in the other
+case. In particular, if that packet has no contact isolates, this is an old
+internal pair of **two loaded points**. The pair is distinct whenever
+`D>q+1`, as will be assumed in U.4/U.5.
+
+**Proof.** First suppose `x in S` is unloaded, `y in T` loaded. Let `f=x-u in T`
+and `n=p_f-p_y=r'-v`. U.1 gives `n·u<=-1/2-cos(theta)<0`.
+Choose an old hull vertex `z` of `T` maximizing the support functional `n`.
+An unloaded nonisolated vertex without cut contacts is a positive convex
+average of internal contact neighbors by (U.1), so cannot be a hull vertex.
+For an unloaded cut vertex in `T`, its old outside contact force is
+`g_z=-a_z u`, with `a_z>0`. Pairing (U.1) with a support normal gives
+
+\[
+n\cdot g_z=-\sum_{j\in T}\alpha_{zj}n\cdot(p_z-p_j)\le0.
+\]
+
+But `n·(-a_z u)>0`, a contradiction. Therefore `z` is loaded or isolated.
+Since `f in T`,
+
+\[
+|p_z-p_y|\ge\frac{n\cdot(p_z-p_y)}{|n|}\ge|n|.
+\]
+
+Here `|n|>=D-q-1>0` when the distinctness hypothesis is needed. Now
+
+\[
+\begin{aligned}
+D^2-|n|^2
+&=-\beta-1+2r'\cdot v\\
+&=-\beta-1+2r'\cdot\Delta+2r'\cdot u\\
+&\le2Mq-\beta-2\le2Dq-2,
+\end{aligned}
+\]
+
+by U.1 and (U.5). This proves (U.8).
+
+If `y in T` is unloaded and `x in S` loaded, use `g=y+u in S` and support
+normal `p_g-p_x=v-r'`, which has positive `u` projection. An unloaded cut
+vertex of `S` has outside force `+a_z u` and is similarly excluded. The
+pair with `x` has the same squared-distance estimate. ∎
+
+The support point need not be the outside neighbor itself, need not be a
+diameter endpoint exposed across this cut, and need not carry any new KKT
+multiplier. With isolates present the loaded/isolate alternative is real.
+
+### Proposition U.4 — complete upper-witness reduction without isolates
+
+Assume `Z` is empty, `D>q+1`, every old crossing diameter strictly shortens,
+and `Dq<4-Q/2`. Any globally farthest cross pair with `M>=D` forces an old
+internal loaded-loaded pair of squared deficit at most
+
+\[
+\boxed{W=\max\{0,2Dq-2\}.}                              \tag{U.9}
+\]
+
+**Proof.** Two unloaded endpoints are excluded by U.2. Exactly one unloaded
+endpoint gives U.3. If both are loaded, recall the preceding exact lens
+lemma: a pair whose endpoints are each incident to an old crossing diameter
+becomes strictly below `D` whenever all old crossing diameters shorten.
+For completeness, select one crossing diameter at each endpoint. If they
+are the same pair, it is itself shortened. If they share the other endpoint,
+the witness is one of the shortened old diameter pairs. Otherwise the two
+old bars are disjoint; their opposite pair is strictly protected by L.1.
+Thus both witness endpoints cannot be crossing-exposed. A loaded endpoint
+which is not crossing-exposed has an old diameter neighbor in its own
+packet. This gives the required internal loaded pair, of zero deficit. ∎
+
+Near the first angular wall, `Dtheta->2`, we have `Dq->2` and `W->2`.
+Therefore an upper blocker is reduced to an old internal loaded pair within
+`2+o(1)` in **squared distance** of `D^2`, or an isolate if `Z` is retained.
+This does not justify treating such a pair as an actual diameter edge.
+
+## 5. A source-specific sufficient margin and the exact lower fork
+
+### Corollary U.5 — internal loaded-pair margin
+
+Assume all the hypotheses of U.4 and, in each packet, every distinct old
+loaded-loaded pair has squared deficit **strictly greater** than `W`.
+Then the translated source has **every distance strictly below `D`**.
+
+If the old source is a global minimum-diameter source, at least one old
+strict lower pair has new distance **strictly less than one**.
+
+**Proof.** The margin forbids every internal old diameter edge, since its
+endpoints are loaded and its deficit is zero. Thus every unchanged internal
+distance is below `D`. If a new cross distance were at least `D`, a global
+farthest cross pair would give U.4 and contradict the margin. So the new
+diameter is strictly below `D`. Every old contact is preserved. If all new
+lower distances were at least one, this actual full-cardinality source would
+be a strict diameter competitor. Therefore an old strictly inactive lower
+pair must become strictly less than one. ∎
+
+This argument does not use contact-minimality or diameter-pair-minimality:
+under the explicit margin, the upper improvement is already strict.
+It includes new contacts and unit triangles at the endpoint as feasible
+source pairs; neither would obstruct a strict diameter competitor.
+The margin has **not** been proved on an actual canonical cut, and the
+absence of isolates is **not** claimed for arbitrary canonical sources.
+
+## 6. Exact equality packets and hostile tests
+
+The [verifier](../../research/verify_target_c_translation_lens_exposure_2026_10_02.py)
+checks five rational one-unloaded packets and five rational two-unloaded
+packets, at `k=9,17,33,65,129`. It checks every old/new pair, old contacts,
+triangle absence, diameter graphs, and the stated positive local equilibrium
+rows. These are actual source positions, **not full-source KKT certificates**.
+
+In the one-unloaded packet, put
+
+\[
+L=(k^2-1)/(4k),\quad D=(k^2+1)/(4k),\quad
+\tau=1/(2L),\quad v=((1-\tau^2)/(1+\tau^2),2\tau/(1+\tau^2)).
+\]
+
+The new points are `x=(0,0),h=(1,0),y=(1/2,-L),f=-v`. Translate
+`S={x,h}` backwards by `Delta=v-u` to obtain the old source; `T={y,f}`.
+The old contacts `f-x-h` are a horizontal unit chain and the unloaded row
+at `x` has both weights one. The old diameter is `yf`; the new diameter
+adds `xy,hy`. For `r'=x-y`,
+
+\[
+r'\cdot u=-1/2,\qquad r'\cdot\Delta=1,\qquad Dq=1.
+\]
+
+Thus all three bounds in U.1 are attained exactly. An internal old diameter
+survives; this is not an all-crossing-diameters-shortened packet. Point `y`
+is contact-isolated, and full-source equilibrium is not satisfied at every
+other unloaded point. The four-point square gives a strict global competitor.
+
+For the two-unloaded packet, put
+
+\[
+L=(k^2-1)/(2k),\quad D=(k^2+1)/(2k),\quad \tau=2/L.
+\]
+
+Use the same rational formula for `v`. New positions are
+`x=(0,0),h=(1,0),y=(1,-L),j=(0,-L),f=-v,g=y+v`, with
+`S={x,h,g}`. Subtract `Delta` from these three points for the old source.
+The old contact chains are `f-x-h` and `j-y-g`, and the unloaded rows at
+`x,y` have weights one. There are no contact isolates. The sole old diameter
+`fg` crosses the cut and strictly shortens. The new diameters are `xy,hj`.
+The globally farthest vector `r'=x-y=(-1,L)` satisfies exactly
+
+\[
+r'\cdot u=-1,\qquad r'\cdot\Delta=4-Q/2.
+\]
+
+Here `Dtheta->4`. The projection and charge constants in U.2 cannot be
+improved using only those local equilibrium rows and global pair inequalities.
+This does not certify finite-threshold equality after the Cauchy estimate.
+The other unloaded points do not satisfy full-source equilibrium; a six-point
+`2 by 3` square grid has diameter `sqrt(5)<D`, so these are not global optima.
+The old diameter count one increases to two, rather than giving an H-minimal
+competitor. An arbitrarily long chain has not been silently substituted.
+
+The ten packets contribute **210** exact old/new pair checks and **15**
+positive local equilibrium rows. The same script retains the preceding
+105-source lens census and five unexposed upper-blocker regressions.
+No finite survival result is asserted to prove U.1–U.5 or Level I; the proofs
+above are analytic. No isolate is removed to claim a complete-source result.
+
+## 7. Remaining gap and immediate attack
+
+The exact new upper bridge is U.4, with U.5 as a sufficient finite competitor
+criterion. It applies to an actual single exact-phase cut with the stated
+positive equilibrium, not automatically to every normal-form train swap.
+To use it in C-II one must find such a cut and eliminate either its surviving
+old internal loaded pairs of squared deficit at most `W`, or use their actual
+labels/directions to construct the next motion. Replacing their finite slack
+with zero is invalid. Isolate anchors remain a separate actual-source branch.
+Even after the upper fork is excluded, strict lower blockers require a second
+source move or a contradiction. Two-boundary nonconstant-phase slabs need
+their actual endpoint contact-force sums in place of the single vector `u`.
+Split-star, inactive-interface, and inactive-container branches are not covered.
+
+Next concrete attack: test whether the loaded/internal near-diameter pair in
+U.3 can be upgraded to an actual diameter support using full loaded equilibrium
+or convex diameter geometry. A positive answer must produce an exact edge or
+finite source competitor; a near-active pair or an infinitesimal derivative
+alone does not close C-II.

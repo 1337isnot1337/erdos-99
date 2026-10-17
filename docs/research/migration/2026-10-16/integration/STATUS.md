@@ -1,78 +1,62 @@
-# Migration repair status
+# Migration completion status
 
-Status: draft repair candidate. Not release verified. Source deprecation is blocked.
-
-The original [integration receipt](README.md) records the earlier candidate.
-This page records the subsequent recovery and its current limits. Destination
-theorem state remains authoritative; Level I remains open.
+Captured-byte preservation is complete. Source deprecation remains deferred
+because two historical working-copy states were not inventoried at migration
+capture. Both repositories remain private. Level I/A/B/C-II remain open;
+C-I remains closed within its recorded scope.
 
 ## Preserved content
 
-The [source coverage records](SOURCE_MAIN_PRESERVATION.md) account for all
-4,717 pinned source-main paths: 4,654 exact identities and 63 reference-only
-dispositions. The candidate adds 1,282 exact original source files beneath
-`integration/source-main/`. A source-compatible replay assembled before the
-environment outage contained 4,653 first-party files.
+The [source-main ledger](SOURCE_MAIN_PRESERVATION.md) accounts for all 4,717
+pinned source paths: 4,654 exact source identities and 63 explicit external
+reference exclusions. It preserves 1,282 recovered originals separately from
+corrected destination documents. The active `tools/build_artifact_index.py`
+has changed; the source identity survives under
+`baseline-originals/tools/build_artifact_index.py.source`, as explicitly
+recorded by the union checker.
 
-All 813 frozen reports retain their captured bytes, modes, and Git blob
-identities. All 1,643 recorded branch-artifact rows have exact retained content.
-The [branch and dirty-file audit](../ref-reconciliation/README.md) adds 249 raw
-branch blobs and reconstructs two captured dirty artifact indexes exactly.
+All 813 frozen report bindings and all 1,643 captured branch-artifact rows
+remain obligations of the executable checkers. The 249 raw branch archives,
+two exactly reconstructed dirty indexes, and twelve restored original-path
+dependencies remain preserved. These are bounded captured inventories, not
+an assertion that every historical Git object or working copy was transplanted.
 
-The [reference recovery](reference-recovery.md) restores 12 original-path
-dependencies. The [historical reference map](historical-reference-map.md) retains
-version and scope limits. An archived counterpart does not prove that an
-uncaptured historical version was recovered.
+The [local recovery follow-up](../ref-reconciliation/LOCAL_RECOVERY.md)
+recovers all five formerly missing dirty-file versions from the original
+worktrees. Every recovered version matches its captured SHA-256 and byte
+length. All 30 captured dirty-file identities are now present. Exact historical
+bytes remain inert `.source` archives and do not replace active proofs or
+verifiers. The earlier missing-identity ledger and search receipts are retained
+as historical evidence, superseded for current recovery status by the
+[exact-recovery ledger](../ref-reconciliation/recovered-dirty-identities.jsonl).
 
-## Engineering changes
+## Historical working-copy limits
 
-The [integrity policy](integrity-policy.json) pins 1,505 historical Markdown and
-Python payloads and 55 imported unreviewed report banners to the original
-candidate `f282d53169df4d507117893bfdcc99f663855923`.
+The two markers `/tmp/e99-diameter-stress-gap-20261002` and
+`/tmp/e99-source-cycle-20261001` retain **unknown historical working-copy state
+at migration capture**. Earlier local backups record clean tracked/untracked
+snapshots and preserve ignored bytecode. Nine current non-bytecode residual
+files for the first marker exactly match its recorded commit. The second path
+is absent. These observations do not establish an uncaptured later inventory,
+prove there were no later changes, or identify a number of lost files.
+The [follow-up evidence](../ref-reconciliation/historical-worktree-followup.json)
+records the exact scope. An explicit owner disposition is needed before source
+deprecation; the source repository and historical working copies remain intact.
 
-Only six existing engineering files change. Each has an exact old copy under
-`baseline-originals/`. Existing artifact-index rows and source permission
-fields remain unchanged. Added index records remain unreviewed and
-noncanonical. Security scanning still covers historical payloads.
+## Verification and integration contract
 
-The frozen ledger checker, reference and branch audits, release wrapper, bounded
-scanner-finding review, and regression controls are included. No canonical
-claim, theorem-state file, or accepted proof is promoted or rewritten.
+The earlier outage, headless object reviews, and diagnostic test results remain
+historical evidence. A working local CPython 3.14.7 environment and a local
+namespace-capable verification route are now available. The
+[complete migration verification procedure](../../../../launch/MIGRATION_VERIFICATION.md)
+must pass on the exact clean integration candidate and resulting destination
+`main`. No denied, skipped, zero-step hosted, or earlier-SHA result counts as a
+pass. Repository checks, certificate replay, credential and rights checks, and
+mathematical authority checks remain enforced.
 
-## Verification and outage
-
-Before the execution environment disconnected, diagnostic runs passed 94
-registered certificates, 92 migration tests normally and with Python
-optimization, 12 publication-policy controls, 33 rights-lineage controls, and
-the named verifier/discovery replays. Public integrity reported zero errors.
-Four namespace tests could not execute in that sandbox because namespace
-operations were denied.
-
-The [hosted namespace attempt](hosted-namespace-attempt.json) on the recovered
-candidate also failed before runner allocation: zero steps ran. It provides no
-namespace-test result. The available API does not expose a more specific cause.
-
-Those outcomes are earlier diagnostic evidence, not a passing receipt for this
-reconstructed candidate. The environment disconnected during upload and is
-unavailable. Work was recovered from GitHub objects, pinned source inventories,
-and retained writer histories. Reconstructed code has not been executed after
-that outage. The recovery checkpoints and their receipts state this limit.
-
-The final headless checks compare committed Git object identities and ledger
-structure. They do not replace Python regression tests, namespace isolation
-tests, the complete certificate/corpus replay, scanner execution, or Gate 2.
-Use the [verification procedure](../../../../launch/MIGRATION_VERIFICATION.md)
-on the final clean candidate and again on any resulting merge commit.
-
-## Unresolved evidence
-
-Five substantive dirty-file versions remain unavailable. Their paths, sizes,
-and captured SHA-256 values are listed in the
-[missing-identity record](../ref-reconciliation/known-missing-dirty-identities.jsonl).
-Hashes cannot reconstruct their bytes. Twenty-five of the 30 known captured
-dirty-file identities are preserved; two other historical worktree markers
-have no captured file inventory and retain unknown working-copy state.
-
-The source remains intact. The integration pull request stays draft and
-unmerged until the missing evidence has a justified disposition and final
-verification succeeds. No source-deprecation or release approval is claimed.
+Current executable results are recorded in the detached completion evidence
+and the release-engineering handoff on
+[integration PR #75](https://github.com/1337isnot1337/erdos-99/pull/75), bound to
+their tested commit and tree. This page does not embed a self-referential
+verification receipt or grant publication permission. No mathematical claim
+is promoted. Ordinary Git attribution, including `codex@openai.com`, is retained.

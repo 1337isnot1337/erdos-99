@@ -1,5 +1,11 @@
 # Captured branch and worktree reconciliation
 
+**Current follow-up:** all five formerly missing dirty versions were exactly
+recovered from the original local worktrees; see [local recovery](LOCAL_RECOVERY.md)
+and its identity ledger. All 30 captured dirty rows are present. The two
+historical markers retain unknown state at migration capture. The earlier
+search observations below remain historical evidence.
+
 Source main: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`.
 Captured integration: `f282d53169df4d507117893bfdcc99f663855923`.
 Level I, Target A, Target B, and C-II remain open; C-I remains closed.
@@ -49,7 +55,8 @@ The [recovery receipt](recovery-checkpoint.json) distinguishes earlier local tes
 from code reconstructed after the execution environment became unavailable.
 The reconstructed Python files require a fresh test run when execution returns.
 
-Source deprecation remains blocked by the five missing known versions.
-The two markers without captured identities remain explicit uncertainty.
+The historical five-file gap is resolved by the local recovery follow-up.
+Source deprecation remains deferred pending owner disposition of the two
+markers without captured identities.
 No original commit, PR, branch, or author metadata was rewritten or removed.
 Prepared with Codex AI assistance.

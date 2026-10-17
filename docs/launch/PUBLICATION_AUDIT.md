@@ -1,5 +1,23 @@
 # Publication audit and blocker ledger
 
+## Full migration completion scope
+
+The [current integration status](../research/migration/2026-10-16/integration/STATUS.md)
+accounts for all 4,717 pinned source-main paths: 4,654 exact source identities
+and 63 external-reference exclusions. All 813 frozen report bindings, 1,643
+captured branch-artifact rows, and 30 known captured dirty-file identities are
+preserved. The [five-version local recovery](../research/migration/2026-10-16/ref-reconciliation/LOCAL_RECOVERY.md)
+retains exact historical bytes separately from active documents.
+
+Two historical working-copy states remain unknown at migration capture;
+earlier clean backup observations are bounded evidence. Source deprecation is
+deferred pending explicit owner disposition. Neither repository is made public
+or removed. Exact current Gate 2 results belong in detached receipts naming the
+tested SHA/tree, as required by [migration verification](MIGRATION_VERIFICATION.md)
+and the handoff on [PR #75](https://github.com/1337isnot1337/erdos-99/pull/75).
+Historical results below do not establish a current-commit pass.
+
+
 ## Expanded Target C corpus: exact-commit verification scope
 
 The audit narrative below records the earlier 810-entry publication candidate.
