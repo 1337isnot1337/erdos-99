@@ -1,0 +1,8 @@
+PR #78 independent AI audit at exact source head 9f230b2f900bf050a27ce7430ae7b3fed8ef8eda.
+The audit text is preserved byte-for-byte. Its original /tmp reproduction paths are historical.
+From a checkout of this review-artifact commit, reproduce with normal Python (not -O):
+
+python3 docs/research/review-artifacts/pr78/independent-replay.py > /tmp/pr78-independent-replayed.json
+cmp docs/research/review-artifacts/pr78/independent-replay-output.json /tmp/pr78-independent-replayed.json
+
+This branch preserves review evidence and the exact-head intake ledger separately; it is not the tested main integration tree. No canonical lifecycle is promoted.

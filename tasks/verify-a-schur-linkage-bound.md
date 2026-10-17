@@ -1,5 +1,15 @@
 # verify-a-schur-linkage-bound
 
+**Investigation:** `verify-a-schur-linkage-bound-completed-20261017`. **Status:** completed. Source: `9f230b2f900bf050a27ce7430ae7b3fed8ef8eda`.
+
+Downstream use: Retain completed coverage so new workers start at the unresolved successor instead of repeating this audit.
+
+This scope is complete. Continue with [verify-a-source-capacity-coupling](verify-a-source-capacity-coupling.md).
+
+Prior evidence:
+- [agent-audited](../docs/research/review-artifacts/pr78/independent-audit.txt) at `9f230b2f900bf050a27ce7430ae7b3fed8ef8eda`: The exact finite Schur/linkage domain submitted in PR #78; reviewed before its merge. PR #96 is supplementary reconstruction of the same bytes. Remaining: No canonical promotion or acceptance outside this exact scope.
+- [agent-audited](https://github.com/1337isnot1337/erdos-99/blob/6819b4f862508fe843f7a385e2cff992ecf23420/docs/audits/target_a_schur_linkage_independent_audit_2026-10-17.md) at `6819b4f862508fe843f7a385e2cff992ecf23420`: The exact finite Schur/linkage domain submitted in PR #78; reviewed before its merge. PR #96 is supplementary reconstruction of the same bytes. Remaining: No canonical promotion or acceptance outside this exact scope.
+
 **Track / priority:** independent-verification / independent evidence; selection weight 1 (attention only).
 
 ## Exact objective
@@ -29,7 +39,7 @@ Advances only the stated route obligation; global closure still requires all can
 
 ## Approach and first bounded experiment
 
-Implement vertex-capacitated max-flow for small oriented response graphs, and compare it with exact symbolic rank of a generic sparse matrix on the same edge set. Add negative fixtures for paths entering a shield outside the claimed tube and for overlapping sink sectors.
+This exact objective is complete. Read its recorded disposition, then use verify-a-source-capacity-coupling. Reopen only for a changed source or a named discrepancy.
 
 Methods: independent max-flow implementation, exact symbolic matrix rank and cross-check fixtures
 
@@ -55,7 +65,7 @@ The task-context command lists certificate commands for the direct and transitiv
 
 ## Remaining lemma and limitations
 
-For the actual source and response, establish rank(S)<=d_int+|C^partial|-Delta_Lambda (d_sc>=Delta_Lambda); in the locked branch the exact Section-175 surplus is |O_iso|+sum_i max(0,|O_i|-|C_i|)>=j_*+|T_Z|. Any untouched zero-slack/global-realization branch remains.
+No further work on this completed source/domain. The separate successor is verify-a-source-capacity-coupling; the route endpoint remains open.
 
 No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.
 

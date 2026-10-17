@@ -1,0 +1,58 @@
+# Independent reconstruction before reading the proposed corrected argument
+
+Audit session: /root/correction_audit (GPT-6 Astra Pro).
+Submitted local commit: d585826bbe4e7ebc720706231820906f90832b30.
+
+Read first: AGENTS.md; docs/REVIEW_POLICY.md; Target A Section 102;
+Sections 174 and 175; Section 113; the seed-63 source report's fixture.
+The proposed corrected package proof, checker, and audit have not yet been read.
+The corrected numerical conclusions were incidentally visible in search snippets.
+
+Write row indices without the phase v=(1/5,1/7), using
+q(a,b)=a^2+ab+b^2. The source triangle is
+X={(i,j): i,j>=0, i+j<=M}; rows conflict with x exactly at x,x-e1,x-e2.
+Thus Z={(i,j):i,j>=0,i+j<=M-1} and the exterior rows are
+(-1,j), (i,-1), and (i,M-i), for 0<=i,j<=M.
+
+The incidence-deep columns are precisely i>=1,j>=1,i+j<=M-1.
+Their direct identity-row matching makes them all independent. Therefore
+Section-102 admissibility requires every such column to belong to B.
+It is not enough that a matching merely saturates Z.
+
+For the given fan, the interior tube is the union of row strips
+{(0,j):0<=j<=M-1}, {(1,j):0<=j<=M-2}, and {(2,0),(2,1)}.
+Hence |T_Z|=2M+1. The exterior tube contains precisely the three rows
+(-1,1),(2,-1),(1,M-1), attached to the three fan endpoints.
+Every exterior row has exactly one source neighbor. There are 3M exterior
+rows outside the tube. A surviving nonbasis boundary source has at least
+one distinct surviving exterior row, so every sector has nonnegative
+right-minus-boundary-terminal population.
+
+For any relaxed Z-perfect matching, let b_off be the number of nonbasis
+incidence-boundary sources outside the fan. Then
+O_iso + sum_i max(0,|O_i|-|C_i^partial|) = 3M-b_off,
+and the full-tube ledger is M-1-b_off.
+
+For an admissible basis, all M+1 nonbasis sources are boundary sources.
+At most three can lie on the fan, so b_off>=M-2 and the ledger <=1.
+The source report's matching (8) omits all three endpoints and includes
+every incidence-deep column, attaining equality.
+
+A relaxed matching attaining b_off=0 can be written directly (row -> source):
+(0,0)->(0,0); (1,0)->(1,0);
+(0,j)->(0,j+1) for j>=1;
+(1,j)->(2,j) for j>=1;
+(i,j)->(i+1,j) for i>=2.
+All rules are restricted to Z and are injective conflict edges. Its nonbasis
+set is {(0,1),(2,0),(1,M-1)} union {(1,j):1<=j<=M-2}.
+It omits M-2 incidence-deep columns and is inadmissible for M>=4.
+
+For that relaxed matching, the full Schur complement has M+1 columns and
+rank M+1 (all source columns are independently matchable by x->x+v).
+The boundary-only Schur block has just three columns and rank three,
+using the three distinct exterior leaves at the omitted endpoints.
+Consequently the boundary-only rank formula for h(G) cannot be reused:
+actual h(G)=2M+2, but |O|-rank(S_boundary)=3M.
+
+Next: independently enumerate the geometry and finite matching controls,
+then inspect the submitted argument and checker for agreement and gaps.

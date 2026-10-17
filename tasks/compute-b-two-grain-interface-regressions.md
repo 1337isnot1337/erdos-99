@@ -1,10 +1,17 @@
 # compute-b-two-grain-interface-regressions
 
+**Investigation:** `compute-b-two-grain-interface-regressions-successor-20261017`. **Status:** open. Source: `e396ea07887dd0528b817ce4e656ff0e6b01f8fb`.
+
+Downstream use: Decide whether the abstract sharp examples are geometrically relevant to Target B, and whether a stronger realizable budget is possible.
+
+Prior evidence:
+- [author-checked](https://github.com/1337isnot1337/erdos-99/blob/a392a910899b06d20df6c7c29010896223ebfa70/docs/reports/target_b_interface_capacity_2026-10-17.md) at `a392a910899b06d20df6c7c29010896223ebfa70`: Submitted shared-interface inequality R >= G + max(p1,p2,p1+p2-K), with finite incidence checks. Remaining: Geometric realization and payment of virtual mass are not established.
+
 **Track / priority:** exact-computation / scoped exploration; selection weight 2 (attention only).
 
 ## Exact objective
 
-In the smallest exact two-grain crossing models with a shared or deleted interface, is naive addition of the one-grain phase deficits false, and what explicit interface term repairs the model inequality?
+Does a smallest explicitly realized two-grain rhombic disk saturate or improve the submitted shared-interface budget after all virtual crossing terms are included?
 
 ## Definitions, hypotheses and complete prerequisites
 
@@ -28,7 +35,7 @@ Advances only the stated route obligation; global closure still requires all can
 
 ## Approach and first bounded experiment
 
-Define a two-grain finite incidence model with explicit physical, deleted-interface, and virtual crossing counters. Exhaust the smallest shore sizes and emit a minimal exact instance where the proposed additive rule fails, if one exists.
+Build one rational rhombic cellulation with its retained train components and deleted interfaces. Derive counters from that geometry, then compare with PR #86. Emit either a realizable saturation case or a proved geometric restriction on its abstract extremizers.
 
 Methods: exhaustive exact integer enumeration, SAT/SMT model with independently checked certificate
 

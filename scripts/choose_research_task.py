@@ -14,9 +14,13 @@ import sys
 from typing import Any
 
 try:
-    from scripts.research_coordination import DEFAULT_CACHE, REPOSITORY, query_open_work, overlap_for_task, claim_text, handoff_leads
+    from scripts.research_coordination import (DEFAULT_CACHE, REPOSITORY, INVESTIGATION_STATES, ROLES,
+        query_open_work, overlap_for_task, claim_text, handoff_leads, investigation_details,
+        investigation_key, investigation_availability, default_role)
 except ModuleNotFoundError:
-    from research_coordination import DEFAULT_CACHE, REPOSITORY, query_open_work, overlap_for_task, claim_text, handoff_leads
+    from research_coordination import (DEFAULT_CACHE, REPOSITORY, INVESTIGATION_STATES, ROLES,
+        query_open_work, overlap_for_task, claim_text, handoff_leads, investigation_details,
+        investigation_key, investigation_availability, default_role)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -128,6 +132,16 @@ def validate_catalog(catalog: Any, root: Path = ROOT) -> None:
             raise CatalogError(f"task {task_id} selection_weight must be a positive integer")
         for key in required:
             _require_text(task.get(key), f"task {task_id}.{key}")
+        investigation = task.get("investigation")
+        if investigation is not None:
+            if not isinstance(investigation, dict):
+                raise CatalogError(f"task {task_id}.investigation must be an object")
+            for key in ("id", "source_commit", "domain", "question", "status"):
+                _require_text(investigation.get(key), f"task {task_id}.investigation.{key}")
+            if not re.fullmatch(r"[0-9a-f]{40}", investigation["source_commit"]):
+                raise CatalogError(f"task {task_id}.investigation needs a full source SHA")
+            if investigation["status"] not in INVESTIGATION_STATES:
+                raise CatalogError(f"task {task_id}.investigation has an unknown status")
         if task.get("frontier_relation") not in {
             "current-frontier",
             "peripheral-to-frontier",
@@ -243,11 +257,45 @@ def _weighted_pick(items: list[dict[str, Any]], weight_key: str, stream: HashStr
     raise AssertionError("weighted selection fell through")
 
 
-def scope_key(task_id: str, method: str) -> str:
+def scope_key(task_id: str, method: str, investigation: dict[str, Any] | None = None) -> str:
+    if investigation is not None:
+        return investigation_key(investigation)
+    # Kept for callers interpreting old task/method-only snapshots. New
+    # assignments always provide their source/domain/question identity.
     payload = json.dumps(
         {"task_id": task_id, "method": method}, sort_keys=True, separators=(",", ":")
     ).encode("utf-8")
     return hashlib.sha256(payload).hexdigest()[:20]
+
+
+def task_candidates(catalog: dict[str, Any], snapshot: dict[str, Any]) -> list[dict[str, Any]]:
+    candidates = []
+    for task in catalog["tasks"]:
+        investigation = investigation_details(task, catalog["reviewed_base_commit"])
+        candidate = {**task, "investigation": investigation, "role": default_role(task),
+                     "scope_key": investigation_key(investigation)}
+        candidate["selection_state"] = investigation_availability(candidate, snapshot)
+        candidates.append(candidate)
+    held_scopes = {}
+    for candidate in candidates:
+        if candidate["investigation"]["status"] != "open":
+            held_scopes.setdefault(candidate["scope_key"], set()).add(
+                "catalogue:" + candidate["investigation"]["status"])
+    for candidate in candidates:
+        if candidate["scope_key"] in held_scopes:
+            state = candidate["selection_state"]
+            state["eligible"] = False
+            state["reasons"] = sorted(set(state["reasons"]) | held_scopes[candidate["scope_key"]])
+    return candidates
+
+
+def parse_assignment(value: str) -> tuple[str, str | None]:
+    if ":" not in value:
+        return value, None
+    task_id, role = value.rsplit(":", 1)
+    if not task_id or role not in ROLES:
+        raise CatalogError("assignment must be TASK_ID[:producer|reviewer]")
+    return task_id, role
 
 
 def select_tasks(
@@ -256,50 +304,85 @@ def select_tasks(
     count: int = 3,
     track_id: str | None = None,
     task_id: str | None = None,
+    *,
+    snapshot: dict[str, Any] | None = None,
+    assignments: list[str] | None = None,
+    role: str | None = None,
 ) -> list[dict[str, Any]]:
     validate_catalog(catalog)
     if type(count) is not int or count < 1:
         raise CatalogError("count must be a positive integer")
     stream = HashStream(seed)
-    tasks = catalog["tasks"]
+    snapshot = snapshot or {}
+    tasks = task_candidates(catalog, snapshot)
     tracks = catalog["tracks"]
+    if role is not None and role not in ROLES:
+        raise CatalogError("unknown assignment role")
+    if role is not None and task_id is None:
+        raise CatalogError("an explicit role requires a named task")
+    if task_id is not None and assignments:
+        raise CatalogError("choose a named task or batch assignments")
+
+    def assigned(identity, requested_role=None):
+        matches = [task for task in tasks if task["id"] == identity]
+        if len(matches) != 1:
+            raise CatalogError(f"unknown task: {identity}")
+        candidate = {**matches[0], "role": requested_role or matches[0]["role"],
+                     "assignment_source": "explicit"}
+        candidate["selection_state"] = investigation_availability(candidate, snapshot, candidate["role"])
+        inherited = [reason for reason in matches[0]["selection_state"]["reasons"] if reason.startswith("catalogue:")]
+        if inherited:
+            state = candidate["selection_state"]
+            state["eligible"] = False
+            state["reasons"] = sorted(set(state["reasons"]) | set(inherited))
+        return candidate
 
     if task_id is not None:
-        matches = [task for task in tasks if task["id"] == task_id]
-        if len(matches) != 1:
-            raise CatalogError(f"unknown task: {task_id}")
-        if track_id is not None and matches[0]["track"] != track_id:
+        selected = [assigned(task_id, role)]
+        if track_id is not None and selected[0]["track"] != track_id:
             raise CatalogError("task and track do not match")
-        selected = matches
     else:
+        selected = [assigned(*parse_assignment(value)) for value in assignments or []]
+        if len(selected) > count:
+            raise CatalogError("explicit assignments exceed the batch size")
+        producers = [task["scope_key"] for task in selected if task["role"] == "producer"]
+        if len(producers) != len(set(producers)):
+            raise CatalogError("duplicate producer assignments for the same investigation")
+        assigned_scopes = {task["scope_key"] for task in selected}
         eligible_tracks = [track for track in tracks if track_id is None or track["id"] == track_id]
         if not eligible_tracks:
             raise CatalogError(f"unknown track: {track_id}")
-        available = {track["id"]: [task for task in tasks if task["track"] == track["id"]]
+        available = {track["id"]: [task for task in tasks if task["track"] == track["id"]
+                                  and task["selection_state"]["eligible"]
+                                  and task["scope_key"] not in assigned_scopes]
                      for track in eligible_tracks}
         available_tracks = list(eligible_tracks)
-        selected = []
-        seen_tracks: set[str] = set()
+        seen_tracks: set[str] = {task["track"] for task in selected}
         while len(selected) < count:
             remaining_tracks = [track for track in available_tracks if available[track["id"]]]
             if not remaining_tracks:
-                raise CatalogError("count exceeds the number of available task cards")
+                raise CatalogError("count exceeds the number of eligible investigations; inspect exclusions or retrieve an explicit task")
             fresh_tracks = [track for track in remaining_tracks if track["id"] not in seen_tracks]
             pool = fresh_tracks or remaining_tracks
             chosen_track = _weighted_pick(pool, "weight", stream)
             card = _weighted_pick(available[chosen_track["id"]], "selection_weight", stream)
-            selected.append(card)
-            available[chosen_track["id"]].remove(card)
+            selected.append({**card, "assignment_source": "random"})
+            # Different cards can describe the same exact investigation. Do not
+            # assign a second automatic worker merely through another family.
+            for identity in available:
+                available[identity] = [item for item in available[identity]
+                                       if item["scope_key"] != card["scope_key"]]
             seen_tracks.add(chosen_track["id"])
 
     suggestions: list[dict[str, Any]] = []
-    for task in selected:
+    for slot, task in enumerate(selected, 1):
         method = task["methods"][stream.randbelow(len(task["methods"]))]
         suggestions.append(
             {
                 **task,
+                "slot": slot,
                 "selected_method": method,
-                "scope_key": scope_key(task["id"], method),
+                "scope_key": scope_key(task["id"], method, task["investigation"]),
             }
         )
     return suggestions
@@ -359,6 +442,10 @@ def _format_text(result: dict[str, Any]) -> str:
     lines.extend([f"Overlap source: {result.get('overlap_status', 'not queried')}",
                   result.get("overlap_warning", "")])
     lines.append("Handoffs first: " + json.dumps(result.get("handoff_leads", [])))
+    if result.get("batch"):
+        lines.append("Batch slots are controller assignments only; announce them before launching workers.")
+    if result.get("excluded_investigations"):
+        lines.append("Excluded from random selection: " + json.dumps(result["excluded_investigations"]))
     if result["warning"]:
         lines.append(f"WARNING: {result['warning']}")
     for index, task in enumerate(result["suggestions"], 1):
@@ -366,7 +453,11 @@ def _format_text(result: dict[str, Any]) -> str:
             [
                 "",
                 f"{index}. {task['id']} [{task['track']}; {task['frontier_relation']}]",
-                f"   Question: {task['question']}",
+                f"   Role: {task['role']} ({task['assignment_source']})",
+                f"   Investigation: {task['investigation']['id']} [{task['investigation']['status']}]",
+                f"   Source: {task['investigation']['source_commit']}",
+                f"   Domain: {task['investigation']['domain']}",
+                f"   Question: {task['investigation']['question']}",
                 f"   Method: {task['selected_method']}",
                 f"   Scope key: {task['scope_key']}",
                 f"   Overlap leads: PRs {[r['number'] for r in task.get('current_overlap', {}).get('pulls', [])]}; issues {[r['number'] for r in task.get('current_overlap', {}).get('issues', [])]}",
@@ -374,6 +465,7 @@ def _format_text(result: dict[str, Any]) -> str:
                 f"   Stop: {task['stopping_condition']}",
                 f"   Prior checks: {json.dumps(task['existing_checks']) if task.get('existing_checks') else 'unknown'}",
                 f"   Coverage note: {task.get('coverage_warning', 'Unknown coverage is not novelty.')}",
+                f"   Selection state: {json.dumps(task['selection_state'])}",
             ]
         )
     lines.extend(
@@ -390,7 +482,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--seed", help="32 hex digits; default: fresh OS-random 128-bit nonce")
     parser.add_argument("--track", help="force one catalogue track")
     parser.add_argument("--task", help="retrieve one named task without drawing a new task")
-    parser.add_argument("--count", type=int, default=3, help="number of suggestions (default: 3)")
+    parser.add_argument("--role", choices=sorted(ROLES), help="role for explicit --task retrieval, including a deliberate reviewer")
+    parser.add_argument("--count", type=int, help="number of suggestions (default: 3)")
+    parser.add_argument("--batch", type=int, metavar="N", help="prepare N distinct investigation slots for one controlled batch")
+    parser.add_argument("--assign", action="append", default=[], metavar="TASK_ID[:ROLE]",
+                        help="preserve an explicit batch slot; ROLE is producer or reviewer (repeatable)")
     parser.add_argument("--json", action="store_true", help="print the complete machine-readable selection")
     parser.add_argument("--live-overlap", action="store_true", help="read current PRs/issues using gh; never reserves work")
     parser.add_argument("--overlap-snapshot", type=Path, help="saved read-only query JSON for offline use")
@@ -401,12 +497,19 @@ def main(argv: list[str] | None = None) -> int:
         args.overlap_snapshot = args.overlap_snapshot.expanduser()
     if args.overlap_snapshot and (args.live_overlap or args.coordination_cache):
         parser.error("choose live query or offline snapshot")
+    if args.batch is not None and (args.task or args.count is not None):
+        parser.error("--batch cannot be combined with --task or --count")
+    if args.assign and args.batch is None:
+        parser.error("--assign requires --batch")
+    if args.role and not args.task:
+        parser.error("--role requires --task")
+    count = args.batch if args.batch is not None else (args.count if args.count is not None else 3)
     seed = args.seed if args.seed is not None else secrets.token_hex(16)
     try:
         catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
         validate_catalog(catalog)
-        suggestions = select_tasks(catalog, seed, args.count, args.track, args.task)
-        result = make_result(catalog, seed, suggestions)
+        # Load coordination before drawing: it changes eligibility, not just
+        # the warning attached to an already selected task.
         if args.live_overlap:
             try:
                 snapshot = query_open_work(cache=args.coordination_cache or DEFAULT_CACHE, refresh=True)
@@ -421,6 +524,16 @@ def main(argv: list[str] | None = None) -> int:
         else:
             snapshot = {"source": "offline-catalogue-snapshot", "queried_at": catalog.get("open_pr_snapshot_date", catalog["reviewed_on"]),
                         "pulls": catalog["open_pr_snapshot"], "issues": []}
+        suggestions = select_tasks(catalog, seed, count, args.track, args.task, snapshot=snapshot,
+                                   assignments=args.assign, role=args.role)
+        result = make_result(catalog, seed, suggestions)
+        result["batch"] = None if args.batch is None else dict(
+            slots=args.batch, explicit_slots=len(args.assign),
+            limits="Random slots have distinct investigations. Explicit reviewers may share a producer's scope. This command does not post or reserve work.")
+        result["excluded_investigations"] = [dict(task_id=task["id"], investigation_id=task["investigation"]["id"],
+                                                   scope_key=task["scope_key"], reasons=task["selection_state"]["reasons"])
+                                                for task in task_candidates(catalog, snapshot)
+                                                if not task["selection_state"]["eligible"]]
         result["overlap_status"] = snapshot["source"]
         result["overlap_warning"] = "Suggestions are not claims. Offline data can be stale and cannot establish that no claim exists."
         result["handoff_leads"] = handoff_leads(snapshot)
@@ -431,7 +544,7 @@ def main(argv: list[str] | None = None) -> int:
             task["coverage_warning"] = "Prior evidence covers only its pinned sources and stated scope; unknown coverage is not novelty."
             if any(check["state_version"] != result["checkout_state_version"] for check in task["existing_checks"]):
                 task["coverage_warning"] += " The current state differs from a prior check; reassess applicability."
-    except (OSError, json.JSONDecodeError, CatalogError, TypeError, KeyError) as exc:
+    except (OSError, ValueError, TypeError, KeyError) as exc:
         parser.error(str(exc))
         return 2
     if args.claim_template:

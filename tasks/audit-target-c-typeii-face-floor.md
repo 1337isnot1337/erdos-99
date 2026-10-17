@@ -1,5 +1,15 @@
 # audit-target-c-typeii-face-floor
 
+**Investigation:** `audit-target-c-typeii-face-floor-completed-20261017`. **Status:** completed. Source: `3f419d3b6415ade701e00b7fd3dc2a013f8064d6`.
+
+Downstream use: Retain completed coverage so new workers start at the unresolved successor instead of repeating this audit.
+
+This scope is complete. Continue with [target-c-typeii-stress-mass-access](target-c-typeii-stress-mass-access.md).
+
+Prior evidence:
+- [agent-audited](https://github.com/1337isnot1337/erdos-99/blob/3f419d3b6415ade701e00b7fd3dc2a013f8064d6/docs/audits/target_c_typeii_separate_face_floor_recheck_2026-10-17.md) at `3f419d3b6415ade701e00b7fd3dc2a013f8064d6`: Canonical full-core Type-II separate-face coefficient reconstruction at the unchanged cited source. Remaining: No canonical promotion or acceptance outside this exact scope.
+- [agent-audited](https://github.com/1337isnot1337/erdos-99/blob/2d4f2b7930570e989f3f8c76d27fc9aca23f32ac/docs/audits/target_c_typeii_face_floor_independent_reconstruction_2026-10-17.md) at `2d4f2b7930570e989f3f8c76d27fc9aca23f32ac`: Canonical full-core Type-II separate-face coefficient reconstruction at the unchanged cited source. Remaining: No canonical promotion or acceptance outside this exact scope.
+
 **Track / priority:** independent-audit / independent evidence; selection weight 2 (attention only).
 
 ## Exact objective
@@ -29,7 +39,7 @@ Advances only the stated route obligation; global closure still requires all can
 
 ## Approach and first bounded experiment
 
-Recompute the dimensionless constants from the promoted inequalities using exact symbolic expressions, then check each normalization and limit against the face and outer-walk definitions in the audit.
+This exact objective is complete. Read its recorded disposition, then use target-c-typeii-stress-mass-access. Reopen only for a changed source or a named discrepancy.
 
 Methods: exact symbolic algebra, independent combinatorial face count
 
@@ -55,7 +65,7 @@ The task-context command lists certificate commands for the direct and transitiv
 
 ## Remaining lemma and limitations
 
-Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with a triangle-free endpoint at D with lexicographically fewer contacts/actual-diameter pairs or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.
+No further work on this completed source/domain. The separate successor is target-c-typeii-stress-mass-access; the route endpoint remains open.
 
 No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.
 

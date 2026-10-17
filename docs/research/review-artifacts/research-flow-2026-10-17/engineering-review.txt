@@ -1,0 +1,30 @@
+Independent AI-agent engineering review
+======================================
+
+Reviewer: /root/erdos_results, GPT-6 Astra Pro.
+Source: 1182c0ee32074d698b7500642fb450ba6c8264ae.
+Integrated as: e9a10cb (identical coordination source and selector test blobs).
+Verdict: PASS for the narrowly reviewed selector lifecycle repair.
+
+The reviewer first identified two lifecycle defects and then a residual
+cross-thread incomplete-identity defect. The implementing agent repaired them.
+The reviewer loaded the exact committed source independently and ran eight
+adversarial and control scenarios. All passed:
+
+- A reply changing domain or question preserves the original claim or handoff.
+- A separate-thread record with an incomplete conflicting identity and copied
+  scope identifier cannot overwrite a known complete investigation.
+- Released or expired claims and handoffs cannot erase open-PR occupancy.
+- Producer occupancy does not block an explicitly assigned reviewer.
+- Legitimate matching partial-identity and bare-scope updates close the
+  intended lifecycle.
+
+The reviewer inspected the committed regressions for all four identity fields,
+both snapshot orders, CLAIM and HANDOFF, and legitimate completion controls.
+The implementing agent ran 69 selector/coordination tests successfully under
+the locked Python 3.14.7 environment. This review did not rerun the broader
+tooling or theorem-certificate suites and claims no mathematical approval.
+
+No further blocker was found in the narrow repair. The reviewer made no
+repository edits. This is AI-agent review, not human review. The integrating
+agent copied this record from the reviewer's final disposition.

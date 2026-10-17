@@ -5,12 +5,15 @@ Python commands in [the CI guide](README.md#normal-local-verification). The Linu
 runner and bubblewrap details below describe hosted CI and optional isolated
 package replay.
 
-The publication workflow remains disabled by default. `E99_PUBLIC_CI` and
-`E99_PUBLIC_PACKAGE_REPLAY` were both unset when inspected on 2026-10-15.
-Recent destination runs contained skipped plan/replay jobs with no executed
-steps. These are **unverified**, not passing verification. The destination had
-no branch protection or ruleset requiring those skipped checks at inspection.
-Do not configure a skipped check as evidence that the corpus was verified.
+The structural integrity and planning job now runs automatically on non-draft
+PRs. `E99_PUBLIC_PACKAGE_REPLAY` still controls optional isolated package
+execution. A passing plan is structural evidence; its summary preserves pending
+targeted replay and full-verification requirements.
+
+Historical inspection on 2026-10-15 found both rollout variables unset and
+plan/replay jobs skipped without executed steps. Those runs remain unverified.
+No branch protection or ruleset required them at that inspection. The current
+workflow change does not turn those historical skips into verification evidence.
 
 ## Reviewed boundaries and repairs
 
@@ -33,11 +36,24 @@ Do not configure a skipped check as evidence that the corpus was verified.
   regressions cover a symlinked manifest and an unchanged symlink.
 - The planner unions merge-base, head, and current-base dependencies. Unknown
   impact requires full verification or review; it is not silently accepted as
-  a targeted pass. A needed replay with its gate off exits unsuccessfully.
+  a targeted pass. A needed replay with its switch off remains explicitly pending.
+- Automatic workload limits affect scheduling only. An over-budget targeted set
+  retains its complete package list and scientific classification; no package is
+  omitted to fit the automatic job. Complete required replay remains the merging agent's duty.
 - The optional Linux package replay is serial, with at most two selected packages and 240 declared seconds.
-  Job limits are three minutes for planning and six for replay. Bubblewrap
+  Each hosted job is limited to six minutes. The complete Tier 0 corpus check
+  has a separate 180-second process limit, leaving job time for trusted control
+  tests, checkout and installation. These limits do not change the package replay
+  budget. Bubblewrap
   requires separate namespaces, no network, cleared environment, read-only
-  source/runtime mounts, and no inherited credentials. There is no unisolated
+  source/runtime mounts, and no inherited credentials. Hosted jobs install
+  distro Bubblewrap and AppArmor profiles. When Ubuntu's unprivileged-user-namespace
+  restriction is enabled, they load only the packaged `bwrap-userns-restrict`
+  profile. It permits Bubblewrap setup while its child profile denies capabilities.
+  A trusted-control runtime probe must then pass before checks start. See the
+  [Ubuntu restriction explanation](https://documentation.ubuntu.com/release-notes/24.04/#unprivileged-user-namespace-restrictions)
+  and [Noble updates package contents](https://packages.ubuntu.com/noble-updates/all/apparmor-profiles/filelist).
+  No global security setting is changed. There is no unisolated
   fallback. Commands use argument vectors, with wall/CPU, address-space,
   output-file, core-dump, and descriptor limits.
 - The replay limits are not an aggregate cgroup process/memory budget. Local
@@ -45,11 +61,11 @@ Do not configure a skipped check as evidence that the corpus was verified.
   runner images. Process containment, namespace availability and fork behavior
   must be exercised before enabling that gate.
 - Per-PR cancellation limits duplicate work for one PR, not the total number of
-  concurrent PRs. Gates therefore remain protective account-wide cost controls.
+  concurrent PRs. Package execution remains opt-in and bounded separately.
 
 ## Hosted evidence and limitation
 
-The inspected source run `38822653478` failed with zero executed steps. Its
+The historically inspected source run `38822653478` failed with zero executed steps. Its
 check annotation reports that recent payments failed or a spending limit must
 be increased. This is unavailable hosted infrastructure, not a code failure.
 No billing/spending setting, paid runner, or rollout variable was changed.
@@ -57,11 +73,11 @@ The public-fork approval endpoint cannot validate future public behavior while
 the destination is private; it returned the documented private-repository
 validation error at inspection.
 
-No successful hosted canary is claimed. Enabling ordinary PR execution cannot
-resolve the current account restriction without an owner billing decision;
-this session retains both gates. Publication can accurately offer local
-verification while hosted execution remains explicitly disabled. Hosted rollout
-is separate from the owner's repository visibility decision.
+No successful hosted canary is established by this configuration change. Enabling
+ordinary PR checks cannot resolve account restrictions or change spending
+limits. Record the actual run ID and source SHA to establish current hosted
+execution; keep any failed allocation or unavailable sandbox distinct from a
+scientific verification result.
 
 ## Local release verification
 

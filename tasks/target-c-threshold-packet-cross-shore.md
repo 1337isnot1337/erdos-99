@@ -1,5 +1,9 @@
 # target-c-threshold-packet-cross-shore
 
+**Investigation:** `target-c-threshold-packet-cross-shore-current-20261017`. **Status:** open. Source: `e396ea07887dd0528b817ce4e656ff0e6b01f8fb`.
+
+Downstream use: Name the downstream claim or decision this result can change, the exact quantity it controls, and the remaining hypothesis before extending the investigation.
+
 **Track / priority:** target-c / direct frontier; selection weight 4 (attention only).
 
 ## Exact objective

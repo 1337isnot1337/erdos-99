@@ -29,6 +29,21 @@ An empty `existing_checks` array means unknown coverage. Prior checks apply only
 to their pinned source, domain and stated status; a changed theorem state requires
 reassessing applicability. Read full matched files and hypotheses.
 
+The picker reads overlap before selecting and excludes completed, held and
+actively claimed exact investigations from random draws. Its investigation key
+binds source, domain and question; a different method does not reopen the scope.
+Use `--task TASK_ID --role reviewer` for a deliberate audit, retaining the displayed
+current status. Completing an audit or finite experiment closes that scoped job;
+record the separate successor question instead of leaving the same starter open
+until Level I is solved.
+
+For a controlled batch, one controller uses `--batch N` and optional explicit
+`--assign TASK_ID:producer` or `--assign TASK_ID:reviewer` slots. Announce the
+assignments before launch and give each worker its slot; do not redraw inside the
+workers. Random slots have distinct investigations, while an explicit reviewer
+may share a producer's scope. This reduces races within the batch; other
+controllers still require a live overlap check. See [coordination](../COORDINATION.md).
+
 ```sh
 python scripts/find_overlap.py --refresh --json
 python scripts/choose_research_task.py --count 1 --coordination-cache ~/.cache/erdos99/overlap.json --json

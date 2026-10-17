@@ -68,9 +68,16 @@ Tier 0 runs trusted metadata, theorem/task/generated-view consistency, public li
 
 Workflow and navigation documentation receives structural checks. Current theorem and certificate dependencies take priority over that classification: a document used as a mathematical input still receives the relevant verification. Ordinary README edits require no import receipt or full certificate replay.
 
-Tier 1 is an optional isolated package replay. It replays declared affected
-packages and their dependency closure, with at most two packages and 240 declared
-seconds in one serial job. The planner unions merge-base, head and current-base
+Tier 1 is an optional isolated package replay. It replays the complete affected
+package set, including transitive dependents, with at most two packages,
+120 declared seconds per package and 240 declared seconds in one serial job.
+A larger complete set remains `targeted-replay`, with
+`replay_schedule: deferred-budget` and `replay_allowed: false`. Its `packages`
+list and declared workload remain complete; the budget never drops packages or
+changes the required scientific verification level. The merging agent arranges
+the complete deferred replay. Timeout-only edits change scheduling, while changed
+inputs, commands, domains and environments still require impact review.
+The planner unions merge-base, head and current-base
 inputs. This backend requires Linux and bubblewrap. It uses separate namespaces,
 no network or inherited credentials, read-only declared Git blobs, argument-vector
 commands, and time and resource limits. Unavailable isolation produces an explicit
@@ -85,7 +92,21 @@ Tier 2 is explicit and owned by the merging agent: `python tools/run_theorem_cer
 
 ## Hosted CI
 
-Ordinary PRs use a trusted base control checkout and read-only permissions; contributed code is never run with `pull_request_target`. Actions are commit-pinned and checkout credentials are not persisted. No full certificate suite runs on every PR. Per-PR cancellation is not a repository-wide queue limit. Both hosted rollout variables default unset; a required replay remains visibly blocked until separately authorized. This launch does not enable paid usage or alter spending limits. Hosted execution is unverified until actual jobs execute; local measurements exclude hosted queue/setup/install time.
+Non-draft PRs automatically run the structural integrity and planning job. It
+uses a trusted base control checkout and read-only permissions; contributed
+code is never run with `pull_request_target`. Actions are commit-pinned and
+checkout credentials are not persisted. The job installs Bubblewrap when it is
+missing and refuses execution if its required isolation is unavailable.
+
+A successful planning job establishes structural integrity only. Its summary
+reports full verification requirements and deferred targeted work. Actual package
+execution is a separate job, enabled only by
+`E99_PUBLIC_PACKAGE_REPLAY == 'true'` and a plan that fits the automatic budget.
+When execution is disabled or over budget, the complete replay remains pending;
+planning success is not a replay pass. No full certificate suite runs on every
+PR. Per-PR cancellation is not a repository-wide queue limit. The workflow does
+not alter billing or spending limits. Hosted execution is unverified until actual
+jobs execute; local measurements exclude hosted queue/setup/install time.
 
 Hosted jobs choose Linux runners and their matching hash lock. That deployment
 choice does not define the contributor's operating system. See
@@ -94,4 +115,7 @@ release receipt commands.
 
 A package uses `TASK.json`, `SOURCES.json`, `VERIFY.json` and README with exact inputs, provenance, unresolved closure and bounded commands. Existing registered historical certificates need not be retrofitted into misleading package declarations. New packages must state exact mathematical scope and limitations.
 
-Concurrent destination PRs #1 and #2 landed at `213d179` during construction. Their public-fork ancestry handling and undeclared package-shadowing fix are integrated. One consolidated workflow remains; Tier 0 is intentionally owner-gated by `E99_PUBLIC_CI == 'true'`, and Tier 1 is separately gated by `E99_PUBLIC_PACKAGE_REPLAY == 'true'`. Both remain unset pending an authorized hosted-fork canary. No hosted fork canary is claimed.
+The former `E99_PUBLIC_CI` switch is no longer required for Tier 0. Public-fork
+ancestry handling and undeclared package-shadowing checks remain in the trusted
+control path. Enabling the workflow does not establish a successful hosted fork
+canary; record the actual run and source SHA when one executes.

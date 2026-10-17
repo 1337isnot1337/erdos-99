@@ -90,7 +90,9 @@ The isolated replay backend is optional; no new runner is introduced here.
 ## Open next questions
 
 - Question: what exact implication remains after this result?
-- Relevance: how would it affect a current route or independent check?
+- Downstream use: which claim or decision can this extension change, and which exact quantity does it control?
+- Changed hypothesis: what new source, domain or assumption makes this more than another instance of the completed experiment?
+- Outcome: what would either a proof or a counterexample let the next worker do?
 - First step: one feasible command or delicate proof reconstruction.
 - Blocker: the precise missing hypothesis, source or execution obligation.
 

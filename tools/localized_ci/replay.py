@@ -119,6 +119,9 @@ def execute(argv, seconds, logfile):
 
 
 def replay(root, plan, output):
+    if plan.get('replay_schedule') == 'deferred-budget':
+        raise Invalid('complete targeted replay exceeds the automatic budget; '
+                      'required packages remain deferred, with no partial replay')
     if plan['level'] != 'targeted-replay' or not plan['replay_allowed']:
         raise Invalid('plan does not authorize targeted replay')
     # Recompute from Git, never authorize work from an arbitrary JSON plan.
@@ -208,5 +211,7 @@ def integrity(root, control, plan, output):
         'import runpy,sys;sys.path.insert(0,"/control/tools");'
         'sys.argv=["ci_integrity.py","--root","/work","--base-ref",'
         + repr(plan['merge_base']) + '];runpy.run_path("/control/tools/ci_integrity.py",run_name="__main__")']
-    return execute(argv, 55, output / 'integrity.log')
+    # This checks the complete public corpus as well as changed metadata. Keep
+    # its budget separate from the optional package replay command limits.
+    return execute(argv, 180, output / 'integrity.log')
 

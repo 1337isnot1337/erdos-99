@@ -1,10 +1,17 @@
 # target-b-multigrain-transfer
 
+**Investigation:** `target-b-multigrain-transfer-successor-20261017`. **Status:** open. Source: `e396ea07887dd0528b817ce4e656ff0e6b01f8fb`.
+
+Downstream use: The result must show whether the sharp abstract budget can pay the shell inequality on actual geometry. Re-enumerating the abstract counters is complete.
+
+Prior evidence:
+- [author-checked](https://github.com/1337isnot1337/erdos-99/blob/a392a910899b06d20df6c7c29010896223ebfa70/docs/reports/target_b_interface_capacity_2026-10-17.md) at `a392a910899b06d20df6c7c29010896223ebfa70`: Submitted shared-interface inequality R >= G + max(p1,p2,p1+p2-K), with finite incidence checks. Remaining: Geometric realization and payment of virtual mass are not established.
+
 **Track / priority:** target-b / direct frontier; selection weight 5 (attention only).
 
 ## Exact objective
 
-Can the promoted single-dominant-component phase deficit be globalized across several macroscopic coherent grains while retaining physical crossings, deleted/interface crossings, and virtual noncrossing determinant mass?
+Can the shared-interface crossing budget be realized by two retained coherent components in one pure rhombic disk, with virtual determinant mass and deleted-edge costs retained?
 
 ## Definitions, hypotheses and complete prerequisites
 
@@ -29,7 +36,7 @@ Advances only the stated route obligation; global closure still requires all can
 
 ## Approach and first bounded experiment
 
-Write a grain-indexed ledger for physical crossings, deleted interfaces, and virtual determinant mass. First test two grains with a shared interface and derive the exact cross-term that prevents summing the one-grain GPI bound; only then propose a global inequality.
+Review PR #86, then construct one actual rhombic disk with two retained components. Map every physical crossing, shared deleted edge and virtual term into its ledger. Compare the paid lower bound with the exact shell endpoint.
 
 Methods: grain-by-grain charge transport, two-grain exact model followed by a uniform summation lemma
 

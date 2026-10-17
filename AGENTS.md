@@ -29,9 +29,21 @@ investigation thread and artifact link. Claims are optional for short sessions;
 accepted handoffs and multi-session work benefit from one advisory claim.
 No separate session report is required. See `docs/COORDINATION.md`.
 
+For a controlled batch, assign distinct investigations before starting workers.
+Use the picker's `--batch` and explicit producer/reviewer slots. Keep the source,
+domain and question in each handoff. Assign overlapping work deliberately as review.
+
 Write the exact candidate lemma, hypotheses, implication to a canonical quantity, falsification test and stopping condition before a long search. Use exact arithmetic where an exact certificate exists. Preserve scope and useful regressions. Local optimality, finite rank, one-grain interpolation, infinitesimal feasibility or an abstract swap does not supply a global geometric bridge.
 
+Before an extension, state which downstream claim or decision it can change.
+Name the exact quantity affected and the changed hypothesis. Explain what either
+outcome enables. Add these sentences to the existing note or handoff.
+
 Use an isolated branch/worktree and preserve other work. Submit one inspectable proof, computation, verifier, counterexample, audit or precise handoff. Record source commit, state/priority revision, inputs, commands, arithmetic and limitations. Stop without a PR if no meaningful artifact is ready. Refresh upstream before another session. Do not manufacture PRs or repeat a failed approach without naming the changed hypothesis.
+
+After integration, remove merged or closed PR branches when they contain no new work.
+Preserve main, protected branches, open-PR branches and branches with unpublished commits.
+Use the existing branch-cleanup workflow or inspect those conditions before deletion.
 
 For reusable evidence, the optional `scripts/new_research_package.py` scaffold
 provides exact source pins, a deliberately failing checker and Open next questions.

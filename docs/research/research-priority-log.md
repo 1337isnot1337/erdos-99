@@ -1,5 +1,23 @@
 # Scientific priority decisions
 
+## Investigation reconciliation — 2026-10-17; priority revision remains public-frontier.3
+
+Catalogue `public-frontier.8` records completed source-bound work and specific
+successors. The finite #78 review, the #90/#91 coefficient audit and the common
+#93/#94 fixed-parameter audit leave the random pool. Two successor cards cover
+#94's separate diagonal estimate and actual source-capacity verification.
+The seed-63 admissibility correction and #86/#89/#95/#97/#98 submissions update
+starting experiments without treating unreviewed candidates as accepted premises.
+
+Selection now uses investigation state before drawing. A controlled batch assigns
+distinct producers and deliberate reviewers. Track and existing card weights,
+canonical theorem state and the Level I endpoint are unchanged. Completed cards
+remain available for named retrieval; reopening requires changed source or a
+specific discrepancy. See [run dispositions](run-reconciliation-2026-10-17.md).
+
+The older catalogue supplement below records the state before #78's completed
+review was reconciled. Its outstanding-review instruction is superseded.
+
 ## Coordination supplement — 2026-10-17; priority revision remains public-frontier.3
 
 Catalogue `public-frontier.7` adds source-bound prior-check coverage and a fresh

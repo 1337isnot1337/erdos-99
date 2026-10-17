@@ -23,9 +23,11 @@ class Invalid(ValueError):
 
 
 def path(value):
-    if (not isinstance(value, str) or not value or len(value) > 240
+    # A valid nested archive path can exceed 240 characters. Limit individual
+    # components instead of applying a legacy whole-path cutoff to the corpus.
+    if (not isinstance(value, str) or not value
             or not re.fullmatch(r'[A-Za-z0-9_./-]+', value)
-            or any(p in ('', '.', '..') for p in value.split('/'))
+            or any(p in ('', '.', '..') or len(p) > 255 for p in value.split('/'))
             or value.startswith('/') or value.startswith('-')):
         raise Invalid(f'noncanonical relative path: {value!r}')
     return value
@@ -160,11 +162,11 @@ def load_package(snapshot, directory, *, audit=True):
         if len(argv) != 2 or argv[0] != '{python}' or path(argv[1]) not in inputs or not argv[1].endswith('.py'):
             raise Invalid('command must be ["{python}", "declared/script.py"]')
         timeout = command['timeout_seconds']
-        if type(timeout) is not int or not 1 <= timeout <= MAX_PACKAGE_SECONDS:
-            raise Invalid('command timeout outside 1..120 seconds')
+        if type(timeout) is not int or timeout < 1:
+            raise Invalid('command timeout must be a positive integer')
         total += timeout
-    if total > MAX_PACKAGE_SECONDS:
-        raise Invalid('package total timeout exceeds 120 seconds')
+    # Long declared replays still have an inspectable input contract. The planner
+    # enforces the automatic per-package/job budgets without changing that scope.
     if audit:
         unresolved += audit_python(snapshot, inputs)
     return dict(directory=directory, task=task, sources=sources, verify=verify,

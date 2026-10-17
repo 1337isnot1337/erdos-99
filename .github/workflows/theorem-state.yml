@@ -11,13 +11,14 @@ concurrency:
   group: public-localized-ci-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
-# Disabled until explicitly enabled after a real public-fork sandbox canary.
-# No push/schedule/dispatch trigger, paid runner, broad matrix, or full research replay.
+# Structural checks run on ordinary non-draft PRs. Package execution remains
+# separately opt-in; this workflow never runs the full theorem certificate suite.
 jobs:
   plan:
-    if: vars.E99_PUBLIC_CI == 'true' && github.event.pull_request.draft == false
+    name: Structural integrity and verification plan
+    if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 6
     outputs:
       replay: ${{ steps.plan.outputs.replay }}
     steps:
@@ -48,6 +49,22 @@ jobs:
         run: >-
           python3 -m pip install --disable-pip-version-check --require-hashes
           --only-binary=:all: -r control/tools/requirements-integrity-linux-x86_64.lock
+      - name: Ensure hosted isolation backend is available
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends bubblewrap apparmor-profiles
+          if test "$(cat /proc/sys/kernel/apparmor_restrict_unprivileged_userns 2>/dev/null || true)" = '1'; then
+            sudo apparmor_parser -r /usr/share/apparmor/extra-profiles/bwrap-userns-restrict
+          fi
+          python3 -I - <<'PY'
+          import sys
+          sys.path.insert(0, "control")
+          from tools.localized_ci.replay import sandbox_unavailable_reason
+          reason = sandbox_unavailable_reason(require_replay_python=True)
+          if reason:
+              raise SystemExit(reason)
+          print("Trusted isolated Python startup passed")
+          PY
       - name: Verify trusted CI control
         working-directory: control
         run: python3 -B -m unittest tools.test_local_ci -q
@@ -55,24 +72,35 @@ jobs:
         id: plan
         run: >-
           python3 -B control/tools/local_ci.py --root candidate
-          --event-file "$GITHUB_EVENT_PATH" --integrity --require-localized
+          --event-file "$GITHUB_EVENT_PATH" --integrity
           --output "$RUNNER_TEMP/e99-plan" --github-output "$GITHUB_OUTPUT"
-      - name: Explain review requirement
+      - name: Report verification scope and pending replay
         if: always()
+        env:
+          VERIFICATION_LEVEL: ${{ steps.plan.outputs.level }}
+          REPLAY_SCHEDULE: ${{ steps.plan.outputs.replay_schedule }}
+          PACKAGE_REPLAY_ENABLED: ${{ vars.E99_PUBLIC_PACKAGE_REPLAY }}
         run: |
+          echo 'This job checks structural integrity and reports verification scope. It does not certify a theorem or a pending replay.' >> "$GITHUB_STEP_SUMMARY"
+          if test "$VERIFICATION_LEVEL" = 'full-verification-required'; then
+            echo 'Full verification or impact review remains with the merging agent.' >> "$GITHUB_STEP_SUMMARY"
+          elif test "$REPLAY_SCHEDULE" = 'deferred-budget'; then
+            echo 'The complete targeted replay set exceeds the automatic budget. All listed packages remain required; no partial replay ran.' >> "$GITHUB_STEP_SUMMARY"
+          elif test "$REPLAY_SCHEDULE" = 'ready' && test "$PACKAGE_REPLAY_ENABLED" != 'true'; then
+            echo 'Targeted replay remains pending because optional package execution is not enabled.' >> "$GITHUB_STEP_SUMMARY"
+          elif test "$REPLAY_SCHEDULE" = 'ready'; then
+            echo 'Targeted replay is handled by the separate package job; consult its result.' >> "$GITHUB_STEP_SUMMARY"
+          fi
           if test -f "$RUNNER_TEMP/e99-plan/plan.json"; then
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"
             cat "$RUNNER_TEMP/e99-plan/plan.json" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
           fi
           if test -f "$RUNNER_TEMP/e99-plan/integrity.log"; then
             cat "$RUNNER_TEMP/e99-plan/integrity.log"
           fi
-      - name: Refuse incomplete replay
-        if: steps.plan.outputs.replay == 'true' && vars.E99_PUBLIC_PACKAGE_REPLAY != 'true'
-        run: |
-          echo 'Selected research packages require replay; public replay is not enabled.'
-          exit 3
-
   replay:
+    name: Optional isolated package replay
     needs: plan
     if: needs.plan.outputs.replay == 'true' && vars.E99_PUBLIC_PACKAGE_REPLAY == 'true'
     runs-on: ubuntu-latest
@@ -105,6 +133,22 @@ jobs:
         run: >-
           python3 -m pip install --disable-pip-version-check --require-hashes
           --only-binary=:all: -r control/tools/requirements-integrity-linux-x86_64.lock
+      - name: Ensure hosted isolation backend is available
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends bubblewrap apparmor-profiles
+          if test "$(cat /proc/sys/kernel/apparmor_restrict_unprivileged_userns 2>/dev/null || true)" = '1'; then
+            sudo apparmor_parser -r /usr/share/apparmor/extra-profiles/bwrap-userns-restrict
+          fi
+          python3 -I - <<'PY'
+          import sys
+          sys.path.insert(0, "control")
+          from tools.localized_ci.replay import sandbox_unavailable_reason
+          reason = sandbox_unavailable_reason(require_replay_python=True)
+          if reason:
+              raise SystemExit(reason)
+          print("Trusted isolated Python startup passed")
+          PY
       - name: Recompute plan and replay selected packages without network
         run: >-
           python3 -B control/tools/local_ci.py --root candidate
