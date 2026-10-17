@@ -1,0 +1,145 @@
+# Independent audit — final eight-no-root `k=7` `C:(5,12,12)` closure
+
+Date: 2026-09-22  
+Classification: **audited-working finite-layer result; not promoted**  
+Audited note: `target_c_support7_global_segment_relative_eight_noroot_k7_final_full_cover_closure_2026-09-22.md`  
+Audited verifier blob: `3e6eba3fffcbbf4be4f76ec375ad60332568ebe7`  
+Level I: OPEN; Target C-II: OPEN.
+
+This audit checks the exact finite implication recorded by the mainline note. It
+does not promote the finite profile into the canonical global theorem stack: the
+earlier support-7/profile reductions remain outside the current route map, and
+the finite profile is only one branch of C-II.
+
+## Claim under audit
+
+In the current eight-no-root `k=7` finite split, the last profile is
+
+```text
+C:(d_v,q,s)=(5,12,12),    d_6=5.
+```
+
+The exact seven-row obstruction claims that no compatible one-cycle lift reaches
+singleton-functional extra rank eleven. That is the needed obstruction because:
+
+1. the six-row replacement inequality gives `s_f >= 10` when `D_6=3`, `p=12`,
+   and `d_6=5`; the six-row quotient has dimension ten, so a survivor must have
+   full six-row functional rank ten;
+2. canonical-complete blocks persist under a compatible six-to-seven lift, hence
+   deficiency is monotone and `d_7 >= d_6 = 5`;
+3. the established seven-row containment alternatives therefore reduce to
+   `d_7=5` and singleton capacity at least eleven; and
+4. the seven-row replacement inequality has `D_7=1`, `p_7=12`, `d_7=5`, so it
+   requires extra rank at least eleven.
+
+The verifier is conservative in the correct direction. For each qualifying lift
+it inserts *every* compatible singleton state from every virtual-complete block,
+not merely a jointly realizable all-singleton selection. Thus its computed rank is
+an upper bound for any actual target. A zero count of rank-eleven lifts excludes
+the actual profile, provided the finite cover is exhaustive.
+
+## Exact-cover transcript checks
+
+The durable note supplies 33 macro-ranges. The companion machine checker
+
+```text
+research/verify_target_c_final_full_cover_audit_2026_09_22.py
+```
+
+parses that table and checks:
+
+- the ranges form the exact half-open partition `[0,325955)`;
+- every range has `extra11=0` and `extra10=retained`;
+- the row-wise norm/width bounds never exceed `(45,25,24,25)`;
+- the count sums equal the recorded full-cover census; and
+- the note records the strict Hadamard inequalities `P^2>45^25` and
+  `P^2>24^15` for `P=2^127-1`.
+
+The exact aggregate transcript is
+
+```text
+synchronized states                 1,751,870
+six-row full-rank witnesses           136,450
+seven-row d7=5, cap>=11 lifts         968,687
+retained six-row full-span lifts       49,249
+seven-row extra-rank 10 lifts          49,249
+seven-row extra-rank 11 lifts               0
+```
+
+The macro-ranges are contiguous from `0` through `325955`; the sums above are
+independently reproduced by the checker. The recorded global exactness maxima
+are functional-row squared norm `45`, functional width `25`, relation-row
+squared norm `24`, and relation-row count `25`. Since every relevant nonzero
+minor has absolute value strictly below `P` by Hadamard, the modular rank over
+`P` agrees with the rational rank used in the obstruction.
+
+## Hostile scope checks
+
+### Quantifiers
+
+The computation is exhaustive over the committed 325,955-representative
+six-row augmentation cover and all synchronized rank-one coefficient lines in
+each representative. It is not an exhaustive search over arbitrary geometric
+sources; the reduction from a global survivor to this cover belongs to the
+earlier finite support-7 route and is not promoted here.
+
+### Rank direction
+
+The verifier subtracts the exact complete-block relation rank and includes all
+compatible singleton rows. Any omission would weaken the obstruction; the stated
+zero rank-eleven count is therefore used only in the over-approximating direction.
+
+### Deficiency branch
+
+The `d_7=4` alternative is not silently discarded: the separate monotonicity
+lemma proves `C_6 subset C_7` and hence `d_7>=5`. The transcript's zero
+`seven_d4_lifts` in the earlier full-span audit is a consistency check, not the
+logical basis of the present closure.
+
+### Arithmetic
+
+The modulus is certified prime by the verifier's Lucas–Lehmer test. The note's
+strict squared Hadamard bounds dominate every observed functional and relation
+minor, so no probabilistic finite-field rank assumption enters the finite claim.
+
+### Boundary and source scope
+
+This finite obstruction never deletes contact-isolated source points and never
+extends the core ZR/ZF kernel theorem to the full source. It proves only that the
+specified support/profile lift cannot occur.
+
+## Independent rerun on the first 1,000 representatives
+
+Using the committed verifier and the exact cover cache, the first 1,000
+representatives independently reproduce:
+
+```text
+synchronized_states                  6,639
+six_full_rank_witnesses                519
+seven_d5_capacity_ge11_lifts         2,431
+retained_six_full_span_lifts           425
+max_seven_extra_rank                    10
+seven_full_rank_lifts                    0
+functional_hadamard_exact_rank_bound True
+relation_hadamard_exact_rank_bound   True
+```
+
+The run ends with the verifier's PASS line and no rank-eleven example. This is a
+cross-check of the implementation and rank direction, not a replacement for the
+recorded complete-cover execution.
+
+## Audit verdict
+
+The finite implication is internally sound at the recorded scope:
+
+```text
+complete exact cover
+  -> no seven-row extra-rank-11 lift
+  -> no C:(5,12,12), d6=5 profile
+  -> no surviving profile in the current eight-no-root k=7 finite split,
+     together with the already recorded d6=3/d6=4 and companion-profile closures.
+```
+
+Classification: **audited-working finite-layer result**. This audit changes no
+theorem-state file. It does not close C-II, the macroscopic-container branch,
+the high-surplus full-core branch, or Level I.

@@ -1,0 +1,290 @@
+# Target C — finite Oler sandwich for the Section-116 outer detour
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only research lemma; theorem authority unchanged.
+
+This note attacks the full-core Route-A quantity from the current Target-C handoff.
+For the same harmonic attachment cell used in the Section-116 zero-host theorem, a
+finite Oler calculation gives an upper bound for the exact outer-walk detour
+
+\[
+E_{\rm out}:=L+P_{\rm exc}-2d.
+\]
+
+Combined with the hostile-audited Section-116 lower bound, this produces a two-sided
+finite inequality on one actual source cell. No source point is deleted and no
+full-source ZR/ZF statement is used.
+
+The result does **not** close C-II: it shows precisely that Route A still needs a
+boundary-order bound on the local non-rhombic area. Type II currently gives only an
+`o(D^2)` bound for that area on a macroscopic carrier, which is insufficient at the
+linear scale of the detour theorem.
+
+---
+
+## 1. Setup
+
+Fix one canonical harmonic component `I` and its distinct loaded attachment set `A`.
+Use the local notation of canonical Sections 62, 82, and 89:
+
+- `n=|I|`;
+- `a=|A|`;
+- `P=conv(A)`;
+- `p=per(P)` and `d=diam(P)`;
+- `s` is the local pinned-contact surplus;
+- `c` is the number of loaded-loaded unit contacts with both endpoints in `A`;
+- `L` is the outer-face walk length of the induced local contact graph;
+- `f` is the number of bounded nonquadrilateral faces;
+- `Q=sum_F(deg F-4)` over those faces;
+- `R_4` is the number of bounded quadrilateral faces;
+- `A_4` is their total Euclidean area; and
+- `P_exc=4f+Q` is the total boundary length of the bounded nonquadrilateral faces,
+  counted by edge occurrence.
+
+Every quadrilateral face is a strict unit rhombus. Put
+
+\[
+a_0={\sqrt3\over2},\qquad c_0={\sqrt3\over4}={a_0\over2},
+\]
+
+and define its total local rhombus-area excess
+
+\[
+E_4^{\rm loc}:=A_4-a_0R_4\ge0.
+\]
+
+Finally set
+
+\[
+G:=\operatorname{area}(P)-A_4\ge0.
+\]
+
+Thus `G` is the entire area of the attachment polygon not occupied by its bounded
+strict-rhombus faces. It includes bounded nonquadrilateral faces and any part of the
+local outer face lying inside `P`.
+
+Canonical Section 82 gives the exact finite identities
+
+\[
+R_4=n+2+s+c-a-f,
+\tag{1.1}
+\]
+
+and
+
+\[
+L+Q=4a-6-2s-2c.
+\tag{1.2}
+\]
+
+Hence
+
+\[
+E_{\rm out}
+=4a-6-2s-2c+4f-2d.
+\tag{1.3}
+\]
+
+---
+
+## 2. Oler upper bound on the same detour
+
+### Theorem 2.1 — finite local Oler detour upper bound
+
+For every such harmonic cell,
+
+\[
+\boxed{
+E_{\rm out}
+\le
+p-2d+2f+{2\over a_0}
+\left(G+E_4^{\rm loc}\right).
+}
+\tag{2.1}
+\]
+
+Moreover every bounded nonquadrilateral face is convex, so Oler on its boundary
+vertices gives
+
+\[
+G\ge a_0f+c_0Q\ge a_0f.
+\tag{2.2}
+\]
+
+Consequently
+
+\[
+\boxed{
+E_{\rm out}
+\le
+p-2d+{4\over a_0}G+{2\over a_0}E_4^{\rm loc}.
+}
+\tag{2.3}
+\]
+
+### Proof
+
+Harmonic trapping puts every point of `I` in `P`, and of course every attachment lies
+in `P`. Apply finite Oler to the `n+a` unit-separated source points `I union A` inside
+the convex polygon `P`:
+
+\[
+a_0(n+a-1)\le \operatorname{area}(P)+c_0p.
+\tag{2.4}
+\]
+
+From (1.1),
+
+\[
+n=R_4-2-s-c+a+f.
+\]
+
+Substitution in (2.4) gives
+
+\[
+a_0R_4+a_0(2a+f-s-c-3)
+\le \operatorname{area}(P)+c_0p.
+\]
+
+Since `a_0R_4=A_4-E_4^{loc}`,
+
+\[
+a_0(2a+f-s-c-3)
+\le G+E_4^{\rm loc}+c_0p.
+\tag{2.5}
+\]
+
+On the other hand (1.3) is exactly
+
+\[
+E_{\rm out}
+=2(2a+f-s-c-3)+2f-2d.
+\tag{2.6}
+\]
+
+Multiply (2.5) by `2/a_0`, use `2c_0/a_0=1`, and insert into (2.6). This proves
+(2.1).
+
+For (2.2), let a bounded nonquadrilateral face have degree `4+r`, `r>=1`, and area
+`A_F`. Its boundary vertices are unit-separated and the face is convex by the
+canonical local harmonic-cell geometry. Oler applied only to those `4+r` boundary
+vertices gives
+
+\[
+4+r\le {A_F\over a_0}+{4+r\over2}+1,
+\]
+
+so
+
+\[
+A_F\ge a_0+{a_0\over2}r=a_0+c_0r.
+\]
+
+Summing over the `f` exceptional bounded faces gives total exceptional-face area at
+least `a_0f+c_0Q`. Their interiors are disjoint and none is counted in `A_4`, hence
+that total area is at most `G`. This proves (2.2). Substituting
+`2f<=2G/a_0` into (2.1) gives (2.3). `square`
+
+---
+
+## 3. Exact sandwich with Section 116
+
+The hostile-audited proof-only Section-116 two-arc theorem applies to this same finite
+cell and gives
+
+\[
+\boxed{
+dE_{\rm out}\ge(4-2\sqrt3)A_4.}
+\tag{3.1}
+\]
+
+Combining (2.1) and (3.1) yields the finite source-level sandwich
+
+\[
+\boxed{
+{(4-2\sqrt3)A_4\over d}
+\le E_{\rm out}
+\le p-2d+2f+{2\over a_0}(G+E_4^{\rm loc}).
+}
+\tag{3.2}
+\]
+
+Using (2.3) gives the simpler but weaker form
+
+\[
+\boxed{
+{(4-2\sqrt3)A_4\over d}
+\le
+p-2d+{4\over a_0}G+{2\over a_0}E_4^{\rm loc}.
+}
+\tag{3.3}
+\]
+
+Equivalently, whenever the bracket is positive,
+
+\[
+\boxed{
+G+E_4^{\rm loc}
+\ge {a_0\over2}
+\left(
+{(4-2\sqrt3)A_4\over d}-p+2d-2f
+\right).
+}
+\tag{3.4}
+\]
+
+This is not an asymptotic comparison between different cells: every term in (3.2)--
+(3.4) belongs to the same finite harmonic attachment cell.
+
+---
+
+## 4. Hostile scope audit
+
+The proof above deliberately avoids the recurrent Target-C scope failures.
+
+1. **No source deletion.** Oler is applied to the subset `I union A`; ignoring other
+   source points can only weaken an upper packing bound and does not alter the source.
+2. **Contact isolates are retained globally.** Isolates lying in `P` are not silently
+   identified with core vertices. Their possible occupied area is exactly one reason
+   why `G` is not presently controlled at boundary order.
+3. **ZR/ZF is not extended to isolated coordinates.** The proof uses only canonical
+   local face identities and harmonic trapping for the nonisolated component.
+4. **Repeated outer-walk occurrences and bridges are retained.** They are already
+   built into `L`; `P_exc` is occurrence-counted exactly as in Sections 82 and 116.
+5. **No near-equality-to-quadrangulation inference is used.** `R_4`, `f`, and `Q` are
+   exact face quantities.
+6. **The Section-116 lower bound remains proof-only.** The new upper bound (2.1) is
+   independent of Section 116; only the sandwich (3.2) uses that proof-only input.
+
+---
+
+## 5. What the theorem changes, and why it does not yet close Route A
+
+The full-source slack theorem gives global strict-rhombus area excess `E_4=O(D)`, so
+`E_4^{loc}=O(D)` for every cell. The genuinely uncontrolled term in (3.3) is therefore
+
+\[
+\boxed{G=\operatorname{area}(P)-A_4.}
+\]
+
+For the macroscopic wrapping carrier, current Type-II saturation gives only
+
+\[
+G=o(D^2).
+\]
+
+That is too weak for (3.3), whose lower and other upper terms are all linear in `D`.
+A bound such as `G=O(D)` with a sufficiently sharp coefficient would turn (3.2) into
+an actual Route-A comparison. A merely subquadratic estimate does not.
+
+This identifies a sharper next fork than another carrier-decimal improvement:
+
+- prove a boundary-order bound on the non-rhombic area of the actual wrapping carrier;
+- or show that a superlinear `G` forces a mesoscopic inactive container/interface that
+  itself contradicts global diameter minimality;
+- or bypass `G` by an all-regime signed-return theorem that charges physical route
+  occurrences without converting unfilled area into detour budget.
+
+No theorem authority is changed and no C-II closure is claimed.
+

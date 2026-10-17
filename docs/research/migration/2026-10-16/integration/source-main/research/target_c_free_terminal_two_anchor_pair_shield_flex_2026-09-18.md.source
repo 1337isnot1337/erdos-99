@@ -1,0 +1,514 @@
+# Target C-II — two-anchor peeling plus parallel outside pairs forces a `1.1812D` exact-flex reservoir
+
+**Date:** 2026-09-18  
+**Status:** proof-only structural strengthening; theorem-state authority unchanged  
+**Scope:** canonical full-core stopped-train system; terminal FREE constants stated below  
+**Depends on:** audited stopped-train decomposition; strict convexity of bounded nonquadrilateral contact faces; exact train-angle closure coordinates; two-anchor elimination; terminal correlated stability; canonical mixed rigidity / live diameter locking  
+**Certificate:** `research/verify_target_c_free_terminal_two_anchor_pair_shield_flex_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The two-anchor theorem previously had an all-or-nothing endpoint. Complete activation
+integrated essentially all train angles, while a stall left an internal degree-three
+residual core with no quantitative use of the already exposed variables.
+
+There is a stronger exact decomposition. Freeze the residual-internal train system and
+keep the already activated faces solved by the same triangular pivot Jacobian. At a
+residual face with two trains going to the outer/activated side, maximality forces those
+two terminal side directions to be projectively parallel. Their oriented unit vectors
+are exact negatives, so a common rotation of the two train angles preserves the
+residual-face closure identically. If either train ends on an activated face, the old
+pivot system absorbs that change by the implicit-function theorem.
+
+The resulting finite bound is
+
+\[
+\boxed{
+ m_D\ge {b-f\over2}
+}
+\tag{PS.1}
+\]
+
+whenever the two-anchor process stalls. More precisely, the gap above `(b-f)/2`
+records exactly how far the residual system is from the worst one-anchor normal form.
+In the current terminal FREE window this gives
+
+\[
+\boxed{
+ \liminf {m_D\over D}>1.1812298040,
+}
+\tag{PS.2}
+\]
+
+and in the small-complement / near-maximal-detour branch
+
+\[
+\boxed{
+ \liminf {m_D\over D}>1.1984798040.
+}
+\tag{PS.3}
+\]
+
+Thus the previous residual 3-core is not an escape from a large exact-flex manifold.
+At the counting endpoint it must sharpen to a one-anchor internal 4-core.
+
+---
+
+## 1. Maximal two-anchor peeling
+
+Let `O` be the actual outer face and let `mathcal F` be the `f` bounded
+nonquadrilateral contact faces. Run the preceding two-anchor activation process to
+maximality. Let
+
+\[
+ A\subseteq\mathcal F,
+ \qquad U:=\mathcal F\setminus A,
+ \qquad a_F:=|A|,
+ \qquad u:=|U|=f-a_F.
+\tag{1.1}
+\]
+
+The complete-activation case `U=empty` is treated in Section 5. Assume for now that
+`U` is nonempty.
+
+For `F in U`, let `b_U(F)` be the number of incident stopped trains whose other
+terminal face is `O` or a face in `A`. Maximality says that all such side directions
+at `F` span at most one projective line. Strict convexity allows at most two polygon
+sides in one projective direction. Hence
+
+\[
+ b_U(F)\in\{0,1,2\}.
+\tag{1.2}
+\]
+
+Write
+
+\[
+ n_j:=\#\{F\in U:b_U(F)=j\},
+ \qquad j=0,1,2.
+\tag{1.3}
+\]
+
+Thus
+
+\[
+ u=n_0+n_1+n_2,
+ \qquad
+ d_U:=\sum_{F\in U}(2-b_U(F))=2n_0+n_1.
+\tag{1.4}
+\]
+
+For each exceptional face put `x(F)=deg(F)-5>=0`, and write
+
+\[
+ x_A:=\sum_{F\in A}x(F),
+ \qquad
+ x_U:=\sum_{F\in U}x(F).
+\tag{1.5}
+\]
+
+Then `x_A+x_U=Q-f`.
+
+---
+
+## 2. Freeze the residual core and keep every exposed angle
+
+Let `I_U` be the number of complete trains incident to at least one residual face, and
+let `E(U)` be the number with both bounded endpoints in `U`. Put
+
+\[
+ B_U:=\sum_{F\in U}b_U(F)=2u-d_U.
+\]
+
+The residual transport degree sum gives
+
+\[
+ 2E(U)+B_U=5u+x_U.
+\tag{2.1}
+\]
+
+Since `I_U=E(U)+B_U`,
+
+\[
+\boxed{
+ I_U={5u+x_U+B_U\over2}.
+}
+\tag{2.2}
+\]
+
+First freeze every train incident to `U`. For each activated face retain its two
+recorded pivot train angles as dependent variables. All other non-residual train
+angles are free.
+
+No pivot train is incident to `U`: when its face was activated, the pivot's other
+endpoint was `O` or an earlier activated face. Therefore the old pivot Jacobian is
+unchanged after the residual train columns are frozen. Ordered by activation time it
+is block upper triangular with invertible `2x2` diagonal blocks. The implicit-function
+theorem solves all `2a_F` pivots smoothly as functions of the remaining free angles.
+Residual face closures are unchanged and strict rhombi close identically.
+
+This gives an exact finite contact-preserving manifold of dimension
+
+\[
+ m_{peel}=T-I_U-2a_F.
+\tag{2.3}
+\]
+
+Because `U` is nonempty, at least one residual-internal train is frozen: every residual
+face has total degree at least five and at most two outside incidences, hence at least
+three U--U incidences. Thus the all-train rotation vector is not in this manifold.
+After fixing translation, (2.3) is already a non-Euclidean dimension.
+
+Using
+
+\[
+ T=(q-k)+2f,
+ \qquad
+ B_U=2u-d_U,
+ \qquad
+ f=u+a_F,
+\]
+
+we get
+
+\[
+ m_{peel}
+ =(q-k)-{3u+x_U\over2}+{d_U\over2}.
+\tag{2.4}
+\]
+
+The loaded-hull identity `b+Q=2(q-k)` then gives the equivalent exact form
+
+\[
+\boxed{
+ m_{peel}
+ ={b-2f\over2}
+ +{3a_F+x_A+d_U\over2}.
+}
+\tag{2.5}
+\]
+
+---
+
+## 3. Every two-outside residual face supplies one exact pair coordinate
+
+Fix `F in U` with `b_U(F)=2`. Let the two outside trains have oriented unit side
+vectors `v_1,v_2` on the cyclic boundary of `F`.
+
+Maximality of the activation process makes their projective directions equal. On a
+strictly convex polygon, two sides in one projective direction have opposite oriented
+directions. Since both lengths are one,
+
+\[
+ v_2=-v_1.
+\tag{3.1}
+\]
+
+Give both complete trains the same angle change `theta`. Their contribution to the
+closure of `F` remains
+
+\[
+ R_\theta v_1+R_\theta v_2=0
+\tag{3.2}
+\]
+
+for every sufficiently small `theta`; all other incident residual trains remain fixed.
+Hence the residual closure equation is preserved exactly.
+
+The other endpoint of each selected train is either `O` or a face in `A`.
+
+- If it is `O`, there is no second bounded exceptional-face equation.
+- If it lies in `A`, the changed train angle enters an activated-face closure equation.
+  Treat `theta` as an additional free parameter. The same invertible pivot Jacobian
+  from Section 2 then solves all activated-face pivots as smooth functions of these
+  pair parameters as well as the original non-residual free angles.
+
+A U--A train can never itself be one of those pivots, because its residual endpoint was
+not active when the A-end face entered the activation order.
+
+Strict rhombi still close identically under the selected train rotations, including
+when one selected train is singleton. Different residual faces use disjoint outside
+trains, so the `n_2` pair parameters are independent. They were frozen in the initial
+peeling manifold, hence they add `n_2` exact dimensions:
+
+\[
+\boxed{
+ m_D\ge m_{peel}+n_2.
+}
+\tag{3.3}
+\]
+
+This is the key point: a parallel outside pair remains usable even when one or both
+trains terminate on already activated bounded faces. The triangular pivot system
+absorbs those secondary closure changes.
+
+---
+
+## 4. Exact finite lower bound and the one-anchor normal form
+
+Insert `d_U=2n_0+n_1` into (2.5) and then use (3.3):
+
+\[
+\begin{aligned}
+ m_D
+ &\ge {b-2f\over2}
+ +{3a_F+x_A\over2}
+ +n_0+{n_1\over2}+n_2.
+\end{aligned}
+\tag{4.1}
+\]
+
+Since
+
+\[
+ f=a_F+n_0+n_1+n_2,
+\]
+
+(4.1) rearranges exactly to
+
+\[
+\boxed{
+ m_D
+ \ge
+ {b-f\over2}
+ +a_F+{x_A\over2}+{n_0+n_2\over2}.
+}
+\tag{4.2}
+\]
+
+Therefore every stalled activation has the finite universal bound
+
+\[
+\boxed{
+ m_D\ge {b-f\over2}.
+}
+\tag{4.3}
+\]
+
+Equation (4.2) also identifies the unique counting normal form that can approach this
+floor. A near-minimizer must have, up to its permitted error budget,
+
+\[
+ a_F\approx0,
+ \qquad
+ x_A\approx0,
+ \qquad
+ n_0+n_2\approx0.
+\tag{4.4}
+\]
+
+Thus almost every residual face must have exactly one train to the outer/activated
+side. Since every exceptional face has degree at least five, the residual induced
+B--B transport graph then has internal degree at least four at almost every face.
+The old generic internal 3-core obstruction has sharpened to an asymptotic
+**one-anchor internal 4-core** at the exact-flex endpoint.
+
+No pentagon concentration or rhombic-fullness hypothesis is needed for (4.2)--(4.3).
+
+---
+
+## 5. Complete activation versus stalled activation
+
+If `U` is empty, the preceding full two-anchor elimination theorem gives
+
+\[
+ m_D=(q-k)-1.
+\tag{5.1}
+\]
+
+If `U` is nonempty, (4.3) gives `(b-f)/2`. Hence the finite stopped-train system has
+
+\[
+\boxed{
+ m_D\ge
+ \begin{cases}
+ (q-k)-1,&U=\varnothing,\\[2mm]
+ (b-f)/2,&U\ne\varnothing.
+ \end{cases}}
+\tag{5.2}
+\]
+
+This removes the residual degree-three core as a low-dimensional flex escape.
+
+---
+
+## 6. Live terminal FREE window: `1.1812298040D`
+
+Use the correlated terminal variables
+
+\[
+ \xi:=\lim\left({\tau_D\over D}-{\pi\over2}-g\right),
+ \qquad
+ r:=\lim{Q-f\over D},
+ \qquad
+ \delta:=\lim{b-P_F\over D},
+\]
+
+where
+
+\[
+ g=0.007707,
+ \qquad
+ \xi,r,\delta\ge0,
+\]
+
+and, under
+
+\[
+ \limsup t_D\le\mu_*+\varepsilon,
+\]
+
+\[
+\boxed{
+ \xi+2(r+\delta)\le5\varepsilon.
+}
+\tag{6.1}
+\]
+
+Put
+
+\[
+ M_*:=4\sqrt{\frac\pi{2\sqrt3}}+2g.
+\tag{6.2}
+\]
+
+The exact terminal ledger gives
+
+\[
+ {f\over D}
+ ={M_*+2\xi-\delta-r\over5}+o(1),
+ \qquad
+ {b\over D}=\pi+\delta+o(1).
+\tag{6.3}
+\]
+
+For a stalled activation, substitute (6.3) into (4.3):
+
+\[
+\boxed{
+ \liminf {m_D\over D}
+ \ge
+ {\pi\over2}-{M_*\over10}
+ +{3\over5}\delta
+ +{1\over10}r
+ -{1\over5}\xi.
+}
+\tag{6.4}
+\]
+
+Only `xi` has a negative coefficient. Under (6.1), the lower bound is minimized by
+
+\[
+ \delta=r=0,
+ \qquad
+ \xi=5\varepsilon.
+\]
+
+Therefore
+
+\[
+\boxed{
+ \liminf {m_D\over D}
+ \ge
+ c_{pair}(\varepsilon)
+ :={\pi\over2}-{M_*\over10}-\varepsilon.
+}
+\tag{6.5}
+\]
+
+At the current live endpoint `epsilon_0=0.00710`, the exact-rational certificate proves
+
+\[
+\boxed{
+ c_{pair}(0.00710)>1.1812298040.
+}
+\tag{6.6}
+\]
+
+The complete-activation alternative (5.1) is much larger, because the certified
+terminal `t` floor is `1.9603028495...`. Thus (6.6) is unconditional throughout the
+stated live window.
+
+Applying the existing live diameter-locking theorem to this exact manifold gives
+
+\[
+\boxed{
+ \operatorname{rank}G_D,
+ \ |M_{flex\to H}|,
+ \ I_+,
+ \ I_-
+ \ge(1.1812298040-o(1))D.
+}
+\tag{6.7}
+\]
+
+Hence the total signed flex/diameter derivative-incidence count is at least
+
+\[
+\boxed{(2.3624596080-o(1))D.}
+\tag{6.8}
+\]
+
+---
+
+## 7. Near-maximal-detour branch: `1.1984798040D`
+
+In the small-complement branch of the live complement/detour theorem,
+
+\[
+ \delta>0.01725,
+ \qquad
+ \xi+2r\le0.001.
+\tag{7.1}
+\]
+
+The right side of (6.4) is minimized on the closed relaxation by
+
+\[
+ \delta=0.01725,
+ \qquad
+ r=0,
+ \qquad
+ \xi=0.001.
+\]
+
+The exact-rational certificate therefore gives the safe closed floor
+
+\[
+\boxed{
+ \liminf {m_D\over D}>1.1984798040.
+}
+\tag{7.2}
+\]
+
+The scalar inequality is actually strict because `delta>0.01725`.
+
+---
+
+## 8. Remaining obstruction
+
+This still does not close C-II. It changes the active obstruction substantially.
+Every terminal survivor in the live window now carries more than `1.1812D` exact
+contact-flex dimensions, and the near-maximal-detour branch carries more than
+`1.1984D`. The actual diameter system must positively lock that entire manifold with
+at least the same number of pairwise distinct diameter bars and with both derivative
+signs in every flex coordinate.
+
+If the finite lower bound is nearly sharp, (4.2) gives a more specific object than the
+old residual 3-core: almost no face activates, almost every residual face has exactly
+one outside train, and the residual B--B graph is internally at least 4-valent at almost
+every vertex. That one-anchor 4-core is now the clean combinatorial obstruction to the
+full `(q-k)-1` train manifold.
+
+The next useful theorem should attack either side directly:
+
+1. show that the straight-line diameter thrackle cannot positively lock the explicit
+   parallel-pair / peeled coordinates at rank `>1.1812D`; or
+2. use the one-anchor 4-core to find another exact train-angle elimination or a
+   source-preserving finite diameter descent.
+
+No theorem-state file is changed.
+
+**Disposition:** proved the exact peeling-plus-pair inequality (4.2), the finite stalled
+floor `(b-f)/2`, the live `1.1812298040D` exact-flex / locking floor, the
+near-maximal-detour `1.1984798040D` refinement, and the one-anchor 4-core endpoint
+normal form. C-II remains open.

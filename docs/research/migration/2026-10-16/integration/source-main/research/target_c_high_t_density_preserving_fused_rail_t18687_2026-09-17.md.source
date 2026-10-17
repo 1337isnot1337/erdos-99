@@ -1,0 +1,293 @@
+# Target C-II — local phase/bracket fusion can preserve the full leading density of the tagged nested rail
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** corrected one-sided high-`t` good-interface rail through `t=(q-k)/D<=1.8687`  
+**Dependencies:** full tagged nested rail; local phase/bracket fusion theorem; exact diameter-normal order  
+**Certificate:** `research/verify_target_c_high_t_density_preserving_fused_rail_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The fixed-parameter fused-rail theorem retained one half of the `c0/2` tagged nested rail in order to keep an inverse-`D` angular-defect constant independent of `D`. For the remaining geometric closure problem that fixed constant is not always necessary. If one only requires the local ladders to become asymptotically equilateral, the interface and column deletions may both be made `o(D)`.
+
+Let
+
+\[
+c_0={113\over20{,}000{,}000},
+\qquad
+\gamma={c_0\over2}=2.825\times10^{-6},
+\qquad
+r=0.6536.
+\tag{DP.1}
+\]
+
+There is a strictly nested exact-normal tagged rail `R_D` with
+
+\[
+|R_D|>\gamma D-o(D).
+\tag{DP.2}
+\]
+
+Apply the local phase/bracket argument with the varying parameters
+
+\[
+\eta_D=\sigma_D=D^{-1/3},
+\qquad
+\mu={1\over100}.
+\tag{DP.3}
+\]
+
+Then one obtains a subrail `R_D'` satisfying
+
+\[
+\boxed{|R_D'|>\gamma D-o(D),}
+\tag{DP.4}
+
+so there is **no leading-density loss**, and every retained birth interface has one common adjacent-row transverse family `P_i` with
+
+\[
+\boxed{|P_i|>rD-o(D),}
+\tag{DP.5}
+
+such that every retained crossing on both adjacent rows has angular defect
+
+\[
+\boxed{
+0<\delta(\tau_j,b)
+\le {2C_{phase}\over\gamma}D^{-1/3}
++o(D^{-1/3}),
+}
+\tag{DP.6}
+
+where
+
+\[
+C_{phase}={\pi^2\sqrt3(2+\sqrt3)\over12}.
+\]
+
+Thus the common two-row ladders are uniformly `o(1)`-equilateral while retaining asymptotically the entire `0.6536D` crossing population.
+
+The same columns contain common circumcenter flanks at `+-0.01D`. Each flank has density
+
+\[
+\boxed{
+q_*:=0.6536-{1.02\over\sqrt3}
+=0.0647027254\ldots,
+}
+\tag{DP.7}
+
+so
+
+\[
+\boxed{|P_i^-|,|P_i^+|>(q_*-o(1))D.}
+\tag{DP.8}
+
+All global rail structure survives: strict selected-cut nesting, exact normal-direction order, exact antipodal transport of the normal parameter to the partner endpoint, and the EA/TB1 mechanism tag at every position.
+
+Consequently one mechanism tag occurs on at least
+
+\[
+\boxed{{c_0\over4}D-o(D)=1.4125\times10^{-6}D-o(D)}
+\tag{DP.9}
+
+positions of the same density-preserving fused rail. If one also fixes one physical destination, opposite host or `T_m`, one tag/destination branch still has density
+
+\[
+\boxed{{c_0\over8}D-o(D)=7.0625\times10^{-7}D-o(D).}
+\tag{DP.10}
+
+The price for preserving full density is only that the uniform phase defect is `O(D^-1/3)` rather than `O(D^-1)`.
+
+---
+
+## 1. Start after global support ordering
+
+The full tagged-rail theorem gives a family `R_D` of actual switching diameter bars born on one fixed host with
+
+\[
+|R_D|>\gamma D-o(D),
+\qquad \gamma={c_0\over2}.
+\tag{DP.11}
+
+Their selected-cut supports are strictly nested, their exact diameter/hull-normal directions are strictly ordered, and every partner endpoint lies on the opposite-host-plus-terminal segment. Every rail interface is fixed-good, so its adjacent stopped-train terminal cost is `O(1)`.
+
+Deleting any subset of rail positions preserves all of these order statements. It therefore suffices to perform local phase purification directly on `R_D`.
+
+---
+
+## 2. A vanishing fraction of interfaces carries all large local defect
+
+For an interface `i in R_D`, let `S_i` be the two-row total angular-defect charge over the common adjacent-row train family, exactly as in the local phase/bracket theorem. The global strict-rhombus defect budget gives
+
+\[
+\sum_{i\in R_D}S_i\le2C_{phase}D.
+\tag{DP.12}
+
+Set
+
+\[
+\eta_D=D^{-1/3}.
+\]
+
+Use the threshold
+
+\[
+T_D={2C_{phase}\over\eta_D\gamma}
+={2C_{phase}\over\gamma}D^{1/3}.
+\tag{DP.13}
+
+At most
+
+\[
+{2C_{phase}D\over T_D}
+=\eta_D\gamma D
+=\gamma D^{2/3}
+=o(D)
+\tag{DP.14}
+
+rail positions have `S_i>T_D`. Delete them. Together with the original `o(D)` error in (DP.11), the surviving rail still satisfies (DP.4).
+
+---
+
+## 3. A vanishing fraction of columns makes every retained ladder phase-pure
+
+At a retained interface choose
+
+\[
+\sigma_D=D^{-1/3}.
+\]
+
+Call a common adjacent-row column bad if its two-row defect charge exceeds
+
+\[
+{K_D\over D},
+\qquad
+K_D={T_D\over\sigma_D}
+={2C_{phase}\over\gamma}D^{2/3}.
+\tag{DP.15}
+
+Since `S_i<=T_D`, there are at most
+
+\[
+\sigma_DD=D^{2/3}=o(D)
+\tag{DP.16}
+
+bad columns. The adjacent common-train theorem starts with
+
+\[
+|\Gamma_i\cap\Gamma_{i+1}|>rD-o(D),
+\]
+
+so after deleting the bad columns,
+
+\[
+|P_i|>rD-o(D),
+\]
+
+which is (DP.5).
+
+Every retained crossing defect on either adjacent row is at most
+
+\[
+{K_D\over D}
+={2C_{phase}\over\gamma}D^{-1/3},
+\]
+
+proving (DP.6). The numerical coefficient is
+
+\[
+{2C_{phase}\over\gamma}
+=3.763901224\ldots\times10^6.
+\tag{DP.17}
+
+The coefficient is large, but fixed; the bound still tends to zero.
+
+---
+
+## 4. Circumcenter flanks recover the full asymptotic density available at fixed margin
+
+Fix `mu=.01`. The train-step/circumdisk capacity argument applied after the `o(D)` column deletion gives, on either adjacent row, more than
+
+\[
+\left(
+ r-\sigma_D-{1.02\over\sqrt3}-o(1)
+\right)D
+\]
+
+retained crossings below `-.01D` and the same number above `+.01D`.
+
+The common column order on the two rows turns these rowwise counts into common prefix/suffix families. Since `sigma_D->0`, each common flank has the limiting density
+
+\[
+q_*=r-{1.02\over\sqrt3}
+=0.0647027254265\ldots,
+\]
+
+proving (DP.7)--(DP.8).
+
+This improves the clean fixed-parameter fused-rail flank density `0.0547027` because no fixed `0.01D` phase-purification column loss remains asymptotically.
+
+---
+
+## 5. Mechanism and destination tags remain available at full leading rail density
+
+Every retained position is still tagged `EA` or `TB1`.
+
+- `EA`: the selected bar belongs to an exact positive force pair; its companion and exact reaction certificate remain attached to the interface.
+- `TB1`: the selected bar keeps the host-forced opening margin `(0.4143-o(1))D`.
+
+Since the total retained rail has density `c0/2`, one tag has density at least `c0/4`, proving (DP.9).
+
+All partners still lie on only two physical pieces, opposite host or `T_m`. Pigeonholing one destination after one mechanism tag costs at most another factor two, proving (DP.10).
+
+No phase/bracket purification step changes a bar, endpoint, support interval, normal direction, or mechanism certificate; it only deletes `o(D)` interface positions and `o(D)` transverse columns per retained position.
+
+---
+
+## 6. General rate tradeoff
+
+The exponent `1/3` balances the two relative errors when the same power is used for interface and column deletion.
+
+More generally take
+
+\[
+\eta_D=D^{-a},
+\qquad
+\sigma_D=D^{-b},
+\]
+
+with fixed `a,b>0` and
+
+\[
+a+b<1.
+\]
+
+Then:
+
+- interface loss is `O(D^{1-a})=o(D)`;
+- column loss is `O(D^{1-b})=o(D)`;
+- retained angular defect is
+  \[
+  O(D^{a+b-1})=o(1).
+  \]
+
+Thus every choice `a,b>0`, `a+b<1` preserves the full leading rail and column densities while forcing the local ladder defect to zero. The symmetric choice `a=b=1/3` makes all three normalized errors of order `D^-1/3`.
+
+---
+
+## 7. Frontier effect
+
+The current high-`t` survivor may now be required, with no leading-density loss after the single birth-host choice, to have
+
+```text
+(c0/2-o(1))D nested exact-normal rail positions;
+(r-o(1))D common adjacent-row columns at every position;
+uniform o(1) near-equilateral angular defect on both adjacent rows;
+(0.0647027-o(1))D common columns on each side of a +-0.01D circumcenter corridor;
+EA/TB1 mechanism metadata at every position.
+```
+
+The fixed-parameter inverse-`D` theorem remains useful when a later argument needs a quantitative `K/D` error. The present version is stronger when only asymptotic phase purity is needed: it avoids sacrificing any positive fraction of the globally ordered rail or the local transverse ladder.
+
+The remaining closure seam is unchanged in kind but now lives on the full-density ordered object: prove that the exact antipodal normal transport of the nested diameter rail is incompatible with the asymptotically equilateral two-row ladders and one of the two local obstruction tags.
+
+**Disposition:** replaced the fixed-fraction phase/bracket thinning by a vanishing-fraction diagonal choice, preserving the full `c0/2` tagged nested-rail density and full `0.6536` local column density while still forcing every retained adjacent ladder to become uniformly equilateral. C-II and Level I remain open.

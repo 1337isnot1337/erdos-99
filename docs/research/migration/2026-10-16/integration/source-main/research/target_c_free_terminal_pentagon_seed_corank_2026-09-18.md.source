@@ -1,0 +1,340 @@
+# Target C-II — pentagon bootstrap seeds bound the pure-contact closure corank
+
+**Date:** 2026-09-18  
+**Status:** proof-only structural strengthening; theorem-state authority unchanged  
+**Scope:** canonical full-core stopped-train system after maximal two-anchor activation; live terminal consequence stated below  
+**Depends on:** exact train-angle closure matrix; maximal two-anchor activation; bounded-face endpoint-pair simplicity; bounded-pentagon no-parallel-side theorem; live detour pinching  
+**Certificate:** `research/verify_target_c_free_terminal_pentagon_seed_corank_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current corank-to-flex theorem treats a residual zero-anchor face as carrying two unconstrained dual coordinates. That estimate is locally correct but globally wasteful. Almost every live residual face is a pentagon, and a bounded contact pentagon has five pairwise nonparallel terminal train directions. A small seed set therefore suffices to bootstrap two-anchor elimination across at least two thirds of the residual pentagons.
+
+The resulting finite closure-corank bound is
+
+\[
+\boxed{
+\sigma_C
+\le {2\over3}f+{4\over3}(Q-f).
+}
+\tag{PS.1}
+\]
+
+In the current terminal FREE live window, where detour pinching gives
+
+\[
+{f\over D}<0.76152405+o(1),
+\qquad
+{Q-f\over D}<0.000141+o(1),
+\]
+
+this becomes
+
+\[
+\boxed{
+\limsup {\sigma_C\over D}<0.5078707.
+}
+\tag{PS.2}
+\]
+
+Since the canonical defect satisfies
+
+\[
+k=d_H+p_D+\sigma_C,
+\qquad
+p_D=\dim\operatorname{aff}\mathcal P_H,
+\]
+
+and the live endpoint has
+
+\[
+\liminf {k\over D}>1.181229803,
+\]
+
+one obtains the unconditional residual-complexity floor
+
+\[
+\boxed{
+\liminf {d_H+p_D\over D}>0.6733591.
+}
+\tag{PS.3}
+\]
+
+Thus pure-contact closure corank cannot absorb most of the live terminal defect. Every survivor still carries a linear amount of either Woodall diameter-component defect or projected diameter-stress dimension.
+
+---
+
+## 1. Residual pentagon graph
+
+Run the audited maximal two-anchor activation process. Let `A` be the activated bounded exceptional faces and `U` the residual faces.
+
+Split
+
+\[
+U=U_5\sqcup U_{\ge6},
+\]
+
+where `U_5` consists of pentagons and `U_{>=6}` of faces of degree at least six. Put
+
+\[
+u_5=|U_5|,
+\qquad
+u_6=|U_{\ge6}|.
+\]
+
+Every nonpentagonal exceptional face contributes at least one unit to
+
+\[
+Q-f=\sum_F(\deg F-5),
+\]
+
+so
+
+\[
+\boxed{u_6\le Q-f.}
+\tag{1.1}
+\]
+
+Let `G_5` be the simple graph on `U_5` in which two residual pentagons are adjacent when a complete stopped train joins them. Bounded endpoint-pair simplicity makes `G_5` simple. Every pentagon has exactly five terminal train occurrences, hence
+
+\[
+\Delta(G_5)\le5.
+\tag{1.2}
+\]
+
+The bounded-pentagon no-parallel-side theorem says more: the five projective train directions at every vertex of `G_5` are pairwise nonparallel, including directions of trains whose other endpoint is not in `U_5`.
+
+---
+
+## 2. A two-thirds induced 3-degenerate subset
+
+We use the following elementary lemma.
+
+### Lemma 2.1
+
+Every finite graph `G` with maximum degree at most five has an induced 3-degenerate subgraph on at least `2|V(G)|/3` vertices.
+
+### Proof
+
+Choose a uniformly random ordering of `V(G)`. Put a vertex `v` into `W` when at most three of its neighbors occur before it.
+
+Among the `deg(v)+1` vertices consisting of `v` and its neighbors, the rank of `v` is uniform. Therefore
+
+\[
+\Pr(v\in W)
+=\min\left\{1,{4\over \deg(v)+1}\right\}
+\ge{2\over3},
+\]
+
+because `deg(v)<=5`. Hence
+
+\[
+\mathbb E|W|\ge{2\over3}|V(G)|,
+\]
+
+so some ordering has `|W|>=2|V(G)|/3`.
+
+Order the vertices of this `W` in reverse of the chosen random ordering. Each vertex then has at most three neighbors later in the `W` order. This is a 3-degeneracy ordering of the induced graph `G[W]`. `square`
+
+Apply the lemma to `G_5`. There is a set
+
+\[
+W\subseteq U_5,
+\qquad
+|W|\ge {2u_5\over3},
+\tag{2.1}
+\]
+
+with an ordering
+
+\[
+F_1,\ldots,F_{|W|}
+\]
+
+such that each `F_i` has at most three neighbors among
+
+\[
+F_i,F_{i+1},\ldots,F_{|W|}.
+\tag{2.2}
+\]
+
+Define the seed set
+
+\[
+S:=U_{\ge6}\cup(U_5\setminus W).
+\tag{2.3}
+\]
+
+Then
+
+\[
+\boxed{
+|S|
+\le u_6+{u_5\over3}
+={|U|\over3}+{2u_6\over3}
+\le {f\over3}+{2(Q-f)\over3}.
+}
+\tag{2.4}
+\]
+
+---
+
+## 3. Every nonseed residual pentagon supplies two independent pivot columns
+
+Consider `F_i` in the order from Section 2. A pentagon has exactly five terminal train incidences. By (2.2), at most three of them join `F_i` to a still-unprocessed face of `W`. Therefore at least two terminal trains have other endpoint in one of
+
+\[
+O,\qquad A,\qquad S,\qquad\{F_1,\ldots,F_{i-1}\}.
+\tag{3.1}
+\]
+
+Choose two such trains as pivot columns for the two closure rows of `F_i`. Their directions at `F_i` are nonparallel by the pentagon no-parallel-side theorem, so the local `2x2` pivot block is invertible.
+
+These pivot columns are all distinct. A train from `F_i` to a previously processed face could not have been a pivot for that previous face because `F_i` was then unprocessed. A train to `A` was not available when its activated endpoint entered the original two-anchor order because `F_i` was then residual. A train to `S` is never selected from the seed endpoint. A train to `O` has only one bounded endpoint.
+
+Now restrict the closure matrix to the rows belonging to
+
+\[
+A\cup W.
+\]
+
+Keep the original `2|A|` activation pivots for `A` and the two new pivots for every `F_i`. Order the selected row blocks by the original activation order on `A`, followed by `F_1,...,F_|W|`. A new pivot train may also occur only in an earlier selected row block or in an omitted seed row. Thus the selected square pivot submatrix is block upper triangular with invertible `2x2` diagonal blocks.
+
+Consequently
+
+\[
+\operatorname{rank}C_{face}
+\ge2(|A|+|W|)
+=2(f-|S|).
+\tag{3.2}
+\]
+
+Using the exact closure-corank identity
+
+\[
+\sigma_C=2f-\operatorname{rank}C_{face},
+\]
+
+we obtain
+
+\[
+\boxed{\sigma_C\le2|S|.}
+\tag{3.3}
+\]
+
+Insert (2.4):
+
+\[
+\boxed{
+\sigma_C
+\le {2\over3}f+{4\over3}(Q-f).
+}
+\tag{3.4}
+\]
+
+This proves (PS.1).
+
+The proof is finite. It does not assume that the seed faces themselves can be activated and it does not claim a full exact nonlinear manifold. The seed rows are simply omitted when constructing a full-rank row minor. Trains ending on a seed face are legitimate pivot columns because the seed endpoint does not occur in the selected row set.
+
+---
+
+## 4. Why the coefficient `2/3` is the correct combinatorial endpoint
+
+The random-order lemma cannot be improved for arbitrary maximum-degree-five graphs: `K_6` has maximum degree five, and every induced subgraph on five vertices is `K_5`, which is not 3-degenerate. Thus at most four of its six vertices can lie in a 3-degenerate induced subgraph, exactly the ratio `2/3`.
+
+The present theorem does not assert that a `K_6` residual pentagon transport block is geometrically realizable. Excluding that or another extremal seed obstruction would improve (PS.1), but would require new train geometry rather than graph counting.
+
+---
+
+## 5. Live terminal consequence
+
+The live detour-pinching certificate gives
+
+\[
+\limsup {f\over D}<0.76152405,
+\qquad
+\limsup {Q-f\over D}<0.000141.
+\tag{5.1}
+\]
+
+Apply (3.4):
+
+\[
+\limsup {\sigma_C\over D}
+< {2\over3}(0.76152405)
++{4\over3}(0.000141)
+=0.5078707.
+\tag{5.2}
+\]
+
+The terminal defect-partition theorem gives
+
+\[
+k=d_H+p_D+\sigma_C,
+\tag{5.3}
+\]
+
+while `q/D->pi` and `t_D<=mu_*+0.00710+o(1)` give
+
+\[
+\liminf{k\over D}>1.181229803.
+\tag{5.4}
+\]
+
+Subtract (5.2) from (5.4):
+
+\[
+\boxed{
+\liminf {d_H+p_D\over D}>0.6733591.
+}
+\tag{5.5}
+\]
+
+The exact-rational certificate verifies the displayed safe constants.
+
+Two immediate forks are useful:
+
+- if `d_H=o(D)`, then
+  \[
+  \liminf p_D/D>0.6733591;
+  \]
+- if `p_D=o(D)`, then Woodall must be in the caterpillar-forest branch and
+  \[
+  \liminf d_H/D>0.6733591.
+  \]
+
+In the latter case the diameter graph has more than `0.6733591D-o(D)` caterpillar components. Since `q/D->pi`, its mean component size is then less than
+
+\[
+{\pi\over0.6733591}=4.665\ldots
+\]
+
+asymptotically. Thus suppressing projected-stress dimension forces a dense population of small diameter components, while suppressing diameter-component defect forces a large projected-stress affine dimension.
+
+By pigeonhole, every live survivor has at least one of
+
+\[
+{d_H\over D},\ {p_D\over D}
+\]
+
+greater than `0.33667955-o(1)`.
+
+---
+
+## 6. Frontier effect
+
+The previous corank-to-flex theorem showed that large `sigma_C` is converted into exact finite contact flex. The present theorem independently shows that `sigma_C` cannot exceed about `0.508D` in the live window at all. Together with the fixed defect density `k/D>1.1812`, this leaves at least `0.6733D` of defect outside the pure-contact closure kernel.
+
+The remaining C-II obstruction is therefore sharper:
+
+```text
+exact contact flex >= 1.1988388040 D + sigma_C/4 - o(D),
+pure-contact corank sigma_C < 0.5078707 D,
+and
+diameter-component defect + projected-stress dimension > 0.6733591 D.
+```
+
+A closing route can now split on the last line. A small projected-stress image forces a Woodall forest with linearly many, on average fewer than five-vertex, caterpillar components. A small Woodall component count forces a high-dimensional projected diameter-stress image. Either alternative is more rigid than the previous undifferentiated `k` budget.
+
+No theorem-state file is changed.
+
+**Disposition:** proved a finite bootstrap-seed row-rank theorem for the pentagon-dominated residual closure network, certified the live corank cap `sigma_C/D<0.5078707`, and forced `d_H+p_D>0.6733591D-o(D)`. C-II remains open.

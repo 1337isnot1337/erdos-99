@@ -1,0 +1,248 @@
+{
+  "arithmetic": "numpy 2.5.3 floating point; not a proof certificate",
+  "base_commit": "53ab4cac73738c82f6291b41a7ec88a8577c5d55",
+  "cases": [
+    {
+      "average_disk_competitor_diameter_gap": 0.09319198382828375,
+      "lost_sites_inside_eroded_disk": 16,
+      "q": 101,
+      "rotation": 0.0,
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "source_population": 932,
+      "source_population_deficit_per_D": 0.16878658286730153,
+      "trace_ball_expected_sites": 1.4837042046419677,
+      "trace_ball_missing_sites": 4,
+      "trace_character_moduli": {
+        "(0, 1)": 0.04883791407301563,
+        "(1, 0)": 0.04883903291318772,
+        "(1, 1)": 0.049390790016662786,
+        "(2, -1)": 0.026828729632684494
+      }
+    },
+    {
+      "average_disk_competitor_diameter_gap": 0.21380612723631742,
+      "lost_sites_inside_eroded_disk": 8,
+      "q": 101,
+      "rotation": 0.271,
+      "shift": [
+        0.499,
+        0.499
+      ],
+      "source_population": 925,
+      "source_population_deficit_per_D": 0.38651194975221376,
+      "trace_ball_expected_sites": 1.483704204641968,
+      "trace_ball_missing_sites": 0,
+      "trace_character_moduli": {
+        "(0, 1)": 0.04883884497925073,
+        "(1, 0)": 0.04883922603357361,
+        "(1, 1)": 0.04937865804490657,
+        "(2, -1)": 0.06630645231560198
+      }
+    },
+    {
+      "average_disk_competitor_diameter_gap": 0.11039477690709276,
+      "lost_sites_inside_eroded_disk": 9,
+      "q": 101,
+      "rotation": 1.047,
+      "shift": [
+        0.211,
+        0.733
+      ],
+      "source_population": 931,
+      "source_population_deficit_per_D": 0.19989020670800328,
+      "trace_ball_expected_sites": 1.483704204641968,
+      "trace_ball_missing_sites": 1,
+      "trace_character_moduli": {
+        "(0, 1)": 0.04883907169586322,
+        "(1, 0)": 0.04883903271401583,
+        "(1, 1)": 0.04937829753840165,
+        "(2, -1)": 0.08193494684547528
+      }
+    },
+    {
+      "average_disk_competitor_diameter_gap": 0.18924805693650626,
+      "lost_sites_inside_eroded_disk": 34,
+      "q": 401,
+      "rotation": 0.0,
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "source_population": 14732,
+      "source_population_deficit_per_D": 0.3430035412674502,
+      "trace_ball_expected_sites": 5.891069870751608,
+      "trace_ball_missing_sites": 2,
+      "trace_character_moduli": {
+        "(0, 1)": 0.03731069933121468,
+        "(1, 0)": 0.04088556479306959,
+        "(1, 1)": 0.04094851306059383,
+        "(2, -1)": 0.07941123460461838
+      }
+    },
+    {
+      "average_disk_competitor_diameter_gap": 0.14167389317647405,
+      "lost_sites_inside_eroded_disk": 44,
+      "q": 401,
+      "rotation": 0.271,
+      "shift": [
+        0.499,
+        0.499
+      ],
+      "source_population": 14743,
+      "source_population_deficit_per_D": 0.2568254095668701,
+      "trace_ball_expected_sites": 5.8910698707516085,
+      "trace_ball_missing_sites": 6,
+      "trace_character_moduli": {
+        "(0, 1)": 0.041666847690905784,
+        "(1, 0)": 0.039862031417554275,
+        "(1, 1)": 0.03759189524624029,
+        "(2, -1)": 0.02780877427796613
+      }
+    },
+    {
+      "average_disk_competitor_diameter_gap": 0.1546469044770049,
+      "lost_sites_inside_eroded_disk": 34,
+      "q": 401,
+      "rotation": 1.047,
+      "shift": [
+        0.211,
+        0.733
+      ],
+      "source_population": 14740,
+      "source_population_deficit_per_D": 0.28032853639430105,
+      "trace_ball_expected_sites": 5.891069870751608,
+      "trace_ball_missing_sites": 4,
+      "trace_character_moduli": {
+        "(0, 1)": 0.04119228935992972,
+        "(1, 0)": 0.040578319250326934,
+        "(1, 1)": 0.03734564010514321,
+        "(2, -1)": 0.0477680412855385
+      }
+    },
+    {
+      "average_disk_competitor_diameter_gap": 0.2321083083497797,
+      "lost_sites_inside_eroded_disk": 90,
+      "q": 1001,
+      "rotation": 0.0,
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "source_population": 91938,
+      "source_population_deficit_per_D": 0.42084456184276614,
+      "trace_ball_expected_sites": 14.705683009135212,
+      "trace_ball_missing_sites": 19,
+      "trace_character_moduli": {
+        "(0, 1)": 0.0011683997347420095,
+        "(1, 0)": 0.04797177882425101,
+        "(1, 1)": 0.04802982364051422,
+        "(2, -1)": 0.08162547501128399
+      }
+    },
+    {
+      "average_disk_competitor_diameter_gap": 0.15765902228588402,
+      "lost_sites_inside_eroded_disk": 90,
+      "q": 1001,
+      "rotation": 0.271,
+      "shift": [
+        0.499,
+        0.499
+      ],
+      "source_population": 91981,
+      "source_population_deficit_per_D": 0.2858910866555584,
+      "trace_ball_expected_sites": 14.705683009135214,
+      "trace_ball_missing_sites": 14,
+      "trace_character_moduli": {
+        "(0, 1)": 0.04924353022074017,
+        "(1, 0)": 0.0028955615805576684,
+        "(1, 1)": 0.046651366816385556,
+        "(2, -1)": 0.03722635610667412
+      }
+    },
+    {
+      "average_disk_competitor_diameter_gap": 0.15765902228588402,
+      "lost_sites_inside_eroded_disk": 95,
+      "q": 1001,
+      "rotation": 1.047,
+      "shift": [
+        0.211,
+        0.733
+      ],
+      "source_population": 91981,
+      "source_population_deficit_per_D": 0.2858910866555584,
+      "trace_ball_expected_sites": 14.705683009135216,
+      "trace_ball_missing_sites": 8,
+      "trace_character_moduli": {
+        "(0, 1)": 0.05250593633581027,
+        "(1, 0)": 0.04166014881342803,
+        "(1, 1)": 0.010927359593320885,
+        "(2, -1)": 0.03360313025659633
+      }
+    },
+    {
+      "average_disk_competitor_diameter_gap": 0.2105129424030565,
+      "lost_sites_inside_eroded_disk": 567,
+      "q": 5001,
+      "rotation": 0.0,
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "source_population": 2297515,
+      "source_population_deficit_per_D": 0.3818029940890905,
+      "trace_ball_expected_sites": 73.46969185987881,
+      "trace_ball_missing_sites": 69,
+      "trace_character_moduli": {
+        "(0, 1)": 0.0068457811829596964,
+        "(1, 0)": 0.0068457825599155505,
+        "(1, 1)": 0.006847372928338443,
+        "(2, -1)": 0.03236182747597324
+      }
+    },
+    {
+      "average_disk_competitor_diameter_gap": 0.17518189167049059,
+      "lost_sites_inside_eroded_disk": 532,
+      "q": 5001,
+      "rotation": 0.271,
+      "shift": [
+        0.499,
+        0.499
+      ],
+      "source_population": 2297617,
+      "source_population_deficit_per_D": 0.31772732014443955,
+      "trace_ball_expected_sites": 73.46969185987882,
+      "trace_ball_missing_sites": 78,
+      "trace_character_moduli": {
+        "(0, 1)": 0.02167824311925014,
+        "(1, 0)": 0.021679563020103924,
+        "(1, 1)": 0.021677583145454267,
+        "(2, -1)": 0.012935662416370964
+      }
+    },
+    {
+      "average_disk_competitor_diameter_gap": 0.18591967707470758,
+      "lost_sites_inside_eroded_disk": 531,
+      "q": 5001,
+      "rotation": 1.047,
+      "shift": [
+        0.211,
+        0.733
+      ],
+      "source_population": 2297586,
+      "source_population_deficit_per_D": 0.33720129948055894,
+      "trace_ball_expected_sites": 73.4696918598788,
+      "trace_ball_missing_sites": 67,
+      "trace_character_moduli": {
+        "(0, 1)": 0.019378687530710512,
+        "(1, 0)": 0.019376451475544364,
+        "(1, 1)": 0.019376548146011374,
+        "(2, -1)": 0.03247128617715211
+      }
+    }
+  ],
+  "command": "python research/check_unit_hull_lattice_boundary_loss.py --numerical --q 101 401 1001 5001",
+  "state_version": "2026-09-14.audit.51"
+}

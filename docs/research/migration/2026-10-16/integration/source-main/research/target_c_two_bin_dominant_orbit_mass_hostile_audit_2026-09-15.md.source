@@ -1,0 +1,442 @@
+# Hostile audit — two-bin dominant-orbit mass sharpening
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_two_bin_dominant_orbit_mass_2026-09-15.md`
+- `research/verify_target_c_two_bin_dominant_orbit_mass.py`
+
+**Base:** current hostile-audited shared dominant/complement endpoint-retention stack,
+matched atomic gap `g=0.0050`, and audited train-phase orbit decomposition.  
+**Disposition:** **PASS at proof-only full-core Type-II scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate changes one scalar input only: the lower bound on the mass `M` of the
+largest exact `pi/3` atomic train orbit.  The existing proof uses
+`sum M_r^2 <= M sum M_r`; the candidate isolates the dominant bin and bounds the
+entire residual square mass by the square of its total mass.  This audit checks the
+quadratic branch choice, monotonic transfer from atomic mass to the Section-171 upper
+envelope, the complement-train ceiling, and the feasible-region optimization.
+
+---
+
+## 1. The residual square bound is exact and needs no orbit-count hypothesis
+
+Let the nonnegative exact-orbit masses be `M_r`, with
+
+\[
+A=\sum_rM_r,
+\qquad
+M=\max_rM_r.
+\]
+
+For one orbit attaining `M`, the residual masses have total `A-M`, hence simply by
+nonnegativity
+
+\[
+\sum_{r\ne *}M_r^2
+\le\left(\sum_{r\ne *}M_r\right)^2
+=(A-M)^2.
+\]
+
+No assumption on the number of residual orbits is needed; concentrating all residual
+mass in one bin is the extremizer.
+
+The audited crossing inequality gives
+
+\[
+4\Delta_2\le\sum_rM_r^2,
+\]
+
+so
+
+\[
+4\Delta_2\le M^2+(A-M)^2.
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 2. The upper quadratic root is the correct branch
+
+The quadratic inequality is
+
+\[
+2M^2-2AM+A^2-4\Delta_2\ge0.
+\]
+
+Whenever `A^2<8Delta2`, its two roots are
+
+\[
+r_\pm={A\pm\sqrt{8\Delta_2-A^2}\over2}.
+\]
+
+The old audited dominant bound gives
+
+\[
+M\ge{4\Delta_2\over A}.
+\]
+
+Under the same condition `A^2<8Delta2`,
+
+\[
+{4\Delta_2\over A}>{A\over2}.
+\]
+
+But `r_-<A/2<r_+`, so the lower branch `M<=r_-` is impossible.  Therefore
+
+\[
+M\ge r_+=m_2(A).
+\]
+
+On the entire new target interval, `A<=C<=U<2`, while the certificate checks
+
+\[
+4<8\Delta_2,
+\]
+
+so `A^2<8Delta2` holds with large room.
+
+**Verdict:** PASS.
+
+---
+
+## 3. The domain starts at `A>=2sqrt(Delta2)`
+
+From
+
+\[
+4\Delta_2\le\sum_rM_r^2\le A^2
+\]
+
+we obtain
+
+\[
+A\ge2\sqrt{\Delta_2}.
+\]
+
+For
+
+\[
+m_2(A)={A+\sqrt{8\Delta_2-A^2}\over2},
+\]
+
+\[
+m_2'(A)
+={1\over2}\left(1-{A\over\sqrt{8\Delta_2-A^2}}\right).
+\]
+
+At `A=2sqrt(Delta2)` the derivative is zero; above that point it is strictly negative.
+Thus `m_2` is nonincreasing on the full physically relevant atomic-mass interval.
+
+The exposed-hull theorem gives `A<=C`, so
+
+\[
+M\ge m_2(A)\ge m_2(C).
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 4. Passing from `C` to `U` has the correct direction
+
+The complement complete-train density is at most total train density minus dominant
+orbit mass:
+
+\[
+N_c
+\le C+{t+\kappa\over2}-M
+\le C+{t+\kappa\over2}-m_2(C).
+\]
+
+Because
+
+\[
+{d\over dC}[C-m_2(C)]=1-m_2'(C)>0,
+\]
+
+and the Section-171 envelope gives `C<=U`,
+
+\[
+N_c
+\le U+{t+\kappa\over2}-m_2(U).
+\]
+
+This is an upper bound on complement trains, exactly the direction required by the
+shared endpoint-retention theorem.
+
+At `U=C50`, the certificate gives
+
+\[
+{4\Delta_2\over C50}
+=1.8996387052992783\ldots,
+\]
+
+\[
+m_2(C50)
+=1.9046190334611455\ldots,
+\]
+
+so the sharpening is strict by
+
+\[
+0.0049803281618671\ldots .
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 5. The shared-retention and energy arguments require no modification
+
+The hostile-audited shared-retention theorem uses only an upper bound `N_*` on the
+number of trains outside the dominant orbit.  Its finite routewise argument gives
+retained dominant mass `z` and retained complement pair mass `p` satisfying
+
+\[
+z+p\ge\pi-N_*.
+\]
+
+Replacing `N_*` by the smaller valid ceiling
+
+\[
+N_2(U)=U+(t+\kappa)/2-m_2(U)
+\]
+
+therefore strengthens the required retained mass to
+
+\[
+S=\pi-N_2(U).
+\]
+
+The same disjoint edge-energy lower bounds remain
+
+\[
+F(z)=z-6\sin(z/6),
+\qquad
+J(p)=2p-6\sin(p/3).
+\]
+
+Thus the existing infimal convolution
+
+\[
+H(S)=\min_{z+p=S}[F(z)+J(p)]
+\]
+
+applies verbatim.  No occurrence is recounted and no second detour-capacity payment is
+introduced.
+
+**Verdict:** PASS.
+
+---
+
+## 6. `kappa=0` remains the weakest topology point
+
+Put
+
+\[
+S=\pi-U-(t+\kappa)/2+m_2(U),
+\]
+
+with
+
+\[
+\partial U/\partial\kappa=-1/2.
+\]
+
+Then
+
+\[
+{\partial S\over\partial\kappa}
+=-{m_2'(U)\over2}>0
+\]
+
+through the strict low-`t` interval.  Increasing `kappa` therefore increases the
+required retained mass.  Since `H` is nondecreasing, the contradiction margin
+`H(S)-delta` cannot decrease.
+
+Hence the weakest point has
+
+\[
+\boxed{\kappa=0.}
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 7. Maximal detour remains the weakest detour point
+
+At fixed `t,kappa`,
+
+\[
+{\partial S\over\partial\delta}
+=2(1-m_2'(U)).
+\]
+
+The candidate interval has
+
+\[
+U\le {9t\over2}-2\pi<2.
+\]
+
+Also
+
+\[
+m_2''(U)
+=-{4\Delta_2\over(8\Delta_2-U^2)^{3/2}}<0,
+\]
+
+so `m_2'` is decreasing.  The certificate gives
+
+\[
+m_2'(2)=-0.0542571\ldots>-1/8.
+\]
+
+Consequently
+
+\[
+{\partial S\over\partial\delta}<9/4.
+\]
+
+For `S<pi`, the value function has upper marginal cost at most the cost of adding all
+new mass to the dominant coordinate:
+
+\[
+D^+H(S)\le F'(\pi)=1-\sqrt3/2.
+\]
+
+Therefore
+
+\[
+D^+_\delta[H(S)-\delta]
+<{9\over4}(1-\sqrt3/2)-1
+=-0.6985\ldots<0.
+\]
+
+This argument does not depend on whether the allocation optimizer is interior or on a
+coordinate boundary.  The contradiction margin strictly decreases with `delta`.
+
+Hence the weakest point uses maximal allowed detour.
+
+**Verdict:** PASS.
+
+---
+
+## 8. Boundary scalar is strictly decreasing in `t`
+
+Combining Sections 6--7 with
+
+\[
+2\delta+\kappa/2\le R50(t)
+\]
+
+gives the weakest boundary point
+
+\[
+\kappa=0,
+\qquad
+\delta=R50(t)/2,
+\qquad
+U=C50.
+\]
+
+There
+
+\[
+S_0(t)=\pi-C50-t/2+m_2(C50),
+\]
+
+so `S_0'(t)=-1/2`, while `delta_0'(t)=9/4`.  Since `H` is nondecreasing,
+
+\[
+{d\over dt}[H(S_0(t))-\delta_0(t)]<0.
+\]
+
+Thus one positive endpoint margin excludes the entire lower interval already covered
+by the current `1.83279` theorem.
+
+**Verdict:** PASS.
+
+---
+
+## 9. Numerical certificate and independent Pyroam regression
+
+The committed Decimal certificate gives at
+
+\[
+t=1.83287
+\]
+
+\[
+\begin{aligned}
+\delta_0&=0.0275520395462494\ldots,\\
+M_{50}&=1.9046190334611455\ldots,\\
+S_0&=2.2201510733230241\ldots,\\
+z_0&=1.6409090649044951\ldots,\\
+p_0&=0.5792420084185290\ldots,
+\end{aligned}
+\]
+
+with total forced energy
+
+\[
+0.0275633249730987\ldots
+\]
+
+and positive contradiction margin
+
+\[
+\boxed{
+1.1285426849259\times10^{-5}.
+}
+\]
+
+It brackets the scalar crossing by
+
+\[
+1.8328749746<t_*<1.8328749747.
+\]
+
+An independent Pyroam Decimal run reproduced the same values and additionally checked
+
+\[
+U_{max}=1.9647296928\ldots<2,
+\]
+
+\[
+m_2'(2)=-0.0542571844\ldots>-1/8,
+\]
+
+and the conservative detour marginal product
+
+\[
+{9\over4}(1-\sqrt3/2)=0.3014428415\ldots<1.
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 10. Scope and final disposition
+
+The theorem uses only the already-audited orbit crossing-mass identities and the
+current shared endpoint-retention theorem.  It adds no train-order geometry, KKT-weight
+bound, response estimate, or source motion.
+
+The improvement is small in `t` but exact in structure: the residual atomic mass can
+pay its square contribution only once, so the dominant orbit is larger than the old
+`MA` relaxation records.
+
+The safe current proof-only full-core Type-II floor becomes
+
+\[
+\boxed{1.83287}.
+\]
+
+C-II remains open.  The natural next step is to use the per-phase-class constraints
+inside the dominant orbit from the `g=0.0050` two-leaf minimax theorem, rather than
+collapsing the entire dominant orbit to one total mass `M`.
+
+**Final verdict:** PASS at proof-only full-core Type-II scope.

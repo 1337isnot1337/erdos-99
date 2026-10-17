@@ -1,0 +1,608 @@
+# Target C-II — Carathéodory sparsifies the live diameter-resultant interface
+
+**Date:** 2026-09-15<br>
+**Status:** proof-only source-level structural strengthening<br>
+**Scope:** full-core Type-II branch with `t=(q-k)/D<=1.844`, on the audited high-phase smallest-leaf O--O path<br>
+**Dependencies:** exact laminar interval support for actual diameter rows; positive normalized diameter KKT multipliers; audited Section 157 cut resultants; audited high-phase adjacent-cut path and phase-defect budget; adjacent switching-layer/caterpillar theorem<br>
+**Certificate:** `research/verify_target_c_caratheodory_sparse_resultant_profile.py`<br>
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current adjacent-cut normal form still carries as many as `1800+o(1)` actual
+switching diameter edges.  That is already finite-scale, but it is too large for a
+direct geometric classification.
+
+There is a second, independent sparsification available at the level of the exact KKT
+**cut resultants**.  Concatenate all selected-cut resultant equations and apply
+Carathéodory to the actual diameter rows.  The resulting nonnegative diameter measure
+preserves every selected cut resultant exactly and uses at most `2m+1` actual diameter
+rows on an `m`-cut path.  Since each diameter row has interval support, the sparse
+measure has at most `4m+2` switch events in total.
+
+Combining that global switch count with the already-audited bounded total phase defect
+forces an adjacent interface at which the exact resultant jump is carried by only a
+handful of actual diameter vectors.
+
+The strongest small-support corollary obtained below is:
+
+\[
+\boxed{
+\begin{gathered}
+\text{there is an adjacent leaf-cut pair }(i,i+1)\text{ and a nonnegative}\
+\text{actual-diameter resultant certificate preserving every path cut exactly,}\
+\text{for which at most four supported diameter rows switch at }i,\\
+B_i^{\rm sp}+d_{\mathbb{RP}^1}(u_i,u_{i+1})
+<{97500\over D}+o(D^{-1}).
+\end{gathered}}
+\tag{CSR.1}
+\]
+
+Here `B_i^sp` is the total sparse certificate weight on rows switching at the chosen
+boundary.  Consequently
+
+\[
+\boxed{
+F_{i+1}-F_i
+=\sum_{h\in J_i}\widetilde\beta_h
+ (\varepsilon_{h,i+1}-\varepsilon_{hi})r_h,
+\qquad |J_i|\le4,
+}
+\tag{CSR.2}
+\]
+
+with
+
+\[
+\sum_{h\in J_i}\widetilde\beta_h
+<{97500\over D}+o(D^{-1}).
+\tag{CSR.3}
+\]
+
+Thus the change between two asymptotically parallel train resultants is represented by
+at most four **actual diameter vectors**.  Those rows lie in the adjacent switching
+layer cut and hence inherit its straight-line-thrackle/caterpillar-forest geometry.
+
+This does **not** say that only four actual diameter constraints switch.  It says that
+all selected-cut KKT resultant equations admit an exact nonnegative certificate whose
+switch at one useful adjacent boundary has support at most four.  The distinction is
+load-bearing.
+
+---
+
+## 1. The audited high-phase path
+
+Use the high-phase smallest-leaf path from the triple-small adjacent-cut theorem:
+
+\[
+P=(\tau_1,\ldots,\tau_m),
+\qquad
+m>pD-o(D),
+\tag{CSR.4}
+\]
+
+where
+
+\[
+p={278778993\over78216868750}
+=0.0035641799\ldots .
+\tag{CSR.5}
+\]
+
+Choose coherent nested shores along the path and write
+
+\[
+\varepsilon_{hj}\in\{-1,0,1\}
+\]
+
+for the signed incidence of actual diameter row `h` on cut `tau_j`.  The laminar
+interval theorem gives
+
+\[
+(\varepsilon_{h1},\ldots,\varepsilon_{hm})
+=0,\ldots,0,s,\ldots,s,0,\ldots,0
+\tag{CSR.6}
+\]
+
+for one sign `s` depending on `h`.
+
+Let `u_j` be the coherently oriented train contact direction.  The same high-phase path
+construction writes
+
+\[
+q_j:=\beta_j-\alpha_\gamma-\frac\pi3>0
+\]
+
+for its phase offset from the chosen center train and proves
+
+\[
+\boxed{
+\sum_{j=1}^m q_j
+\le Q_{\rm ph}+o(1),
+\qquad
+Q_{\rm ph}:={C_{\rm phase}\over d_{\rm low}},
+}
+\tag{CSR.7}
+\]
+
+with
+
+\[
+d_{\rm low}={9891\over62500}
+\]
+
+and the audited outward bound
+
+\[
+C_{\rm phase}
+<{3258689123681\over612912000000}.
+\tag{CSR.8}
+\]
+
+In particular the certificate used below has
+
+\[
+Q_{\rm ph}<33.595772.
+\tag{CSR.9}
+\]
+
+For adjacent leaves,
+
+\[
+d_{\mathbb{RP}^1}(u_i,u_{i+1})
+\le q_i+q_{i+1}.
+\tag{CSR.10}
+\]
+
+---
+
+## 2. Concatenate every selected-cut resultant equation
+
+Let the positive relative-interior diameter multipliers be normalized by
+
+\[
+\sum_h\beta_h=1.
+\tag{CSR.11}
+\]
+
+For each selected cut, Section 157 gives
+
+\[
+F_j=A_j u_j
+=\sum_h\beta_h\varepsilon_{hj}r_h,
+\qquad |r_h|=D,
+\tag{CSR.12}
+\]
+
+where
+
+\[
+A_j=\sum_{e\in E(\tau_j)}\alpha_e>0.
+\]
+
+For one actual diameter row define its concatenated cut vector
+
+\[
+X_h
+:=
+(\varepsilon_{h1}r_h,
+ \varepsilon_{h2}r_h,
+ \ldots,
+ \varepsilon_{hm}r_h)
+\in\mathbb R^{2m}.
+\tag{CSR.13}
+\]
+
+Also concatenate the exact cut resultants:
+
+\[
+\mathcal F
+:=(F_1,F_2,\ldots,F_m)\in\mathbb R^{2m}.
+\tag{CSR.14}
+\]
+
+Equations (CSR.11)--(CSR.12) say exactly
+
+\[
+\boxed{
+\mathcal F=\sum_h\beta_h X_h,
+\qquad \sum_h\beta_h=1,
+\qquad \beta_h>0.
+}
+\tag{CSR.15}
+\]
+
+Thus `mathcal F` lies in the convex hull of the finite set of actual-diameter vectors
+`X_h`.
+
+---
+
+## 3. Carathéodory gives an exact `2m+1`-row resultant certificate
+
+Carathéodory's theorem in `R^(2m)` applied to (CSR.15) gives actual diameter rows
+
+\[
+h_1,\ldots,h_s,
+\qquad s\le2m+1,
+\]
+
+and nonnegative coefficients
+
+\[
+\lambda_1,\ldots,\lambda_s,
+\qquad
+\sum_{a=1}^s\lambda_a=1,
+\]
+
+such that
+
+\[
+\mathcal F=\sum_{a=1}^s\lambda_a X_{h_a}.
+\tag{CSR.16}
+\]
+
+Define a sparse diameter measure on the full actual diameter set by
+
+\[
+\widetilde\beta_h
+:=
+\begin{cases}
+\lambda_a,&h=h_a,\\
+0,&\text{otherwise}.
+\end{cases}
+\tag{CSR.17}
+\]
+
+Then
+
+\[
+\boxed{
+\widetilde\beta_h\ge0,
+\qquad
+\sum_h\widetilde\beta_h=1,
+\qquad
+|\operatorname{supp}\widetilde\beta|\le2m+1,
+}
+\tag{CSR.18}
+\]
+
+and, block by block in (CSR.16),
+
+\[
+\boxed{
+F_j=A_j u_j
+=\sum_h\widetilde\beta_h\varepsilon_{hj}r_h
+\quad\text{for every }j=1,\ldots,m.
+}
+\tag{CSR.19}
+\]
+
+This is exact, finite, and uses only actual diameter rows of the source.
+
+### Scope warning
+
+The sparse coefficients `tilde beta` are a **cut-resultant certificate**.  They are not
+asserted to satisfy the full vertex-by-vertex KKT equilibrium equations.  Carathéodory
+here preserves exactly the `2m` selected-cut resultant coordinates and the normalization
+in (CSR.18); it does not preserve every other linear statistic of the original KKT
+stress.
+
+Accordingly, no unsparsified active diameter constraint may be discarded from the
+optimization problem, and no local descent follows from (CSR.19) alone.
+
+---
+
+## 4. The sparse certificate has at most `4m+2` switch events
+
+For an internal path boundary `i=1,...,m-1`, put
+
+\[
+\widetilde N_i
+:=\#\{h\in\operatorname{supp}\widetilde\beta:
+       \varepsilon_{h,i+1}\ne\varepsilon_{hi}\},
+\tag{CSR.20}
+\]
+
+and
+
+\[
+\widetilde B_i
+:=\sum_h\widetilde\beta_h
+ |\varepsilon_{h,i+1}-\varepsilon_{hi}|.
+\tag{CSR.21}
+\]
+
+Every interval row changes incidence at at most two internal boundaries.  Hence
+
+\[
+\boxed{
+\sum_{i=1}^{m-1}\widetilde N_i
+\le2|\operatorname{supp}\widetilde\beta|
+\le4m+2.
+}
+\tag{CSR.22}
+\]
+
+The same interval fact and (CSR.18) give the weighted version
+
+\[
+\boxed{
+\sum_{i=1}^{m-1}\widetilde B_i\le2.
+}
+\tag{CSR.23}
+\]
+
+Because a nonzero interval switch is `0<->s`, its absolute change is exactly one; there
+is no hidden factor two in (CSR.21)--(CSR.23).
+
+---
+
+## 5. Many adjacent boundaries have at most `k` sparse switching rows
+
+Fix an integer
+
+\[
+k\ge4
+\]
+
+and let
+
+\[
+G_k:=\{i:\widetilde N_i\le k\}.
+\]
+
+Every boundary outside `G_k` spends at least `k+1` switch events.  By (CSR.22),
+
+\[
+(m-1-|G_k|)(k+1)\le4m+2.
+\]
+
+Therefore
+
+\[
+\boxed{
+|G_k|
+\ge
+{(k-3)m-(k+3)\over k+1}.
+}
+\tag{CSR.24}
+\]
+
+For fixed `k` and an unbounded survivor sequence, (CSR.4) yields
+
+\[
+|G_k|
+\ge
+\left({k-3\over k+1}p-o(1)\right)D.
+\tag{CSR.25}
+\]
+
+The special four-row case is already linear:
+
+\[
+|G_4|\ge{m-7\over5}.
+\tag{CSR.26}
+\]
+
+---
+
+## 6. One of those sparse boundaries is also phase-close and low-weight
+
+Restrict the two remaining global budgets to `G_k`.  From (CSR.7),
+
+\[
+\sum_{i\in G_k}(q_i+q_{i+1})
+\le2Q_{\rm ph}+o(1),
+\tag{CSR.27}
+\]
+
+while (CSR.23) gives
+
+\[
+\sum_{i\in G_k}\widetilde B_i\le2.
+\tag{CSR.28}
+\]
+
+Thus
+
+\[
+\sum_{i\in G_k}
+D\bigl(\widetilde B_i+q_i+q_{i+1}\bigr)
+\le2D(Q_{\rm ph}+1)+o(D).
+\tag{CSR.29}
+\]
+
+Using (CSR.25), some `i in G_k` satisfies
+
+\[
+\boxed{
+D\bigl(\widetilde B_i+q_i+q_{i+1}\bigr)
+\le C_k+o(1),
+}
+\tag{CSR.30}
+\]
+
+where
+
+\[
+\boxed{
+C_k
+:=
+{2(Q_{\rm ph}+1)(k+1)\over(k-3)p}.
+}
+\tag{CSR.31}
+\]
+
+The exact companion verifier uses only the already-audited rational upper bound
+(CSR.8) and proves the following safe Pareto profile:
+
+| maximum sparse switching rows `k` | exact upper estimate for `C_k` | safe rounded constant |
+|---:|---:|---:|
+| 4 | `97065.16659...` | `97500` |
+| 5 | `58239.09996...` | `58500` |
+| 6 | `45297.07775...` | `45500` |
+| 7 | `38826.06664...` | `39000` |
+| 8 | `34943.45998...` | `35000` |
+
+Consequently, for each row of this table there is an adjacent boundary with
+
+\[
+\widetilde N_i\le k,
+\tag{CSR.32}
+\]
+
+\[
+\widetilde B_i
+<{C_k^{\rm safe}\over D}+o(D^{-1}),
+\tag{CSR.33}
+\]
+
+and, by (CSR.10),
+
+\[
+d_{\mathbb{RP}^1}(u_i,u_{i+1})
+<{C_k^{\rm safe}\over D}+o(D^{-1}).
+\tag{CSR.34}
+\]
+
+The two small quantities actually satisfy the stronger combined inequality from
+(CSR.30); (CSR.33)--(CSR.34) merely separate it into convenient consequences.
+
+---
+
+## 7. The resultant jump is carried by at most `k` actual diameter vectors
+
+Subtract the two exact sparse resultant equations (CSR.19):
+
+\[
+\begin{aligned}
+F_{i+1}-F_i
+&=\sum_h\widetilde\beta_h
+ (\varepsilon_{h,i+1}-\varepsilon_{hi})r_h\\
+&=\sum_{h\in J_i}\widetilde\beta_h
+ (\varepsilon_{h,i+1}-\varepsilon_{hi})r_h,
+\end{aligned}
+\tag{CSR.35}
+\]
+
+where
+
+\[
+J_i
+:=\{h\in\operatorname{supp}\widetilde\beta:
+\varepsilon_{h,i+1}\ne\varepsilon_{hi}\}.
+\]
+
+At the selected boundary,
+
+\[
+\boxed{|J_i|\le k.}
+\tag{CSR.36}
+\]
+
+Moreover
+
+\[
+\sum_{h\in J_i}\widetilde\beta_h
+=\widetilde B_i
+<{C_k^{\rm safe}\over D}+o(D^{-1}),
+\tag{CSR.37}
+\]
+
+and therefore, since `|r_h|=D`,
+
+\[
+\boxed{
+\|F_{i+1}-F_i\|
+<C_k^{\rm safe}+o(1).
+}
+\tag{CSR.38}
+\]
+
+For `k=4`, equations (CSR.34)--(CSR.38) give precisely (CSR.1)--(CSR.3).
+
+The adjacent switching theorem identifies every row in `J_i` as an edge of the layer
+cut
+
+\[
+\delta_H(S_{i+1}\setminus S_i).
+\]
+
+That full layer-cut graph is a straight-line-thrackle caterpillar forest.  Hence the
+sparse switching support `J_i` is a subgraph of that same one-dimensional switching
+geometry.  In the four-row case the entire exact resultant jump is therefore encoded
+by at most four edges of a diameter-thrackle layer cut.
+
+---
+
+## 8. Why this is different from the existing `N<1800` theorem
+
+The Pareto adjacent-cut theorem bounds the **actual** switching set:
+
+\[
+N_i<1800+o(1)
+\]
+
+while retaining small original KKT switching mass and phase gap.  That statement is
+about all active diameter constraints and is indispensable for the finite-cusp
+analysis.
+
+The present theorem does something different.  It compresses the vector of all
+selected-cut KKT resultants to a sparse nonnegative certificate.  At one adjacent
+boundary the difference of those exact resultants is then supported on at most four
+actual diameter vectors.
+
+Neither theorem implies the other:
+
+- `N_i<1800` does not give a four-vector exact representation of `F_{i+1}-F_i`;
+- the four-vector sparse certificate does not say the other actual switching diameter
+  constraints disappear.
+
+Together they give two complementary finite interfaces:
+
+```text
+actual active cusp:
+    <1800 switching diameter edges, caterpillar forest, original beta mass O(1/D)
+
+exact resultant certificate:
+    <=4 switching diameter edges, same layer-cut geometry,
+    exact F_i and F_{i+1}, sparse mass O(1/D), phase gap O(1/D)
+```
+
+The latter is a plausible finite classification target: any downstream argument that
+uses only the two adjacent Section-157 cut resultants may now work with at most four
+switching diameter vectors instead of an arbitrary bounded family.
+
+---
+
+## 9. Non-conclusions and next obligation
+
+This theorem does **not** close C-II.
+
+In particular:
+
+1. `tilde beta` is not asserted to be a full KKT stress.  Full vertex equilibrium is
+   not preserved by the Carathéodory projection used here.
+2. Actual diameter constraints outside the sparse support remain active constraints of
+   the source and cannot be ignored in a deformation argument.
+3. No individual KKT multiplier lower bound is used or recovered.
+4. No first-order feasible nonzero train-shear direction is claimed; the audited mixed
+   rigidity/full-support KKT obstruction remains valid.
+
+The gain is an exact reduction of the **cut-resultant interface**.  The next useful
+step is to classify the possible four-edge layer-cut representations in (CSR.35)
+together with
+
+\[
+F_i=A_i u_i,
+\qquad
+F_{i+1}=A_{i+1}u_{i+1},
+\qquad
+u_i-\nu_{i+1}=O(D^{-1}),
+\]
+
+and the cyclic/straight-line-thrackle order of their diameter endpoints.  A
+contradiction there would attack the finite cusp without reintroducing the rejected
+response-conductance inequality.
+
+**Disposition:** proved a new exact Carathéodory sparsification and a four-to-eight-row
+Pareto profile for the live adjacent diameter-resultant interface. C-II and Level I
+remain open.

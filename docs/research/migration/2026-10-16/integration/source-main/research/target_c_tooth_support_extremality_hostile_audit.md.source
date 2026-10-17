@@ -1,0 +1,189 @@
+# Hostile audit — outer-tooth support extremality
+
+**Date:** 2026-09-12  
+**Reviewed candidate:** `research/target_c_tooth_support_extremality_2026-09-12.md` on branch `research/c2-tooth-support-20260912`  
+**Disposition:** **REJECT.** The normal-cone lemma OT.1 is false for the actual inward teeth of the Target-C outer walk.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate claims that, if every loaded hull side has a two-edge unit tooth and every loaded hull vertex is extreme in the full source hull, then
+
+\[
+\beta_{i-1}+\beta_i\le\delta_i,
+\tag{OT.4}
+\]
+
+where `delta_i` is the exterior hull turn and `beta_i=arccos(s_i/2)` is the base angle of the unit tooth. Summing would give `sum beta_i<=pi` and hence the advertised upper bound `q<=pi D/2+pi`.
+
+This implication is false. The sign of the tooth normal is reversed in the candidate proof: the actual Section-130 tooth apex lies on the **inward** side of the loaded hull side, because every unloaded positive-contact vertex lies in the force hull. The candidate formula places it on the outward side. Once the apex is put on the correct inward side, the supporting-half-plane inequality at a loaded hull vertex is automatic and gives no lower bound on the position of the supporting normal inside the hull normal cone.
+
+There is also an exact unit-separated counterexample satisfying the stronger property that every loaded hull vertex is a global diameter endpoint.
+
+---
+
+## 1. Exact regular-heptagon counterexample
+
+Let
+
+\[
+\theta={\pi\over7},
+\qquad
+s=\sqrt3,
+\qquad
+R={\sqrt3\over2\sin\theta}.
+\]
+
+Let `b_0,...,b_6` be the vertices, in cyclic order, of the regular heptagon of circumradius `R`. Then every hull side has length
+
+\[
+|b_i-b_{i+1}|=2R\sin\theta=\sqrt3.
+\tag{1.1}
+\]
+
+For each side `b_i b_{i+1}`, let `x_i` be the **inward** intersection of the two unit circles centered at `b_i,b_{i+1}`. Since the base has length `sqrt(3)`, the tooth altitude is exactly `1/2` and
+
+\[
+|b_i-x_i|=|x_i-b_{i+1}|=1.
+\tag{1.2}
+\]
+
+The seven points `x_i` form a concentric regular heptagon. Its circumradius is
+
+\[
+r=R\cos\theta-{1\over2}.
+\tag{1.3}
+\]
+
+Hence the distance between adjacent tooth apices is
+
+\[
+\begin{aligned}
+|x_i-x_{i+1}|
+&=2r\sin\theta\\
+&=2\left(R\cos\theta-{1\over2}\right)\sin\theta\\
+&=\sqrt3\cos\theta-\sin\theta\\
+&=2\cos\left(\theta+{\pi\over6}\right)\\
+&=2\cos{13\pi\over42}>1,
+\end{aligned}
+\tag{1.4}
+\]
+
+because `13*pi/42 < pi/3`. All other pairs of tooth apices are farther apart on the same regular heptagon.
+
+For a tooth apex `x_i`, the nearest loaded vertices are exactly its two incident endpoints `b_i,b_{i+1}`. Indeed those have angular separation `theta` from the radial direction of `x_i`; every nonincident loaded vertex has larger circular angular separation, so with the same two radii its Euclidean distance from `x_i` is strictly larger than the incident distance one.
+
+Finally, loaded-loaded distances are at least their side length `sqrt(3)>1`. Therefore the fourteen-point source
+
+\[
+A=\{b_0,\ldots,b_6,x_0,\ldots,x_6\}
+\tag{1.5}
+\]
+
+is unit-separated. Its only unit distances are the fourteen intended tooth legs. In particular it contains no unit equilateral triangle.
+
+---
+
+## 2. Every loaded hull vertex is a diameter endpoint
+
+All tooth apices lie strictly inside the regular heptagon, so
+
+\[
+\operatorname{conv}A=\operatorname{conv}\{b_0,\ldots,b_6\}.
+\tag{2.1}
+\]
+
+The diameter of a regular heptagon is the chord joining vertices three cyclic steps apart. By cyclic symmetry, every `b_i` is an endpoint of such a diameter pair. Thus this regression satisfies not merely the stated OT.1 assumption that the `b_i` are extreme in the full source hull, but the stronger Target-C fact that every `b_i` is an actual global diameter endpoint.
+
+---
+
+## 3. OT.4 fails exactly
+
+For every side,
+
+\[
+\beta_i
+=\arccos{s\over2}
+=\arccos{\sqrt3\over2}
+={\pi\over6}.
+\tag{3.1}
+\]
+
+Every exterior turn of the regular heptagon is
+
+\[
+\delta_i={2\pi\over7}.
+\tag{3.2}
+\]
+
+Therefore
+
+\[
+\beta_{i-1}+\beta_i
+={\pi\over3}
+>{2\pi\over7}
+=\delta_i,
+\tag{3.3}
+\]
+
+because `1/3>2/7`. This directly contradicts OT.4.
+
+The same example is consistent with the repaired consecutive-tooth theorem §141. There that theorem gives the opposite type of restriction
+
+\[
+\delta_i
+\le {2\pi\over3}-\beta_{i-1}-\beta_i
+={\pi\over3},
+\]
+
+and indeed `2*pi/7 < pi/3`.
+
+---
+
+## 4. Exact sign error in the candidate proof
+
+For a counterclockwise loaded hull edge with unit tangent `t_i`, `Jt_i` points to the interior side of the convex polygon and `-Jt_i` points outward. The candidate defines
+
+\[
+n_i=-Jt_i
+\]
+
+as the outward normal and then writes the tooth apex as
+
+\[
+x_i={b_i+b_{i+1}\over2}+h_i n_i.
+\]
+
+That is an **outward** tooth. It is not the augmented triangular face of §130. The actual Target-C tooth is
+
+\[
+\boxed{
+x_i={b_i+b_{i+1}\over2}-h_i n_i.}
+\tag{4.1}
+\]
+
+It lies in the old outer-face pocket inside the force hull.
+
+With the corrected sign, if `v_i` is any outward supporting normal at `b_i`, then the condition
+
+\[
+v_i\cdot(x_i-b_i)\le0
+\]
+
+is already implied by `x_i in F`. It cannot force `v_i` away from either edge normal by an angle `beta_i`. Thus the claimed inequalities OT.8--OT.9 and their sum OT.4 have no valid inward-tooth analogue.
+
+---
+
+## 5. Consequence for the proposed pure-tooth exclusion
+
+The derived bounds
+
+\[
+\sum_i\beta_i\le\pi,
+\qquad
+q\le{\pi\over2}D+\pi
+\]
+
+are unsupported and false at the stated geometric level. The subsequent composition with a cap-family lower bound on `q/D` therefore cannot be used to exclude the exact pure-tooth endpoint.
+
+This rejection does **not** affect the normalized audited-working §141 consecutive-tooth turn theorem; §141 uses the correct inward tooth geometry and a cross-distance unit-separation argument. It also does not affect §126 or the train-cut resultant theorem developed separately.
+
+**Final disposition:** reject OT.1 and every conclusion depending on it. No theorem-state mutation. C-II remains open.

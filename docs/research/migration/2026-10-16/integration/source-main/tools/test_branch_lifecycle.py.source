@@ -1,0 +1,172 @@
+import copy
+import json
+from pathlib import Path
+import subprocess
+import tempfile
+import unittest
+from unittest.mock import patch
+
+import branch_lifecycle as lifecycle
+
+
+class BranchLifecycleTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name) / 'repo'
+        self.root.mkdir()
+        self.git('init', '-b', 'main')
+        self.git('config', 'user.name', 'Fixture')
+        self.git('config', 'user.email', 'fixture@example.invalid')
+        (self.root / 'evidence').write_text('original\n')
+        self.git('add', 'evidence')
+        self.git('commit', '-m', 'base')
+        self.old = self.git('rev-parse', 'HEAD').strip()
+        self.git('branch', 'integrated')
+        (self.root / 'evidence').write_text('current\n')
+        self.git('commit', '-am', 'main advances')
+        self.main = self.git('rev-parse', 'HEAD').strip()
+        self.git('update-ref', 'refs/remotes/origin/main', self.main)
+        self.git('checkout', '-b', 'unique', self.old)
+        (self.root / 'new-proof').write_text('unreviewed\n')
+        self.git('add', 'new-proof')
+        self.git('commit', '-m', 'unique research')
+        self.unique = self.git('rev-parse', 'HEAD').strip()
+        self.git('checkout', 'main')
+        self.snapshot = {'repository': 'owner/repo', 'branches': [
+            {'name': 'main', 'commit': {'sha': self.main}},
+            {'name': 'integrated', 'commit': {'sha': self.old}},
+            {'name': 'unique', 'commit': {'sha': self.unique}}], 'pulls': []}
+
+    def git(self, *args):
+        return subprocess.check_output(['git', '-C', str(self.root), *args], stderr=subprocess.DEVNULL).decode()
+
+    def report(self):
+        return lifecycle.reconcile(self.root, self.snapshot)
+
+    def branch(self, name):
+        return next(b for b in self.report()['branches'] if b['ref'] == 'refs/heads/' + name)
+
+    def pr(self, head='unique', base='main', state='open', head_repo='owner/repo'):
+        return {'number': 1, 'state': state, 'draft': True, 'merged_at': None,
+                'head': {'ref': head, 'sha': self.unique, 'repo': {'full_name': head_repo}},
+                'base': {'ref': base, 'sha': self.main, 'repo': {'full_name': 'owner/repo'}}}
+
+    def test_ancestry_and_unique_evidence(self):
+        self.assertEqual(self.branch('integrated')['classification'], 'A')
+        unique = self.branch('unique')
+        self.assertEqual(unique['classification'], 'F')
+        self.assertEqual(unique['unique_commits'], [self.unique])
+        self.assertEqual(unique['changed_paths'], ['new-proof'])
+        self.assertEqual(lifecycle.deletion_preview(self.report())['refs'], [
+            {'ref': 'refs/heads/integrated', 'expected_sha': self.old}])
+
+    def test_open_draft_head_and_base_protected(self):
+        self.snapshot['pulls'] = [self.pr(base='integrated')]
+        self.assertEqual(self.branch('unique')['classification'], 'E')
+        self.assertEqual(self.branch('integrated')['classification'], 'E')
+
+    def test_incomplete_open_pr_protection_fails_closed(self):
+        for side in ('head', 'base'):
+            self.snapshot['pulls'] = [self.pr()]
+            self.snapshot['pulls'][0][side]['repo'] = None
+            with self.assertRaisesRegex(ValueError, 'metadata'):
+                self.report()
+
+    def test_closed_or_merged_pr_is_not_ancestry_evidence(self):
+        pr = self.pr(state='closed'); pr['merged_at'] = '2026-01-01T00:00:00Z'
+        self.snapshot['pulls'] = [pr]
+        self.assertEqual(self.branch('unique')['classification'], 'F')
+        self.assertEqual(self.branch('unique')['prs'][0]['number'], 1)
+
+    def test_fork_head_does_not_protect_unrelated_same_named_ref(self):
+        self.snapshot['pulls'] = [self.pr(head='integrated', head_repo='elsewhere/fork')]
+        self.assertEqual(self.branch('integrated')['classification'], 'A')
+
+    def test_detached_worktree_tip_and_alias_protected(self):
+        self.git('worktree', 'add', '--detach', str(Path(self.tmp.name) / 'detached'), self.old)
+        self.assertEqual(self.branch('integrated')['classification'], 'E')
+
+    def test_worktree_with_only_ignored_evidence_remains_protected(self):
+        worktree = Path(self.tmp.name) / 'ignored-worktree'
+        self.git('worktree', 'add', str(worktree), 'integrated')
+        # Local excludes are shared across worktrees; this simulates an ignored run log.
+        excludes = self.root / '.git/info/exclude'
+        excludes.write_text(excludes.read_text() + '\n*.log\n')
+        evidence = worktree / 'unique-run.log'
+        evidence.write_text('uncommitted computational evidence\n')
+        status = subprocess.check_output(['git', '-C', str(worktree), 'status', '--porcelain'])
+        self.assertEqual(status, b'')
+        self.assertEqual(self.branch('integrated')['classification'], 'E')
+        self.assertTrue(evidence.exists())
+
+    def test_missing_worktree_registration_is_protected(self):
+        with patch.object(lifecycle, 'worktree_protections', return_value=(
+                {'refs/heads/integrated'}, set(), [{'worktree': '/missing'}])):
+            self.assertEqual(self.branch('integrated')['classification'], 'E')
+
+    def test_automation_and_explicit_protection(self):
+        self.snapshot['branches'].append({'name': 'automation/test', 'commit': {'sha': self.old}})
+        row = next(b for b in self.report()['branches'] if b['ref'] == 'refs/heads/automation/test')
+        self.assertFalse(row['deletion_preview_eligible'])
+        self.assertEqual(row['classification'], 'F')  # Prefix is not confirmed activity.
+        report = lifecycle.reconcile(self.root, self.snapshot, protect=['refs/heads/integrated'])
+        self.assertEqual(lifecycle.deletion_preview(report)['refs'], [])
+
+    def test_local_only_branch_and_activity_are_observations(self):
+        self.git('branch', 'local-only', self.old)
+        report = self.report()
+        self.assertEqual(report['local_only_branches'], [
+            {'ref': 'refs/heads/local-only', 'sha': self.old, 'worktree_protected': False}])
+        self.assertTrue(self.branch('integrated')['last_commit_at'])
+
+    def test_duplicate_tip_groups(self):
+        self.snapshot['branches'].append({'name': 'alias', 'commit': {'sha': self.old}})
+        self.assertEqual(self.report()['duplicate_tips'][self.old], ['refs/heads/alias', 'refs/heads/integrated'])
+
+    def test_duplicate_records_invalid_oids_and_stale_main_fail(self):
+        for mutate in (
+            lambda s: s['branches'].append(copy.deepcopy(s['branches'][0])),
+            lambda s: s['branches'][0]['commit'].update(sha=self.old),
+            lambda s: s['branches'][1]['commit'].update(sha='f' * 40),
+            lambda s: s['branches'][1]['commit'].update(sha='--help'),
+            lambda s: s['branches'][1].update(name='../escape'),
+            lambda s: s.update(pulls=[self.pr(), self.pr()]),
+        ):
+            snapshot = copy.deepcopy(self.snapshot); mutate(snapshot)
+            with self.assertRaises((ValueError, subprocess.CalledProcessError)):
+                lifecycle.reconcile(self.root, snapshot)
+
+    def test_shallow_history_refused(self):
+        original = lifecycle.git
+        def fake(root, *args):
+            return b'true\n' if args == ('rev-parse', '--is-shallow-repository') else original(root, *args)
+        with patch.object(lifecycle, 'git', side_effect=fake):
+            with self.assertRaisesRegex(ValueError, 'shallow'):
+                self.report()
+
+    def test_paginated_all_state_collection(self):
+        with patch.object(lifecycle.subprocess, 'check_output', return_value=b'[{"one":1}]\n[{"two":2}]\n') as mocked:
+            got = lifecycle.collect_remote('owner/repo')
+            self.assertEqual(len(got['branches']), 2)
+            self.assertEqual(mocked.call_args_list[1].args[0], [
+                'gh', 'api', '--paginate', 'repos/owner/repo/pulls?state=all&per_page=100'])
+        with patch.object(lifecycle.subprocess, 'check_output', return_value=b'[]\n'):
+            self.assertEqual(lifecycle.github_pages('owner/repo', 'branches'), [])
+        for bad in (b'', b'{}', b'[[1],{}]', b'[{"one":1}]\n{"error": "failed page"}',
+                    b'[{"one":1}]\n[{"truncated":'):
+            with patch.object(lifecycle.subprocess, 'check_output', return_value=bad):
+                with self.assertRaises(ValueError): lifecycle.github_pages('owner/repo', 'branches')
+
+    def test_failure_writes_no_cleanup_preview(self):
+        source = Path(self.tmp.name) / 'snapshot.json'
+        self.snapshot['branches'][0]['commit']['sha'] = self.old
+        source.write_text(json.dumps(self.snapshot))
+        output = Path(self.tmp.name) / 'preview.json'
+        self.assertEqual(lifecycle.main(['--root', str(self.root), '--snapshot', str(source),
+                                         '--deletion-manifest', str(output)]), 1)
+        self.assertFalse(output.exists())
+
+
+if __name__ == '__main__':
+    unittest.main()

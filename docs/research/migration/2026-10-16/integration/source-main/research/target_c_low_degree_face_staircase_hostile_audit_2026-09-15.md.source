@@ -1,0 +1,95 @@
+# Hostile audit — modern low-degree exceptional-face staircase
+
+**Date:** 2026-09-15
+**Reviewed:** `research/target_c_low_degree_face_staircase_2026-09-15.md`
+**Certificate:** `research/verify_target_c_low_degree_face_staircase.py`
+**Verdict:** `PASS` at the stated proof-only full-core Type-II scope.
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The candidate extends the modern pentagon first-moment argument to degree `<=r` exceptional faces. The extension is algebraic, but three scope points need checking: the sign in the all-train-to-`f` conversion, the use of the outer-walk lower perimeter bound in the `Q` estimate, and occurrence multiplicity in the stopped-train endpoint corollary.
+
+All three pass.
+
+## 1. The `f` floor has the correct sign
+
+The exact identity is
+
+\[
+{T-q/2\over D}={t\over2}+2{f\over D}-{k\over2D}.
+\]
+
+The scope-safe all-train theorem gives the left side at least `C_707-o(1)`. Since `k>=0`,
+
+\[
+2f/D\ge C_{707}-t/2+k/(2D)-o(1)
+\ge C_{707}-t/2-o(1),
+\]
+
+so `f/D>=C_707/2-t/4-o(1)` is correct. Dropping `k` weakens the lower bound in the safe direction.
+
+## 2. The `Q` upper bound is canonical and does not assume zero detour
+
+The exact outer ledger is `b+Q=2(q-k)`. The occurrence-counted outer contact walk contains a polygonal route around the force hull, hence `b>=per(F)`. Type II gives `per(F)/D->pi`. Therefore
+
+\[
+Q/D=2t-b/D\le2t-\pi+o(1).
+\]
+
+No equality `b/D=pi` and no zero-detour hypothesis is used.
+
+## 3. The degree moment is exact
+
+For `F_{<=r}=sum_{d=5}^r f_d`,
+
+\[
+Q=\sum_{d\ge5}(d-4)f_d
+\ge F_{\le r}+(r-3)(f-F_{\le r}).
+\]
+
+Rearrangement gives
+
+\[
+F_{\le r}\ge{(r-3)f-Q\over r-4}.
+\]
+
+Substitution of the safe `f` lower bound and `Q` upper bound gives the displayed `L_r(X)`. The threshold formula follows by solving its numerator for zero. The exact Fraction/Taylor certificate verifies all rounded rows.
+
+## 4. The universal `t<=pi+o(1)` endpoint is valid
+
+The loaded force-hull boundary has `q` consecutive sides. Distinct source points are unit-separated, so each side has length at least one. Hence
+
+\[
+q\le\operatorname{per}(F).
+\]
+
+Since `k>=0`,
+
+\[
+t=(q-k)/D\le q/D\le\operatorname{per}(F)/D=\pi+o(1).
+\]
+
+Thus using the adverse endpoint `t=pi` in the `r=22` row is legitimate. The outward certificate uses an upper enclosure for `pi` after simplification because the net `pi` coefficient is negative. It proves `F_{<=22}/D>0.0057` safely.
+
+## 5. Source-empty degree-5/6 corollary is exactly in scope
+
+The hostile-audited isolate-host theorem says every bounded contact face containing an assigned contact-isolated source point has degree at least seven. Therefore every degree-5 or degree-6 face is source-empty. No assumption about the number of isolates or their total density is imported.
+
+## 6. Train endpoint multiplicity is handled correctly
+
+Every side occurrence of a bounded nonquadrilateral face is one terminal occurrence in the complete stopped-train handshake. If the edge has a strict rhombus on the other side, the corresponding non-singleton train stops at this exceptional face. If it has no rhombus on either side, it is a singleton train; its two physical face-side occurrences are exactly its two terminal occurrences.
+
+Thus a family of `F_{<=r}` faces contributes at least `5F_{<=r}` terminal occurrences. Every complete stopped train has exactly two terminal occurrences in the occurrence-counted convention, so
+
+\[
+N_{<=r}\ge(5/2)F_{<=r}
+\]
+
+is safe even with bridges, articulation repetitions, or a singleton edge bordering two selected faces.
+
+## 7. Strategic interpretation
+
+The theorem does not close C-II and does not supply small Oler residual. Its real gain is coverage: the structural exceptional-face object persists after pentagons stop being individually forced, and a bounded-degree face population remains linear all the way to the absolute Type-II endpoint.
+
+The strongest immediate range is `t<2.18548...`, where the new low-degree population is entirely source-empty and the existing Wegner/Groemer 5/6-face stability theorem becomes available facewise. A separate residual-distribution or local-exchange theorem is still required to turn that population into hidden active contacts or a diameter improvement.
+
+**Final verdict:** PASS. C-II and Level I remain open.

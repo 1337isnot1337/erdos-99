@@ -1,0 +1,339 @@
+# Target C-II — phase-free half-saturation of laminar O--O regions by diameter endpoints
+
+**Date:** 2026-09-18  
+**Status:** proof-only endpoint refinement; theorem-state authority unchanged  
+**Scope:** arbitrary finite pairwise-noncrossing O--O train families in the canonical full-core minimizer; terminal FREE consequence at the exact all-phase surplus endpoint  
+**Depends on:** exact arbitrary O--O multishear; canonical mixed infinitesimal rigidity; O--O complement-dual tree; diameter-path Helly hub; terminal FREE transport/phase separation  
+**Certificate:** `research/verify_target_c_free_terminal_laminar_diameter_half_saturation_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The terminal transport theorem produces a pairwise-noncrossing O--O family of size
+
+\[
+\left(\frac{\pi}{10}-\frac g5-o(1)\right)D
+=
+(0.312617865358979\ldots-o(1))D,
+\qquad g=0.007707.
+\]
+
+Its complement dual is a tree, and the exact O--O multishear gives one shear coordinate per tree edge. The previous exact-phase region-saturation theorem showed that every dual region is diameter-loaded when all selected train directions are one exact projective phase. That hypothesis is unavailable here: the new terminal family is deliberately direction-diffuse.
+
+There is nevertheless a phase-free rank bound. Planarity gives only two Euclidean coordinate functions per loaded dual region. Since the selected shear derivative matrix has full column rank, two coordinates per loaded region must span all `m` shear columns. This forces at least half of the `m+1` dual regions to contain actual diameter endpoints.
+
+The finite statement is
+
+\[
+\boxed{
+|B|\ge 1+\left\lceil\frac m2\right\rceil,
+}
+\tag{HS.1}
+\]
+
+where `m` is the number of selected noncrossing O--O trains and `B` is the set of complementary regions containing at least one endpoint of an actual diameter edge.
+
+At the exact terminal FREE surplus endpoint this yields at least
+
+\[
+\boxed{
+\left(\frac{\pi}{20}-\frac g{10}-o(1)\right)D
+=
+(0.156308932679490\ldots-o(1))D
+}
+\tag{HS.2}
+\]
+
+distinct diameter-endpoint-loaded nonhub regions, and consequently at least
+
+\[
+\boxed{
+\left(\frac{\pi}{40}-\frac g{20}-o(1)\right)D
+=
+(0.078154466339745\ldots-o(1))D
+}
+\tag{HS.3}
+\]
+
+distinct actual diameter edges crossing the selected laminar cut system.
+
+Thus the direction-diffuse exact-shear reservoir cannot be braced by a bounded or sublinear collection of diameter endpoints or diameter bars. A linear part of the actual diameter graph must be distributed across distinct complementary regions of the laminar O--O tree.
+
+---
+
+## 1. Finite setup
+
+Let
+
+\[
+\mathcal L=\{\tau_1,\ldots,\tau_m\}
+\]
+
+be any pairwise-noncrossing family of O--O complete stopped trains. Use their audited proper midpoint-centerline crosscuts. Their complement dual `T` is a tree with exactly `m+1` regions.
+
+For each selected train `tau_i`, choose one Jordan shore and let
+
+\[
+\chi_i(v)\in\{0,1\}
+\]
+
+be its indicator on complementary region `v`. Orient the corresponding unit train contact vector as `u_i` and put
+
+\[
+a_i:=Ju_i=(a_{ix},a_{iy}).
+\tag{1.1}
+\]
+
+For an actual diameter edge `h=xy`, orient
+
+\[
+r_h=p_y-p_x,
+\qquad |r_h|=D,
+\]
+
+and write `v=rho(x)`, `w=rho(y)` for the complementary regions of its endpoints. The exact arbitrary-O--O multishear gives first squared-distance derivative matrix, up to the common factor two,
+
+\[
+M_{hi}
+=
+\bigl(\chi_i(v)-\chi_i(w)\bigr)(r_h\cdot a_i).
+\tag{1.2}
+\]
+
+Let
+
+\[
+B:=\{v\in V(T): v\text{ contains an endpoint of some actual diameter edge}\},
+\qquad b:=|B|.
+\tag{1.3}
+\]
+
+The family used below is a proper subset of the complete stopped trains. For the terminal FREE application this is automatic: the selected family consists only of pairwise-noncrossing O--O trains, while the same endpoint has a quadratic strict-rhombus crossing population and a linear bounded-to-bounded train population. The existing arbitrary-family shear-injectivity lemma therefore applies and gives
+
+\[
+\boxed{\operatorname{rank}M=m.}
+\tag{1.4}
+\]
+
+---
+
+## 2. Two coordinate vectors per loaded region
+
+Fix any reference loaded region `v_0 in B`. For each `v in B`, define two row-space vectors in `R^m`:
+
+\[
+X(v)_i
+:=
+\bigl(\chi_i(v)-\chi_i(v_0)\bigr)a_{ix},
+\]
+
+\[
+Y(v)_i
+:=
+\bigl(\chi_i(v)-\chi_i(v_0)\bigr)a_{iy}.
+\tag{2.1}
+\]
+
+Thus
+
+\[
+X(v_0)=Y(v_0)=0.
+\tag{2.2}
+\]
+
+For a diameter edge `h` with endpoint regions `v,w in B`, expand (1.2):
+
+\[
+\begin{aligned}
+M_{h\bullet}
+&=
+(r_h)_x\bigl(X(v)-X(w)\bigr)
++(r_h)_y\bigl(Y(v)-Y(w)\bigr).
+\end{aligned}
+\tag{2.3}
+\]
+
+Therefore every row of `M` lies in
+
+\[
+W_B
+:=
+\operatorname{span}
+\{X(v),Y(v):v\in B\setminus\{v_0\}\}.
+\tag{2.4}
+\]
+
+There are only `2(b-1)` displayed generators, so
+
+\[
+\operatorname{rank}M
+\le
+\dim W_B
+\le
+2(b-1).
+\tag{2.5}
+\]
+
+Combining (1.4) and (2.5),
+
+\[
+m\le2(b-1).
+\tag{2.6}
+\]
+
+Since `b` is integral,
+
+\[
+\boxed{
+b\ge1+\left\lceil\frac m2\right\rceil.
+}
+\tag{2.7}
+\]
+
+This proves (HS.1). `square`
+
+The argument is phase-free. The selected `u_i` may vary arbitrarily. Exact phase improves the factor two because the two coordinate sequences become scalar multiples of one common signed phase vector after shore orientation; that is the stronger previously proved full-saturation theorem. The present theorem is the robust statement that survives direction diffusion.
+
+---
+
+## 3. The Helly hub turns half-saturation into crossing diameter bars
+
+The phase-free diameter-path Helly theorem applies to the same noncrossing O--O family. There is one complementary region
+
+\[
+R_*\in V(T)
+\]
+
+belonging to the endpoint-region path of every actual diameter edge.
+
+At most one loaded region is `R_*`. Hence (2.7) gives at least
+
+\[
+\boxed{
+\left\lceil\frac m2\right\rceil
+}
+\tag{3.1}
+\]
+
+loaded regions different from the hub.
+
+Take such a nonhub loaded region `v`. By definition, some actual diameter edge has an endpoint in `v`. That edge cannot have both endpoint regions inside the same component of `T-R_*`, because then its dual support path would avoid `R_*`. In particular it cannot be internal to `v`. Thus every loaded nonhub region supplies actual diameter incidence that exits its hub branch and crosses at least one selected O--O cut.
+
+One diameter edge has only two endpoints, so it can account for at most two loaded nonhub regions. Therefore the number `H_cross` of distinct actual diameter edges whose selected-cut support is nonempty obeys
+
+\[
+\boxed{
+H_{\rm cross}
+\ge
+\left\lceil
+\frac{1}{2}\left\lceil\frac m2\right\rceil
+\right\rceil.
+}
+\tag{3.2}
+\]
+
+Asymptotically this is `m/4-o(m)` with no KKT multiplier lower bound.
+
+This is stronger than one-train two-sided bracing at the level relevant to the current terminal family. Individual diameter chords may still cross many selected cuts, but they cannot reduce the entire linear laminar family to a sublinear set of endpoint regions or a sublinear set of crossing diameter edges.
+
+---
+
+## 4. Terminal FREE consequence
+
+The terminal transport/phase-separation theorem supplies a pairwise-noncrossing O--O family with
+
+\[
+m\ge
+\left(c_{\rm lam}-o(1)\right)D,
+\qquad
+c_{\rm lam}:=\frac{\pi}{10}-\frac g5
+=0.312617865358979\ldots.
+\tag{4.1}
+\]
+
+Insert this into (2.7) and (3.2):
+
+\[
+\boxed{
+|B|
+\ge
+\left(\frac{c_{\rm lam}}2-o(1)\right)D
+=
+(0.156308932679490\ldots-o(1))D,
+}
+\tag{4.2}
+\]
+
+and the same leading lower bound holds for loaded nonhub regions. Also
+
+\[
+\boxed{
+H_{\rm cross}
+\ge
+\left(\frac{c_{\rm lam}}4-o(1)\right)D
+=
+(0.078154466339745\ldots-o(1))D.
+}
+\tag{4.3}
+\]
+
+The source vertices in different complementary regions are distinct, so (4.2) also forces at least `0.156308932...D-o(D)` distinct actual-diameter endpoint vertices.
+
+The sector version is useful when angular control is needed. Every fixed projective `pi/6` sector contains a noncrossing O--O family with
+
+\[
+m_6\ge
+\left(c_6-o(1)\right)D,
+\qquad
+c_6:=\frac{\pi}{60}-\frac g5
+=0.050818477559830\ldots.
+\tag{4.4}
+\]
+
+Therefore that one-sector laminar family alone forces
+
+\[
+\boxed{
+|B_6|\ge
+(0.025409238779915\ldots-o(1))D,
+}
+\tag{4.5}
+\]
+
+loaded regions and
+
+\[
+\boxed{
+H_{{\rm cross},6}\ge
+(0.012704619389957\ldots-o(1))D
+}
+\tag{4.6}
+\]
+
+distinct crossing actual diameter edges.
+
+---
+
+## 5. Why the factor two is the correct rank barrier
+
+The proof uses only that the ambient motion is planar. Each loaded region contributes two coordinate vectors, `X(v)` and `Y(v)`. Without additional geometric information, the rank argument cannot replace `2(b-1)` by `b-1`.
+
+This algebraic factor is attained by abstract path split data. For `m=2k`, take a path of `m` cuts, load regions `R_0,R_2,...,R_{2k}`, and choose alternating shear-derivative directions `a_i=e_x,e_y`. For each consecutive pair of loaded regions, two independent diameter-row vectors supported on that two-column block recover both columns. The resulting abstract derivative matrix has rank `m` with exactly `k+1=m/2+1` loaded regions. The odd case adds one final loaded end region and one singleton column.
+
+This is only an algebraic sharpness statement for the split/rank factorization. It is not claimed that these abstract rows form the diameter graph of an actual extremal source. Any improvement beyond (2.7) must use additional diameter-thrackle order, endpoint geometry, KKT weights, or the interaction with the atomic bounded-to-bounded grid.
+
+---
+
+## 6. Remaining obstruction
+
+The current exact-surplus endpoint now contains all of the following simultaneously:
+
+1. at least `1.904609957...D-o(D)` bounded-to-bounded trains in one atomic `pi/3` orbit carrying essentially all quadratic rhombus crossing mass;
+2. at least `1.563089326...D-o(D)` direction-diffuse O--O trains;
+3. a pairwise-noncrossing exact-shear O--O subfamily of size at least `0.312617865...D-o(D)`;
+4. at least `0.156308932...D-o(D)` distinct nonhub dual regions carrying actual diameter endpoints for that laminar family; and
+5. at least `0.078154466...D-o(D)` distinct actual diameter bars crossing its cut system.
+
+This rules out a low-rank or sparsely braced interpretation of the terminal laminar reservoir. It still does not prove a feasible diameter-decreasing multishear: the linear crossing diameter family can in principle provide a full-rank first-order cusp.
+
+The next closing theorem should use structure not spent by the rank argument. The most direct target is the cyclic order of these linearly many loaded nonhub regions and crossing diameter chords against the almost half-Lebesgue O--O direction measure. A second route is to couple the loaded-region tree to the near-Mantel atomic B--B grid and show that a linear diameter-thrackle cannot simultaneously route through the diffuse laminar O--O system while the O--O/B--B rhombus incidence remains negligible.
+
+No theorem-state file is changed.

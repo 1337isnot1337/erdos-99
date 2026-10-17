@@ -1,0 +1,137 @@
+# Target C: close the final nullity-four order-6 `(3,2,2,1)` support class
+
+Date: 2026-09-24
+
+Status: exact finite closure of the second and final touched-nullity-four four-support `S_7` orbit with setwise stabilizer order 6 in the eight-no-root `k=5,D=-1,d_root=1,p=3,m=4,(3,2,2,1)` branch. This does not close the remaining 21 nullity-four `(3,2,2,1)` support classes, the full `p=3` branch, the `k=5` layer, Target C-II, or Erdos Problem #99.
+
+Inputs:
+
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_three_singleton_basis_reduction_2026-09-23.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_nullity_catalog_2026-09-23.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_3221_highsym_closure_2026-09-23.md`;
+- the four order-8 shard closures;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_3221_order6_shard_a_closure_2026-09-24.md`;
+- the exact K8 coordinate normal form in `research/verify_target_c_support7_global_segment_relative_four_noroot_k2_2026_09_20.py`.
+
+## 1. Support orbit
+
+After the first order-6 closure, exactly one touched-nullity-four `(3,2,2,1)` support orbit of setwise stabilizer order 6 remained:
+
+```text
+S = {1234,1256,1357,2367}.
+```
+
+Its setwise stabilizer has order 6, hence the labeled support orbit has size
+
+```text
+5040 / 6 = 840.
+```
+
+For a fixed support set, the `(3,2,2,1)` profile has 324 cycle choices. Quotienting those choices by the support stabilizer gives exactly
+
+```text
+60 S_7 cycle-set representatives.
+```
+
+Therefore this certificate covers
+
+```text
+840 * 324 = 272160
+```
+
+labeled eight-cycle sets.
+
+All 60 representatives touch the same 16 root blocks. The complete touched-root row family has exact rank 12, hence touched nullity four.
+
+## 2. Necessary state conditions
+
+The existing `p=3,m=4` reduction forces exactly three singleton touched root blocks. Their three nonzero singleton coefficient rows must have rank three and generalized weights
+
+```text
+(d1,d2,d3) >= (2,4,5).
+```
+
+Every other touched root block is complete. The complete touched-root complement must have nullity exactly one.
+
+For `D=-1,d_root=1`, the five-dimensional coefficient nullspace would have to contribute external relation-rank increment five over that complete-root span. Any state with external increment below five is impossible.
+
+## 3. Exact finite census
+
+A standalone reconstruction of the current repository K8 coordinate normal form and verifier logic was executed on all 60 cycle-set representatives of `S`. The exact census is
+
+```text
+S_7 cycle-set representatives         60
+labeled eight-cycle sets          272160
+touched root blocks                   16
+admissible singleton triples       15360
+singleton-direction states         414720
+coefficient-rank-three states      311040
+generalized-weight states           11520
+external rank increment census  {0:11520}
+max relation-row norm^2                36
+```
+
+Every one of the 11,520 generalized-weight-admissible states has external relation-rank increment zero. A surviving state requires increment five. Hence no state on `S` survives.
+
+> **Theorem.** No `(3,2,2,1)` state in the eight-no-root `k=5,D=-1,d_root=1,p=3,m=4` branch can have support set in the `S_7` orbit of `{1234,1256,1357,2367}`.
+
+This is exhaustive for that support orbit. No random sampling or probabilistic finite-field rank test is used.
+
+As a reconstruction control, the same standalone code was rerun after replacing `S` by the already-closed order-6 shard-A support `{1234,1235,1246,1347}`. It reproduced the committed shard-A census exactly:
+
+```text
+57 cycle-set representatives,
+10488 admissible singleton triples,
+283176 singleton-direction states,
+230825 coefficient-rank-three states,
+23293 generalized-weight states,
+external rank increment census {0:23293},
+max relation-row norm^2 70.
+```
+
+## 4. Exactness of rank decisions
+
+Coefficient rank three is tested by exact integer `3 x 3` minors. Generalized weights are computed directly from the eight coefficient columns. Touched support nullity is computed by exact rational elimination and equals four.
+
+Root and full relation ranks are computed modulo
+
+```text
+P = 2^127 - 1.
+```
+
+The Lucas-Lehmer test for `P` was executed in this run. The largest squared norm of any relation row in this shard is 36, and
+
+```text
+P^2 > 36^15.
+```
+
+Hadamard's inequality therefore certifies that the modular rank decisions equal the rational rank decisions.
+
+The companion repository verifier is
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_3221_order6_shard_b_closure_2026_09_24.py`.
+
+It asserts the two order-6 nullity-four support classes, selects the remaining class, asserts its 16 touched root blocks and nullity four, checks all census values above, checks the zero-only increment census, and checks the Hadamard bound. The exact committed wrapper was syntax-checked but was not executed end-to-end from a repository checkout in this run; the finite census was executed by the standalone reconstruction described above.
+
+## 5. Remaining `(3,2,2,1)` target
+
+Before this certificate, exactly 22 touched-nullity-four support classes remained:
+
+```text
+1^2, 2^8, 4^11, 6^1.
+```
+
+This theorem removes the final order-6 class. Exactly 21 touched-nullity-four support classes remain:
+
+```text
+1^2, 2^8, 4^11.
+```
+
+There are no stabilizer-order-6-or-higher classes left in this profile. The next bounded finite target is the order-4 layer, preferably one support orbit at a time with the same completion-independent external-rank-increment test.
+
+The other unresolved `k=5` arithmetic branches remain
+
+```text
+D=-2, (d_root,p)=(0,5),
+D=-1, (d_root,p)=(0,6).
+```

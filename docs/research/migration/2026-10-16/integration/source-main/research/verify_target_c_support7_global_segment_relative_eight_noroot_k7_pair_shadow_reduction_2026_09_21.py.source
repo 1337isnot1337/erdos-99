@@ -1,0 +1,82 @@
+#!/usr/bin/env python3
+"""Arithmetic certificate for the p-retaining good-pair shadow reduction in eight-no-root k=7."""
+from math import floor
+
+D2_CAP_MAX = 3
+D3 = {6: 485, 7: 78, 8: 116, 9: 144, 10: 64}
+D4 = {8: 15366, 9: 13536, 10: 12922, 11: 11898, 12: 8614, 13: 3733, 14: 762}
+assert sum(v for c, v in D3.items() if c >= 6) == 887
+assert sum(v for c, v in D3.items() if c >= 7) == 402
+assert sum(v for c, v in D3.items() if c >= 8) == 324
+assert sum(v for c, v in D4.items() if c >= 8) == 66831
+assert sum(v for c, v in D4.items() if c >= 9) == 51465
+
+
+def first_retained(p):
+    return 8 - floor(p / 3)
+
+
+def second_retained(p):
+    return 7 - floor(p / 3)
+
+
+# One-row p-losses sum to at most p; after a p-retaining first deletion the
+# second-deletion losses again sum to at most p. Every nonzero loss is at least
+# three. At either stage at most two coordinates can make a rank-one projection
+# have support below two, once the first deletion is good.
+for p in (9, 11, 12):
+    assert first_retained(p) > 2
+    assert second_retained(p) > 2
+
+
+def min_singletons(p, q):
+    return max(0, 2 * q - p)
+
+
+def q6min(D, p, d6):
+    D6 = D + 4
+    return (6 + p + 3 * d6 - D6 + 2) // 3
+
+
+def singleton_lb_in_subset(p, q, q6):
+    s = min_singletons(p, q)
+    nons = q - s
+    return max(0, q6 - nons)
+
+
+# p=9: both dv=2 profiles are impossible in a retained good pair shadow.
+for q in (8, 9):
+    q6 = q6min(-1, 9, 2)
+    assert q6 == 6
+    assert singleton_lb_in_subset(9, q, q6) >= 5 > D2_CAP_MAX
+assert min_singletons(9, 9) == 9
+assert q6min(-1, 9, 3) == 7
+
+# p=11: all dv=2 profiles are impossible.
+for q in (9, 10, 11):
+    q6 = q6min(-2, 11, 2)
+    assert q6 == 7
+    assert singleton_lb_in_subset(11, q, q6) >= 5 > D2_CAP_MAX
+assert singleton_lb_in_subset(11, 10, q6min(-2, 11, 3)) == 7
+assert singleton_lb_in_subset(11, 11, q6min(-2, 11, 3)) == 8
+assert singleton_lb_in_subset(11, 11, q6min(-2, 11, 4)) == 9
+
+# p=12: in particular this removes the dv=2,q=9 profile left by the preceding
+# projection-capacity reduction.
+for q in (9, 10, 11, 12):
+    q6 = q6min(-1, 12, 2)
+    assert q6 == 7
+    assert singleton_lb_in_subset(12, q, q6) >= 4 > D2_CAP_MAX
+assert singleton_lb_in_subset(12, 10, q6min(-1, 12, 3)) == 6
+assert singleton_lb_in_subset(12, 11, q6min(-1, 12, 3)) == 7
+assert singleton_lb_in_subset(12, 12, q6min(-1, 12, 3)) == 8
+assert singleton_lb_in_subset(12, 11, q6min(-1, 12, 4)) == 8
+assert singleton_lb_in_subset(12, 12, q6min(-1, 12, 4)) == 9
+assert singleton_lb_in_subset(12, 12, q6min(-1, 12, 5)) == 10
+
+print("PASS: eight-no-root k7 p-retaining good-pair reduction")
+print("p9_remaining", ((3, 9),), "required_pair_shadow", ("d3", "cap>=7", 402))
+print("p11_remaining", ((3, 10), (3, 11), (4, 11)))
+print("p11_pair_covers", {"d3_cap_ge7": 402, "d3_cap_ge8": 324, "d4_cap_ge9": 51465})
+print("p12_remaining", ((3, 10), (3, 11), (3, 12), (4, 11), (4, 12), (5, 12)))
+print("p12_pair_thresholds", {"d3_cap_ge6": 887, "d3_cap_ge7": 402, "d3_cap_ge8": 324, "d4_cap_ge8": 66831, "d4_cap_ge9": 51465, "d5_cap_ge10": "uncensused"})

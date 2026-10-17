@@ -1,0 +1,80 @@
+#!/usr/bin/env python3
+"""Group an exact release plan for private human review; grants no approvals."""
+from __future__ import annotations
+
+import argparse
+from collections import Counter, defaultdict
+import json
+from pathlib import Path
+import sys
+
+from release_dependencies import ROOT, build_plan, planned_paths
+
+
+def review_inventory(plan):
+    planned_paths(plan)  # Refuse ambiguous/unsafe file sets, even for offline summaries.
+    entries = []
+    by_hash = defaultdict(list)
+    by_group = defaultdict(list)
+    for record in sorted(plan['entries'], key=lambda r: r['path']):
+        path = record['path']
+        suffix = Path(path).suffix.lower() or '(none)'
+        reasons = record['reasons']
+        if path.startswith(('docs/audits/', 'docs/reports/')):
+            group = 'mathematical evidence: source and quotation review'
+        elif path.startswith('research/'):
+            group = 'research code/data: authorship and input provenance review'
+        elif path.startswith(('tools/', 'scripts/', 'tests/', '.github/')):
+            group = 'platform code/configuration: software license review'
+        else:
+            group = 'exposition/governance: text license and attribution review'
+        row = {key: record[key] for key in ('path', 'git_blob_oid', 'mode', 'source_sha256',
+                                          'planned_export_sha256', 'reasons', 'pending_review_fields')}
+        row.update(file_type=suffix, review_group=group,
+                   origin='undetermined; path and Git identity do not establish authorship or rights',
+                   rewritten=record['source_sha256'] != record['planned_export_sha256'],
+                   runtime_contingency='conservative computational dependency' in reasons)
+        entries.append(row)
+        by_hash[record['source_sha256']].append(path)
+        by_group[group].append(path)
+    duplicates = [{'source_sha256': sha, 'paths': paths}
+                  for sha, paths in sorted(by_hash.items()) if len(paths) > 1]
+    return {'schema_version': 1, 'source_commit': plan['commit'], 'state_version': plan['state_version'],
+            'grants_clearance': False, 'file_count': len(entries),
+            'pending_file_reviews': sum(bool(r['pending_review_fields']) for r in entries),
+            'unique_source_contents': len(by_hash),
+            'duplicate_path_count': sum(len(r['paths']) - 1 for r in duplicates),
+            'type_counts': dict(sorted(Counter(r['file_type'] for r in entries).items())),
+            'review_group_counts': {key: len(paths) for key, paths in sorted(by_group.items())},
+            'review_groups': dict(sorted(by_group.items())), 'exact_duplicate_groups': duplicates,
+            'runtime_contingency_count': sum(r['runtime_contingency'] for r in entries),
+            'entries': entries,
+            'limits': 'Grouping is a review aid, not an origin, license, consent, privacy or proof finding. '
+                      'Identical bytes may have different provenance or attribution obligations. '
+                      'Review each path/blob and any rewritten/generated output; approvals never transfer automatically. '
+                      'Store actual approval/reviewer records outside the candidate.'}
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--root', type=Path, default=ROOT)
+    parser.add_argument('--ref', default='HEAD')
+    parser.add_argument('--output', type=Path, help='private review inventory; contains no approval records')
+    parser.add_argument('--summary', action='store_true')
+    args = parser.parse_args(argv)
+    try:
+        result = review_inventory(build_plan(args.root, args.ref))
+        if args.output:
+            args.output.write_text(json.dumps(result, indent=2) + '\n')
+        if args.summary:
+            result = {k: v for k, v in result.items() if k not in ('entries', 'review_groups', 'exact_duplicate_groups')}
+        if not args.output or args.summary:
+            print(json.dumps(result, indent=2))
+    except (ValueError, KeyError, TypeError, OSError) as exc:
+        print(f'release-review: FAIL: {exc}', file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

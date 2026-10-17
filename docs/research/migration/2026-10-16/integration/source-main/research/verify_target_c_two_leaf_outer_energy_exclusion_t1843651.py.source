@@ -1,0 +1,196 @@
+#!/usr/bin/env python3
+"""Exact outward certificate: repaired two-leaf exclusion through t<=1.843651."""
+from fractions import Fraction as Q
+from math import factorial, isqrt
+
+
+def atan_inv_bounds(q, n):
+    s = Q(0)
+    for k in range(n):
+        term = Q(1, (2*k+1)*q**(2*k+1))
+        s += term if k % 2 == 0 else -term
+    nxt = Q(1, (2*n+1)*q**(2*n+1))
+    return (s, s+nxt) if n % 2 == 0 else (s-nxt, s)
+
+
+def sqrt_bounds(lo, hi, scale):
+    a = isqrt((lo.numerator*scale*scale)//lo.denominator)
+    b = isqrt((hi.numerator*scale*scale)//hi.denominator)+1
+    return Q(a,scale), Q(b,scale)
+
+
+def sin_bounds(x, n=30):
+    s = Q(0)
+    for k in range(n):
+        term = x**(2*k+1)/factorial(2*k+1)
+        s += term if k % 2 == 0 else -term
+    nxt = x**(2*n+1)/factorial(2*n+1)
+    return (s,s+nxt) if n % 2 == 0 else (s-nxt,s)
+
+
+def F_bounds(z):
+    slo,shi=sin_bounds(z/6)
+    return z-6*shi, z-6*slo
+
+
+def f_bounds(z):
+    slo,shi=sin_bounds(z/2)
+    return z-2*shi, z-2*slo
+
+
+SCALE=10**100
+a5l,a5h=atan_inv_bounds(5,100)
+a239l,a239h=atan_inv_bounds(239,30)
+pi_lo,pi_hi=16*a5l-4*a239h,16*a5h-4*a239l
+n3=isqrt(3*SCALE*SCALE)
+sqrt3_lo,sqrt3_hi=Q(n3,SCALE),Q(n3+1,SCALE)
+K_lo,K_hi=Q(2)/sqrt3_hi,Q(2)/sqrt3_lo
+Delta_lo,Delta_hi=pi_lo/(2*sqrt3_hi),pi_hi/(2*sqrt3_lo)
+s_lo,s_hi=sqrt_bounds(Delta_lo,Delta_hi,SCALE)
+rcrit_lo,_=sqrt_bounds(Q(20,29),Q(20,29),SCALE)
+C707_lo,C707_hi=2*s_lo+Q(7707,1_000_000),2*s_hi+Q(7707,1_000_000)
+
+T=Q(1843651,1_000_000)
+c=Q(21,20)
+H=Q(957,2_500_000)          # .0003828
+Rt_lo=Q(9,2)*T-2*pi_hi-C707_hi
+Rt_hi=Q(9,2)*T-2*pi_lo-C707_lo
+
+# Residual stability scope: old t<=1.844 phase theorem gives total retained
+# dominant outer mass >1.848, hence delta>=F(1.848)>.029 and U_net<1.956.
+F1848_lo,_=F_bounds(Q(231,125))
+assert F1848_lo > Q(29,1000)
+Unet_scope_hi=Q(9,2)*T-2*pi_lo-2*F1848_lo
+assert Unet_scope_hi < Q(1956,1000) < Q(2013,1000)
+
+# Residual cutoff h<H.
+delta_H_hi=(Rt_hi-H)/2
+assert 0 < delta_H_hi < Q(51,1000)
+B_H_hi=c*c*H*H/(2*(1-delta_H_hi))
+A_H_lo=pi_lo-T/2-c*H-B_H_hi
+F_A_H_lo,_=F_bounds(A_H_lo)
+localization_margin=F_A_H_lo-delta_H_hi
+assert localization_margin > Q(6,100_000_000)  # >6e-8
+Fprime_cap=Q(67,500)
+Qx_upper=-1/(2*Fprime_cap)+1
+Qh_upper=-1/(2*Fprime_cap)+c+c*c*Q(101,1000)/(1-Q(51,1000))
+assert Qx_upper < Q(-27,10)
+assert Qh_upper < Q(-5,2)
+
+# Dominant orbit box.
+WBAR=Q(3825431,2_000_000)   # 1.9127155
+E0=Q(22672491,25_000_000)   # .90689964
+assert C707_hi+H < WBAR
+RMAX=c*H
+assert Delta_lo-RMAX*RMAX/4 > E0
+
+# Tight retained dominant outer mass z>Z.
+Z=Q(55484,25000)            # 2.21936
+FZ_lo,FZ_hi=F_bounds(Z)
+delta_max_hi=Rt_hi/2
+assert delta_max_hi < Q(51,1000)
+Fprime_Z_hi=Z*Z/Q(72)
+assert 1-Fprime_Z_hi/(2*(1-delta_max_hi)) > Q(96,100)
+xH_lo=Rt_lo-H-2*FZ_hi
+assert xH_lo > Q(5,10_000_000)  # >5e-7
+Bx_hi=(1-FZ_lo+c*c*H*H)/(2*(1-delta_max_hi)*(1-delta_max_hi))
+assert Bx_hi < 1
+Bz_hi=c*c*H*H/(2*(1-FZ_hi))
+capped_retention_hi=(
+    Z+Bz_hi-pi_lo+T/2+Rt_hi-2*FZ_lo+(c-1)*H
+)
+assert capped_retention_hi < Q(-4,1_000_000)  # <-4e-6
+assert Rt_lo/2 > FZ_hi
+
+# Phasewise one-well convexity forces every retained phase mass >A.
+A=Q(35101,50000)            # .70202
+OTHER=(Z-A)/2
+assert A < Z/3
+fA_lo,_=f_bounds(A)
+fO_lo,_=f_bounds(OTHER)
+phase_imbalance_margin=fA_lo+2*fO_lo-delta_max_hi
+assert phase_imbalance_margin > Q(1,10_000_000)  # >1e-7
+
+# Leaf mass contradiction threshold.
+U0=Q(13263,25000)           # .53052
+CLOW=WBAR-2*U0
+CHI=Q(10443,10000)          # 1.0443
+alpha=Q(1,10)
+assert CLOW > U0
+# Generic center capacity excludes both tails.
+assert CLOW < WBAR/2
+assert CLOW*(WBAR-CLOW) < E0-Q(3,1000)
+assert CHI > WBAR/2
+assert CHI*(WBAR-CHI) < E0-Q(1,100000)
+
+# Non-circular scope repair for the strong physical pair branch.
+VMIN=A/2
+ratio_scope_hi=(WBAR-VMIN-K_lo)/U0
+assert ratio_scope_hi > 0
+assert ratio_scope_hi < Q(768,1000)
+assert ratio_scope_hi < rcrit_lo
+assert CHI < K_lo
+
+# At the adverse reduced point W=WBAR,U=U0 both positive parts are positive.
+assert CLOW+U0-K_hi > 0
+assert WBAR-U0-K_hi > 0
+
+# Correlated capacity at adverse reduced point.
+def cap(C):
+    V=WBAR-C-U0
+    AA=1-V/C
+    BB=1-U0/C
+    x=alpha*(C+U0-K_hi)**2
+    y=alpha*(C+V-K_hi)**2
+    return C*(U0+V)-AA*x-BB*y
+
+
+def cap_prime(C):
+    V=WBAR-C-U0
+    AA=1-V/C
+    BB=1-U0/C
+    eU=C+U0-K_hi
+    eV=C+V-K_hi
+    x=alpha*eU*eU
+    y=alpha*eV*eV
+    AAp=(WBAR-U0)/(C*C)
+    BBp=U0/(C*C)
+    return WBAR-2*C-AAp*x-AA*(2*alpha*eU)-BBp*y
+
+Dconst=(K_hi*K_hi*WBAR+4*K_hi*U0*U0-4*K_hi*U0*WBAR-U0*U0*WBAR+U0*WBAR*WBAR)
+assert (1+2*alpha)*CLOW**3-alpha*Dconst > CLOW**3
+c0=Q(582127,625000)         # .9314032
+assert CLOW < c0 < CHI
+f0=cap(c0); fp0=cap_prime(c0)
+cap_upper=f0+fp0*fp0/4
+leaf_capacity_margin=E0-cap_upper
+assert leaf_capacity_margin > Q(1,10_000_000)  # >1e-7
+
+# Pair mass and common-center bad-weight allocation.
+PAIR=A-U0
+assert PAIR == Q(343,2000)  # .1715
+BAD=Q(1833,50000)           # .03666
+disc=(BAD-2*WBAR)**2-8*(2*E0-BAD*U0)
+assert disc < Q(-1,100000)
+GOOD=PAIR-BAD
+assert GOOD == Q(3371,25000)  # .13484
+
+# Exact outward sqrt(3) enclosure is necessary at this near-ceiling endpoint.
+ALT_COST_LO=2-sqrt3_hi
+assert ALT_COST_LO > 0
+leaf_energy_lo=ALT_COST_LO*GOOD
+final_energy_lo=fA_lo+leaf_energy_lo
+final_margin=final_energy_lo-delta_max_hi
+assert final_margin > Q(1,1_000_000)
+
+print('PASS: no full-core Type-II survivor with t<=1.843651')
+print('residual-scope U upper =',float(Unet_scope_hi))
+print('h localization margin =',float(localization_margin))
+print('W upper =',float(WBAR),'dominant crossing lower =',float(E0))
+print('z cap excess upper =',float(capped_retention_hi),'x at h=H lower =',float(xH_lo))
+print('z lower =',float(Z),'phase floor =',float(A),'phase imbalance margin =',float(phase_imbalance_margin))
+print('leaf mass cap =',float(U0),'non-circular strong ratio upper =',float(ratio_scope_hi),'rcrit lower =',float(rcrit_lo))
+print('leaf capacity margin =',float(leaf_capacity_margin))
+print('pair lower =',float(PAIR),'bad upper =',float(BAD),'good lower =',float(GOOD),'bad quadratic disc =',float(disc))
+print('leaf energy lower =',float(leaf_energy_lo),'center energy lower =',float(fA_lo))
+print('delta budget upper =',float(delta_max_hi),'final contradiction margin =',float(final_margin))

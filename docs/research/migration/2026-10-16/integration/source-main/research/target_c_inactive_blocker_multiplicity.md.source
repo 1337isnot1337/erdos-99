@@ -1,0 +1,271 @@
+# Target C — bounded multiplicity of deep isolate blockers
+
+**Date:** 2026-09-12  
+**Lifecycle:** proof-only inactive-container theorem; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+Canonical Section 87 supplies, for every fixed depth `w>1`, a linear family of
+vertex-disjoint contact-isolate pairs
+
+\[
+M=\{\{x_i,y_i\}:1\le i\le m\},
+\qquad m\ge c_wD,
+\]
+
+with
+
+\[
+1<|x_i-y_i|\le1+{K_w\over D}
+\]
+
+and both endpoints at depth at least `w` in one macroscopic inactive chamber. Moving
+one chosen endpoint `x_i` straight toward its mate `y_i` is protected from the positive
+core, the exterior source, and the diameter constraint until either the mate reaches
+unit distance or another chamber isolate reaches unit distance first.
+
+This note proves that the latter blocker events cannot concentrate on a bounded set of
+isolates.
+
+---
+
+## 1. One blocker serves at most six pair-closing motions
+
+For each matching pair orient it by choosing one endpoint `x_i` to move toward the
+fixed mate `y_i`. Run the canonical Section-87 pair-closing motion separately for each
+`i`.
+
+If an isolate `z_i` different from `x_i,y_i` is the first obstruction, write `x_i'`
+for the blocked position. Then
+
+\[
+|x_i'-z_i|=1,
+\qquad
+|x_i-x_i'|<|x_i-y_i|-1\le {K_w\over D}.
+\tag{BM.1}
+\]
+
+### Theorem BM.1 — blocker multiplicity at most six
+
+For all sufficiently large `D`, one fixed chamber isolate `z` can be the first blocker
+for at most six of the selected pair-closing motions.
+
+### Proof
+
+Suppose `z` blocks the motions indexed by a set `I`. Every blocked position lies on the
+unit circle about `z`:
+
+\[
+|x_i'-z|=1
+\qquad(i\in I).
+\tag{BM.2}
+\]
+
+The original moving endpoints `x_i` are distinct source points. Since all chamber
+points in Section 87 are contact-isolated,
+
+\[
+|x_i-x_j|>1
+\qquad(i\ne j).
+\tag{BM.3}
+\]
+
+By (BM.1),
+
+\[
+|x_i'-x_j'|
+\ge |x_i-x_j|-|x_i-x_i'|-|x_j-x_j'|
+>1-{2K_w\over D}.
+\tag{BM.4}
+\]
+
+Seven points on a unit circle always contain two whose smaller angular separation is at
+most `2pi/7`. Their chord distance is therefore at most
+
+\[
+2\sin{\pi\over7}=0.867767\ldots<1.
+\tag{BM.5}
+\]
+
+Choose `D` so large that
+
+\[
+1-{2K_w\over D}>2\sin{\pi\over7}.
+\tag{BM.6}
+\]
+
+Then (BM.4) contradicts (BM.5) if `|I|>=7`. Hence `|I|<=6`. `square`
+
+The constant six is deliberately conservative. Six nearly regular positions on the
+unit circle are compatible with the estimate (BM.4), so no improvement to five is
+claimed without additional geometry.
+
+---
+
+## 2. Blocked triples have a controlled local angle
+
+Assume `z_i` blocks before the mate reaches unit distance. Put the blocked position at
+the origin and orient the positive `x` axis toward the mate. Write
+
+\[
+y_i=r e,
+\qquad 1<r\le1+{K_w\over D},
+\]
+
+and
+
+\[
+z_i=(\cos\theta,\sin\theta)
+\]
+
+after reflecting across the pair line if necessary. Let
+
+\[
+t=|x_i-x_i'|,
+\qquad 0<t<{K_w\over D},
+\]
+
+so the original moving point is `x_i=-te`.
+
+Because both `z_i` and `y_i` are original contact isolates,
+
+\[
+|z_i-x_i|>1,
+\qquad
+|z_i-y_i|>1.
+\]
+
+Squaring gives
+
+\[
+1+t^2+2t\cos\theta>1,
+\]
+
+and
+
+\[
+1+r^2-2r\cos\theta>1.
+\]
+
+Therefore
+
+\[
+\boxed{
+-{t\over2}<\cos\theta<{r\over2}.
+}
+\tag{BM.7}
+\]
+
+In particular, uniformly over all blocked gadgets,
+
+\[
+{\pi\over3}-O(D^{-1})
+<\theta
+<{\pi\over2}+O(D^{-1}).
+\tag{BM.8}
+\]
+
+Thus every first-block event is a controlled near-triangular/right-angle wedge, not an
+arbitrary near-contact.
+
+---
+
+## 3. Linear disjoint activation gadgets
+
+Classify each matching pair as
+
+- **direct** if the mate reaches unit distance before any other point blocks; or
+- **blocked** otherwise.
+
+The original matching pairs are vertex-disjoint.
+
+### Corollary BM.2 — linear direct pairs or linear disjoint blocked triples
+
+There is an absolute constant `c'_w>0`, depending only on the Section-87 constants,
+such that every sufficiently large source in the canonical internal inactive-chamber
+branch has one of the following:
+
+1. at least `c'_wD` vertex-disjoint deep pairs whose protected straight motion reaches
+   an exact mate contact without any intervening blocker; or
+2. at least `c'_wD` pairwise vertex-disjoint triples
+   \[
+   \{x_i,y_i,z_i\}
+   \]
+   in which `z_i` is the first blocker of the protected `x_i -> y_i` motion and the
+   blocked geometry obeys (BM.1), (BM.7), and (BM.8).
+
+One may take, for example,
+
+\[
+c'_w={c_w\over42}.
+\tag{BM.9}
+\]
+
+### Proof
+
+If at least half of the `m>=c_wD` pairs are direct, the first alternative holds with
+`c'_w=c_w/2`.
+
+Otherwise at least `m/2` pairs are blocked. Form a 3-uniform hypergraph whose edge for
+a blocked pair is
+
+\[
+E_i=\{x_i,y_i,z_i\}.
+\]
+
+A source point belongs to at most one matching pair, so it appears as a moving/mate
+endpoint in at most one hyperedge. By Theorem BM.1 it appears as a blocker in at most
+six hyperedges. Thus every vertex has hypergraph degree at most seven.
+
+Greedily choose one hyperedge and discard all hyperedges meeting it. One selected edge
+meets at most
+
+\[
+3\cdot7=21
+\]
+
+hyperedges, including itself. Hence the blocked hypergraph contains a matching of size
+at least
+
+\[
+{m/2\over21}={m\over42}
+\ge {c_w\over42}D.
+\]
+
+These are pairwise vertex-disjoint blocked triples. `square`
+
+---
+
+## 4. What this changes
+
+Section 87 left a potentially severe local concentration regression: linearly many
+pair-closing attempts might all have been stopped by the same few interior rattlers.
+That is impossible. The deep inactive packing contains a **linear disjoint population
+of local activation gadgets**.
+
+This does not yet supply the finite `k -> k+1` packing exchange required by the
+stress-transversal reinsertion theorem. In particular:
+
+- creating linearly many new isolate-isolate contacts is not itself a contradiction;
+- a zero-reserve near-triangular chamber can still realize many such gadgets;
+- the theorem gives no lower bound on the sum of the original pair gaps; and
+- the gadgets need not align in one common direction.
+
+The next useful chamber theorem must exploit the disjoint gadget population
+collectively: either construct an augmenting/repacking path that produces one protected
+spare site, or show that a positive density of blocked wedges forces a contact pattern
+that reaches the active chamber boundary.
+
+---
+
+## 5. Scope
+
+- The result is only for the canonical internal inactive-chamber branch and uses the
+  canonical Section-87 deep matching.
+- All motions are the individually protected motions already certified by Section 87.
+- No source point is deleted in the theorem.
+- Contact isolates remain outside the positive-core affine-kernel theorem.
+- The blocked positions `x_i'` are auxiliary geometric positions, not asserted source
+  points of the original minimizer.
+- No inference from contact creation to KKT force transfer is made.
+
+**Disposition:** proof-only structural theorem. C-II remains open.

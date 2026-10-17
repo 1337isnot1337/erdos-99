@@ -1,0 +1,44 @@
+# Target C: r=4 perfect-matching local-rank repair
+
+Date: 2026-09-28
+
+This repairs the eight-no-root `k=4,D=-1,d_root=0,p=3,r=4` certificate after the audit found that
+`no repeated containing support => dim E_b=1` is false.
+
+The old verifier's support eligibility can be kept as a one-sided relaxation, but its nominal-dimension and generator-support filters cannot: a no-repeat block can have true local rank two, so those two filters may underestimate an actual state. The repaired verifier deletes both.
+
+In the `r=4` branch, `P` is the direct sum of four pair-supported lines on a perfect matching `M_1,...,M_4`, so `d(P)=(2,4,6,8)`.
+
+For a fixed support multiset and perfect matching, define `E*` to contain a touched block when its occurrence set is a union of whole matched pairs, additionally requiring at least four incidences if a containing tetrahedral support repeats. Every actual-empty block lies in `E*`: compatibility gives `E_b<=P`; its generalized support equals its touch set; and repetition validly forces local rank two, so `d_2(P)=4`.
+
+Define `S*` to contain a touched block when it meets at least three matched pairs, additionally requiring a whole matched pair if a containing support repeats. Every actual singleton lies in `S*`: the committed quotient localization gives the three-pair condition; if repetition occurs then local rank is two and the nonzero singleton constraint line lies in `P`, hence contains a full matched pair.
+
+For the actual singleton triple `S`, let
+`C*=T\(E* union S)`.
+Then `C* subseteq C_actual`. Therefore `H(C*)` is independent because `d_root=0`, and
+`rank H(T)-rank H(C*)>=4`
+follows from the committed face-local capacity bound. These are the only final filters in the repaired search.
+
+The old touched-block bound remains valid: `c<=11`, `e>=h-14`, and
+`32>=2e+9+c=h+e+6>=2h-8`, hence `h<=20`.
+
+The exact persisted verifier has Git blob SHA
+`0f96ea2172c3c7b980a3d580dc288e20ff58f1a4`.
+It was compiled and executed locally from byte-identical source, using current-main helper blobs
+`7fd214b06afb35f5937479ecb28862ad71c5b3f3`
+and
+`00715b09962ddf85ac29ae3a3ffddcd730d25a12`.
+
+Executed census:
+
+`support_multiset_orbits_size_8 27763`
+`touch_at_most_20 13574`
+`perfect_matchings 105`
+`support_matching_pairs_tested 1425270`
+`relaxed_singleton_triples 47546`
+`structural_passes 0`
+`survivors 0`
+
+Triangle-row ranks are exact over `Q`: the verifier checks the Lucas-Lehmer condition for `2^31-1` and `(2^31-1)^2>3^15`; Hadamard then prevents a nonzero rational minor of rank at most 15 from vanishing modulo that prime.
+
+Therefore the `r=4` perfect-matching branch remains closed without using the false local-rank converse.

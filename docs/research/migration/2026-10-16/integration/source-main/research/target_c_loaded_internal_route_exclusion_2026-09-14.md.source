@@ -1,0 +1,265 @@
+# Target C-II — loaded vertices cannot occur internally on distinguished outer routes
+
+**Date:** 2026-09-14  
+**Status:** proof-only full-core C-II composition; theorem-state authority unchanged  
+**Depends on:** canonical Section 63 outer-route partition, C26, and the proved
+`target_c_grounded_separator_and_loaded_nonarticulation_2026-09-11.md` loaded
+non-articulation theorem  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The new long-side straight-event theorem leaves a formal branch in which a
+near-straight internal route occurrence sits at a contact-degree-two vertex.  C26 then
+makes that vertex positively diameter-loaded.  In the actual Section-63 outer-route
+partition this branch cannot occur.
+
+The reason is topological.  Section 63 marks one distinguished outer-face occurrence
+of every positively loaded force-hull vertex and cuts the outer-face boundary walk at
+those marks.  If a loaded physical vertex occurred internally in one of the resulting
+intervals, that physical vertex would occur at least twice on the same facial walk.
+A repeated vertex of a plane facial walk is an articulation vertex.  The existing
+selected-stress PSD theorem proves that positively diameter-loaded vertices are never
+articulation vertices.
+
+Consequently **every internal physical vertex on every distinguished outer route is
+unloaded**.  In particular the loaded degree-two branch in the current straight-event
+dichotomy vanishes.
+
+---
+
+## 1. Plane-graph facial repetition lemma
+
+Let `G` be a finite connected loopless plane graph and let `W` be one facial boundary
+walk.
+
+### Lemma RI.1
+
+If a physical vertex `v` occurs at least twice in `W`, then `v` is an articulation
+vertex of `G`.
+
+### Proof
+
+Use the standard block decomposition of a connected graph.  A vertex is contained in
+more than one block if and only if it is an articulation vertex.  If `v` is not an
+articulation vertex, all edges incident to `v` belong to one block (with the trivial
+leaf case giving only one incident edge).  Every nontrivial block is 2-connected, and
+in the induced plane embedding every face boundary of a 2-connected block is a simple
+cycle.  Attached blocks can enter a global facial walk at a block vertex only through
+an articulation vertex.  Therefore a non-articulation vertex is encountered at most
+once on each global facial boundary walk.
+
+Equivalently, one can cut the facial walk at two supposed occurrences of `v`: the two
+nonempty subwalks leave `v` through different facial sectors.  Any path in `G-v`
+joining those sectors would, together with a small circle around `v`, separate one of
+the two face sectors from the face, contradicting that both are occurrences of the
+same face.  Hence `G-v` is disconnected.  `square`
+
+The statement is occurrence-level and allows bridges, repeated articulation points,
+and repeated edges elsewhere in `W`.
+
+---
+
+## 2. Section 63 makes every internal loaded encounter a repetition
+
+Let
+
+\[
+B_+=\{b_1,\ldots,b_q\}
+\]
+
+be the positively diameter-loaded set in cyclic force-hull order.  Section 63 chooses
+one distinguished exterior occurrence of every `b_i` on the full positive-contact
+outer-face walk and partitions that walk into consecutive intervals
+
+\[
+W_i:b_i\leadsto b_{i+1}.
+\tag{RI.1}
+\]
+
+The hostile audit of Section 126 explicitly verifies that these are the actual
+Section-63 intervals even in the presence of bridges and articulation repetitions.
+
+### Lemma RI.2
+
+If a physical loaded vertex `z in B_+` occurs at an internal position of some `W_i`,
+then `z` is an articulation vertex of the full contact core.
+
+### Proof
+
+No distinguished loaded occurrence lies strictly inside `W_i`, because the endpoints
+of `W_i` are consecutive distinguished occurrences in the partition.  Therefore the
+internal occurrence of `z` is not the distinguished occurrence chosen for `z`.
+The same physical vertex occurs at least twice on the full outer-face walk.  Apply
+Lemma RI.1. `square`
+
+This also covers `z=b_i` or `z=b_{i+1}` reappearing later inside the same interval: the
+endpoint mark and the internal encounter are two distinct occurrences.
+
+---
+
+## 3. Loaded non-articulation removes the possibility
+
+The proved report
+`docs/reports/target_c_grounded_separator_and_loaded_nonarticulation_2026-09-11.md`
+establishes, under the contact-minimal fully force-visible C-II hypotheses,
+
+\[
+\boxed{G-z\text{ is connected for every positively loaded }z.}
+\tag{RI.2}
+\]
+
+Its proof uses the actual selected-stress PSD matrix.  Grounding at a loaded extreme
+vertex and conjugating by a strictly positive exposing functional shows that no
+positive diameter edge can join distinct contact components of `G-z`.  Every such
+component must then contain an internal positive diameter edge; two components would
+supply two vertex-disjoint contact paths joining alternating diameter-pair endpoints,
+contradicting planarity.  No secondary lexicographic diameter-count assumption is
+used in this loaded non-articulation part of the report.
+
+Combining (RI.2) with Lemma RI.2 gives the main statement.
+
+### Theorem RI.3 — internal outer-route vertices are unloaded
+
+In the fully force-visible C-II core,
+
+\[
+\boxed{
+\text{every physical vertex occurring internally in every Section-63 interval }W_i
+\text{ lies outside }B_+.
+}
+\tag{RI.3}
+\]
+
+By C26, every such contact vertex has full contact degree
+
+\[
+\boxed{3\le\deg_C(x)\le5.}
+\tag{RI.4}
+\]
+
+Thus a degree-one or degree-two internal route vertex is impossible.
+
+---
+
+## 4. Collapse of the current straight-event dichotomy
+
+Use the notation of
+`research/target_c_long_side_straight_event_dichotomy_2026-09-14.md`.
+For fixed `beta in(0,pi/3)`, let `S_beta` count `beta`-straight internal occurrences
+on the long-side routes.  Main proves
+
+\[
+S_\beta
+\ge
+L_{>2}-{2d_{out}\over1-\cos\beta}.
+\tag{RI.5}
+\]
+
+At a straight internal occurrence, RI.3 makes the physical vertex unloaded, so C26
+forces degree at least three.  The degree-two population `V_2(beta)` in the main
+tradeoff is therefore identically zero:
+
+\[
+\boxed{V_2(\beta)=0.}
+\tag{RI.6}
+\]
+
+The local angular argument in the straight-event theorem then supplies a third
+contact with transverse component
+
+\[
+>\sin(\pi/3-\beta).
+\]
+
+A physical vertex supports at most five outer-face occurrences, and one selected
+extra contact edge can be selected at at most its two endpoints.  Hence the main
+occurrence argument sharpens from
+
+\[
+2V_2+10E_\perp\ge S_\beta
+\]
+
+to
+
+\[
+\boxed{
+E_\perp(\beta)
+\ge {S_\beta\over10}
+\ge {1\over10}
+\left(
+L_{>2}-{2d_{out}\over1-\cos\beta}
+\right).
+}
+\tag{RI.7}
+\]
+
+There is no loaded degree-two escape.
+
+---
+
+## 5. Current low-`t` numerical consequence
+
+At the current floor, the long-side branch has
+
+\[
+{L_{>2}\over D}
+\ge0.4363893718701161781\ldots-o(1),
+\]
+
+and
+
+\[
+{d_{out}\over D}
+\le0.002883975+o(1).
+\]
+
+For the main choice `beta=pi/6`,
+
+\[
+{S_{\pi/6}\over D}
+\ge0.3933368069590823665\ldots-o(1).
+\]
+
+Therefore
+
+\[
+\boxed{
+{E_\perp(\pi/6)\over D}
+\ge0.03933368069590823665\ldots-o(1).
+}
+\tag{RI.8}
+\]
+
+Every counted physical contact has absolute transverse component greater than `1/2`
+relative to the corresponding long-side tangent axis.
+
+This doubles the guaranteed transverse-edge alternative in the current main theorem
+and, more importantly, deletes its separate loaded degree-two branch entirely.
+
+---
+
+## 6. Relation to the bridge-deduplicated long-side cohort
+
+The present theorem and the bridge-deduplicated theorem attack different losses.
+
+- Bridge deduplication produces approximately `0.396D` distinct nonbridge near-tangent
+  outer contacts.
+- RI.3 says **all internal vertices** of the distinguished routes are unloaded,
+  independent of whether adjacent route edges are bridges.
+- The straight-event argument converts a subpopulation of locally straight internal
+  occurrences into strongly transverse third contacts.
+
+A natural next composition is to localize the straight events to the nonbridge
+near-tangent cohort and split their third contacts by whether they are loaded
+attachments or internal unloaded-component edges.  That is a smaller and more
+geometric frontier than the loaded-degree-two alternative left by main.
+
+---
+
+## 7. Scope
+
+The loaded non-articulation input is presently a proved but unpromoted report, so this
+composition is also proof-only and must not be promoted without an explicit hostile
+audit of that dependency.
+
+No KKT weight floor is asserted for the transverse third contacts.  The theorem does
+not by itself provide a source-preserving diameter descent.  C-II remains open.

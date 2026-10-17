@@ -1,0 +1,113 @@
+# Target C-II — outer-detour topology band
+
+**Date:** 2026-09-12  
+**Classification:** audited-working proof-only corollary; theorem-state authority
+unchanged.  C-II remains open.
+
+This note extracts the diameter-graph consequences of the audited outer-detour
+floor.  It does not assume that the diameter graph is a forest; the forest
+interpretation is stated separately through the canonical Woodall split.
+
+## 1. Endpoint input
+
+On the proof-only Section-118 common-cap endpoint, the outer-detour theorem gives
+
+\[
+ t:={q-k\over D}\ge S_*-o(1),
+ \qquad S_*=2.798596312209462\ldots .
+\tag{1}
+\]
+
+The loaded force-hull vertex count satisfies the elementary perimeter bound
+
+\[
+ {q\over D}\le\pi+o(1).
+\tag{2}
+\]
+
+Here `k=d_H+s_Z`, `q=h+d_H`, and `s_Z,d_H\ge0` are the canonical diameter/rigidity
+defects.
+
+## 2. Defect and edge-density squeeze
+
+Since `q/D=t+k/D`, (1)--(2) give
+
+\[
+ \boxed{\displaystyle
+ {k\over D}\le \pi-S_*+o(1)<0.3444+o(1).}
+\tag{3}
+\]
+
+Also `h=tD+s_Z`, so
+
+\[
+ \boxed{\displaystyle {h\over D}\ge S_*-o(1).}
+\tag{4}
+\]
+
+For the canonical nonmatching excess `r_H=2h-q`,
+
+\[
+ {r_H\over D}
+ =t+{s_Z\over D}-{d_H\over D}
+ \ge t-{k\over D}
+ =2t-{q\over D}.
+\tag{5}
+\]
+
+Using (1)--(2),
+
+\[
+ \boxed{\displaystyle
+ \liminf {r_H\over D}\ge2S_* -\pi
+ =2.4543352775\ldots .}
+\tag{6}
+\]
+
+For a conservative rational certificate, `S_0=2.7985` and `\pi<22/7` give
+
+\[
+ {k\over D}< {22\over7}-S_0={24105\over70000}<0.3444,
+ \qquad
+ {r_H\over D}>2S_0-{22\over7}>{2454\over1000}.
+\tag{7}
+\]
+
+The stronger decimal in (6) is only a displayed evaluation of the exact symbolic
+bound.
+
+## 3. Forest interpretation
+
+In the Woodall forest branch, `d_H` is exactly the number of caterpillar components
+and the canonical identity is
+
+\[
+ r_H=\sum_{j=1}^{d_H}(q_j-2).
+\tag{8}
+\]
+
+Thus any endpoint countersequence in the forest branch has at most
+`(0.3444+o(1))D` diameter caterpillar components and at least
+`(2.454+o(1))D` total excess beyond matching components.  This excludes a residual
+forest made of only bounded-size caterpillars, but it does not force one component
+to be macroscopic: the excess can be distributed over linearly many components.
+
+The cyclic branch is not removed by this corollary.  There `d_H=0`, and the same
+band says that the odd-unicyclic loaded diameter graph has `q=h` in the zero-
+rigidity-defect subcase with `q/D\ge2.7985`; a further metric or source-minimality
+argument is required.
+
+## 4. Next exact target
+
+The remaining forest obligation is now concrete:
+
+\[
+ d_H\le(\pi-S_*)D+o(D),
+ \qquad
+ \sum_j(q_j-2)\ge(2S_* -\pi)D-o(D).
+\]
+
+A closing theorem should charge this large caterpillar excess to the single common
+positive-contact bridge block, or show that the resulting many-component interface
+has a source-preserving strict diameter descent.  The scalar band itself remains
+feasible and makes no C-II closure claim.

@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+"""Exact rational constants for the phase-zero path/interface through t<=1.865."""
+from fractions import Fraction as Q
+
+pi_hi=Q(355,113)
+c=Q(9,10000)  # one-phase retained-pair/path density > 0.0009
+
+count_avg=2*pi_hi/c
+three_avg=(3*pi_hi+2)/c
+
+assert count_avg < Q(6982)
+assert three_avg < Q(12695)
+
+print('count average upper =', count_avg, float(count_avg))
+print('three-cost average upper =', three_avg, float(three_avg))
+print('eventual count-only N_i <= 6981')
+print('simultaneous N_i,L_i <= 12694 and B_i < 12695/D+o(1/D)')
+print('PASS phase-zero path/interface constants through t<=1.865')

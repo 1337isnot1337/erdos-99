@@ -1,0 +1,37 @@
+# Target C: close p=6, e=6, m<=5 by empty-space rank
+
+Date: 2026-09-26
+
+This note closes the m<=5 part of the e=6 slice in the final eight-no-root k=5, D=-1, d_root=0, p=6 branch.
+
+The committed reduction gives rank(P)=3, generalized weights at least (2,4,5), six touched singleton replacements, no selected pair, and e touched actual-empty blocks. The face-local bound gives nu(T)<=e+1, hence nu(T)<=7 for e=6.
+
+For an actual-empty block b, let E_b<=P be its local constraint space and I_b its external-coordinate support. If some containing tetrahedral support has multiplicity at least two, then E_b has rank two, so d2(P)>=4 forces |I_b|>=4. Otherwise E_b is nonzero, so d1(P)>=2 forces |I_b|>=2. If two empty blocks a,b both have rank-two constraint spaces, their planes in the three-space P intersect nontrivially, so d1(P)>=2 forces |I_a intersect I_b|>=2.
+
+An exact S7 support census with nu(T)<=7 gives, through m=5:
+- m=3: 10 support orbits, all nullity 3;
+- m=4: 38 support orbits, nullity distribution {4:35,5:3};
+- m=5: 137 support orbits, distribution {4:1,5:107,6:27,7:2}.
+
+After multiplicity quotienting, the m<=5 layer has 3091 support/multiplicity orbits:
+- m=3, (3,3,2): 17;
+- m=4, (3,3,1,1): 135;
+- m=4, (3,2,2,1): 226;
+- m=4, (2,2,2,2): 38;
+- m=5, (3,2,1,1,1): 1731;
+- m=5, (2,2,2,1,1): 944.
+
+The phase-independent empty-block conditions eliminate every m=3 and m=4 assignment. For m=5 they leave exactly 8 assignments, all with profile (3,2,1,1,1), and exactly 20 possible empty sextuples.
+
+Each retained assignment has 81 phase choices, so the exact scan contains 648 phase configurations and 1620 phase/empty-sextuple pairs. For each empty sextuple A, form U(A)=sum E_b over b in A. The integer rows spanning U(A) were reduced modulo 2. The complete rank census is
+
+rank_F2 U = 5: 567
+rank_F2 U = 7: 1053.
+
+Thus every case has rank_F2 U>3. A nonzero minor modulo 2 is a nonzero integer minor, so rank_Q U>=rank_F2 U>3, contradicting U<=P and rank(P)=3.
+
+Therefore the entire e=6, m<=5 slice is empty. Any e=6 survivor must have m in {6,7,8}.
+
+The support/multiplicity census and all 1620 mod-2 rank checks were executed independently with an exact reconstruction of the committed K8 quotient normal form. The companion repository verifier encodes the same census and hard assertions. Its source was syntax-checked in this run; the committed wrapper itself was not executed end-to-end from a repository checkout.
+
+This does not close the full p=6 branch or Target C.

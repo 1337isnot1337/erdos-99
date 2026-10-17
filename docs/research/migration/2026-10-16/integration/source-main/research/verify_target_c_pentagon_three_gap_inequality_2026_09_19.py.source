@@ -1,0 +1,80 @@
+#!/usr/bin/env python3
+"""Exact bookkeeping regressions for the pentagon three-gap inequality.
+
+The analytic trigonometric proof is in the companion note. This script uses
+integer/Fraction arithmetic only to verify the cyclic linear reformulations and
+the reciprocal-hull raw-gap corollary. It is deliberately not presented as a
+computer proof of the trigonometric monotonicity step.
+"""
+
+from fractions import Fraction
+
+
+def add(a, b, scale=1):
+    out = dict(a)
+    for key, value in b.items():
+        out[key] = out.get(key, Fraction(0)) + Fraction(scale) * value
+        if out[key] == 0:
+            del out[key]
+    return out
+
+
+def var(name):
+    return {name: Fraction(1)}
+
+
+# q_i = x_i + x_{i+1} - x_{i+3}. With F=sum x_i=2,
+# q_i > 1/3 is equivalent to x_{i+2}+2x_{i+3}+x_{i+4}<5/3.
+xs = [var(("x", i)) for i in range(5)]
+F = {}
+for x in xs:
+    F = add(F, x)
+
+for i in range(5):
+    q = add(add(xs[i], xs[(i + 1) % 5]), xs[(i + 3) % 5], -1)
+    complement = add(
+        add(xs[(i + 2) % 5], xs[(i + 3) % 5], 2),
+        xs[(i + 4) % 5],
+    )
+    assert add(q, complement) == F
+
+# Reciprocal hull corollary. Let raw present rays have angles
+# alpha_1<...<alpha_5 in an open cone and let the size-two sign class occupy
+# raw positions 2 and 4. For that sign choice the force-cycle gaps are:
+# x0=(a4-a2)/pi,
+# x1=1-(a4-a1)/pi,
+# x2=(a3-a1)/pi,
+# x3=(a5-a3)/pi,
+# x4=1-(a5-a2)/pi.
+# The new inequality q_2>1/3 becomes
+# (a2-a1)+(a5-a4)>pi/3.
+alphas = [None] + [var(("a", i)) for i in range(1, 6)]
+
+x0 = add(alphas[4], alphas[2], -1)
+x2 = add(alphas[3], alphas[1], -1)
+x3 = add(alphas[5], alphas[3], -1)
+
+q2 = add(add(x2, x3), x0, -1)
+outer = add(
+    add(alphas[2], alphas[1], -1),
+    add(alphas[5], alphas[4], -1),
+)
+assert q2 == outer
+
+# Global sign reversal cyclically rotates the same force-gap list, so the
+# family of five q_i inequalities is unchanged as an unlabeled cyclic family.
+force_cycle_small_positive = (2, 4, 1, 3, 5)
+force_cycle_small_negative = (1, 3, 5, 2, 4)
+for shift in range(5):
+    rotated = (
+        force_cycle_small_positive[shift:]
+        + force_cycle_small_positive[:shift]
+    )
+    if rotated == force_cycle_small_negative:
+        break
+else:
+    raise AssertionError("global sign reversal did not give a cyclic rotation")
+
+print("PASS: exact cyclic reformulations of the pentagon three-gap inequality")
+print("PASS: reciprocal-hull outer-gap identity")
+print("PASS: global sign reversal preserves the cyclic inequality family")

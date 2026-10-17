@@ -1,0 +1,232 @@
+# Erdős Problem #99 — continuation after the activation-orthant audit
+
+Work in one context. Do not delegate to subagents or separate research workers.
+
+## Objective and quantifiers
+
+Obtain a Level I proof or disproof of Erdős Problem #99. The immediate priority is
+Target A. Do not work on Target B unless a Target B theorem supplies the missing
+Target A bridge.
+
+For
+
+\[
+D(n)=\min\{\operatorname{diam}(A):A\subset\mathbb R^2,\ |A|=n,
+\ |x-y|\ge1\},
+\]
+
+a proof must show that, for every sufficiently large \(n\), **every** global
+minimizer contains a unit equilateral triangle. A disproof requires triangle-free
+global minimizers for infinitely many cardinalities. Local, jammed, asymptotic,
+KKT, or numerical examples do not settle the global quantifiers.
+
+## Authoritative files and reading order
+
+Read, in order:
+
+1. `../README.md`;
+2. `../problem/statement.md` and `../problem/literature_baseline.md` when their
+   assumptions are used;
+3. the shared theory modules actually needed by the argument;
+4. `../targets/target-a/README.md`;
+5. **every active Target A module linked by that route map**, especially:
+   - `../targets/target-a/05-fixed-shape-and-separator-audit.md`;
+   - `../targets/target-a/06-activation-monomer-regression.md`;
+   - `../targets/target-a/07-activation-stress-invariance.md`;
+   - `../targets/target-a/08-prescribed-phase-alignment.md`;
+   - `../targets/target-a/09-activation-orthant.md`.
+
+Historical reports, archived monolithic files, and older prompts are provenance only.
+Prompts are not theorem sources.
+
+## Trust instruction
+
+Treat results explicitly proved and promoted in the active modules as a trusted
+theorem library. Audit new closing mathematics. Re-open an established result only
+when the new argument exposes a specific hypothesis issue.
+
+## Exact Target A endpoint
+
+For the plateau-terminalized scaffold,
+
+\[
+\zeta=\dim\ker S=|C^\partial|-\operatorname{rank}S,
+\qquad
+s=\Delta_\Lambda-d_{\rm int}.
+\]
+
+A surviving hypothetical counterexample has
+
+\[
+g=s-\zeta=\Delta_\Lambda-d_{\rm sc}\ge1.
+\]
+
+Target A closes exactly if
+
+\[
+\boxed{\dim\ker S\ge\Delta_\Lambda-d_{\rm int}},
+\]
+
+equivalently
+
+\[
+\boxed{
+\operatorname{rank}S
+\le d_{\rm int}+|C^\partial|-\Delta_\Lambda.
+}
+\]
+
+The Schur response is an exact planar strict gammoid. Its rank is a maximum directed
+vertex-disjoint alternating linkage from \(C^\partial\) to exterior lattice sinks,
+and also a minimum directed vertex separator. Planarity alone gives no required
+separator saving.
+
+## Current source-side frontier
+
+### Fixed-hull capacity is exact
+
+For the genuine source \(A\subset H\), with
+
+\[
+\widehat p_H=\alpha_1(H)-|A|,
+\]
+
+every unit-separated \(Q\subset H\) satisfies
+
+\[
+|Q|-|N_A(Q)|\le\widehat p_H,
+\]
+
+and this capacity slack is attained. Do not seek a same-hull Hall deficiency above
+\(\widehat p_H\). A closing source argument must add boundary/diameter information,
+produce a strict smaller-diameter competitor, or transport a genuine global invariant
+into the Schur response.
+
+### Prescribed phase and very-super-boundary alignment
+
+Section 154 proves that every prescribed triangular-lattice phase in the source hull
+has an \(O(D)\)-defect Hall shadow in the genuine source. Section 155 further proves
+that, for \(D>16\sqrt3\), when
+
+\[
+\rho\ge \frac{\pi D}{2}
++\frac{4D}{c}\left(1+3\,3^{1/4}\sqrt D\right),
+\qquad c=\frac{2\sqrt3}{\pi},
+\]
+
+the smaller optimum and its inner scaffold collar can be placed inside the actual
+source hull. Both the smaller optimum and the inner lattice shore then have
+near-saturating matchings into the same source.
+
+This removes coordinate independence only in that explicit
+\(\rho=\Omega(D^{3/2})\) subbranch. The matchings need not use compatible source
+images and do not yet give a Schur vector. The exact remaining theorem there is:
+
+> **Two-shadow compatibility lemma.** Choose or exchange the two source matchings so
+> that their common source structure yields the canonical Schur bound or an
+> \(N\)-point unit-separated configuration of diameter strictly below \(D\).
+
+Pure image-intersection counting is insufficient: a smaller-optimum point and a
+lattice point may both lie within one unit of the same source point while lying almost
+two units apart from one another.
+
+### Activation has three binding limitations
+
+1. Section 152 gives an exact non-global family in which quadratic activation rank
+   and coherent neutral monomer incidence coexist with zero response nullity. Local
+   activation rank plus planarity or monomer structure does not imply the target.
+2. Section 153 uses the actual global-minimizer activation sequence and proves that
+   every created unit or diameter constraint has multiplier zero in every terminal
+   normalized KKT stress. Positive-stress compensation is unavailable.
+3. Section 156 proves the full created-pair graph is a singly anchored forest and
+   constructs an exact affine global-minimizer orthant independently releasing every
+   created pair. The activation forest is not a terminal critical-cone locking system.
+
+A surviving activation route must use finite collision geometry beyond the local
+orthant, a relation between different global-optimum cardinalities, or an exact
+source-to-scaffold transport. Do not revive positive KKT load or terminal forest
+locking.
+
+### Kuperberg support scope
+
+Section 146 proves only
+
+\[
+\kappa_*(d)\to\infty\qquad(d\downarrow0)
+\]
+
+for deletion cardinality. The active theorem stack has no explicit asymptotic upper
+bound for the witness support radius \(W(d)\), and no exterior-compatible
+finite-container transfer. Do not import an unpromoted working-report rate as a
+canonical theorem.
+
+## Binding regressions
+
+Every proposed theorem must identify which hypothesis excludes or accommodates:
+
+- the strained-monomer and regular-shell families;
+- the long rooted-chain and small-slack families;
+- the exact two-leaf locked first-transition cage;
+- overlapping fundamental circuits and zero-charge bulk;
+- full-rank planar response and annular-routing regressions;
+- the Section 152 activation/monomer compatibility family;
+- the Section 153 universal zero-stress theorem;
+- the Section 156 exact deactivation orthant.
+
+Do not confuse local or representative-specific geometry with a statement about every
+global minimizer.
+
+## Highest-priority attacks
+
+1. **Two-shadow compatibility.** In the Section 155 subbranch, combine the two
+   transversal structures on the same source shore with geometric conflict data, not
+   merely image counts, and force either the Schur separator saving or strict diameter
+   improvement.
+2. **Direct source-to-Schur transport.** Construct an exact map from a globally
+   derived source invariant to \(\ker S\), preserving the independent smaller optimum
+   and scaffold rather than silently identifying coordinates.
+3. **Finite activation collision theorem.** If activation is used, go beyond the
+   local orthant and prove that a finite collision wall or transition between global
+   optima creates the required response nonlinkage. Respect the locked-cage regression.
+4. **Exterior-compatible monomer gap concentration.** Prove a protected finite
+   rearrangement in the genuine container. An infinite-plane or free-hull Kuperberg
+   witness is not enough.
+5. **Direct strict-gammoid separator theorem.** Prove a separator of size at most
+   \(|C^\partial|-s\) using source/global data absent from pure planarity.
+
+Before investing in a lemma, state the exact implication from that lemma to
+\(\zeta\ge s\) or to a strict smaller-diameter competitor.
+
+## Literature and computation permissions
+
+Internet literature search is allowed. Import only exact theorem statements whose
+hypotheses have been checked against the finite container, packing, reconfiguration,
+and global-optimality setting. Record the source, theorem/equation number, hypotheses,
+conclusion, and exact point of use.
+
+Computation is allowed for falsification, exact finite enumeration, symbolic checks,
+or certified regressions. State encoded and omitted assumptions and arithmetic type.
+Numerical output is not a global-optimality certificate.
+
+## Required output
+
+Begin with one of:
+
+```text
+LEVEL I STATUS: SOLVED
+LEVEL I STATUS: DISPROVED
+LEVEL I STATUS: STILL OPEN
+```
+
+Do not return a survey. If still open, report only:
+
+1. the strongest genuinely new theorem or regression;
+2. its complete proof or exact certificate;
+3. the exact target quantity or mechanism advanced;
+4. the shortest remaining implication;
+5. relevant regression checks and failed routes;
+6. external literature imported with exact applicability;
+7. canonical files that should change.
+
+Do not hide the final one-integer implication behind asymptotic notation, generic
+rank, or an unproved simultaneous compatibility assertion.

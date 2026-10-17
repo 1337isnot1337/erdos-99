@@ -1,0 +1,371 @@
+# Target C-II — a near-quarter reflection braid can be forced through an `o(D)` central core
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the shallow-tooth reflection branch; no canonical promotion claimed  
+**Scope:** Type-II full-core shallow-tooth reflection branch  
+**Dependencies:** reflection/perimeter collapse; flat-cap dispersion; same-center source-hull disk sandwich; fixed-slack midpoint/star bounds; quarter-power reflection braid; shallow-tooth penetration matching  
+**Certificate:** `research/verify_target_c_tooth_reflection_slow_scale_central_braid_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The fixed-width quarter-power braid and the preceding `D^(1/4)/log D` central braid
+are two points of one scale-free statement.  Let
+
+\[
+\kappa_D\to\infty,
+\qquad
+\kappa_D=o(D^{1/4}),
+\tag{SCB.1}
+\]
+
+and put
+
+\[
+w_D:=\kappa_DD^{-1/4}.
+\tag{SCB.2}
+\]
+
+At the near-optimal fixed tooth threshold
+
+\[
+\eta={3\over26},
+\tag{SCB.3}
+\]
+
+the reflection branch contains a family `B_D` of pairwise vertex-disjoint,
+pairwise properly crossing reflection blockers satisfying
+
+\[
+\boxed{
+|B_D|>
+(c_*-o(1)){D^{1/4}\over\kappa_D},
+\qquad
+c_*:=0.129220199818177\ldots .
+}
+\tag{SCB.4}
+\]
+
+Every pairwise crossing point of this family lies in one common disk
+
+\[
+\boxed{
+B\!\left(o,O\!\left({D\over\kappa_D}\right)\right),
+}
+\tag{SCB.5}
+\]
+
+so the crossing core is `o(D)`.
+
+The full five-point tagged gadgets may again be retained pairwise vertex-disjoint: one
+loaded base, one shallow apex, one penetration endpoint, and one reflection-blocker
+head for every edge of `B_D`.
+
+For example, taking
+
+\[
+\kappa_D=\log\log D
+\]
+
+(for `D` sufficiently large) gives
+
+\[
+\boxed{
+|B_D|>
+(0.129220199818177\ldots-o(1))
+{D^{1/4}\over\log\log D}
+}
+\tag{SCB.6}
+\]
+
+with every mutual crossing in a disk of radius `O(D/log log D)` about the common
+circumcenter.  This strictly improves the earlier logarithmic loss while preserving a
+sublinear common crossing core.
+
+More abstractly, choosing any subpolynomial divergent `kappa_D=D^{o(1)}` gives an
+
+\[
+D^{1/4-o(1)}
+\]
+full-gadget crossing braid whose entire crossing set is `o(D)`-central.
+
+---
+
+## 1. Fixed `eta=3/26` ledger
+
+The current two-edge tooth and outer-detour bounds give, for every fixed `eta`,
+
+\[
+{N_{sh}(\eta)\over D}
+\ge
+0.4363893718701161781\ldots
+-{0.002883975\over\eta}
+-o(1).
+\tag{SCB.7}
+\]
+
+At
+
+\[
+\eta={3\over26}
+\]
+this becomes
+
+\[
+\boxed{
+U_D>(u_*-o(1))D,
+\qquad
+u_*=0.411394921870116\ldots .
+}
+\tag{SCB.8}
+\]
+
+after the perimeter-collapse deletion of the `o(D)` exterior-witness teeth.
+
+Every selected base has length at least
+
+\[
+s_*=2-\eta={49\over26},
+\tag{SCB.9}
+\]
+
+and the reflection slack is fixed below one:
+
+\[
+C_*^2=4\eta-\eta^2={303\over676}<1.
+\tag{SCB.10}
+\]
+
+Thus all fixed-slack midpoint and star estimates apply uniformly.
+
+The leading extraction coefficient below is
+
+\[
+\boxed{
+{u_*s_*\over6}
+=u_*{49\over156}
+=0.129220199818177\ldots .
+}
+\tag{SCB.11}
+\]
+
+---
+
+## 2. Flat-cap bin capacity at an arbitrary slow scale
+
+As in the flat-cap reflection theorem, delete the `o(D)` blocked bases whose exterior
+source-hull cap excess is not `o(1)`.  For every remaining base, if `S_D` is the
+common-center tangential localization quantity, then
+
+\[
+S_D=O(D^{3/4}).
+\tag{SCB.12}
+\]
+
+For one inward-normal bin `I` of width `w_D`, the boundary-projection estimate is
+
+\[
+N_I
+\le
+{1\over s_*}
+{2S_D+2R_+\sin(w_D/2)\over\cos(w_D/2)}.
+\tag{SCB.13}
+\]
+
+Because `kappa_D->infinity`, (SCB.12) gives
+
+\[
+2S_D=o(\kappa_DD^{3/4}).
+\]
+
+Because `kappa_D=o(D^{1/4})`, one has `w_D->0`, and therefore
+
+\[
+2R_+\sin(w_D/2)
+=\left({1\over2}+o(1)\right)
+\kappa_DD^{3/4}.
+\]
+
+Using `s_*=49/26`,
+
+\[
+\boxed{
+N_I
+\le
+\left({13\over49}+o(1)\right)
+\kappa_DD^{3/4}.
+}
+\tag{SCB.14}
+\]
+
+No rate for the pre-existing `o(1)` cap errors is required; the explicit divergent
+factor `kappa_D` absorbs the fixed `O(D^(3/4))` localization term.
+
+---
+
+## 3. Dispersion produces `D^(1/4)/kappa_D` separated blockers
+
+One normal quadrant contains at least
+
+\[
+\left({u_*\over4}-o(1)\right)D
+\]
+
+flat blocked bases.  Partition it into consecutive `w_D` bins.  Equation (SCB.14)
+forces at least
+
+\[
+\left(
+{u_*/4\over13/49}-o(1)
+\right){D^{1/4}\over\kappa_D}
+\]
+
+occupied bins.
+
+Retain the largest residue class modulo three and choose one tooth from each retained
+occupied bin.  Their inward normals are pairwise separated by at least `2w_D`, and the
+selected population is
+
+\[
+\boxed{
+|B_D|>
+\left(u_*{49\over156}-o(1)\right)
+{D^{1/4}\over\kappa_D}.
+}
+\tag{SCB.15}
+
+This proves the count (SCB.4).
+
+---
+
+## 4. Direction errors and shared endpoints disappear relative to `w_D`
+
+For every flat selected base, the earlier same-center argument gives
+
+\[
+\angle(d_i,n_i)=O(D^{-1/4}),
+\tag{SCB.16}
+\]
+
+where `n_i` is the inward base normal and `d_i` is the oriented reflection-blocker
+direction.  The fixed-slack star theorem likewise says that two blockers sharing a
+source endpoint have projective direction gap only
+
+\[
+O(D^{-1/4}).
+\tag{SCB.17}
+\]
+
+But
+
+\[
+{D^{-1/4}\over w_D}={1\over\kappa_D}\to0.
+\]
+
+Therefore the selected blocker lines have pairwise projective angle
+
+\[
+\boxed{
+\phi_{ij}\ge(2-o(1))w_D
+}
+\tag{SCB.18}
+\]
+
+and no two selected blockers can share a source endpoint.  They are pairwise
+vertex-disjoint.
+
+---
+
+## 5. Every pairwise crossing lies in one `o(D)` disk
+
+Let `m_i,m_j` be the midpoints of two selected blocker edges.  Fixed-slack midpoint
+localization gives
+
+\[
+|m_i-o|,|m_j-o|=O(D^{3/4}),
+\qquad
+|m_i-m_j|=O(D^{3/4}).
+\tag{SCB.19}
+\]
+
+Let `z_ij` be the intersection of their supporting lines.  From (SCB.18),
+
+\[
+|z_{ij}-m_i|,
+|z_{ij}-m_j|
+\le
+{O(D^{3/4})\over\sin\phi_{ij}}
+=O\!\left({D\over\kappa_D}\right).
+\tag{SCB.20}
+\]
+
+Since `kappa_D=o(D^(1/4))`, the right side dominates the `O(D^(3/4))` midpoint radius,
+so
+
+\[
+\boxed{
+|z_{ij}-o|
+=O\!\left({D\over\kappa_D}\right)
+=o(D).
+}
+\tag{SCB.21}
+\]
+
+Every blocker has half-length `(1/2-o(1))D`.  Equation (SCB.20) is `o(D)`, hence
+`z_ij` lies in the relative interior of both finite blocker segments.  With endpoint
+disjointness, every intersection is proper.
+
+This proves both pairwise crossing and the common-core statement (SCB.5).
+
+---
+
+## 6. The complete tooth gadgets remain disjoint
+
+The quarter-power fixed-width theorem already isolated the only possible cross-gadget
+collisions.  Its arguments become easier here because the selected normal gap is
+`2kappa_DD^-1/4`, which dominates every `O(D^-1/4)` radial/base-normal error.
+
+Thus:
+
+1. two selected loaded bases cannot share a loaded endpoint;
+2. the penetration-matching theorem gives distinct shallow apexes `x_i`, distinct deep
+   endpoints `w_i`, and `X cap W=emptyset`;
+3. every reflection head `y_j` is at distance `D-O(1)` from `x_j`, whereas all local
+   vertices of another selected gadget are at distance at most
+   `(1/sqrt(2)+o(1))D+O(1)` from `x_j`, because all selected radial directions lie in
+   one quadrant.
+
+Therefore the five-point sets
+
+\[
+\{a_i,b_i,x_i,w_i,y_i\}
+\]
+
+are pairwise disjoint throughout the family (SCB.15).
+
+---
+
+## 7. Frontier effect
+
+The reflection branch now admits a tunable normal form:
+
+```text
+choose any kappa_D -> infinity with kappa_D=o(D^(1/4))
+ -> (c_*-o(1)) D^(1/4)/kappa_D pairwise-disjoint full tooth gadgets
+ -> their D-O(1) reflection blockers cross pairwise
+ -> every crossing occurs in one O(D/kappa_D) disk about the common center.
+```
+
+Thus the previous `log D` loss is not structural.  One may retain an
+`D^(1/4-o(1))` approximate thrackle while forcing the entire crossing set into an
+`o(D)` common core.
+
+This still does not close C-II: a near-circular source can support many almost-radial
+fixed-slack chords through a sublinear central region.  The remaining useful bridge is
+now more specific.  It must exploit the attached ordered, nonadjacent loaded bases and
+penetration contacts, not merely the crossing geometry of the long blockers.  A
+simultaneous discrete reflection or a width/turn inequality coupling those local tooth
+gadgets across the central braid would close this survivor.
+
+**Disposition:** generalized the reflection-braid extraction to an arbitrary slow
+inverse-quarter-power scale, yielding `D^(1/4-o(1))` pairwise-crossing full tooth
+gadgets with all blocker crossings confined to an `o(D)` central core.  C-II and Level
+I remain open.

@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+"""Regression checks for the full-parent aperture of every non-TT paired cell."""
+
+from fractions import Fraction
+from math import asin, pi, sin
+
+c = Fraction(113, 5_000_000)
+n0 = c / 2
+
+z0 = 20477 / 10000
+d0 = z0 - 6 * sin(z0 / 6)
+cH = 0.4143 + d0
+gammaH = asin(cH)
+rho0 = gammaH / 2
+
+# Exact discrete minimax used in the theorem.
+for N in range(1, 1000):
+    vals = [max(2 * (s - 1), 2 * (N - s) + 1) for s in range(1, N + 1)]
+    assert min(vals) == N
+
+# The conclusion is independent of TT-prefix length: every suffix index s>M
+# still gets the global N-sized minimax floor because the forward narrow-gap
+# count starts at the first parent center.
+for N in range(1, 80):
+    for M in range(N + 1):
+        for s in range(M + 1, N + 1):
+            forward = 2 * (s - 1)
+            backward = 2 * (N - s) + 1
+            assert max(forward, backward) >= N
+
+# Terminal-prefix combinatorics: after M=min(rA,rB), at least one lane is
+# nonterminal for every remaining center.
+for N in range(1, 60):
+    for rA in range(N + 1):
+        for rB in range(N + 1):
+            M = min(rA, rB)
+            for s in range(M + 1, N + 1):
+                assert (s > rA) or (s > rB)
+
+# C67 scale and asymptotic parent aperture.
+for D in (100, 1_000, 100_000, 10_000_000):
+    delta = 2 * asin(1 / (2 * D))
+    assert delta >= 1 / D
+    assert D * delta > 1
+
+rho_parent = float(n0)
+diamond = sin(rho_parent / 2)
+assert rho_parent == 1.13e-5
+assert rho_parent < rho0
+assert 5.64e-6 < diamond < 5.66e-6
+
+# It strictly improves both earlier no-TT return floors.
+rho_first_half = 2 * asin(cH * float(c) / 4)
+rho_projection = cH * float(c) / (1 + cH)
+assert rho_parent > rho_projection > rho_first_half
+
+print("PASS: full-parent non-TT aperture regressions")
+print(f"c={float(c):.12g}")
+print(f"parent_density={float(n0):.12g}")
+print(f"cH={cH:.15g}")
+print(f"gammaH={gammaH:.15g}")
+print(f"parent_gap_floor={rho_parent:.15g}")
+print(f"parent_gap_floor_deg={rho_parent * 180 / pi:.15g}")
+print(f"central_diamond_coeff={diamond:.15g}")
+print(f"older_projection_floor={rho_projection:.15g}")
+print(f"older_first_half_floor={rho_first_half:.15g}")

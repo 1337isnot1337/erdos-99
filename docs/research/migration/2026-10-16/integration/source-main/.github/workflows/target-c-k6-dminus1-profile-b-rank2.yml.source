@@ -1,0 +1,63 @@
+name: Target C k6 Dminus1 Profile B rank-two audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    if: github.actor == github.repository_owner && vars.E99_HISTORICAL_CI == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {start: 0, end: 640}
+          - {start: 640, end: 1280}
+          - {start: 1280, end: 1920}
+          - {start: 1920, end: 2560}
+          - {start: 2560, end: 3200}
+          - {start: 3200, end: 3840}
+          - {start: 3840, end: 4480}
+          - {start: 4480, end: 5120}
+          - {start: 5120, end: 5760}
+          - {start: 5760, end: 6400}
+          - {start: 6400, end: 7040}
+          - {start: 7040, end: 7680}
+          - {start: 7680, end: 8320}
+          - {start: 8320, end: 8960}
+          - {start: 8960, end: 9600}
+          - {start: 9600, end: 10240}
+          - {start: 10240, end: 10880}
+          - {start: 10880, end: 11520}
+          - {start: 11520, end: 12160}
+          - {start: 12160, end: 12800}
+          - {start: 12800, end: 13440}
+          - {start: 13440, end: 14080}
+          - {start: 14080, end: 14720}
+          - {start: 14720, end: 15360}
+          - {start: 15360, end: 16000}
+          - {start: 16000, end: 16640}
+          - {start: 16640, end: 17280}
+          - {start: 17280, end: 17920}
+          - {start: 17920, end: 18560}
+          - {start: 18560, end: 19200}
+          - {start: 19200, end: 19840}
+          - {start: 19840, end: 20451}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run strengthened rank-two Profile B audit shard
+        run: >-
+          python research/verify_target_c_support7_global_segment_relative_six_noroot_k4_d3_profile_b_common_functional_basis_2026_09_22.py
+          --orbit-start ${{ matrix.start }}
+          --orbit-end ${{ matrix.end }}
+          --stop-on-survivor
+          --require-no-survivors

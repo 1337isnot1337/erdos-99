@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+"""Constant and scale checks for the slow-scale central reflection braid."""
+from decimal import Decimal, getcontext
+from fractions import Fraction as Q
+import math
+
+getcontext().prec = 80
+
+N2 = Decimal("0.4363893718701161781")
+dout = Decimal("0.002883975")
+eta = Decimal(3) / Decimal(26)
+u_star = N2 - dout / eta
+s_min = Decimal(49) / Decimal(26)
+c_star = u_star * s_min / Decimal(6)
+
+assert abs(u_star - Decimal("0.4113949218701161781")) < Decimal("1e-30")
+assert c_star > Decimal("0.12922019")
+
+# Fixed reflection slack at eta=3/26.
+eta_q = Q(3, 26)
+C2 = 4 * eta_q - eta_q * eta_q
+assert C2 == Q(303, 676)
+assert C2 < 1
+
+# Leading bin-cap coefficient at width kappa D^-1/4 is
+# (1/s_min)*(kappa/2) = (13/49) kappa.
+assert Q(1, 1) / Q(49, 26) / 2 == Q(13, 49)
+
+# One quadrant and one residue class mod 3 give u*s_min/6.
+assert abs(c_star - u_star * Decimal(49) / Decimal(156)) < Decimal("1e-60")
+
+# Concrete slowly divergent choice: kappa=log log D.
+# These finite samples only regress the required scale relations; the theorem is asymptotic.
+for exponent in (40, 80, 160, 320):
+    log_D = exponent * math.log(10)
+    kappa = math.log(log_D)
+    D_quarter = math.exp(log_D / 4)
+    w = kappa / D_quarter
+    assert kappa > 1
+    assert 0 < w < 0.1
+    # The fixed O(D^3/4) bin term is lower order than kappa D^3/4.
+    assert 1 / kappa < 0.3
+    # The crossing-core radius O(D/kappa) is sublinear.
+    assert 1 / kappa < 1
+
+print("tooth reflection slow-scale central-braid certificate: PASS")
+print("eta = 3/26")
+print("upper-blocked tooth coefficient =", u_star)
+print("leading braid coefficient c_* =", c_star)
+print("reflection slack squared =", C2)
+print("leading bin coefficient = (13/49) kappa")

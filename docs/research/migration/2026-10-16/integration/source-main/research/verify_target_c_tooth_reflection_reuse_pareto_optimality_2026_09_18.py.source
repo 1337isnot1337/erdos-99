@@ -1,0 +1,86 @@
+#!/usr/bin/env python3
+"""Regression checks for the FREE reuse-threshold Pareto calculation.
+
+This script checks the finite algebra in
+`target_c_tooth_reflection_reuse_pareto_optimality_2026-09-18.md`.
+It does not certify the underlying geometric dependencies or global optimality.
+"""
+
+from __future__ import annotations
+
+import math
+
+
+C_STAR = 0.129220199818177
+H_STAR = math.sqrt(303.0) / 52.0
+
+
+def check_fixed_amplification_r_dependence() -> None:
+    """At fixed A=m/R, the heavy guarantee is exactly proportional to 1/R."""
+    for k in (0.5, 1.0, 2.0, 10.0):
+        alpha = 1.0 - H_STAR / k
+        assert alpha > 0.0
+
+        for amplification in (2.0, 5.0, 10.0, 100.0, 1000.0):
+            base = None
+            for threshold in (1.0, 2.0, 3.0, 5.0):
+                module_count = amplification * threshold
+                coefficient = math.sqrt(
+                    alpha * math.sin(C_STAR / (2.0 * amplification))
+                ) / module_count
+
+                if base is None:
+                    base = coefficient
+                assert base is not None
+                assert math.isclose(
+                    coefficient / base,
+                    1.0 / threshold,
+                    rel_tol=1e-15,
+                )
+
+
+def check_asymptotic_envelope() -> None:
+    """Verify the A^(-3/2) asymptotic coefficient at R=1."""
+    alpha = 1.0 - H_STAR
+    pareto_constant = math.sqrt(alpha * C_STAR / 2.0)
+
+    assert math.isclose(
+        pareto_constant,
+        0.20732100519894858,
+        rel_tol=1e-15,
+    )
+
+    for amplification in (2.0, 5.0, 10.0, 100.0, 1000.0):
+        exact = math.sqrt(
+            alpha * math.sin(C_STAR / (2.0 * amplification))
+        ) / amplification
+        asymptotic = pareto_constant / amplification**1.5
+
+        # sin x / x is already extremely close to one on these scales and
+        # converges monotonically to one as A grows.
+        assert exact <= asymptotic
+        assert exact / asymptotic > 0.999
+
+
+def check_matching_amplification_identity() -> None:
+    """The light-branch matching scale depends only on A=m/R."""
+    alpha = 1.0 - H_STAR
+    d = 1e9
+
+    for amplification in (2.0, 5.0, 10.0, 100.0):
+        expected = alpha * amplification * d / 22.0
+        for threshold in (1.0, 2.0, 7.0):
+            module_count = amplification * threshold
+            actual = alpha * module_count * d / (22.0 * threshold)
+            assert math.isclose(actual, expected, rel_tol=1e-15)
+
+
+def main() -> None:
+    check_fixed_amplification_r_dependence()
+    check_asymptotic_envelope()
+    check_matching_amplification_identity()
+    print("PASS: FREE reuse-threshold Pareto optimum")
+
+
+if __name__ == "__main__":
+    main()

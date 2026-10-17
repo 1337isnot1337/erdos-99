@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+from decimal import Decimal, getcontext
+
+getcontext().prec = 80
+
+pi = Decimal('3.14159265358979323846264338327950288419716939937510')
+sqrt3 = Decimal(3).sqrt()
+Delta2 = pi / (Decimal(2) * sqrt3)
+s = Delta2.sqrt()
+g = Decimal('0.00042')
+C146 = Decimal(4) * (pi + s) / Decimal(9)
+t42 = C146 + Decimal('0.0013751')
+R42 = Decimal('4.5') * (t42 - C146) - g
+delta_max = R42 / Decimal(2)
+tooth_branch = (pi - t42 - Decimal(2) * R42) / Decimal(3)
+
+eta_count = Decimal(1) / Decimal(15)
+cos_count = Decimal(1) - eta_count / Decimal(2)
+sin_count = (Decimal(1) - cos_count * cos_count).sqrt()
+Y_count = sqrt3 / Decimal(2) * cos_count - sin_count / Decimal(2)
+E_count = tooth_branch - delta_max / eta_count
+flux_count = E_count * Y_count
+
+eta_flux = Decimal('0.06')
+cos_flux = Decimal(1) - eta_flux / Decimal(2)
+sin_flux = (Decimal(1) - cos_flux * cos_flux).sqrt()
+Y_flux = sqrt3 / Decimal(2) * cos_flux - sin_flux / Decimal(2)
+E_flux = tooth_branch - delta_max / eta_flux
+flux_006 = E_flux * Y_flux
+
+cos_pi_12 = (Decimal(2) + sqrt3).sqrt() / Decimal(2)
+eta0 = Decimal(2) * (Decimal(1) - cos_pi_12)
+count_supremum = tooth_branch - delta_max / eta0
+
+assert eta_count < eta0
+assert eta_flux < eta0
+assert E_count > Decimal('0.3931297468')
+assert Y_count > Decimal('0.7091387945')
+assert flux_count > Decimal('0.2787835547')
+assert E_flux > Decimal('0.3883231218')
+assert flux_006 > Decimal('0.2790071278')
+assert count_supremum > Decimal('0.3940702972')
+assert E_count > Decimal(2) * Decimal('0.1965648734')
+
+print('t42 =', t42)
+print('R(t42) =', R42)
+print('d_out/D <=', delta_max)
+print('tooth branch N2/D >=', tooth_branch)
+print('eta_count = 1/15 =', eta_count)
+print('internal edges/D >=', E_count)
+print('Y_1/15 >', Y_count)
+print('flux at eta=1/15 >', flux_count)
+print('eta_flux =', eta_flux)
+print('internal edges/D at eta=.06 >=', E_flux)
+print('flux at eta=.06 >', flux_006)
+print('count supremum =', count_supremum)
+print('PASS: internal-edge injectivity upgrade constants')

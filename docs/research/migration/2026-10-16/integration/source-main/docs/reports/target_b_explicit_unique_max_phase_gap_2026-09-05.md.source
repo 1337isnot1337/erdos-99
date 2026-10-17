@@ -1,0 +1,293 @@
+<!-- theorem-state: {"artifact_id":"ART-E943E5A0C854","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Erdős Problem #99 — Target B explicit unique-max coherent phase gap
+
+**Date:** 2026-09-05  
+**Run type:** quantitative stability / explicit constant extraction  
+**Target:** dense coherent three-phase global deficit-transfer gate  
+**Depends on:** unique-max stability algebra; dual-tree dense-grid correction; trimmed-grid phase-star diameter theorem  
+**LEVEL I STATUS:** STILL OPEN
+
+## 1. Statement
+
+Let a coherent three-phase train component have phase classes
+
+`A,B,C`
+
+with sizes
+
+`|A|=M`, `|B|=b`, `|C|=a`,
+
+and suppose
+
+`M>=b>=a`,
+
+`a,b <= (1-kappa)M`,
+
+`b >= tau M`,
+
+for fixed constants `kappa,tau>0`.
+
+Let `E` be the number of physical train crossings inside the coherent component and put
+
+`Delta = [M(a+b)-E]/M^2`.
+
+Assume the standard dense-core hypotheses used by the phase-stability reports:
+
+1. the phase crossing graph has no transversal triangle;
+2. the three phase directions are `o(1)`-coherent around the triangular projective directions;
+3. crossings involving trains outside this coherent component are `o(M^2)`;
+4. `T=O(M)`, so the component-scale Euler asymptotics apply.
+
+Then
+
+### Theorem 1 — explicit unique-max phase deficit
+
+`liminf Delta >= 8*10^(-5) kappa tau`.
+
+Thus the compactness-only `delta_phase>0` in the fixed-gap unique-max regime can be replaced by a concrete universal coefficient.
+
+The constant is deliberately conservative. No numerical optimization is attempted.
+
+## 2. Stability algebra converts phase deficit to one pairwise missing density
+
+Write
+
+`e_AB=Mb-x`,
+
+`e_AC=Ma-y`,
+
+`e_BC=z`.
+
+The standard transversal-triple count gives
+
+`Mz <= ax+by`.
+
+Therefore
+
+`M(a+b)-E=x+y-z`
+
+`>= (1-a/M)x+(1-b/M)y`
+
+`>= kappa(x+y)`.
+
+In particular
+
+`x <= Delta M^2/kappa`.
+
+Let
+
+`epsilon=x/(Mb)`
+
+be the missing density of the `A-B` pair. Since `b>=tau M`,
+
+`epsilon <= Delta/(kappa tau)`.                         (2.1)
+
+Hence it is enough to prove that an admissible coherent component cannot satisfy
+
+`epsilon < epsilon_0`,
+
+where
+
+`epsilon_0=8*10^(-5)`.                                 (2.2)
+
+## 3. Quantitative dual-tree complete-grid extraction
+
+The global-linear-stack claim used in the first phase-stability draft is false in general. Use instead the audited dual-tree correction.
+
+Let `q=x=epsilon Mb` be the number of missing `A-B` crossings. Since `B` is internally noncrossing, its complement dual is a tree. Choose one train of `A` missing at most `epsilon b` tracks of `B`. Its crossing set is a dual-tree path `P_*` with at least
+
+`(1-epsilon)b`
+
+edges. This is the backbone.
+
+Put
+
+`r=sqrt(epsilon)`.
+
+Call a train of `A` good if it misses at most `r b` tracks of the full family `B`. Markov gives at most
+
+`epsilon M/r = rM`
+
+bad trains. Thus there is a retained family
+
+`A' subset A`,
+
+`|A'| >= (1-r)M`.                                      (3.1)
+
+The crossing set of every good `A` train intersects `P_*` in an interval. Since it misses at most `rb` backbone tracks, every such interval contains the central backbone obtained by deleting `rb` edges from each end. Hence there is
+
+`B' subset B`,
+
+`|B'| >= (1-epsilon-2r)b-O(1)`,                         (3.2)
+
+such that every train in `A'` crosses every train in `B'`.
+
+This is a complete topological grid.
+
+Put
+
+`p=|A'|/M`, `q_0=|B'|/M`, `t=b/M`, `s=a/M`.
+
+Then asymptotically
+
+`1-p <= r`,
+
+`t-q_0 <= t(epsilon+2r) <= epsilon+2r`.
+
+Define
+
+`L=(1-p)+(t-q_0)`.
+
+Therefore
+
+`L <= 3r+epsilon+o(1)`.                                (3.3)
+
+## 4. Uniform diameter margin of the complete phase star
+
+Use the triangular phase vectors from the trimmed-grid theorem,
+
+`u=(1,0)`,
+
+`v=(1/2,sqrt(3)/2)`,
+
+`w=(1/2,-sqrt(3)/2)`.
+
+For the full ideal center/leaf sizes, define
+
+`F(s,t)=min_(|xi|<=s)|u+t v+xi w|^2`.
+
+The trimmed-grid theorem gives the exact formula
+
+`F(s,t)=1+t+t^2-s(1-t)+s^2`
+
+when `s<(1-t)/2`, and
+
+`F(s,t)=3(1+t)^2/4`
+
+when `s>=(1-t)/2`.
+
+Let
+
+`c=2sqrt(3)/pi`.
+
+The proof of the trimmed-grid theorem contains a useful uniform numerical margin that was not isolated there:
+
+### Lemma 2 — uniform complete-star margin
+
+For every `0<=s<=t<=1`,
+
+`F(s,t)-c(s+t) >= gamma_0`,
+
+where
+
+`gamma_0=3/4-c/2`
+
+`=0.1986711045...`.                                    (4.1)
+
+### Proof
+
+In the constrained-minimizer branch `s>=(1-t)/2`, use `s<=t`:
+
+`F-c(s+t) >= 3(1+t)^2/4-2ct`.
+
+This quadratic has negative discriminant because `c<3/2`, and its minimum is larger than `gamma_0`.
+
+In the other branch the expression decreases with `s`, so its minimum occurs at `s=(1-t)/2`, giving
+
+`(1+t)[3(1+t)/4-c/2] >= 3/4-c/2=gamma_0`.
+
+`square`
+
+Also `F(s,t)<=3`, hence `sqrt(F)<=sqrt(3)`.
+
+## 5. Cost of the grid deletions
+
+The complete extracted grid uses only `A'` and `B'`. Relative to the full ideal vectors `u+t v`, shortening the two retained vector sums changes the normalized vector by at most `L` in Euclidean norm.
+
+The omitted phase trains in `(A\A') union (B\B')` can themselves separate the selected grid diagonal and contribute with arbitrary sign. Their total normalized contribution has norm at most the same quantity `L`.
+
+The entire coherent third phase contributes an arbitrary scalar multiple `xi w` with `|xi|<=s+o(1)`, exactly as already optimized in `F`. Truly external trains contribute only `o(M)` after the standard fixed-fraction central trim and the grid penetration lemma, because the non-core crossing mass is `o(M^2)`.
+
+Consequently the selected source-point diagonal satisfies
+
+`D/M >= sqrt(F(s,t))-2L-o(1)`.
+
+Squaring and using `sqrt(F)<=sqrt(3)` gives the safe lower bound
+
+`D^2/M^2 >= F(s,t)-4sqrt(3)L-o(1)`.                    (5.1)
+
+No sign assumption on the omitted same-phase trains is used.
+
+## 6. Insert the explicit missing-density threshold
+
+For
+
+`epsilon <= epsilon_0=8*10^(-5)`,
+
+(3.3) gives
+
+`L <= 3sqrt(epsilon_0)+epsilon_0+o(1)`
+
+`<0.026913+o(1)`.
+
+Hence
+
+`4sqrt(3)L <0.1865+o(1)`.
+
+By (4.1),
+
+`F(s,t)-4sqrt(3)L`
+
+`> c(s+t)+0.012+o(1)`.                                 (6.1)
+
+Thus the extracted grid forces
+
+`D^2 > [c(s+t)+0.01]M^2`
+
+for all sufficiently large terms of the sequence.
+
+On the other hand
+
+`E=M(a+b)-Delta M^2`
+
+and the coherent component carries all but `o(M^2)` rhombi, so
+
+`R/M^2=s+t-Delta+o(1)`.
+
+Since `T=O(M)`, Euler gives
+
+`n/M^2=s+t-Delta+o(1)`.
+
+The strict translated-triangular-lattice comparison therefore gives
+
+`D^2/M^2 < c(s+t-Delta)+o(1)`
+
+`<=c(s+t)+o(1)`,                                       (6.2)
+
+contradicting (6.1).
+
+Therefore `epsilon<epsilon_0` is impossible.
+
+Combining with (2.1),
+
+`Delta/(kappa tau) >= epsilon_0-o(1)`,
+
+which proves Theorem 1.
+
+## 7. Why the constant is useful
+
+The earlier general coherent phase report proves only that a positive deficit exists after fixing a dense-core regime. Theorem 1 provides an explicit currency:
+
+`M(a+b)-E >= 8*10^(-5) kappa tau M^2-o(M^2)`.
+
+This can be inserted directly into a future global deficit-transfer inequality. The coefficient is tiny but is independent of the configuration and of the phase ratios once `kappa,tau` are fixed.
+
+The remaining non-unique-max regime still needs its own explicit quantitative extraction. In particular the coefficient above degenerates as `kappa->0`, exactly where the two-largest-tie/balanced stability theorem takes over.
+
+## 8. Audit cautions
+
+- The false implication `pairwise noncrossing => complement dual is a path` is not used. The backbone order comes from one high-degree train in the dual tree.
+- Omitted `A/B` phase trains are charged a second time as possible diagonal cancellation; they are not silently discarded.
+- Truly external train error is controlled only after a further fixed-fraction trim of the already complete grid, followed by the asymptotic limit and then sending that trim fraction to zero.
+- The theorem assumes the coherent component carries all but `o(M^2)` of the rhombus crossings at its scale, as in the existing phase endpoint reports.
+- This is a local phase deficit theorem, not yet the global Target B contradiction.

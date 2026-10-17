@@ -1,0 +1,54 @@
+# Hostile audit — remaining H5 translation-surface signatures
+
+**Date:** 2026-09-18  
+**Audited note:** `target_c_support6_reciprocal_h5_translation_surface_signatures_2026-09-18.md`  
+**Certificate:** `verify_target_c_support6_reciprocal_h5_translation_surface_signatures_2026_09_18.py`  
+**Disposition:** PASS with the scope limits below. C-II remains open.
+
+## 1. The ground hexagon is legitimate only on the noncollapsed uniform branch
+
+The note is explicitly restricted to the three remaining **uniform noncollapsed** H5 reciprocal orbits.  In that regime all seven reciprocal points are distinct and no three are collinear.  Hence the six force directions incident to the ground vertex are pairwise nonparallel.  Ground equilibrium gives a zero sum of six unit force vectors.  Sorting them by argument therefore produces a strict convex equilateral hexagon: a cyclic angular gap of at least `pi` would put all six vectors in a closed semicircle, and zero sum would then force them onto the supporting line, contradicting nonparallelity.
+
+This argument is not available in the collapsed support-six branch.  The theorem does not apply there and makes no claim about it.
+
+## 2. Translation gluing and Euler data
+
+For every present edge `ij`, the unit force vectors satisfy `f_ji=-f_ij`.  Thus the side carrying `ij` on face `P_i` and the side carrying `ji` on `P_j` have equal length, are parallel, and have opposite boundary directions.  Translation gluing is therefore valid and orientation preserving.  All `36` sides of the six pentagons plus one hexagon are paired into `18` edge classes, so the quotient is closed with `F=7,E=18`.
+
+The corner-identification convention in the note was checked directly.  If side `ij` is side `k` of `P_i` and side `ji` is side `l` of `P_j`, the translation pairs the start of one side with the end of the other and conversely.  The exact verifier reproduces the vertex-class statistics
+
+- `P1`: `(16,12,4),(3,2,1),(3,2,1),(3,3,0),(11,11,0)`;
+- `P2`: `(22,16,6),(3,3,0),(4,4,0),(3,3,0),(4,4,0)`;
+- `P3`: `(19,16,3),(14,12,2),(3,2,1)`.
+
+Therefore `P1,P2` have `V=5,g=4`, while `P3` has `V=3,g=5`.  The total corner angle is `6*3pi+4pi=22pi`, so the cone orders sum to eleven.  These counts are exact combinatorics, not numerical experiments.
+
+## 3. Strict corner bounds are used with the correct inequality directions
+
+For each physical force pentagon, the repository already proves
+
+`0 < delta_k < 2pi/3` and `delta_k+delta_{k+1}<pi`.
+
+Thus its interior corner angle `pi-delta_k` lies strictly between `pi/3` and `pi`.  Ground-hexagon corners lie strictly between zero and `pi`.  A class with `N` corners of which `p` are physical therefore has
+
+`p/6 < m < N/2`.
+
+The strictness matters at `p=12`: it gives `m>=3`, not `m>=2`.  The verifier uses `p//6+1` and `(N-1)//2`, which correctly encode the strict integer bounds.
+
+The auxiliary three-consecutive-gap estimate is also valid as stated.  For consecutive `x,y,z`, if `y<=pi/3`, then `x,z<2pi/3`, giving `x+y+z<5pi/3`; if `y>=pi/3`, the two adjacent two-turn inequalities give `x,z<pi-y`, hence again `x+y+z<5pi/3`.  No equality endpoint is admitted.
+
+## 4. The four removed extreme cone assignments really are impossible
+
+For `P1`, the all-physical eleven-corner class selects face-2 gaps `1,2,3`.  If its order were five, the full selected-gap sum would have to equal `pi`, but that face-2 triple alone is `2pi-(delta_24+delta_20)>pi` because gaps `4,0` are adjacent.  If its order were two, the target selected-gap sum would be `7pi`; the face-2 consecutive triple is `<5pi/3` and the other eight selected gaps are each `<2pi/3`, giving a strict total `<7pi`.  Hence only cone orders `(4,4,1,1,1)` and `(5,3,1,1,1)` remain.
+
+For `P2`, the four small classes are all physical and have sizes three or four, so each has cone order exactly one.  The remaining order is then `11-4=7`.  No extra inequality is hidden here.
+
+For `P3`, the fourteen-corner class is the only nontrivial one.  Order six would require selected-gap sum `2pi`.  The selected contributions from faces 1,2,5 are respectively `>pi`, `>2pi/3`, and `>pi/3`; their strict sum already exceeds `2pi`.  Order three would require `8pi`.  The selected physical gaps are `<7pi`, while the two selected ground gaps are `gamma_0=a_2-a_1<pi/3` and `gamma_4=a_4-a_5<pi/3` because all six raw ground rays lie in the H5 cone of width `<pi/3`.  Thus the total is `<23pi/3<8pi`.  Only `(5,5,1)` and `(6,4,1)` remain.
+
+## 5. Scope: this is a reduction, not an exclusion of the three H5 orbits
+
+The five surface signatures are necessary conditions.  The note does **not** prove that any of them is realizable, and it does not claim to eliminate any of the final three uniform H5 reciprocal sign/order orbits.  It uses only rotation-system gluing, cone-angle integrality, the existing one-turn/two-turn bounds, and the ground cone width.  It does not yet use the full equilateral-polygon closure equations or reciprocal metric integrability.
+
+The collapsed support-six realization is untouched.  Even a complete exclusion of all five noncollapsed signatures would still leave the collapsed branch requiring a global source/train or diameter-locking obstruction.
+
+**Audit disposition:** the genus, vertex-class, and cone-signature reduction is supportable as stated.  The exact verifier reproduces all combinatorial bookkeeping and the rational endpoint inequalities.  The theorem-state authority remains unchanged.

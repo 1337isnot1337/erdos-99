@@ -1,0 +1,246 @@
+# Erdős Problem #99 — singleton-anchored core-pentagon refinement
+
+**Date:** 2026-09-14  
+**Target:** C-II, canonical full-core Type-II branch  
+**Dependencies:** singleton-anchored Groemer gate; Wegner residual quantization; exact force-hull residual conservation  
+**Claim class:** proof-only closing reduction awaiting independent audit
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The singleton-anchored Groemer gate leaves the third point of its almost-equilateral triple formally unrestricted: it could be an assigned contact-isolated point or another boundary/core point. Wegner's first residual jump removes that ambiguity on the pentagonal subbranch.
+
+For a pentagonal exceptional face `P`, the Wegner quantization theorem gives
+
+\[
+r(P)<\kappa,
+\qquad
+\kappa={1\over\sqrt3}-{1\over2}=0.0773502691896257\ldots
+\quad\Longrightarrow\quad
+z(P)=0.
+\tag{CP.1}
+\]
+
+Thus, on the small true-residual branch `R_F=o(D)`, all but `o(D)` pentagonal exceptional faces contain **no** assigned interior source point. Combining this with the edgewise Groemer lemma upgrades the singleton-anchored gate: its near apex lies on the boundary of the same contact face and hence in the positive-contact core.
+
+## 1. Almost every Type-II pentagon is empty when `R_F=o(D)`
+
+The exact residual conservation law is
+
+\[
+R_F=\sum_j r_j,
+\qquad r_j\ge0.
+\tag{CP.2}
+\]
+
+Assume
+
+\[
+R_F=o(D).
+\tag{CP.3}
+\]
+
+The number of exceptional faces with residual at least `kappa` is at most
+
+\[
+R_F/\kappa=o(D).
+\tag{CP.4}
+\]
+
+For a pentagon, Wegner's discrete bound is
+
+\[
+r(P)\ge
+\kappa\left(\left\lceil\sqrt{12(5+z)-3}-3\right\rceil-5\right).
+\tag{CP.5}
+\]
+
+The first-jump corollary gives exactly
+
+\[
+r(P)<\kappa\Longrightarrow z=0.
+\tag{CP.6}
+\]
+
+Therefore
+
+\[
+\boxed{
+\#\{\text{pentagonal exceptional faces with }z>0\}=o(D).
+}
+\tag{CP.7}
+\]
+
+This conclusion does not require a lower bound on the total number of pentagons. It says that **whenever** a linear pentagon population appears on the small-residual branch, asymptotically all of it is a purely positive-core phenomenon.
+
+## 2. Edgewise Groemer anchoring becomes a core statement
+
+Fix `eta>0`. Let `tau_5^edge(eta)>0` be the threshold from the singleton-anchored Groemer lemma: every pentagonal exceptional face with
+
+\[
+r(P)<\tau_5^{edge}(\eta)
+\]
+
+has, for every cyclic boundary contact edge `uv`, a source point `w` in the face with
+
+\[
+|u-v|=1,
+\qquad
+1\le|u-w|<1+\eta,
+\qquad
+1\le|v-w|<1+\eta.
+\tag{CP.8}
+\]
+
+Put
+
+\[
+\theta_\eta:=\min\{\kappa,\tau_5^{edge}(\eta)\}>0.
+\tag{CP.9}
+\]
+
+By (CP.2)--(CP.3), only `o(D)` pentagons have residual at least `theta_eta`. Every remaining pentagon satisfies both:
+
+1. `z(P)=0` by Wegner;
+2. the edgewise anchored conclusion (CP.8).
+
+Since `z(P)=0`, the face contains no source point in its interior. Therefore the third point `w` in (CP.8) is one of the other cyclic boundary vertices of `P`. In particular all three points `u,v,w` belong to the positive contact core.
+
+Hence:
+
+### Theorem CP.1 — core-pentagon edgewise anchoring
+
+On every Type-II subsequence with `R_F=o(D)`, for every fixed `eta>0`, all but `o(D)` pentagonal exceptional faces have the following property:
+
+> every cyclic boundary contact edge `uv` is the exact base of an almost-equilateral triple `(u,v,w)` with `w` another boundary/core vertex of the same pentagon and both missing side lengths in `[1,1+eta)`.
+
+The global source is triangle-free, so at least one missing side is strictly greater than one.
+
+## 3. Strengthen the singleton-anchored train gate
+
+Let `S_5` be the number of singleton stopped trains incident with at least one pentagonal exceptional face. Let
+
+\[
+A^{sing,core}_\eta
+\]
+
+be the maximum number of pairwise vertex-disjoint triples satisfying (CP.8) such that
+
+- `uv` is a singleton stopped-train edge;
+- `uv` is incident with a pentagonal exceptional face; and
+- `w` is another boundary/core vertex of that same pentagon.
+
+As before, if `p_5^{hit}` is the number of pentagons touched by `S_5`, then
+
+\[
+p_5^{hit}\ge S_5/5.
+\tag{CP.10}
+\]
+
+Only `o(D)` of these hit pentagons fail the threshold (CP.9). Choose one singleton edge and its core near apex from every remaining hit pentagon. The chosen triples have conflict degree at most 12, so a greedy independent set keeps at least one thirteenth. Therefore
+
+\[
+\boxed{
+A^{sing,core}_\eta\ge {S_5\over65}-o(D),
+}
+\tag{CP.11}
+\]
+
+or equivalently
+
+\[
+\boxed{130A^{sing,core}_\eta\ge2S_5-o(D).}
+\tag{CP.12}
+\]
+
+The detour-free exceptional-train gate and the exact incidence bound
+
+\[
+S_E\le S_5+6(Q-f)
+\]
+
+then give the same numerical gate as before, now with a strictly stronger geometric third currency:
+
+\[
+\boxed{
+\sigma_R+11(Q-f)+130A^{sing,core}_\eta
+\ge
+c_{DF}D+{5\over2}k-o(D),
+}
+\tag{CP.13}
+\]
+
+where
+
+\[
+c_{DF}=0.167964643466509\ldots .
+\]
+
+No outer-detour term survives.
+
+## 4. Conditional core conclusion
+
+If along a small-residual Type-II subsequence
+
+\[
+\sigma_R=o(D),
+\qquad
+Q-f=o(D),
+\tag{CP.14}
+\]
+
+then for every fixed `eta>0`,
+
+\[
+\boxed{
+\liminf {A^{sing,core}_\eta\over D}
+\ge {c_{DF}\over130}
+=0.001292035718973\ldots .
+}
+\tag{CP.15}
+\]
+
+Diagonalizing `eta=1/j` gives a scale `eta_D->0` with the same lower coefficient:
+
+\[
+\boxed{
+\liminf {A^{sing,core}_{\eta_D}\over D}
+\ge {c_{DF}\over130},
+}
+\tag{CP.16}
+\]
+
+where every counted triple consists entirely of positive-core boundary vertices and its exact base is a singleton stopped-train contact edge.
+
+This rules out rattler activation as the mechanism for this particular corner. Any closing theorem here must deform or constrain the positive-contact core itself.
+
+## 5. Why this changes the next target
+
+The previous singleton-anchored gate still allowed the hope that many third vertices were contact-isolated and could be moved behind the protected contact wall. Equation (CP.7) shows that hope is false on the low-residual pentagon population: asymptotically all such pentagons are empty.
+
+The surviving local object is instead
+
+```text
+an empty convex unit-edge pentagon,
+with one boundary edge a singleton stopped train,
+and another boundary vertex simultaneously at distance 1+o(1)
+from both endpoints of that edge.
+```
+
+Thus the next local theorem should be formulated on the **core pentagon/train geometry**, not on inactive-container capacity. Two concrete routes remain:
+
+1. show that a positive-core empty pentagon with a singleton-train base and an `o(1)` almost-equilateral apex forces a forbidden train phase/termination pattern; or
+2. construct a source-preserving positive-core flex that activates one missing side or reduces the global diameter while keeping all old unit contacts noncontracting.
+
+First-order KKT alone does not see the missing sides because they are inactive constraints.
+
+## 6. Scope audit
+
+- `z(P)` is the canonical assigned interior contact-isolate count for the exceptional face.
+- The statement `z=0` does not say the face boundary has only five source points globally; it says no source lies in its open interior.
+- The near apex `w` is therefore a cyclic boundary vertex, hence part of the positive contact core.
+- The theorem remains conditional on `R_F=o(D)` and inherits the proof-only status of AG42, the detour-free train gate, Groemer equality, and Wegner quantization.
+- No exact unit triangle or strict same-cardinality sub-`D` source is claimed.
+
+C-II and Level I remain open.

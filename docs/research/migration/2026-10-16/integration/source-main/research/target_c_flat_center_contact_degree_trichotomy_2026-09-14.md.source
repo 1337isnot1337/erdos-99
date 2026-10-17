@@ -1,0 +1,283 @@
+# Erdos Problem #99 - flat-pentagon center contact-degree trichotomy
+
+**Date:** 2026-09-14
+**Target:** C-II, canonical full-core Type-II branch
+**Dependencies:** flat-pentagon contact-chain extraction; triangle-free unit-contact geometry; positive-contact KKT equilibrium only for the optional degree-two conclusion
+**Claim class:** proof-only local structural theorem; theorem-state authority unchanged
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The low-`t`, small-residual branch now supplies linearly many actual positive-core
+vertices `m` lying on bounded pentagonal faces with consecutive unit-contact neighbors
+`l,r` and
+
+\[
+|l-m|=|m-r|=1,
+\qquad
+\angle lmr=\pi-\epsilon,
+\qquad \epsilon=o(1).
+\]
+
+The local contact geometry at such a flat center is much more rigid than the existing
+extraction statement records.
+
+### Theorem FC-D
+
+Let `m` be a source vertex in a triangle-free unit-distance contact graph. Suppose
+`l,m,r` are consecutive boundary vertices of one bounded contact face, both `lm` and
+`mr` are contacts, and
+
+\[
+\angle lmr\ge\pi-\epsilon,
+\qquad 0\le\epsilon<\pi/3.
+\tag{FD.1}
+\]
+
+Then:
+
+1. `deg_C(m)<=4`.
+2. If `deg_C(m)=4`, write the two additional contact neighbors in cyclic order on the
+   complementary arc as `x,y`. The three exterior angular gaps
+   \[
+   \angle(r,m,x),\quad\angle(x,m,y),\quad\angle(y,m,l)
+   \]
+   all belong to
+   \[
+   \left(\pi/3,\ \pi/3+\epsilon\right],
+   \tag{FD.2}
+   \]
+   and hence the three hidden neighbor pairs satisfy
+   \[
+   1<|r-x|,|x-y|,|y-l|
+   \le2\sin\left({\pi/3+\epsilon\over2}\right)
+   \le1+\epsilon.
+   \tag{FD.3}
+   \]
+3. If `m` is unloaded in the positive KKT stress, then `deg_C(m)>=3`. Consequently an
+   unloaded flat center has only two possibilities: degree three, or degree four with
+   the three additional near-active pairs from (FD.3).
+4. In the degree-three unloaded case, if `x` is the unique additional contact neighbor
+   and the positive contact multipliers at `ml,mr,mx` are `alpha_l,alpha_r,alpha_x`,
+   then
+   \[
+   {\alpha_x\over\min(\alpha_l,\alpha_r)}
+   \le {\sin\epsilon\over
+   \sin(\pi/3-\epsilon)}
+   =O(\epsilon).
+   \tag{FD.4}
+   \]
+   In particular the third-contact multiplier is asymptotically negligible relative
+   to both almost-antipodal face-contact multipliers.
+
+Thus the hard flat-center branch is reduced locally to
+
+```text
+loaded center,
+or degree-4 center + three extra 1+o(1) hidden contacts,
+or unloaded degree-3 center with an O(epsilon) third-contact KKT weight.
+```
+
+No uniform lower bound on positive KKT multipliers is assumed, so the last alternative
+is not excluded here.
+
+## 1. Neighbor angular gaps exceed pi/3
+
+Every contact neighbor of `m` lies on the unit circle centered at `m`. If two distinct
+contact neighbors `u,v` subtend the smaller angle `theta`, then
+
+\[
+|u-v|=2\sin(\theta/2).
+\]
+
+Unit separation gives `theta>=pi/3`. Equality would give `|u-v|=1`, so `m,u,v`
+would be a unit equilateral triangle. In the C-II triangle-free branch equality is
+forbidden. Therefore every consecutive angular gap between contact neighbors of `m`
+satisfies
+
+\[
+\boxed{\theta>\pi/3.}
+\tag{FD.5}
+\]
+
+Because `l-m-r` are consecutive edges of one bounded face, no other contact ray from
+`m` enters the face sector between `ml` and `mr`. All additional contact neighbors lie
+on the complementary angular arc, whose size is at most
+
+\[
+2\pi-(\pi-\epsilon)=\pi+\epsilon.
+\tag{FD.6}
+\]
+
+## 2. Degree five is impossible
+
+If `deg_C(m)=d`, the complementary arc is divided by the `d-2` additional contact
+rays into `d-1` consecutive angular gaps. By (FD.5) their total is strictly greater
+than
+
+\[
+(d-1){\pi\over3}.
+\]
+
+For `d>=5` this exceeds `4pi/3`, whereas (FD.6) is below `4pi/3` when
+`epsilon<pi/3`. Hence
+
+\[
+\boxed{\deg_C(m)\le4.}
+\tag{FD.7}
+\]
+
+This uses only unit separation, planarity of the contact-face sector, and the absence
+of a unit triangle.
+
+## 3. Degree four forces a near-equilateral exterior fan
+
+Suppose `deg_C(m)=4`. Let the exterior gaps be
+
+\[
+\theta_1,\theta_2,\theta_3>\pi/3.
+\]
+
+Their sum is the complementary arc and therefore
+
+\[
+\theta_1+\theta_2+\theta_3\le\pi+\epsilon.
+\]
+
+Writing `theta_i=pi/3+eta_i`, all `eta_i>0` and
+
+\[
+\eta_1+\eta_2+\eta_3\le\epsilon.
+\]
+
+Thus each `eta_i<=epsilon`, proving (FD.2). For the corresponding consecutive contact
+neighbors `u,v`,
+
+\[
+|u-v|=2\sin(\theta_i/2)>1
+\]
+
+by triangle-freeness, while
+
+\[
+|u-v|\le2\sin((\pi/3+\epsilon)/2).
+\]
+
+Since the derivative of `2 sin(theta/2)` is `cos(theta/2)<=1`, the latter is at most
+`1+epsilon`. This proves (FD.3).
+
+Hence every degree-four flat center creates three inactive source pairs whose gaps to
+unit contact are all at most `epsilon`.
+
+## 4. Degree two must be loaded
+
+At an unloaded positive-core vertex the KKT stationarity equation contains only the
+positive contact forces. If `deg_C(m)=2`, it has the form
+
+\[
+\alpha_l u_l+\alpha_r u_r=0,
+\qquad \alpha_l,\alpha_r>0,
+\]
+
+where `u_l,u_r` are unit contact directions. Positive cancellation of two vectors is
+possible only when they are exactly antipodal. A genuine convex pentagonal face has
+`angle lmr<pi`; in the extracted endpoint the angle tends to pi but is not equal to
+pi for a nondegenerate face. Thus a degree-two flat center cannot be unloaded.
+
+Equivalently, in the asymptotic family every unloaded extracted center has contact
+degree three or four.
+
+## 5. Degree-three KKT weight collapse
+
+Suppose `m` is unloaded and has exactly one additional contact neighbor `x`. Let the
+cyclic angular gaps be
+
+\[
+A:=\angle(l,m,r)=\pi-\epsilon',
+\qquad B:=\angle(r,m,x),
+\qquad C:=\angle(x,m,l),
+\]
+
+where `0<=epsilon'<=epsilon` and
+
+\[
+A+B+C=2\pi.
+\]
+
+By (FD.5), `B,C>pi/3`. Therefore
+
+\[
+B,C<2\pi/3+\epsilon.
+\tag{FD.8}
+\]
+
+Three non-collinear planar unit vectors admit a positive dependence unique up to
+scale. Taking cross products with each vector, the positive coefficients obey the
+sine law
+
+\[
+\alpha_x:\alpha_l:\alpha_r
+=\sin A:\sin B:\sin C.
+\tag{FD.9}
+\]
+
+Now `sin A=sin epsilon'<=sin epsilon`. For sufficiently small epsilon,
+`B,C` lie in `(pi/3,2pi/3+epsilon)`, so
+
+\[
+\sin B,\sin C\ge\sin(\pi/3-\epsilon).
+\]
+
+Consequently
+
+\[
+{\alpha_x\over\min(\alpha_l,\alpha_r)}
+\le {\sin\epsilon\over\sin(\pi/3-\epsilon)},
+\]
+
+which is (FD.4).
+
+The exact constant is secondary. The structural point is that an unloaded degree-three
+flat center can balance only by assigning asymptotically vanishing relative stress to
+its unique exterior contact.
+
+## 6. Consequence for the low-t small-residual branch
+
+The low-`t` source-object theorem currently gives, near `t=t_42` and `R_F=o(D)`, at
+least
+
+\[
+(0.0988833344\ldots-o(1))D
+\]
+
+distinct flat centers. Applying FC-D to all of them produces a three-way global split:
+
+1. linearly many are loaded;
+2. linearly many are degree four, hence generate linearly many local triples of
+   additional hidden `1+o(1)` neighbor pairs; or
+3. linearly many are unloaded degree-three centers carrying an exterior positive
+   contact whose multiplier is `o(1)` relative to both face-edge multipliers.
+
+The first branch should be coupled to the near-extremal Woodall diameter topology; the
+second enlarges the existing hidden-contact activation network; the third is a
+quantitative KKT-stress degeneration target.
+
+This theorem does not yet prove that one branch is impossible, and does not sum KKT
+weights across overlapping centers.
+
+## 7. Scope audit
+
+- The degree bound is finite and local; no asymptotic theorem is needed except to make
+  `epsilon=o(1)` in applications.
+- `l,r` are consecutive around the bounded face sector, so no unaccounted contact ray
+  lies inside that sector.
+- The strict `>pi/3` angular separation uses exactly the triangle-free C-II
+  hypothesis.
+- Degree four produces hidden *source pairs*, not new contact edges.
+- The degree-three weight estimate assumes the center is unloaded, so no diameter
+  force appears in its stationarity equation.
+- No lower bound on individual KKT contact multipliers is used.
+- No exact unit triangle or strict smaller-diameter competitor is produced.
+
+**Disposition:** proof-only local structural theorem. C-II and Level I remain open.

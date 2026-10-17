@@ -1,0 +1,54 @@
+# Target C — C91 endpoint Ferrers-exclusion frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_endpoint_ferrers_exclusion_2026-09-01.md](../../reports/target_c_endpoint_ferrers_exclusion_2026-09-01.md).
+
+C89's endpoint-sharp alternative
+
+`T/D -> 2+Delta_2`, `Delta_2=pi/(2sqrt(3))`,
+
+is impossible.
+
+At that endpoint the exact C80 chain atom contains D trains, the residual atomic
+population has `Delta_2 D+o(D)` trains, and essentially all
+`Delta_2 D^2` rhombus crossings are between the chain atom and residual atoms. C89's
+atomic-star equality plus the phase relation leaves at most two residual atomic
+directions, each at projective angle `60 degrees` from the chain direction.
+
+C90 puts every residual train's two terminals on one of the two `z`-to-`a` boundary
+arcs. Thus there are at most four residual phase/side walls.
+
+The total missing chain-residual incidence is `o(D^2)`, so all but `o(D)` residual
+trains cross more than `D/2` chain trains. Inside one phase/side wall the trains are
+pairwise noncrossing and their same-side boundary intervals are disjoint or nested;
+length `>D/2` rules out disjointness. Hence each good wall is Ferrers.
+
+For a `j x i` all-ones rectangle, the i chain trains have exact vector sum of length
+i. The coherent residual side has vector sum `(1-o(1))j`. The four Cartesian corner
+vertices lie in the source, so the parallelogram law gives
+
+`i^2+j^2 <= D^2+o(D^2)`.
+
+If a wall has asymptotic size `lambda D`, its crossing density is at most
+
+`F(lambda)=integral_0^lambda sqrt(1-t^2)dt`.
+
+The four wall masses sum to `Delta_2`, and concavity gives
+
+`sum F(lambda_r) <= 4F(Delta_2/4)=0.8990689038...`.
+
+This is strictly below the required
+
+`Delta_2=0.9068996821...`.
+
+Therefore the C89 endpoint phase cannot occur. By a diagonal compactness argument,
+there are absolute `epsilon_0>0,D_0` such that every sufficiently large canonical
+pure-rhombic chain-face survivor satisfies
+
+`T >= (2+Delta_2+epsilon_0)D`.
+
+The remaining branch is now uniformly train-surplus. The next target is to convert
+that extra linear train population, together with C88's quadratic non-chain separator
+budget and C90's macroscopic secondary-train caterpillar, into an Oler/global-packing
+contradiction.

@@ -1,0 +1,281 @@
+# Target C-II — near-floor near contacts force singleton mass or a large rhombic ear-train graph
+
+**Date:** 2026-09-18  
+**Status:** proof-only structural refinement; theorem-state authority unchanged  
+**Scope:** the concrete low-detour terminal window from `target_c_free_terminal_t_near_floor_near_contact_matching_2026-09-18.md`  
+**Depends on:** the `0.4155D` near-orbit pentagon floor from that note; the exact singleton/full-flower incidence inequality; the no-return-to-one-face train theorem; the train-angle coordinate representation; global contact degree at most five  
+**Certificate:** `research/verify_target_c_free_terminal_t_near_floor_rhombic_ear_train_graph_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The preceding theorem produces many near-unit pentagon diagonals at the actual new
+terminal `t` frontier, but does not ensure that their two boundary sides belong to
+rhombic train coordinates. This note supplies that bridge.
+
+In the concrete window
+
+\[
+\limsup t_D\le1.959952849540479\ldots,
+\qquad
+\limsup {b-P_F\over D}\le10^{-5},
+\tag{ET.1}
+\]
+
+the preceding theorem gives, after the standard limiting extraction,
+
+\[
+\lim_{\theta\downarrow0}\liminf
+{P_5^{near}(\theta)\over D}
+\ge
+N_0,
+\qquad
+N_0=0.415550892775345\ldots .
+\tag{ET.2}
+\]
+
+Here `P_5^{near}(theta)` consists of bounded pentagons whose five side directions are
+within `theta` of one dominant three-line `pi/3` orbit.
+
+The new conclusion is the following split:
+
+\[
+\boxed{
+{S\over D}\ge0.1-o(1)
+}
+\tag{ET.3}
+\]
+
+for the singleton stopped-train count `S`, or, for every metric tolerance
+`eps_geom>0`, there is a family of at least
+
+\[
+\boxed{
+(0.0239-o(1))D
+}
+\tag{ET.4}
+\]
+
+pairwise vertex-disjoint near-unit ear diagonals, each lying in an empty fully-rhombic
+pentagon and each controlled by two distinct rhombic stopped-train angular
+coordinates. Moreover one can retain at least
+
+\[
+\boxed{
+(0.0119-o(1))D
+}
+\tag{ET.5}
+
+of those ears so that, **before imposing the rhombic hole-period equations and the
+external contact/diameter locks**, a single raw train-rate vector strictly decreases
+all of their squared lengths simultaneously.
+
+Thus the low-detour near-`t` branch has a more specific remaining obstruction than a
+bare near-contact matching: either a linear singleton population survives, or the
+period/external locking system must suppress a positive-density directed forest of
+locally compatible ear-tightening train inequalities.
+
+---
+
+## 1. From near pentagons to near fully-rhombic pentagons
+
+Let `F_5^{full}` be the number of bounded pentagons with a strict rhombus on the
+opposite side of every one of their five contact edges. The exact incidence theorem is
+
+\[
+\boxed{
+P_5-F_5^{full}\le2S.
+}
+\tag{ET.6}
+\]
+
+Indeed every non-full pentagon has a singleton boundary edge and one singleton edge can
+witness at most two pentagons.
+
+Both `P_5^{near}(theta)` and `F_5^{full}` are subsets of the full pentagon population
+`P_5`. Hence
+
+\[
+\begin{aligned}
+|P_5^{near}(\theta)\cap F_5^{full}|
+&\ge
+P_5^{near}(\theta)+F_5^{full}-P_5\\
+&\ge P_5^{near}(\theta)-2S.
+\end{aligned}
+\tag{ET.7}
+\]
+
+If (ET.3) fails, so that `S/D<0.1+o(1)`, then (ET.2) and (ET.7) give
+
+\[
+\boxed{
+\lim_{\theta\downarrow0}\liminf
+{|P_5^{near}(\theta)\cap F_5^{full}|\over D}
+\ge
+N_0-0.2
+=0.215550892775345\ldots .
+}
+\tag{ET.8}
+\]
+
+Every pentagon counted in (ET.8) is source-empty by the existing isolate-host theorem.
+
+---
+
+## 2. Each such pentagon has two train-supported near-unit ears
+
+For sufficiently small `theta`, the five-root closure lemma gives two disjoint adjacent
+edge pairs in every near-orbit pentagon. Each pair spans an ear diagonal `d` with
+
+\[
+1<d\le2\cos(\pi/3-\theta).
+\tag{ET.9}
+\]
+
+Because the pentagon is fully rhombic, both sides of each ear are terminal sides of
+non-singleton strict-rhombus stopped trains. The two trains supporting one ear are
+distinct: otherwise one complete train would have two terminal occurrences on the same
+bounded face, contradicting the no-return-to-one-face theorem.
+
+Choose one of the two ears from every pentagon counted in (ET.8). The chosen ear
+diagonals are distinct. Their auxiliary graph on contact-core source vertices has
+maximum degree at most five, exactly as in the existing near-contact matching proof.
+A greedy matching therefore retains at least one ninth of the chosen ears.
+
+Consequently, in the non-singleton branch,
+
+\[
+\boxed{
+\liminf {|\mathcal M_{ear}|\over D}
+\ge
+{N_0-0.2\over9}
+=0.023950099197260\ldots .
+}
+\tag{ET.10}
+\]
+
+For every fixed `eps_geom>0`, choose `theta` small enough that the upper endpoint in
+(ET.9) is below `1+eps_geom`. Then all edges of `mathcal M_ear` have lengths in
+`(1,1+eps_geom)`.
+
+---
+
+## 3. Exact derivative of one ear in train-angle coordinates
+
+Take one selected ear. Orient its two consecutive unit contact sides along the
+pentagon boundary as vectors `u` and `v`, with turning angle
+
+\[
+0<\vartheta<\pi.
+\]
+
+Let their two stopped trains have angular rates `alpha` and `beta`. The train-angle
+cochain gives
+
+\[
+\dot u=\alpha Ju,
+\qquad
+\dot v=\beta Jv.
+\tag{ET.11}
+\]
+
+The ear vector is `d=u+v`. Therefore
+
+\[
+\begin{aligned}
+{d\over dt}|d|^2
+&=2(u+v)\cdot(\alpha Ju+\beta Jv)\\
+&=2\sin\vartheta\,(\alpha-\beta).
+\end{aligned}
+\tag{ET.12}
+\]
+
+Since `sin(vartheta)>0`, the ear strictly shortens to first order exactly when
+
+\[
+\boxed{\alpha<\beta.}
+\tag{ET.13}
+\]
+
+Thus every selected near-contact ear contributes one strict order inequality between
+its two train angular coordinates. No metric approximation is used in the derivative
+formula; near-lattice geometry is needed only to make the nonedge itself almost active.
+
+---
+
+## 4. The ear/train incidence graph has maximum degree two
+
+Build a multigraph `J` whose vertices are complete non-singleton stopped trains and
+whose edges are the selected vertex-disjoint ears in `mathcal M_ear`; an ear joins its
+two supporting trains.
+
+A complete stopped train has exactly two terminal face-side occurrences. At a fixed
+terminal pentagon, the selected family uses that train at most once. Therefore
+
+\[
+\boxed{\Delta(J)\le2.}
+\tag{ET.14}
+\]
+
+So every component of `J` is a path or a cycle, allowing a two-edge parallel cycle in
+the multigraph convention.
+
+Orient each edge of `J` according to the strict inequality (ET.13) that shortens its
+ear. Delete one edge from every underlying cycle. Since every cycle has at least two
+edges, at least half of all ear edges remain. The underlying retained graph is a
+forest, so its oriented inequalities are acyclic. Assign train rates by any topological
+ordering. This produces one raw train-rate vector satisfying every retained strict
+ear-shortening inequality simultaneously.
+
+Hence there is a subfamily `M_tight` with
+
+\[
+\boxed{
+|\mathcal M_{tight}|
+\ge{1\over2}|\mathcal M_{ear}|,
+}
+\tag{ET.15}
+\]
+
+and therefore
+
+\[
+\boxed{
+\liminf {|\mathcal M_{tight}|\over D}
+\ge
+{N_0-0.2\over18}
+=0.011975049598630\ldots .
+}
+\tag{ET.16}
+\]
+
+A conservative coefficient is `0.0119D`.
+
+---
+
+## 5. What the raw simultaneous tightening does and does not mean
+
+The train-rate vector in Section 4 lives in the unconstrained stopped-train coordinate
+space. It is **not** yet asserted to integrate to a contact-framework flex. The audited
+train-period theorem imposes two scalar period equations per independent rhombic hole,
+and the full active framework adds non-rhombus contact and diameter locks.
+
+The point of (ET.16) is to isolate those equations as the only remaining obstruction to
+the local sign pattern. The ear inequalities themselves are globally compatible on a
+linear subfamily: there is no directed-cycle obstruction after losing only a factor two.
+
+This gives a concrete next linear-algebra target. Let `K_train` be the kernel of the
+rhombic hole-period map. Prove either
+
+1. a positive fraction of the forest inequalities (ET.13) remains strictly feasible on
+   `K_train` and can then be combined with the active diameter inequalities; or
+2. the period/external row restrictions needed to kill all such directions have rank
+   or stress cost linear in `|M_tight|`, contradicting one of the terminal currency
+   ledgers.
+
+A pure row-count argument is known to be insufficient in general; the required input
+must use the sparse path/cycle support of the ear/train graph or the geometry of the
+active diameter rows.
+
+**Disposition:** in the concrete low-detour near-`t` window, either at least `0.1D`
+singleton trains survive, or there are at least `0.0239D` vertex-disjoint near-unit
+ears supported by rhombic train pairs, with a raw simultaneously tightenable subfamily
+of at least `0.0119D`. C-II remains open.

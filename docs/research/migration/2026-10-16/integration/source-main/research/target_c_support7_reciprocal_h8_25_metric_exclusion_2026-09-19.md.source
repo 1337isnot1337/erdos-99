@@ -1,0 +1,176 @@
+# Target C-II — convex support-seven H8 cannot have a ground `2+5` sign split
+
+**Date:** 2026-09-19  
+**Claim class:** exact metric exclusion inside the degree-pure support-seven endpoint  
+**Scope:** convex `H8` branch of `research/target_c_support7_reciprocal_reduction_2026-09-19.md`  
+**Depends on:** support-seven reciprocal reduction; reciprocal trace identity; strict triangle inequality; strict convex-quadrilateral crossing inequality; strict negative type of Euclidean distance  
+**Certificate:** `research/verify_target_c_support7_reciprocal_h8_25_metric_exclusion_2026_09_19.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The support-seven reduction leaves 23 convex `H8` sign/order orbits. Exactly two of those orbits have a `2+5` ground force split; equivalently all four labelled sign assignments with ground minority size two belong to those two orbits. Both violate the exact reciprocal signed-length identity.
+
+Therefore every convex `H8` support-seven survivor must have ground split `3+4`, and the convex branch drops from 23 to 21 sign/order orbits.
+
+---
+
+## 1. Metric residuals
+
+Write
+
+\[
+d_{ij}=|y_i-y_j|
+\]
+
+for the distances among the eight strictly convex reciprocal hull vertices `0,1,...,7`.
+
+We use three families of strict negative linear forms in the distances.
+
+For any three distinct hull vertices, strict triangle inequality gives, for example,
+
+\[
+T(a,b,c;bc):=d_{bc}-d_{ab}-d_{ac}<0.
+\tag{1.1}
+\]
+
+For cyclically ordered `a<b<c<d`, the crossing diagonals `ac,bd` meet in the polygon interior, so
+
+\[
+Q_o(a,b,c,d):=d_{ab}+d_{cd}-d_{ac}-d_{bd}<0,
+\tag{1.2}
+\]
+
+and
+
+\[
+Q_x(a,b,c,d):=d_{ad}+d_{bc}-d_{ac}-d_{bd}<0.
+\tag{1.3}
+\]
+
+Finally, for every nonzero real vector `c=(c_0,...,c_7)` with `sum c_i=0`, strict negative type of the Euclidean metric gives
+
+\[
+N(c):=2\sum_{0\le i<j\le7}c_ic_jd_{ij}<0.
+\tag{1.4}
+\]
+
+The strictness in (1.4) follows from the projection-integral proof already used in the support-five reciprocal exclusion: for a generic one-dimensional projection the projected coordinates are distinct, and the quadratic form is the negative integral of a nonzero squared partial-sum function.
+
+Distances across missing reciprocal edges are allowed in these auxiliary residuals. They carry no reciprocal stress, but their coefficients cancel in the identities below.
+
+---
+
+## 2. First `2+5` orbit
+
+Take the labelled missing 7-cycle
+
+\[
+L_A=\{12,17,23,34,45,56,67\}.
+\tag{2.1}
+\]
+
+One representative positive reciprocal-edge set is
+
+\[
+\begin{aligned}
+P_A=\{&01,02,04,06,07,13,15,24,26,35,37,46,57\}.
+\end{aligned}
+\tag{2.2}
+\]
+
+The ground sign word on `1,...,7` is `++-+-++`, so its minority size is two. Put
+
+\[
+L_A^*=\sum_{e\in P_A}d_e-
+\sum_{e\in E(K_8\setminus L_A)\setminus P_A}d_e.
+\tag{2.3}
+\]
+
+The reciprocal trace identity requires `L_A^*=0`.
+
+The companion certificate verifies the following exact coefficient identity over all 28 pair distances:
+
+\[
+-L_A^*=\sum_{r=1}^{19}\alpha_r R_r,
+\qquad \alpha_r>0,
+\tag{2.4}
+\]
+
+where the 19 residuals are three strict triangle residuals, nine strict convex-quadrilateral residuals, and seven strict negative-type residuals. The positive coefficients are in `{1/16,1/8,1/4,1/2}` and are stored explicitly in the verifier using exact rational arithmetic.
+
+Every `R_r<0`, hence
+
+\[
+-L_A^*<0,
+\qquad L_A^*>0,
+\tag{2.5}
+\]
+
+contradicting the trace identity.
+
+Global sign reversal sends `L_A^*` to `-L_A^*`, so it is excluded as well.
+
+---
+
+## 3. Second `2+5` orbit
+
+Take
+
+\[
+L_B=\{14,15,25,26,36,37,47\}.
+\tag{3.1}
+\]
+
+A representative positive edge set is
+
+\[
+\begin{aligned}
+P_B=\{&01,03,04,05,07,12,16,23,27,34,45,56,67\}.
+\end{aligned}
+\tag{3.2}
+\]
+
+Its ground sign word is `+-+++-+`, again with minority size two. Define `L_B^*` by the same positive-minus-negative signed length sum.
+
+Here the exact contradiction is short. The verifier checks
+
+\[
+\boxed{
+-L_B^*=
+T(0,2,5;25)
++Q_x(0,1,4,5)
++Q_o(0,2,4,7)
++Q_x(2,3,6,7)
++\frac12N(1,-1,1,-1,1,-1,1,-1).
+}
+\tag{3.3}
+\]
+
+Every term on the right is strictly negative. Thus `L_B^*>0`, again contradicting exact reciprocal trace cancellation. The globally complemented sign assignment is excluded simultaneously.
+
+---
+
+## 4. Consequence
+
+The support-seven `H8` census had exactly four labelled assignments with ground minority size two. They form precisely the two reflection/global-sign orbits above. Both are impossible. Therefore
+
+\[
+\boxed{
+H8\Longrightarrow\text{ground force split }3+4.
+}
+\tag{4.1}
+\]
+
+and the convex branch now contains
+
+\[
+\boxed{21}
+\tag{4.2}
+\]
+
+unexcluded sign/order orbits rather than 23.
+
+This is not a support-seven exclusion. The remaining 21 convex orbits still have to be tested against ground force closure, the trace/tensor identities, and the full pentagon angle equations. The nonconvex `H6/H7` branches also remain.
+
+No theorem-state file is changed.
+
+**Disposition:** exact strict-metric certificates exclude both convex support-seven `H8` orbits with ground `2+5`; every surviving convex `H8` candidate has ground `3+4`; 21 convex sign/order orbits remain. C-II remains open.

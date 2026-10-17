@@ -1,0 +1,236 @@
+# Target B - exact three-phase cross-grain determinant floor
+
+Date: 2026-10-02
+Base main: 7c95482d3a0c1c0df7319aa70a0f5fe0878d7707
+Status: proved candidate, noncanonical. Target B remains open.
+
+This note strengthens the cross-grain virtual-mass bound in
+research/target_b_cross_grain_virtual_determinant_2026-10-02.md.
+It is independent of the current Target C-II high-t fan / boundary-rhombus work.
+
+Fix Section-50 parameters 0 < eta, lambda < 1. Delete crossings with angular
+defect greater than D^(-1+eta), then perform the Section-50 vertex pruning.
+Let H_i and H_j be two distinct retained components. Write their three phase
+class sizes, in decreasing order, as
+
+    M_i >= b_i >= a_i
+    M_j >= b_j >= a_j
+
+and put
+
+    N_i = M_i + b_i + a_i
+    N_j = M_j + b_j + a_j.
+
+As in the preceding cross-grain note, minimum retained degree gives
+
+    b_i, b_j >= lambda D / 2.                              (1)
+
+Let
+
+    L0 = ceil(3T/(lambda D))
+    epsilon_D = L0 D^(-1+eta) = o(1).                     (2)
+
+The Section-50 potential and signed lift formula put every train in phase class r
+of a retained component within projective angle epsilon_D of one ideal direction
+
+    alpha + r pi/3.
+
+## 1. Exact weighted three-phase trigonometric lemma
+
+For nonnegative A, B, C, define
+
+    f(theta)
+      = A |sin theta|
+      + B |sin(theta + pi/3)|
+      + C |sin(theta - pi/3)|.
+
+Then
+
+    min_theta f(theta)
+      = (sqrt(3)/2) [A + B + C - max(A,B,C)].             (3)
+
+Proof. The zeros of the three absolute-sine terms occur at multiples of pi/3.
+On every open interval between consecutive zeros, all three signs are fixed, so
+
+    f'' = -f < 0.
+
+Thus f is concave on every such interval and its minimum there is attained at an
+endpoint. At the three endpoint types the values are
+
+    (sqrt(3)/2)(A+B),
+    (sqrt(3)/2)(B+C),
+    (sqrt(3)/2)(C+A).
+
+Their minimum is exactly the right side of (3).
+
+The earlier four-direction inequality is the special case (A,B,C) = (2,1,1).
+
+## 2. Exact ideal determinant mass of two grains
+
+Keep the actual cyclic phase labels temporarily. Let
+
+    x_r = |V_r(H_i)|
+    y_r = |V_r(H_j)|
+
+for r in Z/3, and define the three cyclic correlations
+
+    C_d = sum_r x_r y_(r+d),  d in Z/3.                   (4)
+
+If the ideal phase triples have relative angle theta, the determinant mass of all
+nine phase-class products is exactly
+
+    F_ij(theta)
+      = C_0 |sin theta|
+      + C_1 |sin(theta + pi/3)|
+      + C_-1 |sin(theta - pi/3)|.                         (5)
+
+Since
+
+    C_0 + C_1 + C_-1 = N_i N_j,
+
+equation (3) gives
+
+    F_ij(theta)
+      >= (sqrt(3)/2) [N_i N_j - max_d C_d].               (6)
+
+Each C_d pairs the three class sizes of H_i with a permutation of the three class
+sizes of H_j. By the rearrangement inequality,
+
+    max_d C_d <= M_i M_j + b_i b_j + a_i a_j.             (7)
+
+Therefore
+
+    F_ij(theta)
+      >= (sqrt(3)/2)
+         [N_i N_j - M_i M_j - b_i b_j - a_i a_j].         (8)
+
+The bracket equals
+
+    M_i(a_j+b_j)
+      + (a_i+b_i)M_j
+      + a_i b_j
+      + b_i a_j.                                          (9)
+
+In particular,
+
+    F_ij(theta)
+      >= (sqrt(3)/2)(M_i b_j + b_i M_j).                  (10)
+
+This recovers the previous sqrt(3) b_i b_j floor because M_i >= b_i and
+M_j >= b_j.
+
+## 3. Actual train directions
+
+Define
+
+    W_ij
+      = sum |det(u_tau,u_sigma)|
+
+over pairs tau in H_i and sigma in H_j that do not physically cross.
+
+For each pair, the actual relative angle differs from its ideal phase-pair angle
+by at most 2 epsilon_D. Since |sin| is 1-Lipschitz, replacing all actual
+directions by their ideal phase directions loses at most
+
+    2 epsilon_D N_i N_j.                                  (11)
+
+If a train of H_i physically crosses a train of H_j, that crossing was removed
+in the initial high-defect deletion. Both endpoints survive pruning; any retained
+low-defect crossing between them would still be an edge and would put them in the
+same retained component. Removing physical crossing pairs loses at most their
+number because every determinant is at most one.
+
+Let E_hi(H_i,H_j) be the initial high-defect crossings between the two retained
+vertex sets. Then
+
+    W_ij
+      >= (sqrt(3)/2)
+         [N_i N_j - M_i M_j - b_i b_j - a_i a_j]
+         - 2 epsilon_D N_i N_j
+         - |E_hi(H_i,H_j)|.                               (12)
+
+Hence
+
+    W_ij
+      >= (sqrt(3)/2)(M_i b_j + b_i M_j) - o(D^2).         (13)
+
+Using (1),
+
+    W_ij
+      >= (sqrt(3) lambda D / 4)(M_i + M_j) - o(D^2).      (14)
+
+Thus a phase-heavy macroscopic grain is more expensive, not less expensive, to
+keep separate from another retained grain. The previous b_i b_j estimate
+discarded this information.
+
+## 4. Global form
+
+Let
+
+    V_cross = sum_(i<j) W_ij.
+
+For fixed lambda, Section 50 gives O_lambda(1) retained components,
+N_i = O(D), and epsilon_D = o(1). The high-defect crossing sets are disjoint
+across component pairs and have total size O(D^(2-eta)) = o(D^2). Summing (12),
+
+    V_cross
+      >= (sqrt(3)/2) sum_(i<j)
+         [N_i N_j - M_i M_j - b_i b_j - a_i a_j]
+         - o(D^2).                                        (15)
+
+Equivalently,
+
+    V_cross
+      >= (sqrt(3)/2) sum_(i<j)
+         [M_i(a_j+b_j)
+          + (a_i+b_i)M_j
+          + a_i b_j
+          + b_i a_j]
+         - o(D^2).                                        (16)
+
+If H_* is any retained component, its pairs with all other retained components
+alone contribute
+
+    V_cross
+      >= (sqrt(3)/2) M_* sum_(j != *) b_j - o(D^2)
+      >= (sqrt(3) lambda D / 4)(k-1) M_* - o(D^2).        (17)
+
+## 5. Zonotope budget consequence
+
+The exact train-zonotope identity gives
+
+    V_cross <= V_miss
+            = area(Z) - area(R).
+
+For a pure disk, per(Z) = 2T, so area(Z) <= T^2/pi. Section 36 and the strict
+survivor shell window give
+
+    area(R) = pi D^2 / 4 - O(D).
+
+Therefore
+
+    (sqrt(3)/2) sum_(i<j)
+      [N_i N_j - M_i M_j - b_i b_j - a_i a_j]
+      <= T^2/pi - pi D^2/4 + o(D^2).                      (18)
+
+This strictly strengthens the previous bound
+
+    sqrt(3) sum_(i<j) b_i b_j
+      <= T^2/pi - pi D^2/4 + o(D^2),
+
+because every bracket in (18) is at least 2 b_i b_j.
+
+## 6. Scope and remaining bottleneck
+
+This is a proof-only strengthening of the noncanonical Target B multi-grain
+route. It does not alter theorem-state authority and does not close Target B.
+
+The cross-grain virtual determinant mass now sees the full three-phase population
+vector rather than only the two second-largest classes. In particular a retained
+component cannot evade the virtual-area budget merely by placing most of its trains
+in one phase class.
+
+The remaining obstruction is still the physical conversion. The virtual mass in
+(15)-(18) is not automatically Oler shell surplus. A closing theorem must couple
+this stronger cross-grain mass to Section-50 deleted/interface crossings and retained
+physical crossings, or turn it into a strict smaller-diameter competitor.

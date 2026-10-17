@@ -1,0 +1,184 @@
+# Target C-II — the minimal reciprocal `K_6` has sign counts only `6+9` or `7+8`
+
+**Date:** 2026-09-18  
+**Status:** proved candidate; theorem-state authority unchanged  
+**Scope:** the six-point unit-force reciprocal obstruction from a degree-pure minimal one-anchor `K_5` dual block  
+**Depends on:** `target_c_reciprocal_hull_angle_sign_split_2026-09-18.md`; `target_c_reciprocal_h5_five_edge_sign_exclusion_2026-09-18.md`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The reciprocal hull theorem leaves only H5 and H6.  Combining its local signed-degree
+constraints with the H5 five-edge exclusion gives a global sign-count classification:
+
+\[
+\boxed{
+\{|E_+|,|E_-|\}=\{6,9\}\ \text{or}\ \{7,8\}.
+}
+\tag{0.1}
+\]
+
+Thus neither sign can occur on fewer than six of the fifteen reciprocal edges.
+The result is exact and finite; no source turn-gap or translation-surface input is used.
+
+---
+
+## 1. Normalize to the minority sign color
+
+Globally reversing every reciprocal edge sign multiplies all six equilibrium equations
+by `-1` and changes none of the metric consequences.  Choose the positive sign to be
+the minority color and put
+
+\[
+m:=|E_+|\le7.
+\tag{1.1}
+\]
+
+We prove `m>=6` in both possible hull regimes.
+
+---
+
+## 2. H5 already gives `m>=6`
+
+In H5, every hull vertex has positive degree two or three after either global sign
+choice.  Hence `m>=5`.  The separate five-edge exclusion proves that `m=5` is
+impossible by the exact signed-length balance.  Therefore
+
+\[
+\boxed{m\in\{6,7\}\qquad\text{in H5}.}
+\tag{2.1}
+\]
+
+The corresponding hull/interior degree ledgers are:
+
+- if `m=6`, writing `t` for the number of hull vertices of positive degree three and
+  `d_x` for the positive degree of the interior point,
+  \[
+  t+d_x=2;
+  \tag{2.2}
+  \]
+- if `m=7`,
+  \[
+  t+d_x=4.
+  \tag{2.3}
+  \]
+
+---
+
+## 3. H6 gives `m>=6` from degree alone
+
+In H6 all six reciprocal points are hull vertices.  The hull-angle theorem says that at
+most one vertex can have a `1+4` sign split; every other vertex has a `2+3` split.
+
+For the chosen positive color, five vertices therefore have positive degree at least
+two.  The sixth has positive degree at least one.  Hence
+
+\[
+2m=\sum_{i=0}^5 d_i\ge5\cdot2+1=11.
+\]
+
+Since the left side is even,
+
+\[
+2m\ge12,
+\]
+
+and therefore
+
+\[
+\boxed{m\ge6.}
+\tag{3.1}
+\]
+
+Combined with `m<=7`, this gives `m in {6,7}` in H6 as well.
+
+---
+
+## 4. Exact H6 minority-degree ledgers
+
+The same argument gives a small finite list of degree sequences for the minority sign
+graph.
+
+### 4.1 Six minority edges
+
+If `m=6`, then
+
+\[
+\sum_i d_i=12.
+\]
+
+If there is no `1+4` vertex, all six degrees are at least two, so every degree is
+exactly two:
+
+\[
+\boxed{(d_i)=(2,2,2,2,2,2).}
+\tag{4.1}
+\]
+
+If there is an exceptional hull vertex, degree four is impossible because it would
+already force total degree at least `4+5*2=14`.  Thus the exceptional degree is one.
+The remaining five vertices contribute at least ten, leaving exactly one additional
+degree above two among them.  Hence, up to permutation,
+
+\[
+\boxed{(d_i)=(3,2,2,2,2,1).}
+\tag{4.2}
+\]
+
+So these are the only H6 degree sequences with six minority edges.
+
+### 4.2 Seven minority edges
+
+If `m=7`, then
+
+\[
+\sum_i d_i=14.
+\]
+
+With no exceptional vertex, starting from six degree-two vertices leaves exactly two
+extra incidences, so
+
+\[
+\boxed{(d_i)=(3,3,2,2,2,2).}
+\tag{4.3}
+\]
+
+If the exceptional degree is one, the remaining five degree-two baseline contributes
+ten, and three more incidences are required:
+
+\[
+\boxed{(d_i)=(3,3,3,2,2,1).}
+\tag{4.4}
+\]
+
+If the exceptional degree is four, the other five vertices must all have degree two:
+
+\[
+\boxed{(d_i)=(4,2,2,2,2,2).}
+\tag{4.5}
+\]
+
+No other H6 minority-degree sequence is compatible with the hull-angle theorem.
+
+---
+
+## 5. Frontier effect
+
+The original finite reciprocal target allowed an arbitrary signing of all fifteen edges
+of `K_6`.  The current proof-only chain now forces all of the following before any
+coordinate equations are solved:
+
+1. the reciprocal hull is H5 or H6;
+2. in H5 every hull signed degree is `2` or `3`;
+3. in H6 at most one vertex has signed degree `1` or `4`;
+4. both edge signs occur at least six times; and
+5. after choosing the minority sign, only the degree ledgers in Sections 2 and 4 remain.
+
+Thus every survivor has sign-count split exactly `6+9` or `7+8`.  These finite ledgers
+can now be combined with cyclic radial order, the five source `<120` force-gap
+constraints, the signed second-moment identity, and the six-pentagon translation
+surface.  In particular there is no need to search sign patterns with a sign class of
+size five or less.
+
+No theorem-state file is changed.
+
+**Disposition:** reduced the signed reciprocal `K_6` to sign counts `6+9` or `7+8` and
+listed the exact H6 minority-degree sequences.  C-II remains open.

@@ -1,0 +1,113 @@
+# Target C-II — collapsed support-six blocks consume at least eleven strict rhombi
+
+**Date:** 2026-09-22  
+**Claim class:** exact finite/global train-topology strengthening; theorem-state authority unchanged  
+**Scope:** degree-pure collapsed support-six one-anchor components after maximal two-anchor activation  
+**Depends on:** the audited weights-through-nine certificate, the audited 388-cell / 42-orbit rotation census, the exact MI.1 cycle equations, strict crossing-angle difference constraints, the forced crossing rotations, and exhaustive planarization  
+**Certificate:** `research/verify_target_c_support6_collapsed_eleven_crossing_floor_2026_09_22.cpp`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The collapsed support-six endpoint has twelve internal relation trains. Let (X_K) be
+the number of strict-rhombus crossings whose two complete trains are both internal
+to one collapsed block (K). The prior exact finite certificate excluded weights
+(0,ldots,9), proving (X_Kge10). The present run extends the same necessary
+condition search to weight ten and finds no planar candidate:
+
+\[
+\boxed{X_K\ge 11.}
+\tag{TC.1}
+\]
+
+This is a global statement about any planar stopped-train realization of the block.
+It does not assert that eleven crossings are realizable, and it does not use the
+nonlinear six-face closure equations.
+
+## Exact finite certificate
+
+The verifier reconstructs the 388 rational rotation cells (180 all-cross and 208
+mixed) and their 42 sign-preserving symmetry representatives. For every representative
+and every selected internal train-pair set of cardinality (10), it performs the
+following exact tests:
+
+1. solve the complete MI.1 affine system over (mathbb F_2);
+2. retain only triangle-free crossing assignments;
+3. enumerate every orientation of every selected strict crossing window
+   \[
+   1<x_e-x_f<2\quad\text{or}\quad1<x_f-x_e<2;
+   \]
+4. impose all selected windows simultaneously on the same strict rational difference
+   cell; and
+5. planarize every selected crossing with its geometrically forced cyclic rotation
+   and enumerate every order of multiple selected crossings along every train.
+
+The strict difference feasibility test is the exact integer-scaled Bellman--Ford
+criterion used by the audited weights-through-nine certificate. The planarization test
+uses Euler characteristic; positive genus for every order is a necessary-condition
+exclusion.
+
+The complete aggregate output of the new weight-ten pass is
+
+```text
+TOTAL k=10 parity=58377 tri=40324 metric=20349 planar=0
+PASS: no collapsed support-six symmetry orbit admits a planar, angle-compatible MI.1 crossing pattern with 10 internal crossings.
+```
+
+Here `parity` counts all MI.1 survivors, `tri` applies the necessary triangle-free
+condition, `metric` counts assignments with at least one simultaneous orientation of
+all strict crossing windows, and `planar` counts assignments for which some
+crossing-order permutation has genus zero. The final count is zero in both matching
+types and every one of the 42 representatives; the displayed total is the sum of
+the 42 per-representative rows emitted by the verifier.
+
+The representative quotient is safe in the excluding direction: every labelled cell
+is the image of a representative under a sign-preserving relabeling and/or reflection,
+and the MI.1 equations, strict angle windows, forced crossing sign, and genus are
+transported by that symmetry. No floating-point decision occurs.
+
+## Global strict-rhombus payment
+
+Distinct collapsed one-anchor components have disjoint internal relation-train sets.
+Since a strict rhombus belongs to exactly two complete trains, an internal crossing
+rhombus counted by one component cannot be counted by another. If (c_6) is the
+number of active collapsed support-six components and (R_4) is the total strict-
+rhombus population, summing (TC.1) gives
+
+\[
+\boxed{R_4\ge11c_6,\qquad c_6\le R_4/11.}
+\tag{TC.2}
+\]
+
+Combining this with the independently audited tangent payment
+
+\[
+d_C\ge M_0+2c_6
+\]
+
+gives the safe two-currency bound
+
+\[
+\boxed{
+c_6\le
+\min\left\{\frac{d_C-M_0}{2},\frac{R_4}{11}\right\}.
+}
+\tag{TC.3}
+\]
+
+In the existing support accounting, where a collapsed block contributes (c_6/7) to
+the support-six term, this replaces the prior (R_4/70) arm by (R_4/77). This is a
+strict finite strengthening, but its asymptotic effect is only a linear payment in
+the number of collapsed blocks while the near-extremal rhombus population can be
+quadratic.
+
+## Scope and remaining obstruction
+
+The theorem does not close C-II. It rules out every weight-ten internal crossing set
+under the audited necessary conditions; weights (11+) are not searched because the
+current certificate does not need them for (TC.1), and an eleven-crossing floor would
+require excluding only weight ten after the prior weights-through-nine theorem. The
+live continuation is to extract a boundary, train-order, or diameter-locking charge
+from the eleven-or-more forced crossings, or to combine (TC.2) with the actual
+terminal/FREE inequalities without discarding its correlation with (d_C).
+
+**Disposition:** proved candidate awaiting independent audit; exact certificate passes;
+canonical theorem state unchanged; C-II remains open.

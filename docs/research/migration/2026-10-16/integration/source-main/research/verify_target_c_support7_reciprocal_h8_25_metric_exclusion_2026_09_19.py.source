@@ -1,0 +1,137 @@
+#!/usr/bin/env python3
+"""Exact rational certificates excluding the two convex support-seven H8 2+5 orbits."""
+
+from collections import Counter
+from fractions import Fraction as F
+from itertools import combinations
+
+
+def edge(a, b):
+    return tuple(sorted((a, b)))
+
+
+def add(dst, src, scale=F(1)):
+    for k, v in src.items():
+        dst[k] += scale * v
+
+
+def form(terms):
+    out = Counter()
+    for coefficient, e in terms:
+        out[edge(*e)] += F(coefficient)
+    return out
+
+
+def triangle(a, b, c, singled):
+    edges = [edge(a, b), edge(a, c), edge(b, c)]
+    singled = edge(*singled)
+    assert singled in edges
+    others = [e for e in edges if e != singled]
+    return form([(1, singled), (-1, others[0]), (-1, others[1])])
+
+
+def quad(a, b, c, d, which):
+    # a<b<c<d in cyclic convex order; ac and bd are crossing diagonals.
+    if which == "outer":
+        return form(
+            [
+                (1, edge(a, b)),
+                (1, edge(c, d)),
+                (-1, edge(a, c)),
+                (-1, edge(b, d)),
+            ]
+        )
+    if which == "other":
+        return form(
+            [
+                (1, edge(a, d)),
+                (1, edge(b, c)),
+                (-1, edge(a, c)),
+                (-1, edge(b, d)),
+            ]
+        )
+    raise ValueError(which)
+
+
+def negtype(c):
+    assert len(c) == 8 and sum(c) == 0 and any(c)
+    out = Counter()
+    for i, j in combinations(range(8), 2):
+        out[edge(i, j)] += F(2 * c[i] * c[j])
+    return out
+
+
+def signed_length(missing, positive):
+    missing = {edge(*e) for e in missing}
+    positive = {edge(*e) for e in positive}
+    out = Counter()
+    for e in combinations(range(8), 2):
+        if e in missing:
+            continue
+        out[e] += F(1 if e in positive else -1)
+    return out
+
+
+def cleaned(counter):
+    return {k: v for k, v in counter.items() if v}
+
+
+# Orbit A: missing C7 = 12,17,23,34,45,56,67.
+missing_a = [(1, 2), (1, 7), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7)]
+positive_a = [
+    (0, 1), (0, 2), (0, 4), (0, 6), (0, 7),
+    (1, 3), (1, 5), (2, 4), (2, 6), (3, 5),
+    (3, 7), (4, 6), (5, 7),
+]
+L_a = signed_length(missing_a, positive_a)
+rhs_a = Counter()
+terms_a = [
+    (F(1, 4), triangle(0, 1, 4, (1, 4))),
+    (F(1, 4), triangle(0, 2, 7, (2, 7))),
+    (F(1, 4), triangle(0, 3, 6, (3, 6))),
+    (F(1, 4), quad(0, 1, 2, 3, "other")),
+    (F(1, 4), quad(0, 3, 4, 7, "outer")),
+    (F(1, 4), quad(0, 5, 6, 7, "outer")),
+    (F(1, 2), quad(1, 2, 5, 6, "other")),
+    (F(1, 4), quad(1, 4, 5, 6, "outer")),
+    (F(1, 2), quad(2, 3, 4, 5, "other")),
+    (F(1, 4), quad(2, 3, 4, 7, "outer")),
+    (F(1, 4), quad(2, 3, 6, 7, "other")),
+    (F(1, 2), quad(3, 4, 5, 6, "other")),
+    (F(1, 16), negtype((1, 1, -1, -1, 1, 1, -1, -1))),
+    (F(1, 8), negtype((1, 0, -1, 1, -1, 0, 1, -1))),
+    (F(1, 8), negtype((1, 0, -1, 0, 0, 1, 0, -1))),
+    (F(1, 8), negtype((1, -1, 1, 0, -1, 1, -1, 0))),
+    (F(1, 8), negtype((1, -1, 0, 1, 0, 0, -1, 0))),
+    (F(1, 8), negtype((1, -1, 0, 1, -1, 1, 0, -1))),
+    (F(1, 16), negtype((1, -1, -1, 1, 1, -1, -1, 1))),
+]
+for coefficient, residual in terms_a:
+    add(rhs_a, residual, coefficient)
+negative_L_a = Counter({k: -v for k, v in L_a.items()})
+assert cleaned(rhs_a) == cleaned(negative_L_a)
+
+# Orbit B.
+missing_b = [(1, 4), (1, 5), (2, 5), (2, 6), (3, 6), (3, 7), (4, 7)]
+positive_b = [
+    (0, 1), (0, 3), (0, 4), (0, 5), (0, 7),
+    (1, 2), (1, 6), (2, 3), (2, 7), (3, 4),
+    (4, 5), (5, 6), (6, 7),
+]
+L_b = signed_length(missing_b, positive_b)
+rhs_b = Counter()
+terms_b = [
+    (F(1), triangle(0, 2, 5, (2, 5))),
+    (F(1), quad(0, 1, 4, 5, "other")),
+    (F(1), quad(0, 2, 4, 7, "outer")),
+    (F(1), quad(2, 3, 6, 7, "other")),
+    (F(1, 2), negtype((1, -1, 1, -1, 1, -1, 1, -1))),
+]
+for coefficient, residual in terms_b:
+    add(rhs_b, residual, coefficient)
+negative_L_b = Counter({k: -v for k, v in L_b.items()})
+assert cleaned(rhs_b) == cleaned(negative_L_b)
+
+print("PASS: exact metric identities for both H8 ground-2+5 orbits")
+print("orbit A residual terms:", len(terms_a))
+print("orbit B residual terms:", len(terms_b))

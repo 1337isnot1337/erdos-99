@@ -1,0 +1,59 @@
+# Hostile audit — attachment-cell diameter-square budget
+
+**Date:** 2026-09-13
+**Reviewed:** `target_c_attachment_cell_diameter_square_budget_2026-09-13.md`
+**Disposition:** **PASS at stated proof-only full-core scope.**
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+## 1. Area localization
+
+The source scope is the no-container full-core branch. The audited harmonic-face
+fidelity identifies all but `o(D^2)` of the full strict-rhombus area with local cell
+faces. Every such rhombus is contained in its attachment polygon, and the attachment
+polygon interiors are pairwise disjoint. Hence the sum of cell areas is at least
+`A_4-o(D^2)`, with no claim that the cells cover the force hull.
+
+The full-core near-disk theorem supplies
+
+`A_4=(pi/4-o(1))D^2`.
+
+This is not valid for an arbitrary selected carrier, and the reviewed note keeps that
+scope explicit.
+
+**Verdict:** PASS.
+
+## 2. Isodiametric step
+
+For each convex attachment polygon, `area(P_r)<=pi d_r^2/4`. Summing gives
+
+`sum d_r^2 >= (4/pi) sum area(P_r) >= D^2-o(D^2)`.
+
+The inequality `sum d_r >= sqrt(sum d_r^2)` is valid because the diameters are
+nonnegative. Thus (CSB.1)--(CSB.2) have the stated constants.
+
+**Verdict:** PASS.
+
+## 3. Five-currency substitution
+
+The exact finite ledger is
+
+`2(q-k)+2=sum d_r+G_D+Q+u_B+k`.
+
+Inserting `sum d_r>=D-o(D)` gives
+
+`G_D+Q+u_B+k<=2(q-k)-D+o(D)`.
+
+The Type-II identity `e_BB=Q+2k+u_B` gives `Q+u_B+k=e_BB-k`, so the second form is
+also exact at finite scale up to the displayed `o(D)` area loss.
+
+**Verdict:** PASS.
+
+## 4. Limits and non-implications
+
+The audit does not promote the result to theorem-state authority. The budget is an
+upper bound on a combined currency and does not control any one term. It does not
+close the high-detour full-core branch, the inactive-container branch, or the Level-I
+quantifier. Contact-isolated source points remain outside the core cell ledger.
+
+**Final verdict:** PASS at proof-only scope; theorem state and C-II status remain
+unchanged.

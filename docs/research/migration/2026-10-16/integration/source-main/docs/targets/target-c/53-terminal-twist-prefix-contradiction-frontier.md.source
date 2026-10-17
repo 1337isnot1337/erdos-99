@@ -1,0 +1,55 @@
+# Target C — C97 terminal-twist prefix contradiction frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_terminal_twist_prefix_contradiction_2026-09-05.md](../../reports/target_c_terminal_twist_prefix_contradiction_2026-09-05.md).
+
+Audit: [target_c_c97_terminal_twist_audit_2026-09-05.md](../../audits/target_c_c97_terminal_twist_audit_2026-09-05.md).
+
+C97 closes the canonical **exact pure chain-face** branch C80-C96.
+
+In the C65 lexicographically normalized source, suppose a pure simply connected strict-rhombic disk contains the exact straight diameter chain
+
+`z=x_0,x_1,...,x_D=a`.
+
+Every internal chain vertex is non-extreme and hence has no diameter reaction. C65 gives positive stress on every actual contact. The two chain contacts are opposite; positive equilibrium forces at least one off-chain contact ray in each open half-plane, while triangle-freeness permits at most one in each semicircle. Thus every internal chain vertex has exactly four contacts.
+
+If the upper off-chain ray at `x_i` has angle `theta_i in (pi/3,2pi/3)`, unit separation of consecutive upper neighbors gives
+
+`theta_(i+1)<=theta_i`,
+
+with equality exactly across an upper rhombus. The lower row is monotone in the opposite oriented sense.
+
+Two terminal rhombi on the same side would propagate a monotone row between two translated copies of the diameter endpoints. The global diameter bound then forces the row translation to be constant, producing a second parallel length-`D` segment; its cross distances contradict diameter `D`. Therefore the first and last chain edges are both outer-boundary edges, with the outer face on opposite sides. This is the **terminal twist**.
+
+The terminal edges must lie on opposite `z`-to-`a` paths of the simple outer contact boundary. The first chain train `tau_1` therefore terminates in the first boundary edge of one path, while the last chain train `tau_D` terminates in the final edge of the opposite path. Passing to the convex-hull vertices on those paths gives, after naming the hull arcs `U,L`,
+
+`U_0={z}` and `L_D={a}`
+
+for the C83 prefix levels.
+
+C88's equality staircase forces the simple prefix edge `{0,D}`. C87.4 requires every simple prefix edge in both physical transverse orientations. One required orientation for `{0,D}` is then
+
+`U_0 L_D = za`.
+
+But the chain diameter has transverse coefficient `eta_za=0`, whereas every non-chain interval bar used by C87 has `eta!=0`. Contradiction.
+
+Hence:
+
+> **C97.** No C65 lexicographically normalized triangle-free global minimizer can simultaneously admit the exact C76/C80 straight-chain geometry and the pure simply connected strict-rhombic train-coordinate realization.
+
+This supersedes C96's geometric-classification target inside that exact branch.
+
+## What C97 does not close
+
+C76 is an implication
+
+`S_z=1 => exact straight-chain stress`.
+
+It does not prove that the star face `S_z=1` exists; for a finite source that face may be empty. C66-C81 permit a sequence whose KKT stress approaches the star face without reaching it. C80 also assumes the pure-disk train model.
+
+The live next target is therefore a stability/extension theorem:
+
+1. **uniform star-face exclusion:** prove that C97 implies `S_z<=1-delta` at the scale needed to contradict the C66 near-zero response phase; or
+2. **near-chain stability:** convert C81 near-saturated star-to-leaf contact flow into enough ordered near-parallel train geometry that the terminal-prefix contradiction survives quantitatively; or
+3. **defect extension:** propagate the terminal-prefix obstruction through the non-rhombic/outer-pocket train terminations of the general C-II topology.

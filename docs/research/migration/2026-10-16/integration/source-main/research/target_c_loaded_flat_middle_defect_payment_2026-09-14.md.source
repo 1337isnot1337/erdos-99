@@ -1,0 +1,217 @@
+# Erdős Problem #99 — loaded flat middles are degree-two and pay the exact defect ledger
+
+**Date:** 2026-09-14  
+**Target:** Target C-II, canonical full-core Type-II branch  
+**Dependencies:** force-hull extremality of loaded terminals; triangle-free contact geometry; exact post-ZF incidence ledger ZI  
+**Claim class:** exact local theorem and exact ledger consequence
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The flat-pentagon endpoint leaves a loaded/unloaded split at each almost-straight middle vertex. The loaded side is not arbitrary: convex-hull extremality forbids any third contact once the two pentagon-chain contacts are sufficiently close to antipodal.
+
+Thus every loaded flat middle has contact degree exactly two. It contributes one full unit to the canonical loaded contact-degree slack
+
+\[
+s_B:=3q-e_{BI}-2e_{BB}
+=\sum_{b\in B}(3-\deg_C b).
+\]
+
+The exact post-ZF incidence identity then forces any population `L_flat` of distinct loaded flat middles to be paid by the ordinary loaded/pinned defect currencies:
+
+\[
+\boxed{
+e_{BB}+3s_C
+\ge L_{flat}+3k-6,
+\qquad k=d_H+s_Z.
+}
+\tag{LF.1}
+\]
+
+This converts the loaded branch of the pentagon endpoint into a finite scalar payment, while the unloaded branch is governed by the stress-through theorem.
+
+---
+
+## 1. Hull rays lie in a semicircle
+
+Let `m` be a loaded force-hull vertex. Canonical force visibility identifies loaded terminals with extreme vertices of the convex hull of the positive contact core. Therefore there is a supporting line through `m` such that every other core vertex lies in one closed half-plane.
+
+Equivalently, all contact-neighbor direction rays from `m` lie in one closed angular semicircle.
+
+Now suppose `l,m,r` are consecutive boundary vertices of a bounded face with
+
+\[
+\theta:=\angle lmr=\pi-\delta,
+\qquad 0<\delta<\pi/6.
+\tag{LF.2}
+\]
+
+Triangle-freeness implies every consecutive contact-ray gap is strictly greater than `pi/3`.
+
+Assume for contradiction that `m` has a third contact neighbor `x`. Since the open bounded face occupies the `l`-to-`r` sector of angle `pi-delta`, the ray `mx` lies in the complementary sector. Write the three cyclic ray gaps as
+
+\[
+\pi-\delta,
+\qquad \phi,
+\qquad \psi,
+\tag{LF.3}
+\]
+
+with
+
+\[
+\phi,\psi>{\pi\over3},
+\qquad
+\phi+\psi=\pi+\delta.
+\]
+
+Because `delta<pi/6`, each of `phi,psi` is also strictly less than `5pi/6`, hence strictly less than `pi`. Thus **all three cyclic gaps are strictly less than `pi`**.
+
+A finite set of rays is contained in a closed semicircle if and only if some complementary cyclic gap has size at least `pi`. Here no such gap exists. Contradiction.
+
+Therefore a loaded flat middle has no third contact:
+
+\[
+\boxed{\deg_C(m)=2.}
+\tag{LF.4}
+\]
+
+(The lower bound two is supplied by the two pentagon-chain contacts themselves.)
+
+---
+
+## 2. Every loaded flat middle contributes one unit of `s_B`
+
+By definition
+
+\[
+e_{BI}+2e_{BB}
+=\sum_{b\in B}\deg_C(b),
+\]
+
+so
+
+\[
+\boxed{
+s_B=\sum_{b\in B}(3-\deg_C b).}
+\tag{LF.5}
+\]
+
+Canonical C35 gives `deg_C b<=3`, so every summand is nonnegative. Equation (LF.4) shows that each distinct loaded flat middle contributes exactly one.
+
+Hence, if `L_flat` is the number of distinct loaded flat middles in any sufficiently flat family,
+
+\[
+\boxed{s_B\ge L_{flat}.}
+\tag{LF.6}
+\]
+
+No disjointness of the remaining pentagon vertices is required for this count; the middle vertices themselves only need to be distinct.
+
+---
+
+## 3. Exact defect payment
+
+The exact post-ZF incidence/population ledger ZI is
+
+\[
+\sum_r\delta_r+U+s_B+3(d_H+s_Z)
+=6+e_{BB}+3s_C,
+\tag{LF.7}
+\]
+
+where
+
+- every component graph diameter `delta_r` is nonnegative;
+- the attachment surplus `U` is nonnegative;
+- `k=d_H+s_Z>=0`.
+
+Discard the first two nonnegative terms on the left and use (LF.6):
+
+\[
+6+e_{BB}+3s_C
+\ge s_B+3k
+\ge L_{flat}+3k.
+\]
+
+Therefore
+
+\[
+\boxed{
+e_{BB}+3s_C\ge L_{flat}+3k-6.}
+\]
+
+This is (LF.1).
+
+Normalized along an unbounded sequence, if
+
+\[
+{L_{flat}\over D}\to\lambda_L,
+\qquad
+{k\over D}\to\kappa,
+\]
+
+then
+
+\[
+\boxed{
+\liminf {e_{BB}+3s_C\over D}
+\ge\lambda_L+3\kappa.
+}
+\tag{LF.8}
+\]
+
+---
+
+## 4. Loaded/unloaded endpoint dichotomy
+
+Let `N_flat` be any family of distinct sufficiently flat pentagon middle vertices. Split it into loaded and unloaded populations
+
+\[
+N_{flat}=L_{flat}+U_{flat}.
+\tag{LF.9}
+\]
+
+Then at least one of the following holds:
+
+\[
+L_{flat}\ge {N_{flat}\over2},
+\qquad\text{or}\qquad
+U_{flat}\ge {N_{flat}\over2}.
+\tag{LF.10}
+\]
+
+In the first branch, (LF.1) gives
+
+\[
+\boxed{
+e_{BB}+3s_C\ge {N_{flat}\over2}+3k-6.}
+\tag{LF.11}
+\]
+
+In the second branch, the unloaded stress-through theorem gives a linear population of flat middles at which all contact stress external to the two almost-antipodal chain contacts is `o(1)` relative to the through stress, with the two through-edge weights asymptotically equal.
+
+So the small-residual pentagon endpoint is reduced to a concrete two-way global obstruction:
+
+```text
+many loaded degree-two flat middles
+    -> linear exact defect payment e_BB+3s_C;
+
+many unloaded flat middles
+    -> linear family of asymptotic contact-stress-through couplers.
+```
+
+The first branch is now scalarized; the second remains a stress-transport problem.
+
+---
+
+## 5. Scope audit
+
+- The semicircle argument uses convex-hull extremality only for loaded positive-core terminals.
+- The bounded face sector is the actual embedded face sector, so a third contact cannot lie inside it.
+- The strict `>pi/3` contact-ray gap uses triangle-freeness; without it the semicircle contradiction can fail at equality.
+- ZI is used only through its exact finite identity and nonnegativity of its surplus terms.
+- No upper bound on `e_BB+3s_C`, no absolute KKT weight floor, and no strict diameter deformation is asserted.
+
+**Disposition:** exact loaded-flat-middle payment theorem. C-II remains open.

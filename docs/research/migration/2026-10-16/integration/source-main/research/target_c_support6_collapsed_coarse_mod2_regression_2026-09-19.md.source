@@ -1,0 +1,139 @@
+# Target C-II — coarse mod-2 parity does not eliminate any collapsed support-six rotation cell
+
+**Date:** 2026-09-19  
+**Claim class:** exact finite regression; theorem-state authority unchanged  
+**Scope:** the 388 collapsed support-six rational rotation cells from `target_c_support6_collapsed_rotation_cell_reduction_2026-09-19.md`  
+**Depends on:** the exact rotation-cell census; the audited mod-2 relation-cycle equation (MI.1); the strict unit-rhombus crossing-angle necessity  
+**Certificate:** `research/verify_target_c_support6_collapsed_coarse_mod2_2026_09_19.cpp`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The new mod-2 relation-cycle theorem gives a systematic global obstruction for a fixed rotation/crossing cell. A tempting shortcut is to avoid subdividing the 388 exact rotation cells along all crossing-angle walls: for each train pair, force its crossing bit to zero only if that pair can never enter the strict unit-rhombus crossing window anywhere in the whole rotation cell, and otherwise leave that bit free. If this coarse binary relaxation were inconsistent, the entire rotation cell would be excluded at once.
+
+It is never inconsistent.
+
+The exact finite verifier applies this relaxation to every one of the 388 rational rotation cells and every pair of edge-disjoint simple relation cycles. It finds
+
+\[
+\boxed{
+\text{all 388 coarse MI.1 systems are consistent over }\mathbb F_2.
+}
+\]
+
+For the all-cross matching type, 30--34 of the 66 train-pair crossing variables remain potentially active, the parity rank is always 16, and the affine solution dimension ranges from 14 to 18. For the mixed matching type, 30--35 variables remain potentially active, again at rank 16, with affine dimension 14--19.
+
+Thus the global mod-2 theorem is useful only after more metric information is retained. In particular, the contradiction in the second certified collapsed root box genuinely uses its fixed side of several `|u_e.u_f|=1/2` crossing walls; it cannot be lifted to its entire coarse rotation cell by parity alone.
+
+The next finite target is therefore the crossing-threshold subdivision
+
+\[
+1<|x_e-x_f|<2,
+\qquad x_e={3\alpha_e\over\pi},
+\]
+
+inside the 42 conservative symmetry orbits. Apply MI.1 to those refined cells first, then Jordan/pseudosegment constraints, and use the nonlinear six-face closure equations only on survivors.
+
+---
+
+## 1. Conservative crossing variables
+
+Fix one of the exact rational rotation cells. Its base constraints are the strict integer differences
+
+\[
+0<G_i<2,
+\qquad
+2<G_i+G_{i+1}<3
+\]
+
+on the twelve scaled projective train angles `x_e`.
+
+For a train pair `e,f`, strict unit-rhombus crossing requires
+
+\[
+1<|x_e-x_f|<2.
+\tag{1.1}
+\]
+
+The verifier asks, exactly, whether either open interval
+
+\[
+1<x_e-x_f<2
+\quad\text{or}\quad
+1<x_f-x_e<2
+\tag{1.2}
+\]
+
+has nonempty intersection with the base rotation cell. This is another strict integer-difference feasibility query and uses the same exact Bellman--Ford reduction as the rotation-cell certificate.
+
+- If neither interval is feasible, then `e,f` cannot cross anywhere in the cell, so set `x_{e,f}=0`.
+- If at least one interval is feasible, leave `x_{e,f}` as a free binary variable.
+
+The second rule is deliberately weak. It does not require the pairwise crossing windows for different variables to be simultaneously realizable by one angle vector, and it does not assert that a compatible pair actually crosses. The resulting binary system is an over-relaxation of every actual geometric realization in that coarse cell.
+
+Therefore an inconsistency would rigorously exclude the whole cell. Consistency proves only that this shortcut cannot exclude it.
+
+---
+
+## 2. Complete cycle-equation generation
+
+The verifier enumerates every simple cycle of the octahedral relation graph `K_6\setminus M`. For every unordered pair of edge-disjoint cycles `C,D`, it constructs the audited MI.1 equation
+
+\[
+\bigoplus_{e\in E(C),\,f\in E(D)}x_{e,f}
+=
+\bigoplus_{v\in V(C)\cap V(D)}\eta_v(C,D).
+\tag{2.1}
+\]
+
+The alternation bit `eta_v` is read directly from the exact cyclic relation-edge order of the rotation cell. Train pairs sharing a cycle vertex are retained in the left side exactly as required by the hostile audit of MI.1.
+
+Every train pair ruled out by Section 1 is substituted as zero. Every remaining train-pair variable is kept independent. The resulting affine system is reduced exactly over `F_2`.
+
+---
+
+## 3. Exact output
+
+The reproduced certificate output is
+
+```text
+all-cross matching: cells=180, coarse-parity-inconsistent=0, allowed-vars=30..34, rank=16..16, affine-dim=14..18
+all-cross matching: affine-dim histogram 14:24 15:12 16:24 17:96 18:24
+mixed matching: cells=208, coarse-parity-inconsistent=0, allowed-vars=30..35, rank=16..16, affine-dim=14..19
+mixed matching: affine-dim histogram 14:8 15:24 16:56 17:64 18:32 19:24
+PASS: coarse MI.1 parity is consistent on all 388 rotation cells; crossing-wall subdivision is necessary.
+```
+
+The total affine-dimension histograms are therefore
+
+\[
+\begin{array}{c|rrrrrr}
+\text{dimension}&14&15&16&17&18&19\\ \hline
+\text{all-cross}&24&12&24&96&24&0\\
+\text{mixed}&8&24&56&64&32&24.
+\end{array}
+\]
+
+The constant rank 16 is an observed exact finite property of this coarse relaxation. No structural rank theorem is claimed from it here.
+
+---
+
+## 4. What this rules out
+
+This is a regression against a proof strategy, not evidence for a collapsed source.
+
+It rules out the proposed shortcut
+
+> rotation cell + all uniformly impossible crossings + MI.1 alone
+
+as a complete support-six exclusion: not one of the 388 cells dies under that relaxation.
+
+It does **not** show that any one of the 388 cells contains an exact six-pentagon closure root, much less a globally embedded stopped-train source. The relaxed binary solutions may combine crossing bits whose angle windows have empty simultaneous intersection; they may violate pseudosegment/Jordan constraints; and they may fail the nonlinear vector-closure equations.
+
+The useful consequence is procedural and exact. The crossing walls carry load-bearing information and should not be projected away. The finite endpoint should now be refined in the order
+
+1. exact threshold subdivision by `1<|x_e-x_f|<2`;
+2. MI.1 inconsistency elimination;
+3. Jordan and stronger pseudosegment realizability tests;
+4. nonlinear six-face closure certification/falsification on the residual cells;
+5. only then diameter-locking constraints if any global train cells survive.
+
+**Disposition:** exact negative regression. Coarse mod-2 parity is consistent on every one of the 388 collapsed support-six rotation cells, so a complete finite exclusion must retain crossing-threshold information or add stronger geometry. C-II remains open.

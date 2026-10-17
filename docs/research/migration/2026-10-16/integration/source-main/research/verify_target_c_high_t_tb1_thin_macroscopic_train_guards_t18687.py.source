@@ -1,0 +1,67 @@
+from itertools import product
+from math import ceil, exp, log, sqrt
+
+q0 = 0.05470272542658
+Tstar = 3.0605
+eta = sqrt(3) * q0 / 16
+assert eta > 0.0059
+assert eta < 0.0060
+
+
+# Exact finite wide-same-phase-pair bound used in MG.18--MG.20.
+def wide_same_colour_count(bits):
+    m = len(bits)
+    g = ceil(m / 8)
+    return sum(
+        1
+        for i in range(m)
+        for j in range(i + g, m)
+        if bits[i] == bits[j]
+    )
+
+
+# Exhaust all two-colourings through m=16.  The theorem's analytic bound is
+# m^2/8-m/2; small m are enough to guard the integer threshold convention.
+for m in range(2, 17):
+    lower = m * m / 8 - m / 2
+    worst = min(wide_same_colour_count(bits) for bits in product((0, 1), repeat=m))
+    assert worst + 1e-12 >= lower
+
+
+# The double-count coefficient in MG.29 is a fixed positive constant.
+row_prefactor = 3 * q0**4 / (64 * Tstar**4)
+assert row_prefactor > 0
+assert row_prefactor < 1
+
+
+# Concrete half-exponent choice and the four-bit homogeneous-braid loss.
+ln5 = log(5)
+c_half = 1 / (2 * ln5)
+assert abs((1 - c_half * ln5) - 0.5) < 1e-15
+hom_coeff = c_half / 16
+assert 0.019 < hom_coeff < 0.020
+
+
+# Four-bit pigeonhole: the most balanced possible distribution over sixteen
+# incidence words still has a class of size at least ceil(k/16).
+for k in range(1, 129):
+    q, r = divmod(k, 16)
+    counts = [q + (1 if i < r else 0) for i in range(16)]
+    assert max(counts) >= ceil(k / 16)
+
+
+# k=c log D remains inside the upstream THIN matching regime because
+# k^2 D^(3/4)/D = O((log D)^2 D^(-1/4)) -> 0.
+for logD in (100, 1000, 10000):
+    normalized_error = logD * logD * exp(-logD / 4)
+    if logD == 100:
+        assert normalized_error < 1
+    else:
+        assert normalized_error < 1e-20
+
+
+print("PASS: THIN macroscopic train-guard regressions")
+print("eta_* =", eta)
+print("half-exponent braid coefficient =", c_half)
+print("homogeneous sub-braid coefficient =", hom_coeff)
+print("row prefactor =", row_prefactor)

@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+"""Arithmetic/incidence certificate for support-zero pair shadows in final k6 p10.
+
+Inputs established by earlier committed exact work:
+  * seven-row residual D=-1,k=6,p=10;
+  * coefficient line support exactly two;
+  * all ten selected incomplete root rows are singleton blocks;
+  * deleting both support coordinates leaves p=10;
+  * five-row k=4 virtual-canonical deficiency is at least two;
+  * exact singleton-functional audits give maximum extra rank 2 at d=2
+    (whenever enough singleton replacements exist) and maximum extra rank 6
+    at d=3 with singleton capacity at least seven.
+"""
+
+
+def actual_defect(t: int, p: int, d: int, k: int) -> int:
+    return t + p + 3 * d - 3 * k
+
+
+def main() -> None:
+    D_B = -1
+    global_p = 10
+
+    # Delete one support coordinate and one zero coordinate. The rank-one
+    # coefficient line survives, so quotient-rank drop is zero.
+    D5 = D_B + 4
+    assert D5 == 3
+    k5 = 4
+
+    # Exact actual-state arithmetic D=5+p+3d_root-3k gives p+3d_root=10.
+    options = []
+    for d_root in range(20):
+        p = 10 - 3 * d_root
+        if p >= 0 and actual_defect(5, p, d_root, k5) == D5:
+            options.append((d_root, p))
+    assert options == [(0, 10), (1, 7), (2, 4), (3, 1)]
+    losses = sorted(global_p - p for _, p in options)
+    assert losses == [0, 3, 6, 9]
+
+    # Fix which support coordinate is deleted. There are five choices of the
+    # zero coordinate. Because every global singleton survives deletion of both
+    # support coordinates, it has at least one zero-coordinate touch. Such a
+    # singleton can disappear under {support,z} for at most one z. Hence total
+    # root loss across the five shadows is at most ten. Every non-p10 shadow
+    # loses at least three, so at most three of the five are non-p10.
+    zero_coordinates = 5
+    max_total_loss_per_support = global_p
+    min_positive_loss = 3
+    max_non_p10 = max_total_loss_per_support // min_positive_loss
+    min_p10_per_support = zero_coordinates - max_non_p10
+    assert min_p10_per_support == 2
+    min_p10_total = 2 * min_p10_per_support
+    assert min_p10_total == 4
+
+    # For any resulting five-row D=3,k=4,p=10 all-singleton shadow, the
+    # replacement-functional bound is
+    #   D >= 5+p+3*d_v-3*s,
+    # so D=3 requires s >= d_v+4. Existing exact d=2 and d=3 audits have
+    # singleton-functional maxima 2 and 6 respectively, excluding both.
+    assert 2 < 2 + 4
+    assert 6 < 3 + 4
+
+    # Since all replacement functionals come from at most ten singleton blocks,
+    # s<=10. Therefore only d_v=4,5,6 remain, with the stated minimum required
+    # functional ranks (and therefore minimum canonical-complete singleton q).
+    remaining = []
+    for d_v in range(4, 20):
+        s_min = d_v + 4
+        if s_min <= global_p:
+            remaining.append((d_v, s_min))
+    assert remaining == [(4, 8), (5, 9), (6, 10)]
+
+    print("PASS: support-zero pair-shadow reduction for final seven-no-root k6 p10")
+    print("five_shadow", {"D": D5, "k": k5, "p_options": [p for _, p in options]})
+    print("minimum_p10_pair_shadows_per_support", min_p10_per_support)
+    print("minimum_p10_pair_shadows_total", min_p10_total)
+    print("p10_virtual_remaining", remaining)
+
+
+if __name__ == "__main__":
+    main()

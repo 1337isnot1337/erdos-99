@@ -1,0 +1,102 @@
+# Hostile audit — two-half-disk remainder/sign localization
+
+**Date:** 2026-09-12  
+**Audited source:** research/target_c_halfdisk_remainder_sign_173_2026-09-12.md  
+**Disposition:** PASS at conditional proof-only scope; theorem-state authority unchanged.  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+The audit checks that the two-half-disk group areas can be inserted into the
+finite Section-160 component inequality without a hidden local/global
+identification, and then checks the sign algebra in Section 172.
+
+## 1. Internal rhombus area
+
+The groupwise atomic theorem supplies, on one common finite diagonal,
+
+\[
+\sum_{r\in\mathcal G_i}A_{4,r}
+=\left(\frac{\pi}{8}-o(1)\right)D^2.
+\]
+
+Section 160 uses only rhombi whose four vertices are unloaded. A loaded vertex
+has at most five unit neighbors in a triangle-free source, since consecutive
+neighbor rays are separated by more than \(\pi/3\). Hence it is incident to
+only \(O(1)\) strict rhombus faces. The loaded force-hull population is \(O(D)\).
+The local-rhombus incidence audit bounds the number of times one physical
+local rhombus can be charged. Since each unit rhombus has area at most one,
+the total loaded-touching correction is \(O(D)\), giving
+
+\[
+\sum_{r\in\mathcal G_i}A_{4,r}^{\mathrm{int}}
+=\left(\frac{\pi}{8}-o(1)\right)D^2.
+\]
+
+No claim is made that every local rhombus is a global face, and no isolated
+source point is removed.
+
+## 2. Summation of Section 160
+
+For each component, Section 160 gives
+
+\[
+r_r+\eta_r\ge
+\sqrt{\pi A_{4,r}^{\mathrm{int}}}+2-d_r.
+\]
+
+Rearranging and summing over a group gives
+
+\[
+\sum d_r+\sum(r_r+\eta_r)
+\ge \sum\sqrt{\pi A_{4,r}^{\mathrm{int}}}+2N_i.
+\]
+
+The \(2N_i\) term is nonnegative. Cauchy in the form
+\(\sum\sqrt{a_j}\ge\sqrt{\sum a_j}\) gives the lower bound
+\(\pi D/(2\sqrt2)-o(D)\) for each group. The two group index sets are
+disjoint, so their component terms are disjoint subterms of
+
+\[
+S_D+G_D
+=\sum_r d_r+R_I+s_B+\sum_r\eta_r.
+\]
+
+Dropping all remaining nonnegative terms is therefore legitimate and yields
+\((S_D+G_D)/D\ge\pi/\sqrt2-o(1)\).
+
+## 3. Sign identity
+
+From \(G_D=2+q+m-k-S_D\),
+
+\[
+q+m=S_D+G_D+k-2.
+\]
+
+Subtracting \(\operatorname{per}(F)\) gives
+
+\[
+\chi_D=S_D+G_D+k-2-\operatorname{per}(F).
+\]
+
+Type-II perimeter convergence is \(\operatorname{per}(F)/D\to\pi\).
+Consequently the base lower bound is
+
+\[
+\frac{\pi}{\sqrt2}-\pi
+=-\pi\left(1-\frac1{\sqrt2}\right)
+=-0.920151184510610\ldots.
+\]
+
+The finite outer-walk identity is
+\[
+b-\operatorname{per}(F)=u_B+\chi_D\ge0.
+\]
+It supports only the stated conditional dichotomy: a negative \(\chi_D\) must
+be paid by \(u_B\). The audit rejects any inference that the lower bound on
+\(\chi_D\) makes \(u_B\) uniformly positive or makes \(\chi_D\) nonnegative.
+
+## 4. Scope
+
+The result is conditional on the proof-only two-half-disk alternative and the
+audited Section-160/172 inputs. It does not address the center-wrapping branch,
+the Type-I inactive-container branch, or the source-preserving minimality
+bridge. It is a valid proof-only candidate, not a C-II closure.

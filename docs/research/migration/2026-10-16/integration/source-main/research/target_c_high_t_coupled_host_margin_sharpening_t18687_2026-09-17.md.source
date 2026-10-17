@@ -1,0 +1,320 @@
+# Target C-II — coupled detour feasibility sharpens the host transverse margin to `0.453819...`
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` quantitative strengthening; no canonical promotion claimed  
+**Scope:** the coupled paired-remainder O--O path through `t=(q-k)/D<=1.8687`  
+**Dependencies:** coupled paired-remainder path theorem; exact diameter support-normal theorem; host-forced transverse-margin theorem  
+**Certificate:** `research/verify_target_c_high_t_coupled_host_margin_sharpening_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The previous host-margin theorem used only the coarse inequality
+
+\[
+e_\tau\le0.5857+o(1),
+\]
+
+which gave the transverse component floor `0.4143`. The coupled path theorem contains a stronger sourcewise fact that was not used there:
+
+\[
+\delta\ge d_0-o(1),
+\qquad
+ d_0=F(2.0477),
+\qquad
+F(s)=s-6\sin(s/6),
+\]
+
+while the actual adaptive selection threshold is
+
+\[
+e_\tau\le0.5857-\delta+o(1).
+\]
+
+Therefore every selected terminal satisfies
+
+\[
+1-\cos\alpha
+\le e_\tau+o(1)
+\le0.5857-d_0+o(1),
+\]
+
+and hence
+
+\[
+\boxed{
+\cos\alpha\ge c_H-o(1),
+\qquad
+c_H:=0.4143+d_0.
+}
+\tag{CH.1}
+
+Numerically,
+
+\[
+d_0=0.039519885927\ldots,
+\qquad
+\boxed{c_H=0.453819885927\ldots .}
+\tag{CH.2}
+
+Thus every switching diameter on the selected path has the sharper projective transverse margin
+
+\[
+\boxed{
+ d_{\mathbb{RP}^1}([d_h],[u_i])
+\ge\gamma_H-o(1),
+\qquad
+\gamma_H:=\arcsin c_H
+=26.98902928\ldots^\circ .
+}
+\tag{CH.3}
+
+Equivalently,
+
+\[
+\boxed{|d_h\cdot Ju_i|\ge0.453819885927\ldots-o(1).}
+\tag{CH.4}
+
+This is a pointwise improvement and therefore propagates without any new density loss through the strong-TB1 and exact-antipodal branches.
+
+---
+
+## 1. The adaptive threshold gives the stronger endpoint-normal bound
+
+The coupled path theorem fixes
+
+\[
+a={5857\over10000}
+\]
+
+and selects low-energy trains using
+
+\[
+\lambda(\delta)=a-\delta.
+\]
+
+It also proves the uniform feasibility lower bound
+
+\[
+\delta\ge d_0-o(1),
+\qquad
+ d_0=F(z_0),
+\qquad z_0={20477\over10000}.
+\tag{CH.5}
+
+For either terminal of a selected train, let `alpha` be the deviation of its outward support normal from the corresponding ideal normal branch. The audited terminal-energy inequality gives
+
+\[
+1-\cos\alpha\le e_\tau+o(1).
+\tag{CH.6}
+
+Since the train was selected with `e_tau<=lambda(delta)`, (CH.5)--(CH.6) imply
+
+\[
+1-\cos\alpha
+\le a-d_0+o(1).
+\]
+
+Hence
+
+\[
+\cos\alpha
+\ge1-a+d_0-o(1)
+=c_H-o(1),
+\]
+
+proving (CH.1).
+
+The parent exact certificate encloses `d_0` by outward rational arithmetic, so no floating-point value is needed for the proof. The decimals in (CH.2) are only readable evaluations of the certified expression.
+
+---
+
+## 2. Entire host arcs inherit the sharper interval
+
+On either physical host arc, outward support-normal angle is monotone along the convex boundary. The two extreme selected terminal normals on that host are each within
+
+\[
+\vartheta_H+o(1),
+\qquad
+\vartheta_H:=\arccos c_H,
+\]
+
+of the corresponding ideal normal branch. Therefore the entire host arc has support-normal width at most
+
+\[
+\boxed{2\vartheta_H+o(1)<\pi.}
+\tag{CH.7}
+
+Numerically,
+
+\[
+\vartheta_H=63.01097071\ldots^\circ,
+\qquad
+2\vartheta_H=126.0219414\ldots^\circ.
+\]
+
+Every switching diameter has one birth endpoint on one of these two host subarcs, and an actual diameter direction is an exact outward support normal at that endpoint. Since the selected row phase differs from the common path phase by `o(1)`, the complementary angle to the host interval is exactly the margin (CH.3).
+
+No near-disk midpoint approximation and no C67 deletion are used.
+
+---
+
+## 3. Exact-antipodal force cells get stronger two-sided constants
+
+At an exact-antipodal interface the reaction axis equals the row axis projectively. Both selected exact-force bars are switching diameters, so each satisfies (CH.4).
+
+For the elementary antipodal dipole coordinate,
+
+\[
+\ell_h(sd^{(i)})=2Ds\,d_h\cdot Je_i
+\]
+
+up to the common sign convention. Therefore both selected force bars satisfy
+
+\[
+\boxed{
+|\ell_{h_i^\pm}(sd^{(i)})|
+\ge(2c_H-o(1))D|s|.
+}
+\tag{CH.8}
+
+Since
+
+\[
+2c_H=0.907639771854\ldots,
+\]
+
+the previous `0.8286D|s|` cusp floor improves to
+
+\[
+\boxed{(0.907639771854\ldots-o(1))D|s|.}
+\tag{CH.9}
+
+The exact two-ray force coefficients likewise improve to
+
+\[
+\boxed{
+\lambda_i^\pm
+\ge(c_H-o(1)){|G_i|\over D}.
+}
+\tag{CH.10}
+
+The population densities from the host-sharpened fork are unchanged.
+
+---
+
+## 4. Strong-TB1 blockers get the same sharper opening margin
+
+At every non-antipodal TB1 interface, the selected switching blocker lies in the local dual cone. The local contact rays are in the common shrinking row-phase window, while the blocker is at least `gamma_H-o(1)` from that window. The strong-TB1 cone calculation therefore gives
+
+\[
+\boxed{
+ n_i\cdot w
+\ge(c_H-o(1))D
+}
+\tag{CH.11}
+
+for every unit local contact-opening tangent `w`.
+
+Thus the entire non-antipodal branch has first-order blocking margin
+
+\[
+(0.453819885927\ldots-o(1))D,
+\]
+
+not merely `(0.4143-o(1))D`.
+
+The inverse-`D` TB1 cone-collapse theorem is unchanged in width; only the common-axis blocker projection improves.
+
+---
+
+## 5. Exact-antipodal full-stress balance also improves
+
+Repeat the full-stress balance argument with `c_H` in place of `0.4143`. If
+
+\[
+B_i^+,B_i^-
+\]
+
+are the full switching KKT masses on the two transverse sides, then exact transverse cancellation gives
+
+\[
+\boxed{
+B_i^+,B_i^-
+\ge\left({c_H\over1+c_H}-o(1)\right)B_i.
+}
+\tag{CH.12}
+
+Numerically,
+
+\[
+\boxed{{c_H\over1+c_H}=0.3121568843\ldots .}
+\tag{CH.13}
+
+The common transverse moment satisfies
+
+\[
+\boxed{
+T_i\ge\left({c_H\over2}-o(1)\right)B_i
+=(0.2269099429\ldots-o(1))B_i.
+}
+\tag{CH.14}
+
+Finally every switching ray has axial component at most
+
+\[
+\sqrt{1-c_H^2}+o(1)
+=0.8910934357\ldots+o(1),
+\]
+
+so
+
+\[
+\boxed{
+B_i
+\ge(1.1222167731\ldots-o(1)){|G_i|\over D}.
+}
+\tag{CH.15}
+
+Again this is relative conditioning, not an absolute KKT floor.
+
+---
+
+## 6. Same-host diameter exclusion sharpens metrically
+
+The exact-normal proof already excludes a same-host diameter because the host normal width is below `pi`. The stronger host interval also improves the old direct chord-length estimate. Two source vertices on one selected host arc have angular/radial separation at most
+
+\[
+2\vartheta_H+o(1),
+\]
+
+so Type-II near-disk geometry gives
+
+\[
+\boxed{
+|x-y|
+\le(\sin\vartheta_H+o(1))D
+=(0.8910934357\ldots+o(1))D.
+}
+\tag{CH.16}
+
+This improves the previous approximate `0.911D` same-host metric ceiling.
+
+---
+
+## 7. Frontier effect
+
+The physical host arcs are narrower than the previous high-`t` notes used. The coupled feasibility floor `delta>=d_0-o(1)` feeds directly back into the adaptive terminal-energy threshold and raises every host-derived transverse constant from `0.4143` to `0.4538198859...`.
+
+The strongest current local normal form may therefore use, without density loss:
+
+```text
+every switching diameter >=26.989 degrees from the row phase;
+TB1 opening margin >=(0.4538198859-o(1))D;
+EA dipole slope >=(0.9076397719-o(1))D on both selected bars;
+EA force coefficients >=(0.4538198859-o(1))|G|/D;
+EA full KKT stress >=31.2156% on each transverse side;
+same-host chord length <=(0.8910934357+o(1))D.
+```
+
+C-II remains open because none of these relative bounds supplies an absolute lower KKT scale or by itself contradicts the global nested rail/common-ladder geometry.
+
+**Disposition:** fed the coupled detour lower bound back into the adaptive terminal threshold and sharpened every host-derived transverse constant from `0.4143` to `0.453819885927...`, with no new density loss.

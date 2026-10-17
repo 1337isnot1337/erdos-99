@@ -1,0 +1,112 @@
+name: Target C all-root domination depth-1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: target-c-all-root-domination-depth1
+  cancel-in-progress: true
+
+jobs:
+  prepare:
+    if: github.actor == github.repository_owner && vars.E99_HISTORICAL_CI == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical discovery dependency
+        run: python -m pip install --disable-pip-version-check scipy
+      - name: Reconstruct exact 3,874-cell endpoint
+        run: |
+          python research/verify_target_c_support7_h6_all_root_domination_depth1_2026_09_19.py \
+            --prepare-endpoint rootdom-endpoint.json \
+            | tee rootdom-prepare.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: target-c-rootdom-endpoint
+          path: |
+            rootdom-endpoint.json
+            rootdom-prepare.log
+
+  scan:
+    if: github.actor == github.repository_owner && vars.E99_HISTORICAL_CI == 'true'
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        part: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical discovery dependency
+        run: python -m pip install --disable-pip-version-check scipy
+      - uses: actions/download-artifact@v4
+        with:
+          name: target-c-rootdom-endpoint
+          path: endpoint-artifact
+      - name: Exactify one endpoint partition
+        run: |
+          python research/verify_target_c_support7_h6_all_root_domination_depth1_2026_09_19.py \
+            --endpoint-file endpoint-artifact/rootdom-endpoint.json \
+            --part ${{ matrix.part }} --parts 8 \
+            --output result-${{ matrix.part }}.json \
+            | tee rootdom-${{ matrix.part }}.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: target-c-rootdom-${{ matrix.part }}
+          path: |
+            result-${{ matrix.part }}.json
+            rootdom-${{ matrix.part }}.log
+          if-no-files-found: warn
+
+  summarize:
+    if: github.actor == github.repository_owner && vars.E99_HISTORICAL_CI == 'true'
+    needs: scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical discovery dependency
+        run: python -m pip install --disable-pip-version-check scipy
+      - uses: actions/download-artifact@v4
+        with:
+          name: target-c-rootdom-endpoint
+          path: endpoint-artifact
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: target-c-rootdom-*
+          path: rootdom-results
+          merge-multiple: true
+      - name: Reconstruct reflection-closed depth-one census
+        run: |
+          python research/verify_target_c_support7_h6_all_root_domination_depth1_2026_09_19.py \
+            --endpoint-file endpoint-artifact/rootdom-endpoint.json \
+            --summary-dir rootdom-results \
+            --summary-output rootdom-summary.json \
+            | tee rootdom-summary.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: target-c-rootdom-summary
+          path: |
+            rootdom-summary.json
+            rootdom-summary.log

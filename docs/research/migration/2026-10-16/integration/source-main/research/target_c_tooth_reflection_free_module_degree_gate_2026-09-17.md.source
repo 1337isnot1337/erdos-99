@@ -1,0 +1,176 @@
+# Target C-II — higher-degree free reflection apexes force a third lower gate
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; proof-only strengthening of the FREE-MODULE gate branch  
+**Scope:** FREE reflection modules whose unloaded shallow apex has full contact degree at least four  
+**Dependencies:** free-module two-gate amplification; C26 unloaded-degree bound `3 <= deg_C <= 5`; C65 full diameter visibility; connected positive contact support  
+**Certificate:** `research/verify_target_c_tooth_reflection_free_module_degree_gate_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The two-gate theorem used one inactive-guard absorption. The same argument can be iterated one more time whenever the reflected shallow apex has contact degree at least four. Only a bounded number of guards is moved, so every absorbed guard remains in the same `O(sqrt(D))` canonical support cap and the upper-distance proof is unchanged up to constants.
+
+Let `d=deg_C(x)`. Canonical C26 gives `3 <= d <= 5`. For one FREE reflection module define
+
+\[
+U=\{z\in A:|z-q|>D\},\qquad
+L=D+\delta,\qquad
+t_D=\delta+D^{-1/3},
+\]
+
+with
+
+\[
+0<\delta<h_*={\sqrt{303}\over52}.
+\]
+
+If `d >= 4`, then before the reflected apex becomes diameter-feasible one of the following must occur:
+
+\[
+\boxed{
+\begin{array}{ll}
+\text{CORE-GATE:}&\text{one moving blocker/absorbed guard reaches an original contact-core vertex;}\\[1mm]
+\text{TRIPLE-GATE:}&\text{at least three distinct lower gate edges are created, all between}\\
+&\text{vertices that were fully inactive in the original source.}
+\end{array}}
+\tag{DG.1}
+\]
+
+Every underlying original source pair in those gate edges satisfies
+
+\[
+\boxed{1<|uv|\le1+t_D<1.3347479844+o(1).}
+\tag{DG.2}
+\]
+
+Thus degree-three is the only FREE-apex class for which two inactive lower gates can be the first surviving finite obstruction.
+
+---
+
+## 1. Event-and-absorption process
+
+Start with the blocker set `U` translating by `-N`. At a lower event, collect every moving/fixed pair that has just reached unit distance.
+
+If any fixed endpoint has positive old contact degree, CORE-GATE holds and the process stops.
+
+Otherwise every fixed endpoint participating in the event was contact-isolated in the canonical original source. C65 therefore makes it actual-diameter-isolated as well. Absorb all such fixed endpoints into the moving cluster and continue them with velocity `-N`, preserving every newly formed gate contact exactly.
+
+Stop as soon as three distinct gate edges have been created. This is TRIPLE-GATE. Consequently the only case needing a terminal contradiction is one in which at most two gate edges have appeared.
+
+Because each event that does not stop contributes at least one new gate edge, at most two inactive-guard absorption stages are needed before the theorem has already concluded.
+
+---
+
+## 2. Two absorptions remain in the canonical support cap
+
+The original blocker support depths obey
+
+\[
+a_z:=H-N\cdot z\le B_D=O(\sqrt D).
+\]
+
+Suppose an inactive guard `v` is absorbed when it first contacts a currently moving point `p`. If `p` joined the moving cluster at time `sigma_p`, then at event time `s`
+
+\[
+|p-(s-\sigma_p)N-v|=1.
+\]
+
+Therefore
+
+\[
+a_v\le a_p+(s-\sigma_p)+1\le a_p+t_D+1.
+\tag{DG.3}
+\]
+
+After at most two absorption stages,
+
+\[
+\boxed{a_v\le B_D+2(t_D+1)=O(\sqrt D)}
+\tag{DG.4}
+\]
+
+for every absorbed guard.
+
+The one-guard upper-safety argument depends only on this `O(sqrt(D))` support-depth bound and on total inward displacement below `t_D<1/2`. Hence it applies verbatim to each of these finitely many absorbed guards. No absorbed guard can create a new distance above `D`; pairs internal to the moving cluster are constant after the later endpoint joins.
+
+Every absorbed guard also stays strictly inside diameter `D` from `q` at terminal time, because
+
+\[
+N\cdot(v-q)=L-a_v=D-O(\sqrt D)>0
+\]
+
+and its subsequent displacement is inward along `-N`.
+
+Thus, if the process reaches `t_D` with at most two gate edges and without CORE-GATE, the exact tooth reflection `x -> q` is feasible.
+
+---
+
+## 3. Terminal contact count rules out zero, one, or two gates when `d >= 4`
+
+Let `k` be the number of gate edges present at terminal time. Under the case being considered,
+
+\[
+0\le k\le2.
+\]
+
+Every endpoint of every gate edge was fully inactive in the original source. No old contact incident to those vertices existed, and no unrecorded new contact can appear: such a contact would itself have been a lower event.
+
+The reflection preserves exactly the two base contacts at `x` and deletes the other `d-2` old contacts incident to `x`. Hence
+
+\[
+|C'|=|C|-(d-2)+k.
+\tag{DG.5}
+\]
+
+If `d >= 5`, then `d-2 >= 3`, so `k <= 2` gives
+
+\[
+|C'|<|C|.
+\]
+
+The terminal source is triangle-free because at most two new gate edges were created and `q` has only its two nonadjacent base contacts. This contradicts primary contact minimality among triangle-free global minimizers.
+
+If `d=4`, then `d-2=2`.
+
+- For `k<=1`, (DG.5) again gives fewer contacts.
+- For `k=2`, the contact count is unchanged. A graph with only two new gate edges cannot contain a triangle. At least one of those edges forms a nontrivial contact component disjoint from the component containing `q,a,b`, because all gate vertices were old contact isolates and no CORE-GATE occurred.
+
+So the terminal source is another contact-minimal triangle-free global minimizer whose full contact graph has at least two nontrivial components. C-I makes all of its contacts strong; a relative-interior normalized stress then has positive support on the whole contact graph, contradicting canonical connected positive support.
+
+Therefore terminal feasibility with at most two gate edges is impossible whenever `d>=4`. This proves (DG.1).
+
+---
+
+## 4. Source-wide degree split
+
+Let the FREE side of the module-anchor dichotomy contain
+
+\[
+F_D>\left({c_*\over2}-o(1)\right){D^{1/4}\over\kappa_D},
+\qquad c_*=0.129220199818177\ldots .
+\]
+
+Split these modules by shallow-apex degree.
+
+Either at least `F_D/2` have degree three, giving a degree-three FREE population of size
+
+\[
+\boxed{\left({c_*\over4}-o(1)\right){D^{1/4}\over\kappa_D}}
+\tag{DG.6}
+\]
+
+or at least `F_D/2` have degree at least four. In the latter case, applying (DG.1) and one further two-way split gives either CORE-GATE or TRIPLE-GATE on at least
+
+\[
+\boxed{\left({c_*\over8}-o(1)\right){D^{1/4}\over\kappa_D}}
+\tag{DG.7}
+\]
+
+modules, where
+
+\[
+{c_*\over8}=0.016152524977272125\ldots .
+\]
+
+The module separation still makes these bounded gate gadgets vertex-disjoint across retained modules.
+
+**Disposition:** proved that every degree-four/five FREE reflection apex needs a core contact or at least three inactive lower gates. The only two-gate endpoint left is degree three, where the tooth has exactly one non-base old contact. C-II remains open.

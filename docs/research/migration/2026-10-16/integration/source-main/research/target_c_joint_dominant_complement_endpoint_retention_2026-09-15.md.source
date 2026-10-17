@@ -1,0 +1,499 @@
+# Target C-II — joint dominant/complement endpoint retention spends outer detour once
+
+**Date:** 2026-09-15  
+**Repository base:** `410f184e576bb8a431928047637503039b9899c5`  
+**Status:** proof-only strengthening of the direct dominant/complement energy tradeoff  
+**Scope:** full-core/no-container Type-II branch  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The hostile-audited direct energy tradeoff treats the dominant atomic outer occurrences
+and the diameter-braced complement outer-to-outer train endpoints as disjoint energy
+supports, but it truncates the two populations to loaded-hull side-length capacity
+**separately**. Each truncation is allowed to discard as much as the full outer detour
+`d_out`.
+
+That is unnecessary. The two populations are disjoint subsets of the same
+occurrence-counted outer contact walk. Truncate their union once, route by route. The
+single total discard is at most `d_out`, and the retained dominant mass `z` plus the
+retained complement-pair mass `p` satisfies
+
+\[
+\boxed{
+z+p\ge \pi-N_*,
+}
+\tag{JR.1}
+
+where `N_*` is the same complement-train-count upper bound as in the direct theorem.
+The actual dominant terminal count cancels completely.
+
+The resulting energy obstruction raises the safe proof-only floor from `1.83236` to
+
+\[
+\boxed{
+\liminf {q-k\over D}\ge1.83279.
+}
+\tag{JR.2}
+
+The numerical scalar crossing is about
+
+\[
+1.832793564819059\ldots .
+\]
+
+Only the round value `1.83279` is claimed.
+
+---
+
+## 1. Current scalar inputs
+
+Use
+
+\[
+t={q-k\over D},
+\qquad
+\kappa={k\over D},
+\qquad
+\delta={d_{out}\over D},
+\]
+
+and
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+C_0=2\sqrt{\Delta_2}+0.0050.
+\]
+
+The current low-`t` network gives
+
+\[
+C_0\le C={T-q/2\over D}
+\le
+U:={9t\over2}-2\pi-2\delta-\kappa/2.
+\tag{JR.3}
+\]
+
+Thus
+
+\[
+2\delta+\kappa/2
+\le R(t):={9t\over2}-2\pi-C_0.
+\tag{JR.4}
+\]
+
+Freeze the same dominant exact `pi/3` atomic orbit as in the audited direct tradeoff.
+Let `K` be its outer terminal occurrence density and let `N_c` be the complement train
+density. The same common-`C` argument gives
+
+\[
+N_c\le
+N_*:=
+U+{t+\kappa\over2}-{4\Delta_2\over U}.
+\tag{JR.5}
+\]
+
+No lower or upper bound on `K` will be needed below.
+
+---
+
+## 2. Raw complement two-outer pair count
+
+The full outer-face occurrence density is
+
+\[
+\pi+\delta.
+\]
+
+After assigning `K` occurrences to dominant-window trains, complement trains carry
+
+\[
+\pi+\delta-K
+\]
+
+outer occurrences. If `P_c` complement trains have two outer terminal occurrences,
+then every other complement train contributes at most one outer occurrence, so
+
+\[
+\pi+\delta-K\le N_c+P_c.
+\]
+
+Using (JR.5),
+
+\[
+\boxed{
+P_c\ge \pi+\delta-K-N_*.
+}
+\tag{JR.6}
+
+This is exactly the raw pair count used in the direct tradeoff.
+
+---
+
+## 3. Joint routewise retention lemma
+
+For each distinguished Section-63 route `W_i`, write
+
+\[
+\ell_i=s_i+d_i,
+\]
+
+where `s_i` is the physical loaded-hull side length and `d_i>=0` is the route detour.
+The routes partition the occurrence-counted outer walk and
+
+\[
+\sum_i d_i=d_{out}.
+\tag{JR.7}
+
+On route `i`, select two disjoint sets of outer edge occurrences:
+
+1. all dominant-window outer terminal occurrences;
+2. all terminal occurrences belonging to complement outer-to-outer trains counted by
+   `P_c`.
+
+They are disjoint because every outer edge occurrence belongs to exactly one complete
+stopped train, and the dominant/complement train classes are disjoint. Hence the total
+selected occurrence count on `W_i` is at most `ell_i`.
+
+Assign fractional weights in `[0,1]` to the union so that the total retained occurrence
+weight on route `i` is at most `s_i`. This can be done while discarding no more than
+
+\[
+(\#\text{selected on }W_i-s_i)_+
+\le \ell_i-s_i=d_i.
+\tag{JR.8}
+
+Let
+
+- `x` be the total discarded dominant occurrence weight divided by `D`;
+- `y` be the total discarded complement endpoint weight divided by `D`.
+
+Summing (JR.8) gives the single budget
+
+\[
+\boxed{x+y\le\delta.}
+\tag{JR.9}
+
+The retained dominant occurrence mass therefore satisfies
+
+\[
+z\ge K-x.
+\tag{JR.10}
+
+For one complement two-outer train let its two retained endpoint weights be `a,b` and
+retain that pair with weight `min(a,b)`. Since
+
+\[
+1-\min(a,b)\le(1-a)+(1-b),
+\]
+
+the total complement **pair** mass loses at most the discarded complement endpoint
+weight. Thus
+
+\[
+p\ge P_c-y.
+\tag{JR.11}
+
+Combining (JR.6), (JR.9)--(JR.11),
+
+\[
+\begin{aligned}
+z+p
+&\ge K+P_c-(x+y)\\
+&\ge K+(\pi+\delta-K-N_*)-\delta.
+\end{aligned}
+\]
+
+Therefore
+
+\[
+\boxed{
+z+p\ge \pi-N_*.}
+\tag{JR.12}
+
+This is the new finite bookkeeping gain. The direct theorem retained only the weaker
+total `pi-N_*-delta` because it allowed each population to spend the full detour
+capacity independently.
+
+Bridges cause no problem: outer-face occurrences, rather than abstract physical edges,
+are counted in `ell_i`, so the two appearances of a bridge are distinct capacity
+occurrences exactly as in the hostile-audited parent theorem.
+
+---
+
+## 4. The two energy lower bounds still add
+
+The joint retention has total weight at most `s_i` on every route. Consequently each
+retained subpopulation separately has weight at most `s_i` there.
+
+For dominant-window occurrences, the same round-hull projective bathtub theorem gives
+
+\[
+\boxed{E_{dom}\ge F(z),
+\qquad F(z)=z-6\sin(z/6).}
+\tag{JR.13}
+
+For complement pairs, both retained endpoint measures are separately dominated by the
+physical loaded-hull perimeter measure. The same three-sector noncrossing/bracing
+theorem therefore gives, for `0<=p<=1`,
+
+\[
+\boxed{E_{comp}\ge J(p),
+\qquad J(p)=2p-6\sin(p/3).}
+\tag{JR.14}
+
+The dominant and complement occurrence supports remain disjoint, so the actual outer
+route energy satisfies
+
+\[
+\boxed{
+\delta\ge F(z)+J(p).
+}
+\tag{JR.15}
+
+If a retained complement pair mass exceeds one, retaining only unit mass gives
+`J(1)=0.0368318...`, already larger than the entire detour range used below. Hence a
+survivor in the minimizing regime has `p<1`.
+
+---
+
+## 5. Eliminate the unknown dominant count by infimal convolution
+
+Put
+
+\[
+S:=\pi-N_*.
+\tag{JR.16}
+
+Both `F` and `J` are increasing on the relevant positive ranges, so (JR.12)--(JR.15)
+give
+
+\[
+\boxed{
+\delta\ge H(S),
+\qquad
+H(S):=\min_{\substack{z,p\ge0\\z+p=S}}
+\{F(z)+J(p)\}.
+}
+\tag{JR.17}
+
+Thus `K` disappears from the scalar problem.
+
+On the present range the minimum is unique and interior. Indeed
+
+\[
+F''(z)={1\over6}\sin(z/6)>0,
+\qquad
+J''(p)={2\over3}\sin(p/3)>0,
+\]
+
+so the split objective is strictly convex. Its minimizer satisfies
+
+\[
+\boxed{F'(z)=J'(p),
+\qquad z+p=S.}
+\tag{JR.18}
+
+The current interval has `N_*>0.9225`, hence `S<2.22`. At `p=0.72` one has
+`z<1.50`, and
+
+\[
+F'(1.50)<J'(0.72).
+\]
+
+Therefore the unique minimizing pair has
+
+\[
+0<p<0.72<1.
+\tag{JR.19}
+
+This also keeps (JR.14) strictly inside its smooth regime.
+
+Write
+
+\[
+\lambda(S):=H'(S)=F'(z)=J'(p)>0
+\tag{JR.20}
+
+at the unique minimizer.
+
+---
+
+## 6. The feasible triangle again reduces to `kappa=0`, maximal detour
+
+Since
+
+\[
+N_*=U+{t+\kappa\over2}-{4\Delta_2\over U},
+\]
+
+direct differentiation gives
+
+\[
+{\partial N_*\over\partial\kappa}
+=-{2\Delta_2\over U^2}<0.
+\tag{JR.21}
+
+Hence
+
+\[
+{\partial S\over\partial\kappa}
+={2\Delta_2\over U^2}>0,
+\]
+
+and therefore
+
+\[
+{\partial\over\partial\kappa}[H(S)-\delta]
+=\lambda(S){2\Delta_2\over U^2}>0.
+\tag{JR.22}
+
+The weakest point has
+
+\[
+\boxed{\kappa=0.}
+\tag{JR.23}
+
+Similarly,
+
+\[
+{\partial S\over\partial\delta}
+=2\left(1+{4\Delta_2\over U^2}\right)<4,
+\tag{JR.24}
+
+because `U>=C0>2sqrt(Delta2)`. By (JR.19),
+
+\[
+\lambda(S)=J'(p)<J'(0.72)<0.058.
+\]
+
+Thus
+
+\[
+{\partial\over\partial\delta}[H(S)-\delta]
+<4(0.058)-1<0.
+\tag{JR.25}
+
+The weakest point is maximal detour. With (JR.23), the network boundary gives
+
+\[
+\boxed{
+\delta={R(t)\over2},
+\qquad U=C_0.
+}
+\tag{JR.26}
+
+---
+
+## 7. One-variable boundary problem
+
+At (JR.26),
+
+\[
+\delta_0(t)
+={1\over2}\left({9t\over2}-2\pi-C_0\right),
+\tag{JR.27}
+
+\[
+N_0(t)=C_0+{t\over2}-{4\Delta_2\over C_0},
+\tag{JR.28}
+
+and
+
+\[
+S_0(t)=\pi-N_0(t).
+\tag{JR.29}
+
+Let `(z_0,p_0)` be the unique solution of
+
+\[
+z_0+p_0=S_0(t),
+\qquad
+F'(z_0)=J'(p_0).
+\tag{JR.30}
+
+Define
+
+\[
+G_0(t)=F(z_0)+J(p_0)-\delta_0(t).
+\tag{JR.31}
+
+The envelope theorem gives a particularly simple monotonicity formula:
+
+\[
+G_0'(t)
+=H'(S_0)S_0'(t)-\delta_0'(t)
+=-{1\over2}\lambda(S_0)-{9\over4}<0.
+\tag{JR.32}
+
+Thus there is at most one scalar crossing.
+
+At the advertised safe endpoint `t=1.83279`, the independent numerical calculation
+gives approximately
+
+\[
+\begin{aligned}
+\delta_0&=0.02737203954625,\\
+S_0&=2.21521074516116,\\
+z_0&=1.63725469315688,\\
+p_0&=0.57795605200428,\\
+F(z_0)&=0.02024314255598,\\
+J(p_0)&=0.00713698378252,
+\end{aligned}
+\]
+
+so
+
+\[
+\boxed{G_0(1.83279)>8.0\times10^{-6}.}
+\tag{JR.33}
+
+The scalar zero is
+
+\[
+1.832793564819059\ldots .
+\tag{JR.34}
+
+The companion Decimal certificate supplies the load-bearing root bracket and interval
+checks.
+
+---
+
+## 8. Frontier effect
+
+The gain over the direct tradeoff is small numerically but structurally clean:
+
+```text
+old retention:
+    dominant may discard delta
+    complement may discard delta
+
+joint retention:
+    dominant + complement endpoint union discards at most delta total
+```
+
+The actual dominant terminal count no longer needs to be optimized. The only split left
+is how the retained total `pi-N_*` is distributed between the two disjoint energy
+mechanisms, and strict convexity solves that split exactly.
+
+The resulting proof-only floor is
+
+\[
+\boxed{\liminf(q-k)/D\ge1.83279.}
+\]
+
+C-II remains open. The next loss is no longer outer endpoint capacity. It is the
+three-sector complement bracing bound itself: `J(p)` uses only that phase intervals of
+width `pi/3` are noncrossing and ignores the actual complement phase measure and its
+crossings with the dominant atomic orbit.
+
+---
+
+## 9. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_joint_dominant_complement_endpoint_retention.py
+```
+
+for the high-precision scalar checks.

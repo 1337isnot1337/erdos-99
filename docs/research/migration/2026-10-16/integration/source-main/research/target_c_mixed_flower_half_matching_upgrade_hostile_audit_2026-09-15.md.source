@@ -1,0 +1,112 @@
+# Hostile audit — half-matching upgrade for mixed flower splices
+
+**Date:** 2026-09-15\
+**Audited source:** `research/target_c_mixed_flower_half_matching_upgrade_2026-09-15.md`\
+**Verdict:** **PASS at proof-only asymptotic scope.**\
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The upgrade replaces the always-safe greedy `L/3` splice matching by
+`L/2-o(D)`.  The only way a degree-two graph loses from one half is through cycle
+components, so the geometric burden is to prove that every splice cycle is long when
+the local paired-phase mismatch is small.
+
+## 1. A through edge preserves, rather than reverses, the oriented phase lift
+
+At one local through flower, the two terminal boundary contacts have opposite oriented
+side signs but the same projective train direction in the limit.  Choose the same
+oriented projective representative `u` for both train lines.  At the `+u` boundary
+side, the positive `Ju` train orientation approaches the face; at the `-u` side it
+leaves the face.  The connector therefore continues the positive-normal orientation
+without flipping `u` to `-u`.
+
+The finite near-phase case has the same sign by continuity.  This is exactly the
+"through, not U-turn" part of the local theorem.  Thus an edge of the splice graph
+relates two oriented train representatives differing by `o(1)`, not by `pi+o(1)`.
+
+## 2. A train used at both endpoints contributes one incoming and one outgoing splice
+
+Fix an oriented representative `u_tau` on one stopped train.  Canonical train
+orientation gives a midpoint path strictly increasing in the `Ju_tau` coordinate.
+Its initial terminal is its tail and its final terminal its head.  If both endpoints
+are selected splice faces, one selected connector leaves the tail and the other enters
+the head.  Consequently the directed splice graph has indegree and outdegree at most
+one at every train vertex.
+
+An underlying component of degree two is therefore either a directed cycle or a
+directed path after a global reversal of the component.  There is no vertex at which
+two through connectors both enter the same train end.
+
+## 3. Short-cycle phase holonomy cannot flip the lift
+
+Propagate the oriented lift around a directed cycle.  Each splice changes the lifted
+angle by at most `epsilon_D`.  If the cycle has length `ell` with
+
+\[
+ell\epsilon_D<\pi/12,
+\]
+
+all propagated representatives lie in one ordinary angular interval of width below
+`pi/12`.  Returning to the antipodal lift of the first train would require angular
+change close to `pi`, impossible on this interval.  Thus the final edge uses the same
+lift and the positive-normal orientation is globally coherent around a short cycle.
+
+This addresses the only possible projective-circle sign obstruction.
+
+## 4. Positive projection excludes every short cycle
+
+With coherent lifts, all train normals on the short cycle lie within `pi/12` of the
+first normal.  Train midpoint segments lie within `pi/6` of their local normals;
+through connectors lie within `pi/6+o(1)`.  Every segment of the closed directed
+concatenation is therefore within `pi/4+o(1)` of one fixed normal and has strictly
+positive projection on it.
+
+The vector sum of a closed polygonal traversal is zero, so it cannot have every segment
+with positive projection on one vector.  Hence a cycle must have length at least
+`pi/(12 epsilon_D)` up to the irrelevant strict-endpoint convention.
+
+The argument does not require the cycle to be simple.  It uses only total displacement.
+
+## 5. The number of cycle components is `o(D)`
+
+Distinct cycle components use disjoint train vertices.  Since the exact stopped-train
+count is `O(D)`, the lower cycle length gives
+
+\[
+\#\text{cycles}=O(\epsilon_DD)=o(D).
+\]
+
+If `epsilon_D=0` on a subsequence, the positive-projection argument excludes cycles
+entirely there, which is even stronger.
+
+## 6. Componentwise matching loses only one half-edge per odd cycle
+
+Paths and even cycles have matching density at least one half.  An odd cycle of `e`
+edges has maximum matching `(e-1)/2`, losing only `1/2` from `e/2`.  A two-edge
+parallel component has matching one, exactly half its edges.
+
+Therefore, even charging every cycle component rather than only odd ones,
+
+\[
+P_D\ge L_D/2-c_D/2=L_D/2-o(D).
+\]
+
+The companion combinatorial regression checks the path/cycle matching formulas and the
+quadratic propagation.
+
+## 7. The deficit upgrade uses the already-audited matching theorem only
+
+No new supertrain crossing claim is introduced here.  Once a matching of size `P_D`
+is selected, the hostile-audited mixed-splice theorem gives
+
+\[
+T_D^2/4-R_D\ge P_D^2/2-o(D^2).
+\]
+
+Substituting `P_D=L_D/2-o(D)` yields `L_D^2/8-o(D^2)`.
+
+The upgrade still does not claim that all local splices can be applied simultaneously;
+long phase-winding cycles are explicitly allowed.  It uses only a matching.
+
+**Final verdict:** PASS at proof-only asymptotic scope.  The half-matching constant is
+valid for the oriented through-pair population supplied by the three-dominant flower
+normal form.

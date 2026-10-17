@@ -1,0 +1,95 @@
+#!/usr/bin/env python3
+"""Exact/outward interval certificate for the phase-star atomic gap g=0.0021."""
+from fractions import Fraction as F
+from math import isqrt
+
+def dec(s: str) -> F:
+    neg=s.startswith('-')
+    if neg:s=s[1:]
+    if '.' in s:a,b=s.split('.',1)
+    else:a,b=s,''
+    x=F(int((a or '0')+b),10**len(b))
+    return -x if neg else x
+
+def sqrt_upper(x: F, digits: int=30) -> F:
+    assert x >= 0
+    scale=10**digits
+    q=x.numerator*scale*scale
+    n=(q+x.denominator-1)//x.denominator
+    r=isqrt(n)
+    if r*r<n:r+=1
+    return F(r,scale)
+
+G=dec('0.0021')
+# Self-contained outward bounds for s=sqrt(Delta_2), Delta_2=pi/(2 sqrt(3)).
+# The previous certificate hard-coded S_LO/S_HI without checking them from pi and sqrt(3).
+PI_LO=dec('3.14159265358979323846264338327950288419716939937510')
+PI_HI=PI_LO+F(1,10**50)
+SQ3_FINE_LO=dec('1.73205080756887729352744634150587236694280525381038')
+SQ3_FINE_HI=SQ3_FINE_LO+F(1,10**50)
+assert SQ3_FINE_LO*SQ3_FINE_LO < 3 < SQ3_FINE_HI*SQ3_FINE_HI
+DELTA_LO=PI_LO/(2*SQ3_FINE_HI)
+DELTA_HI=PI_HI/(2*SQ3_FINE_LO)
+S_LO=dec('0.9523128068')
+S_HI=dec('0.9523128069')
+assert S_LO*S_LO < DELTA_LO and S_HI*S_HI > DELTA_HI
+# Coarser bounds below are sufficient for the diameter-cap comparisons.
+SQ3_LO=dec('1.7320508075')
+SQ3_HI=dec('1.7320508076')
+assert SQ3_LO*SQ3_LO < 3 < SQ3_HI*SQ3_HI
+W_LO=4*S_LO*S_LO/(2*S_LO+G)
+A_HI=2*S_HI+G
+d_HI=S_HI*G+G*G/4
+CAP_HI=2/SQ3_LO
+CAP_LO=2/SQ3_HI
+Z_HI=dec('0.045')
+STEP=dec('0.00005')
+assert Z_HI*Z_HI>d_HI
+# Every actual C lies below the diameter cap, and is uniformly large.
+C_MIN=W_LO/2-Z_HI
+C_MAX=A_HI/2+Z_HI
+assert C_MAX < CAP_LO
+# If a selected leaf pair has F=C+L-6p>cap, then p<(A-cap)/6.
+# This certifies C>5p; F>cap itself gives L>6p because C<cap.
+P_SELECTED_MAX=(A_HI-CAP_LO)/6
+assert C_MIN>5*P_SELECTED_MAX
+
+min_lb=None
+arg=None
+count=0
+x=-Z_HI
+while x<Z_HI:
+    y=min(x+STEP,Z_HI)
+    # Raw weighted-best-leaf term 3W/4+s/2 is increasing in W and s.
+    raw=3*W_LO/4+x/2
+    # h <= d-s^2; maximize on the interval at the point closest to zero.
+    if x<=0<=y:h_hi=d_HI
+    elif y<0:h_hi=d_HI-y*y
+    else:h_hi=d_HI-x*x
+    if h_hi<0:h_hi=F(0)
+    # R=(W+2s)/(W+6s).  For s<0 it decreases in both W and s;
+    # for s>=0 it is <=1.
+    if x<0:
+        den=W_LO+6*x
+        assert den>0
+        R_hi=(W_LO+2*x)/den
+        if R_hi<1:R_hi=F(1)
+    else:
+        R_hi=F(1)
+    loss=6*sqrt_upper(h_hi*R_hi)
+    lb=raw-loss
+    if min_lb is None or lb<min_lb:
+        min_lb=lb;arg=(x,y,h_hi,R_hi,loss)
+    count+=1
+    x=y
+assert min_lb > CAP_HI + dec('0.0014')
+print('PASS minimax phase-star atomic gap g=0.0021')
+print('intervals=',count)
+print('W_lower=',float(W_LO))
+print('d_upper=',float(d_HI))
+print('C_min=',float(C_MIN),'C_max=',float(C_MAX))
+print('selected_p_upper=',float(P_SELECTED_MAX))
+print('best-leaf lower=',float(min_lb))
+print('2/sqrt3 upper=',float(CAP_HI))
+print('degree-sum margin lower=',float(min_lb-CAP_HI))
+print('worst interval=',tuple(float(v) for v in arg))

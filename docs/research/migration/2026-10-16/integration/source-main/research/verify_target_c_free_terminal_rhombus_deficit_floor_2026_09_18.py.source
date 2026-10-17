@@ -1,0 +1,142 @@
+#!/usr/bin/env python3
+"""Regression checks for the terminal FREE rhombus-deficit floor.
+
+This checks the scalar elimination and reported constants.  It does not replace the
+geometric proofs in the dependency notes.
+"""
+from __future__ import annotations
+
+import math
+import random
+
+PI = math.pi
+SQRT3 = math.sqrt(3.0)
+A0 = SQRT3 / 2.0
+DELTA2 = PI / (2.0 * SQRT3)
+S2 = math.sqrt(DELTA2)
+GAMMA = 2.0 * S2 - PI / 2.0
+C_FREE = PI / 2.0 + 1.0 / 5.0 + 2.0 * S2 / 5.0
+R_STAR = (C_FREE + GAMMA) / 2.0
+R_STAR_CLOSED = 1.0 / 10.0 + 6.0 * S2 / 5.0
+METRIC_STAR = R_STAR + 2.0 / 5.0
+DICHOTOMY = METRIC_STAR / (1.0 + 4.0 / 5.0)
+AREA_STAR = A0 * R_STAR
+AREA_METRIC_STAR = A0 * METRIC_STAR
+Z_COEFF_AREA = 4.0 * A0 / 5.0
+
+
+def check_constants() -> None:
+    assert abs(R_STAR - R_STAR_CLOSED) < 2e-15
+    assert abs(GAMMA - 0.33382928693301817) < 2e-15
+    assert abs(C_FREE - 2.1517214495404797) < 2e-15
+    assert abs(R_STAR - 1.2427753682367488) < 2e-15
+    assert abs(METRIC_STAR - 1.6427753682367490) < 2e-15
+    assert abs(DICHOTOMY - 0.9126529823537494) < 2e-15
+    assert abs(AREA_STAR - 1.0762750400905847) < 2e-15
+    assert abs(AREA_METRIC_STAR - 1.4226852016043603) < 2e-15
+    assert abs(Z_COEFF_AREA - 0.6928203230275509) < 2e-15
+
+
+def check_exact_population_bridge(rng: random.Random, trials: int = 300_000) -> None:
+    # Full-source Oler:
+    #   n <= Delta2 D^2 + (pi/2)D + 1.
+    # Exact population decomposition:
+    #   n = R4 + f + U + 1 + Zch + Zext.
+    # Hence D4=Delta2 D^2-R4 >= U+f+Zch+Zext-(pi/2)D.
+    for _ in range(trials):
+        D = rng.uniform(100.0, 1.0e6)
+        R4 = rng.uniform(0.0, DELTA2 * D * D)
+        U = rng.uniform(0.0, PI * D)
+        f = rng.uniform(0.0, 0.5 * D)
+        zch = rng.uniform(0.0, 0.5 * D)
+        z = rng.uniform(0.0, 0.5 * D)
+        n = R4 + f + U + 1.0 + zch + z
+        cap = DELTA2 * D * D + PI * D / 2.0 + 1.0
+        if n > cap:
+            continue
+        D4 = DELTA2 * D * D - R4
+        rhs = U + f + zch + z - PI * D / 2.0
+        if D4 + 1e-7 < rhs:
+            raise AssertionError((D4, rhs))
+
+
+def check_scalar_elimination(rng: random.Random, trials: int = 700_000) -> None:
+    # Terminal normalized constraints used by the theorem:
+    #   t + (2/5) z >= C_FREE,
+    #   f >= (pi - t + gamma)/2,
+    #   r >= t + f + z - pi/2.
+    # These imply r >= R_STAR + (4/5)z.
+    for _ in range(trials):
+        z = rng.uniform(0.0, 3.0)
+        t_floor = C_FREE - 0.4 * z
+        t = t_floor + rng.expovariate(3.0)
+        f_floor = (PI - t + GAMMA) / 2.0
+        f = max(0.0, f_floor) + rng.expovariate(4.0)
+        if f + 1e-14 < f_floor:
+            continue
+        zch = rng.expovariate(10.0)
+        r = t + f + z + zch - PI / 2.0 + rng.expovariate(5.0)
+        if r + 2e-12 < R_STAR + 0.8 * z:
+            raise AssertionError((t, z, f, zch, r, R_STAR + 0.8 * z))
+
+        # Reinsert the original terminal FREE recipient law lambda+z>=1/2.
+        lam = max(0.0, 0.5 - z) + rng.expovariate(5.0)
+        if r + 0.8 * lam + 2e-12 < METRIC_STAR:
+            raise AssertionError((r, lam, METRIC_STAR))
+        if max(r, lam) + 2e-12 < DICHOTOMY:
+            raise AssertionError((r, lam, DICHOTOMY))
+
+
+def check_relaxed_equality() -> None:
+    # The scalar relaxation is exactly sharp at the small-exterior endpoint already
+    # identified by the FT note.
+    z = 0.0
+    t = C_FREE
+    f = (PI - t + GAMMA) / 2.0
+    qdef = f
+    lam = 0.5
+    r = t + f + z - PI / 2.0
+    assert abs(f - 0.6618502454911660) < 2e-15
+    assert abs(qdef - f) < 1e-15
+    assert abs(r - R_STAR) < 2e-15
+    assert abs(r + 0.8 * lam - METRIC_STAR) < 2e-15
+
+
+def check_old_window_prices() -> None:
+    # FT gives z >= (3pi+1+gamma-5t)/2.  Inserting that into
+    # r >= R_STAR+(4/5)z yields the old-window rhombus-deficit prices.
+    expected = {
+        1.8440: (0.7693036238511981, 1.8582182673177072),
+        1.8687: (0.7075536238511981, 1.8088182673177071),
+        2.0000: (0.3793036238511984, 1.5462182673177076),
+        C_FREE: (0.0, R_STAR),
+    }
+    for t, (want_z, want_r) in expected.items():
+        z = max(0.0, (3.0 * PI + 1.0 + GAMMA - 5.0 * t) / 2.0)
+        r = R_STAR + 0.8 * z
+        assert abs(z - want_z) < 3e-14
+        assert abs(r - want_r) < 3e-14
+
+
+def main() -> None:
+    rng = random.Random(0xE99D4)
+    check_constants()
+    check_exact_population_bridge(rng)
+    check_scalar_elimination(rng)
+    check_relaxed_equality()
+    check_old_window_prices()
+    print("PASS: terminal FREE rhombus-deficit floor")
+    print(f"Delta2={DELTA2:.15f}")
+    print(f"sqrt(Delta2)={S2:.15f}")
+    print(f"gamma={GAMMA:.15f}")
+    print(f"C_FREE={C_FREE:.15f}")
+    print(f"R_STAR={R_STAR:.15f}")
+    print(f"METRIC_STAR={METRIC_STAR:.15f}")
+    print(f"DICHOTOMY={DICHOTOMY:.15f}")
+    print(f"AREA_STAR={AREA_STAR:.15f}")
+    print(f"AREA_METRIC_STAR={AREA_METRIC_STAR:.15f}")
+    print(f"AREA_Z_COEFF={Z_COEFF_AREA:.15f}")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,26 @@
+Target C support4 closure, 2026-09-29.
+
+Support [0123]^3 [0124]^2 [0134]^2 [0234] [1234] is excluded.
+
+The committed symmetry proof reduces the 81 raw orientations to 24 classes. For every canonical representative, the touched block set T has 10 blocks and triangle-row rank 6.
+
+Let C be the actual touched-complete family, S the touched selected-singleton family, and E the actual-empty family. Because d_root=0, H(C) is independent. The face-local capacity condition gives rank H(T)-rank H(C) >= 4. Hence rank H(C) <= 2, so |C| <= 2. Also |S| <= 2. Therefore every realizable state must have |E| >= 10-2-2 = 6.
+
+For each orientation representative and each 6-subset F of its 10 touched blocks, the exact verifier computes the rational row-space rank of the union of the six empty-block spaces E_b, b in F. A realizable aggregate constraint space W has rank 4 and contains E_b for every actual-empty block. Therefore any realizable state would require some 6-subset F whose empty-block span has rank at most 4.
+
+The executed repository verifier checks all 24*C(10,6)=5,040 such subsets. Its exact rank census is:
+rank 6: 27
+rank 7: 55
+rank 8: 818
+rank 9: 4,140
+No six-empty span has rank below 6. Thus no rank-four W can contain six actual-empty block spaces, contradicting the necessary |E| >= 6.
+
+Verifier:
+research/verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_two_singleton_support4_six_empty_obstruction_2026_09_29.py
+
+Persisted and executed verifier blob:
+c82814f0752d73d9b685dc82fd48d54bd3e27341
+
+This is an exact finite certificate. The verifier uses exact rational row-space arithmetic from the existing selected-pair orientation module and asserts the complete 5,040-case census fail-closed.
+
+Supports 1,2,3,4,12 are excluded. Remaining two-singleton supports: 5,6,7,8,9,10,11,13.

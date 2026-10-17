@@ -1,0 +1,317 @@
+# Target C — mixed-wall repacking for a convex exterior cap
+
+**Date:** 2026-09-12  
+**Status:** proof-only research candidate; theorem-state authority unchanged.  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+Audited-working Section 165 protects either Type-I inactive container by placing every
+replacement point in the full one-unit inner parallel body `C_{-1}`. For a canonical
+exterior cap this erodes more boundary than the separation proof actually needs.
+
+Canonical Sections 67, 80 and 84 describe each convex exterior pocket/cap by
+
+- one artificial force-hull closing chord `[u,v]`; and
+- a complementary polygonal path `W` made of actual unit contact edges between source
+  vertices.
+
+Only the artificial chord needs geometric one-unit erosion. Along the contact path,
+unit-edge crossing geometry shows that it is enough to remain one unit from the
+**boundary source vertices**. This note proves the resulting mixed-wall shield and the
+same-cardinality strict-diameter repacking theorem, then gives a lattice-averaging
+capacity criterion.
+
+---
+
+## 1. Canonical exterior-cap geometry
+
+Let `A` be the triangle-free global diameter minimizer, `K=conv(A)`, and let `H` be
+the complete actual diameter graph.
+
+Let `C` be one canonical convex exterior cap selected in the Type-I alternative of
+Sections 80/162. Its boundary is
+
+\[
+ \partial C=[u,v]\cup W,
+\tag{1.1}
+\]
+
+where `[u,v]` is the force-hull closing chord and
+
+\[
+ W=(u=p_0,p_1,\ldots,p_\ell=v)
+\tag{1.2}
+\]
+
+is the complementary old contact path with
+
+\[
+ |p_{i+1}-p_i|=1.
+\tag{1.3}
+\]
+
+Let
+
+\[
+ Z_C=A\cap\operatorname{int}C,
+ \qquad z_C=|Z_C|.
+\]
+
+Audited-working Section 162 supplies that the points of `Z_C` are contact-isolated and
+that every source point not assigned to `Z_C` lies outside `int C`. The cap has
+quadratic area/inactive population, linear perimeter/slack, and linear inradius in the
+Type-I branch.
+
+A source point may lie on the closing chord. Such a point is outside `int C`; the
+mixed-wall guard below protects it directly through distance from the chord.
+
+---
+
+## 2. Mixed-wall safe region
+
+Define
+
+\[
+ S_{mix}(C):=\left\{
+ y\in\operatorname{int}C:
+ \operatorname{dist}(y,[u,v])\ge1,
+ \quad |y-p_i|\ge1\ \text{for every }0\le i\le\ell
+ \right\}.
+\tag{2.1}
+\]
+
+The full inner body is contained in this region:
+
+\[
+ \boxed{C_{-1}\subseteq S_{mix}(C).}
+\tag{2.2}
+\]
+
+Indeed distance at least one from the whole boundary implies distance at least one
+from the closing chord and from every contact-path vertex.
+
+Define the recovered wall area
+
+\[
+ G_{wall}(C)
+ :=\operatorname{area}(S_{mix}(C))-\operatorname{area}(C_{-1})\ge0.
+\tag{2.3}
+\]
+
+No positive lower bound on `G_wall` is asserted here. Establishing a linear lower
+bound from the long unit-contact path would be a useful next theorem.
+
+---
+
+## 3. Mixed-wall shield
+
+We use the elementary contact-edge crossing fact proved in the internal contact-wall
+module: if a segment of length `<1` properly crosses a unit edge `[p,q]` and its
+outside endpoint is at distance at least one from `p,q`, then its inside endpoint is
+at distance `<1` from both `p,q`.
+
+### Theorem 3.1 — exterior mixed-wall shield
+
+If `y in S_mix(C)` and `x` is any old source point outside `int C`, then
+
+\[
+ \boxed{|x-y|\ge1.}
+\tag{3.1}
+\]
+
+#### Proof
+
+Suppose `|x-y|<1`. Follow the segment from `y` toward `x` and let `r` be its first
+intersection with `partial C`.
+
+**Closing-chord interior.** If `r` lies in the relative interior of `[u,v]`, then
+
+\[
+ \operatorname{dist}(y,[u,v])\le |y-r|<|y-x|<1,
+\]
+
+contradicting (2.1).
+
+**Boundary vertex.** If `r=p_i`, then `p_i` is one of the guarded contact-path
+vertices. If `x=p_i`, (2.1) directly gives `|x-y|>=1`. Otherwise source unit
+separation gives `|x-p_i|>=1`, and since `p_i` lies strictly between `x,y`,
+
+\[
+ |x-y|=|x-p_i|+|p_i-y|\ge2,
+\]
+
+a contradiction.
+
+**Contact-edge interior.** Otherwise `r` lies in the relative interior of one unit
+edge `[p_i,p_{i+1}]` of `W`. If `x` is one of its endpoints, the boundary-vertex guard
+already gives `|x-y|>=1`. Otherwise source unit separation gives
+
+\[
+ |x-p_i|,|x-p_{i+1}|\ge1.
+\]
+
+The segment crosses the boundary edge properly at `r`. The two-endpoint crossing
+lemma therefore gives
+
+\[
+ |y-p_i|<1,
+ \qquad |y-p_{i+1}|<1,
+\]
+
+contradicting (2.1).
+
+These cases exhaust the boundary of `C`. `square`
+
+### Corollary 3.2 — simultaneous replacement
+
+Any pairwise unit-separated set `Y subset S_mix(C)` is automatically unit-separated
+from every old source point outside `int C`.
+
+Thus the full one-unit collar along `W` is unnecessary.
+
+---
+
+## 4. Mixed-wall cover repacking
+
+Let
+
+\[
+ M_{mix}(C)
+ :=\sup\{|Y|:Y\subset S_{mix}(C),\ |y-y'|\ge1\}.
+\tag{4.1}
+\]
+
+Let `U` be a vertex cover of the complete actual diameter graph `H`. If
+
+\[
+ M_{mix}(C)\ge z_C+|U|,
+\tag{4.2}
+\]
+
+choose a unit-separated `Y subset S_mix(C)` of that cardinality and put
+
+\[
+ A':=(A\setminus(Z_C\cup U))\cup Y.
+\tag{4.3}
+\]
+
+### Theorem 4.1 — mixed-wall diameter-cover repacking
+
+Under (4.2), `A'` is a same-cardinality unit-separated source with
+
+\[
+ \boxed{\operatorname{diam}A'<D.}
+\tag{4.4}
+\]
+
+#### Proof
+
+Every point of `Z_C` lies in `int C subset int K`, hence is not an endpoint of an
+actual diameter edge. Therefore `Z_C cap U` is empty and cardinality is preserved.
+
+Old-old unit separation is unchanged. New-new separation holds by construction, and
+new-old separation follows from Corollary 3.2 because every retained old source lies
+outside `int C`.
+
+Since `U` covers every actual diameter edge, every retained old-old pair has distance
+strictly below `D`.
+
+Every new point lies in `int C`, hence in `int K`. For `x in K` and `y in int K`,
+`|x-y|<D`: the convex source hull lies in the closed radius-`D` disk centered at `x`,
+and an interior point of `K` cannot lie on that disk's boundary circle. Thus every
+new-old and new-new distance is also strictly below `D`.
+
+The finite set `A'` therefore has diameter strictly below `D`, contradicting global
+diameter minimality. `square`
+
+Taking a minimum vertex cover gives the survivor condition
+
+\[
+ \boxed{M_{mix}(C)-z_C<\tau(H).}
+\tag{4.5}
+\]
+
+Because `C_{-1} subset S_mix(C)`, this strictly weakens the geometric protection
+hypothesis in Section 165 and can only increase the available repacking capacity.
+
+---
+
+## 5. Lattice-averaging lower bound
+
+Let `Lambda` be a unit triangular lattice, whose fundamental area is
+
+\[
+ a_0={\sqrt3\over2}.
+\]
+
+For a bounded measurable region `S`, averaging the number of points of
+`(Lambda+t) cap S` over one fundamental translation cell gives
+
+\[
+ {\operatorname{area}(S)\over a_0}.
+\]
+
+Hence some translate has at least the floor of that average. Applied to the mixed-wall
+region,
+
+\[
+ \boxed{
+ M_{mix}(C)
+ \ge
+ \left\lfloor{\operatorname{area}(S_{mix}(C))\over a_0}\right\rfloor.
+ }
+\tag{5.1}
+\]
+
+The lattice is unit-separated, and every selected lattice point lies in the safe
+region, so Theorem 3.1 supplies separation from the retained source automatically.
+
+Therefore an explicit sufficient condition for Type-I exterior-cap elimination is
+
+\[
+ \boxed{
+ \left\lfloor{\operatorname{area}(S_{mix}(C))\over a_0}\right\rfloor
+ \ge z_C+\tau(H).
+ }
+\tag{5.2}
+\]
+
+Writing
+
+\[
+ A_{-1}=\operatorname{area}(C_{-1}),
+\]
+
+(2.3) gives
+
+\[
+ \operatorname{area}(S_{mix}(C))=A_{-1}+G_{wall}(C).
+\tag{5.3}
+\]
+
+Thus the exact geometric improvement over the Section-165 lattice route is the
+recovered area `G_wall/a_0` in packing slots.
+
+No reverse Oler step occurs: (5.1) is a constructive translate-averaging lower bound.
+
+---
+
+## 6. What remains
+
+This result removes the contact-side collar but does not yet prove that (5.2) holds in
+every macroscopic exterior cap.
+
+The next quantitative target is now precise:
+
+> prove a lower bound for `G_wall(C)` from the long unit-contact boundary path and the
+> Type-I linear-inradius geometry, strong enough to bridge the Section-165 capacity
+> deficit.
+
+A local straight unit-contact edge recovers a universal crescent between the endpoint
+unit disks and the full distance-one edge strip. However, neighboring boundary
+vertices or another nearby portion of the convex boundary can cut into that crescent.
+Any global linear lower bound must control those overlaps using convexity, total
+turning and the Type-I inradius; it is not asserted without proof.
+
+The theorem keeps the full source cardinality, never applies the Section-57 affine
+kernel to isolates, and uses the complete actual diameter graph in the cover step.
+

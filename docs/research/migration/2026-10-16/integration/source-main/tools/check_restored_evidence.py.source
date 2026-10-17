@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+"""Check restored artifact bytes and optional private Git sources; no proof audit."""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+try:
+    from tools.build_artifact_index import HEADER_PREFIX, HEADER_SUFFIX
+    from tools.release_dependencies import safe_path
+except ModuleNotFoundError:
+    from build_artifact_index import HEADER_PREFIX, HEADER_SUFFIX
+    from release_dependencies import safe_path
+
+ROOT = Path(__file__).resolve().parents[1]
+REGISTER = "docs/launch/restored-evidence.json"
+WHITESPACE = "Trailing whitespace normalized; mathematical wording unchanged."
+
+
+def body(raw: bytes) -> bytes:
+    lines = raw.splitlines(keepends=True)
+    if lines and lines[0].startswith(HEADER_PREFIX.encode()) and lines[0].rstrip().endswith(HEADER_SUFFIX.encode()):
+        return b"".join(lines[1:])
+    return raw
+
+
+def check(root: Path, source_root: Path | None = None) -> list[str]:
+    errors, seen = [], set()
+    data = json.loads((root / REGISTER).read_text())
+    if data.get("schema_version") != 1 or not isinstance(data.get("sources"), list):
+        raise ValueError("invalid restored-evidence register")
+    for row in data["sources"]:
+        row_start = len(errors)
+        path = safe_path(row["path"])
+        if path in seen:
+            errors.append(f"duplicate restored artifact: {path}")
+            continue
+        seen.add(path)
+        for key, length in (("source_commit", 40), ("source_sha256", 64), ("restored_body_sha256", 64)):
+            if not re.fullmatch(rf"[0-9a-f]{{{length}}}", row.get(key, "")):
+                errors.append(f"invalid {key}: {path}")
+        current = root / path
+        if current.is_symlink() or not current.resolve().is_relative_to(root.resolve()) or not current.is_file():
+            errors.append(f"missing/unsafe restored artifact: {path}")
+            continue
+        if hashlib.sha256(body(current.read_bytes())).hexdigest() != row.get("restored_body_sha256"):
+            errors.append(f"restored body differs from provenance: {path}")
+        presentation = row.get("presentation_changes")
+        if presentation and presentation != WHITESPACE:
+            errors.append(f"unrecognized presentation normalization: {path}")
+        if source_root is None or len(errors) != row_start:
+            continue
+        raw = subprocess.check_output(["git", "--no-replace-objects", "-C", str(source_root), "show",
+                                       f"{row['source_commit']}:{path}"], stderr=subprocess.PIPE)
+        if hashlib.sha256(raw).hexdigest() != row["source_sha256"]:
+            errors.append(f"historical source hash differs: {path}")
+        expected = body(raw)
+        if presentation == WHITESPACE:
+            expected = b"\n".join(line.rstrip(b" \t\r") for line in expected.split(b"\n"))
+        if hashlib.sha256(expected).hexdigest() != row["restored_body_sha256"]:
+            errors.append(f"historical source does not reproduce restored body: {path}")
+    return errors
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--root", type=Path, default=ROOT)
+    parser.add_argument("--source-root", type=Path, help="optional private archive containing the frozen Git objects")
+    args = parser.parse_args(argv)
+    try:
+        errors = check(args.root, args.source_root)
+    except (OSError, ValueError, KeyError, TypeError, subprocess.SubprocessError):
+        print("restored-evidence: invalid register, missing file, or unavailable source object", file=sys.stderr)
+        return 1
+    for error in errors:
+        print("restored-evidence: " + error, file=sys.stderr)
+    if not errors:
+        count = len(json.loads((args.root / REGISTER).read_text())["sources"])
+        print(f"restored-evidence: OK ({count} artifacts; historical objects {'checked' if args.source_root else 'not requested'})")
+    return bool(errors)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

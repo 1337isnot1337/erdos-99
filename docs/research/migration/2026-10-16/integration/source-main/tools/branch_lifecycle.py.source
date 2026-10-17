@@ -1,0 +1,204 @@
+#!/usr/bin/env python3
+"""Read-only, paginated branch reconciliation. Never fetches, pushes or deletes refs."""
+from __future__ import annotations
+
+import argparse
+from collections import defaultdict
+from datetime import datetime, timezone
+import hashlib
+import json
+from pathlib import Path
+import re
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def git(root, *args):
+    return subprocess.check_output(
+        ['git', '--no-replace-objects', '-C', str(root), *args], stderr=subprocess.PIPE)
+
+
+def github_pages(repo, resource):
+    """gh follows every Link page; decode its stream without requiring --slurp."""
+    separator = '&' if '?' in resource else '?'
+    endpoint = f'repos/{repo}/{resource}{separator}per_page=100'
+    raw = subprocess.check_output(['gh', 'api', '--paginate', endpoint]).decode()
+    decoder = json.JSONDecoder()
+    records, offset, page_count = [], 0, 0
+    while offset < len(raw):
+        if raw[offset].isspace():
+            offset += 1
+            continue
+        page, offset = decoder.raw_decode(raw, offset)
+        if not isinstance(page, list) or any(not isinstance(item, dict) for item in page):
+            raise ValueError('expected complete array pages of objects from GitHub')
+        records.extend(page)
+        page_count += 1
+    if not page_count:
+        raise ValueError('expected at least one GitHub array page')
+    return records
+
+
+def collect_remote(repo):
+    if not re.fullmatch(r'[\w.-]+/[\w.-]+', repo):
+        raise ValueError('repository must be owner/name')
+    return {'repository': repo, 'branches': github_pages(repo, 'branches'),
+            'pulls': github_pages(repo, 'pulls?state=all')}
+
+
+def worktree_protections(root):
+    refs, tips, records = set(), set(), []
+    for block in git(root, 'worktree', 'list', '--porcelain', '-z').split(b'\0\0'):
+        if not block.strip(b'\0'):
+            continue
+        fields = dict((p.decode(errors='surrogateescape').split(' ', 1) + [''])[:2]
+                      for p in block.strip(b'\0').split(b'\0'))
+        # Protect even missing/prunable registrations until a maintainer audits them.
+        if 'branch' in fields:
+            refs.add(fields['branch'])
+        if 'HEAD' in fields:
+            tips.add(fields['HEAD'])
+        records.append(fields)
+    return refs, tips, records
+
+
+def reconcile(root, snapshot, *, main_ref='refs/remotes/origin/main', protect=()):
+    if not isinstance(snapshot, dict) or not isinstance(snapshot.get('branches'), list) or not isinstance(snapshot.get('pulls'), list):
+        raise ValueError('snapshot requires complete branches and pulls arrays')
+    repo = snapshot.get('repository')
+    if not isinstance(repo, str) or not re.fullmatch(r'[\w.-]+/[\w.-]+', repo):
+        raise ValueError('snapshot requires repository owner/name')
+    main = git(root, 'rev-parse', '--verify', main_ref + '^{commit}').decode().strip()
+    oid_len = len(main)
+    oid_pattern = rf'[0-9a-f]{{{oid_len}}}'
+    branches = snapshot['branches']
+    names = set()
+    for b in branches:
+        name, sha = b['name'], b['commit']['sha']
+        if not isinstance(name, str) or name in names:
+            raise ValueError('duplicate or invalid branch name')
+        git(root, 'check-ref-format', 'refs/heads/' + name)
+        if not isinstance(sha, str) or not re.fullmatch(oid_pattern, sha):
+            raise ValueError('invalid full branch object identity')
+        if git(root, 'rev-parse', '--verify', sha + '^{commit}').decode().strip() != sha:
+            raise ValueError('branch tip is not the recorded commit')
+        names.add(name)
+    main_name = main_ref.rsplit('/', 1)[-1]
+    if [b['commit']['sha'] for b in branches if b['name'] == main_name] != [main]:
+        raise ValueError('remote main and local main disagree; fetch and collect again')
+    if git(root, 'rev-parse', '--is-shallow-repository').strip() != b'false':
+        raise ValueError('complete history required; shallow repository refused')
+    wt_refs, wt_tips, worktrees = worktree_protections(root)
+    protected = set(protect) | wt_refs | {'refs/heads/' + main_name}
+    associated = defaultdict(list)
+    seen_prs = set()
+    for pr in snapshot['pulls']:
+        number = pr['number']
+        if not isinstance(number, int) or number in seen_prs or pr['state'] not in ('open', 'closed'):
+            raise ValueError('duplicate or invalid PR record')
+        seen_prs.add(number)
+        head_repo = (pr['head'].get('repo') or {}).get('full_name')
+        if head_repo == repo:
+            associated[pr['head']['ref']].append({
+                'number': number, 'state': pr['state'], 'draft': pr.get('draft', False),
+                'head_sha': pr['head']['sha'], 'merged_at': pr.get('merged_at')})
+        if pr['state'] == 'open':
+            if (pr['base'].get('repo') or {}).get('full_name') != repo or not head_repo:
+                raise ValueError('incomplete or foreign open PR repository metadata')
+            for side in ('head', 'base'):
+                if not isinstance(pr[side]['ref'], str) or not pr[side]['ref']:
+                    raise ValueError('missing open PR ref')
+            # Fork heads do not protect an unrelated branch with the same name.
+            for side in ('head', 'base'):
+                if (pr[side].get('repo') or {}).get('full_name') == repo:
+                    protected.add('refs/heads/' + pr[side]['ref'])
+    rows = []
+    duplicates = defaultdict(list)
+    for b in sorted(branches, key=lambda r: r['name']):
+        name, sha = b['name'], b['commit']['sha']
+        ref = 'refs/heads/' + name
+        duplicates[sha].append(ref)
+        reasons = []
+        if ref in protected:
+            reasons.append('main, open PR, registered worktree or explicit protection')
+        if sha in wt_tips:
+            reasons.append('registered worktree tip (including detached checkouts)')
+        if name.startswith('automation/'):
+            reasons.append('automation requires explicit operational review')
+        probe = subprocess.run(['git', '--no-replace-objects', '-C', str(root),
+                                'merge-base', '--is-ancestor', sha, main], capture_output=True)
+        if probe.returncode not in (0, 1):
+            raise ValueError('ancestry check failed')
+        ancestor = probe.returncode == 0
+        unique = git(root, 'rev-list', sha, '--not', main).decode().splitlines()
+        base = git(root, 'merge-base', main, sha).decode().strip()
+        paths = git(root, 'diff', '--name-only', '-z', base, sha).decode(errors='surrogateescape').strip('\0').split('\0')
+        occupied = ref in protected or sha in wt_tips
+        classification = 'E' if occupied else 'F' if reasons else 'A' if ancestor else 'F'
+        rows.append({'ref': ref, 'sha': sha, 'ancestor_of_main': ancestor,
+                     'classification': classification, 'protection': reasons,
+                     'unique_commits': unique, 'changed_paths': [p for p in paths if p],
+                     'last_commit_at': git(root, 'show', '-s', '--format=%cI', sha).decode().strip(),
+                     'prs': associated[name], 'deletion_preview_eligible': classification == 'A'})
+    local_only = []
+    for line in git(root, 'for-each-ref', '--format=%(refname)%09%(objectname)', 'refs/heads/').decode().splitlines():
+        ref, sha = line.split('\t')
+        if ref.removeprefix('refs/heads/') not in names:
+            local_only.append({'ref': ref, 'sha': sha, 'worktree_protected': ref in wt_refs or sha in wt_tips})
+    return {'schema_version': 1, 'repository': repo,
+            'captured_at': datetime.now(timezone.utc).isoformat(), 'main_sha': main,
+            'snapshot_sha256': hashlib.sha256(json.dumps(snapshot, sort_keys=True).encode()).hexdigest(),
+            'branches': rows, 'worktrees': worktrees, 'local_only_branches': local_only,
+            'duplicate_tips': {s: refs for s, refs in duplicates.items() if len(refs) > 1},
+            'limits': 'A is ancestry only; B/C/D require content/provenance review. '
+                      'F means unclear. No process liveness, rights or mathematical review is inferred. '
+                      'Snapshots are observations, not deletion authorization; refresh before acting.'}
+
+
+def deletion_preview(report):
+    return {'schema_version': 1, 'preview_only': True, 'main_sha': report['main_sha'],
+            'snapshot_sha256': report['snapshot_sha256'],
+            'requirements': ['fresh remote/PR/worktree/process check', 'recoverable private snapshot',
+                             'exact expected-SHA lease; stop on mismatch'],
+            'refs': [{'ref': b['ref'], 'expected_sha': b['sha']}
+                     for b in report['branches'] if b['deletion_preview_eligible']]}
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--root', type=Path, default=ROOT)
+    parser.add_argument('--repo', default='1337isnot1337/e-99')
+    parser.add_argument('--snapshot', type=Path, help='complete saved API branches/pulls; never trusted as current')
+    parser.add_argument('--save-snapshot', type=Path)
+    parser.add_argument('--output', type=Path)
+    parser.add_argument('--tsv', type=Path)
+    parser.add_argument('--deletion-manifest', type=Path, help='preview only; no deletion command is executed')
+    parser.add_argument('--protect-ref', action='append', default=[])
+    args = parser.parse_args(argv)
+    try:
+        snapshot = json.loads(args.snapshot.read_text()) if args.snapshot else collect_remote(args.repo)
+        report = reconcile(args.root, snapshot, protect=args.protect_ref)
+        if args.save_snapshot:
+            args.save_snapshot.write_text(json.dumps(snapshot, indent=2) + '\n')
+        if args.deletion_manifest:
+            args.deletion_manifest.write_text(json.dumps(deletion_preview(report), indent=2) + '\n')
+        if args.tsv:
+            # JSON-escape path/ref fields so unusual Git names cannot inject TSV rows.
+            args.tsv.write_text('ref\tsha\tclass\teligible\n' + ''.join(
+                f"{json.dumps(b['ref'])}\t{b['sha']}\t{b['classification']}\t{str(b['deletion_preview_eligible']).lower()}\n"
+                for b in report['branches']))
+        raw = json.dumps(report, indent=2) + '\n'
+        if args.output:
+            args.output.write_text(raw)
+        else:
+            print(raw, end='')
+    except (ValueError, KeyError, TypeError, OSError, subprocess.CalledProcessError) as exc:
+        print(f'branch-lifecycle: FAIL: {exc}', file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

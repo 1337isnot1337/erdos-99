@@ -1,0 +1,352 @@
+# Hostile audit — shallow-tooth reflection and perimeter collapse
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_shallow_tooth_reflection_blockers_2026-09-14.md`
+- `research/target_c_tooth_reflection_perimeter_collapse_2026-09-15.md`
+- `research/target_c_matching_reflection_coupled_floor_2026-09-15.md`  
+**Disposition:** **PASS at proof-only no-container/full-core Type-II scope, with one nonessential wording repair recorded below.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This audit checks the points most likely to invalidate the reflection route: whether
+reflection really breaks an old contact, whether new contacts are genuinely exterior
+isolates, whether the blocker-depth proof survives widening to `alpha<pi/6`, whether
+one exterior witness can be reused across many teeth, whether cap perimeter increments
+may be summed, and whether the new `0.243036D` coupled floor combines compatible
+extreme points.
+
+---
+
+## 1. Reflection really creates a lexicographic obstruction
+
+For a tooth
+
+\[
+a=(-c,0),\quad b=(c,0),\quad x=(0,h),\quad x^-=(0,-h),
+\]
+
+with `F` in `y>=0`, every source point `y=(p,q)` satisfies
+
+\[
+|y-x^-|^2-|y-x|^2=4hq.
+\]
+
+The base contacts `xa,xb` are preserved exactly. The shallow-tooth apex is an unloaded
+nonisolated vertex, so C26 gives at least one additional unit contact. Every actual
+contact neighbor of the apex lies in the force hull; an additional neighbor cannot lie
+on the supporting line of `ab`, because the only unit-circle intersections there are
+`a,b`. Hence every additional old contact has `q>0` and is strictly lengthened by the
+reflection.
+
+If no reflected point falls below unit separation and no reflected distance exceeds
+`D`, the replacement is a same-cardinality feasible source of diameter at most `D`.
+If its diameter is smaller, global optimality fails. If its diameter is `D` and no new
+unit contact appears, the number of unit contacts strictly decreases, contradicting
+the canonical contact-minimal choice. Therefore a reflection that is not blocked by a
+strict lower violation or by the diameter bound must acquire at least one new unit
+contact.
+
+For `q>=0`, reflection cannot decrease an old distance, so a genuinely new unit
+contact must have `q<0`. It is outside `F`. Canonical Section 56 makes every actual
+source point outside `F` contact-isolated in the original representative. The same is
+true of a strict lower blocker: original separation `|z-x|>=1` and reflected distance
+`|z-x^-|<1` force negative signed height.
+
+**Verdict:** PASS.
+
+---
+
+## 2. The lower-blocker depth proof extends to `alpha<pi/6`
+
+The original reflection note stated the quantitative depth subsection under the older
+`alpha<pi/12` threshold. The perimeter-collapse composition uses the same proof for
+all fixed
+
+\[
+0<\alpha<\pi/6.
+\]
+
+That widening is valid.
+
+For a strict lower blocker `z=(u,-r)`, write `U=|u|`. When `r<1`, separation from the
+nearer base endpoint gives
+
+\[
+|U-c|>B:=\sqrt{1-r^2}.
+\]
+
+The outer branch `U>c+B` is impossible because
+
+\[
+(c+B)^2-\bigl(1-(r-h)^2\bigr)
+=1+2cB-2rh>1-2h>0
+\]
+
+whenever `h=sin(alpha)<1/2`. Thus `U<c-B<c`.
+
+If `r+h>=1`, then
+
+\[
+r\ge1-h>\sin(\pi/3-\alpha),
+\]
+
+because
+
+\[
+1-h-\sin(\pi/3-\alpha)
+=1-\cos(\alpha-\pi/6)>0.
+\]
+
+If `r+h<1`, write `r=sin(beta)`. The old separation from `x` and the endpoint bound
+imply
+
+\[
+\sqrt{1-(r+h)^2}<U<c-\sqrt{1-r^2},
+\]
+
+which reduces to
+
+\[
+2\cos(\alpha+\beta)<1.
+\]
+
+Now `alpha<pi/6` and `beta<pi/2` give `alpha+beta<2pi/3`; monotonicity of cosine on
+this interval implies `alpha+beta>pi/3`, hence
+
+\[
+r>\sin(\pi/3-\alpha).
+\]
+
+The exact-new-contact angular proof also only needs the two admissible arcs to be
+nonempty, i.e. `alpha<pi/6`.
+
+**Verdict:** PASS. The `pi/12` label in the older standalone note is conservative, not
+a hidden dependency of the perimeter-collapse theorem.
+
+---
+
+## 3. Foot-interiority makes witness reuse exactly one
+
+For every exterior reflection witness, the perimeter-collapse lemma proves
+
+\[
+|u|<c.
+\]
+
+Thus the perpendicular foot `p=(u,0)` lies in `relint([a,b])`. Because `F` lies in
+`y>=0`, for every `v in F`,
+
+\[
+|z-v|\ge |z-p|,
+\]
+
+with equality only at `p`. Hence `p` is the unique Euclidean projection of `z` onto
+the closed convex set `F`.
+
+If the same source point witnessed another distinct loaded side, its perpendicular
+foot on that side would be a second nearest point of `F`, impossible by uniqueness of
+convex projection. A fixed loaded side also has only one inward unit-circle
+intersection for its two unit tooth edges, so the same side does not carry two distinct
+inward tooth apexes.
+
+Therefore exterior witnesses are occurrence-injective across shallow teeth. No disk
+packing multiplicity factor is needed.
+
+**Verdict:** PASS.
+
+---
+
+## 4. The cap-perimeter summation is legitimate
+
+Loaded terminals are actual diameter endpoints and therefore vertices of the full
+source hull `K`. A tooth base `ab` is a side of the loaded force hull `F`. If its
+reflection witness `z` lies strictly outside the supporting line of `ab`, the
+corresponding component of `K\setminus F` over that side is a nondegenerate convex
+exterior cap containing `conv{a,b,z}`.
+
+Let `L_K(a,b)` denote the outer `K`-boundary arc of that cap. Convex perimeter
+monotonicity gives
+
+\[
+|a-b|+L_K(a,b)
+\ge |a-b|+|z-a|+|z-b|.
+\]
+
+Using the depth floor and minimizing over tangential offset yields the fixed positive
+increment
+
+\[
+L_K(a,b)-|a-b|
+>g_\eta
+=2\bigl(\sqrt{1+Y_\eta^2}-1\bigr)>0.
+\]
+
+Distinct loaded sides define distinct caps with disjoint interiors in the canonical
+exterior-cap decomposition. Therefore the selected arc-minus-chord increments are
+subterms of the exact total
+
+\[
+\operatorname{per}(K)-\operatorname{per}(F),
+\]
+
+so
+
+\[
+g_\eta M_{ext}(\eta)
+<\operatorname{per}(K)-\operatorname{per}(F).
+\]
+
+In the full-core Type-II branch, `area(F)/D^2 -> pi/4`; planar isoperimetry gives
+`per(F)/D >= pi-o(1)`, while the diameter-perimeter inequality gives
+`per(F)<=pi D`. Hence `per(F)=pi D-o(D)`. Since `F subset K` and `diam(K)<=D`,
+
+\[
+0\le\operatorname{per}(K)-\operatorname{per}(F)=o(D).
+\]
+
+Thus `M_ext(eta)=o(D)` for every fixed threshold with `alpha_eta<pi/6`.
+
+**Verdict:** PASS.
+
+---
+
+## 5. Wording repair for the optional area side effect
+
+The perimeter-collapse note justifies disjoint witness triangles by saying that every
+interior point outside `F` has projection in the relative interior of its associated
+side. That sentence is broader than needed and should not be used as a standalone
+projection theorem.
+
+The claimed area inequality remains valid for the simpler reason already available in
+the cap decomposition:
+
+> each witness triangle `conv{a,b,z}` lies inside the distinct convex exterior cap
+> associated to its tooth side, and distinct exterior caps have pairwise disjoint
+> interiors.
+
+Hence the witness-triangle interiors are disjoint. This repairs the proof of the
+optional area side effect without changing the perimeter-collapse theorem or any
+constant used later.
+
+**Verdict:** wording repaired; no effect on the main theorem.
+
+---
+
+## 6. Upper blockers give a genuine near-common-antipode fan
+
+For an upper blocker `y=(p,q)`, direct expansion gives
+
+\[
+|y-a|^2-|y-x|^2
+=2hq+2cp+\cos(2\alpha),
+\]
+
+\[
+|y-b|^2-|y-x|^2
+=2hq-2cp+\cos(2\alpha).
+\]
+
+The reflected violation `|y-x^-|>D` together with both original endpoint bounds
+`|y-a|,|y-b|<=D` gives
+
+\[
+2hq-2c|p|>\cos(2\alpha).
+\]
+
+Therefore
+
+\[
+\min\{|y-a|^2,|y-b|^2\}
+>|y-x|^2+2\cos(2\alpha).
+\]
+
+At `eta=15/56`,
+
+\[
+2\cos(2\alpha_\eta)={3137\over3136}>1.
+\]
+
+The blocker is thus near-diametral to both endpoints of the actual loaded side, not
+only to the unloaded apex. This is an exact algebraic consequence; it does not promote
+those pairs to actual diameter edges.
+
+**Verdict:** PASS.
+
+---
+
+## 7. The `0.243036D` coupled optimization uses compatible extremes
+
+The current exact burden is
+
+\[
+n_2+2\ell\ge\pi-t-\kappa-\delta.
+\]
+
+The penetration matching theorem gives
+
+\[
+n_2\le y+\delta/\eta,
+\]
+
+while the long-side selector gives
+
+\[
+\ell\le2y+\delta\left(1+2/c_\beta\right).
+\]
+
+Hence
+
+\[
+5y\ge\pi-t-\kappa-K\delta,
+\qquad
+K={341\over15}+8\sqrt3.
+\]
+
+The low-`t` network squeeze is the joint constraint
+
+\[
+2\delta+\kappa/2\le R(t).
+\]
+
+Maximizing the adverse linear form `kappa+K delta` over this single feasible segment
+is legitimate. Since `K>4`, its maximum occurs at
+
+\[
+\delta=R(t)/2,
+\qquad
+\kappa=0,
+\]
+
+not by combining incompatible separate extrema. Thus
+
+\[
+y\ge {1\over5}
+\left[\pi-t-\left({341\over30}+4\sqrt3\right)R(t)\right].
+\]
+
+At `t=t_42`, this is
+
+\[
+0.2430360241576561830\ldots .
+\]
+
+The older factor-`1/2` theorem has the identical numerator divided by six, so the
+improvement is exactly `6/5`.
+
+**Verdict:** PASS.
+
+---
+
+## 8. What this audit does not prove
+
+The result does not close C-II. In particular:
+
+- a normal-aligned blocker need not be an exact diameter partner;
+- one blocker can serve many nearby shallow bases;
+- the cyclic Woodall branch already has exact common antipodes from its Reuleaux
+  representation, so the near-common-antipode statement alone is not contradictory;
+- the rounded long-side branch can still route many transverse contacts through a
+  coherent rhombic train.
+
+The current closing interface is therefore diameter-brace reuse versus train occupancy,
+not another local contact-count or stress-weight estimate.

@@ -1,0 +1,18 @@
+# Hostile audit — collapsed anchor destination capacity
+
+The capacity argument uses only strict convexity of bounded activated contact faces.
+At most two side vectors on such a face can lie on one projective line: three would
+force two with the same orientation, while opposite orientations can occur only as a
+single pair in the cyclic boundary of a strictly convex polygon.
+
+The actual outer face is excluded from the capacity count, so repeated outer-walk
+occurrences and bridges are not silently ruled out.  The resulting inequality
+`6m6 <= r_O + 2a_F` is therefore safe under the current occurrence-counted outer
+boundary conventions.
+
+The reduction does not say that different collapsed components have disjoint
+activated destinations, nor that a common outer host has simple sectors.  Those are
+the remaining global scope conditions.
+
+**Audit disposition:** PASS at the stated finite capacity scope; no canonical state
+change and no C-II closure.

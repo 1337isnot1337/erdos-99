@@ -1,0 +1,126 @@
+#!/usr/bin/env python3
+from decimal import Decimal, getcontext
+
+getcontext().prec = 80
+D = Decimal
+
+pi = D('3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986')
+sqrt3 = D(3).sqrt()
+Delta2 = pi / (D(2) * sqrt3)
+s2 = Delta2.sqrt()
+C0 = D(2) * s2 + D('0.0050')
+
+
+def sin_decimal(x: Decimal) -> Decimal:
+    term = x
+    total = x
+    n = 1
+    sign = -1
+    while True:
+        term = term * x * x / D((2 * n) * (2 * n + 1))
+        old = total
+        total = total + term if sign > 0 else total - term
+        if total == old:
+            return total
+        sign *= -1
+        n += 1
+
+
+def cos_decimal(x: Decimal) -> Decimal:
+    term = D(1)
+    total = term
+    n = 1
+    sign = -1
+    while True:
+        term = term * x * x / D((2 * n - 1) * (2 * n))
+        old = total
+        total = total + term if sign > 0 else total - term
+        if total == old:
+            return total
+        sign *= -1
+        n += 1
+
+
+def L(a: Decimal) -> Decimal:
+    return ((D(1) + sin_decimal(a)) / cos_decimal(a)).ln()
+
+
+def psi(delta: Decimal) -> Decimal:
+    # If K = 6 L(a), then Phi(K) = K - 6a = 6(L(a)-a).
+    # Solve this monotone equation directly in a to avoid nested root finding.
+    lo = D(0)
+    hi = pi / D(6)
+    for _ in range(260):
+        mid = (lo + hi) / D(2)
+        if D(6) * (L(mid) - mid) < delta:
+            lo = mid
+        else:
+            hi = mid
+    a = (lo + hi) / D(2)
+    return D(6) * L(a)
+
+
+def R(t: Decimal) -> Decimal:
+    return D('4.5') * t - D(2) * pi - C0
+
+
+def K0(t: Decimal) -> Decimal:
+    delta = R(t) / D(2)
+    return pi + delta - t - D(2) * C0 + D(8) * Delta2 / C0
+
+
+def bounded_nondominant_cap(t: Decimal) -> Decimal:
+    return psi(R(t) / D(2)) - K0(t)
+
+
+def pentagon_floor(t: Decimal) -> Decimal:
+    return pi + C0 - D('2.5') * t
+
+
+for t_text in ('1.8253', '1.8255', '1.826'):
+    t = D(t_text)
+    delta = R(t) / D(2)
+    cap = bounded_nondominant_cap(t)
+    p5 = pentagon_floor(t)
+    print(
+        't =', t,
+        'delta =', delta,
+        'Psi(delta) =', psi(delta),
+        'K0 =', K0(t),
+        'B_nd cap =', cap,
+        'p5 floor =', p5,
+        'orbit-pure p5 floor =', p5 - cap,
+    )
+
+# Main structural window.
+t = D('1.826')
+delta = R(t) / D(2)
+Psi = psi(delta)
+B_nd = bounded_nondominant_cap(t)
+p5 = pentagon_floor(t)
+
+assert delta < D('0.012095')
+assert Psi < D('1.384')
+assert B_nd < D('0.07561')
+assert p5 > D('0.4862182')
+assert p5 - B_nd > D('0.41061')
+
+# N_t(delta) is strictly increasing throughout the whole window.
+# Psi'(delta)=1/(1-sech(Psi/6)); using Psi<1.384 gives a safe lower bound.
+x = D('1.384') / D(6)
+sech = D(2) / (x.exp() + (-x).exp())
+psi_prime_lower = D(1) / (D(1) - sech)
+negative_cost_upper = D(5) + D(16) * Delta2 / (C0 * C0)
+
+assert psi_prime_lower > D('38.4')
+assert negative_cost_upper < D('8.98')
+assert psi_prime_lower - negative_cost_upper > D('29.4')
+
+# Near-floor collapse checks.
+assert bounded_nondominant_cap(D('1.8255')) < D('0.03157')
+assert bounded_nondominant_cap(D('1.8253')) < D('0.01311')
+
+print('Psi-prime lower bound =', psi_prime_lower)
+print('negative derivative-cost upper bound =', negative_cost_upper)
+print('derivative margin =', psi_prime_lower - negative_cost_upper)
+print('PASS: dominant-orbit bounded endpoint purity')

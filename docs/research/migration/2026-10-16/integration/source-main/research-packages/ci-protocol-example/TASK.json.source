@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "id": "ci-protocol-example",
+  "scope": {
+    "statement": "Integer square identity, finite protocol regression",
+    "domain": "all 289 ordered integer pairs in [-8,8] x [-8,8]",
+    "limitations": "No E99 result and no infinite-domain verification claim"
+  },
+  "result": "Exact finite checks and a false-identity negative control",
+  "remaining_questions": [
+    "Does a future research package declare its entire intended mathematical domain?"
+  ],
+  "classification": "regression"
+}

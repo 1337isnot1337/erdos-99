@@ -1,0 +1,72 @@
+## Submission class
+
+- [ ] Research artifact or independent audit; no canonical promotion requested
+- [ ] Canonical theorem promotion requested
+- [ ] Repository process, documentation, or tooling
+
+An ordinary merge does not promote a mathematical claim. For required items that do
+not apply, write `none` or `not applicable`.
+
+## Base and state
+
+- Base branch:
+- Exact base commit:
+- Theorem `state_version` at that base:
+- PR head commit reviewed:
+- Target route or repository area:
+
+## Exact question or change
+
+State the precise research question, theorem, correction, or behavior changed. If this
+is mathematical, state all objects and hypotheses and distinguish finite, local,
+arbitrary-packing, scaffold, and global-minimizer conclusions.
+
+## Dependencies and predecessors
+
+List canonical theorem IDs, source paths, and any noncanonical assumptions used. Link
+the closest predecessor reports, issues, discussions, and open PRs. Explain what this
+submission adds or independently checks.
+
+## Evidence and verification
+
+Describe the proof or implementation evidence. Include exact reproduction commands,
+inputs, arithmetic or environment requirements, tests, and results. Identify which
+parts were checked independently and by whom. State what the checks establish and what
+they do not establish.
+
+## Limitations and status
+
+- Remaining proof obligations or known limitations:
+- Exact lifecycle classification requested (unreviewed, audited-working, conditional,
+  regression, superseded, rejected, or canonical promotion):
+- Cross-PR or cross-branch dependencies:
+- Canonical theorem delta: zero unless a reviewed promotion is explicitly requested:
+
+## Promotion transaction (only if requested)
+
+- [ ] Complete proof and audit are included; this is not a report-only promotion.
+- [ ] `state_version`, `docs/STATE.md`, target route/frontier, and active prompt are
+      updated as needed in this same PR.
+- [ ] Dependency edges and load-bearing certificate registrations are updated.
+- [ ] Generated theorem metadata and views were regenerated through their generators.
+- [ ] One independent AI-agent mathematical audit is linked, combining full proof
+      reconstruction and adversarial bridge/regression testing. It records the
+      exact reviewed commit, reviewing agent/model when known, inputs, commands,
+      verdict and unresolved points. No human mathematical review is required.
+- [ ] `python3 tools/check_theorem_state.py` and the relevant certificates pass.
+
+## Attribution and AI assistance
+
+- Contributors and predecessor work to credit:
+- AI tools/models used, when known, and their role (proof drafting, code, search,
+  verification, or none):
+- Source, license, or citation notes:
+
+## Modified files
+
+List every created, modified, or deleted file and why it belongs in this PR.
+
+## Outstanding limitations and owner decisions
+
+List unresolved blockers, follow-up work, and any owner decision needed. State explicitly
+what was not verified. Do not claim external peer review unless it occurred.

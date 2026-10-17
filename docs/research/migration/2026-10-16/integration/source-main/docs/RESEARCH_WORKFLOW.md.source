@@ -1,0 +1,309 @@
+# Research workflow and theorem-promotion protocol
+
+This workflow governs proof runs, audits, synthesis, and promotion. The repository is
+large enough that theorem-state errors are a first-class mathematical risk.
+
+**Research and review are agent-only.** No human mathematical referee, proof reviewer,
+expert panel or manual mathematical approval is required. An ordinary new result
+begins unreviewed; consequential canonical promotion requires **one independent AI
+agent audit** of the exact commit, separate from the proposing agent. It must both
+reconstruct the full proof and adversarially test the decisive bridge and regressions.
+The project owner may operate that reviewing AI agent on others' submissions.
+Record exact SHA, reviewer agent/model when known, scope, evidence and result. See
+`docs/REVIEW_POLICY.md`. Human peer review must never be claimed on this basis.
+
+Read [`STATE.md`](STATE.md) before using this file.
+
+## 1. Lock the state before research
+
+At the start of every serious run, record:
+
+- repository commit;
+- state version from `state/theorem-state.yaml`;
+- target route;
+- exact canonical endpoint;
+- canonical dependencies to be used;
+- whether audited-working reports will be treated as hypotheses requiring promotion;
+- allowed literature/computation tools.
+
+If the repository changes during a long run, compare `STATE.md` and the affected route
+map before importing new work. Do not silently mix two theorem states.
+
+## 2. Choose the run type
+
+### Closing-proof run
+
+Goal: prove the exact current route closure or Level I theorem/disproof.
+
+Read the state lock, route map, active modules, necessary shared theory, then current
+prompt. Do not load the report archive by default.
+
+### Audit run
+
+Goal: classify a proposed theorem as canonical-ready, audited-working, conditional,
+regression, or rejected.
+
+Read the exact statement/proof, every nontrivial dependency, relevant regressions, and
+later corrections. “Looks plausible” is not an audit result.
+
+### Literature run
+
+Start from the formal missing lemma. Match exact container model, finite/infinite scope,
+relocation permissions, normalization, equality hypotheses, and quantitative constants.
+Record near misses.
+
+### Computational/regression run
+
+Write the mathematical proposition before coding. State what positive/negative output
+would prove. Prefer exact arithmetic or certified margins for proof-level regressions.
+
+### Synthesis/promotion run
+
+Normalize all candidate theorems and dependencies. Do not average claims or choose the
+newest/largest constant automatically. Preserve useful regressions. Promote only the
+strongest theorem whose proof chain actually survives audit.
+
+## 3. Write the endpoint before the tactic
+
+Before serious work, write
+
+```text
+candidate lemma -> exact canonical quantity -> contradiction / strict sub-D competitor
+```
+
+If the chain cannot be written, the idea is exploratory.
+
+For Target A, the canonical global endpoint is the Schur rank/nullity inequality in its
+route map; the Section-175 locked subbranch is the interior-tube right-deficiency inequality.
+
+For Target B, use the exact joint outer-shell stability inequality with all topology
+corrections.
+
+For Target C, C-I is already closed. Use `targets/target-c/CURRENT.md`: C-II begins after
+strict-negative transfer, exact Woodall topology, and exclusion of a universal common
+positive contact bridge.
+
+## 4. Trust the theorem stack; audit the bridge
+
+Canonical modules are inputs by default. Re-audit an old theorem only when:
+
+- the new proof relies on a subtle hypothesis not previously needed;
+- a regression appears to conflict with it;
+- a source was imported with a stronger claim than it proves;
+- the state lock records a correction or supersession;
+- the new proof depends on an audited-working report that must be promoted first.
+
+Do not spend a closing run re-proving trusted background while the actual new bridge is
+left informal.
+
+## 5. Proof audit checklist
+
+### Definitions and quantifiers
+
+- Are all configurations, hulls, graphs, stresses, sources, scaffolds, and response
+  networks the canonical objects?
+- Is the theorem about global minimizers, arbitrary feasible packings, a fixed
+  container, or a local optimum?
+- Are the “every minimizer” quantifiers preserved where Level I needs them?
+- Are contact-isolated source points retained when the canonical source contains them?
+
+### Geometry and motion
+
+- Do all constructed points remain in the claimed container?
+- Are all pair distances at least one?
+- Is any claimed diameter improvement strictly `<D`, not merely `<=D`?
+- Are every active diameter/contact constraint and secondary normalization handled?
+- Is an independently chosen optimum/scaffold being silently identified with the
+  source?
+
+### Graph/matching/matroid logic
+
+- Does each graph vertex/edge correspond to an actual canonical object?
+- Are candidate exchanges simultaneously compatible?
+- Are ranks taken after the stated contractions/deletions?
+- Are loops/contracted elements/boundary elements counted exactly once?
+- Does a local incidence ordering really imply the claimed path/trail? Remember the
+  Target C star counterexample.
+
+### Stress/response logic
+
+- Is the stress full-support, selected, extreme, or relative-interior as required?
+- Is a PSD theorem being used only under the geometry that proves it?
+- Does a zero multiplier actually integrate to finite release, or is a nonlinear/shear
+  theorem missing?
+- Are response conductances/KKT coefficients given quantitative lower bounds only when
+  proved?
+
+### Asymptotics
+
+- Does every `o(D)`, `O(D)`, or `o(D^2)` loss preserve the required exact contradiction?
+- Is a convergence rate being assumed where only convergence was proved?
+- Are boundary-order terms retained when the target itself is boundary-order?
+- Is the estimate uniform over the full parameter regime used?
+
+### Literature
+
+- Was the theorem checked in the original source or a reliable exact transcription?
+- Are equality/uniqueness claims actually proved there?
+- Do finite/infinite, container, lattice, and relocation hypotheses match?
+
+### Regressions
+
+Run every logically relevant regression in the active route/state lock. For each
+apparent conflict identify the exact hypothesis the regression lacks. If there is none,
+the theorem is false or overstated.
+
+## 6. Lifecycle
+
+Use the status vocabulary in `STATE.md`.
+
+1. **idea** — mechanism only;
+2. **candidate** — precise statement and endpoint;
+3. **proof draft** — complete derivation but not adversarially audited;
+4. **unreviewed** — default artifact state after commit/merge; not an unqualified premise;
+5. **audited-working** — proof survives an explicit audit but is not canonical;
+6. **canonical** — explicitly promoted into the theorem stack;
+7. **superseded/rejected** — later theorem replaces it or audit kills it.
+
+A report can contain several statuses. Promotion applies only to the exact theorem
+identified in the state/route map.
+
+## 7. Parallel-model synthesis
+
+For each run extract:
+
+1. strongest genuinely new theorem;
+2. exact dependencies;
+3. target advanced;
+4. exact remaining lemma;
+5. regressions checked;
+6. new literature;
+7. computational evidence;
+8. failed claims.
+
+Compare hypotheses and conclusions, not prose similarity. Two reports with the same
+conclusion but different assumptions are not duplicates. Never combine partial proofs
+by assuming their intermediate source/scaffold/response objects coincide.
+
+## 8. Reports
+
+Use `reports/REPORT_TEMPLATE.md`. A report should be auditable without the original chat
+transcript but should not reproduce the whole canonical stack.
+
+If Level I remains open, end with one exact next obligation, not a vague idea list.
+
+Unpromoted reports remain `unreviewed` and noncanonical after merge to `main` unless an explicit audit entry assigns a stronger status.
+
+## 9. Prompt refresh
+
+Refresh an active prompt when:
+
+- exact remaining endpoint changes;
+- a major route is eliminated;
+- a new regression invalidates common arguments;
+- a promoted theorem materially changes the dependency set.
+
+Historical prompt paths must not silently masquerade as current. Keep compatibility
+pointers or explicitly mark them historical.
+
+## 10. Computation
+
+For every reusable script record in `research/README.md`:
+
+1. proposition tested;
+2. assumptions encoded/omitted;
+3. exact/symbolic/interval/floating arithmetic;
+4. what success proves;
+5. what it does not prove;
+6. associated theorem/regression.
+
+If a script becomes load-bearing for a ledger entry, register it in that entry's `certificates` list; CI executes every registered certificate.
+
+A computational counterexample intended to kill a theorem should use exact arithmetic
+or a certified margin when feasible.
+
+## 11. Promotion transaction
+
+A frontier-changing theorem is promoted only when one change updates:
+
+1. `state_version` in `docs/state/theorem-state.yaml`;
+2. `docs/STATE.md`;
+3. affected target route map or current-frontier file;
+4. active route prompt if its mission changes;
+5. proof report/module containing the complete audited argument;
+6. explicit `depends_on` / `invalidates` / `supersedes` edges when applicable;
+7. registered computational certificates when load-bearing;
+8. generated artifact metadata/index and readable state views.
+
+Before merge run:
+The promotion must link the single independent agent-review record and name any
+unresolved step; a failed audit blocks promotion even when all automated checks pass.
+
+
+```text
+python3 tools/build_artifact_index.py
+python3 tools/generate_theorem_state_views.py
+python3 tools/check_theorem_state.py
+python3 tools/run_theorem_certificates.py
+git diff --check
+```
+
+Then verify the theorem proof manually. CI catches state drift, not mathematical errors.
+
+## 12. Correcting a bad theorem
+
+When an audit fails:
+
+1. identify the exact invalid implication;
+2. add an exact counterexample or missing-lemma statement when possible;
+3. mark the claim rejected/conditional in `STATE.md` immediately;
+4. trace downstream dependencies;
+5. preserve unaffected results;
+6. update route/current prompt if the failed claim changed the frontier.
+
+Do not delete valuable regressions merely to make the repository look cleaner.
+
+## 13. Stop conditions
+
+A research run should stop only after one of:
+
+- Level I proof/disproof completed and audited;
+- exact route theorem proved;
+- major candidate theorem disproved by exact regression;
+- route reduced to a genuinely sharper named lemma;
+- required external theorem/source is identified but unavailable;
+- certified computation changes the mathematical route.
+
+“Still hard,” “repository summarized,” or “constant slightly improved while the same
+phase survives” is not a substantive stop condition.
+
+## 14. Minimal handoff
+
+A future researcher should be able to continue from:
+
+1. Level I status;
+2. state version and base commit;
+3. strongest new audited theorem;
+4. exact dependency chain;
+5. exact remaining lemma;
+6. binding regressions/dead routes;
+7. required promotion edits.
+
+## 15. Branch cleanup after a run
+
+Branch cleanup is part of the handoff, not optional repository housekeeping. Before an
+agent declares a run finished, it should classify every branch it created or superseded.
+
+- Keep branches backing active work or open PRs.
+- Keep a branch with unique unmerged research until that material is preserved or
+  explicitly dispositioned.
+- Delete branches whose work has merged, been rebuilt on a replacement branch, been
+  explicitly superseded, or been intentionally abandoned with nothing unique left.
+- Do not use branch retention as a substitute for reports, PR history, or Git history.
+- Do not delete another branch based only on age or divergence; compare its content and
+  PR lineage against `main` first.
+- Remove temporary maintenance branches and cleanup-only workflow files when their task
+  is complete.
+
+A complete end-of-run handoff should leave the repository with only active or genuinely
+unique branches, rather than requiring a later global branch-cleanup pass.

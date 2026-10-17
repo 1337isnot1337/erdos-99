@@ -1,0 +1,299 @@
+# Target C — exact correlation of augmented-cell defect currencies
+
+**Date:** 2026-09-12
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+**Status:** proof-only companion stacked on the post-123 integration branch. Theorem authority unchanged.
+**Dependencies:** canonical Section 123 and proof-only augmented-route compression, loaded-contact localization, augmented-triangle charging, and outer-tooth exactness on the current integration stack.
+
+The current post-123 research stack appears to leave three separate currencies in the aggregate Type-II return payment:
+
+\[
+\Delta_{ad}:=\sum_r(a_r-d_r),
+\qquad
+A_*:=\sum_r(a_r-T_r),
+\qquad
+Q_*:=\sum_rQ_r^+.
+\]
+
+The augmented-route theorem gives
+
+\[
+\liminf_{D\to\infty}{1\over D}
+\left(
+\Delta_{ad}+{A_*\over2}+3Q_*
+\right)
+\ge
+c_*^{\rm ret}:={\pi\over4}(2-\sqrt3).
+\tag{1}
+\]
+
+They are not independent. Once loaded contacts are localized to hull sides and the augmented triangular faces are identified exactly with the two-edge nonunit hull teeth, there is an exact finite cancellation:
+
+\[
+\boxed{
+A_*-Q_*
+=2k+2r_{\rm deep}+4c_I-4,
+}
+\tag{2}
+\]
+
+where
+
+\[
+k=d_H+s_Z,
+\qquad
+r_{\rm deep}:=m-T\ge0,
+\]
+
+`m` is the number of nonunit loaded-hull sides, `T=sum_r T_r`, and `c_I` is the number of unloaded positive-contact components.
+
+Consequently (1) is exactly equivalent to
+
+\[
+\boxed{
+\liminf_{D\to\infty}{1\over D}
+\left(
+\Delta_{ad}+{7\over2}Q_*+k+r_{\rm deep}+2c_I
+\right)
+\ge
+{\pi\over4}(2-\sqrt3).
+}
+\tag{3}
+\]
+
+The omitted finite constant is `-2` inside the bracket and vanishes after division by `D`. Since canonical Section 75 gives `c_I=O(D^{2/3})`, the first-order form is
+
+\[
+\boxed{
+\liminf_{D\to\infty}{1\over D}
+\left(
+\Delta_{ad}+{7\over2}Q_*+k+r_{\rm deep}
+\right)
+\ge
+{\pi\over4}(2-\sqrt3).
+}
+\tag{4}
+\]
+
+Thus the full-core frontier has a sharper structural split:
+
+- augmented degree defect `Q_*` is expensive, with coefficient `7/2`;
+- Woodall/mixed defect `k` pays once;
+- genuinely deep nonunit hull detours `r_deep` pay once;
+- only after those three currencies are sublinear is the return demand forced into `Delta_ad`.
+
+This does not close C-II, but it removes a false degree of freedom from the live proof-only frontier.
+
+---
+
+## 1. Exact identities on the integration stack
+
+Use the current notation
+
+\[
+a:=\sum_ra_r,
+\qquad
+T:=\sum_rT_r,
+\qquad
+Q_*:=\sum_rQ_r^+.
+\]
+
+Canonical Section 123 defines the dissection deficit
+
+\[
+\boxed{
+d_{tile}=q-2-a+2c_I,}
+\tag{5}
+\]
+
+hence
+
+\[
+\boxed{a=q-2+2c_I-d_{tile}.}
+\tag{6}
+\]
+
+The Type-II loaded-contact localization theorem gives
+
+\[
+\boxed{c_B=0,}
+\tag{7}
+\]
+
+so every loaded-loaded unit contact is a hull side. If `m` is the number of nonunit loaded-hull sides, then
+
+\[
+\boxed{e_{BB}=q-m.}
+\tag{8}
+\]
+
+The same loaded-hull ledger gives
+
+\[
+\boxed{e_{BB}=Q+2k+u_B.}
+\tag{9}
+\]
+
+Outer-tooth exactness identifies
+
+\[
+\boxed{r_{\rm deep}:=m-T\ge0.}
+\tag{10}
+\]
+
+Finally the augmented-triangle/global-defect theorem gives the exact identity
+
+\[
+\boxed{
+Q_*
+=Q+u_B-r_{\rm deep}-2(c_I-1)-d_{tile}.
+}
+\tag{11}
+\]
+
+Every equation here is finite. No limit is used in the cancellation below.
+
+---
+
+## 2. Eliminate the apparent independent triangle currency
+
+By definition and (6),
+
+\[
+\begin{aligned}
+A_*
+&=a-T\\
+&=q-2+2c_I-d_{tile}-(m-r_{\rm deep})\\
+&=(q-m)+r_{\rm deep}+2c_I-2-d_{tile}.
+\end{aligned}
+\]
+
+Using (8),
+
+\[
+\boxed{
+A_*=e_{BB}+r_{\rm deep}+2c_I-2-d_{tile}.
+}
+\tag{12}
+\]
+
+From (9),
+
+\[
+Q+u_B=e_{BB}-2k.
+\tag{13}
+\]
+
+Insert (13) into (11):
+
+\[
+\boxed{
+Q_*=e_{BB}-2k-r_{\rm deep}-2c_I+2-d_{tile}.
+}
+\tag{14}
+\]
+
+Subtract (14) from (12). The loaded-contact count and the dissection deficit cancel exactly:
+
+\[
+\boxed{
+A_*-Q_*
+=2k+2r_{\rm deep}+4c_I-4.
+}
+\]
+
+This proves (2).
+
+Several points are worth recording.
+
+1. `d_tile` disappears completely. Fragmentation of the attachment-cell triangulation changes `A_*` and `Q_*` together rather than supplying an independent first-order payment.
+2. `e_BB` also disappears. The large loaded-contact count is already encoded in the augmented degree/triangle ledgers.
+3. The only difference between the two augmented currencies is topological defect, genuinely deep outer detours, and the sublinear component count.
+
+---
+
+## 3. Collapse the aggregate return inequality
+
+The proof-only augmented-route theorem gives the finite upper payment that leads to (1). Substitute
+
+\[
+A_*=Q_*+2k+2r_{\rm deep}+4c_I-4
+\]
+
+into its bracket:
+
+\[
+\begin{aligned}
+\Delta_{ad}+{A_*\over2}+3Q_*
+&=\Delta_{ad}
++{1\over2}
+\left(Q_*+2k+2r_{\rm deep}+4c_I-4\right)
++3Q_*\\
+&=\boxed{
+\Delta_{ad}+{7\over2}Q_*+k+r_{\rm deep}+2c_I-2.
+}
+\tag{15}
+\end{aligned}
+\]
+
+Therefore the Type-II return floor is exactly (3).
+
+Canonical Section 75 gives
+
+\[
+c_I=O(D^{2/3})=o(D),
+\]
+
+so (4) follows.
+
+---
+
+## 4. Structural case split
+
+Equation (4) turns the triangular-tooth regression into a finite four-currency alternative. For every Type-II survivor sequence, after subsequence extraction at least one of the following is linear in `D`:
+
+\[
+\Delta_{ad},
+\qquad Q_*,
+\qquad k,
+\qquad r_{\rm deep}.
+\tag{16}
+\]
+
+More quantitatively, for any fixed `eta>0`, if
+
+\[
+{Q_*\over D}\le\eta,
+\qquad
+{k\over D}\le\eta,
+\qquad
+{r_{\rm deep}\over D}\le\eta,
+\]
+
+then
+
+\[
+\boxed{
+\liminf {\Delta_{ad}\over D}
+\ge
+{\pi\over4}(2-\sqrt3)-{11\over2}\eta.
+}
+\tag{17}
+\]
+
+Thus a near-pure two-edge-tooth shell with small augmented degree defect and small topology defect cannot make `Delta_ad` disappear. Conversely, if `Delta_ad` is small, one of `Q_*`, `k`, or `r_deep` must carry a fixed linear amount of the return demand.
+
+This is the correct next proof split. Treating `A_*`, `Q_*`, and the nonunit-tooth population as independently adjustable overcounts the available slack.
+
+---
+
+## 5. Hostile checks
+
+- **No theorem promotion.** The identities depending on loaded-contact localization and outer-tooth exactness remain proof-only. Equation (2) inherits that scope.
+- **No source deletion.** All statements are ledgers on the nonisolated positive-contact core while contact-isolated source points remain in the full configuration.
+- **No full-source ZR/ZF extension.** `k=d_H+s_Z` is used only with its canonical core meaning.
+- **No asymptotic algebra in (2).** The cancellation is finite and exact; only the passage from (3) to (4) uses `c_I=o(D)`.
+- **No sign assumptions on `Delta_ad`.** The return inequality, not the definition, controls the aggregate combination.
+- **No hidden `d_tile` payment.** Its cancellation in (2) is algebraic and is precisely why it should not be counted again in a downstream case split.
+
+**Disposition:** proved exact proof-only correlation theorem. C-II remains open.

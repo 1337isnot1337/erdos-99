@@ -1,0 +1,95 @@
+#!/usr/bin/env python3
+"""Exact support certificate closing the r=0 subcase of the final k=4,p=3 profile."""
+from collections import Counter
+from pathlib import Path
+import sys
+
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+import verify_target_c_support7_global_segment_relative_eight_noroot_k4_dminus1_d1p0_support_closure_2026_09_26 as B
+
+
+def empty_eligible(x):
+    _, dim, incidence = x
+    if dim == 1:
+        return incidence >= 3
+    # In r=0 we have d1(P)>=3.  For a rank-two local empty space with t=4,
+    # write m0+m1+m2=4 for the three local projective-direction multiplicities.
+    # Some mi>=2, so the corresponding nonzero local row has weight 4-mi<=2,
+    # contradicting E_b<=P and d1(P)>=3.  Thus rank two needs t>=5.
+    return incidence >= 5
+
+
+def main():
+    assert B.lucas_lehmer_31()
+    assert B.MOD * B.MOD > 3**15
+
+    # Exact local arithmetic behind the rank-two t=4 exclusion.
+    for m0 in range(5):
+        for m1 in range(5 - m0):
+            m2 = 4 - m0 - m1
+            if sum(m > 0 for m in (m0, m1, m2)) < 2:
+                continue  # this would be local rank one, not rank two
+            m = max(m0, m1, m2)
+            assert 2 <= m <= 3
+            assert 1 <= 4 - m <= 2
+
+    reps = B.support_multiset_orbits()
+    assert len(reps) == 27763
+
+    gap_counts = Counter()
+    tight = []
+    for i, ms in enumerate(reps):
+        data = B.block_data(ms)
+        T = tuple(sorted(data))
+        rank_T = B.tri_rank(T)
+        eligible = {b for b in T if empty_eligible(data[b])}
+        forced_nonempty = set(T) - eligible
+
+        # Any actual-empty block belongs to eligible.  Hence every block in
+        # forced_nonempty is singleton or complete.  There are only three
+        # singleton blocks globally.  An actual state would therefore have
+        # c >= |forced_nonempty|-3 touched complete blocks.  On the other hand,
+        # d_root=0 plus face-local k=4 capacity gives c <= rank(H(T))-4.
+        # Thus an actual state requires |forced_nonempty| <= rank(H(T))-1.
+        gap = len(forced_nonempty) - rank_T
+        gap_counts[gap] += 1
+        if gap == 0:
+            tight.append((i, ms, len(T), rank_T, len(eligible), len(forced_nonempty)))
+
+    expected_gap_counts = {
+        0: 1,
+        1: 3,
+        2: 37,
+        3: 241,
+        4: 1115,
+        5: 3336,
+        6: 6783,
+        7: 6980,
+        8: 5371,
+        9: 2614,
+        10: 976,
+        11: 250,
+        12: 51,
+        13: 4,
+        14: 1,
+    }
+    assert dict(sorted(gap_counts.items())) == expected_gap_counts, gap_counts
+    assert tight == [(10, (0, 0, 0, 1, 1, 1, 4, 4), 9, 6, 3, 6)], tight
+
+    # Every orbit has |forced_nonempty| >= rank(H(T)), whereas an actual r=0
+    # state would need |forced_nonempty| <= rank(H(T))-1.
+    assert min(gap_counts) == 0
+
+    print("PASS: eight-no-root k=4 D=-1 d_root=0 p=3 three-singleton r=0 closure")
+    print("orbit_counts_size_0_through_8", B.EXPECTED_ORBIT_COUNTS)
+    print("support_multiset_orbits_size_8", len(reps))
+    print("minimum_forced_nonempty_minus_touch_rank", min(gap_counts))
+    print("tight_orbits", len(tight))
+    print("tight_orbit", tight[0])
+    print("gap_distribution", dict(sorted(gap_counts.items())))
+    print("hadamard_exact_rank_bound", B.MOD * B.MOD > 3**15)
+
+
+if __name__ == "__main__":
+    main()

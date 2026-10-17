@@ -1,0 +1,54 @@
+# Target C — C94 macroscopic active-face-flat frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_macroscopic_active_face_flat_2026-09-01.md](../../reports/target_c_macroscopic_active_face_flat_2026-09-01.md).
+
+Let `L` be the full train-angle subspace neutral to every active diameter gradient in
+the canonical pure-rhombic C80 chain-face branch. Target B Section 40 gives the exact
+finite count
+
+`dim L >= T-|H| >= T-q`.
+
+C86 upgrades every `v in L` from a formal first-order mode to an actual tangent of the
+local exact active equality realization set: there is a nearby realization preserving
+every original unit contact and every original diameter pair exactly, with derivative
+`v`.
+
+C86 also forces all D chain-train angular coordinates to be equal. Modulo global
+rotation they therefore vanish, so `L` injects into the `T-D` non-chain train-angle
+coordinates. The macroscopic flat is entirely secondary-train motion.
+
+With `x=T/D`, `y=q/T`, C82 gives
+
+`x >= (1+Delta_2)/(1-y/2)+o(1)`.
+
+Hence
+
+`q/D=xy <= 2x-2(1+Delta_2)+o(1)`,
+
+and therefore
+
+`dim L/D >= 2(1+Delta_2)-x-o(1)`.
+
+Thus every asymptotic canonical pure chain-face survivor satisfies the dichotomy:
+
+1. `T >= (3-o(1))D`; or
+2. the tangent cone of its local exact `(C,H)` realization set contains a linear
+   subspace of dimension at least
+
+   `(2Delta_2-1-o(1))D`
+
+   `=(pi/sqrt(3)-1-o(1))D`
+
+   `=(0.8137993642...-o(1))D`,
+
+   supported after gauge fixing entirely on non-chain trains.
+
+C92 also gives `T/D >=2+Delta_2+10^(-4)`, so the low-train phase simultaneously has a
+large exact active flat and explicit linear train surplus.
+
+C94 does not claim the active equality set is a smooth manifold or that every local
+arc continues to macroscopic distance. The next target is an activation-boundary
+theorem converting this linear-dimensional exact tangent flat into a forced 60-degree
+rhombus, a strict sub-D competitor, or a proportional shell-area loss.

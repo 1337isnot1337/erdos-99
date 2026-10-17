@@ -1,0 +1,252 @@
+#!/usr/bin/env python3
+"""Exact graph census and rational Euclidean regression; no global-optimality claim."""
+
+from argparse import ArgumentParser
+from fractions import Fraction as F
+from itertools import combinations
+
+
+def nested(a, b):
+    p, q = a
+    r, s = b
+    return (p <= r and s <= q) or (r <= p and q <= s)
+
+
+def one_sided_slabs(edges, m):
+    for i in range(1, m):
+        for j in range(i, m):
+            left = any(p < i <= q <= j for p, q in edges)
+            right = any(i <= p <= j < q for p, q in edges)
+            if left and right:
+                return False
+    return True
+
+
+def connected(edges, m):
+    neighbors = [set() for _ in range(m + 1)]
+    for p, q in edges:
+        neighbors[p].add(q)
+        neighbors[q].add(p)
+    seen = {0}
+    todo = [0]
+    while todo:
+        for q in neighbors[todo.pop()] - seen:
+            seen.add(q)
+            todo.append(q)
+    return len(seen) == m + 1
+
+
+def nested_families(m):
+    outer = (0, m)
+    options = [e for e in combinations(range(m + 1), 2) if e != outer]
+
+    def visit(k, selected):
+        if k == len(options):
+            yield tuple(selected)
+            return
+        yield from visit(k + 1, selected)
+        e = options[k]
+        if all(nested(e, f) for f in selected):
+            selected.append(e)
+            yield from visit(k + 1, selected)
+            selected.pop()
+
+    yield from visit(0, [outer])
+
+
+def rank(rows):
+    a = [[F(x) for x in row] for row in rows]
+    r = 0
+    for c in range(len(a[0])):
+        pivot = next((i for i in range(r, len(a)) if a[i][c]), None)
+        if pivot is None:
+            continue
+        a[r], a[pivot] = a[pivot], a[r]
+        pivot_value = a[r][c]
+        a[r] = [x / pivot_value for x in a[r]]
+        for i in range(len(a)):
+            if i != r and a[i][c]:
+                coefficient = a[i][c]
+                a[i] = [x - coefficient * y for x, y in zip(a[i], a[r])]
+        r += 1
+    return r
+
+
+def check_classification(edges, m):
+    chain = sorted(edges, key=lambda e: e[1] - e[0], reverse=True)
+    assert len(chain) == m
+    assert chain[0] == (0, m)
+    assert chain[-1][1] - chain[-1][0] == 1
+    for (p, q), (r, s) in zip(chain, chain[1:]):
+        assert (r, s) in ((p + 1, q), (p, q - 1))
+    rows = [tuple(int(p < j <= q) for j in range(1, m + 1)) for p, q in chain]
+    assert rank(rows) == m
+    # One positive weight per row and its negative: exact virtual-work balance.
+    weighted = [F(0) for _ in range(m)]
+    beta = F(1, 2 * m)
+    for row in rows:
+        for c in (F(1), F(-1)):
+            weighted = [x + beta * c * y for x, y in zip(weighted, row)]
+    assert weighted == [F(0)] * m
+
+
+def crosscheck(m):
+    outer = (0, m)
+    options = [e for e in combinations(range(m + 1), 2) if e != outer]
+    count = 0
+    for mask in range(1 << len(options)):
+        edges = [outer] + [e for k, e in enumerate(options) if mask & (1 << k)]
+        chain_condition = all(nested(a, b) for a, b in combinations(edges, 2))
+        assert chain_condition == one_sided_slabs(edges, m)
+        if chain_condition and connected(edges, m):
+            check_classification(edges, m)
+            count += 1
+    assert count == 2 ** (m - 1)
+    return 1 << len(options)
+
+
+def subtract(p, q):
+    return tuple(a - b for a, b in zip(p, q))
+
+
+def norm2(p):
+    return sum(x * x for x in p)
+
+
+def determinant(p, q):
+    return p[0] * q[1] - p[1] * q[0]
+
+
+def proper_cross(a, b, c, d):
+    return (determinant(subtract(b, a), subtract(c, a))
+            * determinant(subtract(b, a), subtract(d, a)) < 0
+            and determinant(subtract(d, c), subtract(a, c))
+            * determinant(subtract(d, c), subtract(b, c)) < 0)
+
+
+def euclidean_regression(m, threshold=False):
+    """A unit-separated source with H = one star plus one disjoint diameter.
+
+    Every star pair has support [1,j]; the separate diameter has support [1,1].
+    Positive diameter weights cancel every train transverse derivative and
+    give positive axial cut/slab reactions. There are NO unit contacts, so
+    these are not vertex KKT stresses of a minimizing contact framework.
+    """
+    diameter = F(100 * m)
+    points = {'v': (F(0), F(0)),
+              'a': (diameter * F(6, 13), -diameter / 2),
+              'b': (diameter * F(6, 13), diameter / 2)}
+    layers = {'v': 0, 'a': 0, 'b': 1}
+    if threshold:
+        points['z'] = (diameter, F(0))
+        layers['z'] = m
+    for j in range(1, m + 1):
+        t = F(m - j + 1, 10 * m)
+        x = diameter * (1 - t * t) / (1 + t * t)
+        y = diameter * 2 * t / (1 + t * t)
+        points[f'p{j}'] = (x, y)
+        points[f'n{j}'] = (x, -y)
+        layers[f'p{j}'] = layers[f'n{j}'] = j
+
+    actual_diameters = set()
+    minimum2 = diameter * diameter
+    for x, y in combinations(points, 2):
+        d2 = norm2(subtract(points[x], points[y]))
+        assert F(1) < d2 <= diameter * diameter
+        minimum2 = min(minimum2, d2)
+        if d2 == diameter * diameter:
+            actual_diameters.add(frozenset((x, y)))
+    expected = {frozenset(('a', 'b'))}
+    expected.update(frozenset(('v', z)) for z in points if z[0] in ('p', 'n'))
+    if threshold:
+        expected.add(frozenset(('v', 'z')))
+    assert actual_diameters == expected
+    for x, y in combinations(actual_diameters, 2):
+        if x.isdisjoint(y):
+            a, b = tuple(x)
+            c, d = tuple(y)
+            assert proper_cross(points[a], points[b], points[c], points[d])
+
+    # Convex boundary order: v,a,n1,...,nm,pm,...,p1,b.
+    boundary = ['v', 'a'] + [f'n{j}' for j in range(1, m + 1)]
+    if threshold:
+        boundary.append('z')
+    boundary += [f'p{j}' for j in range(m, 0, -1)] + ['b']
+    for k in range(len(boundary)):
+        p, q, r = (points[boundary[(k + offset) % len(boundary)]] for offset in range(3))
+        assert determinant(subtract(q, p), subtract(r, q)) > 0
+    for i in range(1, m + 1):
+        sides = [layers[z] >= i for z in boundary]
+        assert sum(sides[k] != sides[(k + 1) % len(sides)] for k in range(len(sides))) == 2
+
+    weights = {(j, sign): F(1) for j in range(1, m + 1) for sign in ('p', 'n')}
+    # Compensate the transverse derivative D of a->b in the [1,1] class.
+    weights[(1, 'n')] += diameter / points['p1'][1]
+    normalizer = sum(weights.values()) + 1 + int(threshold)
+    full_rows = []
+    class_sums = {j: [F(0), F(0)] for j in range(1, m + 1)}
+    class_weights = {j: F(0) for j in range(1, m + 1)}
+    for (j, sign), weight in weights.items():
+        vector = points[f'{sign}{j}']
+        beta = weight / normalizer
+        class_weights[j] += beta
+        class_sums[j] = [x + beta * y for x, y in zip(class_sums[j], vector)]
+        full_rows.append([vector[1] if i <= j else F(0) for i in range(1, m + 1)])
+    separate = subtract(points['b'], points['a'])
+    class_sums[1] = [x + y / normalizer for x, y in zip(class_sums[1], separate)]
+    class_weights[1] += 1 / normalizer
+    full_rows.append([separate[1]] + [F(0)] * (m - 1))
+    if threshold:
+        class_sums[m][0] += diameter / normalizer
+        class_weights[m] += 1 / normalizer
+        full_rows.append([F(0)] * m)
+    assert rank(full_rows) == m
+    for j, (axial, transverse) in class_sums.items():
+        assert axial > 0 and transverse == 0
+        # A_I > |I| B_I makes the restricted stress form positive definite
+        # by Cauchy-Schwarz. These F_i are hypothetical contact cut masses.
+        assert axial > j * class_weights[j]
+        # For t = tan(theta/2) in [0, cell_t], squared diameter change
+        # is 4t*(ny+(1-nx)*t)/(1+t*t). The affine bracket is positive
+        # at both endpoints, hence throughout the interval. The negative
+        # representative gives the identical check for negative angles.
+        cell_t = F(1, 10 * m)
+        positive = points[f'p{j}']
+        negative = points[f'n{j}']
+        for nx, ny in (positive, (negative[0], -negative[1])):
+            assert ny > 0
+            assert ny + (1 - nx) * cell_t > 0
+    return len(points), len(actual_diameters), minimum2
+
+
+def main():
+    parser = ArgumentParser(description=__doc__)
+    parser.add_argument('--max-m', type=int, default=6)
+    parser.add_argument('--crosscheck', type=int, default=4)
+    parser.add_argument('--geometry-max-m', type=int, default=12)
+    args = parser.parse_args()
+    assert 1 <= args.crosscheck <= min(args.max_m, 5)
+    for m in range(1, args.max_m + 1):
+        families = 0
+        survivors = 0
+        for edges in nested_families(m):
+            families += 1
+            assert one_sided_slabs(edges, m)
+            if connected(edges, m):
+                check_classification(edges, m)
+                survivors += 1
+        assert survivors == 2 ** (m - 1)
+        universe = 2 ** (m * (m + 1) // 2 - 1)
+        print(f'm={m}: simple-graph universe={universe}, nested={families}, connected={survivors}')
+        if m <= args.crosscheck:
+            print(f'  direct interval-cut crosscheck: {crosscheck(m)} graphs PASS')
+    for m in range(1, args.geometry_max_m + 1):
+        for threshold in (False, True):
+            n, h, minimum2 = euclidean_regression(m, threshold)
+            mode = 'threshold' if threshold else 'open'
+            print(f'rational {mode} source m={m}: n={n}, h={h}, min squared distance={minimum2} PASS')
+    print('PASS: nested support classification and rational nonstar diameter-packet regressions')
+
+
+if __name__ == '__main__':
+    main()

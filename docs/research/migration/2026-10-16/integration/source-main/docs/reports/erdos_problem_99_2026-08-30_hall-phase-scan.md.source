@@ -1,0 +1,83 @@
+<!-- theorem-state: {"artifact_id":"ART-05A185CE2552","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Exact Hall-phase scan checkpoint
+
+This checkpoint records the finite incidence audit implemented in
+research/hall_phase_scan.py.
+
+The scanner enumerates every monomer/dimer cell packing in a rectangular axial
+triangular-lattice patch. It verifies, with integer arithmetic, both identities
+
+\[
+|S|-|N(S)|=\frac{m_3-b}{2}-\chi,
+\qquad
+\sum_v(4p_v+3q_v-12)=12\bigl(|S|-|N(S)|\bigr).
+\]
+
+The necessary local geometric cap of five cells incident at one lattice vertex was
+enforced. It is only a necessary condition for realizing the blocker points by a
+unit-separated configuration.
+
+## Reproducible outputs
+
+Command:
+
+    python3 research/hall_phase_scan.py --width 2 --height 3
+
+Output:
+
+    patch=2x3 triangles=12 status=complete
+    leaves=41068 valid_degree_leaves=41068 max_left_nullity=0 max_neighborhood_deficiency=0
+
+Thus every cell packing in this complete \(2\times3\) state space has an incidence
+matching saturating its selected cells. In particular, the degree-five cap does not
+by itself create a Hall obstruction at this scale.
+
+The deterministic prefix
+
+    python3 research/hall_phase_scan.py --width 3 --height 3 --max-leaves 200000
+
+returned
+
+    patch=3x3 triangles=18 status=truncated
+    leaves=200000 valid_degree_leaves=200000 max_left_nullity=0 max_neighborhood_deficiency=0
+
+This second line is a bounded regression, not an exhaustive \(3\times3\) theorem.
+The scan supports the existing conclusion that local degree and phase charge need a
+larger-scale/global ingredient; it does not prove the Target A inequality
+\(d_{\rm sc}\ge\Delta_\Lambda\).
+
+## Degree-five regression outside the exhaustive window
+
+The script also carries a fixed \(4\times4\) monomer pattern, selected by omitting
+six elementary triangles. The exact witness command is
+
+    python3 research/hall_phase_scan.py --show-degree-five-witness
+
+and returns
+
+    fixed_witness=4x4 triangles=32 cells=26 vertices=23 rank=23 left_nullity=3 max_vertex_incidence=5
+
+This demonstrates that the local degree-five condition alone does not force a
+matching of all cells. The witness is intentionally only an incidence pattern:
+the 26 blocker points have not been placed and no diameter-optimality claim is
+made. It is therefore a guardrail for the scaffold proof, not a counterexample
+to Erdos #99.
+
+There is an exact capacity reason this witness is not geometric. All 26 cells lie
+in the \(4\times4\) lattice parallelogram \(K\), for which
+
+\[
+\operatorname{area}(K)+c_0\operatorname{per}(K)
+=8\sqrt3+4\sqrt3=12\sqrt3,
+\]
+
+whereas 26 unit-separated points in \(K\) would require, by Oler,
+
+\[
+a_0(26-1)=\frac{25\sqrt3}{2}>12\sqrt3.
+\]
+
+Thus the first positive-nullity pattern is already excluded by finite packing
+capacity. This is precisely why the global scaffold target must combine Hall
+nullity with the surrounding hull/collar data rather than use local incidence
+alone.

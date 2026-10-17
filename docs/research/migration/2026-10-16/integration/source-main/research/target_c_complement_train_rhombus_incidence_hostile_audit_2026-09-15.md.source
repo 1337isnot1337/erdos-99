@@ -1,0 +1,316 @@
+# Hostile audit — complement O–O rhombus-incidence theorem
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_complement_train_rhombus_incidence_2026-09-15.md`
+- `research/verify_target_c_complement_train_rhombus_incidence.py`
+
+**Disposition:** **PASS at proof-only full-core Type-II scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate raises the safe low-`t` floor to
+
+\[
+\boxed{(q-k)/D\ge1.84209-o(1)}.
+\]
+
+The proof has two new geometric obligations: an outer terminal occurrence must be
+localized close enough to the loaded hull to turn angular separation into train length,
+and the rhombi used by complement trains must be separated from the dominant-orbit
+quadratic crossing mass.  Both survive audit.
+
+---
+
+## 1. A terminal occurrence is uniformly close to a loaded endpoint
+
+Every outer edge occurrence belongs to exactly one distinguished Section-63 interval
+`W_i` between consecutive loaded hull vertices.  If its midpoint is `x`, the two
+occurrence-path lengths from `x` to the interval endpoints sum to `ell_i`.  Hence
+
+\[
+\min\{|x-b_i|,|x-b_{i+1}|\}\le\ell_i/2.
+\]
+
+Since
+
+\[
+\ell_i=s_i+d_i,
+\qquad d_i\le d_{out},
+\]
+
+and audited Type-II interface collapse gives the **uniform** bound
+
+\[
+\max_i s_i=o(D),
+\]
+
+we have
+
+\[
+\min\{|x-b_i|,|x-b_{i+1}|\}
+\le\delta D/2+o(D)
+\]
+
+uniformly over all outer occurrences.
+
+This does not assume that the contact outer boundary itself is Hausdorff-close to the
+loaded hull.  A route may make an inward excursion; the excursion is paid by its route
+length, and the global detour bound supplies the uniform estimate above.
+
+**Verdict:** PASS.
+
+---
+
+## 2. Loaded-side normal angle controls the selected loaded endpoints
+
+Let `n_i` be the normal of the loaded side hosting `W_i`.  Type-II near-disk convergence
+gives
+
+\[
+F/D\to B_{1/2}.
+\]
+
+For either endpoint `b` of that side,
+
+\[
+n_i\cdot b=D/2+o(D),
+\qquad |b|=D/2+o(D).
+\]
+
+Therefore the radial direction of `b` differs from `n_i` by `o(1)`, uniformly.  The
+same conclusion also follows from `s_i=o(D)` and strict convexity of the disk limit.
+
+If two terminal host normals have smaller separation `w`, the corresponding selected
+loaded endpoints therefore satisfy
+
+\[
+|b_i-b_j|=D\sin(w/2)+o(D).
+\]
+
+Subtracting the two terminal-localization errors gives
+
+\[
+|x_i-x_j|
+\ge D\sin(w/2)-d_{out}-o(D).
+\]
+
+The factor in front of `d_out` is exactly one: each terminal contributes at most
+`d_out/2+o(D)`.
+
+**Verdict:** PASS.
+
+---
+
+## 3. Midpoint-path length is exactly rhombus count
+
+For one strict unit rhombus, the displacement between midpoints of opposite parallel
+sides equals one of the other side vectors and has length exactly one.  A stopped train
+with `r_tau` rhombi therefore has a midpoint polygonal path with exactly `r_tau` unit
+segments.  The triangle inequality gives
+
+\[
+r_\tau\ge|x_i-x_j|.
+\]
+
+For a singleton O–O train `r_tau=0` and the two terminal occurrences have the same
+physical midpoint.  The same inequality remains valid and forces the two host normal
+locations to be close unless the outer-detour budget is large.  Thus singleton bridges
+are not silently excluded from the theorem.
+
+**Verdict:** PASS.
+
+---
+
+## 4. Section 157 energy is the same terminal pair
+
+The hostile-audited complement-bracing theorem applies Section 157 to the same O–O
+train and the same two outer terminal occurrences.  If `e_tau` is the sum of their
+exact Section-63 directional energies, it gives
+
+\[
+e_\tau\ge2-2\sin(w_\tau/2)-o(1).
+\]
+
+Hence
+
+\[
+\sin(w_\tau/2)\ge1-e_\tau/2-o(1),
+\]
+
+and combining with the midpoint-length bound yields
+
+\[
+{r_\tau\over D}
+\ge1-\delta-e_\tau/2-o(1).
+\]
+
+No KKT coefficient lower bound is used; `e_tau` is a metric outer-route energy.
+
+**Verdict:** PASS.
+
+---
+
+## 5. Weighted pair retention does not break the incidence count
+
+The joint-retention theorem attaches a weight `a_tau in[0,1]` to every retained
+complement pair.  Multiplying the train-length inequality by `a_tau` is legitimate.
+A strict rhombus belongs to exactly two complete trains, so it contributes at most
+
+\[
+a_{\tau_1}+a_{\tau_2}\le2
+\]
+
+to the weighted train-incidence sum.  Therefore the total weighted incidence is at
+most twice the number of distinct rhombi touched by retained complement trains.
+
+The accumulated geometric error is still `o(D^2)`: the per-train terminal/radial error
+is uniform `o(D)`, while the retained train population is `O(D)`.
+
+**Verdict:** PASS.
+
+---
+
+## 6. Dominant-window rhombi and complement-incidence rhombi are asymptotically disjoint
+
+The audited train-phase limit has crossing measure supported on exact projective
+separation `+-pi/3`.  Such a pair lies in one exact three-point orbit.  Consequently
+quadratic strict-rhombus crossing mass decomposes by exact atomic orbits.
+
+Freeze disjoint positive-radius windows around the three atoms of the dominant orbit
+before taking the finite-source limit.  A retained complement train lies outside those
+windows.  Any quadratic family of rhombi joining such trains to the dominant windows
+would have a subsequential phase limit separated by exactly `pi/3`; that limit would
+be one of the other two atoms of the same dominant orbit and hence inside a dominant
+window, contradiction.  Non-atomic or shrinking-boundary leakage is only `o(D^2)`
+after the standard `D->infinity`, then window-radius `->0`, order of limits.
+
+Thus complement-incidence rhombi are disjoint, up to `o(D^2)`, from dominant/dominant
+rhombi.
+
+**Verdict:** PASS.
+
+---
+
+## 7. Residual-orbit mass gives the stated rhombus ceiling
+
+Let `A` be total atomic train mass and `M` the dominant exact-orbit mass.  The
+hostile-audited two-bin theorem gives
+
+\[
+M\ge m_2(A),
+\]
+
+while `A<=C<=U`.  Because `A-m_2(A)` is increasing on the current interval,
+
+\[
+A-M\le U-m_2(U)=:r_2(U).
+\]
+
+Every residual orbit `r` has crossing mass at most `M_r^2/4`, so
+
+\[
+\sum_{r\ne*}E_r
+\le{1\over4}\sum_{r\ne*}M_r^2
+\le{(A-M)^2\over4}
+\le{r_2(U)^2\over4}.
+\]
+
+This is an upper bound on all asymptotically non-dominant strict rhombi, not merely on
+one complement phase sector.  Combining it with the weighted incidence factor two
+produces exactly
+
+\[
+p(1-\delta)-e_c/2\le r_2(U)^2/2.
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 8. No energy is double counted in the conservative theorem
+
+The proof needs only
+
+\[
+e_c\le\delta.
+\]
+
+This is immediate because the weighted complement terminal occurrences are a subset
+of the occurrence-counted outer route edges, with weights at most one.  The conservative
+proof does **not** add the complement terminal-energy lower bound `J(p)` to the dominant
+energy and does not use the joint phase/capacity function `Phi`.
+
+Thus there is no reuse of the same `d_out` budget.  Discarding the positive dominant
+energy from the stronger inequality only weakens the complement-pair ceiling.
+
+**Verdict:** PASS.
+
+---
+
+## 9. Scalar reduction and certificate
+
+The resulting coarse ceiling is
+
+\[
+p\le{\delta+r_2(U)^2\over2(1-\delta)}.
+\]
+
+Joint retention gives `z+p>=pi-N_2(U)`, so dominant mass alone forces
+
+\[
+\delta\ge F\left(\pi-N_2(U)-
+{\delta+r_2(U)^2\over2(1-\delta)}\right).
+\]
+
+The derivative signs in the candidate are correct.  On the entire claimed interval the
+certificate verifies
+
+\[
+U<2.007,
+\quad\delta<0.049,
+\quad r_2(U)<0.11,
+\quad-0.06<m_2'(U)<0.
+\]
+
+These imply the contradiction margin increases with `kappa` and decreases with
+`delta`, so its weakest feasible point is
+
+\[
+\kappa=0,
+\qquad U=C_0,
+\qquad\delta=R_{50}(t)/2.
+\]
+
+The Decimal certificate gives
+
+\[
+H(1.84209)=1.7332\times10^{-5}>0,
+\]
+
+\[
+H(1.84210)=-6.3154\times10^{-6}<0,
+\]
+
+and the root bracket
+
+\[
+1.84209732935<t_*<1.84209732937.
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 10. Remaining scope
+
+The theorem is proof-only because its atomic and low-`t` parents are proof-only.  It
+does not yet use the positive `F(z)` term in the complement-incidence inequality and
+does not use the complement convex terminal-energy floor `J(p)`.  Both are genuine
+remaining slack.
+
+The geometric novelty is independent of those scalar refinements: complement O–O
+trains cannot be simultaneously numerous, low terminal-energy, and short because their
+midpoint paths must physically span their two near-antipodal outer locations while the
+dominant orbit has already consumed almost all strict rhombi.
+
+**Final verdict:** PASS at stated proof-only scope.  C-II remains open.

@@ -1,0 +1,151 @@
+# Hostile audit — generic H7b law-of-sines reduction
+
+**Date:** 2026-09-19  
+**Audited claim:** the audited 27 generic interior-ground `H7b` full-angle survivors reduce to 23 by excluding orbit indices `115,118,145,146`.  
+**Primary certificate:** `research/verify_target_c_support7_h7b_law_of_sines_2026_09_19.py`  
+**Disposition:** **PASS within the stated scope.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+## 1. Scope
+
+The result applies only to the generic interior-ground `H7b` branch already used by the 27-orbit full-angle reduction:
+
+- `y_0=0` is strictly inside a strict convex heptagon `y_1,...,y_7`;
+- no reciprocal collinear triple occurs;
+- the relation missing graph is `C7` for every one of the 27 prior survivors;
+- the complete affine full-angle system and strict pentagon-turn inequalities hold.
+
+No statement is made about collinearity walls, `H7a`, `H6`, or `H8`.
+
+## 2. The sine-order step is valid despite sine not being globally monotone
+
+A possible failure mode is to infer `sin A>sin B` merely from `A>B` for arbitrary angles in `(0,pi)`. The proof does not do that.
+
+For the two endpoint angles of one triangle `0ij`,
+
+\[
+A_{ij}+A_{ji}=\pi-G_{ij}<\pi,
+\]
+
+where `G_ij=angle i0j>0`. Therefore
+
+\[
+\sin A_{ij}-\sin A_{ji}
+=
+2\cos\frac{A_{ij}+A_{ji}}2
+ \sin\frac{A_{ij}-A_{ji}}2
+\]
+
+has the same sign as `A_ij-A_ji`. The cosine factor is strictly positive. Thus the radius-order implication used for orbits 118 and 145 is sound.
+
+## 3. The law-of-sines orientation is correct
+
+In triangle `0ij`, the side opposite `A_ij=angle 0ij` is `|y_j|=rho_j`, while the side opposite `A_ji` is `rho_i`. Hence
+
+\[
+\frac{\rho_j}{\rho_i}
+=
+\frac{\sin A_{ij}}{\sin A_{ji}}.
+\]
+
+The direction used in every radius inequality is therefore correct. Reversing this ratio would reverse all order-cycle arrows, but a reversed complete directed cycle would still be contradictory; the quantitative cycle calculations were nevertheless checked with the stated convention.
+
+## 4. Every cycle edge is a present relation edge
+
+For orbit 118, the three edges `25,35,23` are present.
+
+For orbit 145, the six edges `26,23,34,45,57,67` are present.
+
+For orbit 115, the trigonometric-Ceva cycle uses `23,25,35`, all present.
+
+For orbit 146, the cycle uses `24,46,26`, all present.
+
+The exact verifier reconstructs the orbit representatives and asserts presence for these edges. No law-of-sines relation is assigned to a missing stress/relation edge.
+
+## 5. Zero closure bounds still give strict angle inequalities
+
+Two orbit-145 angle differences and the orbit-146 difference `A_62-A_26` have exact non-strict closure infimum zero. This does not weaken the conclusion to `>=0`.
+
+Each stored dual representation has positive total multiplier on the strict affine inequalities. If
+
+\[
+B_rz<b_r
+\]
+
+and `alpha_r>=0` with some `alpha_r>0`, then
+
+\[
+-\sum_r\alpha_rB_rz
+>
+-\sum_r\alpha_rb_r.
+\]
+
+After adding equality rows, the target linear form is therefore strictly greater than its certified closure bound. The exact verifier checks every dual coefficient and confirms the multiplier supports are nonempty and positive.
+
+## 6. Quantitative sine bounds stay inside monotone intervals
+
+The orbit-115 proof uses only intervals on which the stated sine comparisons are valid:
+
+- `A_32` is between `pi/2` and `3pi/4`, so `sin A_32>sin(3pi/4)`;
+- `A_23<pi/5<pi/2`;
+- `A_53` and `A_25` are above `pi/5` but below `pi/2`;
+- `A_35<pi/15` and `A_52<pi/3`, both below `pi/2`.
+
+The orbit-146 proof likewise keeps `A_24` inside `(pi/3,2pi/3)` and `A_46` inside `(2pi/9,pi/3)`. The only denominator bounded without monotonicity is `sin A_64<=1`, which is universal.
+
+Thus no step silently assumes sine is increasing on all of `(0,pi)`.
+
+## 7. Radical comparisons are exact
+
+For orbit 115, the final lower bound reduces to
+
+\[
+\frac{2\sqrt2}{\sqrt3(\sqrt5-1)}>1.
+\]
+
+All quantities are positive. Squaring and simplifying reduces this to `3sqrt(5)>5`, then to `45>25`.
+
+For orbit 146,
+
+\[
+\sqrt3\sin(\pi/5)>1
+\]
+
+uses
+
+\[
+\sin^2(\pi/5)=\frac{10-2\sqrt5}{16}.
+\]
+
+After positive squaring, the needed inequality reduces to `196>180`.
+
+No floating-point trigonometric comparison is used in the proof.
+
+## 8. The finite certificates are exact
+
+The verifier reuses the audited full-angle verifier, which reconstructs the same 184 orbit representatives and the same 84-variable full-angle affine system used by the preceding reduction. For every new target angle expression it checks a rational identity
+
+\[
+L=-\alpha B+\mu E
+\]
+
+coefficient by coefficient over `fractions.Fraction`, together with the exact dual right-hand side. It then verifies the claimed rational endpoint comparisons and the final survivor list. The compressed payload in the verifier contains only integer numerator/denominator certificate data; it is expanded before every exact check.
+
+Floating-point LP generated candidate dual supports only. A wrong numerical support or coefficient would fail the exact reconstruction.
+
+The verifier output is:
+
+```text
+PASS: exact affine dual certificates support four law-of-sines exclusions.
+generic H7b full-angle survivors: 27 -> 23
+excluded orbit indices: [115, 118, 145, 146]
+remaining orbit indices: [129, 130, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 147, 148, 169, 170, 171, 172, 173, 174, 175, 176]
+```
+
+## 9. Nonclaims and remaining bottleneck
+
+The 23 survivors have not been proved realizable. Failure to find a further forced radius-order cycle is not evidence of realization. The remaining law-of-sines conditions are quantitative nonlinear product equations, and the force directions must also satisfy actual equilateral-pentagon vector closure and common reciprocal-coordinate reconstruction.
+
+**Audit disposition: PASS within scope.**
+
+No theorem-state file is changed. C-II remains open.

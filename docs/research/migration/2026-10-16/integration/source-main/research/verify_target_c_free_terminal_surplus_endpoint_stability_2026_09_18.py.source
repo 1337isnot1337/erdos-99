@@ -1,0 +1,117 @@
+#!/usr/bin/env python3
+"""Regression certificate for terminal FREE surplus-endpoint stability.
+
+This script checks the scalar algebra and reported constants in
+`target_c_free_terminal_surplus_endpoint_stability_2026-09-18.md`.
+It does not establish global optimality or theorem-state authority.
+"""
+
+from __future__ import annotations
+
+import math
+import random
+
+PI = math.pi
+SQRT3 = math.sqrt(3.0)
+S2 = math.sqrt(PI / (2.0 * SQRT3))
+G = 0.007707
+TAU = PI / 2.0 + G
+M = 4.0 * S2 + 2.0 * G
+MU = (2.0 * PI + 2.0 * S2) / 5.0 + TAU / 5.0
+F0 = M / 5.0
+FLOW = M / 15.0
+SIGMA = 2.0 * TAU - 2.0 * FLOW
+MANTEL = SIGMA * S2 / 2.0 + SIGMA * SIGMA / 16.0
+N_FULL = 2.5 * FLOW
+
+
+def close(a: float, b: float, tol: float = 5e-13) -> None:
+    assert abs(a - b) <= tol, (a, b, abs(a - b))
+
+
+# Reported constants.
+close(S2, 0.9523128068639574)
+close(M, 3.8246652274558293)
+close(TAU, 1.5785033267948965)
+close(MU, 1.9532628495404794)
+close(F0, 0.7649330454911658)
+close(FLOW, 0.2549776818303886)
+close(SIGMA, 2.6470512899290157)
+close(MANTEL, 1.6983404551322592)
+close(N_FULL, 0.6374442045759715)
+
+# Algebraic identity: the surplus endpoint equals the terminal t-floor constant.
+T0 = PI / 2.0 + 2.0 * S2 / 5.0 + G / 5.0
+close(MU, T0)
+
+# Random feasible stability tuples.  The variables below are normalized limits:
+# m=m_B/D, r=(Q-f)/D, d=(b-P_F)/D,
+# a=tau/D-tau_*.  The endpoint excess constraint is
+# m + (2/5)(r+d) + (1/5)a <= eps.
+rng = random.Random(0xE99_20260918)
+checked = 0
+for _ in range(400_000):
+    eps = 0.12 * rng.random()
+
+    # Randomly spend at most eps across the four nonnegative terms.
+    raw = [rng.expovariate(1.0) for _ in range(5)]
+    scale = eps / sum(raw)
+    budget_m, budget_r, budget_d, budget_a, unused = [x * scale for x in raw]
+    m = budget_m
+    r = budget_r / 0.4
+    d = budget_d / 0.4
+    a = budget_a / 0.2
+
+    excess = m + 0.4 * (r + d) + 0.2 * a
+    assert excess <= eps + 1e-14
+    assert m <= eps + 1e-14
+    assert r + d <= 2.5 * eps + 1e-14
+    assert a <= 5.0 * eps + 1e-14
+
+    # Exact terminal handshake B+d=M+2a and B=5f+r.
+    B = M + 2.0 * a - d
+    f = (B - r) / 5.0
+    qdef = f + r
+    p5_floor = 2.0 * f - qdef
+
+    assert f >= F0 - 0.5 * eps - 1e-12
+    assert f <= F0 + 2.0 * eps + 1e-12
+    assert qdef >= F0 - 0.5 * eps - 1e-12
+    assert qdef <= F0 + 4.0 * eps + 1e-12
+    assert p5_floor >= F0 - 3.0 * eps - 1e-12
+
+    # Exact degree arithmetic behind the P5 floor.
+    close(p5_floor, f - r, 2e-13)
+    checked += 1
+
+# Exhaust the one-dimensional endpoint dichotomy algebra on a dense grid.
+# From P5>=p and P5-Ffull<=2S, max(S,Ffull)>=p/3.
+for i in range(200_001):
+    eps = (F0 / 3.0) * i / 200_000.0
+    p = F0 - 3.0 * eps
+    if p < -1e-14:
+        continue
+    threshold = p / 3.0
+
+    # Sample S throughout the only nontrivial range [0,p/2].
+    for frac in (0.0, 0.125, 0.25, 0.5, 0.75, 0.999999, 1.0):
+        S = frac * p / 2.0
+        Ffull = max(0.0, p - 2.0 * S)
+        assert max(S, Ffull) + 1e-12 >= threshold
+
+# Flower-branch endpoint consequences.
+close(SIGMA, 2.0 * TAU - 2.0 * FLOW)
+close(MANTEL, SIGMA * S2 / 2.0 + SIGMA * SIGMA / 16.0)
+close(N_FULL, 2.5 * FLOW)
+
+print("PASS terminal FREE surplus-endpoint stability certificate")
+print(f"s2={S2:.15f}")
+print(f"M_*={M:.15f}")
+print(f"tau_*={TAU:.15f}")
+print(f"mu_*={MU:.15f}")
+print(f"endpoint f=Q=P5={F0:.15f}")
+print(f"singleton/full-flower threshold={FLOW:.15f}")
+print(f"flower sigma_R floor={SIGMA:.15f}")
+print(f"flower Mantel-deficit floor={MANTEL:.15f}")
+print(f"flower-ending train floor={N_FULL:.15f}")
+print(f"random stability instances={checked}")

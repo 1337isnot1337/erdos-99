@@ -1,0 +1,125 @@
+# Target C-II — exact boundary normal form for the support-six `H5` metric attack
+
+**Date:** 2026-09-18  
+**Status:** proved candidate; theorem-state authority unchanged  
+**Scope:** the sixteen noncollapsed support-six reciprocal `H5` sign/order orbits  
+**Depends on:** `target_c_support6_reciprocal_h5_reduction_2026-09-18.md`; its
+hostile audit; the double-wall exclusion and hostile audit  
+**Certificate:** `research/verify_target_c_support6_h5_metric_normal_form_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+This note records the exact finite normal form used before imposing the metric
+unit-force equations. It is a small but useful strengthening of the sixteen-case
+description: the sixteen cases do not require sixteen unrelated hull geometries or
+matching placements.
+
+The dependency chain is
+
+```text
+H5 rank/order reduction + double-wall exclusion
+  -> exact orbit representatives
+  -> boundary-sign normal form
+  -> 18-edge / 10-equation metric system
+  -> candidate metric contradiction or realization
+  -> support-six exclusion, hence n_1/7 only if the collapsed branch is also removed.
+```
+
+The last arrow is deliberately conditional: this note does not supply the metric
+contradiction.
+
+## Exact finite statement
+
+Let `H=K_7\M` be the noncollapsed support-six reciprocal graph, with hull vertices
+`0,1,2,3,4` and interior vertices `5,6`. Modulo hull reflection fixing `0`,
+interior interchange, and global sign reversal, the exact reduction has:
+
+1. six uniform representatives; and
+2. ten simple-wall representatives.
+
+For the six uniform representatives, the missing matching is, in the canonical
+labeling,
+
+\[
+M=\{16,25,34\}.
+\]
+
+Exactly one missing pair, `34`, is a hull-boundary pair. In the canonical orientation,
+the three consecutive present hull sides `01,12,23` have one common reciprocal sign,
+and the remaining present side `04` has the opposite sign. The absolute choice of
+which sign is called positive is not promoted because global sign reversal is an
+allowed symmetry.
+
+For every simple-wall representative, the wall can be put in the canonical form
+
+\[
+0,3,6\text{ collinear},\qquad 36\in M,
+\]
+
+and all five hull sides `01,12,23,34,04` have one common reciprocal sign. The two
+matching placements appearing in the ten orbit representatives are
+
+\[
+\{14,25,36\},\qquad \{15,24,36\},
+\]
+
+which are related by the residual H5 symmetries at the level of the full orbit list.
+No higher-codimension wall is being reintroduced: it was excluded by the separate
+double-wall theorem.
+
+These statements are exact consequences of the finite integer sign/order verifier,
+not numerical observations.
+
+## Metric interface
+
+For a representative with present-edge signs `s_ij`, put `y_0=0` and let
+`y_1,...,y_6` be the reciprocal points. The metric equations to be attacked are
+
+\[
+R_i(y):=\sum_{j:\,ij\in E(H)}
+s_{ij}\frac{y_i-y_j}{\lvert y_i-y_j\rvert}=0,
+\qquad i=1,\ldots,5.
+\tag{1}
+\]
+
+There are ten scalar equations and eighteen present reciprocal edges. The equation at
+vertex `6`, and the equation at the ground `0`, follow from endpoint cancellation
+after all six face closures are imposed. Any metric solution must additionally obey:
+
+- the prescribed uniform or simple-wall chirotope;
+- the source-derived consecutive force-gap and two-turn inequalities;
+- the signed trace identity
+  \[
+  \sum_{ij\in E(H)}s_{ij}\lvert y_i-y_j\rvert=0;
+  \tag{2}
+  \]
+- the signed tensor identity
+  \[
+  \sum_{ij\in E(H)}s_{ij}\lvert y_i-y_j\rvert,e_{ij}e_{ij}^{T}=0;
+  \tag{3}
+  \]
+  with `e_ij=(y_i-y_j)/|y_i-y_j|`.
+
+The verifier checks that every orbit supplies exactly these five five-edge vertex
+rows; it does not substitute a nonexistent stress on a missing matching edge.
+
+## What was tested and what was not
+
+The finite certificate uses the existing exact Grassmann--Plücker/sign enumeration.
+It uses no floating-point coordinates and does not claim metric realizability or
+metric impossibility. Exploratory nonlinear least-squares probes on the ten-equation
+system found no certified zero and sometimes ran toward near-collision or
+large-coordinate degenerations; this is not used as a theorem or exclusion.
+
+In particular, the following implication remains unavailable:
+
+```text
+no zero found by numerical solving -> no metric reciprocal equilibrium.
+```
+
+The exact next task is now sharply localized: prove an inequality or interval/algebraic
+certificate for equation (1) plus (2)--(3) in the six uniform and ten simple-wall
+normal forms, or exhibit a genuine metric survivor and identify the missing global
+source constraint. The collapsed all-equal support-six branch remains independent.
+
+**Disposition:** exact finite boundary normal form / proved candidate; not canonical;
+C-II remains open.

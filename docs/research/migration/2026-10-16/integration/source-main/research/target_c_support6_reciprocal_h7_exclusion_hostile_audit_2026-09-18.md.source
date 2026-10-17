@@ -1,0 +1,213 @@
+# Hostile audit — support-six reciprocal `H_7` exclusion
+
+**Date:** 2026-09-18  
+**Audited source:** `research/target_c_support6_reciprocal_h7_exclusion_2026-09-18.md`  
+**Regression:** `research/verify_target_c_support6_reciprocal_h7_exclusion_2026_09_18.py`  
+**Verdict:** `PASS at proof-only scope`  
+**Theorem-state authority:** unchanged  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+This audit checks the places where the support-five reciprocal argument could be
+incorrectly generalized: support-six graph structure, coincident dual values, the
+noncomplete reciprocal graph, reuse of the pentagon turn-gap lemmas, hull-size
+bookkeeping, the exact finite sign enumeration, the three ground chord contradictions,
+and the metric identity for the opposite matching.
+
+## 1. Degree-pure support six really gives `K_6` minus a perfect matching
+
+Every residual face in the degree-pure endpoint is a pentagon with exactly one
+outside/activated anchor. It therefore has exactly four residual internal train
+occurrences. The one-anchor transpose-kernel theorem gives relation degree at least
+four on every face supporting a nonzero component. Thus all four residual incidences
+are relation edges. Endpoint-pair simplicity makes the relation graph simple.
+
+A simple graph on six vertices with every degree four has one-regular complement, so
+its missing edges are exactly a perfect matching. There is no hidden residual train
+outside the component in this degree-pure case: such a train would consume one of the
+four internal occurrences and force relation degree at most three.
+
+## 2. Coincident dual values cannot be silently divided out
+
+The five-face reciprocal proof used an odd-parity anchor sum to rule out a common
+nonzero dual value. Six faces are different. If any two non-ground dual values coincide,
+common-neighbor propagation in `K_6` minus a matching forces all six to coincide, but
+the resulting six parallel oriented anchor vectors can cancel `3+3`.
+
+Therefore the source note correctly separates:
+
+- a collapsed branch `y_1=...=y_6 ne 0`, where internal reciprocal differences vanish;
+- a noncollapsed branch, where all six non-ground dual values are distinct.
+
+The unit-force reciprocal construction is used only on the second branch. No
+`lambda_ij` is defined by dividing a zero reciprocal difference in the collapsed
+branch. This scope distinction is essential and is preserved throughout the proof.
+
+## 3. The `K_7` reciprocal is only `K_7` minus the matching
+
+On the noncollapsed branch every relation edge and every anchor edge has a nonzero
+reciprocal difference parallel to its physical unit side. Hence
+`|lambda_ij|=|y_i-y_j|` on exactly the edges of
+
+\[
+H=K_7\setminus M.
+\]
+
+The three matching pairs do not carry reciprocal stresses. Summing the six physical
+pentagon closures gives the ground equilibrium because relation-edge occurrences cancel
+in opposite pairs. The tensor and trace identities therefore sum over `E(H)`, not over
+all 21 pairs.
+
+The later metric proof uses the missing distances `d_25` and `d_36` only as auxiliary
+Euclidean distances in triangle/quadrilateral inequalities. Their coefficients cancel
+exactly from the final identity, so they are never assigned a nonexistent reciprocal
+stress.
+
+## 4. The local sign strengthening needs only five incident rays
+
+At a non-ground reciprocal hull vertex the five **present** reciprocal edge directions
+lie in a cone of width less than `pi`. The source pentagon still supplies five unit
+force directions with every cyclic gap below `2pi/3`.
+
+The new `1+4` exclusion is local. If the singleton force ray is bordered by gaps
+`delta_5,delta_1`, the already proved two-turn inequality gives
+
+\[
+delta_5+delta_1<pi.
+\]
+
+The four-ray opposite-sign block then has force-angle span greater than `pi`. Reversing
+that whole sign class by `pi` does not change its span, contradicting containment of
+all raw rays in the hull cone. No completeness of the reciprocal graph is used.
+
+Once `1+4` is gone, the inherited `2+3` alternation proof and the inherited
+`phi_i>2pi/3` hull-angle proof use only the same five local rays and the closed source
+pentagon. Their reuse does not require the missing matching edge to exist.
+
+## 5. Hull-size bookkeeping is strict at every endpoint
+
+If ground were interior, all hull vertices would be non-ground and each would have
+angle greater than `2pi/3`. For a hull of size `h<=6`, this strictly exceeds the polygon
+angle sum at `h=6` and exceeds it algebraically for `h<6`.
+
+If ground lies on a hull of size `h<=4`, the `h-1` non-ground angles already strictly
+exceed the complete polygon angle sum at `h=4` and exceed it for smaller `h`.
+Therefore only hull sizes 5, 6, 7 survive.
+
+For hull sizes 5 and 6, the ground angle is respectively `<pi/3` and `<2pi/3`. At the
+ground point a same-sign block of `q` unit raw vectors in a cone of width `phi_0` has
+resultant projection at least `q cos(phi_0/2)` on the cone bisector. This non-strict
+projection estimate is sufficient:
+
+- `1+5` would require `5 cos(phi_0/2)<=1`, hence
+  `phi_0>=2 arccos(1/5)>2pi/3`;
+- `2+4` would require `4 cos(phi_0/2)<=2`, hence `phi_0>=2pi/3`.
+
+Thus the surviving nonconvex ground equilibrium is necessarily `3+3`. The source note
+uses these non-strict projection inequalities after its scope-tightening commit.
+
+## 6. The convex-H7 sign classification is a complete finite check
+
+In a convex heptagon, after cyclic labeling `0,1,...,6`, the raw reciprocal rays at a
+non-ground vertex occur in cyclic vertex order or its reverse. Deleting the matching
+mate leaves five rays. The local size-two sign class must occupy positions 2 and 4;
+orientation reversal preserves that pair.
+
+The regression enumerates all fifteen perfect matchings on `{1,...,6}` and all `2^6`
+local choices of whether one fixed global sign color has degree two or three. It checks
+undirected-edge consistency from both endpoints. Exactly four matchings survive:
+
+\[
+\{12,36,45\},\quad
+\{14,23,56\},\quad
+\{14,25,36\},\quad
+\{16,25,34\}.
+\]
+
+Each has exactly two sign assignments, and those two are global complements. The script
+uses integer/set arithmetic only. It also verifies the representative ground sign sets
+used in the proof. This is a complete finite proof of the sign-compatibility subproblem,
+not a heuristic search.
+
+## 7. The three chord-direction contradictions are orientation-safe
+
+At the ground hull vertex the six raw unit directions fit in an angular interval of
+width `<pi`. For
+
+\[
+Delta_{12}=u_2-u_1,\quad
+Delta_{34}=u_4-u_3,\quad
+Delta_{56}=u_6-u_5,
+\]
+
+the exact unit-circle chord formula orders their arguments strictly by the averages of
+the endpoint angles. All three therefore lie in one open halfplane.
+
+The three relevant ground sign words reduce to
+
+\[
+Delta_{12}=Delta_{34}+Delta_{56},
+\]
+
+or its reflected endpoint version
+
+\[
+Delta_{56}=Delta_{12}+Delta_{34},
+\]
+
+or
+
+\[
+Delta_{12}+Delta_{34}+Delta_{56}=0.
+\]
+
+The first two contradict strict argument ordering of sums inside an open cone; the third
+contradicts common-halfplane positivity. Reversing every reciprocal sign multiplies the
+whole equilibrium by `-1` and changes nothing.
+
+## 8. The opposite-matching length identity is exact and strictly signed
+
+For the remaining matching `M={14,25,36}`, the regression independently checks the
+coefficient identity
+
+\[
+2L=\sum_{j=1}^{8}T_j+\sum_{j=1}^{4}Q_j,
+\]
+
+where `L` is the reciprocal signed length sum, each `T_j` is a strict triangle residual,
+and each `Q_j` is an opposite-side sum minus the two crossing diagonals of a strictly
+convex quadrilateral.
+
+Every `T_j<0` by strict triangle inequality because all seven points are vertices of a
+strictly convex heptagon. Every `Q_j<0` because the crossing diagonals meet in the
+interior; splitting them at the intersection and applying strict triangle inequalities
+gives a strict excess over either opposite-side pair. Hence `L<0`, while reciprocal
+trace cancellation requires `L=0`.
+
+This excludes both sign assignments because the second is the global complement and
+replaces `L` by `-L`.
+
+## 9. Scope of the conclusion
+
+The proved conclusion is exactly:
+
+\[
+\boxed{
+\text{noncollapsed degree-pure support six }\Longrightarrow
+\text{ reciprocal hull }H5\text{ or }H6.
+}
+\]
+
+It does **not** exclude:
+
+1. the collapsed all-equal dual branch with six parallel anchors and a `3+3` oriented
+   anchor sum;
+2. noncollapsed support-six reciprocal configurations with hull size five or six;
+3. larger support one-anchor relation components;
+4. the positive diameter-locking obstruction.
+
+Accordingly the global corank coefficient remains `n_1/6`. To improve it to `n_1/7`,
+both the collapsed support-six branch and the remaining `H5/H6` noncollapsed branches
+must be excluded.
+
+**Audit disposition:** PASS. The convex reciprocal `H7` branch of the degree-pure
+support-six obstruction is rigorously empty. C-II remains open.

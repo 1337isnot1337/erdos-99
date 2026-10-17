@@ -1,0 +1,49 @@
+# Target C — quantitative force-hull area frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_force_hull_area_floor_2026-08-31.md](../../reports/target_c_force_hull_area_floor_2026-08-31.md).
+
+## C67 — the C-II force hull has a fixed positive area fraction
+
+After C65, the response boundary is the full actual diameter-endpoint set. C34 gives
+
+`2|B| >= ceil(D)+2`,
+
+hence the full diameter graph has more than `D/4` edges.
+
+Any two distinct diameter edges have projective direction distance at least
+
+`delta_D = 2 asin(1/(2D))`.
+
+For shared-endpoint edges this is the unit-separation chord bound. For disjoint diameter edges, the diameter-thrackle crossing geometry gives the stronger `phi>=asin(1/D)`.
+
+The stale PR #42 used a false projective-circle statement at the `pi/2` threshold. The corrected packing lemma is:
+
+`h` pairwise `delta`-separated points on a circle of circumference `pi` have two points at distance at least
+
+`min(pi/3,(h-1)delta)`.
+
+The `pi/3` threshold is sufficient because a set of circular diameter below `pi/3` lies in one ordinary arc of that same length.
+
+Therefore two actual diameter chords have projective angle at least
+
+`Phi(D)=min(pi/3,(D/4-1)2asin(1/(2D)))`.
+
+Whether those two diameter chords share an endpoint or cross as disjoint diameter edges, the convex hull of their endpoints has area exactly
+
+`(D^2/2) sin(phi)`.
+
+Hence
+
+`area(F) >= (D^2/2) sin Phi(D)`
+
+and
+
+`liminf area(F)/D^2 >= (1/2)sin(1/4) = 0.1237019796...`.
+
+So the remaining C-II carrier is quantitatively two-dimensional even if C66 forces its normalized diameter stress to concentrate on one star.
+
+## Next target
+
+Combine C66 stress-star concentration with the now-quantitative two-dimensional carrier. A viable closing estimate must charge the `Omega(D)` low-weight diameter directions or their required contact-network branching, rather than treating the source as an almost one-dimensional stress chain.

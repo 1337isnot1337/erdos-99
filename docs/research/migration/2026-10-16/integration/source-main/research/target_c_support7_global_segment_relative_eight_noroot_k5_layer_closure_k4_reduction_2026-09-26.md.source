@@ -1,0 +1,74 @@
+# Target C: close the eight-no-root k=5 layer and reduce k=4 to three rank-four branches
+
+Date: 2026-09-26
+
+Status: proof-level composition of committed eight-no-root k=5 branch closures, followed by a new rank-four deletion/code reduction for k=4. No theorem-state authority is changed. This is a finite support-seven/global-segment result, not a closure of Target C-II or Erdos Problem #99.
+
+## 1. The entire eight-no-root k=5 layer is closed
+
+Let B=R union E with |E|=8. The committed reduction
+`research/target_c_support7_global_segment_relative_eight_noroot_k6_layer_closure_k5_two_clean_reduction_2026-09-23.md`
+proves that for k(B)=5 the coefficient space P has rank three, D(B) is -2 or -1, and
+`D(B)=p+3 d_root-7`.
+Thus the exact boundary is
+
+```
+D=-2: (d_root,p)=(0,5),(1,2)
+D=-1: (d_root,p)=(0,6),(1,3),(2,0).
+```
+
+All five branches are closed on current main:
+- the low-p containment lift closes (-2,1,2) and (-1,2,0);
+- the exact three-singleton chain ending in `target_c_support7_global_segment_relative_eight_noroot_k5_final_order2_execution_dminus2_transfer_closure_2026-09-25.md` closes (-1,1,3);
+- `target_c_h5_face_local_span_full_dminus2_p5_closure_2026-09-25.md` closes (-2,0,5) and records that only (-1,0,6) remains;
+- `target_c_p6_e7_closure_2026-09-26.md`, together with the e<=6, e=8, e=9, and e>=10 certificates cited there, closes (-1,0,6).
+
+Therefore there is no eight-no-root counterexample with k(B)=5. This is a composition theorem; no new finite census is introduced here.
+
+## 2. Exact arithmetic boundary for k=4
+
+For k(B)=4, rank(P)=4 and
+`D(B)=8+p+3 d_root-3k=p+3 d_root-4`.
+Since the seven-no-root deletion theorem forces D in {-2,-1}, the only branches are
+
+```
+D=-2: (d_root,p)=(0,2)
+D=-1: (d_root,p)=(0,3),(1,0).
+```
+
+## 3. Generalized-weight floors
+
+For nonempty S subset E, with s=|S| and q_S the rank loss of P under puncturing,
+`D(B\S)=D(B)+2s-3q_S>=0`.
+Hence
+`d_j(P)>=ceil((3j-D(B))/2)`, giving
+
+```
+D=-2: (d1,d2,d3,d4)>=(3,4,6,7)
+D=-1: (d1,d2,d3,d4)>=(2,4,5,7).
+```
+
+Every one-coordinate puncture preserves rank four, so every one-row deletion has k_7=3 and D_7=0 on the D=-2 side or D_7=1 on the D=-1 side.
+
+For D=-2, d1>=3 makes every two-coordinate puncture rank preserving. Thus all 28 pair deletions have
+`D_6=2, rank(P_6)=4, k_6=2`.
+
+## 4. Weight-two dichotomy for D=-1
+
+Assume D=-1. Distinct projective weight-two lines of P have disjoint supports: equal or overlapping two-supports would span a two-dimensional subcode supported on at most three coordinates, contradicting d2(P)>=4. Representatives of these disjoint lines are linearly independent, so there are at most four.
+
+If there are at most three weight-two lines, their supports cover at most six coordinates. At least two coordinates are two-clean, meaning no weight-one or weight-two word uses them. Puncturing either such coordinate together with any second coordinate preserves rank four. Hence those pair deletions have
+`D_6=3, rank(P_6)=4, k_6=2`.
+
+If there are four weight-two lines, their four disjoint supports partition the eight coordinates and their representatives form a basis of P. Then P is a direct sum of four disjoint weight-two lines and has generalized weights exactly (2,4,6,8). For a matched support pair, puncturing loses exactly one rank and gives
+`D_6=0, rank(P_6)=3, k_6=3`.
+For any unmatched pair, puncturing preserves rank four and gives
+`D_6=3, rank(P_6)=4, k_6=2`.
+
+Thus the D=-1 k=4 layer has only a two-clean case or this rigid perfect-matching coefficient-code case.
+
+## 5. New finite frontier
+
+The eight-no-root frontier is now below k=5. The k=4 layer consists of exactly the three arithmetic branches above, with the rank-four puncture signatures proved here. A bounded next attack can start from their six-row shadows instead of arbitrary eight-row local states.
+
+This does not change the canonical Target C-II frontier. The macroscopic-container/full-core split remains open.

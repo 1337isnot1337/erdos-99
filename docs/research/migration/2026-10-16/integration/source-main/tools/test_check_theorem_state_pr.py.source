@@ -1,0 +1,104 @@
+from __future__ import annotations
+
+import copy
+import importlib.util
+import subprocess
+import tempfile
+import unittest
+from pathlib import Path
+
+import yaml
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def load_module(name: str, path: Path):
+    spec = importlib.util.spec_from_file_location(name, path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader
+    spec.loader.exec_module(module)
+    return module
+
+
+base_checker = load_module("check_theorem_state", ROOT / "tools/check_theorem_state.py")
+pr_checker = load_module("check_theorem_state_pr", ROOT / "tools/check_theorem_state_pr.py")
+
+
+def current_state():
+    return yaml.safe_load((ROOT / base_checker.MANIFEST).read_text(encoding="utf-8"))
+
+
+class PrCheckerTests(unittest.TestCase):
+    def test_locked_endpoint_uses_math_normalization(self):
+        c = pr_checker.Checker(ROOT)
+        c.state = copy.deepcopy(current_state())
+        c.state["targets"]["target-a"]["locked_branch_endpoint"] = (
+            "|O_iso| + sum_i max(0,|O_i|-|C_i|) >= j_* + |T_Z|"
+        )
+        c.check_a()
+        self.assertFalse(any("locked-branch endpoint" in error for error in c.errors))
+
+    def test_replacement_base_cannot_hide_incomplete_promotion(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manifest = root / base_checker.MANIFEST
+            manifest.parent.mkdir(parents=True)
+            base = copy.deepcopy(current_state())
+            manifest.write_text(yaml.safe_dump(base, sort_keys=False))
+            def git(*args):
+                return subprocess.check_output(["git", "-C", tmp, *args], stderr=subprocess.PIPE).decode().strip()
+            git("init", "-q", "-b", "main")
+            git("config", "user.name", "Replacement Fixture")
+            git("config", "user.email", "fixture@example.invalid")
+            git("add", "."); git("commit", "-qm", "base")
+            base_sha = git("rev-parse", "HEAD")
+            head = copy.deepcopy(base)
+            head["targets"]["target-a"]["canonical_sections_through"] += 1
+            manifest.write_text(yaml.safe_dump(head, sort_keys=False))
+            git("add", "."); git("commit", "-qm", "incomplete promotion")
+            replacement = git("commit-tree", git("rev-parse", "HEAD^{tree}"), "-m", "replacement")
+            git("replace", base_sha, replacement)
+            checker = pr_checker.Checker(root, base_ref=base_sha)
+            checker.state = head
+            checker.check_transaction()
+            self.assertTrue(any("without incrementing state_version" in e for e in checker.errors))
+            self.assertTrue(any("without updating docs/STATE.md" in e for e in checker.errors))
+
+    def test_unchanged_generated_outputs_need_not_appear_in_pr_diff(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manifest = root / base_checker.MANIFEST
+            manifest.parent.mkdir(parents=True, exist_ok=True)
+            base = copy.deepcopy(current_state())
+            manifest.write_text(yaml.safe_dump(base, sort_keys=False), encoding="utf-8")
+            (root / "docs").mkdir(exist_ok=True)
+            (root / "docs" / "STATE.md").write_text("base\n", encoding="utf-8")
+            subprocess.run(["git", "init", "-q"], cwd=root, check=True)
+            subprocess.run(["git", "config", "user.email", "test@example.invalid"], cwd=root, check=True)
+            subprocess.run(["git", "config", "user.name", "Theorem State Test"], cwd=root, check=True)
+            subprocess.run(["git", "add", "."], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "base"], cwd=root, check=True)
+
+            head = copy.deepcopy(base)
+            head["state_version"] = str(base["state_version"]) + ".test"
+            head["targets"]["target-a"]["canonical_sections_through"] += 1
+            manifest.write_text(yaml.safe_dump(head, sort_keys=False), encoding="utf-8")
+            (root / "docs" / "STATE.md").write_text("head\n", encoding="utf-8")
+            route = head["targets"]["target-a"]["route_map"]
+            prompt = head["targets"]["target-a"]["active_prompt"]
+            for rel in (route, prompt):
+                path = root / rel
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("updated\n", encoding="utf-8")
+            subprocess.run(["git", "add", "."], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "head"], cwd=root, check=True)
+
+            c = pr_checker.Checker(root, base_ref="HEAD~1")
+            c.state = head
+            c.check_transaction()
+            self.assertFalse(any("refreshing generated view" in error for error in c.errors))
+            self.assertFalse(any("refreshing artifact index" in error for error in c.errors))
+
+
+if __name__ == "__main__":
+    unittest.main()

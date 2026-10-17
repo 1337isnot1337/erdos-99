@@ -1,0 +1,124 @@
+# Target C — repair of the consecutive-tooth ray-order step
+
+**Date:** 2026-09-12
+**Scope:** proof-only repair for `target_c_consecutive_tooth_turn_budget_2026-09-12.md`.
+**Disposition:** the stated turn inequality survives, but the original ordering sentence and the first hostile audit are insufficient as written.
+
+The original proof says that because the two tooth-apex rays lie in the common interior
+wedge at `p_{i+1}`, their order is fixed. That implication is false: two rays can lie
+in the same wedge in either order. The missing input is unit separation between the
+first tooth apex and the **next loaded hull vertex**.
+
+Keep the notation of the theorem. Direct the preceding hull side
+`p_i p_{i+1}` at argument zero. Put
+
+\[
+\beta_i=\arccos(b_i/2),
+\qquad
+\beta_{i+1}=\arccos(b_{i+1}/2).
+\]
+
+The first inward tooth ray from `p_{i+1}` has argument
+
+\[
+\theta_i=\pi-\beta_i,
+\]
+
+while the next loaded hull side has argument `alpha_i` and the next inward tooth ray
+has argument
+
+\[
+\theta_{i+1}=\alpha_i+\beta_{i+1}.
+\]
+
+Inwardness gives
+
+\[
+\alpha_i\le\theta_i,\theta_{i+1}\le\pi.
+\]
+
+We claim
+
+\[
+\boxed{\theta_{i+1}\le\theta_i.}
+\tag{R1}
+\]
+
+Assume instead that `theta_{i+1}>theta_i`. Then
+
+\[
+\alpha_i+\beta_{i+1}>\pi-\beta_i,
+\]
+
+so
+
+\[
+0\le\theta_i-\alpha_i
+=\pi-\beta_i-\alpha_i
+<\beta_{i+1}.
+\tag{R2}
+\]
+
+Now `|x_i-p_{i+1}|=1`, `|p_{i+2}-p_{i+1}|=b_{i+1}`, and the angle between those two
+vectors is `theta_i-alpha_i`. Hence
+
+\[
+|x_i-p_{i+2}|^2
+=1+b_{i+1}^2
+-2b_{i+1}\cos(\theta_i-\alpha_i).
+\]
+
+Because `theta_i-alpha_i<beta_{i+1}` and
+
+\[
+\cos\beta_{i+1}=b_{i+1}/2,
+\]
+
+we have
+
+\[
+\cos(\theta_i-\alpha_i)>b_{i+1}/2,
+\]
+
+and therefore
+
+\[
+|x_i-p_{i+2}|^2<1.
+\]
+
+This contradicts unit separation of the source points `x_i` and `p_{i+2}`. Thus (R1)
+holds.
+
+Consequently the smaller angular separation of the two apex rays is indeed
+
+\[
+\gamma_i
+=\theta_i-\theta_{i+1}
+=\pi-\alpha_i-\beta_i-\beta_{i+1}
+\in[0,\pi).
+\]
+
+The distinct source points `x_i,x_{i+1}` both lie one unit from `p_{i+1}`, so unit
+separation gives
+
+\[
+1\le|x_i-x_{i+1}|=2\sin(\gamma_i/2),
+\]
+
+hence `gamma_i>=pi/3`. Therefore the original theorem's inequality follows:
+
+\[
+\boxed{
+\alpha_i
+\le {2\pi\over3}-\beta_i-\beta_{i+1}
+=f(e_i)+f(e_{i+1}).
+}
+\]
+
+No additional hypothesis is introduced: `x_i` and `p_{i+2}` are already distinct
+source points in the theorem setup, so their unit separation is part of the global
+source assumptions.
+
+**Audit correction.** Any audit of TT.1 must cite (R2) and the cross-distance
+`|x_i-p_{i+2}|>=1`; “both rays lie in the common wedge, so their order is fixed” is
+not a valid argument by itself.

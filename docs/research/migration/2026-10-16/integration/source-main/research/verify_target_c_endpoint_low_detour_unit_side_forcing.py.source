@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+"""Check endpoint low-detour unit-side constants."""
+
+from decimal import Decimal, getcontext
+
+
+getcontext().prec = 60
+pi = Decimal("3.1415926535897932384626433832795028841971693993751")
+sqrt3 = Decimal(3).sqrt()
+alpha = pi * (Decimal(2) - sqrt3) / Decimal(20)
+s118 = Decimal("2.798596312209462")
+t0 = s118 + alpha
+k0 = pi - t0
+e0 = t0 - k0
+assert e0 == Decimal(2) * t0 - pi
+
+# Finite algebra: under m+k<K0 and q-k>=T0, q-m>=2T0-pi+2k.
+T = Decimal("2.84")
+K = Decimal("0.30")
+k = Decimal("0.07")
+m = Decimal("0.20")
+q_minus_k = T
+assert q_minus_k + k - m >= Decimal(2) * T - pi + Decimal(2) * k
+
+assert Decimal("2.5396") < e0 < Decimal("2.5400")
+assert Decimal("0.30090") < k0 < Decimal("0.30092")
+print(f"alpha = {alpha}")
+print(f"T0 = {t0}")
+print(f"K0 = {k0}")
+print(f"E0 = {e0}")
+print("low-detour unit-side arithmetic: PASS")

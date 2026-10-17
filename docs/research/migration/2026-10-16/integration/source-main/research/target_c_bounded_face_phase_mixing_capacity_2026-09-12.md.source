@@ -1,0 +1,149 @@
+# Target C — bounded-face phase mixing consumes crossing capacity
+
+**Date:** 2026-09-12  
+**Status:** proof-only structural candidate; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The bounded-face endpoint fan gives an exact coupling between stopping-face phase
+mixing and the train-crossing graph. If two train populations are counted at the same
+bounded face, their pairs cannot cross. Bounded-face endpoint simplicity ensures that
+the same pair is not charged twice at two bounded faces.
+
+The implication chain is
+
+```text
+bounded-face fan + no repeated bounded-face pair
+  -> every mixed face incidence is a distinct noncrossing train pair
+  -> mixed-face incidence is bounded by missing train crossings
+  -> near-Mantel/phase-saturated routes force bounded faces to be phase-pure.
+```
+
+This is an exact interface currency. It does not by itself control the outer face or
+close C-II.
+
+## 1. Endpoint populations
+
+Let `A` and `B` be disjoint families of complete stopped trains. They may be selected
+by projective direction windows, phase atoms, or any other train property. For a
+bounded nonquadrilateral face `F`, define
+
+\[
+a_F:=\#\{\tau\in A:\tau\text{ has a terminal occurrence on }F\},
+\qquad
+b_F:=\#\{\tau\in B:\tau\text{ has a terminal occurrence on }F\}.
+\tag{1.1}
+\]
+
+The no-loop theorem implies that one train has at most one terminal occurrence on a
+given bounded face. The bounded-face endpoint-simplicity theorem implies that two
+distinct trains cannot have terminal occurrences on the same two bounded faces.
+
+Let `X(A,B)` be the number of unordered pairs `(tau,sigma)` in `A x B` whose
+canonical midpoint paths cross in a strict rhombus. Let `N(A,B)` be the remaining
+pairs. Since `A` and `B` are disjoint,
+
+\[
+|A||B|=X(A,B)+N(A,B).
+\tag{1.2}
+\]
+
+## 2. Mixed-face pairs are distinct missing crossings
+
+Fix a bounded face `F`. Every pair consisting of one train in `A` incident with `F`
+and one train in `B` incident with `F` shares that stopping face. The bounded-face fan
+theorem says that the two paths cannot cross. Therefore each of the `a_Fb_F` pairs
+is in `N(A,B)`.
+
+If the same pair of trains were counted at two different bounded faces `F` and `G`,
+both trains would join the same pair of bounded faces, contradicting bounded-face
+endpoint simplicity. Thus the sets of pairs counted by distinct faces are disjoint.
+Consequently
+
+\[
+\boxed{
+\sum_{F\text{ bounded}}a_Fb_F\le N(A,B)=|A||B|-X(A,B).
+}
+\tag{2.1}
+\]
+
+This is finite and occurrence-safe. No face degree is replaced by a distinct-vertex
+count, and no contact-isolated source point enters the argument.
+
+## 3. Directional crossing form
+
+Let `R(A,B)` be the set of strict-rhombus faces whose two crossing trains lie in `A`
+and `B`, and put `A(A,B)=sum_{R in R(A,B)} area(R)`. Suppose every such crossing has
+rhombus angle `alpha` in a set `I subset (pi/3,pi/2]`. The corresponding rhombus
+areas are `sin alpha`, so the crossing count is bounded by the area carried by those
+crossings:
+
+\[
+X(A,B)\ge {A(A,B)\over\sup_{\alpha\in I}\sin\alpha}
+\quad\text{whenever all }(A,B)\text{ crossings lie in }I,
+\tag{3.1}
+\]
+
+where `X(A,B)=|R(A,B)|`. More generally, if the crossing angles lie in the window
+`pi/3<=alpha<=pi/3+eta` with `0<eta<pi/6`, then
+
+\[
+X(A,B)\ge {A(A,B)\over\sin(\pi/3+\eta)}.
+\tag{3.2}
+\]
+
+Combining this with (2.1) gives the crossing-capacity inequality
+
+\[
+\boxed{
+\sum_F a_Fb_F
+\le |A||B|-X(A,B).
+}
+\tag{3.3}
+\]
+
+Thus an argument that makes `X(A,B)` close to the available bipartite capacity
+`|A||B|` automatically makes the bounded-face phase product small.
+
+## 4. Near-Mantel consequence
+
+Along a sequence for which
+
+\[
+X(A,B)\ge |A||B|-o(D^2),
+\tag{4.1}
+\]
+
+the exact inequality gives
+
+\[
+\boxed{
+\sum_F a_Fb_F=o(D^2).
+}
+\tag{4.2}
+\]
+
+In particular, no single bounded face can carry `Omega(D)` endpoints from both
+families. More generally, if a family of bounded faces has
+`a_F>=rho D` and `b_F>=sigma D` for each member, then that family has at most
+`o(1) / (rho sigma)` members along the sequence.
+
+If the two families are narrow phase windows separated by the rhombic crossing angle,
+(4.2) is a phase-purity statement for every macroscopic bounded stopping face. It
+also supplies a quantitative penalty whenever a proposed interface construction
+places both crossing phase populations on the same exceptional face.
+
+## 5. Scope and remaining gap
+
+The inequality is useful only when an independent argument supplies a lower bound on
+`X(A,B)` or an upper bound on the missing-crossing budget. The current C-II ledger
+does not provide that bound uniformly: multi-grain phase populations and repeated
+outer-face endpoints can absorb the missing crossings. The exact half-disk scalar
+witness therefore remains feasible.
+
+The surviving source-level target is to connect (2.1) to one of the current payment
+currencies—`e_BB-k`, `P_exc`, or the aggregate outer detour—or to use the resulting
+phase-pure corridor family in a source-preserving diameter descent.
+
+No theorem-state file is changed. The result is proof-only.
+
+**Classification:** proved candidate awaiting hostile audit; C-II remains open.

@@ -1,0 +1,172 @@
+#!/usr/bin/env python3
+"""Exact six-to-seven rank-one extension obstruction for Target C.
+
+The verifier scans the committed synchronized six-row augmentation cover and
+retains every rank-one virtual-canonical state with
+
+    deficiency = 3, singleton capacity >= 6,
+
+with projected coefficient-line support at least two. It then adjoins every
+remaining no-root cycle and enumerates every obtainable rank-one seven-row line
+whose restriction is the retained six-row line.
+
+Among all such restriction-compatible extensions, none has both
+
+    seven-row deficiency = 3, singleton capacity >= 7.
+
+This is an extension-cover statement. Complete-block ranks are computed
+modulo 2^127-1. The imported verifier certifies primality by Lucas-Lehmer,
+every complete T-relation row has squared norm at most 12, and
+(2^127-1)^2 > 12^15, so Hadamard's inequality makes every modular rank used
+here equal to its rank over Q.
+"""
+
+from collections import Counter
+import argparse
+import contextlib
+import importlib.util
+import io
+import pickle
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+BASE = HERE / "verify_target_c_support7_global_segment_relative_six_noroot_k5_2026_09_20.py"
+spec = importlib.util.spec_from_file_location("e99_six_k5_for_seven_k6_d3_cap7", BASE)
+S = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(S)
+R = S.R
+
+CAP9 = HERE / "verify_target_c_support7_global_segment_relative_eight_noroot_k7_d3_cap9_extension_2026_09_21.py"
+spec2 = importlib.util.spec_from_file_location("e99_block_profile_for_seven_k6_d3_cap7", CAP9)
+C9 = importlib.util.module_from_spec(spec2)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec2.loader.exec_module(C9)
+block_profile = C9.block_profile
+
+
+def load_cover(cache_path):
+    if cache_path:
+        with open(cache_path, "rb") as handle:
+            keys, cover, info = pickle.load(handle)
+        assert len(keys) == 105
+        assert len(cover) == 325955
+        assert len(info) == 105
+        return keys, cover, info
+
+    keys, five_orbits, orbit_sizes, augmentation_candidates = S.K.five_no_root_orbits()
+    assert len(five_orbits) == 20451
+    assert sum(orbit_sizes) == 96560646
+    assert augmentation_candidates == 20475
+    cover = S.six_augmentation_cover(keys, five_orbits)
+    _local_to_global, info = S.local_cycle_data(keys)
+    assert len(cover) == 325955
+    return keys, cover, info
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--cover-cache",
+        help="optional pickle containing (keys, six_augmentation_cover, local_cycle_info)",
+    )
+    args = parser.parse_args()
+
+    assert R.lucas_lehmer_127()
+    assert max(sum(x * x for x in row) for row in S.COMPLETE_T) == 12
+    assert R.P * R.P > 12 ** 15
+
+    keys, cover, info = load_cover(args.cover_cache)
+    rank_cache = {}
+
+    def deficiency(complete_set):
+        complete_set = tuple(complete_set)
+        cached = rank_cache.get(complete_set)
+        if cached is not None:
+            return cached
+        d = len(complete_set) - R.rank_mod(
+            [S.COMPLETE_T[block] for block in complete_set]
+        )
+        rank_cache[complete_set] = d
+        return d
+
+    def singleton_capacity(complete_set, line, singleton_lines):
+        return sum(
+            any(local is None or local == line for local in singleton_lines[block])
+            for block in complete_set
+        )
+
+    base_states = []
+    base_capacity_census = Counter()
+    synchronized_states = 0
+
+    for ext6 in cover:
+        values6, lines6, empty6, singles6 = S.block_profile(ext6, info)
+        for line6 in lines6:
+            if sum(x != 0 for x in line6) < 2:
+                continue
+            synchronized_states += 1
+            complete6 = tuple(
+                sorted(block for block in values6 if empty6[block] != line6)
+            )
+            if deficiency(complete6) != 3:
+                continue
+            capacity6 = singleton_capacity(complete6, line6, singles6)
+            if capacity6 < 6:
+                continue
+            base_states.append((tuple(ext6), line6))
+            base_capacity_census[capacity6] += 1
+
+    assert synchronized_states == 1751870
+    assert dict(sorted(base_capacity_census.items())) == {
+        6: 485,
+        7: 78,
+        8: 116,
+        9: 144,
+        10: 64,
+    }
+    assert len(base_states) == 887
+
+    all_cycles = set(range(105))
+    restriction_compatible = 0
+    seven_d3 = 0
+    seven_d3_capacity_ge7 = 0
+
+    for ext6, line6 in base_states:
+        remaining = sorted(all_cycles.difference(ext6))
+        for cycle in remaining:
+            ext7 = ext6 + (cycle,)
+            values7, lines7, empty7, singles7 = block_profile(ext7, info)
+            for line7 in lines7:
+                if S.primitive_line(line7[:6]) != line6:
+                    continue
+                restriction_compatible += 1
+                complete7 = tuple(
+                    sorted(block for block in values7 if empty7[block] != line7)
+                )
+                if deficiency(complete7) != 3:
+                    continue
+                seven_d3 += 1
+                capacity7 = singleton_capacity(complete7, line7, singles7)
+                if capacity7 >= 7:
+                    seven_d3_capacity_ge7 += 1
+
+    assert restriction_compatible == 96029
+    assert seven_d3 == 2036
+    assert seven_d3_capacity_ge7 == 0
+    assert len(rank_cache) == 72622
+
+    print("PASS: seven-row d3/capacity>=7 extension obstruction")
+    print("six_augmentation_cover", len(cover))
+    print("synchronized_six_row_states", synchronized_states)
+    print("base_d3_capacity_ge6", dict(sorted(base_capacity_census.items())))
+    print("base_state_count", len(base_states))
+    print("restriction_compatible_line_extensions", restriction_compatible)
+    print("seven_d3_extensions", seven_d3)
+    print("seven_d3_capacity_ge7", seven_d3_capacity_ge7)
+    print("unique_complete_sets_ranked", len(rank_cache))
+    print("hadamard_exact_rank_bound", R.P * R.P > 12 ** 15)
+
+
+if __name__ == "__main__":
+    main()

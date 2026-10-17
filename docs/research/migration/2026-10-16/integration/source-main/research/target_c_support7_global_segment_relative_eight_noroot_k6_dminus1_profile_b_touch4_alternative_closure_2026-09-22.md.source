@@ -1,0 +1,328 @@
+# Target C: close the Profile B all-active-aligned-touch-four alternative
+
+Date: 2026-09-22
+
+Status: rigorous closure of the remaining Profile B subcase in which no dependency-active aligned singleton has touch count three. Consequently every genuine remaining eight-no-root `k=6,D=-1,p=9` Profile B source has a dependency-active aligned singleton block touched by exactly three source cycles, and deleting precisely those three cycles gives a rank-two five-row puncture with virtual canonical deficiency `d_5=2`.
+
+Companion exact certificate:
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_touch4_alternative_closure_2026_09_22.py`
+
+The inputs are the preceding two notes:
+
+- `research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_singleton_line_sharpening_2026-09-22.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_three_ranktwo_exception_closure_2026-09-22.md`.
+
+They prove for every remaining genuine Profile B source:
+
+```text
+rank(P)=2,
+d_1(P)>=4,
+exactly nine singleton changed blocks,
+at most two rank-two local-empty singleton blocks,
+at least seven aligned singleton blocks,
+dim W=3,
+L=W^perp <= V has dim 6,
+```
+
+and the nine source replacement classes form a basis of the nine-dimensional source quotient `V`.
+
+A changed block is dependency-active when its source replacement class restricts nontrivially to `W`. Equivalently its basis class is not in `L`. Since the nine source classes are independent and `dim L=6`, at most six of the nine changed blocks are dependency-inactive.
+
+For an aligned dependency-active block the preceding persistence argument gives
+
+```text
+touch count in {3,4}.
+```
+
+If the touch count is three, deleting exactly those three source coordinates preserves coefficient rank two and forces
+
+```text
+d_5=2.
+```
+
+Thus the only branch left to close is the hypothesis
+
+> no dependency-active aligned changed block has touch count three.
+
+Under that hypothesis every aligned block touched by at most three source cycles is dependency-inactive and hence its basis class lies in `L`.
+
+## 1. Aligned touch-four stars have pairwise intersection at most one
+
+Fix a root triple `b` and one local projective direction `s`. Exactly four global no-root four-cycles touch `b` in direction `s`, one for each fourth vertex outside `b`. Write this four-cycle set as
+
+```text
+T(b,s).
+```
+
+An aligned block with source touch count four has source touch set exactly `T(b,s)`.
+
+Take two distinct aligned direction stars `T(b,s)` and `T(c,t)`.
+
+- If `b=c` and `s!=t`, the stars are disjoint because a touching cycle has one local direction.
+- If the two root triples do not share two vertices, no no-root cycle touches both.
+- If they share two vertices, exactly three no-root cycles touch both, namely the three orientations on the common four-set. At either root block these three cycles occupy the three local directions one each. Therefore the chosen pair of directions can select at most one common cycle.
+
+Hence
+
+```text
+|T(b,s) intersect T(c,t)| <= 1.                 (1.1)
+```
+
+Three distinct stars therefore have union size at least
+
+```text
+4+4+4-1-1-1 = 9.
+```
+
+An eight-cycle source can contain at most two aligned touch-four stars.
+
+The exact companion certificate checks all 105 stars, obtains maximum pair intersection one, and obtains minimum union size nine over all triples.
+
+## 2. A rank-two singleton codeword meets an aligned touch-four star in at most one coordinate
+
+Let `c` be a rank-two local-empty singleton block with chosen local direction `t`. Its nonzero coefficient line `L_c <= P` has support precisely on selected source cycles that touch `c` in a local direction different from `t`.
+
+Fix a distinct aligned touch-four block `b` with star `T=T(b,s)`.
+
+If `b,c` do not share two root vertices, no cycle of `T` touches `c`. If they do share two vertices, among the three common four-cycle orientations `T` contains exactly one, because `T` chooses one local direction at `b`. Therefore
+
+```text
+|supp(L_c) intersect T| <= 1.                  (2.1)
+```
+
+The companion certificate checks this directly over all root-block/direction pairs.
+
+## 3. Only three count profiles survive the no-touch-three-active hypothesis
+
+Let
+
+```text
+a = number of aligned changed blocks,
+h = number of aligned changed blocks with touch count 4,
+r = number of rank-two local-empty changed blocks = 9-a.
+```
+
+The preceding closure gives
+
+```text
+a >= 7,
+r <= 2,
+h <= 2.
+```
+
+Under the present no-touch-three-active hypothesis, every one of the `a-h` aligned blocks with touch count at most three is dependency-inactive. Its source basis class lies in the six-dimensional space `L`. Since the nine source classes are independent,
+
+```text
+a-h <= 6.                                      (3.1)
+```
+
+Combining the integer constraints leaves exactly
+
+```text
+(a,h,r) = (7,1,2),
+          (7,2,2),
+          (8,2,1).                              (3.2)
+```
+
+No other count profile can avoid a dependency-active aligned touch-three block.
+
+## 4. Exclude `(a,h,r)=(7,2,2)`
+
+Let `T_1,T_2` be the two aligned touch-four stars and let `L_1,L_2` be the two distinct rank-two singleton coefficient lines.
+
+By (2.1), each `L_i` is zero on at least three of the four coordinates of each `T_j`.
+
+For one fixed star `T_j`, two subsets of a four-set each of size at least three intersect in at least two coordinates. Hence at least two coordinates of `T_j` are zero for both `L_1` and `L_2`, so they are zero columns of the full rank-two plane `P`.
+
+The existence of two distinct rank-two singleton coefficient lines together with `d_1(P)>=4` already implies `d_2(P)>=6`; the support-intersection inequality from the singleton-line sharpening excludes `d_2=5`. Therefore `P` has at most two zero columns. The preceding paragraph forces exactly two global zero columns, and both belong to each of `T_1,T_2`.
+
+Thus
+
+```text
+|T_1 intersect T_2| >= 2,
+```
+
+contradicting (1.1).
+
+Hence `(7,2,2)` is impossible.
+
+## 5. Exclude `(a,h,r)=(8,2,1)`
+
+Let `T_1,T_2` be the two aligned touch-four stars and let `L` be the unique rank-two singleton coefficient line.
+
+Again (2.1) gives
+
+```text
+|supp(L) intersect T_1| <= 1,
+|supp(L) intersect T_2| <= 1.
+```
+
+By (1.1), two distinct four-stars have union size at least seven. The source has only eight coordinates, so there is at most one source coordinate outside `T_1 union T_2`. Therefore
+
+```text
+wt(L) <= 1+1+1 = 3,
+```
+
+contradicting the already-proved minimum-distance bound
+
+```text
+wt(L) >= d_1(P) >= 4.
+```
+
+Hence `(8,2,1)` is impossible.
+
+## 6. Structure forced by `(a,h,r)=(7,1,2)`
+
+It remains to exclude one aligned touch-four block `b` and two rank-two singleton blocks `c,d`.
+
+Let `T=T(b,s)` be the unique selected aligned touch-four star, and let `L_c,L_d` be the two distinct rank-two coefficient lines.
+
+By (2.1), both lines are zero on at least three coordinates of `T`. Their zero sets inside `T` therefore intersect in at least two positions, so `P` has at least two zero columns. As above, two distinct rank-two singleton lines exclude `d_2=5`, hence
+
+```text
+d_2(P)=6,
+```
+
+and there are exactly two zero columns globally. Both lie in `T`.
+
+For `n=d_2(P)=6`, the projective-column sharpening says two distinct rank-two singleton lines can coexist only when their two kernel projective classes both have multiplicity two. Hence both lines have weight four. The four coordinates of `T` are forced to consist of
+
+```text
+two P-zero columns,
+one nonzero column in ker(L_c),
+one nonzero column in ker(L_d).
+```
+
+Equivalently,
+
+```text
+|supp(L_c) intersect T| = 1,
+|supp(L_d) intersect T| = 1,
+```
+
+and those two star coordinates are distinct.
+
+The two codeword supports intersect in exactly
+
+```text
+6-2-2 = 2
+```
+
+nonzero coordinates. Therefore the three root triples `b,c,d` are pairwise two-intersecting:
+
+- the unique `T` coordinate in `supp(L_c)` touches both `b,c`;
+- the unique `T` coordinate in `supp(L_d)` touches both `b,d`;
+- the two coordinates in `supp(L_c) intersect supp(L_d)` touch both `c,d`.
+
+Three distinct triples that pairwise share two vertices have two incidence types up to relabeling:
+
+```text
+123,124,134
+```
+
+(three faces of one four-set), or
+
+```text
+123,124,125
+```
+
+(common two-set).
+
+The first is impossible. In the tetrahedral-face geometry all three pair unions are the same four-set, while an aligned star `T(b,s)` contains exactly one orientation on any fixed four-set containing `b`. But the two distinct star coordinates in `supp(L_c)` and `supp(L_d)` would both have to lie on that same four-set.
+
+Thus the only possible geometry is, up to `S_7`,
+
+```text
+b=123,
+c=124,
+d=125.                                        (6.1)
+```
+
+This leaves a small exact census.
+
+## 7. Exact 64-state census for the last profile
+
+Normalize (6.1). Enumerate all
+
+```text
+3^3 = 27
+```
+
+choices of local singleton directions for `b,c,d`.
+
+The forced star-column pattern from Section 6 survives in exactly
+
+```text
+12
+```
+
+direction triples.
+
+For each surviving direction triple, the other four source cycles must avoid `b` completely, because `b` is aligned with touch count exactly four. Relative to the two coefficient rows `L_c,L_d`, the four outside cycles must consist of
+
+```text
+one x-only column,
+one y-only column,
+two columns with both entries nonzero,
+```
+
+with no additional zero column. The resulting rank-two projective column profile is necessarily one of
+
+```text
+(2,2,2),
+(2,2,1,1),
+```
+
+on the six nonzero coordinates.
+
+The companion verifier enumerates every such outside-cycle choice and then requires exactly:
+
+1. `rank(P)=2`;
+2. exactly two zero columns;
+3. `d_1(P)>=4`;
+4. local empty-space ranks `1,2,2` at `b,c,d`;
+5. `b,c,d` all virtual-canonical complete for `P`.
+
+Exactly
+
+```text
+64
+```
+
+normalized coefficient-plane candidates remain.
+
+For each candidate, the verifier constructs the full virtual canonical complete set and computes its complete-block dependency rank exactly over `Q`. The deficiency histogram is
+
+```text
+d_8=7: 64.
+```
+
+There are no candidates with
+
+```text
+d_8=3.
+```
+
+Thus `(a,h,r)=(7,1,2)` is impossible as a Profile B source.
+
+## 8. Consequence
+
+All three count profiles in (3.2) are impossible. Therefore the hypothesis that no dependency-active aligned touch-three block exists is false.
+
+Every genuine remaining Profile B source has at least one aligned changed block `b` such that
+
+```text
+b is dependency-active,
+touch_count(b)=3.
+```
+
+Deleting exactly the three source cycles touching `b` preserves coefficient rank two because `d_1(P)>=4`. The block becomes untouched. If the five-row descendant still had deficiency three, dependency persistence would force `b` to remain virtual-complete, contradiction. Hence the designated puncture satisfies
+
+```text
+d_5=2.                                            (8.1)
+```
+
+This removes the all-active-aligned-touch-four branch completely. Profile B itself is not yet closed.
+
+The next finite target should impose (8.1) at source level before any fixed-nine/kernel-lattice descendant construction. Every surviving source must carry an explicit aligned singleton block whose three source touches are a distinguished rank-preserving `d_5=2` deletion triple. That is strictly stronger than the previous audit, which only allowed `d_5 in {2,3}` generically across the clean fan.

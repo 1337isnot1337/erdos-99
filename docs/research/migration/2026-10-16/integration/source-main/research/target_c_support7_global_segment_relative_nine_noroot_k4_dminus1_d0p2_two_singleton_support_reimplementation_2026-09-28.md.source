@@ -1,0 +1,181 @@
+# Target C: repository-audited two-singleton support narrowing
+
+Date: 2026-09-28
+
+Status: exact, executed, fail-closed support-level narrowing for the nine-no-root
+`k=4, D=-1, d_root=0, p=2` two-selected-singleton profile.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_two_singleton_support_reimplementation_2026_09_28.cpp`
+
+Executed verifier blob:
+
+`f9ed9ea83d4dd8c54afe2597464036a51c0f935a`
+
+The verifier imports the already-audited support-orbit, triangle-rank, and
+local-rank primitives from
+
+`research/verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_selected_pair_support_reimplementation_2026_09_28.cpp`
+
+whose blob on main is
+
+`af06b37d42eb417357f9f7e7eac40092c46db7ae`.
+
+## 1. Sound local-rank relaxation
+
+Let `P` be the five-dimensional external coefficient code. The committed
+nine-no-root reduction gives
+
+`(d1,d2,d3,d4,d5)(P) >= (2,4,5,7,8)`.
+
+For a touched block `b`, let `I_b` be the set of the nine no-root
+occurrences whose tetrahedral support contains `b`.
+
+The verifier uses the repaired one-sided local-rank rule already audited for the
+selected-pair profile:
+
+- a repeated containing tetrahedral support forces local empty-block rank two,
+  so `d2>=4` forces `|I_b|>=4`;
+- with no repeated containing support, `|I_b|<2` cannot be empty by
+  `d1>=2`;
+- with no repeated containing support and `|I_b|=2` or `3`, only local
+  rank one is allowed;
+- with no repeated containing support and `|I_b|>=4`, both local ranks one
+  and two are allowed.
+
+Thus every actual empty block receives at least one searched rank option.
+
+For two searched local spaces with occurrence sets `I,J`, the pairwise
+filters are only the necessary generalized-weight consequences:
+
+- line-line: `|I intersect J|>=2` or `|I union J|>=4`;
+- plane-line: `|I intersect J|>=2` or `|I union J|>=5`;
+- plane-plane: `|I intersect J|>=4`, or
+  `|I intersect J|>=2 and |I union J|>=5`, or `|I union J|>=7`.
+
+A selected singleton contributes either the zero external constraint or one
+rank-one constraint line. If that line is nonzero, `d1(P)>=2` forces its true
+support to have size at least two. The verifier permits such a line at any
+remaining touched block with at least two incidences and uses `I_b`, which is
+a superset of its true coordinate support. It also permits the zero-line case.
+These choices enlarge the state space.
+
+The actual-empty spaces together with the two selected-singleton constraints
+must generate the five-dimensional code `P`. The support verifier imposes
+only the necessary relaxed conditions
+
+- nominal generator dimension at least five; and
+- union of their occurrence supports of size at least eight,
+
+the latter following from `d5(P)>=8`.
+
+## 2. Structural conditions and the touched-block bound
+
+Let `T` be the touched block set, `h=|T|`, `C` the touched actual-complete
+blocks, `e` the number of touched actual-empty blocks, and `t` the number of
+the two selected singletons that lie in `T`.
+
+Because `d_root=0`, the triangle rows of `C` are independent. The four
+external relation directions also give
+
+`rank H(T) - rank H(C) >= 4`.
+
+Since `rank H(T)<=15`, every actual state has `|C|<=11`. As
+
+`|C| = h-e-t`,
+
+we obtain
+
+`e >= h-11-t`.
+
+The nine no-root cycles contribute exactly 36 cycle/block incidences. Every
+touched block contributes at least one incidence, while every actual-empty block
+contributes at least two. Therefore
+
+`36 >= h+e >= 2h-11-t >= 2h-13`,
+
+so every actual state satisfies
+
+`h<=24`.
+
+For each relaxed empty family the verifier permits `t=0,1,2`, including the
+possibility that one or both selected singleton blocks are outside `T`. For
+each touched singleton placement it puts the empty and selected-singleton blocks
+into the virtual incomplete set `I`, and keeps a state only if
+
+`H(T minus I)`
+
+is independent and
+
+`rank H(T)-rank H(T minus I) >= 4`.
+
+For the placement corresponding to any actual state, `T minus I=C`, so both
+tests are necessary. The search also admits many placements and rank labels that
+need not come from a legal root state; this only makes the search a superset.
+
+## 3. Exact support enumeration
+
+A no-root four-cycle has one of 35 tetrahedral supports on seven labels, and a
+fixed support occurs with multiplicity at most three. The imported verifier
+independently checks the Burnside orbit counts
+
+`1, 1, 4, 14, 61, 268, 1283, 6032, 27763, 121458`
+
+for multiset sizes zero through nine and reconstructs the size-nine orbits by
+canonical augmentation.
+
+The exact executed census for the two-singleton relaxation is:
+
+- size-nine support orbits: `121458`;
+- support orbits with `|T|<=24`: `103247`;
+- raw legal size-nine extensions: `966977`;
+- raw legal extensions with `|T|<=24`: `802570`;
+- relaxed final empty-family states: `43041`;
+- singleton placements tested: `7566114`;
+- surviving support orbits: `13`.
+
+The exact surviving canonical support multisets are:
+
+1. `[0123]^3 [0124]^3 [0134] [0234] [1234]`
+2. `[0123]^3 [0124]^3 [0134] [0234] [1235]`
+3. `[0123]^3 [0124]^2 [0134]^2 [0234]^2`
+4. `[0123]^3 [0124]^2 [0134]^2 [0234] [1234]`
+5. `[0123]^3 [0124] [0125] [0134] [0145] [0234] [1234]`
+6. `[0123]^3 [0124] [0134] [0145]^2 [0234] [1234]`
+7. `[0123]^3 [0124] [0134] [0145] [0156] [0234] [1234]`
+8. `[0123]^3 [0124] [0134] [0145] [0234] [0245] [1234]`
+9. `[0123]^3 [0124] [0134] [0145] [0234] [0246] [1234]`
+10. `[0123]^3 [0124] [0134] [0145] [0234] [0456] [1234]`
+11. `[0123]^3 [0124] [0134] [0145] [0234] [1234] [2345]`
+12. `[0123]^3 [0124] [0134] [0145] [0234] [1234] [2346]`
+13. `[0123]^2 [0124]^2 [0134]^2 [0234]^2 [1234]`
+
+The verifier fail-closes on every census number above and on the complete
+ordered list of thirteen survivors.
+
+## 4. Exactness of triangle-row ranks
+
+The imported triangle-row rank routine works modulo `2^31-1`, verifies that
+modulus by the Lucas-Lehmer test, and uses the same Hadamard bound as the
+selected-pair support certificate. Relevant triangle-row minors have squared
+absolute determinant at most `3^15`, while `(2^31-1)^2>3^15`. A nonzero
+integer minor therefore cannot vanish modulo the prime, so these modular ranks
+equal the rational ranks.
+
+## 5. Consequence
+
+Every realizable two-selected-singleton state lies among the thirteen support
+orbits above.
+
+Authoritative main already has exact orientation exclusions for the first two
+listed supports:
+
+- `[0123]^3 [0124]^3 [0134] [0234] [1234]`;
+- `[0123]^3 [0124]^3 [0134] [0234] [1235]`.
+
+Consequently the unresolved orientation frontier for this profile is now
+exactly the remaining eleven explicit support orbits 3 through 13 above.
+
+This does not close the two-singleton profile, the full `D=-1,p=2` branch, or
+Erdos Problem #99.

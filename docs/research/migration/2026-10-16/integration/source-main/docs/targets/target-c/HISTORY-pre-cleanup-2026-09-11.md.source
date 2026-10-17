@@ -1,0 +1,408 @@
+# Target C — KKT force-hull / reciprocal-geometry route
+
+Target C is the third active endgame for Erdős Problem #99. It starts directly from global diameter optimality and the normalized KKT system rather than from Target A's independent scaffold/Hall response or Target B's almost-rhombic shell decomposition.
+
+**LEVEL I STATUS: STILL OPEN.**
+
+## Controlling update — 2026-09-09
+
+Read [56 — C-I restored; C-II remains](56-ci-restored-frontier.md) before the
+older frontier below. The promoted
+[orientation/dependency audit](../../reports/target_c_c53_orientation_and_ci_restoration_2026-09-09.md)
+withdraws the incorrectly normalized pentagon regression, restores C53 universal
+selected-stress PSD and C63 finite integration, and closes C-I. A hypothetical
+counterexample has a contact/diameter-lexicographically minimal representative
+with `C=C_*` and `H=H_*`. C-II remains open, including the isolated-point population.
+Older statements below that C-I or universal PSD remain unproved are superseded
+only to this extent; later C-II claims are not automatically promoted.
+
+### Promoted cross-target integrator update
+
+The [shared ambient-force/cap module](../../theory/04-ambient-force-and-cap-transport.md)
+gives `R(F)<=D/2+O(sqrt(D))` for every selected force hull by inclusion in
+the actual global source hull. Thus every normalized stress has
+`P_*=2D-O(sqrt(D))`; all actual diameter-star angles are `O(D^(-1/4))`.
+Normalized force-hull limits are centrally symmetric cyclic hulls, with limiting
+area/perimeter relation `a>=p-3pi/4`. Exterior population satisfies
+`Z_ext=(pi D^2/4-area(F))/(sqrt(3)/2)+O(D)` with explicit finite bounds.
+These supersede the corresponding older circumradius warnings and fixed-angle
+asymptotic summaries, but imply neither a matching nor few interior isolates.
+The post-ZF `0.618470...` area and `0.593235...` surplus specializations remain
+conditional reports.
+
+## Canonical frontier
+
+Read, in order:
+
+1. [01 — Force hull, shear, and reciprocal frontier](01-force-hull-and-shear.md)
+2. [02 — Fully force-visible bridge frontier](02-fully-visible-bridge-frontier.md)
+3. [03 — Pinned-block and loaded-boundary frontier](03-pinned-block-and-loaded-boundary-frontier.md)
+4. [04 — Near-minimal loaded-boundary response frontier](04-near-minimal-response-frontier.md)
+5. [05 — Quadrangulation-defect frontier](05-quadrangulation-defect-frontier.md)
+
+The dated reports below are promoted audited addenda. Their proved statements are canonical unless superseded by a later Target C report or frontier module.
+
+## Promoted audited addenda
+
+1. [Diametral saturation and the KKT force hull](../../reports/target_c_force_hull_2026-08-30.md)
+2. [Critical-cone/KKT-support duality](../../reports/target_c_critical_cone_duality_2026-08-30.md)
+3. [Diameter-shear separator](../../reports/target_c_shear_separator_2026-08-30.md)
+4. [Reciprocal force polygon and contact-network response](../../reports/target_c_force_polygon_2026-08-30.md)
+5. [Positive KKT support is connected](../../reports/target_c_support_connectivity_2026-08-30.md)
+6. [Support-connectivity proof audit](../../reports/target_c_support_connectivity_audit_2026-08-30.md)
+7. [Second-order angular-variance reduction](../../reports/target_c_second_order_variance_2026-08-30.md)
+8. [Force-perimeter endpoint classification](../../reports/target_c_force_perimeter_extremes_2026-08-30.md)
+9. [Reuleaux-triple exclusion](../../reports/target_c_reuleaux_exclusion_2026-08-30.md)
+10. [Uniform force-perimeter gap](../../reports/target_c_uniform_force_gap_2026-08-30.md)
+11. [Diameter-cycle girth bound](../../reports/target_c_diameter_cycle_girth_2026-08-31.md)
+12. [Explicit shared-endpoint diameter-angle gap](../../reports/target_c_explicit_diameter_angle_gap_2026-08-31.md)
+13. [One-dimensional force-hull exclusion](../../reports/target_c_one_dimensional_force_hull_exclusion_2026-08-31.md)
+14. [Contact bridges as reciprocal diagonals](../../reports/target_c_bridge_reciprocal_2026-08-31.md)
+15. [Exact straight-chain reduction](../../reports/target_c_straight_chain_reduction_2026-08-31.md)
+16. [Two-terminal bridge collapse and reaction budget](../../reports/target_c_two_terminal_bridge_collapse_2026-08-31.md)
+17. [Bridge-tree positive-diameter Helly hub](../../reports/target_c_bridge_tree_helly_hub_2026-08-31.md)
+18. [Common diameter-route core](../../reports/target_c_common_diameter_route_core_2026-08-31.md)
+19. [Common-cut caterpillar theorem](../../reports/target_c_common_cut_caterpillar_2026-08-31.md)
+20. [Fully force-visible no-neutral-vertex theorem](../../reports/target_c_fully_visible_no_neutral_vertices_2026-08-31.md)
+21. [Macroscopic bridge-diagonal theorem](../../reports/target_c_macroscopic_bridge_diagonal_2026-08-31.md)
+22. [Reaction-free block capacity theorem](../../reports/target_c_reaction_free_block_capacity_2026-08-31.md)
+23. [Bridge-depth loaded-block cost theorem](../../reports/target_c_bridge_depth_loaded_block_cost_2026-08-31.md)
+24. [Force-visible boundary count](../../reports/target_c_force_visible_boundary_count_2026-08-31.md)
+25. [Loaded-block pinned diameter budget](../../reports/target_c_loaded_block_pinned_diameter_budget_2026-08-31.md)
+26. [Common-bridge full-diameter pseudoforest](../../reports/target_c_common_bridge_full_diameter_pseudoforest_2026-08-31.md)
+27. [Pinned self-stress boundary surplus](../../reports/target_c_pinned_self_stress_boundary_surplus_2026-08-31.md)
+28. [Four-terminal nontrivial block theorem](../../reports/target_c_four_terminal_nontrivial_block_2026-08-31.md)
+29. [Loaded-boundary attachment theorem](../../reports/target_c_loaded_boundary_attachment_2026-08-31.md)
+30. [Harmonic attachment-hull theorem](../../reports/target_c_harmonic_attachment_hulls_2026-08-31.md)
+31. [Planar attachment-incidence theorem](../../reports/target_c_planar_attachment_incidence_2026-08-31.md)
+32. [Response quotient connectivity theorem](../../reports/target_c_response_quotient_connectivity_2026-08-31.md)
+33. [Block self-stress diameter surplus](../../reports/target_c_block_self_stress_diameter_surplus_2026-08-31.md)
+34. [Harmonic component diameter cost](../../reports/target_c_harmonic_component_diameter_cost_2026-08-31.md)
+35. [Strict response diameter-defect trace](../../reports/target_c_response_diameter_defect_trace_2026-08-31.md)
+36. [Pinned-self-stress quadrangulation defect](../../reports/target_c_self_stress_quadrangulation_defect_2026-08-31.md)
+37. [Uniform anti-Reuleaux triple gap](../../reports/target_c_uniform_anti_reuleaux_triple_gap_2026-08-31.md)
+38. [Short-response/macroscopic-component dichotomy](../../reports/target_c_short_response_macroscopic_component_dichotomy_2026-08-31.md)
+39. [Macroscopic component stress fraction](../../reports/target_c_macroscopic_component_stress_fraction_2026-08-31.md)
+40. [Three-edge response inertia budget](../../reports/target_c_three_edge_response_inertia_2026-08-31.md)
+41. [Four-endpoint three-diameter response positivity](../../reports/target_c_four_endpoint_three_diameter_response_2026-08-31.md)
+42. [Five-endpoint three-diameter response positivity](../../reports/target_c_five_endpoint_three_diameter_response_2026-08-31.md)
+43. [Six-endpoint sign-cone regression](../../reports/target_c_six_endpoint_sign_cone_regression_2026-08-31.md)
+44. [Fully force-visible endpoint-count theorem](../../reports/target_c_force_visible_endpoint_count_2026-08-31.md)
+45. [Selected-stress centrally symmetric six-endpoint Kalmanson lemma (superseded scope)](../../reports/target_c_centrally_symmetric_six_matching_2026-08-31.md)
+46. [Selected-stress convex six-endpoint Kalmanson closure](../../reports/target_c_convex_six_matching_kalmanson_2026-08-31.md)
+47. [Six-endpoint equality/star-response classification](../../reports/target_c_six_matching_equality_star_2026-08-31.md)
+48. [Six-endpoint equality concurrency consequence](../../reports/target_c_six_matching_equality_concurrency_2026-08-31.md)
+49. [Six-endpoint star-equality terminal separator](../../reports/target_c_six_matching_star_separator_2026-08-31.md)
+50. [Additive-response terminal-separator obstruction](../../reports/target_c_additive_response_separator_obstruction_2026-08-31.md)
+51. [C-II terminal-path packing and strict-minor family](../../reports/target_c_terminal_path_packing_2026-08-31.md)
+52. [Connected-quotient refinement of terminal-path packing](../../reports/target_c_terminal_path_packing_connected_refinement_2026-08-31.md)
+53. [Bounded-degree near-star response minor regression](../../reports/target_c_near_star_response_minor_regression_2026-08-31.md)
+54. [Two-scale strict-rhombus face capacity](../../reports/target_c_two_scale_face_capacity_2026-08-31.md)
+55. [Four-pair opposite-matching response contraction](../../reports/target_c_four_pair_response_contraction_2026-08-31.md)
+56. [Force-bulk transport — localization/FB4 rejected by audit](../../reports/target_c_force_bulk_and_correction_audit_2026-09-08.md)
+57. [Arbitrary-thrackle interval-sign regression — withdrawn](../../reports/target_c_thrackle_interval_sign_regression_2026-09-05.md)
+58. [Projective-orientation audit, universal PSD, and C-I restoration](../../reports/target_c_c53_orientation_and_ci_restoration_2026-09-09.md)
+59. [Independent exact cut and dependency audit](../../reports/target_c_c53_sign_and_ci_dependency_audit_2026-09-09.md), Section 1A: parallel provenance for the same cut correction. The coordinated promotion in item 58 and module 56 controls the current C-I state; neither audit promotes unrelated C-II claims.
+60. [Ambient roundness and every force hull](../../reports/integrator_ambient_force_geometry_2026-09-09.md), **only AG/AR/AS/AP (Sections 1–6 and 8)**; the DB numerical specialization remains conditional.
+61. [Exact exterior-cap capacity](../../reports/integrator_exterior_cap_capacity_2026-09-09.md), **only EC/EP/ES (Sections 1–5 and 7)**; the numerical Section 6 remains conditional.
+62. [Zero-transfer/additive C-II exclusion](../../reports/target_c_zero_transfer_additive_promotion_2026-09-11.md): for (D\ge9), the canonical C-II response cannot satisfy (min_{e\ne f}K_{ef}=0), in any (s_Z) or diameter-topology branch.
+
+The support-connectivity audit supersedes only the informal noncrossing-partition sublemma in the original connectivity report; the theorem and consequences are unchanged.
+
+## Current proved Target C stack
+
+For a hypothetical triangle-free global minimizer, after the canonical contact-minimal and diametral normalizations:
+
+### Foundational and structural reductions
+- The convex-hull boundary can be made genuinely diametral without changing the
+  nonisolated contact core or the unit-contact graph.
+- The union of all KKT-supportable active constraints defines a canonical force hull.
+- Strong active constraints are exactly those frozen on the entire fixed-diameter
+  first-order critical cone; all weak active constraints can be released strictly and
+  simultaneously to first order.
+- If the strong diameter chords have a common angular rate along such a release, the
+  release integrates to a finite same-diameter motion. A contact-minimal survivor with
+  weak unit contacts therefore forces a nontrivial diameter-shear separator.
+- Every normalized KKT stress has one connected positive unit-contact component, and
+  that component already spans Euclidean diameter `D`.
+- The positive contact network has a Maxwell reciprocal force polygon with exact mixed
+  area `2 V(F,F*) = D^2` and a boundary Dirichlet-response interpretation.
+- The reciprocal perimeter has classified extremal phases and, for sufficiently large
+  global minimizers, a uniform gap above the `sqrt(3) D` endpoint.
+- Three pairwise diametral points are impossible for all sufficiently large
+  minimizers; more generally shared-endpoint diameter chords satisfy an explicit angle
+  bound asymptotic to `50.7608...` degrees.
+- Any diameter-graph cycle has length `Omega(sqrt(D))`.
+- The canonical force hull cannot be one-dimensional when `D>1`.
+- Every positive unit-contact bridge cuts the loaded boundary into two cyclic
+  intervals and is represented by a reciprocal-polygon diagonal perpendicular to the
+  bridge and of length exactly equal to its contact stress. Any disjoint bridge-side
+  family has total bridge stress at most `P_* <= 2D`; in particular leaf bridges carry
+  only `O(D)` of the total normalized contact stress `D^2`.
+- For arbitrary positive KKT supports, every unloaded degree-two positive-contact
+  vertex lies exactly on a straight unit chain and transmits equal stress in both
+  directions. Suppressing all such vertices gives a plane structural skeleton with
+  positive-integer edge lengths `L_E` and exact stress-length identity
+  `sum_E L_E alpha_E = D^2`.
+- More generally, any connected positive-contact region with no positive diameter
+  reaction and exactly two positive-contact edges leaving it is an exact straight
+  constant-stress unit chain. After bridge-block contraction, every nontrivial
+  reaction-free block has bridge-tree degree at least three.
+- The bridge-block paths joining the endpoints of all positive diameter edges have one
+  common Helly hub block. Rooted at this hub, no branch contains a positive diameter
+  edge internally. If `s_b` is the total positive diameter weight incident to loaded
+  vertex `b`, the descendant endpoint masses form an exact nonnegative tree flow, and
+  bridge stress `S_br >= eta D^2` forces `s_b/2`-weighted mean bridge depth at least
+  `eta D/2`.
+- More precisely, the intersection of all positive-diameter terminal paths is a path.
+  If it contains a bridge, `H_+` is bipartite and hence acyclic; in that phase every
+  component of `H_+` is a common-cut caterpillar.
+- In the fully force-visible branch `C=C_*`, every unloaded contact vertex is a strict
+  positive contact barycenter, hence is not any source diameter endpoint. Contact
+  minimality then forces contact degree `3`, `4`, or `5`. Consequently there are no
+  unloaded degree-two vertices, no C21 neutral-chain internal vertices, and no C22
+  reaction-free two-terminal regions. The C24 common route is therefore either one
+  bridge block or one universal contact bridge; it never contains two bridge edges.
+- In that same branch, the bridge-block tree has at most `2|B_+|-3 <= 2*pi*D-3`
+  contact bridges. If `S_br >= eta D^2`, one individual bridge has
+  `alpha_e >= eta D^2/(2*pi*D-3)`, so the reciprocal polygon contains an
+  `Omega_eta(D)` diagonal and the same cut carries `Omega_eta(1)` total positive
+  diameter weight.
+- Every nontrivial reaction-free bridge block `X` in C-II is locally pinned-rigid.
+  If `k_X` is its bridge-tree degree and `delta_X` its internal contact-graph diameter,
+  then `delta_X <= k_X-2`, `diam_Eucl(X)<=k_X-2`, and
+  `|V(X)| <= (2k_X-3)^2`. Globally,
+  `sum_X delta_X <= |B_+|-2 <= pi D-2` over all nontrivial reaction-free blocks.
+- If `R` is the number of loaded bridge blocks, every loaded block has C23 hub depth at
+  most `R-1`, and
+  `S_br <= 2D(R-1)`. Therefore bridge-dominant stress
+  `S_br >= eta D^2` forces
+  `R >= eta D/2+1` and hence `|B_+| >= eta D/2+1`.
+- In the fully force-visible branch, C34 identifies the nonisolated source diameter
+  endpoint set with `B_+` and combines the canonical pinned-core rank lower bound with
+  Eppstein's graph-diameter upper bound to give
+  `2|B_+| >= ceil(D)+2` and `|H_+| >= (ceil(D)+2)/4`.
+- For `D>=9`, the C53 zero-transfer equality `min_{e!=f} K_ef=0` is excluded:
+  C53 makes the transfer kernel diagonal, the circular split representation makes
+  the actual terminal resistance additive, and SEPq then contradicts the C26/C35
+  degree caps using C34. The surviving response phase is strict-negative.
+- Points outside the nonisolated contact core are isolated but need not be
+  diametral. The former force-bulk localization and FB4 assertion are rejected:
+  the globally optimal unit heptagon plus center is an exact counterexample.
+  For a hull-saturated representative the corrected identity retains interior
+  isolates: `n-m+q=|Q|+z_int<=pi D+z_int`; do not identify that representative
+  with the secondary diameter-minimizing representative without proof.
+- For any normalized stress whose positive diameter endpoints span two dimensions,
+  the signed response has negative inertia at most `rank(L_H)-2`. For a three-edge
+  diameter forest this leaves only one possible non-affine negative mode, with
+  threshold `rho = sum_h beta_h R_eff(h)-2`.
+- That possible mode is absent when the three-edge forest has four endpoints (C31),
+  and also when it has five endpoints (C32). In the four-endpoint triangle-free case
+  the response defect is strictly positive. The convex six-endpoint matching is now
+  also covered by K6, so every three-edge forest has no negative response mode;
+  this reduction does not assume a general PSD or Loewner comparison.
+- K6 uses half-turn averaging of the response matrix and one circular-planar
+  Kalmanson inequality; it does not require central symmetry of the six-terminal
+  geometry. EQ6 shows that its `rho=1` equality mode forces an additive
+  effective-resistance metric (star equivalence). CONC6 then places its weighted
+  boundary barycenter in every matching chord. SEP6 now uses the actual
+  circular-planar response: equality makes every two-by-two circular minor vanish,
+  and Gallai's T-path theorem forces a one-vertex terminal separator. C26/C35
+  degree caps exclude that separator in the fully force-visible branch, so the
+  six-terminal equality mode is strict in C-II. SEPq generalizes this: an additive
+  response on q>=6 force-visible terminals is impossible under the same degree
+  caps, and C34 supplies q>=6 once D>=9. Thus the additive part of every
+  larger-support equality mode is excluded in C-II; non-additive larger supports
+  and direction-dependent support selection remain open.
+- TP5 gives the initial non-additive topological complement. The sharper CR4
+  connected-quotient refinement gives `nu_(B_+)(C) >= (|B_+|-1)/4` and hence at
+  least `floor((|B_+|-1)/8)` pairwise terminal-disjoint strict circular minors.
+  C34 makes this family `Omega(D)` in C-II, but no uniform numerical minor size
+  is known. The coefficient `1/4` is sharp from degree and connectivity alone.
+- A cycle-with-leaves electrical regression shows that this strict-minor count has
+  no quantitative consequence from topology alone: bounded-degree circular-planar
+  networks can converge to a star response while retaining linearly many strict
+  minors of arbitrarily small aggregate mass. The missing transport must use unit
+  contact geometry, KKT equilibrium, and the `q=Omega(D)` scale together.
+### Current global summary
+- maximal KKT support defines a canonical two-dimensional force hull of diameter `D`;
+- strong active constraints are exactly those frozen on the fixed-diameter critical cone;
+- weak constraints release simultaneously to first order; failure of finite release is exactly the diameter-shear separator;
+- every normalized KKT stress has one connected positive unit-contact component spanning Euclidean diameter `D`;
+- the positive contact network has the C10/C11 circular-planar response and reciprocal force polygon with `2V(F,F*)=D^2` and `sqrt(3)D<=P_*<=2D`;
+- the full diameter graph has the Reuleaux-triple exclusion, shared-endpoint angle ceiling tending to `50.7607988...` degrees, and cycle length `Omega(sqrt(D))`;
+- **C43 strengthens the Reuleaux exclusion uniformly:** for some absolute `eta_0>0`, every triple of source points in every sufficiently large global minimizer has a pair at distance at most `(1-eta_0)D`; equivalently the graph of pairs longer than this threshold is triangle-free;
+- the one-dimensional force-hull phase is impossible.
+
+### Bridge/articulation stack C20-C29
+
+- every positive contact bridge is a reciprocal diagonal of length exactly its contact stress;
+- every bridge frontier carries at most `2D` stress;
+- reaction-free two-terminal regions collapse to straight constant-stress chains;
+- all positive-diameter terminal paths in the bridge-block tree have a common Helly hub;
+- their full common intersection is a path; if it contains a bridge, `H_+` is a forest and each component is a common-cut caterpillar;
+- in fully force-visible C-II no unloaded degree-one/two contact vertex exists, so neutral series transport disappears;
+- bridge-dominant stress `S_br>=eta D^2` forces one `Omega_eta(D)` reciprocal diagonal, one cut with `Omega_eta(1)` crossing positive-diameter weight, and at least `eta D/2+1` loaded bridge blocks.
+
+### Canonical C30-C32 refinements
+
+- **C30:** every fully force-visible survivor has `|B_+| >= (ceil(D)+2)/2`;
+- **C31:** every bridge block satisfies `delta_X <= 2q_X+k_X-2`, with an `O(D)` global block-diameter budget;
+- **C32:** in the universal-common-bridge phase, the entire nonisolated-core diameter graph becomes bipartite after deleting at most one same-side cap edge. Hence it has at most one diameter cycle, which must use that cap.
+
+### C33-C40 pinned-boundary refinements
+
+- **C33 self-stress boundary surplus:** if `c_I` is the number of unpinned components and `e_BB` the loaded-loaded contact count, `2|B_+| >= delta+c_I+e_BB+2`;
+- **C34 four-terminal block:** every nontrivial bridge block satisfies `q_X+k_X>=4`;
+- **C35 boundary attachment:** every loaded vertex has contact degree at most three and every unpinned component has at least three boundary contact edges;
+- **C36 harmonic attachment hull:** every unpinned component lies in the convex hull of at least three distinct loaded attachment vertices; attachment sets are noncrossing in cyclic boundary order;
+- **C37 planar incidence:** with `q_used` used boundary vertices and `s` incidence components, `sum_r|A_r| <= q_used+2c_I-2s`;
+- **C38 quotient connectivity:** loaded-loaded contacts satisfy `e_BB >= s+(|B_+|-q_used)-1`; near the C33 minimum all but `o(D)` loaded vertices belong to exactly one attachment set;
+- **C39 block self-stress surplus:** with `p_X` pinned-only block contact rows and `c_X` unpinned block components, `delta_X <= k_X+2q_X-p_X-c_X-2`; a nontrivial reaction-free block has bridge degree at least five;
+- **C40 harmonic component diameter cost:** for unpinned component `I_r`, `t_r >= delta_r+3`, hence `delta_r<=3|A_r|-3` and `sum_r delta_r+3c_I+2e_BB<=3|B_+|`.
+
+### C41-C45 response/rhombic/near-diameter refinements
+
+- **C41 strict response diameter defect:** if `c_bk=-Lambda_bk`, then
+  `(D^2/2)tr(Lambda-L_H)=sum_{b<k}c_bk(D^2-|b-k|^2)>0`.
+  Thus `tr Lambda>2=tr L_H` while `M=Lambda-L_H` still satisfies `M1=MP_B=0`. The positive defect decomposes into positive contributions from every harmonic component and every direct loaded-loaded unit contact.
+- **C42 quadrangulation defect:** if `h` is the outer-face walk and `Sigma_4=sum_bounded(deg f-4)`, then
+  `h+Sigma_4<=4|B_+|-2c_I-2e_BB-4`.
+  Since `h>=|B_+|`, at least
+  `m-5|B_+|+3c_I+3e_BB+5`
+  bounded faces are strict unit rhombi, and only `O(D)` outer/nonquadrilateral face-edge incidences touch the defect set.
+- **C43 uniform anti-Reuleaux gap:** every C36 attachment clique contains a response pair of length at most `rho_0D=(1-eta_0)D`; on such a pair C41 pays at least `gamma_0D^2` per unit effective conductance, where `gamma_0=1-rho_0^2>0`.
+- **C44 response dichotomy:** `diam A_r<=delta_r+2<=3|A_r|-1`, so only an absolute constant `K_0` of harmonic components can carry response pairs longer than `rho_0D`. Either the total short response mass is at least `1/2`, which forces `tr(Lambda-L_H)>=gamma_0`, or one component has `Omega(1)` response conductance together with `Omega(D)` attachment diameter, graph diameter, attachment count, and boundary contacts.
+- **C45 stress localization:** in C44's macroscopic-component branch, one component has long response mass `>1/(2K_0)` and therefore, by the componentwise C11 Dirichlet identity, carries more than `[rho_0^2/(2K_0)]D^2` positive contact-stress mass. Thus one unloaded harmonic cell carries a fixed positive fraction of the entire normalized KKT contact stress.
+- **C49 two-scale face capacity:** with `F=conv V(C)`, `A_F=area(F)`, and
+  `G=area(F)-sum_r area(conv A_r)`,
+  `m < min{2A_F/sqrt(3)+5q-3c_I-3e_BB-5,
+  2(A_F-G)/sqrt(3)+7q-3c_I-3e_BB-5}`.
+  The first bound charges every strict rhombus to the whole core hull; the second
+  charges unloaded faces to the disjoint harmonic cells and loses only `2q` loaded
+  face incidences.
+
+## Exact remaining Target C gates
+
+### C-I — eliminate diameter shear
+
+Prove that every sufficiently large contact-minimal, diametrally saturated, triangle-free global minimizer with a weak unit contact has a relative-interior critical velocity with common angular rate on all strong diameter chords. Equivalently, rule out the C9 nonnegative-radial-carrier / zero-total-torque tangential separator.
+
+A proof forces `C=C_*`.
+
+### C-II — eliminate the fully force-visible branch
+
+Assume `C=C_*`. Every survivor has `Theta(D)` positively loaded force-hull vertices by C30.
+
+The active subfrontiers are:
+
+1. [Bridge frontier](02-fully-visible-bridge-frontier.md): bridge-dominant stress forces a macroscopic reciprocal cut, linearly many loaded blocks, the C32 full-core diameter pseudoforest in the universal-bridge phase, and the C39 self-stress-sharpened block budget.
+2. [Pinned-block / loaded-boundary frontier](03-pinned-block-and-loaded-boundary-frontier.md): all block diameters are charged to the same linear loaded boundary, and C33 separates a boundary-surplus phase from a near-minimal phase.
+3. [Near-minimal response frontier](04-near-minimal-response-frontier.md): C44-C45 now replace diffuse small-weight behavior by a binary obstruction: either an absolute trace gap, or one macroscopic unloaded harmonic cell with a fixed positive fraction of the `D^2` contact-stress budget.
+4. [Quadrangulation-defect frontier](05-quadrangulation-defect-frontier.md): in every C-II phase, a macroscopic force-visible contact core has only `O(D)` planar defect and therefore an `m-O(D)` strict-rhombic bounded-face bulk. C49 upgrades this to a two-scale area-capacity bound with an explicit whole-hull fallback.
+
+### Selected-stress response audit
+The promoted response reductions C30-C32 sharpen the selected-stress subcase: if a
+three-edge forest occurs in the relevant two-dimensional response, its four- and
+five-endpoint topologies have no negative response mode. K6 removes the response
+obstruction for the convex six-endpoint matching as well. The maximal-support,
+larger-support, and equality-mode problems remain open, so this is not a C-I closure.
+
+The entire convex six-terminal subcase of the remaining matching is now positive:
+the K6 half-turn/Kalmanson lemma proves `rho <= 1`. Its `rho=1` equality mode and
+the support-selection problem remain live. EQ6 reduces equality to a star-equivalent
+boundary response, and CONC6 forces the three matching chords to be concurrent.
+SEP6 supplies the source-preserving C-II contradiction; SEPq plus C34 extends it to
+all additive canonical responses once `D>=9`, but neither result excludes
+non-additive equality in larger supports.
+
+TP5 supplied the initial complementary non-additive count. CR4 sharpens it using
+the connected quotient of a deleted separator: the C-II degree caps and Gallai's
+T-path theorem give `nu_(B_+)(C) >= (|B_+|-1)/4`, so there are at least
+`floor((|B_+|-1)/8)` pairwise terminal-disjoint strict circular minors. C34 makes
+this number at least `floor(ceil(D)/16)`, but topology alone supplies no uniform
+lower bound on their numerical sizes.
+
+An equivalent closing form is to rule out the nonnegative radial carrier / zero-total-
+torque tangential diameter load produced by the diameter-shear separator theorem.
+### Current shortest remaining C-II targets
+The shortest remaining C-II targets are now:
+
+- **absolute trace-gap exclusion:** rule out `tr(Lambda-L_H)>=gamma_0` under `M1=MP_B=0` using circular-planar minors, diameter-load support, reciprocal geometry, or global packing;
+- **strict-minor transport:** convert CR4's `Omega(D)` terminal-disjoint strict
+  circular minors into a quantitative C41 response defect or a C42/global-packing
+  contradiction. The near-star regression shows topology alone has no uniform
+  aggregate conductance lower bound;
+- **macroscopic harmonic-cell exclusion:** rule out one unloaded component satisfying C45's fixed stress-fraction and C44's linear geometry/attachment bounds;
+- **macroscopic bridge-cut exclusion:** rule out a bridge with `alpha_e>=cD` and crossing positive-diameter weight `w_e>=c` for fixed `c>0`;
+- **force-bulk/area-gap closure:** control interior isolates and the actual
+  attachment-cell gap together; the former linear-only population transport is
+  not proved by its cited localization argument;
+- **boundary-surplus exclusion:** rule out a positive linear surplus of loaded force-hull vertices using C18 diameter-star geometry, reciprocal perimeter, C42 planar structure, and global packing.
+
+No current theorem closes all branches.
+
+## Level I implication chain
+
+```text
+hypothetical sufficiently large triangle-free global minimizer
+    -> contact-minimal + diametrally saturated Target C normal form
+    -> weak unit contact ?
+         yes: C-I -> same-D finite release -> contradiction
+         no: fully force-visible C-II
+    -> bridge / response-dichotomy / boundary-surplus / force-bulk phase
+    -> C-II contradiction theorem
+    -> Erdős Problem #99 for all sufficiently large n
+```
+
+## Binding cautions
+
+### Response-audit cautions
+- Ordinary KKT stress is not a universal prestress-stability certificate.
+- The second-order multiplier may depend on the chosen critical velocity.
+- Universally zero KKT multiplier does not by itself give a finite release; diameter
+  shear is the exact surviving obstruction.
+- Do not replace the proved response/reciprocal identities by an unproved Loewner or
+  PSD comparison.
+- Positive KKT support need not contain every source vertex.
+- Large regular-shell/local-minimum regressions remain compatible because Target C
+  uses global minimum-diameter optimality in its force-hull and Reuleaux exclusions.
+- The one-dimensional force-hull phase is already excluded.
+- No individual positive contact or diameter stress is known to have a uniform lower
+  bound.
+- Complementary loaded boundary intervals do **not** force the diameter edges crossing
+  a bridge cut to form a star; crossing matchings remain a live regression.
+- C26-C29 require the fully force-visible branch `C=C_*`; do not apply their no-neutral
+  conclusions in C-I, where positive-support degree can be smaller than full contact
+  degree.
+- C30-C32 are a separate C-I response reduction for one selected normalized stress;
+  do not confuse their numbering with the C26-C29 bridge addenda or promote the
+  larger-than-three-edge diameter support to a PSD case without a new proof. K6
+  covers the three-edge six-endpoint matching under the stated convex-boundary
+  hypotheses.
+- The C33 six-endpoint matrix is an exact abstract sign-cone regression, not a
+  circular-planar unit-contact realization; it blocks only the sign-plus-affine proof
+  shortcut.
+- EQ6 and CONC6 classify the equality response and force chord concurrency; they do
+  not permit replacing the actual contact graph by a one-hub star.
+
+## Cross-route relation
+
+Target C shares the baseline KKT, nonlinear-stress, finite-packing, and penny-graph
+lemmas in `docs/theory/` with the other routes. It does **not** inherit Target A's
+source-to-independent-scaffold transport or Target B's rhombic train structure.
+Results should move into shared theory only if their hypotheses genuinely cease to be
+Target-C-specific.
+### Current route cautions
+- ordinary KKT stress is not a universal prestress-stability certificate;
+- the second-order multiplier may depend on the critical velocity;
+- zero universal KKT multiplier is only a first-order release statement;
+- no generic PSD/Loewner comparison for the C11 response matrix is proved; C41 proves a positive trace defect and C44 can force an absolute trace gap, but neither proves PSD;
+- the former five-vertex rejection of C53 mixed its projective order and orientation;
+  the promoted September 9 audit corrects it and proves the required PSD statement;
+- positive KKT support need not contain contact-isolated source points;
+- no individual positive contact, diameter, or effective response conductance has a uniform lower bound;
+- C44-C45 use aggregate response/stress mass and do not create an individual-edge lower bound;
+- complementary boundary intervals can support crossing diameter matchings; a bridge cut need not be a diameter star;
+- C26-C42 and C44-C45 are fully force-visible C-II statements; C43 itself is a global minimizer theorem independent of C-II;
+- C42 does not imply a triangular lattice or a density gap; disk-clipped oblique rhombic grids remain a binding regression.

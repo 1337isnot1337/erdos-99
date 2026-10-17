@@ -1,0 +1,163 @@
+#!/usr/bin/env python3
+from decimal import Decimal, getcontext
+
+getcontext().prec = 100
+D = Decimal
+
+pi = D('3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117068')
+sqrt3 = D(3).sqrt()
+Delta2 = pi / (D(2) * sqrt3)
+s2 = Delta2.sqrt()
+C0 = D(2) * s2 + D('0.0050')
+t_lower = D('1.82515')
+t_safe = D('1.83236')
+
+
+def sin_decimal(x: Decimal) -> Decimal:
+    term = x
+    total = term
+    n = 1
+    while True:
+        term = -term * x * x / D((2 * n) * (2 * n + 1))
+        old = total
+        total += term
+        if total == old:
+            return total
+        n += 1
+        assert n < 300
+
+
+def cos_decimal(x: Decimal) -> Decimal:
+    term = D(1)
+    total = term
+    n = 1
+    while True:
+        term = -term * x * x / D((2 * n - 1) * (2 * n))
+        old = total
+        total += term
+        if total == old:
+            return total
+        n += 1
+        assert n < 300
+
+
+def F(z: Decimal) -> Decimal:
+    return z - D(6) * sin_decimal(z / D(6))
+
+
+def Fp(z: Decimal) -> Decimal:
+    return D(1) - cos_decimal(z / D(6))
+
+
+def J(p: Decimal) -> Decimal:
+    return D(2) * p - D(6) * sin_decimal(p / D(3))
+
+
+def Jp(p: Decimal) -> Decimal:
+    return D(2) - D(2) * cos_decimal(p / D(3))
+
+
+def R(t: Decimal) -> Decimal:
+    return D('4.5') * t - D(2) * pi - C0
+
+
+def boundary_values(t: Decimal):
+    delta = R(t) / D(2)
+    N = C0 + t / D(2) - D(4) * Delta2 / C0
+    K_L = pi + delta - t - D(2) * C0 + D(8) * Delta2 / C0
+
+    lo = D('1.5')
+    hi = D('1.7')
+    assert Fp(lo - delta) - Jp(pi - lo - N) < 0
+    assert Fp(hi - delta) - Jp(pi - hi - N) > 0
+    for _ in range(360):
+        mid = (lo + hi) / D(2)
+        derivative = Fp(mid - delta) - Jp(pi - mid - N)
+        if derivative < 0:
+            lo = mid
+        else:
+            hi = mid
+    K = (lo + hi) / D(2)
+    z = K - delta
+    p = pi - K - N
+    margin = F(z) + J(p) - delta
+    return delta, N, K_L, K, z, p, F(z), J(p), margin
+
+
+# Uniform feasible-region bounds used to prove the split minimizer is smooth and
+# the K>=K_L constraint is inactive.
+R_max = R(t_safe)
+delta_max = R_max / D(2)
+U_max = D('4.5') * t_safe - D(2) * pi
+kappa_max = D(2) * R_max
+
+N_min = C0 + t_lower / D(2) - D(4) * Delta2 / C0
+N_max = U_max + (t_safe + kappa_max) / D(2) - D(4) * Delta2 / U_max
+K_L_max = boundary_values(t_safe)[2]
+
+assert N_min > D('0.9225')
+assert N_max < D('1.083')
+assert K_L_max < D('1.32')
+assert delta_max < D('0.0265')
+
+# Uniform derivative signs at K=1.5 and K=1.7.
+p_min_15 = pi - D('1.5') - N_max
+p_max_17 = pi - D('1.7') - N_min
+left_derivative_upper = Fp(D('1.5')) - Jp(p_min_15)
+right_derivative_lower = Fp(D('1.7') - delta_max) - Jp(p_max_17)
+assert left_derivative_upper < D('-0.003')
+assert right_derivative_lower > D('0.008')
+
+# Delta monotonicity of the minimized margin.
+a_max = Delta2 / (C0 * C0)
+assert a_max < D('0.25')
+assert Jp(D('0.72')) < D('0.058')
+assert D(2) * (D(1) + D(4) * a_max) * Jp(D('0.72')) - D(1) < D('-0.76')
+
+# Advertised safe endpoint.
+vals_safe = boundary_values(t_safe)
+margin_safe = vals_safe[-1]
+assert margin_safe > D('0.0000179')
+assert D('1.5') < vals_safe[3] < D('1.7')
+assert D('0.57') < vals_safe[5] < D('0.58')
+
+# Tight root bracket for regression; theorem uses only t_safe.
+root_lo = D('1.832367627743829897')
+root_hi = D('1.832367627743829898')
+assert boundary_values(root_lo)[-1] > 0
+assert boundary_values(root_hi)[-1] < 0
+
+# Boundary margin decreases strictly in t by the exact envelope derivative
+# -(9/4)F'(z) -(1/2)J'(p) -9/4.
+z_safe = vals_safe[4]
+p_safe = vals_safe[5]
+boundary_derivative = (
+    -D('2.25') * Fp(z_safe)
+    -D('0.5') * Jp(p_safe)
+    -D('2.25')
+)
+assert boundary_derivative < D('-2.3')
+
+print('Delta2 =', Delta2)
+print('C0(g=0.0050) =', C0)
+print('R(t_safe) =', R_max)
+print('delta_max =', delta_max)
+print('N_min =', N_min)
+print('N_max =', N_max)
+print('K_L_max =', K_L_max)
+print('Hprime(1.5) upper =', left_derivative_upper)
+print('Hprime(1.7) lower =', right_derivative_lower)
+print('safe delta0 =', vals_safe[0])
+print('safe N0 =', vals_safe[1])
+print('safe K_L =', vals_safe[2])
+print('safe K_split =', vals_safe[3])
+print('safe z =', vals_safe[4])
+print('safe p =', vals_safe[5])
+print('safe F(z) =', vals_safe[6])
+print('safe J(p) =', vals_safe[7])
+print('safe margin =', margin_safe)
+print('root bracket =', root_lo, root_hi)
+print('root_lo margin =', boundary_values(root_lo)[-1])
+print('root_hi margin =', boundary_values(root_hi)[-1])
+print('boundary derivative at safe endpoint =', boundary_derivative)
+print('PASS: direct dominant/complement energy floor t >= 1.83236')

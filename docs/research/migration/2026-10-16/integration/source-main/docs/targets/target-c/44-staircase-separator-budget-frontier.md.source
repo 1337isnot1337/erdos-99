@@ -1,0 +1,44 @@
+# Target C — C88 staircase separator-budget frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_staircase_separator_budget_2026-09-01.md](../../reports/target_c_staircase_separator_budget_2026-09-01.md).
+
+C87 forces the canonical chain prefix graph to be an antitone tree with exactly `D`
+simple interval edges. C88 audits the equality case of the C87 count and obtains an
+exact staircase parametrization. In particular the total simple-edge chain span is
+shape-independent:
+
+`sum_e |I_e| = D(D+1)/2`,
+
+so
+
+`sum_e (D-|I_e|)=D(D-1)/2`.
+
+For any active diameter pair `h`, exact train coordinates give
+
+`r_h=sum_tau d_(h,tau)u_tau`.
+
+The nonzero summands are unit vectors and `|r_h|=D`, hence the number `k_h` of trains
+separating the endpoints satisfies `k_h>=D`. If the C83 chain interval has length
+`ell_h`, at least `D-ell_h` separating trains lie outside the `D`-track chain atom.
+
+C87 supplies at least two actual diameter pairs over every simple tree edge. Selecting
+one of each orientation gives the exact lower budget
+
+`sum_(selected h) # {nonchain trains separating h} >= D(D-1)`.
+
+Thus the paired staircase has a quadratic mandatory incidence with the other train
+directions.
+
+In the asymptotic pure-rhombic branch, `q/T>=1/2-o(1)` and `q<=pi D+o(D)` give
+`T<=2pi D+o(D)`. Therefore some non-chain train separates at least
+
+`(1/(2pi-1)+o(1))D = (0.189279...+o(1))D`
+
+selected active diameter pairs.
+
+The next exact target is a capacity theorem for this macroscopically loaded secondary
+train cut. Its crossing diameter subgraph is bipartite and hence acyclic because
+planar diameter cycles are odd; the ordered-thrackle reduction should force a
+caterpillar-type structure that must be reconciled with C87's paired staircase.

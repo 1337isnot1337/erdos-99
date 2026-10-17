@@ -1,0 +1,252 @@
+# Target C: exact two-witness source profile for the remaining Profile B
+
+Date: 2026-09-23
+
+Status: rigorous finite strengthening of the sole remaining eight-no-root `k=6,D=-1,p=9` Profile B. The previous quotient-span result leaves witness quotient rank two or three. This note eliminates every source containing three aligned touch-three singleton blocks, then eliminates every source containing two aligned touch-three blocks together with any aligned touch-four singleton block.
+
+Consequently every genuine remaining Profile B source has exactly two aligned touch-three witnesses, no aligned touch-four chosen block, exactly one rank-two singleton block, and six further aligned chosen blocks of touch count at most two. The two witnesses span a two-dimensional subspace of `V/L`; the unique rank-two singleton is dependency-active and supplies the third quotient direction.
+
+Profile B and Target C-II are not yet closed.
+
+Companion exact certificate:
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_exact_two_witness_profile_2026_09_23.py`
+
+## 1. Inputs already proved
+
+We use the current repository state:
+
+```text
+rank(P)=2,
+d_1(P)>=4,
+d_8=3,
+exactly nine chosen singleton changed blocks,
+at most one rank-two local-empty singleton block,
+at least eight aligned singleton blocks,
+at least two dependency-active aligned touch-three witnesses,
+witness quotient span H/L has dimension 2 or 3,
+if dim(H/L)=2 then exactly one dependency-active non-witness source class exists,
+and that class is either aligned touch four or rank two.
+```
+
+For an aligned chosen block, all selected source cycles touching that block lie in one four-cycle local direction star. A touch-three aligned block therefore has an exact source touch set equal to a three-subset of one four-star, with the fourth star member absent from the source. Distinct aligned four-stars intersect in at most one no-root cycle.
+
+## 2. Three aligned touch-three blocks are impossible
+
+This exclusion is deliberately stronger than what is needed for quotient rank three. We do not use dependency activity, source-basis kernels, or the minimum-distance condition. We assume only:
+
+```text
+8 selected no-root cycles,
+rank(P)=2,
+virtual canonical deficiency d_8=3,
+three distinct aligned chosen root blocks,
+each touched by exactly three selected source cycles.
+```
+
+### 2.1 Exhaust the root-block geometry
+
+There are `C(35,3)=6545` unordered triples of root triples. Under `S_7` they form exactly ten orbits. Using root-block labels, one representative and orbit size for each orbit is
+
+```text
+123,124,125 :  210
+123,124,134 :  140
+123,124,135 : 1260
+123,124,156 : 1260
+123,124,345 :  630
+123,124,356 : 1260
+123,124,567 :  210
+123,145,167 :  105
+123,145,246 :  840
+123,145,267 :  630
+```
+
+The orbit sizes sum to `6545`, so the list is exhaustive.
+
+For each representative the certificate enumerates all `3^3` aligned local directions and all choices of the omitted member of each four-star. It keeps exactly those configurations for which each block has exactly three source touches and the union can be extended to an eight-cycle source by adding cycles outside all three full stars.
+
+The last three root-block orbits admit no such eight-cycle source geometry at all.
+
+For the first seven orbits, after quotienting by the stabilizer of the root-block triple, the numbers of distinct eight-cycle source sets are
+
+```text
+2259, 261, 1413, 90, 54, 98, 19.
+```
+
+### 2.2 Exhaust every rank-two coefficient-plane incidence class
+
+For each source set, let `E_b <= Q^8` be the local empty space at every touched root block. Since `rank(P)=2`, the pattern of incomplete blocks induced by an arbitrary coefficient plane `P` is completely determined by the finite incidences of `P` with the local spaces:
+
+- if `dim E_b=2` and `E_b<=P`, then `P=E_b`;
+- two distinct rank-one local lines contained in `P` determine `P` as their span;
+- a generic rational plane through one local line realizes exactly that one-line incidence class;
+- a generic rational plane avoiding all local lines realizes the empty incidence class.
+
+Thus the same exact incidence enumeration used in the earlier one-touch-three source closures is exhaustive for every rational rank-two `P`.
+
+For each incidence pattern, the certificate forms the virtual-complete root-block set and computes its exact rational dependency rank using the committed `COMPLETE_T` rows. The resulting deficiency histograms, on stabilizer-orbit representatives of the source sets, are:
+
+```text
+123,124,125:
+  d=4:614, d=5:18790, d=6:94317, d=7:31518,
+  d=8:7896, d=9:1677, d=10:287, d=11:33
+
+123,124,134:
+  d=5:1579, d=6:13936, d=7:3150, d=8:365, d=9:19
+
+123,124,135:
+  d=5:7631, d=6:67639, d=7:20494, d=8:3820,
+  d=9:490, d=10:36
+
+123,124,156:
+  d=6:6099, d=7:1120, d=8:90
+
+123,124,345:
+  d=5:414, d=6:1636, d=7:1303, d=8:333,
+  d=9:55, d=10:5
+
+123,124,356:
+  d=6:3025, d=7:2797, d=8:1251, d=9:324,
+  d=10:56, d=11:6
+
+123,124,567:
+  d=6:241, d=7:600, d=8:354, d=9:160,
+  d=10:46, d=11:6
+```
+
+No incidence pattern in any orbit has `d_8=3`.
+
+Therefore:
+
+```text
+A rank-two eight-cycle source of virtual deficiency three
+cannot contain three aligned touch-three chosen blocks.      (2.1)
+```
+
+This is a strict superset exclusion because no source-basis activity, singleton completeness, coefficient minimum distance, or descendant condition was imposed.
+
+## 3. Two touch-three blocks cannot coexist with an aligned touch-four block
+
+Now assume only that the source contains two aligned touch-three chosen blocks and one aligned touch-four chosen block. Again we do not require any of the three blocks to be dependency-active.
+
+The role-distinguished root-block configurations consist of one touch-four block and an unordered pair of touch-three blocks. There are
+
+```text
+35 * C(34,2) = 19635
+```
+
+such labeled configurations. Under `S_7` they form exactly seventeen role-preserving orbits; their orbit sizes sum to `19635`.
+
+For each orbit the certificate enumerates all local directions, both omitted touch-three star members, and all source cycles outside the three full stars needed to obtain exactly eight selected cycles.
+
+Only four of the seventeen role orbits admit any source geometry. With the touch-four block written first, representatives are
+
+```text
+123 ; 124,125
+123 ; 124,134
+123 ; 124,135
+123 ; 124,145.
+```
+
+After stabilizer reduction they give respectively
+
+```text
+75, 4, 9, 9
+```
+
+eight-cycle source sets.
+
+Running the same exhaustive rank-two coefficient-plane incidence census gives:
+
+```text
+123 ; 124,125:
+  d=5:371, d=6:4072, d=7:1093, d=8:262,
+  d=9:63, d=10:13, d=11:2
+
+123 ; 124,134:
+  d=6:286, d=7:51, d=8:4
+
+123 ; 124,135:
+  d=6:590, d=7:109, d=8:9
+
+123 ; 124,145:
+  d=6:589, d=7:109, d=8:9
+```
+
+Again `d_8=3` never occurs. Hence
+
+```text
+Once two aligned touch-three chosen blocks are present,
+no aligned touch-four chosen block can be present.           (3.1)
+```
+
+This is stronger than the preceding source-level result, which excluded only certain dependency-active touch-four profiles.
+
+## 4. Exact remaining chosen-block profile
+
+The preceding quotient-span theorem gave
+
+```text
+dim(H/L) in {2,3},
+```
+
+where `H` is generated modulo `L` by the dependency-active touch-three witness classes.
+
+If `dim(H/L)=3`, at least three distinct touch-three witnesses are needed. That contradicts (2.1). Therefore
+
+```text
+dim(H/L)=2.                                               (4.1)
+```
+
+The same theorem then gives exactly one dependency-active source class outside the witness family. It was known to be either aligned touch four or rank two. Equation (3.1) removes the touch-four option. Therefore the complementary active class is rank two.
+
+The earlier two-rank-two closure proves that at most one rank-two singleton block exists at all. Thus there is exactly one.
+
+Equation (2.1) also says there are at most two aligned touch-three chosen blocks. The earlier forcing theorem says there are at least two dependency-active aligned touch-three witnesses. Hence there are exactly two aligned touch-three chosen blocks, and both are the active witnesses.
+
+Finally, Profile B has nine chosen singleton blocks and at most one rank-two block, so exactly eight are aligned. Equation (3.1) rules out aligned touch four, while (2.1) leaves exactly two aligned touch-three blocks. The other six aligned chosen blocks therefore have touch count at most two. The earlier activity lemma says a dependency-active aligned block has touch count three or four, so those six classes lie in `L`.
+
+The remaining chosen-block profile is therefore exactly
+
+```text
+2 aligned touch-three blocks, both dependency-active witnesses;
+6 aligned blocks of touch count <=2, all dependency-inactive;
+1 rank-two singleton block, dependency-active.
+```
+
+Modulo `L`, the two touch-three witness classes span a two-dimensional plane and the unique rank-two singleton supplies the third quotient direction.
+
+## 5. Coefficient-line consequence for the unique rank-two singleton
+
+Let `T,U` be the two witness touch triples and let `L_r<=P` be the nonzero coefficient-codeword line supplied by the unique rank-two singleton `r`.
+
+The previously proved line-star bound gives
+
+```text
+|supp(L_r) intersect T| <= 1,
+|supp(L_r) intersect U| <= 1.
+```
+
+Since the two witness stars intersect in at most one cycle,
+
+```text
+|T union U| in {5,6}.
+```
+
+The coefficient minimum distance gives `wt(L_r)>=4`. Consequently:
+
+- if `T` and `U` are disjoint, so `|T union U|=6`, there are only two source coordinates outside the union and therefore `wt(L_r)=4` exactly; both outside coordinates lie in the support and the support contains exactly two coordinates from `T union U`;
+- if `|T union U|=5`, then `wt(L_r)<=5`.
+
+The rank-loss-robust double-witness theorem also applies to the two witnesses. Since they span two quotient dimensions,
+
+```text
+d_{T union U} <= 1.                                  (5.1)
+```
+
+Thus the final branch is now a single concrete source type with one distinguished low-weight coefficient line and one distinguished five- or six-coordinate puncture of deficiency at most one.
+
+## 6. Remaining bottleneck
+
+Profile B is reduced to the exact profile in Section 4. There are no longer separate witness-rank-three or touch-four-complement branches.
+
+The next target is the unique rank-two complement itself. Combine its coefficient-codeword line with the two exact touch-three stars and the union-puncture bound (5.1). The disjoint-witness case already forces a weight-four support pattern; the one-overlap case forces weight at most five. A finite source-level census can now be restricted to these two patterns rather than the full fixed-nine search.

@@ -1,0 +1,32 @@
+"""Check the one-sided arithmetic for the strict aggregate moment gap.
+
+This script certifies only rational lower bounds for the displayed constants.
+It does not verify the geometric identities, asymptotic hypotheses, global
+optimality, or C-II.
+"""
+
+from fractions import Fraction
+from math import pi, sqrt
+
+
+def main() -> None:
+    # One-sided decimal bounds: pi >= pi_lo and sqrt(3) <= sqrt3_hi.
+    pi_lo = Fraction(314159, 100000)
+    sqrt3_hi = Fraction(173205, 100000)
+    gap_lo = pi_lo * (2 - sqrt3_hi) / 20
+    s118_lo = Fraction(279859, 100000)
+
+    assert gap_lo > Fraction(4208, 100000)
+    assert s118_lo + gap_lo > Fraction(28406, 10000)
+
+    c_det = pi / 2 * (2 - sqrt(3))
+    gap = c_det / 10
+    s118 = 2.798596312209462
+    print(f"c_det/10 = {gap:.15f}")
+    print(f"certified lower bound > {float(Fraction(4208, 100000)):.5f}")
+    print(f"S_118 + c_det/10 = {s118 + gap:.15f}")
+    print(f"certified endpoint floor > {float(Fraction(28406, 10000)):.4f}")
+
+
+if __name__ == "__main__":
+    main()

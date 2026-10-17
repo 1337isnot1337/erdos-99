@@ -1,0 +1,295 @@
+#!/usr/bin/env python3
+"""Arithmetic/combinatorial certificate for the eight-no-root k=6 reduction.
+
+This checker verifies the finite arithmetic used by the companion proof note:
+
+* the seven arithmetic boundary branches from D=8+p+3*d_root-3*k with k=6;
+* the rank-two projective-column lemma: under d_2(P)>=4 there are at least
+  two coordinates contained in no codeword of weight <=3;
+* the global virtual-canonical containment lower-bound eliminations;
+* the seven-row d=1 singleton-capacity lift 5*S <= 7*3, hence S<=4;
+* closure of D=-1,d_root=1,p=6;
+* elimination of all d_v=1 profiles in D=-2,d_root=0,p=8;
+* elimination of the d_v=1,q=9 profile in D=-1,d_root=0,p=9.
+
+The structural containment and exact six-row capacity inputs are proved in the
+committed repository notes cited by the companion proof note. This file only
+checks their arithmetic consequences and the projective multiplicity lemma.
+"""
+
+from functools import lru_cache
+
+
+def ceil_div(a: int, b: int) -> int:
+    return -((-a) // b)
+
+
+def partitions(n: int, max_part: int | None = None):
+    """Integer partitions of n in nonincreasing order."""
+    if n == 0:
+        yield ()
+        return
+    if max_part is None or max_part > n:
+        max_part = n
+    for first in range(max_part, 0, -1):
+        for tail in partitions(n - first, first):
+            yield (first,) + tail
+
+
+def clean_count(z: int, classes: tuple[int, ...]) -> int:
+    """Coordinates absent from every nonzero codeword of weight <=3.
+
+    For a rank-two code, nonzero coordinate columns split into projective
+    classes. A codeword whose kernel is one represented projective direction
+    has support equal to the complement of that class among nonzero columns.
+    Zero columns are absent from every codeword.
+    """
+    n = sum(classes)
+    low = [m for m in classes if n - m <= 3]
+    if not low:
+        return 8
+    if len(low) == 1:
+        return z + low[0]
+    return z
+
+
+def verify_clean_coordinate_lemma():
+    # Rank(P)=2 forces at least two distinct nonzero projective column classes.
+    # d_2(P)>=4 says the union support of P has size n=8-z >=4.
+    checked = 0
+    minima = {}
+    witnesses = {}
+    for d1_floor in (2, 3):
+        best = 9
+        best_profile = None
+        for z in range(0, 5):
+            n = 8 - z
+            for cls in partitions(n):
+                if len(cls) < 2:
+                    continue
+                d1 = n - max(cls)
+                if d1 < d1_floor:
+                    continue
+                c = clean_count(z, cls)
+                checked += 1
+                if c < best:
+                    best = c
+                    best_profile = (z, cls, d1)
+                assert c >= 2, (d1_floor, z, cls, d1, c)
+        minima[d1_floor] = best
+        witnesses[d1_floor] = best_profile
+    assert minima[2] >= 2
+    assert minima[3] >= 2
+    return checked, minima, witnesses
+
+
+def arithmetic_boundary():
+    out = {}
+    k = 6
+    for D in (-2, -1):
+        branches = []
+        for d_root in range(0, 8):
+            p = D - 8 - 3 * d_root + 3 * k
+            if p < 0:
+                break
+            branches.append((d_root, p))
+        out[D] = branches
+    assert out[-2] == [(0, 8), (1, 5), (2, 2)]
+    assert out[-1] == [(0, 9), (1, 6), (2, 3), (3, 0)]
+    return out
+
+
+def containment_lb(t: int, p: int, d_v: int, q: int) -> int:
+    return t + p + 3 * d_v - 3 * q
+
+
+def global_profiles(D: int, p: int):
+    profiles = []
+    for d_v in range(1, 10):
+        for q in range(0, p + 1):
+            if containment_lb(8, p, d_v, q) <= D:
+                s_min = max(0, 2 * q - p)
+                profiles.append((d_v, q, s_min))
+    return profiles
+
+
+def verify_global_reduction():
+    # Crude d_v>=1, q<=p bound D>=11-2p kills four branches.
+    killed = []
+    for D, d_root, p in [
+        (-2, 1, 5),
+        (-2, 2, 2),
+        (-1, 2, 3),
+        (-1, 3, 0),
+    ]:
+        lb = 11 - 2 * p
+        assert lb > D
+        killed.append((D, d_root, p, lb))
+
+    prof8 = global_profiles(-2, 8)
+    prof9 = global_profiles(-1, 9)
+    prof6 = global_profiles(-1, 6)
+    assert prof8 == [(1, 7, 6), (1, 8, 8), (2, 8, 8)]
+    assert prof9 == [
+        (1, 7, 5), (1, 8, 7), (1, 9, 9),
+        (2, 8, 7), (2, 9, 9), (3, 9, 9),
+    ]
+    assert prof6 == [(1, 6, 6)]
+    return killed, prof8, prof9, prof6
+
+
+def seven_d1_capacity_bound():
+    # Any compatible singleton-capable seven-row block survives in at least
+    # five of the seven synchronized six-row deletions; each d_6=1 deletion
+    # has exact singleton capacity at most three.
+    max_S = (7 * 3) // 5
+    assert 5 * (max_S + 1) > 7 * 3
+    assert max_S == 4
+    return max_S
+
+
+def min_singletons(q: int, p: int) -> int:
+    return max(0, 2 * q - p)
+
+
+def verify_p6_closure(cap7_d1: int):
+    # Global profile is forced to d_v=1,q=6 and all six changed blocks are
+    # singletons. A clean deletion has d_7=1, defect 1, and p_i in {6,3,0}.
+    outcomes = []
+    for p_i in (6, 3, 0):
+        q_min = ceil_div(9 + p_i, 3)  # 1 >= 7+p_i+3-3q_i
+        feasible_by_rows = q_min <= p_i
+        cap_needed = q_min  # every surviving changed block is a singleton
+        feasible_by_cap = cap_needed <= cap7_d1
+        outcomes.append((p_i, q_min, feasible_by_rows, feasible_by_cap))
+        assert not (feasible_by_rows and feasible_by_cap), outcomes[-1]
+    return outcomes
+
+
+def verify_p8_dv1_elimination(cap7_d1: int):
+    # If d_v=1 in D=-2,p=8, a clean deletion also has d=1 and D_7=0.
+    # p_i is congruent to 8 mod 3: 8,5,2.
+    # Capacity <=4 forces p_i=8,q_i=6 with exactly four singleton blocks.
+    allowed = []
+    for p_i in (8, 5, 2):
+        q_min = ceil_div(10 + p_i, 3)  # 0 >= 7+p_i+3-3q_i
+        for q_i in range(q_min, p_i + 1):
+            s_min = min_singletons(q_i, p_i)
+            if s_min <= cap7_d1:
+                allowed.append((p_i, q_i, s_min))
+    assert allowed == [(8, 6, 4)]
+
+    # But a global d_v=1 profile is q=7 with >=6 singletons or q=8 with 8.
+    # Any six-element subset then contains >=5 or >=6 singletons.
+    for q_global, s_global in ((7, 6), (8, 8)):
+        subset_size = 6
+        subset_singletons_min = max(0, s_global - (q_global - subset_size))
+        assert subset_singletons_min > cap7_d1
+    return allowed
+
+
+def verify_p9_dv1_q9_elimination(cap7_d1: int):
+    # Global q=9 means all nine virtual-complete incomplete blocks are singleton.
+    # A clean deletion has D_7=1,d_7=1 and p_i in {9,6,3,0}.
+    outcomes = []
+    for p_i in (9, 6, 3, 0):
+        q_min = ceil_div(9 + p_i, 3)
+        row_feasible = q_min <= p_i
+        cap_feasible = q_min <= cap7_d1  # all global q blocks are singleton
+        outcomes.append((p_i, q_min, row_feasible, cap_feasible))
+        assert not (row_feasible and cap_feasible), outcomes[-1]
+    return outcomes
+
+
+def verify_p9_dv1_q8_structure(cap7_d1: int):
+    # At q=8,p=9 there are at least seven singletons. Show the only possible
+    # d_v=1 clean-deletion pattern is exactly p_i=6,q_i=5 with four singletons
+    # and one pair; this also forces the global q=8 pattern to be 7S+1P.
+    # p_i=9 is impossible because any six of 7S+1P contain >=5 singletons.
+    q_global = 8
+    possibilities = []
+    for s_global in (7, 8):
+        for p_i in (9, 6, 3, 0):
+            q_min = ceil_div(9 + p_i, 3)
+            for q_i in range(q_min, min(q_global, p_i) + 1):
+                subset_singletons_min = max(0, s_global - (q_global - q_i))
+                row_singletons_min = min_singletons(q_i, p_i)
+                s_min = max(subset_singletons_min, row_singletons_min)
+                if s_min <= cap7_d1:
+                    possibilities.append((s_global, p_i, q_i, s_min))
+    assert possibilities == [(7, 6, 5, 4)]
+    return possibilities
+
+
+def verify_p8_forced_profile_clean_shadows():
+    # After d_v=1 is removed, D=-2,p=8 is forced to d_v=2,q=8 and
+    # all eight changed blocks are singleton. For a clean deletion d_i cannot
+    # be one (that would require a 4-singleton+2-pair q_i=6 shadow). Thus d_i=2.
+    # Then only p_i=8 is row-feasible and q_i>=7.
+    outcomes = []
+    for p_i in (8, 5, 2):
+        q_min = ceil_div(13 + p_i, 3)  # 0 >= 7+p_i+6-3q_i
+        outcomes.append((p_i, q_min, q_min <= p_i))
+    assert outcomes == [(8, 7, True), (5, 6, False), (2, 5, False)]
+    return outcomes
+
+
+def verify_p9_dv1_q7_structure(cap7_d1: int):
+    # For q=7,p=9 the global singleton count is at least five.
+    # Seven singletons is impossible. Six singletons forces every clean
+    # deletion to p_i=6,q_i=5. Five singletons allows p_i=9,q_i=6 or
+    # p_i=6,q_i=5.
+    possible = []
+    for s_global in (5, 6, 7):
+        for p_i in (9, 6, 3, 0):
+            q_min = ceil_div(9 + p_i, 3)
+            for q_i in range(q_min, min(7, p_i) + 1):
+                subset_s_min = max(0, s_global - (7 - q_i))
+                row_s_min = min_singletons(q_i, p_i)
+                if max(subset_s_min, row_s_min) <= cap7_d1:
+                    possible.append((s_global, p_i, q_i, max(subset_s_min, row_s_min)))
+    assert possible == [
+        (5, 9, 6, 4),
+        (5, 6, 5, 4),
+        (6, 6, 5, 4),
+    ]
+    return possible
+
+def main():
+    checked, minima, witnesses = verify_clean_coordinate_lemma()
+    boundary = arithmetic_boundary()
+    killed, prof8, prof9, prof6 = verify_global_reduction()
+    cap = seven_d1_capacity_bound()
+    p6 = verify_p6_closure(cap)
+    p8 = verify_p8_dv1_elimination(cap)
+    p9q9 = verify_p9_dv1_q9_elimination(cap)
+    p9q8 = verify_p9_dv1_q8_structure(cap)
+    p8forced = verify_p8_forced_profile_clean_shadows()
+    p9q7 = verify_p9_dv1_q7_structure(cap)
+
+    print("PASS: eight-no-root k=6 structural reduction arithmetic")
+    print("projective_profiles_checked", checked)
+    print("minimum_clean_coordinates_by_d1_floor", minima)
+    print("minimum_clean_witness_profiles", witnesses)
+    print("arithmetic_boundary", boundary)
+    print("immediate_killed_branches", killed)
+    print("p8_profiles_before_d1_filter", prof8)
+    print("p9_profiles_before_d1_filter", prof9)
+    print("p6_profiles_before_closure", prof6)
+    print("seven_row_d1_singleton_capacity_max", cap)
+    print("p6_clean_deletion_outcomes", p6)
+    print("p8_dv1_allowed_clean_deletion_patterns", p8)
+    print("p9_dv1_q9_clean_deletion_outcomes", p9q9)
+    print("p9_dv1_q8_survivor_patterns", p9q8)
+    print("p8_forced_clean_shadow_outcomes", p8forced)
+    print("p9_dv1_q7_clean_shadow_patterns", p9q7)
+    print("closed_branch", "D=-1,k=6,d_root=1,p=6")
+    print("p8_forced_profile", (2, 8, 8))
+    print("p9_remaining_profiles", [
+        (1, 7, 5), (1, 8, 7),
+        (2, 8, 7), (2, 9, 9), (3, 9, 9),
+    ])
+
+
+if __name__ == "__main__":
+    main()

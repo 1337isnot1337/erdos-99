@@ -1,0 +1,166 @@
+from __future__ import annotations
+
+import copy
+import importlib.util
+import subprocess
+import tempfile
+import unittest
+from pathlib import Path
+
+import yaml
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def load_module(name: str, path: Path):
+    spec = importlib.util.spec_from_file_location(name, path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader
+    spec.loader.exec_module(module)
+    return module
+
+
+checker = load_module("check_theorem_state", ROOT / "tools/check_theorem_state.py")
+artifacts = load_module("build_artifact_index", ROOT / "tools/build_artifact_index.py")
+
+
+def current_state():
+    return yaml.safe_load((ROOT / checker.MANIFEST).read_text(encoding="utf-8"))
+
+
+class StrictManifestTests(unittest.TestCase):
+    def test_current_manifest_matches_strict_schema(self):
+        c = checker.Checker(ROOT)
+        c.load()
+        c.validate_schema()
+        self.assertEqual(c.errors, [])
+
+    def test_unknown_target_field_is_rejected(self):
+        c = checker.Checker(ROOT)
+        c.state = copy.deepcopy(current_state())
+        c.state["targets"]["target-c"]["mystery_frontier"] = "should not be accepted"
+        c.validate_schema()
+        self.assertTrue(any("Additional properties are not allowed" in error for error in c.errors))
+
+    def test_regression_bucket_status_is_enforced(self):
+        c = checker.Checker(ROOT)
+        c.state = copy.deepcopy(current_state())
+        c.state["targets"]["target-c"]["regressions"][0]["status"] = "canonical"
+        c.check_bucket_statuses()
+        self.assertTrue(any("regressions" in error and "expected" in error for error in c.errors))
+
+    def test_regression_ids_participate_in_uniqueness(self):
+        c = checker.Checker(ROOT)
+        c.state = copy.deepcopy(current_state())
+        duplicate = c.state["targets"]["target-c"]["current_canonical_entries"][0]["id"]
+        c.state["targets"]["target-c"]["regressions"][0]["id"] = duplicate
+        c.entry_map()
+        self.assertTrue(any("duplicate theorem-state id" in error for error in c.errors))
+
+    def test_regression_report_is_a_registered_path(self):
+        c = checker.Checker(ROOT)
+        c.state = copy.deepcopy(current_state())
+        missing = "docs/reports/definitely_missing_regression.md"
+        c.state["targets"]["target-c"]["regressions"][0]["report"] = missing
+        self.assertIn(missing, c.registered_paths())
+        c.check_paths()
+        self.assertTrue(any(missing in error for error in c.errors))
+
+    def test_current_target_a_authority_matches_manifest(self):
+        c = checker.Checker(ROOT)
+        c.load()
+        c.check_a()
+        self.assertEqual(c.errors, [])
+
+
+class GraphTests(unittest.TestCase):
+    def test_canonical_node_cannot_depend_on_rejected_node(self):
+        c = checker.Checker(ROOT)
+        c.state = copy.deepcopy(current_state())
+        c.state["targets"]["target-c"]["current_canonical_entries"][0]["depends_on"] = ["C-FB4"]
+        c.check_graph()
+        self.assertTrue(any("forbidden status" in error for error in c.errors))
+
+    def test_depends_on_cycles_fail(self):
+        c = checker.Checker(ROOT)
+        c.state = copy.deepcopy(current_state())
+        rows = c.state["targets"]["target-c"]["current_canonical_entries"]
+        by_id = {row["id"]: row for row in rows}
+        by_id["C-ZTA"]["depends_on"] = ["C-WOODALL"]
+        by_id["C-WOODALL"]["depends_on"] = ["C-ZTA"]
+        c.check_graph()
+        self.assertTrue(any("depends_on cycle" in error for error in c.errors))
+
+    def test_unknown_graph_edge_fails(self):
+        c = checker.Checker(ROOT)
+        c.state = copy.deepcopy(current_state())
+        c.state["targets"]["target-c"]["current_canonical_entries"][0]["depends_on"] = ["NO-SUCH-THEOREM"]
+        c.check_graph()
+        self.assertTrue(any("unknown theorem id" in error for error in c.errors))
+
+
+class ArtifactIndexTests(unittest.TestCase):
+    def test_unregistered_report_defaults_to_unreviewed(self):
+        state = copy.deepcopy(current_state())
+        record = artifacts.build_record("docs/reports/random_future_report.md", state, [])
+        self.assertEqual(record["status"], "unreviewed")
+        self.assertFalse(record["canonical"])
+        self.assertEqual(record["claim_statuses"], {})
+
+    def test_archive_defaults_to_provenance(self):
+        state = copy.deepcopy(current_state())
+        record = artifacts.build_record("docs/archive/old_snapshot.md", state, [])
+        self.assertEqual(record["status"], "provenance")
+
+    def test_mixed_claim_file_preserves_claim_level_statuses(self):
+        state = copy.deepcopy(current_state())
+        refs = [
+            ("target-c", "current_canonical_entries", {"id": "C-CANON", "status": "canonical"}),
+            ("target-c", "regressions", {"id": "C-REG", "status": "regression"}),
+        ]
+        record = artifacts.build_record("docs/reports/mixed.md", state, refs)
+        self.assertEqual(record["status"], "mixed")
+        self.assertTrue(record["canonical"])
+        self.assertEqual(record["claim_statuses"], {"C-CANON": "canonical", "C-REG": "regression"})
+
+    def test_header_replacement_is_idempotent(self):
+        state = copy.deepcopy(current_state())
+        record = artifacts.build_record("docs/reports/example.md", state, [])
+        header = artifacts.header_for(record)
+        once = artifacts.replace_header("# Example\n", header)
+        twice = artifacts.replace_header(once, header)
+        self.assertEqual(once, twice)
+        self.assertTrue(once.startswith("<!-- theorem-state:"))
+
+
+class PromotionTransactionTests(unittest.TestCase):
+    def test_semantic_change_requires_version_and_authority_files(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manifest = root / checker.MANIFEST
+            manifest.parent.mkdir(parents=True, exist_ok=True)
+            base = copy.deepcopy(current_state())
+            manifest.write_text(yaml.safe_dump(base, sort_keys=False), encoding="utf-8")
+            subprocess.run(["git", "init", "-q"], cwd=root, check=True)
+            subprocess.run(["git", "config", "user.email", "test@example.invalid"], cwd=root, check=True)
+            subprocess.run(["git", "config", "user.name", "Theorem State Test"], cwd=root, check=True)
+            subprocess.run(["git", "add", "."], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "base"], cwd=root, check=True)
+
+            head = copy.deepcopy(base)
+            head["targets"]["target-c"]["c_ii"] = "closed"
+            manifest.write_text(yaml.safe_dump(head, sort_keys=False), encoding="utf-8")
+            subprocess.run(["git", "add", "."], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "bad state update"], cwd=root, check=True)
+
+            c = checker.Checker(root, base_ref="HEAD~1")
+            c.state = head
+            c.check_transaction()
+            self.assertTrue(any("incrementing state_version" in error for error in c.errors))
+            self.assertTrue(any("docs/STATE.md" in error for error in c.errors))
+            self.assertTrue(any("CURRENT.md" in error for error in c.errors))
+            self.assertTrue(any("active prompt" in error for error in c.errors))
+
+
+if __name__ == "__main__":
+    unittest.main()

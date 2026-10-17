@@ -1,0 +1,526 @@
+# Target C-II — reflected pocket chains sharpen one-FREE outer currency
+
+**Date:** 2026-09-18  
+**Status:** proved candidate awaiting audit; proof-only sharpening of the one-module FREE outer-walk branch  
+**Scope:** C-II force-visible source with OP outer pockets; final section applies to an all-inactive FREE reflection ancestry  
+**Dependencies:** OP convex outer-pocket decomposition; PC exact pocket-complexity identity; reflected-pocket isoperimetry / fixed-chord Dido theorem; single-FREE outer-walk currency and routing ceiling  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current one-FREE theorem uses the coarse capacity
+
+\[
+H_{\rm out}\le {4\over\pi}x_B^2.
+\]
+
+That loses a factor eight in the square-root regime.  The old reflected-pocket
+argument already gives, pocket by pocket, `area(P)<=ell_P^2/(2pi)`, where `ell_P`
+is the length of the old unit-contact chain.  Combining that statement with the
+exact PC decomposition
+
+\[
+x_B=a+\sum_P(k_P-3)
+\]
+
+keeps the mandatory two chain edges of every pocket instead of replacing the whole
+pocket perimeter by `4x_B`.
+
+The resulting exact finite capacity is
+
+\[
+\boxed{
+H_{\rm out}
+\le { (x_B-a)^2+4x_B \over 2\pi}
+\le { (x_B+1)^2\over2\pi}.
+}
+\tag{RP.1}
+\]
+
+Here `a` is the number of OP outer pockets / missing force-hull sides.  Applied to
+one all-inactive FREE ancestry, (RP.1) raises the forced square-root outer-walk
+coefficient from
+
+\[
+\sqrt{\pi\sqrt3/8}=0.824727\ldots
+\]
+
+to
+
+\[
+\boxed{
+c_{\rm RP}:=\sqrt{\pi\sqrt3}
+=2.332680452334321\ldots .
+}
+\tag{RP.2}
+\]
+
+Together with the existing routing ceiling this gives
+
+\[
+\boxed{
+\liminf {x_B+Z_{\rm ext}\over\sqrt D}
+\ge
+c_{\rm RP}+{1\over2c_{\rm RP}}
+=2.547026141860569\ldots
+}
+\tag{RP.3}
+\]
+
+whenever both currencies remain on the square-root scale.
+
+At the endpoint, the fixed-chord Dido envelope forces additional structure: the
+number of outer pockets is `o(sqrt(D))`, and the global chain-chord detour obeys
+
+\[
+\boxed{
+{b-P_F\over\sqrt D}
+\ge
+\left(1-{2\over\pi}\right)c_{\rm RP}-o(1)
+=0.847649953762939\ldots-o(1).
+}
+\tag{RP.4}
+\]
+
+Thus the critical one-FREE survivor is not a low-detour endpoint.  It must carry an
+explicit square-root chain-chord detour at the same time as the square-root external
+population forced by routing.
+
+---
+
+## 1. Exact reflected-pocket capacity in `x_B`
+
+Let the OP outer pockets be `P_1,...,P_a`.  For pocket `P`, write
+
+- `k_P>=3` for its graph-boundary degree;
+- `ell_P=k_P-1` for the number/length of old unit-contact chain edges;
+- `s_P` for the length of its unique missing force-hull side.
+
+Put
+
+\[
+r_P:=k_P-3=\ell_P-2\ge0.
+\tag{1.1}
+\]
+
+PC proves exactly
+
+\[
+\boxed{x_B=a+\sum_Pr_P.}
+\tag{1.2}
+\]
+
+Reflect one convex pocket across the line containing its missing hull side.  The two
+copies have disjoint interiors and their old contact chains form a rectifiable Jordan
+curve: the common chord becomes internal.  The doubled region has area
+`2 area(P)` and perimeter `2 ell_P`.  The planar isoperimetric inequality therefore
+gives the already-established reflected-pocket estimate
+
+\[
+\boxed{
+\operatorname{area}(P)
+\le {\ell_P^2\over2\pi}.
+}
+\tag{1.3}
+\]
+
+Sum (1.3).  Since `ell_P=r_P+2`,
+
+\[
+\begin{aligned}
+2\pi H_{\rm out}
+&\le\sum_P(r_P+2)^2\\
+&=\sum_Pr_P^2+4\sum_Pr_P+4a\\
+&\le\left(\sum_Pr_P\right)^2+4(x_B-a)+4a\\
+&=(x_B-a)^2+4x_B.
+\end{aligned}
+\tag{1.4}
+\]
+
+This proves the first inequality in (RP.1).
+
+If `a=0`, PC gives `x_B=0` and `H_out=0`.  If `a>=1`, then `a<=x_B`, so
+
+\[
+(x_B-a)^2+4x_B
+\le(x_B-1)^2+4x_B
+=(x_B+1)^2.
+\tag{1.5}
+\]
+
+Hence the second inequality in (RP.1) is also finite and exact.
+
+This is not a new use of an external Dido theorem.  Equation (1.3) is precisely the
+reflection/isoperimetry argument already present in the repository; the new step is
+to combine it with the exact PC identity before discarding the pocket count.
+
+---
+
+## 2. The isolate payment improves by a factor eight
+
+Let
+
+\[
+u:=b-P_F\ge0.
+\]
+
+OP gives the exact outer-face isolate payment
+
+\[
+Z_{\rm in}
+\le {2\over\sqrt3}H_{\rm out}-{u\over2}.
+\tag{2.1}
+\]
+
+Combining (2.1) with (1.4) gives
+
+\[
+\boxed{
+Z_{\rm in}
+\le
+{(x_B-a)^2+4x_B\over\pi\sqrt3}
+-{u\over2}.
+}
+\tag{2.2}
+\]
+
+The `a`-free version is
+
+\[
+\boxed{
+Z_{\rm in}
+\le
+{(x_B+1)^2\over\pi\sqrt3}
+-{u\over2}.
+}
+\tag{2.3}
+\]
+
+The previous quadratic capacity used
+
+\[
+Z_{\rm in}\le {8\over\pi\sqrt3}x_B^2.
+\]
+
+Thus the leading quadratic coefficient is divided by eight.
+
+---
+
+## 3. Insert one all-inactive FREE ancestry
+
+For one non-anchored FREE module in the all-inactive ancestry branch, let `L` and `U`
+be its lower- and upper-gate counts.  The two-sided absorption theorem gives
+
+\[
+L\ge D-O(\sqrt D).
+\tag{3.1}
+\]
+
+All ancestry vertices are distinct old fully inactive points in the original outer
+contact face.  Every upper-gate child is external to the force hull, and distinct
+upper gates have distinct children, so
+
+\[
+U\le Z_{\rm ext}.
+\tag{3.2}
+\]
+
+Counting the ancestry vertices between the internal outer pockets and the exterior
+population gives the current one-FREE payment
+
+\[
+Z_{\rm in}+Z_{\rm ext}
+\ge D+U-O(\sqrt D).
+\tag{3.3}
+\]
+
+Insert (2.2):
+
+\[
+\boxed{
+Z_{\rm ext}
++{(x_B-a)^2+4x_B\over\pi\sqrt3}
+-{u\over2}
+\ge
+D+U-O(\sqrt D).
+}
+\tag{3.4}
+\]
+
+In particular,
+
+\[
+\boxed{
+Z_{\rm ext}
++{(x_B+1)^2\over\pi\sqrt3}
+-{u\over2}
+\ge
+D+U-O(\sqrt D).
+}
+\tag{3.5}
+\]
+
+This strictly supersedes the old one-module quadratic currency
+
+\[
+Z_{\rm ext}+{8\over\pi\sqrt3}x_B^2
+\ge D-O(\sqrt D).
+\]
+
+Two immediate consequences are
+
+\[
+x_B=o(\sqrt D)
+\Longrightarrow
+Z_{\rm ext}\ge D-O(\sqrt D),
+\tag{3.6}
+\]
+
+and
+
+\[
+Z_{\rm ext}=o(D)
+\Longrightarrow
+x_B\ge(c_{\rm RP}-o(1))\sqrt D,
+\tag{3.7}
+\]
+
+with `c_RP` from (RP.2).
+
+---
+
+## 4. Square-root-window minimax
+
+Assume along a subsequence
+
+\[
+{x_B\over\sqrt D}\to\xi,
+\qquad
+{Z_{\rm ext}\over\sqrt D}\to\zeta,
+\qquad
+{a\over\sqrt D}\to\alpha,
+\qquad
+{U\over\sqrt D}\to\upsilon.
+\tag{4.1}
+\]
+
+Divide (3.4) by `D`.  The linear terms
+`Z_ext`, `u`, `U`, and `4x_B` are only `O(sqrt(D))`, so
+
+\[
+\boxed{
+{(\xi-\alpha)^2\over\pi\sqrt3}\ge1.
+}
+\tag{4.2}
+\]
+
+Therefore
+
+\[
+\boxed{
+\xi-\alpha\ge c_{\rm RP},
+\qquad
+\xi\ge c_{\rm RP}.
+}
+\tag{4.3}
+\]
+
+The existing monotone pocket-width routing ceiling is
+
+\[
+2x_B(U+1)+2(1+t_D)Z_{\rm ext}
+\ge D-O(\sqrt D),
+\tag{4.4}
+\]
+
+where `t_D=O(1)`.  Divide by `D` in the same square-root window:
+
+\[
+\boxed{2\xi\upsilon\ge1.}
+\tag{4.5}
+\]
+
+Because `U<=Z_ext`,
+
+\[
+\boxed{
+\zeta\ge\upsilon\ge{1\over2\xi}.
+}
+\tag{4.6}
+\]
+
+Since `xi>=c_RP>1/sqrt(2)`, the function
+
+\[
+f(\xi)=\xi+{1\over2\xi}
+\]
+
+is increasing on the entire feasible interval.  Hence (4.3) and (4.6) prove (RP.3).
+
+Numerically,
+
+\[
+c_{\rm RP}=2.332680452334321\ldots,
+\qquad
+{1\over2c_{\rm RP}}=0.214345689526248\ldots,
+\]
+
+and
+
+\[
+c_{\rm RP}+{1\over2c_{\rm RP}}
+=2.547026141860569\ldots .
+\]
+
+The old one-module coefficient was `1.4309882454...`; the improvement comes from a
+finite pocket theorem rather than from changing the reflection module.
+
+---
+
+## 5. Square-root Dido envelope and endpoint detour
+
+The fixed-chord Dido theorem in the repository can be rescaled from `D` to
+`sqrt(D)` in this branch.  For completeness, the only point needing checking is that
+the `+2` in `ell_P=r_P+2` remains negligible for the pockets that can carry area of
+order `D`.
+
+Let
+
+\[
+d_P:=\sum_Pr_P=x_B-a,
+\qquad
+u_P:=\ell_P-s_P,
+\qquad
+\sum_P\nu_P=u.
+\tag{5.1}
+\]
+
+Suppose
+
+\[
+{d_P\over\sqrt D}\to\tau,
+\qquad
+{u\over\sqrt D}\to\eta.
+\tag{5.2}
+\]
+
+Let `widehat f` be the repository's capped Dido coefficient:
+
+\[
+\widehat f(z)=
+\begin{cases}
+\dfrac{\theta-\sin\theta\cos\theta}{4\theta^2},
+&0\le z\le1-2/\pi,
+\quad z=1-\dfrac{\sin\theta}{\theta},\\[1.2ex]
+\dfrac1{2\pi},&z\ge1-2/\pi.
+\end{cases}
+\tag{5.3}
+\]
+
+Then
+
+\[
+\boxed{
+\limsup {H_{\rm out}\over D}
+\le
+\tau^2\widehat f(\eta/\tau),
+}
+\tag{5.4}
+\]
+
+with right side zero at `tau=0`.
+
+To see this directly, fix `epsilon>0` and split pockets according to
+`r_P<epsilon sqrt(D)` or not.  The reflected bound gives the small-pocket area
+`O(epsilon D)+o(D)` because their maximum chain length is
+`epsilon sqrt(D)+2` while the total chain length is `O(sqrt(D))`.  There are only
+`O_epsilon(1)` large pockets; on those pockets the additive `2` is `o(sqrt(D))`.
+The concavity/Jensen proof of the existing multi-pocket Dido theorem therefore
+applies verbatim at this scale.  First let `D->infinity`, then `epsilon->0`.
+
+Now consider equality in the combined floor (RP.3).  Then necessarily
+
+\[
+\xi=c_{\rm RP},
+\qquad
+\zeta=\upsilon={1\over2c_{\rm RP}}.
+\tag{5.5}
+\]
+
+Equation (4.2) forces `alpha=0`, so
+
+\[
+\tau=\xi-\alpha=c_{\rm RP}.
+\tag{5.6}
+\]
+
+On the other hand, (3.3) together with square-root boundedness gives
+
+\[
+\liminf {H_{\rm out}\over D}\ge {\sqrt3\over2}.
+\tag{5.7}
+\]
+
+But
+
+\[
+{\sqrt3\over2}
+={c_{\rm RP}^2\over2\pi}.
+\tag{5.8}
+\]
+
+Thus (5.4) must attain the capped value `1/(2pi)`.  By (5.3), this requires
+
+\[
+{\eta\over\tau}
+\ge1-{2\over\pi}.
+\tag{5.9}
+\]
+
+Using (5.6) proves (RP.4):
+
+\[
+\boxed{
+\liminf {b-P_F\over\sqrt D}
+\ge
+\left(1-{2\over\pi}\right)c_{\rm RP}
+=0.847649953762939\ldots .
+}
+\]
+
+More generally, (5.4) and (5.7) give a detour lower curve throughout the finite
+square-root window:
+
+\[
+\boxed{
+\xi^2\widehat f(\eta/\xi)
+\ge {\sqrt3\over2}.
+}
+\tag{5.10}
+\]
+
+Here we used `tau<=xi` and the monotonicity of
+`Psi(L,U)=L^2 widehat f(U/L)` in `L`.  For `xi=c_RP`, (5.10) is exactly (5.9).
+
+---
+
+## 6. What remains open
+
+This theorem does not close C-II.  It changes the hard FREE survivor substantially:
+
+- sub-square-root `x_B` still forces linear external population;
+- any sublinear-external survivor must now pay at least
+  `2.332680... sqrt(D)` outer-walk excess, rather than `0.824727... sqrt(D)`;
+- a square-root-scale optimizer must also carry at least
+  `0.847649... sqrt(D)` chain-chord detour and has only `o(sqrt(D))` OP pockets.
+
+The live bridge is still between the global outer-contact-walk currencies
+`x_B,b-P_F` and the canonical Sections 122--123 attachment-cell detour/payment.  The
+new endpoint is more rigid: the square-root outer cavity must be carried by a
+sub-square-root number of large reflected/Dido pockets rather than by a diffuse
+family of small pockets.
+
+A closing theorem should now try to show that such a large-pocket boundary profile is
+incompatible with the full-core harmonic attachment tiling, or use the resulting
+chain-chord detour to build a same-cardinality strict sub-`D` deformation.
+
+**Disposition:** exact factor-eight outer-pocket capacity improvement and its
+one-FREE square-root consequences proved; no theorem-state promotion claimed.

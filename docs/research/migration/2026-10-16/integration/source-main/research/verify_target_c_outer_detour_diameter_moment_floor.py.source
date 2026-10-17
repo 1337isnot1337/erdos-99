@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+"""Arithmetic checks for the outer-detour diameter-moment floor."""
+
+from math import pi, sqrt
+
+
+def main() -> None:
+    s = 2.798596312209462
+    # A high-t normalized point survives the scalar ledgers used in the
+    # endpoint regression. It is not a geometric configuration.
+    t = 2.9
+    delta = 0.0
+    g = 0.2910434605114113
+    m = s + g - t
+    kappa = 0.0
+    f = 0.4
+    c_star = pi * (2.0 - sqrt(3.0)) / 4.0
+    q = t + kappa
+    e_bb = q - m
+    Q = 2.0 * t - pi - delta
+    u_b = e_bb - Q - 2.0 * kappa
+    delta2 = pi / (2.0 * sqrt(3.0))
+    B = Q + 4.0 * f
+    C = t / 2.0 + 2.0 * f - kappa / 2.0
+
+    assert t > s
+    assert 5.0 * t - 2.0 * kappa > 3.0 * s + 2.0 * g + c_star
+    assert 3.0 * t - 2.0 * m - 2.0 * kappa > s + c_star
+    assert t + kappa + 2.0 * m > s
+    assert 0.0 <= Q and 0.0 <= u_b
+    assert f < Q
+    assert Q + 4.0 * f < 10.0 * (e_bb - kappa)
+    assert B > 4.0 * sqrt(delta2)
+    assert B > 8.0 * delta2 / C
+    assert q < pi
+
+    print("outer-detour diameter-moment floor: arithmetic OK")
+    print(f"endpoint_t_floor={s:.12f}")
+    print(f"high_t_witness t={t:.6f} delta={delta:.6f} Q={Q:.6f}")
+
+
+if __name__ == "__main__":
+    main()

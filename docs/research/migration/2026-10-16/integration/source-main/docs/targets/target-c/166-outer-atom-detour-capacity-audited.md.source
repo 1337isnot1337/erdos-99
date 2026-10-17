@@ -1,0 +1,349 @@
+# Target C — audited §166 outer atomic endpoint mass versus outer-walk detour
+
+**Date:** 2026-09-12
+**Lifecycle:** audited-working proof-only Type-II route module; theorem-state authority unchanged.
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+Section 154 identifies the missing all-regime bridge: atomic stopped-train directions can be paid either by bounded defect-face endpoints or by the occurrence-counted old outer contact walk. Section 166 gives the first quantitative version of that bridge when the outer walk has positive detour.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3}.
+\]
+
+Pass to a Type-II subsequence on which the normalized scalar quantities and the train/outer projective direction measures converge. Write
+
+\[
+M:=\lim {b\over D},
+\qquad
+B:=\lim {Q+4f\over D},
+\qquad
+C:=\lim {T-q/2\over D},
+\tag{166.1}
+\]
+
+and, using `per(F)/D->pi`,
+
+\[
+\delta:=\lim {b-\operatorname{per}(F)\over D}=M-\pi\ge0.
+\tag{166.2}
+\]
+
+Then
+
+\[
+\boxed{
+B+\bigl(3M^2\delta\bigr)^{1/3}
+\ge {8\Delta_2\over3C}.
+}
+\tag{166.3}
+\]
+
+Using only `M<=2pi` and `C<=(pi+B)/2`, this implies the fully scalar inequality
+
+\[
+\boxed{
+B+\bigl(12\pi^2\delta\bigr)^{1/3}
+\ge
+{16\Delta_2\over3(\pi+B)}
+=
+{8\pi\over3\sqrt3\,(\pi+B)}.
+}
+\tag{166.4}
+\]
+
+Thus sufficiently small bounded-face endpoint capacity forces a strictly linear outer-walk detour. No zero-detour hypothesis is used.
+
+---
+
+## 166.1 Outer projection excess equals detour
+
+Let
+
+\[
+\nu_D={1\over D}\sum_{e\in\partial_{out}C}^{occ}\delta_{[e]}
+\Rightarrow\nu,
+\]
+
+where bridge and articulation repetitions are retained. Its mass is `M`. Define
+
+\[
+F(\alpha)=\int|\cos(\theta-\alpha)|\,d\nu(\theta).
+\]
+
+Projection variation of the closed outer walk and the uniform Type-II width limit give
+
+\[
+\boxed{F(\alpha)\ge2\quad\forall\alpha.}
+\tag{166.5}
+\]
+
+Also `F<=M` and
+
+\[
+\int_0^\pi F(\alpha)d\alpha=2M.
+\]
+
+Hence for `h=F-2>=0`,
+
+\[
+\boxed{\int_0^\pi h=2(M-\pi)=2\delta.}
+\tag{166.6}
+\]
+
+So normalized outer detour is exactly half of the cosine-transform excess above the disk baseline.
+
+---
+
+## 166.2 Cusp lemma: an outer direction atom has cubic detour cost
+
+### Lemma 166.1
+
+If `nu` has an atom of mass `w>0`, then
+
+\[
+\boxed{M-\pi\ge {w^3\over3M^2}.}
+\tag{166.7}
+\]
+
+### Proof
+
+For the `pi`-periodic kernel `g(t)=|cos t|`,
+
+\[
+\boxed{g''+g=2\delta_{\pi/2\pmod\pi}}
+\tag{166.8}
+\]
+
+as distributions: near a zero, `|cos(pi/2+s)|=|sin s|`, whose first derivative jumps from `-1` to `+1`.
+
+Therefore
+
+\[
+F''+F=2\widetilde\nu,
+\]
+
+where `widetilde nu` is `nu` shifted by `pi/2`. Since `F<=M`,
+
+\[
+h''=2\widetilde\nu-Fd\alpha\ge-Md\alpha.
+\tag{166.9}
+\]
+
+Thus locally `h(alpha_0+t)+(M/2)t^2` is convex. At the shifted location of an atom of mass `w`, the derivative jump of `h` is exactly `2w`, so at least one outward one-sided derivative has magnitude at least `w`. Reflecting if needed, convexity and `h(alpha_0)>=0` give
+
+\[
+h(\alpha_0+t)\ge wt-{M\over2}t^2
+\qquad(t\ge0).
+\tag{166.10}
+\]
+
+Because `w<=M`, the interval `0<=t<=2w/M` has length at most `2<pi`, so it does not wrap around the projective circle. Integrating the positive parabola,
+
+\[
+\int h
+\ge
+\int_0^{2w/M}\left(wt-{M\over2}t^2\right)dt
+={2w^3\over3M^2}.
+\]
+
+Equation (166.6) proves (166.7). `square`
+
+The hostile recomputation confirms the factor `1/3`. Stopping at `w/M` would give the weaker `1/6` constant.
+
+---
+
+## 166.3 Train atom endpoint payment
+
+Let the empirical stopped-train direction measures satisfy
+
+\[
+{T\over D}\to x,
+\qquad
+\mu_D\Rightarrow\mu.
+\]
+
+For an atom `phi` of `mu`, define its absolute train mass
+
+\[
+a=x\mu(\{\phi\}).
+\tag{166.11}
+\]
+
+Every stopped train has two terminal face-side occurrences. For any projective neighborhood `U` of `phi`,
+
+\[
+2\#\{\tau:[u_\tau]\in U\}
+\le
+N_{out}(U)+(Q+4f).
+\tag{166.12}
+\]
+
+Choose nested neighborhoods whose boundaries are null for both limiting measures, take the source limit, then shrink to `phi`. If `w=nu({phi})`,
+
+\[
+\boxed{w\ge(2a-B)_+.}
+\tag{166.13}
+\]
+
+Lemma 166.1 yields, for every train-direction atom,
+
+\[
+\boxed{(2a-B)_+^3\le3M^2\delta,}
+\tag{166.14}
+\]
+
+or equivalently
+
+\[
+\boxed{2a\le B+(3M^2\delta)^{1/3}.}
+\tag{166.15}
+\]
+
+The occurrence convention is exact for singleton trains and bridges: both the endpoint multigraph and the outer walk count physical face-side occurrences.
+
+---
+
+## 166.4 Weighted Mantel forces a large train atom
+
+Write the train atom masses in absolute `D` normalization as `a_i`, and put
+
+\[
+A=\sum_i a_i=x\sigma,
+\qquad m=\sup_i a_i.
+\tag{166.16}
+\]
+
+Partition the projective circle into the three-point orbits of `phi -> phi+pi/3 mod pi`. For orbit `r`, let `M_r` be its total atom mass and `E_r` its limiting strict-rhombus crossing mass. Audited §142 gives
+
+\[
+E_r\le M_r^2/4,
+\qquad
+\sum_rE_r=\Delta_2.
+\tag{166.17}
+\]
+
+Every orbit contains at most three atom locations, so `M_r<=3m`. Therefore
+
+\[
+\Delta_2
+\le{1\over4}\sum_rM_r^2
+\le{3m\over4}\sum_rM_r
+={3mA\over4}.
+\tag{166.18}
+\]
+
+The §142 exposed-hull inequality `q/T<=2(1-sigma)` gives
+
+\[
+A=x\sigma\le x-{1\over2}\lim q/D=C.
+\tag{166.19}
+\]
+
+Hence
+
+\[
+\boxed{m\ge{4\Delta_2\over3C}.}
+\tag{166.20}
+\]
+
+Apply (166.15) to atoms approaching the supremum `m`. Then
+
+\[
+B+(3M^2\delta)^{1/3}
+\ge2m
+\ge{8\Delta_2\over3C},
+\]
+
+proving (166.3). Countably many atoms and infinitely many positive phase orbits cause no compactness issue here.
+
+---
+
+## 166.5 Scalar elimination and explicit low-capacity consequence
+
+The outer ledger
+
+\[
+b+Q=2(q-k)
+\]
+
+and `q<=per(F)<=pi D` give
+
+\[
+M\le2\pi.
+\tag{166.21}
+\]
+
+Also `T=q+2f-k`, so
+
+\[
+C={q\over2D}+{2f\over D}-{k\over D}
+\le{\pi+B\over2},
+\tag{166.22}
+\]
+
+because `B=(Q+4f)/D>=4f/D` and `k>=0`. These substitutions give (166.4).
+
+Define
+
+\[
+B_0={\sqrt{\pi^2+32\pi/(3\sqrt3)}-\pi\over2}
+=1.1318319134366228\ldots .
+\tag{166.23}
+\]
+
+For any fixed `0<=beta<B_0`, if
+
+\[
+\limsup {Q+4f\over D}\le\beta,
+\]
+
+then the decreasing function
+
+\[
+g(B)={8\pi\over3\sqrt3(\pi+B)}-B
+\]
+
+and (166.4) give
+
+\[
+\boxed{
+\liminf {b-\operatorname{per}(F)\over D}
+\ge
+{1\over12\pi^2}
+\left(
+{8\pi\over3\sqrt3(\pi+\beta)}-\beta
+\right)^3>0.
+}
+\tag{166.24}
+\]
+
+At formal `beta=0`,
+
+\[
+\delta\ge0.030813662630724\ldots .
+\tag{166.25}
+\]
+
+The zero-detour consequence `B>=B_0` is intentionally weaker than §154's sharper `B>=4sqrt(Delta_2)`. Section 166 gains scope, not endpoint sharpness: it remains quantitative for positive detour.
+
+---
+
+## 166.6 Audit boundaries and next obstruction
+
+The hostile audit checked:
+
+1. the distributional coefficient in `|cos|''+|cos|` and the `1/3` cubic constant;
+2. semiconvex one-sided derivatives and the non-wrapping integration interval;
+3. nested continuity neighborhoods for both train and outer measures;
+4. exact singleton/bridge endpoint multiplicity;
+5. weighted Mantel with countably many atoms and potentially infinitely many `pi/3` orbits;
+6. use of a supremum rather than an assumed largest atom;
+7. the directions of both scalar eliminations in (166.21)–(166.22).
+
+No full-source affine-kernel extension is used; contact-isolated source points remain retained.
+
+The theorem does not control total outer atomic mass: many small atoms can approximate Lebesgue direction measure while carrying little individual cubic cost. Thus §166 does not replace the exact zero-detour atomlessness theorem and does not yet close Type II. The next viable strengthening is to combine the all-regime §164 gap with orbit concentration or the exceptional-face direction-network constraints so that a larger fraction of atomic train mass is forced through finitely many outer atoms.
+
+**Disposition:** audited-working proof-only quantitative bridge. C-II and Level I remain open.

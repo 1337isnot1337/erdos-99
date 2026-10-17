@@ -1,0 +1,222 @@
+<!-- theorem-state: {"artifact_id":"ART-6A42A38A127B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — repository campaign review and handoff
+
+**Date:** 2026-09-09
+
+**Reviewed state before this report:** `d9f8f3c`, then remote coordination through `ca31415`
+**Run type:** synthesis, regression audit, reproducibility repair
+
+**Target:** A / B / C / repository state
+
+**External search:** no new search in this review; previously imported sources were rechecked by their cited reports
+
+**Computation:** exact repository tests and listed research scripts
+
+## LEVEL I STATUS
+
+**STILL OPEN.** No branch has been promoted to a proof or disproof of Erdős
+Problem #99. The original quantifier remains: every sufficiently large global
+minimum-diameter unit-separated configuration must contain a unit equilateral
+triangle, or there must be infinitely many globally optimal triangle-free
+cardinalities. Neither direction is closed.
+
+This review is a state correction and handoff. It does not silently promote a
+higher-numbered report over the route maps, and it does not treat numerical or
+local evidence as global optimality.
+
+The subsequent [zero-transfer and defect-train review](campaign_zero_transfer_defect_review_2026-09-09.md)
+records the complete Z–DF dependency audit, the exact pentagon competitor, the
+SEPq sign-convention correction, and verification after the coordinated merge.
+Its conditional exceptional-face conclusion does not close the global problem.
+
+## 1. Repository and remote state
+
+The campaign was reviewed from the shared checkout `/home/cinna/math`.
+The prior pushed commits were:
+
+| Commit | Reviewed content |
+| --- | --- |
+| `c0522aa` | diameter-lens exclusion, 15-degree near-chain unloading, exact finite audit |
+| `c26d6ab` | remote merge containing phase-cut work, the force-bulk audit, and the original pentagon regression |
+| `f3653ae` | sharp length-excess/path results, C53 dependency audit, full-KKT chain regressions |
+| `d9f8f3c` | rejection of the mixed-cut pentagon witness and withdrawal of the force-bulk promotion |
+| `edeb4c0`–`ca31415` | coordinated C-I restoration, zero-transfer/defect-train campaign merges, and the remote repository review |
+
+Before this review, the checkout was clean at `d9f8f3c`; the remote then advanced
+through the coordinated C-I restoration and campaign merges. Those changes were
+rebased into this review before publication. The final commit and `origin/main`
+are verified equal below.
+
+## 2. Verification record
+
+The following checks pass in this checkout:
+
+```text
+python3 -m unittest discover -s research -p 'test_*.py'
+  65 tests, OK
+
+python3 research/nearchain_vertex_regressions.py
+  exact Q(sqrt(3)) degree-five and degree-three patches, PASS
+
+python3 research/tube_shield_cut_audit.py
+  17,104 exact graph/tube/shield cases, PASS
+
+python3 research/near_diameter_path_audit.py
+  27,252 exact chord/interval checks, 19 sign patterns, PASS
+
+python3 research/thrackle_interval_regression.py
+  rejected mixed-cut witness reproduced and corrected, PASS
+
+python3 research/phase_cut_certificate.py
+  phase-cut, C5, balanced tripartite, and sliding-interval checks, PASS
+
+python3 research/activation_monomer_regression.py
+  four exact activation sizes, PASS
+
+python3 research/kuperberg_five_block_exact.py
+  exact five-block margin audit, PASS
+
+python3 research/kuperberg_five_block_toeout_exact.py
+  exact toe-out series audit, PASS
+```
+
+The near-chain regression initially failed because it imported SymPy, which is
+not a repository dependency. It now uses a 25-line exact quadratic-field type
+over `fractions.Fraction`; no third-party package is required. The script still
+checks only the finite patch model described in its report.
+
+`git diff --check` passes, and all relative Markdown links introduced or edited
+by this review resolve. The review does not claim that every exploratory script
+in `research/` is a theorem checker; each script's scope remains documented in
+`research/README.md`.
+
+## 3. Mathematical disposition of the work reviewed
+
+### Target A — tube-only Schur refinement
+
+The exact Section-174 tube-only bound is retained as a proved, unpromoted
+refinement:
+
+\[
+\zeta\ge t_\Sigma+\delta_\Sigma-|T_\Sigma|.
+\]
+
+The basis-closed tube makes surviving response paths sector-local and preserves
+the exact sector matching balance. The remaining theorem is still the stress-
+generated population surplus
+
+\[
+t_\Sigma+\delta_\Sigma\ge s+|T_\Sigma|,
+\]
+
+or a strict sub-`D` competitor. The tube estimate does not identify a source
+with an independent scaffold, create a global SDR, or prove Schur nullity.
+
+### Target B — phase cuts and coherent families
+
+The September 5 addendum's PC, PW, CR, PS, IS, TS, NE and HA statements are
+promoted through the Target B route map with their stated scope. They exclude
+coherent, core-sized, near-extremal phase regimes and repair the finite phase-
+cut extraction. They do not prove that every global jammed survivor has the
+coverage/coherence/near-extremality hypotheses required by NE.
+
+The exact remaining Target B endpoint is the topology-correct shell inequality
+
+\[
+G+E\ge\frac{\sqrt3}{4}B+\frac{\sqrt3}{2}(t+\chi-1),
+\]
+
+equivalently the required Oler surplus. The phase potential alone does not
+control active diameter inequalities or boundary/support corrections.
+
+### Target C — C53, C-I, force bulk, and near chains
+
+1. **Pentagon regression rejected.** The fetched regular-pentagon witness uses
+   one projective cut to sort the chords and a different half-plane to orient
+   them. With the `[0,pi)` cut, the edge that it reverses must not be reversed;
+   with the x-positive half-plane, the edge order is `e,f,g`, not `f,g,e`.
+   Both consistently ordered sign triples satisfy C53.T. The original report is
+   retained as rejected provenance, and the exact correction is in
+   `target_c_c53_sign_and_ci_dependency_audit_2026-09-09.md`.
+
+2. **C-I restored and promoted.** The convex-deformation reduction plus the
+   finite chord table supports the interval-sign lemma. The weighted Robinson
+   argument gives selected-support response PSD under the canonical
+   circular-planar/Kalmanson hypotheses; the one-dimensional chain case is
+   handled separately. The Newton–Hoffman argument then gives finite integration
+   for every Farkas multiplier. The coordinated [module 56 restoration](../targets/target-c/56-ci-restored-frontier.md)
+   promotes this chain and closes C-I. It does not close C-II or supply any
+   force-bulk theorem.
+
+3. **Force-bulk proof withdrawn.** The claim that every source point outside
+   the nonisolated contact core is a diameter endpoint used whole-configuration
+   jamming, while the canonical normalization only pins the nonisolated core.
+   The exact heptagon-plus-center configuration in the September 8 audit has an
+   interior contact-isolated center. It refutes the sharpened `(n-m)+q<=pi D`
+   statement under the proof's hypotheses. The weaker `n-m<=pi D` is not
+   refuted by that example, but its supplied proof is invalid and the bound is
+   open. All area-gap consequences depending on it remain conditional.
+
+4. **Near-diameter path theorem.** For a diameter path whose edge directions
+   lie in a cone of angle less than 15 degrees, every internal vertex is
+   non-diametral, with an explicit squared-distance clearance. More generally,
+   if the path excess is `δ=k-D`, every diameter-loaded internal vertex lies
+   within `δ/(2-sqrt(2+sqrt(3)))` path edges of an endpoint. This is exact,
+   finite, and independent of PSD or global optimality.
+
+5. **Dominant-stress refinement.** For a diameter edge of normalized weight
+   `b`, contact stress incident to other diameter endpoints is at most
+   `4(1-b)D^2`; all contact stress incident to the diameter boundary is at most
+   `D(1+b)+5(1-b)D^2`. Therefore `b->1` concentrates stress on contacts joining
+   non-diametral vertices, but does not give a positive lower bound on tiny
+   transverse stresses or a finite release.
+
+6. **Local shortcut regressions.** Exact degree-three and degree-five rhombic
+   patches show that small path turning, source-hull interiority, or a positive
+   local equilibrium does not force degree four or a two-sided strip. The newer
+   degree-five family even has local stress weights bounded away from zero while
+   its area surplus tends to zero. These patches lack a full global KKT stress,
+   a source diameter pair, and a global minimum-diameter certificate.
+
+## 4. Current branch ledger
+
+| Branch | Current status | Exact remaining implication |
+| --- | --- | --- |
+| A fixed-hull Hall | closed as a route | fixed capacity cannot exceed its exact ceiling |
+| A Section-174 tube shield | proved refinement | establish the exact sector surplus or strict sub-`D` move |
+| B coherent phase | conditional exclusions proved | establish coverage/coherence or construct a certified competitor |
+| B general shell | open | prove the exact Oler surplus with boundary/topology corrections |
+| C-I weak contacts | promoted C53/C63 restoration | closed by a same-`D` finite-release contradiction; no C-I obligation remains |
+| C-II near-chain | unloaded core and stress concentration proved | convert small transverse stress into an exact release/competitor |
+| C-II response | selected-support subcases and topology counts | obtain a quantitative response defect or source contradiction |
+| C-II force bulk | proof withdrawn | control interior contact-isolated points without assuming whole jamming |
+| disproof route | no global infinite family | prove global optimality for infinitely many triangle-free cardinalities |
+
+The single shortest all-route theorem after the promoted C-I restoration is a
+fully force-visible C-II contradiction: exclude every sufficiently large
+triangle-free global minimizer with all unit contacts supported, including
+interior contact-isolated points. Target B's shell inequality and Target A's
+sector-surplus theorem are independent alternate endpoints.
+
+## 5. Files changed by this review
+
+- `research/nearchain_vertex_regressions.py`: removed the undeclared SymPy
+  dependency while preserving exact `Q(sqrt(3))` arithmetic.
+- `research/README.md`: documented the standard-library arithmetic and scope.
+- `docs/targets/target-c/README.md`: removed the stale promoted force-bulk
+  bullet, separated correction reports from promoted addenda, and retained
+  rejected provenance explicitly.
+- this report: records the reviewed state, tests, corrections, and remaining
+  theorem obligations.
+
+No additional canonical theorem was silently promoted by this review. No
+historical report was deleted.
+
+## 6. Exact handoff
+
+The repository is mathematically cleaner after this review, but the Level I
+problem remains open. The strongest newly supported statements are the exact
+near-chain geometry/stress bounds and the promoted C53/C-I restoration.
+The strongest rejected statements are the mixed-cut pentagon counterexample and
+the unproved whole-configuration force-bulk transport. Future work must begin
+from the route maps and this report, not from the withdrawn claims.

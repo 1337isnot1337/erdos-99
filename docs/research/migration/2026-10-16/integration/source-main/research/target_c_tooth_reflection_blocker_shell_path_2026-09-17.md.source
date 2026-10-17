@@ -1,0 +1,375 @@
+# Target C-II — each simultaneous reflection blocker module is a thin-shell contact path system
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the simultaneous reflection block-diagonal reduction; no canonical promotion claimed  
+**Scope:** one `eta=3/26` diagonal reflection module `(q_i,U_i)` from the slow-scale selected family  
+**Dependencies:** canonical farthest reflected blocker; shallow-tooth upper-blocker cone; simultaneous reflection block diagonalization  
+**Certificate:** `research/verify_target_c_tooth_reflection_blocker_shell_path_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The block-diagonal reflection reduction leaves one local obstruction per selected tooth:
+
+\[
+U_i=\{z\in A:|z-q_i|>D\},
+\]
+
+where `q_i=x_i^-` is the reflected apex. The set `U_i` could a priori contain as many as `O(D^(3/4))` source points. Its unit-contact geometry is nevertheless one-dimensional.
+
+Let `y_i` be the canonical source point farthest from `q_i`, and write
+
+\[
+L_i:=|y_i-q_i|.
+\]
+
+Then every blocker lies in the radial shell
+
+\[
+\boxed{
+D<|z-q_i|\le L_i<D+h_i
+\qquad(z\in U_i),
+}
+\tag{SP.1}
+\]
+
+where `h_i=sin(alpha_i)` is the shallow-tooth height. At the current threshold
+
+\[
+\eta_*={3\over26},
+\qquad
+h_i\le h_*:={\sqrt{303}\over52}
+=0.3347479843\ldots<\frac12.
+\tag{SP.2}
+\]
+
+All blocker rays `q_i z` lie inside the same open angular cone of half-angle `alpha_i<pi/6` around the tooth inward normal. Consequently their polar angles about `q_i` occupy an interval of width less than `pi/3`.
+
+The thin shell has a strong contact consequence:
+
+\[
+\boxed{
+\Delta\bigl(G_1[U_i]\bigr)\le2,
+}
+\tag{SP.3}
+\]
+
+where `G_1` is the unit-distance contact graph of the original source. More precisely, every blocker has at most one blocker contact at larger polar angle and at most one at smaller polar angle. Since the blocker angles lie in an interval and are all distinct, `G_1[U_i]` has no cycle. Therefore
+
+\[
+\boxed{
+G_1[U_i]\text{ is a disjoint union of angularly monotone paths and isolated vertices.}
+}
+\tag{SP.4}
+\]
+
+This is a finite statement for every sufficiently large source; the numerical contact-cone estimate already holds for `D>=4` at the worst allowed `h_*`.
+
+Thus the remaining diagonal upper obstruction is not an arbitrary `O(D^(3/4))` contact cluster. Internally, each module is a collection of ordered one-dimensional blocker chains in a radial shell of thickness below `0.335`.
+
+---
+
+## 1. Canonical farthest distance leaves less than one tooth height of radial slack
+
+For one tooth suppress the index. Write
+
+\[
+a=p-ct,
+\qquad
+b=p+ct,
+\qquad
+x=p+hn,
+\qquad
+q=x^-=p-hn,
+\]
+
+with `c=cos(alpha)`, `h=sin(alpha)`, and `alpha<pi/6`.
+
+Choose `y` maximizing `|y-q|` over the source and put
+
+\[
+L:=|y-q|,
+\qquad
+N:={y-q\over L}.
+\]
+
+The canonical support-normal theorem gives, with `W=W_K(N)`,
+
+\[
+0\le D-W<L-W\le\sin(\alpha-\theta),
+\qquad
+0\le\theta<\alpha.
+\tag{SP.5}
+\]
+
+Subtracting the first two deficits,
+
+\[
+L-D=(L-W)-(D-W)
+<L-W
+\le\sin(\alpha-\theta)
+\le\sin\alpha=h.
+\tag{SP.6}
+\]
+
+Every `z in U` satisfies `|z-q|>D`, while maximality of `y` gives `|z-q|<=L`. Hence
+
+\[
+\boxed{D<|z-q|<D+h.}
+\tag{SP.7}
+\]
+
+At `eta=3/26`,
+
+\[
+h\le h_*={\sqrt{303}\over52}<\frac12.
+\tag{SP.8}
+\]
+
+The blocker module therefore occupies a radial shell of thickness strictly below one half, centered at the reflected point itself.
+
+---
+
+## 2. All blocker rays occupy one sub-`pi/3` angular sector
+
+Use tooth coordinates whose tangent axis is `t` and inward-normal axis is `n`. For every upper blocker `z`, the reflection-cone theorem gives
+
+\[
+z-x=pt+rn,
+\qquad
+r>0,
+\qquad
+{|p|\over r}<\tan\alpha.
+\tag{SP.9}
+\]
+
+Since
+
+\[
+z-q=z-x+2hn
+=pt+(r+2h)n,
+\]
+
+we have
+
+\[
+{|p|\over r+2h}
+< {|p|\over r}
+<\tan\alpha.
+\tag{SP.10}
+\]
+
+Thus
+
+\[
+\boxed{
+\angle(z-q,n)<\alpha<\frac\pi6
+\qquad(z\in U).
+}
+\tag{SP.11}
+\]
+
+All polar angles of blockers about `q` therefore lie in one interval of width less than `2alpha<pi/3`.
+
+No two blockers have the same polar angle. Indeed, if `z,z'` were on the same ray from `q`, then by (SP.7)
+
+\[
+|z-z'|
+=\bigl||z-q|-|z'-q|\bigr|
+<h<1,
+\]
+
+contradicting source separation.
+
+---
+
+## 3. A unit blocker contact is almost tangential to the blocker shell
+
+Fix `z,u in U` with
+
+\[
+|z-u|=1.
+\tag{SP.12}
+\]
+
+Put
+
+\[
+r:=|z-q|,
+\qquad
+s:=|u-q|,
+\qquad
+e:={z-q\over r}.
+\]
+
+Expanding `|u-q|^2=|z-q+(u-z)|^2`,
+
+\[
+s^2=r^2+1+2r\,e\cdot(u-z).
+\]
+
+Therefore
+
+\[
+\boxed{
+e\cdot(u-z)={s^2-r^2-1\over2r}.}
+\tag{SP.13}
+\]
+
+By (SP.7), `r,s>D` and `|s-r|<h<=h_*`. Hence
+
+\[
+\begin{aligned}
+|e\cdot(u-z)|
+&\le {|s^2-r^2|+1\over2r}\\
+&< {h_*(2D+2h_*)+1\over2D}\\
+&=h_*+{h_*^2+1/2\over D}
+=:H_D.
+\end{aligned}
+\tag{SP.14}
+\]
+
+The worst-case threshold already satisfies
+
+\[
+H_D<\frac12
+\qquad(D\ge4).
+\tag{SP.15}
+\]
+
+Indeed it is enough to check `D=4`, where
+
+\[
+h_*+{h_*^2+1/2\over4}
+=0.4877620375\ldots<\frac12.
+\]
+
+Equivalently, the exact comparison reduces to
+
+\[
+{303\over2704}
+<\left({3753\over10816}\right)^2.
+\tag{SP.16}
+\]
+
+Thus every unit contact vector from a blocker to another blocker makes angle less than `pi/6` with one of the two tangent directions to the circle centered at `q` through `z`.
+
+---
+
+## 4. At most one blocker contact on each angular side
+
+Orient the tangent at `z` toward increasing polar angle about `q`. Suppose two distinct blocker contacts `u,v in U` both have larger polar angle than `z`.
+
+Because the whole blocker sector has width below `pi/3`, the chord from `z` to a blocker on the larger-angle side has positive component along the increasing tangent. By (SP.14)--(SP.15), both unit vectors
+
+\[
+u-z,
+\qquad
+v-z
+\]
+
+lie within angle
+
+\[
+\arcsin(H_D)<\frac\pi6
+\]
+
+of that same tangent direction. Hence
+
+\[
+\angle uzv
+<2\arcsin(H_D)
+<\frac\pi3.
+\tag{SP.17}
+\]
+
+Since `|u-z|=|v-z|=1`,
+
+\[
+|u-v|
+=2\sin\left({\angle uzv\over2}\right)
+<1,
+\tag{SP.18}
+\]
+
+contradicting unit separation of the source.
+
+Therefore a blocker has at most one unit-contact blocker at larger polar angle. The same argument on the other tangent side gives at most one at smaller polar angle. This proves
+
+\[
+\Delta(G_1[U])\le2.
+\tag{SP.19}
+\]
+
+The argument uses the actual radial shell around `q`, not the coarser full-source circumcenter annulus.
+
+---
+
+## 5. Cycles are impossible
+
+Assume a connected component of `G_1[U]` contains a cycle. Choose on that cycle the blocker `z` of smallest polar angle about `q`. Polar angles are distinct by Section 2, so both cycle neighbors of `z` have larger polar angle. This contradicts Section 4, which permits at most one blocker contact on that side.
+
+Hence every component is acyclic. Together with maximum degree two,
+
+\[
+\boxed{G_1[U]\text{ is a disjoint union of paths and isolated vertices.}}
+\tag{SP.20}
+\]
+
+Along every nontrivial component, the polar angles strictly increase from one endpoint to the other: every internal path vertex has exactly one path neighbor on each angular side.
+
+---
+
+## 6. Interaction with the simultaneous block-diagonal system
+
+Apply the argument independently to every module `(q_i,U_i)` in the simultaneous reflection family. The previous reduction already gives
+
+\[
+U_i\cap U_j=\varnothing
+\qquad(i\ne j)
+\tag{SP.21}
+\]
+
+and same-shore separation
+
+\[
+\operatorname{dist}(U_i,U_j)
+=\Omega(\kappa_DD^{3/4}).
+\tag{SP.22}
+\]
+
+Thus for sufficiently large `D` there are no unit contacts between distinct blocker modules. The induced contact graph on the full blocker union is exactly the disjoint union of the path systems from the individual modules:
+
+\[
+\boxed{
+G_1\left[\bigcup_iU_i\right]
+=\bigsqcup_iG_1[U_i],
+\qquad
+\Delta\le2,
+\qquad
+\text{no cycles}.
+}
+\tag{SP.23}
+\]
+
+After the controlled thinning used in the simultaneous theorem, this entire graph has `o(D)` vertices.
+
+---
+
+## 7. Frontier effect
+
+The local repair problem has become more rigid. For each reflected apex `q_i`, all upper blockers:
+
+- lie in a radial shell of thickness `<0.334748` centered at `q_i`;
+- lie in one angular sector of width `<pi/3`;
+- form an induced unit-contact graph of maximum degree two;
+- form only angularly monotone paths and isolated vertices;
+- have no unit contacts to blockers in any other selected module.
+
+This still does not prove that a blocker module can be moved. A blocker vertex can have unit contacts to source points outside `U_i`, and those outward-to-inward boundary contacts can propagate into a much larger contact component. The next local target is therefore exact: classify the unit-contact edges crossing from the thin blocker shell `U_i` to the buffer annulus
+
+\[
+D-1<|z-q_i|\le D.
+\]
+
+Any theorem forcing an endpoint of one blocker path to have no inward boundary contact, or forcing a uniformly bounded contact closure, would give a direct candidate for the independent module repair promised by the block-diagonal reduction.
+
+**Disposition:** proved that every diagonal upper-blocker module lies in a `<0.335` radial shell and that its induced unit-contact graph is a disjoint union of angularly monotone paths. C-II and Level I remain open.

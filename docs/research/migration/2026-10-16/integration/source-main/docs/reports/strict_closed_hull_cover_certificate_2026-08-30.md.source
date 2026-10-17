@@ -1,0 +1,38 @@
+<!-- theorem-state: {"artifact_id":"ART-4733DE823EA4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Strict closed-hull coverage for rectilinear scaffold patches
+
+The current cellwise coverage argument can be sharpened at the boundary. Let a
+coordinate cell have side gaps a,b at least 1 in two unit directions making an
+angle of 60 degrees, and put
+
+    sigma(a,b) = a^2 - a*b + b^2.
+
+Cut the cell along its short diagonal. Each resulting triangle has side lengths
+a, b, and sqrt(sigma), with included angle 60 degrees. If sigma(a,b) < 3,
+then a < 2, b < 2, and sqrt(sigma) < sqrt(3).
+
+The covering radius of a triangle by open unit disks centered at its three
+vertices is strictly below one in this situation. In the acute case it is at
+most the circumradius
+
+    sqrt(sigma) / sqrt(3) < 1;
+
+in the right or obtuse case it is at most half the longest side, which is also
+strictly below one. The inequality is strict, so it covers the closed triangle,
+not only its interior. The two triangles cover the closed cell.
+
+Therefore, for a nonuniform product patch with every cell satisfying
+sigma(a,b) < 3, the closed hull of the patch is contained in the union of open
+unit disks centered at the patch points.
+
+This removes a boundary ambiguity in the source-side exclusion: if a unit-separated
+set F contains P, then no point of F minus P can lie anywhere in the closed product
+hull, including a cell edge or a hull edge. Any remaining source point is strictly
+outside that hull. A lattice replacement site whose distance from the hull boundary
+is at least one is consequently separated from all such exterior points.
+
+The executable certificate is research/strict_hull_cover_certificate.py, with exact
+Fraction regressions in research/test_strict_hull_cover_certificate.py. This is a
+quantifier and boundary-control improvement to the rectilinear replacement route; it
+does not produce the missing coherent product patch inside the actual scaffold, so
+the Target A Schur/Hall endpoint remains open.

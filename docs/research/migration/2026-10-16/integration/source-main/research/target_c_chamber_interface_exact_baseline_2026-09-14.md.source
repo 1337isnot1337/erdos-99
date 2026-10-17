@@ -1,0 +1,301 @@
+# Erdős Problem #99 — exact chamber-interface baseline and residual gluing
+
+**Date:** 2026-09-14
+**Repository base:** `1bcd5008`
+**State version:** `2026-09-14.audit.51`
+**Run type:** closing-proof reduction / exact chamber decomposition
+**Target:** Target C-II, canonical full-core Type-II branch
+**Claim class:** proof-only consequence awaiting independent audit
+**External literature:** no new import
+**Computation:** exact-rational regression only
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The current `q-k` chamber bootstrap proves
+
+\[
+\Sigma_{ch}/D\ge2.1586344\ldots-o(1)
+\]
+
+by separately weakening the chamber area, perimeter, and chamber-count terms. Those
+three terms have an exact cancellation that gives a substantially stronger result.
+
+Let
+
+\[
+d:=b-P_F\ge0,
+\qquad
+H:=d+Q+2f,
+\qquad
+J:=d+Q+4f.
+\tag{CB.1}
+\]
+
+The latest bootstrap gives
+
+\[
+\liminf J/D\ge j_{171}=2.489387211845480\ldots .
+\tag{CB.2}
+\]
+
+Define the exact chamber absorption residual
+
+\[
+\boxed{
+\mathcal R_{ch}
+:=(A_{ch}-a_0Z_{ch})-c_0H\ge0,
+}
+\tag{CB.3}
+\]
+
+where `a_0=sqrt(3)/2` and `c_0=a_0/2`.
+
+## 0. Relation to the existing force-hull residual theorem
+
+The quantity introduced below is not a new internal residual. The September 12
+proof-only theorem `target_c_inactive_chamber_residual_conservation.md` already defines
+
+\[
+R_F:=\Sigma_F-{E_4\over a_0}
+={A_F\over a_0}+{P_F\over2}+1-N_F-{E_4\over a_0}\ge0
+\]
+
+and proves that it is the sum of the chamber fixed-boundary residuals. With the
+notation of this note,
+
+\[
+\boxed{{\mathcal R_{ch}\over a_0}=R_F.}
+\]
+
+Accordingly, the new content here is the exact propagation of the latest `J` floor
+into the raw chamber slack and the exterior-cap/full-source specialization in Section
+3. The internal residual conservation itself retains its earlier provenance.
+
+## 1. Exact chamber perimeter above the interface currency
+
+Canonical Section 77 gives
+
+\[
+P_{ch}=(4f+Q)+(b+P_F-2q+2a).
+\tag{CB.4}
+\]
+
+Subtract `J` and simplify:
+
+\[
+\begin{aligned}
+P_{ch}-J
+&=2P_F-2q+2a\\
+&=2(P_F-q+a).
+\end{aligned}
+\tag{CB.5}
+\]
+
+Canonical Section 67 writes
+
+\[
+P_F=q-a+L_{add},
+\tag{CB.6}
+\]
+
+where `L_add` is the total Euclidean length of the `a` force-hull sides added to close
+the old outer contact face. Hence
+
+\[
+\boxed{
+P_{ch}=J+2L_{add}.
+}
+\tag{CB.7}
+\]
+
+Every added hull side joins distinct source points, so `L_add>=a` and in particular
+`L_add>=0`.
+
+## 2. Exact chamber slack decomposition
+
+The Section-77 chamber slack is
+
+\[
+\Sigma_{ch}
+={A_{ch}-a_0Z_{ch}\over a_0}+{P_{ch}\over2}+s_{ch},
+\qquad s_{ch}=f+a.
+\tag{CB.8}
+\]
+
+By (CB.3) and `c_0/a_0=1/2`,
+
+\[
+{A_{ch}-a_0Z_{ch}\over a_0}
+={H\over2}+{\mathcal R_{ch}\over a_0}.
+\tag{CB.9}
+\]
+
+Insert (CB.7)--(CB.9):
+
+\[
+\Sigma_{ch}
+={H\over2}+{J\over2}+f
++{\mathcal R_{ch}\over a_0}+L_{add}+a.
+\]
+
+But `J-H=2f`, so
+
+\[
+{H\over2}+{J\over2}+f=J.
+\]
+
+Therefore
+
+\[
+\boxed{
+\Sigma_{ch}
+=J+{\mathcal R_{ch}\over a_0}+L_{add}+a.
+}
+\tag{CB.10}
+\]
+
+All three residual terms after `J` are nonnegative. Thus the finite inequality
+
+\[
+\boxed{\Sigma_{ch}\ge J}
+\tag{CB.11}
+\]
+
+holds throughout the canonical post-ZF scope where these ledgers are defined.
+
+In particular, the latest §171 bootstrap immediately improves to
+
+\[
+\boxed{
+\liminf {\Sigma_{ch}\over D}
+\ge j_{171}
+=2.489387211845480\ldots .
+}
+\tag{CB.12}
+\]
+
+This supersedes the proof-only `2.1586344129...` chamber-slack floor and also the
+`2.2392949006...` floor obtained from the first Oler-gluing note.
+
+## 3. The residual gluing identity is much cleaner than the raw one
+
+The exact Oler-gluing theorem at `3ed76f59` proves
+
+\[
+\Sigma_{ch}+\Sigma_{ext}
+=\Omega_K+2(T-q/2)+2a+L_{cap}.
+\tag{CB.13}
+\]
+
+The exact all-train endpoint identity is
+
+\[
+J=2T-P_F.
+\tag{CB.14}
+\]
+
+Therefore
+
+\[
+2(T-q/2)=J+P_F-q.
+\tag{CB.15}
+\]
+
+From (CB.6), `P_F-q=L_add-a`. Substitute (CB.10), (CB.15) into (CB.13):
+
+\[
+J+{\mathcal R_{ch}\over a_0}+L_{add}+a+\Sigma_{ext}
+=
+\Omega_K+J+L_{add}-a+2a+L_{cap}.
+\]
+
+Every forced train/interface term cancels exactly, leaving
+
+\[
+\boxed{
+{\mathcal R_{ch}\over a_0}+\Sigma_{ext}
+=\Omega_K+L_{cap}.
+}
+\tag{CB.16}
+\]
+
+This is the correct additive gluing invariant.
+
+The mandatory linear stopped-train surplus is not an unexplained error term. It is
+exactly the baseline `J` already present in the chamber area/perimeter/count ledger.
+After subtracting that baseline, the remaining chamber packing residual plus exterior
+cap Oler slack equals the punctured full-source packing slack plus the excess length of
+exterior-cap closing chords.
+
+## 4. Structural consequences
+
+Equation (CB.16) gives two finite upper bounds that were not explicit before:
+
+\[
+\boxed{
+{\mathcal R_{ch}\over a_0}
+\le\Omega_K+L_{cap},
+\qquad
+\Sigma_{ext}\le\Omega_K+L_{cap}.
+}
+\tag{CB.17}
+\]
+
+It also identifies exact equality cases.
+
+- If `F=K`, then there are no exterior caps, `Sigma_ext=L_cap=0`, and
+  \[
+  \mathcal R_{ch}/a_0=\Omega_K.
+  \]
+- If every exterior closing chord is a unit segment, then `L_cap=0`, so the chamber
+  residual and exterior-cap slack partition the single global punctured slack exactly.
+- If additionally `Omega_K=o(D)`, then both residuals are `o(D)` and
+  \[
+  \Sigma_{ch}=J+L_{add}+a+o(D).
+  \]
+
+No one of these stronger hypotheses is asserted for all Type-II survivors.
+
+## 5. Revised C-II target
+
+The current full-core frontier now has an exact two-layer decomposition:
+
+```text
+mandatory interface layer:
+    Sigma_ch >= J,
+    J/D >= 2.4893872118... - o(1);
+
+packing residual layer:
+    R_ch/a0 + Sigma_ext = Omega_K + L_cap.
+```
+
+Thus an additive gluing argument should not try to upper-bound the whole
+`Sigma_ch`. The meaningful quantity is `R_ch`, after the forced interface baseline
+`J` has been removed.
+
+A closing theorem can now target one of the following sharply defined statements:
+
+1. an upper bound on `Omega_K+L_cap` incompatible with a separately forced lower bound
+   on `R_ch/a0+Sigma_ext`;
+2. a geometric theorem showing the linear family of exceptional chambers forces
+   `R_ch=Omega(D)` with coefficient larger than the global residual budget;
+3. a source-preserving diameter descent when `L_add+a` or `L_cap` is linear; or
+4. rigidity of the near-equality regime where all four residuals in (CB.16) are small.
+
+The macroscopic-container branch remains separate.
+
+## 6. Scope audit
+
+- `P_ch` is the sum of the perimeters of the Section-77 internal inactive chambers;
+  no exterior-cap perimeter is included in it.
+- `L_add` is Section 67's actual Euclidean length of added force-hull closing sides.
+- `T` is the complete stopped-train count, including singleton trains.
+- `R_ch>=0` uses exactly the two Section-67 Oler absorption inequalities combined in
+  canonical Section 85; it is not a new geometric assumption.
+- `Omega_K` and `L_cap` are the quantities already hostile-audited at `1bcd5008`.
+- All source points are retained.
+
+**Disposition:** proof-only exact decomposition and quantitative strengthening. C-II
+remains open.

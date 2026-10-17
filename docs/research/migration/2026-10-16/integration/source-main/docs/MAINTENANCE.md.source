@@ -1,0 +1,101 @@
+# Maintainer reconciliation
+
+Use this runbook for branch/PR housekeeping. Mathematical authority and review remain
+in [STATE.md](STATE.md) and [REVIEW_POLICY.md](REVIEW_POLICY.md). A merged artifact
+never implies canonical promotion.
+
+Issue [#986](https://github.com/1337isnot1337/e-99/issues/986) has an
+[exact-source preservation ledger](maintenance/issue-986-preservation.json).
+It distinguishes a complete successor mapping, a preserved noncanonical result,
+an open-PR predecessor and an unresolved source review. The seven pentagon
+automation sources have a compact
+[angular/contact-debt consolidation](reports/target_c_pentagon_activation_and_contact_debt_preservation_2026-10-15.md).
+Their scheduler ownership remains unverified; preserving their mathematics does
+not authorize deleting an operationally uncertain ref. The ledger records why
+the absent PR #624 report and the relocated inactive-diameter note need no
+duplicate import: use their corrected canonical successors at the stated scopes.
+The [open-cell finite preservation note](reports/open_cell_staircase_finite_preservation_2026-10-15.md)
+restores a missing checker while leaving the existing all-size/geometric
+candidates unreviewed. The outer-nearunit source also proposed two IDs absent
+from the live manifest: its shared-witness charge and fixed-anchor regression
+remain in their existing unreviewed source report, not in the canonical stack.
+
+## Read-only inventory
+
+Fetch before collecting. Keep inventories, recovery objects, approval records and
+worktree patches in durable private storage outside any release candidate.
+
+```sh
+git fetch origin --prune
+python3 tools/branch_lifecycle.py --output /private/audit/branches.json \
+  --save-snapshot /private/audit/github.json --tsv /private/audit/branches.tsv \
+  --deletion-manifest /private/audit/deletion-preview.json
+```
+
+Replace `/private/audit` with an existing private directory. The tool paginates all
+branches and **all PR states**; it does not fetch, change refs, post messages or delete.
+Local `origin/main` must match the observed remote main. Missing commits, shallow
+history, duplicate records and API failures stop the audit. A saved `--snapshot` is a
+dated observation, never evidence of current activity.
+
+Automatic categories are A (ancestor of main), E (protected) and F (unclear). Main,
+open PR heads/bases, registered worktrees including detached tips and explicit
+`--protect-ref` entries are protected. Automation refs remain ineligible and unclear
+until their operational use is established; a prefix does not confirm activity. Even missing/prunable
+worktree registrations remain protected until separately inspected. Duplicate tips
+are reported; sharing a tip alone does not authorize deletion.
+
+B (content represented), C (superseded) and D (salvage required) require a file-level
+review. A merged PR label alone does not establish that its current branch tip is
+integrated: post-merge commits may contain unique work. Compare exact report/checker/
+data blobs, historical main objects, corrected successors and failed-route evidence.
+Record source refs/SHAs and precise retained paths. Never substitute patch counts,
+branch age, titles or passing computation for this review.
+
+## Preservation and deletion
+
+Before removing unique history, create a complete private snapshot, verify it and test
+restoration. For example, from the fetched archive:
+
+```sh
+git bundle create /private/audit/recovery.bundle --all
+git bundle verify /private/audit/recovery.bundle
+git bundle list-heads /private/audit/recovery.bundle > /private/audit/refs.txt
+```
+
+Use absolute bundle paths: `git -C` interprets relative paths in that repository.
+Record a SHA-256 of the bundle, then fetch a representative ref from it into a separate
+bare repository and run `git fsck --full` there. A bundle covers committed reachable
+objects, not dirty/untracked files or every unreachable object. Save staged/unstaged
+binary patches and relevant working files separately; verify their archives. Do not
+put bundles, confidential inventories or raw scanner findings in Git or the export.
+
+The deletion manifest is a **preview**, not authorization or an executable script.
+Immediately before acting, refresh refs and open PRs, inspect worktree status and check
+process cwd/open files. Protect active automation and concurrent work. Use one exact
+expected-SHA lease for each ref deletion; stop on any mismatch. Delete in bounded
+batches and verify the remaining protected refs after every batch. Never retry a lease
+failure with a force deletion. Preserve D/E/F branches until resolved.
+
+Remove worktrees only after inspecting tracked, ordinary untracked **and ignored**
+content, checking process use, and preserving their exact HEAD and any useful files.
+Save `git ls-files --others --ignored --exclude-standard -z` privately before removal;
+ordinary `git status --porcelain` omits ignored logs, scratch files and caches. A clean
+status and successful `git worktree remove` do not certify that ignored evidence was
+absent or disposable. Preserve useful ignored outputs separately before removal. Missing registrations can be
+pruned after recording their HEADs. Keep local-only history until reviewed and backed
+up; do not run aggressive garbage collection as housekeeping.
+
+## Finish the operation
+
+The branch creator owns cleanup after merge. Refresh the remote branch tip, confirm
+that no new commits, open PR/base, worktree or active process needs it, then remove the
+stale ref with an exact lease. If work stops unfinished, leave a bounded handoff with
+source SHA, lifecycle, reproduction commands and the remaining review obligation.
+
+Close historical coordination issues when their assigned work is completed. Link the
+integration or preservation evidence and explain genuinely outstanding work separately;
+new accumulation does not extend an old assignment indefinitely. Preserve intentional
+PR drafts. For each unresolved PR, record the exact reviewed head, technical findings,
+unique evidence, overlap and next action. Engineering self-review and finite certificate
+replay do not satisfy independent mathematical-review requirements.

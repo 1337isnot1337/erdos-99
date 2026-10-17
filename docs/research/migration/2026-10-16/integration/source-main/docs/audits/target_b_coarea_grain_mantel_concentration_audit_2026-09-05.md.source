@@ -1,0 +1,117 @@
+<!-- theorem-state: {"artifact_id":"ART-16EADC361CDC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Audit - Target B coarea-grain Mantel concentration
+
+**Date:** 2026-09-05  
+**Candidate:** `docs/reports/target_b_coarea_grain_mantel_concentration_2026-09-05.md`  
+**Verdict:** PASS.  
+**Global LEVEL I status:** STILL OPEN.
+
+## 1. Quadratic crossing mass survives the coarea cut
+
+For fixed phase-bin width `eta`, PCA2 deletes only `O_eta(D)` crossing edges/rhombi. The original pure-rhombic count satisfies
+
+`R/D^2 -> Delta_2`.
+
+Hence the retained count
+
+`R_*=sum_j e_j`
+
+satisfies
+
+`R_*/D^2 -> Delta_2`.
+
+PASS.
+
+## 2. Componentwise Mantel aggregation
+
+The train-crossing graph is triangle-free, so every retained component with `v_j` trains and `e_j` crossings obeys
+
+`e_j<=v_j^2/4`,
+
+or
+
+`v_j>=2sqrt(e_j)`.
+
+The retained component vertex sets are disjoint subsets of the global train set, hence
+
+`sum_jv_j<=T`.
+
+Therefore
+
+`T>=2sum_jsqrt(e_j)`
+
+`=2sqrt(R_*)sum_jsqrt(theta_j)`
+
+for `theta_j=e_j/R_*`.
+
+Dividing by `D` proves
+
+`sum_jsqrt(theta_j)<=x/(2sqrt(Delta_2))+o(1)`.
+
+PASS.
+
+## 3. Largest-grain inversion below the two-grain threshold
+
+If the right side is below `sqrt(2)`, every probability vector with all coordinates at most one half is impossible because the minimum square-root sum under the cap `theta_j<=1/2` is attained by `(1/2,1/2)` and equals `sqrt(2)`.
+
+For fixed largest mass `Theta>=1/2`, concavity of `sqrt(.)` means the square-root sum is minimized by concentrating all remaining mass in one coordinate:
+
+`sum_jsqrt(theta_j)>=sqrt(Theta)+sqrt(1-Theta)`.
+
+Let
+
+`S=x/(2sqrt(Delta_2))<sqrt(2)`.
+
+Squaring gives
+
+`S^2>=1+2sqrt(Theta(1-Theta))`,
+
+hence
+
+`Theta(1-Theta)<=((S^2-1)/2)^2`.
+
+On the branch `Theta>=1/2`, solving the quadratic yields
+
+`Theta>=1/2[1+sqrt(1-(S^2-1)^2)]`.
+
+PASS.
+
+## 4. Numerical constants
+
+The two-equal-grain threshold is
+
+`2sqrt(2Delta_2)=2.6935473741...`.
+
+At the canonical Section-39 lower coefficient
+
+`x=8/(3sqrt(c))=2.5395008183...`,
+
+using `Delta_2=1/c` gives exactly
+
+`S=4/3`.
+
+The formula then gives
+
+`Theta>=0.8142696805...`.
+
+PASS.
+
+## 5. General capped-mass form
+
+For a cap `theta_j<=q`, minimizing a concave sum over the probability simplex with an upper coordinate cap occurs at an extreme point: fill `r=floor(1/q)` coordinates to `q`, with one final remainder `1-rq`.
+
+Therefore
+
+`sum_jsqrt(theta_j)>=r sqrt(q)+sqrt(1-rq)`.
+
+PASS.
+
+## 6. Scope
+
+The theorem is only a crossing-mass concentration result. It does not say that the largest grain carries `1-o(1)` of the rhombi, and therefore it does not directly satisfy the dominant-component hypotheses of the current explicit phase-gap reports.
+
+Its proper use is as input to a future fractional dominant-component diameter theorem.
+
+## Verdict
+
+PASS.

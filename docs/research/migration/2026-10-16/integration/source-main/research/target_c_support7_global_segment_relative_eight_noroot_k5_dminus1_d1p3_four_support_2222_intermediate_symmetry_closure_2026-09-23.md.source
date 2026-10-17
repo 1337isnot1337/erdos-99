@@ -1,0 +1,165 @@
+# Target C: close the intermediate-symmetry `(2,2,2,2)` four-support shard
+
+Date: 2026-09-23
+
+Status: exact finite closure of the seven support-set `S_7` orbits of stabilizer order 8 or 12 inside the remaining `(2,2,2,2)` multiplicity profile of the eight-no-root `k=5,D=-1,d_root=1,p=3` branch. This does **not** close the full `(2,2,2,2)` profile, the `(3,2,2,1)` profile, the full `p=3` branch, the full `k=5` layer, Target C-II, or Erdos Problem #99.
+
+Inputs:
+
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_tetrahedral_support_compression_2026-09-23.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_three_support_closure_and_certificate_audit_2026-09-23.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_3311_closure_2026-09-23.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_2222_high_symmetry_closure_2026-09-23.md`;
+- the exact K8 normal form inherited by the corresponding verifier chain.
+
+## 1. Necessary external-rank condition
+
+The existing `m=4` reduction forces exactly three singleton root blocks, every other touched root block complete, coefficient rank three with
+
+```text
+(d1,d2,d3) >= (2,4,5),
+```
+
+and touched-complete root nullity exactly one.
+
+For `D=-1,d_root=1`, the five-dimensional coefficient nullspace must contribute five independent external relation directions modulo the full complete-root relation span. Consequently a touched state is impossible whenever its external rank increment over the touched complete-root span is less than five. Adding untouched complete blocks cannot increase that quotient increment.
+
+## 2. Intermediate-symmetry shard
+
+The `(2,2,2,2)` profile uses four distinct tetrahedral supports, with exactly two of the three no-root four-cycle orientations chosen on each support.
+
+The 38 `S_7`-orbits of four-support sets have stabilizer-order distribution
+
+```text
+1^2, 2^8, 4^12, 6^2, 8^5, 12^2, 16^2, 24^2, 36^1, 48^1, 144^1.
+```
+
+The previous high-symmetry certificate closes all seven classes of stabilizer order at least 16. This run closes the next seven classes, namely the five order-8 classes and the two order-12 classes.
+
+For a support-set orbit with stabilizer order `h`, there are `5040/h` labeled support sets and `3^4=81` orientation choices. The seven classes in this shard therefore cover exactly
+
+```text
+323,190
+```
+
+raw `(2,2,2,2)` eight-cycle sets.
+
+Quotienting orientation choices by each support stabilizer leaves exactly
+
+```text
+106
+```
+
+`S_7` cycle-set orbit representatives.
+
+## 3. Exact finite census
+
+For each of those 106 cycle-set representatives, the verifier enumerates every triple of touched singleton blocks and keeps only those for which the remaining touched complete root rows have nullity exactly one. This leaves
+
+```text
+16,726
+```
+
+singleton triples.
+
+There are three local singleton directions at each singleton block, giving
+
+```text
+451,602
+```
+
+direction states. All 451,602 have singleton coefficient rank three. Of these,
+
+```text
+27,874
+```
+
+satisfy
+
+```text
+(d1,d2,d3) >= (2,4,5).
+```
+
+For every one of those 27,874 generalized-weight-admissible states, the exact external relation-rank increment over the touched complete-root span is
+
+```text
+0.
+```
+
+The required increment is five. Hence every state in the seven stabilizer-8-or-12 support-set orbits is impossible.
+
+> **Theorem.** In the eight-no-root `k=5,D=-1,d_root=1,p=3` branch, the `(2,2,2,2)` subbranch has no state whose four-support set has setwise `S_7` stabilizer of order 8 or 12.
+
+Together with the previous high-symmetry theorem, every `(2,2,2,2)` support-set orbit of stabilizer order at least 8 is now closed.
+
+## 4. Exactness
+
+The coefficient-rank test uses exact integer `3 x 3` minors and the generalized weights are computed directly from the eight coefficient columns.
+
+The relation rows are integral. Across this complete shard the maximum squared Euclidean norm of any relation row is
+
+```text
+70.
+```
+
+The verifier uses the Mersenne prime
+
+```text
+P = 2^127 - 1
+```
+
+and checks
+
+```text
+P^2 > 70^15.
+```
+
+By Hadamard's inequality, every relevant nonzero minor has absolute value below `P`, so the modular rank decisions equal the rational rank decisions.
+
+## 5. Validation status
+
+The committed certificate is
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_2222_intermediate_symmetry_closure_2026_09_23.py`.
+
+A standalone local reconstruction of the repository's exact K8 normal form and the same orbit/census logic was executed for the complete shard. It produced:
+
+```text
+support-set orbits: 7
+support stabilizer orders: (8, 8, 8, 8, 8, 12, 12)
+raw cycle sets covered: 323190
+S7 cycle-set orbits: 106
+admissible singleton triples: 16726
+direction states: 451602
+rank-three states: 451602
+generalized-weight states: 27874
+external rank increment census: {0: 27874}
+max relation-row squared norm: 70
+```
+
+The committed verifier source was syntax-checked before upload. The exact committed wrapper itself was not executed from a repository checkout in this run, so the local reconstruction and committed executable certificate remain explicitly distinct.
+
+## 6. Remaining finite target
+
+The `D=-1,k=5,d_root=1,p=3` branch still has:
+
+```text
+(3,2,2,1),
+```
+
+and the `(2,2,2,2)` support-set orbits of stabilizer order
+
+```text
+1, 2, 4, or 6.
+```
+
+There are 24 such four-support orbits in total: two of order 1, eight of order 2, twelve of order 4, and two of order 6. The next bounded target is another stabilizer shard of those remaining classes, using the same completion-independent external-rank-increment test.
+
+The other unresolved `k=5` arithmetic branches remain
+
+```text
+D=-2, (d_root,p)=(0,5),
+D=-1, (d_root,p)=(0,6).
+```
+
+No theorem-state authority file is changed by this note.

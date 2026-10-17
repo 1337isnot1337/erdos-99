@@ -1,0 +1,88 @@
+# Hostile audit — collapsed support-six mod-2 cycle obstruction
+
+**Date:** 2026-09-19  
+**Audited note:** `research/target_c_support6_collapsed_mod2_cycle_obstruction_2026-09-19.md`  
+**Certificate:** `research/verify_target_c_support6_collapsed_mod2_cycle_obstruction_2026_09_19.py`  
+**Disposition:** PASS at stated cell scope; C-II remains open.
+
+## 1. The plane-intersection equation counts all relevant intersections
+
+For an edge-disjoint relation cycle, each relation edge is represented by its complete train centerline and consecutive terminal midpoints are joined by a chord inside the corresponding strict convex exceptional face. This gives a closed immersed plane curve. It need not be Jordan.
+
+For two edge-disjoint cycles, they share no complete train. Distinct train centerlines cannot meet at a contact-edge midpoint, and interiors of distinct exceptional faces are disjoint from all other face interiors. Away from exceptional faces, a meeting of two distinct train centerlines occurs at a common rhombus. The canonical train theorem gives at most one such crossing for a fixed train pair.
+
+At a common exceptional face, each cycle uses two different relation sides. Edge-disjointness makes all four side midpoints distinct. The two interior chords cross exactly when their four boundary endpoints alternate. Thus the local bit `eta_v` is correct.
+
+After a generic perturbation, the mod-2 intersection number of two closed curves in the plane is zero. Summing rhombus crossings and alternating face chords therefore proves (MI.1).
+
+The formula does not silently discard adjacent relation edges. If two trains share an exceptional endpoint and also cross later in a rhombus, their variable `x_e,f` is included in (MI.1). This matters in the third certified equation, where `04` and `34` share face `4`.
+
+## 2. The crossing threshold is used only as a necessary condition
+
+A strict unit rhombus crossed by train directions `u,v` has both diagonals strictly longer than the unit side/contact length. Equivalently its acute projective angle exceeds `pi/3`, hence
+
+\[
+|u\cdot v|<1/2.
+\]
+
+The proof uses only the contrapositive: a pair certified with `|u.v|>1/2` cannot cross. A pair with `|u.v|<1/2` is left as an unconstrained binary variable; the note never assumes that compatibility forces an actual crossing.
+
+The exact verifier uses rational Taylor/Lagrange enclosures for the center angles and the `1`-Lipschitz bound for cosine over the `10^-10` box. Every pair needed by the three cycle equations is strictly on one side of `1/2`. The weakest forbidden margin is over `0.0035208`, so no threshold equality is hidden by numerical tolerance.
+
+## 3. The new local root is independently certified
+
+The two fixed train angles are exact decimal rationals. The remaining ten angle centers are exact decimal rationals. The approximate inverse matrix `C` is also treated as an exact rational matrix.
+
+The verifier encloses every sine and cosine by rational Taylor bounds, computes `F(x0)`, `J(x0)`, `I-CJ(x0)`, and then uses the same derivative-Lipschitz estimate as the earlier collapsed-root certificate. It obtains
+
+\[
+Y<3.146\cdot10^{-16},
+\quad
+Z_0<1.713\cdot10^{-15},
+\quad
+Z<4.766\cdot10^{-9},
+\]
+
+and proves `Y+Zr<r` for `r=10^-10`. Banach's theorem gives one exact root in the box for the fixed two parameters. The proof is not a floating-point residual check.
+
+The face rotations and all strict one-turn/two-turn inequalities are then checked uniformly on that same box. The certificate proves both sides of the newer adjacent-turn theorem,
+
+\[
+2\pi/3<\delta_i+\delta_{i+1}<\pi,
+\]
+
+rather than relying on center values.
+
+## 4. The three parity equations are correct
+
+The certified relation rotations are
+
+\[
+0:(2,5,4,1),\quad
+1:(0,3,5,2),\quad
+2:(3,1,0,4),
+\]
+
+\[
+3:(5,4,2,1),\quad
+4:(0,2,5,3),\quad
+5:(1,4,3,0).
+\]
+
+For `C=012`, `D=234`, the common-face-2 pattern is `D,C,C,D`, so `eta_2=0`. Of all nine train pairs across the cycles, only `02,34` is crossing-compatible. This gives `x_02,34=0`.
+
+For `C=024`, `D=345`, the common-face-4 pattern is `C,C,D,D`, so `eta_4=0`. Exactly `02,34` and `04,34` are crossing-compatible. This gives `x_02,34+x_04,34=0`.
+
+For `C=045`, `D=234`, the common-face-4 pattern is `C,D,C,D`, so `eta_4=1`. Exactly `04,34` is crossing-compatible. This gives `x_04,34=1`.
+
+The verifier constructs these cycle cross-products directly from the edge lists and checks the allowed sets exactly. It separately computes the alternation bits from the certified rotation system. XORing the three equations eliminates both variables and leaves right-hand side one.
+
+## 5. Scope is not overstated
+
+The contradiction excludes every exact closure root inside the new certified `10^-10` box, and more generally any collapsed block with the same certified rotation and crossing pattern. It does not classify all solutions of the six collapsed pentagon equations.
+
+The mod-2 lemma itself is universal for the stopped-train setting, but consistency of its binary system is only a necessary condition for global realizability. Numerical exploration during this run found locally admissible collapsed cells with a consistent mod-2 system. Those cells still need the triangle-free crossing condition, Jordan separation, additional pseudosegment realizability constraints, or diameter locking. The source note states this limitation explicitly.
+
+No theorem-state promotion is justified.
+
+**Audit disposition:** PASS. The new root box is rigorously nonempty at the local closure level and rigorously empty at the global stopped-train level. The global contradiction is an exact three-equation `F_2` intersection certificate and correctly includes possible rhombus crossings between trains sharing an exceptional endpoint. C-II remains open outside the certified rotation/crossing cell.

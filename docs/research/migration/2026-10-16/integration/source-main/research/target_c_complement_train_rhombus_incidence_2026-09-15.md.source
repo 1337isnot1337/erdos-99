@@ -1,0 +1,556 @@
+# Target C-II — complement O–O trains consume non-dominant rhombi
+
+**Date:** 2026-09-15  
+**Status:** proof-only low-`t` Type-II strengthening; theorem-state authority unchanged  
+**Scope:** fully force-visible no-container/full-core Type-II branch  
+**Dependencies:** hostile-audited two-bin dominant-orbit theorem; hostile-audited joint endpoint retention; audited Type-II interface collapse; audited stopped-train primitives; audited Section 157 two-sided O–O bracing  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The current two-bin/shared-retention endpoint forces a large retained population of
+complement outer-to-outer stopped trains.  The existing scalar argument charges only
+their two terminal edge energies.  It does not use the length of the train between
+those terminals.
+
+That length gives a much stronger obstruction.  Every step of a stopped-train midpoint
+path crosses one strict unit rhombus and has Euclidean length exactly one.  On the
+other hand, a complement O–O train whose two host loaded-hull normals are separated by
+angle `w` has terminal midpoints at distance at least
+
+\[
+D\sin(w/2)-d_{out}-o(D).
+\]
+
+Section 157 already charges the same train terminal directional energy at least
+
+\[
+2-2\sin(w/2)-o(1).
+\]
+
+Thus train length and terminal energy satisfy a linear tradeoff.  Summed over the
+retained complement population, this creates a quadratic demand for strict rhombi.
+Near the current low-`t` endpoint, however, the two-bin atomic theorem says essentially
+all strict rhombi already belong to the dominant exact `pi/3` orbit.  The two demands
+are incompatible.
+
+A conservative version of this argument, discarding a favorable energy term, raises
+the safe proof-only floor from `1.83287` to
+
+\[
+\boxed{
+\liminf {q-k\over D}\ge1.84209.
+}
+\]
+
+The scalar crossing of the conservative inequality is
+
+\[
+1.842097329359247\ldots .
+\]
+
+Only the rounded value `1.84209` is claimed here.  A sharper joint incidence/energy
+optimization is left to a companion refinement.
+
+---
+
+## 1. Current low-`t` variables
+
+Pass to a convergent Type-II subsequence and write
+
+\[
+t={q-k\over D},\qquad
+\kappa={k\over D},\qquad
+\delta={d_{out}\over D}.
+\]
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+C_0=2\sqrt{\Delta_2}+0.0050,
+\]
+
+and
+
+\[
+U={9t\over2}-2\pi-2\delta-\frac\kappa2.
+\tag{RI.1}
+\]
+
+The current network envelope gives
+
+\[
+C_0\le C={T-q/2\over D}\le U,
+\tag{RI.2}
+\]
+
+hence
+
+\[
+2\delta+\frac\kappa2
+\le R_{50}(t):={9t\over2}-2\pi-C_0.
+\tag{RI.3}
+
+The hostile-audited two-bin theorem defines
+
+\[
+m_2(U):={U+\sqrt{8\Delta_2-U^2}\over2}
+\tag{RI.4}
+\]
+
+on the present range and gives the dominant exact-orbit train-mass floor
+
+\[
+M\ge m_2(U)-o(1).
+\tag{RI.5}
+
+It also gives the complement complete-train ceiling
+
+\[
+\boxed{
+N_c\le N_2(U):=
+U+{t+\kappa\over2}-m_2(U).
+}
+\tag{RI.6}
+
+The hostile-audited joint routewise-retention theorem then supplies retained dominant
+outer-occurrence mass `z` and retained complement O–O pair mass `p` satisfying
+
+\[
+\boxed{
+z+p\ge S:=\pi-N_2(U)-o(1).}
+\tag{RI.7}
+
+The dominant retained occurrences alone pay outer directional energy
+
+\[
+\boxed{E_{dom}\ge F(z)D-o(D),
+\qquad F(z):=z-6\sin(z/6).}
+\tag{RI.8}
+
+---
+
+## 2. One O–O train: midpoint length versus terminal energy
+
+Let `tau` be one retained complement O–O train.  Its two terminal outer-edge
+occurrences lie on distinguished Section-63 routes `W_i,W_j`.  Write
+
+\[
+\ell_r=s_r+d_r
+\]
+
+for route length, loaded-hull side length, and route detour.
+
+Let `x_r` be the midpoint of the terminal contact edge on `W_r`.  The two path lengths
+along `W_r` from `x_r` to its loaded route endpoints sum to `ell_r`.  Hence one loaded
+endpoint `b_r` satisfies
+
+\[
+|x_r-b_r|\le {\ell_r\over2}
+\le {s_{max}(F)+d_{out}\over2}.
+\]
+
+Audited Type-II interface collapse gives
+
+\[
+s_{max}(F)=o(D),
+\]
+
+so uniformly over all outer terminal occurrences,
+
+\[
+\boxed{|x_r-b_r|\le {\delta D\over2}+o(D).}
+\tag{RI.9}
+
+Let `w_tau in[0,pi]` be the smaller angular separation of the two loaded-side normal
+locations used by the complement-bracing theorem.  Type-II near-disk convergence and
+`s_max(F)=o(D)` imply that the chosen loaded endpoints `b_i,b_j` have the same normal
+angles up to `o(1)`.  Therefore
+
+\[
+|b_i-b_j|
+=D\sin(w_\tau/2)+o(D).
+\tag{RI.10}
+
+Combining (RI.9)--(RI.10),
+
+\[
+\boxed{
+|x_i-x_j|
+\ge D\bigl(\sin(w_\tau/2)-\delta\bigr)-o(D).
+}
+\tag{RI.11}
+
+Now let `r_tau` be the number of strict rhombi traversed by the stopped train.  Between
+opposite parallel sides of one unit rhombus, the corresponding midpoint displacement
+is exactly the other unit side vector.  Hence every train midpoint step has length one.
+The midpoint path has `r_tau` such steps, so
+
+\[
+r_\tau\ge|x_i-x_j|.
+\]
+
+Thus
+
+\[
+\boxed{
+{r_\tau\over D}
+\ge\sin(w_\tau/2)-\delta-o(1).
+}
+\tag{RI.12}
+
+This statement also covers a singleton O–O train: then `r_tau=0` and the two terminal
+occurrences have the same physical midpoint, forcing their host normals to be close
+unless the global detour is large.
+
+Section 157 and the complement-bracing theorem give a terminal directional-energy
+lower bound for the same train.  If `e_tau` denotes the sum of the exact directional
+energies of its two terminal outer-edge occurrences, then
+
+\[
+e_\tau
+\ge2-2\sin(w_\tau/2)-o(1).
+\tag{RI.13}
+
+Therefore
+
+\[
+\sin(w_\tau/2)
+\ge1-{e_\tau\over2}-o(1),
+\]
+
+and (RI.12) becomes the train-length/terminal-energy tradeoff
+
+\[
+\boxed{
+{r_\tau\over D}
+\ge1-\delta-{e_\tau\over2}-o(1).
+}
+\tag{RI.14}
+
+---
+
+## 3. Weighted complement incidence demand
+
+The shared-retention theorem assigns each retained complement O–O pair a weight
+`a_tau in[0,1]`.  Normalize so
+
+\[
+{1\over D}\sum_\tau a_\tau\to p.
+\]
+
+Put
+
+\[
+e_c:={1\over D}\sum_\tau a_\tau e_\tau.
+\]
+
+Multiply (RI.14) by `a_tau` and sum.  Uniformity of the Type-II `o(1)` terms gives
+
+\[
+\boxed{
+{1\over D^2}\sum_\tau a_\tau r_\tau
+\ge p(1-\delta)-{e_c\over2}-o(1).
+}
+\tag{RI.15}
+
+Every strict rhombus contributes at most two weighted train incidences to the left
+side, because it is the crossing of exactly two complete stopped trains and each
+retained train weight is at most one.
+
+---
+
+## 4. Two-bin concentration leaves few rhombi for complement trains
+
+Let the exact atomic orbit masses be `M_r`, with total atomic mass `A`, and choose the
+dominant orbit.  The two-bin theorem gives
+
+\[
+M\ge m_2(A).
+\]
+
+Hence the residual exact-orbit mass is at most
+
+\[
+A-M\le A-m_2(A).
+\]
+
+The function `A-m_2(A)` is increasing on the current interval, while
+
+\[
+A\le C\le U.
+\]
+
+Therefore
+
+\[
+\boxed{
+A-M\le r_2(U):=U-m_2(U).
+}
+\tag{RI.16}
+
+The asymptotic strict-rhombus crossing measure decomposes by exact `pi/3` orbits.
+Crossing mass in all non-dominant orbits is at most
+
+\[
+{1\over4}\sum_{r\ne *}M_r^2
+\le {1\over4}(A-M)^2
+\le {r_2(U)^2\over4}.
+\tag{RI.17}
+
+After freezing disjoint shrinking windows around the dominant orbit, any strict rhombus
+incident to a retained complement train is not a dominant/dominant crossing.  Crossings
+between a dominant window and its exterior that survive at quadratic density would
+limit to a `pi/3`-related atomic phase and hence belong to the same exact orbit; such
+mass is absorbed by the windows.  Thus the finite complement-incidence rhombi obey
+
+\[
+\boxed{
+{R_{comp}\over D^2}
+\le {r_2(U)^2\over4}+o(1).
+}
+\tag{RI.18}
+
+Since the weighted incidence sum in (RI.15) is at most `2R_comp`,
+
+\[
+\boxed{
+p(1-\delta)-{e_c\over2}
+\le {r_2(U)^2\over2}.}
+\tag{RI.19}
+
+This is the new quadratic occupancy constraint.
+
+---
+
+## 5. Coarse complement-pair ceiling
+
+The dominant retained occurrences and complement terminal occurrences belong to
+disjoint train classes, so their exact outer-edge energy payments are disjoint.  From
+(RI.8),
+
+\[
+e_c\le\delta-F(z)+o(1)\le\delta+o(1).
+\tag{RI.20}
+
+Discard the favorable `F(z)` term for the conservative theorem.  Equations
+(RI.19)--(RI.20) give
+
+\[
+\boxed{
+p\le
+P(\delta,U):=
+{\delta+r_2(U)^2\over2(1-\delta)}+o(1).}
+\tag{RI.21}
+
+Together with (RI.7),
+
+\[
+\boxed{
+z\ge
+Z(t,\delta,\kappa):=
+\pi-U-{t+\kappa\over2}+m_2(U)-P(\delta,U)-o(1).}
+\tag{RI.22}
+
+The dominant energy (RI.8) therefore forces the necessary condition
+
+\[
+\boxed{
+\delta\ge F(Z(t,\delta,\kappa)).}
+\tag{RI.23}
+
+---
+
+## 6. The full feasible triangle again reduces to one endpoint
+
+Write
+
+\[
+r(U):=U-m_2(U).
+\]
+
+Then
+
+\[
+S=\pi-{t+\kappa\over2}-r(U),
+\qquad
+P={\delta+r(U)^2\over2(1-\delta)},
+\qquad
+Z=S-P.
+\]
+
+On the interval `1.83287<=t<=1.84210`, every feasible point has
+
+\[
+C_0\le U<2.007,
+\qquad
+0\le\delta<0.049,
+\]
+
+and the companion certificate verifies the conservative bounds
+
+\[
+-0.06<m_2'(U)<0,
+\qquad
+0<r(U)<0.11.
+\tag{RI.24}
+
+### `kappa` direction
+
+At fixed `t,delta`, `partial U/partial kappa=-1/2`.  Since `m_2'<0`,
+`S` strictly increases with `kappa`; since `r` increases with `U`, `P` strictly
+decreases with `kappa`.  Hence `Z` strictly increases with `kappa`.  The contradiction
+margin `F(Z)-delta` is weakest at
+
+\[
+\boxed{\kappa=0.}
+\tag{RI.25}
+
+### `delta` direction
+
+At fixed `t,kappa`,
+
+\[
+{\partial S\over\partial\delta}=2(1-m_2'(U))<2.12.
+\]
+
+Also
+
+\[
+{\partial P\over\partial\delta}
+={1+r^2\over2(1-\delta)^2}
+-{2r(1-m_2'(U))\over1-\delta}.
+\]
+
+Using (RI.24),
+
+\[
+{\partial Z\over\partial\delta}<2.37.
+\tag{RI.26}
+
+Throughout the same interval `0<Z<pi`, so
+
+\[
+F'(Z)\le F'(\pi)=1-\frac{\sqrt3}{2}<0.134.
+\]
+
+Therefore
+
+\[
+{\partial\over\partial\delta}[F(Z)-\delta]
+<2.37(0.134)-1<0.
+\tag{RI.27}
+
+Thus maximal detour is again the weakest point.  With (RI.25) and the network boundary,
+
+\[
+\boxed{
+\kappa=0,
+\qquad
+\delta={R_{50}(t)\over2},
+\qquad
+U=C_0.
+}
+\tag{RI.28}
+
+---
+
+## 7. One-variable endpoint and certified floor
+
+At (RI.28), put
+
+\[
+M_0=m_2(C_0),
+\qquad
+r_0=C_0-M_0,
+\]
+
+\[
+\delta_0(t)={1\over2}\left({9t\over2}-2\pi-C_0\right),
+\]
+
+\[
+S_0(t)=\pi-C_0-{t\over2}+M_0,
+\]
+
+\[
+P_0(t)={\delta_0(t)+r_0^2\over2(1-\delta_0(t))},
+\qquad
+Z_0(t)=S_0(t)-P_0(t).
+\tag{RI.29}
+
+A survivor requires
+
+\[
+H_0(t):=F(Z_0(t))-\delta_0(t)\le0.
+\tag{RI.30}
+
+The derivative argument above makes `H_0` strictly decreasing on the stated interval.
+The Decimal certificate gives
+
+\[
+H_0(1.84209)>1.7\times10^{-5},
+\]
+
+\[
+H_0(1.84210)<-6.3\times10^{-6},
+\]
+
+and brackets the scalar zero at
+
+\[
+1.842097329359247\ldots .
+\tag{RI.31}
+
+Therefore:
+
+### Theorem RI.1 — complement rhombus-incidence floor
+
+Every full-core Type-II survivor sequence in the stated proof-only scope satisfies
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}
+\ge1.84209.}
+\tag{RI.32}
+
+This improves the hostile-audited two-bin shared-retention floor `1.83287` by more than
+`0.0092`.
+
+At the old endpoint `t=1.83287`, the conservative incidence ceiling is already only
+about `0.0142D` retained complement O–O trains, compared with the `0.5792D` complement
+mass preferred by the energy-only optimizer.  This is why the gain is macroscopic.
+
+---
+
+## 8. Remaining slack and next refinement
+
+The theorem intentionally throws away two favorable facts:
+
+1. the exact complement-energy budget is
+   \[
+   e_c\le\delta-F(z),
+   \]
+   not merely `e_c<=delta`; and
+2. complement O–O pairs themselves pay the convex terminal-energy floor `J(p)`.
+
+Keeping both terms leads to the stronger coupled system
+
+\[
+F(z)+J(p)\le\delta,
+\]
+
+\[
+p(1-\delta)-{\delta-F(z)\over2}
+\le {r_2(U)^2\over2},
+\]
+
+\[
+z+p\ge S.
+\]
+
+The conservative theorem above is committed separately so that the geometric
+train-length lemma and the quadratic dominant/complement crossing competition can be
+audited independently before optimizing this sharper system.
+
+C-II remains open.

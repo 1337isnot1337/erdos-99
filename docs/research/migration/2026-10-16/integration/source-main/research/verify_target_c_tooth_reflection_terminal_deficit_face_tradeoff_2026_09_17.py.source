@@ -1,0 +1,62 @@
+import math
+import random
+
+h = math.sqrt(303.0) / 52.0
+k = 1.0 / (2.0*h)
+c_blk = (1.0 + h/2.0) ** -0.5
+c_univ = 0.8686555438292305
+
+def g(t):
+    return k * (math.sqrt(t*t + 4.0/k) - t)
+
+assert abs(k - 1.4936609730157075) < 2e-15
+assert abs(g(0.0) - 2.4443084690895356) < 3e-15
+assert abs(c_blk - 0.9255395746805810) < 3e-15
+assert abs(g(2.0*c_blk) - c_blk) < 3e-15
+
+t_cross = 2.0/c_univ - h*c_univ
+assert abs(t_cross - 2.0116279138938693) < 3e-15
+assert abs(g(t_cross) - c_univ) < 3e-15
+assert abs(g(0.0)/4.0 - 0.6110771172723839) < 3e-15
+assert abs(2.0*h/g(0.0) - 0.2738999504933911) < 3e-15
+
+# g is strictly decreasing and is the exact minimum of the scaled block quotient.
+prev = g(0.0)
+for j in range(1, 10000):
+    t = 4.0*j/10000.0
+    cur = g(t)
+    assert cur < prev
+    prev = cur
+    s = 0.5*(math.sqrt(t*t + 4.0/k) - t)
+    q = (1.0 + k*s*s)/(s+t/2.0)
+    assert abs(q-cur) < 2e-14
+
+# Random minimax regression against arbitrary thick counts s.
+rng = random.Random(20260918)
+for _ in range(200000):
+    t = 3.0*rng.random()
+    s = 8.0*rng.random()
+    q = (1.0 + k*s*s)/(s+t/2.0) if s+t/2.0 > 0.0 else float('inf')
+    assert q + 2e-14 >= g(t)
+
+# The old fork threshold is exactly the point where terminal cap M<=T/2 equals
+# the block-superbraid cutoff M<=c_blk*sqrt(D).
+assert abs((2.0*c_blk)/2.0 - c_blk) < 1e-15
+
+# Representative square-root scales and Lambda=2 matching constants.
+for t in (0.0, 0.5, 1.0, 1.5, 2.0, t_cross):
+    gt = g(t)
+    match = gt/4.0
+    slack = 2.0*h/gt
+    assert gt > 0.0 and match > 0.0 and slack > 0.0
+
+print('PASS: terminal-deficit / FREE-face-run tradeoff arithmetic')
+print(f'h_*={h:.15f}')
+print(f'k_inf={k:.15f}')
+print(f'g(0)={g(0.0):.15f}')
+print(f'c_blk={c_blk:.15f}')
+print(f'g(2*c_blk)={g(2*c_blk):.15f}')
+print(f'c_univ={c_univ:.15f}')
+print(f't_cross={t_cross:.15f}')
+print(f'near-terminal Lambda=2 matching={g(0.0)/4.0:.15f}')
+print(f'near-terminal Lambda=2 slack={2.0*h/g(0.0):.15f}')

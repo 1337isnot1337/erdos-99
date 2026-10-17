@@ -1,0 +1,182 @@
+# Target C — endpoint corridor bridge/rhombus dichotomy audit
+
+**Date:** 2026-09-12
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module is the independently audited successor to Section 97.  An earlier
+proof-only source used the number 97 for this theorem even though the endpoint
+route-excess/near-equilateral-tooth theorem had landed first and is logically prior.
+The mathematics below is unchanged; this module assigns the corridor theorem the
+unambiguous modern number **98**.
+
+---
+
+# 98. Endpoint corridors are bridge-rich or rhombus-rich
+
+## 98.1 Route-level endpoint stability
+
+At the sharp Section-96 wrapping endpoint put
+
+\[
+\theta_4=2\arcsin\mu_4,
+\qquad
+s_4:=\sin\theta_4=0.658020712164235\ldots,
+\]
+
+and let `W_{1,D},W_{2,D},W_{3,D}` be the three distinguished outer-contact routes.
+Canonical Section 96 and the exact local identity
+
+\[
+L_D+Q_D=4a_D-6-2s_D-2c_D
+\]
+
+give
+
+\[
+{a_D\over D}\to\alpha_4={3\over2}s_4,
+\qquad
+Q_D,s_D,c_D=o(D),
+\qquad
+L_D=6s_4D+o(D).
+\tag{98.1}
+\]
+
+Each distinguished endpoint chord has length at least `s_4D-o(D)`.  Every remaining
+attachment interval costs at least two outer-walk edges except for
+`c_D^partial=o(D)` direct loaded-loaded sides.  Therefore the three distinguished
+route lengths `ell_{j,D}` satisfy
+
+\[
+\sum_{j=1}^3\ell_{j,D}\le3s_4D+o(D).
+\]
+
+Since each route dominates its endpoint chord, separately
+
+\[
+\boxed{
+\ell_{j,D}=s_4D+o(D),
+\quad
+d_{j,D}=s_4D+o(D),
+\quad
+e_{j,D}:=\ell_{j,D}-d_{j,D}=o(D).
+}
+\tag{98.2}
+
+For one route orient its unit edge vectors `z_k` along the chord direction `q`, and
+write `psi_k` for the signed angle from `q` to `z_k`.  Projection gives
+
+\[
+\sum_k(1-\cos\psi_k)=e_{j,D}.
+\tag{98.3}
+\]
+
+Since `1-cos x>=2x^2/pi^2` on `[-pi,pi]`,
+
+\[
+\boxed{
+\sum_k\psi_k^2=o(D).
+}
+\tag{98.4}
+\]
+
+The path lies in the ellipse with its endpoints as foci and major-axis length
+`ell_{j,D}`, so its transverse distance from the chord is
+
+\[
+O\!\left(\sqrt{d_{j,D}e_{j,D}+e_{j,D}^2}\right)=o(D).
+\tag{98.5}
+\]
+
+Thus every special route is a thin macroscopic contact corridor, and for every fixed
+angular tolerance only `o(D)` route-edge occurrences deviate from its chord direction
+by that tolerance.
+
+## 98.2 Nonbridge corridor edges almost always border strict rhombi
+
+Let `H_D` be the induced contact graph on the selected unloaded harmonic component and
+its attachment set.  A nonbridge outer-face edge has one bounded face on its inner
+side.  Canonical Section 82 says every bounded four-face is a strict unit rhombus.
+If `f_exc,D` is the number of nonquadrilateral bounded faces, then
+
+\[
+f_{exc,D}\le Q_D,
+\qquad
+\sum_{f\ nonquad}\deg f=4f_{exc,D}+Q_D\le5Q_D=o(D).
+\tag{98.6}
+\]
+
+Hence only `o(D)` nonbridge outer-edge occurrences can border a nonquadrilateral
+bounded face.
+
+Fix one distinguished route and let `B_D` be its number of bridge occurrences.  For
+any fixed `eta in (0,s_4)`, along a subsequence one has either
+
+\[
+\boxed{B_D\ge\eta D}
+\tag{98.7}
+\]
+
+or else at least
+
+\[
+\boxed{(s_4-\eta-o(1))D}
+\tag{98.8}
+
+route-edge occurrences border strict rhombi.  Intersecting with (98.4), for every
+fixed `delta>0` the latter branch retains the same leading count with exposed unit-side
+direction within `delta` of the corridor chord.  Since one rhombus has four sides,
+there are at least
+
+\[
+\left({s_4-\eta\over4}-o(1)\right)D
+\tag{98.9}
+\]
+
+distinct boundary strict rhombi of that phase.
+
+## 98.3 A bridge-rich corridor has linear block-tree depth
+
+A bridge cannot cut off an attachment-free component of `H_D`.  If it did, every
+vertex on that side would be unloaded and positive harmonic equilibrium would give a
+connected network with only one boundary value across the bridge.  The discrete
+maximum principle would collapse all those vertices to that boundary point,
+contradicting source distinctness.
+
+Bridge cuts also cannot alternate their two attachment sets around `partial P_D`:
+connected paths joining alternating boundary pairs in the two bridge-deletion
+components would have to cross in the plane.
+
+Contract maximal bridge-free blocks of `H_D`; the bridges form a tree `T_D`.  Project
+a distinguished outer route to this tree.  If a bridge is traversed out and back,
+its two route edge vectors are opposites.  Their contribution to (98.3) is exactly
+
+\[
+(1-\cos\psi)+(1+\cos\psi)=2.
+\]
+
+Because the total route excess is `o(D)`, only `o(D)` bridge edges can be traversed
+both ways.  Therefore in the bridge-rich case (98.7), after deleting `o(D)`
+backtracking occurrences at least
+
+\[
+\boxed{(\eta-o(1))D}
+\tag{98.10}
+
+distinct bridge edges lie on the simple `T_D` path between the endpoint blocks.  The
+corresponding bridge cuts form a nested linear chain of nontrivial, nonalternating
+attachment separators.
+
+## 98.4 Exact surviving split
+
+Every distinguished Section-96 corridor therefore has one of two concrete forms:
+
+1. **bridge-rich:** a linear-depth laminar attachment-cut chain along an almost-straight
+   contact corridor; or
+2. **rhombus-rich:** a linear family of boundary strict rhombi with exposed sides in an
+   arbitrarily narrow projective direction cone around the corridor chord.
+
+The theorem does not assume 2-connectivity, discard bridges, or use the false global
+claim `L_D-per(P_D)=o(D)`.  Contact-isolated source points are outside the harmonic
+cell and play no role.
+
+**Status:** independently audited proof-only theorem; lifecycle state unchanged.

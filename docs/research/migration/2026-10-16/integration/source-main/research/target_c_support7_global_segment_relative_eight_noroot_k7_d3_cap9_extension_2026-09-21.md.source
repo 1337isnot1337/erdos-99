@@ -1,0 +1,171 @@
+# Target C: eight-no-root `k=7` deficiency-three high-capacity obstruction
+
+Date: 2026-09-21
+
+Status: exact finite reduction. The last `D=-1,d_root=1,p=9` branch is closed. All deficiency-three profiles with at least nine required singleton replacements are also removed from the `p=11` and `p=12` branches.
+
+Companion exact verifier:
+
+- `research/verify_target_c_support7_global_segment_relative_eight_noroot_k7_d3_cap9_extension_2026_09_21.py`
+
+## 1. Starting point
+
+The committed eight-no-root `k=7` reduction leaves three arithmetic branches:
+
+```text
+A: D=-2, d_root=0, p=11
+C: D=-1, d_root=0, p=12
+D: D=-1, d_root=1, p=9.
+```
+
+After the deficiency-two residual was closed, the surviving virtual-canonical profiles are
+
+```text
+A: (d_v,q,s_min)=(3,10,9),(3,11,11),(4,11,11)
+
+C: (3,10,8),(3,11,10),(3,12,12),
+   (4,11,10),(4,12,12),(5,12,12)
+
+D: (3,9,9).
+```
+
+Here `q` is the number of globally virtual-complete blocks made incomplete and
+
+`s_min=max(0,2q-p)`
+
+is the forced minimum number of singleton changed blocks. In every profile displayed above the row budget is saturated by `s_min` singleton blocks and `q-s_min` pair blocks.
+
+The pair-shadow reduction already proves that each of these three arithmetic branches has a deletion of two external rows which
+
+1. preserves `p`;
+2. leaves the projected rank-one coefficient line with support at least two; and
+3. is therefore a synchronized six-row `k=5` shadow to which the six-row containment theorem applies.
+
+The existence of such a pair follows from the deletion-loss budget. At the first deletion at least `8-floor(p/3)` coordinates preserve `p`; at most two coordinates can be bad for the projected coefficient line. After a good `p`-preserving deletion, at least `7-floor(p/3)` second coordinates preserve `p`, again with at most two bad coordinates. These numbers are respectively
+
+```text
+p=9:  5 then 4
+p=11: 5 then 4
+p=12: 4 then 3,
+```
+
+so a good `p`-preserving pair exists in every case.
+
+## 2. The exact extension theorem
+
+Consider a synchronized six-row rank-one virtual-canonical state with coefficient-line support at least two, complete-set deficiency three, and singleton capacity at least seven.
+
+The committed six-row augmentation cover has 325,955 representatives and covers every `S_7` orbit of six no-root cycles. Across that cover there are exactly 402 such states, with singleton-capacity census
+
+```text
+capacity 7:   78
+capacity 8:  116
+capacity 9:  144
+capacity 10:  64
+----------------
+total:       402.
+```
+
+For every one of those 402 states, the new verifier adjoins every unordered pair of the remaining no-root cycles. For each resulting labeled eight-cycle set it enumerates every obtainable rank-one coefficient line whose restriction to the original six coordinates is the fixed six-row line. It then recomputes the eight-row virtual-canonical complete set and its deficiency.
+
+The exact scan gives
+
+```text
+restriction-compatible rank-one line extensions: 2,254,014
+global deficiency-three extensions:                    393
+global d_v=3 and singleton capacity >=9:                 0
+unique complete sets ranked:                        115,637
+```
+
+Thus:
+
+> No eight-row rank-one virtual-canonical state with `d_v=3` and singleton capacity at least nine can have a synchronized six-row deletion shadow with `d_6=3` and singleton capacity at least seven.
+
+This is an extension-cover statement, so duplicate labeled extensions do not matter. Coverage is enough: any hypothetical eight-row state with such a pair shadow can be relabeled by an `S_7` vertex permutation so that the six-row shadow is one of the 325,955 cover representatives; the two deleted cycles are then among the explicitly enumerated extensions.
+
+The complete-block ranks are exact over `Q`. As in the preceding verifiers, ranks are computed modulo `2^127-1`; Lucas-Lehmer certifies that modulus prime, complete T-relation rows have squared norm at most 12, and
+
+`(2^127-1)^2 > 12^15`,
+
+so Hadamard's inequality rules out a rational rank drop hidden by the modular computation.
+
+## 3. Why the relevant pair shadows have `d_6=3`
+
+For a globally deficiency-three profile, a deletion shadow has `d_6<=3` because its virtual-complete set is a subset of the global one. The synchronized containment theorem gives `d_6>=2`.
+
+The exact six-row audit proves that a deficiency-two state has singleton capacity at most three. In the profiles used below, the pair-shadow containment inequality forces far more singleton-compatible changed blocks if `d_6=2`. Hence `d_6=2` is impossible and the good `p`-retaining pair shadow has `d_6=3`.
+
+The resulting minimum singleton capacities are:
+
+```text
+branch/profile             six-row q_min   six-row singleton minimum
+A: (3,10,9), p=11               8                     7
+A: (3,11,11), p=11              8                     8
+C: (3,10,8), p=12               8                     6
+C: (3,11,10), p=12              8                     7
+C: (3,12,12), p=12              8                     8
+D: (3,9,9), p=9                 7                     7
+```
+
+The new exact obstruction applies to every row of this table except `C:(3,10,8)`, whose necessary pair shadow has only capacity six.
+
+## 4. Branch D is closed
+
+Branch D has the single surviving profile
+
+`(d_v,q,s)=(3,9,9)`.
+
+All nine changed blocks are singletons, so the global singleton capacity is at least nine. A good `p=9` pair shadow has `d_6=3` and singleton capacity at least seven. This is exactly the configuration excluded by the extension theorem.
+
+Therefore
+
+> `D=-1,d_root=1,p=9` is impossible.
+
+No branch-D profile remains.
+
+## 5. Deficiency-three pruning in A and C
+
+For branch A, both deficiency-three profiles require global singleton capacity at least nine:
+
+```text
+(3,10,9)
+(3,11,11).
+```
+
+Their good `p=11` pair shadows have singleton capacity at least seven and eight respectively. Both are excluded by the extension theorem. Hence branch A is reduced to
+
+`(d_v,q,s)=(4,11,11)`.
+
+For branch C, the profiles
+
+```text
+(3,11,10)
+(3,12,12)
+```
+
+likewise require global singleton capacity at least nine, while their good pair shadows have capacity at least seven and eight. Both are excluded.
+
+The smaller deficiency-three profile
+
+`(3,10,8)`
+
+is not covered by this scan: its pair shadow is forced only to singleton capacity at least six. It remains open.
+
+## 6. Remaining eight-no-root `k=7` target
+
+After this exact scan, the complete surviving profile list is
+
+```text
+A: D=-2, p=11
+   (d_v,q,s)=(4,11,11)
+
+C: D=-1, p=12
+   (3,10,8)
+   (4,11,10)
+   (4,12,12)
+   (5,12,12)
+```
+
+Branch D is gone.
+
+The smallest next target is `C:(3,10,8)`. A good `p=12` pair shadow must have `d_6=3` and singleton capacity at least six. Each of the two intermediate seven-row `p=12` shadows has deficiency three and singleton capacity at least seven: deficiency two would require at least six singleton changed blocks, exceeding the established seven-row deficiency-two capacity bound. Thus a stagewise exact search can start from the 887 six-row `d=3, capacity>=6` states, require both seven-row intermediates to have `d=3, capacity>=7`, and finally require global `d_v=3, capacity>=8`. This is strictly smaller than an unrestricted eight-row census.

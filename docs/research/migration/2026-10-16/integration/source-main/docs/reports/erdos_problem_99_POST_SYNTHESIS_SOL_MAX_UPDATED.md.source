@@ -1,0 +1,2340 @@
+<!-- theorem-state: {"artifact_id":"ART-E0A0AED503FC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — Post-Synthesis Research Addendum for Sol Max
+
+## Status
+
+**LEVEL I STATUS: STILL OPEN.**
+
+This document is a continuation of:
+
+`erdos_problem_99_complete_working_report_SYNTHESIZED.md`
+
+It records the strongest results obtained *after* that synthesis, including the subsequent perimeter/support-depth theorem, the exact support-turning and mixed-area identities, and several further deductions developed in the continuation.
+
+For the next Sol Max run, use the synthesized report as the canonical base theorem library and use this file as its post-synthesis addendum.
+
+The goal remains to prove or disprove:
+
+\[
+\exists n_0\ \forall n\ge n_0\ \forall A,\qquad
+\operatorname{diam}(A)=D(n)
+\Longrightarrow
+A\text{ contains a unit equilateral triangle}.
+\]
+
+The negation requires triangle-free **global** minimizers for arbitrarily large \(n\).
+
+---
+
+# 24. Perimeter saturation and the linear support-depth theorem
+
+Throughout, let
+
+\[
+K=\operatorname{conv}A,\qquad
+P=\operatorname{per}(K),\qquad
+D=D(n),
+\]
+
+and use
+
+\[
+a_0=\frac{\sqrt3}{2},
+\qquad
+c_0=\frac{\sqrt3}{4},
+\qquad
+c=\frac{2\sqrt3}{\pi},
+\qquad
+C_0=\sqrt{2\pi\sqrt3}.
+\]
+
+The following results were obtained in the subsequent continuation and are to be treated as part of the established research state.
+
+## 24.1 Perimeter lower bound for every global minimizer
+
+Every global minimizer satisfies
+
+\[
+\boxed{
+P\ge
+\sqrt{
+C_0^2(n-1)+\frac{3\pi^2}{4}
+}
+-\frac{\pi\sqrt3}{2}.
+}
+\tag{24.1}
+\]
+
+Together with Cauchy's perimeter-diameter inequality \(P\le \pi D\), this gives
+
+\[
+\boxed{
+0\le \pi D-P
+\le
+\frac{\pi\sqrt3}{2}+o(1)
+=
+2.7206990463\ldots+o(1).
+}
+\tag{24.2}
+\]
+
+Thus the convex hull of a global minimizer has perimeter within an absolute \(O(1)\) error of the maximum possible perimeter for its diameter.
+
+This is a much stronger global statement than the previous \(P=O(D)\).
+
+## 24.2 Uniform width saturation
+
+Let \(w_K(\phi)\) denote the width of \(K\) in direction \(\phi\).
+
+The bounded perimeter deficit implies
+
+\[
+\boxed{
+\min_\phi w_K(\phi)
+=
+D-O(n^{1/6}).
+}
+\tag{24.3}
+\]
+
+Since \(D=\Theta(\sqrt n)\),
+
+\[
+w_K(\phi)=D-o(D)
+\]
+
+uniformly in direction.
+
+Thus every surviving global minimizer is asymptotically constant-width at the scale relevant to the rhombic train system.
+
+## 24.3 Exact support depth of a train end
+
+For a rhombic boundary edge \(e\), let \(\nu_e\) be its outward unit normal and \(m_e\) its midpoint. Define its support depth
+
+\[
+\boxed{
+d_e
+=
+h_K(\nu_e)-\nu_e\cdot m_e.
+}
+\tag{24.4}
+\]
+
+For a train track \(\tau\), whose two end edges are \(e_-,e_+\), let
+
+\[
+L_\tau
+=
+\sum_{F\in\tau}\sin\theta_F.
+\]
+
+Then the train span is exactly
+
+\[
+\boxed{
+w_K(\nu_\tau)
+=
+L_\tau+d_{e_-}+d_{e_+}.
+}
+\tag{24.5}
+\]
+
+Summing over all tracks gives
+
+\[
+\boxed{
+\sum_\tau w_K(\nu_\tau)
+=
+2\sum_F\sin\theta_F+H_*,
+}
+\tag{24.6}
+\]
+
+where
+
+\[
+\boxed{
+H_*=\sum_{e\in\partial\mathcal R}d_e.
+}
+\tag{24.7}
+\]
+
+This completes the earlier directional train-width inequality to an equality.
+
+## 24.4 Linear support-depth budget
+
+Every sufficiently large triangle-free jammed survivor satisfies
+
+\[
+\boxed{
+H_*
+\ge
+\left(
+2\sqrt{\frac{2\sqrt3}{\pi}}-\sqrt3
+\right)n
+-
+O(n^{2/3}).
+}
+\tag{24.8}
+\]
+
+Numerically,
+
+\[
+\boxed{
+H_*
+\ge
+0.3680994640\ldots\,n
+-
+O(n^{2/3}).
+}
+\tag{24.9}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+\frac{H_*}{D}
+\ge
+0.3505458338\ldots\sqrt n-o(\sqrt n).
+}
+\tag{24.10}
+\]
+
+This is an order-\(n\) support-depth constraint.
+
+## 24.5 Many train ends are macroscopically deep
+
+A counting refinement gives at least
+
+\[
+\boxed{
+0.1833050182\ldots\sqrt n-o(\sqrt n)
+}
+\tag{24.11}
+\]
+
+rhombic train ends satisfying
+
+\[
+\boxed{
+d_e
+\ge
+0.0460124330\ldots\sqrt n
+=
+0.0438182292\ldots D+o(D).
+}
+\tag{24.12}
+\]
+
+Thus the defect network cannot consist entirely of shallow train ends.
+
+## 24.6 Important negative conclusion: raw depth is not Oler currency
+
+The coefficient in (24.9) does not directly close the finite packing inequality.
+
+If one attempted a scalar conversion
+
+\[
+\mathscr O(A)
+\ge
+\Lambda \frac{H_*}{D}
+-o(\sqrt n),
+\]
+
+then the previously identified Oler threshold would require
+
+\[
+\boxed{
+\Lambda>4.0749855583\ldots.
+}
+\tag{24.13}
+\]
+
+No such valid scalar conversion was obtained.
+
+More strongly, explicit near-equilateral triangular or pentagonal indentation geometries show that a train end can be macroscopically deep while the associated local Oler slack tends to zero.
+
+Therefore:
+
+> **Raw support depth is not an independent positive contribution to Oler surplus.**
+
+Any successful use of \(H_*\) must exploit global transport, support turning, diametral-hull geometry, train coherence, or a variational obstruction.
+
+---
+
+# 25. Exact support-turning and mixed-area identities
+
+The next continuation completed the support-depth bookkeeping. These results supersede any attempt to count \(H_*\) as an independent shell surplus.
+
+For clarity, write the full support depth as
+
+\[
+\rho_e^K
+=
+h_K(\nu_e)-\nu_e\cdot m_e.
+\]
+
+This is the same geometric quantity as \(d_e\) above.
+
+## 25.1 Exact train equality
+
+For every finite edge-to-edge strict unit-rhombus complex \(\mathcal R\subset K\),
+
+\[
+\boxed{
+w_K(\nu_\tau)
+=
+L_\tau+\rho_{e_-}^K+\rho_{e_+}^K.
+}
+\tag{25.1}
+\]
+
+Hence
+
+\[
+\boxed{
+\sum_\tau w_K(\nu_\tau)
+=
+2\sum_{F\in\mathcal R}\sin\theta_F
++
+H_\partial^K,
+}
+\tag{25.2}
+\]
+
+where
+
+\[
+H_\partial^K
+=
+\sum_{e\in\partial\mathcal R}\rho_e^K.
+\]
+
+## 25.2 Pocket support-turning defect
+
+In the pure rhombic-disk case, consider one indentation pocket \(C\).
+
+Suppose its unit-edge chain has outward normals
+
+\[
+\nu_1,\ldots,\nu_r
+\]
+
+and its closing hull chord has length \(L\) and outward normal \(n\).
+
+Define
+
+\[
+\boxed{
+\mathfrak J(C)
+=
+\sum_{i=1}^r h_K(\nu_i)
+-
+Lh_K(n).
+}
+\tag{25.3}
+\]
+
+Support-function sublinearity gives
+
+\[
+\boxed{
+\mathfrak J(C)\ge0.
+}
+\tag{25.4}
+\]
+
+The exact pocket identity is
+
+\[
+\boxed{
+\sum_{i=1}^r \rho_{e_i}^K
+=
+2\operatorname{area}(C)
++
+\mathfrak J(C).
+}
+\tag{25.5}
+\]
+
+The proof uses
+
+\[
+\sum_i\nu_i=Ln
+\]
+
+and the signed Green identity
+
+\[
+\sum_i\nu_i\cdot m_{e_i}
+-
+Ln\cdot m_f
+=
+-2\operatorname{area}(C).
+\]
+
+## 25.3 Global pure-disk identity
+
+Let
+
+\[
+G=
+\operatorname{area}(K)
+-
+\sum_{F\in\mathcal R}\operatorname{area}(F)
+\]
+
+be the total convexification/pocket area and put
+
+\[
+\mathfrak J
+=
+\sum_C\mathfrak J(C).
+\]
+
+Then
+
+\[
+\boxed{
+H_\partial^K
+=
+2G+\mathfrak J.
+}
+\tag{25.6}
+\]
+
+Combining with the train equality gives
+
+\[
+\boxed{
+\sum_\tau w_K(\nu_\tau)
+=
+2\operatorname{area}(K)+\mathfrak J.
+}
+\tag{25.7}
+\]
+
+This is the exact cancellation hidden in the raw support-depth theorem.
+
+## 25.4 Train zonotope formulation
+
+For every train \(\tau\), let \(u_\tau\) be its unit edge direction and define the train zonotope
+
+\[
+\boxed{
+Z=
+\sum_\tau
+[-u_\tau/2,u_\tau/2].
+}
+\tag{25.8}
+\]
+
+Then
+
+\[
+\boxed{
+\operatorname{per}(Z)=B,
+}
+\tag{25.9}
+\]
+
+where \(B\) is the rhombic boundary-edge count.
+
+Mixed area gives
+
+\[
+\boxed{
+2V(K,Z)
+=
+\sum_\tau w_K(\nu_\tau).
+}
+\tag{25.10}
+\]
+
+Therefore, in the pure rhombic-disk case,
+
+\[
+\boxed{
+\mathfrak J
+=
+2\bigl(
+V(K,Z)-\operatorname{area}(K)
+\bigr).
+}
+\tag{25.11}
+\]
+
+Thus the order-\(n\) support-turning mass is a mixed-area excess.
+
+## 25.5 Global area and perimeter deficits
+
+For every global minimizer, with no triangle-free or rigidity hypothesis, the later
+translated-lattice \(n-1\) improvement in Section 36 strengthens the area-deficit
+estimate to
+
+\[
+\boxed{
+\frac{\pi D^2}{4}
+-
+\operatorname{area}(K)
+<
+c_0P.
+}
+\tag{25.12'}
+\]
+
+This supersedes the earlier bound \(c_0\pi D+a_0\).
+
+Also,
+
+\[
+\boxed{
+\limsup_{n\to\infty}
+\sup_{\substack{A\text{ global minimizer}\\|A|=n}}
+\left(
+\pi D(n)
+-
+\operatorname{per}(\operatorname{conv}A)
+\right)
+\le
+\frac{\pi\sqrt3}{2}.
+}
+\tag{25.13}
+\]
+
+Thus both the isodiametric area deficit and the perimeter deficit are sharply controlled at boundary scale or better.
+
+## 25.6 Exact cancellation identity
+
+Define
+
+\[
+\mathfrak M(K)
+=
+\frac{DP}{2}
+-
+2\operatorname{area}(K)
+\ge0
+\tag{25.14}
+\]
+
+and
+
+\[
+\Delta_\tau
+=
+\sum_\tau
+\left(
+D-w_K(\nu_\tau)
+\right)
+\ge0.
+\tag{25.15}
+\]
+
+Then
+
+\[
+\boxed{
+\mathfrak J
+=
+\frac D2(B-P)
++
+\mathfrak M(K)
+-
+\Delta_\tau.
+}
+\tag{25.16}
+\]
+
+This equation explains exactly why the large support-depth term cannot simply be added to the Oler shell budget: support turning and train-width deficit cancel it.
+
+## 25.7 Sharpened exact contradiction threshold
+
+The support/perimeter bookkeeping first improved the sufficient Oler contradiction
+threshold from
+
+\[
+\mathscr O(A)\ge c_0\pi D+a_0
+\]
+
+to
+
+\[
+\mathscr O(A)\ge c_0P+a_0.
+\]
+
+Section 36 subsequently removes the remaining \(+a_0\) by proving the stronger
+translated-lattice bound
+
+\[
+D(n)^2<\frac{2\sqrt3}{\pi}(n-1).
+\]
+
+Hence the current exact sufficient threshold is
+
+\[
+\boxed{
+\mathscr O(A)\ge c_0P.
+}
+\tag{25.17'}
+\]
+
+This is the threshold that should be used from now on.
+
+## 25.8 Exact remaining Target B lemma in the pure rhombic-disk case
+
+Let
+
+\[
+E=
+\sum_{F\in\mathcal R}
+\left(
+\sin\theta_F-a_0
+\right).
+\]
+
+The strengthened shell window from Section 36 gives, for every pure rhombic-disk
+global minimizer,
+
+\[
+\boxed{
+G+E<c_0B.
+}
+\tag{25.18'}
+\]
+
+Therefore a sufficient contradiction is now simply
+
+\[
+\boxed{
+G+E\ge c_0B.
+}
+\tag{25.19'}
+\]
+
+Equivalently, using
+
+\[
+H_\partial^K-\mathfrak J=2G,
+\]
+
+it is enough to prove
+
+\[
+\boxed{
+2E+H_\partial^K-\mathfrak J
+\ge
+a_0B.
+}
+\tag{25.20'}
+\]
+
+The former \(+a_0\) term is obsolete.
+
+The general topology-corrected version must still incorporate:
+
+- bounded nonquadrilateral faces;
+- holes;
+- multiple rhombic components;
+- vertices outside the rhombic core;
+- the bridge-forest residue.
+
+## 25.9 Order-\(n\) support turning has zero guaranteed Oler coefficient
+
+Since
+
+\[
+H_\partial^K=2G+\mathfrak J
+\]
+
+and \(G\) is only boundary order in the relevant regime, (24.9) implies
+
+\[
+\boxed{
+\mathfrak J
+\ge
+\bigl(0.3680994640\ldots+o(1)\bigr)n.
+}
+\tag{25.21}
+\]
+
+This is a genuine order-\(n\) support-turning mass.
+
+However, after the exact subtraction in the Oler identity, the guaranteed usable Oler-surplus coefficient contributed by this term is
+
+\[
+\boxed{0.}
+\tag{25.22}
+\]
+
+This is a decisive strategic correction.
+
+The next proof must work with the residual
+
+\[
+\boxed{
+H_\partial^K-\mathfrak J=2G,
+}
+\]
+
+not with \(H_\partial^K\) alone.
+
+---
+
+# 26. Further deductions developed after Sections 24–25
+
+The results in this section were derived from the established theorem stack during the continuation in ChatGPT. They are included because they appear structurally important.
+
+Where a result has not yet received the same adversarial audit as Sections 24–25, that is stated explicitly.
+
+---
+
+## 26.1 Sixfold phase energy of the train graph
+
+For every train \(\tau\), let
+
+\[
+\phi_\tau\in\mathbb R/\pi\mathbb Z
+\]
+
+be its unoriented edge direction and define
+
+\[
+\boxed{
+z_\tau=e^{6i\phi_\tau}.
+}
+\tag{26.1}
+\]
+
+If tracks \(\tau,\sigma\) cross, their rhombus has acute angle
+
+\[
+\theta_{\tau\sigma}
+=
+\frac\pi3+\delta_{\tau\sigma}.
+\]
+
+Therefore
+
+\[
+\frac{z_\sigma}{z_\tau}
+=
+e^{\pm6i\delta_{\tau\sigma}}
+\]
+
+and
+
+\[
+|z_\tau-z_\sigma|
+\le
+6\delta_{\tau\sigma}.
+\]
+
+Since \(0<\delta\le\pi/6\),
+
+\[
+|z_\tau-z_\sigma|^2
+\le
+6\pi\delta_{\tau\sigma}.
+\]
+
+Summing over crossings gives
+
+\[
+\boxed{
+\sum_{\tau\sigma\in E(\Gamma)}
+|z_\tau-z_\sigma|^2
+\le
+6\pi\sum_F\delta_F
+=
+O(D).
+}
+\tag{26.2}
+\]
+
+Since
+
+\[
+|E(\Gamma)|=F_4=\Theta(D^2),
+\]
+
+the average sixfold phase energy per crossing is \(O(D^{-1})\).
+
+This converts the local statement “almost every rhombus is nearly \(60^\circ\)” into a global coherence constraint on train orientations.
+
+### Status
+
+The derivation of (26.2) is elementary from the established angular-defect theorem.
+
+---
+
+## 26.2 Macroscopic grain decomposition
+
+Fix \(0<\eta<1\).
+
+Delete every train crossing with
+
+\[
+\delta_{\tau\sigma}>D^{-1+\eta}.
+\]
+
+Because
+
+\[
+\sum\delta_{\tau\sigma}=O(D),
+\]
+
+only
+
+\[
+O(D^{2-\eta})=o(D^2)
+\]
+
+crossings are deleted.
+
+Next repeatedly delete any track of current degree \(<\lambda D\), for fixed \(\lambda>0\).
+
+Since there are \(T=O(D)\) tracks, this deletes at most
+
+\[
+O(\lambda D^2)
+\]
+
+additional crossings.
+
+Every surviving component has minimum degree \(\lambda D\), while containing only \(O(D)\) tracks. A shortest-path neighborhood argument therefore bounds its graph diameter by \(O_\lambda(1)\).
+
+Consequently all tracks in one surviving component have sixfold phases differing by
+
+\[
+O_\lambda(D^{-1+\eta}).
+\]
+
+Thus every component has a phase \(\phi_0\) such that
+
+\[
+\boxed{
+\phi_\tau
+=
+\phi_0
++
+k_\tau\frac\pi3
++
+O_\lambda(D^{-1+\eta})
+\pmod\pi,
+\qquad
+k_\tau\in\{0,1,2\}.
+}
+\tag{26.3}
+\]
+
+Hence, for every fixed \(\varepsilon>0\), after deleting at most \(\varepsilon n+o(n)\) rhombi, the remaining rhombic bulk is a bounded number of macroscopic grains, each asymptotically aligned with one triangular-lattice orientation modulo \(60^\circ\).
+
+A quantitative choice such as defect cutoff \(D^{-2/3}\) yields an all-but-\(O(n^{5/6})\) version with \(O(n^{1/6})\) components and phase error \(O(D^{-1/3})\).
+
+### Status
+
+This is a direct graph-theoretic consequence of (26.2) and the already established \(T=O(D)\) train bound. It should nevertheless receive a short audit before being promoted into the core report.
+
+---
+
+## 26.3 Scalar phase-potential structure inside a grain
+
+Choose local representatives of the three direction classes as
+
+\[
+A:\quad \phi=a,
+\]
+
+\[
+B:\quad \phi=\frac\pi3+b,
+\]
+
+\[
+C:\quad \phi=\frac{2\pi}3+c,
+\]
+
+where the offsets are small.
+
+Then strict triangle-freeness gives, at a crossing,
+
+\[
+A\text{-}B:
+\qquad
+b-a>0,
+\]
+
+\[
+B\text{-}C:
+\qquad
+c-b>0,
+\]
+
+\[
+C\text{-}A:
+\qquad
+a-c>0.
+\tag{26.4}
+\]
+
+Thus crossing incidences inside a coherent grain can be oriented by a genuine scalar phase potential.
+
+Any directed cycle in this induced inequality system is impossible.
+
+This is a promising way to replace arbitrary defect transport by an ordered continuation network.
+
+### Status
+
+The local sign calculation is exact. Its strongest global combinatorial consequence has not yet been fully extracted.
+
+---
+
+## 26.4 Train zonotope: missing crossings and mixed area
+
+For the train zonotope
+
+\[
+Z=
+\sum_\tau[-u_\tau/2,u_\tau/2],
+\]
+
+one has
+
+\[
+\operatorname{area}(Z)
+=
+\sum_{\tau<\sigma}
+|\det(u_\tau,u_\sigma)|.
+\tag{26.5}
+\]
+
+Let
+
+\[
+S=
+\sum_{F\in\mathcal R}\sin\theta_F
+\]
+
+and define the missing-crossing determinant mass
+
+\[
+M
+=
+\sum_{\substack{\tau<\sigma\\
+\tau,\sigma\text{ do not cross}}}
+|\det(u_\tau,u_\sigma)|.
+\]
+
+Because each crossing pair contributes exactly one rhombus,
+
+\[
+\boxed{
+\operatorname{area}(Z)
+=
+S+M.
+}
+\tag{26.6}
+\]
+
+Combined with (25.10),
+
+\[
+2V(K,Z)
+=
+2S+H_\partial^K.
+\]
+
+Thus both support depth and missing train crossings have exact convex-geometric interpretations.
+
+---
+
+## 26.5 Exact zonotope anisotropy identity
+
+Define
+
+\[
+C_k
+=
+\sum_\tau e^{2ik\phi_\tau}.
+\]
+
+The Fourier expansion of the zonotope support function gives
+
+\[
+\boxed{
+\operatorname{per}(Z)^2
+-
+4\pi\operatorname{area}(Z)
+=
+8\sum_{k\ge1}
+\frac{|C_k|^2}{4k^2-1}.
+}
+\tag{26.7}
+\]
+
+In a hexatically coherent grain,
+
+\[
+|C_3|
+=
+(1-o(1))T_{\rm grain}.
+\]
+
+Therefore its zonotopal completion obeys
+
+\[
+\boxed{
+P_Z^2
+-
+4\pi A_Z
+\ge
+\frac8{35}
+(1-o(1))
+T_{\rm grain}^2.
+}
+\tag{26.8}
+\]
+
+So a macroscopic triangularly coherent grain has a quantitatively anisotropic zonotopal completion, even though the true minimizing hull satisfies
+
+\[
+P(K)=\pi D-O(1)
+\]
+
+and is asymptotically constant-width.
+
+### Strategic interpretation
+
+A large survivor must reconcile strongly anisotropic crystalline train systems with an almost constant-width diametral hull through only a boundary-order defect network.
+
+Scalar mixed-area inequalities alone appear too weak; the missing information is the **incidence/transport structure** of the trains.
+
+---
+
+## 26.6 Train-angle realization modes
+
+A pure rhombic complex admits train-coordinate realizations.
+
+Choose a side label
+
+\[
+\epsilon_\tau(v)\in\{0,1\}
+\]
+
+for each vertex relative to every train.
+
+Up to translation,
+
+\[
+p_v
+=
+\sum_\tau
+\epsilon_\tau(v)u_\tau.
+\tag{26.9}
+\]
+
+Replacing each train vector \(u_\tau\) independently by another unit vector preserves every rhombic contact length.
+
+Thus an unconstrained pure rhombic complex carries one angle parameter per train.
+
+Modulo global Euclidean motions, this suggests at least
+
+\[
+\boxed{
+T-1
+}
+\tag{26.10}
+\]
+
+independent train-angle modes before the defect/hull shell constraints are imposed.
+
+### Strategic interpretation
+
+The \(n-O(D)\) rhombic bulk carries \(\Theta(D)\) natural shear modes, and the \(O(D)\)-scale hull/defect structure must lock them all.
+
+### Status
+
+The train-coordinate representation is standard for simply connected rhombic tilings. Extension across holes, multiple components, and all topologies in the full survivor requires explicit hypothesis management before this becomes a universal theorem.
+
+---
+
+## 26.7 Difference-body transport bound for a convex defect face
+
+Let \(F\) be a convex unit-sided contact face.
+
+For each side \(e\), let \(\nu_e\) be its outward normal.
+
+Then the polygonal mixed-area formula gives
+
+\[
+\boxed{
+\sum_{e\subset\partial F}
+w_F(\nu_e)
+=
+\operatorname{area}(F-F).
+}
+\tag{26.11}
+\]
+
+The planar Rogers-Shephard difference-body inequality gives
+
+\[
+\boxed{
+\operatorname{area}(F-F)
+\le
+6\operatorname{area}(F).
+}
+\tag{26.12}
+\]
+
+Hence
+
+\[
+\boxed{
+\sum_{e\subset\partial F}
+w_F(\nu_e)
+\le
+6\operatorname{area}(F).
+}
+\tag{26.13}
+\]
+
+A weighted analogue applies to an outer convex pocket: the unit-edge chain cannot absorb more than a constant multiple of the pocket area in local transverse width.
+
+### Consequence
+
+A boundary-order amount of defect-face/pocket area can absorb only boundary-order local width.
+
+Therefore the order-\(n\) global support-depth mass cannot be interpreted as order-\(n\) *local defect-cell width*. Most depth is transported globally through the rhombic body.
+
+This reinforces the exact cancellation in Section 25.
+
+---
+
+## 26.8 Correction: large \(H_*\) is not itself anomalous
+
+A disk-like family of chord tracks naturally has quadratic total support-depth deficit.
+
+For a Euclidean disk of radius \(R=D/2\), a unit-spaced parallel family has asymptotic missing span
+
+\[
+\int_{-R}^{R}
+\left(
+2R-2\sqrt{R^2-x^2}
+\right)\,dx
+=
+(4-\pi)R^2.
+\tag{26.14}
+\]
+
+Thus one family naturally contributes
+
+\[
+\left(1-\frac\pi4\right)D^2,
+\]
+
+and two such families contribute
+
+\[
+\boxed{
+\left(
+2-\frac\pi2
+\right)D^2
+=
+0.4292036\ldots D^2.
+}
+\tag{26.15}
+\]
+
+The Section 24 lower bound is only approximately
+
+\[
+0.3338\,D^2.
+\]
+
+Therefore a quadratic \(H_*\) is compatible with ordinary disk-like geometry.
+
+The anomaly is not the **amount** of raw depth; it is the need to realize it simultaneously with:
+
+- strict triangle-freeness;
+- almost-equilateral rhombi;
+- diametral hull vertices;
+- near-constant width;
+- exact global diameter optimality;
+- boundary-order Oler budget;
+- locking of all train/shear modes.
+
+This correction should be treated as a regression test against future scalar-depth arguments.
+
+---
+
+## 26.9 Fixed-oblique-lattice scaling heuristic
+
+Suppose a large relevant region really lies in a single rank-two unit lattice generated by two unit vectors at angle
+
+\[
+\theta>\frac\pi3.
+\]
+
+The fundamental-cell area is
+
+\[
+s=\sin\theta>a_0.
+\]
+
+A finite lattice-polygon capacity estimate of Pick/Oler type gives schematically
+
+\[
+n
+\lesssim
+\frac{\pi D^2}{4\sin\theta}
++
+O(D).
+\]
+
+Combining with the global competitor
+
+\[
+D^2<\frac{2\sqrt3}{\pi}n
+\]
+
+forces
+
+\[
+\boxed{
+\theta-\frac\pi3
+=
+O(D^{-1}).
+}
+\tag{26.16}
+\]
+
+This identifies the natural final scale:
+
+\[
+\boxed{
+\delta\asymp D^{-1}.
+}
+\]
+
+Bulk density loss from a positive shear and boundary-order gains compete exactly at this scale.
+
+### Status
+
+This scaling conclusion is highly plausible and consistent with the exact capacity calculations. Any use of the precise finite-lattice formula or lattice-point constants should be independently checked before becoming part of the trusted theorem stack.
+
+---
+
+# 27. Consolidated new endgame
+
+The post-synthesis work substantially changes the remaining Target B problem.
+
+It is no longer:
+
+> show that the forced train ends have large depth.
+
+That is already done.
+
+It is also not:
+
+> convert raw support depth to Oler surplus.
+
+The exact support-turning identity proves that this conversion has a cancellation term of order \(n\).
+
+The surviving problem is:
+
+\[
+\boxed{
+\text{control the residual }
+H_\partial^K-\mathfrak J
+=
+2G,
+}
+\]
+
+together with the strict-rhombus area excess
+
+\[
+E.
+\]
+
+In the pure rhombic-disk case, the translated-lattice \(n-1\) improvement sharpens
+the exact desired inequality to
+
+\[
+\boxed{
+G+E
+\ge
+c_0B.
+}
+\tag{27.1'}
+\]
+
+A global minimizer satisfies the strict opposite inequality
+
+\[
+G+E<c_0B,
+\]
+
+so (27.1') would finish that branch.
+
+The challenge is that both terms can be individually small near local triangular-lattice equality.
+
+The proof must use **simultaneous stability**.
+
+---
+
+# 28. Most plausible final Target B theorem
+
+A useful target is the following.
+
+> **Residual shell-saturation / equality-stability theorem.**
+>
+> Let \(A\) be a sufficiently large triangle-free global diameter minimizer in the jammed almost-rhombic normal form.
+>
+> Assume every rhombus satisfies
+>
+> \[
+> \theta_F>\frac\pi3.
+> \]
+>
+> Then the combination of
+>
+> 1. \(Q=V(\operatorname{conv}A)\);
+> 2. \(P=\pi D-O(1)\);
+> 3. uniform width \(w_K=D-o(D)\);
+> 4. \(F_4=n-O(D)\);
+> 5. \(\sum_F\delta_F=O(D)\);
+> 6. the train-crossing pseudoline structure;
+> 7. the exact support-turning identities;
+> 8. the phase/grain coherence of Section 26;
+> 9. the fact that every hull vertex is a diameter endpoint;
+>
+> forces
+>
+> \[
+> G+E\ge c_0B+a_0
+> \]
+>
+> or forces an exact \(60^\circ\) rhombus.
+
+The exact \(60^\circ\) rhombus produces a unit diagonal and therefore a unit equilateral triangle.
+
+---
+
+# 29. Equality regime that must be classified
+
+The final obstruction lives near simultaneous equality in several classical inequalities.
+
+A hypothetical survivor must approach equality in:
+
+1. Oler's finite packing inequality;
+2. the isodiametric inequality;
+3. Cauchy's perimeter-diameter inequality;
+4. local unit-sided polygon area inequalities;
+5. the rhombic sine/angle defect inequality;
+6. train-width bounds.
+
+But these equality geometries point in competing directions.
+
+- Local Oler equality wants triangular/hexagonal packing geometry.
+- Exact triangle-freeness requires every rhombic angle to stay strictly above \(60^\circ\).
+- Perimeter equality wants an almost constant-width hull.
+- The train graph wants finitely many near-triangular crystalline grains.
+- Every hull vertex must be diametral.
+- The nonlattice boundary shell must lock \(\Theta(D)\) train/shear modes.
+
+The most promising affirmative route is to prove that these near-equalities cannot coexist strictly: at least one local rhombic shear parameter must hit zero.
+
+---
+
+# 30. Variational formulation of the likely final step
+
+Inside a coherent rhombic grain, use train-angle variables.
+
+Write schematically
+
+\[
+\delta_1,\ldots,\delta_T>0
+\]
+
+for the positive shear/phase parameters responsible for keeping every rhombus strictly above \(60^\circ\).
+
+The final theorem should show that global diameter minimization cannot occur at an interior point of the positive shear cone.
+
+Equivalently:
+
+\[
+\boxed{
+\text{some active shear must satisfy }\delta_\tau=0.
+}
+\tag{30.1}
+\]
+
+That is the desired exact \(60^\circ\) event.
+
+Potential mechanisms:
+
+- a diameter-decreasing feasible train-angle motion;
+- a boundary support-function variation;
+- a convexity argument showing the diameter objective has no strict interior minimum in train-angle coordinates;
+- an equality classification in the residual shell inequality;
+- a continuation-network theorem forcing a forbidden Cartesian block.
+
+---
+
+# 31. Target A remains separate
+
+The flexible branch is still reduced to the hybrid representative with fixed core \(K\) and a bridge forest.
+
+If
+
+\[
+\ell=
+\dim\mathcal L_{\widehat Q},
+\]
+
+then
+
+\[
+|V(\widehat A)\setminus V(K)|
+\le
+\ell+2|\widehat Q|.
+\]
+
+Thus
+
+\[
+\ell=O(\sqrt n)
+\]
+
+already reduces to the jammed almost-rhombic endgame.
+
+The genuinely separate obstruction remains
+
+\[
+\boxed{
+\ell=\omega(\sqrt n).
+}
+\tag{31.1}
+\]
+
+The Oler shell-window cancellation shows that plain area accounting does not penalize a forest vertex differently from a core vertex.
+
+Therefore Target A requires a non-area mechanism, likely involving:
+
+- configuration-space dimension;
+- free volume;
+- diameter cables;
+- boundary roots;
+- packing of many articulated branches inside an almost constant-width body;
+- or a unified shell-rank theorem linking train/shear modes and forest modes.
+
+---
+
+# 32. Regression tests that every final proof must survive
+
+Do not accept a candidate closing theorem unless it explains all of these.
+
+## 32.1 Unit square
+
+Triangle-free global minimizer with exact mixed stress.
+
+## 32.2 \(n=8\) heptagon plus center
+
+Triangle-free global minimizer with a flexible rattler.
+
+## 32.3 Regular odd-prime shells
+
+Arbitrarily large triangle-free strict local diameter minima.
+
+## 32.4 Dense regular-shell fillings
+
+Asymptotically optimal density, exact stress, triangle-free, not globally certified.
+
+## 32.5 Five-sector rhombic complexes
+
+Arbitrarily large boundary-pinned jammed strict-rhombus complexes with
+
+\[
+\sum\delta_F\to0
+\]
+
+and balanced \(C_5\)-blowup train graph.
+
+They fail the true diametral-hull condition.
+
+## 32.6 11-point sun
+
+Satisfies the true hull-pinning condition locally but is globally suboptimal.
+
+## 32.7 Near-equilateral convex defect polygons
+
+Local Oler slack can approach zero even at nonquadrilateral defect cells.
+
+## 32.8 Disk-like raw support depth
+
+A quadratic raw depth budget is compatible with ordinary disk-like chord geometry.
+
+Thus \(H_*\) itself cannot be used as a contradiction currency.
+
+---
+
+# 33. Constants to keep visible
+
+\[
+a_0=\frac{\sqrt3}{2}=0.8660254038\ldots
+\]
+
+\[
+c_0=\frac{\sqrt3}{4}=0.4330127019\ldots
+\]
+
+\[
+C_0=\sqrt{2\pi\sqrt3}=3.298908\ldots
+\]
+
+\[
+c_0C_0=1.4284692103\ldots
+\]
+
+\[
+\frac{\pi\sqrt3}{2}=2.7206990463\ldots
+\]
+
+\[
+\gamma=
+2\sqrt{\frac{2\sqrt3}{\pi}}-\sqrt3
+=
+0.3680994640\ldots
+\]
+
+Deep-end count:
+
+\[
+0.1833050182\ldots\sqrt n-o(\sqrt n).
+\]
+
+Deep-end threshold:
+
+\[
+0.0460124330\ldots\sqrt n
+=
+0.0438182292\ldots D+o(D).
+\]
+
+The old scalar conversion would require
+
+\[
+\Lambda>4.0749855583\ldots,
+\]
+
+but the exact support-turning cancellation shows that no raw-depth scalar conversion is the correct route.
+
+---
+
+# 34. Current research priority
+
+The preferred order is now:
+
+1. **Backward-train / higher-order shell-rotation lemma.**  
+   The full first-order train cusp has been excluded in Section 38.  The surviving
+   pure-rhombic-disk mechanism is therefore genuinely higher order: backward trains
+   or diameter-invisible train coordinates must supply the positive curvature needed
+   to lock the complement of the active diameter-gradient span.
+
+2. **Rank-sensitive nonovercounting charge.**  
+   Trace each backward train to the missing coordinate flip it forbids, propagate that
+   failure to its terminal boundary/fault structure, and charge independent backward
+   or invisible modes to pocket slack, exceptional-face slack, or ordered missing
+   crossings without overcounting.
+
+3. **Residual shell equality.**  
+   Use the sharpened exact target
+   \[
+   G+E\ge c_0B
+   \]
+   rather than any obsolete \(+a_0\) threshold.
+
+4. **Hexatic grain transport.**  
+   Use the sixfold phase decomposition to organize the fault network into a bounded
+   number of near-triangular grains and make the backward-train charge compatible
+   with ordered train continuation.
+
+5. **Target A.**  
+   Prove that the same \(O(D)\) diameter shell cannot second-order-lock
+   \(\omega(D)\) bridge-forest modes, ideally by the same rank-sensitive charge.
+
+---
+
+# 35. Exact current frontier
+
+A concise description is:
+
+\[
+\boxed{
+\begin{array}{c}
+\text{near-constant-width diametral hull}\\
++\text{ }n-O(\sqrt n)\text{ strict near-}60^\circ\text{ rhombi}\\
++\text{ finitely many near-triangular orientation grains}\\
++\text{ }O(\sqrt n)\text{-scale nonlattice shell}\\
++\text{ exact support-turning cancellation}\\
++\text{ }\Theta(\sqrt n)\text{ train/shear modes to lock}.
+\end{array}
+}
+\]
+
+The final affirmative proof must show that this system cannot remain strictly inside the triangle-free region.
+
+The most plausible endpoint remains:
+
+\[
+\boxed{
+\text{global optimality forces a shear parameter to hit }0,
+}
+\]
+
+hence some rhombus angle equals exactly \(60^\circ\), hence a unit equilateral triangle appears.
+
+Sections 36--41 sharpen this substantially: the full first-order cusp is now excluded,
+so the only surviving shear-locking mechanism is higher-order and must be supported by
+backward or diameter-invisible train coordinates.
+
+Target A remains separate unless the same rank-sensitive shell charge can also control
+bridge-forest modes.
+
+---
+
+# 36. Translated-lattice \(n-1\) improvement
+
+This section records a later exact improvement that supersedes every previous
+\(n\)-based triangular-lattice upper bound in the report.
+
+## 36.1 Strict \(n-1\) diameter upper bound
+
+Let \(\Lambda\) be the unit triangular lattice, whose fundamental-cell area is
+
+\[
+a_0=\frac{\sqrt3}{2}.
+\]
+
+Choose an open disk \(B_r\) so that the average number of lattice points in a
+translated copy is exactly \(n-1\):
+
+\[
+\frac{\pi r^2}{a_0}=n-1.
+\]
+
+Periodize the indicator of \(B_r\) over \(\Lambda\).  The resulting translated
+lattice-point count is integer valued and has mean \(n-1\).
+
+It is not constant.  Indeed, choose a generic point of one circular boundary
+away from all pairwise boundary intersections.  Crossing that boundary changes
+the periodized count by exactly one locally.
+
+An integer-valued nonconstant function with integer mean \(n-1\) must exceed its
+mean somewhere.  Hence some translate of the open disk contains at least \(n\)
+lattice points.
+
+Any \(n\) of them are unit-separated and, because the disk is open, have
+diameter strictly less than \(2r\).  Therefore
+
+\[
+\boxed{
+D(n)
+<
+\sqrt{\frac{2\sqrt3}{\pi}(n-1)}.
+}
+\tag{36.1}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+D(n)^2
+<
+c(n-1),
+\qquad
+c=\frac{2\sqrt3}{\pi}.
+}
+\tag{36.2}
+\]
+
+This is unconditional.
+
+## 36.2 Topology-corrected shell consequence
+
+For a rhombic complex \(\mathcal R\), recall
+
+\[
+n=R+\frac B2+\chi+t,
+\]
+
+and
+
+\[
+\operatorname{area}(K)
+=
+a_0R+E_{\mathcal R}+G_{\mathcal R}.
+\]
+
+The isodiametric inequality and (36.2) give
+
+\[
+\operatorname{area}(K)
+<
+a_0(n-1).
+\]
+
+Hence
+
+\[
+\boxed{
+G_{\mathcal R}+E_{\mathcal R}
+<
+c_0B+a_0(t+\chi-1).
+}
+\tag{36.3}
+\]
+
+Combined with the existing Oler lower side,
+
+\[
+G_{\mathcal R}+E_{\mathcal R}
+\ge
+c_0(B-P)+a_0(t+\chi-1),
+\]
+
+the exact remaining shell window becomes
+
+\[
+\boxed{
+c_0(B-P)+a_0(t+\chi-1)
+\le
+G_{\mathcal R}+E_{\mathcal R}
+<
+c_0B+a_0(t+\chi-1).
+}
+\tag{36.4}
+\]
+
+Its width is exactly
+
+\[
+\boxed{c_0P.}
+\tag{36.5}
+\]
+
+All previous \(+a_0\) closing thresholds are superseded.
+
+## 36.3 Pure rhombic disk
+
+For \(t=0,\chi=1\),
+
+\[
+\boxed{
+c_0(B-P)
+\le
+G+E
+<
+c_0B.
+}
+\tag{36.6}
+\]
+
+Thus the exact sufficient contradiction is
+
+\[
+\boxed{
+G+E\ge c_0B.
+}
+\tag{36.7}
+\]
+
+## 36.4 Oler-surplus and area-deficit consequences
+
+The Oler surplus
+
+\[
+\mathscr O(A)
+=
+\operatorname{area}(K)+c_0P-a_0(n-1)
+\]
+
+satisfies
+
+\[
+\boxed{
+0\le\mathscr O(A)<c_0P.
+}
+\tag{36.8}
+\]
+
+Also,
+
+\[
+\boxed{
+\frac{\pi D^2}{4}
+-
+\operatorname{area}(K)
+<
+c_0P.
+}
+\tag{36.9}
+\]
+
+The Cartesian-block restriction sharpens correspondingly to
+
+\[
+\boxed{
+ab+
+\frac{4\sqrt3-6}{\pi}\Delta_{a,b}
+<
+\frac2\pi(n-1).
+}
+\tag{36.10}
+\]
+
+---
+
+# 37. Train-angle Hessian and the exact backward-train mechanism
+
+This section records the exact second-variation identities found by projecting the
+diameter objective into train-angle coordinates.
+
+Assume for this section a simply connected pure rhombic disk so that standard
+train coordinates are available.
+
+Let
+
+\[
+u_\tau=(\cos\phi_\tau,\sin\phi_\tau)
+\]
+
+be the unit edge vector of train \(\tau\).
+
+For vertices \(i,j\), write
+
+\[
+r=p_i-p_j
+=
+\sum_\tau d_\tau u_\tau,
+\qquad
+d_\tau\in\{-1,0,1\}.
+\]
+
+Let
+
+\[
+f_{ij}(\phi)
+=
+\frac12|r|^2.
+\]
+
+## 37.1 Exact Hessian trace
+
+Let
+
+\[
+k_{ij}
+=
+\#\{\tau:d_\tau\ne0\}.
+\]
+
+Differentiation with respect to the independent train angles gives
+
+\[
+\boxed{
+\operatorname{tr}\nabla_\phi^2 f_{ij}
+=
+k_{ij}-|p_i-p_j|^2.
+}
+\tag{37.1}
+\]
+
+For an active diameter pair,
+
+\[
+|p_i-p_j|=D,
+\]
+
+hence
+
+\[
+\boxed{
+\operatorname{tr}\nabla_\phi^2 f_{ij}
+=
+k_{ij}-D^2
+\le
+T-D^2
+=
+-\Theta(D^2).
+}
+\tag{37.2}
+\]
+
+Thus each active diameter function is strongly superharmonic in aggregate on the
+train-angle space.
+
+## 37.2 Exact neutral-direction formula
+
+Put
+
+\[
+a_\tau=d_\tau u_\tau,
+\qquad
+\lambda_\tau=r\cdot a_\tau.
+\]
+
+For an angle velocity \(v=(v_\tau)\), let
+
+\[
+b=\sum_\tau v_\tau J a_\tau.
+\]
+
+First-order neutrality for this diameter means
+
+\[
+r\cdot b=0.
+\]
+
+Equivalently, after resolving the neutral direction relative to \(r\), the exact
+second variation can be written in weighted variance form whenever all
+\(\lambda_\tau\ge0\):
+
+\[
+\boxed{
+D^2f_{ij}[v,v]
+=
+-\sum_\tau
+\lambda_\tau
+\left(
+v_\tau-\bar v
+\right)^2
+\le0,
+}
+\tag{37.3}
+\]
+
+where
+
+\[
+\bar v
+=
+\frac{\sum_\tau\lambda_\tau v_\tau}{D^2}.
+\]
+
+Equality requires common rotation on all positively contributing separating trains.
+
+## 37.3 Backward trains are necessary for positive higher-order locking
+
+A separating train is called **backward** for the diameter pair if
+
+\[
+\boxed{
+\lambda_\tau
+=
+d_\tau\,r\cdot u_\tau
+<
+0.
+}
+\tag{37.4}
+\]
+
+If every separating train is forward, then every first-order-neutral train-angle
+direction has nonpositive second variation.
+
+Therefore:
+
+\[
+\boxed{
+\text{every genuinely positive higher-order diameter blocker must use
+a backward train or a diameter-invisible train coordinate.}
+}
+\tag{37.5}
+\]
+
+This is an exact necessary condition.
+
+## 37.4 Coordinate-flip obstruction
+
+If \(a_\tau=d_\tau u_\tau\) is backward, then
+
+\[
+|r-a_\tau|^2
+=
+D^2+1-2r\cdot a_\tau
+>
+D^2.
+\tag{37.6}
+\]
+
+Hence the coordinate-flipped extreme vertex cannot exist while all other train
+coordinates are held fixed; otherwise the configuration would already contain a
+pair longer than \(D\).
+
+This gives the geometric interpretation of backwardness:
+
+> a backward train certifies a missing train-coordinate flip.
+
+The natural next step is to propagate this missing flip along the ordered train to
+its terminal boundary/fault structures and charge it without overcounting.
+
+## 37.5 Boundary backtracking bound
+
+For a suitable boundary arc of length \(L\) joining a diameter pair, the total
+negative weight obeys
+
+\[
+\boxed{
+\sum_{\lambda_\tau<0}
+(-\lambda_\tau)
+\le
+\frac D2(L-D).
+}
+\tag{37.7}
+\]
+
+Thus the positive curvature available from backward trains is quantitatively tied
+to boundary backtracking.
+
+## 37.6 Pure-disk hull contact degree
+
+At a hull vertex of a pure strict-rhombic disk, if the contact degree is \(d\),
+then \(d-1\) rhombi occupy the convex interior angle.
+
+Every rhombic corner is \(>\pi/3\), while the hull interior angle is \(<\pi\).
+Therefore
+
+\[
+(d-1)\frac\pi3<\pi
+\]
+
+and
+
+\[
+\boxed{d\le3.}
+\tag{37.8}
+\]
+
+Thus each diametral hull reaction is transmitted into the rhombic bulk through
+only two or three unit bars.
+
+---
+
+# 38. Full first-order train-cusp exclusion theorem
+
+This section incorporates the strongest theorem from the subsequent Sol Pro run.
+
+It should be treated as the new Target B frontier.
+
+## 38.1 Statement
+
+> **Theorem 38.1 (full train-cusp exclusion).**
+>
+> A sufficiently large triangle-free pure-rhombic-disk global minimizer cannot
+> have its entire \((T-1)\)-dimensional train-angle space locked to first order by
+> the active diameter constraints.
+
+Equivalently, the active diameter gradients cannot generate a full first-order
+cusp on all nontrivial train-angle directions.
+
+## 38.2 First-order locking forces \(q\ge T\)
+
+A full cusp on the \(T-1\)-dimensional train-angle quotient requires at least \(T\)
+active diameter gradients.
+
+For a convex polygon on \(q\) hull vertices, the planar diameter graph has at most
+\(q\) edges.
+
+Hence full first-order locking implies
+
+\[
+\boxed{T\le q.}
+\tag{38.1}
+\]
+
+Together with
+
+\[
+q\le P\le\pi D,
+\]
+
+this gives
+
+\[
+T\le\pi D.
+\]
+
+## 38.3 Lower density of train crossings under a full cusp
+
+In a pure rhombic disk,
+
+\[
+n=R+T+1.
+\]
+
+Using the strengthened lattice bound
+
+\[
+D^2<c(n-1)=c(R+T)
+\]
+
+and \(T\le\pi D\), one obtains asymptotically
+
+\[
+\boxed{
+\liminf\frac{R}{T^2}
+\ge
+\frac1{c\pi^2}
+=
+\frac1{2\pi\sqrt3}
+=
+0.0918881492\ldots.
+}
+\tag{38.2}
+\]
+
+## 38.4 Phase-atomic upper bound
+
+Since
+
+\[
+E=O(T),
+\]
+
+the total angular defect is only boundary order.
+
+Every positive-density weak limit of the train-crossing measure is therefore
+supported on atomic projective phase classes separated by \(60^\circ\).
+
+If \(s\) denotes the total atomic train mass, Mantel's inequality gives
+
+\[
+\boxed{
+\limsup\frac{R}{T^2}
+\le
+\frac{s^2}{4}.
+}
+\tag{38.3}
+\]
+
+## 38.5 Exposed-hull argument forces \(s\le1/2\)
+
+Normalized minimizing hulls converge to the Euclidean disk through asymptotic
+isodiametric equality.
+
+The outer rhombic boundary has \(2T\) unit edges.
+
+Under the full-cusp assumption \(q\ge T\), at least \(T-o(T)\) bounded-length hull
+chains must be exposed.
+
+If more than half the train mass were atomic, these exposed bounded chains would
+have normals in only a countable atomic set in the scaling limit.
+
+But the disk's surface-area measure is non-atomic.
+
+Therefore
+
+\[
+\boxed{s\le\frac12.}
+\tag{38.4}
+\]
+
+Consequently,
+
+\[
+\boxed{
+\limsup\frac{R}{T^2}
+\le
+\frac1{16}
+=
+0.0625.
+}
+\tag{38.5}
+\]
+
+This contradicts
+
+\[
+\frac1{2\pi\sqrt3}
+>
+\frac1{16}.
+\]
+
+Hence a full first-order cusp is impossible.
+
+## 38.6 What survives
+
+A hypothetical pure jammed survivor must therefore satisfy
+
+\[
+\boxed{q<T.}
+\tag{38.6}
+\]
+
+Its active diameter constraints leave a positive-dimensional complement in
+train-angle space at first order.
+
+Every mode in this complement that is nevertheless blocked at higher order must,
+by Section 37, involve:
+
+- a backward train; or
+- a train coordinate invisible to the loaded diameter support.
+
+Thus the first-order train-angle variational branch is eliminated.
+
+The problem is now genuinely second order.
+
+---
+
+# 39. Sharper train/boundary constants without a full cusp
+
+Even without the full-cusp hypothesis, pinned contact rank yields
+
+\[
+\frac qT
+\ge
+\frac12+o(1).
+\tag{39.1}
+\]
+
+Combining this with the phase-atom/exposed-hull argument gives
+
+\[
+\boxed{
+\limsup\frac{R}{T^2}
+\le
+\frac9{64}.
+}
+\tag{39.2}
+\]
+
+Since
+
+\[
+\frac{R}{D^2}\to\frac1c,
+\]
+
+every hypothetical pure jammed survivor obeys
+
+\[
+\boxed{
+\liminf\frac TD
+\ge
+\frac8{3\sqrt c}
+=
+2.5395008183\ldots.
+}
+\tag{39.3}
+\]
+
+Therefore
+
+\[
+\boxed{
+\liminf\frac BD
+\ge
+5.0790016366\ldots.
+}
+\tag{39.4}
+\]
+
+This improves the earlier train lower bound
+
+\[
+\frac TD
+\ge
+\frac2{\sqrt c}
+=
+1.9046256137\ldots.
+\]
+
+The surviving equality mechanism is now sharply constrained:
+
+\[
+\boxed{
+\begin{array}{c}
+q<T,\\
+\text{first-order diameter gradients do not span train-angle space},\\
+\text{higher-order locking is required on a positive-dimensional complement},\\
+\text{every positive-curvature blocker uses backward or invisible coordinates}.
+\end{array}
+}
+\tag{39.5}
+\]
+
+---
+
+# 40. Exact remaining lemma after full-cusp exclusion
+
+The current pure-rhombic-disk endgame is:
+
+> **Backward-train / higher-order shell-rotation lemma.**
+>
+> In a triangle-free global minimizer satisfying
+>
+> \[
+> G+E<c_0B,
+> \]
+>
+> the active diameter bars cannot second-order-lock every train-angle direction
+> outside their first-order gradient span using backward-train incidences or
+> train coordinates invisible to the loaded diameter support.
+
+A bridge-forest version must simultaneously prove that the same \(O(D)\)
+diametral shell cannot kill \(\omega(D)\) independent forest modes.
+
+The most concrete route is now:
+
+1. for every backward train, use (37.6) to identify the forbidden coordinate flip;
+2. propagate the missing flip along the ordered train to its two terminal
+   boundary/fault structures;
+3. assign a rank-sensitive charge to indentation-pocket slack,
+   exceptional-face slack, or ordered missing-crossing fault lines;
+4. prove a nonovercounting theorem showing that the number of independent
+   backward/invisible modes is strictly smaller than the dimension left
+   unspanned by the active diameter gradients whenever
+   \[
+   G+E<c_0B;
+   \]
+5. conclude that a full higher-order lock is impossible.
+
+That would force a first-order cusp, contradict Theorem 38.1.
+
+The same nonovercounting mechanism, applied to bridge-tree degrees of freedom,
+would close Target A as well.
+
+At present, this rank-sensitive nonovercounting charge is the sole unsupported
+step in the most developed affirmative proof architecture.
+
+---
+
+# 41. Updated exact frontier
+
+After Sections 36–40, the pure jammed Target B picture is:
+
+\[
+\boxed{
+\begin{array}{c}
+G+E<c_0B,\\[1mm]
+q<T,\\[1mm]
+T/D\ge2.5395008183\ldots+o(1),\\[1mm]
+B/D\ge5.0790016366\ldots+o(1),\\[1mm]
+\text{full first-order train cusp impossible},\\[1mm]
+\text{remaining lock must be higher order},\\[1mm]
+\text{positive higher-order curvature requires backward or invisible trains}.
+\end{array}
+}
+\tag{41.1}
+\]
+
+Thus the next Level I proof should not attempt another first-order train-angle
+rank argument.
+
+It must eliminate the backward/invisible higher-order locking mechanism, ideally
+with a nonovercounting shell charge that also controls the flexible forest branch.
+

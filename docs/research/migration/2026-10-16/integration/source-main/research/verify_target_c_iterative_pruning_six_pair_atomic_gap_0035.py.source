@@ -1,0 +1,78 @@
+#!/usr/bin/env python3
+"""Exact interval certificate for iterative-pruning six-pair eta_grid=0.0035."""
+from fractions import Fraction as F
+from math import isqrt
+
+SCALE = 10**50
+PI_LO = F(314159265358979323846264338327950288419716939937510, SCALE)
+PI_HI = PI_LO + F(1, SCALE)
+SQ3_LO = F(173205080756887729352744634150587236694280525381038, SCALE)
+SQ3_HI = SQ3_LO + F(1, SCALE)
+assert SQ3_LO * SQ3_LO < 3 < SQ3_HI * SQ3_HI
+
+
+def sqrt_frac(x, digits=45):
+    S = 10**digits
+    m = isqrt((x.numerator * S * S) // x.denominator)
+    while F((m + 1) * (m + 1), S * S) <= x:
+        m += 1
+    while F(m * m, S * S) > x:
+        m -= 1
+    return F(m, S), F(m + 1, S)
+
+
+D2_LO = PI_LO / (2 * SQ3_HI)
+D2_HI = PI_HI / (2 * SQ3_LO)
+S2_LO, _ = sqrt_frac(D2_LO)
+_, S2_HI = sqrt_frac(D2_HI)
+K_LO = F(2, 1) / SQ3_HI
+K_HI = F(2, 1) / SQ3_LO
+ETA = F(35, 10000)
+
+A_LO = 2 * S2_LO + ETA
+A_HI = 2 * S2_HI + ETA
+M_LO = 4 * D2_LO / A_HI
+M_HI = 4 * D2_HI / A_LO
+R_LO = A_LO - M_HI
+R_HI = A_HI - M_LO
+assert R_LO > 0
+
+D0_LO = A_LO * A_LO / 4 - D2_HI + R_LO * R_LO / 4
+D0_HI = A_HI * A_HI / 4 - D2_LO + R_HI * R_HI / 4
+assert D0_LO > 0
+SQD_LO, _ = sqrt_frac(D0_LO)
+_, SQD_HI = sqrt_frac(D0_HI)
+S0_LO = M_LO / 2 - SQD_HI
+S0_HI = M_HI / 2 - SQD_LO
+assert S0_LO > 0
+
+# Range required by the sharp three-label minimizer.
+assert 2 * K_HI / 3 < S0_LO
+assert S0_HI < K_LO
+
+# The iterative-pruning strong branch applies uniformly to every selected
+# distinct-label block.  Since each family is at most s0, it is enough to check
+# (2-K/s0)^2 < 20/29.
+ratio_hi = F(2) - K_LO / S0_HI
+assert ratio_hi > 0
+assert ratio_hi * ratio_hi < F(20, 29)
+
+# With per-pair coefficient c=1/10, the sharp six-label minimization forces
+# d0 >= c(3s0/2-K)^2.  The interval below violates that necessity.
+gap_lo = F(3, 2) * S0_LO - K_HI
+assert gap_lo > 0
+payment_lo = gap_lo * gap_lo / F(10)
+margin = payment_lo - D0_HI
+assert margin > F(4, 100000)
+
+print("PASS: iterative-pruning six-pair eta_grid=0.0035")
+print("Abar interval =", float(A_LO), float(A_HI))
+print("M0 interval =", float(M_LO), float(M_HI))
+print("R0 interval =", float(R_LO), float(R_HI))
+print("d0 interval =", float(D0_LO), float(D0_HI))
+print("s0 interval =", float(S0_LO), float(S0_HI))
+print("K interval =", float(K_LO), float(K_HI))
+print("strong-branch ratio upper =", float(ratio_hi))
+print("strong-branch ratio square upper =", float(ratio_hi * ratio_hi))
+print("payment lower =", float(payment_lo))
+print("contradiction margin lower =", float(margin))

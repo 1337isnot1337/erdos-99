@@ -1,0 +1,583 @@
+# Target C-II — shallow-tooth reflection blockers and normal-aligned diameter bracing
+
+**Date:** 2026-09-14  
+**Repository base:** `6b9afd0870cb6148e54762088f7e70f46767a70a`  
+**Status:** proved proof-only source-level reduction; theorem-state authority unchanged  
+**Scope:** Type-II shallow two-edge teeth in the canonical contact-minimal representative  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The current low-`t` tooth branch already forces a linear family of pairwise distinct
+shallow tooth apices. The missing point is that the resulting penetration contacts
+have no uniform KKT-weight floor. This note extracts a different, weight-free
+consequence from each shallow tooth by reflecting its apex across the supporting line
+of its loaded base.
+
+The reflection gives an exact source-level alternative. Either the move is blocked
+from above by a source point almost at diameter from the apex and lying in a narrow
+cone about the inward support normal, or it is blocked from below by an actual
+contact-isolated source point outside the force hull. Contact minimality supplies the
+same exterior-isolate witness if the reflected move is otherwise feasible.
+
+A circular packing argument bounds how often one exterior isolate can witness distinct
+shallow apices. At the current low-`t` tooth floor this gives the linear alternative
+
+```text
+at least 0.0423993163 D normal-aligned near-diameter shallow apices
+or
+at least 0.0423993163 D distinct exterior contact-isolated source points.
+```
+
+This does not close C-II, but it converts the shallow-tooth population into two
+full-source obstruction families rather than an unweighted contact count.
+
+## 1. One shallow tooth and its reflected apex
+
+Let `a-x-b` be a two-edge outer tooth. Put coordinates
+
+\[
+a=(-c,0),\qquad b=(c,0),\qquad x=(0,h),
+\tag{RB.1}
+\]
+
+where
+
+\[
+c=\cos\alpha,\qquad h=\sin\alpha,\qquad c^2+h^2=1,
+\tag{RB.2}
+\]
+
+and the loaded force hull `F` lies in the half-plane `y>=0`. The loaded base length
+is `2c`. For an `eta`-shallow tooth,
+
+\[
+2c\ge2-\eta,
+\qquad
+0<\alpha\le\alpha_\eta:=\arccos(1-\eta/2).
+\tag{RB.3}
+\]
+
+Reflect the apex across its loaded base line:
+
+\[
+x^-:=(0,-h).
+\tag{RB.4}
+\]
+
+For every point `y=(p,q)` one has the exact identity
+
+\[
+\boxed{
+|y-x^-|^2-|y-x|^2=4hq.
+}
+\tag{RB.5}
+\]
+
+Hence reflection cannot decrease distance to any source point in the closed inward
+half-plane `q>=0`. In particular it preserves the two contacts to `a,b` and moves
+strictly away from every other old contact neighbor of `x`: every actual contact
+neighbor lies in `F`, and a contact neighbor on `y=0` must be `a` or `b`.
+
+Canonical C26 gives `deg_C(x)>=3` for the unloaded positive-contact apex, so at least
+one old unit contact is strictly broken by the reflection.
+
+## 2. Reflection-blocker dichotomy
+
+Call a source point `z` a **lower blocker** if
+
+\[
+|z-x^-|<1,
+\tag{RB.6}
+\]
+
+and call a source point `y` an **upper blocker** if
+
+\[
+|y-x^-|>D.
+\tag{RB.7}
+\]
+
+Every lower blocker has negative signed height. Indeed (RB.5), together with the
+original source separation `|z-x|>=1`, rules out `q>=0`. Therefore `z` lies outside
+`F`. Canonical Section 56 says every actual source point outside `F` is
+contact-isolated in the contact-minimal representative.
+
+Suppose now that there is no lower blocker and no upper blocker. Replacing `x` by
+`x^-` then gives another unit-separated `n`-point configuration of diameter at most
+`D`. The two tooth contacts survive, while all other old contacts of `x` are broken.
+If the new configuration had fewer actual unit contacts, global diameter minimality
+(if the diameter dropped) or the canonical contact-minimal tie-break (if it stayed
+`D`) would be contradicted. Consequently the reflected apex must acquire at least
+one new unit contact.
+
+By (RB.5), a new contact cannot come from `q>=0`; hence every new contact is an actual
+source point outside `F`, and therefore is contact-isolated in the original source.
+We obtain the finite alternative
+
+\[
+\boxed{
+\text{every shallow tooth has either an upper blocker, or an exterior-isolate
+reflection witness.}
+}
+\tag{RB.8}
+\]
+
+The second branch includes both a strict lower blocker and an exact new unit contact
+created by an otherwise feasible reflection.
+
+## 3. Quantitative depth of an exterior-isolate witness
+
+Assume throughout this section that
+
+\[
+\alpha<\pi/12.
+\tag{RB.9}
+\]
+
+Define
+
+\[
+Y_-(\alpha):=\sin(\pi/3-\alpha),
+\qquad
+Y_+(\alpha):=\sin(\pi/3+\alpha).
+\tag{RB.10}
+\]
+
+### Lemma RB.1 — strict lower blockers have depth `>Y_-(alpha)`
+
+Let a lower blocker be
+
+\[
+z=(u,-r),\qquad r>0.
+\]
+
+Then
+
+\[
+\boxed{r>Y_-(\alpha).}
+\tag{RB.11}
+\]
+
+### Proof
+
+Because `z` lies outside `F`, it is contact-isolated. Thus the original source has
+strict separations
+
+\[
+|z-x|>1,\qquad |z-a|>1,\qquad |z-b|>1.
+\tag{RB.12}
+\]
+
+Put `U=|u|`. If `r>=1`, (RB.11) is immediate. Assume `r<1` and put
+
+\[
+B:=\sqrt{1-r^2}.
+\]
+
+Separation from the nearer base endpoint gives
+
+\[
+|U-c|>B.
+\tag{RB.13}
+\]
+
+The branch `U>c+B` is incompatible with the lower-blocker inequality
+`U^2+(r-h)^2<1`, because
+
+\[
+(c+B)^2-\bigl(1-(r-h)^2\bigr)
+=1+2cB-2rh
+>1-2h>0.
+\tag{RB.14}
+\]
+
+Hence
+
+\[
+U<c-B.
+\tag{RB.15}
+\]
+
+In particular `c>B`, so `r>h`. Write
+
+\[
+r=\sin\beta,
+\qquad
+\beta\in(\alpha,\pi/2).
+\]
+
+If `r+h>=1`, then
+
+\[
+r\ge1-h>\sin(\pi/3-\alpha),
+\]
+
+because
+
+\[
+1-h-\sin(\pi/3-\alpha)
+=1-\cos(\alpha-\pi/6)>0.
+\]
+
+It remains to consider `r+h<1`. The old separation `|z-x|>1` and (RB.15) give
+
+\[
+\sqrt{1-(r+h)^2}
+<U
+<c-\sqrt{1-r^2}.
+\tag{RB.16}
+\]
+
+Squaring the outer inequality in (RB.16), substituting `r=sin(beta)`, and cancelling
+common terms gives
+
+\[
+2\cos(\alpha+\beta)<1.
+\]
+
+Since `0<alpha+beta<7pi/12`, this implies
+
+\[
+\beta>\pi/3-\alpha,
+\]
+
+which proves (RB.11).
+
+### Lemma RB.2 — an exact new contact is even deeper
+
+If an otherwise feasible reflection acquires a new unit contact `z=(u,-r)`, then
+
+\[
+\boxed{r>Y_+(\alpha).}
+\tag{RB.17}
+\]
+
+Indeed `a,b,z` all lie on the unit circle centered at `x^-`. Separation
+`|z-a|,|z-b|>1` places the direction of `z-x^-` outside the open `pi/3` neighborhoods
+of the directions `alpha` and `pi-alpha`. The only two remaining arcs are
+
+\[
+(\pi/3+\alpha,\,2\pi/3-\alpha)
+\]
+
+and
+
+\[
+(4\pi/3-\alpha,\,5\pi/3+\alpha).
+\]
+
+The first arc is impossible because `|z-x|>1` is equivalent to
+`sin(theta)<h`, while every angle in that upper arc has
+`sin(theta)>sin(pi/3+alpha)>h`. Thus `theta` lies in the lower arc. There
+
+\[
+r=h-\sin\theta
+>h+\sin(\pi/3-\alpha)
+=\sin(\pi/3+\alpha),
+\]
+
+proving (RB.17).
+
+Thus every exterior-isolate witness lies a fixed positive distance beyond the support
+line of the loaded base. A strict lower blocker has depth `>Y_-`; a contact created
+by a feasible reflection has the stronger depth `>Y_+`.
+
+## 4. Upper blockers are normal-aligned near-diameter points
+
+Let an upper blocker be
+
+\[
+y=(p,q).
+\]
+
+The reflected violation and the original diameter constraints to the two loaded base
+endpoints give
+
+\[
+p^2+(q+h)^2>D^2,
+\tag{RB.18}
+\]
+
+while
+
+\[
+(p+c)^2+q^2\le D^2,
+\qquad
+(p-c)^2+q^2\le D^2.
+\tag{RB.19}
+\]
+
+Comparing (RB.18) with the larger of the two quantities in (RB.19) yields
+
+\[
+\boxed{
+2hq-2c|p|>c^2-h^2=\cos(2\alpha).
+}
+\tag{RB.20}
+\]
+
+Because `alpha<pi/12`, the right side is positive. Consequently
+
+\[
+\boxed{
+q>0,
+\qquad
+{|p|\over q}< {h\over c}=\tan\alpha.
+}
+\tag{RB.21}
+\]
+
+So every upper blocker lies in the inward normal cone of the loaded base, with
+half-angle strictly less than `alpha`. It is also almost a diameter partner of the
+old apex:
+
+\[
+\boxed{
+|x-y|>D-2h.
+}
+\tag{RB.22}
+\]
+
+Equation (RB.22) is just the triangle inequality using `|x-x^-|=2h`, but the cone
+constraint (RB.20)-(RB.21) is additional information supplied by the two loaded base
+endpoints. It is the promised coupling between the shallow-tooth support normal and
+the diameter scale.
+
+No claim is made that an upper blocker lies in `F`; (RB.20) only puts it in the inward
+half-plane of this particular support line.
+
+## 5. Angular packing bounds reflection-witness reuse
+
+Fix `eta` and put
+
+\[
+h_\eta:=\sin\alpha_\eta,
+\qquad
+R_\eta:=1+2h_\eta.
+\tag{RB.23}
+\]
+
+If an exterior isolate `z` is a reflection witness for an `eta`-shallow apex `x`,
+then either `|z-x^-|<1` or `|z-x^-|=1`. Since
+`|x-x^-|=2h<=2h_eta` and `z` is contact-isolated in the original source,
+
+\[
+\boxed{1<|z-x|\le R_\eta.}
+\tag{RB.24}
+\]
+
+Suppose the same `z` witnesses distinct shallow apices `x_1,...,x_M`. Write
+
+\[
+r_j:=|x_j-z|\in(1,R_\eta]
+\]
+
+and let `theta` be the smaller angular separation at `z` between two of the apex
+rays, of radii `r,s`. Unit separation of the source gives
+
+\[
+1\le r^2+s^2-2rs\cos\theta,
+\]
+
+hence
+
+\[
+\cos\theta
+\le f(r,s):={r^2+s^2-1\over2rs}.
+\tag{RB.25}
+\]
+
+For fixed `s`, the derivative of `f(r,s)` with respect to `r` has the sign of
+`r^2-s^2+1`, so there is no interior maximum in `r`. Applying the same observation in
+`s` shows that the maximum on `[1,R_eta]^2` is attained at a corner. Therefore
+
+\[
+f(r,s)\le
+C_\eta:=\max\left\{{R_\eta\over2},
+1-{1\over2R_\eta^2}\right\}.
+\tag{RB.26}
+\]
+
+Put
+
+\[
+\Theta_\eta:=\arccos C_\eta.
+\tag{RB.27}
+\]
+
+Every two witness-associated apex rays have circular separation at least
+`Theta_eta`. Ordering the `M` rays around `z`, the consecutive angular gaps sum to
+`2pi`, so
+
+\[
+\boxed{
+M\le\left\lfloor{2\pi\over\Theta_\eta}\right\rfloor.
+}
+\tag{RB.28}
+\]
+
+This is stronger than the enclosing-disk area bound because it uses the annular
+location `1<|z-x|<=R_eta` directly.
+
+## 6. Current low-`t` tooth branch: a stronger linear blocker/isolate alternative
+
+Use the exact convenient value
+
+\[
+\eta={1\over19}.
+\tag{RB.29}
+\]
+
+Then
+
+\[
+c_\eta={37\over38},
+\qquad
+h_\eta={5\sqrt3\over38},
+\qquad
+\alpha_\eta=0.229921841001413\ldots<\pi/12.
+\tag{RB.30}
+\]
+
+At the current low-`t` floor, the tooth alternative and the metric-detour bound are
+
+\[
+{N_2\over D}\ge0.4363893718701161781\ldots-o(1),
+\qquad
+{d_{out}\over D}\le0.002883975+o(1).
+\tag{RB.31}
+\]
+
+Hence
+
+\[
+{N_{sh}(1/19)\over D}
+\ge
+0.4363893718701161781-19(0.002883975)-o(1),
+\]
+
+so
+
+\[
+\boxed{
+{N_{sh}(1/19)\over D}
+\ge0.3815938468701161781\ldots-o(1).
+}
+\tag{RB.32}
+\]
+
+The shallow-apex injectivity theorem makes all these shallow apices distinct.
+
+For `eta=1/19`,
+
+\[
+R_\eta
+=1+{5\sqrt3\over19}
+=1.455802844097073\ldots,
+\]
+
+and (RB.26)-(RB.27) give
+
+\[
+C_\eta=0.764079936006341\ldots,
+\qquad
+\Theta_\eta=0.701182390406373\ldots>{2\pi\over9}.
+\]
+
+Therefore one exterior isolate can witness at most
+
+\[
+\boxed{8}
+\tag{RB.33}
+\]
+
+of these apices.
+
+Let `U` be the number of distinct `1/19`-shallow apices with an upper blocker, and let
+`Z` be the number of distinct exterior isolates witnessing the remaining shallow
+apices. Equations (RB.8) and (RB.33) give
+
+\[
+8Z\ge N_{sh}(1/19)-U.
+\tag{RB.34}
+\]
+
+Therefore either `U>=N_sh/9` or `Z>=N_sh/9`. Using (RB.32),
+
+\[
+\boxed{
+\max\{U,Z\}
+\ge0.0423993163189017975\ldots D-o(D).
+}
+\tag{RB.35}
+\]
+
+The two branches are quantitative:
+
+1. **normal-aligned near-diameter branch.** At least the amount in (RB.35) of
+   distinct shallow apices have a source point `y` with
+   \[
+   |x-y|>D-{5\sqrt3\over19}
+   =D-0.455802844097073\ldots,
+   \]
+   and, in base coordinates,
+   \[
+   {|p|\over q}< {5\sqrt3\over37}
+   =0.234060919941740\ldots;
+   \]
+2. **exterior-isolate branch.** At least the amount in (RB.35) of distinct actual
+   contact-isolated source points lie beyond the corresponding loaded support lines by
+   more than
+   \[
+   Y_-(\alpha_\eta)
+   ={8\sqrt3\over19}
+   =0.729284550555317\ldots.
+   \]
+
+An isolate created as an exact new reflected contact has the stronger depth
+
+\[
+Y_+(\alpha_\eta)
+={21\sqrt3\over38}
+=0.957185972603853\ldots.
+\tag{RB.36}
+\]
+
+## 7. Frontier effect
+
+The current tooth branch no longer stops at
+
+```text
+many shallow teeth -> many unweighted inward contacts.
+```
+
+It now has the stronger source-level reduction
+
+```text
+many shallow teeth
+ -> pairwise distinct shallow apices
+ -> reflect each apex across its loaded support line
+ -> either a normal-aligned point lies within O(1) of diameter from that apex
+    or an actual exterior isolate blocks/pays for the move
+ -> angular packing bounds exterior-isolate reuse
+ -> linear near-diameter-braced family or linear exterior-isolate family.
+```
+
+This still does not prove a contradiction. The near-diameter pairs in the first
+branch need not be exact diameter edges, and a linear exterior-isolate population in
+the second branch is compatible with the canonical `o(D^2)` full-core alternative.
+Those are the two precise remaining interfaces exposed by this reduction.
+
+The next high-value theorem should couple the first branch to the dense convex
+actual-diameter thrackle, or combine the second branch with exterior-cap packing and
+contact-minimal exchange. Either route now starts from a linear family with explicit
+geometry rather than from stress weights.
+
+## 8. Reproducibility
+
+The arithmetic constants and the finite geometric inequalities are checked by
+
+```bash
+python3 research/verify_target_c_shallow_tooth_reflection_blockers.py
+```
+
+The verifier is a regression certificate, not a substitute for the proofs above.

@@ -1,0 +1,49 @@
+name: migration-namespace-canary
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: migration-namespace-canary-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+# One bounded same-repository migration check. Existing public rollout gates
+# remain unchanged. No pull_request_target execution or secret is used.
+jobs:
+  exact-namespace-tests:
+    if: >-
+      github.event.pull_request.number == 75 &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'integration/repair-three-agent-migration-20261016'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: '3.14.7'
+      - name: Install namespace runtime and locked test dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends bubblewrap
+          python -m pip install --disable-pip-version-check --require-hashes \
+            --only-binary=:all: -r tools/requirements-integrity-linux-x86_64.lock
+          python -m pip check
+      - name: Run the four exact namespace regressions
+        run: |
+          git rev-parse HEAD
+          python --version
+          bwrap --version
+          python -B -m unittest -v \
+            tools.test_local_ci.Repository.test_actual_namespace_hides_credentials_network_and_undeclared_files \
+            tools.test_local_ci.Repository.test_declared_outside_input_and_transitive_helper \
+            tools.test_local_ci.Repository.test_declared_package_shadowing_standard_library_is_replayed \
+            tools.test_local_ci.Repository.test_timeout_fails_and_is_not_fully_verified

@@ -1,0 +1,103 @@
+# Target C-II — five universal closure secants in every physical gap-order cone
+
+**Date:** 2026-09-19  
+**Status:** exact local nonlinear-to-polyhedral reduction; theorem-state authority unchanged  
+**Scope:** every strict closed equilateral force pentagon  
+**Certificate:** `research/verify_target_c_pentagon_all_rank_secants_2026_09_19.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+For normalized force gaps `x_i=delta_i/pi`, the sharp two-gap closure theorem is
+
+\[
+x_{k+2}+x_{k+3}\le M(x_k),
+\qquad
+M(x)=2\left[1-\frac1\pi\arccos\!\left(\frac12-\cos\frac{\pi x}{2}\right)\right].
+\tag{1}
+\]
+
+The exact gap-order theorem reduces every physical strict order to one dihedral orbit. Use the representative closed order cone
+
+\[
+x_0\le x_2\le x_3\le x_4\le x_1.
+\tag{2}
+\]
+
+The exact order/simplex bounds proved separately are
+
+\[
+\begin{aligned}
+0&\le x_0\le 2/5,\\
+1/6&\le x_2\le 5/12,\\
+1/3&\le x_3\le 1/2,\\
+7/18&\le x_4\le 2/3,\\
+2/5&\le x_1\le 2/3.
+\end{aligned}
+\tag{3}
+\]
+
+The previous orbit-129 certificate supplies exact rational upper enclosures for `M` at `1/6`, `1/3`, `4/9`, and `1/2`; the values at `0`, `2/5`, and `2/3` are exact. Re-certifying those endpoint bounds over `Q` and taking convex chords gives one fixed rational upper secant for every rank position.
+
+For rank 1, on `[0,2/5]`,
+
+\[
+\boxed{M(x)\le \frac23+\frac{x}{3}.}
+\tag{4}
+\]
+
+For rank 2, use the slightly enlarged interval `[1/6,4/9]`, which contains the sharper physical interval `[1/6,5/12]`:
+
+\[
+\boxed{
+M(x)\le
+\frac{3045843}{5000000}
++
+\frac{308529}{625000}x.
+}
+\tag{5}
+\]
+
+For rank 3, on `[1/3,1/2]`,
+
+\[
+\boxed{
+M(x)\le
+\frac{549929}{1000000}
++
+\frac{158631}{250000}x.
+}
+\tag{6}
+\]
+
+For rank 4, use the enlarged interval `[1/3,2/3]`, which contains `[7/18,2/3]`:
+
+\[
+\boxed{
+M(x)\le
+\frac{261437}{500000}
++
+\frac{715689}{1000000}x.
+}
+\tag{7}
+\]
+
+For rank 5, on `[2/5,2/3]`,
+
+\[
+\boxed{M(x)\le \frac12+\frac{3x}{4}.}
+\tag{8}
+\]
+
+Because `M` is convex, each chord through certified endpoint upper bounds is an upper bound throughout its interval. The companion verifier independently rebuilds the rational `pi` enclosure and cosine lower bounds needed for the non-exact endpoints, checks the exact value `M(2/5)=4/5`, derives all five chord coefficients over `fractions.Fraction`, and checks that the physical rank intervals lie inside their certification intervals.
+
+Consequently every one of the ten physical gap-order branches supplies five rational linear closure cuts, one for every force gap:
+
+\[
+x_{k+2}+x_{k+3}\le U_{\operatorname{rank}(k)}(x_k).
+\tag{9}
+\]
+
+This is the first fixed polyhedral relaxation here that uses nonlinear force closure at all five gaps rather than only at the minimum and maximum. It requires only the existing ten-way physical order disjunction; it does not require cell-specific interval optimization or floating-point transcendental evaluation.
+
+The natural next finite test is to attach these five cuts to each allowed order branch inside the current generic `H6`, `H7b`, and convex `H8` affine systems and seek exact Farkas contradictions. Failure of this layer is also informative: it would show that further closure progress must use either tighter cell-specific secants or direct nonlinear coupling to the fifteen reciprocal metric equations.
+
+No theorem-state file is changed. C-II remains open.

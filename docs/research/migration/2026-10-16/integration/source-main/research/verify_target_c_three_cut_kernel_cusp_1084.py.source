@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+"""Exact rational propagation: optimized backbone + z>2.217 => 3-cut exceptional set <=1083."""
+from fractions import Fraction as Q
+
+# Parent exact certificate target_c_t1844_retention_2217 proves
+# h_H/D < 1.848545512816704... .  Use a simple outward rational bound.
+H = Q(924273,500000)  # 1.848546
+
+# Exact optimized good-leaf path density from lambda=.6404, d_low=1e-4.
+A=Q(1851,2500)
+W=Q(53,625)
+NC=Q(1063,1000)
+lam=Q(1601,2500)
+dlow=Q(1,10000)
+r=(lam-dlow)/NC
+dtop=lam-(1-r)*NC
+g=(A-lam)*W/(NC-lam)
+p=dtop*g/(r*NC)
+
+# Along the path:
+#   sum_i N_i <= 2 h_H,
+# so for two-boundary windows U_i=N_i+N_{i+1},
+#   sum_i U_i <= 4 h_H.
+# Also sum_i B_i<=2, so sum_i D(B_i+B_{i+1})<=4D.
+# The optimized phase budget has
+#   sum_i D(q_i+q_{i+1}) <= (2 Cphase/dlow)D+o(D),
+# hence the two-boundary windows total at most (4 Cphase/dlow)D+o(D).
+Cphase=Q(3258689123681,612912000000)
+N=Q(1084)
+L=Q(10**12)
+
+bad_count=4*H/N
+bad_beta=Q(4)/L
+bad_phase=(4*Cphase/dlow)/L
+bad_total=bad_count+bad_beta+bad_phase
+margin=p-bad_total
+
+assert 4*H/p < N
+assert margin > Q(1,1_000_000)
+
+print('PASS optimized three-cut exceptional count <1084+o(1)')
+print('path density =',float(p))
+print('safe diameter-edge density =',float(H))
+print('count-only two-boundary average =',float(4*H/p))
+print('bad count density =',float(bad_count))
+print('bad beta density =',float(bad_beta))
+print('bad phase density =',float(bad_phase))
+print('union-bound margin =',float(margin))
+print('CONCLUSION: eventually |H_exc|<=1083, with beta mass and phase variation O(1/D).')

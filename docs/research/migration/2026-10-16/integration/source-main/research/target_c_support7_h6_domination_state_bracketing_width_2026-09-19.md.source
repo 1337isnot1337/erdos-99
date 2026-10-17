@@ -1,0 +1,116 @@
+# Target C support-seven H6: fixed-state domination order-cut support bound
+
+Date: 2026-09-19
+
+Status: exact finite refinement of `target_c_support7_h6_domination_cycle_width_2026-09-19.md`. The theorem-state authority is unchanged. C-II remains open.
+
+## Result
+
+The preceding domination-cycle-width theorem proves that a minimal directed cycle in the reciprocal segment graph `L(K8)` can contain at most two all-root interior-domination literals in their required target-to-hull direction. It leaves 42 compatible two-clause types and 420 compatible atom pairs when all possible hull endpoints are pooled across states.
+
+A fixed generic-H6 state is much more restrictive. Every domination clause has only the two endpoints of one actual bracketing hull edge available. Using only this fact gives the universal bound
+
+\[
+\boxed{82}
+\]
+
+on the number of state-specific binary domination-literal supports that can even occur in a minimal directed segment-order cycle. Together with the 28 individual branch literals, a fixed-state order-cycle cut generator needs to consider at most
+
+\[
+\boxed{28+82=110}
+\]
+
+unary-or-binary domination-literal supports before consulting independently forced segment-comparison signs.
+
+This does not mean that all 110 supports produce contradictions. It bounds the supports that could possibly be completed to a minimal directed `L(K8)` cycle. The actual number can be smaller for a concrete H6 state.
+
+## Hull-hull clause pairs
+
+Consider compatible clauses `(r,6)` and `(s,7)` with distinct hull roots `r,s in {0,...,5}`. Let `A_r` and `B_s` be their state-specific bracketing hull edges. Since the ray starts at a hull vertex, its exit edge does not contain that root. Therefore each hull-root clause has one of exactly four possible nonincident hull edges.
+
+Choose branch endpoints `h in A_r` and `k in B_s`. For the two domination atoms to lie in one directed simple-cycle template, the aligned paths
+
+\[
+6\to r\to h,
+\qquad
+7\to s\to k
+\]
+
+must have six distinct vertices. Because `A_r` already avoids `r` and `B_s` already avoids `s`, the remaining conditions are
+
+\[
+h\ne s,
+\qquad
+k\ne r,
+\qquad
+h\ne k.
+\tag{1}
+\]
+
+The verifier maximizes the total number of endpoint pairs satisfying (1) over a deliberate over-approximation: for each target, the six hull roots independently choose any of their four nonincident hull edges. Actual H6 radial-order data can only reduce this search space.
+
+There are `4^6=4096` target-`6` edge maps. Once one is fixed, the contribution of a target-`7` root `s` depends only on the one edge selected at `s`. Its four choices can therefore be optimized independently. This is exactly equivalent to the full `4^12` finite maximization but much smaller computationally.
+
+The exact maximum in this independent-bracketing relaxation is
+
+\[
+\boxed{74}.
+\]
+
+The verifier also records an attaining relaxed assignment:
+
+```text
+target 6 bracket edges by hull root
+0: 12   1: 23   2: 01   3: 12   4: 01   5: 12
+
+target 7 bracket edges by hull root
+0: 45   1: 45   2: 50   3: 45   4: 50   5: 34
+```
+
+Attainment here is only for the independent finite relaxation. The note does not claim that this complete bracket map is realized by one reciprocal H6 configuration. What is rigorous for every actual H6 state is the upper bound `<=74`.
+
+## Hull-interior clause pairs
+
+For the interior-root clause `(6,7)`, a two-literal directed cycle with a hull-root clause `(r,6)` requires the selected hull endpoint at root `6` to be exactly `r`; otherwise the two required directed paths do not concatenate into a simple cycle.
+
+The bracketing edge for `(6,7)` has exactly two hull endpoints. Hence only two of its six compatible hull-root partner clauses can be active in a fixed state. Each active hull-root clause has its two own bracketing endpoints available, so `(6,7)` contributes exactly
+
+\[
+2\cdot2=4
+\]
+
+candidate binary literal supports. The same argument applies to `(7,6)`, for another four. Thus the hull-interior contribution is exactly eight.
+
+Combining the two types gives
+
+\[
+\boxed{74+8=82}.
+\]
+
+There are fourteen domination clauses and two branch literals per clause, so there are 28 unary supports. Hence
+
+\[
+\boxed{28+82=110}.
+\]
+
+## Computational consequence
+
+For the segment-order layer, arbitrary products of the fourteen two-way domination clauses are unnecessary. On each fixed H6 state, after exactifying background signs among the 168 rooted segment comparisons, the cycle-cut stage can restrict itself to at most 110 domination-facing supports: 28 unary literals and at most 82 binary literal pairs.
+
+The full fourteen-disjunction affine branch-and-bound remains necessary. A rational Farkas contradiction can depend on three or more domination halfspaces without corresponding to a directed segment-order cycle, so the `110` bound applies only to the order-cycle cut layer.
+
+The same-root target-6/target-7 depth-two audit remains relevant only through this broader affine mechanism: same-root clause pairs cannot be the two domination literals of a minimal directed order cycle.
+
+Certificate:
+
+`research/verify_target_c_support7_h6_domination_state_bracketing_width_2026_09_19.py`
+
+## Scope
+
+This result does not eliminate a new H6 cell by itself. The explicit generic-H6 endpoint remains
+
+\[
+3874=3076\,C_7+798\,(C_3\sqcup C_4).
+\]
+
+The next direct reduction still requires exact state-specific forced-sign extraction, the full affine domination branch-and-bound, or nonlinear sine-cycle exclusion. Reciprocal-collinearity walls remain separate. C-II remains open.

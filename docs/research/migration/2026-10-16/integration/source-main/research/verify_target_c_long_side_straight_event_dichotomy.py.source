@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+from decimal import Decimal, getcontext
+
+getcontext().prec = 80
+pi = Decimal('3.14159265358979323846264338327950288419716939937510')
+sqrt3 = Decimal(3).sqrt()
+Delta2 = pi / (Decimal(2) * sqrt3)
+s = Delta2.sqrt()
+g = Decimal('0.00042')
+C146 = Decimal(4) * (pi + s) / Decimal(9)
+t = C146 + Decimal('0.0013751')
+R = Decimal('4.5') * (t - C146) - g
+delta = R / Decimal(2)
+branch_floor = (pi - t - Decimal(2) * R) / Decimal(3)
+
+one_minus_cos_beta = Decimal(1) - sqrt3 / Decimal(2)
+bad_occurrences = delta / one_minus_cos_beta
+straight_occurrences = branch_floor - Decimal(2) * bad_occurrences
+loaded_degree_two = straight_occurrences / Decimal(4)
+transverse_edges = straight_occurrences / Decimal(20)
+
+assert branch_floor > Decimal('0.4363893718')
+assert bad_occurrences < Decimal('0.0215262825')
+assert straight_occurrences > Decimal('0.3933368069')
+assert loaded_degree_two > Decimal('0.0983342017')
+assert transverse_edges > Decimal('0.0196668403')
+
+print('t42 =', t)
+print('detour density <=', delta)
+print('long-side branch density >=', branch_floor)
+print('bad edge occurrences/D <=', bad_occurrences)
+print('near-straight internal occurrences/D >=', straight_occurrences)
+print('loaded degree-two alternative/D >=', loaded_degree_two)
+print('transverse-edge alternative/D >=', transverse_edges)
+print('transverse component in edge alternative > 1/2')
+print('PASS: long-side straight-event constants')

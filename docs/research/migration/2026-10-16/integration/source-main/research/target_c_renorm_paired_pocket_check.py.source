@@ -1,0 +1,55 @@
+from fractions import Fraction as F
+from math import pi, sqrt
+
+# Exact rational checks for
+# docs/reports/target_c_renormalized_paired_pocket_07811_2026-09-10.md
+#
+# The theorem itself is analytic.  This script certifies the quoted rational
+# endpoint margins and brackets; floating-point values are diagnostic only.
+
+PI_LO = F(6283, 2000)   # < pi
+PI_HI = F(3927, 1250)   # > pi
+
+
+def P(x: F, m: F) -> F:
+    """Numerator 16*pi*F_m(pi) with pi replaced by x."""
+    return 3 * x * x - 2 * x * m - (4 * x * x + 1) * m * m
+
+
+# On m in [0.781,0.782] and x>=PI_LO, P is increasing in x:
+# dP/dx = x(6-8m^2)-2m.
+m_hi = F(782, 1000)
+derivative_lower = PI_LO * (6 - 8 * m_hi * m_hi) - 2 * m_hi
+assert derivative_lower > 0
+
+# Therefore PI_LO gives a lower bound and PI_HI an upper bound for the true P.
+assert P(PI_LO, F(781, 1000)) > 0
+assert P(PI_HI, F(782, 1000)) < 0
+
+# The coarse bracket used in the analytic endpoint comparison.
+assert P(PI_LO, F(39, 50)) > 0
+assert P(PI_HI, F(4, 5)) < 0
+
+# Exact y=2rho margin from the report.
+phi_lower = F(154451, 250000)
+rhs_upper = F(42781, 70000)
+margin = phi_lower - rhs_upper
+assert margin == F(727, 109375)
+assert margin > 0
+
+# u_pi < 0.70 certificate used only to show the old PT-L phase is below
+# the new threshold.  From pi<22/7, pi>157/50, sqrt(1648)<203/5:
+upi_upper = F(528, 35) * F(1250, 27149)
+assert upi_upper < F(7, 10)
+
+mu_rp = pi * (2 * sqrt(3 * pi * pi + 1) - 1) / (4 * pi * pi + 1)
+u_pi = pi * (sqrt(3 * pi * pi + 4) - 1) / (2 * (pi * pi + 1))
+
+print("PASS: renormalized paired-pocket exact checks")
+print("dP/dpi lower bound on bracket =", derivative_lower, float(derivative_lower))
+print("P(0.781; pi_lo) =", P(PI_LO, F(781, 1000)), float(P(PI_LO, F(781, 1000))))
+print("P(0.782; pi_hi) =", P(PI_HI, F(782, 1000)), float(P(PI_HI, F(782, 1000))))
+print("2rho-endpoint exact margin =", margin, float(margin))
+print("u_pi rational upper bound =", upi_upper, float(upi_upper))
+print("mu_RP diagnostic =", mu_rp)
+print("u_pi diagnostic =", u_pi)

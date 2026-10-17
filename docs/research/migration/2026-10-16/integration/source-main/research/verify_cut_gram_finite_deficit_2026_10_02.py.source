@@ -1,0 +1,289 @@
+#!/usr/bin/env python3
+"""Exact Q(sqrt(3)) cut-Gram and finite-curvature regressions.
+
+Checks actual hexagon/square pair lengths, full positive KKT equilibrium, PSD
+with the affine kernel, all subsets of their uniform contact cuts, and polynomial
+identities for the finite hexagon shear. The hexagon cuts group two stopped-train
+terminals and are NOT asserted to be O--O trains. Global optimality, large-source
+extraction, inactive-pair exclusion and the human general theorem are not encoded.
+Only Python's standard library is needed; no floating-point arithmetic is used.
+"""
+
+from dataclasses import dataclass
+from fractions import Fraction as F
+from itertools import combinations
+
+
+@dataclass(frozen=True)
+class Q:
+    a: F = F(0)
+    b: F = F(0)
+
+    def __post_init__(self):
+        object.__setattr__(self, "a", F(self.a))
+        object.__setattr__(self, "b", F(self.b))
+
+    def __add__(self, other):
+        other = as_q(other)
+        return Q(self.a + other.a, self.b + other.b)
+
+    __radd__ = __add__
+
+    def __neg__(self):
+        return Q(-self.a, -self.b)
+
+    def __sub__(self, other):
+        return self + -as_q(other)
+
+    def __rsub__(self, other):
+        return as_q(other) + -self
+
+    def __mul__(self, other):
+        other = as_q(other)
+        return Q(self.a * other.a + 3 * self.b * other.b,
+                 self.a * other.b + self.b * other.a)
+
+    __rmul__ = __mul__
+
+    def __truediv__(self, other):
+        other = as_q(other)
+        norm = other.a * other.a - 3 * other.b * other.b
+        assert norm != 0
+        return self * Q(other.a / norm, -other.b / norm)
+
+    def sign(self):
+        if not self.b:
+            return (self.a > 0) - (self.a < 0)
+        if not self.a:
+            return (self.b > 0) - (self.b < 0)
+        if (self.a > 0) == (self.b > 0):
+            return 1 if self.a > 0 else -1
+        norm = self.a * self.a - 3 * self.b * self.b
+        return ((norm > 0) - (norm < 0)) * (1 if self.a > 0 else -1)
+
+
+def as_q(x):
+    return x if isinstance(x, Q) else Q(x)
+
+
+Z = Q()
+ONE = Q(1)
+ROOT3 = Q(0, 1)
+
+
+def sub(p, q):
+    return tuple(x - y for x, y in zip(p, q))
+
+
+def dot(p, q):
+    return sum((x * y for x, y in zip(p, q)), Z)
+
+
+def quarter(p):
+    return -p[1], p[0]
+
+
+def rank(matrix):
+    if not matrix:
+        return 0
+    a = [[as_q(x) for x in row] for row in matrix]
+    r = 0
+    for j in range(len(a[0])):
+        pivot = next((i for i in range(r, len(a)) if a[i][j] != Z), None)
+        if pivot is None:
+            continue
+        a[r], a[pivot] = a[pivot], a[r]
+        divisor = a[r][j]
+        a[r] = [x / divisor for x in a[r]]
+        for i in range(len(a)):
+            if i != r:
+                factor = a[i][j]
+                a[i] = [x - factor * y for x, y in zip(a[i], a[r])]
+        r += 1
+        if r == len(a):
+            break
+    return r
+
+
+def mul(a, b):
+    return [[sum((a[i][k] * b[k][j] for k in range(len(b))), Z)
+             for j in range(len(b[0]))] for i in range(len(a))]
+
+
+def transpose(a):
+    return [list(row) for row in zip(*a)]
+
+
+def laplacian(n, edges, weight):
+    a = [[Z for _ in range(n)] for _ in range(n)]
+    for i, j in edges:
+        a[i][i] += weight
+        a[j][j] += weight
+        a[i][j] -= weight
+        a[j][i] -= weight
+    return a
+
+
+def source_check(points, contacts, diameters, alpha, beta, diameter2, shores):
+    n = len(points)
+    actual_c, actual_h = [], []
+    for i, j in combinations(range(n), 2):
+        d2 = dot(sub(points[j], points[i]), sub(points[j], points[i]))
+        assert (d2 - ONE).sign() >= 0
+        assert (as_q(diameter2) - d2).sign() >= 0
+        if d2 == ONE:
+            actual_c.append((i, j))
+        if d2 == as_q(diameter2):
+            actual_h.append((i, j))
+    normalize = lambda es: sorted(tuple(sorted(e)) for e in es)
+    assert normalize(actual_c) == normalize(contacts)
+    assert normalize(actual_h) == normalize(diameters)
+    assert len(diameters) * beta == ONE
+    assert len(contacts) * alpha == as_q(diameter2)
+    c = laplacian(n, contacts, alpha)
+    h = laplacian(n, diameters, beta)
+    omega = [[c[i][j] - h[i][j] for j in range(n)] for i in range(n)]
+    affine = [[ONE, *p] for p in points]
+    assert mul(omega, affine) == [[Z] * 3 for _ in range(n)]
+    assert rank(affine) == 3 and rank(omega) == n - 3
+    # Symmetric Omega^2=2 Omega certifies spectrum in {0,2}, hence PSD.
+    assert omega == transpose(omega)
+    assert mul(omega, omega) == [[2 * x for x in row] for row in omega]
+    indicators = [[ONE if v in s else Z for s in shores] for v in range(n)]
+    cut_vectors = []
+    membership = {}
+    for i, j in contacts:
+        changed = [k for k, s in enumerate(shores) if (i in s) != (j in s)]
+        assert len(changed) == 1
+        k = changed[0]
+        vector = sub(points[j], points[i]) if j in shores[k] else sub(points[i], points[j])
+        membership[tuple(sorted((i, j)))] = k
+        if len(cut_vectors) <= k:
+            cut_vectors.extend([None] * (k + 1 - len(cut_vectors)))
+        if cut_vectors[k] is None:
+            cut_vectors[k] = vector
+        assert cut_vectors[k] == vector
+    assert all(u is not None for u in cut_vectors)
+    tested = 0
+    for count in range(1, len(shores) + 1):
+        for chosen in combinations(range(len(shores)), count):
+            x = [[row[k] for k in chosen] for row in indicators]
+            w = mul(mul(transpose(x), omega), x)
+            w_expanded = [[Z for _ in chosen] for _ in chosen]
+            for i, j in contacts:
+                sigma = [x[j][k] - x[i][k] for k in range(count)]
+                for a in range(count):
+                    for b in range(count):
+                        w_expanded[a][b] += alpha * sigma[a] * sigma[b]
+            for i, j in diameters:
+                sigma = [x[j][k] - x[i][k] for k in range(count)]
+                for a in range(count):
+                    for b in range(count):
+                        w_expanded[a][b] -= beta * sigma[a] * sigma[b]
+            assert w == w_expanded
+            untouched = [sub(points[j], points[i]) for i, j in contacts
+                         if membership[tuple(sorted((i, j)))] not in chosen]
+            assert count - rank(w) == 2 - rank(untouched)
+            s = [[w[a][b] * dot(cut_vectors[chosen[a]], cut_vectors[chosen[b]])
+                  for b in range(count)] for a in range(count)]
+            equations = []
+            for i, j in contacts:
+                k = membership[tuple(sorted((i, j)))]
+                u = cut_vectors[k]
+                ju = quarter(u)
+                for coordinate in range(2):
+                    row = [Z] * (4 + count)
+                    row[2 * coordinate:2 * coordinate + 2] = list(u)
+                    if k in chosen:
+                        row[4 + chosen.index(k)] = -ju[coordinate]
+                    equations.append(row)
+            assert count - rank(s) == 4 + count - rank(equations)
+            if rank(w) == count:
+                assert rank(s) == count
+            tested += 1
+    return omega, cut_vectors, tested
+
+
+def poly_add(a, b):
+    return [(a[i] if i < len(a) else Z) + (b[i] if i < len(b) else Z)
+            for i in range(max(len(a), len(b)))]
+
+
+def poly_mul(a, b):
+    out = [Z] * (len(a) + len(b) - 1)
+    for i, x in enumerate(a):
+        for j, y in enumerate(b):
+            out[i + j] += x * y
+    return out
+
+
+def poly_scale(a, coefficient):
+    return [coefficient * x for x in a]
+
+
+def poly_equal(a, b):
+    diff = poly_add(a, poly_scale(b, -1))
+    return all(x == Z for x in diff)
+
+
+def main():
+    hexagon = [(Q(1), Z), (Q(F(1, 2)), ROOT3 / 2),
+               (Q(F(-1, 2)), ROOT3 / 2), (Q(-1), Z),
+               (Q(F(-1, 2)), -ROOT3 / 2), (Q(F(1, 2)), -ROOT3 / 2)]
+    contacts = [(i, (i + 1) % 6) for i in range(6)]
+    diameters = [(i, i + 3) for i in range(3)]
+    shores = [{(i + j) % 6 for j in (1, 2, 3)} for i in range(3)]
+    _, vectors, count_hex = source_check(hexagon, contacts, diameters,
+                                         Q(F(2, 3)), Q(F(1, 3)), 4, shores)
+    square = [(Z, Z), (ONE, Z), (ONE, ONE), (Z, ONE)]
+    _, _, count_square = source_check(square, [(0, 1), (1, 2), (2, 3), (0, 3)],
+                                       [(0, 2), (1, 3)], Q(F(1, 2)), Q(F(1, 2)),
+                                       2, [{1, 2}, {2, 3}])
+    u, ju = vectors[0], quarter(vectors[0])
+    denominator = [ONE, Z, ONE]
+    expected = [
+        poly_add(poly_scale(poly_mul(denominator, denominator), 4),
+                 poly_scale(poly_mul([Z, ONE], denominator), 4 * ROOT3)),
+        poly_add(poly_scale(poly_mul(denominator, denominator), 4),
+                 poly_scale(poly_mul([Z, ONE], denominator), -4 * ROOT3)),
+        poly_scale(denominator, 4),
+    ]
+    actual = []
+    for i, j in diameters:
+        r = sub(hexagon[j], hexagon[i])
+        sigma = int(j in shores[0]) - int(i in shores[0])
+        coordinates = [[r[a], 2 * sigma * ju[a], r[a] - 2 * sigma * u[a]]
+                       for a in range(2)]
+        actual.append(poly_add(*(poly_mul(v, v) for v in coordinates)))
+    # Orientation affects which of the first two formulas belongs to which pair.
+    assert all(any(poly_equal(a, e) for e in expected) for a in actual)
+    weighted = [Z]
+    for a in actual:
+        weighted = poly_add(weighted, poly_scale(a, Q(F(1, 3))))
+    target = poly_add(poly_scale(poly_mul(denominator, denominator), 4),
+                      poly_scale(poly_mul([Z, Z, ONE], denominator), Q(F(-4, 3))))
+    assert poly_equal(weighted, target)
+    checked_pairs = 0
+    for parameter in [F(-1, 32), F(-1, 64), F(-1, 100), F(-1, 1000),
+                      F(1, 1000), F(1, 100), F(1, 64), F(1, 32)]:
+        co = Q((1 - parameter * parameter) / (1 + parameter * parameter))
+        si = Q(2 * parameter / (1 + parameter * parameter))
+        delta = tuple((co - ONE) * u[a] + si * ju[a] for a in range(2))
+        moved = [tuple(p[a] + (delta[a] if i in shores[0] else Z) for a in range(2))
+                 for i, p in enumerate(hexagon)]
+        max2 = Q(4) + 2 * ROOT3 * (si if parameter > 0 else -si)
+        for i, j in combinations(range(6), 2):
+            d2 = dot(sub(moved[j], moved[i]), sub(moved[j], moved[i]))
+            assert (d2 - ONE).sign() >= 0
+            assert (max2 - d2).sign() >= 0
+            checked_pairs += 1
+        assert max2.sign() > 0 and (max2 - 4).sign() > 0
+    print("PASS: 21 original pair distances; 10 cut-family kernel classifications;")
+    print("      full vertex equilibrium and PSD affine kernels for hexagon and square;")
+    print("      four symbolic finite identities; 120 moved pair constraints;")
+    print("      strict weighted deficit coexisting with an actual diameter cusp.")
+    print("OMITTED: global optimality, O--O extraction, asymptotics, blocker exclusion.")
+
+
+if __name__ == "__main__":
+    main()

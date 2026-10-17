@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+"""Exact arithmetic check for the slack-aware one-anchor component count."""
+
+
+def main():
+    # m6 components have support six and each consumes one independent host
+    # transpose-kernel dimension.  Every other surviving degree-pure component
+    # has support at least seven after the K5 and noncollapsed support-six
+    # exclusions.
+    for m6 in range(0, 101):
+        for m7 in range(0, 101):
+            n1 = 6 * m6 + 7 * m7
+            s_z = m6
+            m = m6 + m7
+            assert 7 * m <= n1 + s_z
+    print("checked_component_counts", 101 * 101)
+    print("slack_aware_bound", "m <= (n1 + s_Z)/7")
+    print("zero_slack_bound", "m <= n1/7")
+    print("PASS: exact slack-aware one-anchor component count")
+
+
+if __name__ == "__main__":
+    main()

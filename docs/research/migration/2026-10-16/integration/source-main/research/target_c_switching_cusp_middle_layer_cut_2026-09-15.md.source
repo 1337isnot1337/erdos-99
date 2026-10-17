@@ -1,0 +1,362 @@
+# Target C-II — the finite switching cusp is exactly one middle-layer diameter cut
+
+**Date:** 2026-09-15
+**Status:** proof-only exact structural sharpening
+**Scope:** any consecutive pair in the audited laminar O--O interval-shear coordinates; quantitative corollary for the triple-small adjacent pair
+**Dependencies:** `target_c_laminar_multitrain_interval_shear_2026-09-15.md`; audited Section 157 shore resultants; C65 full actual diameter visibility; straight-line diameter-thrackle theorem
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The finite-cusp reduction treats an active diameter row as **switching** when its shore
+incidence differs on two consecutive selected O--O cuts.  The interval theorem gives a
+stronger physical interpretation which was not used there: the switching rows are not
+an arbitrary bounded subset of the diameter graph.  They are exactly the full
+diameter-graph edge boundary of the one physical layer between the two cuts.
+
+Let
+
+\[
+P=(\tau_1,\ldots,\tau_m)
+\]
+
+be a selected dual-path O--O family with layers
+
+\[
+R_0,R_1,\ldots,R_m
+\]
+
+from the exact laminar shear theorem.  Fix an internal boundary `i`, so the physical
+middle layer is `R_i`, between `tau_i` and `tau_{i+1}`.  Let `H` be the complete actual
+diameter graph and put
+
+\[
+B_i:=V(H)\cap R_i.
+\]
+
+Then:
+
+### Theorem MC.1 — exact middle-layer cut identity
+
+A diameter edge switches between columns `i` and `i+1` if and only if it has exactly
+one endpoint in `B_i`.  Equivalently,
+
+\[
+\boxed{
+\mathcal S_i
+:=\{h:\varepsilon_{h,i+1}\ne\varepsilon_{hi}\}
+=\delta_H(B_i).
+}
+\tag{MC.1}
+\]
+
+Thus every switching edge has one and only one loaded endpoint in the physical middle
+layer `R_i`.
+
+### Theorem MC.2 — exact signed reaction of the cusp cut
+
+Orient every switching diameter edge from its endpoint in `B_i` toward its endpoint
+outside `B_i`, and write that length-`D` vector as `d_h`.  For the audited Section 157
+cut resultants
+
+\[
+F_j=A_j u_j
+=\sum_h\beta_h\varepsilon_{hj}r_h,
+\]
+
+one has the exact vector identity
+
+\[
+\boxed{
+F_{i+1}-F_i
+=\sum_{h\in\delta_H(B_i)}\beta_h d_h.
+}
+\tag{MC.2}
+\]
+
+Consequently the switching multiplier quantity from the adjacent-cut theorem is
+literally the KKT weight of this diameter cut:
+
+\[
+\boxed{
+B_i^{\rm sw}
+:=\sum_h\beta_h|\varepsilon_{h,i+1}-\varepsilon_{hi}|
+=\sum_{h\in\delta_H(B_i)}\beta_h.
+}
+\tag{MC.3}
+\]
+
+### Corollary MC.3 — the finite cusp is a bounded straight-line-thrackle cut
+
+For the triple-small pair from
+`target_c_adjacent_cut_triple_small_2026-09-15.md`,
+
+\[
+\boxed{|\delta_H(B_i)|<21200+o(1),}
+\tag{MC.4}
+\]
+
+\[
+\boxed{
+\sum_{h\in\delta_H(B_i)}\beta_h
+<{21200\over D}+o(D^{-1}),
+}
+\tag{MC.5}
+\]
+
+and
+
+\[
+\boxed{
+\left\|\sum_{h\in\delta_H(B_i)}\beta_h d_h\right\|
+<21200+o(1).
+}
+\tag{MC.6}
+\]
+
+The active large-derivative rows in the finite opposite shear are **precisely** the
+edges of this cut.  Since `H` is a straight-line diameter thrackle, any two members of
+`delta_H(B_i)` with disjoint endpoints cross properly.  Every endpoint in `B_i` is a
+loaded extreme vertex of the C65 force hull.
+
+This replaces the previous abstract `O(1)` cusp set by one bounded interface cut in
+the actual Woodall diameter graph.
+
+---
+
+## 1. Interval endpoints identify the physical middle layer
+
+Use the exact layer index `ell(v)` from the laminar interval theorem.  Orient one actual
+diameter edge `h=xy` so
+
+\[
+a:=\ell(x)\le b:=\ell(y).
+\]
+
+Its selected-cut support is exactly
+
+\[
+I_h=\{a+1,a+2,\ldots,b\},
+\tag{MC.7}
+\]
+
+with one constant nonzero shore-incidence sign on this interval.  With the standard
+lower-to-higher orientation that sign is `+1`, so
+
+\[
+\varepsilon_{hj}
+=\mathbf 1_{\{a<j\le b\}}.
+\tag{MC.8}
+\]
+
+Compare consecutive columns `i` and `i+1`.  Their indicators differ exactly in one of
+two cases:
+
+1. `b=i`: the interval ends at `i`; or
+2. `a=i`: the interval starts at `i+1`.
+
+In the first case the higher endpoint `y` lies in layer `R_i`.  In the second case the
+lower endpoint `x` lies in layer `R_i`.  The other endpoint lies strictly outside that
+layer.
+
+Conversely, if exactly one endpoint of a diameter edge lies in `R_i`, then its two
+layer indices are either `a<i=b` or `a=i<b`, so its interval ends or starts at the
+boundary and the edge switches.  If both endpoints lie in `R_i`, then `a=b=i` and the
+selected-cut interval is empty, so the edge does not switch.
+
+C65 identifies every actual diameter endpoint with a loaded vertex of `H`.  Therefore
+this is exactly the graph cut `delta_H(B_i)`, proving (MC.1).
+
+A useful directional split is now canonical:
+
+\[
+\mathcal S_i^-:=\{h=xy:\ell(x)<\ell(y)=i\},
+\]
+
+\[
+\mathcal S_i^+:=\{h=xy:\ell(x)=i<\ell(y)\}.
+\tag{MC.9}
+\]
+
+The first family consists of diameter edges entering the middle layer from earlier
+layers; the second consists of edges leaving it toward later layers.
+
+---
+
+## 2. Consecutive cut-resultant subtraction is the layer reaction
+
+For the lower-to-higher orientation `r_h=p_y-p_x`, equation (MC.8) gives
+
+\[
+\varepsilon_{h,i+1}-\varepsilon_{hi}
+=\begin{cases}
+-1,&h\in\mathcal S_i^-,\\
++1,&h\in\mathcal S_i^+,\\
+0,&h\notin\mathcal S_i.
+\end{cases}
+\tag{MC.10}
+\]
+
+If `h` is in `S_i^-`, then `r_h` points from the outside endpoint toward the middle
+layer, so `-r_h` is the vector from the middle endpoint to the outside endpoint.  If
+`h` is in `S_i^+`, then `r_h` already points from the middle endpoint outward.  Thus in
+both cases
+
+\[
+(\varepsilon_{h,i+1}-\varepsilon_{hi})r_h=d_h.
+\tag{MC.11}
+\]
+
+Subtract the exact Section 157 identities for the two consecutive cuts:
+
+\[
+\begin{aligned}
+F_{i+1}-F_i
+&=\sum_h\beta_h
+ (\varepsilon_{h,i+1}-\varepsilon_{hi})r_h\\
+&=\sum_{h\in\delta_H(B_i)}\beta_h d_h.
+\end{aligned}
+\]
+
+This proves (MC.2).  Since every switch changes a `0/1` incidence by exactly one,
+(MC.3) follows immediately.
+
+The same identity can be read as equilibrium of the physical middle layer: the two
+train-side contact resultants differ by exactly the net outward diameter reaction on
+that layer.  No response-conductance inequality and no coefficient floor are used.
+
+---
+
+## 3. Insert the triple-small estimates
+
+For the adjacent pair selected by the triple-small theorem, its switching count and
+switching multiplier satisfy
+
+\[
+N_i<21200+o(1),
+\qquad
+B_i^{\rm sw}<{21200\over D}+o(D^{-1}).
+\]
+
+By (MC.1) and (MC.3), these are exactly (MC.4)--(MC.5).  Every `d_h` has norm `D`, so
+(MC.2) gives
+
+\[
+\|F_{i+1}-F_i\|
+\le D\sum_{h\in\delta_H(B_i)}\beta_h
+<21200+o(1),
+\]
+
+recovering the existing resultant estimate with a sharper structural interpretation.
+
+The finite-cusp theorem classifies a row as large-derivative precisely when its
+interval contains exactly one of the two adjacent coordinates.  By (MC.1), those rows
+are exactly `delta_H(B_i)`.
+
+---
+
+## 4. Thrackle and Woodall localization
+
+The complete actual diameter graph is a straight-line thrackle.  Therefore the finite
+cusp cannot be an arbitrary collection of `<=21200` active constraints:
+
+- every cusp edge joins one middle-layer loaded terminal to one loaded terminal outside
+  the layer;
+- two cusp edges with four distinct endpoints cross in their interiors;
+- all cusp endpoints are convex-position loaded terminals of the C65 force hull;
+- in the Woodall forest branch the cut sits inside a disjoint union of caterpillars;
+- in the Woodall cyclic branch it sits inside the unique odd-unicyclic component with
+  pendant leaves.
+
+In particular, if `B_i` contains exactly one loaded terminal `z`, then
+
+\[
+\boxed{
+\delta_H(B_i)=E_H(z),
+}
+\tag{MC.12}
+\]
+
+so the entire finite cusp is one actual diameter star.  More generally, internal
+diameter edges with both endpoints in `B_i` are invisible to the cusp and every other
+diameter incidence of a middle-layer terminal appears in it.
+
+No stronger star conclusion is claimed without additional control of `|B_i|` or the
+cyclic placement of the middle-layer terminals.
+
+---
+
+## 5. Interaction with the KKT curvature identity
+
+For the finite opposite shear with coefficients `(1,-s)` and projective sign chosen so
+`|u_i-su_{i+1}|=eta`, the exact KKT curvature identity gives
+
+\[
+Q(1,-s)
+=\sum_h\beta_h|A_h|^2-A_i-A_{i+1}.
+\]
+
+The three row types and (MC.3) imply the useful upper bound
+
+\[
+\boxed{
+Q(1,-s)
+\le
+B_i^{\rm sw}+\eta^2-A_i-A_{i+1}.
+}
+\tag{MC.13}
+\]
+
+Indeed cusp rows contribute exactly one to `|A_h|^2`, rows spanning both coordinates
+contribute `|u_i-su_{i+1}|^2=eta^2`, and rows meeting neither contribute zero; the
+total diameter multiplier is one.
+
+For the triple-small pair,
+
+\[
+B_i^{\rm sw}=O(D^{-1}),
+\qquad
+\eta=O(D^{-1}),
+\]
+
+so
+
+\[
+Q(1,-s)
+\le -A_i-A_{i+1}+O(D^{-1}).
+\tag{MC.14}
+\]
+
+This does **not** close the branch: the current audited stack has no quantitative lower
+bound on either `A_i` or `A_{i+1}`, and a negative KKT-weighted curvature by itself does
+not control the individual first-order diameter cusps.  Equation (MC.14) records the
+precise missing scalar rather than silently assuming the rejected response inequality.
+
+---
+
+## 6. Frontier effect
+
+The finite-cusp normal form can now be stated at source level as
+
+```text
+one physical middle layer R_i
++ two nearly parallel O-O train sides tau_i,tau_{i+1}
++ the complete active diameter interface is delta_H(B_i)
++ |delta_H(B_i)|=O(1)
++ beta(delta_H(B_i))=O(1/D)
++ every two disjoint interface chords cross
++ exact layer reaction F_{i+1}-F_i
++ opposite-shear weighted curvature <= -A_i-A_{i+1}+O(1/D).
+```
+
+A valid next theorem no longer needs to reason about an unstructured finite list of
+cusp rows.  It can attack one bounded edge cut of a Woodall thrackle.  Three concrete
+routes remain:
+
+1. control the number/cyclic order of loaded terminals in `B_i` and classify the
+   resulting thrackle cut;
+2. prove a positive lower floor for `A_i+A_{i+1}` and combine it with a source-level
+   (not merely KKT-average) finite replacement; or
+3. exploit the exact layer interface to build a cardinality-preserving replacement
+   that is allowed to break the two old train-side contact families.
+
+**Disposition:** proved proof-only structural sharpening.  C-II and Level I remain
+open.

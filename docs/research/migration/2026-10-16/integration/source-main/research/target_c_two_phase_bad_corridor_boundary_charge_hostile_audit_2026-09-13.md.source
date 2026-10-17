@@ -1,0 +1,127 @@
+# Hostile audit — two-phase bad-corridor boundary charge
+
+**Date:** 2026-09-13  
+**Reviewed:** `target_c_two_phase_bad_corridor_boundary_charge_2026-09-13.md`  
+**Disposition:** PASS as a scoped proof-only candidate; C-II remains open.  
+**Theorem authority:** unchanged; canonical Target C remains through Section 123.
+
+## 1. Shared-boundary estimate
+
+The proposed estimate is
+
+\[
+ \sum_i H_{D,i}\le(1+o(1))\sum_i I_{D,i},
+\]
+
+for convex exceptional faces contained in a convex force hull converging in scaled
+Hausdorff distance to a disk, with each exceptional face having `o(D^2)` area.
+The side lengths are one in the application, so length and occurrence count agree.
+
+For one shared boundary chain `Gamma`, the complementary face path has length at
+least the chord joining the chain endpoints.  A shared chain of length comparable
+to `D` would contain a fixed positive angular arc of the limiting circle (or a
+fixed nondegenerate sector if it winds around), and convexity would force a positive
+scaled area in the exceptional face.  Thus all shared chains have `o(D)` length.
+
+On a convex body trapped between concentric radii `D/2+o(D)`, a boundary chain of
+length `o(D)` has total turning `o(1)` and chord length
+`(1-o(1))` times its length.  Applying the complementary-path chord bound to the
+alternating shared/free chains gives the stated aggregate estimate.  The estimate
+must be read as an asymptotic convex-boundary lemma; it is not a claim for arbitrary
+near-disk sets without convexity.
+
+**Verdict:** PASS at the stated geometric scope.  The turning/chord estimate is the
+load-bearing sublemma and should remain explicitly cited if this result is reused.
+
+## 2. Strict-face dependency
+
+The occurrence count `S_i<=4` requires that a face not contain a collinear chain
+subdivided into many unit edges. Canonical Section 82 supplies this in the contact
+core: a bounded face is a simple cycle; an unloaded angle equal to `pi` contradicts
+positive equilibrium together with the unloaded degree lower bound three, and a
+loaded angle equal to `pi` is excluded by the strict tangent cone of the loaded force
+hull. Hence the bounded faces used here are strict convex polygons. This dependency
+must remain explicit; the statement would be false for an arbitrary weakly convex
+polygon with collinear unit subdivisions.
+
+**Verdict:** PASS under the canonical strict-face dependency.
+
+## 3. Two-phase incidence count
+
+A convex face has at most two sides in each selected projective direction, hence at
+most four selected-direction side occurrences.  With `S_i` the non-hull selected
+occurrences and `U_i` the non-hull off-phase occurrences,
+
+\[
+ I_i=S_i+U_i,\qquad S_i\le4.
+\]
+
+For a bad face (`U_i\ge1`), the basic bound gives `I_i\le U_i+4\le5U_i`. Combining with the shared-
+boundary estimate yields
+
+\[
+ \sum_{i\ \mathrm{bad}}H_i\le5(1+o(1))\sum_iU_i+o(D),
+\]
+
+where the `o(D)` good-face term is justified as follows.  A good face has a non-hull
+selected phase path of at most four edges; otherwise its whole simple boundary would
+be the force-hull boundary, incompatible with a subquadratic exceptional face.  The
+possible signed phase words form a finite set.  For each nonzero displacement, a
+convex polygon has at most two ordered force-hull vertex pairs with that displacement,
+so only `O(1)` good-face endpoint realizations exist.  Each such realization has
+`o(D)` shared boundary by the same near-disk/subquadratic-area argument.
+
+**Verdict:** PASS.  This is an occurrence-safe physical-side count; it does not
+replace `U` by `Q`.
+
+The factor five is sharp at local incidence level. The strict unit hexagon with
+cyclic vectors `u,v,w,-u,-v,-w` at `theta=70` degrees has four selected sides and
+two off-phase sides. Marking one off-phase side as hull and one as non-hull gives
+`H=1,S=4,U=1,I=5` with exact vector closure. This does not realize a global C-II
+face, but it blocks any factor-four improvement that ignores the hull-side occurrence.
+
+## 4. Equality-branch composition
+
+Under Type-II `c_B=0`, every loaded-loaded unit contact is a force-hull side.  Under
+global two-phase purity, at most four such sides are phase-aligned.  Every other
+non-bridge loaded-hull side borders a bounded exceptional face; outer-visible bridges
+are charged separately.  Therefore, in the scoped branch
+
+\[
+ k=o(D),\qquad u_B=o(D),\qquad B_o=o(D),
+\]
+
+the exact identity `e_BB=Q+2k+u_B` gives
+
+\[
+ \sum_iH_i\ge Q-o(D).
+\]
+
+The result consequently forces
+
+\[
+ U\ge Q/5-o(D).
+\]
+
+Using `H+I=P_exc=4f+Q` together with `H\ge Q-o(D)` and
+`H\le(1+o(1))I` also gives `Q\le4f+o(D)`. This is a face-count consequence,
+not an upper bound on `f` or `U`.
+
+This implication does not assert that `U=o(D)`, and it does not turn a linear
+exceptional-face defect into a contradiction.
+
+**Verdict:** PASS at scoped proof-only level.
+
+## 5. Regression and disposition
+
+The rejected `Q`-only charge is not used.  A pentagonal exceptional face may have
+five off-phase side occurrences while contributing only one unit to `Q`; this is
+consistent with the present `U`-based statement.  Bridges are counted by physical
+edge in the side charge and by occurrences only where explicitly stated; no silent
+identification is made.
+
+The candidate narrows the live equality corridor to a linear unpaid off-phase
+population.  It supplies neither an upper bound on that population nor a strict
+diameter descent, exact unit triangle, or Level-I conclusion.
+
+**Final verdict:** PASS as audited-working/proof-only research.  C-II remains open.

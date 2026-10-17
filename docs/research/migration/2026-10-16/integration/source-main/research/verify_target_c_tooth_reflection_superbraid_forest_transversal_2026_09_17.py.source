@@ -1,0 +1,42 @@
+import math
+
+coef_braid = math.sqrt(3.0 / 8.0)
+coef_incidence = coef_braid / 4.0
+assert abs(coef_braid - 0.6123724356957945) < 1e-15
+assert abs(coef_incidence - 0.15309310892394862) < 1e-15
+
+# Verify the braid-cell sign-vector pattern for the standard cyclic endpoint
+# order p_0,...,p_{m-1},q_0,...,q_{m-1}. Pairwise-crossing matching chords
+# toggle coordinate i at p_i and again at q_i.
+for m in range(2, 20):
+    bits = [0] * m
+    cells = []
+    # Cell before p_0.
+    cells.append(tuple(bits))
+    # Pass p_0,...,p_{m-1}; record following cells except the final duplicate
+    # after all 2m endpoints.
+    for i in range(m):
+        bits[i] ^= 1
+        cells.append(tuple(bits))
+    for i in range(m):
+        bits[i] ^= 1
+        if i < m - 1:
+            cells.append(tuple(bits))
+    assert len(cells) == 2 * m
+    assert len(set(cells)) == 2 * m
+
+    cellset = set(cells)
+    # Every cell has a unique complementary sign cell.
+    for v in cells:
+        comp = tuple(1 - x for x in v)
+        assert comp in cellset
+
+# C30 + positive degree gives h >= q/2 >= (ceil(D)+2)/4.
+for D in (10, 101, 10_000):
+    q_floor = (math.ceil(D) + 2.0) / 2.0
+    h_floor = q_floor / 2.0
+    assert h_floor >= (math.ceil(D) + 2.0) / 4.0
+
+print('PASS: FREE superbraid forest-transversal combinatorics')
+print(f'braid coefficient={coef_braid:.15f}')
+print(f'crossing-incidence coefficient={coef_incidence:.15f}')

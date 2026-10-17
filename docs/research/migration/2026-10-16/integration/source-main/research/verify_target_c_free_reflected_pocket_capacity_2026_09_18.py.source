@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+"""Regression checks for target_c_free_reflected_pocket_capacity_2026-09-18.md.
+
+The proof is analytic.  This script checks the exact finite pocket-square algebra,
+the reported constants, the routing minimax, and the Dido endpoint normalization.
+"""
+
+import math
+import random
+
+SQRT3 = math.sqrt(3.0)
+A0 = SQRT3 / 2.0
+C_RP = math.sqrt(math.pi * SQRT3)
+Z0 = 1.0 - 2.0 / math.pi
+COMBINED = C_RP + 1.0 / (2.0 * C_RP)
+DETOUR = Z0 * C_RP
+
+
+def check_constants() -> None:
+    assert abs(C_RP - 2.332680452334321) < 5e-15
+    assert abs(1.0 / (2.0 * C_RP) - 0.21434568952624794) < 5e-15
+    assert abs(COMBINED - 2.547026141860569) < 5e-15
+    assert abs(DETOUR - 0.847649953762939) < 5e-15
+    assert abs(C_RP * C_RP / (2.0 * math.pi) - A0) < 1e-15
+
+
+def random_composition(total: int, parts: int, rng: random.Random) -> list[int]:
+    if parts == 1:
+        return [total]
+    # Stars-and-bars by random sequential allocation; distribution is irrelevant.
+    values = [0] * parts
+    for _ in range(total):
+        values[rng.randrange(parts)] += 1
+    return values
+
+
+def check_exact_pocket_square_envelope() -> None:
+    """Check sum (r_P+2)^2 <= (x-a)^2+4x <= (x+1)^2."""
+
+    rng = random.Random(0xE99)
+    for x in range(1, 301):
+        for a in range(1, x + 1):
+            r_total = x - a
+            exact_extreme = (r_total + 2) ** 2 + 4 * (a - 1)
+            formula = r_total * r_total + 4 * x
+            assert exact_extreme == formula
+            assert formula <= (x + 1) ** 2
+
+            for _ in range(4):
+                rs = random_composition(r_total, a, rng)
+                square_sum = sum((r + 2) ** 2 for r in rs)
+                assert square_sum <= formula
+
+
+def check_reflected_aggregation_samples() -> None:
+    """Numerically check the underlying reflected-chain square allocation."""
+
+    rng = random.Random(9918)
+    for _ in range(100_000):
+        a = rng.randint(1, 20)
+        rs = [rng.randint(0, 30) for _ in range(a)]
+        x = a + sum(rs)
+        lhs = sum((r + 2) ** 2 for r in rs)
+        rhs = (x - a) ** 2 + 4 * x
+        assert lhs <= rhs
+
+
+def check_routing_minimax() -> None:
+    """For xi>=c_RP, xi+1/(2xi) is minimized at c_RP."""
+
+    assert C_RP > 1.0 / math.sqrt(2.0)
+    for i in range(100_001):
+        xi = C_RP + 5.0 * i / 100_000.0
+        value = xi + 1.0 / (2.0 * xi)
+        assert value + 1e-14 >= COMBINED
+
+
+def z_theta(theta: float) -> float:
+    return 1.0 - math.sin(theta) / theta
+
+
+def f_theta(theta: float) -> float:
+    return (theta - math.sin(theta) * math.cos(theta)) / (4.0 * theta * theta)
+
+
+def check_dido_endpoint() -> None:
+    theta = math.pi / 2.0
+    assert abs(z_theta(theta) - Z0) < 1e-15
+    assert abs(f_theta(theta) - 1.0 / (2.0 * math.pi)) < 1e-15
+
+    # The active Dido coefficient rises to the reflected cap at theta=pi/2.
+    last_z = -1.0
+    last_f = -1.0
+    for i in range(1, 100_001):
+        th = (math.pi / 2.0) * i / 100_000.0
+        z = z_theta(th)
+        f = f_theta(th)
+        assert z >= last_z - 1e-14
+        assert f >= last_f - 1e-14
+        assert f <= 1.0 / (2.0 * math.pi) + 1e-14
+        last_z, last_f = z, f
+
+
+if __name__ == "__main__":
+    check_constants()
+    check_exact_pocket_square_envelope()
+    check_reflected_aggregation_samples()
+    check_routing_minimax()
+    check_dido_endpoint()
+    print("PASS: reflected FREE pocket capacity regression")
+    print(f"c_RP={C_RP:.15f}")
+    print(f"combined={COMBINED:.15f}")
+    print(f"critical_detour={DETOUR:.15f}")

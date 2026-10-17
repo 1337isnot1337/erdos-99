@@ -1,0 +1,122 @@
+from __future__ import annotations
+
+import math
+
+K = 31_400_000
+A = K + 1
+alpha = 1 + math.ceil(8 * (math.sqrt(2 * A) + 0.5) ** 2)
+eps = 1 / (4 * alpha)
+
+assert alpha == 502_463_417, alpha
+assert 4.97e-10 < eps < 4.98e-10
+assert abs(eps - 4.975486603435648e-10) < 1e-24
+
+
+def check_left(owners: tuple[int, ...], j: int) -> None:
+    """Far left owners support the robust rows adjacent to near left owners."""
+    m = len(owners)
+    if m < 2:
+        return
+    owners = tuple(sorted(owners))
+    r = m // 2
+    far = owners[:r]
+    near = owners[r:]
+
+    # Worst-case interval for a left owner a which supports tau_j is
+    # [a,j] in region coordinates, hence cut support {a+1,...,j}.
+    for a in far:
+        support = set(range(a + 1, j + 1))
+        for t in near:
+            # Robust interface at owner t has adjacent rows tau_t,tau_{t+1};
+            # tau_{t+1} is supported by every farther-left blocker.
+            assert t + 1 in support
+
+
+def check_right(owners: tuple[int, ...], j: int) -> None:
+    """Far right owners support the robust rows adjacent to near right owners."""
+    m = len(owners)
+    if m < 2:
+        return
+    owners = tuple(sorted(owners))
+    r = m // 2
+
+    # Near owners are the first m-r; far owners are the last r.
+    near = owners[: m - r]
+    far = owners[m - r :]
+
+    # Worst-case support for right owner b and common cut tau_j is {j,...,b}.
+    for b in far:
+        support = set(range(j, b + 1))
+        for t in near:
+            # tau_t is the supported adjacent row of robust interface t.
+            assert t in support
+
+
+# Exhaustive model checks for the two owner orientations with 15-spaced owners.
+for m in range(2, 10):
+    j_left = 500
+    left = tuple(5 + 15 * i for i in range(m))
+    assert left[-1] < j_left
+    check_left(left, j_left)
+
+    j_right = 10
+    right = tuple(20 + 15 * i for i in range(m))
+    assert right[0] > j_right
+    check_right(right, j_right)
+
+
+# Size bookkeeping after:
+#   owner-side split -> far/near split -> O(1) boundary deletion -> uniqueness split.
+for n in range(32, 1000):
+    m = (n - 1) // 2
+    far = m // 2
+    near = m - far
+    uniq = max(0, (far - 2) // 2)  # conservative finite O(1) boundary deletion
+    assert near >= n / 4 - 2
+    assert uniq >= n / 8 - 4
+
+
+# Ideal step sectors:
+#   owner-row steps: (pi/3, 2pi/3),
+#   B0-column steps: (2pi/3, pi).
+# Away from their shared inverse-D boundary, row-sector membership excludes
+# column-sector membership; outside the row sector is the ROW-UNIQUE case.
+for q in range(1, 5000):
+    x = math.pi * q / 5000
+    in_row = math.pi / 3 < x < 2 * math.pi / 3
+    in_col = 2 * math.pi / 3 < x < math.pi
+    if in_row:
+        assert not in_col
+
+
+# ROW-UNIQUE stabilization scale.
+# H ~ n/4 robust rows and k=n^(1/4) chords imply a surviving ordered row
+# block of order n^(1/2) under the exact row-slot lemma.
+for p in range(16, 97, 8):
+    n = 2**p
+    H = n // 4
+    k = int(n ** 0.25)
+    C = k * (k - 1) // 2
+    block = (H - C) // (C + 1)
+    assert block > 0
+    if p >= 32:
+        assert block >= int(0.20 * math.sqrt(n))
+
+
+coef_log2 = eps / 8
+coef_ln = eps / (8 * math.log(2))
+assert 6.21e-11 < coef_log2 < 6.23e-11
+assert 8.96e-11 < coef_ln < 8.99e-11
+
+print("PASS")
+print("alpha =", alpha)
+print("epsilon_K =", format(eps, ".16g"))
+print(
+    "ROW-UNIQUE stable-row exponent = epsilon_K/2 =",
+    format(eps / 2, ".16g"),
+)
+print(
+    "one-sided cable coefficient vs log2 D = epsilon_K/8 =",
+    format(coef_log2, ".16g"),
+)
+print("one-sided cable coefficient vs ln D =", format(coef_ln, ".16g"))

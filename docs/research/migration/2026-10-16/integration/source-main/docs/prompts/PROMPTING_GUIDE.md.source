@@ -1,0 +1,313 @@
+# Prompting guide for research runs
+
+This project has reached the point where prompt design materially affects mathematical productivity. The goal of a continuation prompt is not to restate the whole theorem ledger. It is to put a strong model on the correct frontier with the correct trust boundaries, regressions, and deliverable.
+
+The active prompt is named in `README.md`. Use that prompt as the starting point unless the theorem state has materially changed.
+
+## 1. What a good continuation prompt must contain
+
+A strong prompt has eight parts.
+
+### 1. Mission and quantifiers
+
+State the actual Level I objective, not a relaxed proxy. Make clear that the problem concerns global minimum-diameter configurations and, on the proof side, every sufficiently large minimizer.
+
+If the run is intentionally narrower, name the exact target theorem and explain how it closes or advances the Level I problem.
+
+### 2. Authoritative files
+
+Give a small, explicit file set and reading order. Prefer route maps and active modules over giant historical reports.
+
+For a Target A continuation, the default should be:
+
+1. `docs/README.md`;
+2. `docs/problem/statement.md` if quantifiers need refreshing;
+3. shared theory modules actually used;
+4. `docs/targets/target-a/README.md`;
+5. all active Target A modules it links;
+6. the active prompt itself only as operational context.
+
+Do not attach the archive, every old prompt, and every report to “be safe.” That creates duplicated frontier statements and increases the chance that a model follows superseded mathematics.
+
+### 3. Trust instruction
+
+Tell the model to treat audited canonical results as a trusted theorem library and to audit the new closing mathematics rather than re-proving the entire project.
+
+This should not forbid checking an old theorem when the new argument genuinely depends on an untested corner of its hypotheses.
+
+### 4. Exact endpoint
+
+Write the exact inequality, rank statement, exchange theorem, or strict-diameter construction that would finish the target.
+
+For Target A, use the current route map. Do not substitute a heuristic such as “show many defects” or an impossible fixed-hull Hall surplus.
+
+For Target B, use the exact shell-stability endpoint in its route map rather than an older intermediate train-count statement.
+
+### 5. Binding corrections and dead routes
+
+List only the failures that a capable model is likely to rediscover. Explain why each is dead in one sentence.
+
+Examples of high-value warnings include:
+
+- source and scaffold are not automatically co-embedded;
+- fixed-hull Hall capacity is exact and cannot be exceeded inside the same hull;
+- planarity/local cages do not by themselves force Schur nullity;
+- many local candidate exchanges are not automatically mutually compatible;
+- near-equilateral configurations remain a valid regression even when exact equilateral triangles are forbidden;
+- Kuperberg witness existence does not imply an unproved quantitative support-radius rate;
+- an `O(D)` error may be fatal to a one-integer endpoint.
+
+Do not spend half the prompt listing every historical dead end.
+
+### 6. Regression tests
+
+Give the small set of regressions relevant to the proposed route. Require the model to state which hypothesis excludes each apparent counterexample.
+
+If a new run is focused on a local transition theorem, include local cage and closed-semicircle regressions. If it is focused on Hall/Schur transport, include full-rank planar response and overlapping-circuit regressions. If it is a strain/Kuperberg run, include distributed strain and vanishing-gap support complexity.
+
+### 7. Tool and literature permissions
+
+State whether web search is allowed. When allowed, require theorem-level hypothesis checking rather than broad literature summaries.
+
+State whether computation is allowed and what role it may play. A useful instruction is:
+
+> Use computation to falsify intermediate universal claims, enumerate finite models, or verify exact identities. Do not treat numerical output as a global optimality certificate.
+
+### 8. Output contract
+
+Force the output to distinguish progress from restatement.
+
+For an open-result run, require:
+
+1. Level I status;
+2. strongest genuinely new theorem;
+3. complete proof or exact certificate;
+4. target advanced;
+5. exact remaining lemma;
+6. regressions checked;
+7. canonical changes recommended;
+8. new literature and exact applicability, if any.
+
+This structure makes parallel runs easy to deduplicate.
+
+## 2. Prompt length
+
+Long prompts are useful only when the text carries information that is not already in the canonical files.
+
+Prefer pointers such as:
+
+> Read all active Target A modules linked from `docs/targets/target-a/README.md` and treat their established results as trusted.
+
+instead of pasting those modules into the prompt.
+
+A prompt should contain the frontier and operating constraints. The repository should contain the mathematics.
+
+## 3. Recommended continuation template
+
+Copy and fill this skeleton.
+
+```text
+# Erdős Problem #99 — [target/run name]
+
+Work in one context. Do not delegate to separate research agents unless explicitly allowed.
+
+## Objective
+
+[State Level I objective or exact target theorem.]
+
+## Authoritative files
+
+Read, in order:
+1. docs/README.md
+2. [shared modules actually needed]
+3. docs/targets/[target]/README.md
+4. every active module linked by that route map
+
+Historical reports, archived monolithic files, and older prompts are provenance only.
+
+## Trust instruction
+
+Treat results explicitly marked established/audited in the active theorem modules as a trusted theorem library. Audit mathematics newly introduced in this run. Re-open an old result only if the new proof exposes a specific hypothesis issue.
+
+## Exact endpoint
+
+[Write the exact formula/theorem.]
+
+Explain in one line why this endpoint closes or advances the target.
+
+## Binding corrections
+
+- [dead route + reason]
+- [scope correction]
+- [quantitative warning]
+
+## Regression tests
+
+Any proposed theorem must survive:
+- [regression 1]
+- [regression 2]
+- [regression 3]
+
+For each apparent conflict, identify the exact hypothesis the regression lacks.
+
+## Literature/computation permissions
+
+[Internet search allowed/not allowed.] If importing literature, verify exact hypotheses and theorem-level applicability.
+
+[Computation allowed/not allowed.] Use it for exact finite checks or falsification, not as a substitute for global optimality.
+
+## Research directive
+
+Do not return a survey of the theorem stack. Work on the exact endpoint. Before pursuing a lemma, write the implication from that lemma to the endpoint. Abandon or reclassify routes that fail this test.
+
+## Required output
+
+Begin with one of:
+LEVEL I STATUS: SOLVED
+LEVEL I STATUS: DISPROVED
+LEVEL I STATUS: STILL OPEN
+
+If still open, give only:
+1. strongest genuinely new theorem proved;
+2. proof;
+3. exact target advanced;
+4. exact remaining lemma;
+5. regressions and failed implications;
+6. literature imported and its exact applicability;
+7. canonical files that should change.
+```
+
+## 4. Audit-run template
+
+Use this when another model supplies a theorem or proof.
+
+```text
+Audit the attached/pasted result against the current canonical state.
+
+Do not reward novelty or confidence. Classify each substantive claim as:
+- proved and promotable;
+- correct but already canonical;
+- correct only under added hypotheses;
+- plausible but unproved;
+- false/overstated;
+- exact regression/no-go.
+
+For every promoted claim:
+1. restate it with canonical notation;
+2. give a complete proof;
+3. list dependencies;
+4. check the relevant regressions;
+5. state exactly what canonical endpoint changes.
+
+For every rejected claim, give the shortest decisive reason or counterexample.
+
+Do not rewrite the theorem ledger until the audit is complete.
+```
+
+## 5. Literature-run template
+
+```text
+The missing theorem has the following hypothesis signature:
+[finite/infinite container, convexity, relocation, lattice status, quantitative parameter, desired conclusion].
+
+Search specifically for theorems matching these hypotheses.
+
+For each promising result, return:
+- full citation and link;
+- theorem number;
+- exact hypotheses;
+- exact conclusion;
+- whether constants/rates are explicit;
+- exact mismatch, if any, with our target;
+- whether the proof technique suggests a new bridge.
+
+Do not list loosely related papers merely because they use the same keywords.
+```
+
+## 6. Computational-regression template
+
+```text
+Test the following universal intermediate claim:
+[claim].
+
+First specify a finite model that is logically sufficient to disprove the claim if a counterexample is found. Prefer exact arithmetic. If floating point is unavoidable, produce a certified margin or a symbolic follow-up.
+
+Output:
+- model/assumptions;
+- enumeration/search method;
+- exact witness if found;
+- what the witness disproves;
+- what it does not say about global Erdős #99;
+- script/test files that should be preserved.
+```
+
+## 7. Synthesis/promotion template
+
+Use this when several long runs have accumulated.
+
+```text
+Treat the current canonical modules as the baseline and the supplied run outputs as candidate additions.
+
+For each run, extract:
+- theorem statement;
+- dependencies;
+- proof status;
+- target implication;
+- regressions;
+- literature imports;
+- failed stronger claims.
+
+Deduplicate by theorem content, not wording. Keep the strongest audited statement. Do not combine incompatible configurations or embeddings implicitly.
+
+Produce:
+1. promotion list;
+2. corrections/rejections;
+3. exact revised frontier;
+4. files to edit;
+5. next continuation prompt changes.
+```
+
+## 8. Prompt anti-patterns
+
+Avoid these.
+
+### “Read everything ever produced”
+
+This maximizes conflicting context. Read the active state and pull provenance on demand.
+
+### “Solve Erdős #99; think hard”
+
+This wastes a run reconstructing the frontier. Supply the exact endpoint and route map.
+
+### Re-copying the entire theorem ledger into the prompt
+
+It wastes context and makes the prompt stale as soon as the repository changes.
+
+### Over-specifying a favorite proof mechanism
+
+State preferred attacks, but permit a stronger route. This project has repeatedly advanced by disproving the initially favored bridge.
+
+### Asking for “more progress” without a promotion criterion
+
+Require a theorem, exact regression, sharper reduction, quantitative bound, or Level I result.
+
+### Allowing literature imports without hypothesis checking
+
+This produces false bridges between infinite-plane saturation, fixed-container packing, append-only problems, and relocation problems.
+
+### Treating confidence as evidence
+
+A model saying “this closes Target A” is not evidence. The exact endpoint and regression audit are.
+
+## 9. When to cut a new prompt version
+
+Create a new active prompt only after a meaningful frontier change, such as:
+
+- a new exact endpoint;
+- a major no-go theorem;
+- a promoted theorem that deletes a whole branch;
+- a new quantitative regime;
+- a new required regression;
+- changed literature permissions or source set.
+
+Update `docs/prompts/README.md` so there is exactly one clearly identified active prompt.

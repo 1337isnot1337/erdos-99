@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+"""Regression checks for the repeated TB1 witness packing collapse.
+
+Checks:
+- the one-witness-per-interface rule makes all twice-selected pairs a matching;
+- the almost-diameter/common-cone midpoint and endpoint packing estimates are
+  uniform in D for fixed constants;
+- the density arithmetic in the fixed M/4 split.
+
+This is a regression certificate, not a substitute for the proof note.
+"""
+
+from fractions import Fraction
+import itertools
+import math
+
+
+S0 = Fraction(791, 320_000_000)
+
+
+def repeated_pairs(selection):
+    """selection[i]=j represents chosen unordered pair {i,j}."""
+    out = set()
+    n = len(selection)
+    for i in range(n):
+        j = selection[i]
+        if j == i:
+            continue
+        if 0 <= j < n and selection[j] == i:
+            out.add(tuple(sorted((i, j))))
+    return out
+
+
+def check_repeated_selection_is_matching() -> None:
+    # Exhaust every one-witness choice function through n=6.  A repeated pair
+    # {i,j} means interface i selected j and interface j selected i.
+    for n in range(2, 7):
+        choices = [tuple(j for j in range(n) if j != i) for i in range(n)]
+        for selection in itertools.product(*choices):
+            reps = repeated_pairs(selection)
+            used = set()
+            for i, j in reps:
+                assert i not in used
+                assert j not in used
+                used.add(i)
+                used.add(j)
+
+
+def midpoint_bound_sq(D: float, A: float, L: float) -> float:
+    return D * D - (D - A / (D * D)) ** 2 * math.cos(L / D) ** 2
+
+
+def chord_vector_difference_bound(D: float, A: float, L: float) -> float:
+    return A / (D * D) + 2.0 * D * math.sin(L / D)
+
+
+def check_parallel_almost_diameter_packing_estimates() -> None:
+    # Fixed constants may be huge in the theorem.  D is taken asymptotically
+    # beyond them; the estimates must then remain O_{A,L}(1).
+    samples = [
+        (1.0, 1.0),
+        (1e4, 1e3),
+        (1e10, 1e6),
+        (1e16, 4e7),
+    ]
+    for A, L in samples:
+        D = max(1e8, 1e5 * (math.sqrt(A + 1.0) + L + 1.0))
+        m2 = midpoint_bound_sq(D, A, L)
+        # Numerical cancellation can add a small relative error at huge scales;
+        # compare against a generous fixed-in-D constant envelope.
+        assert m2 >= -1e-8 * max(1.0, L * L)
+        assert m2 <= 2.0 * L * L + 1.0 + 4.0 * A / D
+        rv = chord_vector_difference_bound(D, A, L)
+        assert rv <= 2.0 * L + 1.0
+
+        # The resulting endpoint-cluster radius is independent of D.
+        midpoint_radius = math.sqrt(max(0.0, 2.0 * L * L + 1.0 + 4.0 * A / D))
+        endpoint_radius = midpoint_radius + 0.5 * (2.0 * L + 1.0)
+        packing_cap = math.ceil(4.0 * (endpoint_radius + 0.5) ** 2)
+        assert packing_cap >= 1
+
+
+def check_density_arithmetic() -> None:
+    assert S0 / 2 == Fraction(791, 640_000_000)
+    assert 3 * S0 / 8 == Fraction(2373, 2_560_000_000)
+    assert S0 / 8 == Fraction(791, 2_560_000_000)
+    assert abs(float(3 * S0 / 8) - 9.26953125e-7) < 1e-20
+    assert abs(float(S0 / 8) - 3.08984375e-7) < 1e-20
+
+    # Finite count form of M=s+2d and the M/4 fork.
+    for M in range(1, 10_000):
+        for d in range(M // 2 + 1):
+            s = M - 2 * d
+            distinct = s + d
+            assert distinct == M - d
+            if 4 * d < M:
+                assert 4 * distinct > 3 * M
+            else:
+                assert 4 * d >= M
+
+
+def main() -> None:
+    check_repeated_selection_is_matching()
+    check_parallel_almost_diameter_packing_estimates()
+    check_density_arithmetic()
+    print(f"s0         = {float(S0):.15g}")
+    print(f"3 s0 / 8   = {float(3*S0/8):.15g}")
+    print(f"s0 / 8     = {float(S0/8):.15g}")
+    print("repeated TB1 witness packing collapse regression: PASS")
+
+
+if __name__ == "__main__":
+    main()

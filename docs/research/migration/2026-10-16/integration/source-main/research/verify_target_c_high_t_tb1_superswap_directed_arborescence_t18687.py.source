@@ -1,0 +1,83 @@
+from math import sqrt
+from random import Random
+
+# Regression checks for the directed common-super-swap obstruction theorem.
+
+
+# 1. Exhaustive/sampled check that every nonroot cut having an incoming arc is
+# equivalent to root reachability.
+for n in range(1, 5):
+    verts = list(range(n + 1))
+    root = 0
+    arcs = [(u, v) for u in verts for v in verts if u != v]
+
+    if n <= 3:
+        masks = range(1 << len(arcs))
+    else:
+        rng_masks = Random(17)
+        masks = [rng_masks.getrandbits(len(arcs)) for _ in range(20_000)]
+
+    for mask in masks:
+        adj = {u: [] for u in verts}
+        for k, (u, v) in enumerate(arcs):
+            if (mask >> k) & 1:
+                adj[u].append(v)
+
+        reachable = {root}
+        stack = [root]
+        while stack:
+            u = stack.pop()
+            for v in adj[u]:
+                if v not in reachable:
+                    reachable.add(v)
+                    stack.append(v)
+        all_reachable = len(reachable) == n + 1
+
+        cut_condition = True
+        for smask in range(1, 1 << n):
+            S = {i + 1 for i in range(n) if (smask >> i) & 1}
+            if not any(u not in S and v in S for u in verts for v in adj[u]):
+                cut_condition = False
+                break
+
+        assert all_reachable == cut_condition
+
+
+# 2. Bidirectional upper blocker algebra. If both +/- Q moves take a strict
+# near-diameter vector outside radius D, then the old deficit is O(Q^2/D) and
+# its transverse projection is <= Q/2.
+rng = Random(20260917)
+for D in (100.0, 1000.0, 10_000.0):
+    K = 7.0
+    Q = K / D
+    for _ in range(100_000):
+        ell = D - rng.random() * 2 * Q
+        x = (rng.random() * 2 - 1) * ell
+        perp2 = max(0.0, ell * ell - x * x)
+        minus = perp2 + (x - Q) ** 2
+        plus = perp2 + (x + Q) ** 2
+
+        if minus >= D * D and plus >= D * D:
+            deficit = D - ell
+            assert deficit <= Q * Q / D + 1e-10
+            assert abs(x) <= Q / 2 + 1e-10
+
+
+# 3. The chosen upper thin threshold is exactly 1/(4D), which lies strictly
+# inside the sharp superdiameter threshold for large D.
+for D in (1000.0, 10_000.0):
+    K = 7.0
+    Q = K / D
+    tau = 1 / (4 * K)
+    assert abs(tau * Q - 1 / (4 * D)) < 1e-15
+    assert D - 1 / (4 * D) > sqrt(D * D - 1)
+
+
+s0 = 791 / 320_000_000
+assert abs(s0 / 6 - 4.1197916666666666e-7) < 1e-20
+assert abs(s0 / 66 - 3.745265151515151e-8) < 1e-20
+
+
+print("PASS: directed TB1 super-swap arborescence regressions")
+print("three-way density floor =", s0 / 6)
+print("near-unit matching coefficient =", s0 / 66)

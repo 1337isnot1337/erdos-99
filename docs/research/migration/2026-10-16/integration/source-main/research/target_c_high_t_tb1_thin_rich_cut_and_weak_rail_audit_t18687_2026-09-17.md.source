@@ -1,0 +1,125 @@
+# Hostile audit — THIN rich-cut synchronization and linear weak rail
+
+**Date:** 2026-09-17  
+**Scope:** `target_c_high_t_tb1_thin_rich_cut_phase_sync_t18687_2026-09-17.md` and `target_c_high_t_tb1_thin_linear_weak_rail_t18687_2026-09-17.md`  
+**Status:** audit/correction note; C-II remains open
+
+I rechecked the two new THIN deductions against the upstream exact-support, owner-spacing, superdiameter-thrackle, and phase-budget statements.
+
+The main deductions survive. One bookkeeping line in the phase-purification section needs the following asymptotic reading.
+
+## 1. Correction to the phase-purification threshold
+
+The rich-cut theorem proves
+
+\[
+F_*\le H_{\rm thin}+o(1),
+\qquad
+H_{\rm thin}={16C_{\rm phase}\over3\gamma}.
+\]
+
+Therefore choose a deterministic sequence
+
+\[
+\varepsilon_D\downarrow0
+\]
+
+which dominates the positive part of that `o(1)` remainder, so that eventually
+
+\[
+F_*\le H_{\rm thin}+\varepsilon_D.
+\]
+
+The deletion threshold in TR.30 should be read as
+
+\[
+\boxed{
+\delta_{*b}>{H_{\rm thin}+\varepsilon_D\over\sigma D}
+}
+\]
+
+rather than using the fixed `+1` if one wants the exact coefficient displayed in TR.32. Markov then deletes at most `sigma D` columns and every retained column satisfies
+
+\[
+\delta_{*b}
+\le {H_{\rm thin}\over\sigma D}+o(D^{-1}).
+\]
+
+Thus the stated coefficient
+
+\[
+K_{\rm thin}=H_{\rm thin}/0.01
+\]
+
+is valid. Alternatively one may keep the literal `+1` threshold and replace the displayed constant by `(H_thin+1)/0.01`; none of the density or geometric conclusions changes.
+
+This is a constant-level bookkeeping correction, not a change to the rich-cut extraction.
+
+## 2. Audit of the rich-cut extraction
+
+The potentially delicate step is replacing a vertex-disjoint THIN matching by the full owned THIN family.
+
+For two THIN chords:
+
+- the superdiameter theorem guarantees that they meet;
+- if they share a source endpoint, their **closed endpoint-region intervals** share that endpoint region;
+- if they do not share an endpoint, they cross properly;
+- disjoint closed endpoint-region intervals would place the two hull chords on opposite sides of one selected O--O crosscut and make hull endpoint alternation impossible.
+
+Hence the closed intervals pairwise intersect and one-dimensional Helly gives a common closed region overlap. This use of closed region intervals is essential: the selected-cut intervals themselves need not intersect when two blockers merely share an endpoint region.
+
+The short-overlap counting is also stable. If the common overlap has width `<3N`, fifteen-spacing leaves fewer than `N/5+1` owners inside it. One exterior side has at least `2N/5-O(1)` owners; the farther half of that side supplies `N/5-O(1)` blockers across at least `3N-O(1)` common cuts. The certificate exhausts the finite integer rounding pattern over a wide range of `N`.
+
+The resulting linear rich-cut count is therefore unaffected:
+
+\[
+Q_D>
+\left({3\gamma\over16}-o(1)\right)D,
+\]
+
+with more than
+
+\[
+\left({\gamma\over80}-o(1)\right)D
+\]
+
+THIN blockers on each rich cut.
+
+## 3. Audit of the weak-rail upgrade
+
+On the selected blocker-rich row, fix the owner shore and one physical owner host. Owner coordinates are distinct, so owner source vertices are distinct.
+
+For two surviving chords `p_sq_s` and `p_tq_t`, with both owners on the same shore:
+
+- they cannot share an owner;
+- an owner cannot equal the other chord's partner because the two endpoint shores are disjoint;
+- therefore either `q_s=q_t`, or the two chords have four distinct hull endpoints and cross properly.
+
+The complementary-shore crossing-order lemma applies in the second case. Equality in the first case merely inserts a plateau. Thus the partner sequence is weakly ordered, not necessarily strictly ordered. Feeding that weak order through the one-turn partner-region word gives a weakly unimodal region-label sequence, and one monotone half survives.
+
+On the decreasing half, strict owner advance alone makes the support containment strict even if several consecutive chords have the same partner vertex or partner-region label. On the increasing half one obtains the stated staircase.
+
+Accordingly the final density
+
+\[
+|R_*|>
+\left({\gamma\over640}-o(1)\right)D
+\]
+
+is valid, but the word **weak** is important: partner repetition is not eliminated.
+
+## 4. What is and is not proved
+
+The audited THIN normal form is now:
+
+```text
+one selected row with O(1) total angular defect;
+>0.6436D inverse-D near-60 columns on that row;
+linear circumcenter flanks;
+linear many inactive superdiameter blockers on the row;
+and a linear owner-injective staircase/nested weak rail after constant-factor thinning.
+```
+
+No inactive blocker has been promoted to an actual diameter edge, switching edge, or positive-KKT edge. The remaining geometric escape is real: many rail chords may share opposite-shore partner vertices, producing high-degree superdiameter stars. Existing circumradius control bounds such degrees only sublinearly, not by a constant.
+
+**Audit disposition:** rich-cut and weak-rail arguments survive; phase-purification threshold corrected as above; C-II remains open.

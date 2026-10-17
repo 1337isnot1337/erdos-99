@@ -1,0 +1,40 @@
+# Target C: mixed p=3 local-rank repair integration audit
+
+Date: 2026-09-28
+
+Scope: eight-no-root `k=4, D=-1, d_root=0, p=3`, mixed one-singleton plus one-pair root profile.
+
+The previous support certificate used the false converse that a touched block with no repeated containing tetrahedral support has local empty rank one. Only the forward implication is support-determined: a repeated containing support forces local rank two.
+
+For this mixed profile, the deletion argument already gives `rank(P)=4` and generalized weights
+`(d1,d2,d3,d4)(P)>=(4,5,6,7)`.
+
+A support-only relaxation is therefore sound:
+
+- repeated containing support: actual-empty rank is two, hence incidence at least five by `d2>=5`;
+- no repeated support and incidence below four: the block cannot be actual-empty by `d1>=4`;
+- no repeated support and incidence exactly four: an actual-empty block can only have rank one, since rank two would violate `d2>=5`;
+- no repeated support and incidence at least five: permit both ranks one and two.
+
+For every chosen virtual-rank assignment, retain only necessary generalized-weight compatibility conditions. For two line spaces with occurrence supports `I,J`, either `|I intersect J|>=4` or `|I union J|>=5`. For a plane and a line, either `|I intersect J|>=4` or `|I union J|>=6`. For two planes, one needs `|I intersect J|>=5`, or both `|I intersect J|>=4` and `|I union J|>=6`, or `|I union J|>=7`.
+
+The selected pair contributes no coefficient constraint. A touched selected singleton is relaxed to either zero constraint or an arbitrary line supported inside its full occurrence set. Using the full occurrence set is safe because it can only enlarge support intersections/unions and the global generator support.
+
+The mixed-profile touched-block bound remains `h<=20`: if `e` touched blocks are actual-empty, then at most two selected incomplete blocks are touched and at most fifteen touched complete rows occur because `d_root=0`; hence `e>=h-17`. Every empty block has at least four incidences, so `32>=4e+(h-e)>=4h-51`.
+
+For touched set `T` and touched incomplete family `I`, let `C=T\\I`. Necessarily the triangle rows `H(C)` are independent and
+`rank H(T)-rank H(C)>=4`. The coefficient generators have nominal total dimension at least four and occurrence support at least seven external coordinates. These are all one-sided necessary conditions, so enumerating every virtual rank choice above gives a superset of the true oriented states.
+
+The exact verifier on branch `target-c-eight-k4-p3-mixed-local-rank-repair-20260927` has Git blob
+`083d47d548b59aed3dbdb2dcc448c621217c4b2a`. I reconstructed that exact blob locally with `git hash-object`, compiled it with C++20, and executed it. It reproduced:
+
+- 27,763 size-eight support orbits;
+- 13,574 with `h<=20`;
+- 2,025,788 relaxed final placement tests;
+- 1,045,473 zero-singleton-line tests;
+- 980,315 nonzero-singleton-line tests;
+- 0 survivors.
+
+Thus the mixed singleton-plus-pair profile remains closed after removal of the false local-rank converse.
+
+This note does not certify the separate three-singleton profile or any larger Target C-II branch.

@@ -1,0 +1,409 @@
+# Target C-II — `t<=1.8436` forces macroscopic O--O families in both leaf phases
+
+**Date:** 2026-09-15  
+**Status:** proof-only near-frontier phase localization  
+**Scope:** full-core Type-II branch  
+**Dependencies:** `g=0.0077` residual-coupled floor/stability; phase-resolved retained outer mass for `t<=1.844`; branch-aware physical center/leaf pair theorem; dominant-orbit triangle-free correlation  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+Write the dominant exact `pi/3` orbit phase masses as
+
+\[
+C\ge U\ge V\ge0.
+\]
+
+The `t<=1.844` phase theorem already gives retained outer-occurrence masses
+
+\[
+z_C,z_U,z_V>0.616-o(1).
+\]
+
+Previously only the smallest leaf was known to have train mass below `0.616D`, so only
+that phase was forced to contain a linear retained O--O family.  Very near the current
+scalar frontier the residual-coupled theorem is much more rigid.
+
+This note proves that every survivor with
+
+\[
+\boxed{t=(q-k)/D\le1.8436}
+\]
+
+satisfies
+
+\[
+\boxed{U<0.513-o(1),\qquad V<0.513-o(1),}
+\tag{TL.1}
+\]
+
+and hence both leaf phases carry retained O--O pair weight
+
+\[
+\boxed{P_U>0.103-o(1),\qquad P_V>0.103-o(1).}
+\tag{TL.2}
+\]
+
+Thus the live frontier contains two macroscopic O--O families whose exact projective
+phases differ by `pi/3`.
+
+---
+
+## 1. Residual slack is below `1.3e-4`
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+C_{77}=2\sqrt{\Delta_2}+0.0077,
+\]
+
+and use the residual-coupled variables
+
+\[
+U_{net}={9t\over2}-2\pi-2\delta-\kappa/2,
+\qquad
+h=U_{net}-C_{77},
+\qquad
+x={\kappa\over2}.
+\]
+
+The `g=.0077` residual theorem gives exact-orbit residual mass
+
+\[
+R:=U_{net}-M\le1.05h,
+\tag{TL.3}
+\]
+
+where `M=C+U+V` is the dominant orbit mass.  Its survivor-capacity function decreases
+strictly in both `h` and `x` throughout the present box.
+
+At
+
+\[
+t=1.8436,\qquad h=0.00013,\qquad x=0,
+\]
+
+the exact certificate evaluates the equivalent direct condition and proves the strict
+contradiction margin
+
+\[
+F(A)-\delta>4.60\times10^{-6},
+\]
+
+where
+
+\[
+F(s)=s-6\sin(s/6),
+\]
+
+\[
+\delta={1\over2}
+\left({9t\over2}-2\pi-C_{77}-h\right),
+\]
+
+and
+
+\[
+A=\pi-{t\over2}-1.05h
+-{1.05^2h^2\over2(1-\delta)}.
+\]
+
+Since survivor capacity increases with `t` and decreases with `h,x`, every survivor with
+`t<=1.8436` must satisfy
+
+\[
+\boxed{h<0.00013-o(1).}
+\tag{TL.4}
+\]
+
+Consequently
+
+\[
+M\le U_{net}<C_{77}+0.00013<1.912456+o(1),
+\tag{TL.5}
+\]
+
+and (TL.3) gives
+
+\[
+R<1.05(0.00013)+o(1)=0.0001365+o(1).
+\]
+
+All non-dominant exact orbits together carry crossing mass at most `R^2/4`.  Therefore
+
+\[
+\boxed{E_{dom}>0.90689967-o(1).}
+\tag{TL.6}
+\]
+
+The exact verifier checks this directly from the Machin/radical enclosure for
+`Delta2`.
+
+---
+
+## 2. A preliminary lower bound on the smallest leaf
+
+The existing phase theorem gives
+
+\[
+z_V>0.616-o(1).
+\]
+
+Every complete train has only two terminal occurrences, each retained with weight at
+most one.  Hence
+
+\[
+z_V\le2V+o(1),
+\]
+
+so
+
+\[
+\boxed{V>0.308-o(1).}
+\tag{TL.7}
+
+This lower bound is used only to keep the phase split inside the strong physical pair
+branch below.
+
+---
+
+## 3. Phase-resolved crossing capacity
+
+Let
+
+\[
+x_{CU}=CU-e(C,U),
+\qquad
+y_{CV}=CV-e(C,V)
+\]
+
+be the missing center/leaf crossing masses.  The hostile-audited triangle-free
+correlation gives
+
+\[
+\left(1-{V\over C}\right)x_{CU}
++
+\left(1-{U\over C}\right)y_{CV}
+\le C(U+V)-E_{dom}.
+\tag{TL.8}
+\]
+
+For the present near-frontier box, the strong branch of the physical pair theorem is
+valid for both center/leaf pairs.  Thus
+
+\[
+x_{CU}\ge{1\over10}(C+U-K)^2,
+\qquad
+y_{CV}\ge{1\over10}(C+V-K)^2,
+\qquad K={2\over\sqrt3},
+\tag{TL.9}
+\]
+
+throughout the only potentially feasible region.  Substituting (TL.9) into (TL.8)
+gives
+
+\[
+\boxed{
+E_{dom}
+\le
+C(U+V)
+-{1\over10}\left(1-{V\over C}\right)(C+U-K)^2
+-{1\over10}\left(1-{U\over C}\right)(C+V-K)^2.
+}
+\tag{TL.10}
+\]
+
+The positive parts may be inserted in (TL.9); in the compact region used by the
+certificate both excesses are already positive.
+
+---
+
+## 4. Suppose the larger leaf has mass at least `0.513`
+
+Assume for contradiction
+
+\[
+U\ge U_0:=0.513.
+\]
+
+Put the safe total-mass upper bound
+
+\[
+W_0:=1.912456.
+\]
+
+For fixed `C,W`, write `V=W-C-U`.  The right side of (TL.10) has two useful
+monotonicities while `C>=U>=V`:
+
+1. it increases with `W`;
+2. it decreases as the larger leaf mass `U` increases at fixed `C,W`.
+
+For the second statement, if
+
+\[
+X={1\over10}(C+U-K)^2,
+\qquad
+Y={1\over10}(C+V-K)^2,
+\]
+
+then `U>=V` and `C<K` give `X>=Y` and
+
+\[
+1-{V\over C}\ge1-{U\over C}.
+\]
+
+Direct differentiation therefore makes both differences nonpositive.  The `W`
+derivative is positive because its leading term is `C`, while the physical-deficit
+correction is below `0.1` on the certified box.
+
+There are two `C` regimes.
+
+### Low center: `C<=W_0-2U_0=0.886456`
+
+Here the condition `U>=0.513` imposes no stronger split restriction than the balanced
+leaf endpoint.  The strong aggregate phase-star capacity applies.  It is increasing on
+this interval, and at its right endpoint the exact verifier gives
+
+\[
+\Psi_{strong}(W_0,0.886456)<E_0-0.00244,
+\]
+
+where
+
+\[
+E_0:=0.90689967.
+\]
+
+This contradicts (TL.6).
+
+### Main interval: `0.886456<=C<1.044`
+
+Generic center capacity already excludes `C>=1.044`, since
+
+\[
+1.044(1.912456-1.044)<0.90689967.
+\]
+
+On the remaining interval, replacing `W` by `W_0` and `U` by `U_0` can only increase
+the right side of (TL.10).  Then
+
+\[
+V=W_0-C-U_0\le U_0.
+\]
+
+The worst center/leaf strong-branch ratio is below
+
+\[
+0.78421<\sqrt{20/29},
+\]
+
+so the `1/10` pair theorem is valid for both leaves on the entire interval.
+
+Define the resulting one-variable upper capacity by
+
+\[
+\begin{aligned}
+G(C)=&\ C(W_0-C)\\
+&-{1\over10}\left(1-{W_0-C-U_0\over C}\right)(C+U_0-K)^2\\
+&-{1\over10}\left(1-{U_0\over C}\right)(W_0-U_0-K)^2.
+\end{aligned}
+\tag{TL.11}
+\]
+
+The exact derivative calculation gives
+
+\[
+G''(C)<-2
+\]
+
+throughout `[0.886456,1.044]`.  At
+
+\[
+c_0=0.933067,
+\]
+
+the tangent bound for a function with second derivative at most `-2` gives
+
+\[
+\max_CG(C)
+\le G(c_0)+{G'(c_0)^2\over4}.
+\]
+
+The exact rational certificate obtains
+
+\[
+\boxed{
+\max_CG(C)<0.906892586
+<0.90689967-7.08\times10^{-6}.
+}
+\tag{TL.12}
+\]
+
+Again this contradicts (TL.6).  Therefore the assumption `U>=0.513` is impossible,
+proving (TL.1).
+
+---
+
+## 5. Both leaf phases are outer-to-outer at linear scale
+
+For one exact phase class `i`, let `P_i` be its retained O--O pair weight.  If a train
+has terminal retained weights `a_tau,b_tau`, then
+
+\[
+a_\tau+b_\tau\le1+\min(a_\tau,b_\tau).
+\]
+
+Summing within phase `i` gives
+
+\[
+z_i\le M_i+P_i+o(1),
+\tag{TL.13}
+\]
+
+where `M_i` is that phase's train mass.
+
+Apply this to the two leaves.  The existing phasewise theorem gives
+
+\[
+z_U,z_V>0.616-o(1),
+\]
+
+while (TL.1) gives `U,V<0.513-o(1)`.  Hence
+
+\[
+\boxed{
+P_U>0.103-o(1),
+\qquad
+P_V>0.103-o(1).
+}
+\]
+
+Each family is pairwise noncrossing internally because it lies in one exact phase, and
+every member is two-sidedly diameter-braced by Section 157.
+
+The two phase directions differ by exactly `pi/3`.  Therefore the existing low-energy
+cross-phase O--O theorem now applies to **two macroscopic pair populations**, rather
+than one leaf population against an unknown second phase.
+
+---
+
+## 6. Exact certificate
+
+Run
+
+`research/verify_target_c_two_leaf_oo_weight_t18436.py`.
+
+It uses exact `Fraction` arithmetic, Machin bounds for `pi`, integer-square-root radical
+enclosures, and alternating-series bounds for `sin`.  The load-bearing margins are
+
+```text
+h=.00013 localization margin      > 4.60e-6
+low-center aggregate margin       > 2.44e-3
+main-interval capacity margin     > 7.08e-6
+strong-branch ratio upper          0.78421...
+strong-branch threshold            0.83045...
+```
+
+No floating-point sign is used in the theorem.
+
+**Disposition:** proof-only structural strengthening. C-II and Level I remain open.

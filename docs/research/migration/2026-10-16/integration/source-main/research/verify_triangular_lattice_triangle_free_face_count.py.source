@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+"""Exact face-count and rational threshold example audit.
+
+This script verifies bounded occupancy counts, not the universal packing
+theorem, global optimality, or a global affine source chart.
+"""
+
+from fractions import Fraction as F
+from itertools import combinations
+
+
+def incident_faces(p):
+    i, j = p
+    faces = set()
+    for x in (i-1, i):
+        for y in (j-1, j):
+            candidates = (
+                frozenset(((x, y), (x+1, y), (x, y+1))),
+                frozenset(((x+1, y), (x, y+1), (x+1, y+1))),
+            )
+            faces.update(t for t in candidates if p in t)
+    assert len(faces) == 6
+    return faces
+
+
+def main():
+    assert F(49, 60)**2 > F(2, 3)
+    assert F(7, 12)**2 > F(1, 3)
+    assert F(49, 60)*16+F(14, 5) < 16
+    assert 4*(F(16)+F(1, 2))**2 == 1089
+    grid = [(i, j) for i in range(4) for j in range(3)]
+    face_cache = {p: incident_faces(p) for p in grid}
+    samples = 0
+    for size in range(1, len(grid)+1):
+        for occupied in combinations(grid, size):
+            source = set(occupied)
+            faces = set().union(*(face_cache[p] for p in source))
+            counts = [len(source.intersection(t)) for t in faces]
+            assert sum(counts) == 6*len(source)
+            if max(counts) == 3:
+                continue
+            assert max(counts) <= 2
+            assert len(faces) >= 3*len(source)
+            # Verify no other unit triangle was overlooked by the face test.
+            for a, b, c in combinations(source, 3):
+                def length2(x, y):
+                    di, dj = x[0]-y[0], x[1]-y[1]
+                    return di*di+di*dj+dj*dj
+                assert not (length2(a, b) == length2(a, c)
+                            == length2(b, c) == 1)
+            samples += 1
+    print("PASS rational strict-competitor threshold D >= 16, n >= 1090")
+    print(f"PASS {samples} nonempty triangle-free subsets of a 4 by 3 "
+          "triangular-lattice patch, including all six boundary incidences")
+    print("Universal source comparison is analytic in the report.")
+
+
+if __name__ == "__main__":
+    main()

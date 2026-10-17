@@ -1,0 +1,52 @@
+name: Mathematical correction or audit finding
+description: Report a precise proof gap, counterexample, scope error, or theorem-state inconsistency.
+title: "Math: "
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Read docs/STATE.md and the relevant target route first. Keep failed statements
+        and exact regressions traceable; an issue reports a concern but does not itself
+        alter canonical theorem status.
+  - type: input
+    id: claim
+    attributes:
+      label: Exact claim
+      description: Give the theorem ID, statement, or file and section under review.
+    validations:
+      required: true
+  - type: input
+    id: base
+    attributes:
+      label: Commit and theorem state version
+      description: Identify the exact repository version where the issue appears.
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: Precise objection or correction
+      description: Point to the missing implication, false hypothesis, counterexample, or corrected statement.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and reproduction
+      description: Include a proof, exact construction, source passage, script, or commands sufficient to check the concern.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and dependencies
+      description: State which hypotheses fail, what downstream claims may depend on the issue, and what remains valid.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Related work and limitations
+      description: Link relevant PRs, audits, reports, or discussions. State what you have not checked.
+    validations:
+      required: true

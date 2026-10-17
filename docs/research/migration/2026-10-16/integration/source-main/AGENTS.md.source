@@ -1,0 +1,256 @@
+# AI research instructions for Erdős Problem #99
+
+This repository is a theorem ledger plus a large provenance archive. The two layers must
+not be conflated.
+ 
+
+## Permanent agent-only mathematical review policy
+
+This project is researched, audited, and mathematically governed by autonomous AI
+agents. Do not seek human mathematicians, human peer review, or human sign-off for a
+proof or theorem promotion. Consequential canonical promotion requires **one independent AI-agent mathematical
+audit** of the exact candidate SHA. The reviewing agent independently reconstructs
+the full proof **and** adversarially checks its decisive bridge and regressions.
+The project owner may operate this independent agent to review other agents' work;
+no second review, different model family, or human proof referee is required.
+The proposing agent or its own checker cannot count as this independent review.
+Record agent/model identities when available, evidence, scope, and verdicts; leave
+unresolved claims noncanonical. See `docs/REVIEW_POLICY.md`.
+
+## Mandatory bootstrap
+
+Before doing new mathematics:
+
+1. read `docs/STATE.md`;
+2. read `docs/state/theorem-state.yaml` when lifecycle/status ambiguity matters;
+3. read `docs/problem/statement.md` for the exact global quantifiers;
+4. read the route map for the chosen target;
+5. read every active theorem module explicitly named by that route map;
+6. read only the shared theory modules the argument actually uses;
+7. read the current route prompt from `docs/prompts/README.md` last.
+
+Do not start by searching all reports. A repository-wide search can return rejected or
+superseded statements before the canonical theorem.
+
+## Authority hierarchy
+
+When two sources disagree:
+
+1. `docs/STATE.md` and `docs/state/theorem-state.yaml` control lifecycle/status;
+2. the active target route map and named active modules control theorem content;
+3. reports explicitly promoted by the state lock or route map are canonical for the
+   exact statements promoted;
+4. audited-working reports are research leads, not unqualified premises;
+5. conditional reports and regressions follow;
+6. unreviewed research artifacts are discovery material only;
+7. superseded, rejected, historical-prompt, and archive material is provenance only.
+
+The September 11 repository consolidation was a provenance merge. A file being on
+`main`, a merged PR, a high section number, or a recent date does not promote its claims.
+
+## Mission and Level I criterion
+
+For unit-separated planar sets let `D(n)` be the minimum possible diameter of an
+`n`-point configuration. A Level I proof must show that for all sufficiently large `n`,
+every global minimizer contains a unit equilateral triangle. A Level I disproof must
+produce triangle-free global minimizers for an unbounded sequence of cardinalities.
+
+Local minima, finite examples, asymptotically dense packings, one good minimizer per
+cardinality, or a lower-dimensional/shell-only regression do not settle those
+quantifiers.
+
+**Current Level I status: open.**
+
+## Current Target A invariant
+
+**Status: open.**
+
+Authority: `docs/targets/target-a/README.md`.
+
+The canonical chain runs through Section 177. The Section-167 source-labeled planar
+Menger lemma and Section-174 full basis-closed shield charge are historical
+intermediate frontiers, not the current endpoint.
+
+The global closure remains
+
+`rank S <= d_int + |C^partial| - Delta_Lambda`,
+
+equivalently `d_sc >= Delta_Lambda`.
+
+The preferred locked-response endpoint is the Section-175 interior-tube
+right-deficiency inequality. Section 176 bounds the zero-slack inner-source defect and
+makes saturating matchings sector-local outside an explicit boundary-order exception.
+Section 177 adds edge-lens/coarse-Hall and source-gate refinements; neither branch is
+closed. Fixed-source same-hull Hall capacity is already exact, so a valid closure must
+add information through the actual response, a source-specific sector inequality, or a
+strict diameter improvement.
+
+Do not infer a Schur kernel from planarity, local cages, many candidate cavities, or a
+single Hall circuit without a simultaneous/global coupling theorem.
+
+## Current Target B invariant
+
+**Status: open.**
+
+Authority: `docs/targets/target-b/README.md`.
+
+The exact sufficient closure is the joint outer-shell stability inequality
+
+`G+E >= (sqrt(3)/4) B + (sqrt(3)/2)(t+chi-1)`.
+
+The coherent near-extremal core has been excluded under the promoted phase hypotheses.
+The remaining obstruction is global: multi-grain transfer, fixed quadratic phase
+deficit, and topology/boundary corrections cannot be discarded.
+
+Later dense-grid/penetration/phase-interpolation reports are audited-working unless the
+state lock explicitly promotes them.
+
+## Current Target C invariant
+
+Authority: `docs/targets/target-c/README.md` and
+`docs/targets/target-c/CURRENT.md`.
+
+**C-I is closed. C-II is open.** Do not spend a research run trying to prove universal
+selected-stress PSD or eliminate the C-I shear separator; the September 9 orientation
+audit restored C53/C63 and closed that gate.
+
+For C-II use the contact-minimal, then diameter-pair-minimal source with `C=C_*` and
+`H=H_*`, retaining all contact-isolated source points.
+
+Current canonical additional reductions are:
+
+- the zero/additive response-transfer branch is closed: `min_{e!=f} K_ef<0` for the
+  promoted regime, with no uniform negative gap claimed;
+- the full loaded diameter graph has exact Woodall topology: `d_H=0` gives one
+  odd-unicyclic graph with pendant leaves; `d_H>0` gives exactly `d_H` caterpillar
+  components;
+- all selected diameter routes have one common positive-contact bridge block;
+- the universal common-contact-bridge phase is impossible.
+
+The independent PR #188 audit promotes the scoped all-phase renormalized-surplus theorem above `0.9604`; the independent PR #191 audit rejects its former `0.995540...` ordinary-surplus theorem while preserving the scoped cyclic structural facts. Use the generated theorem graph and current Target C ledger rather than older report labels.
+
+For the live C-II obligations, follow `docs/targets/target-c/CURRENT.md`: the full-core
+branch still needs a source-realized face-coupled finite move or discrete replacement
+that passes every source lower constraint, actual-diameter upper constraint, and unary
+rhombus test, then gives strict contact loss at diameter `D` or a strict sub-`D`
+competitor. The separate macroscopic-container branch still lacks an arbitrary-container
+packet-capacity or moved-core strict-diameter closure. Audit.230's quarter-fold isolate
+population count does not supply an integrated endpoint or capacity under moved geometry.
+Retain every source point, including contact-isolated points.
+
+## Binding regressions and corrections
+
+Before claiming a general theorem, check the route-specific regression list and at
+least the following repository-wide failures when relevant:
+
+- local/jammed behavior is not global minimum-diameter optimality;
+- source configurations, smaller optima, lattice scaffolds, and response networks are
+  distinct objects unless a theorem co-embeds them;
+- many one-at-a-time feasible exchanges need not be simultaneously compatible;
+- boundary-order losses can destroy exact one-integer contradictions;
+- generic matrix rank or PSD does not automatically give the source-specific Schur
+  nullity or finite motion needed;
+- a universally zero KKT multiplier need not integrate to a finite release without the
+  relevant shear/nonlinear theorem;
+- consecutive incident diameter states do not imply an Euler trail/path; a star is a
+  counterexample;
+- the force-bulk FB4 localization is rejected;
+- the old incompatible-orientation pentagon regression against C53 is rejected;
+- Rogalski–Saint Raymond equality uniqueness is not supplied by the cited 1985 source;
+- the late five-arc Eppstein near-quadrangulation interpretation is rejected even though
+  its branch retained the associated working scalar bound;
+- contact-isolated source points may not be dropped from Target C source-population
+  arguments.
+
+## Run discipline
+
+At the start of a serious run, record the repository commit, state version, chosen
+target, exact theorem being attacked, and proof dependencies. If the repository changes
+during the run, compare the state files before importing anything new.
+
+Before investing in a candidate lemma, write
+
+`candidate lemma -> exact canonical quantity -> contradiction/Level I consequence`.
+
+If that implication chain is unavailable, the idea is exploratory.
+
+Trust canonical inputs by default and audit the new bridge. Reopen old results only when
+a new argument exposes a concrete hypothesis issue, an exact regression conflicts with
+them, or the state lock records a later correction.
+
+## Branch hygiene
+
+Agents that create working branches own their cleanup. Once a branch's work is merged,
+explicitly superseded, or intentionally abandoned, delete that branch promptly after
+verifying that it contains no unique unmerged research that still needs preservation.
+A run is not operationally complete while it leaves behind stale aliases, obsolete
+predecessor branches, or temporary maintenance branches.
+
+Keep a branch only while an open PR or active run still depends on it, or while it
+contains unique unmerged work that has not yet been preserved elsewhere. A branch is
+not a provenance mechanism by itself: merged commits, PR history, reports, and Git
+history preserve provenance. Never delete another active branch merely because it is
+old; compare it against `main` and the relevant PRs first. Temporary workflows or other
+cleanup-only files created solely to remove branches must stay off `main` and disappear
+with their maintenance branch.
+
+## Claim classification
+
+Every substantial output must classify its new claims as one of:
+
+- proved candidate awaiting promotion;
+- unreviewed candidate;
+- audited-working;
+- conditional;
+- regression;
+- rejected.
+
+Only the promotion procedure can make a result canonical. Changing prose from
+“candidate” to “theorem” is not promotion.
+
+## Computation
+
+Use scripts for exact finite reductions, falsification, enumeration, and certified
+arithmetic. A numerical search can kill a universal finite claim when the resulting
+counterexample is exact/certified. It cannot establish global optimality unless a
+separate theorem proves that implication.
+
+Document what each script proves, what it assumes, and what it does not prove in
+`research/README.md`.
+
+## Literature
+
+Import theorem statements only after checking the original or a reliable transcription,
+with exact hypotheses, normalization, and applicability. Record near misses rather than
+forcing them into the proof.
+
+A cleanup-time example: the Woodall straight-line-thrackle classification was rechecked
+before promotion. By contrast, the earlier use of Rogalski–Saint Raymond equality
+uniqueness was rejected because the cited source does not prove uniqueness.
+
+## Reports and prompts
+
+Reports are noncanonical and `unreviewed` by default unless an explicit ledger entry records a completed audit or promotion. `docs/reports/README.md` explains the archive policy, and each indexed artifact carries a generated lifecycle header. Historical prompts are instructions from an earlier theorem state, not theorem
+sources and not current task definitions.
+
+Use the current prompts named by `docs/prompts/README.md`. Compatibility paths for the
+old Target A and Target C prompts now redirect rather than silently presenting stale
+missions.
+
+## Promotion contract
+
+A frontier-changing result must update, in one change:
+
+1. increment `state_version` in `docs/state/theorem-state.yaml`;
+2. `docs/STATE.md`;
+3. the affected target route map or current-frontier file;
+4. the active route prompt if the next obligation changes;
+5. dependency edges and certificate registrations when applicable;
+6. regenerated artifact metadata/index and generated state views.
+
+Follow `docs/RESEARCH_WORKFLOW.md` and `CONTRIBUTING.md`. Run
+`python3 tools/check_theorem_state.py` before committing.
+
+Never create another monolithic “canonical complete report” as a competing source of
+truth. Preserve history in reports/archive; keep current theorem state small and
+explicit.

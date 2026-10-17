@@ -1,0 +1,333 @@
+# Target C — Section 141 coincident-apex repair and pure-tooth train consequence
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working repair candidate; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This note repairs one missing case in normalized post-126 Section 141 and records a
+finite consequence for the exact Section-126 pure-tooth endpoint.
+
+Section 141 studies two consecutive Type-II tooth sides
+
+\[
+p_i p_{i+1},\qquad p_{i+1}p_{i+2}
+\]
+
+with nonunit base lengths
+
+\[
+b_i=1+e_i,\qquad b_{i+1}=1+e_{i+1},\qquad 0<e_i,e_{i+1}<1,
+\]
+
+and unit-tooth apexes `x_i,x_{i+1}`. It defines
+
+\[
+\beta(e):=\arccos{1+e\over2}\in(0,\pi/3)
+\]
+
+and proves, after fixing the ray order, that unit separation of the two apexes gives
+
+\[
+\alpha_i\le
+\left({\pi\over3}-\beta(e_i)\right)
++
+\left({\pi\over3}-\beta(e_{i+1})\right),
+\tag{R141.1}
+\]
+
+where `alpha_i` is the exterior turn of the loaded force hull at `p_{i+1}`.
+
+The written proof used `|x_i-x_{i+1}|>=1` without first excluding
+`x_i=x_{i+1}`. The equality case is not formally covered by unit separation because it
+is one source point, not two distinct source points. In the Type-II scope the missing
+case is impossible for a separate geometric reason: near-disk convergence makes every
+loaded-hull exterior turn uniformly `o(1)`, whereas a coincident pair of tooth apexes
+would force a turn strictly larger than `pi/3`.
+
+The repair has a useful exact corollary: in the Section-126 pure-tooth endpoint there
+are no singleton stopped trains for all sufficiently large Type-II sources. Therefore
+all `q` stopped trains are genuine strict-rhombus train tracks and
+
+\[
+\boxed{R_4\le {q^2\over4}.}
+\tag{R141.2}
+\]
+
+Since canonical Type II has
+
+\[
+{R_4\over D^2}\to\Delta_2={\pi\over2\sqrt3},
+\]
+
+this yields the endpoint-specific asymptotic floor
+
+\[
+\boxed{
+\liminf {q\over D}
+\ge 2\sqrt{\Delta_2}
+=2\sqrt{\frac{\pi}{2\sqrt3}}
+=1.9046256137279147\ldots .
+}
+\tag{R141.3}
+\]
+
+This does **not** revive the rejected global claim
+`liminf (q-k)/D>=1.9046256...`. Equation (R141.3) is restricted to the exact
+Section-126 pure-tooth one-cell endpoint, where `k=0` and every stopped train is shown
+below to be a non-singleton rhombus train.
+
+---
+
+## 1. Type-II near-disk convergence makes the maximum hull turn vanish
+
+Let
+
+\[
+F_D=\operatorname{conv}(B_D)
+\]
+
+be the loaded force hull. Canonical Section 80 gives centers `o_D` and errors
+`delta_D=o(D)` such that
+
+\[
+d_H(F_D,B(o_D,D/2))\le\delta_D.
+\tag{R141.4}
+\]
+
+The centralized Type-II loaded-hull-side theorem already uses the resulting finite
+normal-cone estimate. Put
+
+\[
+r_D={D\over2}-\delta_D,
+\qquad
+R_{+,D}={D\over2}+\delta_D,
+\qquad
+\varepsilon_D:=\arccos{r_D\over R_{+,D}}.
+\tag{R141.5}
+\]
+
+Then `epsilon_D->0`. For every boundary point `p` of `F_D` and every outward unit
+supporting normal `n` at `p`, the same support-function argument gives
+
+\[
+\angle(n,p-o_D)\le\varepsilon_D.
+\tag{R141.6}
+\]
+
+At a loaded hull vertex, take the outward normals of its two incident hull sides.
+Their angular separation is exactly the exterior turning angle `alpha_i`. Both normals
+lie within `epsilon_D` of the same radial direction `p-o_D`; hence
+
+\[
+\boxed{
+0<\alpha_i\le2\varepsilon_D=o(1)
+\quad\text{uniformly in }i.
+}
+\tag{R141.7}
+\]
+
+In particular, for all sufficiently large Type-II sources,
+
+\[
+\boxed{\max_i\alpha_i<\pi/3.}
+\tag{R141.8}
+\]
+
+No absolute Hausdorff rate is needed.
+
+---
+
+## 2. Consecutive tooth apexes cannot coincide
+
+Use the exact ray notation of normalized Section 141. Direct the preceding loaded-hull
+side at argument zero. The ray from `p_{i+1}` to the first tooth apex has argument
+
+\[
+\theta_i=\pi-\beta(e_i),
+\tag{R141.9}
+\]
+
+and the ray from `p_{i+1}` to the next tooth apex has argument
+
+\[
+\theta_{i+1}=\alpha_i+\beta(e_{i+1}).
+\tag{R141.10}
+\]
+
+Suppose
+
+\[
+x_i=x_{i+1}.
+\]
+
+The two rays are then the same physical ray. In the inward angular lifts used in
+(R141.9)--(R141.10), this gives
+
+\[
+\pi-\beta(e_i)
+=\alpha_i+\beta(e_{i+1}),
+\]
+
+so
+
+\[
+\boxed{
+\alpha_i
+=\pi-\beta(e_i)-\beta(e_{i+1})
+>\pi/3,
+}
+\tag{R141.11}
+\]
+
+because both tooth bases are nonunit and therefore
+`beta(e_i),beta(e_{i+1})<pi/3`.
+
+Equation (R141.11) contradicts (R141.8). Thus for all sufficiently large Type-II
+survivors,
+
+\[
+\boxed{x_i\ne x_{i+1}}
+\tag{R141.12}
+\]
+
+whenever the two adjacent hull sides are two-edge nonunit teeth.
+
+Now the two apexes are distinct source points, so source unit separation legitimately
+gives
+
+\[
+|x_i-x_{i+1}|\ge1.
+\]
+
+The repaired ray-order argument in normalized Section 141 then applies exactly as
+written and proves (R141.1). Thus the numerical conclusions (141.2)--(141.5) remain
+valid in their stated sufficiently-large Type-II scope; the missing distinctness step
+is supplied by (R141.7)--(R141.12).
+
+---
+
+## 3. Exact pure-tooth endpoint has no singleton stopped train
+
+Assume now the exact Section-126 endpoint:
+
+1. there is one unloaded positive-contact component;
+2. its attachment set is the full loaded set `B`, `|B|=q`;
+3. the augmented graph has
+   \[
+   T_\triangle=q,\qquad Q^+=0.
+   \]
+
+Section 126 proves
+
+\[
+e_{BB}=k=d_H=s_Z=Q=0,
+\qquad h=q,
+\qquad b=2q,
+\tag{R141.13}
+\]
+
+and every bounded positive-contact face is a strict unit rhombus. It also proves that
+the full contact graph has exactly `q` stopped trains, where an edge incident to no
+rhombus is allowed a priori as a singleton bridge train.
+
+The centralized Type-II loaded-hull theorem gives
+
+\[
+e_{BB}=q-m,
+\]
+
+where `m` is the number of nonunit loaded-hull sides. Since `e_BB=0`,
+
+\[
+\boxed{m=q.}
+\tag{R141.14}
+\]
+
+Thus every loaded-hull side is nonunit. Normalized Section 130 identifies augmented
+triangles exactly with two-edge nonunit outer teeth. Since `T_\triangle=q=m`, every
+loaded-hull interval is therefore
+
+\[
+p_i-x_i-p_{i+1}
+\tag{R141.15}
+\]
+
+with two unit contact edges and unloaded apex `x_i`.
+
+Suppose a singleton stopped train existed. Its unique contact edge is incident to no
+bounded rhombus. Because every bounded face is a rhombus, both sides of that edge are
+the outer face, so it is a bridge and occurs twice in the occurrence-counted outer
+walk.
+
+But (R141.15) exhausts that outer walk. Every outer contact edge joins one loaded
+vertex to one tooth apex. If a physical bridge edge incident to `p_i` occurs twice,
+its two occurrences can only be the terminal legs of the two hull intervals adjacent
+to `p_i`; a two-edge interval itself cannot traverse one edge twice because its loaded
+endpoints are distinct. Hence
+
+\[
+x_{i-1}=x_i.
+\]
+
+This contradicts (R141.12). Therefore
+
+\[
+\boxed{
+\text{the exact Section-126 Type-II endpoint has no singleton stopped train}
+}
+\tag{R141.16}
+\]
+
+for all sufficiently large `D`.
+
+Consequently every one of the `q` stopped trains is a genuine train track of the full
+strict-rhombus complex.
+
+---
+
+## 4. Train crossing gives the pure-endpoint `1.9046256...` floor
+
+Apply canonical Theorem 10.6 to the collection of all bounded strict-rhombus faces.
+With `T=q` genuine train tracks, its simple triangle-free train crossing graph gives
+
+\[
+R_4\le {T^2\over4}={q^2\over4},
+\]
+
+which is (R141.2).
+
+Canonical Type II gives
+
+\[
+{R_4\over D^2}\to\Delta_2={\pi\over2\sqrt3}.
+\]
+
+Taking square roots proves (R141.3).
+
+The logical scope is important. The recently rejected global `1.9046256...` loaded-hull
+floor attempted to derive the same constant before establishing the exact pure-tooth
+normal form and was algebraically invalid. Here the constant follows from the physical
+rhombus crossing count after singleton trains have been excluded. It therefore says
+nothing about a general Type-II survivor with augmented defect, multiple cells, deep
+outer routes, exceptional faces, or `k>0`.
+
+---
+
+## 5. What this changes and what remains open
+
+The repair removes two ambiguities from the post-126 endpoint.
+
+1. Normalized Section 141's use of apex unit separation is now justified in its
+   sufficiently-large Type-II scope.
+2. The exact pure-tooth Section-126 endpoint is not a rhombic system with an arbitrary
+   linear population of bridge trains. Every stopped train traverses the strict-rhombus
+   complex, and its train count must satisfy the finite Mantel bound (R141.2).
+
+This still does not close the pure-tooth endpoint. The valid asymptotic lower bound
+`q/D>=1.9046256...` is compatible with the near-disk perimeter bound
+`q<per(F)=(pi+o(1))D`. The remaining exact obstruction is the Section-126
+train-shear/diameter-thrackle matrix, now without singleton bridge columns, together
+with the complete-grid diameter restrictions on the same `q` genuine trains.
+
+**Disposition:** repair candidate plus exact pure-endpoint sharpening. C-II and Level I
+remain open.

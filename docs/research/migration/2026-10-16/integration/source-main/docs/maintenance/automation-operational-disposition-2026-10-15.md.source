@@ -1,0 +1,51 @@
+# Automation source ownership and retirement evidence
+
+Observed 2026-10-15 during autonomous closeout, after main
+`9327a3a13f0641f2a8c1897aec0c088be016743a`.
+This is an operational observation, not authorization to retire a job.
+The [source ledger](issue-986-preservation.json) records every full source SHA,
+commit-account identity and remaining external action.
+
+All eight retained F tips still match their original captured identities.
+GitHub's commit API maps both author and committer to repository account
+`1337isnot1337` for all eight. This establishes account provenance; it does
+not identify a particular hosted job or its current scheduler operator.
+
+| Retained source | History/successor evidence | Operational disposition |
+| --- | --- | --- |
+| `automation/e99-target-c-closure-worker` | All 24 source-only commits remain ancestors of the exact current intentional draft #737, head `73fa41814eb1cdac50ba1eab135461868437edf0`. Its ten final research notes are represented there. | Retain for the open draft and external scheduler gate. PR #737's mathematical audit is a separate closeout obligation. |
+| `automation/target-c-edgewise-pentagon-opening-barrier-2026-10-05` | One source-only commit; edgewise angular content preserved in the consolidation below. | Retain pending external scheduler retirement evidence. |
+| `automation/target-c-one-edge-pentagon-activation-barrier-2026-10-05` | Two source-only commits, including formatting repair; final report blob equals the v2 report. | Retain pending external scheduler retirement evidence. |
+| `automation/target-c-one-edge-pentagon-activation-barrier-2026-10-05-v2` | One source-only commit; exact report duplicate of the preceding final source. | Retain pending external scheduler retirement evidence. |
+| `automation/target-c-pentagon-contact-debt-planarity-2026-10-05` | Two source-only commits, including formatting repair; final report blob equals the v2 report. | Retain pending external scheduler retirement evidence. |
+| `automation/target-c-pentagon-contact-debt-planarity-2026-10-05-v2` | One source-only commit; exact report duplicate of the preceding final source. | Retain pending external scheduler retirement evidence. |
+| `automation/target-c-short-unit-wall-zero-capacity-2026-10-05-v2` | One source-only commit; scoped mathematics already represented by `C-SHORT-WALL-ZERO-CAPACITY`. | Retain pending external scheduler retirement evidence. |
+| `automation/target-c-single-train-collar-zero-surplus-2026-10-05-v2` | One source-only commit; abstract boundary-vertex cellulation argument preserved with its actual-train embedding hypotheses explicit. | Retain pending external scheduler retirement evidence. |
+
+The seven finite sources have their mathematical successor in the
+[angular/contact-debt consolidation](../reports/target_c_pentagon_activation_and_contact_debt_preservation_2026-10-15.md).
+Preserving that content supplies no scheduler-retirement evidence.
+
+On both reached hosts, `homelab` and `Asus`, the same-user process cwd and open
+file scan found no research use, and the user unit-file inventory had no E99,
+Erdos or swarm unit. Homelab's available crontab had no matching entry; Asus
+had no `crontab` executable. These are bounded observations, not proof that no
+remote or hosted scheduler exists. The branch-specific GitHub Actions API
+reported zero runs for each of the eight branches. GitHub Actions history is
+not a hosted Codex or ChatGPT scheduler inventory.
+
+The known Macbook SSH endpoint timed out. A bounded current Codex app-server
+thread query exposed only this closeout as active, but its older-thread list
+was truncated and it does not enumerate hosted controller ownership or job
+retirement. No general hosted scheduler retirement interface was exposed by
+the available tools at this inspection.
+
+Two targeted plugin-catalog searches, for Codex scheduled automations and
+ChatGPT Tasks, found no suitable scheduler ownership/retirement connector.
+The catalog results are not exhaustive; no unrelated plugin was connected.
+
+The exact external decision record needed before deletion is: job/controller
+identifier, responsible owner, current enabled/disabled state, branch use and
+an explicit retirement or successor record. Until those facts are available,
+these refs remain protected. The inaccessible decision does not block source
+preservation, PR repairs, worktree review or final verification elsewhere.

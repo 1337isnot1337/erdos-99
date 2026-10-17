@@ -1,0 +1,39 @@
+"""Regression tests for strict covering of the complete product hull."""
+
+import unittest
+from fractions import Fraction
+
+from strict_hull_cover_certificate import (
+    short_diagonal_squared,
+    strict_cell_cover_margin,
+    strictly_covers_closed_cell,
+    strictly_covers_closed_product_hull,
+)
+
+
+class StrictHullCoverCertificateTests(unittest.TestCase):
+    def test_strict_threshold_covers_the_closed_cell(self) -> None:
+        gap = Fraction(6, 5)
+        self.assertEqual(short_diagonal_squared(gap, gap), Fraction(36, 25))
+        self.assertEqual(strict_cell_cover_margin(gap, gap), Fraction(39, 25))
+        self.assertTrue(strictly_covers_closed_cell(gap, gap))
+
+    def test_threshold_three_is_not_strict(self) -> None:
+        self.assertEqual(short_diagonal_squared(2, 1), Fraction(3))
+        self.assertFalse(strictly_covers_closed_cell(2, 1))
+
+    def test_nonuniform_strict_product_hull(self) -> None:
+        self.assertTrue(
+            strictly_covers_closed_product_hull(
+                (0, Fraction(6, 5), Fraction(13, 5)),
+                (0, Fraction(11, 10), Fraction(23, 10)),
+            )
+        )
+
+    def test_invalid_subunit_gap_is_rejected(self) -> None:
+        with self.assertRaises(ValueError):
+            strictly_covers_closed_product_hull((0, Fraction(9, 10)), (0, 1))
+
+
+if __name__ == "__main__":
+    unittest.main()

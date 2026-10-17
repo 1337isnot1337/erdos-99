@@ -1,0 +1,286 @@
+<!-- theorem-state: {"artifact_id":"ART-EE1E5D6630C4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Target B — five distinct persistent bars flatten by exact arithmetic
+
+**Date:** 2026-09-22  
+**Starting SHA:** `84d937ca93decb710b829fc610d46e0d89684988`  
+**Current base:** `43601c43`; state `2026-09-14.audit.51`  
+**Classification:** proved candidate awaiting promotion; artifact unreviewed.  
+**Level I / Target B:** unchanged, open.
+
+## 1. Statement and exact consequence
+
+Use the pure strict-rhombic disk, backward kernel `K`, persistent equality set
+`J`, and rotation functionals `s_h` of the
+[tangent-capacity candidate](target_b_tangent_cubic_capacity_2026-09-21.md).
+Its canonical geometric inputs are Target B §§40–43. Assume a gradient balance
+`mu` is strictly positive on **every** persistent bar.
+
+**Theorem F5.** If `|J|<=5` and the rotation functionals of the persistent bars
+are pairwise distinct on `K`, every persistent diameter bar is exactly constant
+on a neighborhood of zero in the train-angle slice `theta(0)+K`.
+
+If `K!=0` and the source is diameter-pair-minimal among triangle-free
+configurations of that cardinality and diameter, it has no active diameter bars
+outside `J`. This does not exclude a same-diameter flat family. Selection is
+conditional on the selected source retaining the pure-disk contact complex.
+
+The implication chain is
+
+```text
+integer phase counts + exact source-gradient balance
+ -> one of six five-vertex transfer supports
+ -> rational ratios among three specific stress weights
+ -> forbidden rational point on one of two rank-zero elliptic curves
+ -> zero phase matrix -> exact simultaneous flattening.
+```
+
+The new result closes the five-distinct-bar higher-order case, not Target B.
+Repeated rotation classes, unsupported persistent bars, larger supports,
+full backward rank, same-diameter families, and topology corrections remain.
+
+## 2. Source-to-finite-universe reduction
+
+From AP/PG in the companion, define integer off-diagonal counts `N_ij` and
+`B_ij=N_ij`, `B_ii=-sum_{j!=i}N_ij`. Then
+
+\[
+B\mathbf1=0,\qquad Bs=0,\qquad \mu^T B=0.
+\tag{F1}
+\]
+
+Every nonzero `N_ij` is realized by a tangent train. Distinct rotation
+functionals imply that this train separates only bars `i,j` within `J`.
+Consequently
+
+\[
+\mu_i<\mu_j,\qquad
+|v_i\cdot v_j|=|v_i|^2,
+\qquad v_i=\mu_i e_i.
+\tag{F2}
+\]
+
+Order the bars by nondecreasing weight. The support of nonzero `N_ij` is a
+nonempty forward directed graph if `B!=0`. Ties cause no loss: no edge can
+join equal weights, and any total tie-breaking is permitted. With five labels,
+there are exactly `2^10` subsets of the ten forward edges; no additional
+symmetry quotient is taken. Smaller supports are included by isolated vertices.
+
+The following necessary tests eliminate supports:
+
+1. No vertex has outdegree one: its row of `Bs=0` would equate two distinct
+   functionals.
+2. A source with nonzero outdegree has outdegree at least three. Its column of
+   `mu^T B=0` makes its diagonal zero; two outgoing signed counts would then
+   be opposite, and `Bs=0` would equate their two destinations.
+3. A sink cannot have indegree one, by its column of `mu^T B=0`.
+4. Two vertices have at most two common higher recipients. The two absolute
+   projection equations in F2 intersect in at most four vectors, or two
+   unoriented directions, because distinct diameter directions are not parallel.
+5. If `i->j`, they have at most one common higher recipient. The FF proof in
+   the companion solves this explicitly: in coordinates `v_i=(a,0)`,
+   `v_j=(a,b)`, a common higher recipient is, up to sign, the unique vector
+   `(a,-b-2a^2/b)` distinct from `v_j`.
+
+The deterministic verifier exhausts all 1024 subsets and leaves exactly the
+following six supports. An edge `ij` means `i->j`.
+
+| Case | Edges | Geometric type |
+| --- | --- | --- |
+| A1 | 12,13,15,23,24,34,35 | triangle 123 |
+| B1 | 12,14,15,23,24,34,35 | chain 123, common higher 4 |
+| A2 | 12,13,14,23,25,34,35 | triangle 123 |
+| B2 | 12,14,15,23,25,34,35 | chain 123, common higher 5 |
+| C1 | 12,13,14,24,25,34,35 | fork 1 to 2,3, common higher 4 |
+| C2 | 12,13,15,24,25,34,35 | fork 1 to 2,3, common higher 5 |
+
+This table is a proved finite lemma via the complete explicit enumeration;
+it does not assume that any surviving support has a geometric realization.
+
+## 3. The three source weights are commensurate
+
+In every row of outdegree two, the diagonal of `B` is nonzero: if the two
+outgoing counts summed to zero, `Bs=0` would equate the destinations.
+
+Column 2 has only the nonzero off-diagonal entry from row 1 and the nonzero
+diagonal from row 2. Thus `mu_1/mu_2` is rational. In cases B1/B2, column 3
+similarly forces `mu_2/mu_3` rational. In C1/C2 it forces `mu_1/mu_3` rational.
+In A1, the sink column 4 has precisely the two nonzero entries from rows 2,3;
+in A2, sink column 5 does. Hence `mu_2/mu_3` is rational in those cases too.
+All three weights are therefore rational multiples of one another. Only
+**integer** source counts justify this step; arbitrary real signed flows do not.
+
+## 4. Three geometric obstructions
+
+Two elementary arithmetic facts will be certified in §5:
+
+\[
+\begin{split}
+&(x^2-1)(y^2-1)=4
+ &&\text{has no rational solution with }x,y>1;\tag{R1}\\
+&z^2=x^4+6x^2-3
+ &&\text{has no rational solution with }x>1.\tag{R2}
+\end{split}
+\]
+
+### Triangle type A
+
+Orient `v_1=(a,0)`, `v_2=(a,b)` with `a>0`, `b!=0`. The common higher
+recipient `v_3` is `(a,-b-2a^2/b)` up to sign. Thus
+
+\[
+\left(\left({\mu_2\over\mu_1}\right)^2-1\right)
+\left(\left({\mu_3\over\mu_2}\right)^2-1\right)=4.
+\]
+
+Both ratios are rational and exceed one, contradicting R1.
+
+### Common-higher fork type C
+
+Orient each of `v_1,v_2,v_3` to have positive dot product with their common
+higher recipient `w`. For any edge `i->j` within these three vertices, the dot
+product `v_i dot v_j` is **negative**. Otherwise the two projection equations
+would force `w=v_j`, impossible for a higher recipient.
+
+Write `v_1=(a,0)`, `v_2=(-a,b)`, and `v_3=(-a,c)`. The equations with `w`
+give `w_x=a` and
+
+\[
+w_y=b+2a^2/b=c+2a^2/c.
+\]
+
+The two diameter directions are distinct, so `b!=c`, and hence `bc=2a^2`.
+It follows that
+
+\[
+\left(\left({\mu_2\over\mu_1}\right)^2-1\right)
+\left(\left({\mu_3\over\mu_1}\right)^2-1\right)=4,
+\]
+
+again contradicting R1.
+
+### Common-higher chain type B
+
+Put the common higher vector at `w=(R,0)`, and orient the three lower vectors
+to have positive dot product with it. They lie on its diameter circle and have
+the form
+
+\[
+v_i={R\over1+t_i^2}(1,t_i),\qquad
+\mu_i={R\over\sqrt{1+t_i^2}}.
+\]
+
+The negative-dot observation gives, for the two chain edges,
+
+\[
+t_1=-t_2-2/t_2,\qquad t_2=-t_3-2/t_3.
+\]
+
+None of these denominators is zero: zero would identify a lower vector with
+the higher recipient. Set `r=mu_2/mu_1>1` and `s=mu_3/mu_2>1`, both rational.
+Direct substitution yields
+
+\[
+r^2=1+{4(s^2-1)\over(s^2+1)^2},\qquad
+[r(s^2+1)]^2=s^4+6s^2-3.
+\]
+
+This contradicts R2. All six supports are therefore excluded; `B=0`, and
+groupwise cancellation in the exact train formula proves F5. ∎
+
+## 5. Complete arithmetic certificates for R1 and R2
+
+Only standard rational 2-isogeny descent and good-reduction torsion injection
+are imported. Their hypotheses and normalization were checked in the author's
+copies of [Dixit–Murty–Pathak, §2](https://www.imsc.res.in/~anupdixit/rankproblem.pdf)
+and [Stoll, Theorem 19.5 and §22](https://www.mathe2.uni-bayreuth.de/stoll/teaching/ElliptischeKurven-SS2023/Notes-EllipticCurves-pub-screen.pdf).
+No database rank, BSD assumption, or unproved equality classification is used.
+
+For `E: Y^2=X^3+aX^2+bX`, with `b(a^2-4b)!=0`, its 2-isogenous curve has
+coefficients `a'=-2a`, `b'=a^2-4b`. The descent map sends a nonzero
+`X`-coordinate to its rational squareclass, sends `(0,0)` to `b`, and the
+identity to 1. Its image is supported on signed squarefree divisors of `b`.
+A class `d` requires a primitive integral solution of
+
+\[
+N^2=dM^4+aM^2e^2+(b/d)e^4.
+\tag{R3}
+\]
+
+The rank satisfies `2^(rank+2)=|im alpha_E| |im alpha_E'|`.
+
+### R1: the curve `Y^2=X(X-1)(X+3)`
+
+Here `(a,b)=(2,-3)`, and the isogenous coefficients are `(-4,16)`.
+The first descent image consists of all four classes `1,-1,3,-3`, represented
+by the identity and the points with `X=-1,3,-3`. On the isogenous curve,
+`Y^2=X((X-2)^2+12)` forces `X>=0`, so only classes 1 and 2 remain.
+Class 2 would require
+
+\[
+N^2=2M^4-4M^2e^2+8e^4.
+\]
+
+For primitive `(M,e)`, its residue modulo 16 is respectively 2, 6, or 8 when
+`(M,e)` has parity `(odd,even)`, `(odd,odd)`, or `(even,odd)`. None is a square.
+Thus the second image has size one and the rank is zero.
+
+The discriminant is 2304, so 5 is a good prime. Direct enumeration gives
+`#E(F_5)=8`; good-reduction injection bounds rational torsion by eight.
+The eight exhibited rational points are
+
+\[
+O,\ (0,0),\ (1,0),\ (-3,0),\ (-1,\pm2),\ (3,\pm6).
+\]
+
+They are therefore all rational points. A putative R1 solution maps to
+`X=x^2>1`, `Y=xy(x^2-1)`. The only possible coordinate above one is `X=3`,
+which is not a rational square. This proves R1.
+
+### R2: the curve `Y^2=X^3+6X^2-3X`
+
+Start with `E_0: Y^2=X^3-3X^2+3X=(X-1)^3+1`, with `(a,b)=(-3,3)`.
+Its descent image is `{1,3}`: the cubic has the sign of `X`, and `(3,3)`
+represents class 3. Its 2-isogenous curve is `E_2: Y^2=X^3+6X^2-3X`.
+Its possible classes are `1,-1,3,-3`, and it contains `1,-3`. Class 3 requires
+
+\[
+N^2=3M^4+6M^2e^2-e^4.
+\]
+
+If `3` does not divide `e`, the residue modulo 3 is 2. If `3` divides `e`,
+primitivity gives `3` not dividing `M`, and the residue modulo 9 is 3.
+Both are impossible for a square. Since the descent image is a group and
+contains `-3`, class `-1` is excluded too. The two image sizes are two and two;
+both isogenous curves have rank zero.
+
+The discriminant of `E_2` is 6912, and `#E_2(F_5)=6`. Its complete rational
+point set is therefore
+
+\[
+O,\ (0,0),\ (1,\pm2),\ (-3,\pm6).
+\]
+
+A putative R2 solution maps to `X=x^2>1`, `Y=xz`, contradicting this list.
+
+## 6. Reproduction and scope audit
+
+Run
+
+```text
+python3 research/verify_target_b_five_bar_arithmetic_2026_09_22.py
+python3 tools/check_theorem_state.py
+```
+
+The verifier exhausts all 1024 labeled forward support graphs, checks the exact
+six-member cover and every rational-weight propagation witness, certifies the
+mod-16 and mod-9 exclusions, counts both good reductions, verifies the complete
+listed rational point sets against their equations, and checks the geometric
+and quartic substitutions symbolically. No floating-point search is a premise.
+
+The standard descent and torsion-injection theorems, not finite point searches,
+justify completeness of the rational-point lists. The graph enumeration is
+exhaustive only because §2 maps every nonzero source phase matrix into its finite
+universe. No source points, contacts, inactive inequalities, or unsupported
+persistent bars are silently removed. The full-support and distinct-functional
+hypotheses remain essential. All new claims are **proved candidates awaiting
+promotion**; no canonical state or route status is changed.

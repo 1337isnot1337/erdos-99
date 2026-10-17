@@ -1,0 +1,33 @@
+# WITHDRAWN: nine-no-root k=5, D=-1, d_root=0, p=5 orientation narrowing
+
+Date of withdrawal: 2026-09-29
+
+The certificate previously stored at this path is invalid and must not be used.
+
+The error is a dual-space reversal. For this branch, the global external coefficient-constraint space is a rank-four subspace
+
+    P <= Q^9,
+
+and every actual-empty local coefficient space satisfies
+
+    E_b <= P.
+
+The withdrawn argument instead defined `W=P^perp` and tested
+
+    span(E_b) <= W.
+
+That containment is false in general. Consequently its claimed exclusions of S2, S5, S6, and S7, and its claimed residual frontier S1, S3, S4, S8, are not theorem-level results.
+
+The original text and verifier remain recoverable from Git history at commit
+
+    8a1d95957323c7a9e19fafed6967c16a886983af
+
+and verifier blob
+
+    7a822a02ebf9306f0a88cadd32fdd366e268229f.
+
+A corrected proof closes S1 independently:
+
+    research/target_c_support7_global_segment_relative_nine_noroot_k5_dminus1_d0p5_S1_closure_2026-09-29.md
+
+Until the remaining supports are re-audited, the sound frontier from the preceding support-level certificate is S2 through S8.

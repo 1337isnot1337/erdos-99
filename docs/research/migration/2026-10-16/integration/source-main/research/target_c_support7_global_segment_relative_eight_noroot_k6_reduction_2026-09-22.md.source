@@ -1,0 +1,390 @@
+# Target C: eight-no-root `k=6` clean-coordinate lift and branch reduction
+
+Date: 2026-09-22
+
+Status: rigorous structural reduction of the eight-no-root rank-two layer. One arithmetic branch is closed, four more are excluded immediately, the `D=-2` residual is forced to a single all-singleton virtual profile, and the `D=-1,p=9` deficiency-one residual is sharply constrained.
+
+Companion checker:
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k6_reduction_2026_09_22.py`
+
+This result is a finite metric-basis layer statement. It does not promote Target C-II or Erdős Problem #99 to solved, and it does not modify theorem-state authority.
+
+## 1. Starting point
+
+The seven-no-root work proves
+
+> every four-cycle family with at most seven no-root cycles has `D=|A|-3 delta(A)>=0`.
+
+The eight-no-root `k=8` and `k=7` layers are now closed. Consider a hypothetical eight-no-root counterexample
+
+`B=R union E`, `|E|=8`,
+
+in the next layer
+
+`k(B)=6`.
+
+As in the committed `k=8` and `k=7` reductions, every external row is an `M`-coloop and a `Q`-noncoloop. Hence
+
+`D(B) in {-2,-1}`,
+
+and deleting one external coordinate preserves the external coefficient-space rank.
+
+Let
+
+`P <= Q^8`
+
+be the coefficient-constraint space. Since `k=6`,
+
+`rank(P)=8-k=2`.
+
+The exact root-block formula is
+
+`D(B)=8+p+3 d_root-3k=p+3d_root-10`.
+
+Therefore the complete arithmetic boundary is
+
+```text
+D=-2: (d_root,p)=(0,8),(1,5),(2,2)
+D=-1: (d_root,p)=(0,9),(1,6),(2,3),(3,0).
+```
+
+## 2. All-depth puncturing and a clean-coordinate lemma
+
+For any nonempty deletion set `S subset E`, write `s=|S|` and let
+
+`q_S = rank_Q(B)-rank_Q(B\S)`.
+
+All eight external rows are `M`-coloops, so
+
+`D(B\S)=D(B)+2s-3q_S`.
+
+The deletion has at most seven no-root rows, hence the seven-no-root theorem gives
+
+`D(B\S)>=0`.
+
+Thus
+
+`q_S <= floor((D(B)+2s)/3)`.
+
+Equivalently, if `d_j(P)` denotes the generalized Hamming weights of `P`,
+
+`d_j(P) >= ceil((3j-D(B))/2)`.
+
+For the rank-two space needed here this gives
+
+```text
+D=-2: d_1(P)>=3, d_2(P)>=4;
+D=-1: d_1(P)>=2, d_2(P)>=4.
+```
+
+The common fact `d_2(P)>=4` has a useful consequence.
+
+### Lemma 2.1: at least two three-clean coordinates
+
+Call an external coordinate `i` **three-clean** if no nonzero word of `P` of Hamming weight at most three has `i` in its support.
+
+Then every rank-two `P<=Q^8` with `d_2(P)>=4` has at least two three-clean coordinates.
+
+#### Proof
+
+Choose a `2 x 8` generator matrix for `P`. Let `z` be the number of zero columns. The nonzero columns split into projective classes according to their one-dimensional direction in `Q^2`.
+
+The support of the whole code has size `8-z`, so `d_2(P)>=4` gives `z<=4`.
+
+If `z>=2`, every zero-column coordinate is absent from every codeword and is therefore three-clean. So suppose `z<=1`.
+
+For a nonzero linear functional on the two generator rows, the zero coordinates of the resulting codeword consist of the `z` zero columns together with one projective class. A word of weight at most three therefore requires a projective class of size at least
+
+`5-z`.
+
+There cannot be two such classes when `z<=1`, because two of them would use at least `2(5-z)>8-z` nonzero columns. Hence there is at most one support pattern of weight at most three. That support has size at most three, so at least five of the eight coordinates are outside it and are three-clean.
+
+Thus there are always at least two three-clean coordinates. `□`
+
+For a three-clean coordinate `i`, deleting `i` together with any additional zero, one, or two coordinates preserves `rank(P)=2`. Indeed a rank drop after deleting a set of at most three coordinates containing `i` would give a nonzero word of `P` supported in that deleted set, contrary to three-cleanliness.
+
+The companion checker independently enumerates all projective column-multiplicity profiles compatible with rank two and the generalized-weight floors. The minimum number of three-clean coordinates is exactly two; one sharp profile is `z=2` with two nonzero projective classes of size three each.
+
+## 3. Lift the synchronized six-row containment theorem twice
+
+Fix a three-clean coordinate `i`. The seven-row puncture
+
+`P_i=pi_i(P)<=Q^7`
+
+has rank two, and every one- and two-coordinate puncture of `P_i` also has rank two.
+
+For each remaining coordinate `j`, the six-row plane `P_{ij}` is therefore fully synchronized: all of its one-coordinate punctures still have rank two. The committed six-no-root `k=4` containment theorem applies. In its virtual-canonical notation, every such six-row state has
+
+- complete-block deficiency at least one; and
+- every external canonical relation contained in the span of the virtual-complete block relations.
+
+Define the seven-row virtual-canonical complete set `C_i` from `P_i`. Projection of a seven-row virtual-empty block is virtual-empty or untouched, so
+
+`C_{ij} subset C_i`.
+
+Row-nullity monotonicity gives seven-row deficiency at least one.
+
+For external relation containment, let `N_i=null(P_i)`. For a remaining coordinate `j`, put
+
+`N_{ij}={alpha in N_i: alpha_j=0}`.
+
+Because every two-coordinate puncture of `P_i` preserves rank two, these are genuine distinct hyperplanes for at least two choices of `j`, and two distinct hyperplanes span `N_i`. For `alpha in N_{ij}`, the synchronized six-row containment theorem puts the punctured external relation in `H(C_{ij})`; lifting back adds no correction on `C_i\C_{ij}` for the usual two reasons: a block either became untouched in coordinate `j`, where `alpha_j=0`, or remained touched but became virtual-empty, where its projected quotient demand vanishes on `null(P_{ij})`. Hence every seven-row external canonical relation lies in `H(C_i)`.
+
+Now choose two distinct three-clean coordinates `i,j` in the original eight-row state. Let `C` be the eight-row virtual-canonical complete set and `N=null(P)`. Again
+
+`C_i,C_j subset C`,
+
+so the global virtual deficiency `d_v` is at least one.
+
+The spaces
+
+`N_i={alpha in N: alpha_i=0}`
+
+and `N_j` are distinct hyperplanes. If they were equal, the two coordinate functionals would be proportional on `N`, so `P=N^perp` would contain a nonzero word supported on `{i,j}`, contradicting three-cleanliness. Thus
+
+`N=N_i+N_j`.
+
+The same lift argument shows every external canonical relation from `N_i` or `N_j` belongs to `H(C)`. Therefore
+
+`L(N) subset H(C)`.
+
+The standard virtual-canonical accounting now applies globally:
+
+`D(B) >= 8+p+3d_v-3q`,
+
+where `q` is the number of global virtual-complete blocks that are incomplete in the actual state. A virtual-complete block cannot be actual-empty, so
+
+`q<=p`.
+
+In particular,
+
+`D(B)>=11-2p`.
+
+## 4. Four arithmetic branches close immediately
+
+The crude bound already excludes
+
+```text
+D=-2, (d_root,p)=(1,5):  D>=1;
+D=-2, (d_root,p)=(2,2):  D>=7;
+D=-1, (d_root,p)=(2,3):  D>=5;
+D=-1, (d_root,p)=(3,0):  D>=11.
+```
+
+Only
+
+```text
+A: D=-2, d_root=0, p=8;
+B: D=-1, d_root=0, p=9;
+C: D=-1, d_root=1, p=6
+```
+
+remain at this point.
+
+The global containment inequality leaves the exact virtual-profile lists
+
+```text
+A, p=8:
+(d_v,q,s_min)=(1,7,6),(1,8,8),(2,8,8)
+
+B, p=9:
+(d_v,q,s_min)=(1,7,5),(1,8,7),(1,9,9),
+                (2,8,7),(2,9,9),(3,9,9)
+
+C, p=6:
+(d_v,q,s_min)=(1,6,6),
+```
+
+where `s_min=max(0,2q-p)` is the minimum number of singleton replacements among the `q` changed virtual-complete blocks.
+
+## 5. A seven-row deficiency-one capacity bound
+
+The exact synchronized six-row rank-two audit in
+
+`research/target_c_support7_global_segment_relative_seven_noroot_k5_dminus1_d1p4_closure_2026-09-21.md`
+
+counts **all** compatible singleton blocks, without the older support-multiplicity filter. Among all synchronized six-row virtual states of deficiency one, singleton capacity is at most three.
+
+This lifts one row.
+
+### Lemma 5.1
+
+Let `Q<=Q^7` have rank two and suppose every one- and two-coordinate puncture of `Q` has rank two. If its virtual-canonical deficiency is one, then its compatible singleton capacity is at most four.
+
+#### Proof
+
+Delete coordinate `j`. The resulting six-row plane is synchronized. Its virtual-complete set is contained in the seven-row one, so its deficiency is at most one; the six-row containment theorem gives deficiency at least one. Hence every six-row deletion has deficiency exactly one and singleton capacity at most three.
+
+Fix a singleton-capable seven-row virtual-complete block `b`.
+
+Its singleton state remains compatible under projection whenever the block stays touched, because its local coefficient constraint projects into the projected global coefficient space.
+
+The block can disappear from the singleton-capable virtual-complete set for at most two deletion coordinates:
+
+1. it becomes untouched, which can happen for at most one coordinate;
+2. it remains touched but becomes virtual-empty.
+
+For the second event, if `E_b` is the empty-state coefficient-constraint space, deletion of `j` makes `b` virtual-empty exactly when
+
+`E_b subset Q+span(e_j)`.
+
+This can happen for at most one `j`. If it happened for distinct `j,k`, then either the two three-dimensional spaces `Q+span(e_j)` and `Q+span(e_k)` were distinct, whose intersection is `Q`, contradicting that `b` is seven-row virtual-complete, or they were equal, in which case `Q` contains a nonzero word supported on `{j,k}`, contradicting preservation of rank under the two-coordinate puncture.
+
+Thus each seven-row singleton-capable block survives in at least five of the seven six-row deletions. Double-counting singleton-capable block/deletion incidences gives
+
+`5 S <= 7*3`,
+
+so
+
+`S<=4`. `□`
+
+## 6. Close `D=-1,d_root=1,p=6`
+
+For branch C the global profile is forced to
+
+`d_v=1, q=6`.
+
+All six changed virtual-complete blocks must therefore be singletons, and they consume all six selected incomplete root rows. There is no selected incomplete row outside them.
+
+Choose a three-clean coordinate `i`. Its seven-row puncture has defect
+
+`D_i=D(B)+2=1`,
+
+rank-two coefficient space, and every one- and two-coordinate puncture remains rank two. Since `C_i subset C`, its virtual deficiency is at most the global `d_v=1`; Section 3 gives at least one. Hence
+
+`d_i=1`.
+
+The seven-row root formula at `k=5` gives
+
+`p_i in {6,3,0}`.
+
+The containment inequality is
+
+`1 >= 7+p_i+3-3q_i`,
+
+so
+
+`q_i >= ceil((9+p_i)/3)`.
+
+If `p_i=3`, this gives `q_i>=4>p_i`; if `p_i=0`, it gives `q_i>=3>p_i`. Thus `p_i=6`, and then `q_i>=5`.
+
+Every globally selected incomplete block is a singleton and `C_i subset C`, so these `q_i` blocks are compatible singleton blocks in the seven-row state. Its singleton capacity is therefore at least five. Lemma 5.1 says it is at most four. Contradiction.
+
+Hence
+
+> `D=-1,k=6,d_root=1,p=6` is impossible.
+
+This closes a fifth of the seven original arithmetic branches in the eight-no-root `k=6` layer.
+
+## 7. The `D=-2,p=8` branch is forced to one profile
+
+Suppose branch A had global `d_v=1`. For a three-clean deletion, the seven-row deficiency is again one, so Lemma 5.1 gives singleton capacity at most four. Here `D_i=0`, and the root formula gives
+
+`p_i in {8,5,2}`.
+
+The seven-row containment inequality
+
+`0 >= 7+p_i+3-3q_i`
+
+shows that the only pattern compatible with capacity at most four is
+
+`p_i=8, q_i=6`,
+
+with exactly four singleton replacements and two pair replacements. (`p_i=5` requires at least five singleton replacements; `p_i=2` requires more changed blocks than selected rows.)
+
+But either global `d_v=1` profile has too many singleton blocks:
+
+- at `q=7`, at least six of the seven changed blocks are singletons, so every six-block subset contains at least five singletons;
+- at `q=8`, all eight are singletons.
+
+Since `C_i subset C`, the required six-block deletion shadow cannot have singleton capacity only four. Therefore global `d_v=1` is impossible.
+
+The branch is forced to
+
+```text
+D=-2, p=8,
+d_v=2, q=8,
+eight singleton changed blocks.
+```
+
+For every three-clean coordinate, the seven-row deletion cannot have deficiency one by the preceding argument, so it has deficiency two. Its defect-zero containment inequality then forces
+
+```text
+p_i=8,
+q_i>=7,
+d_i=2,
+singleton capacity >=7.
+```
+
+Thus the entire `D=-2,k=6,p=8` branch has been reduced to depth-two-synchronized seven-row rank-two deficiency-two shadows with at least seven compatible singleton blocks. This is now the cleanest finite target in the layer.
+
+## 8. The `D=-1,p=9` deficiency-one side
+
+For branch B the possible global profiles were
+
+```text
+(1,7,5),(1,8,7),(1,9,9),
+(2,8,7),(2,9,9),(3,9,9).
+```
+
+Lemma 5.1 eliminates `(d_v,q)=(1,9)` immediately. A three-clean deletion has `d_i=1` and
+
+`p_i in {9,6,3,0}`.
+
+At global `q=9` all nine changed blocks are singletons. The seven-row containment inequality requires at least six changed blocks when `p_i=9` and at least five when `p_i=6`, already above the capacity-four bound; `p_i<=3` cannot supply the required `q_i`. Hence this profile is impossible.
+
+The remaining deficiency-one profiles sharpen as follows.
+
+### `d_v=1,q=8`
+
+There must be exactly seven singleton blocks and one pair block. Every three-clean deletion has exactly
+
+```text
+p_i=6,
+q_i=5,
+four singleton blocks + the one pair block.
+```
+
+Thus every three-clean deletion loses exactly three selected singleton rows and retains the pair block.
+
+### `d_v=1,q=7`
+
+The global singleton count is five or six; seven singletons are impossible. If it is six, every three-clean deletion must again have
+
+`p_i=6, q_i=5`
+
+with four singleton replacements. If it is five, a clean deletion may instead preserve `p_i=9` with `q_i=6`.
+
+The higher-deficiency profiles remain
+
+```text
+(d_v,q,s_min)=(2,8,7),(2,9,9),(3,9,9).
+```
+
+## 9. Exact remaining `k=6` target
+
+The eight-no-root `k=6` layer is now reduced to two arithmetic root branches:
+
+```text
+A: D=-2, d_root=0, p=8
+B: D=-1, d_root=0, p=9.
+```
+
+Branch A is especially rigid:
+
+```text
+global: d_v=2, q=8, eight singleton blocks;
+for every three-clean i:
+    p_i=8,
+    d_i=2,
+    q_i>=7,
+    seven-row singleton capacity >=7,
+    every one- and two-coordinate puncture of P_i has rank two.
+```
+
+The next exact computation should attack this seven-row rank-two deficiency-two, capacity-at-least-seven target first. The existing synchronized six-row `d=2` extension engine already supplies the relevant exact six-row children and capacity census; the new search only needs to impose the seven-row compatibility and depth-two synchronization inherited above rather than enumerate arbitrary eight-row states.
+
+For branch B, the deficiency-one residuals are now small enough to attack by the same extension method after Branch A, while the `(d_v,q)=(2,8),(2,9),(3,9)` profiles provide the higher-deficiency fallback targets.
+
+The direct C-II/global minimizer frontier remains independently open.

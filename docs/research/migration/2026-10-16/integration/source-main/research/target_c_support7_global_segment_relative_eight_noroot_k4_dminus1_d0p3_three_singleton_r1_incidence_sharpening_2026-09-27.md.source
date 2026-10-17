@@ -1,0 +1,69 @@
+# Target C: r=1 incidence sharpening for the final k=4 p=3 profile
+
+Date: 2026-09-27
+
+Status: proof-level reduction only. Scope is the remaining eight-no-root
+`k=4,D=-1,d_root=0,p=3` three-singleton profile with exactly one
+projective weight-two line in the rank-four coefficient space `P<=Q^8`.
+This does not close r=1, Target C-II, or Erdos Problem #99.
+
+Let `M` be the support of the unique weight-two line. Current main gives
+`(d1,d2,d3,d4)(P)>=(2,4,5,7)`. The sharp five-row descendants give, for
+every selected singleton block `b`, `|I_b\M|>=2`, and exclude weight-one
+representatives of `W_b=(E_b+P)/P`.
+
+## Rank-two selected singleton: at least four touches
+
+Assume a selected singleton has local rank two and exactly three touches.
+Write the three local direction multiplicities as `m_s,m_1,m_2`, with `s`
+the selected singleton direction. The singleton line
+`L_b=E_b intersect P` has weight `3-m_s`, hence `m_s<=1` by
+`d1(P)>=2`. Each nonselected local row represents the nonzero quotient line
+`W_b`, so sharpness excludes weight one and gives `m_1,m_2<=1`.
+Thus `m_s=m_1=m_2=1`. Then `L_b` has weight two, so its support is exactly
+`M`. The three-touch set therefore contains both coordinates of `M` and
+only one coordinate outside `M`, contradicting `|I_b\M|>=2`.
+Hence every rank-two selected singleton has at least four touches.
+
+## At most one two-touch actual-empty block
+
+A rank-one actual-empty block with exactly two touches has its unique local
+line inside `P`, so its support must be `M`. Hence every such block is
+touched by the same two external occurrences.
+
+There is at most one. If the two tetrahedral supports are equal, the committed
+local-block rule makes every common touched block rank two. If they are
+distinct, they share at most one triangle: two distinct common triangles
+would have a four-element union contained in both four-subsets, forcing the
+supports equal.
+
+Therefore among actual-empty blocks at most one has incidence two; every
+other empty block has at least three touches, while rank-two empty blocks have
+at least four by `d2(P)>=4`.
+
+## Touched-block bound
+
+Let `h,e,c` count touched, actual-empty, and complete blocks. There are
+exactly three selected singleton blocks, so `h=e+3+c`. Since
+`d_root=0`, complete rows are independent. Face-local containment of the
+four external relation directions gives
+`rank H(T)-rank H(C)>=4`. The triangle boundary space has rank at most 15,
+so `c<=11` and `e>=h-14`.
+
+If `e=0`, then `h<=14`. Otherwise the empty blocks contribute at least
+`3e-1` incidences, the three singleton blocks at least six, and the complete
+blocks at least `c`. Since the eight no-root four-cycles contribute exactly
+32 incidences,
+
+`32 >= (3e-1)+6+c = h+2e+2 >= 3h-26`.
+
+Thus
+
+`h<=19`.
+
+A bounded local exact search using these necessary conditions regenerated all
+27,763 support orbits; 9,444 have `h<=19`, and all 264,432 choices of a
+support orbit and one of the 28 possible pairs `M` had zero virtual
+survivors. That computation is not promoted as a closure certificate here
+because the exact verifier source could not be persisted through the GitHub
+connector in this run. The theorem-level lemmas above are independent of it.

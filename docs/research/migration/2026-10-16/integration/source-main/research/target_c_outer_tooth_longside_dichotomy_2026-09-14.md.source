@@ -1,0 +1,281 @@
+# Target C-II — exact outer-tooth / long-side dichotomy
+
+**Date:** 2026-09-14  
+**Repository base:** `d4351da44afc596da6e3ea9d9b473ba1145af540`  
+**Status:** proved proof-only source-level reduction; theorem-state authority unchanged  
+**Scope:** finite Type-II statements from audited outer-tooth exactness and integer hull-route defect; low-`t` corollary additionally uses proof-only AG42  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The low-`t` branch has a very small metric outer detour but a large combinatorial outer
+excess.  The existing audited tooth theorem and integer hull-route theorem convert
+that mismatch into a strong physical alternative.
+
+For consecutive loaded force-hull vertices `b_i,b_{i+1}`, let
+
+\[
+s_i=|b_i-b_{i+1}|,
+\qquad
+\ell_i=|W_i|
+\]
+
+where `W_i` is the distinguished outer-face unit-contact route.  Let
+
+- `m=#\{i:s_i>1\}` be the number of nonunit loaded-hull sides;
+- `u_B=x_B-m`, where `x_B=b-q` is the outer-walk excess;
+- `N_2=#\{i:s_i>1,\ell_i=2\}` be the number of genuine two-edge outer teeth;
+- `L_{>2}=\sum_{s_i>1}(s_i-2)_+` be total loaded-hull side length above two; and
+- `d_{out}=b-per(F)=\sum_i(\ell_i-s_i)` be the metric outer detour.
+
+Audited Section 126 proves
+
+\[
+0\le m-N_2\le u_B,
+\tag{TL.1}
+\]
+
+while the integer hull-route theorem proves
+
+\[
+0\le u_B-L_{>2}\le d_{out}.
+\tag{TL.2}
+\]
+
+## 1. Exact finite coupled burden
+
+Since `x_B=m+u_B`, (TL.1) gives
+
+\[
+N_2\ge m-u_B=x_B-2u_B.
+\tag{TL.3}
+\]
+
+Equation (TL.2) gives
+
+\[
+L_{>2}\ge u_B-d_{out}.
+\tag{TL.4}
+\]
+
+Add (TL.3) to twice (TL.4).  The hidden integer slack cancels exactly:
+
+\[
+\boxed{
+N_2+2L_{>2}
+\ge x_B-2d_{out}.
+}
+\tag{TL.5}
+\]
+
+This is a finite source-level inequality.  It says that the combinatorial outer-walk
+excess cannot disappear when metric detour is small: it must reappear either as actual
+two-edge triangular teeth or as metric loaded-hull side length beyond two.
+
+In particular
+
+\[
+\boxed{
+\max\{N_2,L_{>2}\}
+\ge {x_B-2d_{out}\over3}.
+}
+\tag{TL.6}
+\]
+
+The right side may of course be negative outside the low-detour regime; the useful
+statement is its positive part.
+
+## 2. Type-II normalized form
+
+On a Type-II subsequence write
+
+\[
+t={q-k\over D},
+\qquad
+\kappa={k\over D},
+\qquad
+\delta={b-per(F)\over D}.
+\]
+
+Canonical near-disk perimeter convergence gives `per(F)/D->pi`, hence
+
+\[
+{x_B\over D}=\pi+\delta-t-\kappa+o(1).
+\tag{TL.7}
+\]
+
+Dividing (TL.5) by `D` gives
+
+\[
+\boxed{
+\liminf {N_2+2L_{>2}\over D}
+\ge \pi-t-\kappa-\delta.
+}
+\tag{TL.8}
+\]
+
+and therefore
+
+\[
+\boxed{
+\liminf {1\over D}\max\{N_2,L_{>2}\}
+\ge {\pi-t-\kappa-\delta\over3}.
+}
+\tag{TL.9}
+\]
+
+No assumption about a positive area or angular gap for one tooth is used.
+
+## 3. Low-`t` elimination of `kappa+delta`
+
+Use the same notation as the low-`t` topology/network theorem:
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+C_0=2\sqrt{\Delta_2}+0.00042,
+\]
+
+and
+
+\[
+R(t)={9t\over2}-2\pi-C_0.
+\]
+
+Proof-only AG42 plus audited §171 gives
+
+\[
+2\delta+{\kappa\over2}\le R(t).
+\]
+
+Thus
+
+\[
+\kappa+\delta\le2R(t).
+\tag{TL.10}
+\]
+
+Combining (TL.8)--(TL.10),
+
+\[
+\boxed{
+\liminf {N_2+2L_{>2}\over D}
+\ge \pi-t-2R(t)
+=5\pi+2C_0-10t.
+}
+\tag{TL.11}
+\]
+
+and
+
+\[
+\boxed{
+\liminf {1\over D}\max\{N_2,L_{>2}\}
+\ge {5\pi+2C_0-10t\over3}.
+}
+\tag{TL.12}
+\]
+
+This is positive throughout the present low-`t` region and well beyond it.
+
+## 4. Numerical consequences
+
+At
+
+\[
+t_{42}=C_{146}+0.0013751
+=1.8208886379794447\ldots,
+\]
+
+(TL.11) gives
+
+\[
+\boxed{
+{N_2+2L_{>2}\over D}
+\ge1.3091681156103485\ldots-o(1),
+}
+\tag{TL.13}
+\]
+
+so
+
+\[
+\boxed{
+\max\{N_2,L_{>2}\}
+\ge0.4363893718701161\ldots D-o(D).
+}
+\tag{TL.14}
+\]
+
+Even throughout the older endpoint/common-cap band `t<=1.8585`,
+
+\[
+\boxed{
+\max\{N_2,L_{>2}\}
+\ge0.3110181651349318\ldots D-o(D).
+}
+\tag{TL.15}
+\]
+
+At `t<=1.90` the same bound remains
+
+\[
+\max\{N_2,L_{>2}\}
+\ge0.1726848318015985\ldots D-o(D).
+\]
+
+## 5. Geometric meaning of the two branches
+
+### Tooth branch
+
+`N_2=Omega(D)` means a linear family of nonunit loaded-hull sides is replaced by
+exactly two unit contacts.  Audited Section 126 identifies these routes bijectively
+with actual augmented triangular faces.  Each triangle has an unloaded apex and a
+nonunit global loaded-hull base.
+
+Moreover each tooth contributes exactly `2-s_i` to `d_out`.  Thus when `d_out/D` is
+small, a large tooth family is automatically shallow in aggregate: almost all of its
+bases are close to length two at any fixed tolerance.
+
+### Long-side branch
+
+`L_{>2}=Omega(D)` is not combinatorial bookkeeping.  It is literal Euclidean length
+of consecutive loaded-hull sides beyond two.  The integer hull-route theorem also
+shows
+
+\[
+0\le u_B-L_{>2}\le d_{out},
+\]
+
+so in the small-detour regime essentially all deep integer route slack is forced into
+this metric long-side currency.  In addition, the rounding decomposition forces all
+but `O(d_out/epsilon)` loaded side lengths to lie within `epsilon` below an integer.
+
+Thus the second branch is a rounded long-side endpoint for the actual loaded diameter
+vertices.
+
+## 6. Frontier effect
+
+This theorem does not close C-II, but it removes a diffuse escape route.  In the
+low-`t` branch one cannot simultaneously have few two-edge teeth and little metric
+length above two.  At the current frontier at least `0.436D` of one of these two
+physical structures is mandatory.
+
+The next source-level split is therefore concrete:
+
+1. **many shallow teeth:** use the unloaded apex degree/contact geometry to force a
+   large family of inward penetration contacts and couple them to the rhombic phase
+   system; or
+2. **large rounded long-side mass:** use the near-extremal Woodall diameter thrackle
+   to constrain the angular spacing and integer-scale lengths of consecutive loaded
+   hull vertices.
+
+Neither route can be replaced by a scalar optimization over `u_B` after (TL.5).
+
+## 7. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_outer_tooth_longside_dichotomy.py
+```
+
+for the Decimal constant checks.

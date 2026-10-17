@@ -1,0 +1,412 @@
+<!-- theorem-state: {"artifact_id":"ART-990B868FCBFA","canonical":true,"claim_ids":["C-MU-09604"],"claim_statuses":{"C-MU-09604":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
+# Erdős Problem #99 — full dependency audit of PR #188
+
+**Date:** 2026-09-11  
+**Audited object:** PR #188, `research/c2-renorm-paired-pocket-20260910`  
+**Target:** Target C, post-ZF C-II  
+**Disposition:** the reported all-phase bound `liminf mu_D >= z_* > 0.9604` survives; one endpoint interpretation is rejected; two proof-presentation gaps are repaired below  
+
+## LEVEL I STATUS
+
+`STILL OPEN`.
+
+This audit does not infer validity from the self-audit chain in PR #188. It reconstructs the load-bearing dependency graph and checks the actual implications needed for the final `>0.9604` theorem.
+
+Write
+
+\[
+\mu_D=\frac{e_{BB}+2s_C-3(d_H+s_Z)}D.
+\]
+
+The surviving explicit endpoint is the unique `z_* in (0,1)` satisfying
+
+\[
+10\arcsin z_*-4\pi=z_*/3,
+\]
+
+with the exact certificate
+
+\[
+0.9604<z_*<0.961.
+\]
+
+The conclusion certified here is
+
+\[
+\boxed{\liminf_{D\to\infty}\mu_D\ge z_*>0.9604.}
+\]
+
+A separate September 11 repair, `target_c_attachment_perimeter_three_gap_endpoint_repair_2026-09-11.md`, excludes convergence to `z_*` itself and therefore gives a nonexplicit absolute gap above it.
+
+## 1. Load-bearing dependency graph
+
+The final FD bound does not require every historical step that appears earlier in the PR. In particular, the Rogalski--Saint Raymond equality discussion is not load-bearing for the final `>0.9604` result.
+
+The actual dependency stack is:
+
+```text
+C-I lexicographic restoration / full actual diameter support
+  -> C35 loaded contact-degree cap
+  -> C36 harmonic attachment hulls
+  -> C37 planar attachment incidence
+  -> C40 component diameter / attachment-pin cost
+  -> C49 pairwise interior-disjoint attachment cells
+
+ZF exact ledgers
+  -> ZE / ZT / PC
+  -> ZK exact component-slack identity
+       sum delta_r + R_I + s_B = mu_D D + 6
+
+C67 + DB + FS.4
+  -> separated actual projective diameter directions
+  -> common full-source center and radial endpoint annulus
+  -> midpoint polygon P_H/2 and FSDB area floor
+
+OP + PC + FS.4
+  -> RP paired-pocket capacity
+  -> SC projective side-cost area floor
+  -> JS joint side/pocket budget
+
+ZK + FS.4 + RP + JS
+  -> RA radial attachment theorem
+  -> TA maximal circle-set / three-component envelope
+  -> FD pin-density delay
+  -> liminf mu_D >= z_* > 0.9604.
+```
+
+The audit below records the checks that matter to this chain.
+
+## 2. Exact ledger audit
+
+The ZE/ZT/PC/ZK algebra was rederived from the definitions.
+
+With `k=d_H+s_Z`, PC gives
+
+\[
+e_{BB}=d_P+Q+2k+c_B,
+\qquad
+q=a+d_P+Q+2k.
+\]
+
+ZK gives
+
+\[
+\sum_r\delta_r+R_I+s_B+3k=6+e_{BB}+2s_C.
+\]
+
+Therefore exactly
+
+\[
+\boxed{\sum_r\delta_r+R_I+s_B=\mu_DD+6.}
+\]
+
+No asymptotic replacement is used in this identity. It is the only component-diameter budget needed by RA/TA/FD.
+
+The RPE remainder also checks directly:
+
+\[
+\boxed{
+2(d_P+Q)=\mu_DD+h-s_Z-a-c_B-2s_C.
+}
+\]
+
+The signs and coefficients are consistent with both PC identities. No hidden positive term has been dropped with the wrong sign.
+
+## 3. C35/C36/C37/C40/C49 audit
+
+### 3.1 Loaded degree cap
+
+At a loaded force-hull vertex all source directions lie in a strict convex wedge of width `<pi`. Distinct unit-contact directions differ by at least `pi/3`; equality would create a forbidden unit equilateral triangle. Four such directions cannot fit in the wedge. Hence
+
+\[
+\deg_C(b)\le3.
+\]
+
+### 3.2 Pinned component rank
+
+Pin all loaded diameter endpoints. A vector in the kernel of the pinned contact rigidity matrix gives a straight motion of the unpinned vertices that preserves first-order contact inequalities. Because every active diameter endpoint in the core is pinned, all inactive diameter inequalities remain strict for sufficiently small motion.
+
+For an active unit contact with zero first derivative, a nonzero relative velocity increases its squared length by a positive `t^2` term. Thus any nonzero pinned kernel vector would produce a nearby feasible configuration with fewer unit contacts, contradicting contact minimality. The pinned contact matrix therefore has full column rank componentwise.
+
+Restricting the strictly positive contact stress to one unpinned component supplies a nonzero left-kernel relation. If that component has `n_r` vertices, `e_r` internal contacts, and `t_r` boundary contacts,
+
+\[
+e_r+t_r\ge2n_r+1.
+\]
+
+Eppstein's published triangle-free penny-graph theorem gives
+
+\[
+e_r\le2n_r-\delta_r-2.
+\]
+
+Consequently
+
+\[
+t_r\ge\delta_r+3,
+\qquad
+\boxed{\delta_r\le3|A_r|-3.}
+\]
+
+This is the FD pin-density input.
+
+### 3.3 Attachment hulls and cell disjointness
+
+Positive equilibrium makes each coordinate harmonic on an unpinned component. The maximum principle gives
+
+\[
+I_r\subseteq\operatorname{conv}A_r.
+\]
+
+The C36 alternating-path argument correctly forbids proper crossings of two attachment hulls. Containment would force at least three shared loaded attachments. The C37 contracted incidence graph would then contain two component nodes joined to three outer loaded nodes, six incidence edges, while its planar outer-boundary Euler bound permits at most five. Hence distinct attachment hulls have disjoint interiors.
+
+Thus
+
+\[
+C_{att}:=\sum_r\operatorname{area}(\operatorname{conv}A_r)
+\le\operatorname{area}F
+\]
+
+and `G=area(F)-C_att>=0` are justified.
+
+## 4. DB / FS / FSDB audit
+
+C67 separates distinct actual projective diameter directions by
+
+\[
+\delta_D=2\arcsin\frac1{2D},
+\qquad D\delta_D\to1.
+\]
+
+DB places the diameter vectors in the difference body and compares its perimeter with the outer contact walk. The concave gap minimization gives the valid asymptotic bound
+
+\[
+\liminf h/D\ge2\rho,
+\qquad \rho=\cos\rho.
+\]
+
+FS.4 uses the full-source circumcenter `o`. For every actual diameter edge `bk` with midpoint `m`, the parallelogram identity gives
+
+\[
+|m-o|=o(D)
+\]
+
+uniformly. Every loaded force-hull vertex also satisfies
+
+\[
+\bigl||b-o|-D/2\bigr|=o(D)
+\]
+
+uniformly. Consequently, with
+
+\[
+P_H=D\operatorname{conv}\{\pm u_e:e\in H\},
+\]
+
+one has
+
+\[
+\boxed{d_{Haus}(F-o,P_H/2)=o(D).}
+\]
+
+The FSDB area calculation then gives, for `y=lim h/D`,
+
+\[
+\liminf\frac{\operatorname{area}F}{D^2}
+\ge\Phi(y):=\frac{y+\sin y}{4}.
+\]
+
+No RSR equality classification enters this implication.
+
+## 5. Repair of the RP/RLE flat-side transfer
+
+RP and RLE use a correct geometric fact but originally state it too briefly. Hausdorff near-symmetry alone would not be enough, because a long limiting flat could be subdivided by extra vertices. The uniform radial annulus supplied by FS.4 is the missing ingredient.
+
+### Lemma FA — radial flat-side transfer
+
+Let `D_j->infinity`. Let `F_j` be convex polygons with center `o_j` such that every vertex `v` of `F_j` satisfies
+
+\[
+\bigl||v-o_j|-D_j/2\bigr|=o(D_j)
+\]
+
+uniformly. Let `Q_j` be convex polygons whose vertices lie on the circle of radius `D_j/2`, and suppose
+
+\[
+d_{Haus}(F_j-o_j,Q_j)=o(D_j).
+\]
+
+Assume `Q_j` has a side whose endpoint directions converge to two distinct circle points `a,b` with angular separation `r in (0,pi)`. Then `F_j` has an actual side of length
+
+\[
+D_j\sin(r/2)+o(D_j).
+\]
+
+If `Q_j` has the antipodal side as well, `F_j` has the corresponding opposite actual side with the same asymptotic length.
+
+#### Proof
+
+Scale by `D_j` and pass to a subsequence. The polygons `Q_j/D_j` and `(F_j-o_j)/D_j` have the same Hausdorff limit `K`. The selected side converges to the boundary chord `[a,b]` of the radius-`1/2` circle.
+
+Fix disjoint small neighborhoods `U_a,U_b` of `a,b`. Every point in the relative interior of `[a,b]` outside `U_a union U_b` has radius strictly below `1/2`; compactness gives a fixed radial deficit there. The uniform radial hypothesis therefore forbids vertices of `(F_j-o_j)/D_j` from lying near that middle portion for all sufficiently large `j`.
+
+Hausdorff convergence forces the boundary of `(F_j-o_j)/D_j` near `[a,b]` to meet both `U_a` and `U_b`. Along the polygonal boundary, the last vertex in the `U_a` cluster and the first vertex in the `U_b` cluster must consequently be consecutive: there is no admissible vertex between them near the supporting face. Their joining edge is an actual side of `F_j`, and its normalized length tends to `|a-b|=sin(r/2)`.
+
+Apply the same argument to `[-a,-b]` for the antipodal side. `square`
+
+This closes the presentation gap in RP/RLE and validates the uses made in SC and JS. In particular a macroscopic projective gap `r` costs two actual opposite force-hull sides of total normalized chord length `2 sin(r/2)`.
+
+## 6. RP / SC / JS audit
+
+For an OP pocket with old contact-chain length `ell` and hull chord `s`, its contribution to `d_P` is `ell-2`.
+
+Two opposite pockets with equal asymptotic chord can be glued across that chord. Their old chains form a Jordan curve of perimeter `ell_1+ell_2`; isoperimetry gives
+
+\[
+area(P_1)+area(P_2)
+\le\frac{(ell_1+ell_2)^2}{4\pi}.
+\]
+
+Small pockets contribute `o(D^2)` after an epsilon truncation. The macroscopic groups therefore give
+
+\[
+\limsup H_{out}/D^2\le\tau^2/(4\pi),
+\qquad \tau=\lim d_P/D.
+\]
+
+For exceptional bounded faces, put `r_i=k_i-4>=1`, so `Q=sum r_i`. Convex isoperimetry gives
+
+\[
+A_{exc}\le\frac1{4\pi}\sum_i(r_i+4)^2
+\le\frac{Q^2+24Q}{4\pi}.
+\]
+
+Because the exact post-ZF ledgers give `Q=O(D)`, this is
+
+\[
+A_{exc}/D^2\le(Q/D)^2/(4\pi)+o(1).
+\]
+
+Together with the RPE budget this validates RP's quadratic cavity capacity.
+
+For SC/JS, Lemma FA validates the side-cost charge. The algebra
+
+\[
+x\le\mu+d+s,
+\qquad
+x\le y-d-2s
+\]
+
+for `x=(d_P+Q)/D` gives
+
+\[
+3x\le2\mu+y+d.
+\]
+
+The same macroscopic sides contribute to `P_F-q`, while `q/D=y+d` and `P_F/D<=pi`, giving
+
+\[
+C\le\pi-y-d.
+\]
+
+Thus
+
+\[
+\boxed{3x+C\le2\mu+\pi,\qquad C\le x.}
+\]
+
+The subsequent SC/JS one-variable calculus and rational endpoint checks are consistent with these inequalities.
+
+## 7. RA / TA / FD audit
+
+RA correctly transfers each macroscopic attachment set to the common radius-`1/2` circle. Below `sqrt(3)/2`, Caratheodory's theorem prevents a wrapping attachment set; at the endpoint the only wrapping set is the equilateral triple. The component-mass truncation is controlled by the exact ZK identity, so microscopic components contribute `o(D^2)`.
+
+TA's maximal feasible-set argument was checked separately. For
+
+\[
+\theta=2\arcsin z,\qquad \varphi=\pi-\theta,
+\]
+
+an inclusion-maximal closed feasible set `M` satisfies
+
+\[
+T\setminus M=N_\varphi(M+\pi).
+\]
+
+If `M` has `m` connected components, neighborhood components cannot merge at maximality; hence
+
+\[
+|M|=\pi-m\varphi.
+\]
+
+The half-turn interchanges the alternating occupied/complement components, so `m` is odd. In the first wrapping range this forces `m=3`; Jensen's inequality for `g-sin g` gives the reported `W_3(z)` envelope.
+
+FD then uses C40 and C67 as follows. For a component with `delta_r/D->z<1`,
+
+\[
+|A_r|/D\ge z/3-o(1).
+\]
+
+One actual diameter edge can be chosen at each attachment pin, and two distinct pins cannot choose the same edge: otherwise the two pins would be a diameter pair, contradicting `|b-b'|<=delta_r+2<D` for large `D`. Thus there are at least `|A_r|` distinct projective directions. Their C67 spacing forces every `m`-component maximal host of total angular measure `L` to satisfy
+
+\[
+L\ge z/3.
+\]
+
+For `m=5`,
+
+\[
+L=10\arcsin z-4\pi.
+\]
+
+Therefore the five-component phase cannot occur below the unique root `z_*` of
+
+\[
+10\arcsin z-4\pi=z/3.
+\]
+
+TA's three-component envelope remains valid below that root, and the JS/SC/RP force-side inequality excludes the entire remaining interval. The exact FD certificate brackets the root by
+
+\[
+0.9604<z_*<0.961.
+\]
+
+Hence the reported FD lower bound is valid.
+
+## 8. Rejected endpoint statement
+
+The PR's later Eppstein audit correctly rejects
+
+```text
+r_r=o(D) => near quadrangulation / nearly minimum outer boundary.
+```
+
+Eppstein's `2n-delta-2` proof is inductive and does not supply that face classification.
+
+There is one additional wording correction. Equality in the FD projective packing shows saturation of the **total available measure** of a five-component maximal host. By itself it does not prove that the finite attachment set contains a pin in every one of the five host components. Any downstream theorem requiring five populated actual arcs therefore needs another argument.
+
+This does not affect FD.1--FD.5 or the `z_*>0.9604` lower bound.
+
+The September 11 three-gap endpoint repair avoids the issue completely: wrapping forces the limiting attachment set to meet at least three host components, and three actual inter-component gaps already contradict attachment-perimeter capacity.
+
+## 9. Final classification
+
+| Item | Audit disposition |
+| --- | --- |
+| ZE/ZT/PC/ZK exact ledgers | valid |
+| C35/C36/C37/C40 attachment structure | valid |
+| C49 cell disjointness | valid |
+| C67/DB direction spacing and density | valid |
+| FS.4 common center / radial annulus | valid under its full-source inputs |
+| FSDB area floor | valid |
+| RP opposite-pocket pairing | valid after Lemma FA makes the flat-side transfer explicit |
+| RP cavity capacity | valid |
+| SC/JS side-cost budget | valid after Lemma FA |
+| RA radial attachment theorem | valid |
+| TA maximal-set / three-arc theorem | valid |
+| FD `liminf mu_D >= z_* > 0.9604` | **certified valid** |
+| `r_r=o(D)` implies near quadrangulation | rejected |
+| FD endpoint populates all five host components | not proved and not needed |
+| Level I settlement | not obtained |
+
+The PR #188 numerical theorem should no longer be described merely as surviving its own final self-audit. Its load-bearing chain has now received an independent dependency audit. The remaining global problem is still C-II/Level I, including branches above this renormalized-surplus floor and contact-isolated source points.

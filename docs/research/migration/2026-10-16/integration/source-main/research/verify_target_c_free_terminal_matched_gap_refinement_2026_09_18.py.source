@@ -1,0 +1,177 @@
+#!/usr/bin/env python3
+"""Regression checks for the matched-gap terminal FREE refinement."""
+from __future__ import annotations
+
+import math
+import random
+
+PI = math.pi
+SQRT3 = math.sqrt(3.0)
+A0 = SQRT3 / 2.0
+C0 = SQRT3 / 4.0
+DELTA2 = PI / (2.0 * SQRT3)
+S2 = math.sqrt(DELTA2)
+G = 0.007707
+GAMMA = 2.0 * S2 - PI / 2.0
+GAMMA_G = GAMMA + G
+
+T0_G = (3.0 * PI + GAMMA_G) / 5.0
+C_FREE_G = PI / 2.0 + 1.0 / 5.0 + 2.0 * S2 / 5.0 + G / 5.0
+H_FLOOR_G = 12.0 * S2 / 5.0 + 6.0 * G / 5.0
+CHAMBER_G = C0 * H_FLOOR_G
+RAW_SPLIT_G = 3.0 * S2 / 2.0 + 3.0 * G / 4.0
+CHAMBER_SPLIT_G = C0 * RAW_SPLIT_G
+RHOMBUS_G = 1.0 / 10.0 + 6.0 * S2 / 5.0 + 3.0 * G / 5.0
+WEIGHTED_G = RHOMBUS_G + 2.0 / 5.0
+DICHOTOMY_G = 5.0 * WEIGHTED_G / 9.0
+GEO_RHOMBUS_G = A0 * RHOMBUS_G
+GEO_WEIGHTED_G = A0 * WEIGHTED_G
+
+
+def check_constants() -> None:
+    expected = {
+        "gamma_g": (GAMMA_G, 0.3415362869330182),
+        "t0_g": (T0_G, 1.9532628495404794),
+        "c_free_g": (C_FREE_G, 2.1532628495404790),
+        "h_floor_g": (H_FLOOR_G, 2.2947991364734976),
+        "chamber_g": (CHAMBER_G, 0.9936771743843209),
+        "raw_split_g": (RAW_SPLIT_G, 1.4342494602959360),
+        "chamber_split_g": (CHAMBER_SPLIT_G, 0.6210482339902005),
+        "rhombus_g": (RHOMBUS_G, 1.2473995682367490),
+        "weighted_g": (WEIGHTED_G, 1.6473995682367488),
+        "dichotomy_g": (DICHOTOMY_G, 0.9152219823537493),
+        "geo_rhombus_g": (GEO_RHOMBUS_G, 1.0802797147627647),
+        "geo_weighted_g": (GEO_WEIGHTED_G, 1.4266898762765403),
+    }
+    for name, (got, want) in expected.items():
+        if abs(got - want) >= 3e-15:
+            raise AssertionError((name, got, want))
+
+
+def check_train_face_and_rhombus(rng: random.Random, trials: int = 500_000) -> None:
+    # Terminal normalized constraints:
+    #   2t+z >= pi+Q+1/2        (FREE finite bridge)
+    #   f >= (pi-t+gamma_g)/2   (matched terminal defect gap)
+    #   Q >= f.
+    # Verify the strengthened train/face and rhombus consequences.
+    accepted = 0
+    for _ in range(trials):
+        z = rng.uniform(0.0, 2.0)
+        t_floor = C_FREE_G - 0.4 * z
+        t = max(0.0, t_floor) + rng.expovariate(4.0)
+        f_floor = max(0.0, (PI - t + GAMMA_G) / 2.0)
+        q_cap = 2.0 * t + z - PI - 0.5
+        if q_cap < f_floor:
+            continue
+        f = f_floor + rng.random() * (q_cap - f_floor)
+        q = f + rng.random() * (q_cap - f)
+
+        assert 2.0 * t + z + 1e-12 >= PI + q + 0.5
+        assert q + 1e-12 >= f
+        assert f + 1e-12 >= (PI - t + GAMMA_G) / 2.0
+
+        if t + 0.4 * z + 2e-12 < C_FREE_G:
+            raise AssertionError((t, z))
+
+        d4_floor = 0.5 * t + z + 0.5 * GAMMA_G
+        if d4_floor + 2e-12 < RHOMBUS_G + 0.8 * z:
+            raise AssertionError((d4_floor, RHOMBUS_G + 0.8 * z))
+        accepted += 1
+
+    assert accepted > trials // 3
+
+
+def check_terminal_interface(rng: random.Random, trials: int = 500_000) -> None:
+    # Pure terminal interface constraints:
+    #   f >= (pi-t+gamma_g)/2,
+    #   Q >= f,
+    #   lambda >= 0,
+    #   Q+lambda = 2t-pi.
+    accepted = 0
+    for _ in range(trials):
+        t = rng.uniform(T0_G, PI)
+        f_floor = max(0.0, (PI - t + GAMMA_G) / 2.0)
+        f_cap = 2.0 * t - PI
+        if f_floor > f_cap:
+            continue
+        f = rng.uniform(f_floor, f_cap)
+        q = rng.uniform(f, f_cap)
+        lam = f_cap - q
+
+        h = lam + q + 2.0 * f
+        raw_exc = q + 2.0 * f
+        if h + 2e-12 < H_FLOOR_G:
+            raise AssertionError((h, H_FLOOR_G))
+        if max(raw_exc, lam) + 2e-12 < RAW_SPLIT_G:
+            raise AssertionError((raw_exc, lam, RAW_SPLIT_G))
+        accepted += 1
+
+    assert accepted > trials // 2
+
+
+def check_equality_points() -> None:
+    # Total terminal-interface equality.
+    t = T0_G
+    f = (4.0 * S2 + 2.0 * G) / 5.0
+    q = f
+    lam = 0.0
+    assert abs(2.0 * f - (PI - t) - GAMMA_G) < 3e-15
+    assert abs(q + lam - (2.0 * t - PI)) < 3e-15
+    assert abs(lam + q + 2.0 * f - H_FLOOR_G) < 3e-15
+
+    # Classwise split equality.
+    f = (2.0 * S2 + G) / 4.0
+    q = f
+    t = PI / 2.0 + S2 + G / 2.0
+    lam = 3.0 * (2.0 * S2 + G) / 4.0
+    assert abs(2.0 * f - (PI - t) - GAMMA_G) < 3e-15
+    assert abs(q + lam - (2.0 * t - PI)) < 3e-15
+    assert abs(2.0 * f + q - RAW_SPLIT_G) < 3e-15
+    assert abs(lam - RAW_SPLIT_G) < 3e-15
+
+    # z=0 train/face/rhombus equality.
+    t = C_FREE_G
+    z = 0.0
+    f = (PI - t + GAMMA_G) / 2.0
+    q = f
+    assert abs(2.0 * t + z - (PI + q + 0.5)) < 3e-15
+    d4 = 0.5 * t + z + 0.5 * GAMMA_G
+    assert abs(d4 - RHOMBUS_G) < 3e-15
+
+
+def check_old_window_prices() -> None:
+    expected = {
+        1.8440: (0.7731571238511981, 1.8659252673177074),
+        1.8600: (0.7331571238511980, 1.8339252673177073),
+        1.8687: (0.7114071238511981, 1.8165252673177075),
+        2.0000: (0.3831571238511984, 1.5539252673177075),
+    }
+    for t, (want_z, want_d4) in expected.items():
+        z = max(0.0, (3.0 * PI + 1.0 + GAMMA_G - 5.0 * t) / 2.0)
+        d4 = RHOMBUS_G + 0.8 * z
+        assert abs(z - want_z) < 3e-14
+        assert abs(d4 - want_d4) < 3e-14
+
+
+def main() -> None:
+    rng = random.Random(0xE99707)
+    check_constants()
+    check_train_face_and_rhombus(rng)
+    check_terminal_interface(rng)
+    check_equality_points()
+    check_old_window_prices()
+    print("PASS: matched-gap terminal FREE refinement")
+    print(f"gamma_g={GAMMA_G:.15f}")
+    print(f"t0_g={T0_G:.15f}")
+    print(f"C_FREE_g={C_FREE_G:.15f}")
+    print(f"rhombus_g={RHOMBUS_G:.15f}")
+    print(f"weighted_g={WEIGHTED_G:.15f}")
+    print(f"dichotomy_g={DICHOTOMY_G:.15f}")
+    print(f"interface_g={H_FLOOR_G:.15f}")
+    print(f"chamber_g={CHAMBER_G:.15f}")
+    print(f"raw_split_g={RAW_SPLIT_G:.15f}")
+    print(f"chamber_split_g={CHAMBER_SPLIT_G:.15f}")
+
+
+if __name__ == "__main__":
+    main()

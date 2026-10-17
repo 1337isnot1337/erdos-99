@@ -1,0 +1,93 @@
+# Target B: Type-II atomic-gap transfer into Section 39
+
+Date: 2026-10-03
+Base main: 6276af2c645b4fe31c56ce9bb25b43675f5c8b99
+Status: proof-only cross-route corollary, noncanonical. Target B, C-II, and Level I remain open.
+
+This note applies only to sequences that satisfy both the pure-rhombic-disk jammed
+hypotheses of Target B Section 39 and the audited-working Type-II train-measure
+hypotheses of Target C Sections 142/168. It does not extend Section 168 to every
+Target B pure-rhombic disk.
+
+Let
+
+    x = lim T/D,
+    y = lim q/T,
+
+along a common subsequence, and let sigma be the total atomic mass of the limiting
+projective train-direction measure. Put
+
+    Delta_2 = pi/(2 sqrt(3)),
+    s_2 = sqrt(Delta_2),
+    A = 2 s_2 + 0.0004.
+
+Target B Section 39 gives
+
+    sigma <= 1-y/2                                      (1)
+
+and, from pinned rigidity,
+
+    y >= 1/2.                                           (2)
+
+Audited Target C Section 168 gives in its Type-II scope
+
+    x sigma >= A.                                       (3)
+
+Combining (1) and (3),
+
+    A <= x(1-y/2),
+
+so
+
+    x >= A/(1-y/2).                                     (4)
+
+Using (2),
+
+    boxed{
+    liminf T/D >= (4/3)A
+                  = (8/3)sqrt(Delta_2) + 1/1875
+                  = 2.540034151637219... .
+    }                                                   (5)
+
+Since sqrt(Delta_2)=1/sqrt(c), c=2sqrt(3)/pi, this improves the Section-39 endpoint
+
+    8/(3sqrt(c)) = 2.539500818303886...
+
+by the explicit amount
+
+    1/1875 = 0.000533333333333... .
+
+This is a uniform asymptotic gap on the common scope, not merely endpoint
+nonattainment.
+
+Section 39 also has q <= pi D + o(D), hence xy <= pi. Combining that with (4) gives
+
+    boxed{
+    limsup q/T <= pi/(A+pi/2)
+                 = 0.903841654534597... .
+    }                                                   (6)
+
+Finally,
+
+    (T-q)/D = x(1-y),
+
+and A(1-y)/(1-y/2) is decreasing in y. Substituting the upper bound in (6) gives
+
+    boxed{
+    liminf (T-q)/D >= A-pi/2
+                     = 0.334229286933018... .
+    }                                                   (7)
+
+Because B=2T in the pure-rhombic disk,
+
+    liminf B/D >= 16/(3sqrt(c)) + 2/1875.               (8)
+
+The new step is only this cross-route transfer. Equation (3) is the already audited
+finite-diagonal atomic Mantel theorem; no atomic-mass semicontinuity argument is added
+here. No numerical search, verifier execution, or CI result is used as a proof premise.
+The decimals only evaluate the closed forms.
+
+The result still does not imply the Target-B shell inequality G+E >= (sqrt(3)/4)B,
+and it does not close C-II. The remaining bottleneck is a physical conversion of the
+strict train/atomic gap into shell, penetration, boundary-turning, or source-level
+competitor currency.

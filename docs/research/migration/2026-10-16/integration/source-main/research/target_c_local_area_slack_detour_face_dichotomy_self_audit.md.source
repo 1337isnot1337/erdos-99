@@ -1,0 +1,148 @@
+# Self-audit — local area slack to exceptional-face dichotomy
+
+**Date:** 2026-09-12  
+**Reviewed:** `research/target_c_local_area_slack_detour_face_dichotomy.md`  
+**Disposition:** PASS as a conditional proof-only composition; C-II remains open.  
+**Authority:** theorem-state `2026-09-12.audit.46` is unchanged.
+
+This audit checks only the composition and its arithmetic. The local area/slack
+inequality, the retained component remainder, the aggregate detour identity, and the
+Section-151 Hall theorem remain separate named inputs with their recorded scopes.
+
+## 1. Candidate implication chain
+
+On the repaired Section-118 frontier/common-cap subsequence:
+
+```text
+local internal-rhombus area/slack
+  -> G_D >= g_* D
+retained remainder + exact aggregate detour identity
+  -> E_D <= (6t_D+2kappa_D-2g_*-4S_*)D+4F_loc+o(D)
+Section 122 lower bound
+  -> F_loc >= (c_det+2g_*+4S_*-6t_D-2kappa_D)D/4
+Section 151 Hall expansion
+  -> a linear distinct train-host set when this bracket is positive.
+```
+
+The final arrow is a structural obligation, not a contradiction by itself.
+
+## 2. Exact detour substitution
+
+The audited decomposition is
+
+\[
+E_D=2(a-H_D)+2(e_{BB}-k)-2d_{tile}-2C_{loc}^{att}+4F_{loc},
+\]
+
+where `a=sum_r a_r` and `H_D=sum_r d_r`. In Type II,
+
+\[
+a=q-2+2c_I-d_{tile},\qquad e_{BB}=q-m.
+\]
+
+The retained remainder identity is
+
+\[
+m=G_D+H_D-q+k-2.
+\]
+
+Substitution gives the exact finite equality
+
+\[
+E_D=6q-2G_D-4H_D-4k
+ +4c_I-4d_{tile}-2C_{loc}^{att}+4F_{loc}.
+\]
+
+No inequality has been used in this substitution. Since `d_tile` and `C_loc^{att}`
+are nonnegative, and `c_I=o(D)`,
+
+\[
+E_D\le(6t_D+2\kappa_D)D-2G_D-4H_D+4F_{loc}+o(D),
+\]
+
+with `t_D=(q-k)/D` and `kappa_D=k/D`.
+
+## 3. Lower-bound conversion
+
+The audited local area/slack theorem supplies, for the same wrapping component,
+
+\[
+G_D/D\ge g_*-o(1),
+\qquad
+g_*=0.2910434605114113\ldots,
+\]
+
+and the endpoint diameter-moment input supplies
+
+\[
+H_D/D\ge S_*-o(1),
+\qquad
+S_*=2.798596312209462\ldots.
+\]
+
+The canonical aggregate return theorem supplies
+
+\[
+E_D/D\ge c_{det}-o(1),
+\qquad
+c_{det}=\frac\pi2(2-\sqrt3).
+\]
+
+Combining these three inequalities with the upper bound in §2 yields
+
+\[
+\frac{F_{loc}}D
+\ge\left[
+\frac{c_{det}+2g_*+4S_*-6t_D-2\kappa_D}{4}-o(1)
+\right]_+.
+\]
+
+The positive part is necessary because `F_loc>=0`; no sign is inferred for the
+unbracketed expression.
+
+## 4. Arithmetic certificate
+
+Using the displayed inputs,
+
+\[
+c_{det}+2g_*+4S_*
+=12.19736577709914\ldots.
+\]
+
+Thus the no-linear-face alternative implies
+
+\[
+t_D+\frac{\kappa_D}{3}
+\ge2.03289429618319\ldots-o(1).
+\]
+
+For example, combining the current audited `t_D\ge1.8203135\ldots` endpoint gap with
+`\kappa_D\le0.05` leaves a positive face lower bound; the exact reusable statement
+is the bracketed inequality above, not that example.
+
+## 5. Hall conversion and limitations
+
+If the cellwise exceptional faces are identified with distinct full-core faces under
+the recorded face-fidelity hypothesis, the audited Hall theorem gives
+
+\[
+|N(S_D)|\ge2F_{loc}-s_Z.
+\]
+
+Substitution yields
+
+\[
+\frac{|N(S_D)|}{D}
+\ge\left[
+\frac{c_{det}+2g_*+4S_*-6t_D-2\kappa_D}{2}
+-\frac{s_Z}{D}-o(1)
+\right]_+.
+\]
+
+This does not contradict train capacity: a linear exceptional-face population and a
+linear set of stopping trains are both allowed by the present ledger. No source point
+is deleted and no affine-kernel claim is made on contact-isolated points.
+
+**Final classification:** audited-working proof-only composition under its explicit
+frontier, area/slack, face-fidelity, and Hall dependencies. It is not a promotion and
+does not close C-II or Level I.

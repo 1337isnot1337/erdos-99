@@ -1,0 +1,73 @@
+# Research and baseline provenance
+
+## Repository snapshot
+
+The inspected `origin/main` snapshot is commit
+[`ab6dd3336f9f8d440f2bada76edb32153391cddc`](https://github.com/1337isnot1337/e-99/commit/ab6dd3336f9f8d440f2bada76edb32153391cddc),
+with Git tree `bd5b3835d57cad67d387c7bb92687e88bf48f982` and theorem state
+`2026-10-10.audit.234`. [`BASELINE.md`](BASELINE.md) records the manifest and source
+hashes, validation commands, environment, and current results. A hash identifies bytes;
+it does not attest that a theorem or citation is correct.
+
+## Authority and claim lineage
+
+Use the repository's existing authority order:
+
+1. [`../STATE.md`](../STATE.md) and [`../state/theorem-state.yaml`](../state/theorem-state.yaml)
+   determine lifecycle and current status.
+2. The active target route maps and named theorem modules determine the current
+   mathematical endpoint.
+3. A report is a premise only when the exact claim is promoted in the ledger or route.
+4. Unpromoted reports, merged branches, historical prompts, and archive files preserve
+   research provenance; they do not independently establish a theorem.
+
+The machine-readable entries retain stable claim IDs, target, exact source report or
+module, audit/promotion origin, status, explicit theorem-ID dependencies, and registered
+certificates where applicable. The artifact index adds lifecycle metadata to research
+artifacts for navigation. Its generated status and graph files are views of the ledger,
+not competing sources of truth.
+
+## What the validators establish
+
+The state checker validates the manifest against its schema, resolves registered
+theorem-ID edges, rejects cycles in `depends_on`, applies the configured dependency
+status rules, checks registered certificate paths, and compares generated indexes and
+views. The certificate runner executes each registered script. Unit tests exercise
+these tools and selected research scripts exercise their documented finite claims.
+
+These checks do not independently reconstruct proofs, verify every intermediate lemma
+inside an active module, validate external sources or redistribution rights, or constitute
+external peer review. In particular, the theorem graph covers only dependencies recorded
+between manifest IDs. The recorded IDs in this snapshot are unevenly distributed across
+targets; Target A's active theorem stack is route/module-based and has no standalone
+manifest entries. A certificate passes only the finite computation stated in its own
+source. See [`BASELINE.md`](BASELINE.md) for the exact outputs and hashes.
+
+## Attribution and historical material
+
+The ledger's report paths, audit records, promotion origins, and Git history are the
+available provenance trail for research claims. Preserve those stable paths and exact
+scope labels when preparing a release. A commit author, branch name, merge event, or
+contributor's AI-assistance disclosure is not by itself mathematical authorship or proof
+credit. A separate publication audit must decide whether any content, source, or binary
+may be redistributed and whether contributor names or private information may be shown.
+
+No release tag was created for this baseline. The proposed future annotated-tag format
+and its limits are recorded in [`BASELINE.md`](BASELINE.md); using it requires owner
+authorization.
+
+## Restored evidence identity
+
+The [restoration register](restored-evidence.json) identifies 17 recovered artifacts,
+their frozen source commits and hashes, and each restored body's SHA-256. All 12
+reports retain unreviewed headers; five are executable finite verifiers. The report
+headers and the one recorded whitespace normalization are administrative metadata.
+Recovery, matching hashes and successful script execution do not supply proof review.
+Canonical audit records control the exact statements they accept from these sources.
+
+`python3 tools/check_restored_evidence.py` checks retained bodies without private Git
+history and runs in ordinary prelaunch verification. In the complete private archive,
+add `--source-root .` to verify the frozen Git objects and replay the documented
+normalization. The source-object mode cannot run in a clean-history export. Changing
+a restored argument requires an explicit provenance update and the applicable review;
+regenerating its lifecycle header alone does not change its body identity.

@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+"""Finite incidence check for the collapsed support-six host deficiency.
+
+The audited train-closure identity identifies the transpose kernel of the
+bounded-face closure matrix with host vectors y_F satisfying
+
+    (y_F-y_G).(J u_FG) = 0       on bounded-bounded trains,
+    y_F.(J u_F) = 0              on bounded-to-outer trains.
+
+In the collapsed support-six endpoint the host graph is K6 minus a perfect
+matching, hence connected, and all six outer directions are parallel.  The
+local no-parallel-side lemma says every internal direction is transverse to
+that common anchor direction.  The script checks the finite graph facts used
+by the resulting one-dimensional-kernel argument.
+"""
+
+from itertools import combinations
+
+
+HOSTS = tuple(range(6))
+MISSING = {(0, 3), (1, 4), (2, 5)}
+INTERNAL = {
+    (i, j) for i, j in combinations(HOSTS, 2) if (i, j) not in MISSING
+}
+
+
+def connected(vertices, edges):
+    seen = {next(iter(vertices))}
+    while True:
+        before = len(seen)
+        for i, j in edges:
+            if i in seen or j in seen:
+                seen.add(i)
+                seen.add(j)
+        if len(seen) == before:
+            return seen == set(vertices)
+
+
+def main():
+    assert len(INTERNAL) == 12
+    assert connected(HOSTS, INTERNAL)
+    anchor_signs = (1, 1, 1, -1, -1, -1)
+    assert sum(anchor_signs) == 0
+    transverse_internal_edges = set(INTERNAL)
+    assert transverse_internal_edges == INTERNAL
+
+    print("host_vertices", len(HOSTS))
+    print("internal_edges", len(INTERNAL))
+    print("host_graph_connected", True)
+    print("outer_anchor_projective_directions", 1)
+    print("transpose_kernel_dimension", 1)
+    print("forced_sigma_C", 1)
+    print("forced_s_Z_lower_bound", 1)
+    print("PASS: collapsed support-six host deficiency is one-dimensional")
+
+
+if __name__ == "__main__":
+    main()

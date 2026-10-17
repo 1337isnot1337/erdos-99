@@ -1,0 +1,132 @@
+<!-- theorem-state: {"artifact_id":"ART-068255935729","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Audit - Target B phase-coarea boundary-order grain decomposition
+
+**Date:** 2026-09-05  
+**Candidate:** `docs/reports/target_b_phase_coarea_boundary_order_grains_2026-09-05.md`  
+**Verdict:** PASS.  
+**Global LEVEL I status:** STILL OPEN.
+
+## 1. Phase variation identity
+
+For a crossing of two projective train directions, choose the acute rhombus angle
+
+`theta=pi/3+delta`, `0<delta<=pi/6`.
+
+If `z_tau=exp(6i phi_tau)`, the projective direction difference is either `theta` or `pi-theta`. Multiplication by six makes these phase differences respectively
+
+`6delta mod 2pi`
+
+or
+
+`-6delta mod 2pi`.
+
+Since `6delta<=pi`, the circle geodesic distance is exactly `6delta`.
+
+Thus the graph total variation is
+
+`W=6 sum_F(theta_F-pi/3)=O(D)`
+
+by the established total angular-defect theorem.
+
+PASS.
+
+## 2. Random shifted circle coarea
+
+Let bin width be `h=2pi/m` and randomly shift the equally spaced bin boundaries by a uniform offset in `[0,h)`.
+
+For two phase points at circle geodesic distance `d<=pi`:
+
+- if `d<h`, the probability that a boundary lies on their shorter arc is exactly `d/h`;
+- if `d>=h`, the separation probability is at most one, hence at most `d/h`.
+
+Therefore one crossing edge is cut with probability at most `d/h`. Summing gives
+
+`E|F_s|<=W/h`.
+
+With `m=ceil(2pi/eta)`, one has `eta/2<=h<=eta` for `eta<=pi`, so some shift cuts at most
+
+`2W/eta=O_eta(D)`
+
+physical crossing edges.
+
+PASS.
+
+## 3. Surviving components lie in one phase bin
+
+Every retained crossing edge has both endpoint phases in the same half-open bin. Along a connected path in the retained crossing graph, bin membership therefore propagates from vertex to vertex. Hence one connected component cannot use two different bins.
+
+A bin has sixfold phase diameter at most `h<=eta`. Lifting through `z=exp(6i phi)` on projective angle space `R/pi Z` gives exactly three lifts separated by `pi/3`; each lift cone has angular radius at most `h/12`, hence class diameter at most `h/6<=eta/6`.
+
+For `eta<pi`, the three lifted cones are disjoint, so phase-class assignment is unambiguous.
+
+PASS.
+
+## 4. Compatibility with the physical multigrain theorem
+
+Only the coarea-cut crossing set `F_s` is physically deleted to define the grain decomposition. The later small-component and sparse-component estimates are analytic discards of crossing mass; they are not added to the physical interface set.
+
+Thus MG3 applies with
+
+`|F_s|=O_eta(D)`
+
+and gives
+
+`sum_j P_j<=2T+O_eta(D)`.
+
+No hidden quadratic deletion term re-enters this physical perimeter bound.
+
+PASS.
+
+## 5. Small-component mass estimate
+
+For one triangle-free train-crossing component with `v_j` train vertices, Mantel gives
+
+`e_j<=v_j^2/4`.
+
+If `v_j<rho D`, then
+
+`e_j<=(rho D/4)v_j`.
+
+The retained train components partition a subset of the `T` train vertices, so summing yields
+
+`sum_small e_j<=(rho D/4)T<=C_T rho D^2/4`.
+
+PASS.
+
+## 6. Sparse macroscopic mass estimate
+
+For components declared sparse by
+
+`e_j<kappa v_jD`,
+
+summing over disjoint train vertex sets gives
+
+`sum_sparse e_j<kappa D sum_jv_j<=kappa C_TD^2`.
+
+PASS.
+
+## 7. Positive-density phase pair in every remaining grain
+
+A remaining grain satisfies `e_j>=kappa v_jD`. Among its three cross-phase pairs, one carries at least `e_j/3` crossings.
+
+If its two shore sizes are `p,q<=v_j`, then
+
+`rho_pair>= (e_j/3)/v_j^2>=kappa D/(3v_j)>=kappa/(3C_T)`.
+
+Also
+
+`p,q>=e_pair/v_j>=kappa D/3`.
+
+Thus the PDG theorem applies with fixed positive density and linearly sized shores.
+
+PASS.
+
+## 8. Scope
+
+The theorem does not prove that a remaining dense grain dominates the global rhombus count, nor that the PDG complete grid exceeds the PC3 diameter-cancellation threshold. Those remain genuine quantitative gaps.
+
+The important correction is narrower and valid: **phase coherence itself can be obtained with boundary-order physical deletion**, so the `C_T lambda D^2` low-degree pruning loss is not intrinsic to the multi-grain geometry.
+
+## Verdict
+
+PASS. The coarea grain theorem can be used together with MG3-MG4, PDG, and PC3/MCP on the current research branch.

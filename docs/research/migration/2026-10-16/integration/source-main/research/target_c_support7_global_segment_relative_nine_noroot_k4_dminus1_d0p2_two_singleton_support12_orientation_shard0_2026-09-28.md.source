@@ -1,0 +1,34 @@
+# Target C: two-singleton support12 orientation shard 0
+
+Date: 2026-09-28
+
+Status: exact executed partial orientation certificate for the explicit nine-no-root `k=4, D=-1, d_root=0, p=2` two-selected-singleton support
+
+`[0123]^3 [0124] [0134] [0145] [0234] [1234] [2346]`.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_two_singleton_support12_orientation_shard0_2026_09_28.py`
+
+Executed verifier blob:
+
+`071e17898fa67add89cb77b6b800095ace31e3cd`
+
+The verifier imports the exact rational quotient-coordinate and generalized-weight machinery from
+`verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_selected_pair_orientation_2026_09_28.py`, blob `867e8e583f6073c92b1f7afbf2aaf536e2567fa9` on the parent main commit.
+
+For each cycle-choice assignment in the shard, the verifier enumerates a superset of every possible rank-four aggregate coefficient space W. It permits arbitrary touched empty-block spaces and up to two arbitrary nonzero singleton constraint lines, without imposing a legal root-state assignment. Every realizable two-singleton state therefore has its actual W in the searched family.
+
+The already-audited nine-coordinate parity-check criterion implies that an actual W must satisfy `parity_profile_ok(W)`, equivalently the generalized-weight lower bounds `(d1,d2,d3,d4,d5) >= (2,4,5,7,8)`.
+
+The shard is the first 27 assignments produced by the deterministic `oriented_exts` product order. Equivalently, the first choices for supports `[0124]`, `[0134]`, and `[0145]` are fixed, while all 27 choices for `[0234]`, `[1234]`, and `[2346]` are exhausted. The repeated `[0123]^3` support already contains all three cycles.
+
+Exact executed census:
+
+- cycle-choice assignments: 27;
+- relaxed rank-four aggregate spaces: 40,586;
+- generalized-weight-admissible spaces: 0.
+
+The verifier fail-closes on the first two counts; the absence of a `weight_pass` counter is part of the asserted exact Counter equality.
+
+Therefore these 27 of the 729 cycle-choice assignments for this explicit support are impossible. This is a rigorous partial certificate only. It does not exclude the remaining 702 assignments and does not close the whole support or the two-singleton profile.

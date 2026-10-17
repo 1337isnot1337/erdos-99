@@ -1,0 +1,305 @@
+#define main rotation_cell_base_main
+#include "verify_target_c_support6_collapsed_rotation_cells_2026_09_19.cpp"
+#undef main
+
+#include <bitset>
+#include <functional>
+#include <unordered_map>
+
+struct Syndrome {
+    uint32_t target;
+    array<uint32_t,66> col;
+};
+
+static int pair_id(int a,int b) {
+    if (a>b) swap(a,b);
+    int id=0;
+    for (int i=0;i<12;i++) for (int j=i+1;j<12;j++,id++)
+        if (i==a && j==b) return id;
+    assert(false); return -1;
+}
+
+static pair<int,int> pair_from_id(int id) {
+    int k=0;
+    for (int i=0;i<12;i++) for (int j=i+1;j<12;j++,k++)
+        if (k==id) return {i,j};
+    assert(false); return {-1,-1};
+}
+
+static vector<uint16_t> all_simple_cycles(const vector<Edge>& E) {
+    vector<uint16_t> ans;
+    for (int mask=1;mask<(1<<12);mask++) {
+        int k=__builtin_popcount((unsigned)mask);
+        if (k<3 || k>6) continue;
+        int deg[6]={0};
+        for (int e=0;e<12;e++) if ((mask>>e)&1) {
+            deg[E[e].a]++; deg[E[e].b]++;
+        }
+        int used=0,start=-1; bool ok=true;
+        for (int v=0;v<6;v++) if (deg[v]) {
+            used++; start=v; if (deg[v]!=2) ok=false;
+        }
+        if (!ok || used!=k) continue;
+        bool vis[6]={false}; vector<int> stack={start}; vis[start]=true; int seen=0;
+        while (!stack.empty()) {
+            int v=stack.back(); stack.pop_back(); seen++;
+            for (int e=0;e<12;e++) if ((mask>>e)&1) {
+                int w=-1;
+                if (E[e].a==v) w=E[e].b;
+                else if (E[e].b==v) w=E[e].a;
+                if (w>=0 && !vis[w]) { vis[w]=true; stack.push_back(w); }
+            }
+        }
+        if (seen==used) ans.push_back((uint16_t)mask);
+    }
+    return ans;
+}
+
+static int face_alternation(uint16_t C,uint16_t D,int v,const Cell& cell) {
+    vector<int> a,b;
+    for (int j=0;j<4;j++) {
+        int e=cell.order[v][j];
+        if ((C>>e)&1) a.push_back(j);
+        if ((D>>e)&1) b.push_back(j);
+    }
+    if (a.empty() || b.empty()) return 0;
+    assert(a.size()==2 && b.size()==2);
+    return ((a[1]-a[0]+4)%4)==2;
+}
+
+static Syndrome parity_syndrome(const Cell& cell,const vector<Edge>& E) {
+    const auto cycles=all_simple_cycles(E);
+    vector<bitset<67>> rows;
+    for (size_t i=0;i<cycles.size();i++) for (size_t j=i+1;j<cycles.size();j++) {
+        uint16_t C=cycles[i],D=cycles[j];
+        if (C&D) continue;
+        bitset<67> row; int rhs=0;
+        for (int v=0;v<6;v++) rhs^=face_alternation(C,D,v,cell);
+        for (int e=0;e<12;e++) if ((C>>e)&1)
+            for (int f=0;f<12;f++) if ((D>>f)&1) row.flip(pair_id(e,f));
+        if (rhs) row.set(66);
+        rows.push_back(row);
+    }
+    int rank=0;
+    for (int col=0;col<66 && rank<(int)rows.size();col++) {
+        int p=rank; while (p<(int)rows.size() && !rows[p].test(col)) p++;
+        if (p==(int)rows.size()) continue;
+        swap(rows[p],rows[rank]);
+        for (int r=0;r<(int)rows.size();r++) if (r!=rank && rows[r].test(col)) rows[r]^=rows[rank];
+        rank++;
+    }
+    for (const auto& row:rows) {
+        bool any=false; for (int c=0;c<66;c++) any|=row.test(c);
+        assert(any || !row.test(66));
+    }
+    assert(rank<=31);
+    Syndrome s{}; s.target=0; s.col.fill(0);
+    for (int r=0;r<rank;r++) {
+        if (rows[r].test(66)) s.target|=(1u<<r);
+        for (int c=0;c<66;c++) if (rows[r].test(c)) s.col[c]|=(1u<<r);
+    }
+    return s;
+}
+
+static vector<vector<int>> crossing_orientations(const Cell& cell,const vector<int>& ids) {
+    vector<Ineq> base;
+    for (int v=0;v<6;v++) add_gap_constraints(base,cell.order[v]);
+    assert(strict_difference_feasible(base));
+    vector<vector<int>> ans; vector<int> cur(ids.size());
+    function<void(int,const vector<Ineq>&)> rec=[&](int q,const vector<Ineq>& z) {
+        if (q==(int)ids.size()) { ans.push_back(cur); return; }
+        auto [e,f]=pair_from_id(ids[q]);
+        for (int sg=0;sg<2;sg++) {
+            // sg=0: 1 < x_e-x_f < 2, so det(u_e,u_f)<0.
+            // sg=1: 1 < x_f-x_e < 2, so det(u_e,u_f)>0.
+            int p=sg?f:e, n=sg?e:f;
+            auto z2=z;
+            z2.push_back({n,p,2});
+            z2.push_back({p,n,-1});
+            if (strict_difference_feasible(z2)) {
+                cur[q]=sg; rec(q+1,z2);
+            }
+        }
+    };
+    rec(0,base);
+    return ans;
+}
+
+static int forced_crossing_flip(const Cell& cell,int e,int f,int sg) {
+    // Orient relation train e from its +u_e terminal occurrence to its -u_e
+    // terminal occurrence. In a crossing rhombus, if D=det(u_e,u_f), the
+    // oriented midpoint-path tangents satisfy det(t_e,t_f) with the same sign
+    // as D. A dart from the crossing toward E[e].a equals +t_e iff the
+    // relation orientation has its head at E[e].a, i.e. orientation_bits[e]=1.
+    const int Dsign=sg?1:-1;
+    const int ce=((cell.orientation_bits>>e)&1)?1:-1;
+    const int cf=((cell.orientation_bits>>f)&1)?1:-1;
+    return ce*cf*Dsign>0 ? 0 : 1;
+}
+
+struct Segment { int u,v,original_edge; };
+
+static int planarized_genus(const Cell& cell,const vector<Edge>& E,
+                            const vector<pair<int,int>>& crossing_pairs,
+                            const vector<vector<int>>& crossing_order,
+                            const vector<int>& crossing_flip) {
+    int k=(int)crossing_pairs.size();
+    vector<Segment> segs; vector<vector<int>> edge_segs(12),edge_chain(12);
+    for (int e=0;e<12;e++) {
+        vector<int> chain={E[e].a};
+        for (int cid:crossing_order[e]) chain.push_back(6+cid);
+        chain.push_back(E[e].b); edge_chain[e]=chain;
+        for (int j=0;j+1<(int)chain.size();j++) {
+            int sid=(int)segs.size(); segs.push_back({chain[j],chain[j+1],e}); edge_segs[e].push_back(sid);
+        }
+    }
+    int V=6+k,M=(int)segs.size();
+    map<pair<int,int>,int> dart; int nd=0;
+    for (int s=0;s<M;s++) { dart[{segs[s].u,s}]=nd++; dart[{segs[s].v,s}]=nd++; }
+    vector<int> rot(nd,-1),rev(nd,-1);
+    for (int s=0;s<M;s++) {
+        int a=dart[{segs[s].u,s}],b=dart[{segs[s].v,s}]; rev[a]=b; rev[b]=a;
+    }
+    for (int v=0;v<6;v++) {
+        array<int,4> d{};
+        for (int j=0;j<4;j++) {
+            int e=cell.order[v][j];
+            int sid=(E[e].a==v?edge_segs[e].front():edge_segs[e].back());
+            d[j]=dart[{v,sid}];
+        }
+        for (int j=0;j<4;j++) rot[d[j]]=d[(j+1)%4];
+    }
+    for (int cid=0;cid<k;cid++) {
+        int cv=6+cid,e=crossing_pairs[cid].first,f=crossing_pairs[cid].second;
+        auto toward_a=[&](int oe) {
+            const auto& chain=edge_chain[oe]; int pos=-1;
+            for (int i=0;i<(int)chain.size();i++) if (chain[i]==cv) pos=i;
+            assert(pos>0 && pos+1<(int)chain.size());
+            return pair<int,int>{edge_segs[oe][pos-1],edge_segs[oe][pos]};
+        };
+        auto ep=toward_a(e),fp=toward_a(f);
+        int eA=dart[{cv,ep.first}],eB=dart[{cv,ep.second}];
+        int fA=dart[{cv,fp.first}],fB=dart[{cv,fp.second}];
+        array<int,4> d=crossing_flip[cid]==0
+            ? array<int,4>{eA,fA,eB,fB}
+            : array<int,4>{eA,fB,eB,fA};
+        for (int j=0;j<4;j++) rot[d[j]]=d[(j+1)%4];
+    }
+    vector<int> seen(nd); int F=0;
+    for (int d=0;d<nd;d++) if (!seen[d]) {
+        F++; int x=d; while (!seen[x]) { seen[x]=1; x=rot[rev[x]]; }
+    }
+    int chi=V-M+F; assert((2-chi)%2==0); return (2-chi)/2;
+}
+
+static bool oriented_planarization_exists(const Cell& cell,const vector<Edge>& E,
+                                           const vector<int>& ids,
+                                           const vector<vector<int>>& orientations) {
+    vector<pair<int,int>> cp; for (int id:ids) cp.push_back(pair_from_id(id));
+    for (const auto& sg:orientations) {
+        vector<int> flip;
+        for (int c=0;c<(int)ids.size();c++)
+            flip.push_back(forced_crossing_flip(cell,cp[c].first,cp[c].second,sg[c]));
+        vector<vector<int>> order(12);
+        for (int c=0;c<(int)cp.size();c++) {
+            order[cp[c].first].push_back(c);
+            order[cp[c].second].push_back(c);
+        }
+        vector<int> multi;
+        for (int e=0;e<12;e++) if (order[e].size()>1) multi.push_back(e);
+        bool planar=false;
+        function<void(int)> rec=[&](int q) {
+            if (planar) return;
+            if (q==(int)multi.size()) {
+                if (planarized_genus(cell,E,cp,order,flip)==0) planar=true;
+                return;
+            }
+            int e=multi[q]; sort(order[e].begin(),order[e].end());
+            do { rec(q+1); } while (!planar && next_permutation(order[e].begin(),order[e].end()));
+        };
+        rec(0);
+        if (planar) return true;
+    }
+    return false;
+}
+
+struct Count { long long parity=0,metric=0,planar=0; };
+
+static void process_candidate(const Cell& cell,const vector<Edge>& E,const vector<int>& ids,Count& out) {
+    out.parity++;
+    auto orientations=crossing_orientations(cell,ids);
+    if (orientations.empty()) return;
+    out.metric++;
+    if (oriented_planarization_exists(cell,E,ids,orientations)) out.planar++;
+}
+
+static array<Count,7> run_case(const string& name,const set<pair<int,int>>& missing,int expected_cells) {
+    map<int,int> genus_count,per_orientation;
+    auto cells=enumerate_cells(missing,genus_count,per_orientation);
+    auto E=make_edges(missing); assert((int)cells.size()==expected_cells);
+    array<Count,7> C{};
+    for (const auto& cell:cells) {
+        auto s=parity_syndrome(cell,E);
+        if (s.target==0) process_candidate(cell,E,{},C[0]);
+        for (int a=0;a<66;a++) if (s.col[a]==s.target)
+            process_candidate(cell,E,{a},C[1]);
+        for (int a=0;a<66;a++) for (int b=a+1;b<66;b++)
+            if ((s.col[a]^s.col[b])==s.target)
+                process_candidate(cell,E,{a,b},C[2]);
+        for (int a=0;a<66;a++) for (int b=a+1;b<66;b++) for (int c=b+1;c<66;c++)
+            if ((s.col[a]^s.col[b]^s.col[c])==s.target)
+                process_candidate(cell,E,{a,b,c},C[3]);
+        for (int a=0;a<66;a++) for (int b=a+1;b<66;b++) for (int c=b+1;c<66;c++) for (int d=c+1;d<66;d++)
+            if ((s.col[a]^s.col[b]^s.col[c]^s.col[d])==s.target)
+                process_candidate(cell,E,{a,b,c,d},C[4]);
+
+        unordered_map<uint32_t,vector<pair<int,int>>> pairs;
+        pairs.reserve(4096);
+        for (int a=0;a<66;a++) for (int b=a+1;b<66;b++)
+            pairs[s.col[a]^s.col[b]].push_back({a,b});
+        for (int c=0;c<66;c++) for (int d=c+1;d<66;d++) for (int e=d+1;e<66;e++) {
+            auto it=pairs.find(s.target^s.col[c]^s.col[d]^s.col[e]);
+            if (it==pairs.end()) continue;
+            for (auto [a,b]:it->second) if (b<c)
+                process_candidate(cell,E,{a,b,c,d,e},C[5]);
+        }
+
+        unordered_map<uint32_t,vector<array<int,3>>> triples;
+        triples.reserve(8192);
+        for (int a=0;a<66;a++) for (int b=a+1;b<66;b++) for (int c=b+1;c<66;c++)
+            triples[s.col[a]^s.col[b]^s.col[c]].push_back({a,b,c});
+        for (int d=0;d<66;d++) for (int e=d+1;e<66;e++) for (int f=e+1;f<66;f++) {
+            auto it=triples.find(s.target^s.col[d]^s.col[e]^s.col[f]);
+            if (it==triples.end()) continue;
+            for (auto A:it->second) if (A[2]<d)
+                process_candidate(cell,E,{A[0],A[1],A[2],d,e,f},C[6]);
+        }
+    }
+    cout << name << "\n";
+    for (int k=0;k<=6;k++)
+        cout << "  k=" << k << " parity=" << C[k].parity
+             << " metric=" << C[k].metric << " planar=" << C[k].planar << "\n";
+    return C;
+}
+
+int main() {
+    auto A=run_case("all-cross matching",{{0,3},{1,4},{2,5}},180);
+    auto M=run_case("mixed matching",{{0,1},{2,3},{4,5}},208);
+
+    const long long expA[7][3]={
+        {0,0,0},{0,0,0},{156,132,0},{1176,96,0},
+        {10788,756,0},{87648,1416,0},{583296,5160,0}
+    };
+    const long long expM[7][3]={
+        {0,0,0},{0,0,0},{40,32,0},{696,192,0},
+        {10024,528,0},{82264,1288,0},{617952,5480,0}
+    };
+    for (int k=0;k<=6;k++) {
+        assert(A[k].parity==expA[k][0] && A[k].metric==expA[k][1] && A[k].planar==expA[k][2]);
+        assert(M[k].parity==expM[k][0] && M[k].metric==expM[k][1] && M[k].planar==expM[k][2]);
+    }
+
+    cout << "PASS: no collapsed support-six rotation cell admits a planar, angle-compatible MI.1 crossing pattern with at most six internal crossings.\n";
+    cout << "CONCLUSION: every global collapsed support-six block has X_K >= 7 internal strict-rhombus crossings.\n";
+    return 0;
+}

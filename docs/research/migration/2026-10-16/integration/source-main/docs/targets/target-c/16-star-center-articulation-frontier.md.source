@@ -1,0 +1,70 @@
+# Target C — star-center articulation frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+This module records C60 from
+`docs/reports/target_c_zero_transfer_star_center_articulation_2026-08-31.md`.
+It sharpens C58's zero-transfer star forest and feeds C59's collinear multi-body branch.
+
+## C60 resistance-equality theorem
+
+In any finite connected positive-conductance graph,
+
+`R_ab = R_ac + R_cb`
+
+holds exactly when deleting `c` separates `a` from `b`.
+
+Proof: ground `c`, inject one unit from `a` to `c`, and let `phi` be the voltage. The
+quadratic resistance identity gives
+
+`R_ab = R_ac + R_bc - 2 phi_b`.
+
+The strong discrete maximum principle says `phi` is strictly positive on the component
+of `G-c` containing `a` and identically zero on every other component. Equality is
+therefore equivalent to separation by `c`.
+
+## Zero-transfer consequence
+
+For a C56-Z diameter star with center `o` and leaves `v_i`, C58 gives
+
+`R_vi,vj = R_vi,o + R_o,vj`.
+
+Hence `o` itself is the source positive-contact articulation separating every two
+diameter leaves. In particular
+
+`deg_contact(o) >= deg_diameter_star(o)`.
+
+The triangle-free unit-contact degree cap immediately gives diameter-star degree at
+most five. Unlike SEPq, this identifies the separator and applies already to a
+two-leaf star.
+
+## Null-body consequence
+
+C59 proves that two differently rotating extreme null bodies meet at one source hinge
+and their finite relative rotation is feasible. Their midpoint positive support is
+literally a graph one-sum at that hinge. If a midpoint diameter star contains edges
+from both bodies, its center is the same hinge and C60 identifies it as the contact
+articulation.
+
+For three differently rotating null bodies, every positive convex mixture of the
+three extreme stresses is itself C56-Z: if it were C56-G, the common selected diameter
+angular rate would force all three body rates equal. Therefore the complete three-body
+diameter union is a degree-at-most-five star forest, and every nontrivial star center
+is a contact articulation of the complete three-body positive support.
+
+C59 independently forces the three distinct pairwise hinge vertices of a nontrivial
+three-body motion to be collinear.
+
+## Next exact target
+
+Exclude the resulting collinear pin cycle, or integrate it. The remaining covered
+three-body obstruction is:
+
+- three rigid full-diameter null bodies;
+- pairwise one-vertex intersections at three distinct collinear source points;
+- complete positive diameter union a bounded star forest;
+- every nontrivial diameter-star center an articulation of the full mixed positive
+  contact graph.
+
+After that, the independent issue is whether the null-face body cover contains every
+active vertex needed for the finite release.

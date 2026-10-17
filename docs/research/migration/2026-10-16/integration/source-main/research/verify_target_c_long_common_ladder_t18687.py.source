@@ -1,0 +1,119 @@
+#!/usr/bin/env python3
+"""Exact certificate for a low-energy O-O path and >0.697D common ladder at t<=1.8687."""
+from fractions import Fraction as Q
+from math import factorial, isqrt
+
+
+def atan_inv_bounds(q,n):
+    s=Q(0)
+    for k in range(n):
+        term=Q(1,(2*k+1)*q**(2*k+1))
+        s += term if k%2==0 else -term
+    nxt=Q(1,(2*n+1)*q**(2*n+1))
+    return (s,s+nxt) if n%2==0 else (s-nxt,s)
+
+
+def sqrt_bounds(lo,hi,scale):
+    a=isqrt((lo.numerator*scale*scale)//lo.denominator)
+    b=isqrt((hi.numerator*scale*scale)//hi.denominator)
+    return Q(a,scale),Q(b+1,scale)
+
+
+def sin_bounds(x,n=32):
+    s=Q(0)
+    for k in range(n):
+        term=x**(2*k+1)/factorial(2*k+1)
+        s += term if k%2==0 else -term
+    nxt=x**(2*n+1)/factorial(2*n+1)
+    return (s,s+nxt) if n%2==0 else (s-nxt,s)
+
+
+def F_bounds(z):
+    slo,shi=sin_bounds(z/6)
+    return z-6*shi,z-6*slo
+
+
+# pi / Delta enclosures for U0 and the matched detour ceiling.
+a5l,a5h=atan_inv_bounds(5,110)
+a239l,a239h=atan_inv_bounds(239,35)
+pil,pih=16*a5l-4*a239h,16*a5h-4*a239l
+S=10**120
+n3=isqrt(3*S*S)
+s3l,s3h=Q(n3,S),Q(n3+1,S)
+Dl,Dh=pil/(2*s3h),pih/(2*s3l)
+sDl,_=sqrt_bounds(Dl,Dh,S)
+C76=2*sDl+Q(19,2500)
+
+T=Q(18687,10000)
+U0lo=Q(9,2)*T-2*pih
+U0hi=Q(9,2)*T-2*pil
+dmax=(U0hi-C76)/2
+assert dmax<Q(107,1000)
+
+# Inherited coupled feasibility barrier at T=1.8687:
+# z >= z0 + c(delta-d0)-o(1), d0=F(z0), c=1.36.
+z0=Q(20477,10000)
+d0lo,d0hi=F_bounds(z0)
+c=Q(34,25)
+
+# Use a much stricter fixed terminal-energy cutoff than the endpoint theorem.
+lam=Q(49,125)  # 0.392 < 1/2
+
+# Physical same-oriented branch is uniformly impossible at the worst detour.
+dcap=Q(107,1000)
+brace=1-dcap-lam/2
+same=lam-lam*lam/4
+assert brace>0 and brace*brace>same
+assert lam<Q(1,2)
+
+# Along z=z0+c(delta-d0), the residual r=2U0-z-4delta decreases with delta.
+# Its maximum is attained at the lower detour edge.
+rmax=2*U0hi-z0-4*d0lo
+assert 0<rmax<Q(2047,1000)
+
+# F'(r)=1-cos(r/6) <= r^2/72 < .0582.
+fpmax=Q(291,5000)
+assert Q(2047,1000)**2/72<fpmax
+
+# For fixed lambda,
+# L=P-(delta-F(r))/lambda,
+# L'=c+2-[1+(c+4)F'(r)]/lambda.
+# Hence the selected low-energy mass increases with detour on the whole box.
+Lprime=(c+2)-(1+(c+4)*fpmax)/lam
+assert Lprime>Q(1,100)
+
+# Exact adverse boundary delta=d0, z=z0.
+Plo=z0-U0hi+2*d0lo
+assert Plo>0
+rlo=2*U0lo-z0-4*d0hi
+rhi=2*U0hi-z0-4*d0lo
+assert 0<rlo<=rhi<Q(2047,1000)
+Frem_lo,_=F_bounds(rlo)
+Ahi=d0hi-Frem_lo
+assert Ahi>0
+Llo=Plo-Ahi/lam
+assert Llo>Q(1,2000)       # >0.0005 pair weight
+phase=Llo/3
+assert phase>Q(1,6000)     # >D/6000 in one phase
+
+# Every selected boundary train satisfies the audited train-length/energy tradeoff
+# r_tau/D >= 1-delta-e_tau/2-o(1).
+length_floor=1-dmax-lam/2
+assert length_floor>Q(697,1000)
+
+# Re-run finite-defect averaging on this stricter low-energy path.
+# Terminal occurrences <=(10T-4pi)D; diameter switches <=2pi D;
+# D times switching KKT mass <=2D.
+terminal=10*T-4*pil
+complexity=2*pih+terminal+2
+ratio=complexity/Q(1,6000)
+assert ratio<87000
+
+print('PASS low-energy long-ladder selection through t<=1.8687')
+for k,v in [
+ ('delta max',dmax),('d0 lo',d0lo),('d0 hi',d0hi),
+ ('rmax',rmax),('Fprime max',fpmax),('Lprime floor',Lprime),
+ ('pair floor',Plo),('residual lo',rlo),('residual F floor',Frem_lo),
+ ('low-energy pair floor',Llo),('one-phase floor',phase),
+ ('selected-train crossing floor',length_floor),('finite-defect average',ratio),
+]: print(k,'=',float(v))

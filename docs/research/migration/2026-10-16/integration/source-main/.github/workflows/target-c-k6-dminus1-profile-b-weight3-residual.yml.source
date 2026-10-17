@@ -1,0 +1,34 @@
+name: Target C k6 Dminus1 Profile B weight-three residual
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    if: github.actor == github.repository_owner && vars.E99_HISTORICAL_CI == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Profile B weight-three five-row residual shard
+        shell: bash
+        run: |
+          start=$(( ${{ matrix.shard }} * 1280 ))
+          end=$(( start + 1280 ))
+          if [ "$end" -gt 20451 ]; then end=20451; fi
+          python research/verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_weight3_five_row_residual_2026_09_22.py \
+            --orbit-start "$start" \
+            --orbit-end "$end" \
+            --assert-empty

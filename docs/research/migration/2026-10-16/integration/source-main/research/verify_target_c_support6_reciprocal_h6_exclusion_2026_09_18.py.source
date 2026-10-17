@@ -1,0 +1,283 @@
+#!/usr/bin/env python3
+"""
+Exact finite regression for the support-six reciprocal H6 exclusion.
+
+No floating point is used. The script:
+  1. enumerates every uniform rank-3 chirotope extension of a convex hexagon
+     by one interior point;
+  2. verifies there are exactly 26 radial order types;
+  3. checks all perfect matchings, ground +/- complement choices, and local
+     2+3 alternation phases and finds no uniform H6 signing;
+  4. enumerates the simple codimension-one walls corresponding to the only
+     allowed H6 collinearity 0--6--j with j the missing matching mate; and
+  5. checks all necessary ground sign choices and again finds no signing.
+"""
+
+from itertools import combinations, permutations, product
+
+HULL = tuple(range(6))
+NONGROUND = tuple(range(1, 7))
+
+
+def parity_to_sorted(t):
+    inv = sum(t[i] > t[j] for i in range(len(t)) for j in range(i + 1, len(t)))
+    return -1 if inv & 1 else 1
+
+
+PAIRS = list(combinations(HULL, 2))
+FIXED = {(i, i + 1): 1 for i in range(5)}
+FIXED[(0, 5)] = -1
+FREE = [p for p in PAIRS if p not in FIXED]
+
+
+def chi_factory(assign):
+    def chi(a, b, c):
+        if len({a, b, c}) < 3:
+            return 0
+        t = (a, b, c)
+        s = tuple(sorted(t))
+        sign = parity_to_sorted(t)
+        if s[2] <= 5:
+            base = 1
+        else:
+            i, j, _ = s
+            base = assign[(i, j)]
+        return sign * base
+    return chi
+
+
+def grassmann_plucker_ok(assign):
+    """Uniform rank-3 chirotope B2 axiom, exhaustively over orderings."""
+    chi = chi_factory(assign)
+    for subset in combinations(range(7), 5):
+        for a in subset:
+            rest = [x for x in subset if x != a]
+            for b, c, d, e in permutations(rest):
+                vals = (
+                    chi(a, b, c) * chi(a, d, e),
+                    -chi(a, b, d) * chi(a, c, e),
+                    chi(a, b, e) * chi(a, c, d),
+                )
+                if vals[0] == vals[1] == vals[2]:
+                    return False
+    return True
+
+
+def enumerate_uniform_extensions():
+    out = []
+    for bits in product((1, -1), repeat=len(FREE)):
+        assign = dict(FIXED)
+        assign.update(dict(zip(FREE, bits)))
+        if grassmann_plucker_ok(assign):
+            out.append(assign)
+    return out
+
+
+def hull_ray_sequence(i):
+    return [(i + k) % 6 for k in range(1, 6)]
+
+
+def insertion_index(assign, i):
+    """Position of interior ray 6 among the five hull rays at hull vertex i."""
+    chi = chi_factory(assign)
+    h = hull_ray_sequence(i)
+    vals = [chi(i, j, 6) for j in h]
+    k = 0
+    while k < 5 and vals[k] == 1:
+        k += 1
+    assert vals == [1] * k + [-1] * (5 - k)
+    assert 1 <= k <= 4
+    return k
+
+
+def full_ray_order(assign, i):
+    h = hull_ray_sequence(i)
+    k = insertion_index(assign, i)
+    return h[:k] + [6] + h[k:]
+
+
+def all_matchings(items):
+    items = list(items)
+    if not items:
+        yield []
+        return
+    a = items[0]
+    for idx in range(1, len(items)):
+        b = items[idx]
+        rest = items[1:idx] + items[idx + 1:]
+        for tail in all_matchings(rest):
+            yield [(a, b)] + tail
+
+
+MATCHINGS = list(all_matchings(NONGROUND))
+assert len(MATCHINGS) == 15
+
+
+def edge(a, b):
+    return tuple(sorted((a, b)))
+
+
+def consistent_uniform_signings(assign):
+    """
+    Use:
+      - ground 3+3 lemma: along the six distinct ground rays the + set is
+        positions {1,4,5} (0-based {0,3,4}) or its complement;
+      - at each non-ground hull vertex, local 2+3 alternation: one sign color
+        occupies incident raw positions {2,4} (0-based {1,3}).
+    """
+    survivors = []
+    order0 = full_ray_order(assign, 0)
+    base_plus = {order0[0], order0[3], order0[4]}
+
+    for ground_complement in (False, True):
+        ground_plus = set(order0) - base_plus if ground_complement else base_plus
+        ground_signs = {edge(0, j): (j in ground_plus) for j in NONGROUND}
+
+        for matching in MATCHINGS:
+            missing = {edge(*e) for e in matching}
+            local = {}
+            for i in range(1, 6):
+                mate = next(j for j in NONGROUND if edge(i, j) in missing)
+                order = [j for j in full_ray_order(assign, i) if j != mate]
+                assert len(order) == 5
+                two = {order[1], order[3]}
+                three = set(order) - two
+                local[i] = (two, three, order)
+
+            for phases in product((0, 1), repeat=5):
+                signs = dict(ground_signs)
+                ok = True
+                for idx, i in enumerate(range(1, 6)):
+                    plus = local[i][phases[idx]]
+                    for j in local[i][2]:
+                        e = edge(i, j)
+                        value = j in plus
+                        if e in signs and signs[e] != value:
+                            ok = False
+                            break
+                        signs[e] = value
+                    if not ok:
+                        break
+                if ok:
+                    survivors.append((matching, phases, signs))
+    return survivors
+
+
+def assignment_key(assign):
+    return tuple(assign[p] for p in PAIRS)
+
+
+def simple_collinearity_walls(uniform):
+    """
+    A simple H6 degeneracy has 0,6,j collinear, with j in {2,3,4}.
+    Perturbing 6 to either side changes only chi(0,j,6), so the two adjacent
+    uniform extensions differ in exactly that entry.
+    """
+    by_key = {assignment_key(a): a for a in uniform}
+    walls = []
+    seen = set()
+    for j in (2, 3, 4):
+        target = (0, j)
+        for a in uniform:
+            b = dict(a)
+            b[target] *= -1
+            kb = assignment_key(b)
+            if kb not in by_key:
+                continue
+            ka = assignment_key(a)
+            marker = (j, min(ka, kb), max(ka, kb))
+            if marker in seen:
+                continue
+            seen.add(marker)
+            walls.append((j, a, by_key[kb]))
+    return walls
+
+
+def consistent_wall_signings(j, assign):
+    """
+    Matching must contain j--6. At ground the duplicate raw directions j,6
+    cannot have opposite signs: cancellation would leave equality of sums of
+    two disjoint pairs of unit vectors in an open semicircle, impossible.
+    Hence they have the same sign; after global reversal take both positive,
+    with exactly one of the other four ground rays positive.
+    """
+    survivors = []
+    remaining = [x for x in range(1, 6) if x != j]
+
+    for rest_matching in all_matchings(remaining):
+        matching = [(j, 6)] + rest_matching
+        missing = {edge(*e) for e in matching}
+
+        local = {}
+        for i in range(1, 6):
+            mate = next(x for x in NONGROUND if edge(i, x) in missing)
+            order = [x for x in full_ray_order(assign, i) if x != mate]
+            # At i=j the tied ray 6 is precisely the missing edge and is deleted.
+            assert len(order) == 5
+            two = {order[1], order[3]}
+            three = set(order) - two
+            local[i] = (two, three, order)
+
+        others = [x for x in NONGROUND if x not in (j, 6)]
+        for extra in others:
+            base_plus = {j, 6, extra}
+            for ground_complement in (False, True):
+                ground_plus = set(NONGROUND) - base_plus if ground_complement else base_plus
+                signs0 = {edge(0, x): (x in ground_plus) for x in NONGROUND}
+
+                for phases in product((0, 1), repeat=5):
+                    signs = dict(signs0)
+                    ok = True
+                    for idx, i in enumerate(range(1, 6)):
+                        plus = local[i][phases[idx]]
+                        for x in local[i][2]:
+                            e = edge(i, x)
+                            value = x in plus
+                            if e in signs and signs[e] != value:
+                                ok = False
+                                break
+                            signs[e] = value
+                        if not ok:
+                            break
+                    if ok:
+                        survivors.append((matching, extra, ground_complement, phases, signs))
+    return survivors
+
+
+def main():
+    uniform = enumerate_uniform_extensions()
+    assert len(uniform) == 26
+
+    insertion_types = {
+        tuple(insertion_index(a, i) for i in HULL)
+        for a in uniform
+    }
+    assert len(insertion_types) == 26
+
+    uniform_survivors = []
+    for a in uniform:
+        uniform_survivors.extend(consistent_uniform_signings(a))
+    assert uniform_survivors == []
+
+    walls = simple_collinearity_walls(uniform)
+    wall_counts = {j: 0 for j in (2, 3, 4)}
+    for j, _, _ in walls:
+        wall_counts[j] += 1
+    assert wall_counts == {2: 4, 3: 6, 4: 4}
+    assert len(walls) == 14
+
+    wall_survivors = []
+    for j, a, _b in walls:
+        wall_survivors.extend(consistent_wall_signings(j, a))
+    assert wall_survivors == []
+
+    print("uniform_extensions", len(uniform))
+    print("uniform_insertion_types", len(insertion_types))
+    print("uniform_sign_survivors", len(uniform_survivors))
+    print("simple_collinearity_walls", len(walls), wall_counts)
+    print("collinear_sign_survivors", len(wall_survivors))
+    print("PASS: reciprocal H6 support-six branch excluded by exact finite sign/order check")
+
+
+if __name__ == "__main__":
+    main()

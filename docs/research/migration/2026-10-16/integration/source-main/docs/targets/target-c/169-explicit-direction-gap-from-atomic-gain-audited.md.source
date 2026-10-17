@@ -1,0 +1,318 @@
+# Target C — audited §169 explicit direction gap from the §168 atomic gain
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working proof-only Type-II consequence; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The historical quantitative direction-gap argument combines audited §146 endpoint
+stability with a distributional atom-versus-detour estimate for the occurrence-counted
+outer direction measure. Section 168 strengthens the all-regime atomic train floor to
+
+\[
+A\ge2s+g,
+\qquad
+s:=\sqrt{\Delta_2},
+\qquad g:=0.0004.
+\]
+
+Feeding this gain into that argument yields
+
+\[
+\boxed{
+\liminf {q-k\over D}
+\ge C_{146}+0.00089
+=1.8204035379794445\ldots,
+}
+\tag{169.1}
+\]
+
+where
+
+\[
+C_{146}={4\over9}(\pi+s).
+\]
+
+The first zero of the resulting one-variable scalar margin is near
+`0.0009024977029`; the certified endpoint `0.00089` retains strict normalized margin.
+
+## 169.1 Endpoint-stability data
+
+Assume for contradiction along a Type-II survivor subsequence that
+
+\[
+t:={q-k\over D}
+\le C_{146}+\eta+o(1),
+\qquad
+\eta=0.00089.
+\]
+
+The audited §146 endpoint-stability inequalities give
+
+\[
+0\le\kappa:=\lim{k\over D}\le9\eta,
+\tag{169.2}
+\]
+
+and normalized outer-walk detour
+
+\[
+\lambda_{out}:=\limsup {b-\operatorname{per}(F)\over D}
+\le {9\over4}\eta.
+\tag{169.3}
+\]
+
+Let `x=lim T/D`, and split train mass in absolute `D` normalization into atomic and
+nonatomic parts
+
+\[
+A+N=x.
+\]
+
+The exact stopped-train and outer-walk ledgers give
+
+\[
+x\le5t-2\pi,
+\tag{169.4}
+\]
+
+and audited §142 gives
+
+\[
+N\ge {t+\kappa\over2}.
+\tag{169.5}
+\]
+
+Hence the atomic upper bound remains
+
+\[
+A\le2s+{9\over2}\eta=:A_\eta.
+\tag{169.6}
+\]
+
+The new §168 lower bound gives
+
+\[
+A\ge2s+g.
+\tag{169.7}
+\]
+
+Using (169.4) and (169.7), the nonatomic upper bound improves to
+
+\[
+\boxed{
+N\le {C_{146}\over2}+5\eta-g.
+}
+\tag{169.8}
+\]
+
+This `-g` term is the only new favorable input; the atomic upper bound in (169.6) is
+left unchanged to avoid double-counting.
+
+## 169.2 Dominant-orbit leakage
+
+Weighted Mantel on exact projective `pi/3` atomic orbits gives one dominant orbit whose
+complement atomic mass is at most
+
+\[
+\boxed{
+R_\eta
+=A_\eta-{4s^2\over A_\eta}.
+}
+\tag{169.9}
+\]
+
+The function `A-4s^2/A` is increasing for positive `A`, so using the upper endpoint
+`A_eta` is the correct worst case even after adding the new lower bound (169.7).
+
+At `eta=0.00089`,
+
+\[
+A_\eta=1.9086306137279148\ldots,
+\]
+
+\[
+\boxed{R_\eta=0.00800159605589257\ldots .}
+\tag{169.10}
+\]
+
+## 169.3 The forced outer atom gains exactly `2g/3`
+
+The occurrence-counted outer walk has normalized mass at least `pi-o(1)`.
+
+- nonatomic trains contribute at most `2N` outer terminal occurrences;
+- atomic trains outside the dominant orbit contribute at most `2R_eta`;
+- the dominant orbit contains at most three projective atoms.
+
+Therefore one dominant-orbit outer-direction atom has normalized mass at least
+
+\[
+\ell_\eta
+={\pi-2N_{max}-2R_\eta\over3},
+\]
+
+where
+
+\[
+N_{max}={C_{146}\over2}+5\eta-g.
+\]
+
+Equivalently,
+
+\[
+\boxed{
+\ell_\eta
+={\pi-C_{146}-10\eta+2g-2R_\eta\over3}.
+}
+\tag{169.11}
+\]
+
+Relative to the older quantitative direction-gap formula, the explicit atomic gain
+contributes exactly `2g/3` before the nonlinear width-excess conversion.
+
+At `eta=0.00089`,
+
+\[
+\boxed{
+\ell_\eta=0.4326586411661879\ldots .
+}
+\tag{169.12}
+\]
+
+## 169.4 Atom-versus-detour lemma
+
+Let `nu` be a weak limit of the occurrence-counted outer projective direction measures,
+normalized by `D`, and put
+
+\[
+F=|\cos|*\nu,
+\qquad
+g_{out}=F-2.
+\]
+
+Projection variation of the actual closed outer walk and Type-II width convergence give
+`g_out>=0`. Also
+
+\[
+\int_0^\pi g_{out}
+=2\lambda_{out}.
+\tag{169.13}
+\]
+
+On the projective period-`pi` circle,
+
+\[
+|\cos|''+|\cos|=2\delta_{\pi/2}
+\]
+
+as distributions. After translating `nu` by `pi/2`,
+
+\[
+g_{out}''+g_{out}=2(\mu-d\theta).
+\tag{169.14}
+\]
+
+Suppose `mu` has an atom of mass at least `ell`. Put `r=ell/2` and use
+
+\[
+\psi(\theta)=
+\cos^2\!\left({\pi\theta\over2r}\right)
+\quad (|\theta|\le r),
+\]
+
+with `psi=0` outside `[-r,r]`. In the present application `ell<pi`, so the support does
+not wrap around the projective circle. The function is `C^1`, piecewise `C^2`, and its
+first derivative vanishes at both support endpoints, so distributional integration by
+parts creates no boundary delta. Moreover
+
+\[
+\psi(0)=1,
+\qquad
+\int\psi=r,
+\qquad
+\|\psi''+\psi\|_\infty
+\le {\pi^2\over2r^2}+1.
+\]
+
+Pairing (169.14) with `psi` and using `g_out>=0` gives
+
+\[
+\boxed{
+\int g_{out}
+\ge {\ell^3\over2\pi^2+\ell^2}.
+}
+\tag{169.15}
+\]
+
+Thus diffuse outer mass cannot cancel the cusp produced by an atom for free.
+
+## 169.5 Strict endpoint contradiction
+
+Using (169.12) in (169.15),
+
+\[
+\boxed{
+{\ell_\eta^3\over2\pi^2+\ell_\eta^2}
+=0.00406450115885619\ldots .
+}
+\tag{169.16}
+\]
+
+On the other hand, (169.3) and (169.13) give
+
+\[
+\int g_{out}
+\le {9\over2}\eta
+=0.004005.
+\tag{169.17}
+\]
+
+The strict contradiction margin is
+
+\[
+\boxed{
+0.00406450115885619-0.004005
+=5.9501158856\times10^{-5}>0.
+}
+\tag{169.18}
+\]
+
+Therefore the hypothesis `t<=C146+0.00089+o(1)` is impossible, proving (169.1).
+
+## 169.6 Scalar envelope and scope
+
+With `g=0.0004` fixed, define
+
+\[
+A_\eta=2s+{9\over2}\eta,
+\qquad
+R_\eta=A_\eta-{4s^2\over A_\eta},
+\]
+
+\[
+\ell_\eta={\pi-C_{146}-10\eta+2g-2R_\eta\over3}.
+\]
+
+The scalar margin
+
+\[
+H(\eta)
+={\ell_\eta^3\over2\pi^2+\ell_\eta^2}
+-{9\over2}\eta
+\]
+
+has its first zero near
+
+\[
+\eta_{env}=0.0009024977029\ldots .
+\]
+
+No theorem endpoint at that root is asserted.
+
+The proof uses the explicit §168 atomic gap exactly once, only through the improved
+nonatomic upper bound. Occurrence multiplicity is retained; no carrier-decimal theorem
+or Type-I exchange is used. Contact-isolated source points remain outside all train and
+rigidity kernels.
+
+**Independent audit disposition:** PASS at audited-working proof-only scope. This is an
+all-Type-II endpoint separation, not C-II closure. Type-I inactive containers remain
+open.

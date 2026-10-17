@@ -1,0 +1,370 @@
+# Target C-II — dominant retained O--O pair weight stays linear through `t<=1.865`
+
+**Date:** 2026-09-15
+**Status:** proof-only high-`t` quantitative extension
+**Scope:** full-core/no-macroscopic-container Type-II branch with the corrected `g=0.0076` matched atomic floor
+**Dependencies:** hostile-audited shared-retention/complement-incidence inequalities; retained dominant pair-weight interpretation
+**Certificate:** `research/verify_target_c_dominant_double_outer_trains_g0076_t1865.py`
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The dominant retained-mass bootstrap used for the old `t<=1.860` O--O theorem is
+symbolic in the endpoint `T`.  Its monotonicity proof requires only
+
+\[
+U\ge C_{76}>2\sqrt{\Delta_2},
+\qquad
+\delta_{max}<1,
+\]
+
+not the old numerical value `T=1.860`.  Re-running the same outward-rational bootstrap
+at
+
+\[
+\boxed{T=1.865}
+\]
+
+still leaves a positive retained O--O pair margin.
+
+For every sufficiently large full-core Type-II survivor with
+
+\[
+t={q-k\over D}\le1.865,
+\]
+
+the retained dominant O--O pair weight satisfies
+
+\[
+\boxed{
+{P_{OO}^{dom}\over D}>0.0027-o(1).
+}
+\tag{E65.1}
+\]
+
+Since the dominant exact orbit has at most three projective phase classes, one phase
+class carries
+
+\[
+\boxed{
+P_i>0.0009-o(1).
+}
+\tag{E65.2}
+\]
+
+Retained pair weight per train is at most one, so that phase contains more than
+`0.0009D-o(D)` actual O--O complete trains.
+
+This extends the existence of a linear dominant O--O family beyond the current
+low-energy dual-path endpoint `1.8623`.  It does not itself claim terminal localization
+or a dual path.
+
+---
+
+## 1. Parent bootstrap at a symbolic endpoint
+
+Use the parent variables
+
+\[
+U={9t\over2}-2\pi-2\delta-\kappa/2,
+\qquad
+\delta={d_{out}\over D},
+\qquad
+\kappa={k\over D},
+\tag{E65.3}
+\]
+
+and
+
+\[
+C_{76}=2\sqrt{\Delta_2}+0.0076,
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\tag{E65.4}
+\]
+
+The corrected matched atomic theorem gives
+
+\[
+U\ge C_{76}-o(1).
+\tag{E65.5}
+\]
+
+Define
+
+\[
+m_2(U)={U+\sqrt{8\Delta_2-U^2}\over2},
+\qquad
+r(U)=U-m_2(U),
+\tag{E65.6}
+\]
+
+and
+
+\[
+F(z)=z-6\sin(z/6).
+\tag{E65.7}
+\]
+
+The audited retained-mass stack gives
+
+\[
+z+p\ge
+\pi-U-{t+\kappa\over2}+m_2(U)-o(1),
+\tag{E65.8}
+\]
+
+\[
+p\le
+{\delta-F(z)+r(U)^2\over2(1-\delta)}+o(1),
+\tag{E65.9}
+\]
+
+and
+
+\[
+\delta\ge F(z)-o(1).
+\tag{E65.10}
+\]
+
+Fix `T=1.865` and put
+
+\[
+U_{max}={9T\over2}-2\pi,
+\qquad
+\delta_{max}={U_{max}-C_{76}\over2}.
+\tag{E65.11}
+\]
+
+The exact verifier proves
+
+\[
+\boxed{\delta_{max}<0.099<1.}
+\tag{E65.12}
+\]
+
+It also checks the radical domain
+
+\[
+8\Delta_2-U^2>0
+\]
+
+at every bootstrap evaluation.
+
+The parent monotonicity remains valid on this interval.  For
+
+\[
+U\ge C_{76}>2\sqrt{\Delta_2},
+\]
+
+\[
+m_2'(U)<0,
+\qquad
+r'(U)>0.
+\tag{E65.13}
+\]
+
+Writing
+
+\[
+S=3\pi-5t+2\delta+m_2(U),
+\]
+
+gives
+
+\[
+S_t<0,
+\qquad
+S_\delta>0,
+\qquad
+S_\kappa>0.
+\tag{E65.14}
+\]
+
+These are exactly the sign inputs used in the original `t<=1.860` theorem.
+
+---
+
+## 2. Exact rounded bootstrap
+
+If `z>=z_j-o(1)`, put
+
+\[
+d_j:=F(z_j),
+\qquad
+U_j:=U_{max}-2d_j.
+\]
+
+The parent argument gives the same lower map
+
+\[
+\boxed{
+z\ge S_j-P_j-o(1),}
+\tag{E65.15}
+\]
+
+where
+
+\[
+S_j=
+\pi-U_j-{T\over2}+m_2(U_j),
+\tag{E65.16}
+\]
+
+and
+
+\[
+P_j=
+{\delta_{max}-d_j+r(U_j)^2
+\over2(1-\delta_{max})}.
+\tag{E65.17}
+\]
+
+The exact certificate uses Machin bounds for `pi`, integer-square-root enclosures, and
+alternating-series enclosures for `sin`.  It proves
+
+```text
+0       -> z > 1.9111
+1.9111  -> z > 2.0144
+2.0144  -> z > 2.0311
+2.0311  -> z > 2.0339
+2.0339  -> z > 2.0344
+2.0344  -> z > 2.0345
+```
+
+with respective exact margins larger than
+
+```text
+8.79e-5,
+5.46e-5,
+6.29e-5,
+1.04e-4,
+8.51e-5,
+7.09e-5.
+```
+
+Hence
+
+\[
+\boxed{z>2.0345-o(1).}
+\tag{E65.18}
+\]
+
+The same exact certificate gives
+
+\[
+F(2.0345)>0.03876343775,
+\tag{E65.19}
+\]
+
+and therefore, from (E65.3),
+
+\[
+\boxed{U<2.031787818+o(1).}
+\tag{E65.20}
+\]
+
+---
+
+## 3. Convert retained occurrence mass to retained O--O pair weight
+
+Freeze shrinking windows around the dominant exact three-phase orbit.  For every
+complete train `tau`, let `a_tau,b_tau in[0,1]` be its two retained terminal-occurrence
+weights and put
+
+\[
+w_\tau:=\min(a_\tau,b_\tau).
+\]
+
+Finitely,
+
+\[
+a_\tau+b_\tau\le1+w_\tau.
+\]
+
+Summing over dominant-window trains gives the established pair-weight inequality
+
+\[
+\boxed{z\le M_{dom}+P_{OO}^{dom}+o(1),}
+\tag{E65.21}
+\]
+
+where `M_dom` is normalized dominant complete-train mass and
+
+\[
+P_{OO}^{dom}
+={1\over D}\sum_{\tau\,dom}w_\tau.
+\]
+
+The exposed-hull train-mass chain gives
+
+\[
+M_{dom}\le U+o(1).
+\tag{E65.22}
+\]
+
+Therefore
+
+\[
+P_{OO}^{dom}
+\ge z-U-o(1).
+\]
+
+Using (E65.18)--(E65.20),
+
+\[
+{P_{OO}^{dom}\over D}
+>2.0345-2.031787818-o(1)
+>0.0027-o(1),
+\]
+
+proving (E65.1).
+
+The dominant orbit has at most three projective phase classes, so one phase receives at
+least one third of this pair weight.  Thus
+
+\[
+P_i>0.0009-o(1),
+\]
+
+which proves (E65.2).
+
+---
+
+## 4. Scope and endpoint sharpness of this mechanism
+
+The extension uses no low-energy Markov truncation.  It is therefore independent of
+the current `1.8623` low-energy path endpoint.
+
+A numerical fixed-point exploration of the same rounded bootstrap, used only for route
+selection, puts the zero of `z-U` near
+
+\[
+1.865196.
+\]
+
+Thus `T=1.865` is close to the endpoint of the present retained-pair mechanism.  The
+exact theorem stops at the safely rounded value `1.865`; no claim is made at
+`1.8651` or at the exploratory root.
+
+What is proved:
+
+```text
+t <= 1.865
+-> dominant retained O-O pair weight >0.0027D-o(D)
+-> one shrinking dominant phase carries >0.0009D-o(D) retained pair weight
+-> that phase contains >0.0009D-o(D) actual O-O trains.
+```
+
+What is not proved here:
+
+- low terminal energy for those trains;
+- fixed positive terminal-arc separation;
+- a complement-dual path;
+- an exclusion for `t>1.865`; or
+- C-II closure.
+
+The phase-zero marker route is designed precisely to turn retained pair weight into a
+path without a low-energy threshold, but that is a separate theorem and should be
+audited separately at the new endpoint.
+
+**Disposition:** proved proof-only retained-pair extension through `t<=1.865`. C-II and
+Level I remain open.

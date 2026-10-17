@@ -1,0 +1,171 @@
+# Hostile audit — Target C Sections 127–129
+
+**Date:** 2026-09-12
+**Reviewed:** face fidelity/global defect injection, bounded-face train-loop exclusion,
+and corridor phase purity.
+**Disposition:** **PASS at proof-only scope.**
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+## 1. Section 127: vertex fidelity
+
+Canonical Section 82 gives `I_r subset int(P_r)`. For another unloaded component
+`I_s`, Section 82 gives `I_s subset int(P_s)` and Section 83 gives disjoint cell
+interiors, so no vertex of `I_s` lies in `int(P_r)`.
+
+If a loaded vertex `b` is not an attachment of cell `r`, then `b` is an extreme point
+of the loaded force hull and cannot belong to the convex hull of the other loaded
+vertices, which contains `P_r`. Hence no omitted loaded vertex lies in `P_r`.
+
+Thus
+
+\[
+V(G)\cap\operatorname{int}P_r=I_r.
+\]
+
+**Verdict:** PASS.
+
+## 2. Section 127: omitted-edge test
+
+Let `C` be a bounded face of the induced harmonic graph `H_r`. Its open interior lies
+in `int(P_r)` and contains no positive-core vertex by the preceding result.
+
+A straight positive-contact edge not in `H_r` cannot enter and leave `C` without
+meeting `partial C`. Proper intersections violate contact planarity. If both
+intersections are common boundary vertices, both endpoints lie in the induced vertex
+set `I_r union A_r`, so the contact is already an edge of `H_r` and cannot cut the
+interior of one of its faces. All other cases force a proper crossing.
+
+Hence every bounded local face is an actual bounded global positive-core face.
+Contact-isolated source points inside the region do not invalidate this: they have no
+contact edges and are not vertices of the positive-contact core.
+
+**Verdict:** PASS.
+
+## 3. Section 127: across-cell multiplicity and defect algebra
+
+If one global bounded face were counted in two cells, its nonempty open interior would
+lie in two cell interiors, contradicting Section 83. Therefore local bounded faces
+inject into global bounded faces with their degrees unchanged.
+
+Consequently
+
+\[
+\sum_rP_{{\rm exc},r}\le4f+Q.
+\]
+
+Every nonquadrilateral bounded face has degree at least five, so `f<=Q` and
+`4f+Q<=5Q`. Canonical Section 63 gives
+
+\[
+e_{BB}=Q+2k+u_B+c_B,
+\qquad k=d_H+s_Z,
+\]
+
+hence `Q<=e_BB-k`. Therefore
+
+\[
+\sum_rP_{{\rm exc},r}
+\le4f+Q\le5Q\le5(e_{BB}-k).
+\]
+
+The Section-122 composition subtracts an upper bound for the nonnegative exceptional
+perimeter from the valid aggregate lower bound, so the inequality direction is correct.
+
+**Verdict:** PASS.
+
+## 4. Section 128: Jordan shore contains no loaded endpoint
+
+Assume a nontrivial train terminates twice on one bounded global face. Closing its
+midpoint path through the open face gives a simple closed curve inside the convex force
+hull. The bounded Jordan domain is contained in the convex hull of that curve and hence
+inside the force hull.
+
+A loaded force-hull vertex cannot lie in that open Jordan domain: it is an extreme
+boundary point, whereas membership in the open domain would give it a planar
+neighborhood contained in the force hull. Therefore the bounded shore contains no
+active diameter endpoint and no diameter edge crosses the cut.
+
+**Verdict:** PASS.
+
+## 5. Section 128: contact resultant and summed equilibrium
+
+The closed curve crosses the positive-contact graph exactly in the parallel train
+contacts. The train orientation is coherent across every crossed rhombus, so all cut
+contact vectors have one common direction `u`. Relative-interior KKT normalization
+makes every contact weight strictly positive. Thus the total entering contact
+resultant is
+
+\[
+\left(\sum_{e\in E(\tau)}\alpha_e\right)u\ne0.
+\]
+
+Summing vertex equilibrium over the bounded shore cancels all internal forces. No
+diameter force crosses the shore, so the contact-cut resultant must be zero, a
+contradiction.
+
+No finite shear, old response theorem, or affine-kernel assertion on isolated
+coordinates is used.
+
+**Verdict:** PASS.
+
+## 6. Section 129: exact route accounting
+
+For any directed unit-edge route from `a` to `b` with chord direction `q`,
+
+\[
+m-|a-b|=\sum_i(1-q\cdot v_i).
+\]
+
+A boundary occurrence whose projective direction is separated from `[q]` by at least
+`eta` has `q·v_i<=cos eta` regardless of whether its route orientation points forward
+or back, so it costs at least `1-cos eta`.
+
+Orient both boundary arcs from `a` to `b`. Their occurrence sets are disjoint and their
+combined excess is exactly
+
+\[
+\deg C-2\operatorname{diam}C.
+\]
+
+This proves the occurrence count and weighted alignment inequalities with no repeated
+charging.
+
+**Verdict:** PASS.
+
+## 7. Section 129: Type-II and train-end composition
+
+Canonical Section 84 gives, for a linear-degree bounded inactive face,
+
+\[
+\deg C_D-2\operatorname{diam}C_D=o(D).
+\]
+
+For every fixed angular scale the finite denominator `1-cos eta` is positive, hence
+only `o(D)` boundary occurrences can be transverse to the corridor direction.
+
+Section 127 makes local harmonic defect faces actual global faces while preserving
+physical boundary occurrences. Train endpoints are a subset of those occurrences, so
+the same phase-purity bound applies without assuming every boundary edge is a train
+endpoint. Section 128 ensures two endpoints on one bounded face come from distinct
+trains.
+
+The host interpretation adds no false free support: the same corridor route excess pays
+the physical alignment defect of the endpoint cohort. The theorem explicitly stops
+short of claiming that corridor phase purity alone excludes an oblique lattice patch.
+
+**Verdict:** PASS.
+
+## 8. Scope and final disposition
+
+- Section 127 is finite on the post-ZF positive-contact core; its Section-84 consequence
+  is Type II.
+- Section 128 is finite and exact in the normalized positive core.
+- Section 129 is Type II for the `o(D)` phase-purity conclusion.
+- Contact-isolated full-source points are retained throughout.
+- No full-source extension of the Section-57 affine kernel is used.
+- None of the three theorems supplies the missing aggregate outer-detour upper bound or
+  a strict diameter-decreasing source competitor.
+
+**Final verdict:** Sections 127–129 survive hostile audit at proof-only scope. They
+safely absorb the unique mathematical content of PR #351 into the post-123 full-core
+structural branch. C-II remains open.

@@ -1,0 +1,209 @@
+# Target C — regression: four boundary hosts annihilate perimeter-subtracted signed return
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** exact finite geometric regression for the all-regime signed-return route.  
+**Dependencies:** none beyond the Section-117 signed-return definitions.
+
+Section 117 gets a positive return constant because at most three directed host directions must serve the four signed train directions `u,-u,v,-v` of a strict rhombus. This note records the sharp obstruction to simply replacing the three principal routes by *all* outer boundary routes.
+
+With four hosts, a large triangle-free strict-rhombus grid can have
+
+\[
+A_4=\Theta(D^2)
+\]
+
+but **zero** perimeter-subtracted route excess and **zero** signed-return loss on every train. Thus an all-regime theorem must prevent a fourth effective host from carrying a linear train population. The three-host mechanism itself cannot be extended to arbitrary outer routes.
+
+---
+
+## 1. Oblique square-grid lattice
+
+Choose two unit vectors `u,v` with angle
+
+\[
+\theta\in(\pi/3,2\pi/3).
+\tag{1.1}
+\]
+
+Let
+
+\[
+\Lambda=\{iu+jv:i,j\in\mathbb Z\}.
+\]
+
+For one lattice difference,
+
+\[
+|au+bv|^2=a^2+b^2+2ab\cos\theta.
+\tag{1.2}
+\]
+
+Since `|cos theta|<1/2`,
+
+\[
+|au+bv|^2
+\ge a^2+b^2-|ab|.
+\tag{1.3}
+\]
+
+For nonzero integers `(a,b)`, the right side is at least one. If both coordinates are nonzero,
+
+\[
+a^2+b^2-|ab|
+=(|a|-|b|)^2+|ab|\ge1;
+\]
+
+if one coordinate vanishes, the claim is immediate.
+
+Equality in the actual norm occurs for the basis vectors `+-u,+-v`. Because the angle is strictly between the two triangular endpoints, `u-v` and `u+v` both have length strictly greater than one. Hence
+
+\[
+\boxed{
+\text{the only unit lattice vectors are }\pm u,\pm v.
+}
+\tag{1.4}
+\]
+
+The lattice is unit-separated and its unit-contact graph is the ordinary square grid in the two basis directions. In particular it contains no unit-contact triangle.
+
+---
+
+## 2. Finite rhombic patch
+
+For integers `M,N>=1`, take
+
+\[
+X_{M,N}:=\{iu+jv:0\le i\le M,\ 0\le j\le N\}.
+\tag{2.1}
+\]
+
+Its contact graph consists exactly of the horizontal and vertical grid edges. The bounded faces are `MN` strict unit rhombi, each of area `sin theta`. Therefore
+
+\[
+\boxed{A_4=MN\sin\theta.}
+\tag{2.2}
+\]
+
+The convex hull `P` is the parallelogram with side vectors `Mu` and `Nv`. Its contact outer walk follows the four straight boundary chains, so
+
+\[
+L=2M+2N=\operatorname{per}(P),
+\qquad
+P_{\rm exc}=0.
+\tag{2.3}
+\]
+
+Consequently the perimeter-subtracted physical route excess is exactly
+
+\[
+\boxed{L+P_{\rm exc}-\operatorname{per}(P)=0.}
+\tag{2.4}
+\]
+
+while `A_4` is quadratic when `M,N` are comparable.
+
+---
+
+## 3. Four hosts make every signed-return loss vanish
+
+Direct the four boundary chains in their outer-walk orientations. Their unit chord/host directions are
+
+\[
+Q=\{u,v,-u,-v\}.
+\tag{3.1}
+\]
+
+For a train parallel to `u`,
+
+\[
+\max_{q\in Q}q\cdot u=1,
+\qquad
+\min_{q\in Q}q\cdot u=-1,
+\]
+
+so
+
+\[
+w_Q(u)=2.
+\tag{3.2}
+\]
+
+Likewise
+
+\[
+w_Q(v)=2.
+\tag{3.3}
+\]
+
+Every complete train in the patch has direction `u` or `v`. Hence every Section-117 train return term is exactly zero:
+
+\[
+\boxed{2-w_Q(u_\tau)=0\quad\text{for every complete train }\tau.}
+\tag{3.4}
+\]
+
+The signed-return inequality is sharp here: both sides of the perimeter-subtracted version are zero even though every rhombus is strict and the rhombic area is quadratic.
+
+---
+
+## 4. Why the Section-117 three-host constant is sharp in host number
+
+Section 117 proves that for two strict-rhombus directions and at most three unit hosts,
+
+\[
+(2-w_Q(u))+(2-w_Q(v))\ge2-\sqrt3>0.
+\tag{4.1}
+\]
+
+The present example shows that replacing `|Q|<=3` by `|Q|<=4` destroys every positive universal constant:
+
+\[
+\boxed{|Q|=4\quad\Longrightarrow\quad
+(2-w_Q(u))+(2-w_Q(v))=0}
+\tag{4.2}
+\]
+
+for the natural four hosts of the oblique parallelogram.
+
+Thus the host-count step is not an artifact of the proof. It is the exact combinatorial source of the signed-return gap.
+
+---
+
+## 5. Consequence for the live all-regime route
+
+A tempting response to the Section-116 isoperimetric-dominance regression is to assign every outer train endpoint to its actual consecutive-attachment route and compare signed return directly with
+
+\[
+L+P_{\rm exc}-\operatorname{per}(P).
+\]
+
+The present finite regression shows that no theorem of the form
+
+\[
+d\bigl(L+P_{\rm exc}-\operatorname{per}(P)\bigr)
+\ge cA_4
+\]
+
+with an absolute `c>0` can hold for arbitrary strict-rhombic carriers using unrestricted outer hosts.
+
+A successful all-regime theorem must instead prove a **source-specific effective-host restriction**. In the language of Sections 117--118, it must show that a fourth (and subsequent) route family cannot carry enough distinct physical train-end occurrences to absorb the quadratic rhombic area. Equivalently, one needs a theorem of the form
+
+```text
+large fourth-host endpoint population
+    => interface / route / diameter-minimality contradiction.
+```
+
+This pinpoints the structural content hidden by the small-`sigma` estimates: they work because all but three principal host corridors have small endpoint capacity. Extending them to all regimes requires controlling fourth-host capacity, not changing the return constant.
+
+---
+
+## 6. Scope
+
+- The patches `X_{M,N}` are local regressions, not claimed global diameter minimizers.
+- No source point is deleted and the lattice is exactly unit-separated.
+- Triangle-freeness is exact because the only unit vectors are `+-u,+-v`.
+- The obstruction persists for arbitrarily large finite patches and for angles arbitrarily close to `pi/3` from above.
+- The regression does not invalidate Sections 117--118; it identifies the exact hypothesis that makes their positive return possible.
+
+**Disposition:** exact regression. An all-regime signed-return closure must control effective fourth-host capacity.

@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+"""Certificate for the common transverse ladder extension through t<=1.8687."""
+from fractions import Fraction as Q
+
+# Reuse the hostile-audited parent path certificate exactly.
+from verify_target_c_coupled_paired_remainder_path_t18687 import dmax, a
+
+# Selected boundary train terminal energy is e_tau <= lambda(delta)=a-delta.
+# The audited train-incidence theorem gives
+#   r_tau/D >= 1-delta-e_tau/2-o(1)
+#             >= 1-a/2-delta/2-o(1).
+# This is adverse at delta=dmax.
+cross_floor = 1 - a/Q(2) - dmax/Q(2)
+assert cross_floor > Q(6536, 10000)
+
+# The finite-defect theorem has a fixed crossing-neighborhood symmetric-difference
+# bound <=70954, hence it is o(D) and does not change the asymptotic density.
+symmetric_difference_cap = 70954
+assert symmetric_difference_cap > 0
+
+print('delta max =', float(dmax))
+print('single-boundary crossing-degree floor/D >', float(cross_floor))
+print('safe common-ladder floor/D =', float(Q(6536, 10000)))
+print('finite symmetric-difference cap =', symmetric_difference_cap)
+print('PASS common transverse ladder through t<=1.8687')

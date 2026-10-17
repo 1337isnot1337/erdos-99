@@ -1,0 +1,119 @@
+#!/usr/bin/env python3
+"""Exact stress regressions for the 60-degree contact-arc threshold.
+
+No global-optimality claim: the hexagon disproves a proposed line-cut transfer
+sign shortcut; crossed chains show the angle threshold is sharp for KKT data.
+All arithmetic is rational, with one formal square root in point coordinates.
+"""
+from fractions import Fraction as F
+from itertools import combinations
+import json
+
+
+def matrix(n):
+    return [[F(0) for _ in range(n)] for _ in range(n)]
+
+
+def laplacian(n, edges, weight):
+    result = matrix(n)
+    for i, j in edges:
+        result[i][i] += weight
+        result[j][j] += weight
+        result[i][j] -= weight
+        result[j][i] -= weight
+    return result
+
+
+def inverse(a):
+    n = len(a)
+    b = [row[:] + [F(i == j) for j in range(n)] for i, row in enumerate(a)]
+    for j in range(n):
+        pivot = next(i for i in range(j, n) if b[i][j])
+        b[j], b[pivot] = b[pivot], b[j]
+        scale = b[j][j]
+        b[j] = [x / scale for x in b[j]]
+        for i in range(n):
+            if i != j:
+                scale = b[i][j]
+                b[i] = [x - scale*y for x, y in zip(b[i], b[j])]
+    return [row[n:] for row in b]
+
+
+def distance_squared(p, q, radical_squared):
+    return (p[0]-q[0])**2 + radical_squared*(p[1]-q[1])**2
+
+
+def check_stress(points, radical_squared, contacts, diameters, alpha, beta):
+    forces = [[F(0), F(0)] for _ in points]
+    for edges, weight in ((contacts, alpha), (diameters, -beta)):
+        for i, j in edges:
+            for d in (0, 1):
+                force = weight*(points[i][d]-points[j][d])
+                forces[i][d] += force
+                forces[j][d] -= force
+    assert all(force == [0, 0] for force in forces)
+    assert len(diameters)*beta == 1
+    distances = {(i, j): distance_squared(points[i], points[j], radical_squared)
+                 for i, j in combinations(range(len(points)), 2)}
+    assert min(distances.values()) == 1
+    maximum = max(distances.values())
+    assert {e for e, d in distances.items() if d == 1} == set(contacts)
+    assert {e for e, d in distances.items() if d == maximum} == set(diameters)
+    assert len(contacts)*alpha == maximum
+    return maximum
+
+
+def hexagon():
+    points = [(F(1), F(0)), (F(1, 2), F(1, 2)), (F(-1, 2), F(1, 2)),
+              (F(-1), F(0)), (F(-1, 2), F(-1, 2)), (F(1, 2), F(-1, 2))]
+    contacts = [tuple(sorted((i, (i+1) % 6))) for i in range(6)]
+    diameters = [(i, i+3) for i in range(3)]
+    assert check_stress(points, F(3), contacts, diameters, F(2, 3), F(1, 3)) == 4
+    # t=(1,sqrt(3)) separates the coherently oriented diameter endpoints.
+    assert all(points[i][0]+3*points[i][1] > 0 and
+               points[j][0]+3*points[j][1] < 0 for i, j in diameters)
+    lc = laplacian(6, contacts, F(2, 3))
+    lh = laplacian(6, diameters, F(1, 3))
+    omega = [[lc[i][j]-lh[i][j] for j in range(6)] for i in range(6)]
+    assert all(sum(omega[i][k]*omega[k][j] for k in range(6)) == 2*omega[i][j]
+               for i in range(6) for j in range(6))
+    # Omega symmetric and Omega^2=2 Omega certify PSD exactly.
+    assert sum(omega[i][i] for i in range(6)) == 6  # rank three
+    grounded_inverse = inverse([row[:5] for row in lc[:5]])
+    incidence = [[F(i == a)-F(i == b) for i in range(5)] for a, b in diameters]
+    transfer = [[sum(q[i]*grounded_inverse[i][j]*r[j]
+                     for i in range(5) for j in range(5))
+                 for r in incidence] for q in incidence]
+    expected = [[F(9, 4), F(3, 4), F(-3, 4)],
+                [F(3, 4), F(9, 4), F(3, 4)],
+                [F(-3, 4), F(3, 4), F(9, 4)]]
+    assert transfer == expected
+    return dict(example="regular_unit_hexagon", diameter_squared=4,
+                transfer=[[str(x) for x in row] for row in transfer],
+                stress_psd_rank=3, line_cut=True)
+
+
+def cross(m, k):
+    assert m >= 2 and k >= 3
+    c = F(1, 2)-F(1, k*k)
+    s2 = 1-c*c
+    points = [(F(i), F(0)) for i in range(-m, m+1)]
+    points += [(F(i)*c, F(i)) for i in range(-m, m+1) if i]
+    index = {p: i for i, p in enumerate(points)}
+    contacts = []
+    diameters = []
+    for u in ((F(1), F(0)), (c, F(1))):
+        at = lambda i: index[(i*u[0], i*u[1])]
+        contacts += [tuple(sorted((at(i), at(i+1)))) for i in range(-m, m)]
+        diameters.append(tuple(sorted((at(-m), at(m)))))
+    assert check_stress(points, s2, contacts, diameters, F(m), F(1, 2)) == 4*m*m
+    assert distance_squared((F(1), F(0)), (c, F(1)), s2) == 1+F(2, k*k)
+    return dict(example="near_sixty_degree_cross", m=m, k=k, cosine=str(c),
+                neighbor_distance_squared=str(1+F(2, k*k)),
+                contacts=len(contacts), diameter_pairs=2, global_optimality=False)
+
+
+if __name__ == "__main__":
+    print(json.dumps(hexagon(), sort_keys=True))
+    for m, k in ((2, 3), (4, 10), (4, 100)):
+        print(json.dumps(cross(m, k), sort_keys=True))

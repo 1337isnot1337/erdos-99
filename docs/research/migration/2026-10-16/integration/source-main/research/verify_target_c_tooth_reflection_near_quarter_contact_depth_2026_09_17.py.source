@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+"""Regression checks for near-quarter-power reflection contact depth."""
+
+from fractions import Fraction
+
+
+# kappa = D^(1/4)/omega^2, so the available slow-scale module count is
+# D^(1/4)/kappa = omega^2.
+assert Fraction(1, 4) - Fraction(1, 4) == 0
+
+# Per-module geometric tube cost at r=kappa:
+# D^(3/4)*kappa = D/omega^2.
+assert Fraction(3, 4) + Fraction(1, 4) == 1
+
+# The quadratic tube term is kappa^2 = D^(1/2)/omega^4.
+assert 2 * Fraction(1, 4) == Fraction(1, 2)
+
+# Selecting m=omega modules gives total leading cost D/omega and
+# quadratic cost D^(1/2)/omega^3, both o(D) as omega -> infinity.
+assert Fraction(1, 2) < 1
+
+# Inter-module Euclidean/contact distance is
+# kappa*D^(3/4) = D/omega^2, whereas the chosen contact radius is
+# only kappa = D^(1/4)/omega^2.
+assert Fraction(3, 4) + Fraction(1, 4) == 1
+assert Fraction(1, 4) < 1
+
+# The concrete slow subpolynomial choice omega=log log D therefore leaves
+# D^(1/4)/(log log D)^2 = D^(1/4-o(1)) contact depth.
+
+print("PASS: near-quarter reflection contact-depth certificate")

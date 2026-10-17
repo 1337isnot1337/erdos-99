@@ -1,0 +1,101 @@
+#!/usr/bin/env python3
+"""Exact seven-outsider exchange barrier for the Target-C 45-four-cycle test.
+
+The preceding six-outsider verifier proves that a sufficient 44-cycle family,
+if one exists, must use at least seven cycles outside the selected 45-cycle
+family F.  This verifier rules out exactly seven outsiders.  Together they
+prove that every sufficient 44-cycle family chosen from all 210 undirected
+simple K8 four-cycles must use at least eight cycles outside F (and therefore
+omit at least nine members of F).
+
+The Python layer reuses the committed exact quotient construction and exports
+only integer data to the companion C++ exhaustive core.  The core is used
+because the seven-outsider rank<=4 ledger has 9,382,140 cases.  Use
+--start/--stop to split the deterministic sorted ledger into bounded reruns.
+"""
+
+from argparse import ArgumentParser
+from fractions import Fraction
+from pathlib import Path
+import runpy
+import shutil
+import subprocess
+import tempfile
+
+HERE = Path(__file__).resolve().parent
+BASE_NAME = "verify_target_c_support7_global_segment_45_four_cycle_exchange_barrier_2026_09_19.py"
+CORE_NAME = "verify_target_c_support7_global_segment_45_four_cycle_seven_exchange_core_2026_09_19.cpp"
+
+
+def export_integer_instance(path: Path) -> None:
+    B = runpy.run_path(str(HERE / BASE_NAME))
+    outside = B["OUTSIDE"]
+    class_items = B["CLASS_ITEMS"]
+    compact_dirs = B["COMPACT_DIRS"]
+
+    cycle_to_class = {}
+    for ci, (_key, ids) in enumerate(class_items):
+        for e in ids:
+            assert e not in cycle_to_class
+            cycle_to_class[e] = ci
+
+    assert len(outside) == 165
+    assert len(class_items) == 105
+    assert len(cycle_to_class) == 165
+
+    rows = ["165 59 45"]
+    for e, item in enumerate(outside):
+        ci = cycle_to_class[e]
+        full_key = class_items[ci][0]
+        pivot = next(i for i, x in enumerate(full_key) if x)
+        lam = item["residual"][pivot] / full_key[pivot]
+        assert lam in (1, -1)
+        assert all(
+            item["residual"][i] == lam * full_key[i]
+            for i in range(len(full_key))
+        )
+        residual = tuple(int(lam * x) for x in compact_dirs[ci])
+        assert len(residual) == 59
+        assert max(map(abs, residual)) <= 1
+
+        f2 = tuple(int(2 * x) for x in item["fcoord"])
+        assert len(f2) == 45
+        assert all(Fraction(x, 2) == y for x, y in zip(f2, item["fcoord"]))
+        assert max(map(abs, f2)) <= 2
+        rows.append(
+            f"{ci} " + " ".join(map(str, residual)) + " | " + " ".join(map(str, f2))
+        )
+
+    path.write_text("\n".join(rows) + "\n")
+
+
+def main() -> None:
+    parser = ArgumentParser()
+    parser.add_argument("--start", type=int, default=0)
+    parser.add_argument("--stop", type=int)
+    args = parser.parse_args()
+    assert args.start >= 0
+    if args.stop is not None:
+        assert args.start <= args.stop
+
+    compiler = shutil.which("g++") or shutil.which("c++")
+    if compiler is None:
+        raise SystemExit("a C++17 compiler (g++ or c++) is required")
+
+    with tempfile.TemporaryDirectory(prefix="e99-seven-exchange-") as td:
+        td = Path(td)
+        data = td / "instance.txt"
+        exe = td / "seven_exchange"
+        export_integer_instance(data)
+        subprocess.run(
+            [compiler, "-O3", "-std=c++17", str(HERE / CORE_NAME), "-o", str(exe)],
+            check=True,
+        )
+        cmd = [str(exe), "--input", str(data), "--start", str(args.start)]
+        if args.stop is not None:
+            cmd += ["--stop", str(args.stop)]
+        subprocess.run(cmd, check=True)
+
+
+if __name__ == "__main__":
+    main()

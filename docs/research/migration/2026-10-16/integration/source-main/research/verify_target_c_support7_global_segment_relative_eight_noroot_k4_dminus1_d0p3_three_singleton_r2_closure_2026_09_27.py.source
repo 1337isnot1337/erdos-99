@@ -1,0 +1,191 @@
+#!/usr/bin/env python3
+"""Exact support certificate closing the r=2 weight-two-line subcase."""
+from argparse import ArgumentParser
+from collections import Counter
+from itertools import combinations
+from pathlib import Path
+import sys
+
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+import verify_target_c_support7_global_segment_relative_eight_noroot_k4_dminus1_d1p0_support_closure_2026_09_26 as B
+
+SHARDS = ((0, 5000), (5000, 10000), (10000, 15000),
+          (15000, 20000), (20000, 25000), (25000, 27763))
+EXPECTED_H19 = (3924, 1642, 1586, 781, 1065, 446)
+
+
+def disjoint_pair_masks():
+    out = set()
+    for p1 in combinations(range(8), 2):
+        rest = tuple(x for x in range(8) if x not in p1)
+        for p2 in combinations(rest, 2):
+            m1 = (1 << p1[0]) | (1 << p1[1])
+            m2 = (1 << p2[0]) | (1 << p2[1])
+            out.add(tuple(sorted((m1, m2))))
+    assert len(out) == 210
+    return tuple(sorted(out))
+
+
+PAIR_MASKS = disjoint_pair_masks()
+
+
+def mask_of(occurrences):
+    return sum(1 << i for i in occurrences)
+
+
+def sharp_survival(mask, pair_mask):
+    return (mask & ~pair_mask).bit_count() >= 2
+
+
+def virtual_survivor(data, pair_masks):
+    T = tuple(sorted(data))
+    rank_T = B.tri_rank(T)
+    masks = {}
+    E = set()
+    S = set()
+
+    for b, (occurrences, dim, incidence) in data.items():
+        mask = mask_of(occurrences)
+        masks[b] = mask
+
+        if (
+            dim == 1
+            and ((incidence == 2 and mask in pair_masks) or incidence >= 3)
+        ) or (dim == 2 and incidence >= 4):
+            E.add(b)
+
+        if (
+            all(sharp_survival(mask, pm) for pm in pair_masks)
+            and ((dim == 1 and incidence >= 2) or (dim == 2 and incidence >= 4))
+        ):
+            S.add(b)
+
+    if len(S) < 3:
+        return None
+
+    N = set(T) - E
+    min_from_N = max(0, len(N) - (rank_T - 4))
+    if min_from_N > 3:
+        return None
+
+    S_in_N = sorted(S & N)
+    S_in_E = sorted(S & E)
+
+    for x in range(min_from_N, min(3, len(S_in_N)) + 1):
+        y = 3 - x
+        if y > len(S_in_E):
+            continue
+
+        for X in combinations(S_in_N, x):
+            Xset = set(X)
+            forced_complete = tuple(sorted(N - Xset))
+            rank_C = B.tri_rank(forced_complete)
+            if rank_C != len(forced_complete):
+                continue
+            if rank_T - rank_C < 4:
+                continue
+
+            for Y in combinations(S_in_E, y):
+                singletons = Xset | set(Y)
+
+                nominal_dim = sum(
+                    data[b][1] for b in E if b not in singletons
+                )
+                nominal_dim += sum(
+                    1 for b in singletons if data[b][1] == 2
+                )
+                if nominal_dim < 4:
+                    continue
+
+                generator_support = 0
+                for b in E:
+                    if b not in singletons:
+                        generator_support |= masks[b]
+                for b in singletons:
+                    if data[b][1] == 2:
+                        generator_support |= masks[b]
+                if generator_support.bit_count() < 7:
+                    continue
+
+                return (
+                    tuple(sorted(E)),
+                    tuple(sorted(singletons)),
+                    forced_complete,
+                    nominal_dim,
+                    generator_support,
+                )
+
+    return None
+
+
+def run_shard(reps, shard):
+    a, z = SHARDS[shard]
+    census = Counter()
+    survivors = []
+
+    for i in range(a, z):
+        data = B.block_data(reps[i])
+        census["orbits"] += 1
+
+        if len(data) > 19:
+            continue
+        census["h19"] += 1
+
+        for pair_masks in PAIR_MASKS:
+            census["tests"] += 1
+            witness = virtual_survivor(data, pair_masks)
+            if witness is not None:
+                survivors.append((i, reps[i], pair_masks, witness))
+                break
+
+        if survivors:
+            break
+
+    assert census["orbits"] == z - a, census
+    assert census["h19"] == EXPECTED_H19[shard], census
+    assert census["tests"] == EXPECTED_H19[shard] * len(PAIR_MASKS), census
+    assert not survivors, survivors
+    return census
+
+
+def main():
+    ap = ArgumentParser()
+    ap.add_argument("--shard", type=int, choices=range(6))
+    args = ap.parse_args()
+
+    assert B.lucas_lehmer_31()
+    assert B.MOD * B.MOD > 3**15
+
+    reps = B.support_multiset_orbits()
+    assert len(reps) == 27763
+
+    shards = range(6) if args.shard is None else (args.shard,)
+    total = Counter()
+
+    for shard in shards:
+        census = run_shard(reps, shard)
+        total.update(census)
+        print(
+            "shard", shard,
+            "range", SHARDS[shard],
+            "h_le_19", census["h19"],
+            "support_pairset_tests", census["tests"],
+            "virtual_survivors", 0,
+        )
+
+    if args.shard is None:
+        assert total["orbits"] == 27763
+        assert total["h19"] == 9444
+        assert total["tests"] == 1983240
+        print("PASS: r=2 two-weight-two-line subcase closed")
+        print("support_multiset_orbits_size_8", total["orbits"])
+        print("touch_at_most_19", total["h19"])
+        print("disjoint_weight_two_pairsets", len(PAIR_MASKS))
+        print("support_pairset_tests", total["tests"])
+        print("virtual_survivors", 0)
+        print("hadamard_exact_rank_bound", B.MOD * B.MOD > 3**15)
+
+
+if __name__ == "__main__":
+    main()

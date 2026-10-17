@@ -1,0 +1,123 @@
+#!/usr/bin/env python3
+"""Add source-basis kernel-incidence filtering to the Profile B actual-state audit.
+
+The imported audit already enforces a fixed nine-singleton source basis, exact
+source coefficient realization, the six-row common-basis identity, and exact
+puncture-fan ranks. This wrapper rejects fixed-nine candidates whose individual
+source basis classes have zero-image patterns incompatible with the seven
+distinct clean-puncture kernel planes.
+"""
+
+from collections import Counter
+from pathlib import Path
+import contextlib
+import importlib.util
+import io
+
+HERE = Path(__file__).resolve().parent
+BASE = HERE / "verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_actual_state_realization_2026_09_22.py"
+spec = importlib.util.spec_from_file_location("e99_profile_b_actual_state", BASE)
+A = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(A)
+
+F = A.F
+L = A.L
+BASE_FIXED_EXTRA_RANK = F.fixed_extra_rank
+
+INCIDENCE_COUNTS = Counter()
+CURRENT_BLOCK_KEY = None
+CURRENT_ZERO7 = None
+CURRENT_ZERO6 = []
+
+
+def zero_source_indices(ext, space, state_data, block_states):
+    """Indices of fixed source basis classes with zero descendant image."""
+    out = []
+    for i, item in enumerate(block_states):
+        if BASE_FIXED_EXTRA_RANK(ext, space, state_data, (item,)) == 0:
+            out.append(i)
+    return tuple(out)
+
+
+def fixed_extra_rank_with_kernel_incidence(ext, space, state_data, block_states):
+    """Enforce the distinct-kernel-plane incidence rule on each fixed nine-set."""
+    global CURRENT_BLOCK_KEY, CURRENT_ZERO7, CURRENT_ZERO6
+
+    rank = BASE_FIXED_EXTRA_RANK(ext, space, state_data, block_states)
+    if len(block_states) != 9:
+        return rank
+
+    key = tuple(block for block, _state in block_states)
+
+    if len(ext) == 8:
+        CURRENT_BLOCK_KEY = key
+        CURRENT_ZERO7 = None
+        CURRENT_ZERO6 = []
+        return rank
+
+    if key != CURRENT_BLOCK_KEY:
+        # Defensive reset. In the fixed-nine caller an eight-row rank call
+        # starts every candidate before any descendant calls.
+        CURRENT_BLOCK_KEY = key
+        CURRENT_ZERO7 = None
+        CURRENT_ZERO6 = []
+
+    if len(ext) == 7 and rank == 8:
+        zero7 = zero_source_indices(ext, space, state_data, block_states)
+        INCIDENCE_COUNTS[("zero7_size", len(zero7))] += 1
+        if len(zero7) > 1:
+            INCIDENCE_COUNTS["reject_zero7_dimension"] += 1
+            return -1
+        CURRENT_ZERO7 = zero7
+        CURRENT_ZERO6 = []
+        return rank
+
+    if len(ext) == 6 and rank == 7 and CURRENT_ZERO7 is not None:
+        zero6 = zero_source_indices(ext, space, state_data, block_states)
+        INCIDENCE_COUNTS[("zero6_size", len(zero6))] += 1
+        if len(zero6) > 2:
+            INCIDENCE_COUNTS["reject_zero6_dimension"] += 1
+            return -1
+
+        if CURRENT_ZERO7:
+            a = CURRENT_ZERO7[0]
+            if a not in zero6:
+                INCIDENCE_COUNTS["reject_lost_seven_kernel"] += 1
+                return -1
+
+        CURRENT_ZERO6.append(zero6)
+        if len(CURRENT_ZERO6) == 7:
+            if not CURRENT_ZERO7:
+                if sum(len(z) == 2 for z in CURRENT_ZERO6) > 1:
+                    INCIDENCE_COUNTS["reject_two_double_zero_children"] += 1
+                    return -1
+            else:
+                a = CURRENT_ZERO7[0]
+                second = []
+                for z in CURRENT_ZERO6:
+                    if len(z) == 2:
+                        second.append(z[0] if z[1] == a else z[1])
+                if len(second) != len(set(second)):
+                    INCIDENCE_COUNTS["reject_repeated_second_zero"] += 1
+                    return -1
+            INCIDENCE_COUNTS["kernel_incidence_survivors"] += 1
+        return rank
+
+    return rank
+
+
+F.fixed_extra_rank = fixed_extra_rank_with_kernel_incidence
+
+
+if __name__ == "__main__":
+    try:
+        L.B.main()
+    finally:
+        print("global_lift_counts", L.GLOBAL_LIFT_COUNTS)
+        print("global_lift_examples", L.GLOBAL_LIFT_EXAMPLES)
+        print("fixed_nine_counts", F.FIXED_NINE_COUNTS)
+        print("fixed_nine_examples", F.FIXED_NINE_EXAMPLES)
+        print("actual_counts", A.ACTUAL_COUNTS)
+        print("actual_examples", A.ACTUAL_EXAMPLES)
+        print("kernel_incidence_counts", INCIDENCE_COUNTS)

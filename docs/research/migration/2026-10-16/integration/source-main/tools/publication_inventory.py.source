@@ -1,0 +1,177 @@
+#!/usr/bin/env python3
+"""Print a conservative, dry-run inventory for a possible curated E99 export.
+
+This tool reads a committed Git tree and emits path, size, and blob ID metadata.
+It never copies files or creates an export. ``include`` means a candidate for a
+future export after the repository-wide license and owner-approval gates have
+been satisfied; it is not a rights determination.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import subprocess
+import sys
+from collections import Counter
+from dataclasses import asdict, dataclass
+from pathlib import Path, PurePosixPath
+
+STATE_PATH = "docs/state/theorem-state.yaml"
+STATE_VERSION_RE = re.compile(rb"(?m)^state_version:\s*[\"']?([^\"'\s]+)")
+
+EXCLUDED_PREFIXES = (
+    "docs/archive/",
+    "docs/reports/",
+    "docs/audits/",
+    "docs/prompts/historical/",
+    "research/legacy/",
+    "research/cleanup/",
+    "papers/",
+    "extracted/",
+)
+EXCLUDED_PATHS = {"docs/state/artifact-index.jsonl"}
+EXCLUDED_SUFFIXES = {".pdf", ".png", ".jpg", ".jpeg", ".gif", ".zip", ".gz"}
+INCLUDE_ROOT_FILES = {
+    ".editorconfig",
+    ".gitignore",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "pyproject.toml",
+}
+ROOT_LICENSE_NAMES = {"license", "license.txt", "license.md", "copying", "copying.txt"}
+INCLUDE_PREFIXES = ("tools/", "scripts/")
+
+
+@dataclass(frozen=True)
+class Entry:
+    path: str
+    action: str
+    reason: str
+    size_bytes: int
+    git_blob_oid: str
+
+
+def classify_path(path: str) -> tuple[str, str]:
+    """Return a conservative action and human-readable reason for one path."""
+    lowered = path.lower()
+    if path in EXCLUDED_PATHS:
+        return "exclude", "generated index covers a large unreviewed archive"
+    if path.startswith(EXCLUDED_PREFIXES):
+        if path.startswith(("papers/", "extracted/")):
+            return "exclude", "third-party source copy or derived extraction; rights not cleared"
+        return "exclude", "historical, unreviewed, or superseded archive; omit by default"
+    if PurePosixPath(lowered).suffix in EXCLUDED_SUFFIXES:
+        return "exclude", "binary content requires a separate rights and content review"
+    if path in INCLUDE_ROOT_FILES or path.startswith(INCLUDE_PREFIXES):
+        return "include", "project infrastructure candidate; global license and owner gate still applies"
+    return "review", "requires file-level scope, provenance, privacy, and license review"
+
+
+def run_git(root: str, *args: str) -> bytes:
+    return subprocess.check_output(["git", "--no-replace-objects", "-C", root, *args], stderr=subprocess.PIPE)
+
+
+def resolve_commit(root: str, ref: str) -> str:
+    if not re.fullmatch(r"[A-Za-z0-9_./^~-]+", ref) or ref.startswith("-"):
+        raise ValueError("ref must be a Git revision expression without options or whitespace")
+    output = run_git(root, "rev-parse", "--verify", f"{ref}^{{commit}}")
+    return output.decode("ascii").strip()
+
+
+def read_state_version(root: str, commit: str) -> str | None:
+    try:
+        data = run_git(root, "show", f"{commit}:{STATE_PATH}")
+    except subprocess.CalledProcessError:
+        return None
+    match = STATE_VERSION_RE.search(data)
+    return match.group(1).decode("utf-8") if match else None
+
+
+def read_entries(root: str, commit: str) -> list[Entry]:
+    """Read all blob entries at commit; paths are decoded losslessly."""
+    output = run_git(root, "ls-tree", "-r", "-l", "-z", "--full-tree", commit)
+    entries: list[Entry] = []
+    for record in output.split(b"\0"):
+        if not record:
+            continue
+        metadata, raw_path = record.split(b"\t", 1)
+        mode, object_type, oid, raw_size = metadata.split()
+        if object_type != b"blob":
+            continue
+        path = raw_path.decode("utf-8", errors="surrogateescape")
+        action, reason = classify_path(path)
+        size = 0 if raw_size == b"-" else int(raw_size)
+        entries.append(
+            Entry(path, action, reason, size, oid.decode("ascii"))
+        )
+    return entries
+
+
+def build_inventory(root: str, ref: str, dependency_plan: dict | None = None) -> dict:
+    commit = resolve_commit(root, ref)
+    entries = read_entries(root, commit)
+    if dependency_plan is not None:
+        if dependency_plan.get("commit") != commit:
+            raise ValueError("dependency plan belongs to a different commit")
+        required = {r["path"]: r for r in dependency_plan["entries"]}
+        replaced = []
+        for entry in entries:
+            if entry.path in required:
+                if required[entry.path]["git_blob_oid"] != entry.git_blob_oid:
+                    raise ValueError("dependency plan blob identity mismatch")
+                entry = Entry(entry.path, "review", "required active-system evidence; exact-blob content, attribution, privacy and rights review required", entry.size_bytes, entry.git_blob_oid)
+            replaced.append(entry)
+        if set(required) - {e.path for e in entries}:
+            raise ValueError("dependency plan contains absent files")
+        entries = replaced
+    counts = Counter(entry.action for entry in entries)
+    has_root_license = any(
+        "/" not in entry.path and entry.path.lower() in ROOT_LICENSE_NAMES
+        for entry in entries
+    )
+    return {
+        "schema_version": 1,
+        "mode": "dry-run inventory only; no files are copied or exported",
+        "reference": ref,
+        "commit": commit,
+        "state_version": read_state_version(root, commit),
+        "root_license_present": has_root_license,
+        "action_counts": {
+            action: counts.get(action, 0)
+            for action in ("include", "exclude", "review")
+        },
+        "license_gate": (
+            "A root license file is present; verify its scope, compatibility, and owner approval."
+            if has_root_license
+            else "No root license is present at this revision; include entries are not cleared for redistribution."
+        ),
+        "entries": [asdict(entry) for entry in entries],
+    }
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--root", default=".", help="repository worktree (default: current directory)")
+    parser.add_argument("--ref", default="HEAD", help="committed Git revision to inventory (default: HEAD)")
+    parser.add_argument("--summary", action="store_true", help="print counts and baseline only")
+    parser.add_argument("--dependency-plan", type=Path, help="exact-commit dependency plan overrides archive exclusions as review candidates")
+    args = parser.parse_args(argv)
+    try:
+        inventory = build_inventory(args.root, args.ref, json.loads(args.dependency_plan.read_text()) if args.dependency_plan else None)
+    except (OSError, ValueError, subprocess.CalledProcessError) as exc:
+        print(f"publication inventory failed: {exc}", file=sys.stderr)
+        return 2
+
+    if args.summary:
+        summary = {key: value for key, value in inventory.items() if key != "entries"}
+        print(json.dumps(summary, indent=2, sort_keys=True))
+    else:
+        print(json.dumps(inventory, indent=2, sort_keys=True))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+"""Regression certificate for the THIN growing-braid/growing-fence theorem."""
+from fractions import Fraction
+from math import sqrt, log, floor
+
+# Audited upstream constants.
+gamma = Fraction(791, 9_600_000_000)
+nu = gamma / 16
+p0 = Fraction(1609, 2500)
+Tstar = Fraction(6121, 2000)
+mu = 0.01
+q0 = float(p0) - (1 + 2*mu)/sqrt(3)
+lam = q0 / float(Tstar)
+Cstar = 5.0 * (float(Tstar)/q0)**2
+
+assert q0 > 0
+assert abs(q0 - 0.05470272542658161) < 1e-15
+assert 0 < lam < 1
+assert abs(Cstar - 15650.810858588804) < 1e-8
+
+# Fixed (r,s) row coefficient relative to N after one row-phase split.
+def rows_per_N(r: int, s: int) -> float:
+    return 0.75 * (lam ** (2*s)) / (5 ** r)
+
+assert rows_per_N(1, 1) > 0
+# s=1 recovers the fixed-bracket theorem.
+assert abs(rows_per_N(1, 1) - 4.792083980673866e-05) < 1e-18
+assert abs(rows_per_N(2, 1) - 9.584167961347732e-06) < 1e-19
+# Increasing r costs exactly 5; increasing s costs exactly (T/q)^2.
+for r in range(1, 5):
+    for s in range(1, 5):
+        if r > 1:
+            assert abs(rows_per_N(r-1, s)/rows_per_N(r, s) - 5.0) < 1e-10
+        if s > 1:
+            ratio = rows_per_N(r, s-1)/rows_per_N(r, s)
+            assert abs(ratio - (float(Tstar)/q0)**2) < 1e-7
+
+# Along r=s=k the denominator is Cstar^k, so any k=o(log D) loses only D^o(1).
+for L in [100, 400, 1600, 6400, 25600]:  # L = log D
+    k = floor(sqrt(L))
+    exponent_loss = k*log(Cstar)/L
+    assert exponent_loss < 1.0
+losses = []
+for L in [100, 400, 1600, 6400, 25600]:
+    k = floor(sqrt(L))
+    losses.append(k*log(Cstar)/L)
+assert all(losses[i+1] < losses[i] for i in range(len(losses)-1))
+
+# Compatibility of a concrete slow diagonal with matching and train-subset errors.
+# Delta/N=O(D^-1/4); k^2/D also tends to zero.
+for L in [100, 400, 1600]:
+    k = floor(sqrt(L))
+    assert 2*log(max(k,1)) - L/4 < 0
+    assert 2*log(max(k,1)) - L < 0
+
+print('THIN growing-braid/growing-fence certificate: PASS')
+print(f'nu={float(nu):.15g}')
+print(f'q0={q0:.15g}')
+print(f'q0/Tstar={lam:.15g}')
+print(f'Cstar={Cstar:.15g}')
+print(f'r=s=1 rows/N={rows_per_N(1,1):.15g}')
+print(f'r=2,s=2 rows/N={rows_per_N(2,2):.15g}')
+print(f'r=2,s=2 rows/D={rows_per_N(2,2)*float(nu):.15g}')

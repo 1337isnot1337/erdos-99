@@ -1,0 +1,149 @@
+<!-- theorem-state: {"artifact_id":"ART-0DD6B1BE85D8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
+# Erdős Problem #99 — Target A exterior source-gate boundary budget
+
+**Date:** 2026-09-05  
+**Run type:** exact source-sector localization  
+**Target:** Target A Sections 168–174  
+**Depends on:** zero-slack full source matching (168.2), boundary-layer packing estimate (72.12), source-label shield-crossing theorem  
+**LEVEL I STATUS:** STILL OPEN
+
+## 1. Purpose
+
+The source-label shield-crossing theorem proves that, for a zero-slack matching `x -> a_x` from `X^*` into the genuine source `A^0`, internal source labels can change geometric response sector only at cost at most five labels per contact-shield vertex.
+
+Its stated remaining loophole is an exterior source label
+
+`a_x notin K^*`.
+
+Such a segment can leave the response hull through `partial K^*` without crossing the interior contact shield. This note shows that the entire exterior-label population is nevertheless boundary-order, with the same explicit `12d+9` constant already canonical in Target A.
+
+## 2. Every exterior gate starts in the one-unit response boundary layer
+
+Write
+
+`K^*=conv X^*`, `diam(K^*)=d`.
+
+Fix the zero-slack matching from Theorem 168.2,
+
+`M_A : X^* -> A^0`,
+
+and write `a_x=M_A(x)`. Every matching edge is strict:
+
+`|x-a_x|<1`.
+
+Define the exterior-gate start set
+
+`G_ext={x in X^*: a_x notin K^*}`.
+
+### Lemma 1 — exterior gates are boundary-layer vertices
+
+For every `x in G_ext`,
+
+`dist(x,partial K^*)<1`.
+
+### Proof
+
+The segment `[x,a_x]` starts in the closed convex body `K^*` and ends outside it, so it meets `partial K^*` at some point `b`. Since `b` lies on the segment between `x` and `a_x`,
+
+`dist(x,partial K^*) <= |x-b| < |x-a_x| <1`.
+
+`square`
+
+No source-hull information is needed for this step.
+
+## 3. Exact boundary-layer count
+
+The proof of canonical estimate (72.12) uses only unit separation and convex-hull perimeter: radius-`1/2` disks around points within distance one of the hull boundary are disjoint and lie in the radius-`3/2` boundary tube. Therefore the same estimate applies verbatim to the unit-separated point set `X^*` in its own hull `K^*`.
+
+Let
+
+`B_1(X^*)={x in X^*: dist(x,partial K^*)<=1}`.
+
+Then
+
+`|B_1(X^*)| <= 12 per(K^*)/pi + 9`.
+
+Cauchy's perimeter inequality for a convex body of diameter `d` gives
+
+`per(K^*)<=pi d`.
+
+Hence
+
+`|B_1(X^*)|<=12d+9`.
+
+Together with Lemma 1:
+
+### Theorem 2 — exterior source-gate budget
+
+For every zero-slack source matching `M_A:X^*->A^0`,
+
+`|G_ext| <= 12d+9`.
+
+This bound is uniform over the choice of saturating source matching.
+
+## 4. Combined sector-localization theorem
+
+Let `Sigma` be any finite unit-contact shield in `X^*`, and let
+
+`D_1,...,D_k`
+
+be the components of `K^*\|Sigma|`.
+
+Call a matched vertex `x in X^*\V(Sigma)` **sector-good** if its source label `a_x` lies in `K^*` and lies in the same component `D_i` as `x`.
+
+The source-label shield-crossing theorem gives at most `5|V(Sigma)|` failures among labels lying in `K^*`. Theorem 2 gives at most `12d+9` exterior labels. Therefore:
+
+### Corollary 3 — zero-slack matching is sector-local up to explicit boundary order
+
+For every zero-slack source matching and every finite unit-contact shield,
+
+`#{x in X^*\V(Sigma): x is not sector-good}`
+
+`<= 5|V(Sigma)| + 12d + 9`.
+
+Equivalently, after removing at most that many matched response vertices, the genuine-source matching restricts sector-by-sector:
+
+`x in D_i  =>  a_x in A^0 cap D_i`.
+
+For a three-channel locked-stress fan this gives a genuine source labeling of the three response sectors with an explicit defect controlled only by the fan size and response-hull diameter.
+
+## 5. Exact implication and remaining gap
+
+Sections 173–174 already make the Schur response sector-local after deleting a tube/basis-closed shield. Corollary 3 now makes the **genuine-source matching** sector-local as well, up to
+
+`5|V(Sigma)|+12d+9`
+
+vertices.
+
+Thus the source/response coordinate-identification problem is reduced further: a closing Section-174 population theorem no longer needs to handle arbitrary cross-sector source matching or arbitrarily many exterior source gates.
+
+The remaining quantitative gap is sharper:
+
+> Compare the sector-local source populations `|A^0 cap D_i|` simultaneously with the response populations `|X_i|` and `|Z_i|+|O_i|+|C_i^circ|` strongly enough to recover the required signed surplus `s`, while paying the explicit source-localization defect and the basis-closed tube-shield cost.
+
+A generic inequality from planarity is still impossible by the existing annular/full-rank regressions. The needed gain must use zero-slack source capacity, the co-phased source monomer/lozenge complex, or the locked stress fan.
+
+## 6. Regression audit
+
+- No claim is made that every exterior gate begins at a Schur terminal; the bound applies to all `X^*` vertices and therefore does not need that false strengthening.
+- The `12d+9` estimate is applied to `X^*` itself, not imported from the remote source hull; its proof depends only on unit separation and convex perimeter.
+- The theorem does not identify the two independent source and response matchings.
+- No common-neighbor SDR is asserted, so the Section 166 collision regression remains respected.
+- The conclusion is boundary-order, not yet enough by itself to prove `zeta>=s`.
+
+## 7. Handoff
+
+```text
+LEVEL I STATUS: STILL OPEN.
+
+Exterior labels are no longer unbounded:
+
+  #{x in X*: source label a_x lies outside K*} <= 12d+9.
+
+Combining with the source-label shield-crossing theorem, for any contact shield Sigma:
+
+  #{off-shield X* vertices whose source labels do not remain in the same K* sector}
+  <= 5|V(Sigma)| + 12d + 9.
+
+Next: exploit the now-common sector decomposition of the genuine source matching and Schur response to prove the signed sector population surplus, or convert a deficient sector into a strict sub-d competitor.
+```

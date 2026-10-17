@@ -1,0 +1,207 @@
+# Target C: closure of the final seven-no-root `k=5` branch by global containment lift
+
+Date: 2026-09-21
+
+Status: exact structural closure of the last open seven-no-root `k=5` arithmetic branch,
+
+`D=-1, k=5, d=0, p=7`.
+
+Together with the previously committed `k=5` branch closures, this closes the entire seven-no-root `k=5` layer. It does not by itself close the seven-no-root `k=6` or `k=7` layers and does not close C-II.
+
+Companion arithmetic checker:
+
+`research/verify_target_c_support7_global_segment_relative_seven_noroot_k5_dminus1_d0p7_global_lift_2026_09_21.py`
+
+The proof uses only structural statements already certified in the repository. No new finite census is required.
+
+## 1. Inputs from the preceding all-pair synchronization result
+
+Assume, for contradiction, that a seven-no-root state `B` exists with
+
+`D(B)=-1, k(B)=5, d(B)=0, p(B)=7`.
+
+Let
+
+`P <= Q^7`
+
+be its coefficient-constraint space. Since `k=5`, `rank(P)=2`.
+
+The preceding all-pair synchronization theorem proves that every one- and two-coordinate puncture of `P` still has rank two. In particular
+
+`d_1(P)>=3`.
+
+For each external coordinate `i`, write
+
+`P_i = pi_i(P) <= Q^6`.
+
+Then every `P_i` is a synchronized six-row rank-two coefficient space: all six of its one-coordinate punctures still have rank two.
+
+The preceding reduction also leaves exactly two possible incomplete-root patterns.
+
+Pattern B:
+
+- five singleton incomplete blocks and one pair incomplete block;
+- every one-row deletion has virtual-canonical deficiency `d_i=2`;
+- all six actual incomplete blocks are virtual-canonical complete in every one-row deletion.
+
+Pattern C:
+
+- seven singleton incomplete blocks;
+- every one-row deletion has virtual-canonical deficiency `d_i=3`;
+- all seven actual incomplete blocks are virtual-canonical complete in every one-row deletion.
+
+The earlier note stopped here and proposed another finite six-row audit. The finite audit is unnecessary because the six-row containment theorem lifts one more level.
+
+## 2. Global virtual canonical state
+
+For a touched root block `b`, let `E_b` be its seven-row empty-state coefficient-constraint space.
+
+Define the seven-row virtual canonical state by
+
+- `b` empty when `E_b subset P`;
+- `b` complete otherwise.
+
+Let `C` be its complete-block set and
+
+`H(C)`
+
+be the span in the 15-dimensional `T` space of the complete-block relation rows. Put
+
+`d_v = |C| - rank H(C)`.
+
+For deletion of coordinate `i`, let `C_i` be the six-row virtual-canonical complete set defined from `P_i`.
+
+If `b` is seven-row canonical-empty, then `E_b subset P`. Projection gives
+
+`pi_i(E_b) subset P_i`.
+
+If the block remains touched after deletion, it is therefore six-row canonical-empty. If it becomes untouched, it is not in `C_i` either. Hence
+
+`C_i subset C`
+
+for every `i`.
+
+Row nullity cannot decrease when rows are added, so
+
+`d_v >= d_i`
+
+for every deletion.
+
+Consequently
+
+- pattern B has `d_v>=2`;
+- pattern C has `d_v>=3`.
+
+## 3. The six-row external containment theorem lifts to seven rows
+
+Let
+
+`N = null(P)`.
+
+Since `rank(P)=2`, `dim N=5`.
+
+For each coordinate `i`, define
+
+`N_i = {alpha in N : alpha_i=0}`.
+
+Because `d_1(P)>=3`, no coordinate vector belongs to `P`; equivalently the coordinate functional `alpha -> alpha_i` is nonzero on `N`. Thus every `N_i` is a four-dimensional hyperplane of `N`.
+
+The restrictions of the seven ambient coordinate functionals span `N*`. Since `dim N*=5`, they are not all proportional. Hence at least two of the hyperplanes `N_i` are distinct. Two distinct hyperplanes in a five-dimensional vector space span the whole space, so
+
+`N = sum_i N_i`.
+
+Now fix `alpha in N_i`.
+
+After deleting coordinate `i`, the six-vector `alpha_{-i}` lies in `null(P_i)`. The committed synchronized six-no-root `k=4` containment theorem applies to `P_i` and says that its canonical external `T` relation lies in
+
+`H(C_i)`.
+
+That six-row relation is exactly the seven-row canonical relation for `alpha`.
+
+To see this, consider a block in `C\C_i`. There are only two possibilities.
+
+1. The block becomes untouched after deleting row `i`. Then its seven-row local demand is supported only on coordinate `i`, and `alpha_i=0`, so its demand is zero.
+2. The block remains touched but is six-row canonical-empty. Then its projected empty constraint lies in `P_i`, so every vector in `null(P_i)`, including `alpha_{-i}`, has zero local quotient demand there.
+
+Thus no block in `C\C_i` contributes a correction when lifting the six-row relation back to seven rows. Therefore
+
+`L(alpha) in H(C_i) subset H(C)`
+
+for every `alpha in N_i`.
+
+Since the spaces `N_i` span `N` and the external relation map `L` is linear,
+
+`L(N) subset H(C)`.
+
+So the global seven-row virtual canonical state inherits the same two facts used throughout the five- and six-row containment arguments:
+
+- complete-block deficiency `d_v` as above;
+- every external canonical relation is already contained in `H(C)`.
+
+## 4. Defect accounting at seven rows
+
+Use the same virtual-canonical accounting already proved in the five- and six-row containment theorems.
+
+Let `q` be the number of seven-row virtual-canonical complete blocks that are incomplete in the actual state. A virtual-complete block cannot be actual-empty, because its empty constraint is not contained in `P`. Let `p` be the total number of selected root rows in incomplete blocks.
+
+Replacing a virtual-complete block by a compatible singleton or pair can alter external lifts only within the complete-block relation direction for that block. Changes inside virtual-empty blocks have zero quotient demand on `null(P)`. Completing additional virtual-empty blocks adds three rows and at most one `T` direction, so it cannot lower the defect.
+
+Therefore
+
+`D(B) >= 7 + p + 3d_v - 3q`.
+
+It remains only to insert the two already forced root patterns.
+
+## 5. Pattern B is impossible
+
+Pattern B has five singleton blocks and one pair block, hence
+
+`p=7`.
+
+The preceding synchronization theorem proves that all six incomplete blocks are virtual-canonical complete in every one-row deletion. Since `C_i subset C`, each of those six blocks is also seven-row virtual-canonical complete. Thus
+
+`q=6`.
+
+Every one-row deletion has `d_i=2`, so
+
+`d_v>=2`.
+
+The global defect bound gives
+
+`D(B) >= 7 + 7 + 3*2 - 3*6 = 2`.
+
+This contradicts `D(B)=-1`.
+
+## 6. Pattern C is impossible
+
+Pattern C has seven singleton blocks, so
+
+`p=7`.
+
+All seven are virtual-canonical complete in every one-row deletion, hence all seven are globally virtual-canonical complete:
+
+`q=7`.
+
+Every one-row deletion has `d_i=3`, so
+
+`d_v>=3`.
+
+Therefore
+
+`D(B) >= 7 + 7 + 3*3 - 3*7 = 2`,
+
+again contradicting `D(B)=-1`.
+
+## 7. Conclusion
+
+Neither surviving root pattern can occur. Hence
+
+> there is no seven-no-root counterexample with `D=-1,k=5,d=0,p=7`.
+
+This was the last open seven-no-root `k=5` arithmetic case. Therefore the entire seven-no-root `k=5` layer is closed.
+
+The next unresolved seven-no-root work lies in the higher-`k` layers (`k=6` and `k=7`). The same one-step containment-lift mechanism should be checked there before launching new finite searches: the committed six-row `k=5` theorem already has a virtual-canonical containment statement with deficiency at least two for synchronized rank-one coefficient spaces.
+
+The direct C-II endpoint remains
+
+`3874 = 3076 C7 + 798 (C3 disjoint-union C4)`.

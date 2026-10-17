@@ -1,0 +1,49 @@
+# Adversarial evidence and review boundary
+
+Run `python3 -B -m unittest tools.test_local_ci` from the trusted control checkout.
+The suite creates disposable Git repositories and uses real Git objects, commits,
+renames, deletions, source hashes and Linux namespace execution. It does not edit
+canonical research. Workflow contract tests supplement actionlint; hosted execution
+has not been measured under the account restriction.
+
+| Failure/attack | Evidence in `tools/test_local_ci.py` | Required outcome |
+| --- | --- | --- |
+| Deleted/renamed source | `test_deleted_source`, `test_renamed_input_records_both_names` | Both rename endpoints retained; missing input prevents replay |
+| Transitive helper outside package | `test_declared_outside_input_and_transitive_helper`, `test_undeclared_transitive_import` | Declared helper selects its dependent and replays; missing transitive input requires review |
+| Undeclared package initializer | `test_undeclared_package_initializer` | Cannot substitute namespace-package behavior silently |
+| Local package shadows standard library | `test_undeclared_package_shadowing_standard_library_requires_review`, `test_declared_package_shadowing_standard_library_is_replayed` | Missing local package initializer requires review; a declared initializer is replayed with its actual behavior |
+| Dynamic import/filesystem input | `test_dynamic_import`, `test_undeclared_filesystem_input`, `test_dynamic_filesystem_input`, `test_declared_unresolved_input` | No closure claim or automatic replay |
+| Shared/legacy certificate utility | `test_shared_certificate_utility`, `test_legacy_shared_helper_cannot_be_claimed_exclusive` | Comprehensive verification/review even if a new package declares the input |
+| Canonical theorem/generated index | `test_canonical_theorem_change`, `test_state_generated_index_change` | Comprehensive verification/review; 94 certificates are not launched automatically |
+| Generated package input | `test_declared_generated_input_selects_package`, `test_generated_input_missing_generator` | Select dependent; undeclared generator rejected |
+| Unknown path/malformed metadata | `test_unknown_file`, `test_malformed_manifest`, `test_duplicate_json_keys` | Fail closed |
+| Traversal/path aliases/symlinks | `test_traversal_aliases_and_special_paths`, `test_symlink` | Reject before materialization |
+| Duplicate declarations | `test_duplicate_source`, `test_duplicate_identity` | Reject aliasing/hiding |
+| Remove inputs/package edges | `test_removed_dependency_cannot_hide_changed_input`, `test_removing_package_edge_requires_review` | Old and new graph union prevents hidden impact; review required |
+| Transitive/cyclic package graph | `test_package_edges_select_transitive_dependents`, `test_cyclic_package_edges` | Select transitive dependents; reject cycles |
+| Missing/ambiguous ancestry | `test_missing_merge_base`, `test_real_criss_cross_ancestry`, `test_ambiguous_merge_base`, `test_shallow_history` | No range guess; review required |
+| Target base advances after fork | `test_advanced_base_new_dependent_is_not_invisible`, `test_advanced_base_unrelated_package_does_not_expand_replay`, `test_advanced_base_changed_package_contract_needs_rebase` | Include new base dependents; require rebase for changed affected contracts; preserve unrelated locality |
+| External inputs and legacy closure | `test_arbitrary_external_input_does_not_establish_legacy_closure` | Selection of a declared external input does not imply legacy closure |
+| Force push/stale head/dirty files | `test_force_push_event`, `test_stale_pr_head`, `test_dirty_checkout` | No use of incomplete event or working tree |
+| Forged serialized plan | `test_forged_plan_cannot_authorize_more_work` | Recompute authorization from exact Git endpoints |
+| Workflow privilege/code attacks | `test_privileged_workflow_proposal_is_not_a_green_plan`, `test_malicious_privileged_import_is_rejected`, `test_workflow_permissions_and_gates` | Read-only tokens, trusted base tools, no privileged PR trigger, no candidate planner execution |
+| Runtime sandbox escapes | `test_actual_namespace_hides_credentials_network_and_undeclared_files` | Host files, tokens, `.git`, network and writes to inputs unavailable |
+| Optimization/false passing verifier | `test_replay_does_not_inherit_optimization_or_secrets` | Failing assertion remains failing despite inherited `PYTHONOPTIMIZE=2` |
+| Timeout/unavailable sandbox | `test_timeout_fails_and_is_not_fully_verified`, `test_no_sandbox_means_no_replay` | Timeout or refusal; never a skipped success |
+| Dependency installation/shell flags | `test_dependency_installation_is_not_silently_skipped`, `test_shell_and_interpreter_flags_rejected` | Unsupported dependency environment and command capabilities rejected |
+| Reduced test domain | `test_new_domain_must_match_verify`, `test_coordinated_domain_reduction_requires_review`, `test_code_only_domain_reduction_cannot_report_full_verification` | Domain mismatch, coordinated contract reduction or loop reduction requires review; replay refused |
+| Scanner fixtures / credential diagnostics | `test_scanner_fixture_is_not_a_private_key`, `test_whitespace_diagnostics_do_not_echo_credentials` | Literal test fixtures accepted; diagnostic text never echoes credential bytes |
+| Oversized automatic workload | `test_workload_cap` | Two-package cap; no matrix expansion |
+
+Every plan and scoped replay result has `full_verified: false`. Tests assert that
+flag on fast, targeted, timeout, failure and comprehensive-review paths. The full
+verifier is a different explicit operation. No fixture labels an unexecuted
+required verifier as fully verified.
+
+The domain tripwire is deliberately incomplete. No Python AST inspection can
+prove that an arbitrary contributed verifier checks its claimed theorem. New
+packages, data exclusions, early returns and obfuscated dynamic behavior still
+need scientific review. Namespace execution binds the available input bytes; it
+cannot prove that a verifier uses all of them correctly. A valid finite package
+also cannot promote a global theorem. This distinction is retained in all JSON
+outputs and contributor documentation.

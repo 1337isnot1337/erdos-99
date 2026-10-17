@@ -1,0 +1,162 @@
+#!/usr/bin/env python3
+"""Regression checks for the near-floor three-spoke exact-flex note.
+
+The script checks the new scalar constants, the transport minimax algebra, and the
+finite sixth-root stacked-rank condition used in the local three-spoke lemma. It is a
+certificate/regression aid, not a replacement for the geometric proof.
+"""
+
+import itertools
+import math
+import random
+from fractions import Fraction
+
+PI = math.pi
+SQRT3 = math.sqrt(3.0)
+S2 = math.sqrt(PI / (2.0 * SQRT3))
+G = 0.007707
+MSTAR = 4.0 * S2 + 2.0 * G
+ESTAR = (MSTAR - PI) / 2.0
+E = 0.00659 + 1.0e-4
+N0 = 0.4155508927753457501087997262559491
+K0 = N0 - (2.0 / 3.0) * (ESTAR + 5.0 * E)
+C3 = 3.0 * K0 / 11.0
+
+
+def close(x, y, tol=5e-13):
+    assert abs(x - y) <= tol * max(1.0, abs(x), abs(y)), (x, y)
+
+
+close(ESTAR, 0.3415362869330181)
+close(ESTAR + 5.0 * E, 0.3749862869330181)
+close(K0, 0.16556003482000037)
+close(C3, 0.04515273676909101)
+assert C3 > 0.04515
+assert abs(K0 - (11.0 / 3.0) * C3) < 1.0e-15
+
+# Random scalar regression. The exact t-stability budget implies
+# E_BB/D <= ell + ESTAR + 5E. Combining with H/D >= N0-2s and
+# Y_3O >= H-(2/3)E_BB gives the displayed lower bound.
+rng = random.Random(0x3E9920260918)
+for _ in range(300_000):
+    delta = rng.random() * 1.0e-5
+    rmax = max(0.0, 2.5 * E - delta)
+    r = rng.random() * rmax
+    amax = max(0.0, 5.0 * E - 2.0 * (r + delta))
+    a = rng.random() * amax
+    ell = rng.random() * 0.25
+    s = rng.random() * 0.20
+
+    ebb = ell + ESTAR + a - delta
+    ebb_upper = ell + ESTAR + 5.0 * E
+    assert ebb <= ebb_upper + 1.0e-15
+
+    exact_y_lower = N0 - 2.0 * s - (2.0 / 3.0) * ebb
+    closed_y_lower = K0 - 2.0 * s - (2.0 / 3.0) * ell
+    assert exact_y_lower + 1.0e-14 >= closed_y_lower
+
+# Minimax equality point.
+assert abs(K0 - 2.0 * C3 - (2.0 / 3.0) * C3 - C3) < 1.0e-15
+
+# Integer coordinates for sixth roots after an invertible scaling of the y row.
+# These preserve all linear ranks:
+# r_0,...,r_5 = (2,0),(1,1),(-1,1),(-2,0),(-1,-1),(1,-1).
+ROOT = [
+    (2, 0),
+    (1, 1),
+    (-1, 1),
+    (-2, 0),
+    (-1, -1),
+    (1, -1),
+]
+BASE = [0, 0, 2, 3, 4]
+
+
+def rank_fraction(matrix):
+    a = [[Fraction(x) for x in row] for row in matrix]
+    if not a:
+        return 0
+    m = len(a)
+    n = len(a[0])
+    r = 0
+    for c in range(n):
+        pivot = next((i for i in range(r, m) if a[i][c] != 0), None)
+        if pivot is None:
+            continue
+        a[r], a[pivot] = a[pivot], a[r]
+        q = a[r][c]
+        a[r] = [x / q for x in a[r]]
+        for i in range(m):
+            if i == r or a[i][c] == 0:
+                continue
+            q = a[i][c]
+            a[i] = [x - q * y for x, y in zip(a[i], a[r])]
+        r += 1
+        if r == m:
+            break
+    return r
+
+
+def cyclic_shift(xs, k):
+    return xs[k:] + xs[:k]
+
+
+# For every rotation of the root orbit, every cyclic starting index, and every
+# choice of three variable sides, the stacked linear system
+#   closure derivative = 0,
+#   ear1 derivative = 0,
+#   ear2 derivative = 0
+# has only the zero vector on the three selected coordinates. Equivalently its
+# 4x3 matrix has rank three. This is the finite root-pattern core of Lemma 3.2.
+checked = 0
+for rot in range(6):
+    rotated = [((j + rot) % 6) for j in BASE]
+    for shift in range(5):
+        labels = cyclic_shift(rotated, shift)
+        gaps = [((labels[(i + 1) % 5] - labels[i]) % 6) for i in range(5)]
+        ears = [(i, (i + 1) % 5) for i, gap in enumerate(gaps) if gap == 2]
+        assert len(ears) == 2
+        assert set(ears[0]).isdisjoint(set(ears[1]))
+
+        for O in itertools.combinations(range(5), 3):
+            pos = {idx: j for j, idx in enumerate(O)}
+            closure_x = [ROOT[labels[idx]][0] for idx in O]
+            closure_y = [ROOT[labels[idx]][1] for idx in O]
+            rows = [closure_x, closure_y]
+            for a, b in ears:
+                row = [0, 0, 0]
+                if a in pos:
+                    row[pos[a]] += 1
+                if b in pos:
+                    row[pos[b]] -= 1
+                rows.append(row)
+            assert rank_fraction(rows) == 3, (labels, ears, O, rows)
+            checked += 1
+
+assert checked == 6 * 5 * 10
+
+# Direct exact root check of the exceptional distribution used in the prose:
+# if the leftover side and both sides of one ear are the three variables, the
+# root ear diagonal is not parallel to the leftover root. Determinants are
+# nonzero for every rotation/start choice.
+for rot in range(6):
+    rotated = [((j + rot) % 6) for j in BASE]
+    for shift in range(5):
+        labels = cyclic_shift(rotated, shift)
+        gaps = [((labels[(i + 1) % 5] - labels[i]) % 6) for i in range(5)]
+        ears = [(i, (i + 1) % 5) for i, gap in enumerate(gaps) if gap == 2]
+        used = set(ears[0]) | set(ears[1])
+        leftover = next(i for i in range(5) if i not in used)
+        for a, b in ears:
+            ua = ROOT[labels[a]]
+            ub = ROOT[labels[b]]
+            ue = ROOT[labels[leftover]]
+            diag = (ua[0] + ub[0], ua[1] + ub[1])
+            det = diag[0] * ue[1] - diag[1] * ue[0]
+            assert det != 0
+
+print("terminal near-floor three-spoke exact-flex certificate passed")
+print(f"e_star={ESTAR:.15f}")
+print(f"K0={K0:.15f}")
+print(f"common_trichotomy_floor={C3:.15f}")
+print(f"stacked_root_cases={checked}")

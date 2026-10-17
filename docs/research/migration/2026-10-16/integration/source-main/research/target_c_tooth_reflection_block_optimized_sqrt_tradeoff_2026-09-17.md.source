@@ -1,0 +1,353 @@
+# Target C-II — upper-block structure sharpens the FREE square-root fork
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; supersedes the preceding continuous thin/thick count optimization  
+**Scope:** all-inactive non-anchored FREE reflection ancestry  
+**Dependencies:** two-sided inactive gate absorption; two-sided outer-face localization; exact upper-event backtracking identity; sharp superdiameter-thrackle theorem  
+**Certificate:** `research/verify_target_c_tooth_reflection_block_optimized_sqrt_tradeoff_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The preceding optimized square-root theorem still paid for every upper gate separately
+when counting how many lower runs can occur. That is unnecessary. Consecutive upper
+gates form one block and create only one break between lower runs. If a block contains
+no thick upper gate, it contains a thin edge that can be charged to the thin-edge
+matching. This changes the denominator in the face-run averaging from roughly
+`m+2M` to `m+M`, where `m` is the number of thick upper gates and `M` is the maximum
+matching size among thin upper gates.
+
+The result is a substantially larger common square-root constant.
+
+Put
+
+\[
+h_*={\sqrt{303}\over52}=0.334747984337100\ldots
+\]
+
+and
+
+\[
+\boxed{
+ c_{\rm blk}
+ :=\left(1+{h_*\over2}\right)^{-1/2}
+ =0.925539574680581\ldots .
+}
+\tag{BO.1}
+
+Then every all-inactive non-anchored FREE ancestry has at least one of the following
+outcomes.
+
+### BLOCK-SQRT-FACE
+
+One consecutive all-lower run in the original outer contact face has support span
+
+\[
+\boxed{
+ \operatorname{span}_N(R)
+ \ge(c_{\rm blk}-o(1))\sqrt D.
+}
+\tag{BO.2}
+
+For every fixed `Lambda>1`, it contains a vertex-disjoint matching of old fully inactive
+outer-face source pairs of size
+
+\[
+\boxed{
+ \left({\Lambda-1\over2\Lambda}c_{\rm blk}-o(1)\right)\sqrt D
+}
+\tag{BO.3}
+
+with
+
+\[
+\boxed{
+1<|x-y|
+\le
+1+\left({\Lambda h_*\over c_{\rm blk}}+o(1)\right)D^{-1/2}.
+}
+\tag{BO.4}
+
+For `Lambda=2`, this is a matching of size
+
+\[
+\boxed{
+(0.231384893670145\ldots-o(1))\sqrt D
+}
+\tag{BO.5}
+
+with excess at most
+
+\[
+\boxed{
+(0.723357473833849\ldots+o(1))D^{-1/2}.
+}
+\tag{BO.6}
+
+### BLOCK-SQRT-SUPER-BRAID
+
+There is a vertex-disjoint matching of old fully inactive source pairs of size
+
+\[
+\boxed{
+(c_{\rm blk}-o(1))\sqrt D
+}
+\tag{BO.7}
+
+and every retained edge is strictly longer than
+
+\[
+\boxed{\sqrt{D^2-1}.}
+\tag{BO.8}
+
+Hence the chords cross properly pairwise and the existing superbraid
+forest-transversal theorem applies unchanged.
+
+The previous continuous count optimization gave the common coefficient
+`0.679255...`. The only new input here is the exact one-dimensional block structure of
+the activation ancestry; the metric backtracking estimate itself is unchanged.
+
+---
+
+## 1. Thin and thick upper edges
+
+Use the exact sharp threshold
+
+\[
+\tau_D:=D-\sqrt{D^2-1}
+={1\over D+\sqrt{D^2-1}}.
+\]
+
+An upper gate with deficit `rho` is **thin** if `rho<tau_D` and **thick** otherwise.
+Every thin edge has original length
+
+\[
+D-\rho>\sqrt{D^2-1}.
+\]
+
+Let
+
+- `m` be the number of thick upper edges;
+- `M` be the size of a maximum vertex-disjoint matching among all thin upper edges of
+  the ancestry;
+- `B` be the number of maximal consecutive blocks consisting of upper edges;
+- `R` be the number of maximal consecutive all-lower runs.
+
+Because the ancestry is a path in edge order, any matching of thin upper edges is a
+source matching. The sharp superdiameter theorem therefore makes all `M` selected thin
+edges pairwise properly crossing.
+
+---
+
+## 2. The upper-block inequality
+
+### Lemma BO.1
+
+\[
+\boxed{B\le m+M.}
+\tag{BO.9}
+
+### Proof
+
+Split the maximal upper blocks into two classes.
+
+1. A block containing at least one thick edge is charged to one such thick edge. Since
+   the blocks are edge-disjoint, distinct blocks receive distinct thick edges. There
+   are at most `m` blocks of this kind.
+2. A block containing no thick edge consists entirely of thin edges. The maximum thin
+   matching on the whole ancestry restricts blockwise, and every nonempty pure-thin
+   block contributes at least one matching edge. Equivalently, the maximum matching on
+   the disjoint union of the pure-thin blocks has size at least the number of those
+   blocks. Hence there are at most `M` pure-thin blocks.
+
+Adding the two classes proves (BO.9). `square`
+
+Deleting the upper blocks leaves at most one more lower block than upper blocks, so
+
+\[
+\boxed{R\le B+1\le m+M+1.}
+\tag{BO.10}
+
+This is the improvement over the preceding theorem. Counting individual upper edges
+would only give `R<=U+1`, while a long consecutive upper run causes only one lower-run
+break.
+
+---
+
+## 3. Thick-edge backtracking is unchanged
+
+For an upper gate with activation increment `Delta`, deficit `rho`, and support
+backtracking `b`, the exact first-hit identity gives
+
+\[
+2\Delta b=2D\rho-\rho^2+\Delta^2,
+\]
+
+hence
+
+\[
+b\ge{\rho\over\Delta}\left(D-{\rho\over2}\right).
+\]
+
+Set
+
+\[
+\bar t_D=h_*+D^{-1/3},
+\]
+
+\[
+A_D=D\tau_D\left(1-{\bar t_D\over2D}\right),
+\qquad
+k_D={A_D\over\bar t_D}.
+\tag{BO.11}
+
+The activation-time budget is at most `bar t_D`. Cauchy over the `m` thick upper gates
+therefore gives
+
+\[
+\boxed{B_{\rm back}\ge k_Dm^2.}
+\tag{BO.12}
+
+Moreover
+
+\[
+\boxed{k_D\longrightarrow k_\infty={1\over2h_*}.}
+\tag{BO.13}
+
+The support ledger consequently gives total positive lower-edge support progress
+
+\[
+\boxed{
+G_{\rm low}\ge D+k_Dm^2-O(\sqrt D).
+}
+\tag{BO.14}
+
+---
+
+## 4. Exact minimax balance with block count
+
+Define
+
+\[
+\boxed{
+ c_D:=\left(1+{1\over4k_D}\right)^{-1/2}.
+}
+\tag{BO.15}
+
+Then
+
+\[
+c_D\longrightarrow
+\left(1+{h_*\over2}\right)^{-1/2}
+=c_{\rm blk}.
+\]
+
+If
+
+\[
+M\ge(c_D-o(1))\sqrt D,
+\]
+
+we have BLOCK-SQRT-SUPER-BRAID immediately.
+
+Otherwise
+
+\[
+M\le c_D\sqrt D+o(\sqrt D).
+\tag{BO.16}
+
+The definition (BO.15) is exactly equivalent to
+
+\[
+1-c_D^2={c_D^2\over4k_D}.
+\]
+
+Therefore, for every `m>=0`,
+
+\[
+\begin{aligned}
+&D+k_Dm^2-c_D\sqrt D\,(m+c_D\sqrt D)\\
+&\qquad=
+ k_D\left(m-{c_D\sqrt D\over2k_D}\right)^2
+ \ge0.
+\end{aligned}
+\tag{BO.17}
+
+Combining (BO.10), (BO.14), (BO.16), and (BO.17), one lower run has support span at
+least
+
+\[
+\begin{aligned}
+{G_{\rm low}\over R}
+&\ge
+{D+k_Dm^2-O(\sqrt D)
+ \over m+c_D\sqrt D+o(\sqrt D)+1}\\
+&\ge(c_D-o(1))\sqrt D.
+\end{aligned}
+\tag{BO.18}
+
+The numerator error contributes only `O(1)` after division because the displayed
+denominator is `Omega(sqrt(D))`; if the true number of lower runs is smaller, the
+average only increases. This proves BLOCK-SQRT-FACE.
+
+---
+
+## 5. Near-unit matching on the face run
+
+Let the selected lower run have `r` edges and edge slacks
+
+\[
+\sigma_e=|e|-1>0.
+\]
+
+The activation-time ledger gives
+
+\[
+\sum_{e\in R}\sigma_e\le h_*+D^{-1/3}.
+\]
+
+Also support progress per edge is at most `1+sigma_e`, hence
+
+\[
+r\ge(c_{\rm blk}-o(1))\sqrt D.
+\]
+
+For fixed `Lambda>1`, Markov leaves at least `(1-1/Lambda)r` edges with
+
+\[
+\sigma_e
+\le
+\left({\Lambda h_*\over c_{\rm blk}}+o(1)\right)D^{-1/2}.
+\]
+
+Any set of `g` edges of a path contains a matching of size at least `g/2-O(1)`. This
+proves (BO.3)--(BO.4). The `Lambda=2` constants are
+
+\[
+{c_{\rm blk}\over4}=0.231384893670145\ldots,
+\]
+
+\[
+{2h_*\over c_{\rm blk}}=0.723357473833849\ldots .
+\]
+
+---
+
+## 6. Consequences and remaining seam
+
+The superbraid branch inherits every previously proved forest-transversal conclusion:
+its endpoints are external full-hull vertices, every braid chord crosses every actual
+diameter edge, the diameter graph is a caterpillar forest, and each diameter-tree
+bipartition lies in complementary braid cells.
+
+The face branch is stronger as well. Since every lower gate has length below `sqrt(2)`
+for large `D`, the recent short-edge theorem places the whole run in the common plane
+source-pair graph `P_<sqrt(2)(A)`.
+
+This does not close C-II. It removes another artificial constant loss. The current
+per-module FREE obstruction is now either a planar outer-face near-unit run of
+`0.925539... sqrt(D)` support span or an equally large exact-threshold inactive
+superdiameter braid. The next step should use multi-module planarity or the forest
+outer-walk currencies, not another fixed-fraction thin/thick split.
+
+**Disposition:** used maximal upper blocks rather than individual upper gates to sharpen
+the common FREE square-root coefficient from `0.679255...` to
+`0.925539574680581...`.

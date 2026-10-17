@@ -1,0 +1,159 @@
+# Target C: four-no-root rank-density, the k=2 branch
+
+Date: 2026-09-20
+
+Status: exact finite result for one of the three remaining branches in the global four-cycle metric-basis subproblem. This does not reduce the current 3,874-state generic-H6 endpoint and does not close C-II.
+
+The companion verifier is
+
+`research/verify_target_c_support7_global_segment_relative_four_noroot_k2_2026_09_20.py`.
+
+## Statement
+
+Use the relative four-cycle notation already fixed in the preceding audits. Let `M` be the 85-dimensional span of the 210 simple `K8` four-cycle rows modulo the 56 automatic side-triangle rows, let `T` be the 15-dimensional ground-root star space, let `Q=M/T`, and put
+
+`delta(A) = r_M(A) - r_Q(A)`.
+
+For a family with exactly four no-root four-cycles, strip untouched complete root-0 blocks as before. In the touched blocks let
+
+- `c` be the number of complete local root-0 triples,
+- `p` be the number of selected root-0 rows in incomplete blocks, and
+- `k` be the extra `Q`-kernel dimension contributed by the four no-root rows after quotienting by the selected local root-0 spans.
+
+Then
+
+`n = 4 + 3c + p`
+
+and the total `Q`-kernel dimension is `c+k`. The crude defect bound is
+
+`n - 3 delta >= 4 + p - 3k`.
+
+Thus a possible failure of `3 delta(A) <= |A|` at `t=4` lies in only three regimes:
+
+- `k=2`, `p<=1`;
+- `k=3`, `p<=4`;
+- `k=4`, `p<=7`.
+
+The new verifier eliminates the first regime completely:
+
+> For every four-no-root family and every local root-0 selection in the `k=2,p<=1` regime, `3 delta(A) <= |A|`.
+
+Therefore any hypothetical four-no-root counterexample to the factor-three rank-density inequality must have `k>=3`. The remaining finite branches are exactly `k=3,p<=4` and `k=4,p<=7`.
+
+This does not yet prove that every sufficient 44-cycle family contains at least five no-root cycles. That stronger conclusion requires closing the two remaining `t=4` branches.
+
+## Exact orbit census
+
+There are
+
+`C(105,4) = 4,780,230`
+
+unordered sets of four no-root cycles. Exact `S_7` relabeling reduces them to 1,186 orbits. The orbit-size distribution is
+
+```text
+105:      1
+210:      1
+315:      5
+420:      3
+630:     18
+840:      2
+1260:    83
+2520:   297
+5040:   776
+--------------
+total: 1186 orbits, 4,780,230 quadruples
+```
+
+The four no-root rows touch between 7 and 16 of the 35 local quotient blocks. The orbit-representative distribution is
+
+```text
+7:    3
+8:    7
+9:   10
+10:  34
+11:  80
+12: 118
+13: 234
+14: 403
+15: 243
+16:  54
+```
+
+The verifier constructs the 1,186 orbits directly from all 5,040 permutations of the seven non-ground labels and checks that the orbit sizes sum to 4,780,230.
+
+## Why the `k=2,p<=1` scan collapses
+
+A touched local block can contain zero, one, two, or all three of its root-0 rows. In the dangerous `p<=1` regime, every incomplete touched block is empty except for at most one singleton block. All other selected touched blocks are complete local triples.
+
+Fix a `k=2` state. The four external coefficients have a rank-two global constraint space `P`, so their allowed coefficient kernel has dimension two. Every empty-block constraint rowspace and the optional singleton constraint rowspace must lie in `P`.
+
+For a fixed `P` and fixed singleton choice, define the canonical state by leaving every other block empty whenever its empty-block constraint lies in `P`, and completing the block otherwise. If the union of the resulting constraints is not exactly `P`, no state with that `P` and singleton choice exists: completing additional blocks only removes constraints.
+
+Every other state with the same `P` and singleton choice is obtained from this canonical state by changing some empty blocks to complete triples. Each such completion
+
+- adds exactly three selected rows,
+- adds exactly one dimension to the `Q`-kernel, and therefore
+- can increase `delta` by at most one.
+
+Hence the defect `|A|-3 delta(A)` cannot decrease under completion. It is enough to exactify the canonical state for each possible `P` and singleton choice.
+
+The list of possible planes is also finite and complete. An actual rank-two `P` is either the rank-two constraint space of one local empty/singleton state, or is spanned by two rank-one local constraints. Since `p<=1`, the latter pair cannot consist of two singleton constraints. The verifier enumerates exactly these possibilities.
+
+This reduces the full `k=2,p<=1` branch to 216,737 canonical states:
+
+```text
+p=0 canonical states:   8,270
+p=1 canonical states: 208,467
+------------------------------
+total:                 216,737
+```
+
+## Exact rank decisions
+
+The coordinate model is rebuilt independently with exact `Fraction` arithmetic:
+
+- `r_M = 85`;
+- `dim T = 15`;
+- `r_Q = 70`;
+- 35 root-0 quotient blocks with local vectors `(1,0)`, `(0,1)`, `(1,-1)`; and
+- every no-root cycle supported on exactly four local blocks.
+
+For each canonical state, the verifier constructs an integer basis of all selected-row relations that vanish in `Q`: one local relation for every complete root-0 block and two lifted external relations spanning the `k=2` kernel. Their `T`-images are integer 15-vectors, and their rank equals `delta`.
+
+As in the three-no-root audit, rank is computed modulo
+
+`P = 2^127 - 1`.
+
+This remains an exact decision over `Q`, not probabilistic modular evidence. The verifier checks that 127 is prime, runs the Lucas-Lehmer test for `P`, tracks the squared Euclidean norm of every relation row, and verifies the Hadamard determinant bound `P^2 > B^15`. Across the complete audit the largest observed `B` is 36.
+
+## Complete shard audit
+
+The 1,186 orbit representatives were audited in twelve disjoint ranges:
+
+```text
+range       p=0      p=1    min p=0  min p=1  max B   negative
+0:100        653    13382       7        5       36       0
+100:200      877    20160       7        8       24       0
+200:300      919    21377       7        8       22       0
+300:400      846    20534       7        8       24       0
+400:500      832    21167       7        8       24       0
+500:600      828    20513       7        8       36       0
+600:700      533    13552       7        5       36       0
+700:800      456    12081       7        8       18       0
+800:900      603    16109      10        8       16       0
+900:1000     605    16533      10        8       16       0
+1000:1100    602    17117      10        8       16       0
+1100:1186    516    15942      10        8       30       0
+---------------------------------------------------------------
+total       8270   208467       7        5       36       0
+```
+
+Thus the minimum exact canonical defect is 5 in the `p=1` class and 7 in the `p=0` class. By the completion monotonicity above, no omitted `k=2,p<=1` state can have smaller defect.
+
+The production verifier supports `--orbit-start` and `--orbit-end` for deterministic reruns of the same disjoint shards.
+
+## Remaining bottleneck
+
+For the metric-basis route, the next finite target is `t=4,k=3,p<=4`. A blind enumeration is unnecessarily large; it should exploit that all local constraint rowspaces lie in one common one-dimensional global constraint space. After that remains `k=4,p<=7`.
+
+For C-II itself, the more direct bottleneck is still the frozen 3,874 generic-H6 cells. The exact forced segment-order scan is implemented but has been blocked by the current workflow-runner failures. Once execution is available, it should still be preferred over extending the metric-basis side route indefinitely. Surviving cells then require quantitative sine-law metric compatibility.

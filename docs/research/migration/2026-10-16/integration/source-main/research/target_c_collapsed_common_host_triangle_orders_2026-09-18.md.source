@@ -1,0 +1,63 @@
+# Target C-II — a universal common-host endpoint-order reduction
+
+**Status:** proved finite combinatorial candidate; theorem-state authority unchanged.
+**Scope:** the collapsed support-six subcase in which all six parallel outer-host
+trains terminate at one common outer host.
+**Certificate:** `verify_target_c_collapsed_common_host_triangle_orders_2026_09_18.py`.
+
+This reduction is independent of the metric collapsed root.  It uses only the
+audited endpoint-fan rule and the audited triangle-free train-crossing rule.
+
+## Statement
+
+The internal train graph is
+
+\[
+K_6\setminus\{03,14,25\}.
+\]
+
+For a cyclic order of the six bounded endpoints on one common outer host, join two
+internal trains when their endpoint chords alternate.  Such a pair must cross in
+any common-host embedding.  Exact enumeration of all `6! = 720` labelled endpoint
+orders gives:
+
+\[
+\boxed{384\text{ orders contain a triangle in this forced-crossing graph}.}
+\]
+
+The triangle-free train-crossing theorem therefore excludes those 384 orders for
+every collapsed metric realization.  Only 336 endpoint orders remain for any future
+common-host attack.  Their forced-crossing graphs have exactly three
+degree/bipartiteness types:
+
+| type | count | bipartite? | nonzero degree multiset |
+|---|---:|:---:|---|
+| A | 48 | yes | `2^6` |
+| B | 144 | yes | `2^4 3^2` |
+| C | 144 | no | `2^2 3^6` |
+
+Thus the remaining metric problem is finite at the crossing-graph level, but it is
+not eliminated by direction-only graph coloring: type A is a 6-cycle and type C
+contains odd cycles without a forced triangle.
+
+The proof is exact integer combinatorics; it does not use floating-point angles,
+the local closure equations, or a selected numerical chamber.
+
+Dependency chain:
+
+```text
+common outer host
+  -> cyclic endpoint order
+  -> alternating endpoint chords must cross
+  -> exact triangle in the forced-crossing graph
+  -> contradiction with triangle-free train crossings.
+```
+
+This does not exclude the remaining 336 orders, any multi-host attachment, or the
+collapsed branch globally.  It is a universal partial reduction, not a C-II closure.
+
+Run:
+
+```text
+python3 research/verify_target_c_collapsed_common_host_triangle_orders_2026_09_18.py
+```

@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+"""Numerical regressions for the wide-antipodal central-diamond geometry."""
+
+from math import acos, cos, pi, sin, sqrt
+
+
+def eta0(D: float) -> float:
+    return (3.0 ** 0.25) * sqrt(D)
+
+
+def L(D: float) -> float:
+    e = eta0(D)
+    return sqrt(D * e + e * e)
+
+
+def shared_endpoint_angle(D: float) -> float:
+    e = eta0(D)
+    return 2.0 * acos(D / (D + 2.0 * e))
+
+
+# L_D is sublinear with the certified D^(3/4) scale.
+for D in (1e8, 1e12, 1e16):
+    assert L(D) > 0.0
+    assert L(D) / D < 0.02
+
+# Use a numerically visible fixed rho for the geometric regression. The proof
+# applies to every fixed rho>0, including the much smaller density-fork scales.
+rho = 0.2
+for D in (1e8, 1e12, 1e16):
+    r_in = 0.5 * D * sin(rho / 2.0) - L(D)
+    cross_radius = (1.0 + 2.0 / sin(rho)) * L(D)
+    endpoint_floor = D * sin(rho / 2.0) - 2.0 * L(D)
+    area_floor = 0.5 * D * D * sin(rho)
+    assert r_in > 0.0
+    assert cross_radius / D < 0.3
+    assert endpoint_floor > 0.0
+    assert area_floor > 0.0
+
+# Exact centered model: v1,v2 at angle eta. The ideal diamond side distances
+# are R*cos(eta/2) and R*sin(eta/2), so the latter is the inradius for
+# eta<=pi/2. The quadrilateral area is D^2 sin(eta)/2.
+D = 1000.0
+eta = 0.4
+R = D / 2.0
+assert 0.0 < eta <= pi / 2.0
+side_distance_1 = R * cos(eta / 2.0)
+side_distance_2 = R * sin(eta / 2.0)
+assert side_distance_2 < side_distance_1
+assert abs(side_distance_2 - 0.5 * D * sin(eta / 2.0)) < 1e-12
+area = 0.5 * D * D * sin(eta)
+assert area > 0.0
+
+# The shared-endpoint angular width tends to zero, so every fixed-rho wide
+# pair is eventually vertex-disjoint.
+D = 1e20
+assert shared_endpoint_angle(D) < 0.01
+
+print("PASS: wide-antipodal central-diamond regressions")
+print(f"L(1e16)/D={L(1e16)/1e16:.12g}")
+print(f"rho={rho:.12g}")
+print(f"ideal_inradius_fraction={0.5*sin(rho/2):.12g}")
+print(f"area_fraction={0.5*sin(rho):.12g}")

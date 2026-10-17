@@ -1,0 +1,352 @@
+# Target C-II — `g=0.0050` raises the joint orbit-capacity / phase-energy floor
+
+**Date:** 2026-09-15  
+**Repository base:** current `main` through the joint orbit-capacity/phase-energy theorem, plus the hostile-audited iterative-pruning atomic gap `g=0.0050`  
+**Status:** proof-only low-`t` Type-II strengthening; theorem-state authority unchanged  
+**Scope:** same fully force-visible no-container/full-core Type-II scope as `research/target_c_joint_orbit_capacity_phase_energy_2026-09-15.md`  
+**LEVEL I STATUS:** `STILL OPEN`  
+
+The merged joint orbit-capacity/phase-energy theorem is symbolic in the atomic all-train floor
+
+\[
+C_0=2\sqrt{\Delta_2}+g,
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\]
+
+Current `main` instantiated that theorem only with the older conservative value
+`g=0.00042`, obtaining the safe numerical floor `t >= 1.82434-o(1)` for
+
+\[
+t={q-k\over D}.
+\]
+
+The independently hostile-audited iterative-pruning minimax theorem imported on this branch proves the stronger matched all-train/rhombic value
+
+\[
+\boxed{g=0.0050.}
+\]
+
+No geometric step of the joint orbit theorem changes. Re-running its one-dimensional endpoint with this stronger input yields
+
+\[
+\boxed{
+\liminf {q-k\over D}\ge1.82515.
+}
+\]
+
+The scalar zero is approximately
+
+\[
+1.82516142463113334\ldots,
+\]
+
+but only the safely rounded `1.82515` is claimed.
+
+C-II remains open.
+
+---
+
+## 1. Stronger atomic input
+
+Put
+
+\[
+s_2:=\sqrt{\Delta_2}.
+\]
+
+The imported iterative-pruning theorem and its hostile audit prove, at the same proof-only train-measure scope,
+
+\[
+\boxed{
+{T-q/2\over D}\ge C_0-o(1),
+\qquad
+C_0:=2s_2+0.0050.
+}
+\tag{GJ.1}
+\]
+
+They also prove the matched rhombic-only bounds
+
+\[
+{T_R\over D}\ge C_0-o(1),
+\qquad
+{\sigma_R\over D}\ge0.0100-o(1),
+\tag{GJ.2}
+\]
+
+though only (GJ.1) is needed for the scalar improvement below.
+
+The exact outward certificate
+
+`research/verify_target_c_iterative_minimax_atomic_gap_0050.py`
+
+proves the `0.0050` gap with more than `0.0015` margin over the geometric cap in its worst rational interval.
+
+---
+
+## 2. Retain the merged joint-orbit inequalities
+
+On a convergent Type-II subsequence write
+
+\[
+t={q-k\over D},
+\qquad
+\kappa={k\over D},
+\qquad
+\delta={d_{out}\over D}.
+\]
+
+As in the merged joint theorem, put
+
+\[
+U={9t\over2}-2\pi-2\delta-\frac\kappa2.
+\]
+
+The Section-171 envelope and (GJ.1) give
+
+\[
+C_0\le C={T-q/2\over D}\le U,
+\]
+
+hence
+
+\[
+\boxed{
+2\delta+{\kappa\over2}
+\le R_{50}(t):={9t\over2}-2\pi-C_0.
+}
+\tag{GJ.3}
+\]
+
+Canonical Sections 142/168 and the exposed-hull train endpoint inequality give one dominant exact `pi/3` orbit whose normalized outer terminal-occurrence mass obeys
+
+\[
+\boxed{
+K\ge K_*(t,\delta,\kappa)
+:=\pi+\delta-t-\kappa-2U+{8\Delta_2\over U}.
+}
+\tag{GJ.4}
+\]
+
+The merged joint route relaxation is exact for the two local constraints
+
+\[
+d_i\ge n_i g_i,
+\qquad
+d_i\ge n_i-s_i,
+\]
+
+and yields
+
+\[
+\boxed{
+\delta\ge\Phi(K_*),
+}
+\tag{GJ.5}
+\]
+
+where
+
+\[
+\boxed{
+\Phi(z)=z-6\arcsin(\tanh(z/6)).
+}
+\tag{GJ.6}
+\]
+
+Nothing in the derivation of (GJ.4)--(GJ.6) uses the old numerical value `0.00042`; it uses only the lower bound `C>=C_0`.
+
+---
+
+## 3. The two-parameter endpoint remains the same
+
+For fixed `t,delta`,
+
+\[
+{\partial K_*\over\partial\kappa}
+={4\Delta_2\over U^2}>0,
+\]
+
+so `Phi(K_*)-delta` is minimized at
+
+\[
+\kappa=0.
+\]
+
+For fixed `t,kappa`,
+
+\[
+{\partial K_*\over\partial\delta}
+=5+{16\Delta_2\over U^2}.
+\]
+
+The stronger atomic floor gives `U>=C_0`, and the exact certificate checks
+
+\[
+5+{16\Delta_2\over C_0^2}
+=8.9790809080\ldots<9.
+\tag{GJ.7}
+\]
+
+For the relevant orbit masses below `1.33`,
+
+\[
+\Phi'(z)=1-\operatorname{sech}(z/6)<0.025.
+\]
+
+Therefore
+
+\[
+{\partial\over\partial\delta}
+[\Phi(K_*)-\delta]
+<9(0.025)-1<0.
+\]
+
+Thus the easiest feasible point remains the maximal-detour endpoint
+
+\[
+\boxed{
+\kappa=0,
+\qquad
+\delta={R_{50}(t)\over2},
+\qquad
+U=C_0.
+}
+\tag{GJ.8}
+\]
+
+At this endpoint define
+
+\[
+K_{50}(t)
+:=
+\pi+{R_{50}(t)\over2}-t-2C_0+{8\Delta_2\over C_0}
+\tag{GJ.9}
+\]
+
+and
+
+\[
+\boxed{
+H_{50}(t)
+:=\Phi(K_{50}(t))-{R_{50}(t)\over2}.
+}
+\tag{GJ.10}
+\]
+
+A survivor requires
+
+\[
+H_{50}(t)\le0.
+\tag{GJ.11}
+\]
+
+As in the merged theorem,
+
+\[
+K_{50}'(t)={5\over4}
+\]
+
+and hence
+
+\[
+H_{50}'(t)
+={5\over4}\Phi'(K_{50}(t))-{9\over4}<0
+\]
+
+throughout the interval under consideration.
+
+---
+
+## 4. Certified endpoint
+
+The branch verifier
+
+`research/verify_target_c_joint_orbit_capacity_energy_g0050.py`
+
+uses 100-digit `Decimal` arithmetic and a monotone bisection evaluation of the exact dual optimizer. It checks
+
+\[
+H_{50}(1.82515)
+=2.5373341233\times10^{-5}>0,
+\tag{GJ.12}
+\]
+
+\[
+H_{50}(1.82516)
+=3.1640100\times10^{-6}>0,
+\]
+
+and
+
+\[
+H_{50}(1.82517)
+=-1.9045315\times10^{-5}<0.
+\]
+
+It further brackets the scalar zero by
+
+\[
+1.82516142463113334
+<t_*<
+1.82516142463113335.
+\tag{GJ.13}
+\]
+
+The stronger `g=0.0050` Section-171 floor
+
+\[
+t_{50,\mathrm{base}}
+={4\over9}(\pi+s_2)+0.0023374
+=1.8218509379\ldots
+\]
+
+has joint-orbit contradiction margin greater than `0.00735`, so the whole interval from that prior floor through `1.82515` is excluded.
+
+### Theorem GJ.1 — strengthened joint orbit floor
+
+Every convergent full-core Type-II survivor subsequence in the proof-only scope satisfies
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}
+\ge1.82515.
+}
+\tag{GJ.14}
+\]
+
+This numerically supersedes the `1.82434` conclusion of the merged joint orbit-capacity/phase-energy theorem.
+
+---
+
+## 5. What changes at the frontier
+
+The improvement is small in absolute decimal size but not merely cosmetic. The proof now simultaneously carries
+
+\[
+{T-q/2\over D}\ge2\sqrt{\Delta_2}+0.0050-o(1),
+\]
+
+\[
+{T_R\over D}\ge2\sqrt{\Delta_2}+0.0050-o(1),
+\qquad
+{\sigma_R\over D}\ge0.0100-o(1),
+\]
+
+and
+
+\[
+{q-k\over D}\ge1.82515-o(1).
+\]
+
+The joint orbit relaxation has already optimized the two local outer-route costs exactly. Further progress should not come from re-combining those same scalar inequalities. The remaining useful interfaces are structural:
+
+1. route the dominant-orbit terminal mass into bounded exceptional faces versus actual outer-to-outer trains;
+2. combine the resulting outer-to-outer population with the response-free two-sided diameter bracing theorem;
+3. use the matched rhombic slack `sigma_R/D>=0.0100` in the exceptional-face closure-rank ledger; or
+4. produce a simultaneous source-preserving multi-train shear in the near-equality orbit configuration.
+
+No exact unit equilateral triangle or strict same-cardinality sub-`D` competitor is produced here.
+
+**Disposition:** proof-only strengthening. C-II and Level I remain open.

@@ -1,0 +1,273 @@
+#!/usr/bin/env python3
+"""Exact checks for the tangent cubic-capacity candidate.
+
+The general rank theorem is proved in the accompanying report, not by this
+finite check.  We verify the signed Taylor expansion, paired equality spaces,
+an unpaired five-coordinate extremizer over Q(sqrt(5)), and small exhaustive
+integer graph charts.  No planar realization or optimality is assumed/proved.
+Requires sympy; all calculations are exact.
+"""
+
+from itertools import product
+
+import sympy as sp
+
+
+def zero(expr):
+    return sp.expand(expr).simplify() == 0
+
+
+def expansion_check():
+    t, diameter = sp.symbols("t D", real=True)
+    s2, s3, s4, s5, s6 = sp.symbols("S2 S3 S4 S5 S6", real=True)
+    # S1=0, with arbitrary orientation signs already included in Sm.
+    axial = diameter + s3 * t**3 / 6 - s5 * t**5 / 120
+    transverse = -s2 * t**2 / 2 + s4 * t**4 / 24 - s6 * t**6 / 720
+    got = sp.series(axial**2 + transverse**2 - diameter**2, t, 0, 7).removeO()
+    expected = (
+        diameter * s3 * t**3 / 3
+        + s2**2 * t**4 / 4
+        - diameter * s5 * t**5 / 60
+        + (s3**2 / 36 - s2 * s4 / 24) * t**6
+    )
+    assert zero(got - expected)
+    print("PASS: arbitrary-sign tangent expansion through degree six")
+
+
+def extremizers():
+    for dimension in range(1, 7):
+        xs = sp.symbols(f"x0:{dimension}", real=True)
+        coordinates = [a for x in xs for a in (x, -x)]
+        assert zero(sum(coordinates))
+        assert zero(sum(w**3 for w in coordinates))
+        assert zero(sum(w**2 for w in coordinates) - 2 * sum(x**2 for x in xs))
+        assert sp.Matrix([[sp.diff(w, x) for x in xs] for w in coordinates]).rank() == dimension
+    print("PASS: paired sharpness in dimensions 1 through 6")
+
+    x, y = sp.symbols("x y", real=True)
+    root = sp.sqrt(5)
+    a = [1, (root - 1) / 4, -(root + 1) / 4, -(root + 1) / 4, (root - 1) / 4]
+    b = [0, 1, (root - 1) / 2, -(root - 1) / 2, -1]
+    rows = [sp.Matrix([aa, bb]) for aa, bb in zip(a, b)]
+    ws = [aa * x + bb * y for aa, bb in zip(a, b)]
+    assert zero(sum(ws))
+    assert zero(sum(w**3 for w in ws))
+    assert zero(sum(w**2 for w in ws) - sp.Rational(5, 2) * x**2 - (5 - root) * y**2)
+    for i in range(5):
+        for j in range(i):
+            assert not zero(sp.det(sp.Matrix.hstack(rows[i], rows[j])))
+    assert not zero(sum(w**5 for w in ws))
+    # Certified positivity, with no numerical evaluation of sqrt(5).
+    assert 0 < 5 < 25  # 0 < sqrt(5) < 5, so 5-sqrt(5)>0.
+    print("PASS: nonpaired rank-two five-coordinate extremizer over Q(sqrt(5))")
+
+
+def cubic_signature(row):
+    """Unscaled symmetric cubic tensor, sufficient for testing zero sums."""
+    dimension = len(row)
+    return tuple(
+        row[i] * row[j] * row[k]
+        for i in range(dimension)
+        for j in range(i, dimension)
+        for k in range(j, dimension)
+    )
+
+
+def finite_graph_charts(dimension, radius):
+    """W={(x,A x)}: exhaust integer A in the stated finite box."""
+    basis = [tuple(int(i == j) for i in range(dimension)) for j in range(dimension)]
+    choices = list(product(range(-radius, radius + 1), repeat=dimension))
+    signatures = {row: cubic_signature(row) for row in choices}
+    target = tuple(-sum(cubic_signature(row)[j] for row in basis) for j in range(len(cubic_signature(basis[0]))))
+    survivors = 0
+    examined = 0
+    negative_basis = sorted(tuple(-a for a in row) for row in basis)
+    for rows in product(choices, repeat=dimension):
+        examined += 1
+        if tuple(sum(signatures[row][j] for row in rows) for j in range(len(target))) != target:
+            continue
+        survivors += 1
+        assert sorted(rows) == negative_basis, rows
+    assert survivors == sp.factorial(dimension)
+    print(f"PASS: d={dimension}, integer radius={radius}: {examined} charts, {survivors} paired survivors")
+
+
+def signed_pair_check():
+    x, y = sp.symbols("x y", real=True)
+    # The cubic is still zero with mixed signs, but the quadratic moment need
+    # not be definite; this prevents a false signed sharpness assertion.
+    z = [x, -x, y, -y]
+    signs = [1, 1, -1, -1]
+    w = [s * zi for s, zi in zip(signs, z)]
+    assert zero(sum(s * wi**3 for s, wi in zip(signs, w)))
+    assert zero(sum(s * wi**2 for s, wi in zip(signs, w)) - 2 * x**2 + 2 * y**2)
+    print("PASS: signed equality need not give a uniform quartic blocker")
+
+
+def cubic_cusp_check():
+    x, y, a, b, diameter = sp.symbols("x y a b D", real=True)
+    w = [x, y, -x - y]
+    cubic = sp.expand(sum(z**3 for z in w))
+    assert zero(cubic + 3 * x * y * (x + y))
+    assert zero(sum((-z)**3 for z in w) + cubic)
+    assert sp.Matrix([[sp.diff(z, variable) for variable in (x, y)] for z in w]).rank() == 2
+    # For D>0, max(delta1,delta2)=2D|a|+a^2+b^2 exactly.
+    delta1 = (diameter - a)**2 + b**2 - diameter**2
+    delta2 = (diameter + a)**2 + b**2 - diameter**2
+    assert zero(delta1 + delta2 - 2 * a**2 - 2 * b**2)
+    assert zero(delta2 - delta1 - 4 * diameter * a)
+    p = x**3 - 3 * x * y**2
+    q = 3 * x**2 * y - y**3
+    assert sp.gcd(p, q) == 1
+    assert p.subs({x: 1, y: 2}) == -11
+    assert q.subs({x: 1, y: 2}) == -2
+    print("PASS: opposite-cubic cusp regression and coprime common-descent example")
+
+
+def joint_capacity_checks():
+    x, y, t = sp.symbols("x y t", real=True)
+    # Semidefinite-cofactor example: even support m=4, rank exactly m/2.
+    ws = [x, x, -x + y, -x - y]
+    assert zero(sum(ws))
+    assert zero(sum(w**3 for w in ws) + 6 * x * y**2)
+    assert sp.Matrix([[sp.diff(w, v) for v in (x, y)] for w in ws]).rank() == 2
+
+    for dimension in range(1, 5):
+        xs = sp.symbols(f"x0:{dimension}", real=True)
+        aa = sp.symbols(f"a0:{dimension}", real=True)
+        bb = sp.symbols(f"b0:{dimension}", real=True)
+        coordinates = [w for xx, a, b in zip(xs, aa, bb) for w in (xx + t * a, -xx + t * b)]
+        expected = (
+            3 * t * sum((a + b) * xx**2 for xx, a, b in zip(xs, aa, bb))
+            + 3 * t**2 * sum((a**2 - b**2) * xx for xx, a, b in zip(xs, aa, bb))
+            + t**3 * sum(a**3 + b**3 for a, b in zip(aa, bb))
+        )
+        assert zero(sum(w**3 for w in coordinates) - expected)
+        assert zero(sum(coordinates) - t * sum(a + b for a, b in zip(aa, bb)))
+
+        # For every assignment of paired coordinates to two labeled bars,
+        # each partial first moment vanishes iff all pairs stay within a bar.
+        paired = [w for xx in xs for w in (xx, -xx)]
+        for assignment in product((0, 1), repeat=2 * dimension):
+            first = sum(w for w, label in zip(paired, assignment) if label == 0)
+            internal = all(assignment[2 * j] == assignment[2 * j + 1] for j in range(dimension))
+            assert (sp.expand(first) == 0) == internal
+            if internal:
+                assert sp.expand(sum(w**3 for w, label in zip(paired, assignment) if label == 0)) == 0
+    print("PASS: semidefinite-cofactor example, paired-wall extension identity, and bar-partition obstruction")
+
+
+def curved_descent_and_flattening_checks():
+    t, diameter, epsilon = sp.symbols("t D epsilon", real=True)
+    # Two positive collinear unit contributions rotated oppositely.
+    # Full squared-length Hessian is -4D (canonical half-squared Hessian -2D).
+    squared = (diameter - 2 + 2 * sp.cos(t))**2 - diameter**2
+    assert sp.diff(squared, t, 2).subs(t, 0) == -4 * diameter
+    curved = sp.series(squared.subs(t, epsilon * t**2), t, 0, 7).removeO()
+    assert zero(curved + 2 * diameter * epsilon**2 * t**4)
+
+    # Source transfer forces every tangent deviation of a bar to be delta.
+    # Exhaust signs, not velocities: S1=0 forces signed cancellation unless
+    # delta=0, and in either case the complete trigonometric change vanishes.
+    delta = sp.symbols("delta", real=True)
+    for count in range(1, 9):
+        for signs in product((-1, 1), repeat=count):
+            signed_count = sum(signs)
+            axial = signed_count * sp.sin(t * delta)
+            transverse = signed_count * (sp.cos(t * delta) - 1)
+            assert axial.subs(delta, 0) == 0
+            assert transverse.subs(delta, 0) == 0
+            if signed_count == 0:
+                assert axial == 0 and transverse == 0
+
+    # Exact cubic corrector in a two-gradient circuit.  The strict feasibility
+    # interval exists iff the unique normalized weighted cubic is negative.
+    c, f1, f2, b = sp.symbols("c f1 f2 b", real=True)
+    lhs1, lhs2 = b + f1, -c * b + f2
+    assert zero(c * lhs1 + lhs2 - c * f1 - f2)
+    midpoint = (f2 / c - f1) / 2
+    assert zero(lhs1.subs(b, midpoint) - (c * f1 + f2) / (2 * c))
+    assert zero(lhs2.subs(b, midpoint) - (c * f1 + f2) / 2)
+    print("PASS: zero-gradient fourth-order descent, exact tangent flattening, and cubic corrector")
+
+    # The first dependent rotation-level model: relation (1,-2,1) on (0,x,2x).
+    x = sp.symbols("x", real=True)
+    levels, relation = (0, x, 2 * x), (1, -2, 1)
+    assert sum(relation) == 0
+    assert zero(sum(c * s for c, s in zip(relation, levels)))
+    deviations = [s - x for s in levels]
+    assert zero(sum(c * w for c, w in zip(relation, deviations)))
+    assert zero(sum(c * w**3 for c, w in zip(relation, deviations)))
+    assert zero(sum(c * w**2 for c, w in zip(relation, deviations)) - 2 * x**2)
+    sine = sum(c * sp.sin(t * w) for c, w in zip(relation, deviations))
+    cosine = sum(c * (sp.cos(t * w) - 1) for c, w in zip(relation, deviations))
+    assert zero(sine)
+    assert zero(cosine**2 - 4 * (sp.cos(t * x) - 1)**2)
+    # In contrast, independent differences x,y admit no nonzero signed count
+    # relation, checked on every coefficient pair in the explicit [-5,5] box.
+    y = sp.symbols("y", real=True)
+    for c1, c2 in product(range(-5, 6), repeat=2):
+        assert (sp.expand(c1 * x + c2 * y) == 0) == (c1 == c2 == 0)
+    print("PASS: three-level integer-relation quartic regression and independent-level cancellation")
+
+    a, b, u, w = sp.symbols("a b u w", real=True)
+    first, cubic = a * u + b * w, a * u**3 + b * w**3
+    assert zero(cubic - w**2 * first - a * u * (u - w) * (u + w))
+    assert zero((cubic - w**2 * first).subs(w, -u))
+    assert zero(first.subs({w: -u, b: a}))
+    # Exhaust weak weight orderings too: at most one of three bars has two
+    # strictly heavier recipients, including ties between the upper weights.
+    for weights in product(range(4), repeat=3):
+        two_recipients = sum(sum(weights[i] < weights[j] for j in range(3) if i != j) == 2 for i in range(3))
+        assert two_recipients <= 1
+    print("PASS: three-bar midpoint elimination and strict stress-weight transfer ordering")
+
+    # The intermediate midpoint quartic cannot meet the full phase-group
+    # gradient balance: its sole nonzero row is (1,-2,1).
+    mu0, mu1, mu2 = sp.symbols("mu0 mu1 mu2", positive=True)
+    midpoint_matrix = sp.Matrix([[0, 0, 0], [1, -2, 1], [0, 0, 0]])
+    assert midpoint_matrix * sp.ones(3, 1) == sp.zeros(3, 1)
+    assert midpoint_matrix * sp.Matrix([0, x, 2*x]) == sp.zeros(3, 1)
+    assert sp.Matrix([[mu0, mu1, mu2]]) * midpoint_matrix == sp.Matrix([[mu1, -2*mu1, mu1]])
+    # With distinct rotation values, the second-highest-weight row has at
+    # most one recipient and must vanish. Check the remaining one-row
+    # phase balance throughout an exact finite signed-count box.
+    for n01, n02 in product(range(-4, 5), repeat=2):
+        matrix = sp.Matrix([[-n01-n02, n01, n02], [0, 0, 0], [0, 0, 0]])
+        assert (sp.Matrix([[1, 2, 3]]) * matrix == sp.zeros(1, 3)) == (n01 == n02 == 0)
+    print("PASS: phase-group balance rejects the midpoint quartic and all three-bar one-row flows")
+
+    aa, bb, yy = sp.symbols("aa bb yy", nonzero=True, real=True)
+    projection_polynomial = (aa**2 + bb*yy)**2 - (aa**2 + bb**2)**2
+    assert zero(projection_polynomial - bb*(yy-bb)*(2*aa**2 + bb**2 + bb*yy))
+    assert zero(projection_polynomial.subs(yy, bb))
+    assert zero(projection_polynomial.subs(yy, -bb-2*aa**2/bb))
+    # Exact phase-balance formulas for the only possible four-row pattern.
+    n23, n24, mu1, mu2 = sp.symbols("n23 n24 mu1 mu2", nonzero=True, real=True)
+    n12 = mu2*(n23+n24)/mu1
+    n13, n14 = -mu2*n23/mu1, -mu2*n24/mu1
+    phase = sp.Matrix([
+        [-n12-n13-n14, n12, n13, n14],
+        [0, -n23-n24, n23, n24],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+    ])
+    assert all(zero(entry) for entry in sp.Matrix([[mu1, mu2, 1, 1]]) * phase)
+    assert phase * sp.ones(4, 1) == sp.zeros(4, 1)
+    print("PASS: four-bar phase reduction and unique common-recipient projection obstruction")
+
+
+def main():
+    expansion_check()
+    extremizers()
+    finite_graph_charts(2, 2)
+    finite_graph_charts(3, 1)
+    signed_pair_check()
+    cubic_cusp_check()
+    joint_capacity_checks()
+    curved_descent_and_flattening_checks()
+    print("All exact checks passed; no geometric realization or Level I claim follows.")
+
+
+if __name__ == "__main__":
+    main()

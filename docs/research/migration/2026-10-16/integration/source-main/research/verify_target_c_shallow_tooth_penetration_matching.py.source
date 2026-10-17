@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+from decimal import Decimal, getcontext
+
+getcontext().prec = 80
+
+pi = Decimal('3.14159265358979323846264338327950288419716939937510')
+sqrt3 = Decimal(3).sqrt()
+Delta2 = pi / (Decimal(2) * sqrt3)
+s = Delta2.sqrt()
+g = Decimal('0.00042')
+C146 = Decimal(4) * (pi + s) / Decimal(9)
+t42 = C146 + Decimal('0.0013751')
+R42 = Decimal('4.5') * (t42 - C146) - g
+delta = R42 / Decimal(2)
+tooth_floor = (pi - t42 - Decimal(2) * R42) / Decimal(3)
+
+eta = Decimal(1) / Decimal(15)
+u = Decimal(29) / Decimal(30)
+sin_alpha = Decimal(59).sqrt() / Decimal(30)
+r = (Decimal(29) + Decimal(177).sqrt()) / Decimal(60)
+margin = u - r
+Y = (Decimal(29) * sqrt3 - Decimal(59).sqrt()) / Decimal(60)
+matching = tooth_floor - delta / eta
+endpoint_population = Decimal(2) * matching
+
+assert eta == Decimal(1) / Decimal(15)
+assert margin > Decimal('0.26')
+assert Decimal(2) * margin > Decimal('0.52')
+assert Y > Decimal('0.70913879')
+assert matching > Decimal('0.3931297468')
+assert endpoint_population > Decimal('0.7862594937')
+assert sin_alpha < Decimal(3).sqrt() / Decimal(2)
+
+print('u_min =', u)
+print('r_max =', r)
+print('per-side tangent margin =', margin)
+print('two-side tangent margin =', Decimal(2) * margin)
+print('shallow apex depth <=', sin_alpha)
+print('inward edge component >', Y)
+print('matching/D >=', matching)
+print('distinct matching endpoints/D >=', endpoint_population)
+print('PASS: shallow-tooth penetration matching constants')

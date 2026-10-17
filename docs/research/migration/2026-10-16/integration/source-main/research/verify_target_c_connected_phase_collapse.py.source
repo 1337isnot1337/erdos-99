@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+"""Check the arithmetic and finite graph bound in Lemma CP.
+
+The proof is in
+docs/reports/target_c_connected_phase_core_collapse_2026-09-12.md.  The first
+check is the elementary neighborhood-packing estimate for a shortest path.  The
+second check reproduces the safe Section-118 mass thresholds after composing
+Lemma CP with proof-only Theorem PC.
+
+This script does not extract a connected core, certify the common phase lift, or
+prove any global-minimality implication.  A passing run is not a C-II proof.
+"""
+
+from __future__ import annotations
+
+import math
+
+
+def path_bound(vertex_constant: float, degree_constant: float) -> float:
+    """Safe upper bound m <= 3C/eta+2 from spaced closed neighborhoods."""
+
+    if vertex_constant <= 0.0 or degree_constant <= 0.0:
+        raise ValueError("constants must be positive")
+    return 3.0 * vertex_constant / degree_constant + 2.0
+
+
+def main() -> None:
+    # These are the proof-only Section-118 endpoint values used by Theorem PC.
+    sigma = 0.0088
+    area = 0.4703752868004241
+    theta = 2.7047792352154936
+    bad = 0.1162704799276074
+    route = math.sin(theta / 2.0) + 2.0 * math.sin(theta) + (16.0 / 3.0) * sigma
+
+    assert path_bound(1.0, 1.0) == 5.0
+    assert path_bound(1.0, 0.5) == 8.0
+
+    print(f"safe_route_upper={route:.16f}")
+    print(f"full_carrier_endpoint_lower={4.0 * math.sqrt(area):.16f}")
+
+    for labels in (1, 2, 3):
+        threshold = ((route + 2.0 * labels * bad) / 4.0) ** 2
+        margin_at_full_mass = 4.0 * math.sqrt(area) - route - 2.0 * labels * bad
+        print(f"labels={labels} threshold={threshold:.16f}")
+        print(f"labels={labels} full_mass_margin={margin_at_full_mass:.16f}")
+        assert threshold > 0.0
+        if labels == 3:
+            assert margin_at_full_mass > 0.0
+
+    # The q=3 threshold is below the certified full-carrier mass, but only by a
+    # finite margin; this guards the direction of the composition inequality.
+    threshold_three = ((route + 6.0 * bad) / 4.0) ** 2
+    assert threshold_three < area
+
+
+if __name__ == "__main__":
+    main()
+

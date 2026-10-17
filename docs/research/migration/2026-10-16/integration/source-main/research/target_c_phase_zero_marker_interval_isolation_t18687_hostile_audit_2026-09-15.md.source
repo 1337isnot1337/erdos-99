@@ -1,0 +1,157 @@
+# Hostile audit — phase-zero marker path and interval-block isolation through `t<=1.8687`
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_phase_zero_marker_interval_isolation_t18687_2026-09-15.md`  
+**Base:** merged hostile-audited coupled paired-remainder path through `1.8687`  
+**Disposition:** **PASS.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The candidate composes the merged adaptive low-energy pair theorem with the independent two-shore phase-zero marker argument, then applies the marker exclusion to arbitrary contiguous path blocks. The load-bearing checks are: selection must preserve endpoint-measure domination; marker deletion must leave linear pair weight; deleting selected cuts must preserve path-region diameter saturation; and the adjacent one/two-bar tangent argument must remain valid for nonadjacent block boundaries.
+
+All four checks pass.
+
+## 1. `P_low` remains a retained pair submeasure
+
+The merged `1.8687` theorem begins with retained dominant O--O pair weights
+
+\[
+w_\tau=\min(a_\tau,b_\tau),
+\qquad 0\le w_\tau\le a_\tau,b_\tau,
+\]
+
+and applies weighted Markov to select trains satisfying the source-adaptive energy threshold. This operation discards whole train weights; it does not increase any endpoint weight.
+
+Therefore the endpoint measure of the selected `P_low` family is still dominated by the retained dominant outer-occurrence measure, separately at each terminal. Pigeonholing among at most three shrinking dominant phase windows preserves that domination.
+
+The exact merged theorem gives
+
+\[
+P_{low}>0.0006115D-o(D),
+\]
+
+so one window carries more than `0.0002038D-o(D)` retained pair weight.
+
+**Verdict:** PASS.
+
+## 2. Shrinking marker neighborhoods cost only `o(D)` selected pair weight
+
+The Type-II loaded-hull perimeter measure converges uniformly to half angular measure in oriented normal angle. Thus for an interval of width `rho_D->0`, its loaded-hull side-length mass is `O(rho_D D)+o(D)=o(D)`.
+
+The selected pair endpoint measure is a submeasure of retained occurrence measure and hence of this side-length measure. The union of the two antipodal marker neighborhoods therefore contains only `o(D)` selected endpoint weight. Deleting every train with either endpoint there removes at most `o(D)` pair weight.
+
+Hence the surviving window still has
+
+\[
+>0.0002D-o(D)
+\]
+
+pair weight and, since every train weight is at most one, the same lower bound on actual train count.
+
+**Verdict:** PASS.
+
+## 3. The two-shore zero argument is independent of the low-energy threshold
+
+For one selected O--O train, Section 157 gives diameter crossings with both signs of `r dot J u` on either chosen Jordan shore. Exchanging shores reverses both the oriented diameter vector and the coherent train vector, so the scalar sign is unchanged:
+
+\[
+(-r)\cdot J(-u)=r\cdot Ju.
+\]
+
+Uniform Type-II diameter-normal convergence transfers the two signs to loaded-hull normal directions on that shore. Continuity therefore puts a zero of `n dot Ju` in each complementary shore normal arc.
+
+This statement uses neither the numerical terminal-energy threshold nor the fixed host arcs from the merged path proof. The low-energy selection supplies pair mass; the marker argument supplies the stronger oriented topology.
+
+**Verdict:** PASS.
+
+## 4. Fixed-marker separation follows after deletion
+
+All train directions in one dominant window approach one projective phase. The two oriented shore zeros therefore approach one fixed antipodal pair `theta_+,theta_-` with uniform error `epsilon_D+eta_D`.
+
+Choose `rho_D` with
+
+\[
+epsilon_D+eta_D=o(rho_D).
+\]
+
+After deleting terminal occurrences in the `rho_D` neighborhoods, moving either train-dependent zero to its limiting fixed marker crosses no terminal. Since the two complementary shore interiors are disjoint and each contains a zero, the two zeros occupy distinct antipodal representatives. Thus every surviving crosscut separates the same fixed marker pair.
+
+Pairwise-disjoint proper disk crosscuts separating the same two boundary markers have totally ordered marker-side shores. The complement dual is therefore a path.
+
+**Verdict:** PASS.
+
+## 5. Coarsening the merged path preserves region saturation and the hub
+
+The surviving marker family is a subset of the merged same-window O--O family. Deleting cuts merges consecutive old complement regions; it creates no new split.
+
+The merged phase-free saturation theorem puts an actual diameter endpoint in every old path region. Every coarsened region contains at least one old region, so it remains diameter-loaded.
+
+Each actual diameter support on the coarsened path is the image of its old interval under contraction of deleted path edges, hence remains an interval. Pairwise intersection of actual diameter segments gives pairwise intersection of these path intervals; Helly for tree paths again produces one common hub. Nonhub switching remains one-sided toward it.
+
+**Verdict:** PASS.
+
+## 6. Arbitrary interval blocks have exactly two moving contact families
+
+For selected cuts `tau_i,tau_j` with nested far shores `S_j subset S_i`, the interval block is
+
+\[
+S_i\setminus S_j,
+\qquad
+1_{S_i\setminus S_j}=\chi_i-\chi_j.
+\]
+
+The exact O--O cutset theorem says a unit contact crosses a selected shore precisely when it belongs to that train. Hence the contact boundary of the difference block is exactly
+
+\[
+\tau_i\cup\tau_j.
+\]
+
+Internal selected train contacts have both endpoints in the moving block; exterior ones have both endpoints fixed. Translating the block therefore changes only the two boundary contact families.
+
+For every source pair the exact relative displacement is binary membership difference times `v`, so every block-crossing actual diameter has the same quadratic formula used in the adjacent-strip theorem. Adjacency is not used.
+
+**Verdict:** PASS.
+
+## 7. Marker exclusion holds for a long block, not only one region
+
+On each of the two open marker-to-marker loaded-hull arcs, selected terminal occurrences are monotone in path order. The loaded boundary belonging to the block between `tau_i,tau_j` is the subarc between their terminal occurrences on each side.
+
+Both endpoints of each subarc lie outside the deleted marker neighborhoods, and the subarc is contained in the same open marker-to-marker arc. Hence it does not enter either marker neighborhood.
+
+Every actual diameter endpoint is an extreme loaded vertex. Therefore the moving endpoint of every block-crossing diameter has outward normal outside the marker neighborhoods. This is the exact input needed for the TB1/TB2 localization argument.
+
+**Verdict:** PASS.
+
+## 8. The one/two-bar classification extends verbatim
+
+For block boundary contacts oriented into the moving block,
+
+\[
+a=\nu_i,
+\qquad b=-\nu_j.
+\]
+
+The homogeneous contact-opening directions form the same one-dimensional arc `Omega` used in the adjacent theorem. If every moving diameter had negative dot product with one `w in Omega`, a small finite translation would open both boundary contacts and shorten every moving old diameter; canonical minimality excludes this. Interval Helly gives a one/two-bar certificate.
+
+If `nu_i!=nu_j`, the opening arc length is the shrinking phase gap. An inclusion-minimal TB2 bar has one zero on that arc, so its projective direction is within the phase gap of the train phase. Uniform diameter-normal convergence then places its moving endpoint in a deleted marker neighborhood, impossible. Thus TB1 is forced. Boundary-ray TB1 is excluded by the same marker argument, so the blocker lies strictly inside `cone{a,b}`.
+
+If `nu_i=nu_j`, a zero-transverse moving diameter would be phase-parallel and marker-forbidden. A one-bar certificate for the two opposite opening directions would require exactly such zero transverse projection. Hence the minimal certificate is TB2 with opposite strict transverse signs.
+
+**Verdict:** PASS.
+
+## 9. Finite local isolation is sourcewise exact
+
+In the nonparallel case, strict interior TB1 gives a positive sourcewise margin on the compact opening arc. Any hypothetical sequence of arbitrarily small feasible finite translations has normalized directions converging into that arc, so the TB1 diameter increases linearly, contradicting its upper bound.
+
+In the equal-phase case, the antipodal contact inequalities force normalized limits to `+/-Jnu`; the corresponding strict-sign TB2 bar increases linearly.
+
+Thus zero is locally isolated for every fixed proper interval block. The theorem correctly claims no uniform isolation radius in `D`.
+
+**Verdict:** PASS.
+
+## 10. Scope
+
+The theorem does not exclude a deformation assigning different translations to different path regions, a contact-preserving multishear, or a nonlocal source replacement. It rules out the entire class of sufficiently small **rigid contiguous-block translations**.
+
+The theorem is valid through the merged `t<=1.8687` endpoint because the only endpoint-dependent input is the positive linear retained selected pair weight already certified there.
+
+**Final disposition:** **PASS.** The common-marker topology and rigid interval-block isolation extend through `t<=1.8687`. C-II and Level I remain open.

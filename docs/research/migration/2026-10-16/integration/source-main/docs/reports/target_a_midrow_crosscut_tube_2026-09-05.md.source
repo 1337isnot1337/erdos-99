@@ -1,0 +1,185 @@
+<!-- theorem-state: {"artifact_id":"ART-B0F319F3FE7E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
+# Erdős Problem #99 — Target A midrow crosscut tube
+
+**Date:** 2026-09-05  
+**Branch:** `research/target-c-c97-caterpillar-fan-capacity-2026-09-04`  
+**Run type:** exact phase-aligned refinement of RD1–RD3  
+**Target:** response-corrected right-deficiency separator  
+**Status:** LEVEL I STILL OPEN
+
+## 1. Result
+
+The averaged straight-crosscut estimate RD3 pays
+
+`(4/sqrt(3)) L + O(1)`
+
+interior lattice sites for a crosscut of length `L`.  The response phase is a free
+translation parameter, and a survivor must fail Target A for **every** admissible
+generic phase.  We may therefore choose the phase so that a straight crosscut lies
+exactly halfway between two adjacent lattice rows parallel to it.
+
+For that phase, the open unit tube of the crosscut meets only those two rows.  This
+gives the exact finite estimate
+
+`|T_Z| <= 2 ceil(L+sqrt(13)/2) = 2L+O(1)`.
+
+Thus the leading straight-separator cost improves from
+
+`4/sqrt(3)=2.309401...`
+
+to exactly `2`.
+
+## 2. Midrow geometry of the unit triangular lattice
+
+Fix a primitive unit direction `e` of the triangular lattice `Lambda`, and let `n` be
+a unit normal.  Lattice rows parallel to `e` are separated by
+
+`h=sqrt(3)/2`.
+
+Let `ell` be a line parallel to `e` lying exactly halfway between two adjacent rows.
+After translating coordinates in the `n` direction, take those rows to have normal
+coordinates `0` and `h`, while
+
+`ell={x:n dot x=h/2}`.
+
+The distance from `ell` to either adjacent row is
+
+`h/2=sqrt(3)/4<1`.
+
+The next rows have distance
+
+`3h/2=3sqrt(3)/4>1`.
+
+Hence:
+
+### Lemma MR1 — only two rows enter the unit strip
+
+Every lattice point whose distance from `ell` is strictly below one lies on one of the
+two adjacent rows.
+
+## 3. Exact count for a finite segment
+
+Let `Gamma` be a closed segment of length `L` contained in `ell`.
+A point on either adjacent lattice row has perpendicular distance
+
+`sqrt(3)/4`
+
+from `ell`.  Therefore it has distance `<1` from `Gamma` only if its longitudinal
+coordinate lies in the projection of `Gamma` enlarged at each end by
+
+`a=sqrt(1-3/16)=sqrt(13)/4`.
+
+The resulting open longitudinal interval has length
+
+`L+2a=L+sqrt(13)/2`.
+
+Lattice sites on one row are spaced exactly one unit apart in the `e` direction.  An
+open interval of length `S` contains at most `ceil(S)` points of a unit arithmetic
+progression.  Applying this on the two rows gives:
+
+### Theorem MR2 — exact midrow tube count
+
+`# {y in Lambda+v : dist(y,Gamma)<1}`
+
+`<= 2 ceil(L+sqrt(13)/2)`.
+
+In particular
+
+`|T_Z| <= 2 ceil(L+sqrt(13)/2)`
+
+for the interior response-lattice tube of RD1.
+
+The estimate is independent of the position of the segment endpoints along the line.
+
+## 4. A generic response phase can satisfy the midrow constraint
+
+Let `K` be the full-dimensional response hull and `X^*` the finite response point set.
+Choose any line `ell` parallel to a primitive lattice direction which crosses
+`int K`, avoids `X^*`, and is not tangent to `K`.  Such offsets are dense because
+`X^*` is finite.  Its chord
+
+`Gamma=ell cap K`
+
+is a valid straight RD1 crosscut: its endpoints lie on `partial K`, its open segment
+lies in `int K`, and
+
+`L(Gamma)<=diam K=d`.
+
+Now translate the lattice in the normal direction so that `ell` is halfway between
+adjacent lattice rows.  One translation parameter remains: translation parallel to
+`ell`, modulo one lattice period.
+
+The canonical genericity requirements exclude only finitely many values of this
+remaining parameter.  Indeed, for each of the finitely many response points and each
+of the finitely many lattice rows/sites that can lie within unit distance of the
+bounded response region, the conditions
+
+- response point = lattice point, or
+- response-point-to-lattice distance = 1
+
+are finite equations in the one-dimensional parallel translation parameter.  They do
+not hold identically along the midrow family.  Therefore an admissible generic phase
+exists inside that family.
+
+### Lemma MR3 — phase-compatible midrow crosscut
+
+For every full-dimensional response hull there is an admissible generic response
+translate and a straight primitive-direction crosscut `Gamma` for which MR2 applies.
+
+The statement uses only translation freedom; no rotation of the prescribed response
+lattice is needed.
+
+## 5. Right-deficiency consequence
+
+RD1 gives, for every geometric separator,
+
+`h(G_v) >= Xi_Gamma(v)-|T_Z(v)|`,
+
+where
+
+`Xi_Gamma=|O_0|+sum_i(|O_i|-|C_i|)_+`.
+
+Choose the midrow phase supplied by MR3.  Then:
+
+### Theorem MR4 — pointwise phase-aligned separator bound
+
+`h(G_v)`
+
+`>= Xi_Gamma(v)-2 ceil(L(Gamma)+sqrt(13)/2)`.
+
+Since `L(Gamma)<=d`,
+
+`h(G_v)`
+
+`>= Xi_Gamma(v)-2 ceil(d+sqrt(13)/2)`.
+
+Target A closes for this phase whenever
+
+`Xi_Gamma(v)`
+
+`>= J(v)+2 ceil(L(Gamma)+sqrt(13)/2)`.
+
+Equivalently every survivor must satisfy on every admissible midrow phase
+
+`Xi_Gamma(v)`
+
+`<= J(v)+2 ceil(L(Gamma)+sqrt(13)/2)-1`.
+
+## 6. Relation to the averaged bound
+
+RD3 remains the correct theorem when the phase is averaged over the full lattice
+torus.  MR4 is different: it exploits the pointwise quantifier in the survivor
+condition and selects a codimension-one family of phases before choosing a generic
+member.
+
+For a straight chord the two penalties are
+
+- averaged RD3: `(4/sqrt(3))L+O(1)`;
+- phase-aligned MR4: `2L+O(1)`.
+
+The improvement is about `0.3094L` lattice sites, which is linear at the Target A
+boundary scale.
+
+This does not by itself prove the missing lower bound on `Xi_Gamma-J`.  The remaining
+problem is now sharper: force right-sector surplus of at least `J+2L+O(1)` for one
+midrow crosscut, or construct a strict sub-`D` competitor.

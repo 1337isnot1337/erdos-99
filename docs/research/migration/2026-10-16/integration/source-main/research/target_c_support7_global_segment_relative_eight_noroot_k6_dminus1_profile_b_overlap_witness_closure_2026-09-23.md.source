@@ -1,0 +1,160 @@
+# Target C: close the intersecting two-witness Profile B branch
+
+Date: 2026-09-23
+
+Status: rigorous finite closure of the sole remaining eight-no-root `k=6,D=-1,p=9` Profile B. The preceding disjoint-witness theorem forces the two dependency-active aligned touch-three witness triples to meet in exactly one source cycle. This note eliminates that one-overlap branch. Therefore Profile B is empty.
+
+This closes the remaining `k=6,D=-1,p=9` Profile B finite target. It does **not** by itself promote Target C-II, the canonical global Target C frontier, or Erdos Problem #99 to solved.
+
+Companion exact certificate:
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_overlap_witness_closure_2026_09_23.py`
+
+## 1. Inputs already proved
+
+The current repository gives the exact remaining source profile:
+
+```text
+8 selected no-root cycles;
+rank(P)=2;
+d_1(P)>=4;
+d_8=3;
+exactly two aligned touch-three witness blocks b,c;
+exactly one rank-two singleton block r;
+exactly six further aligned blocks, all dependency-inactive;
+|T intersect U|=1 for the witness touch triples T,U.
+```
+
+The line `L_r<=P` supplied by the rank-two singleton satisfies
+
+```text
+|supp(L_r) intersect T| <= 1,
+|supp(L_r) intersect U| <= 1.
+```
+
+There are exactly three source coordinates outside `T union U`, because the union has size five.
+
+## 2. The one-overlap branch has only three root-role orbits
+
+Let `x` be the unique cycle in `T intersect U`.
+
+The four vertices of `x` contain both witness root triples `b` and `c`. Since they are distinct triples,
+
+```text
+|b intersect c| = 2.                                      (2.1)
+```
+
+Also `d_1(P)>=4`, while only three source coordinates lie outside `T union U`. Therefore `L_r` must have at least one support coordinate inside `T union U`.
+
+Any support coordinate of `L_r` touches the root triple `r`. If such a coordinate lies in `T`, it also touches `b`, so its four-vertex set contains both `r` and `b`. Distinct triples contained in one four-set meet in two vertices. Likewise for `U` and `c`. Hence
+
+```text
+max(|r intersect b|, |r intersect c|) = 2.                 (2.2)
+```
+
+The preceding exact-profile verifier already classifies all distinguished roles `(r;{b,c})` into 17 `S_7` orbits. Applying (2.1)--(2.2) leaves exactly three:
+
+```text
+r=123 ; b,c=124,125
+r=123 ; b,c=124,134
+r=123 ; b,c=124,145.
+```
+
+No other root-role orbit can occur in the one-overlap branch.
+
+This argument also explains the support patterns. In the tetrahedral role `123;124,134`, the only witness-star cycle that can support `L_r` is the shared cycle, so it must be supported and `wt(L_r)=4`, with all three outside coordinates supported. In the role `123;124,145`, only the `124` witness star can meet the line support, so again `wt(L_r)=4` and all three outside coordinates are supported. The role `123;124,125` permits weights four or five.
+
+## 3. Exact source census
+
+For each of the three role representatives, the certificate enumerates all local directions `(s_r,s_b,s_c)`, both omitted witness-star members, and the three outside source coordinates.
+
+For a genuine aligned touch-three witness, an outside source cycle cannot touch its root block at all: an aligned touch would give a fourth member of the star and an off-direction touch would make the local empty space rank two rather than aligned. Therefore the three outside coordinates are required to have zero local quotient at both `b` and `c`.
+
+The census requires:
+
+```text
+|T intersect U|=1;
+|T union U|=5;
+exact aligned touch-three outside avoidance at b,c;
+dim E_r=2;
+wt(L_r) in {4,5};
+|supp(L_r) intersect T|<=1;
+|supp(L_r) intersect U|<=1.
+```
+
+For safety, the five coordinates already in `T union U` are not further filtered for accidental off-star cross-touches. Thus the enumerated set is still a superset of the true branch.
+
+The resulting normalized source/line case counts are
+
+```text
+r=123 ; b,c=124,125 : 7280 cases
+    wt(L_r)=4 : 7216
+    wt(L_r)=5 :   64
+
+r=123 ; b,c=124,134 : 1026 cases
+    wt(L_r)=4 : 1026
+
+r=123 ; b,c=124,145 :  684 cases
+    wt(L_r)=4 :  684
+```
+
+Total: `8990` source/line cases.
+
+## 4. Exhaust every rank-two coefficient plane through the forced line
+
+Fix one source/line case and write `L=L_r`.
+
+Rank-two planes `P` containing `L` are classified by their incidences with the finitely many local empty spaces `E_q<=Q^8`.
+
+A two-dimensional `E_q` can be contained in `P` only when `P=E_q`, and this is possible only if `L<=E_q`. A one-dimensional local line `E_q!=L` can be contained in `P` only when
+
+```text
+P = span(L,E_q).
+```
+
+These give a finite set of exceptional planes. Every other rational rank-two plane through `L` has the same generic incomplete-block pattern: it contains exactly the rank-one local spaces equal to `L` and no two-dimensional local space.
+
+Therefore the classification is exhaustive over `Q`; no sampling of coefficient values is involved.
+
+Across the `8990` source/line cases there are `95798` exceptional planes before imposing coefficient minimum distance. Only four exceptional planes satisfy
+
+```text
+d_1(P)>=4.
+```
+
+All four have source deficiency
+
+```text
+d_8=7.
+```
+
+The generic incidence classes have exact deficiency histogram
+
+```text
+d=6  :   32
+d=7  : 3624
+d=8  : 4482
+d=9  :  576
+d=10 :  192
+d=11 :   84
+```
+
+In particular, neither the generic family nor any `d_1(P)>=4` exceptional plane has `d_8=3`.
+
+Thus the one-overlap branch is impossible.
+
+## 5. Consequence
+
+The disjoint branch was already excluded, and distinct witness stars meet in at most one cycle. Section 4 now excludes the only remaining one-overlap branch. Therefore
+
+```text
+Profile B is empty.                                        (5.1)
+```
+
+The stronger double-witness puncture condition `d_{T union U}<=1` is not needed for this final exclusion; source deficiency and the coefficient minimum-distance condition already suffice.
+
+Since Profile A was already closed and Profile B was the sole remaining eight-no-root `k=6,D=-1,p=9` profile, that finite target is now closed.
+
+## 6. Remaining bottleneck
+
+Do not promote (5.1) to a solution of Target C-II. The canonical global frontier in `docs/targets/target-c/CURRENT.md` remains open. Its live obstruction is source-level closure of the macroscopic-container/full-core dichotomy, in particular the full-core high-surplus branch and the macroscopic-container branch. This finite Profile B closure removes one exact local obstruction; it does not supply the missing global bridge.

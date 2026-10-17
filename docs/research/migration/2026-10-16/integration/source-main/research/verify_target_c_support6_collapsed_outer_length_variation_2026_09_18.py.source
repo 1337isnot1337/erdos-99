@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+"""Exact finite certificate for the all-outer collapsed length payment.
+
+In a common-outer collapsed support-six fan, the six anchor signs are three
+plus and three minus.  If adjacent opposite-sign anchor corridors are required
+to have unequal positive integer contact-edge lengths (the source-separation
+condition in the companion note), the cyclic total variation of the six
+lengths is at least two.  The script certifies the finite sign-word part of
+that implication for all 20 labelled 3+3 words and all small integer lengths.
+
+It does not assert that every global collapsed block has one common outer host,
+or that the outer-sector simplicity condition is automatic.  Those are the
+binding scope hypotheses.
+"""
+
+from itertools import combinations, product
+
+
+def transitions(signs):
+    return sum(signs[i] != signs[(i + 1) % 6] for i in range(6))
+
+
+def total_variation(lengths):
+    return sum(
+        abs(lengths[i] - lengths[(i + 1) % 6])
+        for i in range(6)
+    )
+
+
+def main():
+    sign_words = []
+    for plus in combinations(range(6), 3):
+        signs = tuple(1 if i in plus else -1 for i in range(6))
+        sign_words.append(signs)
+        assert transitions(signs) >= 2
+
+    checked = 0
+    minimum = None
+    minimum_by_transitions = {}
+    for signs in sign_words:
+        for lengths in product(range(1, 5), repeat=6):
+            admissible = True
+            for i in range(6):
+                if signs[i] != signs[(i + 1) % 6]:
+                    if lengths[i] == lengths[(i + 1) % 6]:
+                        admissible = False
+                        break
+            if not admissible:
+                continue
+            variation = total_variation(lengths)
+            minimum = variation if minimum is None else min(minimum, variation)
+            t = transitions(signs)
+            old = minimum_by_transitions.get(t)
+            minimum_by_transitions[t] = variation if old is None else min(old, variation)
+            assert variation >= t
+            checked += 1
+
+    # The minimum is attained, for example, by alternating 1 and 2 around
+    # the sign transitions and keeping same-sign runs constant.
+    assert minimum == 2
+    assert minimum_by_transitions == {2: 2, 4: 4, 6: 6}
+    print("labelled_3_plus_3_sign_words", len(sign_words))
+    print("integer_length_vectors_checked", checked)
+    print("minimum_cyclic_anchor_length_variation", minimum)
+    print("minimum_variation_by_transition_count", minimum_by_transitions)
+    print("PASS: common-outer opposite-sign transitions pay variation >= 2")
+    print("SCOPE: common outer host and simple outer sectors are hypotheses")
+
+
+if __name__ == "__main__":
+    main()

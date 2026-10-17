@@ -1,0 +1,22 @@
+# Hostile audit — reciprocal `H5` double-wall exclusion
+
+**Date:** 2026-09-18  
+**Audited note:** `target_c_support6_reciprocal_h5_double_wall_exclusion_2026-09-18.md`  
+**Disposition:** PASS. C-II remains open.
+
+The proof uses only the already established support-six incidence facts, the ground cone width `<pi/3`, convex-hull radial order, and the proved hull positions-two-and-four sign alternation.
+
+The main scope checks are:
+
+1. A ground-collinear pair must be a missing matching edge. Otherwise a physical pentagon would contain a present relation train projectively parallel to its outside anchor.
+2. Ground-ray coincidence classes have size at most two because three non-ground reciprocal points cannot be collinear.
+3. A same-ray pair cannot contain two reciprocal hull vertices. The nearer point is not extreme. Therefore every pair consumes at least one of the two interior points, so at most two pairs occur.
+4. Two pairs force, up to symmetry, `25` and `36`, with remaining matching edge `14`. A pair using both interiors would leave any second pair with two hull vertices and is therefore impossible.
+5. The `3+3` ground split remains valid with duplicate rays because the earlier projection estimates did not require distinctness.
+6. The ground sign classification treats all possibilities. Opposite signs in a duplicate pair are impossible by cancellation plus either distinct-ray noncancellation or the strict inequality `|u_1+u_4|<2`. With both pairs same-signed, count `3+3` forces opposite pair signs and opposite singleton signs. One singleton assignment is then excluded because two forward unit-circle chords in a common open semicircle cannot be opposite.
+7. At hull vertex 2 the only variable order is whether rays `24` and `26` swap; positions of `23` and `20` remain one and four. At hull vertex 3 the only variable order is whether `31` and `35` swap; positions of `30` and `32` remain two and five. Thus the sign contradiction on edge `23` does not depend on an unproved metric order.
+8. Global sign reversal preserves the contradiction.
+
+The accompanying regression checks all four combinations of the two variable middle-ray orders and both global sign phases. It is not needed for the analytic proof.
+
+**Audit disposition:** the higher-codimension `H5` ground-collinearity family is empty. The surviving `H5` branch is exactly the six uniform and ten simple-wall sign/order orbits from the preceding reduction. The collapsed support-six branch is untouched.

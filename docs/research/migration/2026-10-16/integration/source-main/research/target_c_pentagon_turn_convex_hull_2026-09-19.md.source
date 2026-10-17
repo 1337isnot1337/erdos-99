@@ -1,0 +1,260 @@
+# Target C-II — exact convex hull of physical pentagon turn vectors
+
+**Date:** 2026-09-19  
+**Claim class:** exact local convex-hull classification  
+**Depends on:** `target_c_pentagon_three_gap_inequality_2026-09-19.md`; pentagon closure  
+**Certificate:** `research/verify_target_c_pentagon_turn_convex_hull_2026_09_19.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+Let `S` be the set of normalized turn vectors
+
+\[
+x=(x_0,\ldots,x_4),
+\qquad x_i=\delta_i/\pi,
+\]
+
+arising from strict closed equilateral physical force pentagons in the audited regime. Thus `sum x_i=2`. Define
+
+\[
+q_i=x_i+x_{i+1}-x_{i+3}.
+\tag{1}
+\]
+
+The preceding three-gap theorem proves
+
+\[
+q_i>\frac13
+\qquad\text{for every }i.
+\tag{2}
+\]
+
+This note identifies the exact closed convex hull of `S`:
+
+\[
+\boxed{
+\overline{\operatorname{conv}}(S)
+=
+\left\{x:\sum_i x_i=2,\ q_i\ge\frac13\text{ for all }i\right\}.
+}
+\tag{3}
+\]
+
+The right side is a four-simplex. Its five vertices are the cyclic rotations of
+
+\[
+\boxed{
+\left(0,\frac23,\frac13,\frac13,\frac23\right).
+}
+\tag{4}
+\]
+
+Consequently the new three-gap inequalities are not just another collection of local linear bounds. Together with the angle sum they give the complete affine-linear information obtainable from the local physical-pentagon turn set. Any further exclusion of the surviving support-seven cases using local pentagon closure must use genuinely nonlinear information or information coupling different faces.
+
+---
+
+## 1. The `q` transform is unimodular
+
+The linear map (1) has determinant one. Its inverse is
+
+\[
+\boxed{x_i=q_{i+1}-q_{i+2}+q_{i+3}.}
+\tag{5}
+\]
+
+Also
+
+\[
+\sum_iq_i=\sum_ix_i=2.
+\tag{6}
+\]
+
+The companion exact certificate verifies the determinant, inverse, and sum identity over the rationals.
+
+Set
+
+\[
+t_i=q_i-\frac13.
+\]
+
+Then the closed inequalities `q_i>=1/3` become
+
+\[
+t_i\ge0,
+\qquad
+\sum_it_i=\frac13.
+\tag{7}
+\]
+
+Thus the right side of (3), expressed in `q` coordinates, is literally the standard four-simplex. Its vertices have one `q` coordinate equal to `2/3` and the other four equal to `1/3`. Applying (5) gives exactly the five cyclic rotations of (4).
+
+The three-gap theorem already gives
+
+\[
+S\subset\operatorname{int}P,
+\]
+
+where `P` denotes this closed simplex. Hence
+
+\[
+\overline{\operatorname{conv}}(S)\subseteq P.
+\tag{8}
+\]
+
+It remains only to show that every vertex of `P` is a limit of strict physical pentagons.
+
+---
+
+## 2. An exact strict family approaching a simplex vertex
+
+Take a small parameter
+
+\[
+0<\varepsilon<\frac\pi6
+\]
+
+and define
+
+\[
+\alpha(\varepsilon)
+=
+\arccos\left(\cos\varepsilon-\frac12\right).
+\tag{9}
+\]
+
+For this interval,
+
+\[
+\frac\pi3<\alpha<\frac\pi2.
+\]
+
+Consider the five unit directions with arguments
+
+\[
+\varepsilon,
+\quad
+\pi-\alpha,
+\quad
+\pi,
+\quad
+\pi+\alpha,
+\quad
+2\pi-\varepsilon.
+\tag{10}
+\]
+
+They are strictly ordered. Their vector sum is exactly zero:
+
+\[
+2\cos\varepsilon
+-
+\left(1+2\cos\alpha\right)
+=0
+\tag{11}
+\]
+
+by the definition of `alpha`. Therefore they are the side directions of a closed equilateral force pentagon.
+
+Their positive cyclic gaps are
+
+\[
+\begin{aligned}
+\delta_0&=\pi-\alpha-\varepsilon,\\
+\delta_1&=\alpha,\\
+\delta_2&=\alpha,\\
+\delta_3&=\pi-\alpha-\varepsilon,\\
+\delta_4&=2\varepsilon.
+\end{aligned}
+\tag{12}
+\]
+
+These satisfy all strict physical gap conditions. The only boundary-sensitive adjacent sum is
+
+\[
+\delta_3+\delta_4=\pi-\alpha+\varepsilon.
+\]
+
+It is strictly larger than `2pi/3` because
+
+\[
+\alpha<\frac\pi3+\varepsilon.
+\tag{13}
+\]
+
+To verify (13), cosine is decreasing on the relevant interval and
+
+\[
+\begin{aligned}
+\cos\alpha-
+\cos\left(\frac\pi3+\varepsilon\right)
+&=
+\frac12\left(
+\cos\varepsilon-1+\sqrt3\sin\varepsilon
+\right)\\
+&=
+\sin\frac\varepsilon2
+\left(
+\sqrt3\cos\frac\varepsilon2-
+\sin\frac\varepsilon2
+\right)>0
+\end{aligned}
+\]
+
+for `0<epsilon<pi/6`.
+
+As `epsilon` tends to zero,
+
+\[
+\alpha(\varepsilon)\to\frac\pi3
+\]
+
+and the normalized gap vector (12) tends to
+
+\[
+\left(
+\frac23,\frac13,\frac13,\frac23,0
+\right),
+\tag{14}
+\]
+
+which is one vertex of `P`. Cyclic relabeling gives strict families approaching all five vertices.
+
+Therefore every vertex of `P` lies in `closure(S)`, so
+
+\[
+P=\operatorname{conv}(\text{vertices of }P)
+\subseteq
+\overline{\operatorname{conv}}(S).
+\tag{15}
+\]
+
+Combining (8) and (15) proves (3).
+
+---
+
+## 3. The old linear turn bounds are consequences of the simplex
+
+The exact certificate checks the five simplex vertices against the older closed inequalities
+
+\[
+0\le x_i\le\frac23,
+\qquad
+\frac23\le x_i+x_{i+1}\le1.
+\tag{16}
+\]
+
+They hold at every vertex and therefore throughout `P` by convexity. In the interior `q_i>1/3`, all simplex barycentric weights are positive, and the physical strict versions are recovered.
+
+Thus, after (2) is known, the older one-turn/two-turn linear inequalities do not cut the closed convex hull any further. They remain useful geometric statements, but they are not additional affine separation power.
+
+---
+
+## 4. Consequence for the support-seven strategy
+
+The current twelve convex support-seven `H8` orbits survived the known affine triangle-angle equations and strict linear turn inequalities. Equation (3) explains why searching for another purely linear inequality in one physical pentagon cannot finish those cases: the local linear hull is now complete.
+
+The next usable information must be nonlinear or inter-face. Two exact candidates already present in the repository are:
+
+- the full equilateral-pentagon closure identities, such as the cosine equation used to prove the three-gap theorem;
+- the eight support-seven `H8` sine-cycle integrability equations coupling radial ratios across the relation graph.
+
+**Disposition:** the closed convex hull of strict physical pentagon turn vectors is exactly the four-simplex `sum x=2`, `x_i+x_{i+1}-x_{i+3}>=1/3`. No stronger affine-linear local pentagon inequality exists outside consequences of these five simplex facets.

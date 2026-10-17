@@ -1,0 +1,252 @@
+# Target C-II — low-`t` pentagon sea and outer-to-outer train floor
+
+**Date:** 2026-09-14  
+**Repository base:** `45b2e811`  
+**Status:** proved proof-only structural consequence; theorem-state authority unchanged  
+**Scope:** canonical full-core Type-II branch, using the proof-only AG42 train gap  
+**LEVEL I STATUS:** `STILL OPEN`
+
+Let
+
+\[
+\Delta_2={\pi\over2\sqrt3},\qquad
+C_0:=2\sqrt{\Delta_2}+0.00042,
+\]
+
+and on a convergent Type-II subsequence write
+
+\[
+t:=\lim{q-k\over D},\quad
+\kappa:=\lim{k\over D},\quad
+\delta:=\lim{b-P_F\over D},\quad
+\varphi:=\lim{f\over D},\quad
+\chi:=\lim{Q\over D}.
+\]
+
+The audited §171 identities and the proof-only AG42 input imply
+
+\[
+\chi=2t-\pi-\delta,
+\tag{PS.1}
+\]
+
+\[
+C={t\over2}+2\varphi-{\kappa\over2}\ge C_0,
+\tag{PS.2}
+\]
+
+with `0<=varphi<=chi` because every bounded nonquadrilateral contact face has degree at least five.
+
+These two elementary constraints have a strong low-`t` consequence which was not previously isolated: every low-`t` survivor contains a linear **sea of pentagonal defect faces**, and simultaneously a linear family of outer-to-outer stopped trains.
+
+## 1. Exceptional-face count
+
+From (PS.2),
+
+\[
+\boxed{
+\varphi\ge {C_0\over2}-{t\over4}+{\kappa\over4}.
+}
+\tag{PS.3}
+\]
+
+Thus even before using the face-degree distribution, low `t` forces about one exceptional face per two units of diameter.
+
+## 2. Almost all excess degree disappears near the present floor
+
+Because
+
+\[
+Q-f=\sum_F(\deg F-5),
+\]
+
+we have, using (PS.1) and (PS.3),
+
+\[
+\boxed{
+{Q-f\over D}
+\le {9t\over4}-\pi-{C_0\over2}-\delta-{\kappa\over4}+o(1).
+}
+\tag{PS.4}
+\]
+
+Let `f_{>=6}` be the number of bounded exceptional faces of degree at least six. Each such face contributes at least one unit to `Q-f`, so
+
+\[
+f_{\ge6}\le Q-f.
+\tag{PS.5}
+\]
+
+Let `p_5` be the number of pentagonal bounded exceptional faces. Then
+
+\[
+p_5=f-f_{\ge6}\ge2f-Q,
+\]
+
+and hence
+
+\[
+\boxed{
+{p_5\over D}
+\ge \pi+C_0-{5t\over2}+\delta+{\kappa\over2}-o(1).
+}
+\tag{PS.6}
+\]
+
+This is the main structural conclusion. It does not assume a positive area or Oler gap per pentagon; the known near-degenerate pentagon regression remains fully compatible with the theorem.
+
+## 3. Numerical form at the current proof-only floor
+
+Put
+
+\[
+C_{146}={4\over9}\left(\pi+\sqrt{\Delta_2}\right),
+\qquad
+t_{42}:=C_{146}+0.0013751
+=1.8208886379794447\ldots .
+\]
+
+At the most permissive values `delta=kappa=0`, equations (PS.3)--(PS.6) give
+
+\[
+\boxed{
+{f\over D}\ge0.4973006473690961\ldots-o(1),
+}
+\tag{PS.7}
+\]
+
+\[
+\boxed{
+{Q-f\over D}\le0.0028839750000000\ldots+o(1),
+}
+\tag{PS.8}
+\]
+
+and therefore
+
+\[
+\boxed{
+{p_5\over D}\ge0.4944166723690961\ldots-o(1).
+}
+\tag{PS.9}
+\]
+
+In particular the proportion of exceptional faces which can have degree at least six is at most
+
+\[
+{0.002883975\over0.4973006473}<0.0058
+\]
+
+at the endpoint profile. More than `99.42%` of the exceptional faces are forced to be pentagons there.
+
+The conclusion remains strong throughout the old endpoint/common-cap band. If
+
+\[
+t\le1.8585,
+\]
+
+then simply dropping `delta,kappa>=0` from (PS.6) gives
+
+\[
+\boxed{
+{p_5\over D}\ge0.4003882673177079\ldots-o(1).
+}
+\tag{PS.10}
+\]
+
+Thus any survivor below the separate `1.8585` barrier must carry at least `0.4003D` actual pentagonal contact faces.
+
+## 4. A simultaneous outer-to-outer train floor
+
+Let
+
+- `L_OO` be the number of stopped trains whose two terminal occurrences lie on the outer face,
+- `L_OB` the number with one outer and one bounded-face terminal occurrence, and
+- `L_BB` the number with two bounded-face terminal occurrences.
+
+The occurrence-counted endpoint ledgers are
+
+\[
+b=2L_{OO}+L_{OB},
+\tag{PS.11}
+\]
+
+\[
+Q+4f=L_{OB}+2L_{BB}.
+\tag{PS.12}
+\]
+
+Hence
+
+\[
+L_{OO}-L_{BB}={b-(Q+4f)\over2},
+\]
+
+so, since `L_BB>=0`,
+
+\[
+L_{OO}\ge {b-(Q+4f)\over2}.
+\tag{PS.13}
+\]
+
+Audited §171 gives
+
+\[
+{Q+4f\over D}=t+2C+\kappa-\pi-\delta
+\]
+
+and
+
+\[
+C\le {9t\over2}-2\pi-2\delta-{\kappa\over2}.
+\]
+
+Therefore
+
+\[
+{Q+4f\over D}\le10t-5\pi-5\delta,
+\]
+
+while `b/D=pi+delta`. Substituting into (PS.13) yields
+
+\[
+\boxed{
+\liminf {L_{OO}\over D}\ge3\pi-5t.
+}
+\tag{PS.14}
+\]
+
+At `t=t_42`,
+
+\[
+\boxed{
+\liminf {L_{OO}\over D}\ge0.3203347708721561\ldots .
+}
+\tag{PS.15}
+\]
+
+Throughout the band `t<=1.8585`,
+
+\[
+\boxed{
+\liminf {L_{OO}\over D}\ge0.1322779607693797\ldots .
+}
+\tag{PS.16}
+\]
+
+This is significant because audited §157 proves that every outer-to-outer train is crossed by actual diameter edges with both transverse signs. The low-`t` branch therefore contains simultaneously:
+
+1. a linear sea of actual pentagonal defect faces, and
+2. a linear family of two-sided diameter-braced outer-to-outer train cuts.
+
+## 5. Frontier effect
+
+This does **not** close C-II. The known pentagon regression shows that a convex unit pentagon can approach all three triangular-lattice projective directions while its extra diagonals approach unit length, so no uniform per-face angular or Oler penalty is available.
+
+The useful narrowing is global. Any attempt to keep `t` below `1.8585` must now realize a contact complex with at least `0.400388D-o(D)` pentagonal bounded faces and at least `0.132278D-o(D)` outer-to-outer trains, each of which is two-sidedly braced by the actual diameter graph. Near the present `t_42` floor these populations strengthen to approximately `0.494417D` pentagons and `0.320335D` outer-to-outer trains.
+
+The next plausible closure target is therefore a **global compatibility theorem** between the near-lattice pentagon network and the convex-diameter thrackle / nested outer-train cut system. Local pentagon nondegeneracy alone is false.
+
+## 6. Reproducibility
+
+The arithmetic certificate is `research/verify_target_c_low_t_pentagon_sea.py`.

@@ -1,0 +1,239 @@
+# Hostile audit — optimized Pareto adjacent cusp with at most 920 switching rows
+
+**Date:** 2026-09-15
+**Reviewed:**
+- `research/target_c_adjacent_cut_pareto_920_2026-09-15.md`
+- `research/verify_target_c_adjacent_cut_pareto_920.py`
+
+**Disposition:** `PASS` at the stated proof-only `t<=1.844` full-core Type-II scope.
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The candidate changes only the numerical selection parameters in the already-audited
+good-leaf/top-center/union-bound architecture. The potentially dangerous point is the
+very small lower-phase margin
+
+\[
+d_{\rm low}=10^{-5}.
+\]
+
+That choice is legal: the parent phase-payment proof requires a fixed positive linear
+neighbor density, not a universal lower bound bounded away from zero independently of
+the theorem parameters. The resulting phase constant is large but finite and is paid
+by the deliberately large fixed threshold `a=10^13`.
+
+## 1. Weighted good-leaf thresholding remains valid
+
+The audited parent data are
+
+\[
+A=0.7404,
+\qquad W=0.0848,
+\qquad N=1.063.
+\]
+
+For
+
+\[
+\lambda=0.6403,
+\]
+
+the standard weighted threshold inequality gives
+
+\[
+g={ (A-\lambda)W\over N-\lambda}
+={53053\over2641875}
+=0.0200815708540\ldots .
+\]
+
+Since every retained pair weight is at most one, the same number is a valid lower
+bound on distinct good-leaf density.
+
+**Verdict:** PASS.
+
+## 2. The top-center quantile arithmetic is exact
+
+The candidate takes
+
+\[
+r={64029\over106300},
+\qquad rN={64029\over100000}=0.64029.
+\]
+
+Therefore
+
+\[
+d_{\rm top}
+=\lambda-(1-r)N
+={21759\over100000}>0
+\]
+
+and
+
+\[
+d_{\rm low}
+=\lambda-rN
+={1\over100000}>0.
+\]
+
+Every good leaf has at least `d_top D-o(D)` neighbors in the top quantile. Averaging
+those incidences over at most `rND+o(D)` top centers gives one center crossing a simple
+good-leaf path of density
+
+\[
+p={d_{\rm top}g\over rN}
+={54970487\over8055076875}
+=0.00682432804218\ldots .
+\]
+
+This is the same parent argument with different fixed rational parameters.
+
+**Verdict:** PASS.
+
+## 3. The small `d_low` does not break the phase-defect proof
+
+Because the selected center belongs to the top `r` fraction, at most `rND+o(D)` centers
+lie strictly above it in phase order. Every good leaf has more than `lambda D` center
+neighbors. Hence every path leaf has at least
+
+\[
+(\lambda-rN)D-o(D)
+=10^{-5}D-o(D)
+\]
+
+center neighbors at or below the selected center phase.
+
+This is still a linear population because `10^-5` is a fixed positive constant. For
+each such center/leaf pair, the parent hostile audit proves that its actual strict
+rhombus pays at least the selected leaf phase offset `q_j`; different train pairs use
+different rhombi. Thus
+
+\[
+\sum_jq_j\le C_{\rm phase}/d_{\rm low}+o(1)
+\]
+
+continues to hold. No later step requires the quotient to be numerically small.
+
+**Verdict:** PASS.
+
+## 4. The Pareto union bound has exact positive margin
+
+The inherited budgets are
+
+\[
+\sum_iN_i\le2\pi D,
+\qquad
+\sum_iDB_i\le2D,
+\qquad
+\sum_iDQ_i\le {2C_{\rm phase}\over d_{\rm low}}D+o(D).
+\]
+
+With
+
+\[
+n={3683\over4}=920.75,
+\qquad b=10^{12},
+\qquad a=10^{13},
+\]
+
+and the same outward rational bounds
+
+\[
+\pi<{355\over113},
+\qquad
+C_{\rm phase}<{3258689123681\over612912000000},
+\]
+
+the exact verifier obtains
+
+\[
+\text{bad density}=0.006824093130793006\ldots
+\]
+
+while
+
+\[
+p=0.006824328042182713\ldots .
+\]
+
+The exact rational gap is
+
+\[
+2.349113897\ldots\times10^{-7}>2\times10^{-7}.
+\]
+
+There is therefore genuine margin; the result does not rely on binary floating-point
+rounding.
+
+**Verdict:** PASS.
+
+## 5. Integrality gives the advertised 920-row statement
+
+The good boundary satisfies
+
+\[
+N_i<920.75+o(1).
+\]
+
+Along an unbounded survivor sequence the error tends to zero. For all sufficiently
+large members it is smaller than `0.25`, so
+
+\[
+N_i<921.
+\]
+
+Since `N_i` is an integer,
+
+\[
+N_i\le920.
+\]
+
+The theorem correctly states an eventual integer bound, not `N_i<920`.
+
+**Verdict:** PASS.
+
+## 6. The caterpillar conclusion imports cleanly
+
+The adjacent switching-caterpillar theorem applies to every pair of consecutive nested
+O--O cuts, independently of the numerical Pareto parameters. Hence the at-most-920
+switching rows are exactly one layer cut of the full actual diameter graph and form a
+caterpillar forest.
+
+No extra geometric assumption is introduced by combining the two results.
+
+**Verdict:** PASS.
+
+## 7. Finite-amplitude scope is stated correctly
+
+The candidate does not reuse the recently repaired claim that `t=xi/D` is uniformly
+feasible for all inactive pairs. It uses only active-diameter first derivatives,
+interval support, phase order, KKT multiplier budgets, and the graph-theoretic
+caterpillar classification.
+
+The minimum slack of inactive source pairs may tend to zero and is not controlled here.
+
+**Verdict:** PASS.
+
+## Final assessment
+
+The optimized parameter choice is a genuine strengthening:
+
+```text
+current main: <1800+o(1) switching rows
+candidate:    <=920 switching rows eventually
+```
+
+while preserving
+
+```text
+layer-cut support
++ caterpillar-forest structure
++ O(D^-1) switching KKT mass
++ O(D^-1) adjacent phase mismatch.
+```
+
+The improvement does not close C-II. It makes the remaining finite blocker
+classification materially smaller. Further progress now requires using the caterpillar
+spine/leaf geometry, source cyclic order, or a nonlocal replacement; another simple
+retuning of the old balanced constants is not the main bottleneck.
+
+**Final verdict:** PASS. C-II remains open.

@@ -1,0 +1,199 @@
+#!/usr/bin/env python3
+"""Exact certificate for 39 additional generic-H6 cells using faces 2 and 3.
+
+Starting point: the committed 4,910-cell generic support-seven H6 endpoint after
+the first exact two-face reduction.
+
+Each physical pentagon face has 20 closed local branches: ten admissible cyclic
+gap orders times the low/high median side, with the exact branch-adaptive
+closure secants certified by the preceding verifier chain. A product branch at
+faces 2 and 3 is covered either because one constituent branch already has an
+exact one-face Farkas contradiction or because the combined pair has an exact
+two-face contradiction.
+
+For every cell listed below all 20*20 branch products are covered. Numerical
+LPs are used only to propose dual supports. Acceptance uses the exact Fraction
+checker from the committed adaptive-branch verifier.
+"""
+
+from collections import Counter
+from pathlib import Path
+import contextlib
+import importlib.util
+import io
+
+HERE = Path(__file__).resolve().parent
+
+
+def load(name, filename):
+    spec = importlib.util.spec_from_file_location(name, HERE / filename)
+    module = importlib.util.module_from_spec(spec)
+    with contextlib.redirect_stdout(io.StringIO()):
+        spec.loader.exec_module(module)
+    return module
+
+
+T = load(
+    "h6_two_face",
+    "verify_target_c_support7_h6_two_face_branch_reduction_2026_09_19.py",
+)
+A = T.A
+O = T.O
+BRANCH_KEYS = T.BRANCH_KEYS
+
+# q indexes the committed 5,692-cell complete-angle endpoint. expected_idx is
+# the corresponding index in the 14,174-cell generic-H6 state list. live2 and
+# live3 are the numbers of locally feasible branches at physical faces 2 and 3.
+CANDIDATES = (
+    (137, 289, "C3+C4", "345", 4, 3),
+    (148, 320, "C7", "256", 1, 4),
+    (194, 416, "C7", "356", 8, 7),
+    (196, 418, "C7", "356", 7, 7),
+    (212, 456, "C7", "256", 4, 1),
+    (223, 485, "C7", "356", 14, 10),
+    (228, 495, "C7", "256", 4, 1),
+    (229, 497, "C7", "256", 6, 9),
+    (231, 502, "C3+C4", "356", 14, 10),
+    (239, 519, "C7", "256", 6, 9),
+    (249, 543, "C7", "235", 7, 4),
+    (251, 548, "C7", "356", 14, 10),
+    (255, 553, "C7", "256", 6, 9),
+    (257, 558, "C3+C4", "356", 14, 10),
+    (260, 561, "C7", "256", 6, 9),
+    (265, 569, "C7", "235", 4, 3),
+    (269, 576, "C7", "356", 14, 10),
+    (271, 578, "C7", "356", 14, 10),
+    (272, 579, "C7", "235", 9, 6),
+    (280, 590, "C7", "356", 9, 8),
+    (284, 595, "C7", "256", 5, 7),
+    (287, 600, "C3+C4", "356", 9, 8),
+    (290, 603, "C7", "256", 5, 7),
+    (293, 607, "C7", "356", 11, 8),
+    (294, 609, "C7", "356", 11, 8),
+    (301, 618, "C7", "356", 14, 8),
+    (302, 619, "C7", "346", 5, 1),
+    (303, 620, "C7", "356", 14, 8),
+    (308, 626, "C3+C4", "346", 1, 1),
+    (311, 637, "C7", "256", 1, 6),
+    (321, 660, "C7", "256", 6, 6),
+    (326, 669, "C7", "256", 6, 7),
+    (334, 688, "C7", "256", 6, 7),
+    (336, 692, "C7", "256", 6, 6),
+    (338, 699, "C7", "256", 1, 6),
+    (340, 706, "C7", "256", 6, 7),
+    (342, 712, "C7", "256", 6, 7),
+    (346, 720, "C7", "256", 1, 6),
+    (348, 726, "C7", "256", 6, 6),
+)
+
+
+def main():
+    states = O.tri.collect_survivors()
+    assert len(states) == 14174
+    previous = O.complete_angle_survivors(states)
+    assert len(previous) == 5692
+
+    one_face_dead = {q for q, _, _, _ in A.CANDIDATES}
+    earlier_two_face_dead = {q for q, _, _, _, _ in T.CANDIDATES}
+    new_q = {q for q, _, _, _, _, _ in CANDIDATES}
+    assert len(CANDIDATES) == len(new_q) == 39
+    assert new_q.isdisjoint(one_face_dead)
+    assert new_q.isdisjoint(earlier_two_face_dead)
+
+    graph = Counter()
+    pattern = Counter()
+    forced = Counter()
+    denominators = [1]
+    one_face_certificates = 0
+    two_face_certificates = 0
+
+    for q, expected_idx, expected_graph, expected_pattern, expected_live2, expected_live3 in CANDIDATES:
+        idx = previous[q]
+        assert idx == expected_idx
+        st = states[idx]
+        assert st[1] == expected_graph
+        pat = "".join(map(str, st[5]))
+        assert pat == expected_pattern
+
+        system = O.C.build_system(st)
+        assert A.survives_previous_order_hull(system)
+
+        exact_dead = {}
+        live = {}
+        for face in (2, 3):
+            dead = set()
+            live_here = set()
+            for branch_index, (order, side) in enumerate(BRANCH_KEYS):
+                closed = A.BRANCH[(face, order, side)]
+                margin, result = O.numerical_candidate(system, closed)
+                assert margin is not None, result.message
+                if margin <= 1e-8:
+                    cert = A.exactify_support(system, closed, result)
+                    assert cert is not None
+                    T.record_certificate(cert, forced, denominators)
+                    one_face_certificates += 1
+                    dead.add(branch_index)
+                else:
+                    live_here.add(branch_index)
+            exact_dead[face] = dead
+            live[face] = live_here
+
+        assert len(live[2]) == expected_live2
+        assert len(live[3]) == expected_live3
+        assert len(exact_dead[2]) + len(live[2]) == 20
+        assert len(exact_dead[3]) + len(live[3]) == 20
+
+        # Products using an exactly dead one-face branch are already covered.
+        # Exactify every remaining product of locally live branches.
+        pair_count = 0
+        for i2 in sorted(live[2]):
+            o2, s2 = BRANCH_KEYS[i2]
+            for i3 in sorted(live[3]):
+                o3, s3 = BRANCH_KEYS[i3]
+                closed = A.BRANCH[(2, o2, s2)] + A.BRANCH[(3, o3, s3)]
+                margin, result = O.numerical_candidate(system, closed)
+                assert margin is not None, result.message
+                assert margin <= 1e-8
+                cert = A.exactify_support(system, closed, result)
+                assert cert is not None
+                T.record_certificate(cert, forced, denominators)
+                two_face_certificates += 1
+                pair_count += 1
+
+        assert pair_count == expected_live2 * expected_live3
+        graph[st[1]] += 1
+        pattern[pat] += 1
+
+    assert graph == Counter({"C7": 34, "C3+C4": 5})
+    assert pattern == Counter({"235": 3, "256": 19, "345": 1, "346": 2, "356": 14})
+    assert one_face_certificates + two_face_certificates == 3208
+
+    remaining_graph = Counter({"C7": 3914, "C3+C4": 996}) - graph
+    assert remaining_graph == Counter({"C7": 3880, "C3+C4": 991})
+
+    remaining_pattern = Counter({
+        "145": 4, "156": 16, "235": 673, "236": 1282, "237": 16,
+        "245": 477, "256": 1263, "345": 22, "346": 483, "347": 4,
+        "356": 670,
+    }) - pattern
+    assert remaining_pattern == Counter({
+        "145": 4, "156": 16, "235": 670, "236": 1282, "237": 16,
+        "245": 477, "256": 1244, "345": 21, "346": 481, "347": 4,
+        "356": 656,
+    })
+    assert sum(remaining_pattern.values()) == 4871
+
+    print("PASS")
+    print("previous generic H6 endpoint: 4910 = 3914 C7 + 996 C3+C4")
+    print("new exact face-(2,3) exclusions: 39 = 34 C7 + 5 C3+C4")
+    print("exact one-face branch certificates used:", one_face_certificates)
+    print("exact two-face product certificates used:", two_face_certificates)
+    print("total exact certificates:", one_face_certificates + two_face_certificates)
+    print("certificate forced values:", dict(forced))
+    print("maximum exact dual denominator:", max(denominators))
+    print("remaining certified endpoint: 4871 = 3880 C7 + 991 C3+C4")
+    print("excluded by ground pattern:", dict(sorted(pattern.items())))
+
+
+if __name__ == "__main__":
+    main()

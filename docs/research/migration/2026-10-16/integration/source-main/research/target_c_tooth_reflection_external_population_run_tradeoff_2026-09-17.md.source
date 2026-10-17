@@ -1,0 +1,342 @@
+# Target C-II — FREE ancestry couples external population to one outer-face near-unit run
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; proof-only strengthening of two-sided FREE absorption  
+**Scope:** non-anchored FREE reflection modules, all-inactive two-sided activation ancestry  
+**Dependencies:** two-sided gate absorption; two-boundary slack tradeoff; two-sided outer-face localization; C65 `F=conv B`  
+**Certificate:** `research/verify_target_c_tooth_reflection_external_population_run_tradeoff_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+Let
+
+\[
+Z_{\rm ext}:=|A\setminus F|,
+\qquad F=\operatorname{conv}B,
+\]
+
+where `B` is the complete actual-diameter endpoint set.  The preceding outer-face
+localization proves that every inactive upper-gate child lies outside `F`.  Since an
+activation ancestry never activates one source vertex twice, the number `U` of upper
+gates on one ancestry satisfies the exact source-level bound
+
+\[
+\boxed{U\le Z_{\rm ext}.}
+\tag{ER.1}
+\]
+
+This turns the tunable upper-poor theorem into a direct external-population/run
+tradeoff.  Let `S_*` be the largest support-depth span of a maximal consecutive
+lower-gate run on an all-inactive ancestry reaching the near-opposite threshold.  Then
+
+\[
+\boxed{
+(Z_{\rm ext}+1)S_*
+\ge D-O(\sqrt D).
+}
+\tag{ER.2}
+\]
+
+Every such lower run lies in the original outer contact face, and every maximal lower
+run starts at a source point outside `F`.
+
+The longest run also has a quantitative near-unit matching.  If it has `R_*` edges,
+then
+
+\[
+R_*\ge S_*-t_D,
+\qquad
+t_D<h_*+D^{-1/3},
+\qquad
+h_*={\sqrt{303}\over52},
+\tag{ER.3}
+\]
+
+and it contains a vertex-disjoint matching of at least
+
+\[
+\boxed{{R_*\over4}-O(1)}
+\tag{ER.4}
+\]
+
+old fully inactive outer-face pairs satisfying
+
+\[
+\boxed{
+1<|x-y|
+\le1+{2t_D\over R_*}.
+}
+\tag{ER.5}
+\]
+
+Thus whenever `S_*->infinity`, the selected outer-face run contains
+`(1/4-o(1))S_*` disjoint pairs of length
+
+\[
+1+O(1/S_*).
+\]
+
+In exponent form, for every fixed `0<=alpha<1`,
+
+\[
+Z_{\rm ext}=O(D^\alpha)
+\]
+
+forces one outer-face run with
+
+\[
+\boxed{S_*=\Omega(D^{1-\alpha})}
+\tag{ER.6}
+\]
+
+and a matching of the same order whose excess above one is
+
+\[
+\boxed{O(D^{\alpha-1}).}
+\tag{ER.7}
+\]
+
+For example, `Z_ext=O(D^(1/4))` forces the reflection-matched
+`D^(3/4)` run without making a separate upper-gate count assumption.
+
+Equivalently, absence of a support-deep outer-face run forces external population:
+for every positive threshold `S_D`, if every maximal lower run has support span below
+`S_D`, then
+
+\[
+\boxed{
+Z_{\rm ext}
+\ge {D-O(\sqrt D)\over S_D}-1.
+}
+\tag{ER.8}
+
+This is a direct bridge between the reflection repair and the canonical external-cap
+population variable of Sections 77--80.
+
+---
+
+## 1. Every upper gate spends one distinct external source vertex
+
+Fix an all-inactive ancestry
+
+\[
+z_0,z_1,\ldots,z_m.
+\]
+
+The activation process assigns strictly increasing activation times along an ancestry.
+Every child is fixed before its first activation and remains active afterwards, so a
+source vertex cannot occur twice as an activated child on the same ancestry.
+
+By the two-sided outer-face localization theorem, if `z_j z_{j+1}` is an upper gate,
+then
+
+\[
+z_{j+1}\notin F.
+\]
+
+Different upper gates therefore have different children in `A\setminus F`, proving
+(ER.1).
+
+The same observation also identifies the starting vertex of every maximal lower run.
+The first run begins at the FREE blocker root, which lies outside `F`; every later run
+begins immediately after an upper gate, at its child, which also lies outside `F`.
+Hence
+
+\[
+\boxed{
+\text{every maximal lower run starts outside }F
+\text{ and then travels entirely in the old outer contact face.}
+}
+\tag{ER.9}
+
+It may enter one or more convex outer pockets inside `F`; ER.9 does not assert that the
+whole run remains outside the force hull.
+
+---
+
+## 2. Total lower support progress is almost `D`
+
+Write
+
+\[
+A:=a_{z_m}-a_{z_0}.
+\]
+
+The near-opposite activation theorem gives
+
+\[
+A>D-O(\sqrt D).
+\tag{ER.10}
+\]
+
+For an ancestry edge let
+
+\[
+\Delta_j=s_{j+1}-s_j>0,
+\]
+
+so
+
+\[
+\sum_j\Delta_j=s_m\le t_D.
+\tag{ER.11}
+\]
+
+Let `g_j=a_{z_{j+1}}-a_{z_j}` be its signed support-depth increment.  For a lower gate,
+`g_j>0`; for an upper gate the first-hit sign calculation gives
+
+\[
+g_j<\Delta_j.
+\tag{ER.12}
+\]
+
+Put
+
+\[
+G_{\rm low}:=\sum_{j\in E_{\rm low}}g_j,
+\qquad
+G_{\rm up}:=\sum_{j\in E_{\rm up}}g_j.
+\]
+
+Then
+
+\[
+A=G_{\rm low}+G_{\rm up},
+\]
+
+and by (ER.11)--(ER.12),
+
+\[
+G_{\rm up}<\sum_{j\in E_{\rm up}}\Delta_j\le t_D.
+\]
+
+Therefore
+
+\[
+\boxed{
+G_{\rm low}>A-t_D=D-O(\sqrt D).
+}
+\tag{ER.13}
+
+Upper-gate backtracking can be arbitrarily large and only makes `G_low` larger.  No
+sign assumption on the total upper progress is needed.
+
+---
+
+## 3. External population bounds the number of lower runs
+
+Deleting the `U` upper edges partitions the lower edges into at most `U+1` maximal
+consecutive lower runs.  The support span of a lower run is exactly the sum of its
+positive `g_j` values.  If `S_*` is the largest such span, then
+
+\[
+G_{\rm low}\le(U+1)S_*.
+\tag{ER.14}
+
+Combining (ER.1), (ER.13), and (ER.14),
+
+\[
+(Z_{\rm ext}+1)S_*
+\ge(U+1)S_*
+\ge G_{\rm low}
+>D-O(\sqrt D),
+\]
+
+which proves ER.2.
+
+The contrapositive ER.8 is immediate.
+
+---
+
+## 4. The selected run inherits the global `O(1)` lower-slack ledger
+
+Take a maximal lower run attaining `S_*`, with `R_*` edges.  For a lower gate,
+
+\[
+1<|z_j-z_{j+1}|=1+\sigma_j,
+\qquad
+\sigma_j\le\Delta_j,
+\]
+
+and its support gain satisfies
+
+\[
+0<g_j\le |z_j-z_{j+1}|=1+\sigma_j.
+\tag{ER.15}
+
+The global activation-time telescope gives
+
+\[
+\sum_{j\in E_{\rm low}}\sigma_j\le t_D.
+\tag{ER.16}
+
+Hence on the selected run
+
+\[
+S_*
+=\sum_{j\in R_*}g_j
+\le R_*+\sum_{j\in R_*}\sigma_j
+\le R_*+t_D,
+\]
+
+which is ER.3.
+
+By Markov counting, fewer than `R_*/2` run edges can satisfy
+
+\[
+\sigma_j>{2t_D\over R_*}.
+\]
+
+At least `R_*/2` edges are therefore good.  Split the path edges by index parity;
+one parity contains at least half the good edges and is a matching.  This yields at
+least `R_*/4-O(1)` vertex-disjoint good edges and proves ER.4--ER.5.
+
+The two-sided outer-face theorem puts every run vertex in the original outer contact
+face, so this matching is outer-face localized.
+
+---
+
+## 5. Exponent consequences
+
+If
+
+\[
+Z_{\rm ext}\le C D^\alpha
+\]
+
+for a fixed `C` and `0<=alpha<1`, ER.2 gives
+
+\[
+S_*
+\ge {D-O(\sqrt D)\over CD^\alpha+1}
+=\Omega(D^{1-\alpha}).
+\]
+
+Then ER.3--ER.5 give a matching of order `D^(1-alpha)` and excess
+
+\[
+O(D^{\alpha-1}).
+\]
+
+At `alpha=1/4`, this is exactly the geometric scale of the current slow reflection
+braid:
+
+\[
+S_*=\Omega(D^{3/4}),
+\qquad
+|M_*|=\Omega(D^{3/4}),
+\qquad
+|e|-1=O(D^{-3/4}).
+\]
+
+At `alpha=0`, bounded external population forces a linear outer-face run with
+inverse-`D` near-unit matching.
+
+The theorem is deliberately stated as a tradeoff rather than a closure: canonical
+Section 80 allows `Z_ext=o(D^2)` in the no-macroscopic-container branch, which by
+itself is too weak to make ER.2 macroscopic.  What is new is that every interruption
+of the FREE lower corridor has an exact source-level price in the already canonical
+external population variable.
+
+**Disposition:** proved `U<=Z_ext` and the hyperbolic external-population / outer-face-run
+tradeoff ER.2, with an inherited near-unit matching ER.4--ER.5.  C-II and Level I
+remain open.

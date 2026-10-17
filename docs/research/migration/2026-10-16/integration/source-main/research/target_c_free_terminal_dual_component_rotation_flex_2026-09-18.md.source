@@ -1,0 +1,307 @@
+# Target C-II — sealed one-anchor dual components rotate exactly and charge corank into flex
+
+**Date:** 2026-09-18  
+**Status:** proof-only structural strengthening; theorem-state authority unchanged  
+**Scope:** canonical full-core stopped-train system after maximal two-anchor activation; live terminal consequence stated below  
+**Depends on:** audited train-angle closure coordinates and transpose-kernel equations; two-anchor pair-shield exact manifold; one-anchor closure-corank theorem; bounded-pentagon no-parallel-side theorem; live detour pinching  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The one-anchor corank theorem leaves nonzero transpose-kernel modes on connected components of the nonparallel one-anchor relation graph `R`. There is an exact primal motion attached to every such component that is sealed from the rest of the residual transport graph: rotate every train incident to the component by the same angle. Every face in the component then has all of its boundary side vectors rotated together, so its closure remains zero identically; the activated pivot system absorbs the changed outside-anchor trains.
+
+An unsealed nonzero `R` component must emit a residual train parallel to the unique outside anchor at its endpoint. The bounded-pentagon no-parallel-side theorem then forces that endpoint to have degree at least six. Hence every unsealed nonzero component consumes one unit of residual degree excess.
+
+The resulting finite transfer is
+
+\[
+\boxed{
+ m_D\ge {b-f\over2}
+ +{1\over4}\bigl(\sigma_C-(Q-f)\bigr)_+-1.
+}
+\tag{CR.1}
+\]
+
+The `-1` is a conservative allowance for the global rotation direction. In the current live terminal window the correlated pair-shield ledger absorbs the degree-excess term and gives
+
+\[
+\boxed{
+ {m_D\over D}
+ >1.1988388040
+ +{1\over4}{\sigma_C\over D}
+ -o(1).
+}
+\tag{CR.2}
+\]
+
+Thus a sequence approaching the universal pair-shield floor must have `sigma_C=o(D)`. A linear density of independent `K_5`-type dual blocks is not a free low-flex escape.
+
+---
+
+## 1. Residual one-anchor fiber
+
+Run maximal two-anchor activation. Use
+
+\[
+A,\quad U,\quad a_F=|A|,\quad n_j=\#\{F\in U:b_U(F)=j\},\quad j=0,1,2,
+\]
+
+and
+
+\[
+x_A=\sum_{F\in A}(\deg F-5),
+\qquad
+x_U=\sum_{F\in U}(\deg F-5),
+\qquad
+x_A+x_U=Q-f.
+\tag{1.1}
+\]
+
+Let
+
+\[
+\sigma_C=\dim\ker C_{face}^T.
+\]
+
+Project `ker C_face^T` onto the residual `n_0` and `n_2` face blocks. Their total ambient dimension is `2n_0+n_2`, so the kernel of this projection, supported only on one-anchor `n_1` faces, has dimension
+
+\[
+d_1\ge\sigma_C-(2n_0+n_2).
+\tag{1.2}
+\]
+
+On the `n_1` faces, the relation graph `R` joins `F,G` when their common residual train is projectively nonparallel to both unique outside-anchor directions. The one-anchor theorem proves that each connected `R` component contributes at most one scalar degree of freedom to this fiber. If `c_*` is the number of `R` components on which the fiber has nonzero projection, then
+
+\[
+\boxed{c_*\ge d_1.}
+\tag{1.3}
+\]
+
+On any such component, nonzeroness propagates along the nonzero edge coefficients, so every face scalar in that component is nonzero.
+
+---
+
+## 2. Unsealed nonzero components consume degree excess
+
+Call a nonzero `R` component `K` **sealed** when no residual train joins a face of `K` to a face of `U\setminus K`.
+
+For a fiber vector nonzero on `K`, every `F\in K` has
+
+\[
+y_F=c_Fa_F,\qquad c_F\ne0,
+\tag{2.1}
+\]
+
+where `a_F` is a unit vector in its unique outside-anchor direction. If a residual train `tau=FG` leaves `K`, then
+
+\[
+(y_F-y_G)\cdot Ju_\tau=0.
+\tag{2.2}
+\]
+
+The leaving train must be projectively parallel to `a_F`. Indeed, if it were nonparallel at `F`, then either `y_G=0`, which immediately forces `c_F=0`, or `G` is another nonzero one-anchor component. In the latter case, if the train is nonparallel at `G` it is an `R` edge and the two components are the same; if it is parallel at `G`, the `G` term vanishes and again (2.2) forces `c_F=0`.
+
+Thus an unsealed nonzero component contains a face with two projectively parallel sides: its outside anchor and the leaving residual train. A degree-five residual face is a bounded strict unit-contact pentagon, and the bounded-pentagon no-parallel-side theorem excludes this. Hence that face has degree at least six and contributes at least one unit to `x_U`.
+
+Different `R` components have disjoint face sets, so choosing one such endpoint in each unsealed component gives
+
+\[
+\boxed{c_{bad}\le x_U.}
+\tag{2.3}
+\]
+
+If `g` is the number of sealed nonzero components, then
+
+\[
+\boxed{
+ g\ge\bigl(\sigma_C-2n_0-n_2-x_U\bigr)_+.
+}
+\tag{2.4}
+\]
+
+This is finite and exact.
+
+---
+
+## 3. Sealed components have exact common-angle motions
+
+Fix a sealed nonzero `R` component `K`. Every face of `K` is one-anchor, every residual train incident to it has its other residual endpoint in `K`, and it has exactly one train to `O` or an activated face. Therefore every boundary side occurrence of every face in `K` belongs to
+
+\[
+\mathcal T(K)=\{\text{complete trains incident to a face of }K\}.
+\tag{3.1}
+\]
+
+Give every train in `mathcal T(K)` the same angle increment `theta`. If `r_1,...,r_d` are the oriented unit boundary vectors of a face `F\in K`, then
+
+\[
+\sum_{j=1}^dR_\theta r_j
+=R_\theta\sum_{j=1}^dr_j=0.
+\tag{3.2}
+\]
+
+Thus every `K`-face closure remains exact for all sufficiently small `theta`, not only to first order. Strict rhombi still close identically.
+
+A train from `K` to `O` creates no second bounded-face equation. A train from `K` to an activated face is a nonpivot variable: no `U--A` train was available as a pivot when that activated face entered the activation order. The existing block-upper-triangular pivot Jacobian is unchanged and invertible, so the implicit-function theorem restores all activated-face closures simultaneously for all sealed-component parameters.
+
+Distinct sealed components have disjoint train sets and therefore independent common-angle free-coordinate directions.
+
+These directions are also independent from the previously counted pair-shield coordinates. The peeled manifold freezes every residual-internal train. The `n_2` pair coordinates live on `n_2` faces. A mutually parallel one-anchor `p_U` coordinate can lie inside the same `R` component through a non-`R` chord, so literal support-disjointness from `p_U` is **not** assumed. Independence instead follows because every nonzero `R` component contains an actual `R` edge, and the common-angle component direction changes every such `R`-edge train. No `p_U` coordinate changes an `R` edge, and the peeled manifold freezes it. Hence each component rotation has a residual-internal coordinate not used by the previously counted directions; distinct component rotations use disjoint `R`-edge sets.
+
+The only possible universal overlap is the one-dimensional all-train global rotation. Therefore
+
+\[
+\boxed{
+ m_D\ge
+ {b-f\over2}
+ +a_F+{x_A\over2}+{n_0+n_2\over2}+p_U
+ +(g-1)_+.
+}
+\tag{3.3}
+\]
+
+---
+
+## 4. Eliminate the residual bookkeeping
+
+Drop the nonnegative terms `a_F`, `p_U`, and `x_A/2`. Put `z=\sigma_C-x_U`. From (2.4),
+
+\[
+(g-1)_+\ge\bigl(z-2n_0-n_2\bigr)_+-1.
+\tag{4.1}
+\]
+
+For all nonnegative integers `n_0,n_2` and `z>0`,
+
+\[
+{n_0+n_2\over2}
++\bigl(z-2n_0-n_2\bigr)_+
+\ge {z\over4}.
+\tag{4.2}
+\]
+
+If `2n_0+n_2>=z`, this follows from `(n_0+n_2)/2>=z/4`. If `2n_0+n_2<z`, the left side is
+
+\[
+z-{3\over2}n_0-{1\over2}n_2
+\ge z-{3\over4}(2n_0+n_2)>{z\over4}.
+\]
+
+Hence
+
+\[
+ m_D\ge {b-f\over2}+{1\over4}(\sigma_C-x_U)_+-1.
+\tag{4.3}
+\]
+
+Since `x_U<=Q-f`,
+
+\[
+\boxed{
+ m_D\ge {b-f\over2}
+ +{1\over4}\bigl(\sigma_C-(Q-f)\bigr)_+-1.
+}
+\tag{4.4}
+\]
+
+This proves (CR.1).
+
+---
+
+## 5. Live terminal consequence
+
+In the live terminal FREE window
+
+\[
+\limsup t_D\le\mu_*+0.00710,
+\]
+
+the detour-pinching theorem gives
+
+\[
+\delta>\delta_0:=0.017609,
+\qquad
+r:={Q-f\over D}<0.000141+o(1),
+\tag{5.1}
+\]
+
+and the full correlated pair-shield ledger gives
+
+\[
+{b-f\over2D}
+\ge
+{\pi\over2}-{M_*\over10}-0.00710
++\delta+{r\over2}-o(1).
+\tag{5.2}
+\]
+
+Put
+
+\[
+C_0:={\pi\over2}-{M_*\over10}-0.00710+\delta_0.
+\tag{5.3}
+\]
+
+The existing exact live certificate proves
+
+\[
+C_0>1.1988388040.
+\tag{5.4}
+\]
+
+Combining (4.4) with (5.2), and writing `s=\sigma_C/D`, gives
+
+\[
+{m_D\over D}
+\ge C_0+{r\over2}+{1\over4}(s-r)_+-o(1).
+\tag{5.5}
+\]
+
+For all `r,s>=0`,
+
+\[
+{r\over2}+{1\over4}(s-r)_+\ge{s\over4}.
+\tag{5.6}
+\]
+
+Therefore
+
+\[
+\boxed{
+{m_D\over D}
+>1.1988388040+{1\over4}{\sigma_C\over D}-o(1).
+}
+\tag{5.7}
+\]
+
+This is (CR.2). The previous live corank transfer activated only after `sigma_C/D` exceeded a base near `0.15230481`; (5.7) removes that threshold.
+
+The existing diameter-locking theorem transfers the same lower bound to `rank G_D`, to a matching into distinct actual diameter bars, and separately to the positive and negative signed derivative-incidence counts.
+
+---
+
+## 6. Low-flex endpoint
+
+If a live terminal sequence satisfies
+
+\[
+{m_D\over D}\le1.1988388040+\eta+o(1),
+\]
+
+then (5.7) forces
+
+\[
+\boxed{{\sigma_C\over D}\le4\eta+o(1).}
+\tag{6.1}
+\]
+
+Thus a sequence approaching the universal pair-shield floor has
+
+\[
+\boxed{\sigma_C=o(D).}
+\tag{6.2}
+\]
+
+A linear population of independent five-face `K_5` dual blocks therefore cannot coexist with the low-flex endpoint. Either such dual dependence is sublinear, or sealed-component rotations enlarge the exact contact-flex manifold by a linear amount and the actual diameter system must positively lock that larger manifold.
+
+The remaining low-flex target is consequently the full-row-rank or near-full-row-rank one-anchor closure network, coupled to the positive straight-line diameter locking system. No theorem-state file is changed.
+
+**Disposition:** proved exact sealed-component common-angle motions, charged every unsealed nonzero relation component to residual degree excess, derived the finite transfer (CR.1), and sharpened the live endpoint to the threshold-free corank/flex law (CR.2). C-II remains open.

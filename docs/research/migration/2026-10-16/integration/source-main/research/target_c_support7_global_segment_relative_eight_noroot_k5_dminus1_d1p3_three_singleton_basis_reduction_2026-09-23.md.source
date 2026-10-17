@@ -1,0 +1,293 @@
+# Target C: reduce the eight-no-root `k=5,D=-1,d_root=1,p=3` branch to three essential singleton generators
+
+Date: 2026-09-23
+
+Status: rigorous proof-level structural reduction of the smallest remaining eight-no-root `k=5` branch. This does not close the branch, the full `k=5` layer, Target C-II, or Erdos Problem #99. No new exhaustive computation is used.
+
+Inputs:
+
+- `research/target_c_support7_global_segment_relative_eight_noroot_k6_layer_closure_k5_two_clean_reduction_2026-09-23.md`, which gives `rank(P)=3`, the arithmetic branch list, and the `D=-1` generalized-weight floors;
+- `research/verify_target_c_support7_global_segment_relative_five_noroot_k2_slack_2026_09_20.py`, which certifies the five-row rank-three slack-two theorem for every coefficient space obtainable from local empty constraints plus at most two singleton constraints;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_low_p_containment_lift_closure_2026-09-23.md`, whose puncture-spanning argument lifts that five-row theorem to eight rows whenever the parent coefficient space has such a two-singleton generation.
+
+The point of this note is that the lift depends on the **minimum singleton generator count of the coefficient space**, not on the numerical incomplete-row cost `p` itself. Applying that observation at `p=3` removes every state except a rigid three-singleton basis configuration.
+
+## 1. Setup
+
+Consider the remaining branch
+
+```text
+D=-1,
+k=5,
+d_root=1,
+p=3.
+```
+
+Let
+
+```text
+P <= Q^8
+```
+
+be the external coefficient-constraint space. Then
+
+```text
+rank(P)=3
+```
+
+and the established all-depth deletion theorem gives
+
+```text
+d_1(P)>=2,
+d_2(P)>=4,
+d_3(P)>=5.
+```
+
+At a root block `b`, use the standard local notation:
+
+- an empty state contributes its local empty coefficient space `E_b`, of rank at most two;
+- a singleton state contributes a line or zero space `L_b <= E_b`;
+- a pair state contributes no coefficient constraint;
+- a complete state contributes no coefficient constraint.
+
+Untouched blocks have zero local coefficient space.
+
+## 2. Generator-count form of the eight-row containment lift
+
+Call a rank-three coefficient space `P` **two-singleton-generated** if it can be obtained by choosing blockwise local states using arbitrary empty states and at most two singleton states, with complete/pair states contributing zero.
+
+### Lemma 1
+
+If an eight-row rank-three coefficient space `P` is two-singleton-generated, then its virtual-canonical complete set `C` satisfies
+
+```text
+d_v = |C|-rank H(C) >= 1
+```
+
+and the full external nullspace relation space satisfies
+
+```text
+L(null(P)) subset H(C).
+```
+
+This conclusion is independent of the actual incomplete-row cost `p` of a compatible state.
+
+### Proof
+
+Use the same quotient-basis puncture construction as in the committed low-`p` lift.
+
+Let
+
+```text
+Q = Q^8/P.
+```
+
+Since `rank(P)=3`, `dim Q=5`. Choose five coordinate classes forming a basis of `Q`. Every three-subset `J` of those five coordinates is a good puncture: deleting `J` preserves `rank(P)=3`.
+
+Because the parent `P` has a generation using arbitrary empty constraints plus at most two singleton constraints, its projection `P_J` has the corresponding projected generation using at most two singleton constraints. Therefore the certified five-row slack-two theorem applies to every one of these ten punctures. It gives punctured virtual deficiency at least one and containment of the two-dimensional punctured nullspace in the punctured complete-block relation span.
+
+Exactly as in the committed lift, these ten punctured nullspaces are the coordinate two-planes in a five-dimensional dual coordinate system, hence span the full five-dimensional parent nullspace. Restoring deleted coordinates creates no demand on blocks omitted from a punctured virtual-complete set because the null vector is zero on the deleted coordinates, and a block that remains touched but becomes virtual-empty has projected empty constraint contained in `P_J`.
+
+Thus the punctured containments span to
+
+```text
+L(null(P)) subset H(C).
+```
+
+Also one punctured deficient complete set is contained in the parent virtual-complete set, so parent deficiency is at least one. No step here uses `p<=2`; `p<=2` was only the sufficient condition used in the preceding note to guarantee two-singleton generation. `square`
+
+## 3. The `p=3` branch cannot be two-singleton-generated
+
+For any compatible actual root state, let `q` be the number of parent virtual-complete blocks changed to incomplete states. Once Lemma 1 supplies global containment, the standard eight-row accounting gives
+
+```text
+D >= 8 + p + 3d_v - 3q.
+```
+
+Every changed virtual-complete block contains at least one selected incomplete root row, so
+
+```text
+q<=p=3.
+```
+
+With `d_v>=1`,
+
+```text
+D >= 8+3+3-9 = 5.
+```
+
+But the present branch has `D=-1`. Contradiction.
+
+Therefore:
+
+> **Theorem 2.** Every state in the `D=-1,k=5,d_root=1,p=3` branch has a rank-three coefficient space `P` that is **not** two-singleton-generated.
+
+This immediately eliminates every pair-plus-singleton root pattern, because a pair contributes no coefficient constraint. It also eliminates every three-singleton realization in which one singleton constraint is zero or redundant modulo the empty-block constraints and the other singleton constraints.
+
+## 4. Exact actual root-state consequence
+
+Let the actual empty touched blocks contribute spaces whose total span is
+
+```text
+U = span(E_b : b is actual-empty).
+```
+
+Let the actual singleton blocks be `b_1,...,b_s`, with local singleton spaces `L_i`.
+
+The actual coefficient space is
+
+```text
+P = U + L_1 + ... + L_s,
+```
+
+because pair and complete states contribute zero coefficient constraint.
+
+The total incomplete-root cost is `p=3`. Hence `s<=3`.
+
+Theorem 2 rules out `s<=2`. Therefore
+
+```text
+s=3.
+```
+
+All three units of incomplete cost are three distinct singleton blocks. There is no pair block and no additional selected row in any incomplete block.
+
+Now suppose `dim U>0`. Then
+
+```text
+dim(P/U) <= 2,
+```
+
+because `dim P=3`. The quotient `P/U` is generated by the images of the three singleton lines, so at most two of those images generate it. Hence `P` would be generated by the same actual empty constraints plus at most two singleton constraints, contradicting Theorem 2.
+
+Thus
+
+```text
+U=0.
+```
+
+With `U=0`, the three singleton spaces generate the rank-three space `P`. If they were linearly dependent, two would suffice, again contradicting Theorem 2. Therefore each `L_i` is nonzero and
+
+```text
+P = L_1 direct_sum L_2 direct_sum L_3.
+```
+
+Equivalently, choosing any nonzero row `ell_i` spanning `L_i`,
+
+```text
+{ell_1,ell_2,ell_3}
+```
+
+is a basis of `P`.
+
+This proves:
+
+> **Theorem 3.** A surviving state in the `D=-1,k=5,d_root=1,p=3` branch has exactly three selected singleton blocks. Their three nonzero singleton coefficient lines are linearly independent and form a basis of `P`. The actual empty-block constraint span is zero.
+
+## 5. No touched root block can be empty
+
+If a root block is touched by at least one no-root cycle, its local empty coefficient space is nonzero: at least one local quotient component is nonzero by the definition of touch.
+
+But every actual-empty block contributes its `E_b` to `U`, and Theorem 3 gives `U=0`.
+
+Therefore no touched root block is actual-empty.
+
+Since the incomplete cost is already exhausted by the three singleton blocks and there is no pair block, every other touched root block is complete.
+
+Hence the entire touched root-state profile is now forced:
+
+```text
+three touched singleton blocks, whose singleton rows form a basis of P;
+every other touched root block complete;
+no touched empty block;
+no pair block.
+```
+
+Untouched blocks may be ignored for coefficient-space generation because their local coefficient spaces are zero.
+
+## 6. Root-relation filter
+
+Let `T` be the set of root blocks touched by the eight no-root cycles, let
+
+```text
+S={b_1,b_2,b_3}
+```
+
+be the three singleton blocks, and put
+
+```text
+C_touch = T \ S.
+```
+
+Every block in `C_touch` is complete by Theorem 3.
+
+The branch parameter `d_root=1` is the nullity of the complete-root relation rows for the full actual complete set `C`. Since
+
+```text
+C_touch subset C,
+```
+
+and row nullity `|X|-rank H(X)` is monotone nondecreasing when rows are added,
+
+```text
+|C_touch| - rank H(C_touch) <= 1.
+```
+
+Thus the touched geometry alone already has complete-block deficiency at most one. Any candidate eight-cycle/singleton configuration violating this can be rejected without considering untouched root blocks or the final external relation rows.
+
+## 7. Generalized-weight consequences for the three singleton basis rows
+
+Let `ell_1,ell_2,ell_3` be the singleton coefficient basis from Theorem 3. The established generalized weights become direct support restrictions on these actual local singleton rows.
+
+Because `d_1(P)>=2`,
+
+```text
+wt(ell_i) >= 2
+```
+
+for each `i`.
+
+Because `d_2(P)>=4`, for each pair `i!=j`,
+
+```text
+|supp(ell_i) union supp(ell_j)| >= 4.
+```
+
+Because `d_3(P)>=5`,
+
+```text
+|supp(ell_1) union supp(ell_2) union supp(ell_3)| >= 5.
+```
+
+At a singleton root block, `ell_i` is supported exactly on the touching no-root cycles whose local quotient direction is not parallel to the selected singleton root-row direction. So these generalized-weight tests can be evaluated directly from an eight-cycle set and three chosen singleton directions, without enumerating any other coefficient spaces.
+
+## 8. Reduced finite target
+
+The branch has therefore collapsed to the following exact finite search problem.
+
+Enumerate, up to the `S_7` action:
+
+1. an unordered triple of distinct root blocks `S={b_1,b_2,b_3}`;
+2. one singleton root-row direction at each `b_i`;
+3. eight distinct no-root four-cycles.
+
+For each candidate:
+
+1. form the three exact singleton coefficient rows `ell_i`;
+2. require them to have rank three;
+3. set `P=span(ell_1,ell_2,ell_3)`;
+4. test the already-proved generalized weights `(d_1,d_2,d_3)>=(2,4,5)`;
+5. compute every touched root block and set all touched non-singletons complete;
+6. require the touched complete-row nullity to be at most one;
+7. only survivors need any further test involving optional untouched complete blocks or the full `T`-space/external relation rank.
+
+Unlike the preceding seven-row `p=3` closure, there is no subset-span dynamic program over empty blocks: Theorem 3 proves that the coefficient space is exactly the span of the three selected singleton rows. This removes the largest coefficient-space branching from the next verifier.
+
+The branch is not closed here. The exact remaining bottleneck is to exhaust or further rule out this three-singleton basis geometry. The other open `k=5` branches remain
+
+```text
+D=-2, (d_root,p)=(0,5),
+D=-1, (d_root,p)=(0,6).
+```
+
+No theorem-state authority file is changed by this note.

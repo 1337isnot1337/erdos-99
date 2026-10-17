@@ -1,0 +1,114 @@
+# Target C-II — collapsed support-six branch forces positive stress slack
+
+**Date:** 2026-09-18  
+**Status:** conditional proved candidate; theorem-state authority unchanged  
+**Scope:** the collapsed degree-pure support-six one-anchor branch  
+**Dependencies:** exact support-six incidence `K_6\setminus M`; audited-working train-closure host equations (§151); local no-parallel-side theorem  
+**Certificate:** `research/verify_target_c_support6_collapsed_host_anchor_deficiency_2026_09_18.py`
+
+This note extracts a global consequence that is not visible in the six local closure
+equations. It does not eliminate the positive-slack collapsed branch, but it rules out
+the branch in the exact `s_Z=0` sector and forces the smallest remaining case to have
+one-dimensional normalized KKT stress freedom.
+
+The dependency chain is
+
+```text
+collapsed support-six incidence
+  -> connected host graph K6 minus a perfect matching
+  -> one common outer-anchor projective direction
+  -> one-dimensional transpose host kernel
+  -> sigma_C = 1
+  -> s_Z >= 1 by the audited mixed-rigidity identity.
+```
+
+## Exact host-kernel calculation
+
+Use the audited host form of the face-closure transpose equations. For bounded host
+vectors `y_F`, a bounded-bounded train `FG` with projective direction `u_FG` gives
+
+\[
+ (y_F-y_G)\cdot J u_{FG}=0,
+\tag{1}
+\]
+
+and a bounded-to-outer train with direction `u_F` gives
+
+\[
+ y_F\cdot J u_F=0.
+\tag{2}
+\]
+
+In the collapsed branch all six outer directions are projectively parallel. Choose
+their common direction as `e_1`. Equation (2) then forces
+
+\[
+ y_F=t_F e_1
+\]
+
+for every one of the six hosts. At each present internal edge, the physical
+no-parallel-side theorem says `u_FG` is not parallel to the anchor direction. Hence
+`e_1\cdot J u_FG\ne0`, and (1) gives `t_F=t_G`.
+
+The internal host graph is
+
+\[
+R=K_6\setminus\{03,14,25\},
+\]
+
+which is connected. Therefore all `t_F` are equal and
+
+\[
+\boxed{\dim\ker C_{face}^{T}=1.}
+\tag{3}
+\]
+
+This is an exact incidence-and-direction argument; it does not use the numerical
+local realization and does not assume that the auxiliary genus-two side pairing is
+the physical source.
+
+## Consequence for canonical KKT slack
+
+The audited train-closure identity gives
+
+\[
+\sigma_C=\dim\ker C_{face}^{T},
+\]
+
+and the canonical mixed-rigidity/KKT inclusion gives
+
+\[
+\sigma_C\le s_Z.
+\]
+
+Thus every global canonical representative containing this collapsed support-six
+host component satisfies
+
+\[
+\boxed{s_Z\ge1.}
+\tag{4}
+\]
+
+In particular, the collapsed branch is impossible in the exact zero-slack sector
+`s_Z=0`. If `s_Z=1`, the normalized KKT stress polytope has exactly one affine
+degree of freedom at the global level, subject to the other active components and
+the full source constraints. The local two-parameter angle family is not being
+identified with that KKT degree; the two objects live in different spaces.
+
+## Scope and next obstruction
+
+The result is conditional on the audited-working §151 host-equation and
+mixed-rigidity identities; it does not promote those modules or change the
+canonical theorem-state ledger. It does not exclude the positive-slack collapsed
+branch. A complete closure now needs either:
+
+1. a theorem incompatible with a collapsed one-anchor component and `s_Z\ge1`;
+2. an endpoint/KKT-support argument at `s_Z=1`; or
+3. a source-preserving deformation or exact triangle using the global train and
+   diameter-bar geometry.
+
+The certified local realization remains a binding regression against purely local
+exclusions.
+
+**Disposition:** conditional proved candidate; collapsed `s_Z=0` excluded, positive
+slack collapsed branch remains open, C-II remains open.

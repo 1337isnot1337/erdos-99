@@ -1,0 +1,442 @@
+# Target C-II — the modern high-`t` ledger forces a linear population of bounded pentagonal contact faces
+
+**Date:** 2026-09-15  
+**Status:** proof-only source-level structural strengthening  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch after the hostile-audited `t=(q-k)/D<=1.844` exclusion; quantitative staircase stated through `t<=1.860`  
+**Dependencies:** hostile-audited modern high-`t` train-slack theorem; canonical Sections 63, 67, 80, and 85  
+**Certificate:** `research/verify_target_c_high_t_pentagon_face_floor.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The modern high-`t` chamber theorem proves that every remaining full-core survivor has
+linear train-boundary slack
+
+\[
+\liminf {\tau_D\over D}\ge \rho+0.007707,
+\qquad \rho=\cos\rho=0.7390851332\ldots,
+\tag{PF.1}
+\]
+
+where
+
+\[
+\tau_D=(q-k)+2f-2\sqrt{R_4}.
+\tag{PF.2}
+\]
+
+Here `f` is the number of bounded nonquadrilateral contact faces and
+
+\[
+Q=\sum_P(\deg P-4)
+\tag{PF.3}
+\]
+
+is their total degree-above-four defect.
+
+The previous chamber notes used this currency to force large total inactive-interface
+and Oler surplus.  In the live quantitative high-`t` windows there is an additional
+discrete consequence: the same upper bound on
+
+\[
+t={q-k\over D}
+\]
+
+that supports the dominant O--O staircase also caps `Q`, because the old outer contact
+walk already has asymptotic length at least `pi D`.  The two inequalities force most
+of the linearly many exceptional faces to have the **minimum possible degree five**.
+
+Let `P_5` be the number of bounded pentagonal contact faces.  Then the following
+staircase holds:
+
+\[
+\boxed{
+t\le1.850
+\Longrightarrow
+\liminf {P_5\over D}>0.243,
+}
+\tag{PF.4}
+\]
+
+\[
+\boxed{
+t\le1.855
+\Longrightarrow
+\liminf {P_5\over D}>0.228,
+}
+\tag{PF.5}
+\]
+
+and
+
+\[
+\boxed{
+t\le1.860
+\Longrightarrow
+\liminf {P_5\over D}>0.213.
+}
+\tag{PF.6}
+\]
+
+At the widest endpoint `1.860`, one also has
+
+\[
+\boxed{
+\liminf {f\over D}>0.3957,
+\qquad
+\limsup {Q\over D}<0.5785,
+}
+\tag{PF.7}
+\]
+
+and consequently more than `53%` of the bounded nonquadrilateral faces are pentagons
+asymptotically.  The exceptional bounded faces alone pay
+
+\[
+\boxed{
+\liminf {A_{exc}-a_0 Z_{def}\over D}>0.514,
+\qquad a_0={\sqrt3\over2},
+}
+\tag{PF.8}
+\]
+
+before any outer-pocket chamber contribution is used.
+
+Thus the thin-exceptional-face regression in the surviving high-`t` branch is no
+longer an unspecified collection of nonquadrilateral chambers.  A macroscopic linear
+population consists of actual convex unit-edge pentagons.
+
+No positive width or area cost per pentagon is asserted.  Near-degenerate convex
+pentagons remain compatible with the current Section-84 corridor collapse, so this is
+not yet a C-II contradiction.
+
+---
+
+## 1. Modern train slack forces many exceptional faces
+
+Use the exact modern identity
+
+\[
+\boxed{
+\tau_D=(q-k)+2f-2\sqrt{R_4}.
+}
+\tag{PF.9}
+\]
+
+Canonical Type-II saturation gives
+
+\[
+{R_4\over D^2}\to
+\Delta_2:={\pi\over2\sqrt3}.
+\tag{PF.10}
+\]
+
+Fix an endpoint `T` and suppose along the survivor sequence
+
+\[
+t={q-k\over D}\le T+o(1).
+\tag{PF.11}
+\]
+
+Rearranging (PF.9), dividing by `D`, and combining (PF.1), (PF.10), and (PF.11) gives
+
+\[
+\boxed{
+\liminf {f\over D}
+\ge
+f_0(T):=
+{\rho+0.007707-T+2\sqrt{\Delta_2}\over2}.
+}
+\tag{PF.12}
+\]
+
+The exact certificate uses the safe lower bound `rho>0.739085` and outward enclosures
+for `pi`, `sqrt(3)`, and `sqrt(Delta_2)`.
+
+At the three useful endpoints it gives
+
+\[
+\begin{array}{c|c}
+T & f_0(T)\\ \hline
+1.850 & >0.4007088\\
+1.855 & >0.3982088\\
+1.860 & >0.3957088.
+\end{array}
+\tag{PF.13}
+
+This is substantially stronger, on the live bounded-`t` windows, than the older
+proof-only `0.1671D` exceptional-face floor obtained from the pre-audit AG42 endpoint.
+
+---
+
+## 2. The same `t` window gives an upper bound on total degree defect
+
+Canonical loaded-hull algebra gives the exact finite identity
+
+\[
+\boxed{b+Q=2(q-k),}
+\tag{PF.14}
+\]
+
+where `b` is the occurrence-counted boundary length of the old outer contact face.
+
+The image of that closed unit-edge walk contains every extreme vertex of the force
+hull `F`; hence, canonically,
+
+\[
+\operatorname{per}(F)\le b.
+\tag{PF.15}
+\]
+
+Type II gives the disk limit
+
+\[
+{\operatorname{per}(F)\over D}\to\pi.
+\tag{PF.16}
+\]
+
+Therefore (PF.14)--(PF.16) imply
+
+\[
+\boxed{
+\limsup {Q\over D}
+\le Q_0(T):=2T-\pi.
+}
+\tag{PF.17}
+\]
+
+The exact outward values used by the certificate are
+
+\[
+\begin{array}{c|c}
+T & Q_0(T)\\ \hline
+1.850 & <0.558408\\
+1.855 & <0.568408\\
+1.860 & <0.578408.
+\end{array}
+\tag{PF.18}
+
+The point is the direction of the inequality: a larger outer-face detour only makes
+`Q` smaller.  No assumption `b/D->pi` is needed; the lower bound
+`b>=per(F)=pi D-o(D)` suffices.
+
+---
+
+## 3. Degree arithmetic forces pentagons
+
+For each bounded nonquadrilateral face `P`, put
+
+\[
+r_P:=\deg(P)-4\ge1.
+\tag{PF.19}
+\]
+
+A pentagon has `r_P=1`, while every face of degree at least six has `r_P>=2`.  Hence
+
+\[
+\begin{aligned}
+Q
+&=\sum_P r_P\\
+&\ge P_5+2(f-P_5)\\
+&=2f-P_5.
+\end{aligned}
+\]
+
+Therefore, finitely,
+
+\[
+\boxed{P_5\ge2f-Q.}
+\tag{PF.20}
+\]
+
+Combining (PF.12), (PF.17), and (PF.20),
+
+\[
+\boxed{
+\liminf {P_5\over D}
+\ge
+p_5(T):=2f_0(T)-Q_0(T).
+}
+\tag{PF.21}
+\]
+
+The expression simplifies to
+
+\[
+\boxed{
+p_5(T)
+=ho+0.007707+2\sqrt{\Delta_2}+\pi-3T.}
+\tag{PF.22}
+\]
+
+The exact certificate proves
+
+\[
+\begin{array}{c|c}
+T & p_5(T)\\ \hline
+1.850 & >0.2430102\\
+1.855 & >0.2280102\\
+1.860 & >0.2130102.
+\end{array}
+\tag{PF.23}
+
+This proves (PF.4)--(PF.6).
+
+A useful equivalent statement controls the degree distribution.  Since
+
+\[
+Q-f=\sum_P(\deg P-5),
+\tag{PF.24}
+\]
+
+the number of faces of degree at least six is at most `Q-f`.  At `T=1.860`, the
+bounds above give
+
+\[
+\limsup {\#\{P:\deg P\ge6\}\over D}
+<0.18270.
+\tag{PF.25}
+\]
+
+Meanwhile `f/D>0.39570`, so the pentagonal fraction satisfies
+
+\[
+\liminf {P_5\over f}
+\ge 2-{Q_0(1.860)\over f_0(1.860)}
+>0.5383.
+\tag{PF.26}
+\]
+
+The certificate records the simpler safe conclusion `>0.53`.  At `T=1.855` and
+`1.850`, the corresponding safe fractions are `>0.57` and `>0.60`.
+
+---
+
+## 4. Exceptional bounded faces already carry most of the new chamber surplus
+
+Canonical Section 67 applies Oler face by face.  With `Z_def` the inactive source
+population inside bounded nonquadrilateral faces and `A_exc` their total area,
+
+\[
+\boxed{
+A_{exc}
+\ge a_0(Z_{def}+f)+c_0Q,
+\qquad
+c_0={\sqrt3\over4}.
+}
+\tag{PF.27}
+\]
+
+Thus
+
+\[
+A_{exc}-a_0Z_{def}
+\ge a_0f+c_0Q.
+\tag{PF.28}
+\]
+
+Since every exceptional face has degree at least five, `Q>=f`, and therefore
+
+\[
+\boxed{
+A_{exc}-a_0Z_{def}
+\ge (a_0+c_0)f
+={3\sqrt3\over4}f.
+}
+\tag{PF.29}
+\]
+
+Combining with (PF.13), the exact certificate gives
+
+\[
+\begin{array}{c|c}
+T & (A_{exc}-a_0Z_{def})/D\\ \hline
+1.850 & >0.520\\
+1.855 & >0.517\\
+1.860 & >0.514.
+\end{array}
+\tag{PF.30}
+
+At the widest endpoint, this already accounts for most of the independently proved
+modern total chamber-surplus floor
+
+\[
+(A_{ch}-a_0Z_{ch})/D\ge0.586223-o(1).
+\]
+
+The statement is only a lower-bound comparison.  No upper bound is inferred for the
+outer-pocket contribution.
+
+---
+
+## 5. Relation to the existing second-order rhombus deficit
+
+The pentagon floor does not by itself contradict the current linear rhombus-count
+deficit.  Indeed the area decomposition gives, after discarding nonnegative terms,
+
+\[
+\Delta_2D^2-R_4
+\ge f+{Q\over2}-o(D)
+\ge {3\over2}f-o(D).
+\tag{PF.31}
+\]
+
+At `T=1.860`, this only forces a coefficient above `0.5935`, whereas the current
+modern Section-85 population package is compatible with a still larger linear deficit.
+Thus no scalar `R_4` contradiction is being hidden here.
+
+The gain is discrete geometry: the deficit is carried by a linear population of actual
+five-sided convex contact chambers, rather than by an unspecified aggregate degree
+currency.
+
+---
+
+## 6. Updated high-`t` normal form
+
+Combine the present theorem with the live high-`t` O--O path/hub results.  Every
+survivor in
+
+\[
+1.844<t\le1.855
+\]
+
+simultaneously has
+
+```text
+>0.0184 D low-energy same-phase O--O cuts on one exact dual path;
+one common dual region on every actual diameter support interval;
+a nonhub adjacent strip with <=341 one-sided moving diameter bars;
+exact nonzero strip reaction generated by <=2 of those bars;
+>0.228 D bounded pentagonal contact faces;
+>0.517 D exceptional-face Oler surplus.
+```
+
+At the wider endpoint `t<=1.860`, the path theorem weakens to the existing Helly-hub /
+region-saturation normal form, while the present face theorem still gives
+`P_5>0.213D-o(D)`.
+
+These are independent structural pressures: the O--O path is selected from the
+dominant train orbit, while `P_5` counts global bounded contact faces.
+
+---
+
+## 7. What remains open
+
+A convex unit-edge pentagon can be arbitrarily thin, so neither (PF.6) nor (PF.8)
+creates a uniform Euclidean area penalty per face.  This is exactly the Section-84
+near-geodesic-corridor regression.
+
+The next useful theorem should exploit information unavailable to generic convex
+pentagons.  Two concrete routes are now sharper:
+
+1. **pentagon/train incidence:** prove that a positive fraction of the `>0.228D`
+   pentagons in the live path band meet the selected near-antipodal O--O path or its
+   adjacent rhombic carriers, and show that the resulting local five-sided transition
+   is incompatible with the one-sided diameter-routing hub; or
+2. **pentagon phase defect:** show that a near-degenerate unit-edge pentagon separating
+   two strict-rhombus phase regions pays a positive amount of the already bounded
+   angular/directional defect, giving a global upper bound on the number of such
+   pentagons.
+
+No C-II or Level-I closure is claimed.
+
+**Disposition:** proved proof-only high-`t` bounded-pentagon population and
+exceptional-face Oler-surplus staircase.  C-II and Level I remain open.

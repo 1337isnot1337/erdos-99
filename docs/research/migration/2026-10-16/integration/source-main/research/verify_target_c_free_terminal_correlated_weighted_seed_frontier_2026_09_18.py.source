@@ -1,0 +1,108 @@
+#!/usr/bin/env python3
+"""Exact certificate for the correlated degree-weighted seed frontier."""
+from fractions import Fraction
+from math import isqrt
+
+Q = Fraction
+
+
+def atan_inv_bounds(q, terms):
+    s = Q(0)
+    for j in range(terms):
+        t = Q(1, (2*j+1)*q**(2*j+1))
+        s += t if j % 2 == 0 else -t
+    nxt = Q(1, (2*terms+1)*q**(2*terms+1))
+    return (s, s+nxt) if terms % 2 == 0 else (s-nxt, s)
+
+
+def sqrt_floor(x, scale):
+    n = isqrt((x.numerator*scale*scale)//x.denominator)
+    y = Q(n, scale)
+    assert y*y <= x
+    return y
+
+
+def sqrt_ceil(x, scale):
+    n = isqrt((x.numerator*scale*scale)//x.denominator) + 1
+    y = Q(n, scale)
+    assert y*y >= x
+    return y
+
+
+S = 10**90
+a5l, a5h = atan_inv_bounds(5, 100)
+a239l, a239h = atan_inv_bounds(239, 30)
+pil = 16*a5l - 4*a239h
+pih = 16*a5h - 4*a239l
+
+n3 = isqrt(3*S*S)
+s3l = Q(n3, S)
+s3h = Q(n3+1, S)
+d2l = pil/(2*s3h)
+d2h = pih/(2*s3l)
+s2l = sqrt_floor(d2l, S)
+s2h = sqrt_ceil(d2h, S)
+
+g = Q(7707, 10**6)
+eps = Q(71, 10000)
+delta0 = Q(17609, 10**6)
+delta_max = 5*eps/2
+Mlo = 4*s2l + 2*g
+Mhi = 4*s2h + 2*g
+
+# Canonical live defect floor k/D.
+k_lo = pil/2 - Q(2, 5)*s2h - g/5 - eps
+assert k_lo > Q(1181229804, 10**9)
+
+# Correlated degree-weighted line.  This is an outward upper enclosure for
+# sigma_C/D - (8/15)m_D/D.
+kappa_hi = (
+    Q(2, 15)*Mhi
+    - Q(4, 15)*pil
+    + Q(4, 3)*eps
+    + Q(14, 15)*(delta_max - 2*delta0)
+)
+assert kappa_hi < -Q(3346394, 10**7)
+
+combined_lo = k_lo - kappa_hi
+assert combined_lo > Q(15158692, 10**7)
+
+# Fixed-flex checks quoted in the note.
+if_m_120 = combined_lo - Q(8, 15)*Q(6, 5)
+if_m_125 = combined_lo - Q(8, 15)*Q(5, 4)
+assert if_m_120 > Q(8758692, 10**7)
+assert if_m_125 > Q(8492025, 10**7)
+
+# Existing sealed-component supporting line.
+C0_lo = pil/2 - Mhi/10 - eps + delta0
+assert C0_lo > Q(1198838804, 10**9)
+old_combined_lo = C0_lo + k_lo/4
+assert old_combined_lo > Q(1494146255, 10**9)
+
+# Existing unconditional pentagon-bootstrap floor.
+sigma_coarse_hi = Q(5078707, 10**7)
+unconverted_coarse_lo = k_lo - sigma_coarse_hi
+assert unconverted_coarse_lo > Q(6733591, 10**7)
+
+# Crossings of the safe rounded supporting lines used only for description.
+A = Q(1494146255, 10**9)
+B = Q(15158692, 10**7)
+C = Q(6733591, 10**7)
+m_cross_old_new = Q(15, 52)*(4*A-B)
+x_cross_old_new = 4*(A-m_cross_old_new)
+m_cross_new_coarse = Q(15, 8)*(B-C)
+assert Q(1286744, 10**6) < m_cross_old_new < Q(1286745, 10**6)
+assert Q(829605, 10**6) < x_cross_old_new < Q(829606, 10**6)
+assert Q(1579706, 10**6) < m_cross_new_coarse < Q(1579707, 10**6)
+
+print('PASS: correlated degree-weighted seed frontier certified')
+print('live k/D floor >', float(k_lo))
+print('kappa upper <', float(kappa_hi))
+print('(d_H+p_D)/D + (8/15)m_D/D >', float(combined_lo))
+print('if m_D/D <= 1.20, (d_H+p_D)/D >', float(if_m_120))
+print('if m_D/D <= 1.25, (d_H+p_D)/D >', float(if_m_125))
+print('old quarter-weight combined floor >', float(old_combined_lo))
+print('coarse unconditional (d_H+p_D)/D >', float(unconverted_coarse_lo))
+print('safe old/new crossing m =', float(m_cross_old_new))
+print('safe old/new crossing x =', float(x_cross_old_new))
+print('safe new/coarse crossing m =', float(m_cross_new_coarse))

@@ -1,0 +1,103 @@
+# Erdős Problem #99: technical briefing on the current research program
+
+**Snapshot.** This briefing is anchored to `origin/main` commit `ab6dd3336f9f8d440f2bada76edb32153391cddc` and the repository's generated state label `2026-10-10.audit.234`. The state lock says Level I is open, Target A is open through Section 177, Target B is open, and Target C-I is closed while C-II is open. The result descriptions below follow the machine-readable manifest and active route files at that commit. This is a private preview, not a claim of external validation or a public call for submissions.
+
+## 1. The global problem
+
+For $n\ge2$, define
+
+\[
+D(n)=\min\{\operatorname{diam}(A): A\subset\mathbb R^2,\ |A|=n,\ |x-y|\ge1\text{ for }x\ne y\}.
+\]
+
+Erdős's question is whether there is an $n_0$ such that every diameter-minimizing $n$-point set, for every $n\ge n_0$, contains a unit equilateral triangle. Equivalently, its unit-contact graph has a triangle. Both quantifiers matter: exhibiting one triangle-containing minimizer per $n$ would not prove the claim, and a triangle-free packing only disproves it if that packing is a global minimizer. A disproof needs triangle-free global minimizers for arbitrarily large $n$. The repository's [formal problem module](../problem/statement.md) records these quantifiers and the associated equal-disk formulation.
+
+## 2. Public literature baseline
+
+The direct literature on the eventual unit-triangle question is limited. Erdős's [1995 survey](https://doi.org/10.11606/resimeusp.v2i2.74798) gives the published formulation and its triangular-lattice heuristic; the [Erdős Problems record](https://www.erdosproblems.com/99) continues to list Problem #99 as open. For the underlying minimum-diameter problem, Bateman and Erdős determined the early cases through $n=7$ ([paper](https://doi.org/10.1080/00029890.1951.11999682)), and Bezdek and Fodor determined $D(8)$ ([paper](https://doi.org/10.1006/jcta.1998.2889)). Their planar estimate, with $\Delta_2=\pi/(2\sqrt3)$, is
+
+\[
+\sqrt{n/\Delta_2}-1\le D(n)<\sqrt{n/\Delta_2}.
+\]
+
+Schürmann proved that sufficiently large extremal packings are nonlattice ([paper](https://doi.org/10.1007/s00454-002-0747-6)), which rules out a simple eventual classification by finite triangular-lattice patches but says nothing by itself about unit triangles. Eppstein's bounds on triangle-free penny graphs ([paper](https://jgaa.info/index.php/jgaa/article/view/paper463)) provide useful restrictions on contact graphs, but graph sparsity alone does not establish a feasible geometric motion or global optimality. These are context and constraints, not a solution to E99. The source-annotated [literature review](../literature_review.md) distinguishes direct results from structural tools and analogies, and links to the cited papers.
+
+## 3. Canonical mathematical results and their scope
+
+### A universal population reserve
+
+One particularly strong result is independent of the three route-specific normal forms. For every sufficiently large global minimizer of diameter $D$, define
+
+\[
+g_A=n-1-\frac{\pi D^2}{2\sqrt3}.
+\]
+
+The canonical [Audit.243](../audits/target_c_population_excess_sharp_coefficient_independent_audit_2026-10-10.md) proves that, for every fixed $131/208<\theta<2/3$,
+
+\[
+g_A\ge \kappa_0D^{2/3}-C_\theta D^\theta,
+\qquad
+\kappa_0=\frac{3\pi}{5a_0}\left(\frac{3a_0}{16}\right)^{2/3},
+\quad a_0=\frac{\sqrt3}{2}.
+\]
+
+In particular, $\kappa_0\approx0.647826$, and along any sequence of such minimizers with $D\to\infty$, \(\liminf g_A/D^{2/3}\ge\kappa_0\). The proof uses a translated triangular-lattice disk count and an exact weighted accounting of pairs that must be deleted to obtain a strict-diameter comparison set. The theorem's quantifier covers every global minimizer and assumes no triangle-free structure, contact-minimality, stress, or lattice form.
+
+The reserve is a population statement. It does not move points in a given minimizer, identify which labels could be exchanged, or imply a unit triangle. The ledger separately records an explicit finite-range square-root reserve and a positive $D^{2/3}$ reserve; no uniform finite-$D$ dominance between the latter bounds is claimed. Their scopes and certificates are in the manifest entries `C-GLOBAL-POPULATION-EXCESS-SQRT-RESERVE`, `C-GLOBAL-POPULATION-EXCESS-TWO-THIRDS-RESERVE`, and `C-GLOBAL-POPULATION-EXCESS-ASYMPTOTIC-COEFFICIENT`.
+
+### Stress and rigidity
+
+At a minimizing configuration, pairwise distances have lower bounds of one, unit contacts are active constraints, and diameter constraints impose upper bounds. KKT equilibrium stresses turn these active inequalities into first-order force-balance and rigidity questions. The repository's canonical stress results support three complementary analyses: a Schur-response rank calculation in Target A; a shell and phase-energy analysis in Target B; and positive-contact-core force and mixed-rigidity analysis in Target C.
+
+For Target C, the audited ZR/ZF theorem has a deliberately limited domain. If $V$ is the nonisolated positive-contact core and $v=|V|$, then the stress matrix has exactly the affine kernel
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\]
+
+and the mixed contact/diameter rigidity matrix on that core has rank $2v-3$. This is powerful finite rigidity information for the core. Contact-isolated labels remain part of the original configuration and are excluded from these matrices; extending the affine-kernel theorem by adding zero rows would create extra kernel directions. The theorem therefore supplies no bound on isolate population and no full-source motion. See the [independent ZR/ZF audit](../targets/target-c/57-zr-zf-rigidity-audit.md) and the exact scope correction in the [state lock](../STATE.md).
+
+## 4. The three active routes
+
+### Target A: source capacity and Schur response
+
+Target A compares the rigidity/response rank of a lattice-like scaffold with source labels that can be placed into its capacity. Its global sufficient closure is
+
+\[
+\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda,
+\qquad\text{equivalently}\qquad d_{\rm sc}\ge\Delta_\Lambda.
+\]
+
+The current locked-stress branch has a sharper exact target. Section 175 proves that the remaining response deficiency would be paid by the interior-tube population if
+
+\[
+|O_{\rm iso}|+\sum_i\max\{0,|O_i|-|C_i|\}\ge j_*+|T_Z|.
+\]
+
+Section 177 adds a two-site edge-lens alternative, boundary-order genuine-source paths for the zero-slack branch, and a phase-aligned crosscut tube with a $2L+O(1)$ site cost. These are exact separator and bookkeeping theorems; the required surplus has not been derived from arbitrary global-minimizer geometry. A strict smaller-diameter competitor would also close the route. See the [Target A route](../targets/target-a/README.md), the [Section 175 frontier module](../targets/target-a/27-tube-only-right-deficiency-frontier.md), and the [Section 177 audited refinements](../targets/target-a/29-lens-source-gate-refinements.md).
+
+### Target B: rhombic shell stability
+
+Target B treats the first-order-jammed branch. The shared geometric theory produces an almost-rhombic contact complex; the remaining obstruction is a global shell estimate rather than local rigidity. In the route's notation, a sufficient closure is
+
+\[
+G+E\ge \frac{\sqrt3}{4}B+\frac{\sqrt3}{2}(t+\chi-1).
+\]
+
+The route has already excluded coherent phase-star and near-extremal three-class cores under their promoted hypotheses, with independently certified dense-grid and penetration tools. The unresolved case allows multiple large grains whose interface costs and topology corrections interact. A local density or one-grain estimate cannot be added across them without controlling those terms. No global inequality or strict smaller-diameter competitor closes that case. The exact variables and hypotheses are defined in the [Target B module](../targets/target-b/01-jammed-rhombic-branch.md); the current route summary is in its [frontier page](../targets/target-b/README.md).
+
+### Target C: force geometry and finite motion
+
+Target C-I is closed. The remaining C-II analysis uses a contact-minimal, then diameter-pair-minimal representative and retains every source point, including contact-isolated points. The current reductions include exact stress-transfer and diameter-graph structure, core rigidity, all-minimizer population reserves, and many finite wall or shell exclusions. These results narrow the possible obstruction, but no canonical argument yet turns them into a legal full-source endpoint.
+
+In the full-core branch, the most useful next result is a source-realized face-coupled finite move or discrete replacement that satisfies every source lower-distance constraint, every actual-diameter upper constraint, and the remaining unary rhombus tests, then yields strict contact loss at diameter $D$ or a strict sub-$D$ competitor. A separate macroscopic-container branch remains open. The [current frontier](../targets/target-c/CURRENT.md#exact-remaining-split) lists both branches and binding regressions. The contact-isolated points cannot be discarded simply because the core stress and rigidity calculations are cleaner without them.
+
+## 5. A collaboration model that fits the mathematics
+
+A large research effort can be useful if it assigns bounded mathematical obligations instead of asking many agents to “solve E99.” Work can be distributed across A's population/response inequality, B's global multi-grain stability transfer, C's full-source finite-motion endpoint, independent theorem audits, exact computation, and literature-led methods. Each task should start from a recorded main commit and state version, name the exact canonical dependencies, and state what evidence would count as progress and what would end the experiment.
+
+Contributors should first check the route's current frontier and related audits for overlap. A submission can be valuable as a proof candidate, an independent audit, a scoped computation, or an exact regression. It should state which one it is, preserve failed attempts and counterexamples, and never promote itself by wording. Independent review and the repository's explicit promotion procedure should remain separate from exploratory work. This structure would let outside mathematicians and AI agents investigate different bridges without multiplying competing theorem states; it is a proposal for a future collaboration system, not a claim that submissions are currently being accepted.
+
+## 6. Evidence and remaining limits
+
+The machine-readable theorem manifest supplies claim IDs, audit provenance, hypotheses, dependencies, and certificate paths. `python3 tools/check_theorem_state.py` reports `theorem-state: OK` at the briefing's base commit. This establishes ledger integrity under that checker; it does not independently validate every mathematical proof. Internal proof audits are not external peer review, and exact computation verifies only its specified finite statement. The [authoritative state page](../STATE.md), [machine ledger](../state/theorem-state.yaml), and [literature review](../literature_review.md) should be reopened before using this snapshot for later research or publication decisions.

@@ -1,0 +1,147 @@
+<!-- theorem-state: {"artifact_id":"ART-054C969AFA2F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
+# Erdős Problem #99 — Target A tube-only Schur penalty
+
+**Date:** 2026-09-04  
+**Branch:** `research/target-c-c97-caterpillar-fan-capacity-2026-09-04`  
+**Run type:** exact sharpening of the contracted tube shield  
+**Target:** locked three-channel sector branch  
+**Status:** LEVEL I STILL OPEN
+
+## 1. Matched contact vertices add no new shield pair
+
+Retain the Section 113 basis matching
+
+`mu_0:B->Z`
+
+and a finite contact graph `Sigma` in the response point set. Let
+
+`T_Sigma={y in Y_in: dist(y,|Sigma|)<1}`.
+
+In the contracted Schur gammoid, the previous report shielded a matched pair `{b,mu_0(b)}` whenever
+
+`b in V(Sigma)` or `mu_0(b) in T_Sigma`.
+
+The first condition is redundant.
+
+### Lemma TO1
+
+If `b in B cap V(Sigma)`, then `mu_0(b) in T_Sigma`.
+
+### Proof
+
+The basis matching is a conflict matching, so
+
+`|b-mu_0(b)|<1`.
+
+Since `b in V(Sigma) subset |Sigma|`,
+
+`dist(mu_0(b),|Sigma|)<=|mu_0(b)-b|<1`.
+
+Thus the matched lattice site belongs to `T_Sigma`. QED.
+
+Because `mu_0` is a bijection from `B` onto `Z`, the shielded contracted basis-pair set is therefore exactly
+
+`P_Sigma={mu_0^{-1}(z): z in Z cap T_Sigma}`,
+
+and
+
+`|P_Sigma|=|Z cap T_Sigma|`.
+
+## 2. Exact tube-only sector rank bound
+
+Let
+
+`C_V=C^partial cap V(Sigma)`
+
+and
+
+`O_T=O cap T_Sigma`.
+
+Shield in the contracted directed gammoid:
+
+- every matched pair corresponding to `z in Z cap T_Sigma`;
+- every terminal in `C_V`;
+- every sink in `O_T`.
+
+Every surviving right vertex lies outside `T_Sigma`, so Lemma 174.2 makes every surviving response edge sector-local. Every surviving matched pair is sector-local for the same reason.
+
+Hence, with the usual sector terminal/sink sets `C_i^partial,O_i`, the Schur rank satisfies
+
+### Theorem TO2 — tube-only Schur rank
+
+`rank S <= |Z cap T_Sigma|+|C_V|+|O cap T_Sigma|`
+
+`          + sum_i min(|C_i^partial|,|O_i|)`.
+
+Since
+
+`T_Sigma subset Y_in=Z sqcup O`,
+
+the first and third terms sum to `|T_Sigma|`. Thus
+
+`rank S <= |T_Sigma|+|C_V|+sum_i min(|C_i^partial|,|O_i|)`.
+
+Subtracting from
+
+`|C^partial|=|C_V|+sum_i |C_i^partial|`
+
+gives the exact nullity inequality
+
+### Corollary TO3 — tube-only Schur nullity
+
+`zeta >= sum_i max(0,|C_i^partial|-|O_i|) - |T_Sigma|`.
+
+All physical contact-vertex cost cancels. No basis-closure factor remains.
+
+## 3. Explicit locked-fan constant
+
+The nine-site unit-tube theorem proves
+
+`|T_Sigma|<=9|E(Sigma)|`.
+
+For the connected unicyclic three-channel fan,
+
+`|E(Sigma)|=|V(Sigma)|`.
+
+Therefore
+
+### Corollary TO4 — nine-per-vertex locked penalty
+
+`zeta >= sum_i max(0,|C_i^partial|-|O_i|) - 9|V(Sigma)|`.
+
+A sufficient locked-branch population theorem is now
+
+`sum_i max(0,|C_i^partial|-|O_i|) >= s+|T_Sigma|`,
+
+or crudely
+
+`sum_i max(0,|C_i^partial|-|O_i|) >= s+9|V(Sigma)|`.
+
+The promoted Section 174 physical-shield bound charged up to `24|V(Sigma)|`; the exact directed-gammoid contraction and lattice congruence argument reduce that explicit loss to `9|V(Sigma)|`.
+
+## 4. Dual deficit form
+
+Let `J=rho^dagger-|Y_0|`, let `O_iso` denote surviving exterior sinks with no surviving neighbor after the tube is removed, and put
+
+`Q_Sigma=sum_i max(0,|O_i|-|C_i^partial|)`.
+
+The signed sector identity without physical basis closure is
+
+`sum_i (|C_i^partial|-|O_i|)`
+
+`=s-J-|C_V|+|O cap T_Sigma|+|O_iso|`.
+
+The tube-only closing criterion is equivalent to
+
+`Q_Sigma >= J+|Z cap T_Sigma|+|C_V|-|O_iso|`.
+
+The form on the positive side is cleaner because the terminal cancellation is explicit:
+
+`P_Sigma >= s+|T_Sigma|`.
+
+## 5. Remaining target
+
+The shielding problem is no longer dominated by basis bookkeeping. The exact geometric cost is the number of response-lattice sites in the open unit tube of the stress fan. Further progress must either
+
+1. improve the nine-site tube bound using the connected/unicyclic geometry of the fan; or
+2. prove that the three sectors carry terminal surplus exceeding `s` by at least the actual tube population.

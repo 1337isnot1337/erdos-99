@@ -1,0 +1,211 @@
+<!-- theorem-state: {"artifact_id":"ART-FAC449ED811A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Audit - positive-density grids, penetration charging, and BFS force stability
+
+**Date:** 2026-09-05  
+**Branch:** `research/target-b-positive-density-dual-grid-2026-09-05`  
+**Candidates:** PDG, PC1/PC3, MCP1/MCP2, BCS1-BCS6  
+**Verdict:** PASS under the hypotheses stated in the candidate reports.  
+**Global LEVEL I status:** STILL OPEN.
+
+## 1. PDG dual-tree extraction
+
+Candidate:
+
+`docs/reports/target_b_positive_density_dual_tree_grid_2026-09-05.md`.
+
+For an internally noncrossing `B` family, the corrected complement dual is a tree with one edge per `B` train. DT2 identifies the crossing set of each `A` train with one simple tree path.
+
+If the exact crossing density is `rho`, then
+
+`sum_alpha l_alpha=rho M b`.
+
+Paths shorter than `rho b/2` carry less than half of this total length, so long paths carry at least `rho M b/2`. Cauchy-Schwarz gives
+
+`sum_long l_alpha^2 >= rho^2 M b^2/4`.
+
+A path of length `l` contains at least `l^2/64` first-quarter/last-quarter edge pairs for large `l`. Double counting over fewer than `b^2/2` unordered tree-edge pairs therefore gives one pair contained in at least
+
+`rho^2 M/128`
+
+paths. Every such path contains the unique connecting tree subpath, whose length is at least
+
+`rho b/4-O(1)`.
+
+Hence the complete rectangle sizes in PDG are valid.
+
+No false implication `pairwise noncrossing => dual path` is used. The dual is a tree; only the crossing set of one transverse train is a tree path.
+
+PASS.
+
+## 2. Same-phase trains are internally noncrossing
+
+The Section-50 application of PDG requires trains inside one coherent phase class to be pairwise noncrossing.
+
+If two train tracks cross, their unit direction vectors form a strict unit rhombus. Unit separation forces both rhombus diagonals to have length at least one, hence the acute projective angle is at least `pi/3`; equality creates a unit equilateral triangle and is excluded in the triangle-free branch. Thus a crossing pair has projective angle strictly larger than `pi/3` on the acute side.
+
+A coherent phase class has angular diameter `o(1)`, so for sufficiently large `D` two trains in that class cannot cross.
+
+PASS.
+
+## 3. PC1 penetration charging
+
+Candidate:
+
+`docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md`.
+
+TG1 already proves that every train outside the complete `A union B` grid that separates a selected deep diagonal pair crosses at least
+
+`d=min(k,l)-2`
+
+grid tracks. Train-coordinate differences have coefficients in `{-1,0,1}`, so if `s` external trains separate the corners, their total error vector satisfies
+
+`|E|<=s`.
+
+If `X` is the number of external-grid physical crossings used by these separators, TG1 gives `X>=ds`, and the source diameter gives
+
+`D>=|U+V+E|>=|U+V|-s`.
+
+Therefore
+
+`X>=d(|U+V|-D)_+`.
+
+The `Mb` internal grid crossings and the external-grid crossings are disjoint physical rhombi, proving PC1.
+
+The trimmed-away outer `A/B` trains are not silently placed in `E`: TG1's inward-corner construction already makes them nonseparating for the chosen central diagonal.
+
+PASS.
+
+## 4. PC3 phase functional and sign conventions
+
+Inside a retained coherent component, choose triangular projective representatives
+
+`u=(1,0)`, `v=(1/2,sqrt(3)/2)`, `w=(-1/2,sqrt(3)/2)`
+
+and
+
+`L(x,y)=x+y/sqrt(3)`.
+
+Then
+
+`L(u)=L(v)=1`, `L(w)=0`, `||L||=2/sqrt(3)`.
+
+Train-coordinate orientations do not invalidate this statement. Reversing an oriented train vector is absorbed by the signed separator coefficient `d_tau in {-1,0,1}`. Thus the absolute cancellation supplied by one in-component train is at most `1+o(1)` for the first two phase classes and `o(1)` for the third; using the coarser common bound one is valid. An arbitrary train outside the coherent component has `|L(u_tau)|<=2/sqrt(3)`.
+
+A train outside the retained component that physically crosses a retained grid train lies on an edge deleted in the Section-50 construction; otherwise the two retained vertices would belong to the same connected component. Hence `X_out<=E_del(H)` is valid.
+
+Eliminating `s_in,s_out` gives
+
+`X_in+X_out`
+
+`>=d(M'+b'-2D/sqrt(3)-o(D))`
+
+` -(2/sqrt(3)-1)E_del(H)`,
+
+with positive part when the right side is negative.
+
+PASS.
+
+## 5. MCP bounded multiplicity
+
+Candidate:
+
+`docs/reports/target_b_multicomponent_penetration_budget_2026-09-05.md`.
+
+Choose at most one complete grid in each retained component. Internal grid crossing sets from distinct components are disjoint.
+
+A physical crossing used as an external penetration charge can be counted from at most the components containing its two train endpoints. Therefore it is charged at most twice. Crossings with a pruned train are charged at most once. An internal crossing inside one retained component can occur only in that component's penetration set, and an internal grid edge cannot simultaneously be an external-grid edge for the same grid.
+
+Thus
+
+`sum_j(|G_j|+|X_j|)<=2R`,
+
+which proves MCP1. Similarly each deleted crossing is incident with at most two retained components, so
+
+`sum_j E_del(H_j)<=2E_del`.
+
+PASS.
+
+The factor two cannot be removed by pure bookkeeping: one deleted crossing between retained components can in principle help separate selected diagonals in both endpoint components.
+
+## 6. BCS effective-conductance lower bound
+
+Candidate:
+
+`docs/reports/target_c_bfs_cut_conductance_stability_2026-09-05.md`.
+
+C53/C64 gives the Schur response inequality
+
+`Lambda-L_H >=0`.
+
+Fix active diameter edge `za` of weight `b`. Impose boundary potential difference one between `z,a` and minimize over all other boundary values and the contact interior. For every such boundary vector the diameter Laplacian energy contains the fixed nonnegative term
+
+`b(phi_z-phi_a)^2=b`.
+
+Hence the minimized contact Dirichlet energy, i.e. the effective conductance, satisfies
+
+`C_eff(z,a)>=b`.
+
+Thus the candidate did not assume more than the canonical PSD domination theorem.
+
+For BFS cuts `E_i`, every unit `z-a` flow has net flux one across every cut. The cuts are edge-disjoint. Cauchy-Schwarz on each cut and Thomson minimization give
+
+`R_eff>=sum_i1/C_i`,
+
+hence
+
+`b<=C_eff<=1/(sum_i1/C_i)`.
+
+The subsequent inequalities
+
+`sum_i C_i>=bk^2`
+
+and
+
+`D^2-sum_iC_i<=D^2-bk^2<= (1-b)D^2`
+
+are correct because `k=d_C(z,a)>=D` and the virial identity is `sum_C alpha_e=D^2`.
+
+PASS.
+
+## 7. BCS cut-force identity
+
+Sum KKT equilibrium over a BFS ball `S_i`. Internal contact and diameter forces cancel. Orient every cut contact from the ball toward its complement. The dominant diameter `za` crosses every cut for `i<k` and contributes `bDu` up to the global sign convention; choosing the contact orientation consistently fixes that sign.
+
+All other diameter bars have total normalized beta mass at most `1-b` and vector length `D`. Therefore
+
+`|F_i-bDu|<=(1-b)D`.
+
+This yields
+
+`u dot F_i>=(2b-1)D`,
+
+`C_i>=(2b-1)D`
+
+for `b>1/2`.
+
+Finally
+
+`sum_(e in E_i)alpha_e|t_e-u|^2=2(C_i-u dot F_i)`
+
+and summing, using `sum_iC_i<=D^2` and `k>=D`, gives
+
+`sum_i sum_(e in E_i)alpha_e|t_e-u|^2<=4(1-b)D^2`.
+
+PASS.
+
+## 8. Scope failures that remain real
+
+None of these theorems closes Level I.
+
+1. PDG is density-only. Its `rho^2` shore scale can produce grids whose retained shore sum is below the PC3 cancellation threshold `2D/sqrt(3)`.
+2. MCP closes crossing reuse bookkeeping but permits many subcritical grids in several macroscopic grains.
+3. BCS controls KKT stress mass, not geometric/contact cardinality. Degree-four rhombic vertices admit positive equilibrium weights `(A,A,epsilon,epsilon)` with arbitrarily small transverse `epsilon`, so no uniform side-stress leakage follows locally.
+4. C97's exact terminal-twist contradiction is not automatically stable under `k-D=o(D)`: near-geodesic internal vertices need not be non-extreme, and the two path rays need not be exactly opposite.
+
+These limitations must remain explicit in any downstream use.
+
+## Verdict
+
+The four candidate reports are internally consistent with the current canonical theorem stack and survive this audit under their stated pure-rhombic/coherent-component hypotheses.
+
+**LEVEL I remains open.**

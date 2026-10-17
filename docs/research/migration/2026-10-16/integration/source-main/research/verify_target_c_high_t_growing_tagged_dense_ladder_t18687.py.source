@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+"""Regression checks for the repaired growing tagged dense high-t ladder."""
+
+import math
+from fractions import Fraction as Q
+
+c = Q(226, 10_000_000)          # 0.0000226
+gamma = Q(113, 40_000_000)     # c0/2 = 2.825e-6
+A = 1_108_000
+M = 9_000_000
+r0 = 0.6536
+mu = 0.01
+
+# The global cost coefficient divided by rail density is below 8*A because
+# gamma=c/8.  The clean 9,000,000 threshold therefore has strict room.
+assert gamma / c == Q(1, 8)
+assert 8 * A == 8_864_000
+assert M > 8 * A
+
+# One-percent circumcenter flank density after an o(D) common-column deletion.
+flank = r0 - (1 + 2 * mu) / math.sqrt(3)
+assert 0.06470 < flank < 0.06471
+
+# Almost-linear rail-group choice k_D=D/log D and sigma_D=(log D)^(-1/2):
+# k_D/D -> 0, sigma_D -> 0, and k_D/(sigma_D D)=1/sqrt(log D) -> 0.
+prev_defect = None
+for logD in [1e4, 1e6, 1e8, 1e10]:
+    k_over_d = 1 / logD
+    sigma = 1 / math.sqrt(logD)
+    defect = M * k_over_d / sigma
+    assert abs(defect - M / math.sqrt(logD)) < 1e-9
+    assert k_over_d > 0
+    assert sigma > 0
+    if prev_defect is not None:
+        assert defect < prev_defect
+    prev_defect = defect
+
+# One mechanism tag and one physical destination cost two factors of two from
+# the k_D tagged rail positions already guaranteed inside the chosen interval.
+assert Q(1, 1) * Q(1, 2) * Q(1, 2) == Q(1, 4)
+
+print("PASS: repaired growing tagged dense-ladder regressions")
+print("rail/global-density ratio =", float(gamma / c))
+print("global-cost / rail-density ceiling =", 8 * A)
+print("clean interval-cost threshold =", M)
+print("one-percent common flank density =", flank)

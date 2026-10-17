@@ -1,0 +1,82 @@
+# Erdős Problem #99 research
+
+Erdős Problem #99 asks whether every sufficiently large **global minimum-diameter** configuration of unit-separated points in the plane contains a unit equilateral triangle.
+
+For `n` points, let `D(n)` be the smallest possible diameter among configurations whose pairwise distances are at least one. The question is whether there is an `n₀` such that, for every `n ≥ n₀`, **every** configuration attaining `D(n)` contains three mutually unit-distance points. See the [formal statement and quantifiers](docs/problem/statement.md).
+
+**Level I is open.** No proof covers all global minimizers for all sufficiently large `n`, and no unbounded family of triangle-free global minimizers is known. A packing, local optimum, finite example, or one selected minimizer per size does not settle those quantifiers.
+
+## What this repository contains
+
+This is a theorem ledger together with a large research archive. The [state lock](docs/STATE.md) and its [machine-readable manifest](docs/state/theorem-state.yaml) identify which claims are canonical and record their scope and dependencies. Route maps collect the active results for each proof program. Reports preserve audits, conditional arguments, counterexamples, failed approaches, and historical work; they are useful research material, but a report being present on `main` does not make its claims canonical.
+
+The research is organized around three approaches:
+
+| Route | Current position | Read next |
+| --- | --- | --- |
+| **A — source capacity and Schur response** | Open. The global rank/deficit closure is still missing. The canonical chain runs through Section 177; the locked-response branch and the zero-slack/descent branch both retain open conversion steps. | [Target A route map](docs/targets/target-a/README.md) |
+| **B — rhombic shell stability** | Open. The sufficient global inequality is `G + E ≥ (√3/4)B + (√3/2)(t + χ − 1)`. Existing dense-grid and interpolation results have stated local hypotheses; the multi-grain transfer and global shell-stability inequality remain open. | [Target B route map](docs/targets/target-b/README.md) |
+| **C — KKT force geometry and reciprocal rigidity** | **C-I is closed; C-II is open.** Canonical reductions constrain the force and contact geometry, but the full-source finite-motion/payment obligation remains. Keep contact-isolated points in the source population. | [Target C route map](docs/targets/target-c/README.md) and [current C-II frontier](docs/targets/target-c/CURRENT.md) |
+
+These summaries are navigation aids, not alternate theorem statements. For current status, assumptions, and exact endpoints, use [`docs/STATE.md`](docs/STATE.md) first and then the selected route map. The active stack is only one part of the archive; rejected and superseded claims remain available because their regressions prevent repeated errors.
+
+## Five-minute orientation
+
+1. Read the [exact problem statement](docs/problem/statement.md), especially its universal quantifiers.
+2. Read the [authoritative theorem state](docs/STATE.md). Use the [generated status table](docs/state/STATUS.generated.md) for a compact lifecycle view and the [generated theorem graph](docs/state/THEOREM_GRAPH.generated.md) to trace dependencies.
+3. Choose one route from the table above. Start with its route map rather than searching all reports.
+4. Follow that map to the active theorem modules needed for the question at hand. For Target C, start with [`CURRENT.md`](docs/targets/target-c/CURRENT.md); do not try to read its full module history at once.
+5. Read the [current prompt index](docs/prompts/README.md) last if you need an operational research prompt. Prompts guide work; they do not determine theorem status.
+
+For a fuller newcomer path, including how to locate an exact open obligation and prepare evidence for review, see [Start here](docs/START_HERE.md). Repository-specific terms are collected in the [glossary](docs/GLOSSARY.md).
+
+## Agent-only mathematical governance
+
+All mathematical proof review and canonical promotion are conducted through AI
+agents, without human mathematicians or human mathematical sign-off. For each
+consequential new canonical claim, the project owner operates **one independent
+reviewing AI agent** to reconstruct the complete proof and adversarially check
+the decisive bridge, scope and regressions against the exact submitted SHA.
+A passing script or merged PR is not an independent proof audit. The review and
+same-change theorem-state promotion rules are in [review policy](docs/REVIEW_POLICY.md).
+Legal rights, source attribution and authorization to publish are separate.
+
+## Research platform
+
+The [expert technical briefing](docs/launch/TECHNICAL_BRIEF.md) and
+[one-page overview](docs/launch/ONE_PAGE_SUMMARY.md) explain the strongest scoped
+intermediate results and the open global bridges. They describe internally audited
+work; external peer review has not been established.
+
+| Need | Entry point |
+| --- | --- |
+| Choose a bounded research question | [Autonomous research guide](autoresearch.md), [task catalogue](docs/research/agent-task-catalog.json), and [seeded selector](scripts/choose_research_task.py) |
+| Check overlap and record a claim or handoff | [Issue-based coordination](docs/COORDINATION.md) and `python3 scripts/choose_research_task.py --live-overlap` |
+| Submit work and request independent review | [Contribution guidelines](CONTRIBUTING.md), [review policy](docs/REVIEW_POLICY.md), and [promotion workflow](docs/RESEARCH_WORKFLOW.md) |
+| Reproduce the historical snapshot | [Baseline](docs/launch/BASELINE.md) and [provenance](docs/launch/PROVENANCE.md) |
+| Verify the integrated platform locally | [CI and local verification](docs/launch/CI.md); `python3 tools/verify_prelaunch.py --full` |
+| Prepare a dependency-closed release without publishing | [Release preparation](docs/launch/RELEASE_PREPARATION.md) and [publication audit](docs/launch/PUBLICATION_AUDIT.md) |
+| Plan a limited invited pilot | [Pilot procedure](docs/launch/PILOT_PLAN.md) and [integration readiness record](docs/launch/READINESS.md) |
+
+Task suggestions are not reservations. Discussions are disabled; open claim issues
+and draft PRs provide the current coordination record. Catalogue overlap pointers
+are a dated snapshot and must be refreshed before starting work.
+
+## Research archive and contribution status
+
+Historical and unsuccessful work is intentionally retained. Check the lifecycle in the state lock before relying on a report. In particular, `unreviewed`, `conditional`, `regression`, `rejected`, `superseded`, and `provenance` materials are not canonical premises. The [contribution protocol](CONTRIBUTING.md) explains how a result is audited and how a proved candidate can be proposed for promotion into the single canonical theorem state.
+
+The repository is being organized for possible broader collaboration. Repository access and invitations to contribute are managed separately; this README is not an announcement that the project is public or accepting outside submissions.
+
+## Repository map
+
+| Path | Contents |
+| --- | --- |
+| [`docs/STATE.md`](docs/STATE.md) and [`docs/state/`](docs/state/) | Authoritative theorem lifecycle, machine-readable state, and generated views |
+| [`docs/problem/`](docs/problem/) | Definitions, quantifiers, and literature baseline |
+| [`docs/targets/`](docs/targets/) | Active route maps and canonical theorem modules |
+| [`docs/theory/`](docs/theory/) | Shared theory used across routes |
+| [`docs/reports/`](docs/reports/) | Audits, candidate proofs, regressions, handoffs, and provenance |
+| [`research/`](research/) | Reproducible computations and certificates |
+| [`docs/RESEARCH_WORKFLOW.md`](docs/RESEARCH_WORKFLOW.md) | Research, audit, and promotion workflow |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Repository contribution protocol |

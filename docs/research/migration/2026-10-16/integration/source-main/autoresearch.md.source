@@ -1,0 +1,188 @@
+# E99 autonomous research task entrypoint
+
+**Permanent policy:** This is an AI-agent-only mathematical research program.
+Canonical promotion requires one independent reviewing AI-agent session, which may be
+operated by the project owner while auditing other agents' work. The session must
+independently reconstruct the complete proof and adversarially test its bridge and
+regressions against the exact SHA. No human mathematical approval or second agent
+audit is required. See `docs/REVIEW_POLICY.md`.
+
+Use this page when an authorized research assignment does not already name a
+bounded question. An explicit assignment takes precedence over random selection.
+The task catalogue is a set of starting points, not a record of novelty, an
+exclusive reservation, or a second theorem ledger. A useful result may be a
+proof candidate, an exact counterexample to a proposed lemma, an independent
+audit, or a clear handoff.
+
+## Current mathematical snapshot
+
+This catalogue was checked against `origin/main` at
+`ab6dd3336f9f8d440f2bada76edb32153391cddc`, state version
+`2026-10-10.audit.234`. The problem remains open; Level I is open.
+
+- **Target A:** the canonical route runs through Section 177. The global
+  closure is `rank S <= d_int + |C^partial| - Delta_Lambda`, equivalently
+  `d_sc >= Delta_Lambda`. The locked-response branch has the Section-175
+  right-deficiency endpoint; the zero-slack/source branch also remains open.
+- **Target B:** the exact sufficient closure is
+  `G+E >= (sqrt(3)/4) B + (sqrt(3)/2)(t+chi-1)`. The one-component GPI
+  estimate and coherent-core exclusions do not prove the required global
+  multi-grain inequality.
+- **Target C:** C-I is closed and C-II is open. The current finite-move
+  endpoint requires an actual source move or discrete replacement that checks
+  every full-source lower constraint and actual-diameter upper constraint,
+  then loses a contact at diameter `D` or yields a same-cardinality competitor
+  of diameter `< D`. Keep the macroscopic-container branch distinct from the
+  full-core branch.
+
+These statements summarize the reviewed manifest and route maps; when they
+disagree with a report, prompt, branch, or open PR, follow `docs/STATE.md`,
+`docs/state/theorem-state.yaml`, and the active route map in that order. Never
+promote an unreviewed proposal by citing its PR or merge status.
+
+## Draw a diversified shortlist
+
+The catalogue contains 19 bounded cards across eight tracks. Track weights
+allocate suggestions across the A, B, and C frontiers, independent audits,
+exact computation, independent verification, literature checks, and alternate
+approaches. By default the selector samples three different tracks without
+replacement. Use the task that best matches the actual assignment and expertise;
+the selector does not allocate work among agents or reserve a question. Track
+weights are allocation choices, not estimates of theorem success or research yield.
+The selector uses only the Python 3.10+ standard library.
+
+```sh
+python3 scripts/choose_research_task.py
+python3 scripts/choose_research_task.py --seed 0123456789abcdef0123456789abcdef
+python3 scripts/choose_research_task.py --task target-c-face-coupled-move
+python3 scripts/choose_research_task.py --track target-b --count 2 --json
+```
+
+The default seed is a fresh 128-bit OS nonce. The output reports the seed,
+checkout commit, catalogue-reviewed commit, and theorem-state version. A seed
+reproduces a suggestion; it does not establish that the question is open or
+unclaimed. The printed scope key fingerprints the selected card and method,
+not the base commit or random seed.
+
+## Check overlap before starting
+
+Do not infer novelty from an empty title search, a different seed, or an old
+task card. The repository is private and GitHub Discussions were disabled at
+the reviewed snapshot. Recheck the live repository through the access available
+to you; do not create a reservation automatically.
+
+1. Record `git rev-parse HEAD`, fetch `origin/main`, and read `docs/STATE.md`,
+   the relevant part of `docs/state/theorem-state.yaml`, the exact problem
+   statement, the chosen target map, its named current modules, and the current
+   prompt. Compare state versions before importing anything from another
+   branch.
+2. Inspect current open PRs, including drafts and files, not just titles:
+
+   ```sh
+   gh pr list --repo 1337isnot1337/e-99 --state open --limit 100 \
+     --json number,title,headRefName,url
+   gh pr view PR_NUMBER --repo 1337isnot1337/e-99 --json title,body,files
+   gh pr diff PR_NUMBER --repo 1337isnot1337/e-99
+   ```
+
+3. Search the precise object, hypothesis, and method in the route modules,
+   audits, and relevant report directories. For example:
+
+   ```sh
+   rg -n -i 'owner implication|weighted diameter mass|multi-grain transfer' \
+     docs/targets/target-c docs/audits docs/reports
+   ```
+
+   Follow matching references and the theorem manifest before deciding whether
+   the older result is an obstruction, a regression, or a superseded attempt.
+4. Compare the candidate's source objects, hypotheses, domain, and expected
+   evidence with the nearest work. Split by a genuinely different lemma, model,
+   proof method, or bounded parameter range. If the scope changes, record why
+   the change still reaches the card's stated endpoint.
+
+At the final overlap check, PR #737 and #947–#967 were open on adjacent
+theorem or prelaunch work, including Target A source-arm capacity and the
+coembedded full-rank regression, Target B train-ratio cases, Target C finite
+folds/owner motion/grid access, rhombus-mesh replacement regressions, and the
+other prelaunch documentation PRs. These proposals do not change theorem
+authority unless the state manifest promotes a specific claim. The catalogue
+stores this snapshot for search leads only; recheck the live PR list and read
+any matching bodies before claiming a task.
+
+## Work to an exact endpoint
+
+Before substantial work, write the chain
+
+```text
+candidate lemma -> exact canonical quantity -> contradiction or strict sub-D competitor
+```
+
+If no such chain is available, classify the work as exploratory and bound it.
+Do not weaken the endpoint to fit a successful computation. A finite packing,
+local optimum, source scaffold, response network, or one minimizer per size is
+not a global-minimizer theorem. Retain all contact-isolated source points in
+Target C source-population, feasibility, and diameter checks. Do not assume
+separately feasible one-at-a-time moves combine into one compatible move.
+
+For a bounded session, spend the first part on the state and overlap check,
+then one exact proof obligation or finite experiment, and reserve time for
+adversarial checking and a handoff. Use at most one evidence-backed pivot. Stop
+when the stated domain is exhausted, a required hypothesis cannot be derived,
+or the current method cannot imply its named endpoint; write the precise
+obstruction and what new fact would justify reopening it.
+
+For computation, state the proposition and finite domain before coding. Use
+exact arithmetic or certified bounds when the output is proof-level. Record
+the assumptions encoded, omitted cases, and what the result cannot prove. A
+search failure is only a result about its searched domain.
+
+## Agent handoff contract
+
+Every substantial handoff or PR should include these fields, even when the
+result is negative:
+
+```text
+Task ID and scope key:
+Base commit and theorem-state version:
+Exact question and endpoint implication chain:
+Canonical dependency IDs and file paths:
+Scope status: unchanged / refined / changed, with reason:
+Nearest open PRs or prior reports and the difference in scope:
+Method and bounded domain or parameter range:
+Evidence, commands, environment, and failure controls:
+Claim status: proved candidate awaiting promotion / unreviewed candidate / audited-working / conditional / regression / rejected:
+What the evidence proves:
+What it does not prove:
+Predecessor and parallel contributor credit; substantial AI assistance:
+Remaining gap, stop condition, and smallest next step:
+```
+
+Use `docs/reports/REPORT_TEMPLATE.md` for a reusable proof report. State
+negative results at their exact scope and preserve counterexamples that rule
+out an overstrong lemma. A candidate report or PR does not promote a theorem;
+canonical promotion follows `docs/RESEARCH_WORKFLOW.md`. Independent checking
+and useful superseded work deserve explicit credit. Do not claim mathematical
+authorship for a tool, and disclose substantial AI assistance in accordance
+with repository policy.
+
+## Design references
+
+The workflow borrows general coordination patterns from
+[CrocSwap's `autoresearch.md`](https://github.com/CrocSwap/integer-mult-bounds/blob/main/autoresearch.md),
+especially weighted task suggestions, semantic scope keys, overlap checks, and
+bounded stopping rules. Its
+[PR template](https://github.com/CrocSwap/integer-mult-bounds/blob/main/.github/pull_request_template.md)
+informed the base/dependency, overlap, evidence, limitations, and attribution
+handoff fields. The task statements, theorem status, and proof standards here
+come from E99's own state lock and research workflow; no integer-multiplication
+claims or machinery are imported.
+
+## Current coordination and reproduction
+
+The selector can read current open PRs and issues using `--live-overlap`; it never posts
+or reserves work. The dated catalogue snapshot is an explicit offline fallback, and a
+saved query can be supplied with `--overlap-snapshot`. Check [claim issues and handoffs](docs/COORDINATION.md)
+before work, and use `--count 1 --claim-template` for stable task/scope identifiers and an
+expiry. Independent mathematical review follows [the review policy](docs/REVIEW_POLICY.md).
+See the [historical reproducibility baseline](docs/launch/BASELINE.md),
+[local full verification](docs/launch/CI.md), and [dependency-closed release preparation](docs/launch/RELEASE_PREPARATION.md).

@@ -1,0 +1,258 @@
+# Target C-II — the full source hull has an explicit same-center `O(sqrt D)` disk sandwich
+
+**Date:** 2026-09-17  
+**Status:** proof-only finite corollary of the audited full-source Bonnesen geometry; no canonical promotion claimed  
+**Scope:** every noncollinear global minimum-diameter source  
+**Dependencies:** audited Section 58 full-source circumradius proof  
+**Certificate:** `research/verify_target_c_full_source_same_center_disk_sandwich_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN.`
+
+The audited full-source geometry proves, for every noncollinear global minimizer with source hull `K`, diameter `D`, circumradius `R`, and inradius `r`,
+
+\[
+R-r<\eta_D,
+\qquad
+{D\over2}\le R<{D\over2}+\eta_D,
+\qquad
+\eta_D:=3^{1/4}\sqrt D.
+\tag{SC.1}
+\]
+
+The proof did not record that the circumcenter and incenter themselves are automatically close. That observation upgrades (SC.1) to an explicit disk sandwich about one common center.
+
+Let `o` be a circumcenter of `K` and `c` an incenter. Then
+
+\[
+\boxed{|c-o|\le R-r<\eta_D.}
+\tag{SC.2}
+\]
+
+Consequently, for all sufficiently large `D`,
+
+\[
+\boxed{
+B\!\left(o,{D\over2}-2\eta_D\right)
+\subset K
+\subset
+B\!\left(o,{D\over2}+\eta_D\right).
+}
+\tag{SC.3}
+\]
+
+In particular
+
+\[
+\boxed{
+d_H\!\left(K,B(o,D/2)\right)
+<2\,3^{1/4}\sqrt D.
+}
+\tag{SC.4}
+\]
+
+Thus the entire source hull, not only the Type-II force hull and not only a subsequential normalized limit, is quantitatively near-circular about its own full-source circumcenter with an explicit `O(sqrt D)` Hausdorff rate.
+
+This gives a source-wide normal/radial estimate. If `x in partial K` and `n` is any outward supporting unit normal at `x`, then
+
+\[
+n\cdot(x-o)
+=h_K(n)
+\ge {D\over2}-2\eta_D,
+\qquad
+|x-o|<{D\over2}+\eta_D.
+\]
+
+Hence
+
+\[
+\boxed{
+\angle(n,x-o)
+\le
+\arccos\!\left(
+{{D/2-2\eta_D}\over{D/2+\eta_D}}
+\right)
+=O(D^{-1/4}).
+}
+\tag{SC.5}
+\]
+
+This finite full-source statement can replace qualitative near-disk convergence whenever a later proof only needs hull support directions or radial localization.
+
+---
+
+## 1. The incenter lies close to every circumcenter
+
+The inball satisfies
+
+\[
+B(c,r)\subset K
+\subset B(o,R).
+\tag{SC.6}
+\]
+
+If `c=o`, (SC.2) is immediate. Otherwise put
+
+\[
+e={c-o\over|c-o|}.
+\]
+
+The point
+
+\[
+z=c+re
+\]
+
+belongs to the closed inball and therefore to `K`. Its distance from `o` is
+
+\[
+|z-o|
+=|c-o|+r.
+\]
+
+Because `K subset B(o,R)`,
+
+\[
+|c-o|+r\le R.
+\]
+
+Thus
+
+\[
+\boxed{|c-o|\le R-r.}
+\tag{SC.7}
+\]
+
+Combining with the audited Bonnesen bound `R-r<eta_D` proves (SC.2).
+
+---
+
+## 2. Move the inball to the circumcenter
+
+Let
+
+\[
+d:=|c-o|.
+\]
+
+Any point `z` satisfying
+
+\[
+|z-o|\le r-d
+\]
+
+also satisfies
+
+\[
+|z-c|
+\le |z-o|+|o-c|
+\le r,
+\]
+
+so
+
+\[
+B(o,r-d)\subset B(c,r)\subset K.
+\tag{SC.8}
+\]
+
+From (SC.1) and (SC.2),
+
+\[
+r>R-\eta_D,
+\qquad
+d<\eta_D.
+\]
+
+Therefore
+
+\[
+r-d>R-2\eta_D
+\ge {D\over2}-2\eta_D.
+\tag{SC.9}
+\]
+
+For sufficiently large `D`, the right-hand radius is positive. Equations (SC.8)--(SC.9) prove the inner inclusion in (SC.3).
+
+The outer inclusion follows immediately from
+
+\[
+K\subset B(o,R),
+\qquad
+R<{D\over2}+\eta_D.
+\]
+
+---
+
+## 3. Hausdorff rate
+
+Let
+
+\[
+R_-={D\over2}-2\eta_D,
+\qquad
+R_0={D\over2},
+\qquad
+R_+={D\over2}+\eta_D.
+\]
+
+Equation (SC.3) gives
+
+\[
+B(o,R_-)\subset K\subset B(o,R_+).
+\]
+
+For concentric convex bodies this implies
+
+\[
+d_H(K,B(o,R_0))
+\le\max\{R_0-R_-,R_+-R_0\}
+=2\eta_D,
+\]
+
+which proves (SC.4).
+
+The estimate is finite and source-wide. No Type-I/Type-II split, KKT stress choice, contact-core deletion, or asymptotic subsequence is used beyond the already audited Section-58 inputs.
+
+---
+
+## 4. Support-normal consequence
+
+Fix `x in partial K` and an outward supporting unit normal `n` there. Since the inner ball in (SC.3) is centered at `o`,
+
+\[
+h_K(n)=n\cdot(x-o)
+\ge R_-.
+\]
+
+The outer inclusion gives
+
+\[
+|x-o|\le R_+.
+\]
+
+Therefore
+
+\[
+{n\cdot(x-o)\over|x-o|}
+\ge {R_-\over R_+}.
+\]
+
+This proves (SC.5).
+
+Since
+
+\[
+1-{R_-\over R_+}
+=O(D^{-1/2}),
+\]
+
+the angle is `O(D^-1/4)` by the standard small-angle cosine expansion. This matches the scale of the audited diameter-star angular-width estimate, but now applies to every supporting normal of the full source hull.
+
+---
+
+## 5. Frontier use
+
+The same-center sandwich does not itself contradict any Type-II survivor. Its value is that later source-level arguments no longer need to import qualitative force-hull near-disk convergence when they concern actual source-hull vertices, hull support normals, or fixed-slack almost-diameters.
+
+In particular it is compatible with and strengthens the geometric setting of the shallow-tooth reflection branch: every loaded base vertex lying on the source hull has radial direction within `O(D^-1/4)` of its hull normal, uniformly and with an explicit full-source center.
+
+**Disposition:** extracted an explicit finite `O(sqrt D)` same-center disk sandwich for the full source hull from the audited Bonnesen proof. C-II and Level I remain open.

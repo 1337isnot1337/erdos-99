@@ -1,0 +1,1089 @@
+# Erdős Problem #99 — Final continuation prompt from canonical v1.3.0
+
+Work entirely in this single context.
+
+Do not spawn subagents, parallel agents, delegated workers, or separate research agents.
+
+Do not search the internet.
+
+This is a continuation of a long research investigation, not a fresh attempt.
+
+Your objective is to obtain a **Level I proof or disproof** of Erdős Problem #99.
+
+---
+
+# Files to place in the surrounding environment
+
+Use exactly the following theorem-state file:
+
+1. `erdos_problem_99_1.3.0.md`
+
+and the seven supplied literature sources:
+
+2. `mp05-2-261-269.pdf`
+3. `1951-03.pdf`
+4. `1-s2.0-S0097316598928898-main.pdf`
+5. `s00454-002-0747-6.pdf`
+6. `1204.4403v1.pdf`
+7. `463.pdf`
+8. `10.1007_PL00009374.pdf`
+
+Optionally, the project-memory handoff
+`erdos_problem_99_CHAT_HANDOFF_2026-08-26.md` may also be present. It is orientation
+and workflow context only, **not** an independent theorem source. If it conflicts with
+v1.3.0, the canonical theorem-state file controls.
+
+Do **not** attach v1.0.0, v1.1.0, v1.2.0, `addendum.md`, earlier working reports,
+`FINAL(1)`, `FINAL(2)`, old synthesized reports, post-synthesis addenda, previous
+continuation prompts, transcript dumps, or pasted branch logs.
+
+`erdos_problem_99_1.3.0.md` supersedes them as the sole canonical theorem-state file.
+
+---
+
+# Critical trust instruction
+
+Read `erdos_problem_99_1.3.0.md` in full before doing new mathematics.
+
+Then treat every result that v1.3.0 explicitly labels established/audited as a
+**trusted theorem library**.
+
+Do not spend the run re-auditing, reproving, or numerically recomputing that trusted
+stack. Audit only mathematics you newly introduce as part of the closing argument.
+
+Sections 71 onward are the authoritative v1.3 frontier. Earlier frontier language is
+historical where the report says so.
+
+In particular, do not redo:
+
+- the KKT/MFCQ framework;
+- pinned expansive-cone and jammed/hybrid normal forms;
+- strict pinned stress and direction-dependent second-order stress;
+- almost-rhombic bulk structure and exact Oler shell bookkeeping;
+- train pseudoline topology;
+- the translated-lattice `n-1` theorem;
+- support-turning and mixed-area identities;
+- sixfold phase energy, grain decomposition, and phase-atomic/exposed-hull bounds;
+- the quantitative `T/D`, `q/T`, and `(T-q)/D` constants;
+- train-angle Hessian, signed variance, backward-flip identities, and tangent quartic
+  mechanism;
+- minimal-face harmonic--Dirichlet reduction and peripheral-dual rank;
+- terminal direction-network and terminal-turn factorization;
+- corrected six-block facial peeling;
+- exact diameter-plateau theorem;
+- rooted-forest self-stress identity;
+- root-skeleton exactification;
+- affine forest triangle-factor exclusion;
+- forest rattlerization;
+- same-diameter triangle-free saturation;
+- open-disk replacement and collar-width inequalities;
+- terminal-component Minkowski decomposition;
+- componentwise vector closure and `s_C=0,1,2` classification;
+- stochastic Minkowski-width component-rotation formula;
+- the explicit component-rotation rank budget `r_alpha <= c(Theta)-1`;
+- the unconditional compatible-collar dichotomy;
+- the safe-collar lattice population estimate;
+- deep Voronoi containment;
+- the local Delaunay clearance inequality and its equality classification;
+- the global clearance budget;
+- the degree-six nearest-neighbor graph and `1/24` matching estimate;
+- strong Gabriel/Delaunay promotion of the matching;
+- the matched two-well theorem; or
+- the exact Hall--Kőnig scaffold conflict inequality and inner-band near-perfect
+  conflict matching.
+
+These are inputs, not tasks.
+
+---
+
+# Problem
+
+For
+
+\[
+D(n)=
+\min\left\{
+\operatorname{diam}(A):
+A\subset\mathbb R^2,
+\ |A|=n,
+\ |x-y|\ge1\quad(x\ne y)
+\right\},
+\]
+
+prove or disprove
+
+\[
+\boxed{
+\exists n_0\ \forall n\ge n_0\ \forall A,
+\qquad
+\operatorname{diam}(A)=D(n)
+\Longrightarrow
+A\text{ contains a unit equilateral triangle}.
+}
+\]
+
+A unit equilateral triangle is exactly a triangle in the unit-contact graph.
+
+The negation requires triangle-free **global minimizers** for arbitrarily large `n`.
+
+Finite counterexamples, strict local minima, asymptotically dense families, shell
+models, boundary-pinned models, or one triangle-containing minimizer for each `n` do
+not settle the problem.
+
+---
+
+# Mission
+
+The structural phase is essentially complete.
+
+Do not return another survey of the theorem stack.
+
+Do not spend the run polishing constants that do not enter an exact contradiction.
+
+Do not stop merely because the remaining theorem is difficult.
+
+Push the two exact capacity problems below hard enough to obtain one of:
+
+1. a complete Target A closure;
+2. a complete Target B closure;
+3. a theorem unifying both;
+4. an exact infinite counterexample family proving disproof; or
+5. if Level I genuinely remains open, one strictly sharper theorem/reduction than the
+   v1.3 targets, with a full proof.
+
+The preferred output is an unconditional proof or disproof.
+
+---
+
+# Global constants and exact shell gate
+
+Use
+
+\[
+a_0=\frac{\sqrt3}{2},
+\qquad
+c_0=\frac{\sqrt3}{4},
+\qquad
+c=\frac{2\sqrt3}{\pi},
+\qquad
+C_0=\sqrt{2\pi\sqrt3}.
+\]
+
+The audited translated-lattice theorem is
+
+\[
+\boxed{D(n)^2<c(n-1).}
+\]
+
+For a topology-corrected rhombic core,
+
+\[
+\boxed{
+ c_0(B-P)+a_0(t+\chi-1)
+ \le G_{\mathcal R}+E_{\mathcal R}
+ <c_0B+a_0(t+\chi-1).
+}
+\]
+
+For a pure rhombic disk,
+
+\[
+\boxed{c_0(B-P)\le G+E<c_0B.}
+\]
+
+Thus the exact pure contradiction threshold is
+
+\[
+\boxed{G+E\ge c_0B.}
+\]
+
+There is no residual `+a0` term.
+
+---
+
+# Target B survivor: trusted quantitative state
+
+For a sufficiently large triangle-free pure strict-rhombic-disk global minimizer,
+
+\[
+B=2T,
+\qquad
+n=R+T+1,
+\qquad
+R/D^2\to1/c,
+\]
+
+\[
+G+E<c_0B,
+\]
+
+\[
+\boxed{
+\frac TD\ge2.5395008183\ldots-o(1),
+}
+\]
+
+\[
+\boxed{
+\frac qT\le0.9039456812\ldots+o(1),
+}
+\]
+
+and
+
+\[
+\boxed{
+\frac{T-q}{D}\ge0.3338292869\ldots-o(1).
+}
+\]
+
+The common first-order-neutral train-angle space satisfies
+
+\[
+\boxed{
+\dim\mathcal L\ge T-q
+\ge0.3338292869\ldots D-o(D).
+}
+\]
+
+Full first-order train locking is dead. Do not revisit it.
+
+The established lower-rank theorem is
+
+\[
+\boxed{
+\operatorname{rank}\mathcal B+I+r\ge T-q+1.
+}
+\]
+
+The total desired upper bound is
+
+\[
+\boxed{
+\operatorname{rank}\mathcal B+I+r\le T-q.
+}
+\]
+
+---
+
+# Target B component structure
+
+Let `Theta` be the terminal graph. Its connected components are exact convex
+Minkowski summands of the hull:
+
+\[
+\boxed{K=\sum_CK_C}
+\]
+
+up to translation.
+
+For terminal chain `j`,
+
+\[
+L_j=
+\operatorname{span}\{J(u_\tau-u_{\rho(j)}):\partial_{j\tau}\ne0\},
+\qquad
+t_j=\dim L_j,
+\]
+
+and for terminal component `C`,
+
+\[
+s_C=\dim\operatorname{span}_{j\in J_C}L_j.
+\]
+
+The componentwise closure theorem is
+
+\[
+\boxed{
+|E(C)|-|V(C)|+1
+\le
+\sum_{j\in J_C}t_j-s_C.
+}
+\]
+
+Hence
+
+\[
+\boxed{
+T-q+c(\Theta)
+\le
+\sum_jt_j-\sum_Cs_C.
+}
+\]
+
+The equality classification is exact:
+
+\[
+\boxed{
+\begin{array}{ll}
+s_C=0&\Rightarrow C\text{ is a one-direction tree};\\[1mm]
+s_C=1,\ C\text{ cyclic}&\Rightarrow C\text{ uses exactly two train directions};\\[1mm]
+s_C=2&\Rightarrow C\text{ has genuine two-dimensional phase turning}.
+\end{array}
+}
+\]
+
+A cyclic component that pays only one closure is therefore an exact two-family
+ordered/Ferrers system.
+
+---
+
+# Target B component rotations: isolated but not free
+
+For an active diameter bar `h`, the common component rotations satisfy the exact
+stochastic width formula
+
+\[
+s_h(\alpha)
+=
+\sum_C
+\frac{w_{K_C}(e_h)}D\,\alpha_C.
+\]
+
+Let
+
+\[
+a_{hC}=\frac{w_{K_C}(e_h)}D,
+\qquad
+a_{hC}\ge0,
+\qquad
+\sum_Ca_{hC}=1.
+\]
+
+The component-rotation part of an inverse blocker is
+
+\[
+\alpha_C-
+\sum_{C'}a_{hC'}\alpha_{C'}.
+\]
+
+Let `S_alpha` be its row span and
+
+\[
+\boxed{
+r_\alpha:=\dim\mathscr S_\alpha\le c(\Theta)-1.
+}
+\]
+
+Write
+
+\[
+x_\tau=\alpha_C+\xi_\tau
+\qquad(\tau\in E(C)),
+\]
+
+and quotient the blocker-row span by `S_alpha`, obtaining
+\(\overline{\mathcal B}_\xi\). Then
+
+\[
+\boxed{
+\operatorname{rank}\mathcal B
+\le
+r_\alpha+
+\operatorname{rank}\overline{\mathcal B}_\xi.
+}
+\]
+
+Do not drop `r_alpha`, and do not count it twice.
+
+---
+
+# PRIMARY TARGET B
+
+Prove the exact residual theorem
+
+\[
+\boxed{
+\operatorname{rank}\overline{\mathcal B}_\xi+I+r
+\le
+T-q-r_\alpha.
+}
+\]
+
+A stronger but simpler sufficient theorem is
+
+\[
+\boxed{
+\operatorname{rank}\overline{\mathcal B}_\xi+I+r
+\le
+T-q-c(\Theta)+1.
+}
+\]
+
+Either gives the total upper bound and contradicts the established lower rank by one
+integer.
+
+The proof must be componentwise:
+
+- `s_C=2`: use both vector-closure equations and the internal turn quotient;
+- cyclic `s_C=1`: use the exact two-family ordering and Ferrers staircase theorem;
+- one-direction tree components: no scalar cycle obstruction;
+- common component rotations: reserve exactly `r_alpha`.
+
+The two-family numerical endpoint is already sufficient:
+
+\[
+0.8944923195\ldots D^2
+<
+0.9068996821\ldots D^2,
+\]
+
+with gap
+
+\[
+\boxed{0.0124073626\ldots D^2.}
+\]
+
+Do not waste the run improving this constant. The missing theorem is concentration /
+rank transfer: failure of the internal coforest bound must force enough crossing mass
+into one or a controlled family of two-direction components to trigger the existing
+Ferrers/Cartesian contradiction.
+
+After the pure theorem, transport it through nonquadrilateral faces, holes, multiple
+components, pinches, and outside vertices with every transfer gadget charged exactly
+to the topology-corrected shell residual. An uncontrolled `O(D)` loss is fatal.
+
+---
+
+# Target A normal form: all forest kinematics are finished
+
+The rooted quotient forest satisfies
+
+\[
+\boxed{
+\ell=u-r+c+\sigma,
+\qquad
+0\le\sigma\le r-c,
+}
+\]
+
+so
+
+\[
+\ell=u-O(D).
+\]
+
+Root-skeleton exactification and forest rattlerization give a nearby triangle-free
+global minimizer with strict-rattler set \(\mathscr R\) satisfying
+
+\[
+\boxed{
+\rho:=|\mathscr R|
+\ge u-r+c
+\ge\ell-(r-c)
+\ge\ell-\pi D.
+}
+\]
+
+Each retained strict rattler has no unit contact, no active diameter incidence, and
+strict slack in every constraint involving it.
+
+The local same-`D` minimizer set contains an open product ball of dimension at least
+
+\[
+\boxed{2\rho\ge2\ell-2\pi D.}
+\]
+
+Do not work on forest rigidity, bar self-stress, generic hinge regularity, or isolated
+triangle walls. Those are no longer the Target A obstruction.
+
+---
+
+# Target A saturation
+
+Any triangle-free global minimizer can be enlarged inside its fixed convex hull to a
+triangle-free global minimizer of the same diameter by adding fewer than
+
+\[
+\boxed{\frac\pi2D}
+\]
+
+points, so that the fixed hull is unit-covered:
+
+\[
+K\subseteq\bigcup_{p\in A}\overline B(p,1).
+\]
+
+The retained strict rattlers can be kept non-diametral by generic insertion.
+
+Thus a super-boundary Target A survivor may be assumed simultaneously:
+
+- globally optimal;
+- triangle-free;
+- fixed diameter `D`;
+- unit-covering saturated in its hull; and
+- carrying \(\rho=\omega(D)\) genuine strict rattlers.
+
+---
+
+# Target A: unconditional compatible collar
+
+Put
+
+\[
+m=N-\rho,
+\qquad
+d=D(m),
+\qquad
+t=\frac{D-d}{2},
+\]
+
+and define
+
+\[
+\boxed{
+C_{\rm col}
+=
+\pi\left(\frac12+\frac2{\sqrt3}\right)
+=
+5.198395055263\ldots .
+}
+\]
+
+The trusted v1.3 compatible-collar dichotomy is
+
+\[
+\boxed{
+\rho<C_{\rm col}D
+\quad\text{or}\quad
+t>1
+\text{ and a common strict sub-}D\text{ scaffold contains }
+>N-C_{\rm col}D+\frac{2\pi}{\sqrt3}
+\text{ points}.
+}
+\]
+
+More precisely, for an independently chosen `m`-point optimum \(X_m\) with hull
+\(K_m\), the safe collar
+
+\[
+\Omega
+=
+\operatorname{int}(K_m+t\mathbb B)
+\setminus
+(K_m+\mathbb B)
+\]
+
+has triangular-lattice population
+
+\[
+\boxed{
+k>
+\rho-C_{\rm col}D
++
+\pi\left(\frac4{\sqrt3}-1\right)t
++
+\pi\left(1-\frac2{\sqrt3}\right).
+}
+\]
+
+In particular
+
+\[
+\boxed{
+k>
+ho-C_{\rm col}D+\frac{2\pi}{\sqrt3}.}
+\]
+
+Let
+
+\[
+X=X_m\cup(Y\cap\Omega).
+\]
+
+Then `X` is unit-separated and has diameter strictly less than `D`.
+
+A surviving counterexample therefore has an exact missing-site demand
+
+\[
+\boxed{
+1\le j:=N-|X|=\rho-k
+<
+C_{\rm col}D-\frac{2\pi}{\sqrt3}.
+}
+\]
+
+This is already `O(D)`.
+
+---
+
+# Target A: global clearance and two-well supply
+
+For the original saturated minimizer define
+
+\[
+\delta(p)=\min_{q\ne p}|p-q|-1.
+\]
+
+The global clearance budget is
+
+\[
+\boxed{
+\sum_{p\in A}\delta(p)
+<
+\left(24+\frac\pi2\right)D+18.
+}
+\]
+
+Put
+
+\[
+L_D=
+\left(24+\frac\pi2\right)D+18.
+\]
+
+If \(\rho\ge20L_D\), there is a matching `M` of strict nearest-neighbor edges, every
+edge containing a deep strict rattler, with
+
+\[
+\boxed{
+|M|\ge\frac\rho{24}-D-\frac34,
+}
+\]
+
+and
+
+\[
+\boxed{
+1<|p-q|\le1+\frac{2L_D}{\rho}.
+}
+\]
+
+These are strong Gabriel edges and can be included simultaneously in a Delaunay
+triangulation.
+
+The local deep-Delaunay inequality is
+
+\[
+\boxed{
+\operatorname{area}(T)-\frac{\sqrt3}{4}
+\ge
+\frac{\sqrt3}{6}\sum_{v\in T}\mu_T(v),
+}
+\]
+
+with exact equality side multisets
+
+\[
+\boxed{
+\{1,1,1\},
+\qquad
+\{1,1,\sqrt3\}.
+}
+\]
+
+The global excess budget implies that along \(\rho/D\to\infty\),
+
+\[
+\boxed{
+\frac\rho{24}-o(\rho)
+}
+\]
+
+pairwise vertex-disjoint strong-Delaunay near-unit edges have both incident triangles
+approaching one of those two equality wells.
+
+Both wells must remain. The exact equilateral triangle is forbidden, but triangles of
+side `1+epsilon` approach it quadratically while remaining triangle-free.
+
+Do not make a `120-degree-only` argument.
+
+---
+
+# Target A: exact scaffold conflict graph
+
+Let
+
+\[
+L=\operatorname{int}(K_m+t\mathbb B),
+\qquad
+Y=(\Lambda+v)\cap L,
+\]
+
+using the same lattice translate that gives the safe-collar count.
+
+Build a bipartite conflict graph between \(X_m\) and `Y`, with
+
+\[
+x\sim y
+\iff
+|x-y|<1.
+\]
+
+Let \(\nu\) be its maximum matching size. The exact Hall--Kőnig theorem is
+
+\[
+\boxed{
+m+|Y|-\nu\le N-1.}
+\]
+
+Equivalently, for every \(S\subseteq Y\),
+
+\[
+\boxed{|S|-|N(S)|\le\rho-1.}
+\]
+
+Let
+
+\[
+Y_0=Y\cap\Omega,
+\qquad
+|Y_0|=k,
+\qquad
+Y_{\rm in}=Y\setminus Y_0.
+\]
+
+Since `Y_0` has no conflicts with \(X_m\), every \(Q\subseteq Y_{\rm in}\) satisfies
+
+\[
+\boxed{
+|Q|-|N(Q)|\le\rho-k-1=j-1.
+}
+\]
+
+Hence the inner-band conflict graph has a matching into \(X_m\) leaving at most
+`j-1=O(D)` inner-band lattice sites unmatched.
+
+This is a matching of **conflicts**. It is not the desired grafting.
+
+---
+
+# PRIMARY TARGET A
+
+The exact v1.3 Target A is:
+
+> **Two-well configuration-transfer / inner-band Hall-rigidity theorem.**
+>
+> In a super-boundary survivor \(\rho/D\to\infty\), combine
+>
+> 1. the original saturated minimizer's
+>    \(\rho/24-o(\rho)\) disjoint matched two-well Gabriel neighborhoods; and
+> 2. the independently constructed scaffold's inner-band conflict graph with deficiency
+>    at most \(j-1=O(D)\),
+>
+> to force either an actual `N`-point unit-separated subset of `L`, or a subset
+> \(Q\subseteq Y_{\rm in}\) with
+> \[
+> \boxed{
+> |Q|-|N(Q)|\ge j=\rho-k.
+> }
+> \]
+>
+> That one-integer Hall surplus contradicts the exact conflict inequality and closes
+> Target A.
+
+The supply-to-demand ratio diverges:
+
+\[
+\boxed{
+\frac{|M|}{j}\to\infty
+}
+\]
+
+whenever `j>0` along a super-boundary sequence.
+
+Therefore the remaining problem is not scarcity. A hypothetical survivor must somehow
+make almost all of an `Omega(rho)` supply of near-equality local structures useless for
+only `O(D)` insertion demand.
+
+The most promising closing dichotomy is:
+
+1. **near-equilateral well:** propagate into phase-coherent triangular grains; show
+   triangle-freeness forces enough interfaces/defects to exceed the `O(D)` Delaunay
+   excess budget or connect directly to the audited rhombic phase machinery;
+2. **near-120-degree well:** propagate into ordered two-contact wedge chains; convert
+   their ordering into actual independent scaffold cavities or a Hall surplus;
+3. **mixed interfaces:** prove a positive finite charge per independent interface,
+   again exceeding the `O(D)` budget; or
+4. **alternating conflict components:** use the near-perfect conflict matching to show
+   that a Hall-saturating component must carry one of the above coherent geometries.
+
+A proof may instead discover a different exact transfer invariant. Do not feel bound
+to this route if a stronger argument appears.
+
+---
+
+# Crucial Target A separation of geometries
+
+Never identify the following two configurations:
+
+1. the original saturated minimizer `A`, where the rattlers, clearance budget,
+   Gabriel matching, and two-well Delaunay faces live; and
+2. the independently chosen `m`-optimum scaffold `X_m` inside
+   `int(K_m+tB)`, where the lattice conflict graph lives.
+
+They are logically simultaneous consequences of the same hypothetical survivor, but
+there is no canonical coordinate map between them.
+
+Using original Voronoi cells directly as right-hand Hall slots for the scaffold is
+invalid unless you first prove a transfer theorem.
+
+This distinction is the heart of the v1.3 Target A gap.
+
+---
+
+# Regression tests
+
+Every new closing theorem must survive all of the following.
+
+1. Unit square.
+2. Regular unit pentagon and other small exact minimizers.
+3. `n=8` heptagon-plus-center rattler family.
+4. Regular odd-prime polygon strict local minima.
+5. Dense regular-shell fillings.
+6. Five-sector `C5`-blowup rhombic complexes.
+7. The 11-point sun.
+8. Disk-clipped near-`60 degree` oblique grids.
+9. Near-equilateral zero-slack pocket degenerations.
+10. Disk chord systems with quadratic raw support depth.
+11. Parallel tangent quartic locking.
+12. Long one-root chains with high-rank exact-bar triangle walls.
+13. Singly rooted interior trees attaining `ell=u`.
+14. Branch junctions caged by several fixed unit neighbors.
+15. Scaled equilateral Delaunay faces of side `1+epsilon`, which remain triangle-free
+    and approach the `\{1,1,1\}` equality well.
+
+If a proposed theorem eliminates one of these, identify the exact global hypothesis
+that the regression example lacks.
+
+---
+
+# Dead or superseded routes
+
+Do not spend serious time on:
+
+- a uniform triangle-free density gap;
+- eventual lattice classification;
+- raw contact counts;
+- generic Laman counting;
+- recursive degeneracy alone;
+- KKT or positive stress alone;
+- a fixed universal prestress Hessian;
+- affine shear alone;
+- defect quantization;
+- asymptotic `60 degree + o(1)` without an exact capacity consequence;
+- generic graph biclique extraction;
+- raw support depth as Oler currency;
+- another first-order train-cusp proof;
+- one-active-bar-per-higher-order-mode counting;
+- omitting tangent quartic locking;
+- the rejected cycle-lift kernel argument;
+- unrestricted forest rank counting;
+- assuming deletion inheritance;
+- generic one-ray first-event selection;
+- claiming exact-bar triangle-wall normals have `O(D)` rank;
+- trying to preserve a full `u`-dimensional exact-bar forest through every branch
+  junction;
+- treating component-rotation rank as free;
+- population-only parallel-body arguments without actual compatibility;
+- treating strict rattlers as having uniform positive clearance;
+- using the original minimizer's Voronoi cells as scaffold cavities without a transfer
+  theorem;
+- discarding the near-equilateral equality well;
+- counting many candidate cavities without simultaneous realizability; or
+- confusing a near-perfect conflict matching with the desired insertion matching.
+
+---
+
+# Opposite direction is fully allowed
+
+Do not assume Erdős is true.
+
+If either the two-well transfer analysis or the terminal-component rank analysis
+reveals an exact infinite family of triangle-free global minimizers, pursue it.
+
+A disproof must include:
+
+- an infinite sequence of `n`;
+- exact unit separation;
+- exact triangle-freeness;
+- exact diameter; and
+- a proof that the diameter equals `D(n)` globally.
+
+No local or asymptotic certificate is enough.
+
+---
+
+# Working discipline
+
+Think aggressively and creatively.
+
+Actually work on the remaining theorem. Do not treat the existence of a difficult final
+lemma as a reason to stop.
+
+Do not output a running research diary in the final response.
+
+Before pursuing a new lemma, derive explicitly how it can reach one of the exact
+contradictions.
+
+For Target A, useful lemmas should do at least one of:
+
+- force the Hall surplus `|Q|-|N(Q)| >= j`;
+- construct `j` actual compatible sites in `L`;
+- transfer the original two-well matching to configuration-independent scaffold
+  capacity;
+- prove near-equilateral grain interfaces have positive finite charge;
+- prove near-120-degree wedge chains provide ordered cavities;
+- show mixed two-well interfaces exhaust the `O(D)` excess budget; or
+- produce a strict sub-`D` `N`-point configuration directly.
+
+For Target B, useful lemmas should do at least one of:
+
+- control the internal `xi` blocker rank componentwise;
+- force the two-family Ferrers endpoint;
+- yield the residual inequality with the exact `r_alpha` budget;
+- force `G+E>=c0B`;
+- create an exact `60 degree` rhombus;
+- create an actual oversized Cartesian block; or
+- produce a genuine diameter-decreasing motion.
+
+Do not call a same-diameter flex a diameter decrease.
+
+---
+
+# If you think Target A can now be closed by Hall alone
+
+Be especially careful.
+
+The exact Hall theorem already says every survivor has deficiency at most `rho-1` on
+the whole lattice side and at most `j-1` on the inner band after the safe collar is
+included.
+
+To contradict it, you need an actual subset `Q` with deficiency at least `j`, or an
+actual independent set of size `N`.
+
+A heuristic statement that there are “far more candidate neighborhoods than missing
+sites” is not a Hall proof.
+
+A valid closing argument must establish simultaneous realizability or an exact
+configuration-independent capacity certificate.
+
+---
+
+# If you think the two-well theorem closes Target A
+
+It does not by itself.
+
+The two-well matching lies in the original saturated minimizer. The scaffold conflict
+graph lies around an independent `m`-optimum.
+
+You need a theorem transporting geometry/capacity between them, or a global invariant
+common to both.
+
+Also retain both wells. Exact triangle-freeness does not give a positive distance from
+the equilateral well.
+
+---
+
+# If you believe you have solved the problem
+
+Audit only the **new closing mathematics**.
+
+For Target A verify:
+
+- every final point lies in the same open diameter-`D` body when claiming strict
+  diameter improvement;
+- every final pair is at least unit separated;
+- every Hall vertex corresponds to a simultaneously realizable point or to an exact
+  conflict-graph argument;
+- no original Voronoi cell has been silently transported to the independent scaffold;
+- no deletion-optimality assumption has re-entered;
+- the near-equilateral well has not been discarded without proof;
+- strict inequalities needed for `diameter < D` are preserved.
+
+For Target B verify:
+
+- `r_alpha` is neither dropped nor double-counted;
+- the internal map acts on the actual inverse-blocker rows;
+- componentwise closure dimensions are exact;
+- `s_C=1` is legitimately reduced to a two-family system;
+- the Cartesian block, if invoked, satisfies the audited global additive-block
+  hypotheses;
+- topology correction loses no uncontrolled boundary-order rank.
+
+Run every regression test before claiming Level I.
+
+---
+
+# Required final response
+
+Begin exactly with one of:
+
+`LEVEL I STATUS: SOLVED`
+
+`LEVEL I STATUS: DISPROVED`
+
+`LEVEL I STATUS: STILL OPEN`
+
+If **SOLVED**:
+
+1. state Erdős #99 in the proved form;
+2. isolate the genuinely new closing theorem(s);
+3. give a complete rigorous proof from the trusted v1.3 stack;
+4. close Target A;
+5. close pure and topology-corrected Target B;
+6. give an explicit `n0` if available;
+7. explain all regression models.
+
+If **DISPROVED**:
+
+1. give the infinite family;
+2. prove exact unit separation and triangle-freeness;
+3. prove exact global optimality;
+4. identify the infinite set of `n`.
+
+If **STILL OPEN**, do not return a survey. Return only:
+
+1. strongest genuinely new theorem proved;
+2. which target it advances;
+3. exact remaining lemma after your new theorem;
+4. best rank/constant/equality statement obtained;
+5. next route not already failed;
+6. any canonical correction needed for v1.3.0.
+
+Do not merely restate a v1.3 theorem as your “new theorem.”
+
+---
+
+# Final directive
+
+The forest is finished.
+
+The rattlers are finished as a local-flex object.
+
+The population-only replacement is finished.
+
+The safe collar is compatible with the smaller optimum.
+
+The total rattler clearance is only `O(D)`.
+
+A super-boundary survivor carries a linear matching of near-unit strong-Delaunay
+edges whose incident faces collapse into two exact equality wells.
+
+The scaffold itself obeys an exact Hall--Kőnig expansion law and admits an inner-band
+conflict matching with only `O(D)` unmatched sites.
+
+The remaining Target A obstruction is therefore
+
+\[
+\boxed{
+\text{two-well configuration transfer / inner-band Hall rigidity}.
+}
+\]
+
+The terminal graph is also structurally resolved at component scale. The remaining
+Target B obstruction is
+
+\[
+\boxed{
+\text{internal relative-angle blocker rank with exact }r_\alpha\text{ budget}.
+}
+\]
+
+Do not rediscover the reductions.
+
+Break one of these capacities, use it to break the other if possible, or construct an
+exact global counterexample.
+
+Finish Erdős Problem #99.

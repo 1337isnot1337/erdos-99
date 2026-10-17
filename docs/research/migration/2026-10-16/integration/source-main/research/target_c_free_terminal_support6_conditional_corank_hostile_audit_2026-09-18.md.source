@@ -1,0 +1,42 @@
+# Hostile audit — conditional support-six corank propagation
+
+**Date:** 2026-09-18  
+**Audited source:** `target_c_free_terminal_support6_conditional_corank_2026-09-18.md`  
+**Disposition:** PASS as a conditional algebraic propagation; no theorem-state change
+
+## Scope
+
+The note does not claim that the collapsed support-six local family is globally
+impossible. Its hypothesis is explicitly that the remaining collapsed endpoint has
+already been excluded in the canonical residual system. The local realization and its
+hostile audit therefore remain binding regressions, not premises for the conditional
+bound.
+
+## Component-size step
+
+The existing one-anchor theorem bounds each nonzero relation component's fiber
+dimension by one. The earlier support-five equality block is excluded, and the new
+combined support-six theorem excludes the complete noncollapsed degree-pure support-six
+endpoint. The note retains the degree-pure qualification and does not infer a theorem
+about arbitrary six-vertex graphs with extra relation edges.
+
+## Algebra
+
+For `f=a_F+n_0+n_1+n_2` and
+`E_U=a_F+x_A/2+(n_0+n_2)/2`, direct expansion gives
+
+\[
+{f\over7}+{26\over7}E_U
+ -\left(2n_0+n_2+{n_1\over7}\right)
+={27a_F+13x_A+7n_2\over7}\ge0.
+\]
+
+The verifier checks this identity with exact rational arithmetic over a finite box and
+checks the terminal decimal using outward rational enclosures for `pi` and
+`sqrt(pi/(2 sqrt(3)))`.
+
+## Final disposition
+
+The improvement from `1/6` to `1/7` is conditional and proof-only. It becomes a
+canonical dependency only after a separately audited global exclusion or realization
+theorem for the collapsed support-six branch.

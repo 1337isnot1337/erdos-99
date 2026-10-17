@@ -1,0 +1,69 @@
+name: Target C face-23 saturation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: target-c-face23-saturation
+  cancel-in-progress: true
+
+jobs:
+  exactify:
+    if: github.actor == github.repository_owner && vars.E99_HISTORICAL_CI == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {start: 0, stop: 50, serial: 0}
+          - {start: 50, stop: 100, serial: 1}
+          - {start: 100, stop: 150, serial: 2}
+          - {start: 150, stop: 192, serial: 3}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical discovery dependency
+        run: python -m pip install --disable-pip-version-check scipy
+      - name: Exactify frozen candidate chunk
+        run: |
+          python research/verify_target_c_support7_h6_face23_saturation_fast_2026_09_19.py \
+            --start ${{ matrix.start }} --stop ${{ matrix.stop }} \
+            | tee face23-exactification-${{ matrix.serial }}.log
+      - name: Preserve chunk log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: target-c-face23-exactification-${{ matrix.serial }}
+          path: face23-exactification-${{ matrix.serial }}.log
+          if-no-files-found: warn
+
+  summarize:
+    if: github.actor == github.repository_owner && vars.E99_HISTORICAL_CI == 'true'
+    needs: exactify
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical discovery dependency
+        run: python -m pip install --disable-pip-version-check scipy
+      - name: Reconstruct reflection-closed post-saturation census
+        run: |
+          python research/verify_target_c_support7_h6_face23_saturation_fast_2026_09_19.py \
+            --summary-only | tee face23-summary.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: target-c-face23-summary
+          path: face23-summary.log

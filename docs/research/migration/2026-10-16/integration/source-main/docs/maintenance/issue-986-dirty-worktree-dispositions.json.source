@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "issue": 986,
+  "scope": "Individual preservation/activity dispositions for the29 original dirty worktrees; original indices match the private archive. This ledger does not certify new mathematics or authorize publication.",
+  "state_version": "2026-10-10.audit.234",
+  "private_recovery": "177 working files plus all29 original commits and complete worktree Git metadata, with hashes verified; locations held in the private closeout checkpoint",
+  "sources": [
+    {
+      "original_index": 0,
+      "original_head": "a9dba68d1b2dff4b0c32292a81a4c25c9bedb2be",
+      "worktree_label": "e99-gap-stress",
+      "comparison_main": "d6f953100d62a84de72e991642041fdd026e82ba",
+      "content_disposition": "complete exact-content/provenance comparison; no new mathematical promotion",
+      "activity": "Original path absent on refreshed Asus check; no cwd/fd references, metadata locks or staged deltas. Exact working files, original head and full Git metadata recover privately.",
+      "files": [
+        {
+          "path": "docs/reports/target_c_deep_isolate_octagon_flip_regression_2026-10-02.md",
+          "sha256": "d7a79cc227a71014b1b91d4f3de8a6562e2c8bcc3b259079536a2c99f2c15683",
+          "disposition": "Entire Markdown differs only by trailing whitespace and final blank line; full proof already on current main",
+          "main_blob_at_comparison": "efeef201d53dff53f1b6607f4239d49cace4aa66"
+        },
+        {
+          "path": "research/__pycache__/nearchain_vertex_regressions.cpython-314.pyc",
+          "sha256": "2722f94c2f38f3d586c5a2940513eaafbbb7176cd060aa0c25f5064114511529",
+          "disposition": "Generated CPython314 bytecode exactly reproduces tracked source at original head",
+          "generated_bytecode_source": {
+            "source": "research/nearchain_vertex_regressions.py",
+            "source_identity": "a9dba68d1b2dff4b0c32292a81a4c25c9bedb2be",
+            "source_blob": "90e22ac054d97f4e617aa4fe7257ae0d7a02a10f",
+            "source_sha256": "1898dbc85a436fda3bfa0ead60f231e3fb11c792c08872e331d68725325965a5"
+          }
+        },
+        {
+          "path": "research/__pycache__/verify_target_c_gap_bundle_regression_2026_10_01.cpython-314.pyc",
+          "sha256": "bd12d43cf10ca3d3bdcc74735485b25acf11f3aa33993ba5df36173814dac389",
+          "disposition": "Generated CPython314 bytecode exactly reproduces tracked source at original head",
+          "generated_bytecode_source": {
+            "source": "research/verify_target_c_gap_bundle_regression_2026_10_01.py",
+            "source_identity": "a9dba68d1b2dff4b0c32292a81a4c25c9bedb2be",
+            "source_blob": "5c377a8711b6cf1d0ea37931e8ad2541433b98a0",
+            "source_sha256": "45b5771a4f017f792457fa8f778452849064992162e3f51a16e5b2797d0db0f5"
+          }
+        },
+        {
+          "path": "research/verify_target_c_deep_isolate_octagon_flip_2026_10_02.py",
+          "sha256": "2ced791130f1a4a8ee9329158e9ca05ea983fb6706e42b2172e5580c0a60feb2",
+          "disposition": "Exact complete source file on current main",
+          "main_blob_at_comparison": "f27facb8a135606a0ef2069bf998a6a992062457"
+        },
+        {
+          "path": "tools/__pycache__/check_theorem_state.cpython-314.pyc",
+          "sha256": "ac4a2183120cb0576655dab65d0742b47ef74ffa834c37f995cc8ba175187e2b",
+          "disposition": "Generated CPython314 bytecode exactly reproduces tracked source at original head",
+          "generated_bytecode_source": {
+            "source": "tools/check_theorem_state.py",
+            "source_identity": "a9dba68d1b2dff4b0c32292a81a4c25c9bedb2be",
+            "source_blob": "fcdc1215d6e71ade63d6a57e5a5480578e209475",
+            "source_sha256": "2f98c5a4e0f243910538c71f4c9a0916273b29ad28c298ae2ecbfd43c954f71b"
+          }
+        }
+      ],
+      "cleanup": "Only selected stale registration may be retired after fresh identity guards; source branch and all recovery data remain retained."
+    },
+    {
+      "original_index": 6,
+      "original_head": "c56fd49c2793deb956b17cdf488a1f8cbce428d3",
+      "worktree_label": "e99-slot1-physical-20261005",
+      "comparison_main": "d6f953100d62a84de72e991642041fdd026e82ba",
+      "content_disposition": "complete exact-content/provenance comparison; no new mathematical promotion",
+      "activity": "Original path absent on refreshed Asus check; no cwd/fd references, metadata locks or staged deltas. Exact working files, original head and full Git metadata recover privately.",
+      "files": [
+        {
+          "path": "research/README.md",
+          "sha256": "8d7a282fcae43a457dec3bf3da11a1549c5aa08d19777161b498e8aff67323c0",
+          "disposition": "Only a historical README preservation/attribution paragraph; the linked complete proof and verifier are exact current-main bytes; attribution will be restored visibly",
+          "source_attribution": "a81de9a0515076eb49bed6da8f555593a5d651c1",
+          "successor": "research/target_c_g0050_physical_boundary_propagation_2026-09-14.md"
+        },
+        {
+          "path": "research/target_c_g0050_physical_boundary_propagation_2026-09-14.md",
+          "sha256": "98d838cf57e86a4638b3b5fe90001c83ad23161508b98c52ee057c8ab95bca20",
+          "disposition": "Exact complete file on current main",
+          "main_blob_at_comparison": "6d06fe8d83d10eebd9b5562853802a0b14e5ded1"
+        },
+        {
+          "path": "research/verify_target_c_g0050_physical_boundary_propagation.py",
+          "sha256": "b07380aadcc1d7c527c11681b5c6f55cf01f62c31b7e5d6c90b21a3d1af2f93c",
+          "disposition": "Exact complete file on current main",
+          "main_blob_at_comparison": "9c52aa5bdc9c9163bc751490e2be746b37716f3c"
+        }
+      ],
+      "cleanup": "Only selected stale registration may be retired after fresh identity guards; source branch and all recovery data remain retained."
+    },
+    {
+      "original_index": 12,
+      "original_head": "75aac1464f80ca91256e96dc70ca0c865e0b3b0e",
+      "worktree_label": "math-fan-geometry-20261002",
+      "comparison_main": "bc429cc834e38be7a17b10d8e55622d463864931",
+      "content_disposition": "Complete AI substantive proof/certificate audit; all unique working files restored with verified provenance correction, explicit candidate scope and exact nonglobality controls.",
+      "activity": "Original physical path absent; original index/metadata retained privately with no staged delta or locks. Fresh exact retirement guards remain required.",
+      "files": [
+        {
+          "path": "docs/reports/target_c_fan_flip_isolate_escape_2026-10-02.md",
+          "original_sha256": "9cd3d43e5c2e7fb749dc1f3e5c56e6c76fe45d3f9b0d257ac60d65e97a09f710",
+          "original_git_blob": "b3f43a8d1c01de9873ee854a4e9b39fc8537405b",
+          "disposition": "Missing source restored after complete substantive proof/code audit; verified identity correction and exact nonglobality controls; remains noncanonical"
+        },
+        {
+          "path": "research/verify_target_c_fan_flip_geometry_2026_10_02.py",
+          "original_sha256": "63b5dbc51a65a0441028a5290c7dafca588e30855d458c2f6fb9d8bd45d3f1f1",
+          "original_git_blob": "b1f22814b94919b0b2d52c3fdd8893b830051e7d",
+          "disposition": "Missing source restored after complete substantive proof/code audit; verified identity correction and exact nonglobality controls; remains noncanonical"
+        }
+      ],
+      "audit": "docs/audits/original12_fan_flip_archive_audit_2026-10-15.md",
+      "cleanup": "Pending landed preservation and exact stale-registration/ref/activity/recovery protections."
+    },
+    {
+      "original_index": 23,
+      "original_head": "6433d1db49a1363bfa65008eb78f6b15d6ef4ed7",
+      "worktree_label": "math-slot03-train-hull-20261010",
+      "comparison_main": "8c6f37127fbf119fe7ae3745babd1130a6628a09",
+      "content_disposition": "Complete proof/provenance audit of the entire570-line archived variant and exact diff against initial PR950. Preserve full-cell access/interior grid and composition; endpoint-inclusive Menger gap repaired. Other source arguments unchanged and represented by repaired PR950; no promotion.",
+      "activity": "Fresh Asus inspection: original path physically absent; all8 Git metadata hashes unchanged, no staged delta, no metadata locks or cwd/fd references to working path or metadata. Original working tar and member hashes revalidated. Only exact stale registration may be retired after landing; original branch remains protected by open PR950.",
+      "files": [
+        {
+          "path": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "sha256": "a5c5cd27d2ba2a78e25ced822535794674250c36b716b310349d40b1ba442980",
+          "disposition": "Unique full-cell/interior-grid and composition arguments analytically preserved with exact original bytes retained privately. Direct canonical route budget justifies large-allowance access; arbitrary endpoint cuts repair linkage; a stronger sharp composition bound implies the original factor3 statement. No finite move or endpoint-overlap closure.",
+          "preserved_paths": [
+            "docs/reports/target_c_full_cell_common_grid_preservation_2026-10-15.md",
+            "research/verify_full_cell_linkage_composition_2026_10_15.py"
+          ],
+          "unchanged_predecessor": "PR950 repaired head cbf066bb7489115559bcda34f9f810a1d78826ce"
+        }
+      ]
+    }
+  ]
+}

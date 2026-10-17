@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+"""Regression checks for flexible-scale upper Horn localization."""
+
+from fractions import Fraction
+import math
+
+gamma7 = Fraction(113, 640_000_000)
+Tstar = Fraction(6121, 2000)
+delta0 = gamma7 / 8
+theta = delta0 / (3 * Tstar)
+cstar = theta / 2
+
+assert cstar == gamma7 / (48 * Tstar)
+assert cstar == Fraction(113, 94_018_560_000)
+
+# Long-support bookkeeping:
+# total incidence >= (delta0/2)DL;
+# poor cuts <= T*D * theta*L = (delta0/3)DL;
+# rich incidence >= (delta0/6)DL.
+assert Tstar * theta == delta0 / 3
+assert delta0 / 2 - delta0 / 3 == delta0 / 6
+
+# SIGNED/THIN split on a rich location leaves theta L / 2 = cstar L.
+assert theta / 2 == cstar
+
+# Representative L=D/loglogD scales have the advertised asymptotics.
+for D in [10**8, 10**12, 10**20, 10**40]:
+    omega = math.log(math.log(D))
+    L = D / omega
+    assert 1 < L < D
+    common_cut_defect_scale = D / L
+    local_window_cost_scale = L
+    assert abs(common_cut_defect_scale - omega) / omega < 1e-12
+    assert local_window_cost_scale / D < 1
+
+print("flexible-scale upper localization certificate: PASS")
+print("gamma_7 =", float(gamma7))
+print("delta0_7 =", float(delta0))
+print("theta_7 =", float(theta))
+print("c*_7 =", float(cstar))

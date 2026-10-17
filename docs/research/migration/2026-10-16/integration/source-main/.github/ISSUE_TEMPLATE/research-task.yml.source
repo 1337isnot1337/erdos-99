@@ -1,0 +1,90 @@
+name: Bounded research task or independent review
+description: Request a concrete research task, independent audit, or reproducible follow-up.
+title: "Research task: "
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Use this form for issue-based task claims and independent review requests.
+        Discussions are disabled. An issue does not
+        reserve a theorem or make a claim canonical.
+  - type: textarea
+    id: identifiers
+    attributes:
+      label: Task ID, scope ID and expiry
+      description: Paste selector markers; keep expiry within seven days and update this field when renewing.
+      value: |
+        E99-TASK-ID: <catalogue ID>
+        E99-SCOPE-ID: <scope_key>
+        E99-CLAIM-EXPIRES: <UTC ISO timestamp>
+    validations:
+      required: true
+  - type: input
+    id: review_head
+    attributes:
+      label: Independent review commit
+      description: For an audit request, give the exact PR head SHA and requested review scope.
+  - type: textarea
+    id: question
+    attributes:
+      label: Exact question
+      description: State the mathematical statement, object, or failure to investigate.
+      placeholder: Include hypotheses and the exact expected conclusion.
+    validations:
+      required: true
+  - type: input
+    id: authority
+    attributes:
+      label: Base commit and state version
+      description: Record the current main commit and docs/state/theorem-state.yaml version.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Canonical dependencies and predecessors
+      description: Give theorem IDs and paths; link the closest open PRs or earlier reports.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and method
+      description: Identify the object, hypotheses, changed assumption, method, and bounded domain.
+    validations:
+      required: true
+  - type: textarea
+    id: overlap
+    attributes:
+      label: Overlap check
+      description: Summarize relevant open PRs, discussions, and predecessor work. Explain any intentional overlap.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Expected evidence and stopping condition
+      description: State what would count as success or falsification, how it can be reproduced, and when to hand off.
+    validations:
+      required: true
+  - type: dropdown
+    id: class
+    attributes:
+      label: Work type
+      options:
+        - Proof or missing-lemma work
+        - Independent mathematical audit
+        - Exact computation or counterexample search
+        - Literature investigation
+        - Formalization or verification
+        - Repository tooling or documentation
+    validations:
+      required: true
+  - type: textarea
+    id: claim_status
+    attributes:
+      label: Expected result status
+      description: Indicate whether this is exploratory, a candidate, a regression, or a promotion request. Promotion is reviewed separately.
+      value: Exploratory; no canonical theorem change is implied.
+    validations:
+      required: true

@@ -1,0 +1,87 @@
+# Target C-II — slack-aware one-anchor component count
+
+**Date:** 2026-09-18  
+**Status:** conditional proved candidate; theorem-state authority unchanged  
+**Scope:** the degree-pure one-anchor decomposition after the promoted support-five exclusion and the proof-only noncollapsed support-six exclusions  
+**Dependencies:** support-five `K_5` exclusion; uniform and simple-wall support-six `H5` projection-potential exclusions; audited train-closure host deficiency; disjoint-support one-anchor component decomposition  
+**Certificate:** `research/verify_target_c_one_anchor_slack_aware_component_count_2026_09_18.py`
+
+This is the first exact propagation of the new support-six work into the component
+count. It does not claim the full C-II closure or promote theorem state.
+
+## Statement
+
+Let `m` be the number of degree-pure one-anchor relation components in the
+decomposition to which the existing support-five/support-six route applies, and let
+`n_1` be the number of one-anchor faces in those components. Let `m_6` be the number
+of support-six components. Then
+
+\[
+\boxed{7m\le n_1+s_Z.}
+\tag{1}
+\]
+
+Equivalently,
+
+\[
+\boxed{m\le {n_1+s_Z\over7}.}
+\tag{2}
+\]
+
+In the exact zero-slack sector this becomes `m<=n_1/7`.
+
+## Proof
+
+The support-five `K_5` endpoint is excluded by the existing reciprocal theorem. The
+new projection-potential certificates exclude every noncollapsed support-six `H5`
+representative, including all six uniform and all ten simple-wall orbits. The prior
+`H7/H6` exclusions and the double-wall theorem cover the other noncollapsed
+support-six strata. Hence every surviving degree-pure component either:
+
+1. has support at least seven; or
+2. has support six and is collapsed, with all six outer anchors projectively parallel.
+
+For each collapsed support-six component, the host graph is connected and the exact
+host-transpose calculation gives a one-dimensional kernel. The audited host-deficiency
+identity embeds these row-dual spaces with disjoint support into the global pure-contact
+stress space, so
+
+\[
+ m_6\le \sigma_C\le s_Z.
+\tag{3}
+\]
+
+The face population obeys
+
+\[
+ n_1\ge 6m_6+7(m-m_6)=7m-m_6.
+\tag{4}
+\]
+
+Combining (3) and (4) gives (1).
+
+The argument is exact and does not treat the two-dimensional local collapsed angle
+family as a global source realization. It charges only the global host-kernel
+deficiency supplied by the audited train-closure framework.
+
+## Canonical-quantity propagation
+
+The exact canonical quantity improved here is the number `m` of one-anchor relation
+components in the degree-pure closure count. Any downstream rank/corank inequality
+that previously inserted the coarse bound `m<=n_1/6` may, within this scope, insert
+
+\[
+ m\le(n_1+s_Z)/7.
+\]
+
+The `s_Z/7` correction must be retained; silently replacing it by `n_1/7` at positive
+slack would be invalid. In the zero-slack branch the support-six collapsed endpoint
+is absent and the sharp coefficient is `n_1/7`.
+
+This does not yet close the global Target C-II inequalities because the canonical
+frontier allows arbitrary `s_Z>=0`. The remaining smallest obstruction is a positive-
+slack collapsed component, together with whatever global diameter/bar constraints are
+needed to eliminate it.
+
+**Disposition:** conditional proved candidate; exact slack-aware support count; C-II
+remains open and theorem-state authority is unchanged.

@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+from decimal import Decimal, getcontext
+from math import asin, pi, sin, sqrt
+
+getcontext().prec = 100
+
+delta = Decimal('0.002883975')
+epsilon = 2 * asin(float(delta / Decimal(2)))
+cone_width = pi / 2 + 2 * epsilon
+route_dot_upper = sin(pi / 12) + float(delta)
+signed_threshold = 1 / sqrt(2)
+
+Eall = Decimal('1.1543116921171727469')
+Er = Decimal('0.2380794231274503948341213756586533811066')
+Er_simp = Decimal('0.1921428832164165832341213756586533811066')
+
+M_all = Eall / Decimal(2)
+M_r = Er / Decimal(2)
+M_r_simp = Er_simp / Decimal(2)
+
+assert epsilon < 0.0028841
+assert cone_width < 2 * pi / 3
+assert route_dot_upper < signed_threshold
+assert M_all > Decimal('0.5771558460')
+assert M_r > Decimal('0.1190397115')
+assert M_r_simp > Decimal('0.0960714416')
+
+print('normal-angle epsilon <=', epsilon, 'rad')
+print('endpoint cone width <=', cone_width, 'rad')
+print('2pi/3 =', 2 * pi / 3)
+print('route-edge normal-dot upper proxy =', route_dot_upper)
+print('signed penetration threshold =', signed_threshold)
+print('all penetration matching/D >=', M_all)
+print('rhombic-train penetration matching/D >=', M_r)
+print('simple rhombic-train penetration matching/D >=', M_r_simp)
+print('PASS: global signed penetration matching constants')

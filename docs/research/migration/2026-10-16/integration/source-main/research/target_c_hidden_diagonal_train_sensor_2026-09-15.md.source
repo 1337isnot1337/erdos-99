@@ -1,0 +1,182 @@
+# Target C-II — near-unit pentagon diagonals are a linear-rank train-rate sensor system
+
+**Date:** 2026-09-15
+**Status:** proof-only exact differential strengthening
+**Scope:** any vertex-disjoint family of bounded convex unit pentagons with one selected hidden diagonal per face
+**Dependencies:** audited train-rate parametrization; bounded-face convexity; no-bounded-return train theorem; high-`t` residual/near-contact matching for the asymptotic corollary
+**Certificate:** `research/verify_target_c_hidden_diagonal_train_sensor.py`
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The residual theorem produces a linear matching of hidden pentagon diagonals of length `1+o(1)`. This note identifies the exact first-order quantity that those near contacts measure.
+
+Let a bounded convex equilateral pentagon contain consecutive boundary vertices
+
+\[
+x,z,y
+\]
+
+and orient the two unit side vectors along the face as
+
+\[
+a=z-x,\qquad b=y-z.
+\]
+
+Let `tau_a,tau_b` be the complete stopped trains containing those two boundary occurrences. They are distinct: if one complete train had both terminal occurrences on the same bounded face, it would violate the audited no-bounded-return theorem.
+
+The hidden diagonal is
+
+\[
+d=y-x=a+b.
+\]
+
+For a contact infinitesimal flex with train angular rates `omega_tau`, the audited train parametrization gives
+
+\[
+\dot a=\omega_{\tau_a}Ja,
+\qquad
+\dot b=\omega_{\tau_b}Jb.
+\]
+
+Therefore
+
+\[
+\begin{aligned}
+{d\over dt}|d|^2
+&=2(a+b)\cdot
+\bigl(\omega_{\tau_a}Ja+\omega_{\tau_b}Jb\bigr)\\
+&=2\det(a,b)
+\bigl(\omega_{\tau_a}-\omega_{\tau_b}\bigr).
+\end{aligned}
+\tag{HS.1}
+\]
+
+The sign assumes the standard counterclockwise face orientation; reversing all orientations reverses both determinant conventions but not the content.
+
+## 1. Near-unit diagonals have a nonvanishing sensor coefficient
+
+Because `|a|=|b|=1`,
+
+\[
+a\cdot b={|d|^2-2\over2}.
+\]
+
+Strict convexity gives `det(a,b)>0`, and hence
+
+\[
+2\det(a,b)
+=2\sqrt{1-\left({|d|^2-2\over2}\right)^2}.
+\tag{HS.2}
+\]
+
+If `|d|\to1`, then
+
+\[
+\boxed{2\det(a,b)\to\sqrt3.}
+\tag{HS.3}
+\]
+
+Thus the hidden diagonal is not becoming first-order insensitive as it approaches activation. Its squared-length derivative converges to `sqrt(3)` times one adjacent train-rate difference. For example `|d|<=1.01` already gives coefficient greater than `1.70`.
+
+In particular, under any contact flex,
+
+\[
+{d\over dt}|d|^2=o(1)
+\quad\Longleftrightarrow\quad
+\omega_{\tau_a}-\omega_{\tau_b}=o(1)
+\tag{HS.4}
+\]
+
+uniformly on a family whose selected diagonals converge to one.
+
+## 2. The sensor multigraph has maximum degree two
+
+Now take a vertex-disjoint family `\mathcal G` of pentagons and choose one hidden diagonal in each. For each selected diagonal use the shorter two-edge boundary path and form a multigraph `H_{sens}`:
+
+- vertices are complete stopped trains;
+- the edge corresponding to pentagon `P` joins the two trains on the two boundary sides spanning its chosen diagonal.
+
+There are no loops by no-bounded-return.
+
+A complete stopped train has exactly two terminal occurrences. A sensor incidence at a train uses one terminal side occurrence on its selected pentagon. Since the pentagons are vertex-disjoint, the same terminal occurrence cannot serve two selected faces. Hence
+
+\[
+\boxed{\Delta(H_{sens})\le2.}
+\tag{HS.5}
+\]
+
+Parallel edges are possible only if the same two trains terminate together at both ends; this causes no problem below.
+
+Therefore every nontrivial connected component of `H_sens` is a path or a cycle, with a two-edge parallel cycle allowed.
+
+## 3. Linear rank of hidden-contact derivative rows
+
+Let `B_sens` be the oriented incidence matrix of `H_sens`, one row per selected pentagon and one column per train. Equation (HS.1) says that the vector of hidden-diagonal squared-length derivatives is
+
+\[
+D_{hid}\omega
+=
+\operatorname{diag}(c_P)B_{sens}\omega,
+\qquad
+c_P=2\det(a_P,b_P)>0.
+\tag{HS.6}
+\]
+
+Thus diagonal scaling does not change rank:
+
+\[
+\operatorname{rank}D_{hid}
+=\operatorname{rank}B_{sens}.
+\]
+
+A path component with `e` edges has incidence rank `e`. A cycle component with `e>=2` edges has rank `e-1>=e/2`. Summing components gives
+
+\[
+\boxed{
+\operatorname{rank}D_{hid}
+\ge {|\mathcal G|\over2}.
+}
+\tag{HS.7}
+
+This is a finite exact statement. No genericity, stress sign, or phase separation is used.
+
+## 4. High-`t` residual corollary
+
+In the `R_F=o(D)` branch of the high-`t` residual theorem, there is a vertex-disjoint pentagon family `\mathcal G_D` with
+
+\[
+|\mathcal G_D|
+\ge\left({p_5(T)\over21}-o(1)\right)D
+\]
+
+and one selected hidden diagonal per face satisfying `|d|-1=o(1)` uniformly. Applying (HS.3) and (HS.7), the source carries a train-rate sensor operator with
+
+\[
+\boxed{
+\operatorname{rank}D_{hid}
+\ge\left({p_5(T)\over42}-o(1)\right)D,
+}
+\tag{HS.8}
+
+whose nonzero row coefficients converge uniformly to `sqrt(3)`.
+
+Representative safe densities are therefore one half of the certified hidden-matching densities: about `0.0084D` at `T=1.88`, `0.0072D` at `1.90`, `0.0060D` at `1.92`, `0.00365D` at `1.96`, and `0.00125D` at `2.00`.
+
+## 5. What this does and does not solve
+
+The residual matching is therefore not merely a geometric population of near contacts. It is a linear-rank family of explicit train-rate difference functionals. Any contact flex that keeps all selected hidden diagonals first-order stationary must equalize train angular rates along every component of `H_sens`.
+
+This does **not** yet produce a diameter-feasible flex. The canonical positive KKT stress and mixed rigidity still block nontrivial first-order motions that preserve all old contacts while making every active diameter nonincreasing. Nor does (HS.7) by itself prove that these sensor rows remain independent after restriction to `ker C_face`.
+
+The next exact question is now algebraic and global:
+
+```text
+face-closure kernel ker C_face
++ max-degree-2 sensor graph H_sens
++ diameter-thrackle derivative map
+-> can all p5(T)D/42 hidden-contact sensor directions be blocked
+   without forcing linear R_F or an actual unit diagonal?
+```
+
+That is strictly narrower than generic simultaneous activation.
+
+**Disposition:** proved exact hidden-diagonal/train-rate derivative identity and linear sensor-rank corollary in the sublinear-residual branch. C-II and Level I remain open.

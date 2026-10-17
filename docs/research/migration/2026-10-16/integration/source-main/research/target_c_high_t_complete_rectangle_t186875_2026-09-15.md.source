@@ -1,0 +1,160 @@
+# Target C-II — complete linear-by-linear train rectangle through `t<=1.86875`
+
+**Date:** 2026-09-15  
+**Status:** proof-only high-`t` structural propagation  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.86875`  
+**Dependencies:** coupled paired-remainder O-O path through `1.86875`; audited train-length/terminal-energy inequality; exact stopped-train crossing topology and train ledger  
+**Certificate:** `research/verify_target_c_high_t_complete_rectangle_t186875.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The `1.86875` path theorem still supplies a linear same-window family of pairwise
+noncrossing O-O complete stopped trains.  Although the row density is now small near
+the scalar zero of the path architecture, every selected train remains macroscopically
+long in the train-crossing graph.  The same interval/right-endpoint argument used at
+`1.8687` therefore still produces a genuine complete bipartite train rectangle.
+
+There are train families
+
+\[
+A_*,B_*
+\]
+
+such that
+
+\[
+\boxed{|A_*|>0.0000055D-o(D),}
+\]
+
+\[
+\boxed{|B_*|>0.3135D-o(D),}
+\]
+
+with the exact properties:
+
+1. every train in `A_*` crosses every train in `B_*` in one strict rhombus;
+2. `A_*` is pairwise noncrossing and is one consecutive block of the live O-O path;
+3. `B_*` is pairwise noncrossing.
+
+Hence the crossing graph contains an actual
+
+\[
+\boxed{K_{|A_*|,|B_*|}}
+\]
+
+with both shores linear in `D` throughout `t<=1.86875`.
+
+## 1. Crossing degree of every selected row
+
+The adaptive path theorem selects each train with terminal directional energy
+
+\[
+e_\tau\le0.5857-\delta.
+\]
+
+The audited train-length theorem gives
+
+\[
+{r_\tau\over D}
+\ge1-\delta-{e_\tau\over2}-o(1)
+\ge1-{0.5857\over2}-{\delta\over2}-o(1).
+\]
+
+At `t<=1.86875`, the exact path certificate gives `delta<0.107+o(1)`.  Therefore
+
+\[
+\boxed{r_\tau>0.6536D-o(D).}
+\]
+
+As before, each strict rhombus on `tau` is one crossing with a distinct complete
+stopped train, so the crossing neighborhood satisfies
+
+\[
+|\Gamma(\tau)|>0.6536D-o(D).
+\]
+
+## 2. The path still has linear length
+
+The exact `1.86875` paired-remainder certificate gives total selected low-energy pair
+weight above `0.00016D-o(D)`.  One of at most three dominant phase windows therefore
+contains more than
+
+\[
+\boxed{0.00005D-o(D)}
+\]
+
+actual same-window O-O path trains.  Write them in complement-dual order as
+
+\[
+\tau_1,\ldots,\tau_m,
+\qquad
+m>0.00005D-o(D).
+\]
+
+For every complete train `sigma`, the set of selected rows crossed by `sigma` is one
+consecutive interval, exactly as in the `1.8687` rectangle theorem.
+
+## 3. Nine-block endpoint averaging
+
+The exact stopped-train ledger gives
+
+\[
+{T_{tr}\over D}
+\le5T-2\pi+o(1).
+\]
+
+At `T=1.86875`, the companion certificate proves
+
+\[
+\boxed{T_{tr}<3.0606D+o(D).}
+\]
+
+Partition the selected path into nine consecutive blocks.  Each block contains more
+than
+
+\[
+{0.00005\over9}D-o(D)>0.0000055D-o(D)
+\]
+
+selected rows.  Assign every nonempty crossing interval to the block containing its
+right endpoint.  Some block `J` receives fewer than
+
+\[
+{3.0606\over9}D+o(D)
+\]
+
+right endpoints.
+
+Let `tau_a` be the first row of `J`.  More than `0.6536D-o(D)` trains cross it.  A train
+crossing `tau_a` but failing to cross all of `J` must end inside `J`, hence is charged
+to one of those right endpoints.  Therefore the common crossing family obeys
+
+\[
+\begin{aligned}
+\left|\bigcap_{j\in J}\Gamma(\tau_j)\right|
+&>\left(0.6536-{3.0606\over9}\right)D-o(D)\\
+&>0.3135D-o(D).
+\end{aligned}
+\]
+
+Take this intersection as `B_*` and the rows of `J` as `A_*`.
+
+## 4. Internal noncrossing is unchanged
+
+The rows are a subfamily of the pairwise noncrossing O-O path.  If two columns in
+`B_*` crossed one another, then together with any row of `A_*` they would form a
+triangle in the complete-train crossing graph.  That graph is triangle-free.
+Therefore `B_*` is pairwise noncrossing.
+
+The orientation-ambiguity argument from the `1.8687` phase theorem also immediately
+gives one consistent oriented column subfamily of density
+
+\[
+\boxed{>0.1567D-o(D).}
+\]
+
+after deleting only `O(1)` ambiguous columns.  The inverse-`D` phase-collapse
+propagation is recorded separately so its larger numerical constant is not hidden in
+this rectangle statement.
+
+**Disposition:** proved proof-only complete train rectangle through `t<=1.86875`.
+C-II and Level I remain open.

@@ -1,0 +1,295 @@
+#include <algorithm>
+#include <array>
+#include <cassert>
+#include <cstdint>
+#include <iostream>
+#include <map>
+#include <set>
+#include <string>
+#include <tuple>
+#include <unordered_set>
+#include <utility>
+#include <vector>
+
+using namespace std;
+
+struct Edge { int a, b; };
+struct Ineq { int u, v, c; }; // x_v - x_u < c; -1 denotes the constant node.
+using Orders = array<array<int,4>,6>;
+struct Cell { uint16_t orientation_bits; Orders order; };
+
+static vector<Edge> make_edges(const set<pair<int,int>>& missing) {
+    vector<Edge> e;
+    for (int a=0;a<6;a++) for (int b=a+1;b<6;b++)
+        if (!missing.count({a,b})) e.push_back({a,b});
+    assert(e.size()==12);
+    return e;
+}
+
+static void add_lt(vector<Ineq>& z, int pos, int neg, int constant, int rhs) {
+    // constant + x_pos - x_neg < rhs.
+    z.push_back({neg,pos,rhs-constant});
+}
+
+struct Gap { int c, p, n; }; // c + x_p - x_n.
+
+static void add_gap_constraints(vector<Ineq>& z, const array<int,4>& o) {
+    const int a1=o[0], a2=o[1], b1=o[2], b2=o[3];
+    const Gap g[5] = {
+        {0,a1,-1}, {0,a2,a1}, {3,b1,a2}, {0,b2,b1}, {3,-1,b2}
+    };
+
+    // Scaled by 3/pi, the current physical-pentagon inequalities are
+    //     0 < g_k < 2,
+    //     2 < g_k + g_{k+1} < 3.
+    for (int k=0;k<5;k++) {
+        add_lt(z,g[k].p,g[k].n,g[k].c,2);
+        add_lt(z,g[k].n,g[k].p,-g[k].c,0);
+    }
+    for (int k=0;k<5;k++) {
+        const Gap A=g[k], B=g[(k+1)%5];
+        int coeff[12]={0};
+        if (A.p>=0) coeff[A.p]++;
+        if (A.n>=0) coeff[A.n]--;
+        if (B.p>=0) coeff[B.p]++;
+        if (B.n>=0) coeff[B.n]--;
+        int p=-1,n=-1;
+        for (int i=0;i<12;i++) {
+            assert(coeff[i]>=-1 && coeff[i]<=1);
+            if (coeff[i]==1) p=i;
+            if (coeff[i]==-1) n=i;
+        }
+        const int c=A.c+B.c;
+        add_lt(z,p,n,c,3);
+        add_lt(z,n,p,-c,-2);
+    }
+}
+
+static bool strict_difference_feasible(const vector<Ineq>& z) {
+    // There are 12 angle variables plus one constant node. All right-hand sides
+    // are integers. A strict difference system is feasible iff every directed
+    // cycle has strictly positive total integer weight. Replace each weight c by
+    // 14*c-1. A simple cycle has at most 13 edges, so the transformed cycle is
+    // negative exactly when its original integer total is <=0. Ordinary
+    // Bellman-Ford negative-cycle detection is therefore an exact strict test.
+    constexpr int N=13, CONST=12, SCALE=14;
+    int d[N]={0};
+    for (int it=0;it<N;it++) {
+        bool changed=false;
+        for (const auto& q:z) {
+            const int u=(q.u<0?CONST:q.u), v=(q.v<0?CONST:q.v);
+            const int w=SCALE*q.c-1;
+            if (d[v] > d[u]+w) {
+                d[v]=d[u]+w;
+                changed=true;
+            }
+        }
+        if (!changed) return true;
+    }
+    return false;
+}
+
+static int ribbon_genus(const Cell& c, const vector<Edge>& E) {
+    // Darts are (vertex,edge). The cyclic order at a face after deleting the
+    // anchor is A1,A2,B1,B2. Count faces of rotation o edge-reversal.
+    map<pair<int,int>,int> dart;
+    int id=0;
+    for (int v=0;v<6;v++) for (int ei=0;ei<12;ei++)
+        if (E[ei].a==v || E[ei].b==v) dart[{v,ei}]=id++;
+    assert(id==24);
+    vector<int> rot(id), rev(id), seen(id,0);
+    for (int v=0;v<6;v++) for (int j=0;j<4;j++)
+        rot[dart[{v,c.order[v][j]}]]=dart[{v,c.order[v][(j+1)%4]}];
+    for (int ei=0;ei<12;ei++) {
+        rev[dart[{E[ei].a,ei}]]=dart[{E[ei].b,ei}];
+        rev[dart[{E[ei].b,ei}]]=dart[{E[ei].a,ei}];
+    }
+    int F=0;
+    for (int d=0;d<id;d++) if (!seen[d]) {
+        F++;
+        int x=d;
+        while (!seen[x]) { seen[x]=1; x=rot[rev[x]]; }
+    }
+    const int chi=6-12+F;
+    assert((2-chi)%2==0);
+    return (2-chi)/2;
+}
+
+static vector<Cell> enumerate_cells(const set<pair<int,int>>& missing,
+                                    map<int,int>& genus_count,
+                                    map<int,int>& per_orientation_count) {
+    const auto E=make_edges(missing);
+    vector<Cell> cells;
+
+    for (int bits=0;bits<(1<<12);bits++) {
+        int out[6]={0}, in[6]={0};
+        for (int ei=0;ei<12;ei++) {
+            const auto e=E[ei];
+            const int tail=((bits>>ei)&1)?e.b:e.a;
+            const int head=e.a+e.b-tail;
+            out[tail]++; in[head]++;
+        }
+        bool eulerian=true;
+        for (int v=0;v<6;v++) if (out[v]!=2 || in[v]!=2) eulerian=false;
+        if (!eulerian) continue;
+
+        array<array<array<int,4>,4>,6> choices{};
+        for (int v=0;v<6;v++) {
+            vector<int> outs, ins;
+            for (int ei=0;ei<12;ei++) {
+                const auto e=E[ei];
+                if (e.a!=v && e.b!=v) continue;
+                const int tail=((bits>>ei)&1)?e.b:e.a;
+                (tail==v?outs:ins).push_back(ei);
+            }
+            assert(outs.size()==2 && ins.size()==2);
+            // Faces 0,1,2 have + anchor. Faces 3,4,5 have - anchor.
+            // After rotating the -anchor face by pi, the first physical block
+            // is incoming rather than outgoing.
+            const vector<int> A=(v<3?outs:ins), B=(v<3?ins:outs);
+            int t=0;
+            for (int sa=0;sa<2;sa++) for (int sb=0;sb<2;sb++)
+                choices[v][t++]={A[sa],A[1-sa],B[sb],B[1-sb]};
+        }
+
+        int accepted=0;
+        for (int code=0;code<4096;code++) {
+            int x=code;
+            Cell c{};
+            c.orientation_bits=(uint16_t)bits;
+            vector<Ineq> z;
+            z.reserve(120);
+            for (int v=0;v<6;v++) {
+                c.order[v]=choices[v][x&3];
+                x>>=2;
+                add_gap_constraints(z,c.order[v]);
+            }
+            if (!strict_difference_feasible(z)) continue;
+            const int g=ribbon_genus(c,E);
+            genus_count[g]++;
+            cells.push_back(c);
+            accepted++;
+        }
+        if (accepted) per_orientation_count[accepted]++;
+    }
+    return cells;
+}
+
+static vector<array<int,6>> sign_preserving_automorphisms(const set<pair<int,int>>& missing) {
+    vector<array<int,6>> ans;
+    array<int,3> P={0,1,2}, N={3,4,5};
+    sort(P.begin(),P.end());
+    do {
+        sort(N.begin(),N.end());
+        do {
+            array<int,6> p{};
+            for (int i=0;i<3;i++) { p[i]=P[i]; p[i+3]=N[i]; }
+            set<pair<int,int>> M2;
+            for (auto [a,b]:missing) {
+                auto q=minmax(p[a],p[b]);
+                M2.insert({q.first,q.second});
+            }
+            if (M2==missing) ans.push_back(p);
+        } while (next_permutation(N.begin(),N.end()));
+    } while (next_permutation(P.begin(),P.end()));
+    return ans;
+}
+
+static Cell transform_cell(const Cell& c, const vector<Edge>& E,
+                           const array<int,6>& p, bool reflect) {
+    map<pair<int,int>,int> index;
+    for (int i=0;i<12;i++) index[{E[i].a,E[i].b}]=i;
+    Cell d{};
+    d.orientation_bits=0;
+
+    for (int ei=0;ei<12;ei++) {
+        const auto e=E[ei];
+        int tail=((c.orientation_bits>>ei)&1)?e.b:e.a;
+        int head=e.a+e.b-tail;
+        tail=p[tail]; head=p[head];
+        if (reflect) swap(tail,head); // projective reflection flips q-sign.
+        auto q=minmax(tail,head);
+        const int ne=index[{q.first,q.second}];
+        if (tail==q.second) d.orientation_bits|=(1u<<ne);
+    }
+
+    for (int v=0;v<6;v++) {
+        array<int,4> a{};
+        for (int j=0;j<4;j++) {
+            const auto e=E[c.order[v][j]];
+            auto q=minmax(p[e.a],p[e.b]);
+            a[j]=index[{q.first,q.second}];
+        }
+        // alpha -> pi-alpha reverses projective order and flips q, hence
+        // A1,A2,B1,B2 -> B2,B1,A2,A1.
+        d.order[p[v]]=reflect?array<int,4>{a[3],a[2],a[1],a[0]}:a;
+    }
+    return d;
+}
+
+static string cell_key(const Cell& c, const vector<Edge>& E) {
+    string s;
+    for (int ei=0;ei<12;ei++) {
+        const auto e=E[ei];
+        const int tail=((c.orientation_bits>>ei)&1)?e.b:e.a;
+        s+=to_string(e.a)+to_string(e.b)+":"+to_string(tail)+",";
+    }
+    s+='|';
+    for (int v=0;v<6;v++) {
+        for (int j=0;j<4;j++) {
+            const auto e=E[c.order[v][j]];
+            s+=to_string(e.a)+to_string(e.b)+",";
+        }
+        s+=';';
+    }
+    return s;
+}
+
+static int orbit_count(const set<pair<int,int>>& missing, const vector<Cell>& cells) {
+    const auto E=make_edges(missing);
+    const auto aut=sign_preserving_automorphisms(missing);
+    set<string> reps;
+    for (const auto& c:cells) {
+        string best(1,'~');
+        for (const auto& p:aut) {
+            best=min(best,cell_key(transform_cell(c,E,p,false),E));
+            best=min(best,cell_key(transform_cell(c,E,p,true),E));
+        }
+        reps.insert(best);
+    }
+    return (int)reps.size();
+}
+
+static void run_case(const string& name, const set<pair<int,int>>& missing,
+                     int expected_cells, const map<int,int>& expected_genus,
+                     int expected_orbits, const map<int,int>& expected_per_orientation) {
+    map<int,int> genus_count, per_orientation;
+    const auto cells=enumerate_cells(missing,genus_count,per_orientation);
+    const int orbits=orbit_count(missing,cells);
+
+    assert((int)cells.size()==expected_cells);
+    assert(genus_count==expected_genus);
+    assert(orbits==expected_orbits);
+    assert(per_orientation==expected_per_orientation);
+    assert(genus_count.count(0)==0);
+
+    cout << name << ": cells=" << cells.size() << ", orbits=" << orbits << ", genus";
+    for (auto [g,n]:genus_count) cout << " g" << g << "=" << n;
+    cout << ", orientation-cell-counts";
+    for (auto [n,k]:per_orientation) cout << " " << n << "x" << k;
+    cout << "\n";
+}
+
+int main() {
+    // With three + and three - anchors, a perfect matching has either three
+    // cross-sign edges or one cross-sign edge plus one ++ and one -- edge.
+    run_case("all-cross matching", {{0,3},{1,4},{2,5}},
+             180, {{1,36},{2,60},{3,84}}, 15,
+             {{2,24},{6,6},{12,8}});
+    run_case("mixed matching", {{0,1},{2,3},{4,5}},
+             208, {{1,32},{2,72},{3,104}}, 27,
+             {{4,4},{5,24},{7,8},{8,2}});
+
+    cout << "PASS: exact collapsed support-six angle-order census = 388 cells, 42 conservative symmetry orbits, no planar rotation cell.\n";
+    return 0;
+}

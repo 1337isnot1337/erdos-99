@@ -1,0 +1,41 @@
+# Target C — C79 radial winner-take-all frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_radial_winner_take_all_branching_2026-08-31.md](../../reports/target_c_radial_winner_take_all_branching_2026-08-31.md).
+
+The PR #83 audit moves the mature train-track machinery back to Target B/shared theory. C79 supplies new information on the Target C stress side.
+
+Fix the C66 center `z`. For an outward unit contact `v->w`, put
+
+`d=r_w-r_v` and `q=1-d^2`.
+
+C74 gives the exact projection identity
+
+`n_v dot (p_w-p_v) = d-q/(2r_v)`.
+
+For `r_v>=10`, if `q<1/5`, this radial projection is greater than `sqrt(3)/2`. Hence two such outgoing contacts at one vertex would have mutual angle below 60 degrees, making their two endpoints less than unit distance apart. Therefore:
+
+`at most one outward contact with q<1/5 per vertex outside radius 10.`
+
+Call it the primary radial edge. All secondary outward contacts have `q>=1/5`, so C68 gives
+
+`sum_secondary alpha <= 5 Q_z`.
+
+At the C66 center,
+
+`Q_z <= D^2(1-S_z) <= C_0 D^3 epsilon`.
+
+Thus if `D epsilon->0`, secondary outward stress is `o(D^2)`.
+
+For fixed `lambda>0`, every vertex with two outward contacts of stress at least `lambda D` contributes a distinct secondary edge of defect at least `1/5`. Hence
+
+`N_split(lambda) <= 5 Q_z/(lambda D) <= (5C_0/lambda)D^2 epsilon = o(D)`.
+
+After deleting `o(D)` heavy secondary edges, the `alpha>=lambda D` outward carrier outside radius ten has outdegree at most one and no directed cycles.
+
+## Cross-route implication
+
+The small-response certificate is now a depth-`D`, winner-take-all transport system with only sublinearly many macroscopic forward splits. The two-dimensional rhombic/train-angle geometry imported from Target B must therefore live mostly in mechanically light transverse contacts for this certificate.
+
+The next bridge should use Target B Sections 39--43: show that a macroscopic train-angle blocker/equality space necessarily forces `Omega(D)` macroscopic turns/splits in any radially directed stress carrier, or use the KKT polytope to select a second certificate with nonvanishing transverse mass.

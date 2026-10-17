@@ -1,0 +1,294 @@
+# Target C-II — one-sign TB1 layers are disjoint on the active-diameter side
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the one-sign side of the strong-TB1 branch through `t=(q-k)/D<=1.8687`  
+**Dependencies:** TB1 common-axis cone collapse; host transverse margin; exact layer support; contact-swap theorem; canonical contact-minimal then diameter-pair-minimal normalization  
+**Certificate:** `research/verify_target_c_high_t_tb1_active_diameter_decoupling_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The one-sign contact-swap argument was previously local: at each strong-TB1 layer, every switching actual diameter shortens under the exact contact swap. The common-axis theorem implies a stronger global statement.
+
+An actual diameter cannot switch at **two different one-sign strong-TB1 layers**.
+
+Indeed, if the same diameter pair moves under two disjoint path-layer translations, its two inward incidence vectors are exact negatives. But every one-sign layer requires its inward vector to have a fixed positive projection on the local swap axis, while all swap axes differ by only `O(D^-1)`. The two requirements would force an order-`D` change in projection across axes whose difference has norm only `O(D^-1)`.
+
+Thus the active-diameter switching sets of all one-sign TB1 layers are pairwise disjoint as sets of diameter pairs.
+
+This makes a genuine simultaneous finite move possible. Thin the one-sign layer indices by parity so no two retained layers are adjacent. Apply the exact contact swap on **every retained layer at once**. Then
+
+- every old unit contact remains exactly unit;
+- every old actual diameter is affected by at most one layer;
+- every affected old actual diameter strictly shortens.
+
+Hence all coupling in this simultaneous move comes from previously strict source pairs. Canonical minimality forces at least one inactive pair to become invalid or active. On the current positive-density one-sign branch, the simultaneous exact-swap family may be chosen with density more than
+
+\[
+\boxed{
+{s_0\over4}D-o(D)
+=(6.1796875\times10^{-7})D-o(D).
+}
+\]
+
+The strong-TB1 active constraints therefore do **not** form the long-range coupling left in C-II. After parity thinning, the entire old active system separates coordinatewise; only inactive lower/upper slack can obstruct the linear simultaneous swap.
+
+---
+
+## 1. Common swap-axis control
+
+At every one-sign strong-TB1 interface `i`, let
+
+\[
+q_i=|a_i+b_i|,
+\qquad
+w_i={a_i+b_i\over q_i},
+\qquad
+v_i=-q_iw_i
+\tag{AD.1}
+\]
+
+be the exact contact-swap data.
+
+The cone-collapse theorem supplies one common oriented transverse axis `w_*` and a fixed constant `C` such that, uniformly over the robust strong-TB1 population,
+
+\[
+|w_i-w_*|\le {C+o(1)\over D}.
+\tag{AD.2}
+\]
+
+Hence for every two such interfaces
+
+\[
+\boxed{
+|w_i-w_j|\le {2C+o(1)\over D}.
+}
+\tag{AD.3}
+\]
+
+The contact-swap theorem and the host transverse margin give, on every one-sign interface, every switching actual diameter `h` an orientation-independent inward vector `n_{h,i}` with
+
+\[
+|n_{h,i}|=D
+\]
+
+and
+
+\[
+\boxed{
+n_{h,i}\cdot w_i\ge(c_H-o(1))D,
+}
+\tag{AD.4}
+\]
+
+where
+
+\[
+c_H=0.453819885927\ldots>0.
+\]
+
+---
+
+## 2. One actual diameter cannot switch at two one-sign layers
+
+Suppose an actual diameter pair `h=xy` switched at two distinct one-sign path layers `R_i,R_j`.
+
+The layers are disjoint. Since `h` moves under the translation of a layer exactly when one endpoint lies in that layer, switching at both `i,j` forces one endpoint of `h` into `R_i` and the other into `R_j`. Therefore its two orientation-independent inward vectors are exact negatives:
+
+\[
+\boxed{
+n_{h,j}=-n_{h,i}.}
+\tag{AD.5}
+\]
+
+Put `n=n_{h,i}`. Applying (AD.4) at the two interfaces gives
+
+\[
+n\cdot w_i\ge(c_H-o(1))D,
+\]
+
+and
+
+\[
+(-n)\cdot w_j\ge(c_H-o(1))D,
+\]
+
+so
+
+\[
+\boxed{
+n\cdot(w_i-w_j)\ge(2c_H-o(1))D.}
+\tag{AD.6}
+\]
+
+On the other hand, (AD.3) and `|n|=D` give
+
+\[
+|n\cdot(w_i-w_j)|
+\le D|w_i-w_j|
+\le2C+o(1).
+\tag{AD.7}
+\]
+
+The right side is bounded while (AD.6) tends linearly to infinity. Contradiction for all sufficiently large `D`.
+
+Therefore
+
+\[
+\boxed{
+X_i\cap X_j=\varnothing
+\quad\text{for distinct one-sign strong-TB1 interfaces }i,j,
+}
+\tag{AD.8}
+\]
+
+where `X_i` is the moving/switching old actual-diameter set of layer `R_i`.
+
+This conclusion uses the **oriented** common transverse axis. Projective phase collapse alone would not suffice.
+
+---
+
+## 3. Parity thinning removes contact interference
+
+A simultaneous translation of adjacent source layers would make their shared boundary contact receive the difference of two swap vectors, so local exact-swap identities cannot simply be superposed on adjacent layers.
+
+This is removed at constant cost. The selected path layers have integer indices. Split the one-sign population by index parity and keep the larger class `I`. Then
+
+\[
+|I|\ge {1\over2}|M_D|,
+\tag{AD.9}
+\]
+
+and no two indices in `I` are consecutive.
+
+On the `NEAR-ACTIVE` winner of the strong-TB1 sign split,
+
+\[
+|M_D|>{s_0\over2}D-o(D),
+\]
+
+so
+
+\[
+\boxed{
+|I|>{s_0\over4}D-o(D)
+=(6.1796875\times10^{-7})D-o(D).
+}
+\tag{AD.10}
+
+Translate every source vertex in `R_i`, `i in I`, by its exact swap vector `v_i` from (AD.1), leaving all other vertices fixed.
+
+---
+
+## 4. Every old contact remains exactly unit
+
+The audited stopped-train/cutset decomposition gives exact interval support to every old contact. In particular a contact edge crosses exactly its own selected train, so its two endpoint layers are consecutive along the selected path.
+
+Because `I` contains no consecutive layer indices, an old contact has at most one endpoint in a moved layer.
+
+- If neither endpoint lies in a moved layer, the contact is unchanged.
+- If one endpoint lies in `R_i`, its contact belongs to one of the two boundary families of that layer. The local exact-swap identity gives
+  \[
+  a_i+v_i=-b_i
+  \quad\text{or}\quad
+  b_i+v_i=-a_i,
+  \]
+  so the new contact still has length exactly one.
+
+Thus
+
+\[
+\boxed{
+\text{all old unit contacts remain exactly unit under the simultaneous move.}
+}
+\tag{AD.11}
+
+No infinitesimal approximation is used.
+
+---
+
+## 5. Every old actual diameter is unchanged or strictly shortened
+
+Take any old actual diameter `h`.
+
+If neither endpoint belongs to a moved layer, it is unchanged.
+
+If one endpoint belongs to some `R_i`, `i in I`, then `h in X_i`. By (AD.8), its other endpoint cannot lie in any other one-sign moved layer. Hence the simultaneous displacement of its relative vector is **exactly the same** as in the single-layer exact swap at `i`.
+
+The one-sign contact-swap theorem therefore gives
+
+\[
+|h|_{\rm new}<D.
+\tag{AD.12}
+\]
+
+Consequently
+
+\[
+\boxed{
+\text{every old actual diameter is unchanged or strictly shortened.}
+}
+\tag{AD.13}
+\]
+
+At least one old diameter is shortened for every nonempty `I`, because each strong-TB1 interface has a switching certificate diameter.
+
+---
+
+## 6. Only inactive slack can block the simultaneous swap
+
+Assume, for contradiction, that after the simultaneous exact swaps
+
+- every previously strict noncontact still has distance greater than one, and
+- every previously strict nondiameter pair still has distance less than `D`.
+
+Then (AD.11) preserves the entire old contact set, while (AD.13) preserves the diameter upper bound and strictly removes at least one old diameter pair.
+
+If some unaffected old diameter remains, the new source is another diameter-`D` global minimizer with the same number of contacts but fewer diameter pairs. If none remains, the whole source has diameter less than `D`. Both alternatives contradict the canonical normalization/global minimality exactly as in the one-layer contact-swap theorem.
+
+Therefore
+
+\[
+\boxed{
+\text{some previously strict source pair obstructs the simultaneous swap.}
+}
+\tag{AD.14}
+
+A strict pair is moved only through the translations of the layers containing its endpoints, so at most two swap vectors contribute to its relative displacement. With
+
+\[
+q_i=O(D^{-1})
+\]
+
+uniformly, its total displacement is `O(D^-1)`. Hence every simultaneous obstruction again lies in an inverse-`D` inactive window around distance `1` or distance `D`.
+
+The point is not a better slack constant. It is the separation of roles:
+
+\[
+\boxed{
+\text{old active diameters are fully decoupled;
+all multi-interface coupling is inactive-slack coupling.}
+}
+\tag{AD.15}
+
+---
+
+## 7. Frontier effect
+
+The one-sign strong-TB1 branch now admits a linear-dimensional finite exact-swap pattern with no active-diameter interaction after one parity thinning:
+
+```text
+> (s0/4) D nonadjacent one-sign layers
++ exact contact swap on every retained layer
+
+-> every old contact stays exactly unit
+-> every old actual diameter is touched by at most one coordinate
+-> every touched old diameter strictly shortens
+-> canonical obstruction must come from a previously strict pair
+-> every such pair couples at most two retained coordinates.
+```
+
+This converts the remaining one-sign TB1 problem into a sparse inactive-constraint system of arity at most two over a linear family of finite swap coordinates.
+
+The next target is therefore combinatorial/finite rather than local KKT geometry: exploit the one- or two-coordinate support of every inactive obstruction to choose a nonzero subset of exact swaps avoiding all lower/upper violations, or prove that any obstruction system blocking all such subsets forces the ultra-near-unit repeated pattern isolated in the repeated-witness theorem.
+
+**Disposition:** proved active-diameter injectivity across one-sign strong-TB1 interfaces and a linear simultaneous exact-swap family whose only blockers are previously strict pairs. C-II and Level I remain open.

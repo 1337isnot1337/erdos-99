@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+"""Arithmetic/combinatorial regression for universal outer-supported kernel floor."""
+from decimal import Decimal, getcontext
+from itertools import product
+getcontext().prec = 80
+D = Decimal
+PI = D('3.1415926535897932384626433832795028841971693993751058209749445923078164')
+S = D('0.9523128068639573458338104262565569008230510550118582389446084732508783')
+EPS = D('0.0017279')
+C146 = D(4)/D(9)*(PI+S)
+T0 = C146 + EPS
+
+def coeff(t, delta=D(0)):
+    return D('1.5')*PI - 2*t + D('1.5')*delta
+
+assert D('1.8212414379') < T0 < D('1.8212414380')
+assert D('1.06990') < coeff(T0) < D('1.06992')
+assert D('0.99538') < coeff(D('1.8585')) < D('0.99540')
+assert D('2.35619') < D(3)*PI/D(4) < D('2.35620')
+assert coeff(T0, D('0.01'))-coeff(T0) == D('0.015')
+
+# Exhaust finite small endpoint distributions: K = LOO + sum(r-2)_+
+# must dominate b/2-f where b=2*LOO+sum r.
+for f in range(0,5):
+    for rs in product(range(0,7), repeat=f):
+        lob=sum(rs)
+        local=sum(max(r-2,0) for r in rs)
+        for loo in range(0,8):
+            b=2*loo+lob
+            kdim=loo+local
+            assert D(kdim) + D('1e-70') >= D(b)/2-D(f)
+
+# Check the f<=Q, b+Q=2(q-k) elimination algebra on finite integers.
+for b in range(0,20):
+    for Q in range(0,20):
+        if (b+Q)%2: continue
+        qmk=(b+Q)//2
+        for f in range(Q+1):
+            lhs=D(b)/2-D(f)-1
+            rhs=D(3)*D(b)/2-D(2*qmk)-1
+            assert lhs >= rhs
+
+print('PASS universal outer-supported private-kernel floor')
+print('t0=',T0)
+print('coefficient_t0=',coeff(T0))
+print('coefficient_t=1.8585=',coeff(D('1.8585')))
+print('zero_bonus_threshold=',D(3)*PI/D(4))

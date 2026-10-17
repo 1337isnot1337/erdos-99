@@ -1,0 +1,75 @@
+# Start here
+
+This guide is a short entry into the Erdős Problem #99 research repository. The repository combines one canonical theorem state with a much larger archive of research. Begin with the state and the active route; do not treat reports or merged changes as theorem authority.
+
+## Five-minute orientation
+
+### 1. Fix the mathematical question
+
+Read the [problem statement](problem/statement.md). For each `n`, `D(n)` is the least diameter of an `n`-point planar set with pairwise distances at least one. The conjecture concerns **every global minimizer** for every sufficiently large `n`. A local optimum, arbitrary packing, finite construction, or single favorable minimizer does not meet that quantifier.
+
+### 2. Check what is currently established
+
+Read [`STATE.md`](STATE.md). It is the authority for theorem lifecycle and the overall status. The machine-readable mirror is [`state/theorem-state.yaml`](state/theorem-state.yaml); the generated [status table](state/STATUS.generated.md) and [dependency graph](state/THEOREM_GRAPH.generated.md) provide compact views.
+
+The main lifecycle categories are:
+
+- **Canonical:** promoted into the active theorem state with its stated scope and dependencies.
+- **Audited-working:** independently checked research that has not been promoted as a canonical theorem.
+- **Conditional:** valid only under additional assumptions that remain explicit.
+- **Regression:** a counterexample or obstruction to a proposed inference.
+- **Rejected / superseded:** an invalid claim or a claim replaced by a later result.
+- **Unreviewed / provenance:** research material or history that has not been established as a current theorem premise.
+
+The state lock controls these labels. A recent report, a large section number, or a merged pull request does not promote a result by itself.
+
+### 3. Pick one active route
+
+| Route | Main question | Starting document |
+| --- | --- | --- |
+| **A — source capacity / Schur response** | Can the global source-rank deficit be forced from the response and its boundary data? | [Target A route map](targets/target-a/README.md) |
+| **B — rhombic shell stability** | Can the joint shell-stability inequality be proved beyond the currently audited local regimes? | [Target B route map](targets/target-b/README.md) |
+| **C — KKT force geometry / reciprocal rigidity** | Can the canonical C-II reductions produce the required full-source finite move, population payment, or strict diameter improvement? | [Target C current frontier](targets/target-c/CURRENT.md), then [route map](targets/target-c/README.md) |
+
+Each route still has an unresolved target. Target C's C-I part is closed; C-II is open. The overall Level I problem remains open. The [root README](../README.md) gives a brief comparison of the routes.
+
+### 4. Trace one theorem chain
+
+Use the selected route map to find the active theorem modules and their reading order. Follow links from the named theorem to its dependencies in the generated graph. Read only the shared theory modules that the argument uses. Target C has a long module history, so start with `CURRENT.md` and select the module for one specific obligation.
+
+The [documentation map](README.md) summarizes where definitions, theory, routes, reports, prompts, and computations live. The [prompt index](prompts/README.md) should be read last when you need task instructions; prompts are operational documents, not theorem sources.
+
+## Find an exact open obligation
+
+Before searching reports, write down:
+
+1. The exact canonical statement you want to use or extend, including its hypotheses.
+2. The theorem IDs or route modules it depends on.
+3. The precise implication that is missing and how it would advance the route endpoint.
+4. Which configurations and labels are in scope: global minimizer, arbitrary packing, finite scaffold, local optimum, contact core, or full source.
+
+Then check the route map and current state for an existing regression or a superseded version of the same idea. Only after this check should you search the reports archive for a named predecessor or exact obstruction. Preserve failures and counterexamples: they often identify why an apparently plausible bridge cannot work.
+
+## Prepare reviewable work
+
+For a substantial result, follow [`RESEARCH_WORKFLOW.md`](RESEARCH_WORKFLOW.md), [`CONTRIBUTING.md`](../CONTRIBUTING.md), and the [report template](reports/REPORT_TEMPLATE.md). A useful handoff states the base commit and state version, exact claim, hypotheses, dependencies, proof or reproducible evidence, relevant regressions, limitations, and what the result does **not** establish. Keep candidate work clearly labeled until it is independently reviewed and formally promoted through the single state system.
+
+For AI-assisted work, read the repository [`AGENTS.md`](../AGENTS.md) before starting. It gives the mandatory bootstrap sequence and the rules for source scope, generated state, and claim classification. The continuation prompts can help execute a chosen task, but cannot replace checking the current state and route map.
+
+## Select a task and hand it off
+
+After reading the state and route, run
+`python3 scripts/choose_research_task.py --seed 00000000000000000000000000000001 --count 1 --live-overlap`.
+For offline work, omit `--live-overlap` or provide `--overlap-snapshot <saved-query.json>`;
+the output explicitly identifies its dated overlap evidence. Read each named dependency
+and regression, compare current open PRs and claim issues, and follow
+[coordination](COORDINATION.md). Use `--count 1 --claim-template` to print an issue claim
+and handoff template. Selection never posts an issue or reserves work.
+
+Reproduction instructions are in the [baseline](launch/BASELINE.md). Run the local
+[integrity and full-verification commands](launch/CI.md) before submitting. Research
+merges and canonical promotion have separate [review requirements](REVIEW_POLICY.md).
+
+## Terms
+
+See the [glossary](GLOSSARY.md) for the repository's use of “global minimizer,” “unit-contact graph,” “Level I,” and theorem lifecycle labels.

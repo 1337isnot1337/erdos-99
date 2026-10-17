@@ -1,0 +1,77 @@
+#!/usr/bin/env python3
+"""Non-load-bearing regression for the pentagon hidden-contact gap budget."""
+import math
+
+sqrt3 = math.sqrt(3.0)
+a0 = sqrt3 / 2.0
+
+
+def F(s: float) -> float:
+    return 0.25 * s * math.sqrt(4.0 - s * s)
+
+
+def Fp(s: float) -> float:
+    return (2.0 - s * s) / (2.0 * math.sqrt(4.0 - s * s))
+
+
+def S(x: float, y: float) -> float:
+    return 4.0 * x * x * y * y - (x * x + y * y - 1.0) ** 2
+
+
+def G(x: float, y: float) -> float:
+    return 0.25 * math.sqrt(S(x, y))
+
+
+def Gx(x: float, y: float) -> float:
+    return x * (y * y - x * x + 1.0) / (2.0 * math.sqrt(S(x, y)))
+
+
+def Gy(x: float, y: float) -> float:
+    return y * (x * x - y * y + 1.0) / (2.0 * math.sqrt(S(x, y)))
+
+
+def rho(x: float, y: float) -> float:
+    return (F(x) + G(x, y) + F(y)) / a0 - 1.5
+
+
+def rhox(x: float, y: float) -> float:
+    return (Fp(x) + Gx(x, y)) / a0
+
+
+def rhoy(x: float, y: float) -> float:
+    return (Fp(y) + Gy(x, y)) / a0
+
+
+assert abs(F(1.0) - sqrt3 / 4.0) < 1e-15
+assert abs(G(1.0, 1.0) - sqrt3 / 4.0) < 1e-15
+assert abs(rho(1.0, 1.0)) < 1e-15
+assert abs(Fp(1.0) - 1.0 / (2.0 * sqrt3)) < 1e-15
+assert abs(Gx(1.0, 1.0) - 1.0 / (2.0 * sqrt3)) < 1e-15
+assert abs(Gy(1.0, 1.0) - 1.0 / (2.0 * sqrt3)) < 1e-15
+assert abs(rhox(1.0, 1.0) - 2.0 / 3.0) < 1e-15
+assert abs(rhoy(1.0, 1.0) - 2.0 / 3.0) < 1e-15
+
+# This grid is a regression only. The theorem's existence of eta_0 follows by
+# continuity from the exact endpoint derivatives above.
+min_dx = 10.0
+min_dy = 10.0
+min_margin = 10.0
+for i in range(41):
+    x = 1.0 + 0.01 * i / 40.0
+    for j in range(41):
+        y = 1.0 + 0.01 * j / 40.0
+        dx = rhox(x, y)
+        dy = rhoy(x, y)
+        min_dx = min(min_dx, dx)
+        min_dy = min(min_dy, dy)
+        margin = rho(x, y) - 0.5 * ((x - 1.0) + (y - 1.0))
+        min_margin = min(min_margin, margin)
+
+assert min_dx > 0.64
+assert min_dy > 0.64
+assert min_margin > -1e-14
+
+print(f"endpoint gradient=({rhox(1,1):.15f}, {rhoy(1,1):.15f})")
+print(f"sampled min partials on [1,1.01]^2: {min_dx:.15f}, {min_dy:.15f}")
+print(f"sampled min HG.2 margin: {min_margin:.15e}")
+print("pentagon hidden-contact gap budget regression: PASS")

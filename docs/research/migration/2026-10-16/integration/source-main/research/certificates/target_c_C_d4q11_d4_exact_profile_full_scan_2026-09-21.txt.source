@@ -1,0 +1,252 @@
+Target C C:(4,11,10), d6=4 exact-profile full scan certificate
+Date: 2026-09-21
+Verifier: research/verify_target_c_support7_global_segment_relative_eight_noroot_k7_C_d4q11_d4_exact_profile_2026_09_21.py
+Verifier SHA-256 in the execution workspace: 28f4e9abc645232bc898129027c642c22186ff60bbb5e1767d8bc70c375c511e
+
+The seven ranges below are disjoint, contiguous, and cover [0,325955).
+Each shard terminated with PASS and its exact-rank guards true.
+
+===== [0,41000) =====
+completed C:(4,11,10) d6=4 exact-profile scan
+cover_range (0, 41000)
+synchronized_states 276453
+d4_capacity_ge8 {8: 8453, 9: 6561, 10: 6108, 11: 5294, 12: 3166, 13: 945}
+functional_witness_states 2623
+viable_pair_choice_census {6: 2623}
+seven_row_lift_multiplicity {1: 5128, 2: 276}
+pair_cycle_count 10106
+pair_line_count 11624
+compatible_pair_line_count 11348
+incompatible_pair_line_count 276
+structural_global_d4 414
+structural_capacity {10: 414}
+pair_choice_survivors 2484
+singleton_choice_census {1: 2484}
+actual_state_tests 0
+exact_constraint_line_tests 0
+defect_census {}
+D_le_minus1_count 0
+bad_examples []
+unique_complete_sets_ranked 12475
+max_singleton_multiplicity 1
+max_functional_row_norm_squared 42
+max_functional_width 22
+functional_hadamard_exact_rank_bound True
+max_relation_row_norm_squared 0
+max_relation_row_count 0
+hadamard_exact_rank_bound True
+PASS: no C:(4,11,10) d6=4 exact-profile candidate
+
+===== [41000,61500) =====
+completed C:(4,11,10) d6=4 exact-profile scan
+cover_range (41000, 61500)
+synchronized_states 141463
+d4_capacity_ge8 {8: 2299, 9: 1946, 10: 1924, 11: 1854, 12: 1335, 13: 476}
+functional_witness_states 0
+viable_pair_choice_census {}
+seven_row_lift_multiplicity {}
+pair_cycle_count 0
+pair_line_count 0
+compatible_pair_line_count 0
+incompatible_pair_line_count 0
+structural_global_d4 0
+structural_capacity {}
+pair_choice_survivors 0
+singleton_choice_census {}
+actual_state_tests 0
+exact_constraint_line_tests 0
+defect_census {}
+D_le_minus1_count 0
+bad_examples []
+unique_complete_sets_ranked 5808
+max_singleton_multiplicity 1
+max_functional_row_norm_squared 35
+max_functional_width 22
+functional_hadamard_exact_rank_bound True
+max_relation_row_norm_squared 0
+max_relation_row_count 0
+hadamard_exact_rank_bound True
+PASS: no C:(4,11,10) d6=4 exact-profile candidate
+
+===== [61500,82000) =====
+completed C:(4,11,10) d6=4 exact-profile scan
+cover_range (61500, 82000)
+synchronized_states 130006
+d4_capacity_ge8 {8: 1794, 9: 1533, 10: 927, 11: 1105, 12: 603, 13: 460}
+functional_witness_states 6
+viable_pair_choice_census {6: 6}
+seven_row_lift_multiplicity {}
+pair_cycle_count 0
+pair_line_count 0
+compatible_pair_line_count 0
+incompatible_pair_line_count 0
+structural_global_d4 0
+structural_capacity {}
+pair_choice_survivors 0
+singleton_choice_census {}
+actual_state_tests 0
+exact_constraint_line_tests 0
+defect_census {}
+D_le_minus1_count 0
+bad_examples []
+unique_complete_sets_ranked 8970
+max_singleton_multiplicity 1
+max_functional_row_norm_squared 35
+max_functional_width 22
+functional_hadamard_exact_rank_bound True
+max_relation_row_norm_squared 0
+max_relation_row_count 0
+hadamard_exact_rank_bound True
+PASS: no C:(4,11,10) d6=4 exact-profile candidate
+
+===== [82000,246000) =====
+completed C:(4,11,10) d6=4 exact-profile scan
+cover_range (82000, 246000)
+synchronized_states 843180
+d4_capacity_ge8 {8: 884, 9: 1703, 10: 2027, 11: 2484, 12: 1846, 13: 1119, 14: 126}
+functional_witness_states 324
+viable_pair_choice_census {6: 324}
+seven_row_lift_multiplicity {1: 648}
+pair_cycle_count 1620
+pair_line_count 1620
+compatible_pair_line_count 1620
+incompatible_pair_line_count 0
+structural_global_d4 0
+structural_capacity {}
+pair_choice_survivors 0
+singleton_choice_census {}
+actual_state_tests 0
+exact_constraint_line_tests 0
+defect_census {}
+D_le_minus1_count 0
+bad_examples []
+unique_complete_sets_ranked 44450
+max_singleton_multiplicity 1
+max_functional_row_norm_squared 32
+max_functional_width 23
+functional_hadamard_exact_rank_bound True
+max_relation_row_norm_squared 0
+max_relation_row_count 0
+hadamard_exact_rank_bound True
+PASS: no C:(4,11,10) d6=4 exact-profile candidate
+
+===== [246000,266500) =====
+completed C:(4,11,10) d6=4 exact-profile scan
+cover_range (246000, 266500)
+synchronized_states 93490
+d4_capacity_ge8 {8: 149, 9: 247, 10: 387, 11: 392, 12: 401, 13: 160, 14: 27}
+functional_witness_states 102
+viable_pair_choice_census {6: 102}
+seven_row_lift_multiplicity {1: 288}
+pair_cycle_count 720
+pair_line_count 720
+compatible_pair_line_count 720
+incompatible_pair_line_count 0
+structural_global_d4 0
+structural_capacity {}
+pair_choice_survivors 0
+singleton_choice_census {}
+actual_state_tests 0
+exact_constraint_line_tests 0
+defect_census {}
+D_le_minus1_count 0
+bad_examples []
+unique_complete_sets_ranked 9431
+max_singleton_multiplicity 1
+max_functional_row_norm_squared 33
+max_functional_width 23
+functional_hadamard_exact_rank_bound True
+max_relation_row_norm_squared 0
+max_relation_row_count 0
+hadamard_exact_rank_bound True
+PASS: no C:(4,11,10) d6=4 exact-profile candidate
+
+===== [266500,287000) =====
+completed C:(4,11,10) d6=4 exact-profile scan
+cover_range (266500, 287000)
+synchronized_states 95010
+d4_capacity_ge8 {8: 1063, 9: 1112, 10: 1056, 11: 756, 12: 1221, 13: 573, 14: 573}
+functional_witness_states 1368
+viable_pair_choice_census {6: 1368}
+seven_row_lift_multiplicity {1: 5664}
+pair_cycle_count 12024
+pair_line_count 12024
+compatible_pair_line_count 12024
+incompatible_pair_line_count 0
+structural_global_d4 1080
+structural_capacity {10: 1080}
+pair_choice_survivors 6480
+singleton_choice_census {1: 6480}
+actual_state_tests 0
+exact_constraint_line_tests 0
+defect_census {}
+D_le_minus1_count 0
+bad_examples []
+unique_complete_sets_ranked 9439
+max_singleton_multiplicity 1
+max_functional_row_norm_squared 33
+max_functional_width 23
+functional_hadamard_exact_rank_bound True
+max_relation_row_norm_squared 0
+max_relation_row_count 0
+hadamard_exact_rank_bound True
+PASS: no C:(4,11,10) d6=4 exact-profile candidate
+
+===== [287000,325955) =====
+completed C:(4,11,10) d6=4 exact-profile scan
+cover_range (287000, 325955)
+synchronized_states 172268
+d4_capacity_ge8 {8: 724, 9: 434, 10: 493, 11: 13, 12: 42, 14: 36}
+functional_witness_states 96
+viable_pair_choice_census {6: 96}
+seven_row_lift_multiplicity {1: 384}
+pair_cycle_count 792
+pair_line_count 792
+compatible_pair_line_count 792
+incompatible_pair_line_count 0
+structural_global_d4 108
+structural_capacity {10: 108}
+pair_choice_survivors 648
+singleton_choice_census {1: 648}
+actual_state_tests 0
+exact_constraint_line_tests 0
+defect_census {}
+D_le_minus1_count 0
+bad_examples []
+unique_complete_sets_ranked 10458
+max_singleton_multiplicity 1
+max_functional_row_norm_squared 31
+max_functional_width 21
+functional_hadamard_exact_rank_bound True
+max_relation_row_norm_squared 0
+max_relation_row_count 0
+hadamard_exact_rank_bound True
+PASS: no C:(4,11,10) d6=4 exact-profile candidate
+
+===== aggregate =====
+covered_representatives 325955
+synchronized_states 1751870
+d4_capacity_ge8 {8: 15366, 9: 13536, 10: 12922, 11: 11898, 12: 8614, 13: 3733, 14: 762}
+d4_capacity_ge8_total 66831
+functional_witness_states 4519
+viable_pair_choice_census {6: 4519}
+seven_row_lift_multiplicity {1: 12112, 2: 276}
+pair_cycle_count 25262
+pair_line_count 26780
+compatible_pair_line_count 26504
+incompatible_pair_line_count 276
+structural_global_d4 1602
+structural_capacity {10: 1602}
+pair_choice_survivors 9612
+singleton_choice_census {1: 9612}
+actual_state_tests 0
+exact_constraint_line_tests 0
+defect_census {}
+D_le_minus1_count 0
+max_singleton_multiplicity 1
+max_functional_row_norm_squared 42
+max_functional_width 23
+max_relation_row_norm_squared 0
+max_relation_row_count 0
+functional_hadamard_exact_rank_bound True
+hadamard_exact_rank_bound True

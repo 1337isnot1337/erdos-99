@@ -1,0 +1,440 @@
+# Erdős Problem #99 — propagate the three-label atomic gap through §171 and the chamber ledger
+
+**Date:** 2026-09-14  
+**Repository base:** `e4c0d710` on `research/c2-gluing-sol-20260914`  
+**Target:** Target C-II, canonical full-core Type-II branch  
+**Claim class:** proof-only propagation from TC109 through audited-working §171 and exact planar ledgers
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The three-label concentration theorem gives the stronger proof-only atomic/train gap
+
+\[
+g:=0.00109,
+\qquad
+{T-q/2\over D}\ge 2\sqrt{\Delta_2}+g-o(1),
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\tag{PC109.1}
+\]
+
+This supersedes the `g=0.000698` propagation on this branch. Rerunning the audited §171 orbit/detour scalar envelope and then using the exact interface identities gives
+
+\[
+\boxed{
+\liminf {q-k\over D}
+>1.82102923795,
+}
+\tag{PC109.2}
+\]
+
+\[
+\boxed{
+\liminf {J_D\over D}
+\ge2.490867811845480\ldots,
+}
+\tag{PC109.3}
+\]
+
+and
+
+\[
+\boxed{
+\liminf {H_D\over D}
+\ge1.495666817107288\ldots .
+}
+\tag{PC109.4}
+\]
+
+There is still no scalar contradiction. The gain does, however, strengthen every first-order exceptional-face, chamber-area, rhombus-deficit, and low-residual pentagon coefficient.
+
+---
+
+## 1. §171 with `g=0.00109`
+
+Put
+
+\[
+C_{146}:={4\over9}(\pi+\sqrt{\Delta_2}).
+\]
+
+Audited §171 proves that any Type-II subsequential limit
+
+\[
+t=\lim {q-k\over D},
+\qquad
+\delta=\lim {b-P_F\over D}\ge0
+\]
+
+must satisfy
+
+\[
+F_t(\delta):=
+10t-5\pi-5\delta
++\bigl(81(\pi+\delta)^2\delta\bigr)^{1/3}
+-{8\Delta_2\over {9t\over2}-2\pi-2\delta}
+\ge0,
+\tag{PC109.5}
+\]
+
+with feasible detour interval
+
+\[
+0\le\delta\le
+{{9\over2}(t-C_{146})-g\over2}.
+\tag{PC109.6}
+\]
+
+Set
+
+\[
+\varepsilon_{109}:=0.0015157,
+\qquad
+t_{109}:=C_{146}+\varepsilon_{109}.
+\tag{PC109.7}
+\]
+
+At the right endpoint of (PC109.6),
+
+\[
+\delta_{109}
+={{9\over2}\varepsilon_{109}-g\over2}
+=0.002865325.
+\tag{PC109.8}
+\]
+
+The exact-rational certificate
+`research/verify_target_c_three_label_orbit_chamber_propagation.py` proves
+
+\[
+1.821029237951019<t_{109}<1.821029237995464,
+\tag{PC109.9}
+\]
+
+\[
+F_{t_{109}}(\delta_{109})<-5.2\times10^{-5},
+\tag{PC109.10}
+\]
+
+and
+
+\[
+\partial_\delta F_{t_{109}}(\delta)>142
+\qquad(0<\delta\le\delta_{109}).
+\tag{PC109.11}
+\]
+
+Audited §171 also proves strict monotonicity in `t`, so no feasible Type-II limit can have `t<=t_109`. A non-load-bearing high-precision solve puts the unchanged-envelope root at
+
+\[
+\varepsilon_*=0.001515855755331\ldots,
+\tag{PC109.12}
+\]
+
+leaving the safe decimal in (PC109.7) below the first zero.
+
+---
+
+## 2. Exceptional-face floor
+
+The exact stopped-train ledger is
+
+\[
+T=q+2f-k.
+\tag{PC109.13}
+\]
+
+Since `q<=P_F`, `k>=0`, and `P_F/D->pi` in the full-core Type-II branch,
+
+\[
+T-{q\over2}
+={q\over2}+2f-k
+\le {P_F\over2}+2f.
+\]
+
+Combining with (PC109.1),
+
+\[
+\boxed{
+\liminf {f\over D}
+\ge f_{109}:=
+\sqrt{\Delta_2}-{\pi\over4}+{g\over2}
+=0.167459643466509\ldots .
+}
+\tag{PC109.14}
+\]
+
+Therefore
+
+\[
+\liminf {Q\over D}\ge f_{109},
+\qquad
+\liminf {Q+4f\over D}\ge5f_{109}
+=0.837298217332545\ldots .
+\tag{PC109.15}
+\]
+
+---
+
+## 3. Endpoint/interface floor
+
+Define
+
+\[
+J_D:=(b-P_F)+(Q+4f).
+\tag{PC109.16}
+\]
+
+The train handshake gives
+
+\[
+J_D=2T-P_F.
+\tag{PC109.17}
+\]
+
+Put
+
+\[
+C_{109}:=2\sqrt{\Delta_2}+g
+=1.905715613727914\ldots .
+\]
+
+Because
+
+\[
+2T=q+2(T-q/2),
+\qquad q\ge q-k,
+\]
+
+(PC109.1), (PC109.2), and `P_F/D->pi` give
+
+\[
+\boxed{
+\liminf {J_D\over D}
+\ge j_{109}:=t_{109}+2C_{109}-\pi
+=2.490867811845480\ldots .
+}
+\tag{PC109.18}
+\]
+
+---
+
+## 4. Exact correlated defect `H_D`
+
+Define
+
+\[
+H_D:=(b-P_F)+(Q+2f).
+\tag{PC109.19}
+\]
+
+The outer ledger is
+
+\[
+b+Q=2(q-k).
+\tag{PC109.20}
+\]
+
+Eliminating `f` between (PC109.16) and (PC109.20) gives the exact identity
+
+\[
+\boxed{
+H_D={J_D\over2}+(q-k)-{P_F\over2}.
+}
+\tag{PC109.21}
+\]
+
+Hence
+
+\[
+\boxed{
+\liminf {H_D\over D}
+\ge h_{109}:={j_{109}\over2}+t_{109}-{\pi\over2}
+=1.495666817107288\ldots .
+}
+\tag{PC109.22}
+\]
+
+This is stronger than throwing away the `q-k` correlation through the older bound `H_D>=3J_D/5`.
+
+---
+
+## 5. Population, chamber-area, and rhombus-deficit propagation
+
+The exact planar population identity gives
+
+\[
+m-R_4={P_F+H_D\over2}+1.
+\tag{PC109.23}
+\]
+
+Therefore
+
+\[
+\boxed{
+\liminf {m-R_4\over D}
+\ge {\pi\over2}+{h_{109}\over2}
+=2.318629735348540\ldots .
+}
+\tag{PC109.24}
+\]
+
+With
+
+\[
+a_0={\sqrt3\over2},
+\qquad c_0={\sqrt3\over4},
+\]
+
+canonical Section 85 gives
+
+\[
+A_{ch}-a_0Z_{ch}\ge c_0H_D,
+\]
+
+so
+
+\[
+\boxed{
+\liminf {A_{ch}-a_0Z_{ch}\over D}
+\ge \beta_{109}:=c_0h_{109}
+=0.647642729606162\ldots .
+}
+\tag{PC109.25}
+\]
+
+The full-source Oler count bound and (PC109.24) similarly yield
+
+\[
+\boxed{
+\liminf {\Delta_2D^2-R_4\over D}
+\ge \gamma_{109}:={h_{109}\over2}
+=0.747833408553644\ldots .
+}
+\tag{PC109.26}
+\]
+
+and `a_0 gamma_109=beta_109`.
+
+---
+
+## 6. Raw chamber slack versus genuine residual
+
+The exact chamber-interface cancellation theorem remains
+
+\[
+\Sigma_{ch}=J_D+a+L_{add}+R_F,
+\qquad a,L_{add},R_F\ge0.
+\tag{PC109.27}
+\]
+
+Hence
+
+\[
+\boxed{
+\liminf {\Sigma_{ch}\over D}
+\ge j_{109}
+=2.490867811845480\ldots .
+}
+\tag{PC109.28}
+\]
+
+This remains mandatory boundary credit rather than fixed-wall packing spare.
+
+The true residual-budget theorem gives
+
+\[
+R_F+\Sigma_{ext}<{P_K\over2}+P_F-q.
+\]
+
+Using `q>=q-k`, Cauchy's perimeter bounds, and (PC109.2),
+
+\[
+\boxed{
+\limsup {R_F+\Sigma_{ext}\over D}
+\le {3\pi\over2}-t_{109}
+=2.891359742405245\ldots .
+}
+\tag{PC109.29}
+\]
+
+Adding the existing coarse loaded-rhombus allowance gives the joint-puncture coefficient
+
+\[
+3.863371892162530\ldots,
+\tag{PC109.30}
+\]
+
+still far from contradiction.
+
+---
+
+## 7. Low-residual pentagon source objects also improve
+
+The low-`t` pentagon-sea formula has the form
+
+\[
+P(t,\delta,\kappa)
+=\pi+C_{109}-{5t\over2}+\delta+{\kappa\over2}.
+\tag{PC109.31}
+\]
+
+At the most permissive profile `t=t_109`, `delta=kappa=0`,
+
+\[
+P_{109}=0.494735172369096\ldots .
+\tag{PC109.32}
+\]
+
+Therefore, on the additional branch `R_F=o(D)`, the existing pentagon extraction gives
+
+\[
+\boxed{{V_{flat}\over D}\ge0.098947034473819\ldots-o(1),}
+\tag{PC109.33}
+\]
+
+\[
+\boxed{{H_{tooth}\over D}\ge0.054970574707677\ldots-o(1),}
+\tag{PC109.34}
+\]
+
+and
+
+\[
+\boxed{
+{C_{flat}\over D},\ {T_{tooth}\over D}
+\ge0.038056551720699\ldots-o(1).
+}
+\tag{PC109.35}
+\]
+
+The increase is numerically modest because the §171 floor rises with the train gap and partially offsets the direct `C_109` gain. The important new structural inputs remain the loaded degree-two defect payment and the unloaded stress-through theorem.
+
+---
+
+## 8. Current frontier
+
+After TC109 the strongest scalar package on this branch is
+
+```text
+atomic train gain              0.00109
+q-k                            > 1.82102923795 D
+bounded exceptional faces f   >= 0.16745964347 D
+J interface                    >= 2.49086781185 D
+H correlated defect            >= 1.49566681711 D
+chamber area surplus           >= 0.64764272961 D
+rhombus count deficit          >= 0.74783340855 D
+corrected residual upper cap   <= 2.89135974241 D
+```
+
+This is not a closure. Scalar optimization is no longer the main bottleneck. The low-residual hard corner now carries a linear family of flat pentagonal source objects. Their middles satisfy the exact local split proved on this branch:
+
+- loaded flat middle -> contact degree exactly two -> one full unit of `s_B`;
+- unloaded flat middle -> external contact stress is `O(flatness)` relative to the two through contacts, with the through weights asymptotically equal;
+- unloaded degree four additionally creates three hidden `1+o(1)` noncontacts.
+
+A closing theorem should exploit that defect-payment/stress-through dichotomy rather than further tune the scalar endpoint.
+
+**Disposition:** proof-only propagation. C-II and Level I remain open.

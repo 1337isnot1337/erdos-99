@@ -1,0 +1,77 @@
+from fractions import Fraction
+import math
+
+# Regression certificate for
+# target_c_high_t_tb1_inactive_rail_dense_grid_t18687_2026-09-17.md
+#
+# The averaging, adjacent-train intersection, and circumcenter-flank arguments
+# reuse audited parent lemmas.  This script checks the new scale arithmetic,
+# constants, purification rate, and synchronized half-by-half incidence count.
+
+S0 = Fraction(791, 320_000_000)
+RHO = float(S0) / (2048 * (3 ** (1 / 8)))
+assert abs(RHO - 1.0520984869560897e-9) < 1e-21
+
+# Parent full-defect audit: K_glob/c < 1,108,000 with c=0.0000226.
+C_PATH = 0.0000226
+K_GLOB_UPPER = 1_108_000 * C_PATH
+RATIO_UPPER = K_GLOB_UPPER / RHO
+
+assert abs(K_GLOB_UPPER - 25.0408) < 1e-12
+assert RATIO_UPPER < 2.381e10
+assert RATIO_UPPER < 2.4e10
+
+# k_D = D^(1/4)/log D gives Theta(log D) candidate groups from a
+# (rho-o(1))D^(1/4) rail and hence O(D/log D) cost on one group.
+# Check the exponent/cancellation algebra on symbolic powers represented by
+# exponents: D^(1/4) / (D^(1/4)/log D) = log D.
+rail_exponent = Fraction(1, 4)
+group_exponent = Fraction(1, 4)
+assert rail_exponent - group_exponent == 0
+
+# Purification: total angular defect O(D/log D).  Delete columns whose total
+# defect exceeds C/sqrt(log D).  This deletes O(D/sqrt(log D))=o(D), and the
+# retained individual crossing defects are O(1/sqrt(log D))=o(1).
+for logD in [100, 1000, 1_000_000]:
+    normalized_cost = 1 / logD
+    sigma = 1 / math.sqrt(logD)
+    retained_defect_scale = normalized_cost / sigma
+    assert abs(retained_defect_scale - 1 / math.sqrt(logD)) < 1e-15
+    assert sigma < 1
+
+# Circumcenter flank coefficient at mu=0.01.
+FLANK = 0.6536 - 1.02 / math.sqrt(3)
+assert abs(FLANK - 0.06470272542658162) < 1e-15
+assert FLANK > 0
+
+# Half-by-half complete-incidence combinatorics.  Model an ordered group with
+# supports [i_s+1, j_s] where every j_s is beyond a common cut K and all
+# birth tags lie before K.  Every first-half support contains every latter-half
+# birth-tag cut.
+for n in range(2, 20):
+    births = list(range(1, n + 1))
+    K = n + 10
+    ends = [K + (s % 3) for s in range(n)]
+    h = n // 2
+    for s in range(h):
+        left = births[s] + 1
+        right = ends[s]
+        for t in range(h, n):
+            cut = births[t]
+            assert left <= cut <= right
+
+# Location-or-angle inequality uses only |e|<=D and midpoint error o(D):
+# if |h(x)|>mu D and |m-o|<=eta D, then
+# sin(theta)>2(mu-eta).  Verify the displayed mu=0.01 threshold tends to .02.
+MU = 0.01
+for eta in [1e-2, 1e-3, 1e-4, 1e-6]:
+    if eta < MU:
+        lower = 2 * (MU - eta)
+        assert lower < 0.02
+        assert lower > 0
+assert abs(2 * MU - 0.02) < 1e-15
+
+print("PASS: TB1 inactive-rail dense-grid certificate")
+print("rho =", RHO)
+print("K_glob/rho upper =", RATIO_UPPER)
+print("flank coefficient =", FLANK)

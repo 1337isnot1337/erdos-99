@@ -1,0 +1,206 @@
+# Target C — exact exceptional-face closure corank equals pure contact stress dimension
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only strengthening of `target_c_train_closure_rank_and_bracing_2026-09-12.md`; theorem authority unchanged.
+
+The closure-rank theorem has a sharper exact form. Let `C_face` be the `2f x T`
+exceptional-face closure matrix defined in the companion note, and let
+
+\[
+\sigma_C:=\dim\ker R_C^T
+\]
+
+be the dimension of the pure contact self-stress space on the nonisolated positive
+contact core. Then
+
+\[
+\boxed{
+2f-\operatorname{rank}C_{\rm face}=\sigma_C.
+}
+\tag{1}
+\]
+
+Canonical mixed rigidity then gives `sigma_C<=s_Z`, recovering and conceptually
+strengthening
+
+\[
+\operatorname{rank}C_{\rm face}\ge2f-s_Z.
+\]
+
+Thus every exact linear dependency among the two-coordinate exceptional-face closure
+conditions is literally the dual shadow of a pure contact self-stress. The defect
+faces do not have an independent hidden source of closure-row degeneracy.
+
+---
+
+## 1. Contact-flex dimension from the train closure matrix
+
+Use the notation of the companion theorem. The audited stopped-train decomposition has
+`T` train variables. The companion Lemma 4.1 proves that, modulo translations, the
+contact infinitesimal flex space is `ker C_face`. The constant train angular-rate vector
+is global rotation. Therefore the non-Euclidean contact-flex dimension is
+
+\[
+\boxed{
+d_C=T-\operatorname{rank}C_{\rm face}-1.
+}
+\tag{2}
+\]
+
+This statement permits bridges, articulation vertices, singleton trains, and arbitrary
+bounded nonquadrilateral faces.
+
+---
+
+## 2. The same dimension from the contact rigidity matrix
+
+Let `R_C` be the contact rigidity matrix on the same `v` nonisolated core vertices and
+`e` actual contact edges. By rank-nullity,
+
+\[
+\operatorname{rank}R_C=e-\sigma_C.
+\]
+
+The contact infinitesimal-flex space modulo Euclidean motions therefore has dimension
+
+\[
+\begin{aligned}
+d_C
+&=(2v-3)-\operatorname{rank}R_C\\
+&=2v-3-e+\sigma_C.
+\end{aligned}
+\tag{3}
+\]
+
+Euler for the connected plane contact graph gives
+
+\[
+v-e+(R+f+1)=2,
+\]
+
+so
+
+\[
+2v-3-e
+=e-2R-2f-1.
+\]
+
+The audited train identity is `T=e-2R`. Hence
+
+\[
+\boxed{
+d_C=T-2f-1+\sigma_C.
+}
+\tag{4}
+\]
+
+Compare (2) and (4). The `T-1` terms cancel, leaving the exact identity
+
+\[
+\boxed{
+2f-\operatorname{rank}C_{\rm face}=\sigma_C.
+}
+\]
+
+No KKT positivity is needed for this equality.
+
+---
+
+## 3. Mixed rigidity bounds the pure-contact stress space
+
+Canonical core-only ZR/ZF gives
+
+\[
+\operatorname{rank}R_{C\cup H}=2v-3
+\]
+
+and
+
+\[
+e+h=2v-2+s_Z.
+\]
+
+Therefore the full signed equilibrium-stress space on the actual contact and diameter
+rows has dimension
+
+\[
+(e+h)-(2v-3)=s_Z+1.
+\tag{5}
+\]
+
+Every pure contact self-stress `lambda in ker R_C^T` extends to a mixed stress
+`(lambda,0_H)`. These form a `sigma_C`-dimensional subspace of the mixed stress space.
+
+The normalized KKT equilibrium stress has a nonzero diameter part; in the fully
+force-visible relative-interior normalization every actual diameter coefficient is in
+fact positive. Hence that KKT stress is not in the pure-contact subspace. Consequently
+
+\[
+\sigma_C+1\le s_Z+1,
+\]
+
+so
+
+\[
+\boxed{\sigma_C\le s_Z.}
+\tag{6}
+\]
+
+Combining (1) and (6) gives
+
+\[
+\boxed{
+0\le2f-\operatorname{rank}C_{\rm face}
+=\sigma_C
+\le s_Z.
+}
+\tag{7}
+\]
+
+In particular, `s_Z=0` forces both
+
+\[
+\ker R_C^T=\{0\}
+\]
+
+and
+
+\[
+\operatorname{rank}C_{\rm face}=2f.
+\]
+
+---
+
+## 4. Why this is useful for the all-regime corridor route
+
+A macroscopic Type-II exceptional face is proof-only known to collapse to two
+near-geodesic, almost projectively one-directional boundary routes. Such a face has a
+closure block that can be extremely ill-conditioned while retaining exact rank two.
+Equation (1) says that any **exact** loss of closure rank is not a local geometric
+accident: it creates a pure contact self-stress. Across all faces, only `s_Z` such
+scalar losses are available.
+
+This reframes the remaining Route-B problem sharply:
+
+> convert the physical near-rank-one corridor blocks into either an exact row
+> dependency, or a quantitative small-singular-value direction whose associated
+> train-angle flex contradicts diameter minimality before the `s_Z` mixed-stress
+> budget can absorb it.
+
+The theorem does not itself supply that quantitative conditioning estimate.
+
+---
+
+## 5. Scope audit
+
+- All rigidity matrices are on the nonisolated positive-contact core only.
+- Contact-isolated source points are retained in the full source and are not inserted
+  into `R_C` or `R_{C union H}`.
+- The exact identity uses only planar Euler, the audited stopped-train decomposition,
+  and elementary rigidity rank-nullity.
+- The inequality `sigma_C<=s_Z` uses only the canonical mixed rank and the existence of
+  one KKT equilibrium stress with nonzero diameter part.
+- No response theorem, carrier constant, or asymptotic limiting argument is used.
+
+**Disposition:** proof-only exact structural identity. C-II remains open.

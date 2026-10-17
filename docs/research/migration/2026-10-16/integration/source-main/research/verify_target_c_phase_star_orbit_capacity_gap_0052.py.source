@@ -1,0 +1,148 @@
+#!/usr/bin/env python3
+"""Exact rational certificate for the Target C-II phase-star orbit-capacity gap 0.0052.
+
+The certificate proves the load-bearing inequalities used in
+`target_c_phase_star_orbit_capacity_gap_0052_2026-09-15.md`.
+
+No floating-point arithmetic is used for assertions. Printed decimals are diagnostics only.
+"""
+
+from fractions import Fraction as F
+from math import isqrt
+
+
+def atan_inv_bounds(q: int, n: int):
+    """Alternating-series rational bounds for atan(1/q)."""
+    s = F(0)
+    for k in range(n):
+        term = F(1, (2 * k + 1) * q ** (2 * k + 1))
+        s += term if k % 2 == 0 else -term
+    nxt = F(1, (2 * n + 1) * q ** (2 * n + 1))
+    # The omitted tail has the sign of the next term and magnitude below nxt.
+    if n % 2 == 0:
+        return s, s + nxt
+    return s - nxt, s
+
+
+def sqrt_bounds(x_lo: F, x_hi: F, scale: int):
+    """Rational decimal-grid enclosure for sqrt([x_lo,x_hi])."""
+    lo_n = isqrt((x_lo.numerator * scale * scale) // x_lo.denominator)
+    hi_n = isqrt((x_hi.numerator * scale * scale) // x_hi.denominator)
+    return F(lo_n, scale), F(hi_n + 1, scale)
+
+
+def dec(x: F, digits: int = 16) -> str:
+    """Diagnostic decimal string only; never used in assertions."""
+    return f"{float(x):.{digits}g}"
+
+
+# Exact Machin enclosure for pi.
+a5_lo, a5_hi = atan_inv_bounds(5, 80)
+a239_lo, a239_hi = atan_inv_bounds(239, 20)
+pi_lo = 16 * a5_lo - 4 * a239_hi
+pi_hi = 16 * a5_hi - 4 * a239_lo
+assert pi_lo < pi_hi
+
+# Exact rational enclosures for sqrt(3), Delta_2, sqrt(Delta_2), and K=2/sqrt(3).
+DIGITS = 70
+SCALE = 10 ** DIGITS
+sqrt3_n = isqrt(3 * SCALE * SCALE)
+sqrt3_lo = F(sqrt3_n, SCALE)
+sqrt3_hi = F(sqrt3_n + 1, SCALE)
+assert sqrt3_lo * sqrt3_lo < 3 < sqrt3_hi * sqrt3_hi
+
+K_lo = F(2) / sqrt3_hi
+K_hi = F(2) / sqrt3_lo
+Delta_lo = pi_lo / (2 * sqrt3_hi)
+Delta_hi = pi_hi / (2 * sqrt3_lo)
+s_lo, s_hi = sqrt_bounds(Delta_lo, Delta_hi, SCALE)
+assert s_lo * s_lo <= Delta_lo
+assert s_hi * s_hi >= Delta_hi
+
+alpha = F(2, 29)
+g = F(52, 10000)  # 0.0052
+A_lo = 2 * s_lo + g
+A_hi = 2 * s_hi + g
+
+# Generic dominant-orbit lower bound M >= 4 Delta_2 / A_0.
+M0_lo = 4 * Delta_lo / A_hi
+
+# Relevant-center geometry checks.
+# r=(W+C)/2-K is positive already at C=W/3 and W=M0.
+r_left_lo = F(2, 3) * M0_lo - K_hi
+assert r_left_lo > 0
+
+# r<C on W/3<=C<=W/2 follows from W-C<2K; certify the worst endpoint.
+r_less_c_margin = 2 * K_lo - F(2, 3) * A_hi
+assert r_less_c_margin > 0
+
+# Phi_C(W,W/3)>0 uniformly on M0<=W<=A0.
+# At C=W/3, q=0 and r=2W/3-K:
+# Phi_C = W/3 - alpha*(9/W)*r^2.
+r_edge_hi = F(2, 3) * A_hi - K_lo
+left_derivative_lo = (
+    M0_lo / 3
+    - alpha * (F(9) / M0_lo) * r_edge_hi * r_edge_hi
+)
+assert left_derivative_lo > 0
+
+# At C=W/2, Phi_C<0 because W-2C=0 and the penalty derivative is positive.
+# The preceding positivity plus Phi_CC<=-2 gives a unique interior maximizer C_*(W).
+
+# Envelope slope lower bound used to prove that
+# Psi(M)+(A0-M)^2/4 increases with M.
+# At C_*(M): C>=M/3, q<=1, r<=3A0/4-K.
+r_slope_hi = F(3, 4) * A_hi - K_lo
+psi_slope_lo = M0_lo / 3 - alpha * r_slope_hi
+residual_slope_hi = (A_hi - M0_lo) / 2
+net_slope_lo = psi_slope_lo - residual_slope_hi
+assert net_slope_lo > 0
+
+# Strong-concavity tangent certificate for Psi(A0).
+# c0 is chosen near the numerical maximizer.
+c0 = F(94043, 100000)
+assert A_hi / 3 < c0 < A_lo / 2
+
+# q = 3-A/c and r=(A+c)/2-K, all positive here.
+q_lo = 3 - A_hi / c0
+q_hi = 3 - A_lo / c0
+r_lo = (A_lo + c0) / 2 - K_hi
+r_hi = (A_hi + c0) / 2 - K_lo
+assert q_lo > 0 and r_lo > 0
+
+# Phi(A,c)=c(A-c)-alpha*q*r^2.
+term1_lo = c0 * (A_lo - c0)
+term1_hi = c0 * (A_hi - c0)
+penalty_lo = alpha * q_lo * r_lo * r_lo
+penalty_hi = alpha * q_hi * r_hi * r_hi
+phi_lo = term1_lo - penalty_hi
+phi_hi = term1_hi - penalty_lo
+
+# Phi_C = A-2c-alpha[(A/c^2)r^2+q r].
+part1_lo = A_lo / (c0 * c0) * r_lo * r_lo
+part1_hi = A_hi / (c0 * c0) * r_hi * r_hi
+part2_lo = q_lo * r_lo
+part2_hi = q_hi * r_hi
+phi_c_lo = A_lo - 2 * c0 - alpha * (part1_hi + part2_hi)
+phi_c_hi = A_hi - 2 * c0 - alpha * (part1_lo + part2_lo)
+phi_c_abs_hi = max(abs(phi_c_lo), abs(phi_c_hi))
+
+# Because Phi_CC<=-2 on the whole relevant center interval,
+# max_C Phi(A0,C) <= Phi(A0,c0)+Phi_C(A0,c0)^2/4.
+psi_A0_hi = phi_hi + phi_c_abs_hi * phi_c_abs_hi / 4
+capacity_margin_lo = Delta_lo - psi_A0_hi
+assert capacity_margin_lo > F(13913, 100000000)  # > 1.3913e-4
+
+print("phase-star orbit-capacity gap 0.0052: PASS")
+print("pi interval width:", dec(pi_hi - pi_lo))
+print("Delta_2 lower:", dec(Delta_lo))
+print("A0 upper:", dec(A_hi))
+print("M0 lower:", dec(M0_lo))
+print("left-center derivative lower:", dec(left_derivative_lo))
+print("Psi slope lower:", dec(psi_slope_lo))
+print("residual slope upper:", dec(residual_slope_hi))
+print("net M-monotonicity slope lower:", dec(net_slope_lo))
+print("Phi(c0) upper:", dec(phi_hi))
+print("|Phi_C(c0)| upper:", dec(phi_c_abs_hi))
+print("Psi(A0) strong-concavity upper:", dec(psi_A0_hi))
+print("Delta_2-Psi(A0) lower:", dec(capacity_margin_lo))

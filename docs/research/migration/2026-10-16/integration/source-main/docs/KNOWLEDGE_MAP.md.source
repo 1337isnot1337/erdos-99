@@ -1,0 +1,83 @@
+# Knowledge map
+
+Always read [`STATE.md`](STATE.md) first. This file is navigation, not an independent theorem source.
+
+## Five-minute orientation
+
+1. [`STATE.md`](STATE.md) — exact current theorem lifecycle/status.
+2. [`problem/statement.md`](problem/statement.md) — Level I quantifiers.
+3. Pick one route map:
+   - [`targets/target-a/README.md`](targets/target-a/README.md)
+   - [`targets/target-b/README.md`](targets/target-b/README.md)
+   - [`targets/target-c/README.md`](targets/target-c/README.md)
+4. Read only the canonical modules/reports named there.
+5. Read the current route prompt from [`prompts/README.md`](prompts/README.md) last.
+
+For research workflow also read [`../AGENTS.md`](../AGENTS.md) and [`RESEARCH_WORKFLOW.md`](RESEARCH_WORKFLOW.md).
+
+## Current route summaries
+
+### Target A
+
+Canonical development runs through Section 177. The Section-167 source-labeled Menger endpoint and Section-174 full basis-closed shield penalty are historical. Section 175 reduces the locked branch to the interior-tube right-deficiency inequality `|O_iso| + sum_i max(0,|O_i|-|C_i|) >= j_* + |T_Z|`. Section 176 proves the zero-slack inner-source defect is at most `12d+9` and localizes every saturating source matching to contact-shield sectors outside an explicit boundary-order exceptional set. Target A remains open.
+
+### Target B
+
+The canonical endpoint remains the joint outer-shell stability inequality. The September 11 independent dense-grid / penetration / interpolation audit promotes DT1–DT4, TG1–TG3, PDG, PC1/PC3, MCP1, fixed-`lambda` MCP2, and GPI under their exact pure-disk/coherent-component hypotheses. These are canonical scoped tools, not a multi-grain globalization; the global transfer across several macroscopic coherent grains remains open.
+
+### Target C
+
+Start at [`targets/target-c/CURRENT.md`](targets/target-c/CURRENT.md), not chronological report search.
+
+Current canonical state:
+
+1. C-I is closed; C-II remains open.
+2. Zero/additive response transfer is excluded in the promoted regime.
+3. ZR/ZF is scoped to the nonisolated positive-contact core `V`: `ker Omega_V=span{1,Px|_V,Py|_V}`, mixed core rigidity rank `2v-3`, `e+h>=2v-2`, and `h>=delta>=ceil(D)`. Contact-isolated source points remain in the full configuration.
+4. Sections 58–69 give full-source geometry, difference-body density/stability, nonmatching and attachment currency, all-topology population transport, punctured phase control, and a forced quadratic coherent physical grain in the quadratic-core branch.
+5. Section 70 gives sharp Woodall-forest endpoint area/inradius and a linear family of distinct shallow inward contacts. Section 71 gives selected-extreme attachment separation/perimeter control with the genuine deficiency and pinned-nullity terms retained.
+6. Section 72 is canonical only in the exact primitive all-loaded shell `m=0`, `d_H+s_Z=2`, `C=C_q`: `dim S=s_Z=2-d_H`, every full-H leaf diameter edge stays positive throughout `S`, and for `s_Z>0` at least `s_Z+1=3-d_H` nonleaf–nonleaf diameter edges occur. No facet-derived lower bound is asserted for `(d_H,s_Z)=(2,0)`.
+7. Section 73 closes grid extraction in the quadratic-core branch even with holes: a Section-69 grain with `R` rhombi and `T=P/2` trains has complete internally noncrossing shores `>=c_PS R/T` and a complete distinct-phase subgrid with shores `>=(c_PS/2)R/T=Omega(D)`.
+8. Section 74 collapses half of each linear phase-pure shore to inverse-diameter phase width: every retained complete-grid rhombus has angle `pi/3+O(1/D)`. The live obstruction is boundary-budget common-order/penetration or a direct diameter contradiction.
+9. The full loaded diameter graph has the exact Woodall topology split and all selected diameter routes meet one common positive-contact bridge block.
+10. The independently audited PR #188 and PR #182 scalar chains remain canonical. The pocket-degree numerical optimizer near `0.767...` remains exploratory.
+11. PR #191's `0.995540...` theorem remains rejected because the inward pocket and exterior Reuleaux minor cap lie on opposite sides of the force-hull chord.
+12. In the narrow primitive `d_H=1,s_Z=1` endpoint, P1 is excluded; S1 remains open under the reciprocal-square reduction; the finite `q=13` KKT/PSD object is a regression rather than a global-minimizer theorem.
+
+### Target C dead-route checklist
+
+Do not use older reports that require any of these rejected implications unless a new proof explicitly repairs them:
+
+- incident diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- incompatible-cut pentagon objection to C53;
+- RSR disk-equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host measure saturation `=>` all five hosts populated;
+- inward OP pocket contained in the exterior Reuleaux minor cap;
+- dropping contact-isolated source points;
+- extending the Section-57 affine-kernel theorem to contact-isolated source coordinates.
+
+## Task-to-path guide
+
+| Need | Read first | Read next |
+| --- | --- | --- |
+| Exact problem | `problem/statement.md` | `problem/literature_baseline.md` |
+| What is current | `STATE.md` | `state/theorem-state.yaml` |
+| Continue Target A | `targets/target-a/README.md` | Sections 168–176 + exact dependencies |
+| Continue Target B | `targets/target-b/README.md` | named canonical modules |
+| Continue Target C | `targets/target-c/CURRENT.md` | `targets/target-c/README.md` + named canonical reports |
+| Audit a proof | `RESEARCH_WORKFLOW.md` | complete dependency chain + regressions |
+| Check shared KKT/local structure | `theory/01-local-structure.md` | route-specific theorem using it |
+| Check nonlinear/regressions | `theory/02-nonlinear-and-regressions.md` | active target module |
+| Check Oler/shell geometry | `theory/03-oler-shell.md` | active target use |
+| Source/force-hull transport | `theory/04-ambient-force-and-cap-transport.md` | current Target C state |
+| Find failed route | `STATE.md` | named audit/regression |
+| Run computation | `research/README.md` | named certificate/report |
+| Start a new model run | `STATE.md` | current prompt registry |
+
+## Report and computation rule
+
+`reports/` is intentionally provenance-rich. Unlisted reports are noncanonical by default. A correction/regression may override stronger older wording.
+
+Computation is appropriate for exact certificates, finite enumeration, regressions, and candidate discovery. A script does not establish global minimum-diameter optimality without a theorem that supplies the bridge.

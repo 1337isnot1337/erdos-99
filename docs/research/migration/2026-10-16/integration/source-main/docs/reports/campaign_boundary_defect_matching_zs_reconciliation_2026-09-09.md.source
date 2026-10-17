@@ -1,0 +1,82 @@
+<!-- theorem-state: {"artifact_id":"ART-C49994A23F98","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — ZM / ZS reconciliation note
+
+**Date:** 2026-09-09  
+**Repository base reconciled through:** `a8efd00fa7fca0c4a20911e86efd46cb0aadeb9c`  
+**Status:** `LEVEL I STATUS: STILL OPEN`
+
+This note reconciles `campaign_boundary_defect_matching_2026-09-09.md` with the ZS report that landed on `main` while the ZM report was being written:
+
+- `target_c_zf_boundary_surplus_collapse_2026-09-09.md` proves
+  \[
+  q\ge h\ge\delta\ge\lceil D\rceil
+  \]
+  and
+  \[
+  \sigma_B\ge\lceil D\rceil-2.
+  \]
+- It therefore eliminates the old C33 near-minimal boundary branch on the audited ZF route.
+- It also produces a linear family of terminal-disjoint strict size-two circular response minors, but does not lower-bound their numerical size.
+
+The ZM theorem is complementary, not superseded. ZM proves that the actual non-diameter **response graph** contains a terminal-disjoint matching `J` with
+
+\[
+|J|\ge q/16.
+\]
+
+Feeding ZS into ZM improves the diameter-scale form immediately:
+
+\[
+\boxed{|J|\ge q/16\ge\lceil D\rceil/16.}
+\tag{R.1}
+\]
+
+Thus the weaker bound `(ceil(D)+2)/32` in the original ZM report remains true but is no longer the best available consequence once current `main` is included.
+
+Every edge of `J` is a strictly subdiameter terminal pair with positive Kron response conductance, and C64 gives
+
+\[
+0<\sum_{ij\in J}c_{ij}
+\le\frac12\operatorname{tr}(\Lambda-L_H).
+\tag{R.2}
+\]
+
+The logical distinction between ZS and ZM matters:
+
+1. ZS supplies many strict circular two-connection minors. Strictness is a determinant/connection statement and can be arbitrarily small numerically.
+2. ZM supplies many actual positive off-diameter Kron conductances, terminal-disjoint as pairs.
+3. Neither theorem gives a quantitative lower bound on the aggregate conductance in (R.2).
+
+Accordingly the sharpened response-side endpoint is:
+
+> **ZM mass lemma, current-main form.** Prove that every sufficiently large audited C-II/ZF survivor has a ZM matching `J` satisfying
+> \[
+> |J|\ge\lceil D\rceil/16
+> \]
+> and
+> \[
+> \sum_{ij\in J}c_{ij}\ge c/D
+> \]
+> for some absolute `c>0`, or prove a stronger lower bound.
+
+Since
+
+\[
+\varepsilon:=\frac12\operatorname{tr}(\Lambda-L_H),
+\]
+
+(R.2) would then give `D epsilon>=c`, excluding the C66/C70/C71 near-zero phase `D epsilon->0`.
+
+A constant lower bound on the matching mass would instead give an absolute trace gap.
+
+No support-count-to-mass implication is being asserted. The known tiny-conductance and near-star regressions still prevent that shortcut. Any proof of the mass lemma must use the actual unit-contact embedding, the normalized budget `sum_C alpha=D^2`, global minimum-diameter geometry, or another source-specific quantitative invariant.
+
+The direct Level I endpoint is unchanged:
+
+\[
+\boxed{
+ b+\sum_{F\text{ bounded}}(\deg F-4)>2h.
+}
+\]
+
+ZS narrows the class in which this must be proved to the linear-boundary-surplus phase; ZM independently narrows the response substitute to a quantitative weight problem on an explicit linear matching.

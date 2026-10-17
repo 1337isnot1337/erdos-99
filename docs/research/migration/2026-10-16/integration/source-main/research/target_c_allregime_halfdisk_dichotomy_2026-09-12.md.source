@@ -1,0 +1,400 @@
+# Target C — all-regime wrapping / two-half-disk dichotomy
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only Type-II structural theorem; theorem authority unchanged.
+
+This note removes the historical `x_B=o(D)` hypothesis from the geometric two-half-disk
+alternative.  It uses only the current canonical Type-II attachment-cell tiling stack:
+Sections 80, 83, and the cap-support geometry of Section 88.
+
+The conclusion is qualitative and all-regime:
+
+> Along every Type-II subsequence, after a further subsequence, either one positive-area
+> harmonic-cell limit contains the disk center in its interior, or the harmonic cells
+> split at leading area scale into exactly two complementary half-disk cap groups.  In
+> the second alternative each group is defined by an actual harmonic-cell sequence of
+> diameter `(1-o(1))D`.
+
+No common diameter cap, small Section-101 scalar slack, outer-detour hypothesis, or
+`x_B=o(D)` assumption is used.
+
+---
+
+## 1. Canonical Type-II inputs
+
+Translate by the Type-II centers and scale by `D`.  Canonical Sections 80 and 83 give
+
+\[
+F_D/D\longrightarrow B_{1/2},
+\tag{1.1}
+\]
+
+pairwise interior-disjoint attachment cells
+
+\[
+P_{r,D}=\operatorname{conv}(A_{r,D})\subset F_D,
+\tag{1.2}
+\]
+
+and
+
+\[
+\boxed{
+\sum_r \operatorname{area}(P_{r,D})
+=\left({\pi\over4}-o(1)\right)D^2.
+}
+\tag{1.3}
+\]
+
+They also give the square-root area bound
+
+\[
+\boxed{
+\sum_r\sqrt{\operatorname{area}(P_{r,D})}=O(D).
+}
+\tag{1.4}
+\]
+
+Finally the strict-rhombus localization in the same branch gives
+
+\[
+\boxed{
+\sum_r\left(
+\operatorname{area}(P_{r,D})-A_{4,r,D}
+\right)=o(D^2),
+}
+\tag{1.5}
+\]
+
+where `A_{4,r,D}` is the strict-rhombus area assigned to cell `r`; every summand is
+nonnegative.
+
+For every fixed `eta>0`, (1.4) implies that cells of area `<eta D^2` carry total area
+`O(sqrt(eta))D^2`.  Hence only finitely many cells above the cutoff matter at leading
+area scale.  Passing to a subsequence, every retained cell converges to a positive-area
+convex set
+
+\[
+Q_i=\operatorname{conv}(S_i)\subset B_{1/2},
+\tag{1.6}
+\]
+
+with compact support `S_i` on the radius-`1/2` circle, and the `Q_i` retain pairwise
+disjoint interiors.
+
+---
+
+## 2. Center-wrapping versus closed-cap type
+
+Call a positive-area limit `Q=conv(S)` **center-wrapping** if
+
+\[
+0\in\operatorname{int}Q.
+\tag{2.1}
+\]
+
+If (2.1) fails, separation through the origin gives a unit vector `n` with
+
+\[
+n\cdot x\ge0\qquad(x\in Q),
+\]
+
+so `S` lies in a closed semicircle.  Let `J(S)` be its minimal closed supporting circle
+arc and write
+
+\[
+0<\alpha(S):=|J(S)|\le\pi.
+\tag{2.2}
+\]
+
+Compactness makes both endpoints of the minimal arc members of `S`.  Its chord is
+therefore a supporting edge of `Q`, and `Q` lies on the circular-cap side of that
+chord.
+
+Thus every positive-area limit is in exactly one of the two classes needed here:
+center-wrapping, or closed-cap type with support span at most `pi`.  The latter includes
+possible diameter-one limits whose support uses an antipodal pair; this is why the
+closed-semicircle formulation is used instead of the open-semicircle wording of the
+`lambda<1` part of Section 88.
+
+---
+
+## 3. Closed-cap support arcs remain laminar at the endpoint `alpha=pi`
+
+### Lemma 3.1
+
+For pairwise interior-disjoint positive-area closed-cap limits `Q_i`, their minimal
+support arcs `J_i` are laminar: two relative interiors are disjoint or one arc is
+contained in the other.
+
+### Proof
+
+Suppose two arcs overlap in their relative interiors and neither contains the other.
+For arcs of length at most `pi`, their four extreme endpoints alternate around the
+circle.  Hence the two base chords cross properly.  Each chord is a relative-interior
+piece of a supporting line of its positive-area convex set, and each set lies on the
+circular-cap side of its chord.  At a proper crossing, those two cap-side half-planes
+have a common open sector.  Positive area on the supported side puts interior points of
+both convex sets in that sector arbitrarily near the crossing, contradicting pairwise
+interior disjointness.
+
+The endpoint case `alpha=pi` causes no exception.  Its base chord is a diameter.  A
+partially overlapping nonnested arc still has alternating endpoints and a proper chord
+crossing.  Two complementary semicircles have disjoint arc interiors and are allowed.
+If two distinct cells had the **same** minimal semicircle, they would have the same
+diameter as a supporting edge and would lie on the same side of its line.  At every
+relative-interior point of that diameter, each positive-area convex cell contains an
+open inward wedge; the two wedges overlap.  Hence equal semicircle supports are also
+impossible for distinct interior-disjoint positive-area cells. `square`
+
+Retain the inclusion-maximal support arcs.  Lemma 3.1 plus the equal-arc exclusion makes
+their relative interiors pairwise disjoint.  If their angular lengths are
+
+\[
+\alpha_1,\ldots,\alpha_s\in(0,\pi],
+\]
+
+then
+
+\[
+\boxed{
+\sum_i\alpha_i\le2\pi.
+}
+\tag{3.1}
+\]
+
+Every retained cell nested below one maximal arc lies in its radius-`1/2` circular cap.
+Hence the whole retained group below that arc has total area at most
+
+\[
+G(\alpha_i):={\alpha_i-\sin\alpha_i\over8}.
+\tag{3.2}
+\]
+
+Cells discarded by the area cutoff are not used to define these maximal retained arcs;
+their **total area**, rather than their support spans, is paid by the `O(sqrt(eta))`
+tail from (1.4).  Thus a very thin discarded cell with a long support arc cannot spoil
+the capacity estimate for the retained family.
+
+---
+
+## 4. Disk-area saturation forces two semicircle groups
+
+Assume now that **no** positive-area harmonic-cell limit is center-wrapping.  Apply the
+preceding construction at a fixed cutoff `eta`.  Equations (1.3)--(1.4) give
+
+\[
+{\pi\over4}-O(\sqrt\eta)
+\le
+\sum_i G(\alpha_i)
+\le
+{1\over8}\sum_i\alpha_i
+\le {\pi\over4}.
+\tag{4.1}
+\]
+
+Therefore
+
+\[
+2\pi-\sum_i\alpha_i=O(\sqrt\eta)
+\tag{4.2}
+\]
+
+and, because
+
+\[
+\sum_iG(\alpha_i)
+={1\over8}\sum_i\alpha_i
+-{1\over8}\sum_i\sin\alpha_i,
+\]
+
+also
+
+\[
+\boxed{
+\sum_i\sin\alpha_i=O(\sqrt\eta).
+}
+\tag{4.3}
+\]
+
+This already classifies the equality profile.  To make the cutoff passage explicit,
+fix `epsilon in (0,pi/3)`.
+
+- Arcs with `epsilon<=alpha_i<=pi-epsilon` contribute at least `sin epsilon` each to
+  (4.3), so their number tends to zero as `eta->0`.
+- Arcs with `alpha_i<epsilon` have
+  \[
+  G(\alpha_i)
+  ={\alpha_i-\sin\alpha_i\over8}
+  \le{\alpha_i^3\over48}
+  \le{\epsilon^2\alpha_i\over48}.
+  \]
+  By (3.1), their total cap area is at most `pi epsilon^2/24`.
+- At most two maximal arcs can have length above `pi-epsilon`, because three such arcs
+  would have total length greater than `2pi`.
+
+Let first `eta->0` and then `epsilon->0`.  Since the retained cell area tends to
+`pi/4` while all small/intermediate maximal arcs carry vanishing cap area, exactly two
+maximal retained arcs survive.  Their lengths approach `pi`, and their relative
+interiors are disjoint.  Thus their limiting arcs are the two complementary
+semicircles cut by one diameter of `B_{1/2}`.
+
+The cutoff and source limits are taken by a standard finite diagonal.  Choose
+`eta_j downarrow0`.  For each `j`, choose the source index far enough along the original
+Type-II sequence that the area tail, Hausdorff cell limits, and inequalities
+(4.1)--(4.3) hold with error `o_j(1)`.  Let `J_{1,j},J_{2,j}` be the two long maximal
+retained arcs.  Compactness of the circle and a further subsequence give
+
+\[
+\boxed{
+|J_{1,j}|\to\pi,
+\qquad
+|J_{2,j}|\to\pi,
+}
+\tag{4.4}
+\]
+
+with complementary limiting semicircles.  The corresponding finite-source cells and
+groups are the sequences used below; no fixed positive cutoff is asked to produce an
+exact semicircle.
+
+Because each long group has cap capacity at most `pi/8+o(1)` and the two long groups
+together carry `pi/4-o(1)` retained area, each separately saturates.  Restoring the
+vanishing discarded tail gives
+
+\[
+\boxed{
+\sum_{r\in\mathcal G_i}
+\operatorname{area}(P_{r,D})
+=\left({\pi\over8}-o(1)\right)D^2,
+\qquad i=1,2.
+}
+\tag{4.5}
+
+Every other retained maximal support group, together with the discarded cutoff tail,
+has total area `o(D^2)` along the diagonal sequence.
+
+This proves the leading-area two-half-disk decomposition without any outer-walk
+smallness assumption.
+
+---
+
+## 5. Each half-disk group has a diameter-scale defining harmonic cell
+
+For each `i=1,2`, the long maximal retained arc `J_{i,j}` belongs to an actual retained
+harmonic cell; denote the corresponding diagonal finite-source sequence by
+`P_{i,D}^*`.  The two extreme attachment supports converge to the endpoints of
+`J_{i,j}`.  Their Euclidean chord length is
+
+\[
+D\sin(|J_{i,j}|/2)+o(D)=(1-o(1))D.
+\tag{5.1}
+\]
+
+Both endpoints are attachments of `P_{i,D}^*`, hence
+
+\[
+\boxed{
+{\operatorname{diam}(P_{i,D}^*)\over D}\to1,
+\qquad i=1,2.
+}
+\tag{5.2}
+\]
+
+Canonical harmonic trapping then gives the same diameter scale for the component graph:
+if `delta_{i,D}^*` is its contact-graph diameter,
+
+\[
+\operatorname{diam}(P_{i,D}^*)\le\delta_{i,D}^*+2,
+\]
+
+so
+
+\[
+\boxed{
+{\delta_{i,D}^*\over D}\to1.
+}
+\tag{5.3}
+\]
+
+The two defining cells need not themselves carry all of the half-disk area: nested
+components may share a dominant group.  Only their diameter-scale support span is
+asserted.
+
+---
+
+## 6. Each group also carries half of the strict-rhombus area
+
+Equation (1.5) has nonnegative summands.  Therefore the total local rhombus-area deficit
+inside either dominant group is at most the global `o(D^2)` deficit.  Combining with
+(4.5),
+
+\[
+\boxed{
+\sum_{r\in\mathcal G_i}A_{4,r,D}
+=\left({\pi\over8}-o(1)\right)D^2,
+\qquad i=1,2.
+}
+\tag{6.1}
+\]
+
+Thus the no-wrapping alternative is not merely a convex-cell partition: both half-disk
+groups contain quadratic strict-rhombus area and the full local train structure that
+comes with it.
+
+---
+
+## 7. The all-regime dichotomy
+
+Combining the preceding steps gives the structural theorem.
+
+### Theorem 7.1 — wrapping or two half-disks
+
+Along every Type-II survivor subsequence, after a further subsequence, at least one of
+the following holds.
+
+1. **Center-wrapping alternative.**  A positive-area harmonic-cell limit `Q` satisfies
+   `0 in int(Q)`.
+
+2. **Two-half-disk alternative.**  Along a finite diagonal there are two complementary
+   dominant cap groups `G_1,G_2` satisfying (4.5) and (6.1), and each has a defining
+   harmonic-cell sequence satisfying (5.2)--(5.3).  All remaining cell area is
+   `o(D^2)` outside those two groups.
+
+The alternatives are exhaustive.  The second alternative has no `x_B=o(D)`, common
+cell-diameter cap, Section-101 endpoint, or cap-minimality hypothesis.
+
+A center-wrapping limit of normalized diameter `<1` falls under the existing canonical
+wrapping-support machinery.  A center-wrapping limit of diameter `1` is already a
+near-global harmonic carrier and should be treated together with the near-diameter
+branch rather than forced into the cap classification.
+
+---
+
+## 8. Frontier effect and nonclaims
+
+The theorem converts arbitrary Type-II harmonic-cell geometry into two structural
+branches:
+
+```text
+positive-area center-wrapping carrier
+              OR
+two complementary rhombic half-disk groups,
+with one diameter-scale defining component on each side.
+```
+
+It does **not** yet close either branch.  In particular:
+
+- the two diameter-scale defining components can be nested among additional cells;
+- their near-geodesic contact routes need not be exact straight chains;
+- no same-cardinality strict sub-`D` source is constructed;
+- no exact unit triangle is inferred from the limiting half-disk equality;
+- contact-isolated source points remain part of the full source and are untouched.
+
+The next closing target in the second alternative is now specific: couple the two
+quadratic rhombic train systems across their common limiting diameter, or show that the
+two diameter-scale harmonic components force incompatible source-level diameter/contact
+loads.
+
+**Disposition:** new proof-only all-regime structural reduction.  C-II remains open.

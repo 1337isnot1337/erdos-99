@@ -1,0 +1,151 @@
+# Target C: nine-no-root k=6 p=5 support-nullity compression
+
+Date: 2026-10-04
+Base main: d432d18a14cfeccbb7e47c51960847ecc33351f2
+Dependency branch: worker-b/nine-noroot-k6-p5-quotient-basis-cover-2026-10-04
+Status: proof-level reduction plus executed exact finite support census. C-II and Level I remain open.
+
+Assume the surviving nine-no-root branch
+
+    k=6, D=-1, d_root=1, p=5,
+
+with rank-three coefficient space P and generalized weights
+(d1,d2,d3)(P)>=(2,4,5).
+
+The singleton-generator reduction leaves exactly two selected incomplete-root
+profiles:
+
+1. three singleton blocks and one pair block;
+2. five singleton blocks.
+
+It also proves there is no touched actual-empty block, every selected incomplete
+block is touched, every other touched block is complete, and the touched
+complete-root nullity is at most one.
+
+Let F be the set of distinct tetrahedral four-supports used by the nine no-root
+cycles, let m=|F|, and let T be the union of all triangular faces of supports in
+F. Since one tetrahedral support has only three undirected four-cycle
+orientations, nine distinct no-root rows force m>=3.
+
+For a triangle set X write
+
+    nu(X)=|X|-rank H(X),
+
+where H(X) is the oriented triangle-boundary matrix in the 21 edge coordinates
+of K_7.
+
+## 1. Full touched-root nullity bound
+
+Let I be the selected incomplete touched root blocks and C_touch=T\I. There are
+no touched empty blocks, so this is a partition of T.
+
+Because d_root=1,
+
+    |C_touch|-rank H(C_touch) <= 1.
+
+Since H(C_touch) is a row submatrix of H(T),
+
+    rank H(T) >= rank H(C_touch)
+              >= |T|-|I|-1.
+
+Therefore
+
+    nu(T) <= |I|+1.                                      (1)
+
+Consequently:
+
+- in the three-singleton-plus-pair profile, |I|=4 and nu(T)<=5;
+- in the five-singleton profile, |I|=5 and nu(T)<=6.
+
+This uses the full touched triangle-row nullity, not only the span of
+tetrahedron-boundary dependencies.
+
+## 2. Exact S_7 support census
+
+I executed an exact orbit enumeration of tetrahedral support families on seven
+vertices. The search starts from all three-support S_7 orbits and extends each
+retained representative by one tetrahedron. The pruning condition is nu(T)<=6.
+This is exhaustive because triangle-row nullity is monotone under adding rows.
+
+For each family the verifier forms T and computes rank H(T) modulo the prime
+1000003. The modular rank equals the rational rank: every triangle row has
+Euclidean norm sqrt(3), every square minor has order at most 21, and Hadamard
+gives
+
+    |det| <= 3^(21/2) < 1000003.
+
+Hence a nonzero integer minor cannot vanish modulo the checked prime.
+
+The exact retained orbit census is
+
+    m=3: 10 orbits, nullity distribution {3:10}
+    m=4: 38 orbits, nullity distribution {4:35,5:3}
+    m=5: 135 orbits, nullity distribution {4:1,5:107,6:27}
+    m=6: 302 orbits, nullity distribution {5:2,6:300}
+    m=7: 10 orbits, nullity distribution {6:10}
+    m=8: 0 orbits.
+
+Thus the profile-specific consequences are:
+
+### Three singletons plus one pair
+
+The bound nu(T)<=5 gives
+
+    3 <= m <= 6.                                         (2)
+
+At m=6 there are exactly two S_7 support orbits. They are the five tetrahedral
+facets on a common five-vertex set plus one extra tetrahedron, with the extra
+tetrahedron meeting that five-set in respectively three or two vertices.
+
+### Five singletons
+
+The bound nu(T)<=6 gives
+
+    3 <= m <= 7.                                         (3)
+
+At m=7 there are exactly ten S_7 support orbits, all with nu(T)=6. No
+eight-support family survives.
+
+Since the nine cycle multiplicities are positive and at most three, every m=7
+candidate has multiplicity profile either
+
+    (3,1,1,1,1,1,1)
+
+or
+
+    (2,2,1,1,1,1,1).
+
+This reduces the top support layer of the five-singleton profile to twenty
+support/multiplicity types before singleton placement, cycle orientation,
+generalized-weight, quotient-basis-cover, and external relation-rank tests.
+
+## 3. Verification record
+
+The executed verifier completed with PASS and reproduced both the known
+nu<=5 census and the new nu<=6 extension. Its local source SHA-256 was
+
+    d8c892f7b2c8425bca94f9a6df0e782e3fbd8c23fe421a2f101f2b7f8f32a01c.
+
+The exact counts above are computational proof of the finite support
+classification. The connector rejected both normal and low-level attempts to
+persist the verifier source, so this note does not claim that the executable
+source itself is committed.
+
+## 4. Remaining p=5 bottleneck
+
+The immediate finite target is now bounded:
+
+- profile (3 singleton, 1 pair): m=3,4,5,6 only, with only two m=6 support
+  orbits;
+- profile (5 singleton): m=3,4,5,6,7 only, with only ten m=7 support orbits and
+  two possible m=7 multiplicity profiles.
+
+The next highest-value exact certificate is the m=7 five-singleton layer. It
+should enumerate the ten support orbits, the two multiplicity profiles,
+five singleton placements satisfying touched-complete nullity at most one,
+all cycle orientations, singleton local directions spanning rank-three P with
+generalized weights at least (2,4,5), the quotient-basis cover/transversal
+filters, and finally require external relation-rank increment exactly six.
+
+This note does not close the p=5 branch, the nine-no-root k=6 layer, C-II, or
+Level I.

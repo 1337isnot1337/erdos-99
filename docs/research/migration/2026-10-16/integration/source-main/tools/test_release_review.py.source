@@ -1,0 +1,52 @@
+import copy
+import unittest
+
+from release_review import review_inventory
+
+
+class ReleaseReviewTests(unittest.TestCase):
+    def plan(self):
+        entries = []
+        for path in ('research/input.json', 'docs/reports/proof.md', 'tools/example.py'):
+            entries.append({'path': path, 'mode': '100644', 'git_blob_oid': 'a'*40,
+                            'source_sha256': 'b'*64, 'planned_export_sha256': 'b'*64,
+                            'reasons': ['conservative computational dependency'] if path.startswith('research/') else ['active system root'],
+                            'pending_review_fields': ['content', 'license', 'privacy', 'attribution']})
+        return {'commit': 'c'*40, 'state_version': 'fixture', 'entries': entries,
+                'generated_overlay': [], 'task_evidence': {}}
+
+    def test_exact_duplicates_keep_all_path_reviews(self):
+        result = review_inventory(self.plan())
+        self.assertEqual(result['file_count'], 3)
+        self.assertEqual(result['unique_source_contents'], 1)
+        self.assertEqual(result['duplicate_path_count'], 2)
+        self.assertEqual(result['pending_file_reviews'], 3)
+        self.assertEqual(len(result['exact_duplicate_groups'][0]['paths']), 3)
+        self.assertFalse(result['grants_clearance'])
+        self.assertEqual(result['runtime_contingency_count'], 1)
+        self.assertEqual(len(result['review_groups']), 3)
+
+    def test_rewrites_and_sensitive_review_fields(self):
+        plan = self.plan()
+        plan['entries'][0].update(reviewer='PRIVATE IDENTITY', private_note='CONFIDENTIAL',
+                                  planned_export_sha256='d'*64)
+        result = review_inventory(plan)
+        self.assertNotIn('PRIVATE IDENTITY', repr(result))
+        self.assertNotIn('CONFIDENTIAL', repr(result))
+        row = next(r for r in result['entries'] if r['path'].startswith('research/'))
+        self.assertTrue(row['rewritten'])
+        self.assertEqual(row['git_blob_oid'], 'a'*40)
+        self.assertEqual(row['pending_review_fields'], plan['entries'][0]['pending_review_fields'])
+
+    def test_unsafe_or_duplicate_paths_refused(self):
+        for change in ('../private', 'research/input.json'):
+            plan = self.plan(); plan['entries'][1]['path'] = change
+            with self.assertRaises(ValueError): review_inventory(plan)
+
+    def test_sorting_is_deterministic(self):
+        plan = self.plan(); reverse = copy.deepcopy(plan); reverse['entries'].reverse()
+        self.assertEqual(review_inventory(plan), review_inventory(reverse))
+
+
+if __name__ == '__main__':
+    unittest.main()

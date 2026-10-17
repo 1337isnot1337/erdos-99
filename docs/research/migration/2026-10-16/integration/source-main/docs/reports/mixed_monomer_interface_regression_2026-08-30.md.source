@@ -1,0 +1,231 @@
+<!-- theorem-state: {"artifact_id":"ART-D5323C735FF0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Exact mixed-monomer interface regression
+
+This note records a local geometric no-go result for the Target A scaffold. It
+does not assert that a large mixed phase is globally realizable; it shows that
+local cell geometry cannot, by itself, force a single monomer orientation.
+
+Use the triangular-lattice basis \((e_1,e_2)\) with
+
+\[
+|a e_1+b e_2|^2=a^2+ab+b^2.
+\]
+
+Consider the two edge-sharing elementary triangles
+
+\[
+T_+=\{(0,0),(1,0),(0,1)\},
+\qquad
+T_-=\{(1,0),(0,1),(1,1)\}.
+\]
+
+For a rational parameter \(0<t<1/2\), put
+
+\[
+p_t=(t,t),
+\qquad
+q_t=(1-t,1-t).
+\]
+
+The barycentric coordinates of \(p_t\) in \(T_+\) are
+
+\[
+(1-2t,t,t),
+\]
+
+and those of \(q_t\) in \(T_-\) are
+
+\[
+(t,t,1-2t).
+\]
+
+Thus both blockers are strictly inside their respective cells. Directly from
+the quadratic form, the largest squared distance from either blocker to one of
+the three vertices of its own triangle is
+
+\[
+1-3t+3t^2<1.
+\tag{1}
+\]
+
+The blockers themselves have squared separation
+
+\[
+|p_t-q_t|^2=3(1-2t)^2.
+\tag{2}
+\]
+
+Therefore this explicit pair is unit-separated whenever
+
+\[
+3(1-2t)^2\ge1.
+\tag{3}
+\]
+
+For the exact regression value \(t=1/10\), the two relevant margins are
+
+\[
+\max_{v\in T_+}|p_t-v|^2
+=\max_{v\in T_-}|q_t-v|^2
+=\frac{73}{100}<1,
+\]
+
+and
+
+\[
+|p_t-q_t|^2=\frac{48}{25}>1.
+\]
+
+## The full conflict neighborhoods
+
+The example is not merely a check against the three displayed vertices. Translate
+the origin to the nearby lattice anchor. The lattice vectors with squared norm
+at most three are finite, and exact evaluation gives
+
+\[
+N_\Lambda(p_{1/10})
+=\{(0,0),(1,0),(0,1)\},
+\tag{4}
+\]
+
+and
+
+\[
+N_\Lambda(q_{1/10})
+=\{(1,0),(0,1),(1,1)\}.
+\tag{5}
+\]
+
+No vector outside this shell can be a strict conflict. Indeed, a lattice vector
+of squared norm at least four has norm at least two, whereas each blocker is at
+oblique distance \(\sqrt3/10<\sqrt3/2\) from its anchor. The reverse triangle
+inequality gives a distance larger than one. Consequently (4)--(5) are complete
+strict conflict neighborhoods, not truncated neighborhoods.
+
+The two cells share the edge \([(1,0),(0,1)]\), have disjoint interiors, and
+their blockers are at distance greater than one. Hence adjacent opposite-
+orientation monomers can occur in a locally valid blocker shore with the exact
+degree-three neighborhoods required by the scaffold classification.
+
+## An interface of arbitrary finite length
+
+The local example can be assembled along a diagonal. In the index square
+\(\{0,\ldots,L-1\}^2\), use
+
+\[
+p_{ij}=(i+t,j+t)\quad\text{for }i+j\le L-1,
+\]
+
+in the \(+\)-triangle \(T_+(i,j)\), and
+
+\[
+q_{ij}=(i+1-t,j+1-t)\quad\text{for }i+j\ge L-1,
+\]
+
+in the \(-\)-triangle \(T_-(i,j)\). There are
+
+\[
+\frac{L(L+1)}2+\frac{L(L+1)}2=L(L+1)
+\tag{6}
+\]
+
+blockers. The two index regions meet along a diagonal of \(L\) cells, so this
+is a mixed interface whose length grows without bound while the two phases each
+occupy a macroscopic triangular region.
+
+Same-orientation blockers differ by a nonzero lattice vector and are therefore
+at distance at least one. For a plus blocker and a minus blocker, write
+
+\[
+a=k-i+1,\qquad b=\ell-j+1,\qquad r=2t.
+\]
+
+The index inequalities imply \(a+b\ge2\), and their difference vector is
+\((a-r)e_1+(b-r)e_2\). Since
+
+\[
+u^2+uv+v^2
+=\frac34(u+v)^2+\frac14(u-v)^2,
+\]
+
+we obtain
+
+\[
+\begin{aligned}
+|q_{k\ell}-p_{ij}|^2
+&\ge \frac34(2-2r)^2\\
+&=3(1-2t)^2.
+\end{aligned}
+\tag{7}
+\]
+
+Thus the complete diagonal family is unit-separated whenever
+\(3(1-2t)^2\ge1\). For example, \(t=1/10\) gives the strict lower bound
+\(48/25\) on all cross-orientation distances. The same finite-shell argument
+used for the two-cell example translates to every blocker, so each point has
+exactly its declared three lattice conflicts; the interface does not introduce
+hidden degree-four cells.
+
+The executable certificate checks sides through \(L=11\), but inequality (7) is
+independent of \(L\), so the construction is a finite family of arbitrary length,
+not a search artifact.
+
+The same family has an explicit incidence matching. Match each \(+\)-cell to
+its lower-left vertex \((i,j)\), and each \(-\)-cell to its upper-right vertex
+\((i+1,j+1)\). The plus assignments have coordinate sum at most \(L-1\), while
+the minus assignments have coordinate sum at least \(L+1\); within each class the
+index pair is unique. Thus all \(L(L+1)\) cells are matched to distinct lattice
+vertices. The selected vertex set has \((L+1)^2\) sites, so the raw incidence
+deficiency is
+
+\[
+L(L+1)-(L+1)^2=-(L+1),
+\tag{8}
+\]
+
+and the left Hall nullity is exactly zero. This is an explicit mixed-interface
+family with arbitrary interface length, exact blocker separation, complete local
+neighborhoods, and no scaffold nullity generated by the interface itself.
+
+There is also a parameter-free way to see the Hall-neutrality of this corner-well
+family. Call a blocker *central* if it has no lattice conflict vertex at distance
+less than \(1/2\). Every noncentral blocker can be assigned a conflict vertex at
+distance less than \(1/2\). Two unit-separated blockers cannot receive the same
+assignment, since the triangle inequality would make their mutual distance less
+than one. Hence for any selected cell set \(S\),
+
+\[
+|N(S)|\ge |S\setminus C|,
+\qquad
+|S|-|N(S)|\le |S\cap C|,
+\tag{9}
+\]
+
+where \(C\) is the set of central blockers. In particular, a positive Hall core
+requires central blockers, and its deficiency is at most their number. In the
+diagonal construction the anchor distance squared is \(3t^2\); for the certified
+range \(t=1/10\) (and more generally \(3t^2<1/4\)), every blocker is noncentral.
+The explicit matching above is therefore also an instance of this general
+sub-half-anchor bound.
+
+## Frontier consequence
+
+This closes a tempting but invalid shortcut:
+
+> disjoint monomer cells plus unit separation of their blockers force a single
+> orientation phase.
+
+They do not. Any phase-rigidity proof must add a genuinely bulk or interface
+argument—for example, a quantitative bound on how many such interfaces can be
+assembled, or a source-specific diameter variation. The diagonal construction
+shows that an interface can be assembled for arbitrary finite length, although it
+separates two-dimensional \(+\) and \(-\) regions, and its explicit matching shows
+that the interface need not carry Hall nullity. It also does not prove that
+this finite scaffold is a globally optimal packing; it only prevents local cell
+geometry or interface length from being used as the missing Target A theorem.
+
+The exact arithmetic implementation and regression are in
+research/mixed_monomer_interface.py and
+research/test_mixed_monomer_interface.py.
+
+**LEVEL I STATUS: STILL OPEN. TARGET A REMAINS UNRESOLVED.**

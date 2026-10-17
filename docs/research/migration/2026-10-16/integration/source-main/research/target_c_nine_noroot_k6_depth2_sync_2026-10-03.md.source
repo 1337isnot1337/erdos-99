@@ -1,0 +1,159 @@
+# Target C: nine-no-root k=6 depth-two synchronization
+
+Date: 2026-10-03
+Base main: 7a327e1ad95cd2e9cb035b9b96fb34fd8f12114d
+Status: proof-only reduction. C-II and Level I remain open.
+
+Let B have nine no-root rows and k=6. Current main gives D in {-2,-1},
+rank(P)=3, and for every nonempty deleted coordinate set S,
+
+    D(B-S)=D(B)+2|S|-3 q_S >= 0,
+
+where q_S is the puncture rank loss of the coefficient space P. Hence
+
+    D=-2: (d1,d2,d3)(P)>=(3,4,6),
+    D=-1: (d1,d2,d3)(P)>=(2,4,5).
+
+The root identity is D=p+3 d_root-9. The six arithmetic branches are
+
+    D=-2: (d_root,p)=(0,7),(1,4),(2,1),
+    D=-1: (d_root,p)=(0,8),(1,5),(2,2).
+
+The current-main eight-no-root rank-three low-p theorem
+research/target_c_support7_global_segment_relative_eight_noroot_k5_low_p_containment_lift_closure_2026-09-23.md
+excludes the p=1 and p=2 parent branches after one deletion. It also implies:
+
+    D=-2,p=4: every one-row shadow retains p=4;
+    D=-1,p=5: every one-row shadow retains p=5;
+    D=-2,p=7: at least seven coordinates retain p=7;
+    D=-1,p=8: at least seven coordinates retain p=8.
+
+Call a coordinate p-good when its one-row shadow retains p.
+
+## Pair-rank structure
+
+For D=-2, d1(P)>=3, so every coordinate pair preserves rank(P)=3.
+
+For D=-1, distinct weight-two projective lines of P have disjoint supports.
+Otherwise two independent weight-two words would span a two-dimensional
+subcode on at most three coordinates, contradicting d2(P)>=4. Since rank(P)=3,
+there are at most three such lines. Thus at least 33 of the 36 coordinate pairs
+preserve rank.
+
+For any rank-preserving pair {i,j}, the seven-row shadow has rank three, k=4,
+and D_ij=D+4. Comparing root identities gives
+
+    p-p_ij = 3(d_ij-d_root).                              (1)
+
+So pair loss is a multiple of three.
+
+## Pair-loss-three lemma
+
+Assume i and j are individually p-good and deleting {i,j} loses exactly three
+selected incomplete root rows. Every lost block then has exact external support
+{i,j}. An incomplete root block contains at most two selected rows, so there
+are at least two distinct lost blocks and at least one lost singleton block.
+
+The current-main local four-cycle geometry from
+research/target_c_support7_global_segment_relative_seven_noroot_k4_dminus2_d0p3_closure_2026-09-20.md
+says that two no-root cycles jointly touching two distinct root blocks are two
+different orientations of one four-set, and their local quotient directions
+differ at each common root block.
+
+At the lost singleton block, its singleton coefficient constraint is therefore
+nonzero and supported inside {i,j}. This constraint lies in P. Thus pair loss
+three forces a nonzero word of P supported on {i,j}.
+
+Consequences:
+
+- for D=-2, pair loss three is impossible;
+- for D=-1, pair loss three is impossible on every rank-preserving pair.
+
+## Four branch consequences
+
+1. D=-2, (d_root,p)=(1,4).
+
+All nine coordinates are p-good and all 36 pairs preserve rank. Equation (1)
+allows only loss 0 or 3, and loss 3 is impossible. Therefore every pair shadow is
+
+    seven no-root rows, rank(P)=3, k=4, D=2, d_root=1, p=4.
+
+In particular every selected incomplete block in the parent is touched by at
+least three no-root rows.
+
+2. D=-1, (d_root,p)=(1,5).
+
+All nine coordinates are p-good. Every rank-preserving pair retains p=5, so at
+least 33 pair shadows are exactly
+
+    seven no-root rows, rank(P)=3, k=4, D=3, d_root=1, p=5.
+
+Any p-loss pair must be a weight-two support. Weight-two supports are disjoint,
+and each p-loss consumes three selected rows, so at most one pair can lose p.
+Hence at least 35 of all 36 pair deletions retain p=5.
+
+3. D=-2, (d_root,p)=(0,7).
+
+There is a p-good set G of size at least seven. All pairs preserve rank.
+For pairs inside G, losses can be 0,3,6. Loss 3 is impossible. If loss 6 occurs,
+then no lost block can be a singleton, or the same local argument would create
+a weight-at-most-two word in P. Thus a six-loss pair consists of exactly three
+selected pair blocks, all with exact support {i,j}; call this a triple-pair
+packet. At most one such packet can occur because p=7. Therefore at least 20 of
+the 21 pairs inside G retain p=7 and give exact seven-row (k,D,d_root,p)=(4,2,0,7)
+shadows.
+
+4. D=-1, (d_root,p)=(0,8).
+
+There is a p-good set G of size at least seven. Among its 21 pairs, at least 18
+preserve rank. On a rank-preserving pair, loss 3 is impossible, and loss 6 can
+only be a triple-pair packet. At most one such packet can occur because p=8.
+Therefore at least 17 pairs in G give exact rank-three seven-row
+(k,D,d_root,p)=(4,3,0,8) shadows.
+
+The next finite target is therefore the four seven-row positive-defect boundary
+classes above, with simultaneous extension multiplicities 36, at least 33,
+at least 20, and at least 17 respectively, rather than an unrestricted
+nine-row k=6 search.
+
+No numerical search, verifier output, floating-point calculation, or CI result
+is used as a proof premise.
+
+
+## Depth-three p=4 synchronization
+
+In the D=-2, d_root=1, p=4 branch, every three-coordinate deletion also
+retains p=4.
+
+Let S={i,j,k}. The root-cost identity makes p-p_S a multiple of three, so a
+loss would have size three. The depth-two result implies that every block lost
+under deletion of S has exact external support S. Since an incomplete block
+contains at most two selected root rows, total lost cost three uses at least
+two distinct blocks and includes a singleton.
+
+Thus i,j,k jointly touch two distinct root blocks. Current-main local
+four-cycle geometry puts all three cycles on the same four-set, so they are its
+three orientations and give the three distinct local projective directions at
+the lost singleton block. The singleton constraint vanishes on the orientation
+parallel to the selected root row and is nonzero on the other two. It is
+therefore a weight-two nonzero word of the parent coefficient space P,
+contradicting d1(P)>=3.
+
+Hence all C(9,3)=84 triple deletions retain p=4, and every selected incomplete
+block is touched by at least four of the nine no-root rows.
+
+For every triple,
+
+    D(B-S)=4-3q_S>=0,
+
+so q_S is 0 or 1. The only six-row shadow types are
+
+    q_S=0: rank(P_S)=3, k=3, D=4, d_root=1, p=4;
+    q_S=1: rank(P_S)=2, k=4, D=1, d_root=1, p=4.
+
+At least twenty triples have q_S=0. Indeed Q^9/P has dimension six; choose six
+coordinate classes forming a basis. Every triple among them is independent
+modulo P, giving C(6,3)=20 rank-preserving punctures.
+
+This is proof-only. The next finite target is a simultaneous-extension
+classification of these two six-row shadow types.

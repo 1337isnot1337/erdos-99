@@ -1,0 +1,269 @@
+# Target C-II — bridge-deduplicated long-side contact concentration
+
+**Date:** 2026-09-14  
+**Composes:** main `target_c_outer_route_direction_concentration_2026-09-14.md` with the audited proof-only bridge-subtracted outer-face isoperimetry theorem  
+**Status:** proof-only full-core Type-II strengthening; theorem-state authority unchanged  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The current long-side physicalization converts long loaded-hull side mass into
+near-tangent outer-route edge occurrences and then divides by two because a physical
+outer-face edge may occur twice.  In the full Type-II positive core that factor-two
+loss is far too large: an outer-face edge occurs twice only when it is a graph bridge,
+and the audited full-area bridge inequality makes the entire bridge population no
+larger than half the metric outer detour, up to `o(D)`.
+
+This raises the current low-`t` long-side branch from roughly `0.2074D` distinct
+near-tangent contacts to more than `0.3970D` while tightening the direction window from
+30 degrees to 22.5 degrees.
+
+---
+
+## 1. Occurrence deduplication by physical bridges
+
+Use the outer-route notation of main:
+
+- `d_out=b-per(F)` is total metric outer detour;
+- `L_{>2}=sum_{s_i>2}(s_i-2)` is rounded long-side mass;
+- for fixed `beta`, an outer-route occurrence is `beta`-good when its oriented unit
+  vector lies within angle `beta` of its loaded-hull chord direction.
+
+The exact directional-energy identity gives
+
+\[
+A_\beta\le {d_{out}\over1-\cos\beta},
+\tag{BD.1}
+\]
+
+where `A_beta` is the total number of bad outer-route occurrences.  Hence the
+long-side routes contain at least
+
+\[
+G_\beta
+\ge
+L_{>2}-{d_{out}\over1-\cos\beta}
+\tag{BD.2}
+\]
+
+good occurrences.
+
+Let `B_o` be the number of graph-theoretic positive-contact bridges with both sides on
+the unbounded face.
+
+### Lemma BD.1 — exact bridge deduplication
+
+If `E_tan(beta)` is the number of distinct physical contact edges represented among
+the good long-side occurrences, then
+
+\[
+\boxed{
+E_{tan}(\beta)\ge G_\beta-B_o.
+}
+\tag{BD.3}
+\]
+
+### Proof
+
+In a connected plane graph, a physical edge has the same face on both sides if and
+only if it is a graph bridge.  Therefore:
+
+- a nonbridge contact edge contributes at most one occurrence to the outer-face walk;
+- an outer bridge contributes exactly two outer-face occurrences.
+
+Restricting to any subset of outer-face occurrences cannot increase either
+multiplicity.  If `m_e` is the number of selected good occurrences of edge `e`, then
+`m_e<=1` for nonbridges and `m_e<=2` for the `B_o` outer bridges.  Thus
+
+\[
+G_\beta=\sum_em_e
+\le E_{tan}(\beta)+B_o,
+\]
+
+which is (BD.3). `square`
+
+Combining with (BD.2),
+
+\[
+\boxed{
+E_{tan}(\beta)
+\ge
+L_{>2}-{d_{out}\over1-\cos\beta}-B_o.
+}
+\tag{BD.4}
+\]
+
+This is strictly stronger than the generic `G_beta/2` estimate whenever the outer
+bridge population is small.
+
+---
+
+## 2. Full-core Type-II bridge budget
+
+Let `U` be the union of the closures of all bounded faces of the full positive-contact
+core and put `A_U=area(U)`.  The hostile-audited bridge-subtracted theorem gives the
+finite inequality
+
+\[
+B_o\le {b-2\sqrt{\pi A_U}\over2}.
+\tag{BD.5}
+\]
+
+In the canonical no-container full-core Type-II branch,
+
+\[
+{A_U\over D^2}\to{\pi\over4}.
+\tag{BD.6}
+\]
+
+This is the audited area sandwich
+
+\[
+A_4\le A_U\le area(F),
+\]
+
+with both endpoints asymptotic to `pi D^2/4`.  Also
+
+\[
+per(F)=\pi D+o(D),
+\qquad
+b=per(F)+d_{out}.
+\tag{BD.7}
+\]
+
+Substituting (BD.6)--(BD.7) into (BD.5) gives
+
+\[
+\boxed{
+B_o\le {d_{out}\over2}+o(D).
+}
+\tag{BD.8}
+\]
+
+Therefore the long-side contact count sharpens to
+
+\[
+\boxed{
+E_{tan}(\beta)
+\ge
+L_{>2}
+-\left({1\over1-\cos\beta}+{1\over2}\right)d_{out}
+-o(D).
+}
+\tag{BD.9}
+\]
+
+No KKT-weight lower bound and no two-phase hypothesis is used.  The only extra input
+beyond main's directional identity is the already-audited full-core bounded-face area
+saturation.
+
+---
+
+## 3. Current low-`t` constant with a 22.5-degree window
+
+At the present proof-only low-`t` floor, on the long-side branch,
+
+\[
+{L_{>2}\over D}
+\ge0.4363893718701161781\ldots-o(1),
+\tag{BD.10}
+\]
+
+and
+
+\[
+{d_{out}\over D}
+\le0.002883975+o(1).
+\tag{BD.11}
+\]
+
+Choose the tighter direction window
+
+\[
+\boxed{\beta={\pi\over8}=22.5^\circ.}
+\]
+
+Then
+
+\[
+1-\cos(\pi/8)
+=1-{\sqrt{2+\sqrt2}\over2}
+=0.0761204674887132\ldots .
+\]
+
+Equation (BD.9) yields
+
+\[
+\boxed{
+{E_{tan}(\pi/8)\over D}
+\ge0.39706039950067\ldots-o(1).
+}
+\tag{BD.12}
+\]
+
+Thus the long-side branch contains more than `0.397D-o(D)` distinct physical
+outer-face unit contacts whose oriented directions stay within 22.5 degrees of their
+corresponding long loaded-hull sides.
+
+For comparison, using the older `beta=pi/6` window gives the still larger count
+
+\[
+{E_{tan}(\pi/6)\over D}
+\ge0.41342110191459\ldots-o(1),
+\tag{BD.13}
+\]
+
+rather than main's pre-bridge-deduplication value `0.2074315...`.
+
+---
+
+## 4. Strengthened physical low-`t` dichotomy
+
+The companion internal-edge injectivity upgrade gives, on the tooth branch with
+`eta=1/15`,
+
+\[
+{E_{int}\over D}
+\ge0.3931297468701161\ldots-o(1),
+\tag{BD.14}
+\]
+
+where every counted edge is an unloaded-to-unloaded internal contact crossing from a
+shallow boundary layer to depth greater than `sqrt(3)/2` relative to its tooth base.
+
+Combining (BD.12) and (BD.14), every current-floor low-`t` full-core survivor obeys
+
+\[
+\boxed{
+\begin{array}{ll}
+\text{either}&\ge0.3931297468D-o(D)\text{ distinct internal penetration contacts},\\[1mm]
+\text{or}&\ge0.3970603995D-o(D)\text{ distinct outer contacts within }22.5^\circ
+\text{ of long-side tangents}.
+\end{array}
+}
+\tag{BD.15}
+\]
+
+In particular, regardless of which side of the tooth/long-side split occurs, the
+source carries at least
+
+\[
+\boxed{0.3931297468D-o(D)}
+\]
+
+distinct physical unit contacts in one of two quantitatively rigid boundary families.
+This roughly doubles the branch-uniform physical-edge floor in main.
+
+---
+
+## 5. Remaining obstruction
+
+The new dichotomy is still not a C-II contradiction.  Its two families live in
+different parts of the positive-contact graph:
+
+- the tooth family lies **inside unloaded components** and is suitable for the
+  `e_r/r_r/s_r` component ledger;
+- the long-side family lies on the **outer-face route system** and is suitable for
+  train-phase or loaded-diameter/thrackle coupling.
+
+A genuine closure now needs a common source-level payment theorem or separate
+contradictions for these two families.  The numerical scarcity problem is no longer
+the bottleneck: both branches force approximately `0.4D` distinct physical contacts.

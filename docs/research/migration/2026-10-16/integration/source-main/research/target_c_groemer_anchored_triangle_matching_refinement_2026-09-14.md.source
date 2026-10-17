@@ -1,0 +1,198 @@
+# Erdős Problem #99 — dense anchored almost-triangle extraction on the Groemer branch
+
+**Date:** 2026-09-14  
+**Target:** C-II, canonical full-core Type-II branch  
+**Dependencies:** all-degree Groemer stability hostile audit; pair-level conflict refinement  
+**Claim class:** proof-only extraction refinement
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The hostile audit of the all-degree Groemer theorem strengthens the local conclusion: for every fixed degree cutoff `K` and every fixed `eta>0`, if the force-hull residual satisfies `R_F=o(D)`, then all but `o(D)` of the degree-at-most-`K` exceptional faces contain an **anchored almost-equilateral triple**
+
+\[
+|u-v|=1,
+\qquad
+1\le |u-w|<1+\eta,
+\qquad
+1\le |v-w|<1+\eta,
+\tag{AT.1}
+\]
+
+where `uv` is one of the face's existing cyclic boundary contact edges.
+
+The hostile audit extracted these triples by making the entire containing faces vertex-disjoint, losing a factor depending on `K`. That is unnecessary. Exactly as in the pair-level refinement, only the selected triples themselves must be vertex-disjoint. This improves the extraction constant by more than a factor of 50 and removes the degree cutoff from the limiting coefficient.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+f_*:=\sqrt{\Delta_2}-{\pi\over4}+0.00021
+=0.167124643466509\ldots .
+\tag{AT.2}
+\]
+
+## 1. Fixed-cutoff supply of anchored triples
+
+For every fixed `K>=5`, the AG42 face floor and `Q<=P_F` give
+
+\[
+\liminf {f_{\le K}\over D}
+\ge
+\ell_K:=f_*-{\pi\over K-3}.
+\tag{AT.3}
+\]
+
+Fix `eta>0`. The anchored Groemer stability theorem gives a constant `tau_K(eta)>0` such that a degree-at-most-`K` exceptional face with residual below `tau_K(eta)` contains a triple satisfying (AT.1).
+
+Since every chamber residual is nonnegative and their sum is `R_F=o(D)`, only
+
+\[
+{R_F\over\tau_K(\eta)}=o(D)
+\]
+
+of the degree-at-most-`K` faces can fail this residual threshold. Hence at least
+
+\[
+(\ell_K-o(1))D
+\tag{AT.4}
+\]
+
+exceptional faces contain an anchored triple satisfying (AT.1). Choose one such triple from each face.
+
+## 2. Triple conflicts have degree at most 12
+
+Build a conflict graph whose vertices are the chosen triples, with two triples adjacent when they share a source point.
+
+A contact-isolated point assigned to the interior of an exceptional face belongs to no other exceptional face. Such an endpoint creates no cross-face conflict.
+
+Now let `x` be a boundary source vertex. Because the global source is assumed triangle-free, its distinct unit-contact neighbors subtend pairwise angles strictly larger than `pi/3`; therefore
+
+\[
+\deg_C(x)\le5.
+\tag{AT.5}
+\]
+
+The number of distinct bounded face sectors incident with `x` is at most the contact degree, hence at most five. Consequently at most five chosen triples can contain the same boundary vertex `x`: the triple from one face plus at most four triples from other exceptional faces.
+
+A chosen triple has three source vertices. Through each of them there are at most four **other** chosen triples, and an interior-isolate endpoint only lowers this number. Therefore its conflict degree is at most
+
+\[
+\boxed{12.}
+\tag{AT.6}
+\]
+
+A greedy independent set in a graph of maximum degree 12 retains at least one thirteenth of the triples. Thus for every fixed `K,eta`, on `R_F=o(D)`, there exist pairwise vertex-disjoint anchored triples satisfying (AT.1) with asymptotic density at least
+
+\[
+\boxed{
+\liminf {\tau^{\triangle}_\eta\over D}
+\ge {\ell_K\over13}.
+}
+\tag{AT.7}
+\]
+
+Here `tau^triangle_eta` denotes the maximum number of pairwise vertex-disjoint anchored triples of the form (AT.1) lying in distinct exceptional faces.
+
+## 3. Remove the cutoff from the coefficient
+
+The quantity `tau^triangle_eta` is intrinsic and does not depend on `K`. Since (AT.7) holds for every fixed cutoff with positive `ell_K`, take the supremum over fixed `K`:
+
+\[
+\sup_K\ell_K=f_*.
+\]
+
+Therefore for every fixed `eta>0`,
+
+\[
+\boxed{
+\liminf {\tau^{\triangle}_\eta\over D}
+\ge {f_*\over13}
+=0.012855741805116\ldots .
+}
+\tag{AT.8}
+\]
+
+So at least about `1.2855%` of `D` pairwise-disjoint anchored almost-equilateral triples are forced for every fixed error tolerance.
+
+## 4. Vanishing-gap diagonal without coefficient loss
+
+As in the pair-level refinement, choose increasing cutoffs `K_j` with
+
+\[
+{\ell_{K_j}\over13}>{f_*\over13}-{1\over j}
+\]
+
+and let `eta_j=1/j`. For each fixed `j`, once `D` is sufficiently large, the residual-threshold loss is `o(D)` and (AT.7) supplies at least
+
+\[
+\left({f_*\over13}-{2\over j}\right)D
+\]
+
+pairwise vertex-disjoint anchored triples with both missing sides below `1+eta_j`.
+
+Choose increasing thresholds `D_j` and define `eta_D=eta_j` for `D_j<=D<D_{j+1}`. Then `eta_D->0` and
+
+\[
+\boxed{
+\liminf {\tau^{\triangle}_{\eta_D}\over D}
+\ge {f_*\over13}
+=0.012855741805116\ldots .
+}
+\tag{AT.9}
+\]
+
+Thus the small-residual branch contains a macroscopic vertex-disjoint family
+
+\[
+\boxed{
+\Omega(D)\text{ triples }(u,v,w):
+|u-v|=1,
+\quad
+|u-w|,|v-w|=1+o(1),
+}
+\tag{AT.10}
+\]
+
+with the explicit asymptotic coefficient in (AT.9).
+
+This improves the hostile audit's conservative diagonal coefficient
+
+\[
+0.000256127176574\ldots
+\]
+
+by a factor slightly above 50.
+
+## 5. Type split for the third vertex
+
+For every anchored triple, `u,v` are positive-core boundary vertices of its exceptional face. The third vertex `w` is either
+
+1. an assigned contact-isolated interior source point; or
+2. another boundary source vertex of the same exceptional face.
+
+Hence, after passing to a subsequence, at least half of the triples in (AT.9) have the same third-vertex type. Therefore one of the following two alternatives has density at least
+
+\[
+\boxed{{f_*\over26}=0.006427870902558\ldots :}
+\tag{AT.11}
+\]
+
+- **isolate-apex branch:** pairwise-disjoint anchored almost-triangles whose third point is contact-isolated inside the chamber;
+- **boundary-apex branch:** pairwise-disjoint anchored almost-triangles whose third point is another positive-core boundary vertex.
+
+This is the activation split that the independent audit of the parent theorem requested. The two branches require different source-level arguments.
+
+## 6. What this does and does not solve
+
+The isolate-apex branch is compatible with contact-wall protected motion of the third vertex, but moving an isolate to a new contact creates a contact-richer minimizer rather than contradicting the canonical contact-minimal representative. A strict sub-`D` exchange or a theorem forcing **simultaneous** activation of both missing sides is still needed.
+
+The boundary-apex branch cannot use rattler activation at all; moving `w` risks breaking positive-core unit contacts. It requires a core deformation/rigidity argument or a train/phase contradiction.
+
+Near-active inequalities still carry zero KKT multiplier in the original minimizer. Therefore the density improvement in (AT.9) does not by itself create force in the KKT equilibrium.
+
+The value of the refinement is that the remaining activation problem is now macroscopic and endpoint-disjoint, with a clean two-type split and an explicit coefficient above `0.0064 D` on one type.
+
+C-II and Level I remain open.

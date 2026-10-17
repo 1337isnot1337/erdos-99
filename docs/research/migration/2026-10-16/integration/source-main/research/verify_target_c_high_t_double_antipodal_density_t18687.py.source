@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+"""Exact-constant and path-counting regressions for double-antipodal density."""
+
+from fractions import Fraction
+from itertools import product
+
+c = Fraction(113, 5_000_000)
+C = 1_109_000
+
+bad = c / 16
+good = c * Fraction(7, 16)
+gamma = c / 512
+near = 4 * gamma
+fork = good - near
+balance = Fraction(23, 64) * c
+p0 = Fraction(23, 192) * c
+rho_star = p0 / 8
+wide_double = p0 / 2
+
+assert bad == Fraction(113, 80_000_000)
+assert good == Fraction(791, 80_000_000)
+assert gamma == Fraction(113, 2_560_000_000)
+assert near == c / 128
+assert fork == Fraction(1243, 128_000_000)
+assert balance == Fraction(2599, 320_000_000)
+assert p0 == Fraction(2599, 960_000_000)
+assert rho_star == Fraction(2599, 7_680_000_000)
+assert wide_double == Fraction(2599, 1_920_000_000)
+
+assert abs(float(p0) - 2.7072916666666665e-6) < 1e-18
+assert abs(float(rho_star) - 3.384114583333333e-7) < 1e-19
+assert abs(float(wide_double) - 1.3536458333333333e-6) < 1e-18
+
+# Local phase-width constant remains O(1/D) at the 16C threshold.
+assert 16 * C / 0.1567 < 1.133e8
+
+# Pure path combinatorics: adjacent marked pairs >= marked - unmarked - 1.
+for n in range(1, 13):
+    for bits in product((0, 1), repeat=n):
+        e = sum(bits)
+        u = n - e
+        pairs = sum(bits[i] and bits[i + 1] for i in range(n - 1))
+        assert pairs >= e - u - 1
+
+# Narrow force pairs: <=2*rho*D interfaces, each can spoil at most two cells.
+# With rho*=p0/8 this costs at most p0/2 of the cell density.
+assert 4 * rho_star == p0 / 2
+
+print("PASS: double-antipodal density and robust-cell regressions")

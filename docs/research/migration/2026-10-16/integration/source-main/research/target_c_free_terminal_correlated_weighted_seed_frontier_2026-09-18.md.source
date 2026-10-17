@@ -1,0 +1,312 @@
+# Target C-II — retain terminal correlation in the degree-weighted seed tradeoff
+
+**Date:** 2026-09-18  
+**Status:** proof-only quantitative strengthening; theorem-state authority unchanged  
+**Scope:** terminal full-core Type-II FREE subsequences with `limsup t_D <= mu_*+0.00710`  
+**Depends on:** degree-weighted pentagon seed theorem `(WS.2)`; activated-endpoint pair-shield manifold; exact terminal face/hull ledgers; live detour pinching `delta>0.017609`; exact defect partition `k=d_H+p_D+sigma_C`  
+**Certificate:** `research/verify_target_c_free_terminal_correlated_weighted_seed_frontier_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The degree-weighted pentagon-seed theorem already proves the finite inequality
+
+\[
+\sigma_C
+\le {2\over5}f+{8\over5}(Q-f)+{8\over15}E_U,
+\tag{1}
+\]
+
+where
+
+\[
+E_U=a_F+{x_A\over2}+{n_0+n_2\over2}
+\]
+
+is the structural correction in the pair-shield exact manifold. The first live consequence of that theorem bounded `f/D`, `(Q-f)/D`, and the pair-shield baseline separately. That loses the exact correlation between the three terminal defects.
+
+Keeping the correlation improves the resulting flex/topology-stress supporting line. The strengthened live inequality is
+
+\[
+\boxed{
+{d_H+p_D\over D}+{8\over15}{m_D\over D}
+>1.5158692-o(1).
+}
+\tag{2}
+\]
+
+The previous degree-weighted line, after the same normalization, was
+
+\[
+{d_H+p_D\over D}+{8\over15}{m_D\over D}
+>1.5157752794-o(1).
+\]
+
+Thus the gain is about `9.4e-5 D` in the unconverted-defect intercept. It is small but exact and comes for free from already proved correlation; no new geometric assumption is introduced.
+
+---
+
+## 1. Eliminate `E_U` without separating the terminal variables
+
+The pair-shield exact manifold satisfies
+
+\[
+m_D\ge {b-f\over2}+E_U+p_U,
+\qquad p_U\ge0.
+\]
+
+Therefore
+
+\[
+E_U\le m_D-{b-f\over2}.
+\]
+
+Substitute this directly into (1):
+
+\[
+\boxed{
+\sigma_C
+\le {2\over5}f+{8\over5}(Q-f)
++{8\over15}\left(m_D-{b-f\over2}\right).
+}
+\tag{3}
+\]
+
+This finite inequality is just the degree-weighted theorem plus the already proved pair-shield manifold. The improvement comes only when (3) is reduced with the correlated live ledger.
+
+---
+
+## 2. Correlated live reduction
+
+Use the standard live variables
+
+\[
+r={Q-f\over D},
+\qquad
+\delta={b-P_F\over D},
+\qquad
+a={\tau_D\over D}-{\pi\over2}-0.007707,
+\]
+
+with
+
+\[
+a+2(r+\delta)\le5\varepsilon_0,
+\qquad
+\varepsilon_0=0.00710,
+\tag{4}
+\]
+
+and the certified detour pinching
+
+\[
+\delta>\delta_0:=0.017609.
+\tag{5}
+\]
+
+Put
+
+\[
+M_*=4\sqrt{\frac\pi{2\sqrt3}}+2(0.007707).
+\]
+
+The exact terminal ledgers are
+
+\[
+{f\over D}
+={M_*+2a-\delta-r\over5}+o(1),
+\tag{6}
+\]
+
+\[
+{1\over D}{b-f\over2}
+={\pi\over2}-{M_*\over10}
++{3\delta\over5}+{r\over10}-{a\over5}+o(1).
+\tag{7}
+\]
+
+Divide (3) by `D` and insert (6)--(7). Collecting coefficients gives
+
+\[
+{\sigma_C\over D}-{8\over15}{m_D\over D}
+\le
+{2M_*\over15}-{4\pi\over15}
++{4a\over15}-{2\delta\over5}+{22r\over15}+o(1).
+\tag{8}
+\]
+
+Use (4):
+
+\[
+{4a\over15}-{2\delta\over5}+{22r\over15}
+\le
+{4\varepsilon_0\over3}+{14\over15}(r-\delta).
+\tag{9}
+\]
+
+Also (4) implies
+
+\[
+r+\delta\le{5\varepsilon_0\over2}=0.01775.
+\]
+
+Together with (5),
+
+\[
+r-\delta
+\le0.01775-2\delta
+<0.01775-2(0.017609).
+\tag{10}
+\]
+
+Consequently
+
+\[
+{\sigma_C\over D}-{8\over15}{m_D\over D}
+<\kappa+o(1),
+\tag{11}
+\]
+
+where
+
+\[
+\kappa=
+{2M_*\over15}-{4\pi\over15}
++{4\varepsilon_0\over3}
++{14\over15}\left({5\varepsilon_0\over2}-2\delta_0\right).
+\tag{12}
+\]
+
+The exact-rational certificate proves
+
+\[
+\boxed{\kappa<-0.3346394.}
+\tag{13}
+\]
+
+No independent worst cases for `f`, `r`, and `(b-f)/2` are used.
+
+---
+
+## 3. Transfer to `d_H+p_D`
+
+The exact terminal defect partition is
+
+\[
+k=d_H+p_D+\sigma_C.
+\tag{14}
+\]
+
+The live endpoint gives the exact-certified lower bound
+
+\[
+\liminf{k\over D}>1.1812298040.
+\tag{15}
+\]
+
+Subtract (11) from (14). With outward exact enclosures, the certificate proves
+
+\[
+\boxed{
+\liminf\left(
+{d_H+p_D\over D}+{8\over15}{m_D\over D}
+\right)>1.5158692.
+}
+\tag{16}
+\]
+
+This is the claimed strengthening.
+
+For fixed flex ceilings, (16) gives for example
+
+\[
+{m_D\over D}\le1.20+o(1)
+\Longrightarrow
+{d_H+p_D\over D}>0.8758692-o(1),
+\tag{17}
+\]
+
+\[
+{m_D\over D}\le1.25+o(1)
+\Longrightarrow
+{d_H+p_D\over D}>0.8492025-o(1).
+\tag{18}
+\]
+
+The older sealed-component line is stronger at those two low-flex examples. The purpose of (16) is the intermediate-flex range, where its much shallower slope becomes decisive.
+
+---
+
+## 4. Updated piecewise frontier
+
+The three independently proved supporting bounds are now
+
+\[
+{d_H+p_D\over D}
+>
+5.9765850-4{m_D\over D}-o(1),
+\tag{19}
+\]
+
+from sealed-component corank-to-flex,
+
+\[
+{d_H+p_D\over D}
+>
+1.5158692-{8\over15}{m_D\over D}-o(1),
+\tag{20}
+\]
+
+from the correlated degree-weighted seed theorem, and
+
+\[
+{d_H+p_D\over D}>0.6733591-o(1)
+\tag{21}
+\]
+
+from the unconditional pentagon-bootstrap corank cap.
+
+Thus the current certified envelope is
+
+\[
+\boxed{
+{d_H+p_D\over D}
+>
+\max\left\{
+5.9765850-4{m_D\over D},
+\ 1.5158692-{8\over15}{m_D\over D},
+\ 0.6733591
+\right\}-o(1).
+}
+\tag{22}
+\]
+
+Using unrounded certified constants, the new middle line overtakes the sealed-component line at flex density about `1.2867449` and remains above the unconditional floor until about `1.5797066`. These crossover decimals are descriptive only.
+
+Intersecting the two sloping safe rounded lines gives
+
+\[
+{m_D\over D}\approx1.28674495,
+\qquad
+{d_H+p_D\over D}\approx0.82960523.
+\]
+
+This slightly sharpens the degree-weighted note's earlier crossing `(1.28677204, 0.82949686)`.
+
+---
+
+## 5. Remaining bottleneck
+
+This sharpening does not change the theorem state and does not create a diameter-decreasing tangent. It removes another small relaxation from the quantitative frontier.
+
+The live terminal source now obeys a three-line feasible envelope: very low flex forces large unconverted defect by sealed-component rotation, intermediate flex is controlled by correlated degree-weighted pentagon seeding, and high flex still leaves the unconditional `0.6733591D` topology/stress defect floor.
+
+The unresolved quantity is still
+
+\[
+d_H+p_D,
+\]
+
+where `d_H` is Woodall diameter-component defect and `p_D` is projected normalized diameter-stress affine dimension. Further scalar optimization of `a,r,delta` is unlikely to matter unless it couples to one of these structures. The next useful step should either bound `d_H+p_D` geometrically from above on the explicit contact-flex coordinates, or convert a large value of that quantity into a finite diameter descent / guarded-reinsertion contradiction.
+
+No theorem-state file is changed.
+
+**Disposition:** retained the exact live defect correlation inside the newly proved degree-weighted seed inequality, strengthened its normalized supporting line from `1.5157752794` to `1.5158692`, and updated the certified piecewise flex/topology-stress frontier. C-II remains open.

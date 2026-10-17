@@ -1,0 +1,350 @@
+# Target C-II — repeated exact-UPPER rigidity sharpens the all-residue Horn budget
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the all-residue one-sign strong-TB1 Horn branch; no canonical promotion claimed  
+**Scope:** one-sign strong-TB1 exact swaps through `t=(q-k)/D<=1.8687`  
+**Dependencies:** four-row endpoint-incidence theorem; mod-five Horn reduction; exact-swap double-witness collapse; bounded row-parallel almost-diameter packing; all-residue Horn aggregation; Oler O--O path-capacity theorem  
+**Certificate:** `research/verify_target_c_high_t_tb1_sharp_all_residue_horn_budget_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The first all-residue aggregation used the conservative fact that an UPPER source pair can poison two retained coordinates. The exact-swap double-witness theorem now shows that this multiplicity-two event is source-wide bounded on the UPPER side. The correction applies twice: inside each residue-class permanent-UPPER extraction and again when the residue classes are merged.
+
+After the current four-row LOWER theorem, run the Horn system independently on the five residue classes modulo five. Let
+
+\[
+s_0={791\over320{,}000{,}000}.
+\]
+
+After deleting the source-wide `O(1)` genuine-upper binary exceptions, the total retained one-sign coordinate population still satisfies
+
+\[
+|P_D|>
+\left({s_0\over2}-o(1)\right)D.
+\tag{SB.1}
+
+The sharpened source-wide blocker budget is
+
+\[
+\boxed{
+8N_L+4N_U
+>|P_D|-o(D),
+}
+\tag{SB.2}
+
+where
+
+- `N_L` is the number of distinct permanent inverse-`D` near-unit LOWER blockers;
+- `N_U` is the number of distinct injectively owned inverse-`D` near-diameter UPPER blockers, including implication-forest pairs.
+
+Equivalently,
+
+\[
+\boxed{
+2N_L+N_U>
+\left({s_0\over8}-o(1)\right)D.
+}
+\tag{SB.3}
+
+Therefore one metric type has density at least
+
+\[
+\boxed{
+\delta_{\rm sharp}:={s_0\over24}
+={791\over7{,}680{,}000{,}000}
+=1.02994791666\ldots\times10^{-7}.
+}
+\tag{SB.4}
+
+This improves the preceding equal-density all-residue floor `s0/32` by the factor `4/3`, and the first all-residue floor `s0/48` by the factor `2`.
+
+The UPPER flexible-scale localization coefficient becomes
+
+\[
+\boxed{
+c_{\rm sharp}
+:={\delta_{\rm sharp}\over6A_*}
+={113\sqrt3\over30{,}720{,}000{,}000}
+=6.37115043149\ldots\times10^{-9},
+}
+\tag{SB.5}
+
+where
+
+\[
+A_*={14\over3\sqrt3}.
+\]
+
+This is exactly four times the single-largest-mod-six coefficient used before all-residue aggregation.
+
+---
+
+## 1. Use all five valid Horn residue systems
+
+The four-row endpoint-incidence theorem gives
+
+\[
+|\operatorname{reg}(x)-\operatorname{reg}(y)|\le4
+\tag{SB.6}
+
+for every inverse-`D` near-unit LOWER blocker once `D` is sufficiently large. Hence one may use the five residue classes modulo five. Every class is five-spaced, so
+
+- retained layers are nonadjacent;
+- a LOWER singleton blocker cannot have its other endpoint in another retained layer;
+- after deletion of the bounded genuine-upper binary exception, the exact implication/Horn reduction applies.
+
+Let
+
+\[
+P_D=P_0\sqcup\cdots\sqcup P_4,
+\qquad
+p_r:=|P_r|.
+\tag{SB.7}
+
+We never combine exact swaps belonging to different residue classes. Each `P_r` is a separate valid finite-swap subsystem on the same canonical source.
+
+---
+
+## 2. Every residue class supplies `p_r/4` blockers of one metric type
+
+Fix one `P_r` and let `F_r` be its Horn forbidden set.
+
+### Case A: `|F_r|<p_r/2`
+
+Shortest paths to `F_r` give an implication forest with more than
+
+\[
+{p_r\over2}
+\]
+
+distinct arcs. Every arc is an UPPER near-diameter source pair with a distinct tail coordinate. Thus this class supplies, in particular, at least
+
+\[
+{p_r\over4}
+\]
+
+distinct UPPER blockers.
+
+### Case B: `|F_r|\ge p_r/2`
+
+Choose one permanent blocker incidence for each forbidden coordinate. At least half of these incidences have the same metric type, so one type has at least
+
+\[
+{|F_r|\over2}\ge {p_r\over4}
+\tag{SB.8}
+
+chosen coordinate incidences.
+
+If LOWER wins, four-row bandwidth is strictly smaller than the residue spacing five. A LOWER pair cannot poison two coordinates in `P_r`, so the `p_r/4` incidences already give `p_r/4` distinct LOWER pairs.
+
+If UPPER wins, the historical argument divided by two because one UPPER pair might poison two retained coordinates. The exact-swap double-witness theorem removes that loss. If one strict pair is bad at the UPPER boundary under singleton exact swaps at two distinct coordinates, then it satisfies
+
+\[
+D-O(D^{-2})\le |xy|<D
+\]
+
+and lies in one common `O(D^-1)` projective row cone. The row-parallel almost-diameter packing theorem says the entire source contains only `O(1)` such pairs. Hence all but `O(1)` of the chosen UPPER incidences in (SB.8) correspond to different source pairs.
+
+Thus every residue class may be labeled so that
+
+\[
+\boxed{
+\begin{array}{ll}
+L:&\ge p_r/4-O(1)\text{ distinct LOWER blockers},\\[1ex]
+U:&\ge p_r/4-O(1)\text{ distinct UPPER blockers}.
+\end{array}
+}
+\tag{SB.9}
+
+The improvement from `p_r/8` to `p_r/4` on U classes is the first use of repeated exact-UPPER rigidity.
+
+---
+
+## 3. Merge residue classes: LOWER keeps multiplicity two, UPPER does not
+
+Let
+
+\[
+P_L:=\sum_{r:L}p_r,
+\qquad
+P_U:=\sum_{r:U}p_r,
+\qquad
+P_L+P_U=|P_D|.
+\tag{SB.10}
+
+For LOWER, the same short pair may obstruct the singleton swaps at both physical endpoint layers, which can lie in two different residue classes. The exact layer-support theorem gives multiplicity at most two, and a linear repeated LOWER family has not been excluded. Therefore
+
+\[
+\boxed{
+N_L\ge {P_L\over8}-O(1).
+}
+\tag{SB.11}
+
+For UPPER, a pair appearing in two different residue-class extractions is again an exact UPPER witness at two distinct one-sign interfaces. The exact double-witness/packing theorem gives only `O(1)` such repeated pairs source-wide. Hence no asymptotic factor two is lost:
+
+\[
+\boxed{
+N_U\ge {P_U\over4}-O(1).
+}
+\tag{SB.12}
+
+Each classwise UPPER extraction carries an injective owner coordinate: forbidden-coordinate incidences are deduplicated and forest arcs have distinct tails. Coordinate classes are disjoint. Deleting the `O(1)` cross-residue repeated UPPER pairs therefore preserves an injective owner map on the global UPPER family.
+
+---
+
+## 4. The weighted source-wide budget
+
+Equations (SB.11)--(SB.12) imply
+
+\[
+P_L\le8N_L+O(1),
+\qquad
+P_U\le4N_U+O(1).
+\]
+
+Adding and using (SB.10),
+
+\[
+\boxed{
+8N_L+4N_U\ge|P_D|-O(1).
+}
+\tag{SB.13}
+
+Combining with (SB.1) gives (SB.2) and, after division by four,
+
+\[
+2N_L+N_U>
+\left({s_0\over8}-o(1)\right)D.
+\tag{SB.14}
+
+This weighted inequality is stronger than a dichotomy and should be retained in downstream work.
+
+For an equal-density corollary, suppose both `N_L` and `N_U` were at most `|P_D|/12`. Then
+
+\[
+8N_L+4N_U\le |P_D|,
+\]
+
+with strict asymptotic inequality after the `o(D)` margin. Therefore
+
+\[
+\max\{N_L,N_U\}>
+{|P_D|\over12}-o(D)
+>
+\left({s_0\over24}-o(1)\right)D.
+\tag{SB.15}
+
+This proves (SB.4).
+
+Equivalently, in terms of class mass, if `P_L\ge(2/3)|P_D|` then (SB.11) gives `N_L\ge|P_D|/12`; otherwise `P_U>(1/3)|P_D|` and (SB.12) gives `N_U>|P_D|/12`.
+
+---
+
+## 5. UPPER localization at the sharp all-residue density
+
+Assume UPPER is the metric winner in (SB.15). There are more than
+
+\[
+(\delta_{\rm sharp}-o(1))D,
+\qquad
+\delta_{\rm sharp}={s_0\over24},
+\tag{SB.16}
+
+UPPER near-diameter blockers with injective ownership and exact selected-cut interval support.
+
+The current path-specific Oler theorem gives
+
+\[
+m\le(A_*+o(1))D,
+\qquad
+A_*={14\over3\sqrt3}.
+\tag{SB.17}
+
+The flexible-scale localization theorem uses a rich-cut/window threshold `delta/(3A_*)`, followed by a factor `1/2` for the SIGNED/THIN split. Thus
+
+\[
+\begin{aligned}
+c_{\rm sharp}
+&={\delta_{\rm sharp}\over6A_*}\\
+&={791\over7{,}680{,}000{,}000}\cdot{\sqrt3\over28}\\
+&=\boxed{{113\sqrt3\over30{,}720{,}000{,}000}}\\
+&=6.37115043149\ldots\times10^{-9}.
+\end{aligned}
+\tag{SB.18}
+
+For every scale `L_D->infinity`, `L_D=o(D)`, the UPPER winner therefore yields either
+
+- at least `(c_sharp-o(1))L_D` SIGNED or THIN blockers on one common selected row with full angular defect `O(D/L_D)`; or
+- at least that many same-type blockers inside one `2L_D+O(1)` path window with total row/terminal cost `O(L_D)`.
+
+The existing dense common train family and circumcenter-flank conclusions are unchanged.
+
+The coefficient comparisons are
+
+\[
+\boxed{
+{c_{\rm sharp}\over\widehat c_{*,6}}=4,
+\qquad
+{c_{\rm sharp}\over c_{\rm all}}=2,
+\qquad
+{c_{\rm sharp}\over c_{\rm dedup}}={4\over3}.
+}
+\tag{SB.19}
+
+---
+
+## 6. Immediate LOWER constant upgrade
+
+The concurrent global four-row LOWER synchronization theorem was stated from the previous winner density `s0/32`. Replacing it by (SB.4) improves every linear count in that theorem by `4/3` without changing its proof.
+
+If LOWER wins, the bounded-overlap global budget leaves more than
+
+\[
+\boxed{
+\left({s_0\over48}-o(1)\right)D
+=(5.14973958333\ldots\times10^{-8}-o(1))D
+}
+\tag{SB.20}
+
+low-cost four-row blockers, each with `(0.6436-o(1))D` common inverse-`D` near-60 trains.
+
+One fixed complete train threads more than
+
+\[
+\boxed{
+\left(
+{1{,}272{,}719\over117{,}523{,}200{,}000{,}000}-o(1)
+\right)D
+=(1.08295128111\ldots\times10^{-8}-o(1))D
+}
+\tag{SB.21}
+
+of those windows. Since the support-overlap number is at most eight, the same train threads a pairwise-disjoint subfamily of more than
+
+\[
+\boxed{
+(1.35368910139\ldots\times10^{-9}-o(1))D
+}
+\tag{SB.22}
+
+four-row windows.
+
+---
+
+## 7. Frontier effect
+
+The all-residue Horn seam now has a weighted source-level form rather than a three-way residue-class artifact:
+
+```text
+2 N_LOWER + N_UPPER > (s0/8-o(1)) D.
+
+Consequently either
+    N_LOWER > (s0/24-o(1)) D,
+or
+    N_UPPER > (s0/24-o(1)) D.
+```
+
+UPPER repetition is asymptotically absent; LOWER repetition is the only remaining multiplicity-two loss. A heavy repeated LOWER subfamily is already forced into the ultra-near-unit row-parallel matching geometry.
+
+The next closure targets remain metric. On LOWER, rule out or globally overconstrain the repeated four-row near-unit ladders threaded by one fixed train. On UPPER, use the stronger near-linear flexible-scale input inside the SIGNED/THIN train scaffolds.
+
+**Disposition:** removed both UPPER multiplicity-two losses from the all-residue poison argument, proved the weighted budget `8N_L+4N_U>|P_D|-o(D)`, raised the equal-density winner floor to `s0/24`, improved UPPER localization to `6.37115043149...e-9`, and propagated the `4/3` gain through the global four-row LOWER spine. C-II and Level I remain open.

@@ -1,0 +1,324 @@
+# Erdős Problem #99 — outer-shadow forward chains force loaded slack or blocker contacts
+
+**Date:** 2026-09-14  
+**Target:** Target C-II canonical full-core Type-II branch  
+**Claim class:** proof-only exact outer-walk refinement; theorem-state authority unchanged  
+**External input:** none
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The low-`t` Type-II profile has two simultaneous metric features:
+
+\[
+P_F-q=\Theta(D),
+\qquad
+b-P_F\ll D.
+\]
+
+Thus the loaded force-hull vertices are sparse relative to hull perimeter, but the unit-contact outer walk shadows the long hull sides with little metric detour. This note makes that statement occurrence-exact.
+
+Let
+
+\[
+d_{out}:=b-P_F\ge0,
+\qquad
+x_B:=b-q.
+\]
+
+There are at least
+
+\[
+\boxed{x_B-2d_{out}}
+\tag{OS.1}
+
+internal outer-walk occurrences whose incoming and outgoing unit edges both make **strictly positive projection** along the corresponding loaded hull side.
+
+At every such occurrence, either
+
+1. the source vertex is loaded of contact degree exactly two, contributing one unit to the loaded degree slack `s_B`; or
+2. the source vertex has an additional actual positive contact edge besides the two walk edges.
+
+If `E_{sh}` is the number of distinct chosen blocker edges needed to cover all source vertices of type 2, then
+
+\[
+\boxed{
+2s_B+10E_{sh}
+\ge x_B-2(b-P_F).
+}
+\tag{OS.2}
+\]
+
+This is finite and requires no small force-hull residual, no phase limit, and no Groemer stability.
+
+At the AG58 safe low-`t` endpoint, Section 171 gives
+
+\[
+\boxed{
+{2s_B+10E_{sh}\over D}
+\ge1.30915411561035\ldots-o(1).
+}
+\tag{OS.3}
+
+Hence, after branch selection,
+
+\[
+\boxed{
+{s_B\over D}\ge0.109096176300862\ldots-o(1)
+}
+\]
+
+or
+
+\[
+\boxed{
+{E_{sh}\over D}\ge0.109096176300862\ldots-o(1).
+}
+\tag{OS.4}
+
+The weighted form (OS.3) is the real statement.
+
+---
+
+## 1. Exact projection decomposition on one loaded-hull interval
+
+Use canonical Section-63 notation. Let
+
+\[
+W_i:b_i\leadsto b_{i+1}
+\]
+
+be the occurrence-counted outer contact-walk interval between consecutive loaded force-hull vertices, let
+
+\[
+s_i=|b_{i+1}-b_i|,
+\qquad
+u_i={b_{i+1}-b_i\over s_i},
+\]
+
+and orient the `ell_i` unit edge occurrences of `W_i` from `b_i` toward `b_{i+1}`. Write their oriented unit vectors as
+
+\[
+e_{i,1},\ldots,e_{i,\ell_i}.
+\]
+
+As an occurrence-counted walk,
+
+\[
+\sum_{j=1}^{\ell_i}e_{i,j}=s_i\nu_i.
+\tag{1.1}
+\]
+
+Taking the scalar product with `nu_i`,
+
+\[
+\boxed{
+\ell_i-s_i
+=\sum_{j=1}^{\ell_i}(1-\nu_i\cdot e_{i,j}).
+}
+\tag{1.2}
+\]
+
+Every summand is nonnegative because `|e_{i,j}|=1`.
+
+Summing over all loaded hull intervals gives exactly
+
+\[
+\boxed{
+ b-P_F
+ =\sum_{i,j}(1-\nu_i\cdot e_{i,j}).
+}
+\tag{1.3}
+\]
+
+This refines the metric inequality `b>=P_F`; the whole detour is a sum of nonnegative one-edge projection losses.
+
+---
+
+## 2. Nonforward edge occurrences are paid one-for-one
+
+Call an edge occurrence `nonforward` when
+
+\[
+\nu_i\cdot e_{i,j}\le0.
+\]
+
+For such an occurrence,
+
+\[
+1-\nu_i\cdot e_{i,j}\ge1.
+\]
+
+Therefore, if `N_-` is the total number of nonforward outer edge occurrences,
+
+\[
+\boxed{N_-\le b-P_F.}
+\tag{2.1}
+\]
+
+The number of internal vertex occurrences on all `W_i` is exactly
+
+\[
+\sum_i(\ell_i-1)=b-q=x_B.
+\tag{2.2}
+\]
+
+Call an internal occurrence `forward-good` if both its incident walk-edge occurrences are forward, i.e. have positive projection along `nu_i`. One nonforward edge can spoil at most two internal occurrences. Hence
+
+\[
+\boxed{
+G_{fw}\ge x_B-2N_-
+\ge x_B-2(b-P_F).
+}
+\tag{2.3}
+
+This proves (OS.1).
+
+The statement remains valid with bridges, repeated articulation vertices, and repeated edge occurrences because everything is counted on the actual outer-face walk.
+
+---
+
+## 3. Local classification of a forward-good occurrence
+
+Fix one forward-good internal occurrence at source vertex `v`. The incoming and outgoing walk edges are two **distinct contact incidences** at `v`: a degree-one bridge turnaround would traverse the same physical edge in opposite directions, and one of the two oriented occurrences would then have nonpositive projection, contrary to forward-goodness.
+
+Thus `deg_C(v)>=2`.
+
+If `deg_C(v)=2` and `v` is unloaded, positive contact equilibrium at `v` would require the two contact vectors to be exactly antiparallel with matching positive stresses. Canonical C26/C35 excludes unloaded positive-core degree-two vertices in C-II. Therefore
+
+\[
+\boxed{
+\deg_C(v)=2\Longrightarrow v\in B.
+}
+\tag{3.1}
+
+Such a loaded degree-two vertex contributes exactly one to
+
+\[
+s_B=\sum_{b\in B}(3-\deg_Cb).
+\]
+
+Otherwise `deg_C(v)>=3`, so relative to the chosen outer-walk occurrence there exists at least one actual positive contact edge incident with `v` other than its two walk edges. Call one such edge a **shadow blocker** for `v`.
+
+No stress lower bound is attached to this blocker.
+
+---
+
+## 4. Convert occurrences to distinct source currency
+
+A vertex of degree `d` appears at most `d` times on the boundary walk of any fixed face: every occurrence uses an incident face sector, and there are only `d` sectors.
+
+- A loaded degree-two vertex therefore supports at most two forward-good occurrences and contributes one unit to `s_B`.
+- Every other positive-core vertex has degree at most five: unloaded vertices have degree at most five and loaded vertices at most three. Hence a vertex carrying a chosen blocker supports at most five forward-good occurrences.
+
+Let `V_{blk}` be the number of distinct source vertices in the second class. Then
+
+\[
+G_{fw}\le2s_B+5V_{blk}.
+\tag{4.1}
+\]
+
+Choose one blocker edge at each such source vertex, and let `E_{sh}` be the number of distinct chosen physical contact edges. One edge has only two endpoints, so it can be chosen by at most two blocker vertices. Therefore
+
+\[
+V_{blk}\le2E_{sh}.
+\tag{4.2}
+\]
+
+Combining (2.3), (4.1), and (4.2) proves
+
+\[
+2s_B+10E_{sh}
+\ge x_B-2(b-P_F).
+\]
+
+---
+
+## 5. AG58 low-`t` specialization
+
+On a convergent low-`t` Type-II subsequence put
+
+\[
+t={q-k\over D},
+\qquad
+\kappa={k\over D},
+\qquad
+\delta={b-P_F\over D}.
+\]
+
+Type II gives `P_F/D->pi`, so
+
+\[
+{x_B\over D}
+={b-q\over D}
+=\pi+\delta-t-\kappa+o(1).
+\tag{5.1}
+\]
+
+AG58 and Section 171 give at the safe endpoint
+
+\[
+t=t_{58}=1.820922037979444\ldots
+\]
+
+and the exact necessary budget
+
+\[
+2\delta+{\kappa\over2}
+\le R_{58}:=0.00575825.
+\tag{5.2}
+\]
+
+Therefore
+
+\[
+\begin{aligned}
+{x_B-2(b-P_F)\over D}
+&=\pi-t-\kappa-\delta+o(1)\\
+&\ge\pi-t-2R_{58}-o(1)\\
+&=1.30915411561035\ldots-o(1).
+\end{aligned}
+\tag{5.3}
+\]
+
+The minimization in the second line is exact: under (5.2), `kappa+delta` is maximized at `delta=0`, `kappa=2R58`.
+
+Insert (5.3) into (OS.2) to obtain (OS.3)--(OS.4).
+
+---
+
+## 6. Relation to the small-residual pentagon theorem
+
+The flat-pentagon middle theorem is stronger on the branch `R_F=o(D)`: it obtains a more structured population from cheap exceptional faces and forces
+
+\[
+s_B+2E_{block}
+\ge0.4944931723\ldots D-o(D)
+\]
+
+near the AG58 floor.
+
+The present theorem is different and broader:
+
+- it does **not** assume `R_F=o(D)`;
+- it uses only the global outer-shadow geometry;
+- it identifies more than `1.309D` forward internal outer-walk occurrences before occurrence-to-source compression;
+- its blockers arise from the near-geodesic hull-side shadow, not from Groemer pentagons.
+
+Thus the residual-large branch still carries a substantial exact boundary-network obligation.
+
+---
+
+## 7. Scope and remaining obstruction
+
+- `E_sh` counts actual positive unit-contact edges, not stress weight and not stopped trains.
+- The chosen blocker at a source vertex may itself lie on another outer-face occurrence; no claim that it is geometrically inward is needed.
+- The factor ten is deliberately conservative: five possible outer occurrences per blocker vertex and two blocker vertices per physical edge.
+- Contact-isolated source points do not occur on the positive-contact outer walk and play no role.
+- No packing capacity or reverse Oler statement is used.
+- No exact unit triangle or strict sub-`D` competitor is produced.
+
+The next useful theorem is to classify the blocker edges into singleton versus rhombic stopped trains and show that a linear blocker population cannot be absorbed without increasing one of the already-large train-defect currencies.
+
+**Disposition:** proof-only exact outer-shadow theorem. C-II remains open.

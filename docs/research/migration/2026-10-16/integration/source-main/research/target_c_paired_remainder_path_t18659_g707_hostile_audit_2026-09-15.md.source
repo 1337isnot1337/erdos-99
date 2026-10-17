@@ -1,0 +1,167 @@
+# Hostile audit — paired-remainder path through `t<=1.8659`
+
+**Date:** 2026-09-15  
+**Reviewed:** `target_c_paired_remainder_path_t18659_g707_2026-09-15.md` and `verify_target_c_paired_remainder_path_t18659_g707.py`  
+**Verdict:** **PASS at proof-only full-core Type-II scope.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+## 1. The `C_707` substitution has the correct scope and sign
+
+The hostile-audited matched all-train theorem gives
+
+\[
+(T_{train}-q/2)/D\ge C_{707}-o(1),
+\qquad C_{707}=2\sqrt{\Delta_2}+0.007707,
+\]
+
+at the same full-core train-measure scope used by the paired-remainder parent theorem.  The only endpoint use of this constant is
+
+\[
+\delta\le(U_0-C)/2+o(1).
+\]
+
+Replacing `C_76` by the larger `C_707` decreases the adverse energy ceiling.  No inequality reverses and no stronger structural hypothesis is introduced.
+
+**Verdict:** PASS.
+
+## 2. The enlarged retained-mass derivative box was rechecked
+
+The new endpoint is `T=1.8659`, not a blind extrapolation of the `1.865` certificate.  Exact rational/radical bounds verify
+
+- `U0<2.114`;
+- `delta_max<0.101`;
+- `5 U0^2<32 Delta_2`, hence the inherited `r'<=3/2` bound;
+- `1-delta>0.899`;
+- the coarse `G_delta` lower bound remains above `-7.8`;
+- `G_z>24/25` on `z<=2.0675`;
+- `F'(z)<1/16` there; and therefore
+- `H'(z)>24/25-(7.8)/16>0`.
+
+The outward endpoint evaluation is
+
+\[
+H(2.0675)<-9.4162\times10^{-5},
+\]
+
+so `z>2.0675-o(1)` follows with a nontrivial sign margin.
+
+**Verdict:** PASS.
+
+## 3. Paired/remainder energy bookkeeping is unchanged
+
+The new theorem does not alter the parent decomposition.  For retained terminal weights `a,b` and `w=min(a,b)`, pair weights `w,w` and residual weights `a-w,b-w` are nonnegative and disjoint.  Thus pair energy plus residual energy equals the original retained occurrence energy exactly.  The residual measure remains pointwise dominated by the same perimeter measure, so
+
+\[
+E_{res}\ge F(z-2P)-o(1)
+\]
+
+remains valid.
+
+Consequently
+
+\[
+P_{low}\ge P-{\delta-F(z-2P)\over\lambda}-o(1)
+\]
+
+has exactly the same proof as in the hostile-audited `1.865` theorem.
+
+**Verdict:** PASS.
+
+## 4. All adverse substitutions retain the parent monotonicity
+
+The new threshold is
+
+\[
+\lambda=0.4888.
+\]
+
+It still satisfies
+
+\[
+2-\sqrt3<\lambda<1/2.
+\]
+
+Therefore the parent derivative checks keep the same signs:
+
+\[
+L_P>0,
+\qquad L_z>0,
+\qquad L_\kappa>0,
+\qquad L_\delta<0,
+\qquad L_{U_0}<0.
+\]
+
+Hence the adverse endpoint remains
+
+\[
+t=T,\quad z=z_0,\quad\kappa=0,\quad\delta=\delta_{max}.
+\]
+
+The exact certificate uses those values and obtains
+
+\[
+P_0=0.1551673862\ldots,
+\]
+
+\[
+z_0-2P_0=1.7571652274\ldots,
+\]
+
+\[
+F(z_0-2P_0)=0.0250104463\ldots,
+\]
+
+and
+
+\[
+P_{low}=0.0006960418\ldots>0.00068.
+\]
+
+**Verdict:** PASS.
+
+## 5. Physical opposite branches still have strict room
+
+At the adverse `delta_max` and `lambda=0.4888`, the exact squared margin is
+
+\[
+\left(1-\delta_{max}-{\lambda\over2}\right)^2
+-\left(\lambda-{\lambda^2\over4}\right)
+=6.6355\times10^{-5}\ldots>0.
+\]
+
+Thus same-oriented terminal branches remain impossible by the inherited Section-157 bracing argument.  The selected O--O trains connect the same two separated boundary arcs.
+
+**Verdict:** PASS.
+
+## 6. Pair weight converts safely to actual path length
+
+One of at most three phase windows carries pair weight
+
+\[
+>0.00022D-o(D).
+\]
+
+Each complete train has retained pair weight at most one, so this gives the same lower bound on the number of distinct actual O--O trains.  The inherited noncrossing-crosscut theorem therefore gives a simple dual path of linear length.
+
+The interval endpoint budget is `<=2 pi D+o(D)`.  Since
+
+\[
+2(355/113)/0.00022<28560,
+\]
+
+some nonhub boundary has at most `28559` switching diameter rows for all sufficiently large sources.  The existing exact reaction theorem then reduces its nonzero reaction to one or two actual switching bars.
+
+**Verdict:** PASS.
+
+## 7. Scope limitation
+
+This remains a path normal form, not a C-II contradiction.  In particular:
+
+- `28559` bounds support size, not KKT multiplier size;
+- the one/two reaction bars need not have macroscopic multiplier weight;
+- no strict diameter-decreasing finite move is obtained;
+- the macroscopic-container branch is untouched.
+
+The scalar architecture itself is nearly exhausted: floating optimization with `C_707` places zero retained low-energy mass near `t=1.8659696`.
+
+**Final verdict:** **PASS at proof-only full-core Type-II scope.**

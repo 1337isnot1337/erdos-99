@@ -1,0 +1,427 @@
+# Target C-II — outer-star train closure gives a `0.7916D` exact-flex product
+
+**Date:** 2026-09-18  
+**Status:** proof-only structural strengthening; theorem-state authority unchanged  
+**Scope:** terminal full-core Type-II FREE subsequences in the live window `t_D <= mu_*+0.00710+o(1)`  
+**Depends on:** audited complete stopped-train decomposition; strict convexity of bounded contact faces; train-angle closure coordinates; terminal correlated stability; canonical mixed infinitesimal rigidity; C65 relative-interior KKT positivity  
+**Certificate:** `research/verify_target_c_free_terminal_outer_star_exact_flex_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current live flex theorem extracts one degree of freedom from each fully rhombic
+pentagon having at least three outer-reaching trains. That throws away two pieces of
+available structure:
+
+1. an outer-reaching train can be used as a train-angle variable even when it is a
+   singleton or when its bounded endpoint is not a pentagon;
+2. a bounded face with `j>=3` outer-reaching train variables has `j-2`, not merely
+   one, local closure degrees of freedom.
+
+Keeping all of those variables removes the singleton branch from the live exact-flex
+statement. The endpoint transport multigraph alone forces a simultaneous exact
+contact-flex product of dimension
+
+\[
+\boxed{
+ m_D\ge {b-2f\over2}
+}
+\tag{OS.1}
+\]
+
+throughout the present terminal window (for all sufficiently large members of the
+sequence). Consequently, if
+
+\[
+ t_D\le\mu_*+0.00710+o(1),
+\]
+
+then
+
+\[
+\boxed{
+\liminf {m_D\over D}
+\ge 0.791663281303730\ldots .
+}
+\tag{OS.2}
+\]
+
+The diameter-locking lemma from the current live theorem therefore gives a matching
+from at least `0.7916632813D-o(D)` independent exact contact-flex coordinates to
+pairwise distinct actual diameter bars, and at least that many positive and negative
+diameter derivative incidences separately.
+
+In the small-complement branch of the latest complement/detour theorem, where the
+retained complement O--O pair mass is at most `0.01D+o(D)`, the forced near-maximal
+outer detour improves the product floor further to
+
+\[
+\boxed{
+\liminf {m_D\over D}
+\ge 0.817538281303730\ldots .
+}
+\tag{OS.3}
+\]
+
+No rhombic-fullness assumption and no lower bound on an individual KKT multiplier is
+used.
+
+---
+
+## 1. Outer-star variables at an arbitrary bounded exceptional face
+
+Use the exact endpoint transport multigraph. Its vertices are the actual outer face
+`O` and the `f` bounded nonquadrilateral contact faces; every complete stopped train is
+one transport edge. Bounded vertices support no loops. Write
+
+\[
+o(F):=\#\{\text{transport edges joining }F\text{ to }O\}.
+\]
+
+Thus
+
+\[
+\sum_F o(F)=E_{BO},
+\qquad
+E_{BO}+2L_O=b,
+\tag{1.1}
+\]
+
+where `L_O` is the number of O--O trains.
+
+Fix one bounded exceptional face `F` with `j=o(F)>=3`. Canonical bounded-face
+convexity makes `F` a simple strictly convex unit-edge polygon. Let the oriented side
+vectors belonging to its `j` outer-reaching trains be
+
+\[
+u_1,\ldots,u_j.
+\]
+
+All other train directions incident to `F` are held fixed. Rotating those `j` train
+directions gives the exact face-closure map
+
+\[
+\Phi_F(\theta_1,\ldots,\theta_j)
+=
+\sum_{i=1}^j R_{\theta_i}u_i+c_F,
+\tag{1.2}
+\]
+
+where `c_F` is the fixed sum of the remaining oriented sides and `Phi_F(0)=0`.
+Its derivative is
+
+\[
+D\Phi_F(0)
+=
+\begin{bmatrix}Ju_1&\cdots&Ju_j\end{bmatrix}.
+\tag{1.3}
+\]
+
+A strictly convex polygon cannot have three sides in one projective direction.
+Therefore among any `j>=3` selected side directions there are two nonparallel ones,
+and
+
+\[
+\operatorname{rank}D\Phi_F(0)=2.
+\tag{1.4}
+\]
+
+The implicit-function theorem supplies an exact local closure manifold of dimension
+
+\[
+\boxed{j-2.}
+\tag{1.5}
+\]
+
+This argument does not require the selected train to contain a rhombus. In particular,
+a P--O singleton train is a legitimate train-angle variable: it is one contact edge,
+it has only `F` as a bounded exceptional endpoint, and rotating its edge vector changes
+only the closure equation of `F` among the bounded exceptional faces.
+
+---
+
+## 2. The local manifolds multiply exactly
+
+A P--O train has exactly one bounded endpoint. Hence the outer-reaching train-variable
+sets used at two different bounded faces are disjoint. O--O trains occur in no bounded
+exceptional-face closure equation at all.
+
+For each bounded face with `o(F)>=3`, take the local manifold from Section 1. Assign
+independent small angles to every O--O train. These parameter sets are disjoint, so the
+local manifolds and the O--O angle box form a product of dimension
+
+\[
+M_D
+:=
+L_O+\sum_F (o(F)-2)_+.
+\tag{2.1}
+\]
+
+Every strict rhombus closes identically for arbitrary values of the two train
+directions crossing it: its oriented boundary remains `u+v-u-v`. Every bounded
+exceptional face closes by construction. Bounded facial cycles generate the cycle
+space of the connected plane contact graph, so all graph cycles close. Fixing one core
+vertex then integrates the assigned unit edge vectors to a finite contact-preserving
+realization.
+
+The construction is on the positive-contact core. Contact-isolated source points can
+be kept fixed. Every old noncontact has strict distance greater than one, so for each
+finite source one sufficiently small product neighborhood preserves every strict
+unit-separation inequality. The contact graph, and hence triangle-freeness, is
+unchanged.
+
+In the live terminal window the transport surplus gives
+
+\[
+E_{BB}-L_O
+\ge
+\left(e_*-{5\over2}(0.00710)-o(1)\right)D
+=
+(0.3237862869\ldots-o(1))D.
+\tag{2.2}
+\]
+
+Thus a B--B train exists for all sufficiently large members of the sequence. No B--B
+train angle is varied in (2.1), whereas a nonzero global rotation changes every train
+angle equally. Therefore the product tangent contains no global-rotation direction.
+After fixing translation, its non-Euclidean dimension is exactly `M_D`. We write
+
+\[
+m_D:=M_D.
+\tag{2.3}
+\]
+
+Even without (2.2), quotienting by global rotation would lose at most one dimension,
+which is asymptotically irrelevant.
+
+---
+
+## 3. Finite transport count: `m_D >= (b-2f)/2`
+
+For every integer `j>=0`,
+
+\[
+(j-2)_+\ge j-2.
+\tag{3.1}
+\]
+
+Hence (1.1)--(2.1) give
+
+\[
+\begin{aligned}
+m_D
+&=L_O+\sum_F(o(F)-2)_+\\
+&\ge L_O+E_{BO}-2f\\
+&=b-L_O-2f.
+\end{aligned}
+\tag{3.2}
+\]
+
+Trivially `m_D>=L_O` as well. Therefore
+
+\[
+\boxed{
+ m_D
+\ge
+\max\{L_O,\ b-L_O-2f\}
+\ge {b-2f\over2}.
+}
+\tag{3.3}
+\]
+
+This is a finite statement. It uses no pentagon count, no full-flower estimate, no
+singleton/rhombic split, and no asymptotic optimization.
+
+The old live theorem used
+
+\[
+\max\{S/D,L_O/D,F^{full}_{5,\ge3O}/D\}
+\ge0.1407115\ldots-o(1).
+\]
+
+Equation (3.3) shows why that trichotomy was unnecessarily lossy for contact-flex
+purposes: singleton P--O trains and non-fully-rhombic bounded faces still participate
+in the exact face-closure manifold.
+
+---
+
+## 4. Terminal correlated stability gives `0.791663...D`
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+s_2=\sqrt{\Delta_2},
+\qquad
+g=0.007707,
+\]
+
+\[
+M_*=4s_2+2g,
+\qquad
+p_*={M_*\over5}.
+\tag{4.1}
+\]
+
+For a terminal subsequence with
+
+\[
+\limsup t_D\le\mu_*+\varepsilon,
+\]
+
+the exact correlated stability variables satisfy
+
+\[
+a+2(r+\delta)\le5\varepsilon,
+\qquad a,r,\delta\ge0,
+\tag{4.2}
+\]
+
+and
+
+\[
+{f\over D}
+={M_*+2a-\delta-r\over5}+o(1),
+\qquad
+{b\over D}=\pi+\delta+o(1).
+\tag{4.3}
+\]
+
+Insert (4.3) into (3.3):
+
+\[
+\begin{aligned}
+\liminf {m_D\over D}
+&\ge
+{\pi\over2}-{M_*\over5}
++{7\over10}\delta+{1\over5}r-{2\over5}a\\
+&=
+{\pi\over2}-p_*
++{7\over10}\delta+{1\over5}r-{2\over5}a.
+\end{aligned}
+\tag{4.4}
+\]
+
+The positive coefficients of `delta` and `r` mean the minimum under (4.2) occurs at
+
+\[
+\delta=r=0,
+\qquad a=5\varepsilon.
+\]
+
+Therefore
+
+\[
+\boxed{
+\liminf {m_D\over D}
+\ge
+c_{\rm star}(\varepsilon)
+:={\pi\over2}-p_*-2\varepsilon.
+}
+\tag{4.5}
+\]
+
+At
+
+\[
+\varepsilon_0=0.00710,
+\]
+
+the exact-rational certificate gives
+
+\[
+\boxed{c_{\rm star}(\varepsilon_0)
+=0.7916632813037307425\ldots .}
+\tag{4.6}
+\]
+
+This is more than five times the previous live exact-flex guarantee
+`0.1407115056...D`.
+
+---
+
+## 5. Near-maximal-detour branch: `0.817538...D`
+
+The latest complement/detour theorem says that if the retained complement O--O pair
+mass is at most `0.01D+o(D)`, then in the same `epsilon_0=0.00710` window
+
+\[
+\delta>0.01725,
+\qquad
+a+2r\le0.001,
+\tag{5.1}
+\]
+
+with `a,r>=0`.
+
+Apply (4.4). For fixed `delta`, the expression is minimized by putting the whole
+remaining defect budget into `a`, not `r`. Thus (5.1) gives
+
+\[
+\begin{aligned}
+\liminf {m_D\over D}
+&\ge
+{\pi\over2}-p_*
++{7\over10}(0.01725)-{2\over5}(0.001)\\
+&=
+\boxed{0.8175382813037307425\ldots .}
+\end{aligned}
+\tag{5.2}
+\]
+
+The inequality is strict at the scalar level because `delta>0.01725`; the displayed
+constant is a safe closed lower floor.
+
+---
+
+## 6. Diameter-locking consequence
+
+Apply the already proved general diameter-locking lemma to the exact product manifold.
+Let `G_D` be the actual-diameter squared-length derivative matrix on any tangent basis
+of this product. Mixed infinitesimal rigidity gives
+
+\[
+\operatorname{rank}G_D=m_D.
+\tag{6.1}
+\]
+
+The C65 relative-interior KKT coefficients form a strictly positive dependence among
+the rows. Hence the rows positively span `R^{m_D}`. Hall's rank argument supplies a
+matching from all `m_D` flex coordinates to `m_D` pairwise distinct actual diameter
+bars. Every nonzero column has both derivative signs.
+
+Thus in the full live terminal window,
+
+\[
+\boxed{
+\begin{aligned}
+\operatorname{rank}G_D&\ge(0.791663281303730\ldots-o(1))D,\\
+|M_{flex\to H}|&\ge(0.791663281303730\ldots-o(1))D,\\
+I_+&\ge(0.791663281303730\ldots-o(1))D,\\
+I_-&\ge(0.791663281303730\ldots-o(1))D.
+\end{aligned}}
+\tag{6.2}
+\]
+
+In the small-complement/near-maximal-detour branch every `0.791663...` in (6.2) can
+be replaced by `0.817538...`.
+
+---
+
+## 7. What remains
+
+This does not close C-II. A positive-spanning active-diameter system is precisely the
+first-order KKT obstruction; increasing its rank does not by itself produce a common
+diameter-decreasing tangent.
+
+The useful change is that the former singleton alternative is gone from the live
+window. Every live terminal survivor now has one large, explicit, finite exact-flex
+product built only from O--O trains and bounded-face outer stars. The remaining target
+is correspondingly narrower: prove that a straight-line diameter thrackle cannot
+positively lock this outer-star product with the required signed support pattern, or
+use the exact product to obtain a source-preserving higher-order diameter descent.
+
+No theorem-state file is changed.
+
+**Disposition:** proved the finite outer-star exact-flex product, the transport floor
+`m_D >= (b-2f)/2`, the live `0.791663...D` exact-flex/matching floor, and the
+near-maximal-detour `0.817538...D` refinement. C-II remains open.

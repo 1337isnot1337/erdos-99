@@ -1,0 +1,222 @@
+# Hostile audit — AG58 weighted-minority atomic-gap refinement
+
+**Date:** 2026-09-14  
+**Audited candidate:** `research/target_c_atomic_gap_weighted_minority_00058_2026-09-14.md`  
+**Target:** Target C-II canonical full-core Type-II branch  
+**Verdict:** **PASS at proof-only scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This audit checks only the new step relative to AG47 and the way it is inserted into the already-used §163/§168 machinery. It does not promote theorem-state authority.
+
+## 1. New claim under audit
+
+The only genuinely new inequality is the replacement
+
+\[
+{3\over2}(S-L)
+\quad\rightsquigarrow\quad
+{3S\over2}-L,
+\]
+
+where
+
+- `S` is the pre-minority lower mass on each Mantel shore;
+- `L=sum_i min(x_i,y_i)` is the **total** minority population over the three dominant-orbit atom windows.
+
+All later chain-cover and opposite-corner steps are inherited from AG47.
+
+## 2. Three-label allocation is correct
+
+After assigning each label to one shore on which it has weakly larger population, write the discarded masses as
+
+\[
+L_X+L_Y=L.
+\]
+
+The retained shore totals are at least
+
+\[
+S-L_X,
+\qquad
+S-L_Y.
+\]
+
+The retained label supports are disjoint. With only three labels and both shores nonempty, the support-size pair is `(1,1)`, `(1,2)`, or `(2,1)`.
+
+- `(1,2)`: choose the unique label on the first shore and the larger of the two labels on the second. Their sum is at least
+  \[
+  S-L_X+{S-L_Y\over2}
+  ={3S\over2}-L+{L_Y\over2}
+  \ge {3S\over2}-L.
+  \]
+- `(2,1)`: symmetric.
+- `(1,1)`: the selected sum is at least
+  \[
+  2S-L\ge{3S\over2}-L.
+  \]
+
+The individual lower bound `(S-L)/2` is also valid in all three cases.
+
+**Verdict:** PASS.
+
+## 3. Tie handling does not create overlapping supports
+
+If `x_i=y_i`, assigning the label to either one shore and deleting its population on the other costs exactly `min(x_i,y_i)`. Choose one shore deterministically. Thus each label is retained on at most one shore and the post-assignment supports remain disjoint.
+
+No strict-majority assumption is required.
+
+**Verdict:** PASS.
+
+## 4. Both retained shores are nonempty
+
+This point is implicit in the candidate and must be checked.
+
+If, say, the retained `X` shore were empty, then every `X` population was deleted as a minority, so
+
+\[
+L_X=\sum_i x_i\ge S.
+\]
+
+But the exact certificate at `eta=0.00058` gives
+
+\[
+S=0.9285120\ldots,
+\qquad
+L\le0.0575897\ldots .
+\]
+
+Since `L_X<=L`, this is impossible. The same argument applies to `Y`.
+
+Thus the `1+2` / `2+1` / `1+1` support classification is exhaustive.
+
+**Verdict:** PASS.
+
+## 5. The selected families keep the same missing-pair budget
+
+The chosen opposite-label families are subsets of the original Mantel shores. Therefore their missing cross-pair count is at most the global cross-shore missing count
+
+\[
+(2d_0+o(1))D^2.
+\]
+
+No rescaling by the selected-family sizes is introduced in AG58; the later pruning uses an absolute missing-degree threshold `p_0D`, exactly as AG47 did. Hence restricting to smaller families cannot invalidate the count.
+
+**Verdict:** PASS.
+
+## 6. The inversion graph remains a chain graph
+
+After choosing projective lifts for the two distinct labels with central axes separated by `pi/3`, every inversion
+
+\[
+x_u\ge y_v
+\]
+
+is a missing strict-rhombus pair. Ordering the first shore by `x_u` gives nested inversion neighborhoods
+
+\[
+N(u)=\{v:y_v\le x_u\}.
+\]
+
+Thus the inversion graph is a chain graph regardless of how the families were obtained from the Mantel shores.
+
+With at most `(2d_0+o(1))D^2` inversion edges, König plus the chain matching estimate gives a total vertex cover of size at most
+
+\[
+(2\sqrt{d_0}+o(1))D
+=(\sqrt2\,p_0+o(1))D.
+\]
+
+This is the same AG47 estimate.
+
+**Verdict:** PASS.
+
+## 7. Degree pruning and common-neighbor threshold are not double-counted
+
+After deleting the inversion cover, retain the conservative original missing-edge bound `p_0^2D^2+o(D^2)`. Deleting every vertex missing more than `p_0D+o(D)` opposite vertices removes at most `p_0D+o(D)` vertices from each shore.
+
+The smallest selected family before those deletions has mass at least
+
+\[
+{S-L\over2}D-o(D).
+\]
+
+In the worst case the entire chain cover lies on that family. After chain-cover and degree pruning it therefore has mass at least
+
+\[
+\left[{S-L\over2}-(\sqrt2+1)p_0-o(1)\right]D.
+\]
+
+A triple of trains on the opposite shore has at most `3p_0D+o(D)` missing neighbors in union. Hence a common neighbor exists if
+
+\[
+{S-L\over2}>(4+\sqrt2)p_0.
+\]
+
+The exact certificate gives margin `0.25544...`, so both pair and triple common-neighbor requirements are safely satisfied.
+
+**Verdict:** PASS.
+
+## 8. Opposite-corner loss accounting is correct
+
+The selected family sum before pruning is at least
+
+\[
+{3S\over2}-L.
+\]
+
+The later losses are:
+
+1. chain-cover deletion: at most `sqrt(2)p_0` total;
+2. degree pruning: at most `2p_0` total;
+3. missing neighbors of the two opposite-corner endpoint trains: at most `2p_0` total.
+
+Therefore the projected degree sum is at least
+
+\[
+{3S\over2}-L-(4+\sqrt2)p_0-o(1),
+\]
+
+which is exactly AG58.20.
+
+No loss is counted twice: the first two terms reduce family sizes, while the last term reduces the degrees of the already-retained endpoint trains.
+
+**Verdict:** PASS.
+
+## 9. Numerical certificate
+
+`research/verify_target_c_atomic_gap_weighted_minority_00058.py` uses outward rational intervals and verifies
+
+\[
+{\sqrt3\over2}
+\left[
+{3S\over2}-\sqrt{6d_0}-(4+\sqrt2)p_0
+\right]
+>1.0003
+\]
+
+and a triple-common-neighbor margin greater than `1/4`.
+
+An independent direct floating evaluation gives the sharper values
+
+```text
+projected lower bound      1.0003969495005...
+common-neighbor margin     0.2554417271620...
+```
+
+The contradiction is therefore not a rounding artifact.
+
+**Verdict:** PASS.
+
+## 10. Scope
+
+The audit does **not** certify any stronger claim than AG58:
+
+- it does not make `0.00058` canonical;
+- it does not close C-II;
+- it does not supply a reverse-Oler theorem or a packing extension;
+- it does not change the §163/§168 pseudosegment or train-measure hypotheses;
+- it does not remove contact-isolated source points.
+
+The finite allocation refinement itself is valid, and its insertion into AG47 preserves every required hypothesis.
+
+**Final disposition:** PASS at proof-only scope.

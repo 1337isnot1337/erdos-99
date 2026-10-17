@@ -1,0 +1,539 @@
+# Target C-II — correlated terminal stability raises the FREE `t` gap to `0.00704`
+
+**Date:** 2026-09-18  
+**Status:** proof-only terminal refinement; theorem-state authority unchanged  
+**Scope:** terminal full-core Type-II FREE survivor sequences with `pi D-q=o(D)`  
+**Depends on:** the exact terminal `t` decomposition; scope-safe matched all-train gap `g=0.007707`; hostile-audited two-bin exact-orbit theorem; hostile-audited shared routewise retention; complement train/rhombus incidence; disjoint dominant/complement outer-energy support  
+**Certificate:** `research/verify_target_c_free_terminal_t_gap_correlated_00704_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current certified terminal FREE gap is `0.00659` above the matched scalar baseline. Its proof throws away one piece of information from the exact `t` identity. It replaces
+
+\[
+a+2(r+\delta)\le 5\varepsilon
+\]
+
+by the three independent bounds `a<=5 epsilon`, `r<=5 epsilon/2`, and `delta<=5 epsilon/2`, and then uses the worst possible `a` and `delta` at the same time. Those two extrema cannot coexist.
+
+Keeping that correlation turns the final dominant/complement incidence test into a one-variable problem. The resulting exact-rational certificate excludes
+
+\[
+\varepsilon=0.00704.
+\]
+
+Therefore every terminal full-core Type-II FREE survivor sequence satisfies
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}
+\ge
+1.960302849540479\ldots .
+}
+\tag{CG.1}
+\]
+
+Equivalently, with
+
+\[
+\mu_*
+=
+{\pi\over2}
++{2\over5}\sqrt{\frac{\pi}{2\sqrt3}}
++{0.007707\over5}
+=1.953262849540479\ldots,
+\]
+
+we have
+
+\[
+\boxed{
+\liminf t_D\ge\mu_*+0.00704.
+}
+\tag{CG.2}
+\]
+
+This is `0.00045` above the preceding certified `0.00659` gap. More importantly, it is `0.00035` above the upper edge of the recently studied exact-flex window
+
+\[
+t_D\le\mu_*+0.00669+o(1)
+=1.959952849540479\ldots+o(1).
+\]
+
+Hence that entire near-floor three-spoke exact-flex window is asymptotically empty under the same proof-only dependencies. Its contact-flex theorems remain correct conditional statements, but active-diameter analysis inside that window is no longer a live closing obligation.
+
+---
+
+## 1. Exact correlated stability
+
+Put
+
+\[
+s_2:=\sqrt{\frac\pi{2\sqrt3}},
+\qquad
+g:=0.007707,
+\qquad
+A_0:=2s_2+g.
+\tag{1.1}
+\]
+
+The exact terminal identity already proved is
+
+\[
+q-k
+=
+{2P_F+2\sqrt{R_4}\over5}
++{2\over5}(Q-f)
++{2\over5}(b-P_F)
++{1\over5}\tau_D.
+\tag{1.2}
+\]
+
+Terminality gives
+
+\[
+{P_F\over D}\to\pi,
+\qquad
+{\sqrt{R_4}\over D}\to s_2,
+\]
+
+and the matched all-train theorem gives
+
+\[
+{\tau_D\over D}\ge{\pi\over2}+g-o(1).
+\]
+
+Pass to a subsequence on which the normalized nonnegative defects converge and write
+
+\[
+r:=\lim {Q-f\over D},
+\qquad
+\delta:=\lim {b-P_F\over D},
+\qquad
+a:=\lim\left({\tau_D\over D}-{\pi\over2}-g\right).
+\tag{1.3}
+\]
+
+Then `a,r,delta>=0`, and (1.2) gives
+
+\[
+\boxed{
+\lim(t_D-\mu_*)
+={2\over5}(r+\delta)+{1\over5}a.
+}
+\tag{1.4}
+\]
+
+Suppose for contradiction that a terminal subsequence obeys
+
+\[
+\limsup t_D\le\mu_*+\varepsilon.
+\tag{1.5}
+\]
+
+Then the exact correlated stability constraint is
+
+\[
+\boxed{a+2(r+\delta)\le5\varepsilon.}
+\tag{1.6}
+\]
+
+The previous `0.00659` proof separately used
+
+\[
+a\le5\varepsilon,
+\qquad
+\delta\le{5\over2}\varepsilon.
+\]
+
+For the two-bin residual and outer-energy terms those are opposing worst cases. We keep (1.6) intact.
+
+---
+
+## 2. Correlated residual envelope
+
+Let
+
+\[
+\Delta_2:={\pi\over2\sqrt3}.
+\]
+
+For the normalized all-train scalar
+
+\[
+C=A_0+a,
+\]
+
+the hostile-audited two-bin theorem bounds the residual exact-orbit train mass by
+
+\[
+R\le r_2(C),
+\qquad
+r_2(C):={C-\sqrt{8\Delta_2-C^2}\over2}.
+\tag{2.1}
+\]
+
+The function `r_2` is increasing on the present interval. Dropping only `r>=0` from (1.6) gives
+
+\[
+a\le5\varepsilon-2\delta.
+\tag{2.2}
+\]
+
+Therefore for each fixed `delta`,
+
+\[
+\boxed{
+R\le\rho_\varepsilon(\delta)
+:=r_2(A_0+5\varepsilon-2\delta),
+\qquad
+0\le\delta\le{5\over2}\varepsilon.
+}
+\tag{2.3}
+\]
+
+This is the correlation missing from the earlier scalar closure attempt. Large residual mass requires large `a`, while large outer directional-energy budget requires large `delta`; (1.6) prevents both simultaneously.
+
+---
+
+## 3. Retention and incidence reduce to one scalar function
+
+The shared routewise-retention theorem supplies retained dominant outer-occurrence mass `z` and retained complement O--O pair mass `p` with
+
+\[
+z+p\ge{\pi\over2}-R-o(1).
+\tag{3.1}
+\]
+
+Let
+
+\[
+F(z):=z-6\sin(z/6).
+\tag{3.2}
+\]
+
+If `e_c` is the selected terminal-edge directional energy of the retained complement family, the complement train/rhombus incidence theorem gives
+
+\[
+p(1-\delta)-{e_c\over2}
+\le{R^2\over2}+o(1),
+\tag{3.3}
+\]
+
+while disjoint dominant/complement energy supports give
+
+\[
+F(z)+e_c\le\delta.
+\tag{3.4}
+\]
+
+Use `R<=rho_epsilon(delta)` in the weakening direction in (3.1) and (3.3), and then use (3.4). Any survivor must satisfy
+
+\[
+H_\varepsilon(z,\delta)
+:=
+{\pi\over2}-\rho_\varepsilon(\delta)-z
+-
+{\rho_\varepsilon(\delta)^2+\delta-F(z)
+ \over2(1-\delta)}
+\le0
+\tag{3.5}
+\]
+
+for some `z>=0`.
+
+Equation (3.4) also gives
+
+\[
+F(z)\le\delta.
+\tag{3.6}
+\]
+
+Since
+
+\[
+F'(z)=1-\cos(z/6)\ge0,
+\]
+
+let `z_delta` be the unique nonnegative solution of
+
+\[
+F(z_\delta)=\delta.
+\tag{3.7}
+\]
+
+Then `z<=z_delta`.
+
+Furthermore
+
+\[
+{\partial H_\varepsilon\over\partial z}
+=-1+{F'(z)\over2(1-\delta)}.
+\tag{3.8}
+\]
+
+For the concrete value used below, the exact certificate proves
+
+\[
+0\le z\le z_\delta<1.5626
+\]
+
+and hence
+
+\[
+F'(z)
+\le{z^2\over72}
+<{1.5626^2\over72}.
+\]
+
+This makes (3.8) strictly negative throughout the feasible box. Therefore the easiest point for satisfying (3.5), at fixed `delta`, is `z=z_delta`. Define
+
+\[
+\boxed{
+G_\varepsilon(\delta)
+:={\pi\over2}
+-\rho_\varepsilon(\delta)
+-z_\delta
+-{\rho_\varepsilon(\delta)^2\over2(1-\delta)}.
+}
+\tag{3.9}
+\]
+
+A necessary condition for a survivor is
+
+\[
+G_\varepsilon(\delta)\le0
+\tag{3.10}
+\]
+
+for some `delta` in the stability interval.
+
+---
+
+## 4. The reduced margin is decreasing in `delta`
+
+Set
+
+\[
+\varepsilon={22\over3125}=0.00704,
+\qquad
+\delta_{\max}={5\varepsilon\over2}={11\over625}=0.0176.
+\tag{4.1}
+\]
+
+Write
+
+\[
+C(\delta)=A_0+5\varepsilon-2\delta,
+\qquad
+S(\delta)=\sqrt{8\Delta_2-C(\delta)^2}.
+\]
+
+Differentiating (2.3),
+
+\[
+\boxed{
+-\rho_\varepsilon'(\delta)
+=1+{C(\delta)\over S(\delta)}.
+}
+\tag{4.2}
+\]
+
+For `delta>0`, differentiating (3.7) gives
+
+\[
+z_\delta'={1\over F'(z_\delta)}.
+\tag{4.3}
+\]
+
+Hence
+
+\[
+\begin{aligned}
+G_\varepsilon'(\delta)
+={}&
+(-\rho_\varepsilon')
+\left(1+{\rho_\varepsilon\over1-\delta}\right)
+-z_\delta'
+-{\rho_\varepsilon^2\over2(1-\delta)^2}.
+\end{aligned}
+\tag{4.4}
+\]
+
+The exact-rational certificate gives the uniform bounds
+
+\[
+\rho_\varepsilon(\delta)<0.05,
+\tag{4.5}
+\]
+
+and
+
+\[
+\left(1+{C\over S}\right)
+\left(1+{0.05\over1-\delta_{\max}}\right)
+<2.151,
+\tag{4.6}
+\]
+
+whereas `z_delta<1.5626` gives
+
+\[
+z_\delta'
+={1\over1-\cos(z_\delta/6)}
+>{72\over1.5626^2}
+>29.5.
+\tag{4.7}
+\]
+
+Thus
+
+\[
+\boxed{G_\varepsilon'(\delta)<0}
+\tag{4.8}
+\]
+
+throughout `(0,delta_max]`; continuity covers the endpoint `delta=0`. The weakest contradiction is therefore at `delta=delta_max`.
+
+This identifies the actual scalar adversary. The old proof let the train-slack excess and outer-energy budget both take their independent maxima. After restoring the exact correlation, the worst point instead spends the entire defect budget on `delta` and has `a=0`.
+
+---
+
+## 5. Exact endpoint contradiction
+
+At `delta=delta_max`, equation (2.2) gives `a=0` in the residual envelope, so
+
+\[
+\rho_\varepsilon(\delta_{\max})=r_2(A_0).
+\]
+
+The exact certificate proves
+
+\[
+\boxed{
+\rho_\varepsilon(\delta_{\max})<0.0078.
+}
+\tag{5.1}
+\]
+
+For
+
+\[
+z_0=1.5626,
+\]
+
+the alternating Taylor inequality
+
+\[
+\sin x\le x-{x^3\over6}+{x^5\over120}
+\]
+
+gives
+
+\[
+F(z_0)
+\ge {z_0^3\over216}-{z_0^5\over155520}
+=0.0176041229577\ldots
+>0.0176
+=\delta_{\max}.
+\tag{5.2}
+\]
+
+Thus `z_delta_max<z_0`. Using a Machin-series lower enclosure for `pi`, (5.1), and (5.2), the exact certificate obtains
+
+\[
+\begin{aligned}
+G_\varepsilon(\delta_{\max})
+&>
+{\pi\over2}
+-0.0078
+-1.5626
+-{0.0078^2\over2(1-0.0176)}\\
+&>0.00036536.
+\end{aligned}
+\tag{5.3}
+\]
+
+By (4.8),
+
+\[
+G_\varepsilon(\delta)>0
+\qquad
+(0\le\delta\le\delta_{\max}),
+\]
+
+contradicting the necessary condition (3.10). Therefore no terminal FREE survivor subsequence can satisfy (1.5) at `epsilon=0.00704`. This proves (CG.1)--(CG.2).
+
+The companion certificate uses only `Fraction`, integer square roots, and alternating Machin/Taylor enclosures for every load-bearing inequality.
+
+---
+
+## 6. Immediate frontier consequences
+
+### 6.1 The `0.00669` exact-flex window is empty
+
+The latest near-floor three-spoke exact-flex theorem assumes
+
+\[
+\limsup t_D\le\mu_*+0.00669.
+\]
+
+The new theorem gives
+
+\[
+\liminf t_D\ge\mu_*+0.00704.
+\]
+
+The separation is exactly
+
+\[
+\boxed{0.00704-0.00669=0.00035.}
+\tag{6.1}
+\]
+
+Thus no terminal FREE survivor sequence can enter that window. In particular, the three-way `S/L_O/Y_{3O}^{near}` exact-flex trichotomy is no longer the live terminal near-floor obstruction. It need not be pushed through active diameter rows to clear that range.
+
+### 6.2 Updated chamber-interface constants
+
+The already-proved matched terminal relation
+
+\[
+{\mathcal H_D\over D}
+\ge t_D+
+\left(2s_2-{\pi\over2}+g\right)-o(1)
+\]
+
+now gives
+
+\[
+\boxed{
+\liminf {\mathcal H_D\over D}
+\ge2.301839136473497\ldots .
+}
+\tag{6.2}
+\]
+
+Applying the Section-85 factor `sqrt(3)/4` gives
+
+\[
+\boxed{
+\liminf {A_{ch}-(\sqrt3/2)Z_{ch}\over D}
+\ge0.996725583805642\ldots .
+}
+\tag{6.3}
+\]
+
+These are downstream proof-only refinements, not independent closure statements.
+
+### 6.3 This scalar route is essentially exhausted
+
+A non-load-bearing numerical solve of the exact reduced function (3.9) places the zero of this particular correlated composition near
+
+\[
+\varepsilon\approx0.00704767.
+\]
+
+No theorem is asserted at that decimal. The certified `0.00704` already lies within about `8e-6` of that numerical edge. More decimal optimization of the same two-bin / retention / incidence scalar system cannot materially change the frontier.
+
+The next useful target is therefore beyond the old near-floor window. It must use structure that is absent from the one-variable scalar reduction: the singleton branch, a larger-`t` transport/fan regime, the active diameter incidence system, or a direct source-level exchange/descent.
+
+**Disposition:** proved proof-only correlated stability refinement; C-II remains open.

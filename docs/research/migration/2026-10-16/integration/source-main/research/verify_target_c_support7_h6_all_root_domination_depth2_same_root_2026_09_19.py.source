@@ -1,0 +1,460 @@
+#!/usr/bin/env python3
+"""Exact same-root depth-two audit for the all-root domination disjunctions.
+
+For every cell in the frozen 3,874-cell generic-H6 endpoint and every hull root
+r in {0,...,5}, impose the target-6 and target-7 domination disjunctions at the
+same time. Each root therefore has four closed branch combinations.
+
+For a root/cell pair this verifier tries to certify one of two outcomes:
+
+* LIVE: one of the four combinations has an exact rational primal witness
+  satisfying the complete 85-variable affine system, every original strict
+  facet, and both added closed domination facets;
+* DEAD: all four combinations have exact rational Farkas contradictions.
+
+If neither certificate is recovered, the pair is reported unresolved. A cell
+is excluded if any root is DEAD. A cell is certified to survive this entire
+same-root depth-two layer only if all six roots are LIVE.
+
+Floating-point LPs are used only for support/vertex discovery. Every reported
+LIVE or DEAD result is checked exactly with Fraction arithmetic by the existing
+primal and Farkas verifiers.
+"""
+from argparse import ArgumentParser
+from collections import Counter
+from fractions import Fraction as F
+from pathlib import Path
+import contextlib
+import importlib.util
+import io
+import json
+
+HERE = Path(__file__).resolve().parent
+
+
+def load(name, filename):
+    spec = importlib.util.spec_from_file_location(name, HERE / filename)
+    module = importlib.util.module_from_spec(spec)
+    with contextlib.redirect_stdout(io.StringIO()):
+        spec.loader.exec_module(module)
+    return module
+
+
+D = load(
+    "h6_rootdom_depth1",
+    "verify_target_c_support7_h6_all_root_domination_depth1_2026_09_19.py",
+)
+P = load(
+    "h6_rootdom_depth1_primal",
+    "verify_target_c_support7_h6_all_root_domination_depth1_primal_2026_09_19.py",
+)
+E = load(
+    "h6_endpoint_3874",
+    "target_c_support7_h6_endpoint_3874_ledger_2026_09_19.py",
+)
+O = D.O
+A = D.A
+C = D.C
+ROOTS = tuple(range(6))
+
+
+def branch_options(state, orders, root, target):
+    a, b = D.bracketing_hull_edge(orders, root, target)
+    return tuple(
+        (h, D.domination_branch(state, orders, root, target, h))
+        for h in (a, b)
+    )
+
+
+def exact_farkas_summary(cert):
+    value, denominator = cert
+    return {
+        "forced_num": value.numerator,
+        "forced_den": value.denominator,
+        "max_multiplier_denominator": denominator,
+    }
+
+
+def certify_root(system, state, orders, root, stats):
+    options6 = branch_options(state, orders, root, 6)
+    options7 = branch_options(state, orders, root, 7)
+    dead = []
+    unresolved = []
+
+    for h6, c6 in options6:
+        for h7, c7 in options7:
+            closed = c6 + c7
+            margin, result = O.numerical_candidate(system, closed)
+            stats["branch_lp"] += 1
+
+            if margin is None:
+                stats["solver_failures"] += 1
+                unresolved.append([h6, h7, "solver_failure"])
+                continue
+
+            if margin > 1e-9:
+                stats["numerical_live"] += 1
+                witness = P.exactify_primal(system, closed, result)
+                if witness is not None:
+                    stats["exact_primal"] += 1
+                    stats["max_primal_denominator"] = max(
+                        stats["max_primal_denominator"], witness["max_denominator"]
+                    )
+                    stats["primal_limit_counts"][witness["limit"]] += 1
+                    strict = F(
+                        witness["min_strict_num"], witness["min_strict_den"]
+                    )
+                    current = stats["min_positive_strict"]
+                    if current is None or strict < current:
+                        stats["min_positive_strict"] = strict
+                    if witness["min_closed_num"] == 0:
+                        stats["zero_closed_primal"] += 1
+                    return {
+                        "status": "live",
+                        "root": root,
+                        "branches": [h6, h7],
+                        "witness": witness,
+                    }
+                stats["exact_primal_failures"] += 1
+
+            if margin <= 1e-8:
+                cert = A.exactify_support(system, closed, result)
+                if cert is not None:
+                    stats["exact_farkas"] += 1
+                    stats["max_farkas_denominator"] = max(
+                        stats["max_farkas_denominator"], cert[1]
+                    )
+                    if cert[0] == 0:
+                        stats["farkas_forced_zero"] += 1
+                    else:
+                        stats["farkas_forced_negative"] += 1
+                    dead.append({
+                        "branches": [h6, h7],
+                        "certificate": exact_farkas_summary(cert),
+                    })
+                    continue
+                stats["exact_farkas_failures"] += 1
+
+            unresolved.append(
+                [h6, h7, "no_exact_certificate", float(margin)]
+            )
+
+    if len(dead) == 4:
+        return {
+            "status": "dead",
+            "root": root,
+            "dead_combinations": dead,
+        }
+    return {
+        "status": "unresolved",
+        "root": root,
+        "dead_combinations": dead,
+        "unresolved_combinations": unresolved,
+    }
+
+
+def scan(part, parts, output):
+    assert parts > 0 and 0 <= part < parts
+    endpoint = E.decode_endpoint()
+    states = O.tri.collect_survivors()
+    assert len(endpoint) == E.ENDPOINT_SIZE == 3874
+    assert len(states) == E.UNIVERSE_SIZE == 14174
+
+    start = part * len(endpoint) // parts
+    stop = (part + 1) * len(endpoint) // parts
+    stats = {
+        "branch_lp": 0,
+        "numerical_live": 0,
+        "exact_primal": 0,
+        "exact_primal_failures": 0,
+        "solver_failures": 0,
+        "exact_farkas": 0,
+        "exact_farkas_failures": 0,
+        "max_primal_denominator": 1,
+        "max_farkas_denominator": 1,
+        "primal_limit_counts": Counter(),
+        "min_positive_strict": None,
+        "zero_closed_primal": 0,
+        "farkas_forced_zero": 0,
+        "farkas_forced_negative": 0,
+    }
+    certified = 0
+    excluded = []
+    unresolved_cells = []
+    excluded_graph = Counter()
+    excluded_pattern = Counter()
+    unresolved_graph = Counter()
+    unresolved_pattern = Counter()
+    root_dead = Counter()
+    root_unresolved = Counter()
+
+    for serial in range(start, stop):
+        idx = endpoint[serial]
+        state = states[idx]
+        system = C.build_system(state)
+        orders = C.orders_for_state(state)
+        root_results = []
+        cell_dead = None
+
+        for root in ROOTS:
+            result = certify_root(system, state, orders, root, stats)
+            root_results.append(result)
+            if result["status"] == "dead":
+                cell_dead = result
+                root_dead[root] += 1
+                break
+            if result["status"] == "unresolved":
+                root_unresolved[root] += 1
+
+        pat = "".join(map(str, state[5]))
+        if cell_dead is not None:
+            excluded_graph[state[1]] += 1
+            excluded_pattern[pat] += 1
+            excluded.append({
+                "serial": serial,
+                "state_index": idx,
+                "graph": state[1],
+                "pattern": pat,
+                "witness": cell_dead,
+            })
+            print(
+                "EXCLUDED", serial, idx, state[1], pat,
+                "root", cell_dead["root"], flush=True,
+            )
+            continue
+
+        unresolved_roots = [
+            result for result in root_results
+            if result["status"] == "unresolved"
+        ]
+        if unresolved_roots:
+            unresolved_graph[state[1]] += 1
+            unresolved_pattern[pat] += 1
+            unresolved_cells.append({
+                "serial": serial,
+                "state_index": idx,
+                "graph": state[1],
+                "pattern": pat,
+                "roots": unresolved_roots,
+            })
+            print(
+                "UNRESOLVED", serial, idx,
+                [result["root"] for result in unresolved_roots],
+                flush=True,
+            )
+        else:
+            assert len(root_results) == len(ROOTS)
+            assert all(result["status"] == "live" for result in root_results)
+            certified += 1
+
+        if (serial - start + 1) % 50 == 0:
+            print(
+                "PROGRESS", serial + 1,
+                "certified", certified,
+                "excluded", len(excluded),
+                "unresolved", len(unresolved_cells),
+                "lp", stats["branch_lp"],
+                flush=True,
+            )
+
+    min_strict = stats["min_positive_strict"]
+    payload = {
+        "endpoint_sha256": E.INDEX_SHA256,
+        "part": part,
+        "parts": parts,
+        "start": start,
+        "stop": stop,
+        "checked_cells": stop - start,
+        "certified_cells": certified,
+        "excluded_cells": len(excluded),
+        "unresolved_cells": len(unresolved_cells),
+        "branch_lp": stats["branch_lp"],
+        "numerical_live": stats["numerical_live"],
+        "exact_primal": stats["exact_primal"],
+        "exact_primal_failures": stats["exact_primal_failures"],
+        "solver_failures": stats["solver_failures"],
+        "exact_farkas": stats["exact_farkas"],
+        "exact_farkas_failures": stats["exact_farkas_failures"],
+        "max_primal_denominator": stats["max_primal_denominator"],
+        "max_farkas_denominator": stats["max_farkas_denominator"],
+        "primal_limit_counts": {
+            str(k): v for k, v in sorted(stats["primal_limit_counts"].items())
+        },
+        "min_positive_strict": None if min_strict is None else [
+            min_strict.numerator, min_strict.denominator,
+        ],
+        "zero_closed_primal": stats["zero_closed_primal"],
+        "farkas_forced_zero": stats["farkas_forced_zero"],
+        "farkas_forced_negative": stats["farkas_forced_negative"],
+        "root_dead": {str(k): v for k, v in sorted(root_dead.items())},
+        "root_unresolved": {
+            str(k): v for k, v in sorted(root_unresolved.items())
+        },
+        "excluded_graph": dict(sorted(excluded_graph.items())),
+        "excluded_pattern": dict(sorted(excluded_pattern.items())),
+        "unresolved_graph": dict(sorted(unresolved_graph.items())),
+        "unresolved_pattern": dict(sorted(unresolved_pattern.items())),
+        "excluded": excluded,
+        "unresolved": unresolved_cells,
+    }
+    Path(output).write_text(json.dumps(payload, sort_keys=True) + "\n")
+
+    print("PASS scan")
+    for key in (
+        "part", "parts", "start", "stop", "checked_cells",
+        "certified_cells", "excluded_cells", "unresolved_cells",
+        "branch_lp", "numerical_live", "exact_primal",
+        "exact_primal_failures", "exact_farkas", "exact_farkas_failures",
+        "solver_failures", "max_primal_denominator",
+        "max_farkas_denominator", "zero_closed_primal",
+        "farkas_forced_zero", "farkas_forced_negative",
+    ):
+        print(key, payload[key])
+    print("primal_limit_counts", payload["primal_limit_counts"])
+    print("min_positive_strict", payload["min_positive_strict"])
+    print("root_dead", payload["root_dead"])
+    print("root_unresolved", payload["root_unresolved"])
+
+
+def summarize(directory, output=None):
+    files = sorted(Path(directory).glob("depth2-*.json"))
+    assert files
+    payloads = [json.loads(path.read_text()) for path in files]
+    parts_set = {payload["parts"] for payload in payloads}
+    assert len(parts_set) == 1
+    parts = parts_set.pop()
+    assert len(payloads) == parts
+    assert {payload["part"] for payload in payloads} == set(range(parts))
+    assert all(
+        payload["endpoint_sha256"] == E.INDEX_SHA256
+        for payload in payloads
+    )
+    ranges = sorted((payload["start"], payload["stop"]) for payload in payloads)
+    assert ranges[0][0] == 0 and ranges[-1][1] == E.ENDPOINT_SIZE
+    assert all(
+        ranges[i][1] == ranges[i + 1][0]
+        for i in range(len(ranges) - 1)
+    )
+
+    excluded = [item for payload in payloads for item in payload["excluded"]]
+    unresolved = [item for payload in payloads for item in payload["unresolved"]]
+    limit_counts = Counter()
+    root_dead = Counter()
+    root_unresolved = Counter()
+    for payload in payloads:
+        limit_counts.update({
+            int(k): v for k, v in payload["primal_limit_counts"].items()
+        })
+        root_dead.update({int(k): v for k, v in payload["root_dead"].items()})
+        root_unresolved.update({
+            int(k): v for k, v in payload["root_unresolved"].items()
+        })
+    min_stricts = [
+        F(*payload["min_positive_strict"])
+        for payload in payloads
+        if payload["min_positive_strict"] is not None
+    ]
+
+    states = O.tri.collect_survivors()
+    excluded_idx = {item["state_index"] for item in excluded}
+    assert len(excluded_idx) == len(excluded)
+    survivors = set(E.decode_endpoint()) - excluded_idx
+    graph = Counter(states[i][1] for i in survivors)
+    pattern = Counter("".join(map(str, states[i][5])) for i in survivors)
+
+    summary = {
+        "endpoint_size": E.ENDPOINT_SIZE,
+        "endpoint_sha256": E.INDEX_SHA256,
+        "certified_cells": sum(
+            payload["certified_cells"] for payload in payloads
+        ),
+        "excluded_cells": len(excluded),
+        "unresolved_cells": len(unresolved),
+        "survivors_after_exact_exclusions": len(survivors),
+        "branch_lp": sum(payload["branch_lp"] for payload in payloads),
+        "numerical_live": sum(
+            payload["numerical_live"] for payload in payloads
+        ),
+        "exact_primal": sum(payload["exact_primal"] for payload in payloads),
+        "exact_primal_failures": sum(
+            payload["exact_primal_failures"] for payload in payloads
+        ),
+        "solver_failures": sum(
+            payload["solver_failures"] for payload in payloads
+        ),
+        "exact_farkas": sum(payload["exact_farkas"] for payload in payloads),
+        "exact_farkas_failures": sum(
+            payload["exact_farkas_failures"] for payload in payloads
+        ),
+        "max_primal_denominator": max(
+            payload["max_primal_denominator"] for payload in payloads
+        ),
+        "max_farkas_denominator": max(
+            payload["max_farkas_denominator"] for payload in payloads
+        ),
+        "primal_limit_counts": {
+            str(k): v for k, v in sorted(limit_counts.items())
+        },
+        "min_positive_strict": None if not min_stricts else [
+            min(min_stricts).numerator, min(min_stricts).denominator,
+        ],
+        "zero_closed_primal": sum(
+            payload["zero_closed_primal"] for payload in payloads
+        ),
+        "farkas_forced_zero": sum(
+            payload["farkas_forced_zero"] for payload in payloads
+        ),
+        "farkas_forced_negative": sum(
+            payload["farkas_forced_negative"] for payload in payloads
+        ),
+        "root_dead": {str(k): v for k, v in sorted(root_dead.items())},
+        "root_unresolved": {
+            str(k): v for k, v in sorted(root_unresolved.items())
+        },
+        "survivor_graph": dict(sorted(graph.items())),
+        "survivor_pattern": dict(sorted(pattern.items())),
+        "excluded": excluded,
+        "unresolved": unresolved,
+    }
+    if output:
+        Path(output).write_text(json.dumps(summary, sort_keys=True) + "\n")
+
+    print("PASS summary")
+    for key in (
+        "endpoint_size", "certified_cells", "excluded_cells",
+        "unresolved_cells", "survivors_after_exact_exclusions", "branch_lp",
+        "numerical_live", "exact_primal", "exact_primal_failures",
+        "solver_failures", "exact_farkas", "exact_farkas_failures",
+        "max_primal_denominator", "max_farkas_denominator",
+        "zero_closed_primal", "farkas_forced_zero",
+        "farkas_forced_negative",
+    ):
+        print(key, summary[key])
+    print("primal_limit_counts", summary["primal_limit_counts"])
+    print("min_positive_strict", summary["min_positive_strict"])
+    print("root_dead", summary["root_dead"])
+    print("root_unresolved", summary["root_unresolved"])
+    print("survivor_graph", summary["survivor_graph"])
+    print("survivor_pattern", summary["survivor_pattern"])
+
+
+def main():
+    parser = ArgumentParser()
+    parser.add_argument("--part", type=int)
+    parser.add_argument("--parts", type=int)
+    parser.add_argument("--output")
+    parser.add_argument("--summary-dir")
+    parser.add_argument("--summary-output")
+    args = parser.parse_args()
+
+    if args.summary_dir:
+        assert args.part is None and args.parts is None
+        summarize(args.summary_dir, args.summary_output)
+        return
+
+    assert args.part is not None and args.parts is not None and args.output
+    scan(args.part, args.parts, args.output)
+
+
+if __name__ == "__main__":
+    main()

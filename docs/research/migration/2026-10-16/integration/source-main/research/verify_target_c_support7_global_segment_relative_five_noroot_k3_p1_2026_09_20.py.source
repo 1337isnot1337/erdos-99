@@ -1,0 +1,183 @@
+#!/usr/bin/env python3
+"""Exact t=5, k=3, p=1 rank-density barrier for Target C.
+
+This closes the p=1 slice of the five-no-root k=3 branch after the companion
+p=0 verifier.
+
+Fix the rank-two coefficient-constraint space P.  The canonical p=0 state
+empties every touched root-0 quotient block whose empty constraint is
+contained in P and completes the rest.  Let C be its complete-block set and
+let d=|C|-rank_T(C).
+
+A canonical p=1 state is obtained by replacing exactly one local block by one
+singleton root-0 row.  There are two cases.
+
+* If the singleton lies in a block that is empty in the p=0 canonical state,
+  the complete set C is unchanged.  The p=0 audit proves d>=1, hence the
+  p=1 defect is already nonnegative from delta<=rank_T(C)+3.
+* If the singleton replaces a complete block b, the complete set becomes
+  C\{b}.  If d>=2 this set is still dependent, so the same rank bound is
+  enough.  Only the 86 p=0 canonical states with d=1 can possibly matter.
+
+For those 86 states, the verifier checks every complete block b and each of
+the three singleton local rows whose coefficient constraint lies in P.
+Exactly 42 candidates occur.  In every candidate C\{b} is still dependent:
+36 have (|C\{b}|,rank)=(6,5) and 6 have (5,4).  Therefore every canonical
+p=1 state has nonnegative defect.  Completing additional compatible empty
+blocks adds three selected rows and at most one T direction, so no other
+realization can have smaller defect.
+
+All coefficient-space operations are exact Fraction arithmetic inherited from
+the base verifier.  Complete-block ranks use P=2^127-1; Lucas-Lehmer and the
+Hadamard check P^2>12^15 make those modular ranks exact over Q.
+"""
+from argparse import ArgumentParser
+from collections import Counter
+from pathlib import Path
+import contextlib
+import importlib.util
+import io
+
+HERE = Path(__file__).resolve().parent
+P0_PATH = HERE / "verify_target_c_support7_global_segment_relative_five_noroot_k3_p0_2026_09_20.py"
+spec = importlib.util.spec_from_file_location("relative_five_noroot_k3p0_for_p1", P0_PATH)
+P0 = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(P0)
+R = P0.R
+K = P0.K
+
+
+def scan(keys, orbits, start, stop):
+    key_to_global = {K.cycle_key(R.DESC[e]): e for e in R.NO_ROOT}
+    complete_rank_cache = {}
+    p0_deficiency_one_states = 0
+    complete_replacement_candidates = 0
+    replacement_rank_census = Counter()
+    first_independent = None
+
+    for orbit_index in range(start, stop):
+        local_five = orbits[orbit_index]
+        ext = tuple(key_to_global[keys[i]] for i in local_five)
+        touched = tuple(sorted(
+            b for b in range(35)
+            if any(R.QCOMP[e][b] != (0, 0) for e in ext)
+        ))
+
+        for space in P0.candidate_rank2_constraint_spaces(ext, touched):
+            states = P0.canonical_minimal_state(ext, touched, space)
+            assert states is not None
+            complete_set = tuple(
+                b for b, state in zip(touched, states) if state == 7
+            )
+            c = len(complete_set)
+            if c >= 14:
+                continue
+
+            rank = complete_rank_cache.get(complete_set)
+            if rank is None:
+                rank = R.rank_mod([P0.COMPLETE_T[b] for b in complete_set])
+                complete_rank_cache[complete_set] = rank
+            deficiency = c - rank
+            assert deficiency >= 1
+            if deficiency != 1:
+                continue
+
+            p0_deficiency_one_states += 1
+            for block in complete_set:
+                for singleton_state in (1, 2, 4):
+                    local_key = R.local_constraint_key(
+                        ext, block, singleton_state
+                    )
+                    if not R.is_subspace(local_key, space):
+                        continue
+
+                    complete_replacement_candidates += 1
+                    reduced = tuple(b for b in complete_set if b != block)
+                    reduced_rank = complete_rank_cache.get(reduced)
+                    if reduced_rank is None:
+                        reduced_rank = R.rank_mod(
+                            [P0.COMPLETE_T[b] for b in reduced]
+                        )
+                        complete_rank_cache[reduced] = reduced_rank
+                    replacement_rank_census[(len(reduced), reduced_rank)] += 1
+
+                    if reduced_rank == len(reduced):
+                        first_independent = (
+                            orbit_index,
+                            ext,
+                            touched,
+                            space,
+                            states,
+                            block,
+                            singleton_state,
+                            reduced,
+                        )
+                        return {
+                            "p0_deficiency_one_states": p0_deficiency_one_states,
+                            "complete_replacement_candidates": complete_replacement_candidates,
+                            "replacement_rank_census": replacement_rank_census,
+                            "complete_rank_cache_size": len(complete_rank_cache),
+                            "first_independent": first_independent,
+                        }
+
+    return {
+        "p0_deficiency_one_states": p0_deficiency_one_states,
+        "complete_replacement_candidates": complete_replacement_candidates,
+        "replacement_rank_census": replacement_rank_census,
+        "complete_rank_cache_size": len(complete_rank_cache),
+        "first_independent": None,
+    }
+
+
+def main():
+    parser = ArgumentParser()
+    parser.add_argument("--orbit-start", type=int, default=0)
+    parser.add_argument("--orbit-end", type=int)
+    args = parser.parse_args()
+
+    assert R.lucas_lehmer_127()
+    keys, orbits, orbit_sizes, augmentation_candidates = K.five_no_root_orbits()
+    end = len(orbits) if args.orbit_end is None else args.orbit_end
+    assert 0 <= args.orbit_start <= end <= len(orbits)
+
+    result = scan(keys, orbits, args.orbit_start, end)
+    assert result["first_independent"] is None, result["first_independent"]
+
+    max_complete_norm2 = max(
+        sum(x * x for x in row) for row in P0.COMPLETE_T
+    )
+    assert max_complete_norm2 == 12
+    assert R.P * R.P > max_complete_norm2 ** 15
+
+    if args.orbit_start == 0 and end == len(orbits):
+        assert len(orbits) == 20451
+        assert sum(orbit_sizes) == 96560646
+        assert augmentation_candidates == 20475
+        assert result["p0_deficiency_one_states"] == 86
+        assert result["complete_replacement_candidates"] == 42
+        assert dict(sorted(result["replacement_rank_census"].items())) == {
+            (5, 4): 6,
+            (6, 5): 36,
+        }
+
+    print("PASS: five-no-root k=3,p=1 rank-density branch")
+    print("five_no_root_subsets", 96560646)
+    print("S7_orbits", len(orbits))
+    print("orbit_range", args.orbit_start, end)
+    print("p0_deficiency_one_states", result["p0_deficiency_one_states"])
+    print(
+        "complete_replacement_candidates",
+        result["complete_replacement_candidates"],
+    )
+    print(
+        "replacement_rank_census",
+        dict(sorted(result["replacement_rank_census"].items())),
+    )
+    print("max_complete_row_norm_squared", max_complete_norm2)
+    print("hadamard_exact_rank_bound", R.P * R.P > max_complete_norm2 ** 15)
+    print("complete_rank_cache_size", result["complete_rank_cache_size"])
+
+
+if __name__ == "__main__":
+    main()

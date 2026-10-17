@@ -1,0 +1,183 @@
+# Target C: direct finite cover excludes the last eight-row Profile B source
+
+Date: 2026-09-22
+
+Classification: **proved candidate awaiting promotion**. This closes the
+auxiliary eight-no-root `k=6, D=-1, p=9, d_root=0, d_v=3, q=9` Profile B
+source case, conditional only on the already recorded root-block reduction,
+the coefficient minimum-weight bound `d_1(P)>=4`, and the source requirement
+of nine singleton replacements. It does not close another rank-density
+profile, Target C-II, or Level I.
+
+The reduction to `d_1(P)>=4` is recorded on current main in
+`target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_weight3_unstripped_closure_2026-09-22.md`.
+The Profile B source parameters and virtual complete-block deficiency are in
+the active finite-layer records cited there. This note replaces the proposed
+five-row weight-three residual audit for this source: that residual is not
+needed once the fixed root rows are retained.
+
+## Result
+
+For each rank-two coefficient plane `P <= Q^8` that can occur in this source,
+the virtual-canonical complete set has deficiency
+
+```text
+d_8 = |C| - rank H(C) != 3
+    or fewer than 9 compatible singleton replacements.
+```
+
+The full exact cover considered 3,332,125 generator-pair/external-set
+instances (duplicates can occur when one source plane has several generating
+pairs). It found 47,007 instances with `d_8=3`; every one has singleton
+capacity at most eight. The largest capacity at deficiency three was eight.
+No candidate satisfies the necessary Profile B source requirements
+`d_8=3` and `q=9`.
+
+This is a source-state exclusion. It does not use approximate rank, numerical
+optimization, or a packing configuration. It closes this one finite
+rank-density case if the inherited reduction is applicable as stated.
+
+## 1. Exact finite universe
+
+There are 35 root blocks, the triples of `K_7`, and three singleton states on
+each block. For block `b` and singleton state `s`, write its coefficient
+constraint as the row
+
+```text
+f_(b,s)[e] = det(local_direction_s, QCOMP[e,b]),
+                 e in the 105 no-root four-cycles.
+```
+
+Each row has entries in `{0,+1,-1}` and support exactly eight: each of the
+four four-sets containing the root triangle supplies three four-cycle
+orientations, and precisely one orientation has local quotient direction
+parallel to the singleton direction. The other two give nonzero entries.
+
+An empty block contributes the two local coordinate rows. Those rows are in
+the span of the three singleton constraints on the same block. Complete and
+pair states contribute no coefficient constraints. It follows that every
+actual rank-two source plane `P` is spanned by two linearly independent rows
+from this fixed list of 105 templates. The empty-state case on one block is
+included by choosing two independent templates on that same block.
+
+Thus it is enough to choose an unordered pair of distinct templates and an
+eight-element subset `E` of the 105 cycle coordinates, require the restricted
+rows to have rank two, and test the resulting row space. The cover may include
+planes that are not realizable by a full root state; including them only makes
+the exclusion stronger.
+
+## 2. Minimum-weight filter and exact subset count
+
+For a selected set of eight columns from two template rows, each column is
+zero or has one of the four projective directions
+
+```text
+(1,0), (0,1), (1,1), (1,-1).
+```
+
+If `k` selected columns are nonzero and the largest projective class has size
+`m`, the minimum weight of a nonzero word in the restricted rank-two row
+space is exactly `k-m`: the word annihilating that projective direction
+vanishes on precisely its members and on the zero columns. The inherited
+bound `d_1(P)>=4` is therefore equivalent to
+
+```text
+k >= 6,
+every projective class has size <= k-4.
+```
+
+For each template pair, the verifier enumerates all choices of `k=6,7,8`
+nonzero columns satisfying these multiplicity bounds and all choices of
+`8-k` zero columns. Its independent integer combinatorial count is
+`3,332,125` over the nine representatives below, matching the C++ visit
+count exactly. The multiplicity condition also guarantees restricted rank
+two: a rank-one restriction would have all its nonzero columns in one
+projective class and minimum word weight zero.
+
+## 3. Nine template-pair orbits
+
+The symmetric group on the seven non-root vertices acts on templates as
+marked triangles: a template is a triangle together with the vertex opposite
+the root in its defining root four-cycle. Two unordered pairs are in the same
+orbit exactly when the triangle intersection size and marked-vertex pattern
+agree. The nine types are:
+
+| Triangle intersection | Mark pattern | Pair count |
+|---:|---|---:|
+| 0 | both marks outside | 630 |
+| 1 | neither mark on the common vertex | 1,260 |
+| 1 | exactly one mark on it | 1,260 |
+| 1 | both marks on it | 315 |
+| 2 | both marks outside the intersection | 210 |
+| 2 | one mark inside, one outside | 840 |
+| 2 | both marks inside, same vertex | 420 |
+| 2 | both marks inside, distinct vertices | 420 |
+| 3 | same triangle, distinct marks | 105 |
+| **Total** |  | **5,460** |
+
+The driver enumerates all `choose(105,2)=5,460` template pairs, constructs one
+representative for each type, then independently applies all 5,040 vertex
+permutations to each representative. It asserts the nine orbit sizes shown
+above and their total. Vertex relabeling changes cycle orientations only by
+coordinate signs and changes each local basis by an invertible integral
+`A_2` symmetry; it preserves the restricted code weights, local containment,
+and complete-block relation rank. Therefore the nine representatives cover
+all template-pair/external-set cases.
+
+## 4. Virtual completion and exhaustive output
+
+For each selected external set and its rank-two plane, the verifier computes
+the touched root blocks. A touched block is virtual-empty precisely when both
+of its empty-state constraint rows lie in `P`; otherwise it is virtual
+complete. For each virtual-complete block it tests all three singleton
+constraints for membership in `P`. A block admitting one such state
+contributes one to singleton capacity; uniqueness follows because two
+independent singleton constraints would make the empty block compatible and
+therefore virtual-empty.
+
+The C++ implementation uses exact integer plane membership. It computes
+`d_8=|C|-rank H(C)` modulo the prime `1,000,000,007`. Every complete-block row
+has squared norm at most 12 and each relevant minor has order at most 15.
+Hadamard gives absolute determinant at most `12^(15/2)`, less than the prime.
+The program checks `prime^2 > 12^15` and verifies primality by trial division;
+thus a rational nonzero minor cannot vanish modulo the prime, and the computed
+rank equals the rank over `Q`.
+
+The full run reported:
+
+```text
+template-pair/external-set instances                     3,332,125
+instances with singleton capacity at least 9              2,772,191
+instances with virtual deficiency 3                          47,007
+deficiency-3 capacity histogram
+  0: 2,313; 2: 5,049; 3: 8,055; 4: 5,724; 5: 5,400;
+  6: 7,938; 7: 9,450; 8: 3,078
+deficiency-3 instances with capacity at least 9                   0
+```
+
+For the first two deficiency-three cases in each pair orbit, the Python
+driver independently rebuilds the coefficient plane and virtual-complete set
+and checks its deficiency and singleton capacity over exact rational
+arithmetic. Ten such checks passed. The count of all visited subsets is also
+checked independently by the Python binomial sum over four projective
+directions.
+
+## 5. Reproduction and scope
+
+Run
+
+```text
+python3 research/verify_target_c_profile_b_template_cover_2026_09_22.py --require-no-survivors
+```
+
+The driver compiles `target_c_profile_b_template_cover.cpp` with `g++ -O3` in a
+temporary directory, enumerates all nine orbits, and fails if any deficiency
+three state has capacity at least nine. The C++ rank decisions are exact over
+`Q` by the certificate above; the ten independent sample checks use rational
+arithmetic. The driver imports the core four-cycle module and requires neither
+NumPy nor floating-point arithmetic.
+
+The result excludes only the stated eight-row `k=6` Profile B case in the
+support-seven/global-segment-relative auxiliary rank-density route. It does
+not close neighboring `k` or support values, the route's global implication,
+Target C-II, or Level I.

@@ -1,0 +1,195 @@
+# Target C-II — strict aggregate gap forces component remainder
+
+**Date:** 2026-09-13  
+**Status:** proof-only Type-II composition; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This note composes the proof-only strict aggregate moment gap with the audited-working
+§§160--161 remainder identity. It gives a finite identity and an asymptotic branch
+split that were not retained in the earlier detour note.
+
+Put
+
+\[
+S_D:=\sum_r d_r,\qquad
+X_D:=q-k-S_D,
+\qquad
+G_D:=2+q+m-k-S_D,
+\]
+
+where `m` is the number of nonunit loaded-hull sides and `k=d_H+s_Z`. The
+proof-only strict aggregate result gives
+
+\[
+\liminf_{D\to\infty}{X_D\over D}
+\ge
+\alpha,
+\qquad
+\alpha:={\pi\over20}(2-\sqrt3)
+=0.0420893607\ldots .
+\tag{SGR.1}
+\]
+
+The audited §160 identity is
+
+\[
+G_D=R_I+s_B+\sum_r(\delta_r+2-d_r)\ge0.
+\tag{SGR.2}
+\]
+
+The new consequence is
+
+\[
+\boxed{G_D=m+2+X_D,}
+\tag{SGR.3}
+\]
+
+and therefore
+
+\[
+\boxed{
+\liminf_{D\to\infty}{G_D-m\over D}\ge\alpha.
+}
+\tag{SGR.4}
+\]
+
+Thus the aggregate detour floor cannot be paid while both the nonunit loaded-hull
+side count and the §160 component remainder are sublinear.
+
+## 1. Exact identity
+
+Substitute the definitions of `X_D` and `G_D`:
+
+\[
+G_D-(m+2+X_D)
+=2+q+m-k-S_D-m-2-(q-k-S_D)=0.
+\]
+
+This is finite and has no limiting or injectivity assumption. Combining it with
+(SGR.1) gives (SGR.4). Since the audited §160 decomposition has nonnegative terms,
+the same conclusion applies to the actual remainder `R_I+s_B+sum_r eta_r`, not to
+an auxiliary signed quantity.
+
+## 2. Transfer to the long-side correction
+
+Let
+
+\[
+\chi_D:=q+m-\operatorname{per}(F),
+\qquad
+\delta_D:={b-\operatorname{per}(F)\over D}.
+\]
+
+The exact §172 identity is
+
+\[
+\chi_D=S_D+G_D+k-\operatorname{per}(F)-2,
+\qquad
+b-\operatorname{per}(F)=u_B+\chi_D,
+\tag{SGR.5}
+\]
+
+with `u_B>=0`. Along any Type-II subsequence for which
+
+\[
+{S_D\over D}\to S,
+\qquad {m\over D}\to\mu,
+\qquad {k\over D}\to\kappa,
+\]
+
+the Type-II perimeter limit and (SGR.4) imply
+
+\[
+\boxed{
+\liminf {\chi_D\over D}
+\ge S+\mu+\kappa+\alpha-\pi.
+}
+\tag{SGR.6}
+\]
+
+Consequently the actual outer-walk detour obeys the branch-safe bound
+
+\[
+\boxed{
+\liminf \delta_D
+\ge\bigl(S+\mu+\kappa+\alpha-\pi\bigr)_+.
+}
+\tag{SGR.7}
+\]
+
+No sign is assigned to `chi_D` when the displayed lower bound is negative. The
+positive-part step uses only `b>=per(F)` and `u_B>=0`.
+
+## 3. Scoped endpoint consequence
+
+On the proof-only Section-118 common-cap profile, the prior audited moment bound is
+
+\[
+S\ge S_{118}:=2.798596312209462\ldots .
+\]
+
+Hence every subsequence in that same profile satisfies
+
+\[
+\boxed{
+\liminf {\chi_D\over D}
+\ge {m\over D}+{k\over D}-0.3009069810\ldots-o(1),
+}
+\tag{SGR.8}
+\]
+
+and
+
+\[
+\boxed{
+\liminf {b-\operatorname{per}(F)\over D}
+\ge
+\left({m\over D}+{k\over D}-0.3009069810\ldots\right)_+-o(1).
+}
+\tag{SGR.9}
+\]
+
+For example, if `m+k >= (0.300907+epsilon)D` along a common subsequence, then the
+old outer contact walk has at least `epsilon D-o(D)` excess over the force-hull
+perimeter. This is a genuine source-level dichotomy: a negative long-side correction
+is possible only below the explicit `m+k` threshold, and above that threshold the
+outer detour is forced.
+
+The earlier §172 carrier-area bound remains available simultaneously. On its
+Section-118 data it gives `chi_D/D >= -0.1036221+k/D-o(1)`. Taking the larger of
+that bound and (SGR.8) is valid, but does not remove the low-`m` branch.
+
+## 4. Interaction with the exact hull ledger
+
+In Type II, `e_BB=q-m` and the audited loaded-hull identity is
+
+\[
+e_{BB}=Q+2k+u_B.
+\tag{SGR.10}
+\]
+
+Using `Q/D=2(q-k)/D-\pi-\delta_D+o(1)` gives the finite/asymptotic compatibility
+inequality
+
+\[
+{m\over D}+{k\over D}
+\le
+\pi+\delta_D-{q-k\over D}+o(1).
+\tag{SGR.11}
+\]
+
+Thus a proposed closure of the low-`m` branch must control the remaining
+`q-k`/outer-detour tradeoff; (SGR.7) alone does not provide that control.
+
+## 5. Scope and classification
+
+- (SGR.3)--(SGR.4) are exact/one-line consequences of the proof-only strict gap and
+  audited §160; the theorem state is unchanged.
+- (SGR.6)--(SGR.9) use the audited §172 identities and the same-subsequence
+  Section-118 profile. No independent carrier optimization is made.
+- Contact-isolated source points remain outside the core affine-kernel statement.
+- No KKT coefficient floor, global two-phase assumption, strict diameter descent, or
+  exact unit triangle is asserted.
+
+**Classification:** proved candidate awaiting hostile audit; proof-only Type-II
+composition. C-II remains open.

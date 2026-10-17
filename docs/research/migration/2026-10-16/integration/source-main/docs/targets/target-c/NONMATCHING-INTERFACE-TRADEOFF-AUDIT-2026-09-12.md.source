@@ -1,0 +1,182 @@
+# Target C — hostile audit of corrected Type-II nonmatching/interface tradeoff
+
+**Date:** 2026-09-12  
+**Reviewed:** `docs/reports/target_c_typeii_nonmatching_interface_tradeoff_2026-09-12.md` after repair.  
+**Disposition:** **PASS after correction; old `0.6676585...` floor REJECTED.**  
+**Theorem authority:** unchanged; audit.46 remains canonical.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+## 1. Regression found
+
+The original report set
+
+\[
+a=2\sqrt{\Delta_2}=1.9046256137\ldots
+\]
+
+and asserted an unconditional Type-II floor
+
+\[
+(q-k)/D\ge a-o(1).
+\]
+
+That is the same algebraic overclaim already rejected in the corrected loaded-hull report. Canonical Sections 63, 80, and 85 alone give only
+
+\[
+\boxed{
+\liminf{q-k\over D}
+\ge t_*={2\over5}\left(\pi+\sqrt{\Delta_2}\right)
+=1.6375621841815\ldots .
+}
+\]
+
+The larger `2sqrt(Delta_2)` value is conditional on an additional small-defect hypothesis, for example the separately audited `J_aug=o(D)` branch of the interface/augmented-defect theorem.
+
+**Verdict:** original NT.3 REJECTED; corrected `t_*` input PASS.
+
+## 2. Exact nonmatching identities
+
+Canonical Sections 61 and 63 give
+
+\[
+2h-q=x_B+Q+2s_Z,
+\]
+
+\[
+b+Q=2(q-k),
+\qquad x_B=b-q.
+\]
+
+Thus
+
+\[
+x_B+Q=2(q-k)-q
+\]
+
+and
+
+\[
+2h-q=2(q-k)-q+2s_Z.
+\]
+
+Using only `q/D<=pi` with the corrected `t_*` gives the weak bound
+
+\[
+\liminf{2h-q\over D}
+\ge2t_*-\pi
+=0.1335317147\ldots,
+\]
+
+not `0.6676585...`.
+
+**Verdict:** exact identities PASS; original numerical substitution REJECTED.
+
+## 3. Train-end scalar coupling
+
+The finite Section-61 train-end inequality is
+
+\[
+h-2\le2x_B+3f+(Q-f)+s_Z.
+\]
+
+Since `h=(q-k)+s_Z`, the `s_Z` terms cancel. On normalized subsequential limits,
+
+\[
+\boxed{t\le2x+2f+Q.}
+\]
+
+Put
+
+\[
+s=x+Q=2t-q_*.
+\]
+
+Because `0<=f<=Q`,
+
+\[
+2x+2f+Q\le2x+3Q\le3(x+Q)=3s.
+\]
+
+Hence
+
+\[
+\boxed{s\ge t/3.}
+\]
+
+Since
+
+\[
+{2h-q\over D}=s+2s_Z/D,
+\]
+
+the corrected consequence of this particular Type-II scalar system is only
+
+\[
+\boxed{
+\liminf {2h-q\over D}
+\ge t_*/3
+=0.5458540613938\ldots .
+}
+\]
+
+Canonical Section 61 already gives the stronger universal floor `c_*=0.609904...`. Therefore the repaired report makes no new nonmatching-floor improvement.
+
+**Verdict:** PASS; old `0.6676585...` improvement claim REJECTED.
+
+## 4. Surviving exceptional-face information
+
+The same valid scalar inequality gives
+
+\[
+2f-Q\ge t-2s.
+\]
+
+Thus if `s<t/2`, a positive exceptional-face density is forced:
+
+\[
+f\ge(t-2s)/2.
+\]
+
+Since `2f-Q<=Q<=s`, feasibility also gives `s>=t/3` directly. At the formal endpoint `s=t/3`, all coarse inequalities saturate, forcing
+
+\[
+x=0,
+\qquad Q=f=s.
+\]
+
+This is the real structural content: minimizing interface/nonmatching currency forces linear bounded nonquadrilateral-face currency. It is not a contradiction.
+
+**Verdict:** PASS.
+
+## 5. Interaction with the interface/augmented-defect theorem
+
+The route-local audited theorem now on `main` gives
+
+\[
+(q-k)+J_{aug}\ge2\sqrt{R_4}.
+\]
+
+Therefore on the extra subbranch `J_aug=o(D)`, one does recover
+
+\[
+\liminf(q-k)/D\ge2\sqrt{\Delta_2}.
+\]
+
+The original nonmatching report omitted this needed hypothesis. The corrected report now keeps the conditional high-density branch separate.
+
+## 6. Final disposition
+
+Valid after repair:
+
+- the exact normalized scalar coupling;
+- `x+Q>=t/3`;
+- exceptional-face forcing near equality; and
+- conditional recovery of the `1.9046256...` loaded-density value when `J_aug=o(D)`.
+
+Rejected:
+
+- unconditional `(q-k)/D>=1.9046256...`;
+- unconditional `(2h-q)/D>=0.6676585...`; and
+- the endpoint boundary-pattern discussion attached to that false floor.
+
+**PASS after correction. C-II remains open.**

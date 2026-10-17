@@ -1,0 +1,127 @@
+# Target C-II — lift the orbit/detour floor to the full-core loaded surplus
+
+**Date:** 2026-09-14  
+**Repository base:** `046784db`  
+**Status:** proved proof-only consequence; theorem-state authority unchanged  
+**Scope:** canonical full-core, no-macroscopic-container, near-disk Type-II branch  
+**Dependencies:** canonical loaded-chord elimination and component deatomization; proof-only AG42/§171 orbit-diameter refinement
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The AG42 refinement of the audited §171 orbit/detour theorem gives, at proof-only scope,
+
+\[
+\liminf_{D\to\infty}{q-k\over D}
+\ge t_{42}:=C_{146}+0.0013751
+>1.82088863795,
+\]
+
+where
+
+\[
+C_{146}={4\over9}\left(\pi+\sqrt{\Delta_2}\right),
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\]
+
+In the canonical full-core Type-II branch, the promoted loaded-chord theorem and component deatomization turn this directly into a stronger floor for
+
+\[
+\mu_D={e_{BB}+2s_C-3k\over D}.
+\]
+
+This consequence was not recorded in the existing AG42 or correlated-train notes.
+
+## 1. Exact loaded-chord identity
+
+Canonical loaded-chord elimination gives, for every sufficiently large full-core representative,
+
+\[
+c_B=0,
+\qquad e_{BB}=q-m_B,
+\]
+
+and the exact finite identity
+
+\[
+\boxed{\mu_DD=q+m_B-k-2c_I-4.}
+\tag{OL.1}
+\]
+
+Here `m_B>=0` is the number of nonunit loaded-force-hull sides and `c_I` is the number of unloaded positive-contact components. Canonical all-phase component deatomization gives
+
+\[
+c_I=O(D^{2/3})=o(D).
+\tag{OL.2}
+\]
+
+Therefore
+
+\[
+\mu_D
+={q-k\over D}+{m_B\over D}-o(1)
+\ge {q-k\over D}-o(1).
+\tag{OL.3}
+\]
+
+No endpoint assumption on `m_B` is used.
+
+## 2. Lift of the AG42/§171 floor
+
+The proof-only AG42/§171 refinement gives the safe certified value
+
+\[
+\liminf {q-k\over D}
+\ge C_{146}+0.0013751,
+\]
+
+with
+
+\[
+1.8208886379510192
+<C_{146}+0.0013751
+<1.8208886379954636.
+\]
+
+Combining with (OL.3) yields
+
+\[
+\boxed{
+\liminf_{D\to\infty}\mu_D
+\ge C_{146}+0.0013751
+>1.82088863795.
+}
+\tag{OL.4}
+\]
+
+This strictly supersedes, for the full-core branch, the direct correlated-train surplus floor
+
+\[
+\liminf\mu_D\ge1.785463210824532\ldots.
+\]
+
+The numerical gain is more than `0.0354254`. The correlated-train theorem remains essential: its endpoint handshake supplies the stronger structural lower bounds on `J_D`, exceptional faces, chamber perimeter/slack, and the linear rhombus-count deficit. Equation (OL.4) only strengthens the scalar `mu_D` consequence.
+
+## 3. Scope and frontier effect
+
+This is not a C-II closure theorem.
+
+- The AG42 constant `0.00042` is still proof-only pending independent audit, so (OL.4) inherits that lifecycle status.
+- The lift uses the canonical full-core loaded-chord identity. It does not apply to the separate macroscopic inactive-container branch.
+- There is no known upper bound on `mu_D` below `1.82088863795...`; increasing `m_B` only increases `mu_D` in (OL.1).
+- The result supplies no same-cardinality strict sub-`D` competitor and forces no exact unit equilateral triangle.
+
+The useful structural message is that the surviving full-core branch is already in a high-loaded-surplus regime. Future scalar regressions should impose (OL.4), not the older `mu_TC=1.63756...` or `1.78546...` floors.
+
+## 4. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_orbit_loaded_surplus_floor.py
+python3 research/verify_target_c_orbit_detour_gap_00042.py
+```
+
+The first script checks only the constant propagation. The second is the existing outward exact-rational certificate for the AG42/§171 endpoint.

@@ -1,0 +1,212 @@
+# Target C-II — complete-angle affine reduction cuts generic H6 to 5,692 cells
+
+**Date:** 2026-09-19  
+**Status:** exact finite reduction; theorem-state authority unchanged  
+**Scope:** degree-pure support-seven generic `H6`, with reciprocal hull `0,1,...,5`, reciprocal interior vertices `6,7`, and no collinear reciprocal triple  
+**Certificate:** `research/verify_target_c_support7_h6_complete_angle_affine_census_2026_09_19.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The committed ground-coupled affine endpoint is
+
+\[
+6{,}308=4{,}936\ C_7+1{,}372\ (C_3\sqcup C_4)
+\]
+
+labelled generic-`H6` cells. That relaxation uses the seven local force pentagons, the ground ray order, the fourteen triangles `0ab` associated with present non-ground relation edges, and present non-ground reciprocal triangles. It does not require all eight reciprocal points to share one complete Euclidean angular arrangement.
+
+This note adds that missing affine compatibility layer. Exact Farkas certificates exclude 616 further cells and leave
+
+\[
+\boxed{5{,}692=4{,}464\ C_7+1{,}228\ (C_3\sqcup C_4).}
+\]
+
+No sine-law metric identity or nonlinear force-closure inequality is used in this count.
+
+## 1. Complete reciprocal angular variables
+
+Fix one surviving generic `H6` oriented-matroid cell. The chirotope determines the strict circular order of the seven rays from each reciprocal vertex.
+
+At each hull vertex `v=0,...,5`, introduce six normalized consecutive ray gaps
+
+\[
+h_{v,1},\ldots,h_{v,6}>0.
+\]
+
+The ground cone theorem gives
+
+\[
+\sum_{p=1}^6h_{0,p}<\frac23,
+\]
+
+while strict convexity gives
+
+\[
+\sum_{p=1}^6h_{v,p}<1
+\qquad(v=1,\ldots,5).
+\]
+
+At each interior reciprocal vertex `v=6,7`, introduce seven positive cyclic gaps with
+
+\[
+\sum_{p=1}^7h_{v,p}=2.
+\]
+
+The chirotope chooses, for each pair of rays at an interior vertex, which cyclic arc is the ordinary angle. The selected arc is required to lie strictly below `1`, i.e. below \(\pi\).
+
+Every normalized reciprocal angle
+
+\[
+A_{v;ab}=\frac1\pi\angle avb
+\]
+
+is therefore an exact integer-affine expression in these ray gaps.
+
+## 2. Tie the complete angular arrangement to the physical pentagons
+
+For each non-ground reciprocal vertex `v=1,...,7`, keep the five physical force gaps
+
+\[
+x_{v,0},\ldots,x_{v,4}.
+\]
+
+The already certified pentagon simplex gives
+
+\[
+\sum_{k=0}^4x_{v,k}=2,
+\qquad
+x_{v,k}+x_{v,k+1}-x_{v,k+3}>\frac13.
+\]
+
+Exactly five reciprocal rays at `v` correspond to present support edges. Their complete edge signs and the reciprocal chirotope determine the signed-force cyclic order. For every pair among those five rays, the existing audited raw-angle conversion gives the reciprocal angle as an exact integer-affine expression in the five `x` variables. Equating that expression with the corresponding `A_{v;ab}` supplies ten angle ties at each non-ground vertex, hence seventy ties total.
+
+The complete eight-point reciprocal must also satisfy the Euclidean triangle identity for every triple:
+
+\[
+\boxed{
+A_{a;bc}+A_{b;ac}+A_{c;ab}=1
+}
+\qquad
+\{a,b,c\}\subset\{0,\ldots,7\}.
+\]
+
+There are exactly
+
+\[
+\binom83=56
+\]
+
+such equations. This includes triangles containing missing relation pairs. Those angles exist geometrically even when the pair is not a support edge; omitting them was a relaxation, not a geometric freedom.
+
+The resulting affine system has 85 variables:
+
+- 35 physical force-turn variables;
+- 36 hull-ray gap variables;
+- 14 interior-ray gap variables.
+
+Its equality family contains seven force-turn sums, two interior full-circle sums, seventy present-ray angle ties, and all fifty-six reciprocal triangle sums. Its strict facets are the thirty-five pentagon-simplex facets, all fifty ray-gap positivity facets, six hull-span facets, and the forty-two ordinary-angle `<pi` facets at the two interior reciprocal vertices.
+
+## 3. Exact exclusion certificate
+
+Write the equality system as
+
+\[
+E_r(z)=b_r
+\]
+
+and every strict facet as
+
+\[
+f_j(z)=c_j+a_j\cdot z>0.
+\]
+
+The verifier asks HiGHS only for a candidate dual. A cell is excluded only if the candidate can be converted to exact rational coefficients satisfying
+
+\[
+\alpha_j\ge0,
+\qquad
+\sum_j\alpha_j=1,
+\]
+
+and
+
+\[
+\sum_j\alpha_j a_j+
+\sum_r\mu_rE_r=0
+\]
+
+coefficientwise in all 85 variables. On the equality space this forces
+
+\[
+\sum_j\alpha_jf_j(z)=\kappa.
+\]
+
+The verifier accepts the exclusion only when the exact rational value obeys
+
+\[
+\kappa\le0.
+\]
+
+Since the left side is a convex combination of strictly positive facets, such a cell is impossible.
+
+All 616 accepted certificates in this reduction have
+
+\[
+\boxed{\kappa=0.}
+\]
+
+There are no failed exactifications among the proposed exclusions. The largest denominator occurring in an accepted exact dual coefficient is 102.
+
+## 4. Census
+
+The complete-angle layer excludes
+
+\[
+\boxed{616=472\ C_7+144\ (C_3\sqcup C_4)}
+\]
+
+of the 6,308 input cells.
+
+By normalized ground sign pattern, the exclusions are
+
+| pattern | excluded |
+|---|---:|
+| `145` | 4 |
+| `235` | 58 |
+| `236` | 202 |
+| `245` | 44 |
+| `256` | 202 |
+| `346` | 44 |
+| `347` | 4 |
+| `356` | 58 |
+
+The patterns `156`, `237`, and `345` lose no cells at this layer.
+
+The exact remaining generic-`H6` labelled-cell census is therefore
+
+| ground pattern | survivors |
+|---|---:|
+| `145` | 8 |
+| `156` | 16 |
+| `235` | 772 |
+| `236` | 1,524 |
+| `237` | 16 |
+| `245` | 514 |
+| `256` | 1,524 |
+| `345` | 24 |
+| `346` | 514 |
+| `347` | 8 |
+| `356` | 772 |
+
+for the total
+
+\[
+\boxed{5{,}692=4{,}464\ C_7+1{,}228\ (C_3\sqcup C_4).}
+\]
+
+## 5. What remains
+
+The 616 eliminated cells fail before metric-length consistency is imposed: they cannot support one complete generic reciprocal angle arrangement compatible with all seven local physical pentagon simplex constraints.
+
+The 5,692 survivors are only survivors of this affine relaxation. They are not certified reciprocal configurations. The complete-metric note supplies fifteen independent sine-law consistency equations on the non-ground `K_7`, and the physical pentagon work supplies the ten exact gap-order cones together with rank-conditioned rational secant cuts for the sharp nonlinear two-gap closure bound. Those are the next two non-affine layers to intersect with this 5,692-cell endpoint.
+
+Reciprocal-collinearity walls remain outside the generic calculation and still require their own branch. No theorem-state file is changed here; C-II remains open.

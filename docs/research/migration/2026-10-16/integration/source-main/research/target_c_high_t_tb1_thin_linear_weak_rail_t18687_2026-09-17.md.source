@@ -1,0 +1,338 @@
+# Target C-II — the THIN Horn branch contains a linear owner-injective ordered rail on one phase-pure row
+
+**Date:** 2026-09-17  
+**Status:** proof-only continuation of the THIN rich-cut synchronization theorem; no canonical promotion claimed  
+**Scope:** the THIN side of the 15-spaced one-sign strong-TB1 Horn upper family through `t=(q-k)/D<=1.8687`  
+**Dependencies:** THIN rich-cut phase synchronization; superdiameter geometric-thrackle theorem; exact path-region support; complementary-shore chord order; one-turn partner-region word  
+**Certificate:** `research/verify_target_c_high_t_tb1_thin_linear_weak_rail_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The earlier inactive-common-cut rail theorem extracted a vertex-disjoint THIN matching first and therefore obtained only an `Omega(D^(1/4))` ordered rail. The new rich-cut theorem makes the matching extraction unnecessary.
+
+On its blocker-rich phase-pure row `tau_*`, the full THIN subfamily already has linear size and has **distinct owner coordinates**. Since every THIN chord is superdiameter, any two of these chords meet. After fixing the owner shore, two distinct chords can therefore fail to cross properly only by sharing their partner endpoint. This is enough to recover the complementary-shore order with repetitions allowed.
+
+Consequently the THIN Horn branch contains a linear family of distinct inactive almost-diameters with:
+
+- one common selected O--O cut;
+- one fixed physical owner host;
+- distinct fifteen-spaced owner layers in strict order;
+- weakly ordered partners on the opposite hull shore;
+- and exact support intervals forming either a staircase or a strictly nested family after one final one-turn split.
+
+The same common cut carries the inverse-`D` phase-pure dense train family and circumcenter flanks from the rich-cut theorem.
+
+Write
+
+\[
+\gamma={791\over9\,600\,000\,000}.
+\]
+
+The rich-cut theorem supplies a row `tau_*` and a family `T_*` of THIN blockers satisfying
+
+\[
+\boxed{
+|T_*|>
+\left({\gamma\over80}-o(1)\right)D
+=
+\left(1.02994791667\ldots\times10^{-9}-o(1)\right)D.
+}
+\tag{LR.1}
+\]
+
+The final ordered family has size
+
+\[
+\boxed{
+|R_*|>
+\left({\gamma\over640}-o(1)\right)D
+=
+\left(1.28743489583\ldots\times10^{-10}-o(1)\right)D.
+}
+\tag{LR.2}
+\]
+
+No chord in `R_*` is asserted to be an actual diameter or KKT-loaded edge. Partner endpoints need not be distinct, so this is an **owner-injective weak rail**, not a matching rail.
+
+---
+
+## 1. The rich-cut THIN family already has the needed common shore decomposition
+
+Use the selected path
+
+\[
+R_0-\tau_1-R_1-\cdots-\tau_m-R_m.
+\tag{LR.3}
+\]
+
+Let
+
+\[
+\tau_* = \tau_k.
+\]
+
+Every `e in T_*` has exact selected-cut support containing `k`. Hence its two hull endpoints lie on the two complementary boundary shores of `tau_k`; denote them by
+
+\[
+P_k,\qquad Q_k.
+\tag{LR.4}
+\]
+
+Every blocker retains one assigned owner coordinate, equal to the physical layer containing one endpoint. The owners are all distinct and belong to the fifteen-spaced retained Horn coordinate set.
+
+For each blocker, its owner endpoint lies either on `P_k` or on `Q_k`. Retain the larger class and reverse the path notation if necessary. We obtain a family `T_1` with
+
+\[
+\boxed{|T_1|\ge {|T_*|\over2}}
+\tag{LR.5}
+\]
+
+whose owner endpoints all lie on `P_k` and whose partner endpoints all lie on `Q_k`.
+
+Because the owner coordinates are distinct path regions, the owner endpoints themselves are distinct source vertices.
+
+---
+
+## 2. Fix one physical owner host and order the owners
+
+Inside each path region, a hull endpoint on `P_k` lies on one of the two physical host-side boundary subarcs used throughout the active and inactive rail analyses. Retain the larger host color. This gives `T_2 subset T_1` with
+
+\[
+\boxed{|T_2|\ge {|T_*|\over4}.}
+\tag{LR.6}
+\]
+
+On one fixed physical host, the path-layer subarcs occur in path-index order or its global reverse. Orient the host order so the surviving owner coordinates satisfy
+
+\[
+i_1<i_2<\cdots<i_M,
+\qquad
+M=|T_2|,
+\tag{LR.7}
+\]
+
+and the corresponding owner endpoints
+
+\[
+p_1,p_2,\ldots,p_M\in P_k
+\]
+
+occur in the same hull order.
+
+The Horn thinning gives the stronger spacing
+
+\[
+\boxed{i_{s+1}-i_s\ge15.}
+\tag{LR.8}
+\]
+
+Write `q_s in Q_k` for the partner endpoint of `p_s`.
+
+---
+
+## 3. Pairwise meeting gives weak complementary-shore order
+
+Every THIN blocker satisfies
+
+\[
+|p_sq_s|>\sqrt{D^2-1}.
+\tag{LR.9}
+\]
+
+The superdiameter theorem therefore says that any two blocker segments meet.
+
+Take indices `s<t`. The owner endpoints `p_s,p_t` are distinct and both lie on `P_k`. The two chords cannot share an owner endpoint. They also cannot have
+
+\[
+p_s=q_t
+\quad\text{or}\quad
+p_t=q_s,
+\]
+
+because every `p` lies on `P_k` whereas every `q` lies on the opposite shore `Q_k`.
+
+Thus exactly two possibilities remain:
+
+1. `q_s=q_t`, so the chords share their partner endpoint; or
+2. `q_s!=q_t`, in which case the superdiameter-thrackle theorem forces a proper crossing.
+
+For four distinct hull endpoints on two complementary shores, proper crossing is equivalent to the standard rainbow order: if the `P_k` endpoints occur as `p_s,p_t`, the `Q_k` endpoints occur in the corresponding ambient order used by the complementary-shore crossing lemma.
+
+Allowing the equality case `q_s=q_t`, we obtain
+
+\[
+\boxed{
+q_1,q_2,\ldots,q_M
+\text{ are weakly monotone in the ambient }Q_k\text{ order.}
+}
+\tag{LR.10}
+\]
+
+This is the only modification needed relative to the vertex-disjoint rail proof. Repeated partners create plateaus, not inversions.
+
+---
+
+## 4. The one-turn partner word gives a linear staircase or nested support family
+
+Along the opposite shore `Q_k`, the path-region labels have the usual one-turn form
+
+\[
+R_k,R_{k+1},\ldots,R_m,
+\quad T_m,\quad
+R_m,R_{m-1},\ldots,R_k,
+\tag{LR.11}
+\]
+
+with weak repetitions allowed inside one region and with the terminal boundary piece assigned label `m`.
+
+Because the actual partner endpoints are weakly ordered by (LR.10), their region labels
+
+\[
+j_1,j_2,\ldots,j_M
+\tag{LR.12}
+\]
+
+form a weakly unimodal sequence, up to one harmless global reversal.
+
+A weakly unimodal finite sequence is the union of one weakly monotone prefix and one weakly monotone suffix meeting at its extremal plateau. One piece has at least half the indices. Retain it and call the resulting family `R_*`. Then
+
+\[
+|R_*|\ge {M\over2}
+\ge {|T_*|\over8}.
+\tag{LR.13}
+\]
+
+Using (LR.1),
+
+\[
+\boxed{
+|R_*|>
+\left({\gamma\over640}-o(1)\right)D.
+}
+\tag{LR.14}
+\]
+
+Every retained owner lies on the `R_0` side of `tau_k`, so after indexing as above
+
+\[
+i_s<k\le j_s,
+\tag{LR.15}
+\]
+
+and the exact selected-cut support is
+
+\[
+I_s=\{i_s+1,\ldots,j_s\}.
+\tag{LR.16}
+\]
+
+There are two cases.
+
+### Staircase
+
+If
+
+\[
+j_1\le j_2\le\cdots,
+\]
+
+then
+
+\[
+\boxed{
+i_1<i_2<\cdots,
+\qquad
+j_1\le j_2\le\cdots,
+\qquad
+k\in I_s\ \forall s.}
+\tag{LR.17}
+\]
+
+Moreover the left support endpoints advance by at least fifteen owner layers.
+
+### Nested
+
+If
+
+\[
+j_1\ge j_2\ge\cdots,
+\]
+
+then the strict advance of the owner indices gives
+
+\[
+\boxed{
+I_1\supsetneq I_2\supsetneq\cdots .}
+\tag{LR.18}
+\]
+
+The containment is strict even across a plateau of repeated partner endpoints or repeated partner-region labels, because `i_s` advances strictly.
+
+Thus the linear THIN family has the same exact interval-order alternatives as the earlier `D^(1/4)` matching rail, but without the matching loss.
+
+---
+
+## 5. The rail lives on the same phase-pure circumcenter-bracketed row
+
+No additional row selection was made after the rich-cut theorem. Therefore every chord of `R_*` still supports the same row `tau_*`, and that row retains the same transverse family `P_*` with
+
+\[
+\boxed{|P_*|>(0.6436-o(1))D}
+\tag{LR.19}
+
+and
+
+\[
+\boxed{
+0<\delta(\tau_*,b)
+\le {K_{\rm thin}\over D}+o(D^{-1})
+\qquad(b\in P_*).
+}
+\tag{LR.20}
+\]
+
+The same column order contains initial and terminal circumcenter flank blocks, each of size
+
+\[
+\boxed{
+(0.0547027254265\ldots-o(1))D.
+}
+\tag{LR.21}
+\]
+
+Every rail chord simultaneously has
+
+\[
+D-{1\over4D}<|e|<D,
+\qquad
+|e|>\sqrt{D^2-1},
+\tag{LR.22}
+\]
+
+both endpoints on the convex hull, and one distinct fifteen-spaced owner tag.
+
+So the THIN branch now contains a linear exact-support order object and a linear inverse-`D` train scaffold **on the same selected row**.
+
+---
+
+## 6. Frontier effect
+
+The matching bottleneck has disappeared from the THIN Horn branch. The remaining object is
+
+```text
+one blocker-rich selected row tau_*;
+>0.6436D phase-pure near-60 transverse columns on tau_*;
+linear circumcenter flanks on both sides;
+> (gamma/640-o(1))D distinct inactive superdiameter chords;
+one fixed physical owner host;
+distinct 15-spaced owner layers;
+weakly ordered opposite-shore partners;
+and exact support intervals that are either
+    staircase, or
+    strictly nested.
+```
+
+Partner repetition remains possible and is now the main difference from the active diameter rails. It corresponds geometrically to high-degree superdiameter stars rooted on the opposite shore. If repetition is sparse, the family approaches the vertex-disjoint active-rail order; if repetition is heavy, one opposite-shore hull vertex is joined by many near-diameter chords to widely separated owner layers.
+
+The next THIN target is therefore sharper than before: rule out either the linear owner-injective staircase/nested rail directly inside the phase-pure row scaffold, or prove that heavy partner repetition contradicts the path/train geometry. No KKT activity for the inactive chords is available.
+
+**Disposition:** upgraded the THIN inactive ordered rail from `Omega(D^(1/4))` to linear size by allowing partner plateaus while retaining distinct ordered owner tags; synchronized the resulting weak rail with the same phase-pure blocker-rich row. C-II and Level I remain open.

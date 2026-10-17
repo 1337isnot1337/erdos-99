@@ -1,0 +1,75 @@
+#!/usr/bin/env python3
+"""Check the conservative scalar arithmetic for the sigma=.0100 extension.
+
+This checks only the endpoint roots, product monotonicity bounds, and the rounded
+strict margin in the proof-only report.  It does not prove the inherited sparse /
+directional geometric return theorem or C-II closure.
+"""
+
+from __future__ import annotations
+
+import math
+
+
+def sigma(theta: float) -> float:
+    return 3.0 * theta - 2.0 * math.pi - math.sin(theta / 2.0) - 2.0 * math.sin(theta)
+
+
+def root_for_sigma(target: float) -> float:
+    lo, hi = 2.70, 2.90
+    for _ in range(120):
+        mid = (lo + hi) / 2.0
+        if sigma(mid) < target:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2.0
+
+
+def tooth_q(y: float) -> float:
+    lo, hi = 0.0, 0.10
+    for _ in range(120):
+        mid = (lo + hi) / 2.0
+        f = math.sin(mid) + math.sqrt(3.0) * (1.0 - math.cos(mid)) - mid
+        if f < y / 2.0:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2.0
+
+
+def G(t: float) -> float:
+    return (t - math.sin(t)) / 8.0
+
+
+def main() -> None:
+    s0 = 0.0100
+    theta = root_for_sigma(s0)
+    lam = math.sin(theta / 2.0)
+    U = 3.0 * theta - 2.0 * math.pi
+    theta8 = 2.7029080296483677
+    phi8 = 2.0 * math.pi - 2.0 * theta8
+    q = tooth_q(s0)
+    area = math.pi / 4.0 - G(theta) - 2.0 * G(phi8 + 10.0 * s0 / 3.0) - G(10.0 * s0 / 3.0)
+    product = (U - s0) * (q + s0)
+    kappa = 2.0 - math.sqrt(3.0)
+    margin = 0.4699 - 0.977 * (10.0 + 1.0 / kappa) * s0 - 2.0 * 0.158
+
+    print(f"theta={theta:.16f}")
+    print(f"U={U:.16f}")
+    print(f"lambda={lam:.16f}")
+    print(f"tooth_q={q:.16f}")
+    print(f"area_floor={area:.16f}")
+    print(f"product_upper={product:.16f}")
+    print(f"rounded_margin={margin:.16f}")
+
+    assert q < 0.077
+    assert area > 0.4699
+    assert product < 0.158
+    assert U + 10.0 * s0 / 3.0 < math.pi
+    assert margin > 0.0177
+
+
+if __name__ == "__main__":
+    main()
+

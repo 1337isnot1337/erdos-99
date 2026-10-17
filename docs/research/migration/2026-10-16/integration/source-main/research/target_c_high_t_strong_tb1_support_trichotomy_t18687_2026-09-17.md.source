@@ -1,0 +1,318 @@
+# Target C-II — the strong-TB1 branch has a linear ordered-support trichotomy
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the strong one-bar side of the high-`t` obstruction fork through `t=(q-k)/D<=1.8687`  
+**Dependencies:** linear strong-TB1 density; common diameter-routing hub; one-sided interval support; ordered convex diameter-thrackle geometry; one-turn hubward path-region order; source-wide diameter-degree bound  
+**Certificate:** `research/verify_target_c_high_t_strong_tb1_support_trichotomy_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The strong-TB1 alternative was previously a positive-density family of distinct local blockers with a fixed angular margin, but its laminar support ends were not globally organized. The same common-hub and convex-thrackle order used on the exact-antipodal force rail applies to one chosen strong blocker per interface.
+
+The result is a linear-scale trichotomy. A surviving strong-TB1 branch contains a positive linear family which is either
+
+1. a proper hub-crossing support staircase;
+2. a nested rail joining one fixed pre-hub host arc to one fixed hubward host arc; or
+3. a nested rail whose bars all die at one post-hub interface, forcing a macroscopic switching separator there.
+
+Every bar in all three alternatives retains the fixed strong-TB1 first-order blocking margin.
+
+---
+
+## 1. Setup
+
+Let `S_D` be the strong-TB1 family from the corrected high-`t` fork. In the strong-TB1 alternative,
+
+\[
+|S_D|>s_0D-o(D),
+\qquad
+s_0:={7c_0\over16}
+={791\over320{,}000{,}000}
+=2.471875\times10^{-6},
+\tag{ST.1}
+\]
+
+where
+
+\[
+c_0={113\over20{,}000{,}000}.
+\tag{ST.2}
+\]
+
+For each `i in S_D`, retain the chosen strong switching diameter bar `h_i`. Its consistently oriented diameter vector `n_i` satisfies the uniform tangent-blocking estimate
+
+\[
+\boxed{
+ n_i\cdot w\ge D\sin\gamma
+ \quad\text{for every unit }w\in\Omega_i,
+}
+\tag{ST.3}
+\]
+
+with
+
+\[
+\gamma={c_0\over32}
+={113\over640{,}000{,}000}>0.
+\tag{ST.4}
+\]
+
+All selected interfaces lie on one side of the common hub. Assume they are pre-hub; the post-hub case is obtained by reversing the chain. For a selected interface `i<k`, one-sided interval support gives
+
+\[
+I_i=\{i+1,\ldots,b_i\},
+\qquad b_i\ge k.
+\tag{ST.5}
+\]
+
+Thus `h_i` has one birth endpoint in the middle layer `R_i` and one partner endpoint on the hubward shore of the common cut `tau_k`.
+
+---
+
+## 2. A linear subfamily has births on one fixed host side
+
+The internal rectangle layer `R_i` meets the outer boundary in two host-side subarcs, denoted `C_i^+` and `C_i^-`. Every switching diameter endpoint in `R_i` lies on one of these two subarcs.
+
+Color `i in S_D` by which host-side subarc contains the birth endpoint of `h_i`. One color class has size
+
+\[
+\boxed{
+M>{s_0\over2}D-o(D).
+}
+\tag{ST.6}
+
+Fix that class and write its interface tags in increasing order,
+
+\[
+i_1<i_2<\cdots<i_M<k.
+\tag{ST.7}
+\]
+
+All birth endpoints are distinct. Along the fixed physical host arc the subarcs `C_{i_s}^\sigma` are pairwise disjoint and appear in interface order or its reverse.
+
+Every selected bar crosses the common hub cut `tau_k`. Let `P` be the birth shore and `Q` the hubward partner shore.
+
+---
+
+## 3. The partner map is weakly ordered even when partners collide
+
+Take two retained bars with birth endpoints `x,x' in P` in their boundary order. If their partner endpoints `y,y' in Q` are distinct, then the two diameter edges are vertex-disjoint: their births are distinct and the two shores are disjoint. Actual diameter edges form a convex geometric thrackle, so the chords cross. Hence their partner endpoints occur in the compatible boundary order on `Q`.
+
+If `y=y'`, record a tie.
+
+Therefore the partner map from the ordered births to `Q` is weakly order-preserving. Repeated partner vertices create only equal boundary positions and equal path-region labels.
+
+Along `Q`, the ambient path-region labels have one turn:
+
+\[
+R_k,R_{k+1},\ldots,R_m,
+\quad R_m,\quad
+R_m,R_{m-1},\ldots,R_k.
+\tag{ST.8}
+\]
+
+Allowing repeated vertices within a region, this is weakly nondecreasing and then weakly nonincreasing. Reversing the boundary order preserves the same class of one-turn words.
+
+Consequently, in the interface order (ST.7), the selected support-end sequence
+
+\[
+(b_1,b_2,\ldots,b_M)
+\tag{ST.9}
+\]
+
+is weakly unimodal after the harmless global orientation choice.
+
+---
+
+## 4. Half of the fixed-side family has monotone support ends
+
+A weakly unimodal sequence has a weakly nondecreasing prefix and a weakly nonincreasing suffix whose union is the whole sequence and which overlap at a maximum plateau. One of these two monotone pieces has length at least `M/2`.
+
+Therefore there is a consecutive-in-interface-order subfamily `L` with
+
+\[
+\boxed{
+|L|>{s_0\over4}D-o(D)
+}
+\tag{ST.10}
+
+on which the support ends `b_s` are monotone.
+
+There are two cases.
+
+### Staircase case
+
+If `b_s` is weakly nondecreasing with increasing birth interface, then both support endpoints move hubward:
+
+\[
+i_1<i_2<\cdots,
+\qquad
+b_1\le b_2\le\cdots.
+\tag{ST.11}
+\]
+
+All intervals still contain the common hub cut. This is a proper hub-crossing support staircase.
+
+### Nested case
+
+If `b_s` is weakly nonincreasing, then
+
+\[
+\boxed{
+I_1\supsetneq I_2\supsetneq\cdots.
+}
+\tag{ST.12}
+\]
+
+Strictness follows from the strictly increasing birth indices. This gives a nested strong-TB1 rail of size greater than `s_0D/4-o(D)`.
+
+The blocking inequality (ST.3) survives unchanged in either case.
+
+---
+
+## 5. A nested strong-TB1 rail is cross-host or death-concentrated
+
+Assume the nested case. The same one-turn argument used for the linear exact-force rail needs only:
+
+- births on one fixed pre-hub host side;
+- weak partner order on `Q`;
+- monotone support-end labels; and
+- the one-turn region word on `Q`.
+
+It does not use exact antipodality or a two-bar force pair.
+
+Hence the nested rail splits into
+
+\[
+L=L_{host}\sqcup L_{plateau},
+\tag{ST.13}
+\]
+
+where every bar in `L_host` joins the fixed pre-hub birth arc to one fixed hubward host arc, while every bar in `L_plateau` has one common support-end tag `b_*` and therefore belongs to the same post-hub switching set `X_{b_*}`.
+
+Thus
+
+\[
+\boxed{
+|L_{host}|\ge{|L|\over2}
+\quad\text{or}\quad
+|L_{plateau}|\ge{|L|\over2}.}
+\tag{ST.14}
+\]
+
+Combining (ST.10) and (ST.14), one of the three alternatives
+
+```text
+STAIRCASE,
+CROSS-HOST NESTED,
+ONE-DEATH PLATEAU
+```
+
+has size
+
+\[
+\boxed{
+>{s_0\over8}D-o(D)
+={791\over2{,}560{,}000{,}000}D-o(D)
+=(3.08984375\times10^{-7})D-o(D).
+}
+\tag{ST.15}
+
+The staircase alternative actually retains the stronger `s_0/4` lower density.
+
+---
+
+## 6. The plateau alternative is again a macroscopic separator
+
+In the one-death alternative, all selected bars are distinct because their birth endpoints lie in distinct layer subarcs. Hence
+
+\[
+N_{b_*}=|X_{b_*}|\ge |L_{plateau}|.
+\tag{ST.16}
+\]
+
+Therefore
+
+\[
+\boxed{
+N_{b_*}>{s_0\over8}D-o(D).
+}
+\tag{ST.17}
+\]
+
+Since the joint-cost quantity satisfies `J_j>=N_j`, the common death interface obeys
+
+\[
+J_{b_*}>{s_0\over8}D-o(D).
+\tag{ST.18}
+\]
+
+Thus it lies outside every fixed-threshold good class for sufficiently large `D`. The strong-TB1 branch can fail to produce a cross-host or staircase rail only by concentrating linear raw switching complexity at one post-hub separator.
+
+This is a cardinality statement. It gives no KKT multiplier floor at `b_*`.
+
+---
+
+## 7. Endpoint-disjoint crossing extraction preserves the strong angular margin
+
+Birth endpoints in each of the three alternatives are distinct. Only partner collisions need to be removed. The source-wide bound
+
+\[
+\Delta(H)\le(4\,3^{1/8}+o(1))D^{3/4}
+\tag{ST.19}
+\]
+
+implies that greedy selection of at most one chosen bar per partner vertex retains, from any branch satisfying (ST.15),
+
+\[
+\boxed{
+>
+\left({s_0\over32\,3^{1/8}}-o(1)\right)D^{1/4}
+}
+\tag{ST.20}
+
+endpoint-disjoint bars. Every two retained bars then cross geometrically.
+
+Numerically,
+
+\[
+\boxed{
+{s_0\over32\,3^{1/8}}
+\approx6.73343031652\times10^{-8}.
+}
+\tag{ST.21}
+
+Every retained bar still obeys the same fixed first-order margin (ST.3). Thus the strong-TB1 branch contains an unbounded pairwise-crossing ordered support rail whose blockers are uniformly interior to their local opening dual cones.
+
+---
+
+## 8. Frontier effect
+
+The positive-density strong-TB1 branch is no longer merely a list of unrelated robust local blockers. It has one of three linear ordered forms:
+
+```text
+STAIRCASE:
+  birth and death interface tags both advance monotonically
+  + every support contains the common hub
+  + fixed strong-TB1 angular margin
+
+CROSS-HOST NESTED:
+  strictly nested supports
+  + one fixed pre-hub birth host arc
+  + one fixed hubward partner host arc
+  + fixed strong-TB1 angular margin
+
+ONE-DEATH PLATEAU:
+  strictly nested supports
+  + one common death interface b_*
+  + N_{b_*}=Theta(D) raw switching complexity
+  + fixed strong-TB1 angular margin at the birth interfaces.
+```
+
+This puts the strong-TB1 side into the same ordered-support framework as the exact-antipodal side, without assuming exact force cancellation or bilateral force pairs.
+
+The remaining closure work is now branch-specific. The staircase and cross-host branches should be compared with the common inverse-`D` near-triangular train grid and near-central diameter geometry. The plateau branch should be attacked at its single macroscopic post-hub separator using the exact cut resultant, terminal ledger, and direction/separation budgets.
+
+No C-II or Level-I closure is claimed.
+
+**Disposition:** converted a positive-density strong-TB1 family into a linear ordered-support trichotomy while preserving its fixed first-order blocking margin. C-II and Level I remain open.

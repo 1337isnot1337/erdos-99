@@ -1,0 +1,288 @@
+# Target C-II — a FREE superdiameter braid forces forest diameter topology and complementary hull cells
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; corollary of the square-root FREE tradeoff  
+**Scope:** the `SQRT-SUPER-BRAID` outcome of a non-anchored all-inactive FREE reflection ancestry  
+**Dependencies:** C65 full diameter visibility; C-WOODALL; sharp superdiameter-thrackle lemma; square-root FREE face/braid tradeoff  
+**Certificate:** `research/verify_target_c_tooth_reflection_superbraid_forest_transversal_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The square-root FREE theorem produces, in its upper-rich outcome, a matching `M` of
+
+\[
+\left(\sqrt{3/8}-o(1)\right)\sqrt D
+\]
+
+old fully inactive source pairs with deficit below `0.49/D`. The sharp superdiameter theorem already says that the matching chords cross pairwise and that all their endpoints are vertices of the full source convex hull.
+
+Those facts interact much more strongly with the actual diameter graph than was recorded in the square-root theorem. Every such inactive chord crosses **every actual diameter edge**. Consequently one inactive superdiameter chord already bipartitions the full diameter graph, so the canonical Woodall cyclic case is impossible. The whole actual diameter graph must be a caterpillar forest.
+
+With the entire braid present, each forest component is localized much further: its two graph-bipartition classes lie in one complementary pair of boundary cells cut out by the braid endpoints on the full source hull.
+
+---
+
+## 1. Every superbraid endpoint lies outside the force hull
+
+Let
+
+\[
+K=\operatorname{conv}(A)
+\]
+
+be the full source hull and
+
+\[
+F=\operatorname{conv}(B)
+\]
+
+be the force hull, where by C65 `B=V(H)` is the complete actual-diameter endpoint set.
+
+Take a braid edge
+
+\[
+e=pq\in M.
+\]
+
+The sharp superdiameter theorem gives
+
+\[
+p,q\in V(K).
+\tag{FT.1}
+\]
+
+But `p,q` are fully inactive, so in particular
+
+\[
+p,q\notin B.
+\tag{FT.2}
+\]
+
+If, say, `p in F=conv(B)`, then `p` is a convex combination of source points different from `p`. This contradicts the fact that `p` is an extreme point of `K=conv(A)`. Therefore
+
+\[
+\boxed{p,q\notin F.}
+\tag{FT.3}
+\]
+
+Thus every edge of the square-root superbraid is an external-to-external hull chord relative to the complete force hull.
+
+---
+
+## 2. Every braid edge crosses every actual diameter edge
+
+Let
+
+\[
+h=ab\in E(H).
+\]
+
+Then
+
+\[
+|ab|=D>\sqrt{D^2-1}.
+\]
+
+For a braid edge `e=pq`,
+
+\[
+|pq|>D-{0.49\over D}>\sqrt{D^2-1}.
+\]
+
+The endpoints are disjoint because `p,q` are fully inactive while `a,b in B` are actual diameter endpoints. Apply the sharp superdiameter-thrackle lemma to the two source segments `pq` and `ab`. They must meet, and because they share no endpoint they cross properly.
+
+Hence
+
+\[
+\boxed{e\text{ crosses every }h\in E(H)\text{ properly}.}
+\tag{FT.4}
+\]
+
+In particular `e` intersects `F`, since every actual diameter segment is contained in the convex body `F`.
+
+So the SQRT-SUPER-BRAID is not merely internally crossing. It is a complete geometric transversal family for the entire actual diameter graph.
+
+---
+
+## 3. One inactive superdiameter chord forces `H` to be bipartite
+
+Actual diameter endpoints are vertices of the full source hull `K`. Fix one braid chord
+
+\[
+e=pq.
+\]
+
+The two endpoints `p,q` split the boundary of `K` into two open arcs
+
+\[
+I_e^+,
+\qquad
+I_e^-.
+\]
+
+For two hull vertices `a,b` different from `p,q`, their chord `ab` crosses `pq` properly if and only if `a,b` lie on opposite open arcs.
+
+By (FT.4), every actual diameter edge has one endpoint in each arc. Thus
+
+\[
+B_+:=B\cap I_e^+,
+\qquad
+B_-:=B\cap I_e^-
+\]
+
+is a graph bipartition of `H`:
+
+\[
+\boxed{E(H)\subseteq B_+\times B_-.}
+\tag{FT.5}
+\]
+
+Therefore `H` is bipartite.
+
+Canonical C-WOODALL says the full actual diameter graph is either
+
+1. one connected odd-unicyclic Woodall component, or
+2. a disjoint union of caterpillar trees.
+
+The first case is not bipartite. Hence
+
+\[
+\boxed{H\text{ is a caterpillar forest}.}
+\tag{FT.6}
+\]
+
+Equivalently,
+
+\[
+\boxed{d_H=q-h>0,}
+\tag{FT.7}
+\]
+
+and `d_H` is exactly the number of diameter components.
+
+This conclusion needs only one edge of `M`. Therefore in the cyclic Woodall topology `d_H=0`, the `SQRT-SUPER-BRAID` branch is impossible and every all-inactive FREE ancestry must take `SQRT-FACE`.
+
+---
+
+## 4. The full braid traps each forest component in a complementary pair of hull cells
+
+Now use all chords
+
+\[
+M=\{e_1,\ldots,e_m\}.
+\]
+
+They form a vertex-disjoint pairwise-crossing matching on the convex hull `K`. Their `2m` endpoints divide `partial K` into `2m` open boundary cells. For a hull vertex `x` not in a braid endpoint, define its braid sign vector
+
+\[
+\sigma(x)=(\sigma_1(x),\ldots,\sigma_m(x))\in\{+,-\}^m,
+\]
+
+where `sigma_i(x)` records on which of the two open boundary arcs cut by `e_i` the point `x` lies.
+
+The sign vector is constant on each braid boundary cell. For a pairwise-crossing hull matching, the `2m` cells have distinct sign vectors; traversing the hull toggles exactly the coordinate belonging to the braid endpoint just passed, and the pairwise-interlacing endpoint order prevents a proper subarc from containing both endpoints of every toggled coordinate.
+
+Every actual diameter edge `xy` crosses every `e_i`, so
+
+\[
+\boxed{\sigma(y)=-\sigma(x).}
+\tag{FT.8}
+\]
+
+Let `T` be one connected component of the forest `H`, with its unique graph bipartition
+
+\[
+V(T)=X\sqcup Y.
+\]
+
+Fix `x_0 in X`. Along each graph edge all `m` signs flip by (FT.8). Hence every even-length path preserves the complete sign vector and every odd-length path complements it. Since vertices in `X` are joined to `x_0` by even paths and vertices in `Y` by odd paths,
+
+\[
+\boxed{
+\sigma(x)=\sigma(x_0)\quad(x\in X),
+\qquad
+\sigma(y)=-\sigma(x_0)\quad(y\in Y).
+}
+\tag{FT.9}
+\]
+
+Because braid boundary cells have distinct sign vectors, there is one cell `C_T` containing every vertex of `X` and one unique complementary cell `C_T^*` containing every vertex of `Y`:
+
+\[
+\boxed{
+X\subset C_T,
+\qquad
+Y\subset C_T^*.
+}
+\tag{FT.10}
+\]
+
+Thus each diameter caterpillar component is squeezed into one complementary pair of gaps between consecutive inactive superbraid endpoints on the full source hull.
+
+This is stronger than the bare forest conclusion. It gives a finite `2m`-cell localization of the complete actual-diameter endpoint set, with one complementary cell pair per connected component.
+
+---
+
+## 5. Crossing-incidence mass
+
+C30 gives
+
+\[
+2q\ge\lceil D\rceil+2.
+\]
+
+Every loaded diameter endpoint has positive degree, so in the forest
+
+\[
+h\ge {q\over2}\ge {\lceil D\rceil+2\over4}.
+\tag{FT.11}
+\]
+
+Every edge of `M` crosses every edge of `H`. Therefore the number of proper braid/diameter crossing incidences is at least
+
+\[
+|M|h
+\ge
+\left({\sqrt{3/8}\over4}-o(1)\right)D^{3/2}.
+\tag{FT.12}
+\]
+
+Numerically,
+
+\[
+\boxed{
+{\sqrt{3/8}\over4}
+=0.1530931089239486\ldots .
+}
+\tag{FT.13}
+\]
+
+This incidence count is not itself a contradiction, but it records how strongly the inactive shell is now interleaved with the force-visible diameter topology.
+
+---
+
+## 6. Consequence for the FREE frontier
+
+The square-root FREE fork can now be written with the diameter topology exposed:
+
+```text
+all-inactive non-anchored FREE ancestry
+    -> SQRT-FACE
+       outer-face lower run of support span >= (0.604935...-o(1)) sqrt(D)
+       + sqrt(D) near-unit inactive matching
+
+    or
+
+    -> SQRT-SUPER-BRAID
+       >= (0.612372...-o(1)) sqrt(D) external hull-to-hull inactive chords
+       deficit < 0.49/D
+       pairwise crossing
+       every chord crosses every actual diameter edge
+       H is a caterpillar forest
+       each forest component's two color classes occupy complementary braid cells.
+```
+
+In particular the canonical cyclic Woodall branch has no superbraid escape: there the FREE ancestry is forced into the long outer-face near-unit run.
+
+The forest branch is now the only topology compatible with the superbraid. A closure there should use the complementary-cell localization against the existing forest component/outer-walk currencies rather than treating the inactive chords as an unrelated matching.
+
+**Disposition:** converted the square-root superdiameter braid into an external force-hull transversal and an exact forest-topology certificate for the complete actual diameter graph; additionally localized every diameter-tree bipartition to one complementary pair of braid hull cells. C-II remains open.

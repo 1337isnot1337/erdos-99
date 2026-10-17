@@ -1,0 +1,86 @@
+# Target C: extend the generic H6 two-face reduction to 4,871 cells
+
+Date: 2026-09-19
+
+Status: exact finite reduction inside the generic H6 branch. The theorem-state authority is unchanged. C-II remains open.
+
+## Result
+
+The committed generic H6 endpoint before this step is
+
+\[
+4910=3914\,C_7+996\,(C_3\sqcup C_4).
+\]
+
+A focused continuation of the exact two-face branch search at physical faces 2 and 3 excludes 39 additional cells:
+
+\[
+\boxed{4910\longrightarrow4871}
+\]
+
+with
+
+\[
+\boxed{4871=3880\,C_7+991\,(C_3\sqcup C_4).}
+\]
+
+The 39 exclusions split by ground pattern as
+
+```text
+235    3
+256   19
+345    1
+346    2
+356   14
+```
+
+and by missing graph as
+
+```text
+C7       34
+C3+C4     5
+```
+
+The resulting pattern census is
+
+```text
+145      4
+156     16
+235    670
+236   1282
+237     16
+245    477
+256   1244
+345     21
+346    481
+347      4
+356    656
+```
+
+These counts sum to 4,871.
+
+## Why these are new exclusions
+
+The preceding committed two-face reduction certified 34 cells using several face pairs. The present verifier records 39 cells that are disjoint from both the preceding 34-cell list and the earlier 32 one-face adaptive list. Every listed cell also passes the previous order-hull gate before the stronger two-face branch test is applied.
+
+The discovery pass fixed the face pair `(2,3)` and screened the first 700 positions of the 4,944-cell one-face endpoint. It found 126 numerical candidate exclusions with no LP failures. Sixty of those candidates have now been exactified. Twenty-one of the 60 were already among the preceding 34-cell two-face reduction, leaving the 39 genuinely new cells certified here. The remaining 66 numerical candidates from this fixed-pair batch are not counted until exactification is complete.
+
+## Exact covering argument
+
+Each physical face has 20 closed local branches: ten admissible cyclic gap orders times the two closed median sides, with the five rank-specific branch-adaptive closure secants already certified in the preceding theorem chain.
+
+For a listed cell, the verifier first exact-certifies every locally impossible branch at faces 2 and 3. Any of the 400 branch products containing one of those branches is already impossible. It then checks every Cartesian product of the locally surviving branches and exact-certifies a two-face Farkas contradiction for each one. Hence every one of the 400 branch products is covered, so the cell has no simultaneous realization of faces 2 and 3.
+
+The 39-cell batch uses 3,208 exact rational certificates in total. The completed exactification batches had zero candidate failures. The largest denominator among active exact dual coefficients in this batch is
+
+\[
+8561507295377085489117250000.
+\]
+
+Numerical LPs are used only to locate candidate dual supports. A cell is accepted only after exact rational reconstruction verifies nonnegative inequality multipliers, unit total weight on the original strict facets, coefficientwise cancellation of all 85 variables, unrestricted equality multipliers, and a nonpositive forced constant.
+
+## Scope
+
+This is a necessary-condition reduction in the generic H6 branch. It does not prove any of the remaining 4,871 cells geometrically realizable and it does not treat reciprocal-collinearity walls.
+
+The immediate next finite task is to exactify the remaining 66 face-`(2,3)` numerical candidates from the first 700-cell block, discard any already removed by earlier certificates, and add every genuinely new exact exclusion. After that, continue the fixed-pair scan beyond position 700 and then rank other face pairs by the product of their locally surviving branch counts. Once multi-face affine branching stops yielding useful cuts, the remaining cells still have to satisfy the fifteen independent complete reciprocal sine-law metric consistency equations. Reciprocal-collinearity walls remain a separate nongeneric branch.

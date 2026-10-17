@@ -1,0 +1,39 @@
+name: Target C k7 C d5q12 d3 pair extension
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    if: github.actor == github.repository_owner && vars.E99_HISTORICAL_CI == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - start: 0
+            end: 81
+          - start: 81
+            end: 162
+          - start: 162
+            end: 243
+          - start: 243
+            end: 324
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact-enumeration dependency
+        run: python -m pip install 'numpy>=2.0,<3'
+      - name: Run exact d3 pair-extension shard
+        run: >-
+          python research/verify_target_c_support7_global_segment_relative_eight_noroot_k7_C_d5q12_d3_pair_extension_2026_09_21.py
+          --base-start ${{ matrix.start }}
+          --base-end ${{ matrix.end }}

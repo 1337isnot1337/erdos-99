@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+"""Exact sign regression for the only double ground-collinearity H5 stratum."""
+from itertools import product
+
+# Canonical duplicate pairs: A={2,5}, B={3,6}; missing matching {14,25,36}.
+# Ground angular classes are 1 < A < B < 4. The analytic chord argument leaves,
+# up to global reversal, exactly the signs 1-, A+, B-, 4+.
+ground = {1: False, 2: True, 3: False, 4: True, 5: True, 6: False}
+
+# After deleting tied matching mates, convexity fixes the only positional facts
+# needed. Swapping the two middle rays does not change positions of 0 or edge 23.
+orders2 = ([3, 4, 6, 0, 1], [3, 6, 4, 0, 1])
+orders3 = ([4, 0, 5, 1, 2], [4, 0, 1, 5, 2])
+
+
+def predicted_sign(order, ground_sign, neighbor):
+    two = {order[1], order[3]}
+    # Choose which global sign color is the size-two class from the known 0-edge.
+    two_is_positive = ((0 in two) == ground_sign)
+    return (neighbor in two) if two_is_positive else (neighbor not in two)
+
+
+for o2, o3 in product(orders2, orders3):
+    s23_from_2 = predicted_sign(o2, ground[2], 3)
+    s23_from_3 = predicted_sign(o3, ground[3], 2)
+    assert s23_from_2 is False
+    assert s23_from_3 is True
+    assert s23_from_2 != s23_from_3
+
+# Global sign reversal flips both predictions and preserves the contradiction.
+for o2, o3 in product(orders2, orders3):
+    s23_from_2 = predicted_sign(o2, not ground[2], 3)
+    s23_from_3 = predicted_sign(o3, not ground[3], 2)
+    assert s23_from_2 is True
+    assert s23_from_3 is False
+    assert s23_from_2 != s23_from_3
+
+print("double_wall_templates", len(orders2) * len(orders3))
+print("PASS: every double ground-collinearity H5 template gives opposite signs on edge 23")

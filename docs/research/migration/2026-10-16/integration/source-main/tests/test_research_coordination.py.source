@@ -1,0 +1,64 @@
+import datetime as dt
+import json
+import subprocess
+import unittest
+from unittest.mock import patch
+
+from scripts.research_coordination import query_open_work, overlap_for_task, claim_text
+
+
+class CoordinationTests(unittest.TestCase):
+    def test_paginated_live_query_keeps_markers_without_issue_body(self):
+        item = {"number": 1, "title": "Task A", "html_url": "https://github.com/x/y/issues/1",
+                "updated_at": "2026-10-14", "body": "E99-TASK-ID: task-a\nprivate arbitrary prose"}
+        with patch("scripts.research_coordination.subprocess.check_output", return_value=json.dumps([[item]])) as mock:
+            snapshot = query_open_work()
+        self.assertEqual(mock.call_count, 2)
+        self.assertIn("--paginate", mock.call_args.args[0])
+        self.assertEqual(snapshot["issues"][0]["markers"], {"TASK-ID": "task-a"})
+        self.assertNotIn("private arbitrary prose", json.dumps(snapshot))
+
+    def test_scope_overlap_matches_markers_and_titles(self):
+        task = {"id": "task-a", "scope_key": "scope-1", "overlap_terms": ["tube"]}
+        snapshot = {"issues": [{"number": 1, "title": "claim", "markers": {"SCOPE-ID": "scope-1"}}],
+                    "pulls": [{"number": 2, "title": "tube analysis"}]}
+        result = overlap_for_task(task, snapshot)
+        self.assertEqual([r["number"] for r in result["issues"]], [1])
+        self.assertEqual([r["number"] for r in result["pulls"]], [2])
+
+    def test_catalogue_pr_leads_are_included_in_live_overlap(self):
+        task = {"id": "task-a", "scope_key": "scope-1", "overlap_terms": ["tube"],
+                "potential_open_overlap_prs": [3, 3, 99]}
+        snapshot = {"issues": [], "pulls": [
+            {"number": 3, "title": "unrelated title"},
+            {"number": 4, "title": "tube analysis"},
+        ]}
+        result = overlap_for_task(task, snapshot)
+        self.assertEqual([r["number"] for r in result["pulls"]], [3, 4])
+
+    def test_expired_claim_remains_visible_as_predecessor(self):
+        item = {"number": 1, "title": "claim", "html_url": "https://github.com/x/y/issues/1",
+                "updated_at": "2026-10-14", "body": "E99-TASK-ID: task-a\nE99-CLAIM-EXPIRES: 2000-01-01T00:00:00Z"}
+        with patch("scripts.research_coordination.subprocess.check_output", return_value=json.dumps([[item]])):
+            snapshot = query_open_work()
+        self.assertEqual(snapshot["issues"][0]["claim_status"], "expired")
+
+    def test_query_failure_is_reported(self):
+        with patch("scripts.research_coordination.subprocess.check_output", side_effect=subprocess.CalledProcessError(1, "gh")):
+            with self.assertRaises(subprocess.CalledProcessError):
+                query_open_work()
+
+    def test_claim_has_stable_ids_expiry_and_review_handoff(self):
+        task = {"id": "task-a", "scope_key": "scope-1", "question": "exact question",
+                "selected_method": "method", "canonical_dependencies": [{"path": "docs/STATE.md"}],
+                "stopping_condition": "bound"}
+        text = claim_text({"checkout_commit": "a"*40, "checkout_state_version": "state"}, task,
+                          dt.datetime(2026,10,14,tzinfo=dt.timezone.utc))
+        self.assertIn("E99-CLAIM-EXPIRES: 2026-10-21", text)
+        self.assertIn("E99-SCOPE-ID: scope-1", text)
+        self.assertIn("Independent review requested at commit", text)
+        self.assertIn("suggestion only", text)
+
+
+if __name__ == "__main__":
+    unittest.main()

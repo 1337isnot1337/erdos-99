@@ -1,0 +1,396 @@
+#!/usr/bin/env python3
+"""Exact source-basis kernel-lattice filter for the remaining Profile B.
+
+This wrapper strengthens the fixed-nine/all-clean-fans Profile B audit.  Once
+nine actual source singleton replacement classes form a basis of the source
+functional quotient V_8, every puncture map V_8 -> V_S has a kernel that can
+be recovered exactly in those nine basis coordinates.  The clean-fan
+containment theorem determines a large part of this kernel lattice:
+
+* for a rank-preserving descendant of the same virtual deficiency d=3,
+  G_S = span{ell_i : i in S} inside one fixed six-dimensional external
+  subspace L;
+* for a clean five-row descendant whose deficiency drops to d=2, its
+  four-dimensional kernel contains the same three-dimensional external span,
+  and its intersection with L is exactly that external span;
+* if all eight source coordinates are three-clean, the eight one-puncture
+  kernel lines have the same labeled projective relation plane as the source
+  coefficient plane, up to independent nonzero scaling of coordinates.
+
+All calculations below are exact over Fraction.  The filter is necessary only:
+a zero-survivor full cover excludes Profile B, while a survivor remains a
+candidate for further analysis.
+"""
+
+from collections import Counter
+from fractions import Fraction
+from itertools import combinations
+from pathlib import Path
+import contextlib
+import importlib.util
+import io
+
+HERE = Path(__file__).resolve().parent
+BASE = HERE / "verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_external_kernel_geometry_2026_09_22.py"
+spec = importlib.util.spec_from_file_location("e99_profile_b_external_kernel", BASE)
+E = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(E)
+M = E.M
+
+ORIG_CHOSEN_PASSES_ALL_CLEAN_FANS = M.chosen_passes_all_clean_fans
+KERNEL_LATTICE_COUNTS = Counter()
+KERNEL_LATTICE_EXAMPLES = []
+
+
+def span_basis(*spaces, width=9):
+    return E.rref(
+        tuple(row for space in spaces for row in space),
+        width,
+    )
+
+
+def is_subspace(a, b, width=9):
+    """Whether rowspace(a) is contained in rowspace(b)."""
+    return len(span_basis(a, b, width=width)) == len(b)
+
+
+def reduce_mod_rref(vector, basis):
+    """Canonical linear reduction modulo an RREF rowspace."""
+    r = [Fraction(x) for x in vector]
+    for row in basis:
+        pivot = next(i for i, x in enumerate(row) if x)
+        if r[pivot]:
+            q = r[pivot]
+            r = [x - q * y for x, y in zip(r, row)]
+    return tuple(r)
+
+
+def quotient_kernel(state_data, ext, space, block_states):
+    """Kernel of the fixed nine source classes in a descendant quotient.
+
+    The source classes are the coordinate basis of Q^9.  Each descendant image
+    is represented by its exact replacement functional, or by zero when the
+    source block is no longer virtual-complete.  Reducing those representatives
+    modulo the child canonical column span gives an exact matrix for
+    Q^9 -> V_child; its nullspace is G_S in source-basis coordinates.
+    """
+    complete, _deficiency, _rows, canonical, _base_rank = state_data
+    complete_set = set(complete)
+    complete_index = {block: i for i, block in enumerate(complete)}
+    width = len(canonical[0]) if canonical else len(complete) + len(ext) - len(space)
+
+    canonical_basis = E.rref(canonical, width)
+    images = []
+    for block, state in block_states:
+        if block not in complete_set:
+            images.append((Fraction(0),) * width)
+            continue
+        options = M.B.singleton_options(ext, block, space)
+        if len(options) != 1 or options[0] != state:
+            return None
+        vector = M.B.replacement_functional(
+            ext,
+            block,
+            state,
+            space,
+            complete_index,
+            len(complete),
+        )
+        images.append(reduce_mod_rref(vector, canonical_basis))
+
+    if len(images) != 9:
+        return None
+
+    image_rank = len(E.rref(images, width))
+    equations = tuple(
+        tuple(images[i][j] for i in range(9))
+        for j in range(width)
+    )
+    kernel = E.rref(E.nullspace(equations, 9), 9)
+    if len(kernel) != 9 - image_rank:
+        return None
+    return kernel, image_rank
+
+
+def all_descendant_kernels(ext8, space8, block_states):
+    """Collect exact kernels for every state in every three-clean depth-3 fan."""
+    fans = M.clean_fan_data(ext8, space8, {})
+    if len(fans) < 2:
+        return None, None
+
+    by_deleted = {}
+
+    def add_state(ext, space, state_data):
+        deleted = E.deleted_positions(ext8, ext)
+        item = quotient_kernel(state_data, ext, space, block_states)
+        if item is None:
+            KERNEL_LATTICE_COUNTS["descendant_kernel_state_mismatch"] += 1
+            return False
+        kernel, image_rank = item
+        deficiency = state_data[1]
+        target_rank = (len(ext) - 2) + deficiency
+        if image_rank != target_rank:
+            KERNEL_LATTICE_COUNTS["descendant_wrong_image_rank"] += 1
+            return False
+        if len(kernel) != 9 - target_rank:
+            KERNEL_LATTICE_COUNTS["descendant_wrong_kernel_dimension"] += 1
+            return False
+        previous = by_deleted.get(deleted)
+        current = (deficiency, kernel)
+        if previous is not None and previous != current:
+            KERNEL_LATTICE_COUNTS["duplicate_descendant_kernel_mismatch"] += 1
+            return False
+        by_deleted[deleted] = current
+        return True
+
+    for _source_i, ext7, space7, state7, six_states, five_states in fans:
+        if not add_state(ext7, space7, state7):
+            return None, None
+        for ext6, space6, state6 in six_states:
+            if not add_state(ext6, space6, state6):
+                return None, None
+        for ext5, space5, state5 in five_states:
+            if not add_state(ext5, space5, state5):
+                return None, None
+
+    return fans, by_deleted
+
+
+def matrix_det(v):
+    return v[0] * v[3] - v[1] * v[2]
+
+
+def diagonal_projective_equivalent(p_space, q_space):
+    """Test whether two labeled rank-two subspaces differ by diagonal scaling.
+
+    If P and Q are row spaces in Q^8, Q=P D for some invertible diagonal D iff
+    their labeled projective column configurations are related by one element of
+    PGL_2.  The collinearity conditions are homogeneous linear equations in the
+    four entries of the 2x2 projective transformation.  We then test exactly
+    whether their solution space contains an invertible matrix.
+    """
+    p = E.rref(p_space, 8)
+    q = E.rref(q_space, 8)
+    if len(p) != 2 or len(q) != 2:
+        return False
+
+    equations = []
+    for i in range(8):
+        px, py = p[0][i], p[1][i]
+        qx, qy = q[0][i], q[1][i]
+        p_zero = (px == 0 and py == 0)
+        q_zero = (qx == 0 and qy == 0)
+        if p_zero != q_zero:
+            return False
+        if p_zero:
+            continue
+        equations.append((
+            -qy * px,
+            -qy * py,
+            qx * px,
+            qx * py,
+        ))
+
+    solution = E.nullspace(tuple(equations), 4)
+    if not solution:
+        return False
+
+    if any(matrix_det(v) != 0 for v in solution):
+        return True
+    for a, b in combinations(solution, 2):
+        if matrix_det(tuple(x + y for x, y in zip(a, b))) != 0:
+            return True
+    return False
+
+
+def one_puncture_relation_plane(by_deleted):
+    """Relation plane among the eight one-puncture kernel lines."""
+    lines = []
+    for i in range(8):
+        item = by_deleted.get(frozenset((i,)))
+        if item is None or item[0] != 3 or len(item[1]) != 1:
+            return None
+        lines.append(item[1][0])
+
+    if len(E.rref(lines, 9)) != 6:
+        return None
+    equations = tuple(
+        tuple(lines[i][j] for i in range(8))
+        for j in range(9)
+    )
+    relation_plane = E.rref(E.nullspace(equations, 8), 8)
+    if len(relation_plane) != 2:
+        return None
+    return relation_plane
+
+
+def exact_kernel_lattice_ok(ext8, space8, block_states):
+    """Check the full source-basis puncture-kernel lattice exactly."""
+    fans, by_deleted = all_descendant_kernels(ext8, space8, block_states)
+    if fans is None:
+        return False
+
+    d3_spaces = tuple(
+        kernel for deficiency, kernel in by_deleted.values() if deficiency == 3
+    )
+    L = span_basis(*d3_spaces, width=9)
+    if len(L) != 6:
+        KERNEL_LATTICE_COUNTS[("bad_external_span_dimension", len(L))] += 1
+        return False
+
+    d3_items = tuple(
+        (deleted, kernel)
+        for deleted, (deficiency, kernel) in by_deleted.items()
+        if deficiency == 3
+    )
+    union_rank_cache = {}
+    for (deleted_a, kernel_a), (deleted_b, kernel_b) in combinations(d3_items, 2):
+        union = deleted_a | deleted_b
+        rank_two = union_rank_cache.get(union)
+        if rank_two is None:
+            _ext_u, space_u = M.delete_source_positions(
+                ext8, space8, tuple(sorted(union))
+            )
+            rank_two = len(space_u) == 2
+            union_rank_cache[union] = rank_two
+        if not rank_two:
+            continue
+        intersection = E.intersection_basis(kernel_a, kernel_b, 9)
+        expected = len(deleted_a & deleted_b)
+        if len(intersection) != expected:
+            KERNEL_LATTICE_COUNTS[("bad_d3_intersection_dimension", expected, len(intersection))] += 1
+            return False
+
+    for _source_i, ext7, _space7, _state7, six_states, five_states in fans:
+        deleted_i = E.deleted_positions(ext8, ext7)
+        deficiency_i, kernel_i = by_deleted[deleted_i]
+        if deficiency_i != 3 or len(kernel_i) != 1:
+            KERNEL_LATTICE_COUNTS["bad_clean_first_kernel"] += 1
+            return False
+
+        pair_spaces = {}
+        for ext6, _space6, _state6 in six_states:
+            deleted_ij = E.deleted_positions(ext8, ext6)
+            deficiency_ij, kernel_ij = by_deleted[deleted_ij]
+            if deficiency_ij != 3 or len(kernel_ij) != 2:
+                KERNEL_LATTICE_COUNTS["bad_clean_pair_kernel"] += 1
+                return False
+            if not is_subspace(kernel_i, kernel_ij, width=9):
+                KERNEL_LATTICE_COUNTS["clean_pair_missing_first_line"] += 1
+                return False
+            pair_spaces[deleted_ij] = kernel_ij
+
+        for ext5, _space5, state5 in five_states:
+            deleted_ijk = E.deleted_positions(ext8, ext5)
+            deficiency_ijk, kernel_ijk = by_deleted[deleted_ijk]
+            parents = tuple(
+                kernel
+                for deleted, kernel in pair_spaces.items()
+                if deleted < deleted_ijk
+            )
+            if len(parents) != 2:
+                KERNEL_LATTICE_COUNTS["bad_depth3_parent_count"] += 1
+                return False
+            external = span_basis(parents[0], parents[1], width=9)
+            if len(external) != 3:
+                KERNEL_LATTICE_COUNTS["bad_depth3_external_dimension"] += 1
+                return False
+            if not is_subspace(external, kernel_ijk, width=9):
+                KERNEL_LATTICE_COUNTS["depth3_missing_external_kernel"] += 1
+                return False
+
+            if state5[1] == 3:
+                if kernel_ijk != external:
+                    KERNEL_LATTICE_COUNTS["d3_depth3_kernel_not_external"] += 1
+                    return False
+            elif state5[1] == 2:
+                if len(kernel_ijk) != 4:
+                    KERNEL_LATTICE_COUNTS["bad_d2_depth3_kernel_dimension"] += 1
+                    return False
+                internal_intersection = E.intersection_basis(kernel_ijk, L, 9)
+                if internal_intersection != external:
+                    KERNEL_LATTICE_COUNTS["d2_external_intersection_mismatch"] += 1
+                    return False
+                KERNEL_LATTICE_COUNTS["d2_depth3_kernel_checked"] += 1
+            else:
+                return False
+
+    clean = M.three_clean_positions(ext8, space8)
+    KERNEL_LATTICE_COUNTS[("source_three_clean_count", len(clean))] += 1
+
+    if len(clean) == 8:
+        relation_plane = one_puncture_relation_plane(by_deleted)
+        if relation_plane is None:
+            KERNEL_LATTICE_COUNTS["all_clean_bad_line_relation_plane"] += 1
+            return False
+        if not diagonal_projective_equivalent(space8, relation_plane):
+            KERNEL_LATTICE_COUNTS["all_clean_projective_plane_mismatch"] += 1
+            return False
+        KERNEL_LATTICE_COUNTS["all_clean_projective_plane_pass"] += 1
+
+    KERNEL_LATTICE_COUNTS["exact_kernel_lattice_pass"] += 1
+    if len(KERNEL_LATTICE_EXAMPLES) < 20:
+        KERNEL_LATTICE_EXAMPLES.append(
+            (
+                tuple(ext8),
+                space8,
+                tuple(block_states),
+                tuple(
+                    (tuple(sorted(deleted)), deficiency, kernel)
+                    for deleted, (deficiency, kernel) in sorted(
+                        by_deleted.items(),
+                        key=lambda item: (len(item[0]), tuple(sorted(item[0]))),
+                    )
+                ),
+            )
+        )
+    return True
+
+
+def chosen_passes_exact_kernel_lattice(ext8, space8, rank_cache, block_states):
+    if not ORIG_CHOSEN_PASSES_ALL_CLEAN_FANS(
+        ext8, space8, rank_cache, block_states
+    ):
+        return False
+    return exact_kernel_lattice_ok(ext8, space8, block_states)
+
+
+M.chosen_passes_all_clean_fans = chosen_passes_exact_kernel_lattice
+
+
+_I9 = tuple(
+    tuple(Fraction(int(i == j)) for j in range(9))
+    for i in range(9)
+)
+assert is_subspace((_I9[0],), (_I9[0], _I9[1]), width=9)
+assert len(E.intersection_basis((_I9[0], _I9[1]), (_I9[1], _I9[2]), 9)) == 1
+
+_PTEST = E.rref(((1, 0, 1, 1, 2, 3, 1, 4), (0, 1, 1, 2, 1, 1, 3, 1)), 8)
+_DTEST = (1, 2, 3, 5, 7, 11, 13, 17)
+_QTEST = E.rref(
+    tuple(
+        tuple(row[i] * _DTEST[i] for i in range(8))
+        for row in _PTEST
+    ),
+    8,
+)
+assert diagonal_projective_equivalent(_PTEST, _QTEST)
+_QBAD = [list(row) for row in _QTEST]
+_QBAD[0][7] += 1
+_QBAD = E.rref(tuple(tuple(row) for row in _QBAD), 8)
+assert not diagonal_projective_equivalent(_PTEST, _QBAD)
+
+
+if __name__ == "__main__":
+    try:
+        M.F.L.B.main()
+    finally:
+        print("global_lift_counts", M.F.L.GLOBAL_LIFT_COUNTS)
+        print("fixed_nine_counts", M.F.FIXED_NINE_COUNTS)
+        print("actual_realization_counts", M.A.ACTUAL_COUNTS)
+        print("all_clean_counts", M.ALL_CLEAN_COUNTS)
+        print("low_weight_counts", E.LW.LOW_WEIGHT_COUNTS)
+        print("external_kernel_counts", E.EXTERNAL_KERNEL_COUNTS)
+        print("kernel_lattice_counts", KERNEL_LATTICE_COUNTS)
+        print("kernel_lattice_examples", KERNEL_LATTICE_EXAMPLES)

@@ -1,0 +1,320 @@
+# Target C-II — the strengthened SIGNED braid propagates at quarter-power scale through the common-cut grid
+
+**Date:** 2026-09-17  
+**Status:** proof-only corollary of the bounded-noncrossing-degree upgrade and the SIGNED common-cut robust-owner-grid theorem; no canonical promotion claimed  
+**Scope:** SIGNED / COMMON-CUT side of the 15-spaced one-sign strong-TB1 Horn upper family through `t=(q-k)/D<=1.8687`  
+**Dependencies:** bounded noncrossing degree; SIGNED common-cut robust owner grid; row-slot stabilization; diagonal Ramsey bound; SIGNED common fence-cell reduction  
+**Certificate:** `research/verify_target_c_high_t_tb1_signed_quarter_power_propagation_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current common-cut SIGNED theorem was written with a starting crossing braid
+
+\[
+n_D=D^{\varepsilon_K-o(1)},
+\]
+
+because it inherited the earlier Ramsey extraction. The bounded-noncrossing-degree theorem removes that loss. In the same COMMON-CUT scaffold one may now start with
+
+\[
+\boxed{
+n_D=D^{1/4-o(1)}
+}
+\]
+
+pairwise-properly-crossing SIGNED chords, with distinct 15-spaced Horn owners and all previous metric tags unchanged.
+
+Every subsequent step of the robust-owner-grid proof is hereditary and uses only constant-factor thinning, `O_K(1)` directional deletions, or the row-slot/Ramsey arguments. The entire normal form therefore strengthens quantitatively.
+
+The immediate consequences are:
+
+1. the far-owner braid and the robust marker-row family both have size `D^(1/4-o(1))`;
+2. after the ROW-UNIQUE / COLUMN-UNIQUE split, the surviving family still has size `D^(1/4-o(1))`;
+3. COLUMN-UNIQUE contains `D^(1/4-o(1))` pairwise-crossing SIGNED chords with one common exact `B_0` fence-cell type;
+4. ROW-UNIQUE admits a parameterized one-sided-cable extraction: for every fixed `0<a<1/2`, one obtains
+   \[
+   D^{(1-2a)/4-o(1)}
+   \]
+   robust co-phased rows and
+   \[
+   \left({a\over8}-o(1)\right)\log_2D
+   \]
+   pairwise-crossing SIGNED chords whose every mutual crossing lies on the same side of the whole row slab.
+
+For the old choice `a=1/4`, this becomes
+
+\[
+\boxed{D^{1/8-o(1)}\text{ robust rows}}
+\]
+
+and
+
+\[
+\boxed{\left({1\over32}-o(1)\right)\log_2D\text{ one-sided cable chords}.}
+\]
+
+A balanced choice `a=1/3` gives a pre-Ramsey chord set and ordered row block both of scale `D^(1/12-o(1))`, followed by a cable of
+
+\[
+\left({1\over24}-o(1)\right)\log_2D.
+\]
+
+These replace the previous exponents proportional to the microscopic constant `epsilon_K`.
+
+---
+
+## 1. Quarter-power input survives the common-cut owner split
+
+Let `F_D` be the stronger localized SIGNED braid from the bounded-noncrossing-degree theorem. On the COMMON-CUT side,
+
+\[
+|F_D|=n_D=D^{1/4-o(1)}.
+\tag{QP.1}
+\]
+
+Every chord still has:
+
+- one distinct retained strong-TB1 owner coordinate;
+- the same common supported cut;
+- the SIGNED projection
+  \[
+  r_e\cdot w_*
+  \le-\left({1\over4K}-o(1)\right)D;
+  \]
+- length `D-O(D^-1)`;
+- pairwise proper crossing and vertex-disjointness.
+
+Repeat the owner split from the robust-grid theorem. After selecting one owner side of the common cut and dividing that side into a far half and a near marker half, there are families
+
+\[
+E_D^{far},\qquad A_D^{owner}
+\]
+
+with
+
+\[
+\boxed{
+|E_D^{far}|,|A_D^{owner}|\ge {n_D\over4}-O(1)
+=D^{1/4-o(1)}.
+}
+\tag{QP.2}
+
+Every far-owner chord supports every marker row.
+
+Every marker row is adjacent to a retained strong-TB1 robust interface, so the existing global column family satisfies
+
+\[
+\boxed{|B_0|>0.0783D-o(D)}
+\tag{QP.3}
+
+and
+
+\[
+A_D^{owner}\times B_0
+\]
+
+is one inverse-`D` near-equilateral train grid.
+
+No new averaging is used.
+
+---
+
+## 2. The uniqueness fork remains quarter-power
+
+The common-cut theorem deletes only `O_K(1)` chord directions near the row-sector boundaries and then keeps one of two direction classes. Applying exactly the same step to (QP.2) gives either
+
+### ROW-UNIQUE
+
+\[
+\boxed{
+|E_D^{R}|=D^{1/4-o(1)},
+}
+\tag{QP.4}
+
+with every chord meeting every row in `A_D^{owner}` exactly once; or
+
+### COLUMN-UNIQUE
+
+\[
+\boxed{
+|E_D^{C}|=D^{1/4-o(1)},
+}
+\tag{QP.5}
+
+with every chord meeting every train in the fixed linear family `B_0` at most once.
+
+The COLUMN-UNIQUE fence-cell proof is purely hereditary after this point. Hence its Helly cell `C_g` and the four exact types
+
+```text
+THROUGH
+LEFT-ANCHORED
+RIGHT-ANCHORED
+CELL-INTERNAL
+```
+
+may be chosen on a sub-braid of size
+
+\[
+\boxed{D^{1/4-o(1)}}.
+\tag{QP.6}
+
+Thus the entire fixed-cell obstruction is quarter-power, not `D^(epsilon_K-o(1))`.
+
+---
+
+## 3. Re-optimize the ROW-UNIQUE row-slot argument
+
+Assume ROW-UNIQUE. Let
+
+\[
+H_D:=|A_D^{owner}|=(1/4+o(1))n_D
+\]
+
+up to harmless lower-bound notation. Fix any constant
+
+\[
+0<a<{1\over2}
+\tag{QP.7}
+\]
+
+and retain
+
+\[
+k_D:=\lfloor n_D^a\rfloor
+\tag{QP.8}
+\]
+
+ROW-UNIQUE chords.
+
+There are
+
+\[
+C_D={k_D\choose2}=n_D^{2a+o(1)}
+\tag{QP.9}
+\]
+
+possible chord-pair crossing slots. The existing row-slot stabilization lemma gives an ordered row subblock satisfying
+
+\[
+|A_D^{ord}|
+\ge {H_D-C_D\over C_D+1}.
+\tag{QP.10}
+\]
+
+Because `a<1/2`, `C_D=o(n_D)`, and therefore
+
+\[
+\boxed{
+|A_D^{ord}|
+=n_D^{1-2a-o(1)}
+=D^{(1-2a)/4-o(1)}.
+}
+\tag{QP.11}
+
+On all rows in `A_D^{ord}`, the `k_D` chord intersections have one fixed total order. Hence every pairwise chord crossing lies outside the closed slab bounded by its extreme rows.
+
+Color each chord pair by which exterior side contains its unique crossing. The standard bound
+
+\[
+R(r,r)<4^{r-1}
+\]
+
+gives a monochromatic sub-braid of size
+
+\[
+{1\over2}\log_2 k_D-O(1).
+\tag{QP.12}
+
+Now
+
+\[
+\log_2 n_D
+=\left({1\over4}-o(1)\right)\log_2D,
+\]
+
+so (QP.8)--(QP.12) give
+
+\[
+\boxed{
+|G_D|
+\ge
+\left({a\over8}-o(1)\right)\log_2D.
+}
+\tag{QP.13}
+
+Every mutual crossing of `G_D` lies on the same side of the entire row slab (QP.11). Inside the slab the chord pieces form one ordered noncrossing cable.
+
+---
+
+## 4. Useful concrete choices
+
+### Old quarter choice: `a=1/4`
+
+Then
+
+\[
+k_D=D^{1/16-o(1)},
+\]
+
+\[
+\boxed{|A_D^{ord}|=D^{1/8-o(1)}},
+\tag{QP.14}
+
+and
+
+\[
+\boxed{
+|G_D|\ge\left({1\over32}-o(1)\right)\log_2D.
+}
+\tag{QP.15}
+
+### Balanced polynomial dimensions: `a=1/3`
+
+Then the pre-Ramsey chord population and stabilized row block have the same exponent:
+
+\[
+\boxed{
+k_D=D^{1/12-o(1)}},
+\qquad
+\boxed{|A_D^{ord}|=D^{1/12-o(1)}}.
+\tag{QP.16}
+
+The final one-sided cable has
+
+\[
+\boxed{
+|G_D|\ge\left({1\over24}-o(1)\right)\log_2D.
+}
+\tag{QP.17}
+
+More generally (QP.11) and (QP.13) expose the full row-height/cable-width tradeoff.
+
+---
+
+## 5. Frontier effect
+
+The common-cut SIGNED branch now has the following scale.
+
+```text
+starting localized obstruction:
+    D/log D SIGNED inactive near-diameters;
+
+crossing extraction:
+    D^(1/4-o(1)) vertex-disjoint pairwise-crossing SIGNED braid;
+
+owner synchronization:
+    D^(1/4-o(1)) far-owner braid
+    x D^(1/4-o(1)) robust co-phased owner rows
+    x one fixed >0.0783D train family B_0;
+
+ROW-UNIQUE:
+    for every 0<a<1/2,
+    D^((1-2a)/4-o(1)) ordered rows
+    plus (a/8-o(1)) log_2 D one-sided cable chords;
+
+COLUMN-UNIQUE:
+    D^(1/4-o(1)) crossing chords in one exact common B_0 fence cell/type.
+```
+
+The remaining issue is metric/order closure inside these normal forms. The earlier tiny `epsilon_K` is no longer a meaningful limitation on the SIGNED branch.
+
+**Disposition:** propagated the bounded-noncrossing-degree improvement through the current COMMON-CUT robust-grid, row-cable, and fence-cell reductions and re-optimized the row-slot tradeoff. C-II and Level I remain open.

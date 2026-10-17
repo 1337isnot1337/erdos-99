@@ -1,0 +1,18 @@
+# CI protocol example
+
+Classification: regression. This checks the integer square identity on the
+explicit 289-pair domain `[-8,8] x [-8,8]`, plus a false-identity control.
+It exercises the package protocol and proves no Erdős-99 claim.
+The infinite-domain identity and all canonical theorem certificates are outside
+this package's verification claim. No historical artifacts need conversion.
+
+From a clean committed checkout, change this package on a branch and run:
+
+```sh
+python3 tools/local_ci.py --base-ref main --integrity --replay --output /tmp/e99-example
+```
+
+Use Python 3.14 and bubblewrap on Linux. Only declared inputs are exposed to the
+verifier. See `docs/ci/LOCALIZED_CI.md` for the manifest contract and limits.
+The remaining question is whether the protocol captures a future package's
+actual scientific domain; that requires review of that package.

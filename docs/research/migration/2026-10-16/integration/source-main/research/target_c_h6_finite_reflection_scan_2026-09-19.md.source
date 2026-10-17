@@ -1,0 +1,12 @@
+# Finite H6 face-23 scan recovery (2026-09-19)
+
+**Claim class:** unreviewed finite-computation record.
+**Canonical effect:** none. This does not establish a source-level geometry theorem, global-minimum property, or any change to Target C-II.
+
+The cleanup shard contained three unmerged scratch branches with exact finite scans. Their scripts and stored output are preserved here under named `verify_...` files. Exact source tips and blob IDs are in `cleanup/slot2-8f-ref-artifact-map-2026-10-05.tsv`.
+
+- `verify_target_c_h6_face23_run6_fast_scan_2026_09_19.py` scans face-23 H6 combinatorial candidates over its encoded finite q range. Its stored output records 116 numerical candidates before order-hull duplicate removal, 59 exactified new-compatible candidates, and zero exactification failures. The assertions are finite and tied to the imported support-seven H6 model.
+- `verify_target_c_h6_reflection_symmetry_run6_2026_09_19.py` checks the encoded reflection action over 14,174 generic states and records 103 exact symmetry-new candidates with 7,579 exact certificates and zero failures.
+- `verify_target_c_h6_reflection_closure_exact_audit_2026_09_19.py` is a separate temporary state-level audit of generic H6 reflection closure. Its stored branch had no result file.
+
+These scans establish only the encoded finite computations. They do not show that every encoded state is realized by a canonical source, and they do not close any global branch. The historical stored outputs are preserved verbatim. The fast23 replay was run serially for 600 seconds and timed out without flushing output; its stored output was not reproduced. The symmetry replay is still running. These archived counts remain unverified and are not used to support a theorem claim.

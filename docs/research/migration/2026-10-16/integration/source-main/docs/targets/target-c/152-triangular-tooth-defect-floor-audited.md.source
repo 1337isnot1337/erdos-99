@@ -1,0 +1,190 @@
+# Target C — audited §152 linear defect from the pure triangular-tooth regime
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working proof-only route module; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module normalizes the live theorem from the older pure-tooth endpoint branch. The exact endpoint exclusion is only a special case; the useful statement is a uniform Type-II linear loss from the near-pure two-edge-tooth regime.
+
+Let
+
+- `q` be the number of loaded force-hull vertices;
+- `m` be the number of nonunit loaded-hull sides;
+- `T_triangle` be the total number of augmented triangular faces in the harmonic-cell graphs;
+- `r_deep:=m-T_triangle>=0` be the number of nonunit loaded-hull intervals that are not exact two-edge teeth;
+- `Q` be the global bounded-face degree excess;
+- `f` be the number of bounded nonquadrilateral contact faces;
+- `k=d_H+s_Z`; and
+- `u_B>=0` be the Type-II extra outer-walk surplus.
+
+For sufficiently large Type-II survivors,
+
+\[
+\boxed{
+q-T_{\triangle}=e_{BB}+r_{deep}
+=Q+2k+u_B+r_{deep}.
+}
+\tag{152.1}
+\]
+
+Consequently
+
+\[
+\boxed{
+q-T_{\triangle}\ge f+2k.
+}
+\tag{152.2}
+\]
+
+Normalized audited-working §142 gives
+
+\[
+\liminf_{D\to\infty}{2f-k\over D}
+\ge
+\gamma,
+\qquad
+\gamma:=2\sqrt{\frac\pi{2\sqrt3}}-\frac\pi2
+=0.333829286933018\ldots .
+\tag{152.3}
+\]
+
+Combining (152.2) and (152.3),
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-T_{\triangle}\over D}
+\ge
+\frac\gamma2
+=
+\sqrt{\frac\pi{2\sqrt3}}-\frac\pi4
+=0.166914643466509\ldots .
+}
+\tag{152.4}
+\]
+
+More sharply, along any subsequence with `k/D -> kappa`,
+
+\[
+\boxed{
+\liminf {q-T_{\triangle}\over D}
+\ge
+\frac\gamma2+\frac52\kappa.
+}
+\tag{152.5}
+\]
+
+Thus an unbounded Type-II C-II survivor sequence cannot satisfy
+
+\[
+T_{\triangle}=q-o(D).
+\tag{152.6}
+\]
+
+At least `0.1669146434D-o(D)` loaded-hull positions are lost from the exact two-edge-tooth population, and the loss must be paid by the explicit currencies in (152.1): bounded-face degree excess, topology defect, outer-walk surplus, or deeper nonunit-hull detours.
+
+---
+
+## 152.1 Exact finite identity
+
+The centralized Type-II loaded-contact theorem gives
+
+\[
+c_B=0,
+\qquad
+q-m=e_{BB}.
+\tag{152.7}
+\]
+
+Normalized post-126 §130 identifies `T_triangle` exactly with the nonunit loaded-hull intervals whose distinguished outer contact route has occurrence length two. Therefore
+
+\[
+r_{deep}:=m-T_{\triangle}\ge0
+\tag{152.8}
+\]
+
+and
+
+\[
+q-T_{\triangle}
+=(q-m)+(m-T_{\triangle})
+=e_{BB}+r_{deep}.
+\tag{152.9}
+\]
+
+Canonical Section 63, after `c_B=0`, gives
+
+\[
+e_{BB}=Q+2k+u_B.
+\tag{152.10}
+\]
+
+Substitution proves (152.1). Since every bounded nonquadrilateral face has degree at least five,
+
+\[
+Q\ge f,
+\tag{152.11}
+\]
+
+which proves (152.2).
+
+All quantities are occurrence-safe and no identification of tooth intervals with distinct apex vertices is used.
+
+---
+
+## 152.2 Insert the stopped-train phase gap
+
+From §142,
+
+\[
+2f-k\ge(\gamma-o(1))D.
+\]
+
+Rewrite
+
+\[
+f={1\over2}(2f-k)+{1\over2}k.
+\]
+
+Then (152.2) gives
+
+\[
+\begin{aligned}
+q-T_{\triangle}
+&\ge f+2k\\
+&={1\over2}(2f-k)+{5\over2}k\\
+&\ge {\gamma\over2}D+{5\over2}k-o(D).
+\end{aligned}
+\]
+
+This proves (152.4)–(152.5).
+
+---
+
+## 152.3 What the theorem excludes
+
+The exact one-component all-two-edge-tooth endpoint is immediately impossible, but (152.4) is stronger: it excludes every asymptotically pure regime with only `o(D)` non-tooth positions.
+
+The theorem does **not** show which one of the four currencies
+
+\[
+Q,
+\qquad k,
+\qquad u_B,
+\qquad r_{deep}
+\]
+
+must be linear in a given survivor. It only forces their sum, with the exact coefficients in (152.1), to pay a linear deficit.
+
+This is compatible with the current live frontier: linear bounded-face/corridor defect and linear outer-walk surplus remain possible, and neither has yet been converted into a same-cardinality strict diameter descent.
+
+---
+
+## 152.4 Scope
+
+- §142 and the post-126 structural chain are audited-working proof-only inputs.
+- The result is Type II only.
+- No contact-isolated source point is removed, reclassified, or inserted into the core affine-kernel theorem.
+- `T_triangle` is an interval/augmented-face count, not the number of distinct unloaded tooth apex vertices.
+- No KKT coefficient floor, response hypothesis, or withdrawn Section-121 normalization is used.
+
+**Disposition:** audited-working proof-only theorem. C-II and Level I remain open.

@@ -1,0 +1,119 @@
+# Dependency-closed release preparation
+
+The private research archive stays intact. No publication, binding license choice,
+contributor consent, or source-redistribution right is implied by integration.
+
+The path classifier alone is not a usable public-export specification: blanket removal
+of `docs/audits/` and `docs/reports/` removes task evidence and canonical proof sources.
+The dependency planner supersedes those default exclusions **only as review candidates**.
+It reads one exact committed tree, records blob identities and dependency reasons, and
+retains the complete ledger and its registered proof/audit/certificate sources, active
+route modules/shared theory, task dependencies and regressions, linked evidence,
+platform tools, and all research inputs where runtime dependencies remain uncertain.
+It distinguishes these requirements from nonessential historical paths. Retaining all
+research inputs is a conservative contingency set, not a claim of minimal closure.
+
+```sh
+python3 tools/release_dependencies.py --ref HEAD --check --summary
+python3 tools/release_dependencies.py --ref HEAD > /tmp/e99-release-plan.json
+python3 tools/publication_inventory.py --ref HEAD --dependency-plan /tmp/e99-release-plan.json --summary
+```
+
+`--check` verifies dependency closure, **not rights clearance**. Every one of the task
+cards has explicit evidence paths in the machine-readable plan. Missing sources,
+broken internal references, and uncleared literature without a replacement are errors.
+Third-party PDFs and `extracted/` content are never copied. The
+[literature replacement map](literature-links.json) records bibliographic identities and
+external publisher/author/institutional links. A link is not a redistribution license.
+
+The [file-review template](release-reviews.json) starts with no approvals. Store actual
+reviewer/owner approvals in a private file outside the proposed export, and supply it
+with `--review-file <private-record.json>`. That record must name the exact commit.
+Keeping approvals outside the exported tree avoids self-referential approval hashes
+and prevents private reviewer records from entering an export. Before any
+local reviewed export, reviewers must approve content, attribution, privacy, and
+license for **each exact blob**, with an identified reviewer; changed bytes invalidate
+approval. The owner must approve the destination/release and choose the applicable
+root license and contributor terms. Essential historical evidence receives the same
+review as new prose; a task citation never clears a report by itself.
+
+For unshared structural QA, `--local-candidate <new-local-directory>` builds a
+rights-blocked candidate without altering any approval. It runs the export validators
+and cannot be represented as cleared for redistribution. No rights are inferred from
+that copy.
+
+After those decisions, `--review-file <private-record.json> --export-reviewed <new-local-directory>` copies approved files
+from the recorded tree, rewrites bundled-literature links to bibliography links,
+regenerates the artifact index over retained evidence, checks unchanged generated
+state views, runs theorem-state validation, and validates every task dependency and
+internal link against the actual export. `--validate-export <directory>` repeats that
+check and rejects files outside the planned export plus its regenerated artifact
+index. No command publishes, pushes, changes visibility, or rewrites Git history.
+An export that fails validation remains an unshared failed candidate.
+
+Canonical definitions, theorem IDs, edges, statuses and mathematical claims are
+preserved. The artifact index is a view of retained artifacts and is regenerated; it
+must not list absent archive files. Ordinary state views continue to derive from the
+complete manifest. An actual export must also replay the full certificate suite before
+publication. The original private hash-backed baseline is historical and is not an
+export byte-identity claim.
+
+The current dependency plan can be mechanically complete while release clearance is
+false. Pending owner/file-review decisions are blockers to generating a redistributable
+export, not permission to omit necessary proofs or ship unusable task cards. Use the
+[publication audit](PUBLICATION_AUDIT.md) for the rights/privacy checklist.
+
+## Validation boundaries
+
+Candidates are created with a private `0700` root directory. Before writing, the builder
+checks the exact commit, Git blob, mode, source hash and planned rewritten hash.
+Git reads ignore local replacement references and recompute blob identities from bytes.
+An object alias cannot reuse approval of different content. The
+manifest's registered paths, artifact roots and exclusions are checked before any
+generator runs; its index output must match the declared generated overlay. The
+validator rejects symlinks, special files, unsafe paths, extra files, changed bytes and
+changed permissions before generators inspect the tree. It recomputes artifact metadata
+only after file-set, type, mode, hash and link checks pass; standalone metadata inspection
+rechecks manifest paths before reading any index or report. It then runs the complete
+theorem-state checker against the exported files. This is a static
+local check; do not modify a candidate concurrently with validation.
+
+The scanner handles inline links/images, reference definitions, balanced or escaped
+parentheses and entity references. Top-level fenced examples, code spans, comments and the
+repository's display-math delimiters supply no navigational links and are not rewritten.
+Literal existing evidence paths in inline code remain conservative dependencies. The
+scanner also checks raw HTML `href` and `src` dependencies. Bundled-literature references in
+raw HTML must be converted to Markdown before export, so they cannot evade the
+bibliography rewrite. The scanner is not a complete Markdown renderer; a new navigation
+syntax needs a scanner regression before relying on it for release closure. Unknown binary inputs and unexpected
+executable source files block export rather than disappearing from the evidence set.
+
+Approval records reject duplicate paths, nonboolean owner approval and stale commits.
+Missing approval fields, blank reviewer identities and changed blobs remain pending.
+The plan's `pending_review_fields` lists outstanding requirements without publishing
+reviewer identities. A present root license is only a mechanical gate; its scope and
+authority require human review.
+
+Retained generator programs execute during structural QA. Review the selected source
+code or run it in filesystem/network isolation before using an untrusted revision;
+path validation does not sandbox arbitrary programs.
+
+An unshared file export has no Git history. To rehearse commands that require Git,
+initialize a disposable **local copy** with a new initial commit, use `--base-ref HEAD`
+for its first full verification, and keep it unshared. Validate the original file export
+separately; adding `.git/` to it correctly fails the exact-file-set check. Historical
+baseline commits are available in the private archive, not in a clean-history export.
+
+## Prepare the private rights-and-privacy review inventory
+
+```sh
+python3 tools/release_review.py --ref HEAD --output /private/audit/file-review.json --summary
+```
+
+Use an existing private directory outside the export. This generated inventory retains
+every path/blob, dependency reason and pending field while grouping exact source hashes,
+file types and review areas. It omits reviewer identities and approval records. A group
+is a review aid: identical bytes can have different provenance/attribution obligations,
+and path-based groups do not establish authorship. Each required path/blob still needs
+its own approvals, including inspection of rewritten/generated output. No file is
+removed, approved or licensed by this command.

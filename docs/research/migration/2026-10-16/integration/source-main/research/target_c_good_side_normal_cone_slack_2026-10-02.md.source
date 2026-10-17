@@ -1,0 +1,623 @@
+# Target C: global good-side normal-cone slack and near-Reinhardt carrier sea
+
+**Date:** 2026-10-02\
+**Base:** October full actual-diameter / leaf-fan stack\
+**Status:** proof-only exact geometric ledger. C-II and Level I remain open.
+
+## 1. Setup
+
+Work with the canonical post-ZF C-II source. Let
+
+\[
+B=\{b_1,\ldots,b_q\}
+\]
+
+be the loaded force-hull vertices in cyclic order, and let
+
+\[
+H=(B,E_H),\qquad h=|E_H|,\qquad d_v=\deg_H(v).
+\]
+
+Put
+
+\[
+\delta_D:=2\arcsin\frac1{2D}.
+\tag{1}
+\]
+
+Every actual diameter edge has a distinct projective direction, and the canonical
+diameter-gap theorem gives consecutive projective gaps at least \(\delta_D\). Thus
+
+\[
+\boxed{
+E_{\rm dir}:=\pi-h\delta_D\ge0.
+}
+\tag{2}
+\]
+
+Let \(\theta_v\) be the exterior turning angle, equivalently the width of the
+exterior normal cone, at loaded hull vertex \(v\).
+
+Call the loaded hull interval between two consecutive loaded vertices **good** when
+it is one direct unit-contact edge. Let
+
+\[
+G=\#\{\text{good loaded hull intervals}\},
+\qquad
+B_{\rm bad}:=q-G.
+\tag{3}
+\]
+
+For a loaded vertex \(v\), let
+
+\[
+g_v\in\{0,1,2\}
+\]
+
+be the number of its two adjacent loaded hull intervals that are good. Then
+
+\[
+\sum_{v\in B}g_v=2G.
+\tag{4}
+\]
+
+## 2. Each good side buys half a minimum-gap unit of normal clearance
+
+Fix a loaded vertex \(v\), an incident diameter partner \(k\), and an adjacent good
+unit hull neighbor \(c\). Put
+
+\[
+n={v-k\over D}.
+\]
+
+The diameter condition gives
+
+\[
+|c-k|^2\le D^2=|v-k|^2.
+\]
+
+Since \(|v-c|=1\),
+
+\[
+|c-k|^2
+=
+D^2+1-2D\,n\cdot(v-c).
+\]
+
+Hence
+
+\[
+n\cdot(v-c)\ge\frac1{2D}.
+\tag{5}
+\]
+
+The boundary ray of the normal cone corresponding to the hull side \(vc\) is
+perpendicular to \(v-c\). Therefore the angular distance of \(n\) from that boundary
+ray is at least
+
+\[
+\arcsin\frac1{2D}
+=
+\frac{\delta_D}{2}.
+\tag{6}
+\]
+
+Distinct diameter normals incident with \(v\) are separated by at least
+\(\delta_D\), because their partners are unit-separated on the radius-\(D\) circle.
+
+Ordering the \(d_v\) incident diameter normals inside the normal cone therefore gives
+
+\[
+\boxed{
+\theta_v
+\ge
+\left(d_v-1+\frac{g_v}{2}\right)\delta_D.
+}
+\tag{7}
+\]
+
+This simultaneously contains three cases:
+
+- no adjacent good side: \(\theta_v\ge(d_v-1)\delta_D\);
+- one good side: \(\theta_v\ge(d_v-\tfrac12)\delta_D\);
+- two good sides: \(\theta_v\ge d_v\delta_D\).
+
+The last inequality is the local packing estimate previously used only in the
+Reinhardt/cyclic endpoint; no cyclic or \(d_H\le2\) hypothesis is needed.
+
+## 3. Exact global slack identity
+
+Define the local normal-cone slack
+
+\[
+\sigma_v
+:=
+\theta_v-
+\left(d_v-1+\frac{g_v}{2}\right)\delta_D
+\ge0.
+\tag{8}
+\]
+
+The loaded set is the force-hull vertex set, so
+
+\[
+\sum_v\theta_v=2\pi.
+\tag{9}
+\]
+
+Also
+
+\[
+\sum_v(d_v-1)=2h-q,
+\qquad
+\frac12\sum_vg_v=G.
+\]
+
+Therefore
+
+\[
+\begin{aligned}
+\sum_v\sigma_v
+&=
+2\pi-\delta_D(2h-q+G)\\
+&=
+2\pi-\delta_D(2h-B_{\rm bad}).
+\end{aligned}
+\]
+
+Using (2):
+
+### Theorem 3.1 -- good-side normal-cone ledger
+
+\[
+\boxed{
+\sum_{v\in B}\sigma_v
+=
+2E_{\rm dir}+B_{\rm bad}\delta_D.
+}
+\tag{10}
+\]
+
+Every term on both sides is nonnegative.
+
+Thus all failure of local minimum-width diameter-star packing is paid by exactly two
+global currencies:
+
+1. projective diameter-direction gap excess;
+2. missing direct unit sides on the loaded hull.
+
+No KKT coefficient appears.
+
+## 4. Outer-walk control of the bad-side term
+
+Split the outer positive-contact boundary walk into the \(q\) loaded-to-loaded
+subwalks in cyclic order. If the \(i\)-th subwalk has length \(\ell_i\), then
+
+\[
+\ell_i\ge1,
+\qquad
+\sum_i(\ell_i-1)=x_B.
+\tag{11}
+\]
+
+A loaded hull interval is good exactly when \(\ell_i=1\). Every bad interval has
+\(\ell_i-1\ge1\). Hence
+
+\[
+\boxed{
+B_{\rm bad}\le x_B.
+}
+\tag{12}
+\]
+
+Consequently
+
+\[
+\boxed{
+\sum_v\sigma_v
+\le
+2E_{\rm dir}+x_B\delta_D.
+}
+\tag{13}
+\]
+
+## 5. Collapse in the low-detour square-root branch
+
+Assume
+
+\[
+x_B=o(D),
+\qquad
+\nu(H)=O(\sqrt D).
+\tag{14}
+\]
+
+The near-circle theorem gives
+
+\[
+q/D\to\pi.
+\]
+
+Woodall gives
+
+\[
+d_H=q-h\le\nu=o(D),
+\]
+
+so
+
+\[
+h/D\to\pi.
+\tag{15}
+\]
+
+Since
+
+\[
+\delta_D=\frac1D+O(D^{-3}),
+\]
+
+equation (15) gives
+
+\[
+E_{\rm dir}
+=
+\pi-h\delta_D
+=o(1).
+\tag{16}
+\]
+
+By (12),
+
+\[
+B_{\rm bad}\delta_D
+\le
+x_B\delta_D
+=o(1).
+\tag{17}
+\]
+
+Insert (16)--(17) into Theorem 3.1:
+
+\[
+\boxed{
+\sum_v\sigma_v=o(1).
+}
+\tag{18}
+\]
+
+This is a global near-equality theorem: the complete loaded hull has only \(o(1)\)
+total angular slack beyond the mandatory diameter-star packing and good-side
+clearance.
+
+## 6. Internal star-gap excess is also paid by the same ledger
+
+Fix \(v\) with \(d_v\ge2\), and order its incident diameter directions in the
+normal cone. Write their consecutive angular gaps as
+
+\[
+\gamma_{v,1},\ldots,\gamma_{v,d_v-1},
+\qquad
+\gamma_{v,j}\ge\delta_D.
+\]
+
+Let
+
+\[
+X_v
+:=
+\sum_{j=1}^{d_v-1}(\gamma_{v,j}-\delta_D)
+\ge0.
+\tag{19}
+\]
+
+The proof of (7) decomposes the normal-cone width into the two boundary clearances
+plus these internal gaps. Every clearance term beyond the mandatory
+\(g_v\delta_D/2\) and every internal gap excess is nonnegative. Therefore
+
+\[
+\boxed{0\le X_v\le\sigma_v.}
+\tag{20}
+\]
+
+Hence under (14),
+
+\[
+\boxed{
+\sum_vX_v=o(1).
+}
+\tag{21}
+\]
+
+So the internal spacing of all diameter stars is globally almost minimal in total,
+not only on average over directions.
+
+## 7. Combine with the balanced square-root carrier sea
+
+The companion carrier theorem on the current research branch proves that, under
+(14), there are \(\Omega(\sqrt D)\) **medium carriers** satisfying
+
+\[
+a_K\sqrt D
+\le
+t_v-1
+\le
+B_*\sqrt D
+\tag{22}
+\]
+
+for fixed positive constants \(a_K,B_*\), where \(t_v\) is the number of pendant
+diameter leaves at \(v\).
+
+In particular each medium carrier has
+
+\[
+d_v=\Theta(\sqrt D),
+\qquad
+d_v\delta_D=\Theta(D^{-1/2}).
+\tag{23}
+\]
+
+Fix any \(\varepsilon>0\). By (18),
+
+\[
+\#\left\{
+v\text{ medium}:
+\sigma_v>\frac{\varepsilon}{\sqrt D}
+\right\}
+\le
+\frac{\sqrt D}{\varepsilon}\sum_v\sigma_v
+=
+o(\sqrt D).
+\tag{24}
+\]
+
+Thus all but \(o(\sqrt D)\) medium carriers satisfy
+
+\[
+\boxed{
+\sigma_v\le\frac{\varepsilon}{\sqrt D}.
+}
+\tag{25}
+\]
+
+Since \(\varepsilon\) is arbitrary, a full-density subfamily of the medium carriers
+has
+
+\[
+\boxed{
+\sigma_v=o(D^{-1/2}),
+\qquad
+X_v=o(D^{-1/2}).
+}
+\tag{26}
+\]
+
+For those carriers,
+
+\[
+\boxed{
+\theta_v
+=
+d_v\delta_D+o(D^{-1/2}),
+}
+\tag{27}
+\]
+
+because the possible missing boundary-clearance correction
+\((1-g_v/2)\delta_D=O(D^{-1})\) is smaller than \(D^{-1/2}\).
+
+If \(\Theta_v\) denotes the angular span from the first to the last incident diameter
+direction, then
+
+\[
+\Theta_v
+=
+(d_v-1)\delta_D+X_v,
+\]
+
+so
+
+\[
+\boxed{
+\Theta_v
+=
+(d_v-1)\delta_D+o(D^{-1/2}).
+}
+\tag{28}
+\]
+
+Relative to the natural medium-star scale \(d_v\delta_D=\Theta(D^{-1/2})\), both
+(27) and (28) are asymptotic equalities.
+
+## 8. Interpretation: a near-Reinhardt square-root star sea
+
+The low-detour square-root branch now contains a positive square-root population of
+actual diameter carriers with all of the following simultaneous properties:
+
+- degree \(\Theta(\sqrt D)\);
+- \(\Theta(\sqrt D)\) pendant leaves in one consecutive hull block;
+- star interval width \(\Theta(D^{-1/2})\);
+- normal-cone width equal to \(d_v\delta_D\) up to \(o(D^{-1/2})\);
+- total internal diameter-gap excess \(o(D^{-1/2})\);
+- almost all adjacent leaf-block chords are exact unit contacts.
+
+This is the finite-defect analogue of the exact cyclic Reinhardt relation
+
+\[
+\theta_v=d_v\delta_D.
+\]
+
+The conclusion does **not** imply a common uniform KKT stress, exact equal gaps, or
+membership in the Reinhardt equality class. It does remove macroscopic angular
+slack from the carrier sea.
+
+For the October train problem, the remaining split-star witnesses therefore live
+among \(\Theta(\sqrt D)\) broad, almost-uniform diameter-star grids rather than
+arbitrary direction packets.
+
+
+## 9. Pendant leaves are a contiguous subblock in star-direction order
+
+The leaf-fan theorem states that, for one nonleaf carrier \(a\), its degree-one
+diameter neighbors \(L(a)\) form one consecutive block in loaded-hull cyclic order.
+There is a parallel direction-order consequence.
+
+### Lemma 9.1
+
+The diameter rays from \(a\) to the vertices of \(L(a)\) form one consecutive
+subblock among all actual diameter rays incident with \(a\).
+
+### Proof
+
+All diameter partners of \(a\) lie on the same circle
+
+\[
+\partial B(a,D),
+\]
+
+and the entire source lies inside \(B(a,D)\). The full star has angular span at most
+\(\pi/3\), so its partner rays have one unambiguous ordinary angular order.
+
+Suppose another diameter partner \(z\notin L(a)\) had angular direction strictly
+between two consecutive leaf rays \(ap,aq\) in that order. The points \(p,z,q\) all
+lie on the boundary circle of \(B(a,D)\). Tangent lines to that disk support the
+source hull at those points, so their cyclic order on the source hull agrees with
+their order on this short circle arc. Hence \(z\) lies on the open loaded-hull arc
+from \(p\) to \(q\) that does not contain \(a\).
+
+But the leaf-fan hull-order lemma says every loaded vertex on that open arc is again
+a degree-one diameter neighbor of \(a\). Thus \(z\in L(a)\), contradiction. QED.
+
+Order the leaf rays in this common hull/direction order:
+
+\[
+ap_1,\ldots,ap_{t_a}.
+\]
+
+Put
+
+\[
+Y_a
+:=
+\sum_{i=1}^{t_a-1}
+\left(
+\angle p_iap_{i+1}-\delta_D
+\right)
+\ge0.
+\tag{29}
+\]
+
+By Lemma 9.1 these are internal consecutive gaps of the full star, so
+
+\[
+\boxed{0\le Y_a\le X_a\le\sigma_a.}
+\tag{30}
+\]
+
+Therefore every near-equality medium carrier from Section 7 has pendant-block span
+
+\[
+\boxed{
+\angle p_1ap_{t_a}
+=
+(t_a-1)\delta_D+o(D^{-1/2}).
+}
+\tag{31}
+\]
+
+## 10. Typical medium blocks are almost entirely exact unit-chord fans
+
+Let \(b_a\) be the number of internal pendant-block adjacencies
+\(p_ip_{i+1}\) that are not good direct unit hull contacts.
+
+These bad adjacencies are distinct bad loaded hull intervals. Hence
+
+\[
+\boxed{
+\sum_{a\in\mathcal C}b_a\le B_{\rm bad}\le x_B=o(D).
+}
+\tag{32}
+\]
+
+The balanced-carrier theorem gives \(M_D=\Omega(\sqrt D)\) medium carriers.
+Since the total in (32) is \(o(D)\), there is a subfamily of
+
+\[
+M_D-o(\sqrt D)
+\]
+
+medium carriers for which
+
+\[
+\boxed{b_a=o(\sqrt D).}
+\tag{33}
+\]
+
+One explicit Markov choice is the following. If \(x_B>0\), set
+
+\[
+\eta_D:=\sqrt{x_B/D}=o(1).
+\]
+
+The number of carriers with \(b_a>\eta_D\sqrt D\) is at most
+
+\[
+\frac{x_B}{\eta_D\sqrt D}
+=
+\sqrt{x_B}
+=
+o(\sqrt D).
+\]
+
+When \(x_B=0\) the statement is immediate.
+
+Intersect this subfamily with the full-density near-equality subfamily from
+Section 7. For every retained medium carrier,
+
+\[
+t_a=\Theta(\sqrt D),
+\qquad
+b_a=o(\sqrt D),
+\qquad
+Y_a=o(D^{-1/2}).
+\tag{34}
+\]
+
+Every good adjacency has exact chord length one and exact carrier-angle
+\(\delta_D\). Thus:
+
+\[
+\boxed{
+\text{for a positive }\sqrt D\text{-population of carriers, }
+(1-o(1))t_a
+\text{ consecutive leaf adjacencies are exact }(D,D,1)\text{ fan contacts.}
+}
+\tag{35}
+\]
+
+The non-good adjacencies occupy a vanishing fraction of each retained block, and the
+entire block's angular span differs from the minimum
+\((t_a-1)\delta_D\) by only \(o(D^{-1/2})\).
+
+In particular every retained block contains a consecutive exact good-fan run whose
+length tends to infinity. Indeed \(b_a+1=o(\sqrt D)+1\) good runs partition
+\(\Theta(\sqrt D)\) leaf adjacencies, so the largest run has length
+
+\[
+\frac{\Theta(\sqrt D)}{b_a+1}\longrightarrow\infty.
+\tag{36}
+\]
+
+This does not force an \(\Omega(\sqrt D)\) run unless the stronger
+\(x_B=O(\sqrt D)\) regime is assumed. It does force the remaining low-detour hard
+branch to contain \(\Omega(\sqrt D)\) almost-minimal carrier arcs, each with a
+vanishing fraction of nonunit internal hull transitions.
+
+
+**Disposition:** proof-only exact ledger and asymptotic reduction. No computation,
+numerical search, verifier, or CI output is used.
+
+## Slot 2 recovery provenance — 2026-10-05
+
+Recovered from `research/weighted-cover-stress-concentration-2026-10-02` at exact source tip `ab10eeda2bc16a36daacd54be7cb2cbfdeb1fe1f`. No original PR is associated with the source branch. This report remains a proof-only, unreviewed Target C-II candidate; its stated KKT and train hypotheses are not promoted, and it does not close C-II or Level I. No verifier or computational certificate was present in the source lineage.

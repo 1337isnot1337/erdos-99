@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+"""Certify the arithmetic in the two-phase three-currency gate.
+
+This checks the exact coefficient chain only.  It does not construct a contact graph,
+prove the geometric hypotheses, or establish global minimum-diameter optimality.
+"""
+
+from math import pi
+
+
+def main() -> None:
+    # The sharp finite variation constant and its zero-detour surplus threshold.
+    gap = 4.0 - pi
+    carrier_threshold = gap / 10.0
+    full_core_threshold = gap / 5.0
+    assert gap > 0.8583
+    assert carrier_threshold > 0.0858
+    assert full_core_threshold > 0.1716
+
+    # Current high-detour normalized scalar witness from the endpoint regression.
+    t = 2.9
+    kappa = 0.0
+    s = 2.798596312209462
+    g = 0.291043460511411
+    delta = 0.0                 # (b-per(F))/D
+    rho = 0.0                   # (per(F)-pi*D)/D in the limiting witness
+    f = 0.4
+
+    q = t + kappa
+    m = s + g - t
+    e_bb = q - m
+    Q = 2.0 * t - pi - delta
+    u_b = e_bb - 2.0 * kappa - Q
+    P_exc = Q + 4.0 * f
+
+    assert q < pi
+    assert m > 0.0 and Q > 0.0 and u_b > 0.0
+    assert P_exc <= 5.0 * (e_bb - 2.0 * kappa)
+
+    # Both composed gates are necessary inequalities and are comfortably satisfied
+    # by this scalar point; hence the composition is not a scalar-only closure.
+    assert delta + rho + 10.0 * (e_bb - 2.0 * kappa) >= gap
+    assert delta + rho + 5.0 * (e_bb - 2.0 * kappa) >= gap
+
+    # Conversely, the claimed zero-detour threshold is exactly the point at which the
+    # relaxed payment 10(e_BB-2k) reaches 4-pi.
+    assert 10.0 * carrier_threshold == gap
+    assert 5.0 * full_core_threshold == gap
+
+    print("two-phase three-currency gate arithmetic: OK")
+    print(
+        f"4-pi={gap:.12f} carrier_threshold={carrier_threshold:.12f} "
+        f"full_core_threshold={full_core_threshold:.12f}"
+    )
+    print(f"e_BB={e_bb:.12f} Q={Q:.12f} u_B={u_b:.12f} P_exc={P_exc:.12f}")
+    print(
+        "carrier_gate_margin="
+        f"{delta + rho + 10.0 * (e_bb - 2.0 * kappa) - gap:.12f} "
+        f"full_core_gate_margin={delta + rho + 5.0 * (e_bb - 2.0 * kappa) - gap:.12f}"
+    )
+
+
+if __name__ == "__main__":
+    main()

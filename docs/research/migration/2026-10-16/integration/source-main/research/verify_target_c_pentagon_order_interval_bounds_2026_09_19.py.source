@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+"""Exact Farkas identities for universal turn intervals in one physical order cone."""
+from fractions import Fraction as Q
+
+
+def add(*vectors):
+    return tuple(sum(z) for z in zip(*vectors))
+
+
+def mul(a, vector):
+    return tuple(a * z for z in vector)
+
+
+def xrow(k):
+    row = [Q(0)] * 6
+    row[k] = 1
+    return tuple(row)
+
+
+def qfacet(i):
+    # q_i - 1/3 >= 0.
+    row = [Q(0)] * 6
+    row[i] += 1
+    row[(i + 1) % 5] += 1
+    row[(i + 3) % 5] -= 1
+    row[5] -= Q(1, 3)
+    return tuple(row)
+
+
+# Representative physical order cone:
+# x0 <= x2 <= x3 <= x4 <= x1,
+# corresponding to cyclic rank vector (1,5,2,3,4).
+ORDER = (0, 2, 3, 4, 1)
+
+
+def order_facet(j):
+    a, b = ORDER[j], ORDER[j + 1]
+    row = [Q(0)] * 6
+    row[b] += 1
+    row[a] -= 1
+    return tuple(row)
+
+
+SUM_EQUALITY = tuple([Q(1)] * 5 + [Q(-2)])
+FACETS = [qfacet(i) for i in range(5)] + [order_facet(j) for j in range(4)]
+
+
+def lower_target(k, lower):
+    row = list(xrow(k))
+    row[5] -= lower
+    return tuple(row)
+
+
+def upper_target(k, upper):
+    row = list(mul(Q(-1), xrow(k)))
+    row[5] += upper
+    return tuple(row)
+
+
+# Each tuple is (target nonnegative linear form, nonnegative facet weights,
+# equality multiplier). Facet indices 0..4 are q facets; 5..8 are the four
+# order facets x2-x0, x3-x2, x4-x3, x1-x4.
+CERTIFICATES = [
+    (lower_target(0, Q(0)), {0: Q(2), 1: Q(3, 2), 3: Q(5, 2), 6: Q(1, 2)}, Q(-1)),
+    (upper_target(0, Q(2, 5)), {5: Q(4, 5), 6: Q(3, 5), 7: Q(2, 5), 8: Q(1, 5)}, Q(-1, 5)),
+    (lower_target(1, Q(2, 5)), {5: Q(1, 5), 6: Q(2, 5), 7: Q(3, 5), 8: Q(4, 5)}, Q(1, 5)),
+    (upper_target(1, Q(2, 3)), {0: Q(1), 1: Q(1), 3: Q(2)}, Q(-1)),
+    (lower_target(2, Q(1, 6)), {0: Q(1, 2), 1: Q(3, 2), 3: Q(3, 2), 7: Q(1, 2)}, Q(-1, 2)),
+    (upper_target(2, Q(5, 12)), {0: Q(1, 4), 6: Q(3, 4), 7: Q(1, 4)}, Q(-1, 4)),
+    (lower_target(3, Q(1, 3)), {1: Q(1, 2), 3: Q(1, 2), 6: Q(1, 2)}, Q(0)),
+    (upper_target(3, Q(1, 2)), {0: Q(1), 3: Q(1, 2), 5: Q(1, 2)}, Q(-1, 2)),
+    (lower_target(4, Q(7, 18)), {3: Q(1, 6), 5: Q(1, 6), 6: Q(1, 3), 7: Q(2, 3)}, Q(1, 6)),
+    (upper_target(4, Q(2, 3)), {1: Q(2), 3: Q(1), 4: Q(1)}, Q(-1)),
+]
+
+for target, weights, beta in CERTIFICATES:
+    assert all(a >= 0 for a in weights.values())
+    rhs = mul(beta, SUM_EQUALITY)
+    for i, a in weights.items():
+        rhs = add(rhs, mul(a, FACETS[i]))
+    assert target == rhs
+
+print("PASS")
+print("representative physical order: x0 <= x2 <= x3 <= x4 <= x1")
+print("x0 in [0,2/5]")
+print("x1 in [2/5,2/3]")
+print("x2 in [1/6,5/12]")
+print("x3 in [1/3,1/2]")
+print("x4 in [7/18,2/3]")

@@ -1,0 +1,237 @@
+# Target C — all-defect phase gap forces loaded unit sides and a linear non-tooth boundary deficit
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only Type-II structural theorem; theorem authority unchanged.  
+**Dependencies:** canonical Section 63; audited-working §§130 and 142; audited-working Type-II theorem `c_B=0`.
+
+The exact pure-tooth endpoint was recently excluded by comparing its stopped-train
+count with the audited-working all-defect phase gap. The same ledgers imply a much
+stronger stability theorem.
+
+Every sufficiently large Type-II survivor has a **linear population of direct unit
+sides on the loaded force hull**. Consequently an asymptotically pure two-edge-tooth
+boundary is impossible with a fixed linear margin.
+
+Let
+
+- `q` be the number of loaded force-hull vertices;
+- `T_triangle` be the audited-working §130 augmented triangular-face count, equivalently
+  the number of nonunit loaded-hull intervals whose distinguished outer route has
+  exactly two unit edges;
+- `m` be the number of nonunit loaded-hull sides;
+- `r_deep:=m-T_triangle`, so `r_deep` counts nonunit loaded-hull intervals whose outer
+  route has at least three edge occurrences;
+- `e_BB` be the number of loaded-loaded unit contacts;
+- `f` be the number of bounded nonquadrilateral core faces;
+- `Q=sum_F(deg F-4)` over those faces;
+- `k=d_H+s_Z`.
+
+For sufficiently large Type-II survivors the centralized hull-side theorem gives
+`c_B=0`, so every loaded-loaded unit contact is a force-hull side. Hence
+
+\[
+\boxed{e_{BB}=q-m}
+\tag{1}
+\]
+
+and audited-working §130 gives
+
+\[
+\boxed{r_{deep}=m-T_{\triangle}.}
+\tag{2}
+\]
+
+Therefore
+
+\[
+\boxed{
+q-T_{\triangle}=e_{BB}+r_{deep}.
+}
+\tag{3}
+\]
+
+Thus `q-T_triangle` counts exactly the loaded-hull intervals that are not ordinary
+two-edge nonunit teeth: direct unit loaded sides plus nonunit intervals whose outer
+route has at least three occurrences.
+
+## Theorem 1 — Type II has linearly many direct loaded unit sides
+
+Every Type-II survivor sequence satisfies
+
+\[
+\boxed{
+\liminf_{D\to\infty}{e_{BB}\over D}
+\ge {\gamma\over2},
+}
+\tag{4}
+\]
+
+where the audited-working §142 constant is
+
+\[
+\gamma
+:=2\sqrt{\Delta_2}-{\pi\over2},
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\tag{5}
+\]
+
+Numerically,
+
+\[
+\boxed{
+{\gamma\over2}
+=
+\sqrt{\frac\pi{2\sqrt3}}-{\pi\over4}
+=0.166914643466509\ldots .
+}
+\tag{6}
+\]
+
+Because `c_B=0`, every contact counted in (4) is an actual **unit side of the loaded
+convex hull**, not an interior loaded chord.
+
+### Proof
+
+Canonical Section 63, specialized with `c_B=0`, gives the exact finite identity
+
+\[
+\boxed{
+e_{BB}=Q+2k+u_B,}
+\tag{7}
+\]
+
+with `u_B>=0`. Every bounded nonquadrilateral face has degree at least five, so
+
+\[
+f\le Q.
+\tag{8}
+\]
+
+Hence
+
+\[
+\begin{aligned}
+2f-k
+&\le2Q-k\\
+&=2(e_{BB}-2k-u_B)-k\\
+&=2e_{BB}-5k-2u_B\\
+&\le2e_{BB}.
+\end{aligned}
+\tag{9}
+\]
+
+Audited-working §142 proves the all-defect stopped-train/phase gap
+
+\[
+\boxed{
+\liminf_{D\to\infty}{2f-k\over D}\ge\gamma.
+}
+\tag{10}
+\]
+
+Divide (9) by `2D` and apply (10). `square`
+
+The finite inequality retained before the limit is
+
+\[
+\boxed{
+e_{BB}\ge f-{k\over2}.}
+\tag{11}
+\]
+
+## Theorem 2 — linear non-tooth boundary deficit
+
+Every Type-II survivor sequence also satisfies
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-T_{\triangle}\over D}
+\ge {\gamma\over2}.
+}
+\tag{12}
+\]
+
+### Proof
+
+Equation (3) and `r_deep>=0` give
+
+\[
+q-T_{\triangle}\ge e_{BB}.
+\]
+
+Apply Theorem 1. `square`
+
+Equivalently, the finite chain is
+
+\[
+2(q-T_{\triangle})
+=2(e_{BB}+r_{deep})
+\ge2e_{BB}
+\ge2f-k.
+\tag{13}
+\]
+
+## Consequences
+
+### 1. The asymptotic pure-tooth regime is impossible
+
+There is no Type-II survivor sequence with
+
+\[
+T_{\triangle}=q-o(D).
+\]
+
+The loss from the all-two-edge-tooth boundary is at least
+
+\[
+\left(0.166914643466509\ldots-o(1)\right)D.
+\]
+
+This is strictly stronger than the exact endpoint exclusion.
+
+### 2. The remaining full-core boundary necessarily contains a macroscopic unit-side set
+
+Equation (4) eliminates a possible escape in which the phase-gap currency is paid
+entirely by deep nonunit detours. Regardless of `r_deep`, every large Type-II survivor
+has at least `(gamma/2-o(1))D` direct unit loaded-hull sides.
+
+Those sides consume two units of the loaded contact-degree budget at every interior
+vertex of a consecutive run. A closing theorem can therefore attack the interaction
+between long unit-side runs, inward harmonic attachments, and the near-disk diameter
+thrackle rather than treating the boundary as an arbitrary mixture of teeth and
+detours.
+
+### 3. Relation to the post-126 currency split
+
+Audited-working §147 retains `r_deep` as a positive return-payment currency. The
+present theorem adds an independent compulsory boundary currency:
+
+\[
+\boxed{
+e_{BB}=\Omega(D)}
+\]
+
+with an explicit coefficient. Thus even the branch in which `r_deep=o(D)` is not a
+near-pure-tooth shell; it contains a linear set of exact unit hull contacts.
+
+## Hostile checks
+
+- `T_triangle` is the augmented triangular-face count from §130, not the stopped-train
+  count from §142.
+- The conclusion that the `e_BB` contacts are hull sides uses the separately audited
+  Type-II theorem `c_B=0`; outside Type II, `e_BB` may include additional loaded chords.
+- The phase gap is used only in its audited-working Type-II scope.
+- `f<=Q` uses only the minimum bounded nonquadrilateral degree five.
+- The sign in (9) is favorable: `k,u_B>=0` are subtracted, so discarding them gives an
+  upper bound on `2f-k`.
+- Occurrence multiplicity and bridges are already retained in §142. Bridge excursions
+  can only increase `u_B` and cannot invalidate (9).
+- No contact-isolated source point is deleted or inserted into the Section-57 affine
+  kernel.
+
+**Disposition:** proof-only Type-II stability theorem. It forces a linear exact
+loaded-unit-side population and eliminates the full `T_triangle=q-o(D)` triangular-
+tooth regime, but it does not yet close C-II or the macroscopic inactive-container
+branch.

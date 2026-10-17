@@ -1,0 +1,286 @@
+# Target C support-seven H6: domination width of minimal segment-order cycles
+
+Date: 2026-09-19
+
+Status: exact combinatorial refinement of the generic-H6 global segment-order obstruction. The theorem-state authority is unchanged. C-II remains open.
+
+## Result
+
+The reciprocal segment-comparison graph is `L(K8)`. The all-root interior-domination theorem has fourteen clauses
+
+\[
+(r,t),\qquad t\in\{6,7\},\quad r\ne t.
+\]
+
+A branch atom compares the target segment `rt` with one bracketing hull segment `rh` and imposes
+
+\[
+\lambda_{rt}<\lambda_{rh}
+\]
+
+in a genuine realization; the affine branch cover safely replaces `<` by `<=`. Thus every domination atom points from the segment with one more interior endpoint to the segment with one fewer interior endpoint.
+
+If the state-specific bracketing restriction is temporarily forgotten, there are exactly 72 possible domination comparison atoms in `L(K8)`: each of the twelve hull-root clauses has five possible hull endpoints other than its root, while each of the two interior-root clauses has six. A fixed H6 state uses only two endpoint options per clause, so this 72-atom set is a state-independent superset.
+
+Two nested bounds hold for the 8,242 nontrivial minimal segment-order cycle templates.
+
+First, an undirected chordless template touches at most four distinct domination clauses. Its exact clause-width census is
+
+```text
+possible clause width     templates
+0                               292
+1                               150
+2                              3870
+3                                 0
+4                              3930
+                              -----
+total                          8242
+```
+
+Second, and stronger for actual order cuts:
+
+\[
+\boxed{\text{Either directed cyclic orientation can use at most two domination atoms in the required direction.}}
+\]
+
+For either orientation of each undirected template, the exact directional capacity census is
+
+```text
+aligned domination atoms   templates
+0                               292
+1                              4020
+2                              3930
+                              -----
+total                          8242
+```
+
+Thus a minimal directed order contradiction can depend on at most two domination branch literals. No three-way or larger domination interaction is needed for the `L(K8)` order-cycle layer.
+
+The two-literal case is much more rigid. Exactly 42 of the `C(14,2)=91` clause pairs can occur as two aligned domination atoms in a directed minimal cycle. They are precisely the pairs satisfying all three conditions:
+
+1. one clause targets `6` and the other targets `7`;
+2. the two roots are distinct;
+3. the two roots are not both interior.
+
+They split as
+
+```text
+root types       clause pairs
+hull + hull              30
+hull + interior          12
+                         --
+total                    42
+```
+
+In particular, no two-literal directed order cycle uses two clauses with the same target, the two target clauses at the same hull root, or the mutual interior pair `(6,7)` and `(7,6)`.
+
+At branch-atom resolution, only 420 unordered pairs from the static 72-atom superset can occur aligned in a directed minimal cycle:
+
+```text
+root types       atom pairs    per clause pair
+hull + hull             360                  12
+hull + interior          60                   5
+                        ---
+total                   420
+```
+
+Every hull-hull atom pair occurs in exactly 11 directed simple-cycle templates, while every hull-interior atom pair occurs in exactly 65. Hence the total two-literal directed-template incidence is
+
+\[
+360\cdot11+60\cdot65
+=3960+3900
+=7860
+=2\cdot3930,
+\]
+
+as required by the directional-capacity census.
+
+These are statements about the segment-order cycle layer only. They do **not** imply that the full 85-variable affine domination branch-and-bound has depth two. An affine Farkas contradiction can depend jointly on more domination halfspaces without containing a segment-order cycle.
+
+## Undirected clause-width proof
+
+For a reciprocal vertex `v`, let
+
+\[
+\tau(v)=
+\begin{cases}
+0,&v\in\{0,\ldots,5\},\\
+1,&v\in\{6,7\}.
+\end{cases}
+\]
+
+Every induced line-graph cycle of length `k>=4` is the edge set of a simple `K8` cycle
+
+\[
+v_0v_1\cdots v_{k-1}v_0,
+\]
+
+with line-graph vertices
+
+\[
+e_i=\{v_i,v_{i+1}\}.
+\]
+
+At the comparison between `e_{i-1}` and `e_i`, the shared root is `v_i`. The comparison is domination-eligible exactly when the two non-root endpoints have opposite types:
+
+\[
+\tau(v_{i-1})\ne\tau(v_{i+1}).
+\tag{1}
+\]
+
+Only two vertices of `K8` are interior. Each interior vertex can make (1) true only at its two neighboring positions on the cycle. Therefore there are at most four domination-eligible positions. Since a simple `K8` cycle visits each root once, those positions have distinct root-target clause keys. This proves clause width at most four for every induced cycle of length at least four.
+
+The eligible positions are the positions with exactly one interior cyclic neighbor. They form the symmetric difference of the one-step neighbor sets of the interior vertices present on the cycle, so their number is always `0`, `2`, or `4`.
+
+For a root-star triangle, a comparison is domination-eligible exactly when its two non-root endpoints have opposite hull/interior type. There are at most two such edges. If the triangle has one interior target and two hull endpoints, both eligible edges belong to the same clause `(r,t)`; if it has two interior targets and one hull endpoint at a hull root, they belong to the two clauses `(r,6)` and `(r,7)`. The exact star census is
+
+```text
+eligible comparisons       0     2
+star triangles            100   180
+
+possible clause width      0     1     2
+star triangles            100   150    30
+```
+
+The 56 reciprocal-triangle side triangles are order-tautological on the complete-angle system and are omitted from the 8,242 nontrivial family. For completeness, 20 have no domination-eligible comparison and 36 have two distinct eligible clauses.
+
+## Directed width-two proof
+
+Orient segment-order edges from the shorter segment to the longer segment. A domination atom always has direction
+
+\[
+\{r,t\}\longrightarrow\{r,h\},
+\qquad t\in\{6,7\},\quad h\in\{0,\ldots,5\}.
+\tag{2}
+\]
+
+Take the forward directed orientation of a simple `K8` cycle above, meaning the line-graph cycle uses
+
+\[
+e_{i-1}\longrightarrow e_i
+\]
+
+at root `v_i`. By (2), a domination atom agrees with this orientation exactly when
+
+\[
+v_{i-1}\in\{6,7\},\qquad v_{i+1}\in\{0,\ldots,5\}.
+\tag{3}
+\]
+
+Each interior vertex can occur as the predecessor in (3) at only one position of the simple cycle. Therefore the forward orientation has at most two aligned domination atoms, one contributed by target `6` and one by target `7`. Reversing the cyclic orientation exchanges interior-to-hull transitions with hull-to-interior transitions and gives the same bound.
+
+Equivalently, along either directed cycle orientation the interior-endpoint count of the segment can decrease at most twice. The domination atoms are exactly such one-step decreases.
+
+For a root-star triangle, the three incident segments have only two adjacent interior-count levels (`HH/HI` for a hull root or `HI/II` for an interior root). A directed three-cycle traverses at most one downward transition between those levels, so at most one domination atom can agree with either cyclic orientation. The same bound holds for a side triangle, although side triangles are already order-tautological.
+
+This proves directional domination width at most two for every nontrivial minimal order-cycle template.
+
+## Characterization of the 42 two-clause pairs
+
+Suppose a forward simple cycle has two aligned domination atoms. By (3), one has target `6` and the other target `7`; a fixed interior target cannot contribute twice. Their roots are the immediate successors of `6` and `7` on the simple cycle, so the roots are distinct.
+
+The roots cannot both be interior. That would require `6` immediately after `7` and `7` immediately after `6` in the same directed simple cycle, which would make a two-cycle rather than a simple cycle of length at least four.
+
+Conversely, any opposite-target pair with distinct roots and at most one interior root can be embedded in a directed simple `K8` cycle with suitable hull endpoints. Hence these conditions characterize the two-literal clause pairs exactly.
+
+Counting them directly:
+
+- both roots hull: choose the hull root for the target-`6` clause in 6 ways and a different hull root for the target-`7` clause in 5 ways, giving `6*5=30`;
+- exactly one root interior: either use `(7,6)` with any of the six hull-root target-`7` clauses, or `(6,7)` with any of the six hull-root target-`6` clauses, giving `6+6=12`.
+
+Therefore there are exactly
+
+\[
+30+12=\boxed{42}
+\]
+
+possible two-literal clause pairs.
+
+## The 420 aligned atom pairs and their cycle multiplicities
+
+Fix one of the 30 hull-hull clause pairs, with distinct hull roots `r,s` and opposite targets `6,7`. A forward aligned atom at each root specifies two directed length-two paths
+
+\[
+6\to r\to h,
+\qquad
+7\to s\to k.
+\]
+
+The six vertices in these two paths must be distinct. After removing `r,s` from the six hull labels, there are four possible hull labels for `h`; then `k` has three choices. Thus each hull-hull clause pair admits exactly
+
+\[
+4\cdot3=12
+\]
+
+aligned atom pairs, for `30*12=360` total.
+
+The two directed three-vertex paths are disjoint and use six vertices. To count directed simple cycles containing them, contract the two paths to two blocks. Of the two unused vertices, choose `m=0,1,2` and insert them as singleton blocks. A directed cycle on `2+m` labelled blocks has `(1+m)!` cyclic orders. Therefore a fixed hull-hull atom pair occurs in exactly
+
+\[
+\sum_{m=0}^2\binom2m(m+1)!
+=1+4+6
+=\boxed{11}
+\]
+
+directed simple-cycle templates.
+
+Now fix one of the 12 hull-interior clause pairs. Up to exchanging `6` and `7`, write it as `(r,6)` with hull root `r` together with `(6,7)`. Alignment forces the hull endpoint of the interior-root atom to be exactly `r`, so the two atoms concatenate into one directed path
+
+\[
+7\to6\to r\to h.
+\]
+
+The final hull endpoint `h` can be any of the five hull vertices other than `r`. Hence each hull-interior clause pair has 5 aligned atom pairs, for `12*5=60` total.
+
+For one fixed four-vertex directed path, any subset of the four unused vertices may be inserted before closing the cycle. After contracting the path to one block, choosing `m` unused vertices gives `m!` directed cyclic orders. Thus each hull-interior atom pair occurs in
+
+\[
+\sum_{m=0}^4\binom4m m!
+=1+4+12+24+24
+=\boxed{65}
+\]
+
+directed simple-cycle templates.
+
+These counts yield the 7,860 two-literal directed-template incidences stated above.
+
+## Exact census
+
+The exhaustive integer verifier independently reconstructs the whole finite catalog. For simple cycles it obtains:
+
+```text
+K8 cycle length       clause width 0   width 2   width 4   total
+4                                  60       120        30     210
+5                                  72       480       120     672
+6                                  60      1080       540    1680
+7                                   0      1440      1440    2880
+8                                   0       720      1800    2520
+```
+
+Each width-2 simple template has directional capacity 1 and each width-4 simple template has directional capacity 2. Root-star templates contribute 100 capacity-0 and 180 capacity-1 cases. This gives the exact directional census `292, 4020, 3930` for capacities `0,1,2`.
+
+The verifier also checks all 28 segment vertices, all 168 edges of `L(K8)`, all 72 potential domination atoms, all fourteen clauses, the 42 admissible two-literal clause pairs, the 420 admissible aligned atom pairs, and the `11/65` cycle multiplicities.
+
+Certificate:
+
+`research/verify_target_c_support7_h6_domination_cycle_width_2026_09_19.py`
+
+## Computational consequence
+
+The earlier `II -> HI -> HH` potential proves that domination atoms alone are order-acyclic. A useful order contradiction therefore combines domination choices with independently forced segment comparisons from the affine cell or physical branch.
+
+The present theorem makes that interaction pairwise. After exact forced-sign extraction on a surviving H6 branch, a complete minimal-cycle cut generator only needs:
+
+1. single domination literals from the fourteen clauses;
+2. the 42 cross-target, distinct-root clause pairs above;
+3. at branch-atom resolution, only the 420 static aligned atom pairs before applying the much smaller state-specific bracketing set.
+
+The attempted same-root target-`6`/target-`7` depth-two audit cannot produce a *two-domination-literal order-cycle* certificate: same-root clause pairs are absent from the 42-pair list. That audit is still mathematically relevant for joint affine feasibility, because an affine Farkas contradiction need not be an order cycle.
+
+Accordingly, the next order-layer implementation should exactify forced signs among the 168 rooted segment comparisons and preindex the 8,242 minimal templates by zero, one, or two aligned domination literals. It can emit unary and binary forbidden branch assignments before invoking the full fourteen-disjunction affine BnB or nonlinear sine-cycle checks.
+
+This is a strict reduction from considering arbitrary fourteen-variable domination interactions in the segment-order layer to a finite unary/binary cut system.
+
+## Scope
+
+This theorem does not remove an H6 cell by itself, does not prove joint affine feasibility of the domination clauses, and does not change the current exact 3,874-cell generic-H6 endpoint. It applies only to minimal `L(K8)` segment-order cycle certificates. Reciprocal-collinearity walls remain separate. C-II remains open.

@@ -1,0 +1,73 @@
+# Hostile self-audit — parallel stopping-face train-pair cut
+
+**Date:** 2026-09-12  
+**Audited source:** `target_c_parallel_train_pair_cut_2026-09-12.md`  
+**Disposition:** PASS at the stated conditional scope; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This audit checks the proposed exclusion of two disjoint same-direction complete
+trains joining the same two bounded stopping faces. It does not extend the result to
+different train directions or to the outer face.
+
+## 1. Train disjointness
+
+The canonical train construction partitions contact-edge occurrences by their
+unoriented projective direction. Distinct complete trains in one direction therefore
+have disjoint edge sets and disjoint midpoint paths. The canonical narrow-cone
+monotonicity also rules out a crossing of two same-direction train paths. The report
+states disjointness explicitly, so the cut proof remains valid even if a future train
+normalization changes how this fact is registered.
+
+## 2. Jordan closure
+
+Bounded nonquadrilateral faces are strict convex polygons with empty open interiors.
+The two terminal midpoints on each face can therefore be joined by an interior arc
+that meets the contact graph only at its endpoints. For two disjoint arcs connecting
+the same pair of faces, the endpoint pairing induced by their planar order gives a
+simple four-piece Jordan curve. The train paths meet the contact graph only at the
+midpoints of their own parallel contact edges. Hence the closed curve has no
+unlisted contact crossings.
+
+All train-path rhombi and both bounded faces lie in the convex hull of the full source,
+so the Jordan curve and its interior are contained in that hull. No source vertex is
+used as a point on a closing arc.
+
+## 3. Diameter rows
+
+An active diameter endpoint is an extreme point of the full source convex hull. An
+extreme point cannot lie in the interior of a Jordan domain contained in that convex
+hull. Therefore every active diameter endpoint is outside the cut shore. This uses
+only the exact diameter-endpoint extremality argument and does not assume that the
+positive-contact core contains all source points.
+
+## 4. Contact rows and rigidity
+
+The closed curve intersects contact edges only in the two selected trains, and every
+such edge is parallel to their common direction `u`. The piecewise constant velocity
+`Ju` inside the shore and zero outside has zero first variation on every same-shore
+contact and on every crossed contact because `u dot Ju=0`. Active diameter rows have
+both endpoints outside and also have zero first variation.
+
+The field is nonzero on a core vertex because a train edge is crossed. It is not a
+Euclidean infinitesimal motion: the canonical Section-57 endpoint count supplies at
+least three active diameter edges in distinct projective directions and therefore at
+least two distinct core vertices outside the shore. A Euclidean infinitesimal motion
+vanishing at two distinct points is zero. This contradicts the canonical mixed-rank
+identity `rank R_{C union H}[V]=2|V|-3`.
+
+## 5. Scope controls
+
+- Contact-isolated source points are retained and assigned zero velocity.
+- A common endpoint face would be a bounded loop, already excluded by the global
+  endpoint-multigraph theorem; the present audit assumes two distinct bounded faces.
+- Different-direction trains between the same faces are not covered: their cut edges
+  need not admit one transverse translation.
+- An outer-face endpoint is not covered because a closing arc through the unbounded
+  face need not remain inside the source convex hull, so the diameter-endpoint step
+  would require a separate argument.
+- No source-preserving finite diameter decrease is inferred; the contradiction is
+  infinitesimal mixed rigidity on the nonisolated core.
+
+**Final audit verdict:** PASS as a conditional proof-only structural lemma. The
+endpoint multigraph still has unresolved different-direction pairs and outer-face
+repetitions, and C-II remains open.

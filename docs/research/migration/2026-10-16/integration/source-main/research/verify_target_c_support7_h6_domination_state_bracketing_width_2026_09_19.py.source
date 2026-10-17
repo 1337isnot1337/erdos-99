@@ -1,0 +1,123 @@
+#!/usr/bin/env python3
+"""Exact fixed-state upper bound for binary domination order-cycle supports.
+
+This is a finite combinatorial refinement of
+verify_target_c_support7_h6_domination_cycle_width_2026_09_19.py.
+That verifier proves that a minimal directed L(K8) order cycle can use at most
+two all-root interior-domination literals and characterizes the 42 compatible
+clause pairs.  Here we additionally impose the state-specific fact that each
+clause has only the two endpoints of one bracketing hull edge available.
+
+The hull-root bracket maps are deliberately allowed to vary independently,
+which is a superset of geometrically realizable H6 radial-order data.  Thus the
+computed maximum is a rigorous universal upper bound for every actual H6 cell.
+Integer/set combinatorics only; no floating point.
+"""
+
+from itertools import product
+
+HULL = tuple(range(6))
+HULL_EDGES = tuple(frozenset((i, (i + 1) % 6)) for i in HULL)
+OPTIONS = {
+    r: tuple(edge for edge in HULL_EDGES if r not in edge)
+    for r in HULL
+}
+assert all(len(options) == 4 for options in OPTIONS.values())
+
+
+def aligned_hull_hull_pairs(r, s, edge6, edge7):
+    """Number of endpoint-literal pairs fitting one directed simple cycle.
+
+    The aligned paths are 6->r->h and 7->s->k.  Their six K8 vertices must be
+    distinct.  The bracketing edges already avoid their own roots, so the
+    remaining conditions are h != s, k != r, h != k.
+    """
+    assert r != s
+    assert edge6 in OPTIONS[r]
+    assert edge7 in OPTIONS[s]
+    return sum(
+        h != s and k != r and h != k
+        for h in edge6
+        for k in edge7
+    )
+
+
+def hull_hull_maximum():
+    """Maximize over the independent 4^6 by 4^6 bracket-map relaxation.
+
+    For fixed target-6 choices, different target-7 roots contribute
+    independently, so each of their four edge choices can be optimized
+    separately.  This is exactly equivalent to the full 4^12 finite search.
+    """
+    maximum = -1
+    witness6 = witness7 = None
+
+    for choices6 in product(range(4), repeat=6):
+        edge6 = {r: OPTIONS[r][choices6[r]] for r in HULL}
+        total = 0
+        choices7 = []
+
+        for s in HULL:
+            candidates = []
+            for j, edge7 in enumerate(OPTIONS[s]):
+                score = sum(
+                    aligned_hull_hull_pairs(r, s, edge6[r], edge7)
+                    for r in HULL
+                    if r != s
+                )
+                candidates.append((score, j))
+            score, j = max(candidates)
+            total += score
+            choices7.append(j)
+
+        if total > maximum:
+            maximum = total
+            witness6 = choices6
+            witness7 = tuple(choices7)
+
+    return maximum, witness6, witness7
+
+
+def decode_witness(choices):
+    return {
+        r: tuple(sorted(OPTIONS[r][choices[r]]))
+        for r in HULL
+    }
+
+
+def main():
+    maximum, witness6, witness7 = hull_hull_maximum()
+    assert maximum == 74
+
+    # Each interior-root clause has one bracketing hull edge with two endpoints.
+    # Only the two opposite-target hull-root clauses at those endpoints can form
+    # an aligned pair; each such hull-root clause contributes its two endpoint
+    # literals.  Therefore each interior-root clause contributes exactly 4.
+    interior_root_binary_pairs = 2 * (2 * 2)
+    assert interior_root_binary_pairs == 8
+
+    binary_support_upper_bound = maximum + interior_root_binary_pairs
+    assert binary_support_upper_bound == 82
+
+    # Fourteen clauses have two state-specific branch literals each.
+    unary_literals = 14 * 2
+    assert unary_literals == 28
+    unary_binary_support_upper_bound = unary_literals + binary_support_upper_bound
+    assert unary_binary_support_upper_bound == 110
+
+    print("PASS: fixed-state domination order-cut support bound")
+    print("hull_root_bracket_options_per_clause", 4)
+    print("independent_target6_maps", 4 ** 6)
+    print("hull_hull_binary_literal_pair_max", maximum)
+    print("maximizing_target6_option_indices", witness6)
+    print("maximizing_target7_option_indices", witness7)
+    print("maximizing_target6_edges", decode_witness(witness6))
+    print("maximizing_target7_edges", decode_witness(witness7))
+    print("interior_root_binary_literal_pairs", interior_root_binary_pairs)
+    print("state_binary_literal_support_upper_bound", binary_support_upper_bound)
+    print("state_unary_literals", unary_literals)
+    print("state_unary_plus_binary_support_upper_bound", unary_binary_support_upper_bound)
+
+
+if __name__ == "__main__":
+    main()

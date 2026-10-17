@@ -1,0 +1,318 @@
+# Hostile audit — convex Section-63 routes and joint angular-energy penetration
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_convex_outer_routes_sharpen_global_penetration_2026-09-15.md`
+- `research/target_c_convex_route_split_energy_sharpening_2026-09-15.md`
+- `research/verify_target_c_convex_route_split_energy_sharpening.py`
+
+**Disposition:** **PASS at proof-only low-`t` Type-II scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate improves the already-merged signed penetration theorem from
+
+\[
+1.2805354256993147\ldots D-o(D)
+\]
+
+to
+
+\[
+1.3020617081548316\ldots D-o(D).
+\]
+
+The only genuinely new ingredient is convex order along each distinguished outer route. This audit checks that the route really is the boundary chain of a canonical convex pocket, that principal-angle wrapping is handled correctly, and that the split-route loss is not paid twice from the same directional energy.
+
+---
+
+## 1. The pocket/route identification is already audited
+
+Canonical Section 67 constructs `Ghat` by adding every missing loaded-hull side. It proves:
+
+\[
+V(G)\cap\partial F=B,
+\]
+
+`Ghat` is 2-connected, every face boundary of `Ghat` is a simple cycle, and every bounded face is convex. It also identifies the new bounded faces as the convex pockets cut from the old outer contact face by the hull cycle.
+
+The hostile audit of Section 126 checks the occurrence-level point needed here. For consecutive distinguished loaded occurrences `b_i,b_{i+1}`, if the hull side is missing from the contact graph, its inward pocket has boundary
+
+\[
+b_i b_{i+1}\cup W_i,
+\]
+
+where `W_i` is exactly the canonical Section-63 subwalk, with old bridges and articulation repetitions included with multiplicity. This is not a new identification in the present theorem.
+
+Since the pocket face boundary in `Ghat` is a simple convex cycle, the old route `W_i` cannot actually repeat a physical vertex: any such repetition would repeat a vertex on the simple face cycle. Therefore every nonunit Section-63 route is a simple convex chain.
+
+**Verdict:** PASS. The earlier articulation-sector proof is unnecessary and is not used by the final candidate.
+
+---
+
+## 2. Unit loaded-hull sides contribute no internal route occurrence
+
+If
+
+\[
+|b_i-b_{i+1}|=1,
+\]
+
+the hull side is already a contact. It lies on `partial F`, all core vertices lie in `F`, and its open segment contains no core vertex by Section 67. Hence it is an outer-face edge of the original contact graph.
+
+The loaded-internal-route/non-articulation stack makes every loaded vertex occur only once on the outer facial walk. Section 63 lists those loaded occurrences in the cyclic force-hull order. Therefore the outer-face edge `b_i b_{i+1}` itself is the interval between the consecutive marks:
+
+\[
+\ell_i=1.
+\]
+
+It has no internal occurrence and contributes zero to every straight-event count. No convex-pocket augmentation is needed in this case.
+
+**Verdict:** PASS.
+
+---
+
+## 3. Convex-chain direction order and the two-block correction
+
+For a nonunit side, the route plus closing hull chord is a simple convex polygon. Along one oriented boundary chain its edge directions have a monotone continuous lift. The chain turn is strictly less than `2pi`: the closing hull side is a genuine side and neither endpoint can have zero turning angle, because an adjacent route edge collinear with the hull side would place a distinct core vertex on the open hull side or outside the convex hull.
+
+For a fixed principal-angle window
+
+\[
+|\theta|<\beta,
+\qquad 0<\beta\le\pi/6,
+\]
+
+a monotone lift of length less than `2pi` can meet at most two translates
+
+\[
+(2\pi m-\beta,2\pi m+\beta).
+\]
+
+Thus the good edges form at most two contiguous index blocks. If there is one block, deleting `A_i` bad edges destroys at most `A_i` straight internal occurrences. If there are two blocks it destroys at most `A_i+1`, the additional one being the break between the two good blocks.
+
+Hence
+
+\[
+S_\beta\ge x_B-A_\beta-r,
+\]
+
+where `r` counts split routes.
+
+This explicitly repairs the false intermediate claim that convexity always makes the principal-angle good set one block.
+
+**Verdict:** PASS.
+
+---
+
+## 4. A split route has `2 cos(beta)` energy above the bad-edge baseline
+
+Let
+
+\[
+c_\beta=1-\cos\beta.
+\]
+
+Every bad edge contributes at least `c_beta`, giving the baseline `c_beta A_i` on route `i`.
+
+For a split route the monotone angle sequence moves from a good block near zero to a good block near `2pi`.
+
+If one edge enters
+
+\[
+[\pi-\beta,\pi+\beta],
+\]
+
+its energy is at least `1+cos(beta)`, which exceeds its ordinary baseline by exactly `2cos(beta)`.
+
+Otherwise two consecutive edges straddle that central interval. If their angular distances from `pi` are `x,y>beta`, convexity gives
+
+\[
+x+y<\pi.
+\]
+
+Their combined energy is
+
+\[
+2+\cos x+\cos y>2.
+\]
+
+Their two-edge baseline is
+
+\[
+2(1-\cos\beta)=2-2\cos\beta,
+\]
+
+so their excess above baseline is strictly greater than `2cos(beta)`.
+
+All other bad edges retain their own baselines. Therefore, route by route,
+
+\[
+E_i\ge c_\beta A_i+2\cos\beta\,r_i.
+\]
+
+The Section-63 routes partition outer-walk edge occurrences and the exact directional energies add to `d_out`. Thus
+
+\[
+d_{out}
+\ge c_\beta A_\beta+2\cos\beta\,r.
+\]
+
+For `beta<=pi/6`,
+
+\[
+2\cos\beta>c_\beta,
+\]
+
+so
+
+\[
+c_\beta(A_\beta+r)
+\le d_{out}.
+\]
+
+Hence
+
+\[
+A_\beta+r\le{d_{out}\over1-\cos\beta}.
+\]
+
+This is a **joint** energy estimate. It does not sum two independent upper bounds that both spend the full `d_out` budget.
+
+**Verdict:** PASS.
+
+---
+
+## 5. The straight-event count follows with no hidden occurrence loss
+
+Combining the preceding sections gives
+
+\[
+S_\beta
+\ge x_B-{d_{out}\over1-\cos\beta}.
+\]
+
+The merged signed penetration theorem applies to the same straight internal occurrences. Its local SDR makes selections distinct among multiple occurrences at one physical vertex. Its global signed-normal argument excludes one selected physical edge from being selected at both endpoints in the current low-detour Type-II branch. Therefore
+
+\[
+E_\perp(\beta)
+\ge S_\beta.
+\]
+
+No new edge-deduplication assumption is introduced here.
+
+At `beta=pi/6`, each selected edge has signed inward component strictly greater than `1/2` relative to the corresponding hull-side normal.
+
+**Verdict:** PASS.
+
+---
+
+## 6. Normalized algebra and joint network endpoint
+
+On a convergent low-`t` Type-II subsequence,
+
+\[
+{x_B\over D}
+=\pi+\delta-t-\kappa+o(1),
+\qquad
+\delta={d_{out}\over D}.
+\]
+
+Therefore
+
+\[
+\liminf {E_\perp(\beta)\over D}
+\ge
+\pi-t-\kappa-
+\left({1\over1-\cos\beta}-1\right)\delta.
+\]
+
+At `beta=pi/6`,
+
+\[
+{1\over1-\sqrt3/2}-1
+=3+2\sqrt3.
+\]
+
+The low-`t` network constraint is
+
+\[
+2\delta+\kappa/2\le R(t),
+\qquad
+\delta,\kappa\ge0.
+\]
+
+The penalty to maximize is
+
+\[
+\kappa+(3+2\sqrt3)\delta.
+\]
+
+Since `3+2sqrt3>4`, its maximum over the feasible segment is at the single endpoint
+
+\[
+\delta=R(t)/2,
+\qquad
+\kappa=0.
+\]
+
+Hence
+
+\[
+\boxed{
+\liminf E_\perp/D
+\ge
+\pi-t-\left({3\over2}+\sqrt3\right)R(t).
+}
+\]
+
+At
+
+\[
+t=t_{42}=1.8208886379794447041\ldots,
+\qquad
+R(t)=0.00576795,
+\]
+
+the independent Decimal certificate gives
+
+\[
+\boxed{1.30206170815483162854568\ldots}.
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 7. Regression checks
+
+### Almost-full convex pocket
+
+A convex pocket chain can wind almost all the way around its closing chord, so the principal-angle good set can indeed have two blocks. The theorem explicitly allows this and charges the central reversal from its directional energy. No one-block assumption survives.
+
+### One-rhombus-thick boundary strip
+
+A long convex near-geodesic route with many inward rungs is compatible with the theorem and can realize a linear selected-contact population. The result does not claim train occupancy or a contradiction from the `1.302D` count alone.
+
+### Articulations and bridges in the old outer walk
+
+The Section-126 audit explicitly keeps those occurrences when identifying `W_i` with the pocket side. Section 67 then shows the augmented pocket face is a simple cycle, which forces the particular interval itself to be simple. The proof does not silently assume the full old outer walk is simple.
+
+### Unit hull contacts
+
+They are handled separately as direct intervals and are not augmented a second time.
+
+### Contact-isolated source points
+
+They are not vertices of the positive-contact outer route and remain in the full source. No deletion or motion is performed.
+
+**Verdict:** PASS.
+
+---
+
+## 8. Scope and remaining gap
+
+The theorem remains proof-only because it composes proof-only low-`t` quantitative inputs and the proof-only signed penetration theorem. It does not supply a KKT-weight floor, a source-preserving diameter-decreasing competitor, or an exact equilateral triangle.
+
+The remaining obstruction is now cleanly geometric: more than `1.302D` distinct signed inward contacts can still be concentrated in a small number of macroscopic rhombic boundary strips. Closing C-II requires controlling that strip/train occupancy against the stopped-train endpoint network, two-sided diameter bracing, or a simultaneous source-preserving shear.
+
+**Final verdict:** PASS at proof-only low-`t` Type-II scope. C-II remains open.

@@ -1,0 +1,179 @@
+#!/usr/bin/env python3
+"""Regression checks for the sharp correlated-slack Section 118 companion."""
+
+from __future__ import annotations
+
+import math
+
+PI = math.pi
+THETA8 = 2.7029080296483676832
+MU8 = 0.9760407652670519821
+PHI8 = 2.0 * PI - 2.0 * THETA8
+C_RET = 2.0 - math.sqrt(3.0)
+SAFE_SIGMA = 0.0088
+
+
+def sigma(theta: float) -> float:
+    return 3.0 * theta - 2.0 * PI - math.sin(theta / 2.0) - 2.0 * math.sin(theta)
+
+
+def theta_of_sigma(target: float) -> float:
+    lo = THETA8
+    hi = THETA8 + 0.2
+    for _ in range(180):
+        mid = (lo + hi) / 2.0
+        if sigma(mid) < target:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2.0
+
+
+def G(x: float) -> float:
+    return (x - math.sin(x)) / 8.0
+
+
+def F(q: float) -> float:
+    return math.sin(q) + math.sqrt(3.0) * (1.0 - math.cos(q)) - q
+
+
+def Fprime(q: float) -> float:
+    return math.cos(q) + math.sqrt(3.0) * math.sin(q) - 1.0
+
+
+def critical_tooth_constants() -> tuple[float, float, float]:
+    lo = 0.0
+    hi = PI / 3.0
+    target = 3.0 / 64.0
+    for _ in range(180):
+        mid = (lo + hi) / 2.0
+        if Fprime(mid) < target:
+            lo = mid
+        else:
+            hi = mid
+    q0 = (lo + hi) / 2.0
+    y0 = 2.0 * F(q0)
+    kappa0 = q0 - (32.0 / 3.0) * y0
+    return q0, y0, kappa0
+
+
+Q0, Y0, KAPPA0 = critical_tooth_constants()
+
+
+def bad_density_bound(s: float) -> float:
+    assert s >= Y0
+    return (35.0 / 3.0) * s + KAPPA0
+
+
+def area_floor(s: float) -> float:
+    theta = theta_of_sigma(s)
+    r = (10.0 / 3.0) * s
+    return PI / 4.0 - G(theta) - 2.0 * G(PHI8 + r) - G(r)
+
+
+def train_ceiling(s: float) -> float:
+    theta = theta_of_sigma(s)
+    return 3.0 * theta - 2.0 * PI + 2.0 * s
+
+
+def lambda_of_sigma(s: float) -> float:
+    return math.sin(theta_of_sigma(s) / 2.0)
+
+
+def retained_area_scalar(s: float) -> float:
+    return area_floor(s) - 2.0 * train_ceiling(s) * bad_density_bound(s)
+
+
+def forced_route_excess(s: float) -> float:
+    residual = retained_area_scalar(s)
+    if residual <= 0.0:
+        return 0.0
+    return C_RET * residual / lambda_of_sigma(s)
+
+
+def contradiction_gap(s: float) -> float:
+    return forced_route_excess(s) - s
+
+
+def envelope_root() -> float:
+    lo = 0.0088
+    hi = 0.0091
+    assert contradiction_gap(lo) > 0.0
+    assert contradiction_gap(hi) < 0.0
+    for _ in range(180):
+        mid = (lo + hi) / 2.0
+        if contradiction_gap(mid) > 0.0:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2.0
+
+
+def main() -> None:
+    assert abs(Fprime(Q0) - 3.0 / 64.0) < 5e-15
+    assert abs(Q0 - 0.0272815201203263) < 5e-15
+    assert abs(Y0 - 0.00128228501806740) < 5e-15
+    assert abs(KAPPA0 - 0.0136038132609408) < 5e-15
+    assert SAFE_SIGMA > Y0
+
+    # Check that g(y)=Q_tooth(y)-(32/3)y is maximized at Y0 by its derivative sign.
+    assert Fprime(Q0 * 0.9) < 3.0 / 64.0
+    assert Fprime(Q0 * 1.1) > 3.0 / 64.0
+
+    theta = theta_of_sigma(SAFE_SIGMA)
+    mu = lambda_of_sigma(SAFE_SIGMA)
+    area = area_floor(SAFE_SIGMA)
+    ct = train_ceiling(SAFE_SIGMA)
+    bad = bad_density_bound(SAFE_SIGMA)
+    residual = retained_area_scalar(SAFE_SIGMA)
+    forced = forced_route_excess(SAFE_SIGMA)
+    tangent_extent = (3.0 * theta - 2.0 * PI) + (10.0 / 3.0) * SAFE_SIGMA
+
+    assert abs(theta - 2.704779235215494) < 5e-15
+    assert abs(mu - 0.9762439137425688) < 5e-15
+    assert mu - MU8 > 2.03e-4
+    assert tangent_extent < 1.861
+    assert tangent_extent < PI
+    assert abs(area - 0.4703752868004241) < 5e-15
+    assert abs(ct - 1.848752398466895) < 5e-15
+    assert abs(bad - 0.1162704799276074) < 5e-15
+    assert abs(residual - 0.0404646295263018) < 5e-15
+    assert abs(forced - 0.0111063071953309) < 5e-15
+    assert forced - SAFE_SIGMA > 0.0023063
+
+    root = envelope_root()
+    theta_root = theta_of_sigma(root)
+    mu_root = lambda_of_sigma(root)
+
+    assert abs(root - 0.00897587622448) < 1e-13
+    assert abs(theta_root - 2.70481662472814) < 1e-13
+    assert abs(mu_root - 0.97624796424817) < 1e-13
+    assert abs(contradiction_gap(root)) < 5e-15
+    assert retained_area_scalar(root) > 0.0326
+
+    # Numerical monotonicity regression for the scalar envelope.
+    previous = contradiction_gap(SAFE_SIGMA)
+    for j in range(1, 101):
+        s = SAFE_SIGMA + j * (0.0003 / 100.0)
+        current = contradiction_gap(s)
+        assert current < previous
+        previous = current
+
+    print(f"Q0={Q0:.16f}")
+    print(f"Y0={Y0:.16f}")
+    print(f"KAPPA0={KAPPA0:.16f}")
+    print(f"theta_safe={theta:.16f}")
+    print(f"mu_safe={mu:.16f}")
+    print(f"area_safe={area:.16f}")
+    print(f"train_ceiling_safe={ct:.16f}")
+    print(f"bad_density_safe={bad:.16f}")
+    print(f"retained_area_safe={residual:.16f}")
+    print(f"forced_excess_safe={forced:.16f}")
+    print(f"margin_safe={forced - SAFE_SIGMA:.16f}")
+    print(f"sigma_envelope={root:.16f}")
+    print(f"theta_envelope={theta_root:.16f}")
+    print(f"mu_envelope={mu_root:.16f}")
+
+
+if __name__ == "__main__":
+    main()

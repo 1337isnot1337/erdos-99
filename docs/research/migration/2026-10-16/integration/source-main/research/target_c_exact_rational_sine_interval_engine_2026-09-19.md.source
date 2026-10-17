@@ -1,0 +1,206 @@
+# Target C: exact rational sine-interval engine for metric-cycle certificates
+
+Date: 2026-09-19
+
+Status: reusable exact proof utility. No theorem-state authority changes. C-II remains open.
+
+## Purpose
+
+The generic support-seven metric layer repeatedly produces identities of the form
+
+\[
+\prod_k\frac{\sin(\pi a_k)}{\sin(\pi b_k)}=1,
+\]
+
+where the normalized angles `a_k,b_k` are affine functions of a rational polyhedral cell. Previous exact metric exclusions sometimes used hand-selected special-angle comparisons such as `sin(pi/5)>1/2`.
+
+For the remaining `H6` cells there are many candidate cycles: the 280 root-star trigonometric-Ceva triangles and the 210 induced cross-root four-cycles in the reciprocal-segment line graph. A systematic scan needs a way to turn rational affine angle bounds into rigorous sine-product bounds without decimal transcendental arithmetic.
+
+The companion verifier supplies that layer entirely with `fractions.Fraction`.
+
+Certificate: `research/verify_target_c_exact_sine_interval_2026_09_19.py`.
+
+## 1. A rational enclosure for pi
+
+Use Machin's identity
+
+\[
+\frac\pi4=4\arctan\frac15-\arctan\frac1{239}.
+\tag{1}
+\]
+
+The identity itself can be checked algebraically. If `a=atan(1/5)`, then
+
+\[
+\tan(4a)=\frac{120}{119}.
+\]
+
+With `b=atan(1/239)`,
+
+\[
+\tan(4a-b)
+=
+\frac{120/119-1/239}{1+(120/119)(1/239)}=1,
+\]
+
+because both numerator and denominator have numerator `28561` over the common denominator. The angle `4a-b` lies in `(0,pi/2)`, so it is `pi/4`.
+
+For `0<x<1`, the alternating series
+
+\[
+\arctan x=x-\frac{x^3}{3}+\frac{x^5}{5}-\cdots
+\]
+
+has decreasing term magnitudes. An even number of terms gives a strict lower bound and the following odd partial sum gives an upper bound. Applying this to `1/5` and `1/239` in (1) produces exact rational numbers
+
+\[
+P_-<\pi<P_+.
+\]
+
+The verifier also checks, exactly,
+
+\[
+\frac{333}{106}<P_-<P_+<\frac{355}{113}.
+\]
+
+No floating-point value of `pi` enters a certificate.
+
+## 2. Rational bounds for sin(pi q)
+
+For rational `q in [0,1]`, first use
+
+\[
+\sin(\pi q)=\sin(\pi(1-q))
+\]
+
+to reduce to `0<=q<=1/2`. Then
+
+\[
+qP_-<\pi q<qP_+\subset[0,\pi/2].
+\]
+
+On this interval sine is increasing. Its Taylor series
+
+\[
+\sin y=y-\frac{y^3}{3!}+\frac{y^5}{5!}-\cdots
+\]
+
+also alternates with decreasing term magnitudes. The verifier checks the decrease using the exact inequality
+
+\[
+(P_+/2)^2<6,
+\]
+
+which controls the first term ratio; later ratios are smaller.
+
+Therefore an even Taylor partial sum evaluated at `qP_-` is a rational lower bound for `sin(pi q)`, while the next odd partial sum at `qP_+` is a rational upper bound.
+
+For a rational interval
+
+\[
+q\in[l,u]\subset[0,1],
+\]
+
+the minimum and maximum of `sin(pi q)` are determined only by the endpoints and whether `[l,u]` crosses `1/2`. This gives exact rational bounds
+
+\[
+0\le S_-(l,u)
+\le \sin(\pi q)
+\le S_+(l,u)\le1.
+\tag{2}
+\]
+
+## 3. Exact cycle-product certificate
+
+Suppose affine/Farkas work has certified
+
+\[
+a_k\in[l_k,u_k],
+\qquad
+b_k\in[L_k,U_k]
+\]
+
+with all denominator angles strictly inside `(0,1)`. Then (2) gives the rational enclosure
+
+\[
+\prod_k
+\frac{S_-(l_k,u_k)}{S_+(L_k,U_k)}
+\le
+\prod_k\frac{\sin(\pi a_k)}{\sin(\pi b_k)}
+\le
+\prod_k
+\frac{S_+(l_k,u_k)}{S_-(L_k,U_k)}.
+\tag{3}
+\]
+
+If the left rational number is greater than one, or the right rational number is less than one, the exact sine-cycle identity is impossible.
+
+This creates a clean separation of proof responsibilities:
+
+1. rational LP/Farkas certificates bound the affine angles;
+2. the sine-interval engine converts those rational angle boxes to rational transcendental enclosures;
+3. the final comparison with one is exact integer/rational arithmetic.
+
+Numerical optimization may still be used to discover useful angle bounds, but it has no proof authority.
+
+## 4. Regression against the committed H7b metric exclusions
+
+The verifier reuses only the rational angle intervals already proved for generic `H7b` orbits 115 and 146.
+
+For orbit 115 it uses
+
+\[
+\frac59<a_{32}<\frac{47}{69},
+\quad
+0<a_{23}<\frac4{21},
+\]
+
+\[
+\frac15<a_{53}<\frac13,
+\quad
+0<a_{35}<\frac1{15},
+\]
+
+\[
+\frac5{21}<a_{25}<\frac13,
+\quad
+0<a_{52}<\frac13.
+\]
+
+The rational enclosure from (3) proves directly that the `3->2->5->3` sine-cycle product is greater than one. It reproduces the exclusion without the hand-picked radical inequalities from the original note.
+
+For orbit 146, the intervals
+
+\[
+\frac13<a_{24}<\frac59,
+\quad
+0<a_{42}<\frac16,
+\]
+
+\[
+\frac29<a_{46}<\frac13,
+\quad
+0<a_{64}<1
+\]
+
+already make the product of the first two sine ratios greater than one by a rational certificate. The third ratio is greater than one from the separately certified same-triangle ordering `a_62>a_26`. Thus the complete cycle product is again strictly greater than one.
+
+These are regression tests, not new `H7b` exclusions. Their purpose is to show that the general rational engine can replace ad hoc transcendental comparisons in an already audited case.
+
+## 5. H6 use
+
+The current generic `H6` complete-angle variables make every reciprocal angle affine. The exact next nonlinear scan can therefore be organized as follows.
+
+For each surviving affine/physical branch:
+
+1. enumerate short metric cycles, beginning with the 280 root-star triangles and 210 induced cross-root four-cycles from `target_c_support7_global_segment_order_2026-09-19.md`;
+2. use rational LP duals to certify lower and upper bounds on the normalized angles appearing in a cycle;
+3. pass those rational intervals to this sine engine;
+4. reject the branch whenever the exact product enclosure excludes one;
+5. retain the existing global 15-cycle theorem as the completeness criterion, but use the redundant short cycles as an overcomplete source of local contradictions.
+
+This is strictly stronger than the sign-order layer when a cycle has mixed comparison signs. It targets exactly the class of survivors for which no directed segment-order cycle is forced but sine-ratio magnitudes are still incompatible.
+
+## Scope
+
+The engine certifies trigonometric interval inequalities from rational angle intervals. It does not itself produce the affine angle bounds and does not certify that any surviving cell is realizable. It is intended as a proof backend for the existing exact LP/Farkas machinery and the complete metric-cycle equations. Reciprocal-collinearity walls remain separate.

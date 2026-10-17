@@ -1,0 +1,218 @@
+# Erdős Problem #99 — matched `g=0.0050` penetration matching and deep purity
+
+**Date:** 2026-09-15  
+**Target:** C-II, canonical full-core Type-II branch  
+**Dependencies:** matched iterative-pruning atomic gap `g=0.0050`; shallow-tooth penetration matching; deep-endpoint purity  
+**Claim class:** proof-only source-level propagation awaiting independent audit
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The shallow-tooth branch has a stronger finite structure than an edge count.  For every
+fixed shallow threshold below the `pi/6` locality limit, the selected penetration
+contacts form a matching: the shallow apexes are distinct, the deep endpoints are
+distinct, and no deep endpoint is itself a shallow apex.  The deep endpoint also has
+no loaded contact neighbor.
+
+Propagating the independently audited matched atomic gap `g=0.0050` through the same
+finite theorems gives a matching of density almost `0.395D`.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},\quad
+s=\sqrt{\Delta_2},\quad
+C_{146}={4\over9}(\pi+s),
+\]
+
+\[
+g=0.0050,\qquad
+t_{50}=C_{146}+0.0023374,
+\qquad C_{50}=2s+g.
+\]
+
+Then
+
+\[
+R_{50}={9t_{50}\over2}-2\pi-C_{50}=0.00551830,
+\qquad
+\delta_{50}=R_{50}/2=0.00275915,
+\]
+
+and the exact outer tooth/long-side split gives
+
+\[
+N_2/D\ge B_{50}-o(1)
+\]
+
+on the tooth branch, where
+
+\[
+B_{50}=0.4362350385367828447\ldots .
+\]
+
+At the exact convenient threshold
+
+\[
+\eta={1\over15},
+\]
+
+the shallow population is therefore
+
+\[
+\boxed{
+{N_{sh}\over D}
+\ge B_{50}-15\delta_{50}-o(1)
+=0.3948477885367828447\ldots-o(1).
+}
+\tag{MP.1}
+
+The finite penetration-matching theorem supplies an internal unloaded-to-unloaded
+matching `M` with exactly one edge per shallow tooth.  Hence
+
+\[
+\boxed{
+{|M|\over D}
+\ge0.3948477885367828447\ldots-o(1).
+}
+\tag{MP.2}
+
+If `X` is the shallow-apex endpoint class and `W` the deep endpoint class, then
+
+\[
+|X|=|W|=|M|,
+\qquad X\cap W=\varnothing,
+\]
+
+so
+
+\[
+\boxed{
+{|X\cup W|\over D}
+\ge0.7896955770735656895\ldots-o(1).
+}
+\tag{MP.3}
+
+Every `w in W` is unloaded, has no loaded contact neighbor, and has internal contact
+degree between three and five.  Therefore the unloaded components meeting the
+matching contain at least
+
+\[
+\boxed{
+{2|M|\over D}
+\ge0.7896955770735656895\ldots-o(1)
+}
+\tag{MP.4}
+
+**distinct internal contact edges** incident to `X union W`.
+
+Independently, every `x in X` has exactly its two loaded tooth-base contacts, and
+choices at distinct apexes are distinct physical edges.  Thus the same component
+family has at least
+
+\[
+\boxed{
+{2|M|\over D}
+\ge0.7896955770735656895\ldots-o(1)
+}
+\tag{MP.5}
+
+distinct loaded-to-unloaded attachment edges incident to `X`.
+
+The two types are disjoint, so at least
+
+\[
+\boxed{
+{4|M|\over D}
+\ge1.579391154147131379\ldots-o(1)
+}
+\tag{MP.6}
+
+distinct contact edges are forced across the two-layer tooth structure.
+
+The endpoint geometry is fixed-scale:
+
+- every shallow apex has depth at most
+  \[
+  \sqrt{59}/30=0.2560381915\ldots;
+  \]
+- every deep endpoint has depth greater than `sqrt(3)/2`; and
+- every deep endpoint lies at depth less than
+  \[
+  1+\sqrt{59}/30+o(1)=1.2560381915\ldots+o(1)
+  \]
+  relative to its own tooth-base support line.
+
+Thus the tooth branch now contains a macroscopic matching crossing a fixed-width
+boundary shell, followed by at least two additional internal incidences at every deep
+matched endpoint.
+
+## 1. Why the matching is finite, not only asymptotic counting
+
+The parent theorem proves inner-endpoint injectivity from convex boundary ordering.
+For two shallow teeth whose bases lie in one fixed-scale hull window, the base-midpoint
+tangent separation is at least the sum of the two half-base lengths, while a common
+inner endpoint would bound that separation by the sum of the two maximum tangential
+penetration radii.  For `alpha<pi/6`,
+
+\[
+\cos\alpha-\cos(\pi/3-\alpha)>0,
+\]
+
+with a fixed margin at `eta=1/15`.  Therefore two distinct teeth cannot share an inner
+endpoint.  Combined with apex injectivity and the fact that a deep endpoint is not a
+shallow apex, the selected edges form a genuine matching.
+
+## 2. Why deep endpoints are attachment-free
+
+Let `w` be a matched deep endpoint for base side `ab`, and suppose a loaded vertex `c`
+were a contact neighbor of `w`.  All of `a,b,c` then lie in one fixed-scale loaded-hull
+window.  Convex cyclic order puts `c` beyond one endpoint of the side `ab`, giving a
+tangent displacement at least
+
+\[
+\cos\alpha+1-o(1).
+\]
+
+But `w` is deeper than `sqrt3/2`, so the unit edge `wc` has tangent component less than
+`1/2+o(1)`, while the matched penetration geometry gives
+
+\[
+|t\cdot(w-M_{ab})|<\cos(\pi/3-\alpha).
+\]
+
+Thus
+
+\[
+|t\cdot(c-M_{ab})|
+<\cos(\pi/3-\alpha)+1/2+o(1),
+\]
+
+which contradicts the previous lower bound by a fixed margin greater than `1/2` for
+`alpha<pi/6`.  Hence every contact at `w` is internal.
+
+## 3. Frontier effect
+
+The tooth branch is no longer just a boundary penetration count.  It contains the
+weight-free two-layer structure
+
+```text
+loaded hull
+  |  >= 0.7896955 D distinct attachment edges
+  v
+X: >= 0.3948477 D distinct shallow unloaded apexes
+  |  matching M, |M| >= 0.3948477 D
+  v
+W: >= 0.3948477 D distinct attachment-free unloaded vertices
+   each with internal degree 3,4,or5
+   and at least two further internal incidences beyond M
+```
+
+A closing continuation can therefore work entirely inside the unloaded contact graph
+after the first layer.  The next natural theorem is a shell-growth dichotomy: either a
+linear share of the at-least-two extra contacts at `W` penetrates another fixed depth,
+or a linear near-tangential graph remains trapped in the depth-`O(1)` shell.  Both
+alternatives are physical and weight-free.
+
+This note does not yet prove that second-layer dichotomy and does not close C-II.

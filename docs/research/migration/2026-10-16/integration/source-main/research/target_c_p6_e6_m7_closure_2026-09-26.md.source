@@ -1,0 +1,9 @@
+# Target C p6 e6 m7 closure
+
+For e=6 the existing face-local bound gives nu(T)<=7. For m=7 the multiplicity profile is (2,1,1,1,1,1,1). Exact S7 quotienting gives 693 seven-support orbits, with nullity census {6:10, 7:683}, and 4143 support/multiplicity orbits.
+
+The generalized-weight floor (d1,d2,d3)>=(2,4,5) gives phase-independent conditions on six actual-empty blocks. A rank-two empty space needs external support size at least 4; a rank-one empty space needs size at least 2. Two planes need support intersection at least 2. A plane and line need intersection at least 2 or union at least 5. Two lines need intersection at least 2 or union at least 4. These conditions leave exactly three support/multiplicity assignments and one empty sextuple in each.
+
+The complete retained scan has 6561 phases and 6561 phase/sextuple pairs. For U equal to the sum of the six empty-block spaces, the mod-2 rank census is {6:9, 7:348, 8:6204}. Hence rank_Q(U)>=rank_F2(U)>3 in every case, contradicting U<=P with rank(P)=3.
+
+Therefore e=6,m=7 is empty. Any e=6 survivor must have m=8.

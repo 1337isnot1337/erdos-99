@@ -1,0 +1,68 @@
+# Hostile self-audit — bounded-face train endpoint fans
+
+**Date:** 2026-09-12  
+**Audited source:** `target_c_bounded_face_endpoint_fan_2026-09-12.md`  
+**Disposition:** PASS at the stated proof-only scope; theorem-state authority unchanged.  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+This audit checks the finite structural claim that two complete trains sharing a
+bounded stopping face cannot cross and that two trains cannot join the same pair of
+bounded stopping faces. It does not promote the claim or address the outer face.
+
+## 1. Crossing trains: prefix cut
+
+Canonical train geometry supplies simple midpoint paths and at most one crossing for
+two distinct trains. If they cross, the prefixes from their terminal occurrences on a
+common bounded face to the crossing point, closed through the open face interior, form
+a simple Jordan curve. Each prefix contains its terminal contact-edge crossing. The
+curve is contained in the full source hull because strict-rhombus interiors and
+bounded contact faces are contained there.
+
+The Jordan interior therefore contains no endpoint of an active diameter edge: such an
+endpoint is extreme in the source hull and cannot have an open neighborhood inside the
+hull. Summed KKT equilibrium over the core vertices in the interior has no diameter
+term and has contact terms from exactly the two selected train prefixes. Their positive
+weights give
+
+`epsilon_1 A_1 u_1 + epsilon_2 A_2 u_2 = 0`, with `A_i>0`.
+
+Nonparallel projective directions cannot satisfy this equation. Parallel directions
+give the piecewise transverse mixed flex from the audited pair-cut theorem. Hence the
+crossing is impossible.
+
+## 2. Disjoint trains: full two-face cut
+
+If two trains join the same two bounded faces and are disjoint, their terminal
+occurrences are in the noncrossing order. Joining corresponding occurrences through
+the two open face interiors gives a Jordan curve in the source hull. The same KKT
+shore sum has exactly one positive resultant from each train. Distinct projective
+directions cannot cancel; equal projective directions are excluded by the audited
+parallel pair-cut theorem. Thus a disjoint repeated pair is also impossible.
+
+## 3. Singleton trains
+
+For a singleton bounded-to-bounded train, the contact edge is internal to the source
+hull because both incident faces are bounded. A sufficiently short transverse arc
+through its midpoint supplies the same path representative and has exactly one
+contact crossing. This handles a singleton paired with another train as long as the
+canonical train normalization includes this standard representative. If a future
+normalization omits it, the theorem must be restricted to non-singleton trains; no
+singleton extension is silently assumed.
+
+## 4. No hidden source deletion
+
+Only the nonisolated positive-contact core enters the KKT sum and Section-57 rank
+argument. Contact-isolated source points remain present and do not create diameter rows
+in the core matrix. The hull-extreme argument is applied to actual active diameter
+endpoints of the full source, so it does not require a full-source affine kernel
+theorem.
+
+## 5. Frontier limitation
+
+The theorem gives simplicity and crossing-freeness for bounded-face endpoints. It does
+not control repeated outer-face incidences, mixed outer/bounded pairs, local train
+segments before they are globalized, or the aggregate detour
+`sum_r(L_r-2d_r)`. Therefore the scalar half-disk witness and the canonical C-II
+obstruction remain viable.
+
+**Final audit verdict:** PASS as a proof-only structural candidate; C-II remains open.

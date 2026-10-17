@@ -1,0 +1,308 @@
+<!-- theorem-state: {"artifact_id":"ART-AD1EB85B7588","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — exact activation-deactivation orthant
+
+**Date:** 2026-08-30
+
+**Repository state:** `research/activation-orthant-2026-08-30`, based on canonical
+Sections 154–155
+
+**Run type:** closing proof attempt / activation-route audit
+
+**Target:** A
+
+**Active prompt at start:**
+`docs/prompts/erdos_problem_99_1.7.3_FINAL_CONTINUATION_PROMPT.md`
+
+**External web search:** used only to verify the Bonnesen citation already imported
+by Section 155; it is not a dependency of the new activation theorem
+
+**Computation:** not used
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The run proves an exact finite-amplitude strengthening of Sections 142–145 and 153.
+It does not prove the Target A Schur inequality.
+
+## 1. Starting endpoint
+
+The required closure was and remains
+
+\[
+\boxed{\dim\ker S\ge\Delta_\Lambda-d_{\rm int}},
+\]
+
+equivalently
+
+\[
+\boxed{
+\operatorname{rank}S
+\le d_{\rm int}+|C^\partial|-\Delta_\Lambda.
+}
+\]
+
+The activation route hoped to turn the independent rows created by the canonical
+monotone activation sequence into a compensating loss of boundary-response rank.
+Section 153 ruled out positive KKT load on those rows but left their unweighted
+active/critical-cone geometry open.
+
+The audited implication from this run is diagnostic rather than closing:
+
+```text
+full created-pair forest
+-> exact independent affine release coordinates
+-> terminal activation rows are not a locking/cage mechanism
+-> any surviving activation-to-Schur theorem needs additional global transport data
+```
+
+## 2. Strongest genuinely new audited theorem
+
+### Theorem
+
+Let
+
+\[
+A_0,A_1,\ldots,A_\ell
+\]
+
+be a monotone activation sequence from Theorem 142.1, and let \(F\) contain every
+unit or diameter pair created by the sequence. Then:
+
+1. \(F\) is a forest;
+2. each component of \(F\) contains at most one vertex incident to an active pair
+   of \(A_0\);
+3. there is \(\varepsilon>0\) and an affine embedding
+   \[
+   \Psi:[0,\varepsilon)^F\to(\mathbb R^2)^N
+   \]
+   through the terminal configuration such that every image point is a triangle-free
+   global minimizer of diameter \(D\);
+4. if \(e\) was created as a unit contact, its length is exactly
+   \(1+\theta_e\), and if it was created as a diameter pair, its length is exactly
+   \(D(1-\theta_e)\);
+5. all initial active pairs remain exact, while any prescribed subset of created
+   pairs can be released independently; and
+6. when all coordinates are positive, the strict-rattler set is exactly the
+   strict-rattler set of \(A_0\).
+
+### Scope
+
+The theorem concerns the actual global-minimizer sequence of Theorem 142.1. It is
+finite and exact, preserves the global minimum diameter, and treats unit and diameter
+activations simultaneously. It is local in parameter size: no uniform lower bound on
+\(\varepsilon\) is claimed. It concerns the source representative only and does not
+coordinate-identify that representative with the independent smaller optimum or the
+Schur scaffold.
+
+### Proof
+
+Let \(E_0\) be the initial active-pair set and write the pair created at step \(i\)
+as \(e_i=r_iq_i\), where \(r_i\) is the moved point. Immediately before that step,
+\(r_i\) is strict, so it is isolated in
+
+\[
+E_0\cup\{e_0,\ldots,e_{i-1}\}.
+\]
+
+Every created edge therefore adds an isolated endpoint. This cannot form a cycle.
+It also cannot merge two existing created-edge components, and the isolated endpoint
+is not incident to \(E_0\). Induction proves that the full created-pair graph \(F\)
+is a forest and that each component contains at most one initial-active vertex.
+
+Use that vertex as the component root when it exists, choose any root otherwise,
+and orient the forest away from its roots. At the terminal coordinates \(p_v\), for
+an oriented edge \(e=uv\) put
+
+\[
+d_e=p_v-p_u,
+\qquad
+\sigma_e=
+\begin{cases}
++1,&e\text{ is a unit contact},\\
+-1,&e\text{ is a diameter pair}.
+\end{cases}
+\]
+
+Fix all roots and all vertices outside \(F\). For a vertex \(v\) in a rooted
+component define
+
+\[
+w_v(\theta)=\sum_{e\in P(v)}\sigma_e\theta_e d_e,
+\qquad
+p_v(\theta)=p_v+w_v(\theta),
+\]
+
+where \(P(v)\) is its root path. If \(e=uv\), the two path sums differ only in
+the term for \(e\), so
+
+\[
+p_v(\theta)-p_u(\theta)
+=(1+\sigma_e\theta_e)d_e.
+\]
+
+This gives the asserted exact lengths. Every vertex incident to \(E_0\) is a fixed
+root or lies outside \(F\), so every initial active pair remains exact. All other
+terminally inactive pairs have distances strictly between \(1\) and \(D\). Finiteness
+and continuity give one \(\varepsilon>0\) for which those strict inequalities persist;
+take it also smaller than \(D-1\) and \(1-1/D\).
+
+The resulting configurations are unit-separated and have diameter at most \(D\).
+An initial diameter pair is fixed, so their diameter is exactly \(D=D(N)\); hence
+all are global minimizers. Their contact graphs are subgraphs of the terminal
+triangle-free contact graph, so they remain triangle-free. Finally, each created
+edge length recovers its own coordinate, proving injectivity. Positive coordinates
+release exactly the selected pairs. With every coordinate positive, the active set is
+exactly \(E_0\), which restores precisely the initial strict-rattler set. \(\square\)
+
+### Dependencies
+
+- `docs/targets/target-a/03-source-response.md`, Theorem 142.1;
+- `docs/targets/target-a/07-activation-stress-invariance.md`, Section 153 only for
+  comparison, not for the proof.
+
+### Why it is new
+
+Section 144 records only selected first unit-activation edges and proves that this
+subgraph is a forest. The new theorem treats **all** created pairs, including diameter
+activations, proves the one-initial-root property, and integrates their signed edge
+directions into an exact independent affine family. Section 153 proves only universal
+zero KKT multipliers; it does not construct simultaneous finite deactivations or the
+Boolean family of active-set patterns.
+
+## 3. Exact target implication
+
+The numerical Schur endpoint is unchanged. What changes is the permitted mechanism:
+the independent activation rows cannot be used as an unweighted terminal cage. They
+are coordinate facets of a realizable global-optimum orthant, and even a single row
+can be released while every other created and initial row stays exact.
+
+This does not prove that all uses of activation data fail. It proves that any useful
+activation theorem must use information beyond terminal locking, such as finite
+collision walls outside the local orthant, a relation between different optimum
+cardinalities, or an exact source-to-scaffold transport.
+
+## 4. Exact remaining lemma
+
+The general endpoint remains the canonical Schur inequality. In the aligned
+very-super-boundary subbranch of Section 155, the most concrete remaining theorem is:
+
+> **Two-shadow compatibility lemma.** Under (155.4), choose or exchange the two
+> near-saturating matchings from the smaller optimum and the inner scaffold into the
+> same source so that their common source structure produces either
+> \(\dim\ker S\ge\Delta_\Lambda-d_{\rm int}\) or an \(N\)-point unit-separated
+> configuration of diameter strictly below \(D\).
+
+The activation orthant alone supplies neither alternative.
+
+## 5. Audit classification of other claims
+
+| Claim | Classification | Reason |
+| --- | --- | --- |
+| The full created-pair graph is a forest | proved | Each new edge has the currently strict moved point as an isolated endpoint. |
+| Every subset of created pairs is independently releasable | proved | The signed root-path affine coordinates give exact edge lengths. |
+| The orthant yields Schur nullity | rejected | No source-to-independent-scaffold map is constructed. |
+| The orthant yields a smaller-diameter competitor | rejected | An initial diameter pair is intentionally fixed. |
+| Section 153 already contains the orthant | false/already distinguished | Section 153 concerns multipliers, not finite-amplitude feasibility. |
+| A free Kuperberg support rate is canonical | rejected for promotion here | The active theorem stack contains no such promoted theorem. |
+
+## 6. Regression tests
+
+| Regression | Passed? | Exact reason |
+| --- | --- | --- |
+| long rooted chain | yes | The forest may be arbitrarily long and \(\varepsilon\) may shrink without a uniform bound. |
+| two-leaf locked first-transition cage | yes | The activation theorem creates exactly one active pair at a moved strict point; the locked transition's simultaneous cage constraints are outside the hypothesis. |
+| Section 152 activation/monomer regression | yes | No local activation-to-Schur implication is claimed. |
+| Section 153 zero KKT load | yes | The exact release orthant is compatible with universal zero multipliers. |
+| strained monomer / regular shell | yes | No extra point, support-radius estimate, or density gap is claimed. |
+| overlapping circuits / full-rank planar response | yes | No circuit independence or planarity-to-nullity inference is used. |
+| source/scaffold coordinate independence | yes | The theorem explicitly remains on the source side. |
+| exact fixed-hull capacity | yes | No Hall deficiency above the hull slack is asserted. |
+
+## 7. Failed routes and no-go results
+
+1. **Positive KKT compensation:** already dead by Section 153; the present theorem
+   gives the corresponding finite-amplitude geometry.
+2. **Terminal critical-cone locking:** rejected. The entire signed release orthant is
+   realized by triangle-free global minimizers.
+3. **Independent-row count directly forces response nullity:** still unsupported.
+   The theorem supplies no map from source coordinates to the strict gammoid.
+
+The no-go is mechanism-specific. It does not rule out global transport through the
+finite path or through the two source shadows of Section 155.
+
+## 8. Literature imported
+
+No external result enters the activation theorem. During the repository audit, the
+sole external input of Section 155 was checked at theorem level:
+
+### Daniel A. Klain, “An Error Estimate for the Isoperimetric Deficit”
+
+- Link: [author PDF](https://faculty.uml.edu/dklain/Klain-Isoperimetric.pdf)
+- Exact point: Section 4, equation (6).
+- Hypotheses: compact convex planar set with perimeter \(P\), area \(A\),
+  circumradius \(R\), and inradius \(r\).
+- Conclusion: \(P^2-4\pi A\ge\pi^2(R-r)^2\).
+- Applicability: exact for both convex bodies \(H\) and \(L\) in Section 155.
+- Point of use: converts their canonical \(O(D)\) isoperimetric deficits into
+  \(R-r=O(\sqrt D)\).
+
+The citation and the missing generic-phase noncoincidence hypothesis are corrected in
+the canonical Section 154–155 module as part of this audit.
+
+## 9. Computation and reproducibility
+
+No computation was used. The proof is exact linear geometry on a finite forest.
+
+## 10. Canonical promotion recommendation
+
+**Promote now.** The proof is complete and closes a route explicitly left open by
+Section 153. Files changed:
+
+- `docs/targets/target-a/09-activation-orthant.md`;
+- Target A route map and documentation map;
+- knowledge map;
+- active continuation prompt, advanced to v1.7.4;
+- report index;
+- proof-hygiene corrections to Sections 150 and 154–155;
+- literature-review entry for the verified Bonnesen source.
+
+## 11. Next run
+
+Attack the two-shadow compatibility lemma in the Section 155 subbranch. Model the two
+near-saturating matchings as transversal matroids on the same source shore and determine
+what additional **geometric** condition turns a large common source image into either a
+directed alternating separator or a strict diameter-improving replacement. Pure image
+intersection counting is insufficient because two points lying within one unit of the
+same source point may be almost two units apart.
+
+## 12. Compact handoff
+
+```text
+LEVEL I STATUS: STILL OPEN.
+
+Strongest new theorem:
+Every active pair created by the canonical monotone activation sequence belongs to a
+full forest with at most one initial-active vertex per component. Signed root-path
+coordinates realize an exact |F|-dimensional affine orthant of triangle-free global
+minimizers in which each created unit edge has length 1+theta_e and each created
+diameter edge has length D(1-theta_e). Any subset can be released independently, and
+the relative interior restores exactly the initial strict-rattler set.
+
+Exact endpoint now:
+Unchanged: dim ker S >= Delta_Lambda-d_int. The activation forest is proved not to be
+a terminal locking system, so activation-only critical-cone locking is a dead route.
+
+Binding regressions/no-go results:
+No KKT load (Section 153), no terminal activation cage (Section 156), and no local
+activation-rank-to-Schur implication (Section 152). Long chains and finite collision
+walls remain live because the orthant radius has no uniform bound.
+
+Highest-value next lemma:
+Two-shadow compatibility under Section 155's explicit D^(3/2)-scale alignment.
+
+Authoritative files:
+docs/targets/target-a/README.md
+docs/targets/target-a/08-prescribed-phase-alignment.md
+docs/targets/target-a/09-activation-orthant.md
+```

@@ -1,0 +1,380 @@
+<!-- theorem-state: {"artifact_id":"ART-2638CE34424B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Erdős Problem #99 — affine source audit and exact diameter stretch
+
+**Date:** 2026-09-25  
+**Repository commit:** `15cd5d8a8346b42101b355afebd6da28ccd58886`  
+**State version:** `2026-09-14.audit.51`  
+**Run type:** audit and closing-proof attempt  
+**Target:** Target B, plus an alternate Level I disproof route  
+**Starting status:** canonical frontier  
+**Active prompt:** `docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md`  
+**External literature search:** not used  
+**Computation:** not used
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+## 1. Starting canonical endpoint
+
+The Target B sufficient closure is
+
+\[
+G+E\ge c_0B+a_0(t+\chi-1),\qquad
+a_0=\sqrt3/2,\quad c_0=\sqrt3/4.
+\]
+
+For a pure rhombic disk, \(t=0\) and \(\chi=1\), while the promoted global
+minimizer comparison gives the strict reverse inequality \(G+E<c_0B\). The
+open endpoint is still the global coupling of grain and interface terms, or an
+actual same-cardinality strict smaller-diameter competitor. The result below
+does not prove that closure.
+
+The original affine-source chain was
+
+```text
+one bounded-displacement oblique-lattice chart
+  -> sublinear convex-hull lattice boundary count
+  -> exact Pick ledger for a pure rhombic disk
+  -> restricted near-triangular shear and shell-gap information
+```
+
+It ends with a narrow survivor, not a contradiction. I then pursued a separate
+global disproof chain:
+
+```text
+one actual global minimizer with a single diameter direction
+  -> a source-preserving affine stretch with the same diameter
+  -> a triangle-free global minimizer of the same cardinality
+```
+
+The second chain is proved conditionally. The missing part is an unbounded
+sequence of global minimizers with that diameter-graph property.
+
+## 2. Strongest new result: affine flat modes create tied minimizers
+
+### General affine criterion
+
+Let \(A\subset\mathbb R^2\) be a finite unit-separated set with diameter
+\(D>0\). Let \(\mathcal C\) be the difference vectors of unit-distance
+pairs and \(\mathcal M\) the difference vectors of diametral pairs. Suppose
+there is a nonzero symmetric matrix \(Q\) such that
+
+\[
+c^{\mathsf T}Qc\ge0\quad(c\in\mathcal C),\qquad
+m^{\mathsf T}Qm\le0\quad(m\in\mathcal M),
+\tag{6}
+\]
+
+at least one \(m_0\in\mathcal M\) has \(m_0^{\mathsf T}Qm_0=0\), and every
+unit equilateral triangle in \(A\) has at least one side vector \(c\) with
+\(c^{\mathsf T}Qc>0\). Then an invertible affine image of \(A\) is
+unit-separated, has the same diameter and cardinality, and contains no unit
+equilateral triangle. If \(A\) is a global minimizer, the image is a
+triangle-free global minimizer of the same cardinality.
+
+### Proof
+
+For \(t>0\) small, \(G_t=I+tQ\) is positive definite. Choose an invertible
+linear map \(T_t\) with \(T_t^{\mathsf T}T_t=G_t\). For every pair difference
+\(v\),
+
+\[
+|T_tv|^2=|v|^2+t\,v^{\mathsf T}Qv.
+\tag{7}
+\]
+
+For unit pairs, (6) keeps the squared distance at least one. All other pair
+distances initially lie strictly above one; finiteness lets us choose \(t\)
+small enough that none drops to one. For diametral pairs, (6) keeps every
+squared distance at most \(D^2\), and \(m_0\) remains at \(D\). Every
+non-diametral pair initially has squared distance strictly below \(D^2\);
+again, finiteness lets us choose \(t\) small enough that none reaches \(D\).
+So \(T_t(A)\) is unit-separated and has diameter exactly \(D\).
+
+Any unit triangle in the image must come from three source pairs of unit
+length: noncontacts remain strictly above one, and contacts do not contract.
+Those three source sides already form a unit equilateral triangle. By
+hypothesis at least one side has \(c^{\mathsf T}Qc>0\), so (7) makes its image
+length strictly greater than one. This rules out every unit triangle in the
+image.
+
+If \(A\) is globally minimizing, it has diameter \(D(n)\). The constructed
+feasible set has the same cardinality and diameter \(D(n)\), so it is also a
+global minimizer. \(\square\)
+
+### One-direction stretch corollary
+
+Suppose all diametral difference vectors are parallel to a fixed line with
+unit direction \(e\). Let \(f\perp e\) be unit and set \(Q=ff^{\mathsf T}\).
+Then \(v^{\mathsf T}Qv=(v\cdot f)^2\ge0\) for every pair, while every
+diametral vector has value zero. A unit equilateral triangle cannot have all
+three sides parallel to \(e\), so every triangle has a side on which \(Q>0\).
+The general criterion applies. In this case the exact map is
+\(T_s=I+sff^{\mathsf T}\), whose squared-length change is
+\((2s+s^2)(v\cdot f)^2\).
+
+Thus **any** global minimizer with only one diametral direction has a
+triangle-free global-minimizer tie at the same \(n\). An unbounded sequence
+of such minimizers would disprove Level I.
+
+### A checkable sector condition
+
+The affine criterion also handles several diameter directions. Suppose \(A\)
+contains a unit triangle whose side-direction lines include consecutive lines
+at angles \(\alpha\) and \(\beta=\alpha+\pi/3\). Assume:
+
+1. no unit-distance pair has direction strictly inside the open sector
+   \((\alpha,\beta)\), modulo \(\pi\);
+2. every diametral pair has direction in the closed sector
+   \([\alpha,\beta]\), modulo \(\pi\).
+
+Let \(a,b\) be unit vectors on the boundary lines and define
+\[
+v^{\mathsf T}Qv=(v\cdot a^\perp)(v\cdot b^\perp).
+\]
+This quadratic form is negative inside the sector, zero on its boundary, and
+positive outside. Thus all unit contacts have nonnegative \(Q\), all
+diametral pairs have nonpositive \(Q\), and at least one side direction of
+every unit triangle has positive \(Q\): a triangle has three distinct side
+lines, while only two lines are zeros and none lies in the open sector.
+
+If a global minimizer satisfied these conditions with every diametral pair
+strictly inside the sector, (7) would strictly reduce its diameter, a
+contradiction. Therefore a global minimizer satisfying the two conditions
+must have a diametral pair on the sector boundary. That pair stays at \(D\),
+so the affine criterion gives a triangle-free global minimizer of the same
+cardinality. This is a finite, source-level test for another disproof route;
+it does not assert that any global minimizer meets the sector conditions.
+
+### Scope and limit
+
+These are exact finite-set theorems in the original plane. They use the actual
+source points and all unit and diametral pairs. They do not assume a lattice,
+jammedness, or a shell model. They are not a Level I disproof: no unbounded
+family meeting either sufficient condition has been constructed or proved to
+exist.
+
+## 3. Independent audit of the affine-lattice candidate
+
+The audited candidate is
+`docs/reports/target_b_affine_boundary_shear_2026-09-25.md` at source commit
+`eec3f364f2e2e4ed1b85be44234d036b893cdb31`; the exact source file hash is
+`a7c2396471d000ab9c04dd6236f9a21772dbbd2f9f174d6544398f1f53588fb6`.
+The state version and Target B route did not change between its stated base
+`60e0d60801e1abfa2cfba65ba82ce89740c399f0` and this audit base.
+
+### Theorem 1: bounded-displacement affine chart
+
+The source candidate assumes actual global minimizers \(A_j\), diameters
+\(D_j\to\infty\), and an injective matching of every source point to a point
+of one unit oblique lattice \(\Lambda_{\theta_j}\), with uniformly bounded
+displacement \(\varepsilon_j\). It proves
+
+\[
+b_{\Lambda_{\theta_j}}(K_j)=o(D_j),\qquad
+D_j(\sin\theta_j-a_0)\le 4a_0\varepsilon_j+o(1),
+\]
+
+where \(K_j\) is the convex hull of the matched lattice points. In the exact
+carrier case \(\varepsilon_j=0\), it obtains
+\(D_j(\sin\theta_j-a_0)\to0\) and the isodiametric area deficit
+\(\pi D_j^2/4-\operatorname{area}(K_j)=o(D_j)\).
+
+The packing estimate is valid: centered fundamental cells of radius
+\(\sqrt3/2\) around the distinct matched sites are disjoint and lie in
+\(K_j+\mathbb B(0,\sqrt3/2)\). With
+\(\operatorname{diam}K_j\le D_j+2\varepsilon_j\), Steiner's formula gives
+
+\[
+n_ja_j\le \operatorname{area}(K_j)
+ +\frac{\pi\sqrt3}{2}(D_j+2\varepsilon_j)+\frac{3\pi}{4},
+\quad a_j=\sin\theta_j.
+\tag{2}
+\]
+
+The canonical strict translated-triangular-lattice comparison in Target B
+Section 36 is
+
+\[
+n_j-1>\frac{\pi D_j^2}{4a_0}.
+\tag{3}
+\]
+
+Since \(a_j\ge a_0\), (2)--(3) put \(K_j\), after scaling by \(D_j^{-1}\),
+at isodiametric equality in the limit. Every Hausdorff limit is the radius
+\(1/2\) disk. Therefore every edge of \(K_j\) is \(o(D_j)\).
+
+For the boundary count, fix \(M>0\). There are uniformly finitely many
+primitive lattice directions of length below \(M\), since
+\(|iu+jv|^2\ge(i^2+j^2)/2\) throughout the angle interval. A convex polygon
+has at most two edges in each such direction; these edges contribute
+\(o(D_j)\) lattice boundary sites. The longer primitive directions contribute
+at most \(\operatorname{per}(K_j)/M\). First taking \(j\to\infty\), then
+\(M\to\infty\), proves \(b_{\Lambda}(K_j)=o(D_j)\). This argument is uniform
+over the allowed changing angles.
+
+Pick's identity on \(\Lambda\) is
+
+\[
+|\Lambda\cap K|=\frac{\operatorname{area}(K)}a+
+\frac{b_\Lambda(K)}2+1.
+\]
+
+The candidate supplies a valid proof by triangulating with all lattice sites;
+an empty lattice triangle has determinant one, and Euler's formula gives
+Pick's count. Combining Pick, isodiametry, and (3) gives the finite bound
+
+\[
+D(a-a_0)<4a_0\varepsilon+
+\frac{4a_0\varepsilon^2}{D}+
+\frac{2aa_0}{\pi}\frac{b_\Lambda(K)}D.
+\tag{4}
+\]
+
+The right side proves the claimed shear estimate. For \(\varepsilon=0\),
+Pick and (3) also give
+\(\operatorname{area}(K)>\pi D^2/4-a b_\Lambda(K)/2\), proving the stated
+\(o(D)\) deficit.
+
+I found no missing source point: the matching is injective and is indexed by
+every actual point of \(A_j\), including any contact-isolated points.
+
+### Theorem 2: pure-disk Pick ledger
+
+For the candidate's exact one-disk rhombic complex, let \(R\) be the number of
+rhombi, \(B\) its boundary edge count, and
+\(M=|\Lambda\cap K|-|A|\). Euler's formula for a topological disk gives
+\(n=R+B/2+1\), and Pick gives
+
+\[
+G=a\left(M+\frac{B-b_\Lambda(K)}2\right).
+\]
+
+Using \(E=(a-a_0)R\), these identities yield exactly
+
+\[
+G+E-\frac{a_0B}{2}
+=(a-a_0)(n-1)+aM-\frac a2b_\Lambda(K).
+\tag{5}
+\]
+
+The canonical strict pure-disk shell window is \(G+E<a_0B/2\) (Target B
+Sections 36 and 38.1). Thus (5) implies
+
+\[
+(a-a_0)(n-1)+aM<\frac a2b_\Lambda(K).
+\]
+
+Together with Theorem 1, this gives \(M=o(D)\),
+\(D(a-a_0)\to0\), and a shell gap \(a_0B/2-(G+E)=o(D)\). The algebra is
+correct. The topology assumption is essential: the identity is not asserted
+for multiple grains, holes, exceptional faces, or extra source points outside
+the rhombic complex.
+
+### Regression audit and status
+
+The square-coordinate lattice box in the candidate is an exact regression
+against any Pick-only shell contradiction. With
+\(A_m=\{iu+jv:0\le i,j\le m\}\) and
+\(\theta=\pi/3+m^{-2}\), it is unit-separated and triangle-free, with
+\(R=m^2\), \(B=b_\Lambda(K)=4m\), \(G=M=0\), and
+\(E=m^2(\sin\theta-a_0)<a_0B/2\) for \(m\ge2\). Its diameter is
+\(\sim\sqrt3m\), so the strict triangular-lattice comparison shows it is far
+from globally optimal. It falsifies a scalar implication only; it is not a
+Level I counterexample.
+
+The candidate's second regression is also valid: for each fixed \(n\), a
+strict triangular-lattice feasible bound persists under a sufficiently small
+increase of the basis angle by continuity, and the open oblique angle removes
+unit equilateral triangles. This proves that the scalar diameter bound alone
+does not characterize global minimizers.
+
+Theorem 1 strengthens Target B Section 48.1 only when the affine carrier is a
+unit oblique lattice with angle in \([\pi/3,2\pi/3]\) and the source-to-lattice
+displacement is uniformly bounded. It supplies the additional sublinear
+boundary count; it does not produce a global affine chart from the canonical
+almost-rhombic core. Theorem 2 is an exact restricted ledger. Both claims
+survive this independent proof and scope audit as **audited-working** results;
+neither is canonical or a Target B closure.
+
+## 4. Regressions, failed closures, and frontier effect
+
+| Claim or route | Classification | Exact reason |
+| --- | --- | --- |
+| The same-diameter stretch under one diameter direction | Proved conditional theorem | Its hypotheses are exact and its conclusion is a global minimizer only when the input is one. An unbounded family is unknown. |
+| Bounded-displacement lattice boundary count and shear estimate | Audited-working | Complete under the candidate's matching and unit oblique lattice hypotheses; no global chart follows from Target B. |
+| Pure-disk Pick ledger | Audited-working | Exact for one edge-to-edge topological rhombic disk; no multi-grain or exceptional-face extension. |
+| Universal Pick-only shell inequality | Rejected | The oblique lattice box above satisfies the strict shell window while remaining far from optimal. |
+| Scalar strict diameter bound implies triangle-free global minimality | Rejected | The bound also holds for triangle-free feasible perturbations that are not known to be optimal. |
+| Target B closure from this audit | Open | The multi-grain/global crossing and interface coupling is untouched. |
+| Level I from this audit | Open | The conditional stretch route needs infinitely many global minimizers with one diameter direction; none are established. |
+
+The affine route has no contradiction because the only remaining positive
+terms are \((a-a_0)(n-1)+aM=o(D)\), matched by the sublinear hull-boundary
+term. The shell inequality itself is strict only at that same sublinear scale.
+No strict smaller-\(D\) source-preserving competitor was constructed.
+
+The exact disproof obligation from the new stretch theorem is:
+
+> Prove that for unboundedly many cardinalities, some global minimizer has all
+> diameter pairs parallel; or replace this one-direction condition by a
+> verifiable family of nonzero affine deformations that preserves every unit
+> separation, keeps at least one diameter pair fixed, and makes every unit
+> triangle non-equilateral.
+
+If this fails, the positive route must at least rule out that exact flat
+diameter mode before proving that a triangle in one minimizer is forced in
+every minimizer.
+
+## 5. Dependencies
+
+- Target B Section 36.1: strict translated-triangular-lattice bound
+  \(n-1>\pi D^2/(4a_0)\) for actual global minimizers.
+- Target B Sections 36 and 38.1: strict pure-rhombic-disk shell window.
+- Target B Section 48.1: prior bounded-displacement affine-lattice cell bound;
+  used only for comparison, not as a premise in the sharper boundary-count
+  argument.
+- Elementary planar isodiametry, Steiner's formula for a convex body plus a
+  disk, Hausdorff compactness for bounded convex sets, and Pick's formula
+  (proved in the audited candidate by lattice triangulation).
+
+No noncanonical report is used as a theorem premise. The candidate source
+commit and content hash above identify the exact artifact independently
+audited.
+
+## 6. Literature and computation
+
+No external literature search and no computation were used. All estimates in
+the audit are exact inequalities or sequence limits from the displayed
+proofs.
+
+## 7. Promotion recommendation
+
+Classify the bounded-displacement boundary-count theorem and exact pure-disk
+Pick identity as **audited-working**, retaining their stated scopes. Do not
+promote them into the canonical Target B route: neither changes the exact
+joint shell-stability obligation. Keep the same-diameter stretch as a proved
+conditional global disproof lemma; do not mark it as a disproof until the
+unbounded existence condition is established.
+
+This branch does not alter `docs/STATE.md`, the theorem-state version, Target B
+route map, or active prompt.
+
+## 8. Handoff
+
+1. **Strongest new theorem:** any nonzero affine flat mode satisfying (6),
+   with one fixed diameter pair and strict expansion on at least one side of
+   every source triangle, produces a triangle-free same-diameter configuration.
+2. **Dependencies:** none beyond finite-set geometry; for the independent
+   affine audit, Target B Sections 36, 38.1, and 48.1.
+3. **Exact remaining lemma:** establish an unbounded family of global
+   minimizers whose actual contact-diameter data admit a matrix \(Q\) with
+   the signs in (6), or prove that every sufficiently large global minimizer
+   lacks every such affine flat mode. The one-direction and sector conditions
+   above are explicit sufficient cases.
+4. **Binding dead routes:** Pick-only shell contradiction; scalar strict
+   diameter bound as a global-optimality certificate; treating an affine
+   source chart as supplied by the general almost-rhombic branch.
+5. **Next files:** `docs/targets/target-b/README.md`, Target B Sections
+   36--48, and the exact source candidate at the commit/hash stated above.

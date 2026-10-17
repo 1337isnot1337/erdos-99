@@ -1,0 +1,212 @@
+# Target C: maximal replacement-functional rank in the eight-no-root `k=6` residual
+
+Date: 2026-09-22
+
+Status: rigorous strengthening of the remaining eight-no-root `k=6` layer. It does not close either surviving arithmetic root branch, but it replaces the capacity-only endpoint by a maximal-rank condition: every surviving global profile must fill its entire replacement-functional quotient. In the `D=-2,p=8` branch, the eight global singleton replacement functionals must be independent, and every three-clean seven-row shadow must fill a seven-dimensional quotient.
+
+Companion arithmetic certificate:
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k6_functional_threshold_2026_09_22.py`
+
+The preceding structural reduction is
+
+`research/target_c_support7_global_segment_relative_eight_noroot_k6_reduction_2026-09-22.md`.
+
+## 1. Input from the current `k=6` reduction
+
+The coefficient-constraint space in the eight-no-root `k=6` layer has rank two.
+
+The preceding reduction leaves only
+
+```text
+A: D=-2, d_root=0, p=8,
+B: D=-1, d_root=0, p=9.
+```
+
+Branch A is already forced to
+
+```text
+d_v=2,
+q=8,
+eight singleton changed blocks.
+```
+
+Moreover, every three-clean deletion `i` produces a seven-row rank-two state with
+
+```text
+D_i=0,
+p_i=8,
+d_i=2,
+q_i>=7,
+singleton capacity >=7,
+```
+
+and every one- and two-coordinate puncture of its coefficient space still has rank two.
+
+Branch B has exactly the remaining global profiles
+
+```text
+(d_v,q,singleton_min) =
+(1,7,5), (1,8,7),
+(2,8,7), (2,9,9), (3,9,9).
+```
+
+The goal here is to strengthen all of these profiles using replacement functionals rather than only counting compatible incomplete blocks.
+
+## 2. Rank-uniform replacement-functional accounting
+
+Fix a virtual-canonical state with
+
+- `t` no-root rows;
+- coefficient-constraint rank `r`;
+- `c` virtual-complete root blocks;
+- virtual-complete deficiency `d`;
+- `p` selected root rows in incomplete blocks.
+
+Write
+
+```text
+n = t-r.
+```
+
+The canonical relation matrix has `c+n` rows: one complete-block relation row for each virtual-complete block and `n` canonical external-lift rows from a basis of the coefficient nullspace. External containment puts every canonical external relation in the complete-block relation span, so this matrix has rank `c-d`.
+
+Its row-index functional quotient therefore has dimension
+
+```text
+(c+n) - (c-d) = n+d = t-r+d.          (2.1)
+```
+
+Now replace `q` virtual-complete blocks by compatible incomplete states. For each such block, compare its local coefficients with the canonical complete coefficients on every nullspace basis vector. The difference is the usual row-index replacement functional. This is the same construction used by the committed replacement-functional audits; the linear algebra does not depend on coefficient rank one.
+
+If the chosen replacement functionals gain extra rank `s` modulo the column space of the canonical relation matrix, then the relation rank after the replacements is
+
+```text
+(c-d) - q + s.
+```
+
+The root-row count contributed by unchanged virtual-complete blocks and selected incomplete rows is `3(c-q)+p`. Hence, before harmless completions of virtual-empty blocks,
+
+```text
+D
+ = t + p + 3(c-q) - 3[(c-d)-q+s]
+ = t + p + 3d - 3s.                  (2.2)
+```
+
+Incomplete states on virtual-empty blocks have zero quotient demand on the coefficient nullspace, and completing additional virtual-empty blocks cannot lower defect. Thus the general necessary bound is
+
+```text
+D >= t + p + 3d - 3s.                (2.3)
+```
+
+Combining (2.1) and (2.3), `s<=t-r+d`; whenever the defect forces the opposite inequality, the replacement functionals must fill the entire quotient.
+
+## 3. Branch A globally requires eight independent replacement functionals
+
+For branch A,
+
+```text
+t=8, r=2, D=-2, p=8, d=2.
+```
+
+Equation (2.1) gives quotient dimension `8-2+2=8`. Equation (2.3) gives
+
+```text
+-2 >= 8 + 8 + 3*2 - 3s = 22 - 3s,
+```
+
+so `s>=8`. Therefore
+
+```text
+s=8.                                  (3.1)
+```
+
+The preceding reduction already forces `q=8` and all eight changed virtual-complete blocks to be singletons. An actual state supplies exactly eight replacement functionals, so (3.1) says those eight functionals must be linearly independent modulo the canonical relation column space.
+
+This is strictly stronger than singleton capacity eight. If `s<=7`, (2.3) gives `D>=1`, contradicting `D=-2`.
+
+## 4. Every three-clean seven-row shadow must fill rank seven
+
+Take any three-clean coordinate from branch A. The preceding reduction proves
+
+```text
+t=7, r=2, D=0, p=8, d=2.
+```
+
+The functional quotient has dimension `7-2+2=7`. The defect bound gives
+
+```text
+0 >= 7 + 8 + 3*2 - 3s_7 = 21 - 3s_7,
+```
+
+so
+
+```text
+s_7=7.                                (4.1)
+```
+
+If `q_7=7`, the seven replacement functionals from the virtual-complete incomplete blocks must all be independent modulo the seven-row canonical relation column space. If `q_7=8`, the eight chosen replacement functionals must span the full seven-dimensional quotient.
+
+Thus capacity at least seven is only a combinatorial prefilter. The actual finite target is full extra rank seven.
+
+The first exact computation should enumerate the depth-two-synchronized seven-row rank-two `d=2` states, construct every compatible singleton replacement functional, and discard any state whose over-approximating singleton-functional span has extra rank at most six. Inserting every compatible singleton-state functional simultaneously is safe: an actual root state chooses at most one state per block, so the over-approximation can only increase span.
+
+A full-cover result
+
+```text
+max_seven_singleton_extra_rank <= 6
+```
+
+would close branch A. If rank-seven seven-row states exist, only those survivors need to be extended to eight rows, where the eight actual singleton replacement functionals must have extra rank eight.
+
+## 5. Every surviving branch-B global profile is also full-quotient
+
+For branch B,
+
+```text
+t=8, r=2, D=-1, p=9.
+```
+
+For any surviving deficiency `d`, equation (2.3) gives
+
+```text
+-1 >= 8 + 9 + 3d - 3s,
+```
+
+hence `s>=6+d`. Equation (2.1) gives quotient dimension `8-2+d=6+d`. Therefore every surviving branch-B profile satisfies
+
+```text
+s=6+d.                                (5.1)
+```
+
+For the five profiles:
+
+```text
+(d,q)=(1,7): seven replacement functionals must be independent;
+(d,q)=(1,8): eight replacement functionals must span rank seven;
+(d,q)=(2,8): eight replacement functionals must be independent;
+(d,q)=(2,9): nine replacement functionals must span rank eight;
+(d,q)=(3,9): nine replacement functionals must be independent.
+```
+
+So the entire remaining `D=-1,p=9` side is also a maximal-functional-rank problem. Capacity and root-cost filters remain useful prefilters, but no surviving profile can tolerate one rank of slack below its quotient dimension.
+
+## 6. Exact next target
+
+For branch A, the sharpened seven-row target is
+
+```text
+rank(P_7)=2,
+all one- and two-coordinate punctures rank two,
+d_7=2,
+p_7=8,
+q_7>=7,
+compatible singleton capacity >=7,
+extra singleton-functional rank = 7.
+```
+
+The existing synchronized rank-two machinery already computes virtual-canonical complete sets, compatible singleton states, exact coefficient projections, and complete-block relation ranks. The new endpoint is the row-index functional span. The implementation can reuse the replacement-functional construction from the committed five-row functional audits, with the five-dimensional nullspace of a seven-row rank-two coefficient space.
+
+If that seven-row class is empty, branch A closes. If it survives, extend only the full-rank survivors and require global extra rank eight. The same functional code then attacks the five branch-B profiles at exact target ranks `7,7,8,8,9`.
+
+No finite census is claimed here. The new contribution is the exact maximal-rank condition that every remaining `k=6` counterexample must satisfy.

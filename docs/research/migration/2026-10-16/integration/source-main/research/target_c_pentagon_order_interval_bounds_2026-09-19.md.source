@@ -1,0 +1,112 @@
+# Target C-II — universal turn intervals inside each physical gap-order cone
+
+**Date:** 2026-09-19  
+**Status:** exact local affine consequence; theorem-state authority unchanged  
+**Scope:** every strict closed equilateral force pentagon  
+**Depends on:** the exact turn-simplex theorem and the exact physical gap-order classification  
+**Certificate:** `research/verify_target_c_pentagon_order_interval_bounds_2026_09_19.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The physical gap-order theorem reduces the possible strict orders of the five normalized turn gaps to one dihedral orbit. Use the representative cyclic rank pattern
+
+\[
+(1,5,2,3,4),
+\]
+
+so that
+
+\[
+x_0\le x_2\le x_3\le x_4\le x_1.
+\tag{1}
+\]
+
+Equality is allowed because the closures of these ten strict order cones cover every physical equality case.
+
+Intersect (1) with the exact turn-simplex constraints
+
+\[
+\sum_i x_i=2,
+\qquad
+q_i:=x_i+x_{i+1}-x_{i+3}\ge\frac13.
+\tag{2}
+\]
+
+The resulting rational polytope gives the following universal coordinate intervals:
+
+\[
+\boxed{
+0\le x_0\le\frac25,
+}
+\tag{3a}
+\]
+
+\[
+\boxed{
+\frac25\le x_1\le\frac23,
+}
+\tag{3b}
+\]
+
+\[
+\boxed{
+\frac16\le x_2\le\frac5{12},
+}
+\tag{3c}
+\]
+
+\[
+\boxed{
+\frac13\le x_3\le\frac12,
+}
+\tag{3d}
+\]
+
+and
+
+\[
+\boxed{
+\frac7{18}\le x_4\le\frac23.
+}
+\tag{3e}
+\]
+
+The companion certificate proves all ten bounds by explicit rational Farkas identities. It uses only nonnegative combinations of the five closed simplex facets `q_i-1/3>=0`, the four order facets from (1), and an arbitrary multiple of `sum x_i-2=0`. No numerical optimization enters the certificate.
+
+By cyclic rotation and reflection, (3) applies to all ten physical order cones after relabeling the rank positions.
+
+## Why these intervals matter
+
+The minimum/maximum bounds in (3a)-(3b) recover the exact `2/5` split used by the rank-conditioned secants. The middle ranks provide additional proper rational intervals without solving a cell-specific LP:
+
+- rank 2 lies in `[1/6,5/12]`;
+- rank 3 lies in `[1/3,1/2]`;
+- rank 4 lies in `[7/18,2/3]`.
+
+Thus every physical order branch gives an a priori proper subinterval for every one of its five turn variables. This removes the main prerequisite for applying convex secants of the sharp nonlinear closure function
+
+\[
+M(x)=2\left[1-\frac1\pi\arccos\!\left(\frac12-\cos\frac{\pi x}{2}\right)\right].
+\]
+
+For example, already-certified rational endpoint bounds from the orbit-129 machinery can be reused on the slightly enlarged rational intervals
+
+\[
+[1/6,4/9]
+\quad\text{for rank 2},
+\]
+
+\[
+[1/3,1/2]
+\quad\text{for rank 3},
+\]
+
+and
+
+\[
+[1/3,2/3]
+\quad\text{for rank 4}.
+\]
+
+Together with the exact `[0,2/5]` and `[2/5,2/3]` secants for the minimum and maximum, this yields five predetermined closure secants in every physical order cone. A future certificate can therefore branch only on the ten exact physical orders and immediately add a closure cut for all five gaps; no cell-specific interval discovery is required for this first nonlinear polyhedral layer.
+
+This is directly usable in the remaining generic `H7b`, generic `H6`, and convex `H8` systems. It does not by itself exclude a global reciprocal cell, and no theorem-state file is changed.

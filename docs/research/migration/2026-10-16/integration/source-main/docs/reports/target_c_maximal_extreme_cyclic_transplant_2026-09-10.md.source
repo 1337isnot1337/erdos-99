@@ -1,0 +1,976 @@
+<!-- theorem-state: {"artifact_id":"ART-D65C47915FEE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Erdős Problem #99 — maximal extreme circuits inherit the cyclic high-surplus theorem
+
+**Date:** 2026-09-10  
+**Repository state:** PR #178 after EC/CT/EDB/LI/ENB/QP/GS; cyclic theorem from main commit `4647f7e5`  
+**Run type:** selected-support infrastructure rebuild / cyclic theorem transplant / full-currency comparison  
+**Target:** Target C, C-II extreme-circuit ensemble  
+**Depends on:** EC, CT, LI; canonical positive-support force hull; C17; FS; OP/DD/ZG/DT/DE as geometric statements; cyclic CRP/CRC/CRE/AE/AX proof chain on `main`  
+**External input:** none beyond dependencies already audited in the repository  
+**Computation:** none
+
+## LEVEL I STATUS
+
+`STILL OPEN`.
+
+The new extreme-circuit route becomes substantially stronger when an extreme support
+is a **maximal** planar circuit. Let `x*` be a vertex of the normalized KKT stress
+polytope and write its selected positive mixed support as
+
+\[
+S=C_*\cup H_*.
+\]
+
+Assume
+
+\[
+\boxed{\sigma_*:=2v_*-2-(e_*+h_*)=0.}
+\tag{MX.1}
+\]
+
+EC then gives
+
+\[
+e_*+h_*=2v_*-2,
+\qquad
+\operatorname{rank}R_S=2v_*-3.
+\tag{MX.2}
+\]
+
+Thus the selected equality framework is itself an infinitesimally rigid positive
+mixed circuit. The exact `s_Z=0` ledgers needed by the cyclic branch can be rederived
+inside `S`; they do **not** require the selected stress to use every actual C65 row.
+
+If in addition the selected diameter thrackle is in Woodall's cyclic case
+
+\[
+\boxed{d_*:=q_*-h_*=0,}
+\tag{MX.3}
+\]
+
+then the entire cyclic proof chain from main commit `4647f7e5` applies to the selected
+circuit after replacing every graph quantity by its starred version.
+
+Define the selected pinned/contact currency
+
+\[
+\boxed{L_*:=e_{BB,*}+2s_{C,*},}
+\tag{MX.4}
+\]
+
+where `s_{C,*}` is defined intrinsically from the selected pinned contact blocks below.
+Then there is an absolute constant `epsilon_M>0` such that every sufficiently large
+selected cyclic maximal circuit satisfies
+
+\[
+\boxed{
+{L_*\over D}
+\ge
+\lambda_A+\epsilon_M,
+}
+\tag{MX.5}
+\]
+
+where
+
+\[
+\boxed{
+\lambda_A
+={\pi\over
+\sqrt{\pi^2+\left(\frac54-
+\sqrt{\frac{\pi}{2\sqrt3}}\right)^2}}
+=0.9955405845835427\ldots .
+}
+\tag{MX.6}
+\]
+
+The endpoint `lambda_A` is excluded by exactly the same giant-face versus atomic-train
+direction contradiction as AX, now inside the selected contact graph.
+
+More importantly, the selected currency transfers back to the full C65 graph. Let
+
+\[
+L:=e_{BB}+2s_C
+\]
+
+be the full currency and let
+
+\[
+\kappa_*:=z_*-s_Z=2(v-v_*)
+\tag{MX.7}
+\]
+
+because `sigma_*=0`. Then
+
+\[
+\boxed{
+L\ge L_*-2\kappa_*+s_Z
+\ge L_*-2\kappa_*.
+}
+\tag{MX.8}
+\]
+
+Consequently any unbounded sequence admitting a selected cyclic maximal extreme with
+
+\[
+\kappa_*=o(D)
+\]
+
+satisfies the full-graph lower bound
+
+\[
+\boxed{
+\liminf {e_{BB}+2s_C\over D}
+\ge\lambda_A+\epsilon_M
+>0.9955405845\ldots .
+}
+\tag{MX.9}
+\]
+
+Thus QP reaching a low-degeneracy **cyclic** `sigma=0` endpoint is much more valuable
+than the generic RSJ/DB lower bounds: it pushes the full source directly into an
+almost-unit normalized pinned/contact-surplus regime even when the full stress space
+has `s_Z>0`.
+
+---
+
+## 1. Selected maximal circuit is fully rigid
+
+EC gives for every extreme support
+
+\[
+\operatorname{rank}R_S=e_*+h_*-1.
+\]
+
+Under `sigma_*=0`,
+
+\[
+e_*+h_*=2v_*-2,
+\]
+
+so
+
+\[
+\boxed{\operatorname{rank}R_S=2v_*-3.}
+\tag{1.1}
+\]
+
+Hence the selected mixed framework has only Euclidean infinitesimal motions.
+
+The canonical positive-support theorem gives one connected positive contact component
+`C_*` containing every endpoint of `H_*`, and the force-hull trapping theorem gives
+
+\[
+V(C_*)\subseteq\operatorname{conv}B_*.
+\]
+
+Since `B_* subset V(C_*)`,
+
+\[
+\boxed{F_*:=\operatorname{conv}V(C_*)=\operatorname{conv}B_*.}
+\tag{1.2}
+\]
+
+Every `b in B_*` has a selected partner `b'` with `|b-b'|=D`. Because `F_*` has
+diameter `D`, strict convexity of the Euclidean norm implies `b` is an extreme point
+of `F_*`: if `b` were a nontrivial convex combination of other points of `F_*`, equality
+in
+
+\[
+|b-b'|\le\sum\lambda_i|x_i-b'|\le D
+\]
+
+would force every `x_i-b'` to be the same length-`D` vector, hence every `x_i=b`.
+Therefore
+
+\[
+\boxed{B_*=\operatorname{Vert}(F_*).}
+\tag{1.3}
+\]
+
+This reproduces the loaded-boundary geometry required by the `s_Z=0` ledgers.
+
+---
+
+## 2. Selected articulation theorem and convex faces
+
+The original OP/C51 machinery needs the fact that every branch of the contact graph
+contains a loaded hull vertex. This follows directly from selected mixed rigidity.
+
+### Lemma MX.1 — every articulation branch contains `B_*`
+
+For every vertex `x in V(C_*)`, every connected component of
+
+\[
+C_*-x
+\]
+
+contains at least one selected loaded terminal from `B_*`.
+
+### Proof
+
+Suppose a component `U` contains no member of `B_*`. Give every vertex outside `U`
+zero velocity. Give vertices of `U` the infinitesimal rigid rotation about `p_x`:
+
+\[
+u_y=J(p_y-p_x),
+\qquad y\in U.
+\]
+
+Every selected contact edge internal to `U` is preserved. Every selected contact edge
+from `U` to its complement has endpoint `x`, by definition of a component of
+`C_*-x`, and is preserved because `u_y` is perpendicular to `p_y-p_x`.
+
+No selected diameter edge has an endpoint in `U`, because every endpoint of `H_*`
+lies in `B_*`. All selected diameter rows are therefore preserved as well.
+
+This gives a non-Euclidean infinitesimal motion of the selected mixed framework,
+contradicting (1.1). `square`
+
+Add every missing side of the convex polygon `F_*` to `C_*`. The proof of OP.1 now
+applies verbatim: after deleting any vertex, every contact component still contains a
+surviving loaded vertex and the surviving hull cycle/path connects those loaded
+vertices. Hence the hull-augmented selected plane graph is 2-connected.
+
+Every bounded selected contact face and every new outer pocket is a strict convex
+polygon. At a nonloaded selected vertex there is no selected diameter force, so the
+strictly positive selected contact equilibrium forbids a contact-free angular gap of
+size at least `pi`. At a loaded vertex, every bounded face sector lies inside the
+strict convex tangent cone of `F_*`.
+
+Thus all OP/DD face and pocket arguments are valid for `C_*`.
+
+---
+
+## 3. Selected pinned-contact rank and intrinsic `s_{C,*}`
+
+Let
+
+\[
+I_*:=V(C_*)\setminus B_*.
+\]
+
+Form the pinned selected contact matrix `P_*` by retaining every selected contact row
+with at least one endpoint in `I_*` and retaining only the velocity columns of
+`I_*`.
+
+### Lemma MX.2 — selected pinned contact matrix has full column rank
+
+\[
+\boxed{\operatorname{rank}P_*=2|I_*|.}
+\tag{3.1}
+\]
+
+### Proof
+
+A vector in `ker P_*` assigns velocities to the selected interior vertices, with all
+vertices of `B_*` fixed, while preserving every selected contact edge to first order.
+Extend it by zero on `B_*`. Every selected diameter edge has both endpoints in `B_*`,
+so every selected diameter row is also preserved. Thus the extension lies in the
+infinitesimal flex space of `R_S`.
+
+By (1.1) it is a Euclidean infinitesimal motion. It vanishes at the two distinct
+endpoints of any selected diameter edge, so the Euclidean motion is identically zero.
+Hence the original pinned velocity is zero. `square`
+
+Let the connected components of the induced selected interior contact graph
+`C_*[I_*]` be `I_r`. Write
+
+- `n_r=|I_r|`;
+- `e_r` for selected contact edges internal to `I_r`;
+- `t_r` for selected contacts from `I_r` to `B_*`;
+- `delta_r` for the graph diameter of `C_*[I_r]`, with zero for a singleton.
+
+The pinned matrix is block diagonal by these components and every block has full
+column rank `2n_r`. Its left nullity is
+
+\[
+\ell_r=e_r+t_r-2n_r.
+\tag{3.2}
+\]
+
+At every interior selected vertex, the selected positive KKT equilibrium contains only
+contact terms. Restricting those positive coefficients to one component gives a
+nonzero pinned left-null relation. Therefore
+
+\[
+\ell_r\ge1.
+\]
+
+Define
+
+\[
+\boxed{s_r:=\ell_r-1\ge0,}
+\qquad
+\boxed{s_{C,*}:=\sum_rs_r.}
+\tag{3.3}
+\]
+
+Then, writing `c_{I,*}` for the number of selected interior components,
+
+\[
+\boxed{
+e_*-e_{BB,*}
+=2(v_*-q_*)+c_{I,*}+s_{C,*}.
+}
+\tag{3.4}
+\]
+
+This is the selected pinned-stress ledger needed downstream. It is proved directly
+from selected mixed rigidity and positive equilibrium; no full `s_C` quantity is
+imported.
+
+---
+
+## 4. Exact selected `s_Z=0` ledgers
+
+Put
+
+\[
+d_*:=q_*-h_*\ge0.
+\]
+
+Since `sigma_*=0`,
+
+\[
+e_*+h_*=2v_*-2,
+\]
+so
+
+\[
+e_*=2v_*-q_*+d_*-2.
+\tag{4.1}
+\]
+
+Compare with (3.4):
+
+\[
+e_{BB,*}+2(v_*-q_*)+c_{I,*}+s_{C,*}
+=2v_*-q_*+d_*-2.
+\]
+
+Hence
+
+\[
+\boxed{
+c_{I,*}+e_{BB,*}+s_{C,*}
+=q_*-2+d_*.
+}
+\tag{4.2}
+\]
+
+This is exactly selected ZU with zero mixed surplus.
+
+Planar Euler/face incidence for the connected triangle-free selected contact graph gives
+
+\[
+e_*=2v_*-2-\frac{b_*+Q_*}{2}.
+\]
+
+Comparing with `e_*+h_*=2v_*-2` yields
+
+\[
+\boxed{b_*+Q_*=2h_*.}
+\tag{4.3}
+\]
+
+Write
+
+\[
+x_*:=b_*-q_*.
+\]
+
+Using `h_*=q_*-d_*`, (4.3) gives
+
+\[
+\boxed{q_*=x_*+Q_*+2d_*.}
+\tag{4.4}
+\]
+
+This is selected ZT.
+
+Now perform the OP hull augmentation of Section 2. Let
+
+- `a_*` be the number of missing selected force-hull side contacts;
+- `d_{P,*}:=sum_P(k_P-3)` over selected outer pockets;
+- `c_{B,*}:=e_{BB,*}-(q_*-a_*)` be selected loaded-loaded contacts that are not hull
+  sides.
+
+OP's exact incidence count gives
+
+\[
+\boxed{x_*=a_*+d_{P,*}.}
+\tag{4.5}
+\]
+
+Substitute into (4.4):
+
+\[
+\boxed{q_*=a_*+d_{P,*}+Q_*+2d_*.}
+\tag{4.6}
+\]
+
+Since `e_{BB,*}=q_*-a_*+c_{B,*}`,
+
+\[
+\boxed{e_{BB,*}=d_{P,*}+Q_*+2d_*+c_{B,*}.}
+\tag{4.7}
+\]
+
+Finally insert this form into (4.2):
+
+\[
+\boxed{a_*+d_*=c_{I,*}+c_{B,*}+s_{C,*}+2.}
+\tag{4.8}
+\]
+
+These are exactly PC.1--PC.4 with starred variables and selected mixed surplus zero.
+
+---
+
+## 5. Selected ZK component ledger
+
+Eppstein's triangle-free penny-graph theorem applied to each selected interior
+component gives
+
+\[
+e_r\le2n_r-\delta_r-2.
+\]
+
+Define
+
+\[
+r_r:=2n_r-\delta_r-2-e_r\ge0,
+\qquad
+R_{I,*}:=\sum_rr_r.
+\]
+
+Using (3.3),
+
+\[
+\begin{aligned}
+t_r-\delta_r-3
+&=(e_r+t_r-2n_r-1)+(2n_r-\delta_r-2-e_r)\\
+&=s_r+r_r.
+\end{aligned}
+\tag{5.1}
+\]
+
+Every selected loaded terminal is a full loaded terminal, so its selected contact
+degree is at most its full contact degree, which is at most three. Let
+
+\[
+\boxed{s_{B,*}:=3q_*-\sum_rt_r-2e_{BB,*}\ge0.}
+\tag{5.2}
+\]
+
+Summing (5.1) and eliminating `c_{I,*}` with (4.2) gives exactly
+
+\[
+\boxed{
+\sum_r\delta_r+R_{I,*}+s_{B,*}+3d_*
+=6+e_{BB,*}+2s_{C,*}.
+}
+\tag{5.3}
+\]
+
+Thus the selected attachment-diameter currency is
+
+\[
+L_{2,*}:=6+e_{BB,*}+2s_{C,*}-3d_*\ge0.
+\tag{5.4}
+\]
+
+The same elementary contact-path estimate gives diameter at most `delta_r+2` for the
+convex hull of the selected attachment vertices of `I_r`. The C36/C49 planar
+noncrossing proof uses only the selected plane graph, its convex loaded boundary, and
+the articulation property from MX.1, so it applies to these selected components.
+Consequently their attachment hulls have pairwise disjoint interiors.
+
+In the cyclic case `d_*=0`, (4.2) gives `c_{I,*}<=q_*`, and `q_*<=per(F_*)<=pi D`.
+Exactly as in ZK/GU,
+
+\[
+\boxed{
+\sum_r\operatorname{area}(P_{r,*})
+\le
+\frac\pi4(6+L_*)^2+O(D),
+}
+\tag{5.5}
+\]
+
+where the `O(D)` term is universal and
+
+\[
+L_*=e_{BB,*}+2s_{C,*}.
+\]
+
+Thus along a cyclic selected subsequence with `L_*/D->nu`,
+
+\[
+\boxed{
+\limsup {1\over D^2}
+\sum_r\operatorname{area}(P_{r,*})
+\le{\pi\over4}\nu^2.
+}
+\tag{5.6}
+\]
+
+This is the only selected ZK area consequence needed by the cyclic proof.
+
+---
+
+## 6. Cyclic selected geometry traps the entire source
+
+Now assume `d_*=0`. Woodall applied to `H_*` gives one odd cycle `Gamma_*` with every
+other selected loaded terminal a pendant diameter leaf.
+
+Every edge of `Gamma_*` is an **actual** source diameter edge. C17 therefore applies
+to that cycle independent of omitted KKT rows: it produces a width-`D` Reuleaux
+polygon `R_*` and traps the **entire original source** inside it:
+
+\[
+\boxed{A\subset R_*.}
+\tag{6.1}
+\]
+
+Every selected loaded terminal lies on `partial R_*`: cycle vertices are its defining
+vertices, while a pendant loaded terminal is at distance `D` from its cycle neighbor
+and lies in the diameter-`D` body `R_*`.
+
+Hence `F_*=conv B_*` is an inscribed polygon whose consecutive sides cut the Reuleaux
+boundary into radius-`D` subarcs. FS.3 applies because all selected diameter edges are
+actual. If `phi_j` are the subarc angles, then
+
+\[
+\sum_j\phi_j=\pi,
+\qquad
+\max_j\phi_j=O(D^{-1/4}).
+\tag{6.2}
+\]
+
+Exactly as in CRP/CRC,
+
+\[
+\boxed{
+0\le\pi D-\operatorname{per}F_*=O(\sqrt D),
+}
+\tag{6.3}
+\]
+
+and the selected outer-contact detour obeys
+
+\[
+\boxed{
+0\le b_*-\operatorname{per}F_*=O(\sqrt D).
+}
+\tag{6.4}
+\]
+
+The proof of (6.4) is capwise: each selected outer pocket lies between a selected hull
+chord and the corresponding Reuleaux subarc, so its contact-chain detour is at most
+`D(phi-2sin(phi/2))`; summing gives the displayed order.
+
+The DD inequality is purely a convex-pocket statement, so
+
+\[
+\boxed{H_{out,*}=o(D^2).}
+\tag{6.5}
+\]
+
+All of this remains true even if omitted full C65 vertices and edges lie inside the
+selected pockets: they are source points, but they do not change the selected pocket
+boundary and C17 still keeps them inside the same Reuleaux container.
+
+---
+
+## 7. Oler/rhombus defect transport also survives selection
+
+The CRE proof can now be repeated on the selected plane graph.
+
+Let `N_{F_*}` be the **entire original source population** lying in `F_*`, not merely
+vertices of `C_*`. In every bounded selected face and selected outer region, Oler is
+applied to all source points in that region. An omitted full-core vertex may have full
+contact edges, but those edges are irrelevant: only unit separation of the source
+points is used in the Oler inequality.
+
+The exact selected circuit identity in the cyclic case is
+
+\[
+b_*+Q_*=2q_*.
+\tag{7.1}
+\]
+
+Therefore the facewise Oler cancellation in CRE gives
+
+\[
+a_0N_{F_*}
+\le
+\operatorname{area}F_*+c_0\operatorname{per}F_*+a_0-E_*,
+\tag{7.2}
+\]
+
+where `E_*>=0` is the total rhombus area excess above `a_0=sqrt3/2` over selected
+bounded quadrilateral faces.
+
+C17 partitions `R_*\setminus F_*` into the same selected Reuleaux caps. Apply Oler in
+each cap to its two selected loaded endpoints plus **all** source points in that cap.
+Adding the cap inequalities to (7.2) and using the global strict translated-lattice
+comparison for the original global minimizer gives the selected CRE bound
+
+\[
+\boxed{E_*=O(D).}
+\tag{7.3}
+\]
+
+No omitted full contact edge enters the proof. In particular, the DT/DE train system of
+the selected rhombi has only boundary-order total angular defect.
+
+---
+
+## 8. The selected cyclic `0.995540...` theorem
+
+At this point every ingredient used by CRC/AE/AX has been reproduced for the selected
+circuit:
+
+1. connected triangle-free selected unit-contact graph with strict convex bounded
+   faces and convex outer pockets;
+2. exact selected mixed-circuit identities (4.2)--(4.8);
+3. attachment-hull upper bound (5.6);
+4. `F_*` tends to the diameter-`D` disk in normalized perimeter/area by (6.3) and the
+   FS/central-symmetral argument;
+5. selected outer-pocket area is `o(D^2)` by (6.5);
+6. selected rhombus angular-area excess is `O(D)` by (7.3);
+7. DT applies to any such selected plane unit-contact graph, including bridges and
+   exceptional faces;
+8. DE's train-direction proof concerns only the selected strict-rhombus train complex,
+   its directions, and its `O(D)` angular-defect budget;
+9. the endpoint contradiction in AX uses only selected exceptional-face boundary
+   directions versus selected atomic train-end directions.
+
+For completeness, write
+
+\[
+\nu_*:=\lim {L_*\over D},
+\qquad
+\xi_*:=\lim {Q_*\over D},
+\qquad
+\varphi_*:=\lim {f_*\over D},
+\qquad
+w_*:=\xi_*-\varphi_*.
+\]
+
+If `nu_*<1`, (5.6), disk area saturation, (6.5), and the refined exceptional-face
+square bound give
+
+\[
+\boxed{w_*\ge\pi\sqrt{1-\nu_*^2}.}
+\tag{8.1}
+\]
+
+The selected PC identity (4.7) with `d_*=0` gives
+
+\[
+Q_*\le e_{BB,*}\le L_*,
+\tag{8.2}
+\]
+
+so `0<=w_*<=nu_*`.
+
+Let `R_{4,*}` be the number of selected rhombus faces and `T_*` the selected train
+count. The selected face identity gives
+
+\[
+T_*=q_*+2f_*.
+\tag{8.3}
+\]
+
+The CRE defect bound and DE imply, for the limiting atomic train mass `s_*`,
+
+\[
+{s_*T_*\over D}\ge2\sqrt{r_*},
+\tag{8.4}
+\]
+
+where
+
+\[
+r_*:=\lim R_{4,*}/D^2
+\ge {\pi^2-w_*^2\over2\pi\sqrt3}.
+\tag{8.5}
+\]
+
+Outer-edge direction equidistribution follows from
+`b_*-per(F_*)=o(D)` and disk convergence exactly as in AE. Therefore atomic train
+ends have only `o(D)` selected outer incidences; selected exceptional faces provide
+exactly `Q_*+4f_*` endpoint incidences. Hence
+
+\[
+4\sqrt{r_*}\le\xi_*+4\varphi_*.
+\tag{8.6}
+\]
+
+Eliminate `r_*`,`xi_*`,`varphi_*` as in AE. The monotone one-variable optimization
+gives
+
+\[
+\boxed{\nu_*\ge\lambda_A.}
+\tag{8.7}
+\]
+
+If equality held, the selected exceptional-face square bound would produce one
+selected macroscopic face whose unit-edge direction measure tends to uniform Lebesgue
+measure. Equality in the selected DE/Mantel chain would simultaneously put all atomic
+selected train directions in one three-point `pi/3` orbit, and endpoint-capacity
+equality would force all but `o(D)` edges of that macroscopic selected face into those
+three shrinking direction windows. This is impossible.
+
+Therefore the endpoint is excluded. The same compactness argument as AX yields a
+uniform positive constant `epsilon_M` and proves MX.5.
+
+This section is a proof transplant, not an appeal to the full-support AX theorem: the
+starred infrastructure needed by every step has been established in Sections 1--7.
+
+---
+
+## 9. Exact comparison of selected and full pinned/contact currencies
+
+Let full quantities have no star. LI proves
+
+\[
+B\cap V_*=B_*.
+\tag{9.1}
+\]
+
+Hence
+
+\[
+I_*:=V_*\setminus B_*
+=V_*\cap(V\setminus B).
+\tag{9.2}
+\]
+
+Put
+
+\[
+u:=v-v_*,
+\qquad
+g:=q-q_*.
+\]
+
+Then `g<=u`.
+
+Let `c_I` be the number of full interior contact components and `c_{I,*}` the number
+of selected interior components. Every selected interior component lies inside one
+full interior component. A full interior component that contains no selected interior
+vertex must contain at least one omitted core vertex. Therefore
+
+\[
+\boxed{c_I-c_{I,*}\le u.}
+\tag{9.3}
+\]
+
+The full ZU ledger is
+
+\[
+c_I+e_{BB}+s_C=q-2+d_H+s_Z.
+\tag{9.4}
+\]
+
+The selected cyclic ledger is
+
+\[
+c_{I,*}+e_{BB,*}+s_{C,*}=q_*-2.
+\tag{9.5}
+\]
+
+Writing `L=e_{BB}+2s_C` and `L_*=e_{BB,*}+2s_{C,*}`, subtract twice (9.4)--(9.5) in
+the convenient form to obtain
+
+\[
+\boxed{
+L_*-L
+=(e_{BB}-e_{BB,*})
+-2g+2(c_I-c_{I,*})
+-2d_H-2s_Z.
+}
+\tag{9.6}
+\]
+
+Every selected loaded-loaded contact is a full loaded-loaded contact. Thus
+
+\[
+e_{BB}-e_{BB,*}
+\le z_C,
+\tag{9.7}
+\]
+
+where `z_C` is the number of omitted full contact rows.
+
+CT gives, for `sigma_*=0`,
+
+\[
+z_C+z_H=s_Z+\kappa_*,
+\qquad
+\kappa_*=2u.
+\tag{9.8}
+\]
+
+Use (9.3), discard the favorable nonpositive terms `-2g` and `-2d_H`, and use
+`z_C<=s_Z+\kappa_*`:
+
+\[
+\begin{aligned}
+L_*-L
+&\le z_C+2u-2s_Z\\
+&\le(s_Z+\kappa_*)+\kappa_*-2s_Z\\
+&=2\kappa_*-s_Z.
+\end{aligned}
+\]
+
+Therefore
+
+\[
+\boxed{L\ge L_*-2\kappa_*+s_Z,}
+\tag{9.9}
+\]
+
+which is MX.8.
+
+No monotonicity of pinned stress dimension is assumed; the comparison is derived from
+the two exact ZU ledgers and the elementary component-count estimate (9.3).
+
+---
+
+## 10. Low-degeneracy consequence for the full source
+
+Suppose an unbounded sequence has selected cyclic maximal extreme circuits with
+
+\[
+\kappa_*=o(D).
+\]
+
+MX.5 and (9.9) give
+
+\[
+{L\over D}
+\ge
+{L_*\over D}-2{\kappa_*\over D}
+\ge\lambda_A+\epsilon_M-o(1).
+\]
+
+Hence MX.9.
+
+LI also gives
+
+\[
+q_*=q-o(D).
+\]
+
+Since `d_*=0`,
+
+\[
+h_*=q_*.
+\]
+
+Because `H_* subseteq H`,
+
+\[
+h\ge h_*=q-o(D),
+\]
+while always `h<=q`. Therefore
+
+\[
+\boxed{d_H=q-h=o(D).}
+\tag{10.1}
+\]
+
+Thus this branch has three simultaneous full-source consequences:
+
+\[
+\boxed{
+{e_{BB}+2s_C\over D}
+\ge\lambda_A+\epsilon_M-o(1),
+\qquad
+d_H=o(D),
+\qquad {\operatorname{per}F\over D}\to\pi.
+}
+\tag{10.2}
+\]
+
+The last statement follows because `F_* subseteq F`, selected cyclic geometry gives
+`per(F_*)/D->pi`, and Cauchy gives `per(F)<=pi D`.
+
+This is a much narrower full-source phase than the generic post-ZF frontier.
+
+---
+
+## 11. What remains
+
+MX does **not** close Level I. The full pinned/contact currency has no proved upper
+bound below one. It does, however, make the QP/GS endpoint split concrete:
+
+1. if a minimum-degeneracy extreme reaches `sigma=0,d=0` with `kappa=o(D)`, the full
+   source is forced into (10.2), including a normalized surplus strictly above
+   `0.995540...`;
+2. if every low-degeneracy maximal extreme has selected Woodall forest type `d_*>0`,
+   the next target is the forest branch;
+3. if QP cannot reach `sigma=0` without keeping `kappa=Omega(D)`, the remaining
+   obstruction is the singular-pivot ensemble isolated by GS/QP.
+
+A useful possible closure is now quantitative: combine the full maximal-perimeter
+condition in (10.2) with the full PC/HB degree-three ledgers to seek an **upper** bound
+on `e_{BB}+2s_C` below `lambda_A+epsilon_M`, or show such high surplus itself forces a
+unit triangle / strict sub-`D` rearrangement.
+
+---
+
+## Compact handoff
+
+```text
+LEVEL I STATUS: STILL OPEN.
+
+Let x* be an extreme normalized KKT stress with sigma_*=0. Then its selected mixed
+support is an infinitesimally rigid circuit: rank=2v_*-3.
+
+Rebuild the s_Z=0 infrastructure inside the selected graph:
+- B_*=Vert(F_*), F_*=conv V(C_*)=conv B_*;
+- every articulation branch of C_* contains B_* (otherwise rotate it about the cut
+  vertex to get a selected mixed flex);
+- selected pinned contact matrix on I_*=V_*\B_* has full column rank;
+- define s_{C,*} from the block left-nullity above one positive relation/component;
+- exact ledgers:
+    c_{I,*}+e_{BB,*}+s_{C,*}=q_*-2+d_*,
+    b_*+Q_*=2h_*,
+    q_*=x_*+Q_*+2d_*,
+    e_{BB,*}=d_{P,*}+Q_*+2d_*+c_{B,*},
+    a_*+d_*=c_{I,*}+c_{B,*}+s_{C,*}+2,
+    sum delta_r+R_I+s_B+3d_*=6+e_{BB,*}+2s_{C,*}.
+
+If d_*=0, Woodall gives an actual odd diameter cycle. C17 traps the entire original
+source in its width-D Reuleaux polygon. FS gives subarc angles O(D^-1/4), hence
+    per(F_*)/D->pi,
+    b_*-per(F_*)=o(D),
+    H_out,*=o(D^2).
+Facewise Oler plus capwise Oler counts ALL original source points, including omitted
+full-core vertices, and gives selected rhombus excess E_*=O(D). DT/DE and the AX
+atomic-endpoint contradiction then re-run with starred variables. Therefore for
+    L_*=e_{BB,*}+2s_{C,*}
+there is epsilon_M>0 with
+    L_*/D >= lambda_A+epsilon_M,
+    lambda_A=0.9955405845835427... .
+
+Compare to full L=e_BB+2s_C. LI gives I_*=V_* cap I and
+    c_I-c_{I,*}<=u=v-v_*.
+Using full and selected ZU ledgers and CT z=s_Z+kappa_*, kappa_*=2u:
+    L_*-L <=2kappa_*-s_Z,
+so
+    L >= L_*-2kappa_*+s_Z >= L_*-2kappa_*.
+Hence if kappa_*=o(D),
+    liminf L/D >= lambda_A+epsilon_M >0.9955405,
+    d_H=o(D),
+    per(F)/D->pi.
+
+Next: attack the full high-surplus/maximal-perimeter phase, the selected Woodall forest
+case, or the QP/GS singular-pivot obstruction if no low-kappa maximal extreme exists.
+```

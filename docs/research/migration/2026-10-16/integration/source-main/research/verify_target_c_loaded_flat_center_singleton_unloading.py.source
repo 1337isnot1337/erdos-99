@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+"""Arithmetic regression for the loaded flat-center singleton unloading gate."""
+from decimal import Decimal, getcontext
+getcontext().prec = 70
+D = Decimal
+pi = D('3.14159265358979323846264338327950288419716939937510')
+sqrt3 = D(3).sqrt()
+Delta2 = pi / (D(2) * sqrt3)
+s = Delta2.sqrt()
+C0 = D(2) * s + D('0.00042')
+C146 = D(4) * (pi + s) / D(9)
+t42 = C146 + D('0.0013751')
+sigma0 = D('0.0008')
+
+def P(t, delta=D(0), kappa=D(0)):
+    return pi + C0 - D(5)*t/D(2) + delta + kappa/D(2)
+
+def singleton_upper(t, delta=D(0)):
+    return D(5)*t - D(2)*pi - D(2)*delta - D(2)*s - sigma0/D(2)
+
+def unloaded_floor(t, delta=D(0), kappa=D(0)):
+    return P(t, delta, kappa) - singleton_upper(t, delta)/D(2)
+
+def unloaded_closed(t, delta=D(0), kappa=D(0)):
+    return D(2)*pi + D(3)*s + D('0.00062') - D(5)*t + D(2)*delta + kappa/D(2)
+
+u42 = unloaded_floor(t42)
+assert abs(u42 - unloaded_closed(t42)) < D('1e-60')
+assert D('0.03630053') < u42 < D('0.03630055')
+assert D('0.00403339') < u42/D(9) < D('0.00403340')
+assert D('0.00907513') < u42/D(4) < D('0.00907514')
+root = (D(2)*pi + D(3)*s + D('0.00062'))/D(5)
+assert D('1.82814874') < root < D('1.82814875')
+
+# Positive detour/topology bonuses can only strengthen the unloaded floor.
+assert unloaded_floor(t42, D('0.001'), D('0.002')) > u42
+
+print('PASS loaded flat-center singleton unloading arithmetic')
+print('s =', s)
+print('t42 =', t42)
+print('P42 =', P(t42))
+print('singleton upper at t42 =', singleton_upper(t42))
+print('loaded-center upper at t42 =', singleton_upper(t42)/D(2))
+print('unloaded floor at t42 =', u42)
+print('H4 two-way coefficient =', u42/D(9))
+print('E3 two-way coefficient =', u42/D(4))
+print('zero-bonus positivity endpoint =', root)

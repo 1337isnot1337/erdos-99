@@ -1,0 +1,316 @@
+# Erdős Problem #99 — second-layer penetration or internal-shell tangency
+
+**Date:** 2026-09-15  
+**Target:** C-II, canonical full-core Type-II branch  
+**Depends on:** matched `g=0.0050` penetration matching/deep purity; relative-interior full-core KKT stress; triangle-free unit-contact angle separation; Section-124 fixed-scale loaded-hull flatness  
+**Claim class:** proof-only source-level theorem awaiting independent audit
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The matched tooth branch now contains a penetration matching
+
+\[
+M=\{xw\}
+\]
+
+of size
+
+\[
+|M|\ge ZD-o(D),
+\qquad
+Z=0.3948477885367828447\ldots .
+\]
+
+Here `x` is a shallow unloaded tooth apex and `w` is a distinct deep unloaded endpoint.
+Every `w` has no loaded contact neighbor and has internal contact degree between three
+and five.  Thus, besides its matched edge `wx`, it has at least two further internal
+contacts.
+
+KKT equilibrium gives more than that degree count.  The vector from `w` back to `x`
+has a fixed **outward** normal component.  Since `w` carries no diameter reaction, at
+least one of its other internal contacts must point inward.  Selecting one such
+balancing contact per `w` gives `|M|` directed internal incidences.
+
+At the fixed threshold
+
+\[
+\lambda={13\over25}=0.52,
+\]
+
+those incidences force one of two weight-free source structures:
+
+1. a new second layer of at least `|M|/4` distinct vertices at depth greater than
+   `sqrt(3)/2+13/25`; or
+2. at least `|M|/4` distinct internal contacts whose direction lies within
+   `arcsin(13/25)` of the local loaded-hull tangent.
+
+Numerically, at the current matched endpoint,
+
+\[
+\boxed{
+{|M|\over4D}
+\ge0.0987119471341957111\ldots-o(1).
+}
+\tag{SL2.1}
+
+This is the first forced continuation **past** the attachment-free deep matching
+layer.  It does not use a lower bound on any KKT coefficient.
+
+---
+
+## 1. Every deep endpoint has an inward balancing contact
+
+Fix one matching edge `xw` and orient the local normal `n_w` inward from the loaded
+base side associated with the tooth of `x`.  The shallow-tooth theorem gives
+
+\[
+(w-x)\cdot n_w>Y_{1/15}>0.709,
+\]
+
+so, viewed from `w`,
+
+\[
+(x-w)\cdot n_w<-0.709.
+\tag{SL2.2}
+
+The deep-purity theorem says every contact of `w` is internal to its unloaded
+positive-contact component.  In particular `w` has no diameter reaction.  In the
+relative-interior full-core KKT stress, every incident positive contact has coefficient
+strictly positive and equilibrium at `w` is
+
+\[
+\sum_{y:\,wy\in E_C}\alpha_{wy}(y-w)=0.
+\tag{SL2.3}
+
+Taking scalar product with `n_w`, the strictly negative matched contribution in
+(SL2.2) cannot be cancelled if every other contact has nonpositive inward component.
+Therefore there exists at least one contact
+
+\[
+wy(w)\ne wx
+\]
+
+with
+
+\[
+\boxed{(y(w)-w)\cdot n_w>0.}
+\tag{SL2.4}
+
+Choose one such balancing contact for every `w`.  Since the matching has distinct deep
+endpoints, this produces exactly `|M|` directed selected incidences.
+
+---
+
+## 2. Strong inward selections produce genuinely new deep vertices
+
+Call the selected incidence at `w` **strong** if
+
+\[
+(y-w)\cdot n_w\ge\lambda={13\over25}.
+\tag{SL2.5}
+
+The matched deep endpoint has depth
+
+\[
+\operatorname{depth}(w)>\sqrt3/2
+\]
+
+relative to its tooth-base support line.  Therefore a strong target satisfies
+
+\[
+\boxed{
+\operatorname{depth}(y)
+> {\sqrt3\over2}+{13\over25}
+=1.3860254037\ldots .
+}
+\tag{SL2.6}
+
+By contrast, every endpoint in the first two matching layers has, relative to its own
+nearby loaded support line,
+
+\[
+\operatorname{depth}(x)\le{\sqrt{59}\over30}=0.25603819\ldots,
+\]
+
+or
+
+\[
+\operatorname{depth}(w)
+<1+{\sqrt{59}\over30}+o(1)
+=1.25603819\ldots+o(1).
+\]
+
+A strong target is at contact distance one from `w`, so all relevant loaded base sides
+lie in one fixed Euclidean neighborhood.  Section-124 fixed-scale flatness makes their
+normals and support levels differ by `o(1)`.  Since the fixed gap
+
+\[
+{\sqrt3\over2}+{13\over25}
+-\left(1+{\sqrt{59}\over30}\right)
+>0.1299
+\tag{SL2.7}
+\]
+
+is positive, for all sufficiently large `D` a strong target belongs to neither first
+matching endpoint class `X` nor `W`.  It is a genuinely new deeper unloaded vertex.
+
+---
+
+## 3. One new deep vertex receives at most two strong selections
+
+Fix a source vertex `y` receiving strong selected contacts from distinct deep endpoints
+`w_1,...,w_r`.  Since `|y-w_i|=1` and every `w_i` is within bounded distance of its
+loaded base, all associated base sides lie in one fixed-scale boundary window.  Their
+inward normals agree with one common normal `n` up to `o(1)`.
+
+From (SL2.5), the contact directions viewed from `y` satisfy
+
+\[
+(w_i-y)\cdot n\le-{13\over25}+o(1).
+\tag{SL2.8}
+
+Thus all rays `yw_i` lie in an outward cone of asymptotic half-angle
+
+\[
+\arccos(13/25).
+\]
+
+Its total angular width is
+
+\[
+2\arccos(13/25)<{2\pi\over3}.
+\tag{SL2.9}
+
+Any two distinct unit-contact neighbors of `y` are mutually unit-separated, so their
+angular separation at `y` is at least `pi/3`.  Three such rays would require total span
+at least `2pi/3`, contradicting (SL2.9) for large `D`.  Hence
+
+\[
+\boxed{
+\text{one target vertex receives at most two strong selected incidences.}
+}
+\tag{SL2.10}
+
+If `S` is the number of strong selected incidences, they therefore reach at least
+
+\[
+\boxed{S/2}
+\tag{SL2.11}
+
+**distinct new second-layer vertices** satisfying (SL2.6).
+
+---
+
+## 4. Weak inward selections are near-tangent internal-shell contacts
+
+A selected incidence is **weak** when
+
+\[
+0<(y-w)\cdot n_w<{13\over25}.
+\tag{SL2.12}
+
+Because `|y-w|=1`, its angle from one of the two local tangent directions is less than
+
+\[
+\boxed{
+\theta_{sh}:=\arcsin(13/25)
+=0.54685095\ldots\text{ rad}
+=31.33\ldots^\circ.
+}
+\tag{SL2.13}
+
+Thus weak selections are genuine near-tangential internal contacts in the fixed-width
+unloaded shell.
+
+A physical contact edge has at most two endpoints in `W`, so it can support at most two
+selected weak incidences.  If `|M|-S` selections are weak, they therefore contain at
+least
+
+\[
+\boxed{(|M|-S)/2}
+\tag{SL2.14}
+
+**distinct** weak inward near-tangent internal edges.
+
+No directional coherence between far-separated hull windows is assumed; tangency is
+local to the associated tooth support direction.
+
+---
+
+## 5. The second-layer dichotomy
+
+Equations (SL2.11) and (SL2.14) give
+
+\[
+\max\left\{
+\#\text{new second-layer vertices},
+\#\text{weak near-tangent internal edges}
+\right\}
+\ge {1\over2}\max\{S,|M|-S\}
+\ge {|M|\over4}.
+\]
+
+Therefore every matched tooth survivor satisfies
+
+\[
+\boxed{
+\begin{array}{ll}
+\text{either}&
+\ge |M|/4\text{ distinct new unloaded vertices at depth }>
+\sqrt3/2+13/25,\\[1mm]
+\text{or}&
+\ge |M|/4\text{ distinct internal unit contacts within }
+\arcsin(13/25)\text{ of the local tangent.}
+\end{array}
+}
+\tag{SL2.15}
+
+At the matched `g=0.0050` endpoint, `|M|/D>=Z-o(1)` with
+
+\[
+Z=0.3948477885367828447\ldots,
+\]
+
+so both alternatives have the uniform coefficient in (SL2.1).
+
+---
+
+## 6. Frontier effect
+
+The tooth branch can no longer terminate at one penetration edge per shallow tooth.
+Every one of the `0.3948D` attachment-free deep matched endpoints must continue its
+contact network inward or tangentially:
+
+```text
+first penetration matching M: >=0.3948477 D
+
+then either
+    >=0.0987119 D genuinely new vertices beyond depth 1.386,
+or
+    >=0.0987119 D distinct near-tangent internal shell contacts.
+```
+
+The second alternative is a new inner-shell analogue of the outer long-side branch;
+the first gives a third vertex layer at a fixed extra depth.  Iterating the same idea
+would require controlling how the local support direction evolves after one leaves
+the fixed-width Section-124 window, so no iteration is asserted here.
+
+This theorem remains weight-free except for using positivity in the local KKT
+balance.  It does not lower-bound selected coefficients and does not yet produce a
+strict diameter descent.  C-II remains open.
+
+## 7. Scope audit
+
+- KKT is used only at deep unloaded endpoints, which carry no diameter reaction.
+- All incident contacts at a deep endpoint are internal by the deep-purity theorem.
+- The selected balancing contact may depend on the KKT stress; only its existence and
+  geometry are used afterward.
+- The target-multiplicity bound uses source unit separation and fixed-scale hull
+  flatness, not contact-degree bookkeeping alone.
+- The first/second-layer depth comparison is made only for vertices at bounded mutual
+  distance, so the Section-124 local support transfer is applicable.
+- The near-tangent branch counts distinct physical internal contact edges.
+- Contact-isolated source points remain in the source.
+- C-II and Level I remain open.

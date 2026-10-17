@@ -1,0 +1,202 @@
+# Target C: quantitative conditioning of the strong open-cell staircase
+
+Date: 2026-10-04; finite-isolation corollary added 2026-10-05
+Base main: 55ae751c8d599fb52611c0d77f9d3a17ac2990ad
+Additional source: `automation/target-c-open-cell-strong-scc-multishear-rigidity-2026-10-04-v2` at `bd70618a69dae3664cefeb1275bfedde771eed78`
+Status: proof-only Target C-II candidate; theorem-state authority unchanged.
+LEVEL I STATUS: STILL OPEN. C-II REMAINS OPEN.
+
+This note continues only the nonconstant open-witness-cell strong-SCC route on current main. It replaces the qualitative injectivity of the staircase diameter constraints by an explicit source-independent conditioning bound.
+
+No computation, verifier, or CI result is a proof premise.
+
+## 1. Setup
+
+Let the selected cuts be \(\tau_1,\ldots,\tau_m\), with unit train directions \(u_i\). Current main gives one common maximal staircase of nonempty actual diameter supports
+\[
+I_1\supsetneq I_2\supsetneq\cdots\supsetneq I_m,\qquad |I_j|=m-j+1.
+\tag{1}
+\]
+
+Every support type \(I_j\) has at least one physical actual-diameter row of each strict transverse sign. Choose one representative of each sign and denote their oriented diameter vectors by
+\[
+r_j^+,\qquad r_j^-,\qquad |r_j^\pm|=D.
+\tag{2}
+\]
+
+They are distinct actual diameter edges. Canonical C67 gives projective direction separation
+\[
+\alpha_j:=
+d_{\mathbb{RP}^1}(\operatorname{dir}r_j^+,\operatorname{dir}r_j^-)
+\ge \delta_D,\qquad
+\delta_D=2\arcsin {1\over 2D}.
+\tag{3}
+\]
+
+For an infinitesimal exact laminar multishear \(c=(c_1,\ldots,c_m)\), put
+\[
+Z_j(c):=\sum_{i\in I_j}c_i u_i.
+\tag{4}
+\]
+
+The squared-length first variation of a row \(h\) with support \(I_j\) is
+\[
+\ell_h(c)=2r_h\cdot JZ_j(c).
+\tag{5}
+\]
+
+## 2. A C67-conditioned two-row estimate
+
+Let \(p,q\) be two vectors of length \(D\), with projective line-angle \(\alpha\in(0,\pi/2]\). Then for every \(Z\in\mathbb R^2\),
+\[
+\max\{|p\cdot JZ|,\ |q\cdot JZ|\}
+\ge D\sin(\alpha/2)\,|Z|.
+\tag{6}
+\]
+
+After changing the sign of \(q\) if necessary, the ordinary angle between \(p/D\) and \(q/D\) is \(\alpha\). The smallest singular value of the two-row matrix with rows \(p/D\) and \(q/D\) is
+\[
+\sqrt{1-\cos\alpha}=\sqrt2\sin(\alpha/2).
+\]
+Passing from the Euclidean norm of the two outputs to their maximum divides by at most \(\sqrt2\), proving (6). The rotation \(J\) does not change \(|Z|\).
+
+Apply (6) to the pair (2). By (3),
+\[
+\begin{aligned}
+\max\{|\ell_{r_j^+}(c)|,|\ell_{r_j^-}(c)|\}
+&\ge 2D\sin(\delta_D/2)\,|Z_j(c)|\\
+&=|Z_j(c)|,
+\end{aligned}
+\tag{7}
+\]
+because
+\[
+2D\sin(\delta_D/2)
+=
+2D\sin\left(\arcsin{1\over2D}\right)
+=1.
+\tag{8}
+\]
+
+Thus every staircase support type comes with a two-row measurement whose conditioning constant is at least one:
+\[
+\boxed{
+\max\{|\ell_{r_j^+}(c)|,|\ell_{r_j^-}(c)|\}
+\ge |Z_j(c)|.
+}
+\tag{9}
+\]
+
+This bound is uniform in \(D\), in the width of the open phase cell, and in the KKT coefficients.
+
+## 3. The maximal staircase inverts with loss at most two
+
+Let \(\delta_j\) be the cut deleted from \(I_j\) to \(I_{j+1}\), and let \(I_m=\{\delta_m\}\). Put \(Z_{m+1}=0\). Then
+\[
+c_{\delta_j}u_{\delta_j}=Z_j-Z_{j+1}
+\qquad(1\le j\le m).
+\tag{10}
+\]
+
+Hence, if
+\[
+M(c):=\max_{1\le j\le m}|Z_j(c)|,
+\tag{11}
+\]
+then
+\[
+|c_{\delta_j}|
+\le |Z_j|+|Z_{j+1}|
+\le 2M(c)
+\tag{12}
+\]
+for \(j<m\), while \(|c_{\delta_m}|=|Z_m|\le M(c)\). Since \(\delta_1,\ldots,\delta_m\) is a permutation of the selected cuts,
+\[
+\boxed{
+M(c)\ge {1\over2}\|c\|_\infty.
+}
+\tag{13}
+\]
+
+Combining (9) and (13), among the \(2m\) chosen staircase representatives,
+\[
+\boxed{
+\max_h |\ell_h(c)|
+\ge {1\over2}\|c\|_\infty
+\ge {1\over2\sqrt m}\|c\|_2.
+}
+\tag{14}
+\]
+
+This is an explicit inverse bound for the full strong-SCC staircase measurement map. In particular, it is injective without a source-dependent compactness argument.
+
+## 4. Consequence for one-sided diameter descent
+
+Current main has the positive KKT cut-resultant identities
+\[
+A_i u_i=\sum_{h:\,i\in I_h}\beta_h r_h,
+\qquad A_i>0,\quad \beta_h>0.
+\tag{15}
+\]
+
+Multiplying by the laminar shear coefficients, rotating by \(J\), summing over cuts, and regrouping by diameter rows gives
+\[
+\sum_h\beta_h\ell_h(c)=0.
+\tag{16}
+\]
+
+Suppose every old actual diameter is first-order nonlengthening: \(\ell_h(c)\le0\) for all \(h\). Positivity of every \(\beta_h\) in (16) forces \(\ell_h(c)=0\) for all actual diameters. Equation (14) then forces \(c=0\).
+
+Therefore
+\[
+\boxed{
+c\ne0
+\Longrightarrow
+\text{some old actual diameter lengthens to first order and some old actual diameter shortens to first order.}
+}
+\tag{17}
+\]
+
+The new point over the qualitative tangent-cone statement is (14): the absolute first-order diameter response of the selected staircase rows cannot collapse faster than \(\|c\|_\infty/2\).
+
+There is deliberately no claimed uniform lower bound on the positive response alone. Equation (16) contains KKT weights with no proved source-independent positive lower bound, so the quantitatively large response supplied by (14) could a priori be on the shortening side while the compensating lengthening response has very small unweighted magnitude.
+
+### Source-dependent finite local isolation
+
+For each fixed source and normalized stress, define
+
+\[
+\gamma_+ := \min_{\|c\|_2=1}\max_h\ell_h(c),\qquad
+\gamma_- := \min_{\|c\|_2=1}\max_h(-\ell_h(c)).
+\]
+
+The one-sided conclusion above makes both functions strictly positive on the
+unit sphere: if every \(\ell_h(c)\le0\), positivity of all \(\beta_h\) and
+(16) force every \(\ell_h(c)=0\), and the injectivity in (14) forces \(c=0\).
+The reversed-sign argument is identical. Since the actual diameter set is
+finite, continuity and compactness give \(\gamma_+,\gamma_->0\). They are
+source-dependent; no source-independent lower bound is asserted.
+
+For the exact finite laminar shear parameter \(\theta\), each actual diameter
+has the Taylor expansion
+\[
+|r_h(\theta)|^2-D^2=\ell_h(\theta)+O(\|\theta\|_2^2),
+\]
+uniformly over the finite row set. Consequently every sufficiently small
+nonzero \(\theta\) has an old actual diameter that lengthens and an old one that
+shortens. In particular the origin is isolated among diameter-feasible points
+of this exact shear family. This is a local source-level conclusion only; it
+does not construct a nontrivial feasible endpoint or exclude contact-changing
+moves outside the family.
+
+## 5. Target-C effect
+
+The strong open-cell branch is quantitatively rigid inside the exact laminar shear coordinates:
+
+- the \(2m\) paired staircase rows define an injective first-variation map;
+- its inverse \(\ell_\infty\)-conditioning loss is at most two;
+- C67 supplies the uniform constant, so no compactness or unproved multiplier floor is needed.
+
+This does not close C-II. It removes a degeneracy in any finite contact-changing argument built around the staircase: a proposed shear cannot hide in an arbitrarily ill-conditioned first-order kernel. The remaining issue is one-sided. A closing argument must either obtain a lower bound on the lengthening side from source/contact currency, or leave the laminar shear family and construct a nonlocal contact-changing competitor. The separate condensation alternative remains the inverse-\(D\) inactive near-unit or near-diameter witness.
+
+Disposition: proof-only Target C candidate. C-II and Level I remain open.

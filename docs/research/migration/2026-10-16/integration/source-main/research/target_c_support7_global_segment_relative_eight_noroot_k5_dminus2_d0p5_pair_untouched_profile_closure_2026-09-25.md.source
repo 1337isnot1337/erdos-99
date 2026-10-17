@@ -1,0 +1,89 @@
+# Target C: pair-untouched closure in the eight-no-root k=5, D=-2, d_root=0, p=5 branch
+
+Date: 2026-09-25
+
+Status: proof-level closure of the pair-untouched part of the (s,t)=(3,1) profile. No new exhaustive computation is used. The proof reuses the already-executed exact m=3 certificate for D=-1, d_root=1, p=3.
+
+Inputs:
+
+- research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus2_d0p5_three_generator_reduction_2026-09-25.md
+- research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_three_support_closure_and_certificate_audit_2026-09-23.md
+- research/verify_target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_three_support_closure_2026_09_23.py
+- research/verify_target_c_support7_global_segment_relative_four_noroot_k2_2026_09_20.py
+
+## 1. Setup
+
+Take a hypothetical survivor in k=5, D=-2, d_root=0, p=5, (s,t)=(3,1) whose unique pair block b_* is untouched by all eight no-root cycles.
+
+The three-generator reduction already proves that:
+
+1. the three singleton blocks are touched and their singleton coefficient rows form a basis of the rank-three coefficient space P;
+2. the generalized weights satisfy (d_1,d_2,d_3) >= (3,4,6);
+3. no touched block is empty;
+4. every other touched root block is complete;
+5. the touched complete-root rows are linearly independent;
+6. because the pair is untouched, the support-boundary argument forces exactly three distinct four-vertex supports with multiplicity (3,3,2);
+7. every survivor must have external relation-rank increment exactly five over the complete-root relation span.
+
+## 2. Untouched pair neutrality
+
+In the exact quotient-coordinate model, the three root cycles in one block have local quotient vectors
+
+(1,0), (0,1), (1,-1).
+
+Every pair of these vectors is linearly independent.
+
+The pair state at b_* selects exactly two root cycles. Since b_* is untouched by all eight no-root cycles, every selected external cycle has quotient component (0,0) at b_*. Root cycles from all other blocks also have zero quotient component there.
+
+Project any linear relation among the selected cycles to the two-dimensional quotient component of b_*. Only the two selected pair-root cycles survive this projection. Their two quotient vectors are independent, so both coefficients are zero.
+
+Therefore the two selected pair-root rows occur in no nonzero relation. They impose no coefficient constraint on P, contribute no complete-root relation row, do not alter any external relation row, and do not alter the external relation-rank increment over the span of touched complete-root rows.
+
+Deleting this untouched pair leaves, for the relation-rank calculation, exactly a three-singleton touched state of the type enumerated by the existing p=3,m=3 verifier.
+
+## 3. Inclusion in the audited p=3,m=3 census
+
+The exact D=-1,d_root=1,p=3,m=3 verifier enumerates every eight-cycle state with:
+
+- support multiplicity (3,3,2);
+- exactly three touched singleton blocks;
+- every other touched block complete;
+- touched-complete root nullity at most one;
+- singleton coefficient rank three;
+- generalized weights at least (2,4,5).
+
+The present states are a subset:
+
+- touched-complete nullity is 0;
+- generalized weights satisfy the stronger (3,4,6) bounds;
+- the external geometry is the same m=3,(3,3,2) geometry;
+- Section 2 shows the untouched pair is invisible to the relation-rank calculation.
+
+The already-executed exact census reports external rank increment
+
+0 : 20,215
+1 :  2,419
+
+and no state with increment greater than one.
+
+Thus every present pair-untouched state has external rank increment at most one.
+
+## 4. Contradiction
+
+The D=-2,d_root=0,p=5 accounting requires external relation-rank increment exactly five for every survivor, but Section 3 gives at most one.
+
+Therefore no pair-untouched (s,t)=(3,1) state survives.
+
+Theorem. In the eight-no-root k=5,D=-2,d_root=0,p=5 branch, every surviving (s,t)=(3,1) state has its unique pair block touched by at least one no-root cycle.
+
+Equivalently, the full pair-untouched m=3,(3,3,2) subprofile is empty.
+
+## 5. Certificate status and remaining target
+
+No new finite computation is introduced here. The only computational input is the audited exact m=3 certificate already on main: 58,905 raw cycle sets, 32 S_7 orbits, 22,634 generalized-weight-admissible states, increment census {0:20215,1:2419}, maximum squared relation-row norm 70, and the checked Hadamard bound establishing exact rational ranks.
+
+The remaining (s,t)=(3,1) profile has the pair block touched, with 3 <= m <= 5; m=5 is restricted to the five tetrahedra of a common five-vertex set.
+
+The separate (s,t)=(5,0) five-singleton profile remains open. The other unresolved k=5 arithmetic branch is D=-1,(d_root,p)=(0,6).
+
+This note does not claim closure of the full D=-2,p=5 branch, the full k=5 layer, Target C-II, or Erdos Problem #99.

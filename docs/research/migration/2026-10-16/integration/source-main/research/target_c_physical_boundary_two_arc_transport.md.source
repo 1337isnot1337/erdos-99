@@ -1,0 +1,399 @@
+# Target C — physical-boundary two-arc transport
+
+**Date:** 2026-09-12  
+**Status:** proof-only research candidate; theorem state unchanged  
+**Level I / C-II:** open
+
+This note sharpens the proof-only Section 116 two-arc transport argument at the
+level of an edge-connected strict-rhombus component. Instead of routing train ends
+through the outer contact walk plus all nonquadrilateral-face cycles, it uses only the
+**actual physical boundary of the rhombus component**.
+
+The finite inequality is
+
+\[
+\boxed{
+ \rho(P-2\rho)
+ \ge
+ \sum_{R\in\mathcal R}
+ \left(4-4\cos{\varphi_R\over2}\right)\operatorname{area}(R)
+ > (4-2\sqrt3)A.
+}
+\tag{PB.1}
+\]
+
+Here `mathcal R` is one finite edge-connected component of strict unit-rhombus
+contact faces, `P` is its physical boundary-edge occurrence count including hole
+boundaries, `rho` is the Euclidean diameter of its vertex set, `A` is its total
+rhombus area, and `varphi_R in (pi/3,pi/2]` is the acute projective angle of `R`.
+
+The theorem also gives a globally injective version for the full strict-rhombus
+complex. It therefore resolves the *multiplicity* issue in proof-only Section 120 if
+one is willing to change the left-hand currency from the sum of harmonic-cell detours
+to actual physical rhombus boundary. A hostile comparison at the end shows that the
+resulting Type-II scalar is not yet a closure: the existing near-disk outer-boundary
+lower bound is stronger at leading order.
+
+No source point is deleted, moved, or reclassified.
+
+---
+
+## 1. Physical boundary and train preliminaries
+
+Let `mathcal R` be a nonempty finite edge-connected collection of bounded strict
+unit-rhombus faces in a straight-line plane contact graph. Two rhombi belong to the
+same component when they can be joined through shared full rhombus edges.
+
+Let
+
+- `P` be the number of physical boundary-edge occurrences of the union of the
+  rhombi, counting the outer boundary walk and every bounded hole boundary walk;
+- `A=sum_R area(R)`;
+- `rho=diam V(mathcal R)`.
+
+Canonical Section 89 records the elementary local train facts needed below:
+
+1. every local train has exactly two physical boundary ends, holes included;
+2. every physical boundary-edge occurrence is the end of exactly one local train;
+3. if `tau` has projective unit edge direction `u_tau`, then
+   \[
+   A_\tau:=\sum_{R\in\tau}\operatorname{area}(R)
+   \]
+   is exactly the transverse displacement between the midpoints of its two terminal
+   edges.
+
+Both terminal midpoints lie in `conv V(mathcal R)`, hence
+
+\[
+\boxed{A_\tau\le\rho.}
+\tag{PB.2}
+
+No simply-connectedness assumption is used.
+
+---
+
+## 2. Cut the physical outer boundary at a component diameter
+
+Choose component vertices `p_-,p_+` with
+
+\[
+|p_+-p_-|=\rho.
+\]
+
+A diameter endpoint of a finite point set is extreme in its convex hull: if `p_-`
+were a nontrivial convex combination of other component vertices, strict convexity of
+squared distance to `p_+` would contradict maximality. Thus both endpoints occur on
+the unbounded-face boundary of the rhombus union.
+
+Choose outer-boundary occurrences of them and cut the oriented outer boundary walk at
+those occurrences. The two resulting directed unit-edge routes have displacement
+vectors
+
+\[
+z:=p_+-p_-,\qquad -z.
+\]
+
+Put `q=z/rho`. Orient every bounded hole boundary so that the rhombic region stays on
+its left. Every hole route is closed and has displacement zero. Thus all physical
+boundary occurrences are partitioned into routes with hosts
+
+\[
+\boxed{q,-q,0.}
+\tag{PB.3}
+
+The two open routes have total chord length `2rho`, while the closed routes have chord
+length zero. Their total route excess is therefore exactly
+
+\[
+\boxed{E=P-2\rho.}
+\tag{PB.4}
+
+Repeated boundary vertices and pinches are harmless because this is boundary-
+**occurrence** bookkeeping.
+
+---
+
+## 3. Signed return on physical train ends
+
+For a train direction `u`, define
+
+\[
+\delta_q(u):=2-2|q\cdot u|.
+\tag{PB.5}
+
+For one directed unit-edge route with edge vectors `z_1,...,z_m`, displacement `z`,
+and host `q_z=z/|z|` when `z!=0` (or `q_z=0` when `z=0`), projection gives
+
+\[
+\sum_{j=1}^m(1-q_z\cdot z_j)=m-|z|.
+\tag{PB.6}
+
+The two end-edge orientations of a train are opposite. If its two ends are assigned
+hosts `q_1,q_2 in {q,-q,0}`, their combined contribution to (PB.6) is
+
+\[
+2-u\cdot(q_1-q_2)
+\]
+
+for one choice of sign of the projective direction `u`. Since
+
+\[
+|u\cdot(q_1-q_2)|\le2|q\cdot u|,
+\]
+
+the contribution is at least `delta_q(u)`. Every physical boundary occurrence is used
+once, so
+
+\[
+\boxed{E\ge\sum_\tau\delta_q(u_\tau).}
+\tag{PB.7}
+
+---
+
+## 4. Exact local two-direction cost
+
+Fix one strict rhombus `R`. Let `u,v` be its two projective train directions and
+`varphi in (pi/3,pi/2]` their acute projective angle. For every unit vector `q`,
+
+\[
+|q\cdot u|+|q\cdot v|\le2\cos(\varphi/2).
+\tag{PB.8}
+
+Indeed choose signs of `u,v` making their scalar products with `q` nonnegative. The
+angle between those representatives is either `varphi` or `pi-varphi`, the latter no
+smaller; the norm of their sum is therefore at most `2cos(varphi/2)`.
+
+Consequently
+
+\[
+\boxed{
+\delta_q(u)+\delta_q(v)
+\ge4-4\cos(\varphi/2).
+}
+\tag{PB.9}
+
+Triangle-freeness gives `varphi>pi/3`, so
+
+\[
+4-4\cos(\varphi/2)>4-2\sqrt3.
+\tag{PB.10}
+
+---
+
+## 5. Area transport proves the component theorem
+
+Multiply (PB.9) by `area(R)` and sum over rhombi. Each rhombus belongs to exactly two
+trains, hence
+
+\[
+\begin{aligned}
+&\sum_{R\in\mathcal R}
+ \left(4-4\cos{\varphi_R\over2}\right)\operatorname{area}(R)\\
+&\qquad\le
+\sum_\tau\delta_q(u_\tau)
+\sum_{R\in\tau}\operatorname{area}(R)
+=\sum_\tau\delta_q(u_\tau)A_\tau.
+\end{aligned}
+\tag{PB.11}
+
+Use (PB.2), (PB.7), and (PB.4):
+
+\[
+\sum_\tau\delta_q(u_\tau)A_\tau
+\le\rho\sum_\tau\delta_q(u_\tau)
+\le\rho E
+=\rho(P-2\rho).
+\tag{PB.12}
+
+This proves (PB.1).
+
+---
+
+## 6. Exact disconnected and global forms
+
+Let an arbitrary finite strict-rhombus complex have edge-connected components `Q_i`,
+with physical perimeters `P_i`, component diameters `rho_i`, and areas `A_i`. Suppose
+the whole complex lies in a convex set of diameter `d`. Put
+
+\[
+P_R:=\sum_iP_i,\qquad A_4:=\sum_iA_i.
+\]
+
+Each `P_i-2rho_i` is nonnegative and `rho_i<=d`. Summing (PB.1) gives
+
+\[
+\boxed{
+ d\left(P_R-2\sum_i\rho_i\right)
+ \ge
+ \sum_R\left(4-4\cos{\varphi_R\over2}\right)\operatorname{area}(R)
+ > (4-2\sqrt3)A_4.
+}
+\tag{PB.13}
+
+Now apply this to the **full strict-rhombus complex of the canonical positive-contact
+core**. Its convex ambient force hull has diameter exactly the full source diameter
+`D`, so `d=D`. The physical boundary is globally occurrence-injective. Every physical
+rhombus-boundary edge has on its other side either the outer contact face or one
+bounded nonquadrilateral contact face. Therefore, with canonical global notation,
+
+\[
+P_R\le b+(4f+Q).
+\tag{PB.14}
+
+The exact post-ZF face ledger is
+
+\[
+b+Q=2(h-s_Z).
+\tag{PB.15}
+
+Combining (PB.13)--(PB.15) yields the finite source-level currency
+
+\[
+\boxed{
+ h-s_Z+2f-\sum_i\rho_i
+ > (2-\sqrt3){A_4\over D}.
+}
+\tag{PB.16}
+
+This is the globally injective counterpart that the harmonic-cell sum in proof-only
+Section 120 does not provide. No physical boundary occurrence can pay twice in
+(PB.16).
+
+---
+
+## 7. Area saturation forces the component spans to cover a diameter projection
+
+The subtraction `sum rho_i` in (PB.16) is not disposable. In the Type-II branch it
+has a useful lower bound.
+
+### Lemma PB.1 — projection coverage
+
+Let `K_D` be convex planar bodies with
+
+\[
+\operatorname{diam}(K_D)=d_D\le D,
+\qquad
+\operatorname{area}(K_D)\ge cD^2
+\]
+
+for fixed `c>0`. Let `U_D subset K_D` be a union of connected compact pieces
+`U_{D,i}` with
+
+\[
+\operatorname{area}(K_D\setminus U_D)=o(D^2).
+\]
+
+If `rho_{D,i}=diam(U_{D,i})`, then
+
+\[
+\boxed{\sum_i\rho_{D,i}\ge d_D-o(D).}
+\tag{PB.17}
+
+#### Proof
+
+Project onto a diameter direction and translate the projection interval to `[0,d_D]`.
+Let `f(x)` be the perpendicular section length. It is concave. If `H=max f`, then
+`H>=area(K_D)/d_D>=cD`.
+
+Let `M` be the set of projection coordinates missed by `U_D`, with measure `m`, and
+choose `x_0` with `f(x_0)=H`. Concavity gives tent lower bounds on both sides of
+`x_0`. If `M` has measures `m_-` and `m_+` on those sides, the smallest possible
+integrals of the tent bounds give
+
+\[
+\int_Mf(x)\,dx
+\ge {H\over2D}(m_-^2+m_+^2)
+\ge {H\over4D}m^2
+\ge {c\over4}m^2.
+\]
+
+The left side is at most `area(K_D\setminus U_D)=o(D^2)`, so `m=o(D)`.
+Each connected piece has an interval as projection, whose length is at most its
+diameter. Hence
+
+\[
+\sum_i\rho_{D,i}
+\ge |proj(U_D)|
+=d_D-m=d_D-o(D).
+\]
+
+`\square`
+
+In Type II, take `K_D=F` and `U_D` to be the union of all strict rhombi. Canonical
+Section 80 gives
+
+\[
+area(F)/D^2\to\pi/4,
+\qquad
+A_4=area(F)-o(D^2),
+\]
+
+and `diam(F)=D`. Thus
+
+\[
+\boxed{\sum_i\rho_i\ge D-o(D).}
+\tag{PB.18}
+
+Substitution in (PB.16) gives
+
+\[
+\boxed{
+ h-s_Z+2f
+ \ge
+ \left(1+{\pi\over4}(2-\sqrt3)-o(1)\right)D.
+}
+\tag{PB.19}
+
+The new coefficient beyond the unit component-span term is
+
+\[
+{\pi\over4}(2-\sqrt3)=0.2104\ldots .
+\]
+
+---
+
+## 8. Hostile comparison: why this does not close Type II
+
+Equation (PB.16) is a genuinely globally injective transport statement, but (PB.19)
+is **not** a new scalar contradiction. In Type II, near-isodiametric area already
+forces
+
+\[
+per(F)=\pi D-o(D).
+\]
+
+The outer contact walk has length `b>=per(F)`, while (PB.15) gives
+
+\[
+h-s_Z={b+Q\over2}\ge{\pi\over2}D-o(D),
+\]
+
+whose coefficient `pi/2=1.5707...` is stronger than the `1.2104...` right side of
+(PB.19), even before adding `2f`.
+
+So the physical-boundary theorem resolves one bookkeeping problem but does not by
+itself close C-II. A successful use must keep more than the final scalar collapse,
+for example the angle-sensitive integrand in (PB.1), componentwise diameter data, or
+a variational consequence of positive physical detour.
+
+This also explains why simply replacing Section 120's aggregate local detour by a
+globally injective physical boundary is insufficient. The source has enough ordinary
+outer-boundary currency to pay the universal return constant.
+
+---
+
+## 9. Dependency and source-point audit
+
+- Canonical Section 89 is used only for the elementary train facts: two physical ends
+  per train and exact transverse area span.
+- The global boundary classification and `b+Q=2(h-s_Z)` are canonical post-ZF face
+  ledgers.
+- Holes are retained through zero-host closed physical boundary walks.
+- Repeated outer-boundary vertices are handled by occurrences.
+- Contact-isolated source points are untouched. The theorem concerns a rhombus
+  subcomplex of the nonisolated positive-contact core and never extends ZR/ZF to
+  isolated coordinates.
+- No KKT coefficient floor, Fox--Pach constant, Reuleaux-cap containment, Eppstein
+  near-equality theorem, or source deletion is used.
+- The theorem-state manifest is intentionally unchanged.
+

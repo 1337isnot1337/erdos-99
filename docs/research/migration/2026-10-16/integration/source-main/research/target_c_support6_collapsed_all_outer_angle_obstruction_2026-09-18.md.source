@@ -1,0 +1,62 @@
+# Target C-II — one certified collapsed chamber cannot use a common all-outer host
+
+**Date:** 2026-09-18  
+**Status:** proved candidate; chamber-local global exclusion, theorem-state authority unchanged  
+**Scope:** the certified local collapsed support-six chamber, under the subcase in which
+all six parallel outside trains terminate at one common outer host  
+**Certificate:** `research/verify_target_c_support6_collapsed_all_outer_angle_obstruction_2026_09_18.py`
+
+The exact local realization certificate gives one strict collapsed support-six chamber
+with twelve internal train directions. A common-host all-outer attachment has an
+additional global topological consequence: the six parallel outside trains are pairwise
+noncrossing, so their six pentagon endpoints have one cyclic order. Every pair of
+internally disjoint endpoint chords that alternates in that order must cross.
+
+The exact interval certificate exhausts all `6!` cyclic orders. For every order it finds
+an alternating pair of internal trains whose projective direction gap is strictly less
+than `pi/3` throughout the certified local angle box. Such a pair cannot cross in a
+strict unit rhombus, by the audited train-crossing angle theorem. Therefore
+
+\[
+\boxed{
+\text{the certified collapsed chamber has no common all-outer-host realization.}
+}
+\]
+
+This is not an exclusion of the collapsed branch. It leaves open other points of the
+two-parameter local family and all attachments to multiple activated hosts. It is a
+global chamber reduction: any realization in this certified chamber must use at least
+two distinct outside/activated host destinations.
+
+## Exact finite argument
+
+Use the twelve edge-angle intervals from the local contraction certificate. For a fixed
+cyclic order of the six pentagon hosts, two internally disjoint trains with alternating
+endpoints must cross as proper chords. The interval verifier checks every such pair.
+For each of the 720 host orders, it records one alternating pair `(e,f)` and proves
+
+\[
+\operatorname{dist}_{\mathbb R/\pi\mathbb Z}(\theta_e,\theta_f)<\frac\pi3,
+\]
+
+using rational Taylor/Machin bounds for `pi` and rational interval arithmetic for the
+angle box. The train-crossing theorem requires the opposite strict inequality
+`dist > pi/3`, so the order is impossible. Since every host order is rejected, the
+common-host subcase is excluded for the entire certified box.
+
+The verifier does not assume that the local auxiliary genus-two side pairing is the
+physical source. It uses only the common-host noncrossing consequence and the audited
+proper-crossing angle threshold.
+
+**Dependency chain:**
+
+\[
+\text{certified local chamber}
+\to\text{parallel common-host trains are noncrossing}
+\to\text{720 endpoint orders}
+\to\text{angle-ineligible alternating pair in each order}
+\to\text{common all-outer host excluded}.
+\]
+
+**Disposition:** exact chamber-local/global attachment exclusion; no theorem-state
+change; positive-slack collapsed branch and C-II remain open.

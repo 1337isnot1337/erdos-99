@@ -1,0 +1,272 @@
+from __future__ import annotations
+
+import subprocess
+import tempfile
+import unittest
+from pathlib import Path
+
+from tools import run_theorem_certificates as runner
+
+
+def fixture_state() -> dict:
+    return {
+        "targets": {
+            "target-test": {
+                "current_canonical_entries": [
+                    {
+                        "id": "TEST-CANONICAL",
+                        "status": "canonical",
+                        "report": "docs/audits/canonical-proof.md",
+                        "audit": "docs/audits/canonical-audit.md",
+                        "certificates": ["research/canonical_check.py"],
+                    }
+                ],
+                "audited_working": [
+                    {
+                        "id": "TEST-AUDITED",
+                        "status": "audited-working",
+                        "report": "docs/reports/audited-candidate.md",
+                        "audit": "docs/reports/audited-review.md",
+                        "certificates": ["research/audited_check.py"],
+                    }
+                ],
+                "regressions": [
+                    {
+                        "id": "TEST-REGRESSION",
+                        "status": "regression",
+                        "report": "docs/reports/regression.md",
+                        "certificates": ["research/regression_check.py"],
+                    }
+                ],
+                "rejected_or_overridden": [],
+            }
+        }
+    }
+
+
+class CertificateSelectionTests(unittest.TestCase):
+    def test_missing_diff_fails_closed_to_all(self):
+        selection = runner.select_certificates(fixture_state(), None)
+        self.assertIsNone(selection.paths)
+        self.assertIn("fail closed", selection.reason)
+
+    def test_empty_diff_selects_none(self):
+        selection = runner.select_certificates(fixture_state(), set())
+        self.assertEqual(selection.paths, ())
+
+    def test_unrelated_documentation_skips_certificates(self):
+        selection = runner.select_certificates(fixture_state(), {"CONTRIBUTING.md"})
+        self.assertEqual(selection.paths, ())
+
+    def test_theorem_manifest_change_runs_everything(self):
+        selection = runner.select_certificates(
+            fixture_state(), {"docs/state/theorem-state.yaml"}
+        )
+        self.assertIsNone(selection.paths)
+
+    def test_active_route_change_runs_everything(self):
+        selection = runner.select_certificates(
+            fixture_state(), {"docs/targets/target-c/README.md"}
+        )
+        self.assertIsNone(selection.paths)
+
+    def test_canonical_source_change_runs_everything(self):
+        selection = runner.select_certificates(
+            fixture_state(), {"docs/audits/canonical-proof.md"}
+        )
+        self.assertIsNone(selection.paths)
+
+    def test_canonical_certificate_change_runs_everything(self):
+        selection = runner.select_certificates(
+            fixture_state(), {"research/canonical_check.py"}
+        )
+        self.assertIsNone(selection.paths)
+
+    def test_noncanonical_certificate_change_fails_closed(self):
+        selection = runner.select_certificates(
+            fixture_state(), {"research/audited_check.py"}
+        )
+        self.assertIsNone(selection.paths)
+
+    def test_noncanonical_report_change_fails_closed(self):
+        selection = runner.select_certificates(
+            fixture_state(), {"docs/reports/audited-candidate.md"}
+        )
+        self.assertIsNone(selection.paths)
+
+    def test_ci_configuration_change_runs_everything(self):
+        selection = runner.select_certificates(
+            fixture_state(), {".github/workflows/theorem-state.yml"}
+        )
+        self.assertIsNone(selection.paths)
+
+    def test_direct_transitive_dynamic_and_data_inputs_fail_closed(self):
+        # The registered strict-root script imports the unregistered corner
+        # helper; imported helpers can themselves import or read other files.
+        paths = [
+            "research/verify_target_c_three_direction_corner_barrier_2026_10_06.py",
+            "research/nested/helper.py", "research/imported-dynamically.py",
+            "research/inputs/packet.json", "research/inputs/packet.csv",
+            "unknown-config.toml", "docs/launch/machine-input.json",
+        ]
+        for path in paths:
+            with self.subTest(path=path):
+                self.assertIsNone(runner.select_certificates(fixture_state(), {path}).paths)
+
+    def test_real_registered_importer_and_unregistered_helper(self):
+        import yaml
+        root = Path(__file__).resolve().parents[1]
+        state = yaml.safe_load((root / "docs/state/theorem-state.yaml").read_text())
+        importer = "research/verify_target_c_one_deficit_strict_root_packet_2026_10_07.py"
+        helper = "research/verify_target_c_three_direction_corner_barrier_2026_10_06.py"
+        self.assertIn(importer, runner.registered_certificates(state))
+        self.assertIn(Path(helper).stem, (root / importer).read_text())
+        selection = runner.select_certificates(state, {helper})
+        self.assertIsNone(selection.paths)
+
+    def test_canonical_source_cannot_hide_in_prose_allowlist(self):
+        state = fixture_state()
+        state["targets"]["target-test"]["current_canonical_entries"][0]["report"] = "README.md"
+        self.assertIsNone(runner.select_certificates(state, {"README.md"}).paths)
+
+    def test_git_diff_keeps_deleted_paths_for_safe_selection(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            subprocess.run(["git", "init", "-q"], cwd=root, check=True)
+            subprocess.run(["git", "config", "user.email", "test@example.invalid"], cwd=root, check=True)
+            subprocess.run(["git", "config", "user.name", "Certificate Selection Test"], cwd=root, check=True)
+            old = root / "docs/audits/canonical-proof.md"
+            old.parent.mkdir(parents=True)
+            old.write_text("old\n", encoding="utf-8")
+            subprocess.run(["git", "add", "."], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "base"], cwd=root, check=True)
+
+            old.unlink()
+            (root / "new-name.md").write_text("new\n", encoding="utf-8")
+            subprocess.run(["git", "add", "-A"], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "rename as delete and add"], cwd=root, check=True)
+
+            changed, error = runner.changed_paths_from_git(root, "HEAD~1")
+            self.assertIsNone(error)
+            self.assertEqual(changed, {"docs/audits/canonical-proof.md", "new-name.md"})
+
+    def test_unavailable_git_diff_selects_all(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            changed, error = runner.changed_paths_from_git(Path(tmp), "missing-base")
+            self.assertIsNone(changed)
+            self.assertIsNotNone(error)
+            selection = runner.select_certificates(fixture_state(), changed)
+            self.assertIsNone(selection.paths)
+
+
+class GitRangeTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.git("init", "-q", "-b", "main")
+        self.git("config", "user.email", "test@example.invalid")
+        self.git("config", "user.name", "Range Test")
+        self.commit("README.md", "base")
+        self.base = self.git("rev-parse", "HEAD").strip()
+
+    def git(self, *args):
+        return subprocess.check_output(["git", *args], cwd=self.root, stderr=subprocess.PIPE).decode()
+
+    def commit(self, path, value):
+        p = self.root / path
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(value + "\n")
+        self.git("add", "-A")
+        self.git("commit", "-qm", value)
+
+    def event(self, **extra):
+        return {"before": self.base, "after": self.git("rev-parse", "HEAD").strip(),
+                "forced": False, **extra}
+
+    def test_docs_push_skips(self):
+        self.commit("README.md", "docs")
+        paths, err = runner.changed_paths_from_event(self.root, self.event())
+        self.assertIsNone(err)
+        self.assertEqual(runner.select_certificates(fixture_state(), paths).paths, ())
+
+    def test_merge_push_includes_side_branch_and_previous_commits(self):
+        self.git("checkout", "-qb", "side")
+        self.commit("research/transitive.py", "helper")
+        self.git("checkout", "main")
+        self.commit("docs/launch/PILOT_PLAN.md", "docs")
+        self.git("merge", "--no-ff", "side", "-m", "merge")
+        paths, err = runner.changed_paths_from_event(self.root, self.event())
+        self.assertIsNone(err)
+        self.assertEqual(paths, {"research/transitive.py", "docs/launch/PILOT_PLAN.md"})
+        self.assertIsNone(runner.select_certificates(fixture_state(), paths).paths)
+
+    def test_rename_and_delete_capture_both_sides(self):
+        self.commit("research/helper.py", "input")
+        self.base = self.git("rev-parse", "HEAD").strip()
+        self.git("mv", "research/helper.py", "renamed.md")
+        self.git("rm", "README.md")
+        self.git("commit", "-qm", "rename and delete")
+        paths, err = runner.changed_paths_from_event(self.root, self.event())
+        self.assertIsNone(err)
+        self.assertEqual(paths, {"research/helper.py", "renamed.md", "README.md"})
+        self.assertIsNone(runner.select_certificates(fixture_state(), paths).paths)
+
+    def test_nul_delimited_newline_filename(self):
+        self.commit("research/input\nREADME.md", "unusual")
+        paths, err = runner.changed_paths_from_event(self.root, self.event())
+        self.assertIsNone(err)
+        self.assertEqual(paths, {"research/input\nREADME.md"})
+
+    def test_force_missing_and_mismatched_metadata_fail_closed(self):
+        self.commit("README.md", "docs")
+        for event in [self.event(forced=True), self.event(before="0"*40),
+                      self.event(before="f"*40), self.event(after=self.base), {},
+                      {"before": self.base, "after": self.git("rev-parse", "HEAD").strip()}]:
+            with self.subTest(event=event):
+                paths, error = runner.changed_paths_from_event(self.root, event)
+                self.assertIsNone(paths)
+                self.assertIsNotNone(error)
+
+    def test_nonancestor_push_fails_closed_even_when_not_marked_forced(self):
+        self.git("checkout", "-qb", "diverged")
+        self.commit("research/helper.py", "helper")
+        before = self.git("rev-parse", "HEAD").strip()
+        self.git("checkout", "main")
+        self.commit("README.md", "docs")
+        paths, error = runner.changed_paths_from_event(self.root, self.event(before=before))
+        self.assertIsNone(paths)
+        self.assertIsNotNone(error)
+
+    def test_pr_diff_and_dirty_tree(self):
+        self.commit("README.md", "docs")
+        event = {"pull_request": {"base": {"sha": self.base},
+                                  "head": {"sha": self.git("rev-parse", "HEAD").strip()}}}
+        self.assertEqual(runner.changed_paths_from_event(self.root, event)[0], {"README.md"})
+        (self.root / "untracked.json").write_text("{}")
+        self.assertIsNone(runner.changed_paths_from_event(self.root, event)[0])
+
+    def test_replacement_base_cannot_hide_research_change(self):
+        self.commit("research/helper.py", "new verifier input")
+        event = self.event()
+        tree = self.git("rev-parse", "HEAD^{tree}").strip()
+        replacement = self.git("commit-tree", tree, "-m", "replacement base tree").strip()
+        self.git("replace", self.base, replacement)
+        paths, err = runner.changed_paths_from_event(self.root, event)
+        self.assertIsNone(err)
+        self.assertEqual(paths, {"research/helper.py"})
+        self.assertIsNone(runner.select_certificates(fixture_state(), paths).paths)
+        # The same immutable range must be used for PR merge-base selection.
+        paths, err = runner.changed_paths_from_git(self.root, self.base)
+        self.assertIsNone(err)
+        self.assertEqual(paths, {"research/helper.py"})
+
+    def test_shallow_history_fails_closed(self):
+        self.commit("README.md", "docs")
+        shallow = self.root / "clone"
+        subprocess.run(["git", "clone", "-q", "--depth", "1", self.root.as_uri(), str(shallow)], check=True)
+        self.assertIsNone(runner.changed_paths_from_event(shallow, self.event())[0])
+
+
+if __name__ == "__main__":
+    unittest.main()

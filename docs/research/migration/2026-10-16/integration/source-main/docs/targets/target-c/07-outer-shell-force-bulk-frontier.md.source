@@ -1,0 +1,93 @@
+# Target C — outer-shell force-bulk frontier after C51-C52
+
+> **Correction (2026-09-09):** The claimed source-wide transport proof used false
+> isolated-point localization; see the
+> [exact audit](../../reports/target_c_force_bulk_and_correction_audit_2026-09-08.md).
+> The outer-face population remains an open global-capacity obligation.
+
+**LEVEL I STATUS: STILL OPEN.**
+
+C48-C52 reduce the source-capacity gap from an arbitrary KKT-invisible population to the outer contact face alone.
+
+## 1. Force-visible core and bounded-face population
+
+C48 gives the force-visible core estimate
+
+`m <= Delta_2 D^2 -(2/sqrt3)G + O(D)`.
+
+C49-C50 first localize contact-isolated points to the outer contact face or bounded defect faces.
+
+C51 strengthens the bounded-face geometry: every bounded face of the fully force-visible contact graph has a simple strictly convex unit-edge boundary cycle. The proof uses C3 finite contraction rigidity to force every articulation branch to contain a loaded hull vertex, excluding hidden articulation branches behind bounded faces, and then uses positive equilibrium/C26 to exclude reflex face angles.
+
+## 2. C52 absorbs every bounded-face rattler
+
+Let
+
+- `Z_def` be the contact-isolated source points in bounded faces;
+- `B` be the outer contact-face walk length;
+- `A_bnd` be the total bounded-face area.
+
+Facewise Oler on each convex bounded face gives the exact cancellation
+
+`(sqrt3/2)(m+Z_def-1) <= A_bnd +(sqrt3/4)B`.
+
+Hence
+
+`m+Z_def <= (2/sqrt3)A_bnd+B/2+1`.
+
+Since `A_bnd<=area(F)<=pi D^2/4` and C49 has `B<=4|B_+|-4<=4pi D-4`,
+
+`m+Z_def <= Delta_2 D^2+2pi D-1`.
+
+Thus a giant bounded defect cavity no longer represents a distinct force-bulk obstruction. Its isolated population is already charged by the same optimal-density area term and only an outer-boundary correction.
+
+## 3. Sole remaining invisible phase
+
+Write
+
+`n-m = Z_def+Z_out`,
+
+where `Z_out` is the number of contact-isolated source points in the outer contact face.
+
+C52 gives
+
+`n-Z_out <= Delta_2 D^2+O(D)`.
+
+Define the outer-area gap inside the force hull
+
+`H=area(F)-A_bnd>=0`.
+
+The sharper form is
+
+`m+Z_def <= (2/sqrt3)(area(F)-H)+B/2+1`.
+
+Therefore the only KKT-invisible population capable of compensating the outer-area deficit `H` is the outer-face population itself.
+
+## 4. Exact next target
+
+The force-bulk program is now:
+
+> **Outer-shell force-bulk theorem.** Bound `Z_out` sharply enough in terms of
+> the outer-face geometry, `H`, and the source hull so that C52 yields a
+> source-wide capacity contradiction. The alternative `n-m=O(D)` still needs
+> a valid proof and would in turn require an additional exact area-gap closure.
+
+The hardest live regression is a shell-like force-visible core of diameter `D` with `Theta(D^2)` contact-isolated points in its outer face. Local KKT rigidity alone cannot exclude it; the next theorem must use global container/saturation geometry.
+
+## 5. Useful phase split
+
+Outer-face isolated points can lie:
+
+1. inside the force hull `F` but outside the union of bounded contact faces; or
+2. outside `F` but inside the full source hull / diameter insertion body.
+
+The first population should be charged against the area gap `H`. The second population is universally KKT-invisible and should be attacked using diametral hull saturation and the one-point insertion-body machinery.
+
+A source-wide theorem can therefore split the outer-shell problem into an **internal outer-face area** term and an **external force-hull** term.
+
+## Binding cautions
+
+- C52 does not itself prove the sharper area-gap contradiction or `n-m=O(D)`.
+- A regular-shell-type core with a large invisible population remains the principal regression.
+- Leading-density arguments alone are insufficient; triangle-free configurations can approach `Delta_2` arbitrarily closely.
+- The external outer-face population may lie outside `F`, so an estimate confined to `area(F)` is not enough.

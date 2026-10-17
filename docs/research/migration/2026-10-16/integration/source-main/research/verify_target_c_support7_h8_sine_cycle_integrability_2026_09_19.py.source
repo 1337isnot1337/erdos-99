@@ -1,0 +1,159 @@
+#!/usr/bin/env python3
+"""Exact graph certificate for support-seven H8 sine-cycle integrability.
+
+This script checks the graph-theoretic part of the reduction: each degree-pure
+support-seven relation graph has 7 vertices, 14 edges, is connected, and has an
+8-dimensional cycle space. It constructs a deterministic fundamental-cycle
+basis for both complement types and verifies exact rank over Q.
+
+The law-of-sines derivation of the multiplicative cycle equations is analytic
+and is given in the companion note.
+"""
+
+from fractions import Fraction
+from itertools import combinations
+
+VERTICES = tuple(range(1, 8))
+
+
+def edge(a, b):
+    return tuple(sorted((a, b)))
+
+
+def cycle_edges(cycle):
+    return {
+        edge(cycle[i], cycle[(i + 1) % len(cycle)])
+        for i in range(len(cycle))
+    }
+
+
+def relation_from_missing(missing):
+    return {
+        edge(a, b)
+        for a, b in combinations(VERTICES, 2)
+        if edge(a, b) not in missing
+    }
+
+
+def spanning_tree(graph):
+    adjacency = {v: [] for v in VERTICES}
+    for a, b in graph:
+        adjacency[a].append(b)
+        adjacency[b].append(a)
+    for v in adjacency:
+        adjacency[v].sort()
+
+    root = VERTICES[0]
+    seen = {root}
+    queue = [root]
+    tree = set()
+    while queue:
+        v = queue.pop(0)
+        for w in adjacency[v]:
+            if w in seen:
+                continue
+            seen.add(w)
+            queue.append(w)
+            tree.add(edge(v, w))
+    assert seen == set(VERTICES)
+    assert len(tree) == len(VERTICES) - 1
+    return tree
+
+
+def tree_path(tree, start, goal):
+    adjacency = {v: [] for v in VERTICES}
+    for a, b in tree:
+        adjacency[a].append(b)
+        adjacency[b].append(a)
+    stack = [start]
+    parent = {start: None}
+    while stack:
+        v = stack.pop()
+        if v == goal:
+            break
+        for w in adjacency[v]:
+            if w not in parent:
+                parent[w] = v
+                stack.append(w)
+    assert goal in parent
+    path = [goal]
+    while path[-1] != start:
+        path.append(parent[path[-1]])
+    path.reverse()
+    return path
+
+
+def fundamental_cycle_vector(graph_edges, tree, chord):
+    # Orient the chord from its smaller endpoint to its larger endpoint, then
+    # return through the tree from larger to smaller. Coefficients are in the
+    # fixed min->max orientation of each graph edge.
+    a, b = chord
+    walk = [(a, b)]
+    path = tree_path(tree, b, a)
+    walk.extend(zip(path, path[1:]))
+    index = {e: i for i, e in enumerate(graph_edges)}
+    row = [Fraction(0) for _ in graph_edges]
+    for u, v in walk:
+        e = edge(u, v)
+        row[index[e]] += 1 if (u, v) == e else -1
+    return row
+
+
+def rank_q(matrix):
+    A = [row[:] for row in matrix]
+    if not A:
+        return 0
+    rows = len(A)
+    cols = len(A[0])
+    r = 0
+    for c in range(cols):
+        pivot = next((i for i in range(r, rows) if A[i][c] != 0), None)
+        if pivot is None:
+            continue
+        A[r], A[pivot] = A[pivot], A[r]
+        p = A[r][c]
+        A[r] = [x / p for x in A[r]]
+        for i in range(rows):
+            if i == r or A[i][c] == 0:
+                continue
+            q = A[i][c]
+            A[i] = [x - q * y for x, y in zip(A[i], A[r])]
+        r += 1
+        if r == rows:
+            break
+    return r
+
+
+TYPES = {
+    "C7": cycle_edges((1, 2, 3, 4, 5, 6, 7)),
+    "C3+C4": cycle_edges((1, 2, 3)) | cycle_edges((4, 5, 6, 7)),
+}
+
+for name, missing in TYPES.items():
+    relation = relation_from_missing(missing)
+    assert len(missing) == 7
+    assert len(relation) == 14
+    assert all(sum(v in e for e in relation) == 4 for v in VERTICES)
+
+    tree = spanning_tree(relation)
+    chords = sorted(relation - tree)
+    assert len(chords) == 14 - 7 + 1 == 8
+
+    graph_edges = sorted(relation)
+    cycles = [
+        fundamental_cycle_vector(graph_edges, tree, chord)
+        for chord in chords
+    ]
+    assert rank_q(cycles) == 8
+
+    # Every relation edge ij occurs in the reciprocal ground triangle 0ij:
+    # support-seven missing edges lie entirely among non-ground vertices, so
+    # both ground edges 0i and 0j are always present.
+    assert all(a in VERTICES and b in VERTICES for a, b in relation)
+
+    print(
+        f"{name}: |R|=14, spanning tree=6, "
+        f"fundamental cycles=8, rank_Q=8"
+    )
+
+print("PASS: support-seven H8 relation cycle-space dimension is exactly eight")

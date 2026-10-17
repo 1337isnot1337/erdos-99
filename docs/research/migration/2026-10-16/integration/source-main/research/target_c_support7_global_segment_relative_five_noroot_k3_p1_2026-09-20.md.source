@@ -1,0 +1,139 @@
+# Target C: five-no-root k=3, p=1 rank-density audit
+
+Date: 2026-09-20
+
+Status: exact finite result for one subcase of the five-no-root four-cycle density problem. This does not reduce the current 3,874-state generic-H6 endpoint and does not close C-II.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_five_noroot_k3_p1_2026_09_20.py`
+
+## Statement
+
+Keep the relative four-cycle notation from the preceding audits and put
+
+`delta(A) = r_M(A) - r_Q(A)`.
+
+The preceding five-no-root results closed
+
+- `k=2,p=0`,
+- `k=3,p=0`, and
+- `k=5,p<=9`.
+
+The new verifier also closes
+
+> `k=3,p=1`.
+
+Therefore the unresolved five-no-root regimes are now exactly
+
+- `k=3,p=2,3`, and
+- `k=4,p<=6`.
+
+## Reduction to the p=0 deficiency-one states
+
+For `k=3`, fix the rank-two coefficient-constraint space `P`. Let the canonical `p=0` state empty every touched root-0 quotient block whose empty local constraint `E_b` is contained in `P`, and complete every other touched block.
+
+Write `C` for its complete-block set, `c=|C|`, `r` for the rank in `T` of the complete-block relations, and
+
+`d = c-r`.
+
+The `p=0` audit proved `d>=1` for every canonical state with `c<=13`; states with `c>=14` are already safe by `dim(T)=15`.
+
+A canonical `p=1` state selects one singleton root-0 row at one touched block. There are two cases.
+
+### Singleton in a p=0-empty block
+
+The complete set stays equal to `C`.
+
+The coefficient nullspace has dimension three, so
+
+`delta <= r+3`.
+
+Because `d>=1`,
+
+`|A|-3 delta(A) >= 6 + 3c - 3(r+3) = 3d-3 >= 0`.
+
+Thus every such state is safe without further computation.
+
+### Singleton replacing a p=0-complete block
+
+Suppose the singleton is selected at `b in C`. The new complete set is
+
+`C' = C - {b}`.
+
+If `d>=2`, then
+
+`rank(C') <= r <= c-2 = |C'|-1`,
+
+so `C'` is still dependent and the same bound gives nonnegative defect.
+
+Therefore only canonical `p=0` states with
+
+`d=1`
+
+can possibly matter.
+
+The exact `p=0` audit contains only
+
+`86`
+
+such states.
+
+## Exact residual check
+
+For each of those 86 states, the verifier checks every `b in C` and each of the three singleton local rows. A singleton replacement is admissible only when its coefficient constraint is contained in the fixed rank-two space `P`.
+
+Exactly
+
+`42`
+
+admissible complete-block replacements occur.
+
+For every one, the reduced complete-block relation set remains dependent. The exact rank census is
+
+```text
+(|C'|, rank_T(C'))    states
+(5,4)                     6
+(6,5)                    36
+```
+
+There is no independent `C'`.
+
+Hence every `k=3,p=1` canonical state satisfies
+
+`3 delta(A) <= |A|`.
+
+As in the preceding canonical-completion arguments, any other realization with the same coefficient-constraint space is obtained by completing additional compatible empty blocks. Each such completion adds three selected rows and at most one `T` direction, so the defect cannot decrease. This closes the entire `p=1` branch.
+
+## Exactness
+
+All coefficient-space containment tests use exact rational row spaces inherited from the base verifier.
+
+The only finite-field decisions here are ranks of complete-block `T` relation sets. Their maximum squared row norm is
+
+`12`.
+
+Ranks are computed modulo
+
+`P = 2^127 - 1`,
+
+with the inherited Lucas-Lehmer check and the explicit inequality
+
+`P^2 > 12^15`.
+
+Hadamard's determinant bound therefore proves that every modular dependence used here is a dependence over `Q`.
+
+## Remaining five-no-root bottleneck
+
+The five-no-root factor-three density problem is now reduced to only
+
+- `k=3,p=2,3`, where the coefficient-constraint space has rank two, and
+- `k=4,p<=6`, where it has rank one.
+
+For `k=3,p=2,3`, the same deficiency argument gives a sharper reduction. Starting from the canonical `p=0` complete set `C`, replacing `q` complete blocks by incomplete states can only produce an independent complete set if `q>=d`. Since `p<=3`, only p=0 canonical states with `d<=3` need consideration. A deletion-minimal enumeration over those states should avoid the full local-state product.
+
+For C-II itself, the explicit generic-H6 endpoint remains
+
+`3874 = 3076 C7 + 798 (C3 disjoint-union C4)`.
+
+The state-specific forced-segment-order scan remains the most direct computation for removing those cells. Surviving cells then require quantitative sine-law metric compatibility. The theorem-state authority files are unchanged.

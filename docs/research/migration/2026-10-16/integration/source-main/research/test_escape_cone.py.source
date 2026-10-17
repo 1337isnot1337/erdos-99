@@ -1,0 +1,43 @@
+"""Regression tests for the exact open/closed semicircle distinction."""
+
+import math
+import unittest
+
+from research.escape_cone import (
+    fits_closed_semicircle,
+    fits_open_semicircle,
+    locally_isolated_by_unit_contacts,
+)
+
+
+def u(theta: float) -> tuple[float, float]:
+    return (math.cos(theta), math.sin(theta))
+
+
+class EscapeConeTests(unittest.TestCase):
+    def test_single_contact_has_strict_escape(self) -> None:
+        vectors = [u(0.0)]
+        self.assertTrue(fits_open_semicircle(vectors))
+        self.assertTrue(fits_closed_semicircle(vectors))
+        self.assertFalse(locally_isolated_by_unit_contacts(vectors))
+
+    def test_antipodal_contacts_have_quadratic_escape(self) -> None:
+        vectors = [u(0.0), u(math.pi)]
+        self.assertFalse(fits_open_semicircle(vectors))
+        self.assertTrue(fits_closed_semicircle(vectors))
+        self.assertFalse(locally_isolated_by_unit_contacts(vectors))
+
+    def test_closed_semicircle_boundary_is_not_a_cage(self) -> None:
+        vectors = [u(0.0), u(math.pi / 3.0), u(math.pi)]
+        self.assertFalse(fits_open_semicircle(vectors))
+        self.assertTrue(fits_closed_semicircle(vectors))
+        self.assertFalse(locally_isolated_by_unit_contacts(vectors))
+
+    def test_four_direction_surrounding_cage_is_isolated(self) -> None:
+        vectors = [u(0.0), u(math.pi / 2.0), u(math.pi), u(3.0 * math.pi / 2.0)]
+        self.assertFalse(fits_closed_semicircle(vectors))
+        self.assertTrue(locally_isolated_by_unit_contacts(vectors))
+
+
+if __name__ == "__main__":
+    unittest.main()

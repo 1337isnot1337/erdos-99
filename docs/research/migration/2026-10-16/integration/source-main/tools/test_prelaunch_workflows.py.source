@@ -1,0 +1,44 @@
+import unittest
+from pathlib import Path
+
+import yaml
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class WorkflowSafetyTests(unittest.TestCase):
+    def test_all_workflows_have_read_only_tokens_and_safe_checkouts(self):
+        paths = list((ROOT / ".github/workflows").glob("*.yml"))
+        self.assertEqual(len(paths), 22)
+        for path in paths:
+            with self.subTest(path=path.name):
+                data = yaml.safe_load(path.read_text())
+                self.assertEqual(data["permissions"], {"contents": "read"})
+                for job in data["jobs"].values():
+                    self.assertEqual(job["runs-on"], "ubuntu-latest")
+                    for step in job["steps"]:
+                        if step.get("uses", "").startswith("actions/checkout@"):
+                            self.assertIs(step["with"]["persist-credentials"], False)
+
+    def test_historical_workflows_are_manual_owner_opt_in(self):
+        for path in (ROOT / ".github/workflows").glob("target-c-*.yml"):
+            with self.subTest(path=path.name):
+                data = yaml.safe_load(path.read_text())
+                # YAML 1.1 parses GitHub's `on` as True.
+                triggers = data.get("on", data.get(True))
+                self.assertEqual(set(triggers), {"workflow_dispatch"})
+                for job in data["jobs"].values():
+                    self.assertIn("github.actor == github.repository_owner", job["if"])
+                    self.assertIn("vars.E99_HISTORICAL_CI == 'true'", job["if"])
+
+    def test_pr_uses_localized_event_plan_without_automatic_full_replay(self):
+        text = (ROOT / ".github/workflows/theorem-state.yml").read_text()
+        self.assertIn('control/tools/local_ci.py --root candidate', text)
+        self.assertIn('--event-file "$GITHUB_EVENT_PATH"', text)
+        self.assertIn('--require-localized', text)
+        self.assertNotIn("pull_request_target", text)
+        self.assertNotIn("run_theorem_certificates.py", text)
+
+
+if __name__ == "__main__":
+    unittest.main()

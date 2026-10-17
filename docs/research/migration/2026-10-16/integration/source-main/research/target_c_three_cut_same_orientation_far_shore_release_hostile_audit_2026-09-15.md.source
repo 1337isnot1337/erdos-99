@@ -1,0 +1,274 @@
+# Hostile audit - same-oriented three-cut far-shore release
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_three_cut_same_orientation_far_shore_release_2026-09-15.md`
+- `research/verify_target_c_three_cut_same_orientation_far_shore_release.py`
+- exact laminar multishear / interval-support stack
+- canonical contact-minimal normalization
+
+**Disposition:** **PASS after the quantifier repair in `84113ea9`.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The candidate attacks the only orientation class for which the parent three-cut
+integration theorem has no nonconstant exact all-contacts-preserved `G=0` curve. It
+changes the motion rather than disputing that calculation: two train cuts are rotated
+exactly, then the entire far shore of the third cut is translated back by the accumulated
+displacement. The third train family is deliberately opened.
+
+The construction is valid. It fixes every diameter row meeting none or all three cuts
+exactly and leaves only the two switching interfaces as moving upper constraints.
+
+---
+
+## 1. The layer displacement field is exact
+
+For nested shores
+
+\[
+S_3\subset S_2\subset S_1
+\]
+
+and a common shore-oriented train vector `u`, define
+
+\[
+\Delta_\alpha=R_\alpha u-u,
+\qquad
+\Delta_\beta=R_\beta u-u.
+\]
+
+The candidate field is
+
+\[
+W=\chi_1\Delta_\alpha
+ +\chi_2\Delta_\beta
+ -\chi_3(\Delta_\alpha+\Delta_\beta).
+\]
+
+Evaluating it on the four coarse layers gives exactly
+
+\[
+0,\quad
+\Delta_\alpha,\quad
+\Delta_\alpha+\Delta_\beta,\quad
+0.
+\]
+
+No infinitesimal approximation occurs here. The first two summands are the audited
+finite train shears, and the last summand is an ordinary rigid translation of the full
+far shore.
+
+**Verdict:** PASS.
+
+---
+
+## 2. Contact bookkeeping uses the exact shore cutsets
+
+For each selected outer train `tau_j`, the contact boundary of its shore is exactly the
+parallel unit-contact family of that train. Thus a contact not belonging to `tau_j` has
+the same `chi_j` value at both endpoints.
+
+For three consecutive selected cuts this implies:
+
+- a `tau_1` contact joins coarse layers 0 and 1;
+- a `tau_2` contact joins layers 1 and 2;
+- a `tau_3` contact joins layers 2 and 3;
+- every other old contact has identical displacement at its two endpoints.
+
+Hence the new vectors are respectively
+
+\[
+R_\alpha u,
+\qquad
+R_\beta u,
+\qquad
+3u-R_\alpha u-R_\beta u.
+\]
+
+The first two stay unit and every other unselected contact is unchanged exactly.
+
+There is no hidden issue from unselected train cuts between the selected ones: the
+argument uses the actual shore indicators and their exact contact cutsets, not an
+assumption that the coarse layer contains no other train structure.
+
+**Verdict:** PASS.
+
+---
+
+## 3. The third train opens for every nontrivial sufficiently small parameter
+
+The exact squared-length excess is
+
+\[
+E(\alpha,\beta)
+=10-6\cos\alpha-6\cos\beta+2\cos(\alpha-\beta)
+\]
+
+and equivalently
+
+\[
+E
+=12\sin^2(\alpha/2)+12\sin^2(\beta/2)
+ -4\sin^2((\alpha-\beta)/2).
+\]
+
+The elementary estimate
+
+\[
+\sin^2(A-B)\le2(\sin^2A+\sin^2B)
+\]
+
+gives
+
+\[
+E\ge4\bigl(\sin^2(\alpha/2)+\sin^2(\beta/2)\bigr).
+\]
+
+In a neighborhood of the origin this is strictly positive except at `(0,0)`. Therefore
+every old contact in the nonempty train family `tau_3` becomes strictly longer than one.
+
+The companion regression independently checks the algebraic identity and lower bound on
+a dense small parameter grid; the proof itself is analytic and does not depend on the
+regression.
+
+**Verdict:** PASS.
+
+---
+
+## 4. The diameter support table is complete
+
+A laminar diameter row has one contiguous selected-cut interval. Its intersection with
+three consecutive cuts is therefore one of
+
+\[
+\varnothing,
+\{1\},
+\{2\},
+\{3\},
+\{1,2\},
+\{2,3\},
+\{1,2,3\}.
+\]
+
+Subtracting the coarse-layer displacements gives
+
+\[
+0,
+\Delta_\alpha,
+\Delta_\beta,
+-(\Delta_\alpha+\Delta_\beta),
+\Delta_\alpha+\Delta_\beta,
+-\Delta_\alpha,
+0,
+\]
+
+in that order.
+
+Thus rows meeting none or all three cuts are genuinely unchanged as finite Euclidean
+vectors, not merely stationary to first or second order. Every other support changes
+incidence at one of the two internal boundaries and therefore belongs to the existing
+exceptional set `H_exc`.
+
+This removes precisely the common radial quadratic drift that blocked exact `G=0` in
+the parent same-orientation chart.
+
+**Verdict:** PASS.
+
+---
+
+## 5. The contact-minimality quantifier needed repair and is now correct
+
+The first draft said that, after finding a feasible nonzero parameter pair, one could
+"shrink" it to preserve every strict inactive slack. That is not justified: feasibility
+of the active diameter inequalities need not be radial in `(alpha,beta)`.
+
+Commit `84113ea9` repairs this correctly. For each finite source, continuity first gives
+a neighborhood `U` of the origin in which all strict old lower-distance and subdiameter
+slacks remain strict. The contradiction assumes a nonzero parameter pair **already in
+`U`** for which every moving active diameter remains at most `D`.
+
+Then:
+
+- all source distances remain at least one;
+- no new unit contact appears;
+- the complete old `tau_3` contact family disappears;
+- every old diameter is at most `D`.
+
+If the new diameter is below `D`, global minimality fails. If it equals `D`, the source
+is another global minimizer with fewer unit contacts, contradicting the canonical first
+lexicographic normalization.
+
+**Verdict:** PASS AFTER REPAIR.
+
+---
+
+## 6. The first-order three-ray normal form is correctly derived
+
+Differentiating
+
+\[
+\Delta_\alpha=\alpha Ju+O(\alpha^2),
+\qquad
+\Delta_\beta=\beta Ju+O(\beta^2)
+\]
+
+shows that all exceptional first derivatives are scalar multiples of only
+
+\[
+\alpha,\qquad \beta,\qquad \alpha+\beta.
+\]
+
+More explicitly, with `eta_h=r_h dot Ju`, the support types give
+
+\[
+\{1\}:\eta_h\alpha,
+\quad
+\{2,3\}:-\eta_h\alpha,
+\quad
+\{2\}:\eta_h\beta,
+\quad
+\{3\}:-\eta_h(\alpha+\beta),
+\quad
+\{1,2\}:\eta_h(\alpha+\beta),
+\]
+
+up to the common factor two in squared-length derivative.
+
+This does not itself prove a feasible tangent direction. C65 positivity and KKT
+stationarity can force a positive cusp on these rays. The candidate correctly stops at
+finite localization.
+
+**Verdict:** PASS.
+
+---
+
+## 7. Exact scope of the advance
+
+The parent rank-one classification remains correct inside the chart where all three
+selected train families are kept unit. The new theorem proves that this chart was too
+restrictive for canonical global minimality: opening one selected family allows an
+exact far-shore correction.
+
+The resulting orientation trichotomy is now:
+
+```text
+rank two:
+  exact all-three-contact finite kernel curve;
+
+rank one, mixed shore signs:
+  exact pair-cancellation finite kernel curve;
+
+rank one, same shore sign:
+  exact far-shore release preserving two train families and opening the third.
+```
+
+In every case all nonexceptional diameter rows can be made exactly invariant by a
+nontrivial finite source motion. The remaining obstruction is finite and supported on
+the two switching interfaces.
+
+No claim is made that this finite cusp is already empty, or that the motion itself
+closes C-II.
+
+**Final verdict:** **PASS after the quantifier repair.** The same-oriented parallel
+three-cut regression is reduced to an exact finite exceptional-diameter cusp; C-II and
+Level I remain open.

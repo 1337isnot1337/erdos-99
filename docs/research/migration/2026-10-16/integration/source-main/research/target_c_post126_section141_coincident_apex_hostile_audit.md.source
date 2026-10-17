@@ -1,0 +1,221 @@
+# Hostile audit — post-126 Section 141 coincident-apex repair
+
+**Date:** 2026-09-12  
+**Target:** `docs/targets/target-c/post126-section141-coincident-apex-repair.md`  
+**Disposition:** PASS at sufficiently-large Type-II / exact pure-tooth scope.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This audit tests the two places where the repair could silently overreach:
+
+1. upgrading Type-II Hausdorff near-disk convergence to a **uniform** bound on every
+   loaded-hull exterior turn; and
+2. identifying every singleton stopped train in the exact pure-tooth endpoint with a
+   repeated leg at two adjacent tooth intervals.
+
+No theorem-state promotion is proposed.
+
+---
+
+## A. Uniform turn collapse — PASS
+
+Canonical Type II gives
+
+\[
+d_H(F_D,B(o_D,D/2))=\delta_D=o(D).
+\]
+
+The centralized loaded-hull-side proof already establishes the finite support-normal
+bound
+
+\[
+\angle(n,p-o_D)
+\le
+\varepsilon_D:=
+\arccos\frac{D/2-\delta_D}{D/2+\delta_D}
+\]
+
+for every boundary point `p` and every outward supporting normal `n` at `p`.
+At one polygon vertex the outward normals of the two incident sides are both supporting
+normals at that same point. Therefore their separation, which is the convex exterior
+turn, is at most `2 epsilon_D`.
+
+Because `delta_D/D->0`, `epsilon_D->0`. This is uniform over vertices. No claim that
+the absolute Hausdorff error is `O(1)` is being made.
+
+**Verdict:** PASS.
+
+---
+
+## B. Coincident-apex angle identity — PASS
+
+Normalized Section 141 uses the angular lifts
+
+\[
+\theta_i=\pi-\beta(e_i),
+\qquad
+\theta_{i+1}=\alpha_i+\beta(e_{i+1}),
+\qquad
+0<\beta(e)<\pi/3.
+\]
+
+If the two tooth apexes are the same source point, both rays start at the same loaded
+vertex and end at the same point. Hence they are the same physical ray.
+The displayed lifts cannot differ by `2pi`: the first lies in `(2pi/3,pi)` and the
+second lies in `(0,4pi/3)` for a convex exterior turn `alpha_i<pi`. Thus equality of
+rays gives equality of the displayed arguments and
+
+\[
+\alpha_i
+=\pi-\beta(e_i)-\beta(e_{i+1})
+>\pi/3.
+\]
+
+Uniform Type-II turn collapse excludes this for all sufficiently large `D`.
+Therefore the two apexes are distinct before unit separation is invoked.
+
+**Verdict:** PASS.
+
+### Finite/non-Type-II regression
+
+The argument does **not** claim adjacent tooth apexes are distinct in an arbitrary
+finite convex contact configuration. A coincident apex can occur when the loaded-hull
+turn is large. The repair is explicitly Type II and sufficiently large; this
+regression is retained rather than silently excluded.
+
+---
+
+## C. Pure-tooth outer-walk exhaustion — PASS
+
+In the exact Section-126 endpoint,
+
+\[
+e_{BB}=0,\qquad T_\triangle=q,\qquad b=2q.
+\]
+
+The centralized Type-II theorem gives `e_BB=q-m`, hence `m=q`: every loaded hull side
+is nonunit. Normalized Section 130 gives a one-to-one correspondence between augmented
+triangles and nonunit hull intervals of occurrence length two. Therefore all `q` hull
+intervals have the form
+
+\[
+p_i-x_i-p_{i+1}.
+\]
+
+Their `2q` unit-edge occurrences exactly exhaust the occurrence-counted outer walk of
+length `b=2q`. Thus every outer edge occurrence has one loaded endpoint and one tooth
+apex.
+
+**Verdict:** PASS.
+
+---
+
+## D. Singleton stopped train iff repeated adjacent tooth leg — PASS in the endpoint
+
+A singleton stopped train is an edge incident to no strict-rhombus face. In the exact
+endpoint every bounded positive-contact face is a strict rhombus. Hence such an edge
+has the outer face on both sides. In a connected plane graph this is exactly a bridge,
+and the edge occurs twice in the outer-face walk.
+
+By Section C every outer occurrence lies in one of the two-edge tooth intervals. Let
+the bridge have loaded endpoint `p_i`. The only hull intervals whose edge sets can
+contain an edge incident to `p_i` are the preceding and following intervals. The two
+occurrences cannot both lie in one interval: its two edges have different loaded
+endpoints `p_i` and `p_{i+1}`. Therefore the same physical bridge is used once by each
+adjacent interval, forcing
+
+\[
+x_{i-1}=x_i.
+\]
+
+Conversely, if adjacent apexes coincide, the common edge from their shared loaded
+vertex is traversed in opposite directions by the two adjacent outer intervals and is
+a bridge. The repair only needs the forward implication, but the equivalence is valid.
+
+Section B excludes the coincidence for large Type II, so no singleton stopped train
+survives.
+
+**Verdict:** PASS.
+
+---
+
+## E. Train-count transfer to Theorem 10.6 — PASS
+
+Section 126 counts `q` stopped trains, allowing singleton bridge trains by convention.
+After Section D excludes singleton trains, every stopped train contains at least one
+rhombus and is exactly an opposite-edge train track of the collection of all bounded
+strict rhombi. There is no extra rhombus train omitted by the stopped-train count:
+maximal opposite-edge continuation terminates at the physical outer boundary, exactly
+as in the Section-126 train decomposition.
+
+Canonical Theorem 10.6 therefore applies with
+
+\[
+T=q,
+\]
+
+giving
+
+\[
+R_4\le q^2/4.
+\]
+
+The Type-II asymptotic `R_4/D^2->pi/(2sqrt(3))` then gives
+
+\[
+\liminf q/D
+\ge2\sqrt{\pi/(2\sqrt3)}
+=1.9046256137279147\ldots .
+\]
+
+**Verdict:** PASS.
+
+---
+
+## F. Rejected-global-floor regression — PASS
+
+The result does not use the algebra that was rejected in PR #376. The constant
+`1.9046256...` appears only after all of the following endpoint hypotheses have been
+proved simultaneously:
+
+- one harmonic component attached to all loaded vertices;
+- `T_triangle=q` and `Q^+=0`;
+- `e_BB=k=0`;
+- every loaded-hull interval is a two-edge nonunit tooth;
+- no singleton stopped train.
+
+General Type-II sources need not satisfy any of these endpoint equalities. Therefore
+this result does not imply, and must not be cited as,
+
+\[
+\liminf(q-k)/D\ge1.9046256\ldots
+\]
+
+in the general branch.
+
+**Verdict:** PASS.
+
+---
+
+## G. Remaining mathematical obstruction
+
+The repair does not close the pure-tooth endpoint. It removes bridge columns from the
+Section-126 square train-shear matrix and makes the physical train population exactly
+`q`. The live endpoint is now:
+
+```text
+q genuine rhombus trains,
+R_4 <= q^2/4,
+q/D >= 1.9046256137... - o(1),
+connected odd-unicyclic diameter graph with h=q,
+rank(A_train)=q-1,
+ker(A_train)=span{1},
+ker(A_train^T)=span{beta}, beta>0,
+near-disk loaded hull,
+all q hull sides are nonunit two-edge teeth.
+```
+
+A closure still needs a strict incompatibility between this train system and the active
+diameter thrackle, or a source-preserving strict diameter decrease.
+
+**Final disposition:** PASS. The repair should be merged as a proof-only correction;
+canonical theorem-state authority remains unchanged.

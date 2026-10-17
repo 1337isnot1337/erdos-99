@@ -1,0 +1,151 @@
+#!/usr/bin/env python3
+"""Regression checks for the terminal FREE chamber-interface floor.
+
+The script verifies only the scalar elimination and constants in the companion note.
+It does not replace the geometric proofs in canonical Sections 63, 67, 85 or the
+audited-working all-defect theorem.
+"""
+from __future__ import annotations
+
+import math
+import random
+
+PI = math.pi
+SQRT3 = math.sqrt(3.0)
+A0 = SQRT3 / 2.0
+C0 = SQRT3 / 4.0
+DELTA2 = PI / (2.0 * SQRT3)
+S2 = math.sqrt(DELTA2)
+GAMMA = 2.0 * S2 - PI / 2.0
+
+T0 = (3.0 * PI + GAMMA) / 5.0
+T0_CLOSED = PI / 2.0 + 2.0 * S2 / 5.0
+H_FLOOR = 12.0 * S2 / 5.0
+CHAMBER_FLOOR = C0 * H_FLOOR
+RAW_SPLIT = 3.0 * S2 / 2.0
+CHAMBER_SPLIT = C0 * RAW_SPLIT
+C_FREE = PI / 2.0 + 1.0 / 5.0 + 2.0 * S2 / 5.0
+
+
+def check_constants() -> None:
+    assert abs(T0 - T0_CLOSED) < 2e-15
+    assert abs(GAMMA - 0.33382928693301817) < 2e-15
+    assert abs(T0 - 1.9517214495404793) < 2e-15
+    assert abs(H_FLOOR - 2.2855507364734977) < 2e-15
+    assert abs(CHAMBER_FLOOR - 0.9896724997121409) < 2e-15
+    assert abs(RAW_SPLIT - 1.4284692102959362) < 2e-15
+    assert abs(CHAMBER_SPLIT - 0.6185453123200881) < 2e-15
+
+
+def check_terminal_elimination(rng: random.Random, trials: int = 500_000) -> None:
+    # Limiting terminal scalar constraints:
+    #   2F - (pi-t) >= gamma    (all-defect)
+    #   Q >= F                  (every exceptional face contributes >=1 to Q)
+    #   L >= 0                  (outer-walk detour)
+    #   Q + L = 2t - pi         (b+Q=2U and p/D -> pi)
+    # We generate feasible points and verify the optimized consequences.
+    accepted = 0
+    for _ in range(trials):
+        t = rng.uniform(T0, PI)
+        f_floor = max(0.0, (PI - t + GAMMA) / 2.0)
+        f_cap = 2.0 * t - PI
+        if f_floor > f_cap:
+            continue
+        f = rng.uniform(f_floor, f_cap)
+        q = rng.uniform(f, f_cap)
+        lam = f_cap - q
+
+        # All exact limiting hypotheses.
+        assert 2.0 * f - (PI - t) + 1e-12 >= GAMMA
+        assert q + 1e-12 >= f
+        assert lam >= -1e-12
+        assert abs(q + lam - (2.0 * t - PI)) < 2e-12
+
+        h = lam + q + 2.0 * f
+        if t + 2e-12 < T0:
+            raise AssertionError((t, T0))
+        if h + 2e-12 < H_FLOOR:
+            raise AssertionError((h, H_FLOOR, t, f, q, lam))
+
+        raw_exc = 2.0 * f + q
+        if max(raw_exc, lam) + 2e-12 < RAW_SPLIT:
+            raise AssertionError((raw_exc, lam, RAW_SPLIT, t, f, q))
+
+        chamber = C0 * h
+        if chamber + 2e-12 < CHAMBER_FLOOR:
+            raise AssertionError((chamber, CHAMBER_FLOOR))
+        if max(C0 * raw_exc, C0 * lam) + 2e-12 < CHAMBER_SPLIT:
+            raise AssertionError((C0 * raw_exc, C0 * lam, CHAMBER_SPLIT))
+        accepted += 1
+
+    assert accepted > trials // 2
+
+
+def check_total_equality() -> None:
+    # Equality point for the total interface floor.
+    t = T0
+    f = 4.0 * S2 / 5.0
+    q = f
+    lam = 0.0
+    z = 0.5
+
+    assert abs(2.0 * f - (PI - t) - GAMMA) < 2e-15
+    assert abs(q + lam - (2.0 * t - PI)) < 2e-15
+    h = lam + q + 2.0 * f
+    assert abs(h - H_FLOOR) < 2e-15
+    assert abs(C0 * h - CHAMBER_FLOOR) < 2e-15
+
+    # The current FREE recipient laws are simultaneously tight here.
+    assert abs(lam + z - 0.5) < 2e-15
+    assert abs(t + 0.4 * z - C_FREE) < 2e-15
+
+
+def check_split_equality() -> None:
+    # Equality point for the classwise minimax.
+    f = S2 / 2.0
+    q = f
+    t = PI / 2.0 + S2
+    lam = 3.0 * S2 / 2.0
+
+    assert abs(2.0 * f - (PI - t) - GAMMA) < 2e-15
+    assert abs(q + lam - (2.0 * t - PI)) < 2e-15
+    raw_exc = 2.0 * f + q
+    assert abs(raw_exc - RAW_SPLIT) < 2e-15
+    assert abs(lam - RAW_SPLIT) < 2e-15
+    assert abs(C0 * raw_exc - CHAMBER_SPLIT) < 2e-15
+
+
+def check_one_variable_minimax() -> None:
+    # The proof reduces the split to
+    #   max(3F, 2*s2-F), F>=0.
+    # Its unique intersection is F=s2/2 and value 3*s2/2.
+    f_star = S2 / 2.0
+    assert abs(3.0 * f_star - (2.0 * S2 - f_star)) < 2e-15
+    assert abs(3.0 * f_star - RAW_SPLIT) < 2e-15
+    for i in range(200_001):
+        f = 2.0 * S2 * i / 200_000.0
+        value = max(3.0 * f, 2.0 * S2 - f)
+        if value + 3e-12 < RAW_SPLIT:
+            raise AssertionError((f, value, RAW_SPLIT))
+
+
+def main() -> None:
+    rng = random.Random(0xE99CF)
+    check_constants()
+    check_terminal_elimination(rng)
+    check_total_equality()
+    check_split_equality()
+    check_one_variable_minimax()
+    print("PASS: terminal FREE chamber-interface floor")
+    print(f"Delta2={DELTA2:.15f}")
+    print(f"sqrt(Delta2)={S2:.15f}")
+    print(f"gamma={GAMMA:.15f}")
+    print(f"t0={T0:.15f}")
+    print(f"interface_floor={H_FLOOR:.15f}")
+    print(f"chamber_floor={CHAMBER_FLOOR:.15f}")
+    print(f"raw_split={RAW_SPLIT:.15f}")
+    print(f"chamber_split={CHAMBER_SPLIT:.15f}")
+
+
+if __name__ == "__main__":
+    main()

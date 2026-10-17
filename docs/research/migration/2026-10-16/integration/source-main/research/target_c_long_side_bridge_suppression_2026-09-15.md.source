@@ -1,0 +1,228 @@
+# Target C-II — bridge suppression forces transverse contacts in the long-side branch
+
+**Date:** 2026-09-15  
+**Repository base:** `32a1e08d7bfcc6c69aa6e286ca183f573cf9f36c`  
+**Status:** proved proof-only composition; theorem-state authority unchanged  
+**Scope:** no-container Type-II full positive-contact core  
+**Dependencies:** loaded-hull interval decomposition (§63), C26 no-neutral theorem, bridge-subtracted full-core isoperimetry, long-side straight-event dichotomy  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The preceding long-side straight-event theorem left a two-way alternative: a linear
+population of loaded degree-two boundary events, or a linear population of strongly
+transverse extra contacts. In the full-core Type-II branch, the first alternative is
+not genuinely available. Such a degree-two event is necessarily a repeated
+outer-face occurrence of a loaded vertex, hence an outer-bridge event. Full-core
+near-disk area saturation bounds the total number of outer bridges by the outer-walk
+detour.
+
+The result is a direct one-branch theorem: the current rounded long-side escape forces
+linearly many strongly transverse physical unit contacts.
+
+## 1. A loaded internal route occurrence is non-distinguished
+
+Section 63 chooses one distinguished exterior occurrence of each loaded force-hull
+vertex and cuts the outer-face boundary walk at those occurrences. The distinguished
+occurrences appear in loaded-hull cyclic order, and
+
+\[
+W_i:b_i\leadsto b_{i+1}
+\]
+
+is the subwalk between consecutive distinguished loaded occurrences.
+
+Let `x` be an internal physical vertex occurrence of one `W_i`. If `x` is loaded, this
+occurrence cannot be the distinguished occurrence of `x`: no distinguished loaded
+occurrence lies strictly between the consecutive distinguished occurrences of `b_i`
+and `b_{i+1}`. Therefore a loaded internal route occurrence is a repeated occurrence
+of the same physical vertex on the outer-face walk.
+
+## 2. Degree two makes the repeated event an outer-bridge event
+
+A vertex that occurs more than once on a face-boundary walk of a connected plane graph
+is a cutvertex of the corresponding block decomposition. If such a vertex `x` has
+full contact degree exactly two, both incident contact edges are bridges: deleting one
+of the two edges otherwise leaves an alternate path through the unique other incident
+edge, which would reconnect the two sides of `G-x`, contradicting that `x` is a
+cutvertex.
+
+For the repeated occurrence under discussion, both incident bridge sides occur on the
+unbounded-face walk. A bridge is incident to the same face on both sides, so both
+physical bridges are outer bridges.
+
+Let `V_2(beta)` be the number of distinct physical degree-two vertices supporting a
+`beta`-straight internal occurrence on a long-side route, as in the straight-event
+note, and let `B_o` be the number of outer bridges. C26 makes every such degree-two
+vertex loaded. The argument above therefore applies to every vertex counted by
+`V_2(beta)`.
+
+Counting bridge incidences gives
+
+\[
+2V_2(\beta)\le2B_o,
+\]
+
+because each counted vertex is incident to two distinct outer bridges and each bridge
+has at most two endpoints. Thus
+
+\[
+\boxed{V_2(\beta)\le B_o.}
+\tag{BS.1}
+\]
+
+This is finite.
+
+## 3. Full-core area saturation bounds the bridge population
+
+For the no-container Type-II full positive-contact core, the existing near-disk stack
+squeezes the full bounded-face union to asymptotic area `pi D^2/4`. The
+bridge-subtracted isoperimetric theorem therefore gives, if `b/D -> M`,
+
+\[
+\limsup {2B_o\over D}\le M-\pi.
+\tag{BS.2}
+\]
+
+Type II also has `P_F/D->pi`, while
+
+\[
+d_{out}=b-P_F.
+\]
+
+Hence along any convergent Type-II subsequence with
+
+\[
+\delta:=\lim {d_{out}\over D},
+\]
+
+we have `M=pi+delta`, and (BS.1)--(BS.2) give
+
+\[
+\boxed{
+\limsup {2V_2(\beta)\over D}\le\delta.
+}
+\tag{BS.3}
+\]
+
+Thus near-geodesic outer routes cannot hide a linear population of degree-two loaded
+repetitions: every such event consumes actual bridge-subtracted perimeter.
+
+## 4. Insert the straight-event tradeoff
+
+Let `E_perp(beta)` be the number of distinct extra contact edges selected from
+branching `beta`-straight long-side events. The previous finite event theorem gives
+
+\[
+2V_2(\beta)+10E_\perp(\beta)
+\ge
+L_{>2}-{2d_{out}\over1-\cos\beta}.
+\tag{BS.4}
+\]
+
+Combining with (BS.3), along one convergent Type-II subsequence,
+
+\[
+\boxed{
+\liminf {10E_\perp(\beta)\over D}
+\ge
+\liminf {L_{>2}\over D}
+-\delta\left(1+{2\over1-\cos\beta}\right).
+}
+\tag{BS.5}
+\]
+
+Every selected edge has absolute transverse component greater than
+
+\[
+\sin(\pi/3-\beta)
+\]
+
+relative to the corresponding long loaded-hull side direction.
+
+No individual KKT coefficient lower bound is used.
+
+## 5. Current low-`t` long-side consequence
+
+At the current proof-only floor `t=t_42`, the long-side alternative gives
+
+\[
+{L_{>2}\over D}
+\ge0.4363893718701161781\ldots-o(1),
+\]
+
+while the low-`t` squeeze gives
+
+\[
+\delta\le0.002883975.
+\]
+
+Choose
+
+\[
+\beta={\pi\over6}.
+\]
+
+Then
+
+\[
+1-\cos\beta=1-{\sqrt3\over2},
+\qquad
+\sin(\pi/3-\beta)={1\over2}.
+\]
+
+The bad-edge term is
+
+\[
+{\delta\over1-\cos\beta}
+\le0.02152628245551690578\ldots,
+\]
+
+and (BS.5) yields
+
+\[
+\boxed{
+{E_\perp(\pi/6)\over D}
+\ge0.03904528319590823665\ldots-o(1).
+}
+\tag{BS.6}
+\]
+
+Every edge in this family has absolute transverse component strictly greater than
+`1/2` relative to its long-side tangent direction.
+
+This doubles the unconditional transverse-edge floor from the previous crude
+`0.0196668D` alternative and, more importantly, removes the linear loaded-degree-two
+escape entirely.
+
+## 6. Updated low-`t` physical normal form
+
+At the current low-`t` floor, every full-core Type-II survivor now satisfies one of
+the following two source-level geometric conclusions:
+
+```text
+tooth branch:
+    >= 0.2127872328 D-o(D) distinct inward unit contacts,
+    each with inward component > 0.5011115;
+
+rounded long-side branch:
+    >= 0.03904528319 D-o(D) distinct physical unit contacts,
+    each with transverse component > 1/2 relative to its long-side direction.
+```
+
+The previous third possibility, a macroscopic population of loaded degree-two
+near-straight route events, is absorbed by bridge-subtracted isoperimetry.
+
+This does not close C-II. It does remove a genuine branch from the low-`t` endpoint.
+The remaining long-side contacts are now forced to penetrate across the nearly
+tangential outer-route geometry. The next useful theorem should charge these
+transverse contacts to stopped-train phase/interface capacity or use them in a
+simultaneous boundary deformation.
+
+## 7. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_long_side_bridge_suppression.py
+```
+
+for the Decimal constant checks.

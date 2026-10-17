@@ -1,0 +1,482 @@
+# Target C — terminal FREE currency forces a linear rhombus-count deficit
+
+**Date:** 2026-09-18  
+**Status:** proof-only synthesis; theorem-state authority unchanged  
+**Scope:** full-core Type-II survivor sequences carrying a non-anchored all-inactive FREE reflection module and satisfying `pi D-q=o(D)`  
+**Depends on:** `target_c_free_terminal_train_face_bridge_2026-09-18.md`, canonical Sections 67/77/85, and the same audited-working all-defect phase/train gap used by the train/face bridge  
+**Certificate:** `research/verify_target_c_free_terminal_rhombus_deficit_floor_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The terminal FREE train/face bridge still ends with an apparent two-way escape: either
+`(q-k)/D` is very large or the exterior isolate population `Z_ext/D` is large.  The
+full-source Oler count removes that escape.  Exterior isolates consume the same
+second-order population budget as missing strict-rhombus faces, so the two branches
+collapse to one linear rhombus-count deficit.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+s_2:=\sqrt{\Delta_2},
+\qquad
+\mathcal D_4:=\Delta_2D^2-R_4.
+\]
+
+The main consequence is
+
+\[
+\boxed{
+\mathcal D_4
+\ge
+\left(
+{1\over10}+{6\over5}s_2-o(1)
+\right)D
++{4\over5}Z_{\rm ext}.
+}
+\tag{RD.1}
+\]
+
+Numerically,
+
+\[
+{1\over10}+{6\over5}s_2
+=
+1.242775368236749\ldots .
+\tag{RD.2}
+\]
+
+Thus every terminal FREE survivor in this scope has
+
+\[
+\boxed{
+\liminf {\Delta_2D^2-R_4\over D}
+\ge1.242775368236749\ldots .
+}
+\tag{RD.3}
+\]
+
+This more than doubles the older proof-only `0.586...--0.746...` scale of the
+second-order rhombus deficit.  More importantly, (RD.1) prices any surviving exterior
+population on top of the `1.242775...D` baseline instead of leaving `Z_ext` as an
+independent recipient.
+
+The original terminal FREE metric law also gives
+
+\[
+\lambda_D+Z_{\rm ext}\ge {D\over2}-o(D),
+\qquad
+\lambda_D:=b-\operatorname{per}(F).
+\]
+
+Combining it with (RD.1) yields the weighted structural payment
+
+\[
+\boxed{
+\mathcal D_4+{4\over5}\lambda_D
+\ge
+\left(
+{1\over2}+{6\over5}s_2-o(1)
+\right)D.
+}
+\tag{RD.4}
+\]
+
+The coefficient is
+
+\[
+{1\over2}+{6\over5}s_2
+=1.642775368236749\ldots .
+\tag{RD.5}
+\]
+
+Consequently at least one of the actual outer-walk detour and the absolute
+strict-rhombus count deficit is linear at the explicit scale
+
+\[
+\boxed{
+\max\{\mathcal D_4,\lambda_D\}
+\ge
+(0.912652982353749\ldots-o(1))D.
+}
+\tag{RD.6}
+\]
+
+No comparison of local chamber Oler slacks with the full-hull Oler slack is used.
+
+---
+
+## 1. Exact full-source population bridge
+
+Let `M` be the positive-contact-core population and retain the canonical full-core
+notation:
+
+- `R_4` is the number of bounded strict unit-rhombus faces;
+- `f` is the number of bounded nonquadrilateral contact faces;
+- `q=|B|` is the loaded force-hull vertex count;
+- `k=d_H+s_Z`;
+- `Z_ch` is the contact-isolated population inside `F`;
+- `Z_ext` is the source population outside `F`.
+
+Canonical face counting gives the exact identity
+
+\[
+M=R_4+f+q-k+1.
+\tag{RD.7}
+\]
+
+The full source is
+
+\[
+n=M+Z_{ch}+Z_{\rm ext}.
+\tag{RD.8}
+\]
+
+Oler on the source hull, followed by the isodiametric and Cauchy
+perimeter-diameter bounds, gives
+
+\[
+n\le
+\Delta_2D^2+{\pi\over2}D+1.
+\tag{RD.9}
+\]
+
+Substituting (RD.7)--(RD.8) into (RD.9) and cancelling the two `+1` terms gives the
+finite inequality
+
+\[
+\boxed{
+\mathcal D_4
+\ge
+(q-k)+f+Z_{ch}+Z_{\rm ext}-{\pi\over2}D.
+}
+\tag{RD.10}
+\]
+
+This is the key accounting step.  It retains the exterior source population instead
+of discarding it as in the older absolute rhombus-deficit estimates.
+
+---
+
+## 2. The all-defect gap converts population into a `t/2+z` cost
+
+Normalize
+
+\[
+t_D:={q-k\over D},
+\qquad
+z_D:={Z_{\rm ext}\over D}.
+\]
+
+On the terminal branch `q/D->pi`, hence
+
+\[
+{k\over D}=\pi-t_D+o(1).
+\tag{RD.11}
+\]
+
+The audited-working all-defect phase/train theorem used by the preceding terminal
+FREE train/face bridge states
+
+\[
+2f-k\ge(\gamma-o(1))D,
+\tag{RD.12}
+\]
+
+with
+
+\[
+\gamma
+=2s_2-{\pi\over2}
+=0.333829286933018\ldots .
+\tag{RD.13}
+\]
+
+Equations (RD.11)--(RD.12) imply
+
+\[
+{f\over D}
+\ge
+{\pi-t_D+\gamma\over2}-o(1).
+\tag{RD.14}
+\]
+
+Drop the nonnegative `Z_ch` term from (RD.10), divide by `D`, and insert (RD.14):
+
+\[
+\boxed{
+{\mathcal D_4\over D}
+\ge
+{t_D\over2}+z_D+{\gamma\over2}-o(1).
+}
+\tag{RD.15}
+\]
+
+So both a large high-`t` value and a large exterior population increase the
+rhombus-count deficit.
+
+---
+
+## 3. Insert the terminal FREE train/face bridge
+
+The immediately preceding train/face theorem proves
+
+\[
+\boxed{
+t_D+{2\over5}z_D
+\ge
+C_{\rm FREE}-o(1),
+}
+\tag{RD.16}
+\]
+
+where
+
+\[
+C_{\rm FREE}
+={\pi\over2}+{1\over5}+{2\over5}s_2
+=2.151721449540479\ldots .
+\tag{RD.17}
+\]
+
+Rewrite the right side of (RD.15) as
+
+\[
+{t_D\over2}+z_D+{\gamma\over2}
+=
+{1\over2}\left(t_D+{2\over5}z_D\right)
++{4\over5}z_D+{\gamma\over2}.
+\]
+
+Therefore
+
+\[
+{\mathcal D_4\over D}
+\ge
+{C_{\rm FREE}+\gamma\over2}
++{4\over5}z_D-o(1).
+\tag{RD.18}
+\]
+
+The constants simplify exactly:
+
+\[
+{C_{\rm FREE}+\gamma\over2}
+=
+{1\over10}+{6\over5}s_2.
+\tag{RD.19}
+\]
+
+This proves (RD.1)--(RD.3).
+
+The exterior population is therefore no longer a cheap alternative to the high-`t`
+branch.  Every additional `cD` exterior isolates require at least another
+`0.8cD` units of absolute rhombus-count deficit.
+
+---
+
+## 4. Return to the actual outer-walk detour
+
+The terminal FREE boundary-crossing theorem also proves
+
+\[
+\lambda_D+Z_{\rm ext}
+\ge {D\over2}-o(D).
+\tag{RD.20}
+\]
+
+Add `(4/5)lambda_D` to (RD.1) and use (RD.20):
+
+\[
+\begin{aligned}
+\mathcal D_4+{4\over5}\lambda_D
+&\ge
+\left({1\over10}+{6\over5}s_2-o(1)\right)D
++{4\over5}(Z_{\rm ext}+\lambda_D)\\
+&\ge
+\left({1\over2}+{6\over5}s_2-o(1)\right)D.
+\end{aligned}
+\]
+
+This is (RD.4).
+
+If both `mathcal D_4` and `lambda_D` were below `xD+o(D)`, the left side of (RD.4)
+would be below `(9/5)xD+o(D)`.  Hence
+
+\[
+x\ge
+{5\over9}\left({1\over2}+{6\over5}s_2\right)
+=0.912652982353749\ldots,
+\]
+
+which proves (RD.6).
+
+Two useful endpoints are:
+
+\[
+\lambda_D=o(D)
+\quad\Longrightarrow\quad
+\mathcal D_4
+\ge(1.642775368236749\ldots-o(1))D,
+\tag{RD.21}
+\]
+
+and
+
+\[
+Z_{\rm ext}=o(D)
+\quad\Longrightarrow\quad
+\mathcal D_4
+\ge(1.242775368236749\ldots-o(1))D.
+\tag{RD.22}
+\]
+
+At the formal scalar equality point of the preceding FREE train/face relaxation,
+
+\[
+t=C_{\rm FREE},\qquad
+z=0,\qquad
+{f\over D}={Q\over D}=0.661850245491166\ldots,
+\qquad
+{\lambda_D\over D}={1\over2},
+\]
+
+and (RD.15) is also tight at
+
+\[
+{\mathcal D_4\over D}=1.242775368236749\ldots .
+\tag{RD.23}
+\]
+
+Thus the coefficient in (RD.3) is sharp for the current relaxed scalar system.  A
+larger coefficient requires genuinely new geometry, not another rearrangement of the
+same scalar inequalities.
+
+---
+
+## 5. Price inside the old high-`t` window
+
+The train/face bridge gives
+
+\[
+z_D\ge
+{3\pi+1+\gamma-5t_D\over2}-o(1).
+\tag{RD.24}
+\]
+
+Substituting into (RD.18) gives a stronger rhombus-deficit price whenever `t_D` lies
+below `C_FREE`.  For example:
+
+\[
+\begin{array}{c|c|c}
+T & t_D\le T & \liminf \mathcal D_4/D\\ \hline
+1.8440 & Z_{\rm ext}/D\ge0.769303623851198 & 1.858218267317707\\
+1.8687 & Z_{\rm ext}/D\ge0.707553623851198 & 1.808818267317707\\
+2.0000 & Z_{\rm ext}/D\ge0.379303623851198 & 1.546218267317708\\
+C_{\rm FREE} & Z_{\rm ext}/D\ge0 & 1.242775368236749
+\end{array}
+\tag{RD.25}
+\]
+
+Thus a terminal FREE survivor remaining inside the complete September-17
+`t<=1.8687` support-normal-form window must pay more than `1.8088D` in absolute
+strict-rhombus count deficit.
+
+---
+
+## 6. Geometric form
+
+Let
+
+\[
+\delta_F:={\pi D^2\over4}-\operatorname{area}(F).
+\]
+
+Canonical Section 77 decomposes the force hull into strict-rhombus faces and inactive
+chambers.  If
+
+\[
+E_4:=\sum_R(\operatorname{area}(R)-a_0),
+\qquad
+a_0={\sqrt3\over2},
+\]
+
+then exactly
+
+\[
+\boxed{
+a_0\mathcal D_4
+=\delta_F+A_{ch}+E_4.
+}
+\tag{RD.26}
+\]
+
+Multiplying (RD.1) by `a_0` therefore gives
+
+\[
+\boxed{
+\delta_F+A_{ch}+E_4
+\ge
+(1.076275040090585\ldots-o(1))D
++{2\sqrt3\over5}Z_{\rm ext}.
+}
+\tag{RD.27}
+\]
+
+Since
+
+\[
+{2\sqrt3\over5}=0.692820323027551\ldots,
+\]
+
+exterior population now has an explicit geometric area-defect price.
+
+Likewise (RD.4) becomes
+
+\[
+\boxed{
+\delta_F+A_{ch}+E_4
++{2\sqrt3\over5}\lambda_D
+\ge
+(1.422685201604360\ldots-o(1))D.
+}
+\tag{RD.28}
+\]
+
+This is the form most directly aligned with the remaining global packing and detour
+ledgers.
+
+---
+
+## 7. Scope and remaining bottleneck
+
+The new argument does not prove a contradiction.  It changes the remaining terminal
+FREE obstruction from an uncontrolled source-population branch into a second-order
+structural deficit:
+
+```text
+terminal all-inactive FREE module
+  -> train/face bridge t + (2/5) z >= 2.1517214495...
+  -> full-source Oler keeps the z term instead of discarding it
+  -> absolute rhombus deficit >= 1.2427753682... D + 0.8 Z_ext
+  -> together with lambda+Z_ext >= D/2:
+       rhombus deficit + 0.8 lambda >= 1.6427753682... D.
+```
+
+The exact next target is therefore an upper budget for either side of (RD.28), or a
+linear-order phase/attachment-cell theorem that cannot tolerate
+
+\[
+\Delta_2D^2-R_4\ge(1.2427753682\ldots-o(1))D.
+\]
+
+That is a better-defined seam than bounding `Z_ext` directly.  Existing Type-II
+arguments control `R_4` only at quadratic leading order, so they do not yet contradict
+this new first-order deficit.  A useful next run should try to transfer the deficit in
+(RD.26) into the Section-122/123 attachment-cell detour budget or obtain a first-order
+lower bound on `R_4` strong enough to oppose (RD.3).
+
+**Disposition:** exterior population eliminated as an independent terminal FREE
+recipient; proved the `1.242775...D + 0.8 Z_ext` rhombus-deficit floor and the
+`1.642775...D` weighted rhombus/detour payment.  The authoritative theorem-state ledger
+is unchanged; C-II remains open.

@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+from decimal import Decimal, getcontext
+getcontext().prec = 70
+D = Decimal
+pi = D('3.14159265358979323846264338327950288419716939937510')
+sqrt3 = D(3).sqrt()
+Delta2 = pi / (D(2) * sqrt3)
+r = Delta2.sqrt()
+C0 = D(2) * r + D('0.00042')
+C146 = D(4) * (pi + r) / D(9)
+t42 = C146 + D('0.0013751')
+
+def p5_floor(t, delta=D(0), kappa=D(0)):
+    return pi + C0 - D(5)*t/D(2) + delta + kappa/D(2)
+
+p42 = p5_floor(t42)
+pbar = p5_floor(D('1.8585'))
+assert D('0.49441667') < p42 < D('0.49441668')
+assert D('0.40038826') < pbar < D('0.40038828')
+
+v42, h42, c42 = p42/D(5), p42/D(9), p42/D(13)
+vbar, hbar, cbar = pbar/D(5), pbar/D(9), pbar/D(13)
+assert v42 > D('0.09888333')
+assert h42 > D('0.05493518')
+assert c42 > D('0.03803205')
+assert vbar > D('0.08007765')
+assert hbar > D('0.04448758')
+assert cbar > D('0.03079909')
+
+fstar = r - pi/D(4) + D('0.00021')
+old = fstar/D(13)
+assert c42 / old > D('2.95')
+
+for t, delta, kappa in [
+    (D('1.83'), D('0.002'), D('0.01')),
+    (D('1.84'), D('0.003'), D('0')),
+    (D('1.8585'), D('0.001'), D('0.02')),
+]:
+    p = p5_floor(t, delta, kappa)
+    base = p5_floor(t)
+    assert p == base + delta + kappa/D(2)
+    assert p/D(5) >= base/D(5)
+    assert p/D(9) >= base/D(9)
+    assert p/D(13) >= base/D(13)
+
+print('PASS low-t pentagon source-object amplification')
+print('t42 =', t42)
+print('p5(t42) =', p42)
+print('V_flat(t42) =', v42)
+print('H_tooth(t42) =', h42)
+print('C_flat/T_tooth(t42) =', c42)
+print('p5(1.8585) =', pbar)
+print('V_flat(1.8585) =', vbar)
+print('H_tooth(1.8585) =', hbar)
+print('C_flat/T_tooth(1.8585) =', cbar)
+print('old coarse 1/13 coefficient =', old)
+print('t42 improvement factor =', c42/old)

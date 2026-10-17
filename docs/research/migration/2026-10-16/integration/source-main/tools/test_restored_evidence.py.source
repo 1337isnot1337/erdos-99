@@ -1,0 +1,66 @@
+import hashlib
+import json
+import subprocess
+import tempfile
+import unittest
+from pathlib import Path
+
+from tools import check_restored_evidence as restored
+
+
+class RestorationTests(unittest.TestCase):
+    def setUp(self):
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        self.root = Path(temp.name)
+        self.path = "docs/reports/fixture.md"
+        self.file = self.root / self.path
+        self.file.parent.mkdir(parents=True)
+        self.raw = b"# Historical fixture  \nExact scoped statement.\n"
+        self.file.write_bytes(self.raw)
+        for args in (("init", "-q"), ("config", "user.name", "Provenance Fixture"),
+                     ("config", "user.email", "fixture@example.invalid"), ("add", "."),
+                     ("commit", "-qm", "frozen source")):
+            subprocess.run(["git", "-C", str(self.root), *args], check=True, capture_output=True)
+        sha = subprocess.check_output(["git", "-C", str(self.root), "rev-parse", "HEAD"], text=True).strip()
+        self.normalized = b"# Historical fixture\nExact scoped statement.\n"
+        self.file.write_bytes((restored.HEADER_PREFIX + '{}'+ restored.HEADER_SUFFIX + '\n').encode() + self.normalized)
+        self.row = {"path": self.path, "source_commit": sha,
+                    "source_sha256": hashlib.sha256(self.raw).hexdigest(),
+                    "restored_body_sha256": hashlib.sha256(self.normalized).hexdigest(),
+                    "presentation_changes": restored.WHITESPACE}
+        self.register = self.root / restored.REGISTER
+        self.register.parent.mkdir(parents=True)
+        self.record()
+
+    def record(self, rows=None):
+        self.register.write_text(json.dumps({"schema_version": 1, "sources": rows or [self.row]}))
+
+    def test_source_hash_and_documented_normalization_reproduce_body(self):
+        self.assertEqual(restored.check(self.root, self.root), [])
+        self.assertEqual(restored.check(self.root), [])
+
+    def test_altered_body_missing_artifact_and_wrong_source_are_detected(self):
+        self.file.write_bytes(self.normalized + b"Changed conclusion.\n")
+        self.assertTrue(any("body differs" in e for e in restored.check(self.root)))
+        self.file.unlink()
+        self.assertTrue(any("missing/unsafe" in e for e in restored.check(self.root)))
+        self.file.write_bytes(self.normalized)
+        self.row["source_sha256"] = "0"*64
+        self.record()
+        self.assertTrue(any("source hash differs" in e for e in restored.check(self.root, self.root)))
+
+    def test_unknown_normalization_duplicate_and_unsafe_paths_are_rejected(self):
+        self.row["presentation_changes"] = "proof silently rewritten"
+        self.record()
+        self.assertTrue(any("unrecognized" in e for e in restored.check(self.root)))
+        self.record([self.row, self.row])
+        self.assertTrue(any("duplicate" in e for e in restored.check(self.root)))
+        self.row["path"] = "../../private.md"
+        self.record()
+        with self.assertRaisesRegex(ValueError, "unsafe release path"):
+            restored.check(self.root)
+
+
+if __name__ == "__main__":
+    unittest.main()

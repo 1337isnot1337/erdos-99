@@ -1,0 +1,150 @@
+#!/usr/bin/env python3
+"""Exact combinatorial certificate eliminating three of the six uniform H5 orbits.
+
+The existing exact H5 enumerator gives 48 uniform labelled survivors in six symmetry
+orbits. For each orbit this verifier searches for the fixed representative used in
+the proof note: missing matching {16,25,34}, raw ground order [1,6,5,2,3,4], and
+concave five-cycle 0-1-2-3-6 with its only reflex turn at 6. It then checks the
+force-direction adjacency/sign data that imply the two local angle bounds used in the
+contradiction.
+
+The verification uses only chirotope signs and signed-edge incidence. No floating
+point, coordinates, or numerical tolerances are used.
+"""
+
+import importlib.util
+import itertools
+from pathlib import Path
+
+BASE_PATH = Path(__file__).with_name(
+    "verify_target_c_support6_reciprocal_h5_reduction_2026_09_18.py"
+)
+spec = importlib.util.spec_from_file_location("h5_base", BASE_PATH)
+H = importlib.util.module_from_spec(spec)
+assert spec.loader is not None
+spec.loader.exec_module(H)
+
+
+def full_uniform_survivors(uniform):
+    result = H.uniform_survivors(uniform)
+    return result[1] if isinstance(result, tuple) else result
+
+
+def force_cycle(signs, vertex, missing, edge_signs):
+    neigh = [
+        j for j in H.V
+        if j != vertex and H.edge(vertex, j) not in missing
+    ]
+    assert len(neigh) == 5
+
+    def arrow(a, b):
+        sa = 1 if edge_signs[H.edge(vertex, a)] else -1
+        sb = 1 if edge_signs[H.edge(vertex, b)] else -1
+        return sa * sb * H.chi(signs, vertex, a, b) > 0
+
+    first = min(neigh)
+    cycles = []
+    for rest in itertools.permutations([x for x in neigh if x != first]):
+        p = (first,) + rest
+        if all(
+            arrow(a, p[(r + d) % 5]) == (d in (1, 2))
+            for r, a in enumerate(p)
+            for d in (1, 2, 3, 4)
+        ):
+            cycles.append(p)
+    assert len(cycles) == 1
+    return cycles[0]
+
+
+def adjacent(cycle, a, b):
+    ia, ib = cycle.index(a), cycle.index(b)
+    return (ia - ib) % 5 in (1, 4)
+
+
+def turn_pattern(signs, cycle):
+    return tuple(
+        H.chi(signs, cycle[k - 1], cycle[k], cycle[(k + 1) % len(cycle)])
+        for k in range(len(cycle))
+    )
+
+
+def candidate_is_angle_obstructed(signs, missing, edge_signs):
+    target_missing = frozenset((H.edge(1, 6), H.edge(2, 5), H.edge(3, 4)))
+    if frozenset(missing) != target_missing:
+        return False
+    if H.hull_radial_order(signs, 0) != [1, 6, 5, 2, 3, 4]:
+        return False
+
+    # The polygon 0-1-2-3-6 is simple because 01,12,23 are hull edges and 6
+    # lies in the convex hull. This turn pattern makes 6 its unique reflex
+    # vertex, yielding A+B-C+D+E=pi for the five small raw angles in the note.
+    if turn_pattern(signs, (0, 1, 2, 3, 6)) != (1, 1, 1, 1, -1):
+        return False
+
+    c3 = force_cycle(signs, 3, missing, edge_signs)
+    c6 = force_cycle(signs, 6, missing, edge_signs)
+    if not adjacent(c3, 2, 6):
+        return False
+    if edge_signs[H.edge(3, 2)] == edge_signs[H.edge(3, 6)]:
+        return False
+    if not adjacent(c6, 3, 0):
+        return False
+    if edge_signs[H.edge(6, 3)] != edge_signs[H.edge(6, 0)]:
+        return False
+    return True
+
+
+def main():
+    uniform = H.enumerate_uniform_extensions()
+    assert len(uniform) == 370
+    full = full_uniform_survivors(uniform)
+    assert len(full) == 48
+
+    by_orbit = {}
+    for cand in full:
+        key = H.canonical_candidate(*cand)
+        by_orbit.setdefault(key, []).append(cand)
+    assert len(by_orbit) == 6
+    assert sorted(len(v) for v in by_orbit.values()) == [8] * 6
+
+    eliminated = []
+    surviving = []
+    for key, orbit in by_orbit.items():
+        witnesses = [cand for cand in orbit if candidate_is_angle_obstructed(*cand)]
+        if witnesses:
+            eliminated.append(witnesses[0])
+        else:
+            surviving.append(orbit)
+
+    assert len(eliminated) == 3
+    assert len(surviving) == 3
+
+    target_missing = frozenset((H.edge(1, 6), H.edge(2, 5), H.edge(3, 4)))
+    survivor_plus = set()
+    for orbit in surviving:
+        choices = [
+            cand for cand in orbit
+            if frozenset(cand[1]) == target_missing
+            and H.hull_radial_order(cand[0], 0) == [1, 6, 5, 2, 3, 4]
+            and cand[2][H.edge(0, 1)]
+        ]
+        assert len(choices) == 1
+        edge_signs = choices[0][2]
+        survivor_plus.add(frozenset(e for e, value in edge_signs.items() if value))
+
+    expected_survivors = {
+        frozenset({H.edge(0,1),H.edge(0,2),H.edge(0,3),H.edge(1,2),H.edge(1,4),H.edge(2,3),H.edge(3,6),H.edge(4,6)}),
+        frozenset({H.edge(0,1),H.edge(0,2),H.edge(0,3),H.edge(1,2),H.edge(1,4),H.edge(2,3),H.edge(3,6),H.edge(4,5),H.edge(5,6)}),
+        frozenset({H.edge(0,1),H.edge(0,2),H.edge(0,3),H.edge(1,2),H.edge(1,5),H.edge(2,3),H.edge(3,6),H.edge(4,5),H.edge(4,6)}),
+    }
+    assert survivor_plus == expected_survivors
+
+    print("uniform_labelled_survivors", len(full))
+    print("uniform_symmetry_orbits", len(by_orbit))
+    print("angle_obstructed_orbits", len(eliminated))
+    print("remaining_uniform_orbits", len(surviving))
+    print("PASS: the concave-five-cycle angle identity excludes exactly three uniform H5 orbits")
+
+
+if __name__ == "__main__":
+    main()

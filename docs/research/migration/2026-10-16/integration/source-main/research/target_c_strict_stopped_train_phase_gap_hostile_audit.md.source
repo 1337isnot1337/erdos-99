@@ -1,0 +1,183 @@
+# Hostile audit — strict stopped-train phase gap
+
+**Date:** 2026-09-12  
+**Audited source:** `research/target_c_strict_stopped_train_phase_gap.md`  
+**Dependencies audited in the same branch:** near-Mantel endpoint proof, proof repair, and hostile audit.  
+**Verdict:** **PASS at proof-only scope.**  
+**Theorem-state authority:** unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+## 1. The strengthening is genuinely upstream of §146
+
+The source assumes only equality in audited-working §142.7,
+
+\[
+{T-q/2\over D}\to2\sqrt{\Delta_2}.
+\]
+
+The original near-Mantel endpoint proof used §146 only to derive exactly this equality.
+Everything after that point depends solely on:
+
+- §142's atomic lower bound `x rho>=2sqrt(Delta_2)`;
+- §142's exposed-hull inequality `y<=2(1-rho)`;
+- §142's crossing-measure/weighted-Mantel bound;
+- the simple triangle-free train crossing graph; and
+- the branch's independently repaired near-complete signed-monotone train lemma.
+
+Thus removing the §146 prelude is logically valid and strictly strengthens the result.
+
+## 2. Equality forces atomic Mantel saturation
+
+From
+
+\[
+2\sqrt{\Delta_2}\le x\rho
+\]
+
+and
+
+\[
+x\rho\le x(1-y/2)={T-q/2\over D}+o(1),
+\]
+
+the assumed §142 endpoint forces
+
+\[
+x\rho=2\sqrt{\Delta_2}.
+\]
+
+Therefore
+
+\[
+{\Delta_2\over x^2}={\rho^2\over4},
+\]
+
+so equality holds throughout the §142 crossing-measure/product-measure/weighted-Mantel
+sandwich. The companion repair note justifies the finite induced near-Mantel train graph
+without assuming finitely many phase atoms.
+
+**Disposition:** PASS.
+
+## 3. Geometric contradiction is unchanged
+
+Near-Mantel stability gives two independent shores of size
+
+\[
+(\sqrt{\Delta_2}+o(1))D
+\]
+
+with `o(D^2)` missing cross pairs. The exact projective `pi/3` phase relation is a
+disjoint union of 3-cycles and has no `K_{2,2}`, so one shore collapses to one central
+phase atom and the other to at most its two neighbors. One neighbor has at least half
+the opposite shore mass.
+
+The hostile-audited signed-monotone train lemma then gives
+
+\[
+D\ge(\sqrt3/2-o(1))\left(
+\sqrt{\Delta_2}+{1\over2}\sqrt{\Delta_2}
+\right)D.
+\]
+
+The coefficient is
+
+\[
+{3\sqrt3\over4}\sqrt{\Delta_2}
+=1.237090624640176\ldots>1.
+\]
+
+No §146 variable appears.
+
+**Disposition:** PASS.
+
+## 4. Uniform positive gap
+
+If no absolute positive `epsilon_SG` existed, choose a sequence of Type-II survivors
+with `D->infinity` and
+
+\[
+{T-q/2\over D}<2\sqrt{\Delta_2}+1/j.
+\]
+
+Audited-working §142 supplies the matching lower bound, producing the forbidden equality
+sequence. Therefore the qualitative uniform strict gap is valid.
+
+This is an asymptotic existence statement. No numerical finite modulus is claimed.
+
+**Disposition:** PASS.
+
+## 5. Downstream algebra
+
+The exact ledger
+
+\[
+T-q=2f-k
+\]
+
+and `q<=pi D` give
+
+\[
+\liminf{2f-k\over D}
+\ge2\sqrt{\Delta_2}+\epsilon_{SG}-\pi/2.
+\]
+
+The §146 propagation was recomputed independently. From the improved train bound,
+
+\[
+{f\over D}\ge
+\sqrt{\Delta_2}+{\epsilon_{SG}\over2}
+-{h\over4D}+{d_H\over4D}+{s_Z\over2D}-o(1),
+\]
+
+while
+
+\[
+{Q\over D}+2{s_Z\over D}
+\le2{h\over D}-\pi+o(1),
+\qquad Q\ge f.
+\]
+
+Rearrangement gives
+
+\[
+{1\over D}\left(h-{d_H\over9}-{10s_Z\over9}\right)
+\ge
+{4\over9}\left(\pi+\sqrt{\Delta_2}\right)
++{2\epsilon_{SG}\over9}-o(1).
+\]
+
+The tooth-defect propagation similarly gains `epsilon_SG/2`.
+
+**Disposition:** PASS.
+
+## 6. Regression audit
+
+- **Five-phase C5 blow-up:** its crossing density is a fixed amount below Mantel, so it
+  does not approach the §142 equality case.
+- **Sliding interval graph:** a fixed-width sliding interval model has a positive missing
+  cross-pair density; equality in §142 forces the missing fraction to zero after Mantel
+  stability.
+- **Oblique two-phase lattice:** if the two coherent shore populations reach the
+  equality masses, the two-leg source-diameter path is longer than `D`; smaller patches
+  remain valid regressions.
+- **Holes / defect faces / bridge repetitions:** the near-complete train lemma uses
+  actual stopped trains and the ambient source hull, not a disk-crosscut hypothesis.
+- **Contact isolates:** not used in any train or rigidity coordinate and remain in the
+  full source.
+
+## 7. Final verdict
+
+The proof-only theorem
+
+\[
+\boxed{
+{T-q/2\over D}
+\ge2\sqrt{\Delta_2}+\epsilon_{SG}
+}
+\]
+
+for some absolute `epsilon_SG>0` is certified at the audited-working Type-II scope.
+It strictly improves §142 and consequently the current §§143, 146, and 152 constants,
+but it does not by itself close the full-core or inactive-container branches.
+
+**Final verdict:** PASS.

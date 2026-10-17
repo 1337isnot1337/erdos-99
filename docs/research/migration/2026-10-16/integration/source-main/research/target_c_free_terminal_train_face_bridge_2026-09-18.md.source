@@ -1,0 +1,374 @@
+# Target C — terminal FREE metric currency forces a train/face floor
+
+**Date:** 2026-09-18
+**Status:** proof-only synthesis; theorem-state authority unchanged
+**Scope:** full-core Type-II survivor sequences carrying a non-anchored all-inactive FREE reflection module; terminal consequences additionally assume `pi D-q=o(D)`
+**Depends on:** the FREE boundary-crossing metric-routing theorem, the exact loaded-hull identity `b+Q=2(q-k)`, and the audited-working all-defect phase/train gap
+**Certificate:** `research/verify_target_c_free_terminal_train_face_bridge_2026_09_18.py`
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The preceding FREE metric-routing theorem ends with a recipient inequality in the
+actual outer-walk detour
+
+\[
+\lambda_D:=b-\operatorname{per}(F),
+\]
+
+the exterior isolate population `Z_ext`, and the force-hull side-length surplus
+
+\[
+H_D:=\operatorname{per}(F)-q.
+\]
+
+This note eliminates `lambda_D` exactly by inserting the canonical loaded-hull face
+identity.  On the terminal face it then inserts the independent all-defect train/face
+gap.  The result is a direct lower bound on the high-`t` variable
+
+\[
+t_D:={q-k\over D},\qquad k=d_H+s_Z,
+\]
+
+with an explicit linear tradeoff against `Z_ext/D`.
+
+The main asymptotic consequence is
+
+\[
+\boxed{
+\liminf\left({q-k\over D}+{2\over5}{Z_{\rm ext}\over D}\right)
+\ge
+{\pi\over2}+{1\over5}
++{2\over5}\sqrt{\frac{\pi}{2\sqrt3}}
+=2.151721449540479\ldots
+}
+\tag{FT.1}
+\]
+
+on every terminal FREE survivor sequence in the stated scope.  In particular,
+
+\[
+Z_{\rm ext}=o(D)
+\quad\Longrightarrow\quad
+\boxed{
+\liminf {q-k\over D}\ge2.151721449540479\ldots .
+}
+\tag{FT.2}
+\]
+
+Thus the small-external terminal FREE branch lies strictly beyond the entire
+`t<=1.8687` high-`t` rectangle studied by the September 17 support-normal-form
+pipeline.  Conversely, a terminal FREE survivor with `t<=1.8687+o(1)` must satisfy
+
+\[
+\boxed{
+Z_{\rm ext}\ge(0.707553623851198\ldots-o(1))D.
+}
+\tag{FT.3}
+\]
+
+This is a branch reduction, not a C-II closure.  A large exterior population is still
+allowed, and the proof-only all-defect input is not promoted here.
+
+---
+
+## 1. Exact finite elimination of the outer-walk detour
+
+Use the notation of the FREE boundary-crossing metric-routing theorem.  Its finite
+inequality is
+
+\[
+\lambda_D+Z_{\rm ext}+(C_{H,D}+1)H_D
+\ge
+S_D+1-\sigma_D-C_{\Delta,D}\Delta_D,
+\tag{FT.4}
+\]
+
+where:
+
+- `S_D` is the original monotone parent-chain support span;
+- `sigma_D` is its total edge-length slack, bounded by `h_*+D^{-1/3}`;
+- `Delta_D` is the bounded crossing-side clearing correction;
+- `C_{H,D},C_{Delta,D}` stay bounded as `D->infinity`.
+
+The use of `sigma_D` here avoids overloading the high-`t` variable `t_D`.
+
+Canonical loaded-hull algebra gives the exact finite identity
+
+\[
+\boxed{b+Q=2(q-k).}
+\tag{FT.5}
+\]
+
+Since
+
+\[
+\operatorname{per}(F)=q+H_D,
+\]
+
+we have, exactly,
+
+\[
+\begin{aligned}
+\lambda_D
+&=b-\operatorname{per}(F)\\
+&=2(q-k)-Q-q-H_D.
+\end{aligned}
+\tag{FT.6}
+\]
+
+Substitute (FT.6) into (FT.4).  The extra `+H_D` in the coefficient of (FT.4)
+cancels the `-H_D` inside `lambda_D`.  Therefore
+
+\[
+\boxed{
+2(q-k)+Z_{\rm ext}+C_{H,D}H_D
+\ge
+q+Q+S_D+1-\sigma_D-C_{\Delta,D}\Delta_D.
+}
+\tag{FT.7}
+\]
+
+This is the useful finite bridge.  It converts the FREE corridor directly into the
+same `q-k` and `Q` currencies used by the full-core train/face ledger, with no estimate
+on `b` beyond the exact identity (FT.5).
+
+---
+
+## 2. Terminal normalization
+
+Assume now
+
+\[
+\pi D-q=o(D).
+\tag{FT.8}
+\]
+
+Because `q<=per(F)<=pi D`, (FT.8) also gives
+
+\[
+H_D=\operatorname{per}(F)-q=o(D).
+\tag{FT.9}
+\]
+
+The FREE parent-chain theorem gives
+
+\[
+{S_D\over D}\to{1\over2},
+\tag{FT.10}
+\]
+
+while `sigma_D=O(1)`, `Delta_D=O(1)`, and both clearing coefficients remain bounded.
+Write the normalized finite quantities
+
+\[
+t_D={q-k\over D},
+\qquad
+z_D={Z_{\rm ext}\over D},
+\qquad
+\phi_D={Q\over D}.
+\]
+
+Dividing (FT.7) by `D` and using (FT.8)--(FT.10) gives directly
+
+\[
+\boxed{
+2t_D+z_D\ge\pi+\phi_D+{1\over2}-o(1).
+}
+\tag{FT.11}
+\]
+
+In particular,
+
+\[
+2t_D+z_D\ge\pi+{1\over2}-o(1).
+\tag{FT.12}
+\]
+
+If `z_D=o(1)`, (FT.12) alone gives
+`t_D>=1.82079632679...-o(1)`; the next section raises that coefficient to
+`2.15172...`.
+
+---
+
+## 3. Insert the all-defect phase/train gap
+
+Let `f` be the number of bounded nonquadrilateral contact faces.  The audited-working
+all-defect phase/train theorem gives, for every Type-II full-core survivor,
+
+\[
+2f-k\ge(\gamma-o(1))D,
+\tag{FT.13}
+\]
+
+where
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+\gamma=2\sqrt{\Delta_2}-{\pi\over2}
+=0.333829286933018\ldots .
+\tag{FT.14}
+\]
+
+Every bounded nonquadrilateral face has degree at least five.  Hence, for
+
+\[
+Q=\sum_P(\deg P-4),
+\]
+
+one has the exact discrete inequality
+
+\[
+\boxed{Q\ge f.}
+\tag{FT.15}
+\]
+
+On the terminal branch,
+
+\[
+{k\over D}
+={q\over D}-t_D
+=\pi-t_D+o(1).
+\tag{FT.16}
+\]
+
+Equations (FT.13)--(FT.16) therefore imply the finite asymptotic lower bound
+
+\[
+\boxed{
+\phi_D\ge {\pi-t_D+\gamma\over2}-o(1).
+}
+\tag{FT.17}
+\]
+
+Insert (FT.17) into (FT.11):
+
+\[
+2t_D+z_D
+\ge
+\pi+{1\over2}+{\pi-t_D+\gamma\over2}-o(1).
+\]
+
+Thus
+
+\[
+\boxed{5t_D+2z_D\ge3\pi+1+\gamma-o(1).}
+\tag{FT.18}
+\]
+
+Using (FT.14),
+
+\[
+\boxed{
+t_D+{2\over5}z_D
+\ge
+{\pi\over2}+{1\over5}
++{2\over5}\sqrt{\frac{\pi}{2\sqrt3}}
+-o(1).
+}
+\tag{FT.19}
+\]
+
+Taking `liminf` proves (FT.1), and `z_D=o(1)` proves (FT.2).
+
+---
+
+## 4. Quantitative external-population price below the new floor
+
+Rearranging (FT.18) gives
+
+\[
+\boxed{
+z_D\ge
+{3\pi+1+\gamma-5t_D\over2}-o(1).
+}
+\tag{FT.20}
+\]
+
+For a few reference values:
+
+\[
+\begin{array}{c|c}
+T & t\le T\ \Longrightarrow\ \liminf Z_{\rm ext}/D\\ \hline
+1.8440 & 0.769303623851198\ldots\\
+1.8600 & 0.729303623851198\ldots\\
+1.8687 & 0.707553623851198\ldots\\
+2.0000 & 0.379303623851198\ldots
+\end{array}
+\tag{FT.21}
+\]
+
+The `1.8687` row proves (FT.3).  Therefore a terminal FREE survivor cannot live in the
+entire September-17 bounded high-`t` support-normal-form window unless a positive
+linear exterior-isolate population survives simultaneously.
+
+At the formal `z=0` equality point of the scalar relaxation,
+
+\[
+t=2.151721449540479\ldots,
+\qquad
+{k\over D}=\pi-t=0.989871204049314\ldots,
+\]
+
+and (FT.17) requires
+
+\[
+{Q\over D}\ge {f\over D}\ge0.661850245491166\ldots .
+\tag{FT.22}
+\]
+
+At this formal equality point all scalar inequalities are tight, so
+
+\[
+{\lambda_D\over D}
+=2t-\pi-{Q\over D}
+={1\over2}.
+\]
+
+More generally, when `z_D=o(1)` the original terminal FREE recipient law gives
+`lambda_D/D>=1/2-o(1)` directly, while (FT.17) supplies the independent lower bound on
+`Q/D`.  Their compatibility is exactly what produces (FT.2).  The scalar endpoint
+therefore carries both a half-diameter of actual outer-walk detour and a linear
+exceptional-face population.
+
+---
+
+## 5. Scope audit and next target
+
+The argument uses only quantities from the same full-core source:
+
+1. (FT.7) is a finite algebraic composition of the proved FREE metric-routing
+   inequality with the exact canonical identity `b+Q=2(q-k)`.
+2. The terminal passage uses `pi D-q=o(D)`, which itself implies `H_D=o(D)` because
+   `q<=per(F)<=pi D`.
+3. The strengthening from `1.82079...` to `2.15172...` uses the separate
+   audited-working all-defect phase/train theorem.  This note does not promote that
+   theorem or hide its proof-only status.
+4. No assumption `Z_ext=o(D)` is needed for the tradeoff (FT.19); that assumption is
+   used only for the clean floor (FT.2).
+5. Nothing here bounds `Z_ext/D` from above.  Hence the result does not close the FREE
+   branch and does not close C-II.
+
+The remaining terminal FREE branch is now split sharply:
+
+```text
+large exterior branch:
+    Z_ext = Omega(D), with the exact price (FT.20),
+
+or small-exterior branch:
+    (q-k)/D >= 2.15172144954...,
+    outside the entire t<=1.8687 high-t rectangle,
+    with linear Q/f and at least half a diameter of metric outer-walk detour.
+```
+
+The next useful step is therefore not another refinement inside the old `t<=1.8687`
+rectangle.  It is either:
+
+- an upper bound on `Z_ext/D` in the terminal full-core geometry strong enough to feed
+  (FT.19); or
+- a new large-`t` argument beginning at `t>=2.15172...` and using the simultaneous
+  `lambda_D/D>=1/2-o(1)` and linear defect-face population.
+
+**Disposition:** exact finite FREE-to-train/face bridge proved; terminal combination
+with the audited-working all-defect phase gap yields the new
+`t+(2/5)Z_ext/D >= 2.15172144954...` tradeoff.  The authoritative theorem-state ledger
+is unchanged; C-II remains open.

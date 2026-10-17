@@ -1,0 +1,198 @@
+# Target C: seven-no-root `D=-2,k=4,d=1,p=0` closure
+
+Date: 2026-09-20
+
+Status: exact closure of the deficiency-one half of the seven-no-root `D=-2,k=4` boundary. This does not close the whole seven-no-root layer and does not change the direct 3,874-cell generic-H6 endpoint.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_seven_noroot_k4_dminus2_d1p0_2026_09_20.py`
+
+## Starting point
+
+The established seven-no-root deletion theorem gives, for every hypothetical seven-no-root counterexample,
+
+`D(B) in {-2,-1}`
+
+and the exact identity
+
+`D(B) = 7 + p + 3d - 3k`.
+
+In the `D=-2,k=4` branch this leaves exactly
+
+```text
+(d,p) = (0,3) or (1,0).
+```
+
+This note closes the second case.
+
+Assume therefore
+
+```text
+D(B) = -2,
+k(B) = 4,
+d = 1,
+p = 0.
+```
+
+The seven-row global coefficient-constraint space `P_7` has rank
+
+`7-k = 3`.
+
+The depth-two deletion theorem for the `D=-2` branch says that deleting any one or any two no-root coordinates preserves this rank. Equivalently,
+
+`minimum support(P_7) >= 3`.
+
+Every two-row deletion is consequently a five-no-root shadow with
+
+```text
+D = 2,
+k = 2,
+d = 1,
+p = 0,
+rank(P_5) = 3.
+```
+
+The root-row set itself does not change under these deletions.
+
+## Canonical five-row shadows
+
+For five no-root rows with `k=2,p=0`, the committed canonical construction fixes a realizable rank-three coefficient space `P_5`, leaves every touched block empty when its local empty-state constraint lies in `P_5`, and completes every other touched block.
+
+Let `C_5` be this canonical complete-block set. For any actual realization of the same `P_5`, `C_5` is a subset of its complete root blocks. Complete-block deficiency
+
+`|C|-rank H(C)`
+
+cannot decrease when complete rows are added. Since the hypothetical seven-row state has root deficiency one, every pair-deletion shadow must therefore have canonical deficiency at most one.
+
+A new exact scan ranks the complete-block system for every canonical rank-three five-row state, including the `c=14,15` states that the earlier `k=2` factor-three proof could discard using the ambient 15-dimensional rank cap. It finds no canonical deficiency-zero state. Thus every possible pair shadow of the hypothetical seven-row state has canonical deficiency exactly one.
+
+The exhaustive census gives
+
+```text
+canonical d=1 five-row states     4,717
+S7 orbit representatives involved 3,940
+
+complete blocks c    states
+4                    4,026
+6                      247
+7                      376
+8                       20
+9                       48
+```
+
+The exact rank scans over the three disjoint orbit ranges `0..10000`, `10000..15000`, and `15000..20451` also verify that no `d=0` state occurs anywhere. In particular the old `c=14,15` ambient-cap states all have deficiency at least two.
+
+## The unique complete-block circuit
+
+A deficiency-one complete-block family has a one-dimensional relation kernel. Let `S` be the support of that unique relation for one pair-deletion shadow.
+
+Because its canonical complete rows are a subset of the actual root complete rows, and the actual root system also has deficiency one, this relation is the unique dependence of the actual root system. Therefore every other pair-deletion shadow must contain the same circuit `S` in its canonical complete set. Otherwise that shadow would have no way to realize its required nonzero one-dimensional dependence inside the same actual root relation space.
+
+The 4,717 parents have the exact circuit-size census
+
+```text
+|S|=4    4,557
+|S|=6      157
+|S|=8        3
+```
+
+There are 53 labeled circuits and only three `S_7` circuit orbits. Representatives are
+
+```text
+|S|=4:
+(123),(124),(134),(234)
+
+|S|=6:
+(123),(124),(134),(235),(245),(345)
+
+|S|=8:
+(123),(124),(134),(235),(245),(346),(356),(456)
+```
+
+where `(abc)` denotes the root quotient block indexed by the three non-root vertices `a,b,c`.
+
+## Touch-multiplicity obstruction
+
+Every block of `S` must still be touched after deleting any two of the seven no-root cycles. Hence every circuit block must be touched by at least three of the seven no-root cycles.
+
+For a fixed five-row parent this gives an exact prefilter on the two added cycles:
+
+- if a circuit block is touched once by the parent, both added cycles must touch it;
+- if it is touched twice, at least one added cycle must touch it;
+- multiplicity at least three already survives every two-coordinate deletion.
+
+Across all 4,717 parent states this leaves exactly
+
+`531,888`
+
+candidate unordered pairs of added no-root cycles.
+
+This is a necessary condition only. The final obstruction comes from the coefficient space.
+
+## Exact seven-row coefficient extension
+
+Fix one canonical five-row parent `(E_5,P_5,C_5)` and one of the surviving added pairs. For the resulting seven no-root cycles, every actual `p=0` coefficient space is generated entirely by local empty-block constraints.
+
+The verifier enumerates every rank-three span of such constraints that
+
+1. projects to the fixed parent `P_5` after deleting the two added coordinates; and
+2. preserves rank three after every deletion of two coordinates.
+
+The second condition is exactly the established depth-two synchronization theorem, equivalently minimum support at least three. It is safe to impose this condition on every local generator and intermediate span: every subspace of a code with minimum support at least three also has minimum support at least three.
+
+The exhaustive scan was run in six disjoint parent ranges:
+
+```text
+parent range    candidate added pairs    rank-three P7 extensions
+0..700                 104,274                     0
+700..1400                80,915                     0
+1400..2200              108,720                     0
+2200..3000               83,451                     0
+3000..3800               63,167                     0
+3800..4717               91,361                     0
+-------------------------------------------------------
+total                    531,888                     0
+```
+
+Thus none of the 531,888 structurally possible added pairs admits even a coefficient-space extension satisfying the required projection and depth-two conditions. No final `T`-space reranking is needed: the branch fails before that stage.
+
+Therefore
+
+> there is no seven-no-root counterexample with `D=-2,k=4,d=1,p=0`.
+
+## Exactness and coverage
+
+The five-row orbit enumeration is the already certified exact census of all 20,451 `S_7` orbits of five no-root cycles. Any labeled pair-deletion shadow can be relabeled to one of these representatives, and the same relabeling sends the two deleted cycles to one of the added pairs considered by the verifier.
+
+Coefficient-space generation, projection, union, and containment use the repository's exact rational row-space operations. The only modular calculations are ranks of complete-block `T` relations. Their maximum squared row norm is 12. The verifier checks the Lucas-Lehmer primality condition for `2^127-1` and
+
+`(2^127-1)^2 > 12^15`,
+
+so the complete-block rank decisions agree with rational rank by the same Hadamard argument used in the committed five-row verifier.
+
+The committed verifier is shardable at both finite stages. The full result is certified by merging a complete partition of the 20,451 five-row orbit indices and a complete partition of the 4,717 retained parent indices.
+
+## Remaining boundary
+
+The seven-no-root `D=-2,k=4` boundary is now reduced to the single case
+
+```text
+D=-2, k=4, d=0, p=3.
+```
+
+The other previously isolated small branch is
+
+```text
+D=-1, k=3, d=0, p=1,
+```
+
+for which the repository already has the depth-two synchronization theorem and a direct shadow verifier under active investigation.
+
+The next clean density target is the remaining `D=-2,k=4,d=0,p=3` case. Its pair-deletion shadows have `D=2,k=2,d=0,p=3`; the useful analogue of the argument above is to classify those sharp five-row shadows and identify a root-state invariant that must persist through all 21 pair deletions.
+
+The direct C-II endpoint remains unchanged:
+
+`3874 = 3076 C7 + 798 (C3 disjoint-union C4)`.
+
+No theorem-state authority file is changed by this result.
