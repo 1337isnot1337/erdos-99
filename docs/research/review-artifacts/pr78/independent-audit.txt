@@ -1,0 +1,306 @@
+# Independent AI-agent audit of research PR #78
+
+Verdict: **PASS for the submitted exact finite, noncanonical contribution** at
+`9f230b2f900bf050a27ce7430ae7b3fed8ef8eda`. No load-bearing gap or false finite
+statement was found. This does not promote a canonical claim, audit the entire
+geometric Target A route, or close Target A / Level I.
+
+## Identity, independence, and immutable scope
+
+- Date: 2026-10-17, America/Chicago.
+- Reviewing agent: `/root/audit_pr78`, a separately spawned reviewer task.
+- Observed runtime thread identifier (`CODEX_THREAD_ID`):
+  `01a14b84-2bcb-7320-9373-5d67c5dbeac2`. The task identifier distinguishes this
+  reviewer from the originating/merging parent in the shared runtime.
+- Model: OpenAI Codex, GPT-6 family, as identified by this session's system
+  instructions. A more precise deployed model/version is not exposed.
+- I did not originate, edit, or verify the submitted proof/checker before this
+  independent review. I made no change to submitted source, metadata, or branch.
+  The parent assigned the immutable SHA and review responsibility; I read the
+  source proofs and code and performed my own investigation.
+- Repository: `1337isnot1337/erdos-99`.
+- Reviewed head: `9f230b2f900bf050a27ce7430ae7b3fed8ef8eda`.
+- Reviewed head tree: `355c05a42f85924bf41c04dddd07b9eeb35e112d`.
+- Separate detached worktree:
+  `/home/cinna/erdos99-pr78-independent-audit-20261017`.
+- PR/main merge base: `96e16e52526e978f90dbdae36f7e4394aaeb98ac`.
+  Main named in the assignment was `42d8dba8b2239a22296ab9ca6bc4cc694e138e02`.
+- Scientific state checked live at the reviewed head:
+  `2026-10-15.publication.2`; priority `public-frontier.3`; catalogue
+  `public-frontier.6`; inherited source
+  `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`.
+
+This is an internal AI-agent mathematical review, not external human peer review.
+Both the exact-head and current-main review policies were inspected. Their
+independent-agent requirement agrees; current-main adds explicit merge replay
+ownership. The parent merging agent owns full registered certificate replay on
+the final integration tree. I do not represent an author's historical full-run
+assertion as my own replay.
+
+## Complete change inventory
+
+The symmetric-base diff contains exactly seven files:
+
+| File | Review performed |
+| --- | --- |
+| `docs/reports/target_a_independent_schur_linkage_2026-10-17.md` | Entire report, statements, proof reconstruction, counts, controls, scope, credit and verification claims inspected |
+| `research/verify_target_a_schur_linkage_2026_10_17.py` | Entire 327-line source inspected; normal and optimized replay; independent reimplementation |
+| `research/target_a_schur_linkage_2026_10_17.json` | Entire deterministic input-domain/output evidence inspected and reproduced byte-for-byte |
+| `docs/state/artifact-index.jsonl` | One added artifact entry; `canonical:false`, `status:unreviewed`, no claim IDs, dependencies or invalidations introduced |
+| `research/README.md` | Added bounded checker description, command and limitations inspected |
+| `reading/docs/reports/target_a_independent_schur_linkage_2026-10-17.md` | Generated reading mirror hash checked against manifest; included in corpus check |
+| `reading/manifest.json` | Added source/mirror hashes and aggregate increments inspected; hashes recomputed |
+
+No canonical manifest claim, state snapshot, route theorem, certificate registration,
+priority or task weight changes. Code originates at commit
+`742fcaca902d6f386c25a24148a10f635fb10d2c`; later PR commits revise the report and
+generated metadata without changing the checker. No predecessor code is imported.
+The checker imports only standard-library collections, itertools, argparse, json,
+and pathlib. Its only file input is the user-selected optional `--check` JSON;
+the finite graph domain is fully encoded in source and output. There is no
+network, private repository, numerical package, downloaded data, subprocess or
+external literature dependency in the finite argument.
+
+Source SHA-256s:
+
+```text
+abb381e795052fa2d6de401e9f700faf8c8f72aaf860b966fc5d0867f4645045  docs/reports/target_a_independent_schur_linkage_2026-10-17.md
+7d90accb9bbff1efe3cd3744b115443a305ad5ee493687c47905500aaf29883e  reading/docs/reports/target_a_independent_schur_linkage_2026-10-17.md
+5a3fbc6f5288f0162ad1dc3419279b53854fa08c5c29cf40619e2838240c6bd9  research/verify_target_a_schur_linkage_2026_10_17.py
+fb72c58e16702fb16da72cb6a1aef3a7e17eb932df47619abf5ce66358e3b7a0  research/target_a_schur_linkage_2026_10_17.json
+```
+
+## Inputs and prerequisite boundaries
+
+I inspected `AGENTS.md`, `docs/REVIEW_POLICY.md`, `docs/RESEARCH_WORKFLOW.md`,
+`docs/STATE.md`, `docs/problem/statement.md`, `docs/research/bottleneck-brief.md`,
+`docs/research/priority-state.json`, `autoresearch.md`, the Target A route, and
+`tasks/verify-a-schur-linkage-bound.md`. The complete load-bearing finite source
+statements/proofs inspected were:
+
+- Section 102, `docs/targets/target-a/02-scaffold-and-hall.md`: generic incidence
+  convention, Schur block elimination and bordered determinants.
+- Section 113, `docs/targets/target-a/03-source-response.md`: fixed matching,
+  alternating orientation, contracted-transversal linkage and vertex cuts.
+- Section 173.2-173.3,
+  `docs/targets/target-a/25-contact-shield-sector-hall.md`: coarse sector graph,
+  overlapping sinks and Hall/rank bound.
+- Entire Sections 174 and 175,
+  `docs/targets/target-a/26-tube-shield-sector-balance.md` and
+  `27-tube-only-right-deficiency-frontier.md`: basis closure, geometric hypotheses,
+  tube interception, rank/nullity/right-deficiency subtraction and remaining endpoint.
+- Section 177.3-177.4,
+  `docs/targets/target-a/29-lens-source-gate-refinements.md`: sink overlap and
+  indivisible matched-pair contraction.
+- Entire predecessor `research/tube_shield_cut_audit.py` and its actual replay.
+
+`tools/task_context.py verify-a-schur-linkage-bound` was run and its full navigation
+closure saved. It reports no reachable registered claim/certificate and lists five
+supporting commands. The other activation/Kuperberg scripts in that broad route
+closure are not premises of this finite polynomial/path experiment and were not
+replayed by me. Likewise, I did not silently accept Section 175.6's historical audit
+of the entire source/stress/geometry chain: this contribution explicitly imports
+only the finite combinatorial interfaces, and supplies no geometric realization.
+No uninspected geometric result is needed for the finite PASS.
+
+## Independent proof reconstruction
+
+Before reading the report's reconstruction subsection, I derived the main
+determinant/linkage mechanism from the stated block matrix and source definitions.
+The fixed matching contributes a unique diagonal monomial to `det A[Z,B]`, so the
+basis block is invertible over the rational-function field of independent edge
+variables. Block elimination identifies a Schur minor with its bordered determinant
+divided by that denominator. Distinct supported permutations have different edge
+monomials; none can cancel. Thus a nonzero bordered minor is exactly a supported
+matching of its chosen rows and columns.
+
+An arbitrary injection saturating `B union J` need not itself cover every `Z`, so
+that interface requires more than just naming generic matching rank. Comparing it
+with the fixed `B--Z` matching yields degree-at-most-two alternating components.
+Each `J` vertex is an endpoint of a path whose other endpoint is a free `O` vertex;
+all `B` vertices are matched twice in the superposition, so the paths cannot end
+there. Flipping only these disjoint `J`-paths preserves saturation of every `B` and
+`Z`. This supplies the required bordered row set. Conversely, flipping any such
+path family gives an injection. Alternating cycles can remain and do not invalidate
+the argument. The code tests cyclic as well as acyclic supports.
+
+Every basis vertex has its unique incoming matched edge from its paired `Z`, and
+every matched `Z` has that edge as its unique outgoing edge. A simple directed
+terminal-to-sink path uses both endpoints of a matched pair or neither.
+Contracting the pair therefore preserves vertex-disjoint linkage provided the
+contracted unit keeps capacity one. Source and sink capacities must also remain one.
+I inspected the submitted split-vertex residual implementation, reverse arcs and
+endpoint connectors; exhaustive separator enumeration separately includes terminal
+and sink vertices. The determinant permutation sign convention is valid for the
+actual sorted block orders used by every call.
+
+For a tube `T`, basis closure removes exactly the basis partners of `T cap Z`;
+shield terminals are eligible only when *all* their neighbors lie in `T`. A path
+meeting a removed basis vertex has just used its matched tube row, while a path
+starting at a shield terminal must next visit a tube row. Hence at most `|T|`
+vertex-disjoint paths meet the shield. A remaining path stays in one undirected
+internal component until its final sink. Its start and end give a matching in the
+coarse complete-within-sector graph even when sink neighborhoods overlap. This
+proves `rank S <= |T| + nu_coarse`.
+
+Only when `O_i` are disjoint does `nu_coarse` equal
+`sum_i min(|C_i|,|O_i|)`. The decomposition of surviving sinks then gives the two
+reported nullity and right-deficiency inequalities. Exterior tube sinks cancel,
+but the `|T cap Z|` term remains. Sector basis balance follows because both
+endpoints of every surviving fixed pair are present in the same internal component.
+The old-versus-new lower bound difference is `|C_sh| + |T cap Z|`, consistent with
+the strict-improvement count. All these implications were reconstructed and checked
+against the code; no source-point or packing-optimality inference enters them.
+
+The analytic rank-one count also checks out: rank one requires the two direct
+terminal neighborhoods to be the same singleton sink (two choices). The two basis
+edges into that sink are arbitrary (factor four). For zero, either one, or both
+directed off-diagonal basis edges, the reachability enumeration gives respectively
+25, 22, 22, 19 choices for `C--Z` and safe basis edges into the other sink. Thus
+`2*4*(25+22+22+19)=704`; the remainder is `9216-704=8512`.
+
+## Domain and reviewer-owned replay
+
+The submitted domain really is complete for its declaration: all 14 optional
+edges of `(B union C) cross (Z union O)` with two fixed diagonal edges, filtered
+only by each terminal having at least one direct sink neighbor. Its size is
+`4*16*16*9=9216`. All four terminal subsets are checked. Each of 16 tube subsets
+is paired with every subset of eligible shield terminals; no numerical rank filter,
+random sampling or geometric selection occurs. All path endpoint capacities are one.
+
+To test against correlated implementation errors, I wrote
+`/tmp/erdos99-pr78-independent-recheck.py` from scratch without importing any
+submitted code. It constructs the *actual* Schur numerator
+`N = det(D)*E - F*adj(D)*G` using sparse polynomials, forms the 2-by-2 determinant
+polynomial, and restricts independent variables by setting unsupported edges to
+zero. The complete numerator determinant has 46 nonzero monomials; each entry
+numerator has six. Polynomial cancellation is performed before support restriction.
+This is exact symbolic Schur computation, not a call to matching rank or the
+submitted bordered-minor routine.
+
+It compares those ranks to exhaustive simple directed paths and disjoint path
+pairs, rather than max-flow, separator enumeration or injections. It also checks
+unit-capacity contraction and reconstructs all submitted tube/shield cases using
+union-find, rather than the submitted component search. Rank/path and contraction
+checks deliberately include all **16,384** fixed-matching supports, before the
+direct-sink filter. Those wider checks give 65,536 terminal-subset comparisons,
+16,384 contraction comparisons, and unrestricted rank counts 160 / 4,060 / 12,164
+for ranks zero / one / two. The submitted domain independently yields:
+
+| Quantity | Reproduced count |
+| --- | ---: |
+| Supports | 9,216 |
+| Rank one / rank two | 704 / 8,512 |
+| Supports containing the basis alternating cycle | 2,304 |
+| Tube/shield cases | 234,176 |
+| Disjoint-sink / overlapping-sink cases | 176,984 / 57,192 |
+| Strict improvements over full-shield charge | 150,408 |
+
+Reviewer artifacts, exact hashes, and replay:
+
+```text
+96c27220938d74a36a93d32d2c5c0f717bb78065615347bd36daf16d28724dc0  /tmp/erdos99-pr78-independent-recheck.py
+f51ade24621dcb92d7ebdfd4bfa479c9e24e2803cdc914887d331ea0d5c59e41  /tmp/erdos99-pr78-independent-recheck.json
+```
+
+```sh
+python3 /tmp/erdos99-pr78-independent-recheck.py > /tmp/erdos99-pr78-independent-recheck-replayed.json
+cmp /tmp/erdos99-pr78-independent-recheck.json /tmp/erdos99-pr78-independent-recheck-replayed.json
+```
+
+The script is independent of its working directory and uses only Python's standard
+library. Its reviewer assertions are active in normal Python; run it without `-O`.
+The submitted checker instead uses explicit exceptions and was also replayed with
+`-O`.
+
+## Counterexample attempts and binding regressions
+
+I reconstructed all five controls from their complete edge lists and independently
+checked the decisive values. The reviewer script rechecks the graph/path controls;
+the equal-weight matrix calculation was also checked directly.
+
+1. Missing terminal interception: fixed matching plus direct edges `(2,6),(3,7)`
+   has rank two. Improperly removing terminal 2 with empty tube produces invalid
+   cut upper bound one. The submitted eligibility guard rejects this input.
+2. Overlapping sinks: fixed matching plus `C cross O` gives two separate internal
+   singleton-terminal sectors, both seeing both sinks. Generic rank is two and
+   true right deficiency zero. Summing separate sink surpluses yields the false
+   lower bound two; coarse matching gives the correct lower bound zero.
+3. Lost capacity after contraction: on the separately declared one-basis,
+   three-terminal graph, independently enumerated simple paths give packing
+   numbers two before contraction and two with a capacity-one contracted vertex.
+   Edge-disjoint paths after contraction give three. This isolates the exact
+   contracted-unit capacity failure without incorrectly blaming edge capacities
+   on the original uncontracted matching edge.
+4. Wrong matching orientation: the listed graph has generic rank two but only
+   one directed terminal-to-sink path if matched edges point left-to-right.
+5. Equal-weight specialization: the shared-sink graph has generic rank two.
+   With basis identity, zero `F,G`, and all four direct entries one, `S` is the
+   all-ones 2-by-2 matrix, with determinant zero and rank one. Support/generic rank
+   cannot be substituted for this specialization.
+
+The two-basis alternating cycle is present in one quarter of the domain; all 2,304
+such supports pass. The reviewer-wide unrestricted replay also tests terminals
+with no direct sink neighbor and rank-zero supports, rather than assuming these
+omitted cases are harmless. No finite counterexample was found under the declared
+hypotheses. The controls are counterexamples only to weakened abstract statements;
+none is claimed to be a geometrically realized source or global minimizer.
+
+## Commands actually run and results
+
+Environment: Python 3.14.8; Linux 7.2.10-arch1-1, x86_64, glibc 2.44. No dependency
+installation or desktop automation was needed.
+
+From the exact-head detached worktree:
+
+```sh
+python3 research/verify_target_a_schur_linkage_2026_10_17.py --check research/target_a_schur_linkage_2026_10_17.json > /tmp/erdos99-pr78-checker-normal.json
+python3 -O research/verify_target_a_schur_linkage_2026_10_17.py --check research/target_a_schur_linkage_2026_10_17.json > /tmp/erdos99-pr78-checker-optimized.json
+cmp /tmp/erdos99-pr78-checker-normal.json /tmp/erdos99-pr78-checker-optimized.json
+python3 research/tube_shield_cut_audit.py > /tmp/erdos99-pr78-predecessor.log
+python3 tools/task_context.py verify-a-schur-linkage-bound > /tmp/erdos99-pr78-task-context.txt
+python3 /tmp/erdos99-pr78-independent-recheck.py > /tmp/erdos99-pr78-independent-recheck.json
+git diff --check 42d8dba8b2239a22296ab9ca6bc4cc694e138e02...HEAD
+python3 tools/check_public.py > /tmp/erdos99-pr78-check-public.log
+```
+
+Both submitted checker replays exited zero and reproduced the committed JSON
+byte-for-byte; normal and optimized outputs have SHA-256
+`fb72c58e16702fb16da72cb6a1aef3a7e17eb932df47619abf5ce66358e3b7a0`.
+The predecessor exited zero and printed `PASS: 17104 exact graph/tube/shield
+cases; 15056 strictly improved lower bounds.` The task-context and reviewer-owned
+replay exited zero; diff whitespace check passed. Exact-head corpus check exited
+zero with `integrity: passed`, `errors: 0`, `mathematical_proof: false`; it counted
+1,450 artifacts, 94 certificate registrations, 451 claims, 845 edges, seven
+nonredistributed reference links and 23 tasks. No full registered certificate run
+was performed by this reviewer; it is **deferred to the merging agent** on the final integration
+candidate. The parent has been explicitly informed of that boundary.
+
+## Verdict, applicability, and unresolved obligations
+
+**PASS** for the finite noncanonical proof/checker/evidence and its stated
+bookkeeping conclusions at the exact reviewed SHA. The source report's
+`unreviewed` lifecycle remains unchanged by this note; no canonical promotion
+transaction is requested or supplied. This review may be recorded separately as
+an independent agent audit of that bounded contribution.
+
+The experiment does not establish contact-shield geometry, lattice tube bounds by
+computation, stress fan extraction, existence of a source response, original source
+contact-isolate coverage, packing lower/upper pair feasibility, a finite motion,
+global minimality, uniform onset, the zero-slack endpoint, or exhaustive arbitrary
+graph-size verification. It uses abstract internal components and explicitly tests
+sink uniqueness; those components are not asserted to be actual geometric sectors.
+Although the finite algebraic proof is general in form, the reported enumeration
+is only over its declared finite sizes.
+
+The outstanding locked-branch theorem remains, for an actual canonical response
+and stress-generated fan,
+
+`|O_iso| + sum_i max(0, |O_i|-|C_i|) >= j_* + |T_Z|`,
+
+or a same-cardinality unit-separated strict-sub-D competitor retaining every
+original source label. This audit supplies neither. The zero-slack and universal
+global-minimizer obligations remain. **LEVEL I STATUS: STILL OPEN.**
+
+No Google Tasks creation, update, or deletion is needed for this audit. Repository
+worktrees and author changes were preserved; final worktree status is clean.

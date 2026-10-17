@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "counts": {
+    "unrestricted_terminal_checks": 65536,
+    "unrestricted_contraction_checks": 16384,
+    "supports": 9216,
+    "cyclic_supports": 2304,
+    "tube_shield_cases": 234176,
+    "overlapping_sink_cases": 57192,
+    "disjoint_sink_cases": 176984,
+    "strict_charge_improvements": 150408
+  },
+  "rank_counts": {
+    "1": 704,
+    "2": 8512
+  },
+  "unrestricted_rank_counts": {
+    "0": 160,
+    "1": 4060,
+    "2": 12164
+  },
+  "negative_controls": {
+    "missing_terminal_interception": {
+      "actual_rank": 2,
+      "invalid_cut_upper": 1
+    },
+    "overlapping_sinks": {
+      "actual_deficiency": 0,
+      "invalid_separate_surplus": 2
+    },
+    "contraction_capacity": [
+      2,
+      2,
+      3
+    ],
+    "wrong_orientation": {
+      "actual_rank": 2,
+      "wrong_path_rank": 1
+    },
+    "equal_weights": {
+      "generic_rank": 2,
+      "specialized_all_ones_rank": 1
+    }
+  },
+  "schur_polynomial_terms": {
+    "denominator": 2,
+    "entry_numerators": [
+      6,
+      6,
+      6,
+      6
+    ],
+    "determinant_numerator": 46
+  }
+}
