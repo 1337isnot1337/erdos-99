@@ -16,7 +16,7 @@ The reviewed Git blobs are:
 All paths have the prefix `docs/research/migration/2026-10-16/`.
 The exact paths, line and column ranges, detector rule, fingerprints, redacted
 matches, and mathematical values are registered in
-`tools/review_migration_gitleaks.py`.
+`tools/review_scanner_findings.py`.
 
 The release runner retains the original scanner command, complete report, and
 raw exit code of one. It records a separate reviewed-finding result only if every

@@ -19,6 +19,8 @@ STATE_END = "<!-- END GENERATED: theorem-state-snapshot -->"
 C_BEGIN = "<!-- BEGIN GENERATED: target-c-ledger -->"
 C_END = "<!-- END GENERATED: target-c-ledger -->"
 PUBLIC_PROOF_GRAPH = "docs/publication/proof-graph.json"
+CERTIFICATE_REGISTRY = "research/certificates.json"
+ONBOARDING_PREREQUISITES = "docs/research/onboarding-prerequisites.json"
 BUCKETS = ("current_canonical_entries", "audited_working", "regressions", "rejected_or_overridden")
 
 
@@ -159,9 +161,70 @@ def replace_or_insert(text: str, begin: str, end: str, block: str) -> str:
     return "".join(lines[:insert_at]) + "\n" + block + "\n\n" + "".join(lines[insert_at:])
 
 
+def current_file_dependencies(
+    root: Path,
+    state: dict[str, Any],
+    *,
+    certificates: list[dict[str, Any]] | None = None,
+    supplement: dict[str, Any] | None = None,
+) -> dict[str, set[str]]:
+    """Build reading/evidence edges from current declarations, without migration data.
+
+    These edges support navigation. A report can lead to its audit and finite
+    certificate without assigning either artifact the report's claim status.
+    Claim lifecycle and theorem prerequisites remain in the theorem manifest.
+    """
+    if certificates is None:
+        certificates = json.loads((root / CERTIFICATE_REGISTRY).read_text(encoding="utf-8"))["certificates"]
+    if supplement is None:
+        path = root / ONBOARDING_PREREQUISITES
+        supplement = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
+
+    graph: dict[str, set[str]] = {}
+
+    def paths(value: Any, label: str) -> list[str]:
+        if value is None:
+            return []
+        if not isinstance(value, list) or any(not isinstance(p, str) or not p for p in value):
+            raise ValueError(f"{label} must be a list of nonempty paths")
+        return value
+
+    def add(source: str, dependencies: Iterable[str]) -> None:
+        if not isinstance(source, str) or not source:
+            raise ValueError("file dependency source must be a nonempty path")
+        graph.setdefault(source, set()).update(p for p in dependencies if p != source)
+
+    claims = {entry["id"]: entry for _, _, entry in entries(state)}
+
+    def claim_files(claim: dict[str, Any]) -> list[str]:
+        return (paths([p for p in (claim.get("report"), claim.get("audit")) if p], f"{claim['id']} proof/audit")
+                + paths(claim.get("certificates"), f"{claim['id']} certificates"))
+
+    for claim in claims.values():
+        dependencies = claim_files(claim)
+        for prerequisite in claim.get("depends_on", []) or []:
+            if prerequisite not in claims:
+                raise ValueError(f"unknown prerequisite claim: {prerequisite}")
+            dependencies += claim_files(claims[prerequisite])
+        for source in (claim.get("report"), claim.get("audit")):
+            if source:
+                add(source, dependencies)
+
+    for certificate in certificates:
+        source = certificate["path"]
+        proof_sources = paths(certificate.get("proof_sources"), f"{source} proof_sources")
+        executable_dependencies = paths(certificate.get("executable_dependencies"), f"{source} executable_dependencies")
+        add(source, proof_sources + executable_dependencies)
+        for proof in proof_sources:
+            add(proof, [source])
+
+    for source, dependencies in supplement.get("file_dependencies", {}).items():
+        add(source, paths(dependencies, f"{source} file_dependencies"))
+    return graph
+
+
 def publication_proof_graph(root: Path, state: dict[str, Any]) -> str:
     """Keep the public machine view aligned with claim lifecycle and file edges."""
-    inclusion = json.loads((root / "docs/publication/inclusion.json").read_text(encoding="utf-8"))
     claims = []
     for target, _, claim in entries(state):
         claims.append({
@@ -175,9 +238,9 @@ def publication_proof_graph(root: Path, state: dict[str, Any]) -> str:
             "review_identity": "inherited internal audit unless explicitly recorded otherwise; no human review inferred",
             "limitations": claim.get("scope", claim.get("reason", "No scope beyond the exact proved statement")),
         })
-    file_edges = sorted({(row["public_path"], dependency)
-                         for row in inclusion["entries"]
-                         for dependency in row.get("dependencies", [])})
+    file_edges = sorted((source, dependency)
+                        for source, dependencies in current_file_dependencies(root, state).items()
+                        for dependency in dependencies)
     return json.dumps({"state_version": state["state_version"], "claims": claims,
                        "file_edges": file_edges}, indent=2) + "\n"
 
@@ -215,7 +278,7 @@ def main(argv: list[str] | None = None) -> int:
             path.parent.mkdir(parents=True, exist_ok=True)
             if not content.endswith("\n"):
                 content += "\n"
-            path.write_text(content, encoding="utf-8")
+            path.write_text(content, encoding="utf-8", newline="\n")
         print(f"generated-state: wrote {len(expected)} views/doc blocks")
         return 0
 

@@ -1,14 +1,92 @@
 """Presentation transformations preserve formula bodies and source artifacts."""
+import errno
 import hashlib
 import json
 from pathlib import Path
 import tempfile
 import unittest
 
-from build_reading_edition import expected_files, math_delimiters, render, repair_source
+from build_reading_edition import (
+    check, current_document_page, expected_files, math_delimiters, render,
+    repair_source,
+)
 
 
 class ReadingEditionTests(unittest.TestCase):
+    def test_current_guide_edits_need_no_mirror_or_manifest_update(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            guides = ("AGENTS.md", "autoresearch.md", "CONTRIBUTING.md",
+                      "docs/launch/READINESS.md", "tasks/example.md")
+            for source in (*guides, "docs/theory/example.md"):
+                path = root / source
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("# Original\n")
+            before = expected_files(root)
+            for source in guides:
+                (root / source).write_text("# Edited guide\n\nCurrent instructions.\n")
+            self.assertEqual(expected_files(root), before)
+            manifest = json.loads(before["reading/manifest.json"])
+            self.assertEqual([row["source"] for row in manifest["documents"]],
+                             ["docs/theory/example.md"])
+            self.assertEqual({row["source"] for row in manifest["current_document_links"]},
+                             set(guides))
+            for source in guides:
+                page = before["reading/" + source]
+                self.assertNotIn("Original", page)
+                self.assertNotIn("SHA-256", page)
+                self.assertIn(source, page)
+
+    def test_math_source_edits_still_require_a_current_reading_view(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source = root / "docs/theory/example.md"
+            source.parent.mkdir(parents=True)
+            source.write_text("\\[x=1\\]\n")
+            for name, text in expected_files(root).items():
+                target = root / name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(text.encode("utf-8"))
+            source.write_text("\\[x=2\\]\n")
+            errors = check(root)
+            self.assertIn("stale or missing reading page: reading/docs/theory/example.md", errors)
+            self.assertIn("stale or missing reading page: reading/manifest.json", errors)
+
+    def test_old_reading_urls_link_to_current_sources(self):
+        self.assertIn("[AGENTS.md](../AGENTS.md)", current_document_page("AGENTS.md"))
+        self.assertIn("[docs/launch/READINESS.md](../../../docs/launch/READINESS.md)",
+                      current_document_page("docs/launch/READINESS.md"))
+        with tempfile.TemporaryDirectory() as tmp:
+            page, _ = render("docs/proof.md", "[instructions](../AGENTS.md)",
+                             {"docs/proof.md", "AGENTS.md"}, Path(tmp))
+        self.assertIn("[instructions](../AGENTS.md)", page)
+
+    def test_current_guide_classification_cannot_discard_a_pinned_math_repair(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "AGENTS.md").write_text("Current guidance.\n")
+            registry = root / "docs/publication/reading-tex-repairs.json"
+            registry.parent.mkdir(parents=True)
+            registry.write_text(json.dumps({"documents": {"AGENTS.md": {}}}))
+            with self.assertRaisesRegex(ValueError, "repair refers to a current guidance document"):
+                expected_files(root)
+
+    def test_root_guides_reject_symlinks_even_without_reading_their_contents(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "target.md").write_text("Guidance.\n")
+            try:
+                (root / "AGENTS.md").symlink_to("target.md")
+            except NotImplementedError as exc:
+                self.skipTest(f"native symlink fixture unavailable: {exc}")
+            except OSError as exc:
+                if (exc.errno in {errno.EACCES, errno.EPERM, errno.ENOSYS, errno.ENOTSUP}
+                        or getattr(exc, 'winerror', None) in {1, 50, 1314}):
+                    self.skipTest(f"native symlink fixture unavailable: {exc}")
+                raise
+            with self.assertRaisesRegex(ValueError, "symlinked source document: AGENTS.md"):
+                expected_files(root)
+
     def test_quote_markers_stay_outside_the_equation(self):
         output, _ = math_delimiters("> Claim.\n> \\[\n> F_D^{uniq}\n> \\]\n\nNext.\n")
         self.assertIn("> ```math\n> F_D^{uniq}\n> ```", output)
@@ -115,3 +193,4 @@ class ReadingEditionTests(unittest.TestCase):
             self.assertNotIn("\r", outputs["reading/docs/example.md"])
             self.assertIn("```math\nx=y\n```", outputs["reading/docs/example.md"])
             self.assertEqual((root / "docs/example.md").read_bytes(), original)
+

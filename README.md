@@ -10,7 +10,7 @@ For $n$ points in the plane with every distinct pair at distance at least one, l
 
 ## Current mathematics
 
-This repository publishes a curated snapshot of the current theorem ledger, its detailed proofs, supporting audits, exact obstructions and computational evidence. Start with the [authoritative state](reading/docs/STATE.md), [research map](reading/docs/KNOWLEDGE_MAP.md), [current bottleneck](reading/docs/research/bottleneck-brief.md) and [theorem dependency graph](reading/docs/state/THEOREM_GRAPH.generated.md). The [publication manifest](docs/publication/inclusion.json) binds retained sources to exact blobs; it is separate from mathematical review.
+This repository contains the current theorem ledger, detailed proofs, supporting audits, exact obstructions and computational evidence. Start with the [authoritative state](reading/docs/STATE.md), [research map](reading/docs/KNOWLEDGE_MAP.md), [current bottleneck](reading/docs/research/bottleneck-brief.md) and [theorem dependency graph](reading/docs/state/THEOREM_GRAPH.generated.md). Documentation and research evolve through normal Git changes. Historical import records do not gate edits or releases.
 
 | Program | Established position and missing endpoint | Full development |
 | --- | --- | --- |
@@ -54,20 +54,46 @@ Follow [autoresearch.md](reading/autoresearch.md), [coordination](reading/docs/C
 
 ## Reproduce and inspect
 
+Normal checks do not require Linux. Use Python 3.14 and Git, then install the
+platform-neutral dependency lock.
+
+**macOS or Linux:**
+
 ```sh
 python3 -m venv .venv
-.venv/bin/pip install --require-hashes --only-binary=:all: -r tools/requirements-verification-linux-x86_64.lock
+.venv/bin/python -m pip install -r tools/requirements-verification.lock
 .venv/bin/python tools/check_public.py
-.venv/bin/python tools/run_theorem_certificates.py
 ```
 
-The wheel lock targets Linux x86_64 / CPython 3.14; [portable pinned versions](tools/requirements-verification.lock) are available separately. See the [certificate registry](research/certificates.json), [reproduction guide](reading/research/README.md), [CI policy](reading/docs/ci/README.md), and [actual verification record](reading/docs/launch/READINESS.md). Passing code is finite evidence within its encoded hypotheses, not a proof of the global conjecture.
+**Windows PowerShell:**
+
+For a new checkout, enable Git's long-path handling for the retained research
+archives. Use a short checkout location, such as `C:\e99`, if Windows long-path
+support is disabled for Python or your editor:
+
+```powershell
+git clone --config core.longpaths=true https://github.com/1337isnot1337/erdos-99.git C:\e99
+cd C:\e99
+```
+
+```powershell
+py -3.14 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r tools/requirements-verification.lock
+.\.venv\Scripts\python.exe tools/check_public.py
+```
+
+Run tests and certificates for the behavior or mathematical inputs you change.
+For an explicit full certificate replay, replace `tools/check_public.py` in the
+last command with `tools/run_theorem_certificates.py`. The optional isolated
+package replay uses Linux and Bubblewrap; it is not part of ordinary setup.
+The [Linux wheel lock](tools/requirements-verification-linux-x86_64.lock) remains
+available for that environment. See the [certificate registry](research/certificates.json), [reproduction guide](reading/research/README.md), [CI policy](reading/docs/ci/README.md), and [actual verification record](reading/docs/launch/READINESS.md). Passing code is finite evidence within its encoded hypotheses, not a proof of the global conjecture.
 
 **Release candidate: `0.1.0-rc.4`.** [Current publication status](reading/docs/launch/RELEASE_CANDIDATE.md) · [GitHub reading edition](reading/README.md) · [Glossary](reading/docs/GLOSSARY.md) · [Public bibliography](reading/docs/BIBLIOGRAPHY.md).
 
-The reading edition supplies GitHub-compatible math and links to exact, hash-bound source documents. [Original source navigation](docs/README.md) remains available.
+The reading edition supplies GitHub-compatible math and links to current source documents. Operational guides link directly to their editable originals. [Original source navigation](docs/README.md) remains available.
 
 
-Original project code and exposition use [Apache-2.0](LICENSE), subject to [NOTICE](NOTICE) and source-specific notices. Third-party papers and page/text extractions are excluded; bibliographic links identify external sources. [Publication audit](reading/docs/launch/PUBLICATION_AUDIT.md) records the exact release gate and any outstanding limits. [CITATION.cff](CITATION.cff) supplies citation metadata.
+Original project code and exposition use [Apache-2.0](LICENSE), subject to [NOTICE](NOTICE) and source-specific notices. Third-party papers and page/text extractions are excluded; bibliographic links identify external sources. [Publication audit](reading/docs/launch/PUBLICATION_AUDIT.md) records release checks and any outstanding limits. [CITATION.cff](CITATION.cff) supplies citation metadata.
 
 Inspired by Douglas Colkitt's [https://github.com/CrocSwap/integer-mult-bounds](https://github.com/CrocSwap/integer-mult-bounds) ! Check it out.

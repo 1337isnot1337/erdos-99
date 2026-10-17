@@ -21,19 +21,19 @@ class CorpusAttacks(unittest.TestCase):
   finally:p.write_bytes(raw)
  @contextlib.contextmanager
  def alter(self,path,func):
-  p=self.root/path;raw=p.read_bytes();p.write_text(func(raw.decode()))
+  p=self.root/path;raw=p.read_bytes();p.write_text(func(raw.decode('utf-8')),encoding='utf-8',newline='\n')
   try:yield
   finally:p.write_bytes(raw)
- def errors(self):return validate(self.root,check_hashes=False)[0]
+ def errors(self):return validate(self.root)[0]
  def test_omitted_canonical_audit_is_rejected(self):
-  s=yaml.safe_load((self.root/'docs/state/theorem-state.yaml').read_text())
+  s=yaml.safe_load((self.root/'docs/state/theorem-state.yaml').read_text(encoding='utf-8'))
   p=next(c['audit'] for c in s['targets']['target-c']['current_canonical_entries'] if c.get('audit'))
   with self.omit(p):self.assertTrue(any(p in e for e in self.errors()))
  def test_omitted_import_helper_is_rejected(self):
   p='research/verify_target_c_one_corner_vacancy_packet_2026_10_06.py'
   # This is an actual imported helper in the retained verifier network.
   import ast
-  tree=ast.parse((self.root/p).read_text())
+  tree=ast.parse((self.root/p).read_text(encoding='utf-8'))
   names=[n.module for n in ast.walk(tree) if isinstance(n,ast.ImportFrom) and n.module]
   names += [a.name for n in ast.walk(tree) if isinstance(n,ast.Import) for a in n.names]
   q=next('research/'+n+'.py' for n in names if (self.root/('research/'+n+'.py')).is_file())

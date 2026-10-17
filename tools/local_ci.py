@@ -6,6 +6,7 @@ import json
 import re
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -63,7 +64,7 @@ def main(argv=None):
     plan['errors'].extend(security(root, plan))
     if plan['errors']:
         plan.update(level='full-verification-required', replay_allowed=False)
-    output = args.output or Path('/tmp/e99-local-ci')
+    output = args.output or Path(tempfile.gettempdir()) / 'e99-local-ci'
     if args.integrity:
         try:
             plan['integrity'] = integrity(root, Path(__file__).resolve().parents[1], plan, output)
@@ -75,9 +76,9 @@ def main(argv=None):
         plan.update(level='full-verification-required', replay_allowed=False)
     # Publish output even on failure. Job status must not hide review requirements.
     output.mkdir(parents=True, exist_ok=True)
-    (output / 'plan.json').write_text(json.dumps(plan, indent=2, sort_keys=True) + '\n')
+    (output / 'plan.json').write_text(json.dumps(plan, indent=2, sort_keys=True) + '\n', encoding='utf-8', newline='\n')
     if args.github_output:
-        with args.github_output.open('a') as handle:
+        with args.github_output.open('a', encoding='utf-8', newline='\n') as handle:
             handle.write('replay=' + str(plan['replay_allowed']).lower() + '\n')
             handle.write('level=' + plan['level'] + '\n')
     if args.replay:
@@ -92,7 +93,7 @@ def main(argv=None):
                 plan['errors'].append('targeted replay failed')
         except (Invalid, OSError, subprocess.SubprocessError) as exc:
             plan['errors'].append(f'targeted replay refused/failed: {exc}')
-    (output / 'plan.json').write_text(json.dumps(plan, indent=2, sort_keys=True) + '\n')
+    (output / 'plan.json').write_text(json.dumps(plan, indent=2, sort_keys=True) + '\n', encoding='utf-8', newline='\n')
     print(json.dumps(plan, indent=2, sort_keys=True))
     if plan['errors']:
         return 1

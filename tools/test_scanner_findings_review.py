@@ -8,7 +8,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from tools.review_migration_gitleaks import review_combined_history_gitleaks, review_tree_gitleaks
+from tools.review_scanner_findings import review_combined_history_gitleaks, review_tree_gitleaks
 from tools.verify_publication_candidate import review_history_gitleaks
 
 
@@ -33,7 +33,7 @@ class MathematicalFindingTests(unittest.TestCase):
             'sha256': hashlib.sha256(data).hexdigest(),
             'findings': {1: (3, 51, self.stem)},
         }
-        context = patch('tools.review_migration_gitleaks.REVIEWED_MATH_GROUPS',
+        context = patch('tools.review_scanner_findings.REVIEWED_MATH_GROUPS',
                         {self.path: self.record})
         context.start()
         self.addCleanup(context.stop)
@@ -116,7 +116,7 @@ class MathematicalFindingTests(unittest.TestCase):
     def test_a_changed_pin_or_unavailable_git_object_fails_closed(self):
         for key in ('git_blob_sha', 'sha256'):
             record = {**self.record, key: '0' * len(self.record[key])}
-            with patch('tools.review_migration_gitleaks.REVIEWED_MATH_GROUPS',
+            with patch('tools.review_scanner_findings.REVIEWED_MATH_GROUPS',
                        {self.path: record}):
                 self.assertIsNone(review_tree_gitleaks(self.root, self.report, self.candidate))
         self.report.write_text(json.dumps([self.history_match('0' * 40)]))
@@ -175,7 +175,7 @@ class MathematicalFindingTests(unittest.TestCase):
                  'StartLine': 1, 'EndLine': 2, 'StartColumn': 1, 'EndColumn': 1,
                  'Fingerprint': self.path + ':private-key:1'}
         self.report.write_text(json.dumps([match]))
-        with patch('tools.review_migration_gitleaks.REVIEWED_SOURCE_FIXTURE', record):
+        with patch('tools.review_scanner_findings.REVIEWED_SOURCE_FIXTURE', record):
             self.assertIsNotNone(review_tree_gitleaks(self.root, self.report, candidate))
             self.file.write_text(self.file.read_text() + 'payload = ' + repr(secrets.token_hex(32)) + '\n')
             self.git('add', self.path)
@@ -186,3 +186,4 @@ class MathematicalFindingTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

@@ -14,21 +14,12 @@ from typing import Any, Iterable
 
 import yaml
 
+try:
+    from .ci_document_scope import is_workflow_document, mathematical_inputs
+except ImportError:
+    from ci_document_scope import is_workflow_document, mathematical_inputs
+
 BUCKETS = ("current_canonical_entries", "audited_working", "regressions", "rejected_or_overridden")
-
-# Only reviewed workflow prose can skip computation. All other paths fail
-# closed, including every research file (registered or not). This intentionally
-# covers imports of imports, dynamic imports, globbed/relative inputs, removals
-# and renames without pretending to infer a complete dependency graph.
-SAFE_PROSE_PATHS = {
-    "README.md", "AGENTS.md", "CONTRIBUTING.md", "autoresearch.md",
-    "docs/README.md", "docs/START_HERE.md", "docs/GLOSSARY.md",
-    "docs/COORDINATION.md", "docs/REVIEW_POLICY.md",
-    "docs/RESEARCH_WORKFLOW.md", ".github/copilot-instructions.md",
-    ".github/PULL_REQUEST_TEMPLATE.md",
-}
-SAFE_PROSE_PREFIXES = ("docs/launch/", "docs/prompts/")
-
 
 
 @dataclass(frozen=True)
@@ -69,25 +60,24 @@ def is_canonical(bucket: str, entry: dict[str, Any]) -> bool:
 
 
 def select_certificates(
-    state: dict[str, Any], changed_paths: set[str] | None
+    state: dict[str, Any], changed_paths: set[str] | None, *, root: Path | None = None
 ) -> CertificateSelection:
-    """Skip only explicitly reviewed prose; unknown dependencies run all."""
+    """Skip workflow/navigation prose; declared mathematical inputs still run all."""
     if changed_paths is None:
         return CertificateSelection(None, "diff unavailable or untrusted; fail closed")
-    canonical_sources = set()
-    for _, bucket, entry in entry_records(state):
-        if is_canonical(bucket, entry):
-            canonical_sources.update(entry.get(k) for k in ("report", "audit"))
+    def read_optional(path):
+        file = root / path
+        return file.read_bytes() if file.exists() else None
+    try:
+        protected = mathematical_inputs(state, read_optional if root is not None else None)
+    except (OSError, ValueError, TypeError) as exc:
+        return CertificateSelection(None, f"mathematical dependency metadata unavailable: {exc}")
     for path in sorted(changed_paths):
-        if path in canonical_sources:
-            return CertificateSelection(None, "a canonical theorem source changed")
-        # JSON/YAML under launch is machinery/data, never prose.
-        safe = path in SAFE_PROSE_PATHS or (
-            path.endswith(".md") and path.startswith(SAFE_PROSE_PREFIXES)
-        )
-        if not safe:
+        if path in protected:
+            return CertificateSelection(None, "a declared mathematical input changed")
+        if not is_workflow_document(path, protected):
             return CertificateSelection(None, f"proof/code/data or unknown dependency: {path}")
-    return CertificateSelection((), "only reviewed workflow prose changed")
+    return CertificateSelection((), "only workflow/navigation prose changed; structural checks still required")
 
 
 def changed_paths_from_git(
@@ -176,10 +166,10 @@ def main(argv: list[str] | None = None) -> int:
             changed_paths, git_error = changed_paths_from_event(root, json.loads(args.event_file.read_text()))
         except (OSError, ValueError) as exc:
             changed_paths, git_error = None, str(exc)
-        selection = select_certificates(state, changed_paths)
+        selection = select_certificates(state, changed_paths, root=root)
     elif args.base_ref:
         changed_paths, git_error = changed_paths_from_git(root, args.base_ref)
-        selection = select_certificates(state, changed_paths)
+        selection = select_certificates(state, changed_paths, root=root)
         if git_error:
             print(
                 f"certificate-runner: WARNING unable to compute PR diff ({git_error}); running all",

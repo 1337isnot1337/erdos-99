@@ -1,4 +1,4 @@
-> Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-frozen-813-source-main-corpus-2026-10-16.md) · source SHA-256 `d2ca3bb88ab3e53cecb5dc1dbaec90012a801b451f82aeab03d58de7c35f6374`.
+> Generated reading edition · [exact source](../../../../docs/research/tracks/target-c-frozen-813-source-main-corpus-2026-10-16.md) · source SHA-256 `16d343c442df8fdbb14f719fd7bff22de0a346ff3928a016f744e67942ae1b9f`.
 > [Current theorem state](../../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
 
 # Frozen Target C source-main corpus: 813 report dispositions
@@ -164,7 +164,6 @@ Run the exact finite checks from the repository-root
 [research reproduction index](../../../research/README.md). Passing finite
 checks validate only their recorded inputs and arithmetic. The [committed
 813-path ledger](../../../../docs/research/migration/2026-10-16/frozen-target-c-813-dispositions.jsonl)
-and [coordinator integrity verifier](../../../../tools/verify_frozen_target_c_813_migration.py)
-record and check source/destination identities, transformations, rights coverage,
-lifecycle status, and cross-shard worker evidence. The detached Gate 2 receipt
-must separately identify the exact final main commit and tree.
+records the historical import. Its migration verifier has been deleted.
+Current work uses ordinary Git changes and checks relevant to the changed
+mathematics or code; no migration replay or source-hash refresh is required.

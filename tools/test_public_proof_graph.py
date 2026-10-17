@@ -16,14 +16,15 @@ class PublicProofGraphTests(unittest.TestCase):
         self.root = Path(self.tmp.name)
         source = Path(__file__).resolve().parents[1]
         self.state = views.load(source)
-        for rel in (views.STATE_DOC, views.TARGET_C_DOC, "docs/publication/inclusion.json", views.MANIFEST):
+        for rel in (views.STATE_DOC, views.TARGET_C_DOC, views.CERTIFICATE_REGISTRY,
+                    views.ONBOARDING_PREREQUISITES, views.MANIFEST):
             dest = self.root / rel
             dest.parent.mkdir(parents=True, exist_ok=True)
             dest.write_bytes((source / rel).read_bytes())
         for rel, content in views.expected_files(self.root, self.state).items():
             dest = self.root / rel
             dest.parent.mkdir(parents=True, exist_ok=True)
-            dest.write_text(content)
+            dest.write_text(content, encoding="utf-8", newline="\n")
 
     def check(self):
         output = io.StringIO()
@@ -43,14 +44,50 @@ class PublicProofGraphTests(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertIn(views.PUBLIC_PROOF_GRAPH, output)
 
-    def test_new_manifest_dependency_requires_graph_refresh(self):
-        path = self.root / "docs/publication/inclusion.json"
-        inclusion = json.loads(path.read_text())
-        inclusion["entries"][0].setdefault("dependencies", []).append("docs/new-proof-premise.md")
-        path.write_text(json.dumps(inclusion))
+    def test_current_onboarding_dependency_requires_graph_refresh(self):
+        path = self.root / views.ONBOARDING_PREREQUISITES
+        supplement = json.loads(path.read_text())
+        supplement["file_dependencies"]["docs/current-proof.md"] = ["docs/new-proof-premise.md"]
+        path.write_text(json.dumps(supplement))
         code, output = self.check()
         self.assertEqual(code, 1)
         self.assertIn(views.PUBLIC_PROOF_GRAPH, output)
+        graph = json.loads(views.publication_proof_graph(self.root, self.state))
+        self.assertIn(["docs/current-proof.md", "docs/new-proof-premise.md"], graph["file_edges"])
+
+    def test_current_certificate_dependencies_require_graph_refresh(self):
+        path = self.root / views.CERTIFICATE_REGISTRY
+        registry = json.loads(path.read_text())
+        certificate = registry["certificates"][0]
+        certificate.setdefault("proof_sources", []).append("docs/new-certificate-proof.md")
+        certificate.setdefault("executable_dependencies", []).append("research/new-helper.py")
+        path.write_text(json.dumps(registry))
+        code, output = self.check()
+        self.assertEqual(code, 1)
+        self.assertIn(views.PUBLIC_PROOF_GRAPH, output)
+        graph = json.loads(views.publication_proof_graph(self.root, self.state))
+        self.assertIn([certificate["path"], "docs/new-certificate-proof.md"], graph["file_edges"])
+        self.assertIn(["docs/new-certificate-proof.md", certificate["path"]], graph["file_edges"])
+        self.assertIn([certificate["path"], "research/new-helper.py"], graph["file_edges"])
+
+    def test_migration_inventory_is_neither_required_nor_read(self):
+        path = self.root / "docs/publication/inclusion.json"
+        self.assertFalse(path.exists())
+        self.assertEqual(self.check()[0], 0)
+        path.write_text("Historical data need not be valid input to this generator.\n")
+        self.assertEqual(self.check()[0], 0)
+
+    def test_claim_sources_and_prerequisites_supply_file_edges_without_mutation(self):
+        state = {"targets": {"target-c": {"current_canonical_entries": [
+            {"id": "CLAIM", "status": "canonical", "report": "docs/proof.md",
+             "audit": "docs/audit.md", "certificates": ["research/check.py"], "depends_on": ["PREMISE"]},
+            {"id": "PREMISE", "status": "canonical", "report": "docs/premise.md"},
+        ]}}}
+        before = json.dumps(state, sort_keys=True)
+        graph = views.current_file_dependencies(self.root, state, certificates=[], supplement={})
+        self.assertEqual(graph["docs/proof.md"], {"docs/audit.md", "research/check.py", "docs/premise.md"})
+        self.assertEqual(graph["docs/audit.md"], {"docs/proof.md", "research/check.py", "docs/premise.md"})
+        self.assertEqual(json.dumps(state, sort_keys=True), before)
 
     def test_current_graph_and_other_views_pass(self):
         self.assertEqual(self.check()[0], 0)

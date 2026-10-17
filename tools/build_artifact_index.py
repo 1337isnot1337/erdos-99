@@ -15,7 +15,6 @@ import argparse
 import hashlib
 import json
 import sys
-import subprocess
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -166,10 +165,33 @@ def index_text(records: list[dict[str, Any]]) -> str:
     return "".join(json.dumps(record, sort_keys=True, separators=(",", ":")) + "\n" for record in records)
 
 
+def legacy_unreviewed_header(first: str, record: dict[str, Any]) -> bool:
+    """Read an older header format without treating it as theorem authority.
+
+    This is format compatibility only. It reads no migration ledger, source
+    hashes, archived payloads, or Git history and places no constraint on the
+    report body. The current manifest alone determines the record's lifecycle.
+    """
+    prefix, suffix = "<!-- migration-provenance: ", " -->"
+    if (record["status"] != "unreviewed" or record["canonical"]
+            or record["claim_ids"] or record["claim_statuses"]
+            or not first.startswith(prefix) or not first.endswith(suffix)):
+        return False
+    try:
+        header = json.loads(first[len(prefix):-len(suffix)])
+    except (ValueError, TypeError):
+        return False
+    return (isinstance(header, dict)
+            and header.get("source_canonical", False) is False
+            and header.get("source_lifecycle") == "unreviewed"
+            and header.get("destination_status") in
+            {"historical_unreviewed_noncanonical", "unreviewed_noncanonical"})
+
+
 def write_state(root: Path, state: dict[str, Any], records: list[dict[str, Any]], write_headers: bool) -> int:
     index_path = root / state["artifact_policy"]["index"]
     index_path.parent.mkdir(parents=True, exist_ok=True)
-    index_path.write_text(index_text(records), encoding="utf-8")
+    index_path.write_text(index_text(records), encoding="utf-8", newline="\n")
     changed_headers = 0
     if write_headers:
         for record in records:
@@ -177,7 +199,7 @@ def write_state(root: Path, state: dict[str, Any], records: list[dict[str, Any]]
             old = path.read_text(encoding="utf-8")
             new = replace_header(old, header_for(record))
             if new != old:
-                path.write_text(new, encoding="utf-8")
+                path.write_text(new, encoding="utf-8", newline="\n")
                 changed_headers += 1
     return changed_headers
 
@@ -191,13 +213,6 @@ def check_state(root: Path, state: dict[str, Any], records: list[dict[str, Any]]
     elif index_path.read_text(encoding="utf-8") != expected_index:
         errors.append("artifact-index.jsonl is stale; run tools/build_artifact_index.py --write --write-headers")
 
-    from publication_migration import load_policy
-    try:
-        _, metadata_alternatives = load_policy(root)
-    except (ValueError, OSError, KeyError, subprocess.SubprocessError) as exc:
-        errors.append("migration metadata policy: " + str(exc))
-        metadata_alternatives = set()
-
     seen_ids: dict[str, str] = {}
     for record in records:
         ident = record["artifact_id"]
@@ -207,9 +222,7 @@ def check_state(root: Path, state: dict[str, Any], records: list[dict[str, Any]]
         path = root / record["path"]
         with path.open("r", encoding="utf-8") as source:
             first = source.readline().rstrip("\r\n")
-        alternative = (record["path"] in metadata_alternatives and record["status"] == "unreviewed"
-                       and not record["canonical"] and not record["claim_ids"] and not record["claim_statuses"])
-        if first != header_for(record) and not alternative:
+        if first != header_for(record) and not legacy_unreviewed_header(first, record):
             errors.append(f"missing/stale theorem-state metadata header: {record['path']}")
     return errors
 
@@ -245,3 +258,4 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

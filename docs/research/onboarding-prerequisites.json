@@ -1,7 +1,6 @@
 {
   "status": "public navigation supplement; no mathematical lifecycle changes",
-  "source_commit": "afa7f7ec8b93b39efb921f4f47d132e4219b5df8",
-  "scope": "Explicit section-to-file bridges found during the A/B/C-II outsider evaluation. The theorem manifest remains authoritative; this is not a proof-completeness certificate. Added exact-phase packet, multishear, audit and verifier prerequisites for the new threshold-packet task and related C-II tasks. Added the branch-aware 0.0071 atomic-gap task and its source reports/verifiers as explicit C-II reading prerequisites.",
+  "scope": "Current editable reading and evidence dependencies. This map records file references and section-to-file bridges in proof modules, reports, audits, and task routes. The theorem manifest controls claim lifecycle; this is not a proof-completeness certificate.",
   "file_dependencies": {
     "docs/targets/target-a/02-scaffold-and-hall.md": [
       "docs/targets/target-a/01-forest-and-kinematics.md",
@@ -11,6 +10,15 @@
     "docs/targets/target-a/03-source-response.md": [
       "docs/targets/target-a/02-scaffold-and-hall.md"
     ],
+    "docs/targets/target-a/06-activation-monomer-regression.md": [
+      "docs/reports/activation_monomer_regression_2026-08-30.md",
+      "research/activation_monomer_regression.py",
+      "research/test_activation_monomer_regression.py"
+    ],
+    "docs/targets/target-a/10-quantitative-kuperberg-rate.md": [
+      "docs/reports/exact_kuperberg_five_block_rate_2026-08-30.md",
+      "research/kuperberg_five_block_exact.py"
+    ],
     "docs/targets/target-a/11-activation-coloops-and-locked-boundary.md": [
       "docs/targets/target-a/03-source-response.md",
       "docs/targets/target-a/07-activation-stress-invariance.md",
@@ -18,6 +26,9 @@
       "docs/targets/target-a/09-activation-fixed-hull-flat.md",
       "docs/targets/target-a/09-activation-orthant.md",
       "docs/targets/target-a/10-source-backbone-hall-obstruction.md"
+    ],
+    "docs/targets/target-a/12-toeout-kuperberg-improvement.md": [
+      "research/kuperberg_five_block_toeout_exact.py"
     ],
     "docs/targets/target-a/15-two-shadow-planarity.md": [
       "docs/targets/target-a/06-activation-monomer-regression.md",
@@ -64,11 +75,62 @@
       "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
       "docs/targets/target-a/28-zero-slack-boundary-order-source-frontier.md"
     ],
+    "docs/reports/target_a_tube_only_cut_2026-09-08.md": [
+      "docs/targets/target-a/03-source-response.md",
+      "docs/targets/target-a/26-tube-shield-sector-balance.md",
+      "research/tube_shield_cut_audit.py"
+    ],
+    "docs/reports/exact_kuperberg_five_block_rate_2026-08-30.md": [
+      "docs/reports/quantitative_kuperberg_support_rate_2026-08-30.md",
+      "docs/reports/quantitative_kuperberg_rate_refinement_2026-08-30.md"
+    ],
+    "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md": [
+      "docs/theory/01-local-structure.md",
+      "docs/theory/02-nonlinear-and-regressions.md",
+      "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "research/phase_cut_certificate.py"
+    ],
+    "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md": [
+      "docs/reports/target_b_dual_tree_dense_grid_extraction_correction_2026-09-05.md",
+      "docs/reports/target_b_trimmed_grid_phase_star_exclusion_2026-09-05.md",
+      "docs/reports/target_b_positive_density_dual_tree_grid_2026-09-05.md",
+      "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md",
+      "docs/reports/target_b_multicomponent_penetration_budget_2026-09-05.md",
+      "docs/reports/target_b_balanced_phase_stability_exclusion_2026-09-05.md",
+      "docs/reports/target_b_explicit_general_phase_interpolation_2026-09-05.md"
+    ],
     "docs/reports/target_c_quarter_fold_face_obstructions_slot02_2026-10-10.md": [
+      "docs/audits/target_c_face_coupled_quarter_fold_independent_audit_2026-10-07.md",
+      "docs/audits/target_c_minimum_face_size_local_endpoint_independent_audit_2026-10-09.md",
+      "docs/audits/target_c_local_quarter_fold_hull_cover_independent_audit_2026-10-09.md",
+      "docs/reports/target_c_deep_face_persistence_and_isolate_transport_slot02_2026-10-10.md",
       "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py"
     ],
+    "docs/targets/target-c/58-full-source-geometry-audit.md": [
+      "docs/reports/target_c_full_source_circumradius_response_2026-09-10.md",
+      "docs/reports/target_c_full_source_perimeter_and_lattice_excess_2026-09-10.md",
+      "docs/reports/target_c_full_source_post_zf_diameter_dispersion_2026-09-10.md",
+      "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "docs/audits/target_c_midpoint_and_quantitative_hull_train_independent_audit_2026-10-09.md",
+      "docs/audits/target_c_hull_face_end_pentagon_budget_independent_audit_2026-10-09.md",
+      "docs/audits/target_c_single_port_lattice_chain_independent_audit_2026-10-09.md",
+      "docs/audits/target_c_three_port_finite_direction_independent_audit_2026-10-09.md",
+      "docs/audits/target_c_finite_atlas_single_port_scarcity_independent_audit_2026-10-09.md",
+      "docs/audits/target_c_near_unit_atlas_port_scarcity_independent_audit_2026-10-09.md",
+      "docs/audits/target_c_bounded_variation_chart_port_scarcity_independent_audit_2026-10-09.md",
+      "docs/audits/target_c_tau_d_binary_loaded_witness_pocket_independent_audit_2026-10-09.md"
+    ],
+    "docs/targets/target-c/59-difference-body-density-audit.md": [
+      "docs/reports/target_c_force_hull_area_floor_2026-08-31.md",
+      "docs/reports/target_c_post_zf_difference_body_perimeter_2026-09-09.md",
+      "docs/reports/target_c_difference_body_area_metric_fork_2026-09-09.md",
+      "docs/reports/target_c_fs_symmetry_difference_body_2026-09-10.md",
+      "docs/reports/target_c_fs_symmetry_inradius_addendum_2026-09-10.md",
+      "docs/targets/target-c/58-full-source-geometry-audit.md"
+    ],
     "docs/targets/target-b/01-jammed-rhombic-branch.md": [
-      "docs/theory/03-oler-shell.md"
+      "docs/theory/03-oler-shell.md",
+      "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md"
     ],
     "docs/targets/target-a/01-forest-and-kinematics.md": [
       "docs/theory/03-oler-shell.md"
@@ -94,6 +156,607 @@
       "research/verify_target_c_laminar_multitrain_interval_shear.py",
       "docs/archive/source-e99-main-42f0296d/docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01.md.source",
       "docs/archive/source-e99-main-42f0296d/docs/targets/target-c/train-closure-bracing-audited.md.source"
+    ],
+    "docs/audits/target_c_accessible_stress_face_independent_audit_2026-10-08.md": [
+      "docs/targets/target-c/57-zr-zf-rigidity-audit.md"
+    ],
+    "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md": [
+      "research/verify_target_c_exceptional_star_face_2026_10_08.py"
+    ],
+    "docs/audits/target_c_atomic_track_boundary_cost_independent_audit_2026-10-08.md": [
+      "research/target_c_atomic_mantel_gap_finite_diagonal_hostile_audit_2026-09-12.md",
+      "research/verify_target_c_atomic_boundary_2026_10_04.py"
+    ],
+    "docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md": [
+      "docs/reports/target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md"
+    ],
+    "docs/audits/target_c_contact_opening_transversal_independent_audit_2026-10-07.md": [
+      "docs/reports/target_c_contact_opening_cage_transversal_2026-10-05.md"
+    ],
+    "docs/audits/target_c_face_coupled_quarter_fold_independent_audit_2026-10-07.md": [
+      "research/target_c_face_coupled_quarter_folds_certificate_2026_10_07.json"
+    ],
+    "docs/audits/target_c_finite_hull_side_train_capacity_independent_audit_2026-10-09.md": [
+      "docs/reports/target_c_hull_side_exact_train_capacity_audit_2026-10-04.md"
+    ],
+    "docs/audits/target_c_finite_mixed_core_rigidity_independent_audit_2026-10-07.md": [
+      "research/verify_target_c_finite_core_rigidity_2026_10_02.py"
+    ],
+    "docs/audits/target_c_fixed_port_route_bound_independent_audit_2026-10-08.md": [
+      "docs/problem/literature_baseline.md",
+      "research/verify_target_c_deep_port_defect_routes_2026_10_04.py"
+    ],
+    "docs/audits/target_c_harmonic_component_sqrt_count_independent_audit_2026-10-09.md": [
+      "docs/reports/target_c_disjoint_attachment_cell_square_root_count_2026-10-09.md"
+    ],
+    "docs/audits/target_c_hull_face_end_pentagon_budget_independent_audit_2026-10-09.md": [
+      "research/verify_target_c_all_unit_hull_end_currency_2026_10_04.py"
+    ],
+    "docs/audits/target_c_one_spare_site_scope_refinement_independent_audit_2026-10-08.md": [
+      "docs/reports/target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md"
+    ],
+    "docs/audits/target_c_paired_cap_spoke_global_comparison_independent_audit_2026-10-07.md": [
+      "docs/theory/03-oler-shell.md"
+    ],
+    "docs/audits/target_c_population_excess_two_thirds_independent_audit_2026-10-09.md": [
+      "docs/reports/target_c_full_source_lattice_conflict_deletion_reserve_2026-10-09.md"
+    ],
+    "docs/audits/target_c_pseudosegment_grid_promotion_2026-09-12.md": [
+      "docs/theory/01-local-structure.md"
+    ],
+    "docs/audits/target_c_section104_quantitative_phase_gap_hostile_audit_2026-09-12.md": [
+      "docs/targets/target-c/quantitative-phase-gap-technical-audit-2026-09-12.md"
+    ],
+    "docs/audits/target_c_tau_d_binary_loaded_witness_pocket_independent_audit_2026-10-09.md": [
+      "research/verify_target_c_terminal_oo_geometry_2026_10_06.py"
+    ],
+    "docs/audits/target_c_two_boundary_hole_strict_capacity_independent_audit_2026-10-09.md": [
+      "docs/reports/target_c_triangular_two_pin_strict_capacity_2026-10-05.md",
+      "research/verify_target_c_triangular_two_pin_capacity_2026_10_05.py"
+    ],
+    "docs/audits/target_c_two_boundary_hole_triangular_refill_independent_audit_2026-10-09.md": [
+      "docs/reports/target_c_boundary_vacancy_funded_collective_refill_2026-10-05.md",
+      "research/verify_target_c_boundary_vacancy_funded_collective_refill_2026_10_05.py"
+    ],
+    "docs/reports/activation_monomer_regression_2026-08-30.md": [
+      "docs/targets/target-a/06-activation-monomer-regression.md",
+      "research/activation_monomer_regression.py",
+      "research/test_activation_monomer_regression.py"
+    ],
+    "docs/reports/campaign_defect_train_extension_2026-09-09.md": [
+      "docs/reports/campaign_ledger_2026-09-09.md",
+      "docs/reports/campaign_zero_transfer_and_narrow_paths_2026-09-09.md",
+      "docs/reports/campaign_zero_transfer_defect_review_2026-09-09.md",
+      "docs/targets/target-c/56-ci-restored-frontier.md",
+      "research/campaign_2026_09_09_defect_trains.py"
+    ],
+    "docs/reports/campaign_zero_transfer_and_narrow_paths_2026-09-09.md": [
+      "docs/reports/campaign_ledger_2026-09-09.md",
+      "docs/reports/campaign_zero_transfer_defect_review_2026-09-09.md",
+      "docs/reports/target_c_additive_response_separator_obstruction_2026-08-31.md",
+      "docs/reports/target_c_c53_sign_and_ci_dependency_audit_2026-09-09.md",
+      "docs/reports/target_c_minimum_transfer_kernel_collapse_2026-08-31.md",
+      "docs/reports/target_c_near_diameter_path_unloaded_core_2026-09-09.md",
+      "docs/targets/target-c/56-ci-restored-frontier.md",
+      "research/campaign_2026_09_09_exact.py"
+    ],
+    "docs/reports/campaign_zero_transfer_defect_review_2026-09-09.md": [
+      "docs/reports/campaign_defect_train_extension_2026-09-09.md",
+      "docs/reports/campaign_ledger_2026-09-09.md",
+      "docs/reports/campaign_zero_transfer_and_narrow_paths_2026-09-09.md",
+      "docs/reports/target_a_tube_only_cut_2026-09-08.md",
+      "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+      "docs/targets/target-c/56-ci-restored-frontier.md",
+      "research/campaign_2026_09_09_defect_trains.py",
+      "research/campaign_2026_09_09_exact.py",
+      "research/near_diameter_path_audit.py",
+      "research/nearchain_vertex_regressions.py",
+      "research/phase_cut_certificate.py",
+      "research/thrackle_interval_regression.py",
+      "research/tube_shield_cut_audit.py"
+    ],
+    "docs/reports/global_convexity_exit_barrier_2026-10-12.md": [
+      "docs/theory/03-oler-shell.md"
+    ],
+    "docs/reports/global_joint_stress_strain_phase_mechanism_2026-10-12.md": [
+      "research/verify_global_joint_phase_compatibility.py"
+    ],
+    "docs/reports/global_separable_distortion_obstruction_2026-10-12.md": [
+      "research/verify_global_separable_distortion_obstruction.py"
+    ],
+    "docs/reports/integrator_ambient_force_geometry_2026-09-09.md": [
+      "docs/reports/target_c_force_hull_area_floor_2026-08-31.md",
+      "docs/reports/target_c_force_polygon_2026-08-30.md",
+      "docs/reports/target_c_post_zf_difference_body_perimeter_2026-09-09.md",
+      "docs/targets/target-a/08-prescribed-phase-alignment.md",
+      "docs/targets/target-b/01-jammed-rhombic-branch.md"
+    ],
+    "docs/reports/integrator_exterior_cap_capacity_2026-09-09.md": [
+      "docs/reports/integrator_ambient_force_geometry_2026-09-09.md",
+      "docs/reports/target_c_external_rattler_force_area_dichotomy_2026-09-09.md",
+      "research/integrator_ambient_force_audit.py"
+    ],
+    "docs/reports/integrator_joint_cavity_exclusion_2026-09-09.md": [
+      "docs/reports/integrator_ambient_force_geometry_2026-09-09.md",
+      "docs/reports/target_c_db_upgraded_component_gap_2026-09-09.md",
+      "docs/reports/target_c_post_pi_joint_cavity_budget_2026-09-09.md",
+      "docs/reports/target_c_post_zf_difference_body_perimeter_2026-09-09.md"
+    ],
+    "docs/reports/quantitative_kuperberg_rate_refinement_2026-08-30.md": [
+      "docs/reports/quantitative_kuperberg_support_rate_2026-08-30.md"
+    ],
+    "docs/reports/seed090_finite_rhombus_contraction_2026-10-13.md": [
+      "docs/reports/seed090_shared_edge_overlap_audit_2026-10-14.md",
+      "docs/reports/target_c_inactive_chamber_kkt_activation_regression_2026-09-12.md",
+      "research/verify_seed090_rhombus_contraction.py"
+    ],
+    "docs/reports/seed090_shared_edge_overlap_audit_2026-10-14.md": [
+      "docs/reports/seed090_finite_rhombus_contraction_2026-10-13.md",
+      "research/verify_seed090_rhombus_contraction.py",
+      "research/verify_seed090_shared_edge_overlap_audit.py"
+    ],
+    "docs/reports/target_c_actual_cut_finite_competitor_regression_2026-10-01.md": [
+      "docs/reports/target_c_exact_phase_finite_barrier_and_coembedding_regression_2026-10-01.md"
+    ],
+    "docs/reports/target_c_additive_response_separator_obstruction_2026-08-31.md": [
+      "docs/reports/target_c_force_visible_endpoint_count_2026-08-31.md",
+      "docs/reports/target_c_loaded_boundary_attachment_2026-08-31.md",
+      "docs/reports/target_c_six_matching_equality_star_2026-08-31.md",
+      "docs/reports/target_c_six_matching_star_separator_2026-08-31.md",
+      "docs/targets/target-c/01-force-hull-and-shear.md"
+    ],
+    "docs/reports/target_c_all_degree_groemer_face_stability_2026-09-14.md": [
+      "research/target_c_inactive_chamber_residual_conservation.md"
+    ],
+    "docs/reports/target_c_all_pentagon_closure_core_elimination_2026-10-05.md": [
+      "docs/reports/target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md",
+      "docs/reports/target_c_loaded_flat_pentagon_second_depletion_2026-10-05.md",
+      "docs/reports/target_c_positive_reciprocal_internal_train_graph_2026-10-05.md",
+      "docs/targets/target-c/156-157-face-closure-and-outer-train-bracing-audited.md",
+      "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+      "research/target_c_bounded_pentagon_no_parallel_sides_2026-09-18.md",
+      "research/target_c_free_terminal_two_anchor_elimination_2026-09-18.md",
+      "research/verify_target_c_pentagon_closure_core_elimination_2026_10_05.py"
+    ],
+    "docs/reports/target_c_all_phase_component_deatomization_2026-09-11.md": [
+      "docs/reports/target_c_nearcircle_no_bounded_harmonic_components_2026-09-09.md",
+      "docs/theory/04-ambient-force-and-cap-transport.md"
+    ],
+    "docs/reports/target_c_all_unit_hull_end_currency_2026-10-04.md": [
+      "docs/reports/target_c_clean_endpoint_fullcore_boost_2026-09-09.md",
+      "docs/reports/target_c_outerwalk_surplus_mu_tradeoff_2026-09-25.md"
+    ],
+    "docs/reports/target_c_almost_accessible_transversal_face_codimension_2026-10-08.md": [
+      "docs/reports/target_c_accessible_stress_transversal_or_degenerate_face_2026-10-08.md",
+      "research/verify_target_c_exceptional_star_face_2026_10_08.py"
+    ],
+    "docs/reports/target_c_arbitrary_thrackle_response_contraction_2026-08-31.md": [
+      "docs/reports/target_c_c53_orientation_and_ci_restoration_2026-09-09.md"
+    ],
+    "docs/reports/target_c_attachment_perimeter_three_gap_endpoint_repair_2026-09-11.md": [
+      "docs/reports/target_c_attachment_perimeter_capacity_five_arc_endpoint_2026-09-11.md"
+    ],
+    "docs/reports/target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md": [
+      "docs/reports/target_c_global_phase_access_integrable_branch_exclusion_2026-10-05.md",
+      "docs/reports/target_c_outer_pocket_groemer_phase_depletion_2026-10-05.md",
+      "research/target_c_inactive_chamber_residual_conservation.md"
+    ],
+    "docs/reports/target_c_boundary_vacancy_funded_collective_refill_2026-10-05.md": [
+      "docs/reports/target_c_vacancy_funded_unit_wall_activation_2026-10-05.md"
+    ],
+    "docs/reports/target_c_c53_orientation_and_ci_restoration_2026-09-09.md": [
+      "research/near_diameter_path_audit.py",
+      "research/planar_diameter_stress_probe.py"
+    ],
+    "docs/reports/target_c_c53_sign_and_ci_dependency_audit_2026-09-09.md": [
+      "docs/reports/target_c_arbitrary_thrackle_response_contraction_2026-08-31.md",
+      "docs/reports/target_c_force_bulk_and_correction_audit_2026-09-08.md",
+      "docs/reports/target_c_near_diameter_path_unloaded_core_2026-09-09.md",
+      "docs/reports/target_c_thrackle_interval_sign_regression_2026-09-05.md",
+      "research/near_diameter_path_audit.py"
+    ],
+    "docs/reports/target_c_complete_face_elimination_and_contact_regularity_2026-10-05.md": [
+      "docs/reports/target_c_all_pentagon_closure_core_elimination_2026-10-05.md",
+      "docs/targets/target-c/156-157-face-closure-and-outer-train-bracing-audited.md",
+      "research/target_c_bounded_pentagon_no_parallel_sides_2026-09-18.md"
+    ],
+    "docs/reports/target_c_contact_opening_cage_transversal_2026-10-05.md": [
+      "docs/reports/target_c_noncontact_wall_shield_2026-10-05.md",
+      "docs/reports/target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md",
+      "docs/reports/target_c_residual_cage_release_refill_2026-10-05.md"
+    ],
+    "docs/reports/target_c_critical_cone_duality_2026-08-30.md": [
+      "docs/reports/target_c_force_hull_2026-08-30.md"
+    ],
+    "docs/reports/target_c_deep_face_persistence_and_isolate_transport_slot02_2026-10-10.md": [
+      "docs/audits/target_c_face_coupled_quarter_fold_independent_audit_2026-10-07.md",
+      "docs/audits/target_c_minimum_face_size_local_endpoint_independent_audit_2026-10-09.md",
+      "docs/audits/target_c_short_unit_wall_zero_capacity_promotion_audit_2026-10-05.md",
+      "docs/reports/target_c_quarter_fold_face_obstructions_slot02_2026-10-10.md",
+      "docs/reports/target_c_rigid_cycle_pinned_stress_and_arc_stars_slot02_2026-10-10.md",
+      "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+      "docs/theory/01-local-structure.md",
+      "docs/theory/03-oler-shell.md"
+    ],
+    "docs/reports/target_c_embedded_grain_wall_replacement_2026-10-02.md": [
+      "docs/problem/statement.md",
+      "docs/reports/target_c_open_guard_packing_saturation_2026-09-12.md",
+      "docs/targets/target-c/56-ci-restored-frontier.md",
+      "docs/theory/01-local-structure.md",
+      "research/target_c_inactive_contact_wall_repacking.md",
+      "research/target_c_typeI_hall_blocker_matching_2026-10-02.md"
+    ],
+    "docs/reports/target_c_exact_phase_finite_barrier_and_coembedding_regression_2026-10-01.md": [
+      "docs/reports/target_c_complete_grid_rank_switching_2026-10-01.md",
+      "docs/reports/target_c_exact_phase_gap_graph_circulation_2026-10-01.md",
+      "docs/reports/target_c_exact_phase_gap_graph_connectivity_2026-10-01.md",
+      "docs/reports/target_c_open_cell_block_transposition_2026-10-01.md",
+      "docs/targets/target-c/57-zr-zf-rigidity-audit.md"
+    ],
+    "docs/reports/target_c_exact_phase_gap_graph_circulation_2026-10-01.md": [
+      "docs/reports/target_c_chain_prefix_kkt_circulation_2026-09-01.md"
+    ],
+    "docs/reports/target_c_finite_hull_side_train_capacity_2026-10-09.md": [
+      "docs/reports/target_c_hull_side_exact_train_capacity_audit_2026-10-04.md"
+    ],
+    "docs/reports/target_c_force_bulk_and_correction_audit_2026-09-08.md": [
+      "docs/reports/target_c_c53_orientation_and_ci_restoration_2026-09-09.md",
+      "docs/reports/target_c_force_bulk_transport_2026-09-05.md",
+      "docs/reports/target_c_force_hull_2026-08-30.md",
+      "docs/reports/target_c_fully_visible_no_neutral_vertices_2026-08-31.md",
+      "docs/reports/target_c_newton_hoffman_gate_ci_closure_2026-08-31.md",
+      "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "docs/theory/01-local-structure.md",
+      "docs/theory/02-nonlinear-and-regressions.md"
+    ],
+    "docs/reports/target_c_force_bulk_transport_2026-09-05.md": [
+      "docs/reports/target_c_force_bulk_and_correction_audit_2026-09-08.md"
+    ],
+    "docs/reports/target_c_force_hull_2026-08-30.md": [
+      "docs/theory/01-local-structure.md",
+      "docs/theory/02-nonlinear-and-regressions.md"
+    ],
+    "docs/reports/target_c_force_polygon_2026-08-30.md": [
+      "docs/reports/target_c_critical_cone_duality_2026-08-30.md",
+      "docs/reports/target_c_force_hull_2026-08-30.md",
+      "docs/reports/target_c_shear_separator_2026-08-30.md"
+    ],
+    "docs/reports/target_c_fs_symmetry_difference_body_2026-09-10.md": [
+      "docs/reports/target_c_difference_body_area_metric_fork_2026-09-09.md",
+      "docs/reports/target_c_full_source_circumradius_response_2026-09-10.md"
+    ],
+    "docs/reports/target_c_fs_symmetry_inradius_addendum_2026-09-10.md": [
+      "docs/reports/target_c_fs_symmetry_difference_body_2026-09-10.md",
+      "docs/reports/target_c_full_source_circumradius_response_2026-09-10.md"
+    ],
+    "docs/reports/target_c_full_source_circumradius_response_2026-09-10.md": [
+      "docs/reports/target_c_c53_orientation_and_ci_restoration_2026-09-09.md",
+      "docs/reports/target_c_force_hull_2026-08-30.md",
+      "docs/reports/target_c_force_polygon_2026-08-30.md",
+      "docs/targets/target-a/08-prescribed-phase-alignment.md",
+      "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "docs/targets/target-c/56-ci-restored-frontier.md",
+      "docs/theory/01-local-structure.md",
+      "docs/theory/02-nonlinear-and-regressions.md",
+      "docs/theory/03-oler-shell.md"
+    ],
+    "docs/reports/target_c_full_source_perimeter_and_lattice_excess_2026-09-10.md": [
+      "docs/targets/target-b/01-jammed-rhombic-branch.md",
+      "docs/theory/03-oler-shell.md"
+    ],
+    "docs/reports/target_c_full_source_post_zf_diameter_dispersion_2026-09-10.md": [
+      "docs/reports/campaign_zero_transfer_and_narrow_paths_2026-09-09.md",
+      "docs/reports/target_c_full_source_circumradius_response_2026-09-10.md",
+      "docs/reports/target_c_zf_boundary_surplus_collapse_2026-09-09.md",
+      "docs/targets/target-c/56-ci-restored-frontier.md"
+    ],
+    "docs/reports/target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_2026-09-14.md": [
+      "docs/reports/target_c_fullcore_mantel_endpoint_stability_2026-09-14.md"
+    ],
+    "docs/reports/target_c_fullcore_hull_train_depletion_floor_2026-10-04.md": [
+      "docs/audits/target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_independent_audit_2026-09-14.md",
+      "docs/reports/target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_2026-09-14.md",
+      "docs/reports/target_c_hull_side_exact_train_capacity_audit_2026-10-04.md"
+    ],
+    "docs/reports/target_c_general_matching_contraction_audit_2026-08-31.md": [
+      "research/target_c_matching_contraction_audit.py"
+    ],
+    "docs/reports/target_c_global_exceptional_face_return_quotas_2026-10-04.md": [
+      "docs/targets/target-c/62-attachment-incidence-currency-audit.md",
+      "docs/targets/target-c/82-harmonic-cell-near-quadrangulation-audit.md",
+      "docs/targets/target-c/83-attachment-cell-disjoint-tiling-audit.md"
+    ],
+    "docs/reports/target_c_global_phase_access_integrable_branch_exclusion_2026-10-05.md": [
+      "docs/reports/target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md",
+      "docs/reports/target_c_outer_pocket_groemer_phase_depletion_2026-10-05.md",
+      "docs/reports/target_c_outer_train_rank_groemer_bank_synthesis_2026-10-05.md",
+      "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+      "docs/targets/target-c/69-coherent-grain-interface-audit.md",
+      "research/verify_target_c_global_phase_access_2026_10_05.py"
+    ],
+    "docs/reports/target_c_groemer_pair_matching_refinement_2026-09-14.md": [
+      "docs/reports/target_c_all_degree_groemer_face_stability_2026-09-14.md"
+    ],
+    "docs/reports/target_c_hull_side_exact_train_capacity_audit_2026-10-04.md": [
+      "docs/reports/target_c_fullcore_hull_train_depletion_floor_2026-10-04.md",
+      "docs/reports/target_c_fullcore_loaded_chord_elimination_2026-09-14.md",
+      "docs/reports/target_c_outerwalk_surplus_mu_tradeoff_2026-09-25.md",
+      "docs/targets/target-c/61-linear-nonmatching-excess-audit.md",
+      "docs/targets/target-c/62-attachment-incidence-currency-audit.md",
+      "docs/targets/target-c/63-loaded-hull-slack-audit.md",
+      "docs/targets/target-c/75-all-phase-component-deatomization-audit.md",
+      "docs/targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md"
+    ],
+    "docs/reports/target_c_joint_swap_horn_and_loaded_defects_2026-10-01.md": [
+      "docs/reports/target_c_local_witness_cell_2026-10-01.md",
+      "docs/reports/target_c_open_cell_block_transposition_2026-10-01.md",
+      "docs/reports/target_c_ultrasmall_swap_isolate_dispatch_2026-10-01.md",
+      "docs/targets/target-c/156-157-face-closure-and-outer-train-bracing-audited.md",
+      "docs/targets/target-c/21-full-diameter-visibility-frontier.md",
+      "docs/targets/target-c/56-ci-restored-frontier.md",
+      "docs/theory/01-local-structure.md"
+    ],
+    "docs/reports/target_c_large_near_triangular_fixed_wall_lock_2026-10-05.md": [
+      "docs/reports/target_c_embedded_grain_wall_replacement_2026-10-02.md"
+    ],
+    "docs/reports/target_c_loaded_flat_pentagon_second_depletion_2026-10-05.md": [
+      "docs/reports/target_c_low_t_flat_center_amplification_2026-09-14.md",
+      "docs/reports/target_c_zero_detour_three_axis_pentagon_regression_provenance_2026-10-04.md",
+      "research/target_c_level1_run_live_synthesis_2026-10-04.md"
+    ],
+    "docs/reports/target_c_loaded_hull_cap_attachment_budget_2026-10-01.md": [
+      "docs/reports/target_c_forest_isolate_dispatch_2026-10-01.md"
+    ],
+    "docs/reports/target_c_loaded_near_unit_hull_adjacency_2026-10-01.md": [
+      "docs/reports/target_c_joint_swap_horn_and_loaded_defects_2026-10-01.md",
+      "docs/reports/target_c_wrapping_root_defect_stability_2026-09-30.md"
+    ],
+    "docs/reports/target_c_multishear_traffic_domination_2026-10-05.md": [
+      "docs/reports/target_c_laminar_outer_train_multishear_2026-09-15.md",
+      "docs/targets/target-c/57-zr-zf-rigidity-audit.md"
+    ],
+    "docs/reports/target_c_near_diameter_path_unloaded_core_2026-09-09.md": [
+      "docs/reports/target_a_tube_only_cut_2026-09-08.md",
+      "docs/reports/target_c_c53_sign_and_ci_dependency_audit_2026-09-09.md",
+      "docs/reports/target_c_force_bulk_and_correction_audit_2026-09-08.md",
+      "docs/theory/01-local-structure.md",
+      "research/near_diameter_path_audit.py"
+    ],
+    "docs/reports/target_c_near_unit_faces_and_pure_conflict_paths_2026-10-01.md": [
+      "docs/reports/target_c_joint_swap_horn_and_loaded_defects_2026-10-01.md",
+      "docs/reports/target_c_zr_global_train_shear_2026-09-09.md"
+    ],
+    "docs/reports/target_c_nonconstant_face_quarter_fold_exclusion_slot02_2026-10-10.md": [
+      "docs/audits/target_c_face_coupled_quarter_fold_independent_audit_2026-10-07.md",
+      "docs/audits/target_c_generic_isolate_anchor_avoidance_independent_audit_2026-10-07.md",
+      "docs/audits/target_c_minimum_face_size_local_endpoint_independent_audit_2026-10-09.md",
+      "docs/reports/target_c_rigid_cycle_pinned_stress_and_arc_stars_slot02_2026-10-10.md",
+      "docs/targets/target-c/03-pinned-block-and-loaded-boundary-frontier.md",
+      "docs/targets/target-c/56-ci-restored-frontier.md",
+      "docs/theory/01-local-structure.md",
+      "docs/theory/03-oler-shell.md"
+    ],
+    "docs/reports/target_c_noncontact_wall_shield_2026-10-05.md": [
+      "docs/reports/target_c_embedded_grain_wall_replacement_2026-10-02.md",
+      "docs/reports/target_c_residual_cage_release_refill_2026-10-05.md",
+      "docs/reports/target_c_short_unit_wall_zero_capacity_2026-10-05.md"
+    ],
+    "docs/reports/target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md": [
+      "docs/reports/target_c_noncontact_wall_shield_2026-10-05.md",
+      "docs/reports/target_c_open_guard_packing_saturation_2026-09-12.md",
+      "docs/reports/target_c_residual_cage_release_refill_2026-10-05.md",
+      "docs/targets/target-c/56-ci-restored-frontier.md"
+    ],
+    "docs/reports/target_c_one_vacancy_collective_strictification_2026-10-05.md": [
+      "docs/reports/target_c_large_near_triangular_fixed_wall_lock_2026-10-05.md"
+    ],
+    "docs/reports/target_c_open_guard_packing_saturation_2026-09-12.md": [
+      "research/target_c_section122_finite_exchange_saturation.md"
+    ],
+    "docs/reports/target_c_outer_pocket_groemer_phase_depletion_2026-10-05.md": [
+      "docs/reports/target_c_all_degree_groemer_face_stability_2026-09-14.md",
+      "docs/reports/target_c_fullcore_hull_train_depletion_floor_2026-10-04.md",
+      "docs/targets/target-c/67-rhombus-population-transport-audit.md",
+      "docs/targets/target-c/69-coherent-grain-interface-audit.md",
+      "research/target_c_hull_depletion_post_endpoint_synthesis_2026-10-04.md",
+      "research/target_c_inactive_chamber_residual_conservation.md",
+      "research/verify_target_c_outer_pocket_phase_depletion_2026_10_05.py"
+    ],
+    "docs/reports/target_c_outer_train_rank_groemer_bank_synthesis_2026-10-05.md": [
+      "docs/reports/target_c_outer_pocket_groemer_phase_depletion_2026-10-05.md",
+      "docs/targets/target-c/156-157-face-closure-and-outer-train-bracing-audited.md"
+    ],
+    "docs/reports/target_c_pentagon_activation_and_contact_debt_preservation_2026-10-15.md": [
+      "docs/reports/target_c_short_unit_wall_zero_capacity_2026-10-05.md"
+    ],
+    "docs/reports/target_c_pentagon_terminal_wall_disjoint_quadratic_bulk_2026-10-05.md": [
+      "docs/reports/target_c_positive_reciprocal_internal_train_graph_2026-10-05.md"
+    ],
+    "docs/reports/target_c_phase_frustration_fixed_wall_activation_regression_2026-10-05.md": [
+      "docs/reports/target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md"
+    ],
+    "docs/reports/target_c_positive_reciprocal_internal_train_graph_2026-10-05.md": [
+      "research/target_c_parallel_train_pair_cut_2026-09-12.md"
+    ],
+    "docs/reports/target_c_residual_cage_release_refill_2026-10-05.md": [
+      "docs/audits/target_c_local_diameter_coordinates_promotion_audit_2026-10-05.md",
+      "docs/reports/target_c_complete_face_elimination_and_contact_regularity_2026-10-05.md",
+      "docs/reports/target_c_contact_manifold_local_diameter_coordinates_2026-10-05.md",
+      "docs/reports/target_c_embedded_grain_wall_replacement_2026-10-02.md",
+      "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md"
+    ],
+    "docs/reports/target_c_rigid_cycle_pinned_stress_and_arc_stars_slot02_2026-10-10.md": [
+      "docs/audits/target_c_face_coupled_quarter_fold_independent_audit_2026-10-07.md",
+      "docs/audits/target_c_finite_mixed_core_rigidity_independent_audit_2026-10-07.md",
+      "docs/audits/target_c_minimum_face_size_local_endpoint_independent_audit_2026-10-09.md",
+      "docs/audits/target_c_rigid_face_isolate_transport_independent_audit_2026-10-09.md",
+      "docs/reports/target_c_deep_face_persistence_and_isolate_transport_slot02_2026-10-10.md",
+      "docs/reports/target_c_nonconstant_face_quarter_fold_exclusion_slot02_2026-10-10.md",
+      "docs/reports/target_c_quarter_fold_face_obstructions_slot02_2026-10-10.md",
+      "docs/targets/target-c/56-ci-restored-frontier.md",
+      "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+      "docs/theory/01-local-structure.md"
+    ],
+    "docs/reports/target_c_secondary_diameter_visibility_2026-08-31.md": [
+      "docs/targets/target-c/56-ci-restored-frontier.md",
+      "docs/targets/target-c/57-zr-zf-rigidity-audit.md"
+    ],
+    "docs/reports/target_c_shear_separator_2026-08-30.md": [
+      "docs/reports/target_c_critical_cone_duality_2026-08-30.md",
+      "docs/reports/target_c_force_hull_2026-08-30.md"
+    ],
+    "docs/reports/target_c_simultaneous_disjoint_swaps_exact_2sat_2026-10-01.md": [
+      "docs/reports/target_c_open_cell_block_transposition_2026-10-01.md"
+    ],
+    "docs/reports/target_c_six_matching_star_separator_2026-08-31.md": [
+      "docs/reports/target_c_force_polygon_2026-08-30.md",
+      "docs/reports/target_c_loaded_boundary_attachment_2026-08-31.md",
+      "docs/reports/target_c_six_matching_equality_concurrency_2026-08-31.md",
+      "docs/reports/target_c_six_matching_equality_star_2026-08-31.md",
+      "docs/targets/target-c/01-force-hull-and-shear.md"
+    ],
+    "docs/reports/target_c_terminal_short_pocket_physical_frustration_2026-10-05.md": [
+      "docs/reports/target_c_outer_pocket_groemer_phase_depletion_2026-10-05.md",
+      "research/target_c_inactive_chamber_residual_conservation.md"
+    ],
+    "docs/reports/target_c_thrackle_interval_sign_regression_2026-09-05.md": [
+      "docs/reports/target_c_arbitrary_thrackle_response_contraction_2026-08-31.md",
+      "docs/reports/target_c_c53_orientation_and_ci_restoration_2026-09-09.md"
+    ],
+    "docs/reports/target_c_triangular_two_pin_strict_capacity_2026-10-05.md": [
+      "docs/reports/target_c_boundary_vacancy_funded_collective_refill_2026-10-05.md"
+    ],
+    "docs/reports/target_c_ultrasmall_swap_isolate_dispatch_2026-10-01.md": [
+      "docs/reports/target_c_open_cell_block_transposition_2026-10-01.md",
+      "docs/reports/target_c_tb1_exact_swap_fork_2026-10-01.md",
+      "docs/reports/target_c_tb1_swap_grid_local_immunity_2026-10-01.md",
+      "docs/reports/target_c_witness_cell_blocker_dichotomy_2026-10-01.md",
+      "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md",
+      "docs/targets/target-c/01-force-hull-and-shear.md",
+      "docs/targets/target-c/56-ci-restored-frontier.md",
+      "docs/theory/01-local-structure.md",
+      "research/verify_ultrasmall_swap_isolate_dispatch_2026_10_01.py"
+    ],
+    "docs/reports/target_c_vacancy_funded_unit_wall_activation_2026-10-05.md": [
+      "docs/reports/target_c_one_vacancy_collective_strictification_2026-10-05.md"
+    ],
+    "docs/reports/target_c_zero_detour_three_axis_pentagon_regression_provenance_2026-10-04.md": [
+      "research/target_c_free_terminal_pentagon_phase_capacity_gap_02088_2026-09-18.md",
+      "research/target_c_zero_detour_three_axis_pentagon_regression_2026-09-12.md"
+    ],
+    "docs/reports/target_c_zf_boundary_surplus_collapse_2026-09-09.md": [
+      "docs/reports/campaign_zero_transfer_and_narrow_paths_2026-09-09.md",
+      "docs/reports/campaign_zero_transfer_defect_review_2026-09-09.md",
+      "docs/reports/target_c_terminal_path_packing_connected_refinement_2026-08-31.md",
+      "docs/targets/target-c/03-pinned-block-and-loaded-boundary-frontier.md",
+      "docs/targets/target-c/22-diameter-matching-minor-frontier.md",
+      "docs/targets/target-c/56-ci-restored-frontier.md"
+    ],
+    "docs/targets/target-c/01-force-hull-and-shear.md": [
+      "docs/reports/target_c_convex_six_matching_kalmanson_2026-08-31.md",
+      "docs/reports/target_c_near_star_response_minor_regression_2026-08-31.md",
+      "docs/reports/target_c_six_matching_star_separator_2026-08-31.md",
+      "docs/reports/target_c_terminal_path_packing_connected_refinement_2026-08-31.md",
+      "docs/reports/target_c_zero_transfer_additive_promotion_2026-09-11.md",
+      "docs/targets/target-c/56-ci-restored-frontier.md",
+      "docs/theory/04-ambient-force-and-cap-transport.md"
+    ],
+    "docs/targets/target-c/03-pinned-block-and-loaded-boundary-frontier.md": [
+      "docs/targets/target-c/04-near-minimal-response-frontier.md"
+    ],
+    "docs/targets/target-c/14-zero-transfer-star-forest-frontier.md": [
+      "docs/reports/target_c_zero_transfer_star_forest_2026-08-31.md"
+    ],
+    "docs/targets/target-c/21-full-diameter-visibility-frontier.md": [
+      "docs/reports/target_c_secondary_diameter_visibility_2026-08-31.md"
+    ],
+    "docs/targets/target-c/22-diameter-matching-minor-frontier.md": [
+      "docs/reports/target_c_diameter_matching_circular_minor_transport_2026-08-31.md"
+    ],
+    "docs/targets/target-c/56-ci-restored-frontier.md": [
+      "docs/reports/target_c_c53_orientation_and_ci_restoration_2026-09-09.md",
+      "docs/reports/target_c_force_bulk_and_correction_audit_2026-09-08.md"
+    ],
+    "docs/targets/target-c/60-perfect-matching-exclusion-audit.md": [
+      "docs/reports/target_c_matching_branch_externalization_2026-09-09.md"
+    ],
+    "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md": [
+      "docs/theory/01-local-structure.md"
+    ],
+    "docs/targets/target-c/75-all-phase-component-deatomization-audit.md": [
+      "docs/reports/target_c_all_phase_component_deatomization_2026-09-11.md"
+    ],
+    "docs/targets/target-c/83-attachment-cell-disjoint-tiling-audit.md": [
+      "docs/reports/target_c_attachment_cell_disjointness_2026-08-31.md"
+    ],
+    "docs/theory/04-ambient-force-and-cap-transport.md": [
+      "docs/reports/integrator_ambient_force_geometry_2026-09-09.md",
+      "docs/reports/integrator_exterior_cap_capacity_2026-09-09.md",
+      "docs/reports/integrator_joint_cavity_exclusion_2026-09-09.md",
+      "docs/targets/target-a/08-prescribed-phase-alignment.md",
+      "docs/theory/01-local-structure.md"
+    ],
+    "research/target_c_atomic_mantel_gap_finite_diagonal_2026-09-12.md": [
+      "research/target_c_atomic_mantel_uniform_gap_regression_2026-09-12.md"
+    ],
+    "research/target_c_atomic_mantel_gap_finite_diagonal_hostile_audit_2026-09-12.md": [
+      "research/target_c_atomic_mantel_gap_finite_diagonal_2026-09-12.md"
+    ],
+    "research/target_c_free_terminal_live_detour_pinching_2026-09-18.md": [
+      "research/verify_target_c_free_terminal_live_detour_pinching_2026_09_18.py"
+    ],
+    "research/target_c_free_terminal_pentagon_phase_capacity_gap_02088_2026-09-18.md": [
+      "research/target_c_free_terminal_live_detour_pinching_2026-09-18.md"
+    ],
+    "research/target_c_hull_depletion_post_endpoint_synthesis_2026-10-04.md": [
+      "docs/reports/target_c_all_degree_groemer_face_stability_2026-09-14.md",
+      "docs/reports/target_c_all_unit_hull_end_currency_2026-10-04.md",
+      "docs/reports/target_c_anchored_groemer_triple_matching_refinement_2026-09-14.md",
+      "docs/reports/target_c_clean_endpoint_fullcore_boost_2026-09-09.md",
+      "docs/reports/target_c_groemer_pair_matching_refinement_2026-09-14.md",
+      "docs/targets/target-c/162-typeI-container-exchange-unification-audited.md",
+      "research/verify_target_c_hull_depletion_post_endpoint_synthesis_2026_10_04.py"
+    ],
+    "research/target_c_level1_run_live_synthesis_2026-10-04.md": [
+      "docs/reports/target_c_all_pentagon_closure_core_elimination_2026-10-05.md",
+      "docs/reports/target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md",
+      "docs/reports/target_c_complete_face_elimination_and_contact_regularity_2026-10-05.md",
+      "docs/reports/target_c_global_exceptional_face_return_quotas_2026-10-04.md",
+      "docs/reports/target_c_global_phase_access_integrable_branch_exclusion_2026-10-05.md",
+      "docs/reports/target_c_joint_bulk_defect_separator_capacity_2026-10-05.md",
+      "docs/reports/target_c_large_near_triangular_fixed_wall_lock_2026-10-05.md",
+      "docs/reports/target_c_loaded_flat_pentagon_second_depletion_2026-10-05.md",
+      "docs/reports/target_c_outer_pocket_groemer_phase_depletion_2026-10-05.md",
+      "docs/reports/target_c_outer_train_rank_groemer_bank_synthesis_2026-10-05.md",
+      "docs/reports/target_c_pentagon_terminal_wall_disjoint_quadratic_bulk_2026-10-05.md",
+      "docs/reports/target_c_phase_frustration_fixed_wall_activation_regression_2026-10-05.md",
+      "docs/reports/target_c_positive_reciprocal_internal_train_graph_2026-10-05.md",
+      "docs/reports/target_c_terminal_short_pocket_physical_frustration_2026-10-05.md"
+    ],
+    "research/test_activation_monomer_regression.py": [
+      "research/activation_monomer_regression.py"
+    ],
+    "research/verify_target_c_boundary_vacancy_funded_collective_refill_2026_10_05.py": [
+      "research/verify_target_c_loaded_flat_pentagon_second_depletion_2026_10_05.py",
+      "research/verify_target_c_vacancy_funded_unit_wall_activation_2026_10_05.py"
+    ],
+    "research/verify_target_c_global_phase_access_2026_10_05.py": [
+      "research/verify_target_c_global_face_return_quotas_2026_10_04.py"
+    ],
+    "research/verify_target_c_one_vacancy_collective_strictification_2026_10_05.py": [
+      "research/verify_target_c_loaded_flat_pentagon_second_depletion_2026_10_05.py"
+    ],
+    "research/verify_target_c_pentagon_closure_core_elimination_2026_10_05.py": [
+      "research/verify_target_c_loaded_flat_pentagon_second_depletion_2026_10_05.py"
+    ],
+    "research/verify_target_c_triangular_two_pin_capacity_2026_10_05.py": [
+      "research/verify_target_c_vacancy_funded_unit_wall_activation_2026_10_05.py"
+    ],
+    "research/verify_target_c_vacancy_funded_unit_wall_activation_2026_10_05.py": [
+      "research/verify_target_c_loaded_flat_pentagon_second_depletion_2026_10_05.py",
+      "research/verify_target_c_one_vacancy_collective_strictification_2026_10_05.py"
     ]
   },
   "tasks": {

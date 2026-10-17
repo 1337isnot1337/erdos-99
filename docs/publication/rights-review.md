@@ -1,5 +1,12 @@
 # Source rights and publication provenance — Gate 1
 
+> **Historical import record.** The migration checks and their source/hash,
+> manifest-reconciliation and editorial-ledger requirements have been deleted.
+> Gate and HOLD language below describes the superseded import workflow, not
+> current requirements. The recorded owner authorization remains in force.
+> Edit current files normally through Git and use the
+> [current verification guidance](../launch/GATE_2_VERIFICATION.md).
+
 **Gate 1 project-controlled rights: owner authorization received and recorded.**
 This is a scoped copyright/provenance decision, not a technical-release receipt,
 a legal warranty that every sentence is original, or authorization to make the

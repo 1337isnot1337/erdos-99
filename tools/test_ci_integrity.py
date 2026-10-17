@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import errno
 import json
 import subprocess
 import sys
@@ -28,6 +29,18 @@ class PublicIntegrityTests(unittest.TestCase):
         subprocess.run(["git", "-C", str(self.root), "add", "-A"], check=True)
         subprocess.run(["git", "-C", str(self.root), "commit", "-qm", "fixture"], check=True)
         return subprocess.check_output(["git","-C",str(self.root),"rev-parse","HEAD"],text=True).strip()
+
+    def symlink(self, path, target, *, directory=False):
+        try:
+            path.symlink_to(target, target_is_directory=directory)
+        except NotImplementedError as exc:
+            self.skipTest(f"native symlink fixture unavailable: {exc}")
+        except OSError as exc:
+            if (exc.errno in {errno.EACCES, errno.EPERM, errno.ENOSYS, errno.ENOTSUP}
+                    or getattr(exc, 'winerror', None) in {1, 50, 1314}):
+                self.skipTest(f"native symlink fixture unavailable: {exc}")
+            raise
+        subprocess.run(["git", "-C", str(self.root), "config", "core.symlinks", "true"], check=True)
 
     def test_fast_docs_do_not_need_private_state(self):
         (self.root/"README.md").write_text("# Revised\n")
@@ -60,7 +73,7 @@ class PublicIntegrityTests(unittest.TestCase):
         outside = self.root.parent / ('outside-' + self.root.name + '.yaml')
         outside.write_text('a private non-metadata file\n')
         self.addCleanup(outside.unlink)
-        (self.root / 'docs/state/theorem-state.yaml').symlink_to(outside)
+        self.symlink(self.root / 'docs/state/theorem-state.yaml', outside)
         self.commit()
         process = subprocess.run(
             [sys.executable, str(Path(__file__).with_name('ci_integrity.py')),
@@ -71,7 +84,7 @@ class PublicIntegrityTests(unittest.TestCase):
         self.assertNotIn('a private non-metadata file', process.stdout + process.stderr)
 
     def test_unchanged_symlink_also_rejected(self):
-        (self.root / 'docs').symlink_to(self.root.parent)
+        self.symlink(self.root / 'docs', self.root.parent, directory=True)
         self.base = self.commit()
         self.assertTrue(any('nonregular' in e for e in validate(self.root, self.base)))
 
