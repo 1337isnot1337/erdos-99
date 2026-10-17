@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite the exact commit and the authors credited in the particular proof or evidence package used."
+title: "Erdős Problem 99: open collaborative research"
+type: software
+authors:
+  - family-names: Davis
+    given-names: Cinna
+repository-code: "https://github.com/1337isnot1337/erdos-99"
+url: "https://github.com/1337isnot1337/erdos-99"
+license: Apache-2.0

@@ -1,0 +1,80 @@
+> Generated reading edition · [exact source](../../research/target_c_completion_two_unit_side_regression_2026-09-12.md) · source SHA-256 `5f3e5794ce9745ad0ca2a9fe42a35441a8791772264caef64593d38b126b2fec`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2d6d6a1f448c904d3fd1f699c6d1064ba23ebc2a", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_completion_two_unit_side_regression_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "017edbacd2e14ae329dd37184715eae4aacdb3c7603d9b47d06d2edb4d473f78"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C — rejected constant charge for two-unit-side completion triangles
+
+**Date:** 2026-09-12
+**Base state:** `2026-09-12.audit.46`, canonical through Section 123
+**Classification:** rejected candidate; theorem-state authority unchanged
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The live Type-II completion argument gives
+
+$$
+e_{BB}-C_A\le 2d_{tile},
+$$
+
+because a completion triangle can contain two uncovered unit outer sides.  A proposed
+sharpening was to show that only `O(1)` completion triangles can contain two such
+sides, which would give `e_{BB}-C_A\le d_{tile}+O(1)`.  That implication is false.
+
+The mistake is a turn reversal.  If two consecutive hull sides have unit length, the
+distance between their other endpoints is
+
+$$
+2\cos(\alpha/2)>1,
+$$
+
+where `alpha` is the exterior turn.  Thus `alpha<2pi/3`; convex turning supplies no
+constant upper bound on the number of such vertices.
+
+## Exact triangle-free regression
+
+Take a regular `2m`-gon of side length one, with `m\ge3`.  Its vertices are a
+unit-separated triangle-free source: every nonconsecutive chord is longer than one,
+and the unit-contact graph is the boundary cycle.
+
+For every even vertex, add the diagonal joining its two odd neighbors.  These diagonals
+form the convex polygon on the odd vertices.  Use an arbitrary triangulation of that
+odd polygon as the cell-triangle subgraph, and then add the `m` ear diagonals.  The
+union is a triangulation of the original polygon, and every even vertex is an ear.
+Each of its `m` ear triangles has two unit outer sides.  The cell subgraph has `m-2`
+triangles, none using a full polygon side, so
+
+$$
+d_{tile}=(2m-2)-(m-2)=m,
+\qquad
+e_{BB}-C_A=2m=2d_{tile}.
+$$
+
+Thus the existing coefficient `2` is sharp for the outerplanar completion ledger, and
+the number of two-unit-side ears is linear in the number of outer sides.
+
+This is a regression against the proposed **purely outerplanar** sharpening.  It is a
+finite boundary construction only; it does not assert global minimum-diameter
+optimality, a harmonic-cell realization, or a C-II counterexample.  Additional
+cell-incidence or source-response information would be needed for a stronger charge.
+
+## Correct implication chain
+
+$$
+\text{completion triangulation}
+\to e_{BB}-C_A\le2d_{tile}
+\to \text{canonical joint-payment scalar}.
+$$
+
+The replacement `2d_tile -> d_tile+O(1)` is rejected, and the current source-level
+obstruction remains the aggregate outer detour coupled to the actual loaded-hull and
+diameter response.
+
+Preservation note (2026-10-03): restored from commit `177e193d`
+(with whitespace normalization and this provenance note) to repair the existing research-index reference.
+This is prior research, not a result discovered in the October-3 run.
+
+## Slot 2 recovery provenance — 2026-10-05
+
+Recovered from `research/full-settlement-collar-20261003` at exact source tip `bc52d9f5153c8c936fd3fbf96f755c8d57bbee86`; no original PR was associated with the source branch. This artifact is preserved as a rejected route record. It does not change theorem state. Any conditional source hypotheses and limits remain as stated above; C-II and Level I remain open.

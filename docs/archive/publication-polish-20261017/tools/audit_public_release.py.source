@@ -1,0 +1,635 @@
+#!/usr/bin/env python3
+"""Fail-closed release audit for a curated E99 repository.
+
+Independent of the theorem verifier: checks publication boundaries, recorded
+source inventory, exact public file hashes, credential markers in current
+and historical blobs or commit messages, and reachability of Git history.
+Ordinary author, committer, tagger and contributor attribution is retained and
+is not an email-domain release gate. This is NOT legal rights clearance,
+mathematical proof review, or an all-pattern secret scanner.
+"""
+from __future__ import annotations
+
+import argparse
+from collections import Counter
+import hashlib
+import json
+from pathlib import Path, PurePosixPath
+import re
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+
+RESTRICTED_PREFIXES = ("papers/", "extracted/", ".git/", ".private/")
+RESTRICTED_EXTENSIONS = (".pdf", ".png", ".jpg", ".jpeg", ".gif", ".tiff", ".bmp", ".zip", ".tar", ".7z")
+TOKEN_PATTERNS = {
+    "github-token": re.compile(rb"\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,})\b"),
+    "openai-key": re.compile(rb"\bsk-(?:proj-)?[A-Za-z0-9_-]{24,}\b"),
+    "google-key": re.compile(rb"\bAIza[0-9A-Za-z_-]{35}\b"),
+    "pem-private-key": re.compile(rb"(?m)^-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----\r?$"),
+}
+PRIVATE_REFERENCE_PATTERNS = {
+    "private-source-url": re.compile(rb"https?://(?:www\.)?github\.com/1337isnot1337/e-99(?:[/#?]|\b)"),
+    # Split the first sentinel so this scanner does not warn on its own pattern.
+    "private-worktree-path": re.compile(rb"(?:/tmp/e99-" + rb"private|/home/oai/|/workspace/projects/)"),
+}
+HEX40 = re.compile(r"^[0-9a-f]{40}$")
+HEX64 = re.compile(r"^[0-9a-f]{64}$")
+
+
+def git(root: Path, *args: str) -> bytes:
+    return subprocess.check_output(
+        ["git", "--no-replace-objects", "-C", str(root), *args],
+        timeout=30, stderr=subprocess.PIPE,
+    )
+
+
+def allowed_relative(raw: object) -> bool:
+    if not isinstance(raw, str) or not raw or raw.startswith(("/", "-", "./")):
+        return False
+    if "\\" in raw or "\x00" in raw or any(part in ("", ".", "..") for part in raw.split("/")):
+        return False
+    return PurePosixPath(raw).as_posix() == raw
+
+
+def read_json(root: Path, path: str):
+    # Final-candidate evidence must describe Git objects, never substituted worktree bytes.
+    return json.loads(git(root, "show", "HEAD:" + path))
+
+
+OWNER_RIGHTS_RECORD = "docs/publication/owner-rights-authorization.json"
+OWNER_APPROVED_MANIFEST_BLOB = "96df5a7db05e8b65e8bca605a770d0b09ab27596"
+OWNER_APPROVED_MANIFEST_ENTRIES = 810
+OWNER_APPROVED_CHANGED_MANIFEST_ENTRIES = 8
+OWNER_RIGHTS_EVIDENCE = "https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207244081"
+MIGRATION_RIGHTS_RECORD = "docs/publication/first-party-migration-authorization.json"
+MIGRATION_RIGHTS_LEDGER = "docs/research/migration/2026-10-16/ledger/coordinator-first-party-rights-addendum.jsonl"
+MIGRATION_FROZEN_INDEX = "docs/research/migration/2026-10-16/shards/frozen-813-index.jsonl"
+MIGRATION_DISPOSITION_LEDGER = "docs/research/migration/2026-10-16/frozen-target-c-813-dispositions.jsonl"
+MIGRATION_SOURCE_COMMIT = "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+MIGRATION_SOURCE_TREE = "e061f039eac44c286a00eacdcaa9a4cbbb877891"
+MIGRATION_SUPPORT_PATHS = {
+    "research/diameter_endpoint_gap_audit.py",
+    "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
+    "research/target_c_efaq_uniform_cap.py",
+    "research/target_c_open_cell_phase_flux_2026-10-03.md",
+    "research/target_c_s1_q13_shell_regression.py",
+    "research/target_c_two_halfdisk_scalar_regression_2026-09-12.md",
+    "research/verify_aligned_swap_horn_obstructions.py",
+    "research/verify_antipode_transition.py",
+    "research/verify_convex_shared_witness_outer_occurrences.py",
+    "research/verify_diameter_first_joint_depth_2026_10_02.py",
+    "research/verify_diameter_star_contiguity.py",
+    "research/verify_s1_q13_kkt_endpoints.py",
+    "research/verify_target_c_annular_atlas_2026_09_26.py",
+    "research/verify_target_c_antitone_interval_scc_2026_10_03.py",
+    "research/verify_target_c_ball_hull_lattice_2026_10_02.py",
+    "research/verify_target_c_central_face_two_geodesic_corridor.py",
+    "research/verify_target_c_collinear_punctures_2026_10_02.py",
+    "research/verify_target_c_deep_isolate_octagon_flip_2026_10_02.py",
+    "research/verify_target_c_dominant_pentagon_through_splicing.py",
+    "research/verify_target_c_star_ray_staircase_2026_10_01.py",
+    "research/verify_target_c_two_halfdisk_scalar_regression.py",
+}
+
+
+def inclusion_manifest_lineage(root: Path, manifest: dict, current_blob: str):
+    """Bind one editorial generator update to the unchanged approved source scope.
+
+    The owner grant remains attached to OWNER_APPROVED_MANIFEST_BLOB. A later
+    manifest may update only the existing artifact generator's published hash
+    and editorial description; its source identities and rights do not change.
+    Every comparison uses committed Git bytes, including the current generator.
+    """
+    if not isinstance(manifest, dict) or not HEX40.fullmatch(current_blob):
+        return None
+    approved_bytes = git(root, "cat-file", "blob", OWNER_APPROVED_MANIFEST_BLOB)
+    current_bytes = git(root, "cat-file", "blob", current_blob)
+    for expected, data in ((OWNER_APPROVED_MANIFEST_BLOB, approved_bytes),
+                           (current_blob, current_bytes)):
+        header = b"blob " + str(len(data)).encode("ascii") + b"\0"
+        if hashlib.sha1(header + data).hexdigest() != expected:
+            return None
+    approved = json.loads(approved_bytes)
+    if not isinstance(approved, dict) or json.loads(current_bytes) != manifest:
+        return None
+    approved_entries, current_entries = approved.get("entries"), manifest.get("entries")
+    if (not isinstance(approved_entries, list) or not isinstance(current_entries, list)
+            or len(approved_entries) != OWNER_APPROVED_MANIFEST_ENTRIES
+            or len(current_entries) != OWNER_APPROVED_MANIFEST_ENTRIES
+            or any(not isinstance(row, dict) for row in approved_entries + current_entries)):
+        return None
+    lineage = {
+        "owner_attested_manifest_git_blob_sha": OWNER_APPROVED_MANIFEST_BLOB,
+        "current_manifest_git_blob_sha": current_blob,
+        "source_scope_unchanged": True,
+        "editorial_update": False,
+        "owner_grant_extended": False,
+    }
+    if current_blob == OWNER_APPROVED_MANIFEST_BLOB:
+        return approved, lineage
+    if ({key: value for key, value in approved.items() if key != "entries"}
+            != {key: value for key, value in manifest.items() if key != "entries"}):
+        return None
+    allowed_path = "tools/build_artifact_index.py"
+    allowed_fields = {"public_sha256", "editorial_change"}
+    changed = []
+    for old, new in zip(approved_entries, current_entries):
+        if old == new:
+            continue
+        if old.get("public_path") != allowed_path:
+            return None
+        if ({key: value for key, value in old.items() if key not in allowed_fields}
+                != {key: value for key, value in new.items() if key not in allowed_fields}):
+            return None
+        description, digest = new.get("editorial_change"), new.get("public_sha256")
+        if (not isinstance(description, str) or not description.strip()
+                or not isinstance(digest, str) or not HEX64.fullmatch(digest)):
+            return None
+        generator = git(root, "show", "HEAD:" + allowed_path)
+        if hashlib.sha256(generator).hexdigest() != digest:
+            return None
+        changed.append(allowed_path)
+    if changed != [allowed_path]:
+        return None
+    lineage.update(editorial_update=True, updated_public_path=allowed_path,
+                   current_public_sha256=hashlib.sha256(generator).hexdigest())
+    return approved, lineage
+
+
+def attested_owner_permissions(root: Path, manifest: dict) -> dict | None:
+    """Check the exact owner-granted source scope; never infer rights from a scan.
+
+    This records an external, owner-authored confirmation pinned to one immutable
+    inclusion-manifest Git blob. One narrowly checked editorial generator update
+    may retain that same source scope; it does not extend the owner grant.
+    This grants rights to owner-controlled source expression, not to third-party
+    expression. Git attribution metadata does not need a separate email-domain
+    permission or require history rewriting.
+    """
+    try:
+        record = read_json(root, OWNER_RIGHTS_RECORD)
+        blob = git(root, "rev-parse", "HEAD:docs/publication/inclusion.json").decode("ascii").strip()
+        checked = inclusion_manifest_lineage(root, manifest, blob)
+        if checked is None:
+            return None
+        approved_manifest, lineage = checked
+        entries = approved_manifest["entries"]
+        m = record["source_manifest"]
+        owner = record["owner_declaration"]
+        external = record["external_expression_review"]
+        bounds = record["release_boundaries"]
+        if record.get("schema_version") != 1 or record.get("repository") != "1337isnot1337/erdos-99":
+            return None
+        if m.get("path") != "docs/publication/inclusion.json" or m.get("git_blob_sha") != OWNER_APPROVED_MANIFEST_BLOB:
+            return None
+        if not entries or m.get("retained_source_records") != len(entries) or m.get("source_pins") != len({e["source_commit"] for e in entries}):
+            return None
+        reconciliation = record["current_manifest_reconciliation"]
+        prior_blob = reconciliation["prior_owner_attested_manifest_git_blob_sha"]
+        if not HEX40.fullmatch(prior_blob) or reconciliation.get("current_manifest_git_blob_sha") != OWNER_APPROVED_MANIFEST_BLOB:
+            return None
+        prior_manifest = json.loads(git(root, "cat-file", "blob", prior_blob))
+        prior_entries = prior_manifest["entries"]
+        if len(prior_entries) != OWNER_APPROVED_MANIFEST_ENTRIES or len(entries) != OWNER_APPROVED_MANIFEST_ENTRIES:
+            return None
+        prior_by_path = {e["source_path"]: e for e in prior_entries}
+        current_by_path = {e["source_path"]: e for e in entries}
+        if len(prior_by_path) != OWNER_APPROVED_MANIFEST_ENTRIES or len(current_by_path) != OWNER_APPROVED_MANIFEST_ENTRIES or set(prior_by_path) != set(current_by_path):
+            return None
+        changed_paths = []
+        immutable_fields = ("source_path", "source_commit", "source_blob", "source_sha256", "public_path")
+        allowed_editorial_fields = {"public_sha256", "editorial_change"}
+        for source_path, old in prior_by_path.items():
+            current = current_by_path[source_path]
+            if any(old.get(field) != current.get(field) for field in immutable_fields):
+                return None
+            changed_fields = {key for key in set(old) | set(current) if old.get(key) != current.get(key)}
+            if changed_fields:
+                changed_paths.append(source_path)
+                if not changed_fields <= allowed_editorial_fields:
+                    return None
+        if len(changed_paths) != OWNER_APPROVED_CHANGED_MANIFEST_ENTRIES or set(changed_paths) != set(reconciliation.get("changed_manifest_paths", [])):
+            return None
+        if reconciliation.get("same_810_included_public_paths_as_prior_attestation") is not True or reconciliation.get("same_source_commit_and_12_source_pins") is not True:
+            return None
+        if owner.get("evidence_url") != OWNER_RIGHTS_EVIDENCE or owner.get("disposition") != "OWNER AUTHORIZED FOR PROJECT-CONTROLLED SOURCE EXPRESSION":
+            return None
+        if not owner.get("license_terms", "").startswith("Apache-2.0"):
+            return None
+        if external.get("confirmed_uncleared_redistributed_third_party_exceptions") != []:
+            return None
+        if bounds.get("repository_visibility_change_authorized") is not False:
+            return None
+        return {"imported_entries": len(entries), "manifest_lineage": lineage}
+    except (KeyError, TypeError, AttributeError, ValueError, UnicodeError, OSError, subprocess.SubprocessError):
+        return None
+
+
+def validate_first_party_migration_rights(root: Path, seen_paths: set[str], finding, counts: Counter) -> None:
+    """Validate the additive first-party rights record and frozen 813-file corpus."""
+    try:
+        record = read_json(root, MIGRATION_RIGHTS_RECORD)
+        scope = record["source_scope"]
+        rights_meta = record["additive_rights_ledger"]
+        index_bytes = git(root, "show", "HEAD:" + MIGRATION_FROZEN_INDEX)
+        disposition_bytes = git(root, "show", "HEAD:" + MIGRATION_DISPOSITION_LEDGER)
+        rights_bytes = git(root, "show", "HEAD:" + MIGRATION_RIGHTS_LEDGER)
+        index_rows = [json.loads(line) for line in index_bytes.splitlines() if line.strip()]
+        disposition_rows = [json.loads(line) for line in disposition_bytes.splitlines() if line.strip()]
+        rights_rows = [json.loads(line) for line in rights_bytes.splitlines() if line.strip()]
+        report_paths = {row["path"] for row in index_rows}
+        rights_paths = [row["original_path"] for row in rights_rows]
+        support_paths = rights_meta["covered_support_paths"]
+        listed_cross_shard = set(rights_meta["newly_integrated_cross_shard_support_paths"])
+        listed_prior_support = set(rights_meta["previously_integrated_support_paths"])
+        if record.get("schema_version") != 1 or record.get("repository") != "1337isnot1337/erdos-99":
+            raise ValueError("migration rights record identity mismatch")
+        if scope.get("repository") != "1337isnot1337/e-99" or scope.get("commit") != MIGRATION_SOURCE_COMMIT or scope.get("tree") != MIGRATION_SOURCE_TREE:
+            raise ValueError("frozen source identity mismatch")
+        if scope.get("frozen_report_count") != 813 or len(index_rows) != 813 or len(disposition_rows) != 813:
+            raise ValueError("frozen report/index/disposition count mismatch")
+        if hashlib.sha256(index_bytes).hexdigest() != scope.get("frozen_index_sha256"):
+            raise ValueError("frozen 813 index hash mismatch")
+        if scope.get("frozen_index") != MIGRATION_FROZEN_INDEX or scope.get("disposition_ledger") != MIGRATION_DISPOSITION_LEDGER:
+            raise ValueError("frozen index or disposition ledger path mismatch")
+        if hashlib.sha256(disposition_bytes).hexdigest() != scope.get("disposition_ledger_sha256"):
+            raise ValueError("frozen disposition ledger hash mismatch")
+        if len(report_paths) != 813 or len(set(rights_paths)) != 834 or len(rights_rows) != 834:
+            raise ValueError("duplicate or incomplete additive migration path accounting")
+        if len(support_paths) != 21 or len(set(support_paths)) != 21 or set(support_paths) != MIGRATION_SUPPORT_PATHS:
+            raise ValueError("support path list differs from the 21 registered first-party support files")
+        if listed_cross_shard != {
+            "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
+            "research/target_c_open_cell_phase_flux_2026-10-03.md",
+            "research/verify_target_c_dominant_pentagon_through_splicing.py",
+            "research/verify_target_c_star_ray_staircase_2026_10_01.py",
+        } or listed_prior_support != MIGRATION_SUPPORT_PATHS - listed_cross_shard:
+            raise ValueError("support import treatment list mismatch")
+        if set(rights_paths) != report_paths | MIGRATION_SUPPORT_PATHS:
+            raise ValueError("additive rights paths do not exactly cover frozen reports plus support files")
+        if hashlib.sha256(rights_bytes).hexdigest() != rights_meta.get("sha256") or rights_meta.get("path") != MIGRATION_RIGHTS_LEDGER or rights_meta.get("rows") != 834:
+            raise ValueError("additive rights ledger hash, path, or row count mismatch")
+        if rights_meta.get("covered_report_paths") != 813 or rights_meta.get("required_additional_first_party_paths") != 834:
+            raise ValueError("additive rights scope count mismatch")
+        if not any("independently owned" in value for value in record.get("rights_limits", [])):
+            raise ValueError("third-party rights boundary is absent")
+        for row in rights_rows:
+            original = row["original_path"]
+            dest = row["destination_path"]
+            if row.get("record_type") != "first-party-rights-and-provenance-addendum" or row.get("source_repository") != "1337isnot1337/e-99" or row.get("source_commit") != MIGRATION_SOURCE_COMMIT:
+                raise ValueError("additive rights row has incompatible provenance")
+            if not allowed_relative(original) or not allowed_relative(dest) or dest not in seen_paths:
+                raise ValueError("additive rights row has unsafe or absent destination")
+            if row.get("source_mode") not in ("100644", "100755") or row.get("destination_mode") not in ("100644", "100755"):
+                raise ValueError("additive rights row has invalid file mode")
+            if not HEX40.fullmatch(row.get("source_git_blob_sha", "")) or not HEX64.fullmatch(row.get("source_sha256", "")) or not HEX64.fullmatch(row.get("destination_sha256", "")):
+                raise ValueError("additive rights row has malformed source/destination hashes")
+            committed = git(root, "show", "HEAD:" + dest)
+            if hashlib.sha256(committed).hexdigest() != row["destination_sha256"]:
+                raise ValueError("additive rights destination hash mismatch")
+        if len(disposition_rows) != 813:
+            raise ValueError("frozen disposition ledger row count mismatch")
+        counts["owner_attested_additional_first_party_files"] = 834
+        counts["frozen_target_c_reports_rights_checked"] = 813
+        counts["first_party_support_rights_checked"] = 21
+    except (KeyError, TypeError, AttributeError, ValueError, UnicodeError, OSError, subprocess.SubprocessError) as error:
+        finding(MIGRATION_RIGHTS_RECORD, "invalid-additive-first-party-rights-record", type(error).__name__)
+        return
+
+    verifier = root / "tools/verify_frozen_target_c_813_migration.py"
+    if not verifier.is_file():
+        finding(str(verifier.relative_to(root)), "missing-frozen-migration-verifier", "Required 813-path integrity verifier is absent")
+        return
+    try:
+        replay = subprocess.run(
+            [sys.executable, str(verifier), "--destination", str(root)],
+            cwd=root,
+            capture_output=True,
+            text=True,
+            timeout=300,
+            check=False,
+        )
+        result = json.loads(replay.stdout)
+        if replay.returncode != 0 or result.get("status") != "PASS":
+            finding(MIGRATION_DISPOSITION_LEDGER, "frozen-target-c-corpus-integrity", "Destination-only frozen 813 integrity verification did not pass")
+            return
+        counts["frozen_target_c_reports_verified"] = result.get("counts", {}).get("frozen_paths", 0)
+        if counts["frozen_target_c_reports_verified"] != 813:
+            finding(MIGRATION_DISPOSITION_LEDGER, "frozen-target-c-count", "Destination-only verifier did not report all 813 paths")
+    except (OSError, ValueError, subprocess.SubprocessError) as error:
+        finding(MIGRATION_DISPOSITION_LEDGER, "frozen-target-c-corpus-integrity", type(error).__name__)
+
+
+def reachable_objects(root: Path):
+    """Read each reachable object once, including non-default and fetched PR refs."""
+    records = git(root, "rev-list", "--objects", "--all").splitlines()
+    names = {}
+    for record in records:
+        oid, _, name = record.partition(b" ")
+        names[oid.decode("ascii")] = name.decode("utf-8", "surrogateescape")
+    # cat-file batch avoids thousands of subprocesses and does not execute repo code.
+    proc = subprocess.run(
+        ["git", "--no-replace-objects", "-C", str(root), "cat-file", "--batch"],
+        input=b"".join(oid.encode() + b"\n" for oid in names),
+        capture_output=True, check=True, timeout=120,
+    )
+    offset = 0
+    for expected, name in names.items():
+        end = proc.stdout.index(b"\n", offset)
+        oid, kind, length = proc.stdout[offset:end].split()
+        size = int(length)
+        start = end + 1
+        data = proc.stdout[start:start + size]
+        if oid.decode() != expected or len(data) != size or proc.stdout[start + size:start + size + 1] != b"\n":
+            raise ValueError("invalid Git batch response")
+        offset = start + size + 1
+        yield expected, kind.decode(), name, data
+
+
+def audit(root: Path, *, scan_content: bool = True) -> dict:
+    root = root.resolve()
+    blockers: list[dict] = []
+    warnings: list[dict] = []
+    seen_paths: set[str] = set()
+    counts = Counter()
+    candidate = tree = None
+
+    def finding(where: str, kind: str, detail: str, *, block: bool = True):
+        (blockers if block else warnings).append({"path": where, "kind": kind, "detail": detail})
+
+    try:
+        candidate = git(root, "rev-parse", "HEAD").decode().strip()
+        tree = git(root, "rev-parse", "HEAD^{tree}").decode().strip()
+        dirty = git(root, "status", "--porcelain", "--untracked-files=normal").splitlines()
+        counts["dirty_worktree_records"] = len(dirty)
+        if dirty:
+            finding("<worktree>", "dirty-candidate", "Commit or remove pending changes before recording final-candidate evidence")
+        raw = git(root, "ls-tree", "-r", "-z", "HEAD")
+        entries = []
+        for rec in raw.split(b"\x00"):
+            if not rec:
+                continue
+            meta, name = rec.split(b"\t", 1)
+            mode, typ, sha = meta.decode().split()
+            path = name.decode("utf-8", "surrogateescape")
+            entries.append((path, mode, typ, sha))
+        counts["committed_files"] = len(entries)
+    except (subprocess.SubprocessError, ValueError, UnicodeError) as exc:
+        finding("<git>", "unavailable-committed-tree", type(exc).__name__)
+        entries = []
+
+    for path, mode, typ, blob in entries:
+        seen_paths.add(path)
+        if not allowed_relative(path):
+            finding(path, "unsafe-path", "Noncanonical repository path")
+        if typ != "blob" or mode not in ("100644", "100755"):
+            finding(path, "special-object", "Git mode/type is not a regular file")
+        if path.startswith(RESTRICTED_PREFIXES) or path.lower().endswith(RESTRICTED_EXTENSIONS):
+            finding(path, "restricted-redistribution", "Third-party/binary source requires independent clearance")
+        target = root / path
+        if target.is_symlink() or not target.is_file():
+            finding(path, "symlink-or-missing", "Committed path not present as a regular file")
+            continue
+        if not target.resolve().is_relative_to(root):
+            finding(path, "path-escape", "Committed path escapes the checkout")
+            continue
+        if not scan_content:
+            continue
+        try:
+            data = git(root, "cat-file", "blob", blob)
+        except (OSError, subprocess.SubprocessError) as exc:
+            finding(path, "unreadable", type(exc).__name__)
+            continue
+        counts["content_bytes"] += len(data)
+        for label, pattern in TOKEN_PATTERNS.items():
+            if pattern.search(data):
+                finding(path, "credential-indicator", label + " matched; inspect privately; no secret values are logged")
+        for label, pattern in PRIVATE_REFERENCE_PATTERNS.items():
+            if pattern.search(data):
+                finding(path, "private-reference", label + " occurs; determine whether the reference is appropriate", block=False)
+
+    manifest_path = root / "docs/publication/inclusion.json"
+    exclusion_path = root / "docs/publication/exclusion.json"
+    inc = exc = None
+    try:
+        inc = read_json(root, "docs/publication/inclusion.json")
+        exc = read_json(root, "docs/publication/exclusion.json")
+        if not isinstance(inc, dict) or not isinstance(inc.get("entries"), list):
+            raise ValueError("inclusion manifest requires entries array")
+        if not isinstance(exc, list):
+            raise ValueError("exclusion manifest requires an array")
+    except (OSError, ValueError, UnicodeError, subprocess.SubprocessError) as error:
+        finding("docs/publication/", "invalid-inventory", type(error).__name__)
+        inc = None
+
+    owner_perms = attested_owner_permissions(root, inc) if inc is not None else None
+    if owner_perms is not None:
+        counts["owner_attested_source_rights"] = owner_perms["imported_entries"]
+    elif OWNER_RIGHTS_RECORD in seen_paths:
+        finding(OWNER_RIGHTS_RECORD, "unverified-owner-rights-record",
+                "Owner attestation must match the exact committed inclusion manifest and permission evidence")
+
+    migration_expected = inc is not None and inc.get("latest_observed_source_main") == MIGRATION_SOURCE_COMMIT
+    if MIGRATION_RIGHTS_RECORD in seen_paths:
+        validate_first_party_migration_rights(root, seen_paths, finding, counts)
+    elif migration_expected:
+        finding(MIGRATION_RIGHTS_RECORD, "missing-additive-first-party-rights-record",
+                "The 813-report Target C migration requires a separately pinned first-party rights record")
+
+    if inc is not None:
+        included = set()
+        source_paths = set()
+        source_commit = inc.get("source_commit")
+        if not isinstance(source_commit, str) or not HEX40.fullmatch(source_commit):
+            finding("docs/publication/inclusion.json", "source-commit", "Invalid pinned source SHA")
+        for rec in inc["entries"]:
+            if not isinstance(rec, dict):
+                finding("docs/publication/inclusion.json", "entry-schema", "Nonobject retained entry")
+                continue
+            dest = rec.get("public_path")
+            source_path = rec.get("source_path")
+            counts["imported_entries"] += 1
+            if not allowed_relative(dest) or not allowed_relative(source_path):
+                finding(str(dest), "invalid-included-path", "Unsafe or absent source/public path")
+                continue
+            if dest in included:
+                finding(dest, "duplicate-included-path", "Same destination recorded twice")
+            included.add(dest)
+            source_paths.add(source_path)
+            for field, length in (("source_blob", 40), ("source_sha256", 64), ("public_sha256", 64)):
+                val = rec.get(field)
+                if not isinstance(val, str) or (HEX40 if length == 40 else HEX64).fullmatch(val) is None:
+                    finding(dest, "invalid-provenance", field + " is absent or malformed")
+            if dest not in seen_paths:
+                finding(dest, "missing-import", "Retained source absent from committed tree")
+                continue
+            if scan_content:
+                actual = hashlib.sha256(git(root, "show", "HEAD:" + dest)).hexdigest()
+                if actual != rec.get("public_sha256"):
+                    finding(dest, "hash-mismatch", "Published bytes differ from recorded SHA256")
+            if rec.get("publication_clearance", "").startswith("pending"):
+                if owner_perms is not None:
+                    counts["owner_attested_pending_source_records"] += 1
+                else:
+                    counts["pending_rights_reviews"] += 1
+            elif rec.get("publication_clearance") not in ("approved", "cleared"):
+                counts["unknown_rights_reviews"] += 1
+            for dep in rec.get("dependencies", []):
+                if not allowed_relative(dep) or dep not in seen_paths:
+                    finding(dest, "missing-declared-dependency", "Declared prerequisite omitted or unsafe")
+                else:
+                    counts["declared_dependency_edges"] += 1
+        if inc.get("unresolved_dependencies"):
+            finding("docs/publication/inclusion.json", "unresolved-dependencies",
+                    str(len(inc["unresolved_dependencies"])) + " source dependencies unresolved")
+        if exc is not None:
+            excluded = []
+            for rec in exc:
+                path = rec.get("source_path") if isinstance(rec, dict) else None
+                if not allowed_relative(path):
+                    finding("docs/publication/exclusion.json", "invalid-exclusion", "Noncanonical excluded path")
+                    continue
+                excluded.append(path)
+            counts["excluded_entries"] = len(excluded)
+            if len(set(excluded)) != len(excluded):
+                finding("docs/publication/exclusion.json", "duplicate-exclusion", "Excluded path duplicated")
+            overlap = source_paths & set(excluded)
+            if overlap:
+                finding("docs/publication/", "inclusion-exclusion-conflict", str(len(overlap)) + " source paths both included and excluded")
+        if counts["pending_rights_reviews"] or counts["unknown_rights_reviews"]:
+            finding("docs/publication/inclusion.json", "rights-clearance-pending",
+                    f'{counts["pending_rights_reviews"]} pending and {counts["unknown_rights_reviews"]} unknown source rights; project license does not clear them')
+
+    # HEAD-only scans are insufficient for publication. Git exposes deleted
+    # files in ancestor commits and files reachable through other branch refs.
+    # Walk every reachable tree; inspect historical-only blob bytes as well.
+    try:
+        history_revs = git(root, "rev-list", "--all").decode("ascii").splitlines()
+        current_blobs = {oid for _, _, kind, oid in entries if kind == "blob"}
+        current_entries = set(entries)
+        historic_seen = set()
+        historic_blobs = {}
+        counts["reachable_history_commits_scanned"] = len(history_revs)
+        for rev in history_revs:
+            if not HEX40.fullmatch(rev):
+                raise ValueError("invalid commit SHA in reachable revision list")
+            for item in git(root, "ls-tree", "-r", "-z", rev).split(b"\x00"):
+                if not item:
+                    continue
+                meta, name = item.split(b"\t", 1)
+                mode, kind, oid = meta.decode("ascii").split()
+                rel = name.decode("utf-8", "surrogateescape")
+                entry = (rel, mode, kind, oid)
+                if entry in current_entries or entry in historic_seen:
+                    continue
+                historic_seen.add(entry)
+                where = "<history:" + rev[:12] + ">/" + rel
+                if not allowed_relative(rel):
+                    finding(where, "historical-unsafe-path", "Historic path is noncanonical")
+                if kind != "blob" or mode not in ("100644", "100755"):
+                    finding(where, "historical-special-object",
+                            "Historical Git object was not a regular file")
+                if rel.startswith(RESTRICTED_PREFIXES) or rel.lower().endswith(RESTRICTED_EXTENSIONS):
+                    finding(where, "historical-restricted-redistribution",
+                            "A previously committed restricted source remains reachable")
+                if kind == "blob" and oid not in current_blobs:
+                    historic_blobs.setdefault(oid, (rev, rel))
+        counts["historic_distinct_paths_or_versions"] = len(historic_seen)
+        counts["historical_only_blobs"] = len(historic_blobs)
+        # Content and messages are scanned once in the batched object walk below.
+    except (OSError, ValueError, UnicodeError, subprocess.SubprocessError):
+        finding("<git-history>", "history-blob-audit-incomplete",
+                "Unable to inspect all reachable historical paths, blobs and commit messages")
+
+    try:
+        log = git(root, "log", "--all", "--format=%H%x00%ae%x00%ce%x00").decode("utf-8")
+        fields = log.split("\x00")
+        counts["reachable_commits"] = 0
+        for i in range(0, len(fields) - 2, 3):
+            sha, author, committer = fields[i].strip(), fields[i+1], fields[i+2]
+            if not HEX40.fullmatch(sha):
+                continue
+            counts["reachable_commits"] += 1
+            # Standard Git attribution belongs to the contributor's recorded
+            # history. Count coverage, but never block on its email domain.
+            # Historical commit objects are still independently scanned for
+            # credential patterns in the all-object walk below.
+            if author:
+                counts["git_author_email_metadata_records"] += 1
+            if committer:
+                counts["git_committer_email_metadata_records"] += 1
+    except (subprocess.SubprocessError, UnicodeError) as error:
+        finding("<git>", "history-scan-failure", type(error).__name__)
+
+    if scan_content:
+        try:
+            for oid, kind, name, data in reachable_objects(root):
+                if kind not in ("blob", "commit", "tag"):
+                    continue
+                counts["reachable_" + kind + "_objects_scanned"] += 1
+                # Object ids identify findings without reproducing sensitive paths or values.
+                where = "<git-object:" + oid + ">"
+                for label, pattern in TOKEN_PATTERNS.items():
+                    if pattern.search(data):
+                        finding(where, "historical-credential-indicator", label + " matched; inspect privately")
+                if kind == 'blob' and oid not in current_blobs:
+                    counts['historic_content_bytes'] += len(data)
+                for label, pattern in PRIVATE_REFERENCE_PATTERNS.items():
+                    if pattern.search(data) and (kind != 'blob' or oid not in current_blobs):
+                        finding(where, 'historical-private-reference', label + ' in reachable history; review suitability', block=False)
+                if kind in ("commit", "tag"):
+                    # Tagger and Co-authored-by metadata is retained, not
+                    # suppressed. Any credential contained in the same object
+                    # has already been checked by TOKEN_PATTERNS above.
+                    counts["git_tag_and_contributor_email_metadata_records"] += len(
+                        re.findall(rb"(?im)^(?:tagger |co-authored-by: )[^\n]*<([^<>\n]+)>", data)
+                    )
+        except (OSError, subprocess.SubprocessError, ValueError, UnicodeError) as error:
+            finding("<git>", "historical-content-scan-failure", type(error).__name__)
+
+    return {
+        "status": "BLOCKED" if blockers else ("STRUCTURAL_PRECHECK_PASSED" if scan_content else "CONTENT_SCAN_SKIPPED"),
+        "candidate_commit": candidate,
+        "candidate_tree": tree,
+        "full_content_scan": scan_content,
+        "counts": dict(sorted(counts.items())),
+        "owner_rights_manifest_lineage": owner_perms.get("manifest_lineage") if owner_perms is not None else None,
+        "blockers": blockers,
+        "warnings": warnings,
+        "limits": [
+            "This tool cannot grant copyright rights or verify contributor consent.",
+            "No regex scan certifies absence of every possible secret.",
+            "Ordinary Git attribution metadata is preserved and does not require email-domain consent; credentials in Git objects are still screened.",
+            "Historical scan covers refs reachable with git --all, not unreachable loose objects.",
+            "Machine-valid dependency paths do not prove implicit mathematical dependency closure.",
+            "Proof review, clean-history origin, hosted-CI safety and anonymous public onboarding remain separate gates.",
+        ],
+    }
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--root", type=Path, default=ROOT)
+    ap.add_argument("--skip-content", action="store_true", help="Only structural checks; NOT a publication clearance")
+    ap.add_argument("--output", type=Path, help="Write a JSON report to this private local path")
+    args = ap.parse_args()
+    result = audit(args.root, scan_content=not args.skip_content)
+    output = json.dumps(result, indent=2, sort_keys=True)
+    if args.output:
+        args.output.write_text(output + "\n")
+    print(json.dumps({
+        "status": result["status"],
+        "counts": result["counts"],
+        "blocker_count": len(result["blockers"]),
+        "warning_count": len(result["warnings"]),
+        "blockers_by_type": dict(Counter(x["kind"] for x in result["blockers"])),
+        "warnings_by_type": dict(Counter(x["kind"] for x in result["warnings"])),
+    }, indent=2, sort_keys=True))
+    return int(bool(result["blockers"]))
+
+
+if __name__ == "__main__":
+    sys.exit(main())
+

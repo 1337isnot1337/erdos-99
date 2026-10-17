@@ -1,3 +1,12 @@
+# Current publication candidate
+
+Candidate **0.1.0-rc.1** has **23 current task cards**. The
+[current release summary](RELEASE_CANDIDATE.md) controls present publication
+status and points to the final-commit evidence. The narrative below is preserved
+history: its earlier task counts and uses of “current” refer to those snapshots.
+PR #16 has merged; the schema uses `urn:erdos-99:theorem-state.schema`.
+The repository remains private pending the separate visibility decision.
+
 # Migration completion scope
 
 The [current integration status](../research/migration/2026-10-16/integration/STATUS.md)

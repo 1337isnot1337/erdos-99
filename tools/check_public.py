@@ -97,6 +97,9 @@ def validate(root: Path, *, check_hashes=True):
     from build_artifact_index import build_records,check_state
     try:errors.extend(check_state(root,state,build_records(root,state)))
     except (ValueError,FileNotFoundError) as exc:error('artifact registry: '+str(exc))
+    from build_reading_edition import check as check_reading
+    try:errors.extend(check_reading(root))
+    except (ValueError,OSError) as exc:error('reading edition: '+str(exc))
     return errors,{'claims':len(ids),'edges':sum(len(c.get('depends_on',[])) for c in ids.values()),'certificates':len(certs),'tasks':len(cat['tasks']),'retained_source_files':len(inc['entries']),'nonredistributed_reference_links':reference_links}
 
 def main():

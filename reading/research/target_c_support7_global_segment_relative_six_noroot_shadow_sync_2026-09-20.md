@@ -1,0 +1,185 @@
+> Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_six_noroot_shadow_sync_2026-09-20.md) · source SHA-256 `bb21cbf69abd5e23495eb32fa7ce43c2b1913f23ec1c5e0d778b847c982b4914`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a383aca23d55e7e273cfab40ac17e58b037f8f61", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_six_noroot_shadow_sync_2026-09-20.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "afb2f4fd9a472a53228c1d15e300483394636f81d2b8128ee2ec320678d6a1f7"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: six-no-root deletion-shadow synchronization
+
+Date: 2026-09-20
+
+Status: exact structural reduction of every hypothetical six-no-root factor-three counterexample. It removes the entire `k=3` six-no-root danger branch and synchronizes all six five-no-root deletion shadows to one common boundary band. It does not yet prove the six-no-root inequality, reduce the 3,874-state generic-H6 endpoint, or close C-II.
+
+Companion arithmetic checker:
+
+`research/verify_target_c_support7_global_segment_relative_six_noroot_shadow_sync_2026_09_20.py`
+
+This note builds on the committed deletion-shadow theorem and exact five-no-root boundary classification in `target_c_support7_global_segment_relative_six_noroot_boundary_reduction_2026-09-20.md`.
+
+## Setup
+
+Let `B` be a block-reduced family containing exactly six no-root four-cycles and suppose
+
+`D(B)=|B|-3 delta(B)<0`.
+
+Write `R` for the selected root-0 rows. For the six no-root rows, define
+
+`k(B) = 6 - (r_Q(B)-r_Q(R))`.
+
+Thus `k(B)` is the nullity of the six no-root rows after contracting the selected root-row span in `Q`. This is the same `k` used in the local-block density reduction.
+
+For a no-root row `e`, put
+
+`A_e = B \ {e}`.
+
+The committed deletion-shadow theorem already proves, for every one of the six choices of `e`,
+
+`r_M(B)-r_M(A_e)=1`
+
+and
+
+`r_Q(B)-r_Q(A_e)=0`.
+
+It also proves that either
+
+- `D(B)=-2` and every `D(A_e)=0`, or
+- `D(B)=-1` and every `D(A_e)=1`.
+
+## Nullity synchronization
+
+Because the root-row set is unchanged by deleting `e`, the quotient rank of the no-root rows relative to `R` is unchanged:
+
+`r_Q(A_e)-r_Q(R) = r_Q(B)-r_Q(R)`.
+
+Therefore
+
+`k(A_e)`
+
+`= 5 - (r_Q(A_e)-r_Q(R))`
+
+`= 5 - (r_Q(B)-r_Q(R))`
+
+`= k(B)-1`.
+
+This holds for every no-root deletion. Hence all six deletion shadows have the same `k`, not merely one of the six five-no-root boundary bands independently.
+
+The exact five-no-root boundary theorem says:
+
+- `D=0` is possible only at `(k,p)=(3,4),(4,7),(5,10)`;
+- `D=1` is possible only at `(k,p)=(3,5),(4,8),(5,11)`.
+
+Since every shadow has `k(A_e)=k(B)-1`, a six-no-root counterexample must have
+
+`k(B) in {4,5,6}`.
+
+In particular:
+
+`k(B)=3` is impossible.
+
+So the entire six-no-root `k=3,p<=2` branch from the crude danger-region reduction is closed without any orbit or local-state enumeration.
+
+## p synchronization
+
+Let `p(B)` be the number of selected root-0 rows in incomplete touched blocks after removing blocks untouched by all six no-root cycles. For each deletion shadow, remove blocks that become untouched and write the resulting incomplete-row count as `p(A_e)`.
+
+Deleting a no-root row cannot create a new touched block. A block that remains touched has exactly the same selected root-row state. A block that becomes untouched is removed from the reduced shadow. Therefore
+
+`p(A_e) <= p(B)`.
+
+Now combine this monotonicity with the five-no-root boundary table, the six-no-root danger inequality
+
+`p(B) < 3 k(B) - 6`,
+
+and the congruence
+
+`D(B) congruent |B| congruent p(B) (mod 3)`,
+
+because `|B|=6+3c+p(B)` in block-reduced form.
+
+For `D(B)=-2`, every shadow has `D=0`, so its boundary value is
+
+`p(A_e)=3(k(B)-1)-5 = 3k(B)-8`.
+
+Thus
+
+`3k(B)-8 <= p(B) <= 3k(B)-7`.
+
+The congruence `p(B) congruent -2 congruent 1 (mod 3)` selects the lower value:
+
+`p(B)=3k(B)-8`.
+
+Hence `p(A_e)=p(B)` for every deletion.
+
+For `D(B)=-1`, every shadow has `D=1`, so
+
+`p(A_e)=3(k(B)-1)-4 = 3k(B)-7`.
+
+The danger inequality already gives
+
+`p(B) <= 3k(B)-7`,
+
+while `p(A_e)<=p(B)` gives the reverse inequality. Therefore
+
+`p(B)=p(A_e)=3k(B)-7`
+
+for every deletion.
+
+Thus the six-no-root counterexample search collapses to exactly six synchronized cases:
+
+```text
+D(B)   k(B)   p(B)   deletion k   deletion p
+-2       4      4         3            4
+-2       5      7         4            7
+-2       6     10         5           10
+-1       4      5         3            5
+-1       5      8         4            8
+-1       6     11         5           11
+```
+
+The companion script exhausts the finite arithmetic constraints above and reproduces exactly these six tuples.
+
+## Support-overlap corollary
+
+The equality
+
+`p(A_e)=p(B)`
+
+for every deletion has an immediate local consequence.
+
+Take an incomplete touched block of `B` that contains at least one selected root-0 row. If that block were touched by exactly one of the six no-root cycles, deleting that unique no-root cycle would make the block untouched. Its one or two selected root rows would then disappear from the reduced shadow, forcing
+
+`p(A_e)<p(B)`,
+
+contradiction.
+
+Therefore:
+
+> Every nonempty incomplete block in a hypothetical six-no-root counterexample is touched by at least two of the six no-root cycles.
+
+Empty incomplete blocks may still have support multiplicity one, and complete blocks are not constrained by this `p` argument.
+
+This is useful because the six no-root cycles contribute only 24 block-support incidences in total. Any candidate local state with selected rows in an incomplete block must spend at least two of those incidences on that block.
+
+## Updated finite target
+
+The crude six-no-root danger bands
+
+- `k=3,p<=2`,
+- `k=4,p<=5`,
+- `k=5,p<=8`,
+- `k=6,p<=11`
+
+can now be replaced, for counterexample search, by the six exact boundary points above. The `k=3` branch is gone completely.
+
+A direct six-no-root verifier should therefore enumerate only `k=4,5,6`, only the synchronized `p` value determined by the target defect, and only local states in which every nonempty incomplete block has no-root support multiplicity at least two. This is substantially smaller than the previous four-band search and should be imposed before any 325,911-orbit local-state scan.
+
+The alternative deletion-boundary program also becomes simpler: for a fixed six-no-root candidate, all six five-no-root shadows must land in the same `k` band and the same `p` boundary, so mixed-band extension cases do not exist.
+
+## Direct C-II bottleneck
+
+This remains an auxiliary metric-basis route. The direct generic-H6 endpoint is still
+
+`3874 = 3076 C7 + 798 (C3 disjoint-union C4)`.
+
+The state-specific exact forced-segment-order scan remains the most direct endpoint attack. No theorem-state authority file is changed by this result.

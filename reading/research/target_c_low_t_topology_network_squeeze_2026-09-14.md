@@ -1,0 +1,409 @@
+> Generated reading edition · [exact source](../../research/target_c_low_t_topology_network_squeeze_2026-09-14.md) · source SHA-256 `d2b3024527b9c8818f80d3ce4512b7ab25dfbb1a54087644734263696509f17b`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3b1f22d19960962caa97eda079c6209940570580", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_low_t_topology_network_squeeze_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2594f6309a18ef0211aac1435e1ba3878b9b36a1e2b40db1428242bd4b82f4f8"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — low-`t` topology/network squeeze
+
+**Date:** 2026-09-14  
+**Repository base:** `214495443527e77e2c145d913cd94ba64f59e458`  
+**Status:** proved proof-only consequence; theorem-state authority unchanged  
+**Scope:** canonical full-core Type-II branch plus proof-only AG42 (`eta_grid=0.00042`)  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The low-`t` pentagon theorem already shows that the present Type-II frontier is forced
+into a sea of bounded pentagonal contact faces.  The same exact §171 inequalities give
+more: near the current proof-only floor, the outer detour and the complete
+Woodall/rigidity defect `k=d_H+s_Z` are both tiny, while the stopped-train endpoint
+network is squeezed into a narrow linear band.
+
+Put
+
+$$
+\Delta_2={\pi\over2\sqrt3},\qquad
+s=\sqrt{\Delta_2},\qquad
+C_0=2s+0.00042,
+$$
+
+and on a convergent Type-II subsequence write
+
+$$
+t={q-k\over D},\quad
+\kappa={k\over D},\quad
+\delta={b-P_F\over D},\quad
+\varphi={f\over D},\quad
+\chi={Q\over D}.
+$$
+
+The proof-only AG42 input and audited §171 give
+
+$$
+C\ge C_0,
+\tag{NS.1}
+$$
+
+$$
+C\le {9t\over2}-2\pi-2\delta-{\kappa\over2}.
+\tag{NS.2}
+$$
+
+The exact identities are
+
+$$
+\chi=2t-\pi-\delta,
+\qquad
+C={t\over2}+2\varphi-{\kappa\over2}.
+\tag{NS.3}
+$$
+
+## 1. Tiny outer-detour and topology budget
+
+Define
+
+$$
+R(t):={9\over2}t-2\pi-C_0.
+\tag{NS.4}
+$$
+
+Equations (NS.1)--(NS.2) give the exact asymptotic necessary condition
+
+$$
+\boxed{2\delta+{\kappa\over2}\le R(t).}
+\tag{NS.5}
+$$
+
+Hence separately
+
+$$
+\boxed{
+0\le\delta\le {R(t)\over2},
+\qquad
+0\le\kappa\le2R(t).
+}
+\tag{NS.6}
+$$
+
+Let
+
+$$
+C_{146}={4\over9}(\pi+s),
+\qquad
+t_{42}=C_{146}+0.0013751
+=1.8208886379794447\ldots .
+$$
+
+Since `(9/2)C146-2pi=2s`,
+
+$$
+R(t_{42})={9\over2}(0.0013751)-0.00042=0.00576795.
+$$
+
+Therefore at the current floor profile
+
+$$
+\boxed{\delta\le0.002883975+o(1),}
+\tag{NS.7}
+$$
+
+$$
+\boxed{{d_H+s_Z\over D}=\kappa\le0.0115359+o(1).}
+\tag{NS.8}
+$$
+
+Thus both the Woodall deficiency `d_H` and the mixed-rigidity surplus `s_Z` are at
+most `0.0115359D+o(D)`.
+
+## 2. The loaded diameter graph is near-extremal as a thrackle
+
+The exact identities
+
+$$
+q=(t+\kappa)D,
+\qquad
+h=q-d_H=tD+s_Z
+\tag{NS.9}
+$$
+
+show that the smallest possible normalized edge/vertex density at fixed `t,kappa`
+occurs for `s_Z=0`, `d_H=k`.  Hence
+
+$$
+\boxed{
+{h\over q}\ge {t\over t+\kappa}+o(1).
+}
+\tag{NS.10}
+$$
+
+At `t=t42`, (NS.8) gives
+
+$$
+\boxed{
+{h\over q}\ge0.9937045702232735\ldots-o(1).
+}
+\tag{NS.11}
+$$
+
+Canonical Woodall topology now makes this metric count structural.
+
+- If `d_H=0`, the loaded diameter graph is one connected odd-unicyclic straight-line
+  thrackle, with all vertices off its unique odd cycle pendant leaves.
+- If `d_H>0`, it is a caterpillar forest with exactly `d_H` components.
+
+In the forest branch, using `q>=tD` and `d_H<=k`, the average component size satisfies
+
+$$
+{q\over d_H}
+\ge {t\over\kappa}+o(1).
+\tag{NS.12}
+$$
+
+At the current floor this gives
+
+$$
+\boxed{
+{q\over d_H}\ge157.8453903015\ldots-o(1)
+}
+\tag{NS.13}
+$$
+
+whenever the forest branch is present.  Thus the low-`t` forest cannot be a sea of
+small matching-like diameter components.
+
+## 3. Pentagon closure rank is almost one full row per unit diameter
+
+Let `P_5` be the set of pentagonal bounded exceptional contact faces and `p_5=|P_5|`.
+The preceding low-`t` theorem gives at `t=t42`
+
+$$
+{p_5\over D}\ge
+0.4944166723690961\ldots-o(1).
+\tag{NS.14}
+$$
+
+For any face set `S`, audited §156 gives
+
+$$
+\operatorname{rank}C_S\ge2|S|-\sigma_C,
+\qquad
+\sigma_C\le s_Z.
+\tag{NS.15}
+$$
+
+Apply this to `P_5` and use (NS.8):
+
+$$
+\boxed{
+{\operatorname{rank}C_{P_5}\over D}
+\ge0.9772974447381923\ldots-o(1).
+}
+\tag{NS.16}
+$$
+
+So the pentagon sea is not an incidence-only artifact.  Its train-angle closure rows
+carry almost one full scalar rank per unit diameter, even after allowing the entire
+pure-contact stress corank.
+
+## 4. Nonpentagonal bounded endpoint mass is negligible
+
+For every exceptional face of degree `d>=6`,
+
+$$
+d\le6(d-5).
+$$
+
+Therefore the total number `B_{>=6}` of stopped-train terminal occurrences on
+nonpentagonal bounded faces satisfies
+
+$$
+B_{\ge6}
+\le6\sum_{\deg F\ge6}(\deg F-5)
+=6(Q-f).
+\tag{NS.17}
+$$
+
+At `t=t42`, the low-`t` theorem gives
+
+$$
+{Q-f\over D}\le0.002883975+o(1),
+$$
+
+hence
+
+$$
+\boxed{
+{B_{\ge6}\over D}\le0.01730385+o(1).
+}
+\tag{NS.18}
+$$
+
+Thus essentially all bounded stopping-face endpoint mass is carried by actual
+pentagons.
+
+Each pentagon has five terminal face-side occurrences.  A stopped train has exactly
+two terminal occurrences in total.  Hence the number `N_5` of distinct complete
+stopped trains touching at least one pentagon obeys
+
+$$
+N_5\ge {5p_5\over2}.
+\tag{NS.19}
+$$
+
+At the current floor,
+
+$$
+\boxed{
+{N_5\over D}\ge1.2360416809227404\ldots-o(1).
+}
+\tag{NS.20}
+$$
+
+This count is independent of the closure-rank estimate (NS.16).
+
+## 5. The entire stopped-train count lies in a narrow band
+
+Let
+
+$$
+B:=Q+4f
+$$
+
+be the total bounded-face terminal occurrence count.  Since `Q>=f`,
+
+$$
+B\ge5f.
+\tag{NS.21}
+$$
+
+The low-`t` theorem gives
+
+$$
+{f\over D}\ge {C_0\over2}-{t\over4}+o(1),
+$$
+
+while audited §171 gives
+
+$$
+{B\over D}\le10t-5\pi-5\delta.
+\tag{NS.22}
+$$
+
+At `t=t42` this yields
+
+$$
+\boxed{
+2.4865032368454808\ldots
+\le {B\over D}
+\le2.5009231118454808\ldots
+}
+\tag{NS.23}
+$$
+
+up to `o(1)` errors.
+
+The outer occurrence count satisfies
+
+$$
+{b\over D}=\pi+\delta,
+$$
+
+and every complete stopped train has two terminal occurrences, so
+
+$$
+2T=b+B.
+\tag{NS.24}
+$$
+
+Using (NS.7), (NS.21), and (NS.22),
+
+$$
+\boxed{
+2.8140479452176370\ldots
+\le {T\over D}
+\le2.8212578827176370\ldots
+}
+\tag{NS.25}
+$$
+
+at the current floor profile.  The width of this admissible train-count band is only
+about `0.00721D`.
+
+## 6. Common-cap overlay: local defects are also overwhelmingly pentagonal
+
+On the narrower repaired Section-118/common-cap profile, the proof-only local
+area-slack/detour theorem gives
+
+$$
+{F_{loc}\over D}
+\ge {A_{DF}-6t-2\kappa\over4}-o(1),
+$$
+
+$$
+{|N(S_D)|\over D}
+\ge {A_{DF}\over2}-3t-2\kappa-o(1),
+$$
+
+where `A_DF=12.19736577709914...`.
+
+At `t=t42`, using the worst allowed `kappa=0.0115359`, this becomes
+
+$$
+\boxed{{F_{loc}\over D}\ge0.3122405373056179\ldots-o(1),}
+\tag{NS.26}
+$$
+
+$$
+\boxed{{|N(S_D)|\over D}\ge0.6129451746112358\ldots-o(1).}
+\tag{NS.27}
+$$
+
+Since globally at most `0.002883975D+o(D)` exceptional faces can be nonpentagonal,
+at least
+
+$$
+\boxed{
+0.3093565623056179\ldots D-o(D)
+}
+\tag{NS.28}
+$$
+
+of these local harmonic-cell exceptional faces are pentagons.
+
+This overlay is common-cap only; (NS.5)--(NS.25) are the broader full-core low-`t`
+consequences.
+
+## 7. Frontier effect
+
+This theorem still does not close C-II.  The exact local pentagon regression prevents
+any argument that assigns a uniform area, Oler, or transverse-angle penalty to each
+pentagon separately.
+
+It does, however, make the surviving low-`t` geometry substantially more rigid:
+
+```text
+almost-extremal Woodall diameter thrackle
++ very small mixed-rigidity corank
++ ~0.494 D pentagons
++ almost no higher-degree bounded faces
++ >1.236 D trains touching pentagons
++ total stopped-train count trapped near 2.817 D
++ a linear two-sidedly diameter-braced outer-train family.
+```
+
+A valid next theorem should therefore be global rather than facewise.  The cleanest
+remaining target is a compatibility theorem between the near-extremal Woodall
+caterpillar/odd-cycle topology and the pentagon-dominated stopped-train endpoint
+network.  Equivalently, one can attack a simultaneous multi-train shear on the
+ordered outer-to-outer cuts, where the actual diameter thrackle must provide both
+transverse signs on every cut.
+
+## 8. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_low_t_topology_network_squeeze.py
+```
+
+for the outward Decimal certificate of all displayed constants.

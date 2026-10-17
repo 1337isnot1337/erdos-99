@@ -1,0 +1,277 @@
+> Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_five_noroot_k2_2026-09-20.md) · source SHA-256 `97fcb472cde6bec3228eba4199227024064b270b1feb41789a36d2217dae5ed3`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4a7b91afc06992bc62d33d964af62cd4f187c0e3", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_five_noroot_k2_2026-09-20.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2cbd4766f0b6f11df420319adb981e6266f145b81e92d6c05f9edc9c79ed8c5e"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: five-no-root rank-density audit, k=2 branch
+
+Date: 2026-09-20
+
+Status: exact finite result for one branch of the global four-cycle metric-basis subproblem. This does not reduce the current 3,874-state generic-H6 endpoint and does not close C-II.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_five_noroot_k2_2026_09_20.py`
+
+## Statement
+
+Use the relative four-cycle notation from the preceding audits. Let `M` be the 85-dimensional span of the 210 simple `K8` four-cycle rows modulo the 56 automatic side-triangle rows, let `T` be the 15-dimensional ground-root space, let `Q=M/T`, and put
+
+`delta(A) = r_M(A) - r_Q(A)`.
+
+For a family with exactly five no-root four-cycles, strip untouched root-0 quotient blocks as before. Write
+
+- `c` for the number of complete touched root-0 blocks,
+- `p` for the number of selected root-0 rows in incomplete touched blocks, and
+- `k` for the extra quotient-kernel dimension supplied by the five no-root rows.
+
+Then
+
+`|A| = 5 + 3c + p`
+
+and
+
+`delta(A) <= c + k`.
+
+A violation of
+
+`3 delta(A) <= |A|`
+
+can therefore occur only in
+
+- `k=2, p=0`,
+- `k=3, p<=3`,
+- `k=4, p<=6`, or
+- `k=5, p<=9`.
+
+The preceding five-no-root audit closed the `k=5` branch. The new verifier closes the opposite endpoint:
+
+> Every five-no-root family in the `k=2,p=0` branch satisfies `3 delta(A) <= |A|`.
+
+In fact every canonical minimal state in this branch has defect at least `2`, and the same is therefore true for every state obtained from it.
+
+The unresolved five-no-root regimes are now exactly
+
+- `k=3, p<=3`, and
+- `k=4, p<=6`.
+
+## Rank-three coefficient-constraint space
+
+For `t=5` no-root rows and `k=2`, the global external coefficient-constraint space has rank
+
+`5-k = 3`.
+
+Call that rank-three space `P`.
+
+Because `p=0`, every touched root-0 quotient block is either
+
+- empty, contributing its local empty-state coefficient constraint `E_b`, or
+- complete, contributing no coefficient constraint.
+
+Thus an actual state in this branch satisfies
+
+`P = span(E_b : b is empty)`.
+
+Each `E_b` has rank at most two in the five no-root coefficients.
+
+## Canonical minimal completion
+
+Fix the five no-root rows and a realizable rank-three space `P`.
+
+Define the canonical state `A_P` by
+
+- leaving block `b` empty exactly when `E_b` is contained in `P`, and
+- completing `b` otherwise.
+
+This canonical state also realizes `P`. Indeed, every block that was empty in any actual realization has `E_b subset P`, so all of those blocks remain empty in `A_P` and still span `P`. Every additional empty block in `A_P` has constraint contained in `P`, so the total span cannot exceed `P`.
+
+Therefore `A_P` is the unique least-row empty/complete state attached to `P`.
+
+Any other state with the same `P` is obtained by completing some blocks that are empty in `A_P`.
+
+For every coefficient vector `alpha` in the two-dimensional nullspace of `P`, the local quotient contribution at such a compatible block is zero because `E_b subset P`. Completing that block therefore does not change either of the two external-nullspace relation rows. It only adds the block's complete local `T` relation.
+
+Hence each additional completion
+
+- adds exactly three selected four-cycle rows, and
+- raises `delta` by at most one.
+
+So
+
+`|A|-3 delta(A)`
+
+cannot decrease when passing from the canonical state to another realization of the same `P`.
+
+It is enough to audit the canonical states.
+
+## Complete enumeration of rank-three spaces
+
+The exact `S7` orbit census from the `k=5` verifier reduces the
+
+`C(105,5) = 96,560,646`
+
+five-subsets of no-root four-cycles to
+
+`20,451`
+
+orbit representatives.
+
+For each representative, the verifier constructs every rank-three space obtainable as a span of local empty constraints. The construction starts from the zero space and inserts the local `E_b` one block at a time, retaining every intermediate span of rank at most three. Every realizable rank-three `P` is therefore generated: along any subset whose final span is `P`, all intermediate spans are contained in `P` and have rank at most three.
+
+Across all 20,451 orbit representatives this gives exactly
+
+`263,592`
+
+canonical rank-three states.
+
+Their complete-block count census is
+
+```text
+c    states
+4      4,026
+6        247
+7     63,117
+8    120,611
+9     25,549
+10    37,396
+11     5,964
+12     5,098
+13     1,229
+14       288
+15        67
+```
+
+There are no canonical states with `c=0,1,2,3,5`.
+
+## Why no external relation rank is needed
+
+Let `r` be the rank in `T` of the `c` complete-block relations in a canonical state.
+
+The global coefficient-constraint space has rank three in five coefficients, so its nullspace has dimension two. The full relative relation system therefore consists of
+
+- the complete-block relation space of rank `r`, plus
+- at most two external-nullspace relation rows.
+
+Consequently
+
+`delta(A_P) <= r + 2`.
+
+If `c<=13` and the complete-block relations are dependent, write
+
+`d = c-r >= 1`.
+
+Then
+
+`|A_P| - 3 delta(A_P)`
+
+is at least
+
+`5 + 3c - 3(r+2) = 3d - 1 >= 2`.
+
+If `c>=14`, no complete-block rank calculation is needed. Since `T` has dimension 15,
+
+`delta(A_P) <= 15`,
+
+and already at `c=14`,
+
+`5 + 3c - 3*15 = 2`.
+
+Thus a negative defect could occur only if a canonical state with `c<=13` had all `c` complete-block relations independent.
+
+The exhaustive verifier finds none.
+
+## Exact complete-block rank census
+
+Of the 263,592 canonical states,
+
+- 355 have `c>=14` and are eliminated by the 15-dimensional ambient rank cap;
+- 263,237 have `c<=13` and every one has dependent complete-block relations.
+
+The exact deficiency census `d=c-r` is
+
+```text
+d    states
+1      4,717
+2    256,273
+3      2,247
+```
+
+The complete `(c,r)` census is
+
+```text
+(c,r)     states
+(4,3)       4,026
+(6,5)         247
+(7,5)      62,741
+(7,6)         376
+(8,6)     120,591
+(8,7)          20
+(9,7)      25,501
+(9,8)          48
+(10,7)         37
+(10,8)     37,359
+(11,8)        635
+(11,9)      5,329
+(12,9)        717
+(12,10)     4,381
+(13,10)       858
+(13,11)       371
+```
+
+Therefore the canonical defect lower bound is at least
+
+- `2` when `d=1`,
+- `5` when `d=2`,
+- `8` when `d=3`, and
+- `2` for the `c>=14` dimension-cap states.
+
+Since later completions cannot decrease the defect, the entire `k=2,p=0` branch is closed.
+
+## Exactness of the rank decisions
+
+The only finite-field rank decisions in this verifier are ranks of complete-block `T` relations. Their maximum squared Euclidean row norm is exactly
+
+`12`.
+
+Ranks are computed modulo
+
+`P = 2^127 - 1`.
+
+The imported exact-rank layer runs the Lucas-Lehmer test for `P`, and the verifier checks
+
+`P^2 > 12^15`.
+
+If a set of at most 15 integer rows had larger rational rank than its modular rank, some nonzero integer minor would be divisible by `P`. Hadamard bounds the square of every such determinant by `12^15`, which is strictly below `P^2`. Hence a nonzero minor has absolute value strictly below `P` and cannot vanish modulo `P`.
+
+Thus every dependence used in the proof is a dependence over `Q`, not probabilistic finite-field evidence.
+
+The orbit enumeration itself uses exact integer permutation/combinadic arithmetic. NumPy in the imported five-orbit census is used only to batch those exact integer calculations.
+
+## Consequence for the 44-cycle question
+
+The previous density audits already prove the factor-three inequality for families with at most four no-root cycles. Therefore a hypothetical sufficient 44-cycle family must contain at least five no-root cycles.
+
+If it contains exactly five, the crude defect inequality rules out `k<=1`, this verifier rules out `k=2`, and the preceding `k=5` verifier rules out `k=5`.
+
+Hence any hypothetical sufficient 44-cycle family with exactly five no-root cycles must lie in one of only two quotient-kernel regimes:
+
+`k=3` or `k=4`.
+
+Those are precisely the two remaining five-no-root density branches.
+
+## Remaining bottleneck
+
+For the five-no-root density layer, the unresolved cases are now exactly
+
+- `k=3, p<=3`, where the global coefficient-constraint space has rank two, and
+- `k=4, p<=6`, where it has rank one.
+
+The `k=3` branch is the smaller next target. A deletion-minimal reduction analogous to the completed four-no-root `k=3` audit should enumerate only states whose local constraints lie in a fixed rank-two space and whose selected incomplete rows cannot be deleted while preserving that space.
+
+For C-II itself, the explicit generic-H6 endpoint remains
+
+`3874 = 3076 C7 + 798 (C3 disjoint-union C4)`.
+
+The state-specific forced-segment-order scan remains the computation most directly capable of removing those cells. Surviving cells then require quantitative sine-law metric compatibility. The theorem-state authority files are unchanged.

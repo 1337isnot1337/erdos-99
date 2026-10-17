@@ -1,0 +1,337 @@
+> Generated reading edition · [exact source](../../research/target_c_high_t_tb1_global_lower_four_row_ladders_t18687_2026-09-17.md) · source SHA-256 `e1b92ede5eb6b4cca7f6626679f99591e2633d2c5bc152f9d3c4a86f67d72590`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "7b61cdfa6e6794b35a6d826873adca2721d81b9f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_global_lower_four_row_ladders_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f971bb2eee6bb4efd9cd2d25e55604eb485e58bbc8a5c6a928b89bd10112ce01"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — GLOBAL LOWER synchronizes to bounded-overlap four-row ladders and one train
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the all-residue LOWER branch; no canonical promotion claimed  
+**Scope:** one-sign strong-TB1 all-residue Horn LOWER outcome through `t=(q-k)/D<=1.8687`  
+**Dependencies:** sharp all-residue Horn budget; four-row endpoint-incidence theorem; exact path-interval support; global angular-defect and terminal-variation budgets; high-`t` crossing-neighbor floor; complete-train count  
+**Certificate:** `research/verify_target_c_high_t_tb1_global_lower_four_row_ladders_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current all-residue theorem gives the weighted source-wide obstruction
+
+$$
+\boxed{
+2N_L+N_U>
+\left({s_0\over8}-o(1)\right)D,
+\qquad
+s_0={791\over320{,}000{,}000}.
+}
+\tag{GL.1}
+$$
+
+Thus one metric type has density at least
+
+$$
+\boxed{
+\delta_{sharp}:={s_0\over24}
+={791\over7{,}680{,}000{,}000}
+=1.02994791666\ldots\times10^{-7}.
+}
+\tag{GL.2}
+$$
+
+Assume GLOBAL LOWER is the winning type. Every retained near-unit blocker has exact selected-cut support depth at most four by the endpoint-incidence theorem.
+
+The old LOWER ladder theorem first chose one residue class and one support orientation to make support intervals disjoint. That loss is unnecessary. The all-residue construction retains an injective owner layer for the distinct LOWER blockers. Depth at most four plus injective ownership implies that any selected row is contained in at most eight blocker supports. Hence the global phase and terminal-variation budgets can be spent directly on the full GLOBAL LOWER winner.
+
+> **Global four-row LOWER ladder theorem.** On the GLOBAL LOWER winner there are more than
+> 
+
+$$
+
+> \boxed{
+> \left({s_0\over48}-o(1)\right)D
+> =(5.14973958333\ldots\times10^{-8}-o(1))D
+> }
+> \tag{GL.3}
+> 
+$$
+
+
+> good near-unit blockers whose support has at most four selected rows and whose whole support carries a common family of
+> 
+
+$$
+
+> (0.6436-o(1))D
+> 
+$$
+
+
+> complete trains with uniform inverse-`D` angular defect on every support row.
+>
+> One fixed complete stopped train belongs to the common-column family of more than
+> 
+
+$$
+
+> \boxed{
+> (1.08295128111\ldots\times10^{-8}-o(1))D
+> }
+> \tag{GL.4}
+> 
+$$
+
+
+> such four-row windows. A pairwise-disjoint subfamily with the same fixed train still has more than
+> 
+
+$$
+
+> \boxed{
+> (1.35368910139\ldots\times10^{-9}-o(1))D
+> }
+> \tag{GL.5}
+> 
+$$
+
+
+> members.
+
+---
+
+## 1. Injective owners survive all-residue LOWER deduplication
+
+In each valid mod-five Horn subsystem, the permanent LOWER extraction starts from one chosen blocker occurrence per poisoned coordinate. The four-row bandwidth is smaller than the residue spacing five, so within one residue system the same LOWER pair cannot be chosen for two coordinates.
+
+Across residue systems, one LOWER pair can occur at both physical endpoint layers. Deduplicate by keeping one occurrence. Before deduplication all occurrences have distinct owner coordinates: within one residue system there is one chosen occurrence per coordinate, and different residue systems use disjoint coordinate sets. Deleting occurrences cannot create an owner collision.
+
+Therefore the distinct GLOBAL LOWER family has an injective owner map
+
+$$
+o:E_D^L\to\{0,\ldots,m\}.
+\tag{GL.6}
+$$
+
+If `p(e)` is the other endpoint region, then
+
+$$
+\boxed{1\le|p(e)-o(e)|\le4.}
+\tag{GL.7}
+$$
+
+Its exact selected-cut support `I(e)` is the integer interval between those two region indices.
+
+On the LOWER-winning side,
+
+$$
+\boxed{|E_D^L|>(\delta_{sharp}-o(1))D.}
+\tag{GL.8}
+$$
+
+---
+
+## 2. Support overlap is at most eight
+
+Fix a selected cut `tau_k` and suppose `k in I(e)`.
+
+If the partner lies to the right of the owner, then
+
+$$
+o(e)<k\le p(e)\le o(e)+4,
+$$
+
+so
+
+$$
+o(e)\in\{k-4,k-3,k-2,k-1\}.
+$$
+
+If the partner lies left of the owner, then
+
+$$
+p(e)<k\le o(e)\le p(e)+4,
+$$
+
+so
+
+$$
+o(e)\in\{k,k+1,k+2,k+3\}.
+$$
+
+There are only eight possible owner indices and the owner map is injective. Hence
+
+$$
+\boxed{
+\#\{e:k\in I(e)\}\le8.
+}
+\tag{GL.9}
+$$
+
+If both `k` and `k+1` lie in `I(e)`, only six owner indices are possible; the weaker uniform bound eight is enough below.
+
+---
+
+## 3. Global budgets give linearly many low-cost four-row windows
+
+For a blocker `e`, define
+
+$$
+C(e)=
+\sum_{j\in I(e)}F_j
++
+\sum_{j:\,j,j+1\in I(e)}L_j,
+\tag{GL.10}
+$$
+
+where `F_j` is the full angular-defect cost on row `tau_j` and `L_j` is the adjacent terminal-variation cost.
+
+The canonical budgets give
+
+$$
+\sum_jF_j=O(D),
+\qquad
+\sum_jL_j=O(D).
+\tag{GL.11}
+$$
+
+By (GL.9), every term is charged to at most eight blocker windows. Therefore
+
+$$
+\boxed{
+\sum_{e\in E_D^L}C(e)=O(D).
+}
+\tag{GL.12}
+$$
+
+Together with (GL.8), the mean cost is bounded by a source-independent constant. Choose a fixed `H_0` above twice the asymptotic mean. At least half the blockers satisfy `C(e)<=H_0`, so
+
+$$
+\boxed{
+N_D^{good}>
+\left({\delta_{sharp}\over2}-o(1)\right)D
+=
+\left({s_0\over48}-o(1)\right)D.
+}
+\tag{GL.13}
+
+---
+
+## 4. Each good support is an inverse-`D` near-equilateral local ladder
+
+Every selected high-`t` row has
+
+\[
+|\Gamma_j|>(0.6536-o(1))D.
+\tag{GL.14}
+$$
+
+For a good blocker, its support has at most four rows and total internal terminal variation at most `H_0`. Intersecting the rowwise crossing families therefore leaves
+
+$$
+\left|\bigcap_{j\in I(e)}\Gamma_j\right|
+>(0.6536-o(1))D.
+\tag{GL.15}
+$$
+
+For a common column `b`, put
+
+$$
+\Delta_e(b)=\sum_{j\in I(e)}\delta_{jb}.
+$$
+
+The angular part of the cost bound gives
+
+$$
+\sum_b\Delta_e(b)\le H_0.
+$$
+
+Delete columns with `Delta_e(b)>100H_0/D`. At most `0.01D` columns are deleted. The surviving family `P(e)` satisfies
+
+$$
+\boxed{|P(e)|>(0.6436-o(1))D}
+\tag{GL.16}
+$$
+
+and, for every support row and retained column,
+
+$$
+\boxed{0<\delta_{jb}\le {100H_0\over D}.}
+\tag{GL.17}
+$$
+
+Thus every good blocker lies in a common four-row inverse-`D` near-equilateral ladder. The standard exact train-step argument gives the usual common `0.01D` circumcenter flank blocks of density
+
+$$
+0.6436-{1.02\over\sqrt3}
+=0.0547027254265\ldots
+\tag{GL.18}
+
+on both sides.
+
+---
+
+## 5. One fixed train threads a linear family
+
+The source-wide complete-train count is
+
+\[
+T_D<(T_*+o(1))D,
+\qquad T_*={6121\over2000}=3.0605.
+\tag{GL.19}
+
+Count incidences `(e,b)` with `e` good and `b in P(e)`. By (GL.13) and (GL.16), there are more than
+
+\[
+\left({\delta_{sharp}\over2}\,0.6436-o(1)\right)D^2
+$$
+
+incidences. Dividing by (GL.19), one complete train `b_*` belongs to at least
+
+\[
+\left(
+{\delta_{sharp}\over2}{0.6436\over T_*}-o(1)
+\right)D
+\tag{GL.20}
+
+of the local ladders. The exact coefficient is
+
+\[
+\boxed{
+{\delta_{sharp}\over2}{0.6436\over T_*}
+={1{,}272{,}719\over117{,}523{,}200{,}000{,}000}
+=1.08295128111\ldots\times10^{-8}.
+}
+\tag{GL.21}
+
+The `b_*`-threaded support intervals still have maximum overlap at most eight. Interval graphs are perfect, so they are colorable with at most eight colors. One color class is pairwise disjoint and has density at least one eighth of (GL.21):
+
+\[
+\boxed{
+{1{,}272{,}719\over940{,}185{,}600{,}000{,}000}
+=1.35368910139\ldots\times10^{-9}.
+}
+\tag{GL.22}
+
+---
+
+## 6. Frontier effect
+
+The sharp all-residue Horn seam can now be summarized as
+
+```text
+2 N_LOWER + N_UPPER > (s0/8-o(1))D.
+
+If UPPER wins:
+    use the existing flexible-scale SIGNED/THIN train-scaffold machinery.
+
+If LOWER wins:
+    > (s0/24-o(1))D distinct near-unit blockers;
+    support depth <= 4;
+    injective owner tags;
+    support overlap <= 8 source-wide;
+    > (s0/48-o(1))D good inverse-D four-row ladders;
+    one fixed train threads > 1.08295e-8 D of them;
+    a pairwise-disjoint fixed-train subfamily still has > 1.35368e-9 D members.
+```
+
+The remaining LOWER problem is local and repeated linearly along one fixed train: rule out a strict `1+O(D^-1)` pair traversing at most four co-phased near-equilateral O--O rows in the exact-swap geometry, or show that the repeated four-row gadgets cannot coexist with the global diameter constraints.
+
+**Disposition:** synchronized the sharp all-residue LOWER winner directly by bounded support overlap and forced one fixed train through a linear family of four-row near-unit blocker ladders. C-II and Level I remain open.

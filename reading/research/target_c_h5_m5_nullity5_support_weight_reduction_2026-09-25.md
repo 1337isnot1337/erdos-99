@@ -1,0 +1,65 @@
+> Generated reading edition · [exact source](../../research/target_c_h5_m5_nullity5_support_weight_reduction_2026-09-25.md) · source SHA-256 `9caeaf1966d6c669c7f2cf474c07df1e4e9c2393fbbe944e7d0e7cd1bfcb651a`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f3990a39910ce2b571f28c072d8b844ad89c6dfc", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_h5_m5_nullity5_support_weight_reduction_2026-09-25.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ca944691dccf2c9f6b4a4837b7f8d44b2a182a49b98cf5f20d494d555b1f5af9"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: h=5,m=5,nullity-five support-weight reduction
+
+Date: 2026-09-25
+
+Status: proof-level necessary-condition reduction plus executed exact finite support/multiplicity classification for the remaining eight-no-root k=5,D=-2,d_root=0,p=5,h=5,m=5 branch. This does not close the full m=5 branch.
+
+The preceding nullity-four transfer closure leaves the 107 five-support S_7-orbits whose full touched triangle-boundary nullity is five. Their eight-cycle multiplicity profile is either (3,2,1,1,1) or (2,2,2,1,1).
+
+For a touched triangle b, let U_b be the set of cycle positions whose four-support contains b. Any singleton coefficient row ell_b is supported inside U_b. The five singleton rows span the rank-three coefficient space P, so some three singleton rows form a basis. The established generalized-weight floor (d1,d2,d3)>=(3,4,6) therefore gives the following necessary conditions for any basis triangles a,b,c:
+
+|U_a|,|U_b|,|U_c| >= 3;
+
+every pair union has size at least 4;
+
+|U_a union U_b union U_c| >= 6.
+
+These follow because the support of each row is contained in its U-set, the support of a two-dimensional span is the union of supports of any basis for that span, and the support of P is the union of supports of any basis of P.
+
+There is also the source d_root=0 condition. If S is the set of five singleton triangles and T is the full touched triangle set, then every row indexed by T\S is complete and those oriented triangle-boundary rows must be independent. Hence a support/multiplicity configuration can survive only if some three-triangle basis candidate B satisfies the U-set inequalities and extends to a five-triangle singleton set S for which H(T\S) has full row rank.
+
+I executed this exact filter over all 107 nullity-five support orbits. For each support family the computation enumerated its full vertex stabilizer in S_7, quotiented each multiplicity profile by the induced action on the five supports, and tested all resulting support/multiplicity orbits. Triangle-boundary ranks were computed over Q by exact rational elimination.
+
+Exact census:
+
+- 2,174 support/multiplicity S_7-orbits before the filter;
+- 647 eliminated;
+- 1,527 surviving.
+
+On canonical support representatives this is equivalently:
+
+- 3,210 raw multiplicity assignments;
+- 938 eliminated;
+- 2,272 surviving.
+
+By profile:
+
+- (3,2,1,1,1): 1,410 orbit types, 340 eliminated, 1,070 surviving; 516 of 2,140 raw assignments eliminated.
+- (2,2,2,1,1): 764 orbit types, 307 eliminated, 457 surviving; 422 of 1,070 raw assignments eliminated.
+
+Thirty-eight of the 214 support-orbit/profile pairs are eliminated completely. Five of the 107 nullity-five support orbits fail for both profiles and are therefore impossible outright:
+
+{1236,1246,1256,1267,1345}
+
+{1237,1257,1267,1346,2345}
+
+{1246,1267,1347,1356,2345}
+
+{1267,1357,1456,2345,2346}
+
+{1267,1367,1467,1567,2345}
+
+Therefore the h=5,m=5 residual drops from 107 to at most 102 support orbits and, more sharply, to 1,527 support/multiplicity S_7-orbits before cycle-phase and local-direction enumeration.
+
+This is a necessary-condition elimination only. No surviving support/multiplicity orbit is claimed realizable, and no external relation-rank result is claimed here.
+
+A standalone exact verifier was executed in this run. It independently re-derived the current-main support-nullity counts through m=5, enumerated all 5,040 vertex permutations for stabilizers and canonicalization, and asserted every count above. Upload of the executable source through the contents write path was blocked; the executed result is recorded here, but no newly committed verifier file is claimed.
+
+The next bounded target is to quotient cycle phases for the 1,527 residual support/multiplicity orbits under their residual stabilizers, then apply the exact singleton-direction and external relation-rank tests. The h=5 cases m=3 and m=4 also remain open, as does D=-1,(d_root,p)=(0,6).

@@ -48,6 +48,10 @@ def _check_repo_file(root: Path, raw_path: Any, label: str) -> None:
 
 
 def validate_catalog(catalog: Any, root: Path = ROOT) -> None:
+    # The public graph is generated from the authoritative manifest. Proof
+    # modules need not repeat the machine claim ID in their prose.
+    graph = json.loads((root / "docs/publication/proof-graph.json").read_text())
+    claims = {claim["id"]: claim for claim in graph["claims"]}
     if not isinstance(catalog, dict) or catalog.get("schema_version") != 1:
         raise CatalogError("unsupported or malformed catalogue schema")
     _require_text(catalog.get("reviewed_base_commit"), "reviewed_base_commit")
@@ -150,10 +154,14 @@ def validate_catalog(catalog: Any, root: Path = ROOT) -> None:
                 claim_id = ref.get("claim_id")
                 if claim_id is not None:
                     _require_text(claim_id, f"task {task_id}.{key}[{ref_index}].claim_id")
-                    source_text = (root / ref["path"]).read_text(encoding="utf-8")
-                    if claim_id not in source_text:
+                    claim = claims.get(claim_id)
+                    sources = set() if claim is None else {
+                        claim.get("proof"), claim.get("formal_statement_source"),
+                        claim.get("independent_audit"), "docs/state/theorem-state.yaml",
+                    }
+                    if claim is None or ref["path"] not in sources:
                         raise CatalogError(
-                            f"task {task_id} references absent claim ID {claim_id} in {ref['path']}"
+                            f"task {task_id} claim ID {claim_id} does not map to {ref['path']}"
                         )
         overlap_prs = task.get("potential_open_overlap_prs", [])
         if not isinstance(overlap_prs, list):

@@ -1,0 +1,413 @@
+> Generated reading edition · [exact source](../../research/target_c_tooth_reflection_two_normal_directional_defect_2026-09-18.md) · source SHA-256 `62b0e9a1a33d166bc4143a2825c04f2bee75ea80ad384ef31b18385d42a5168d`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "019b5ab4f6bfe6fa9dfa768ef843fb887cc70c7f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_two_normal_directional_defect_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "9025009486db6fcc4dfcd4a7452795c02bbdc94a9f1ff248f4e313532d1e991e"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — two separated FREE repairs force linear lower directional defect
+
+**Date:** 2026-09-18  
+**Status:** proved candidate awaiting promotion; proof-only refinement of the fixed-pair `PAIR-REUSE` branch  
+**Scope:** the two extreme all-inactive FREE modules after fixed-pair lower-edge reuse  
+**Dependencies:** fixed-pair lossless common runs; two-boundary support/backtracking identity; two-sided outer-face localization  
+**Certificate:** `research/verify_target_c_tooth_reflection_two_normal_directional_defect_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The fixed-pair theorem produces, on its heavy side, a linear set of original lower-gate
+edges reused by two FREE repairs whose support normals have a fixed positive angular
+separation. Previous refinements used the topology of how those common edges are
+assembled into lower runs. There is also a direct metric cost which does not depend on
+that assembly.
+
+A lower gate is efficient for one repair only when its exact unit event vector is nearly
+parallel to that repair normal. The same original edge cannot be simultaneously
+fully efficient for two separated normals. Summing this elementary two-normal defect
+through the exact support ledger forces one of the two ancestries to contain strictly
+more than `D` lower edges by a linear amount.
+
+Put
+
+$$
+h_*:=\frac{\sqrt{303}}{52}=0.334747984337100\ldots,
+\qquad
+c_*:=0.129220199818177\ldots,
+$$
+
+$$
+\boxed{
+\delta_*:=2\left(1-\cos\frac{c_*}{2}\right)
+=0.00417301303247308\ldots .
+}
+\tag{DD.1}
+$$
+
+Fix `K>h_*` and
+
+$$
+\alpha_K:=1-\frac{h_*}{K}>0.
+\tag{DD.2}
+$$
+
+In the `PAIR-REUSE` branch for the two extreme FREE modules, let `E_*` be the common
+set of distinct original lower-gate edges. The fixed-pair theorem gives
+
+$$
+\boxed{
+E:=|E_*|
+\ge\left(\frac{\alpha_K}{2}-o(1)\right)D,
+}
+\tag{DD.3}
+$$
+
+$$
+1<|e|\le1+\frac KD
+\qquad(e\in E_*),
+\tag{DD.4}
+$$
+
+and, for the two canonical normals `N_1,N_2`,
+
+$$
+c_*-o(1)\le\theta_D:=\angle(N_1,N_2)\le\frac\pi2+o(1).
+\tag{DD.5}
+$$
+
+The conclusions below are additional to the current boundary/forest/trunk forks.
+
+## 1. One common lower edge has a fixed two-normal directional-defect cost
+
+For ancestry `i`, write a lower event as in the two-boundary theorem:
+
+$$
+r_i=d_i+\Delta_iN_i,
+\qquad |d_i|=1,
+\qquad \Delta_i>0,
+\tag{DD.6}
+$$
+
+where `r_i` is the original edge vector oriented in the ancestry direction. Put
+
+$$
+c_i:=N_i\cdot d_i\in[0,1],
+\qquad
+\epsilon_i:=1-c_i\in[0,1].
+\tag{DD.7}
+$$
+
+Take one common original edge `e=xy` and put
+
+$$
+\ell:=|x-y|,
+\qquad
+\nu:=\frac{x-y}{\ell}.
+$$
+
+After fixing the orientation of `nu` from ancestry 1, ancestry 2 traverses the same
+edge either in the same direction or the opposite direction. Thus for some
+`eta in {+1,-1}`,
+
+$$
+r_1=\ell\nu,
+\qquad
+r_2=\eta\ell\nu.
+\tag{DD.8}
+$$
+
+Using (DD.6),
+
+$$
+\begin{aligned}
+\epsilon_1+\epsilon_2
+&=2-N_1\cdot d_1-N_2\cdot d_2\\
+&=2-\ell(N_1+\eta N_2)\cdot\nu+\Delta_1+\Delta_2\\
+&\ge2-\ell|N_1+\eta N_2|.
+\end{aligned}
+\tag{DD.9}
+$$
+
+There are two cases.
+
+If the traversals agree, `eta=+1` and
+
+$$
+|N_1+N_2|=2\cos(\theta_D/2).
+$$
+
+Therefore (DD.4)--(DD.5) give
+
+$$
+\epsilon_1+\epsilon_2
+\ge
+2-2\left(1+\frac KD\right)\cos(\theta_D/2)
+\ge\delta_*-o(1).
+\tag{DD.10}
+$$
+
+If the traversals are opposite, `eta=-1` and
+
+$$
+|N_1-N_2|=2\sin(\theta_D/2).
+$$
+
+The upper bound in (DD.5) gives the much stronger estimate
+
+$$
+\epsilon_1+\epsilon_2
+\ge
+2-2\left(1+\frac KD\right)\sin(\theta_D/2)
+\ge 2-\sqrt2-o(1).
+\tag{DD.11}
+$$
+
+Since `delta_* < 2-sqrt(2)`, both traversal types obey the uniform bound
+
+$$
+\boxed{
+\epsilon_1(e)+\epsilon_2(e)
+\ge\delta_*-o(1).
+}
+\tag{DD.12}
+$$
+
+The `o(1)` is uniform over the common edge set for fixed `K`. No component, order, or
+cycle-rank hypothesis is used.
+
+## 2. Linear common reuse forces a linear excess in lower-edge count
+
+Let
+
+- `L_i` be the total number of lower gates on ancestry `i`;
+- `A_i` be its total support-depth traverse;
+- `S_i` be its terminal activation time;
+- `B_i^{back}` be its total upper-gate support backtracking.
+
+The exact two-boundary support identity is
+
+$$
+\sum_{e\in E_{{\rm low},i}}\epsilon_i(e)+B_i^{back}
+=L_i-A_i+S_i.
+\tag{DD.13}
+$$
+
+Hence
+
+$$
+L_i
+=A_i-S_i
++\sum_{e\in E_{{\rm low},i}}\epsilon_i(e)
++B_i^{back}.
+\tag{DD.14}
+$$
+
+The near-opposite ancestry theorem gives, uniformly for both modules,
+
+$$
+A_i>D-O(\sqrt D),
+\qquad
+0\le S_i\le h_*+D^{-1/3},
+\qquad
+B_i^{back}\ge0.
+\tag{DD.15}
+$$
+
+Sum (DD.14) over the two ancestries and retain only directional defect on the common
+edge set. Equations (DD.12) and (DD.15) give
+
+$$
+\boxed{
+L_1+L_2
+\ge
+2D+(\delta_*-o(1))E-O(\sqrt D).
+}
+\tag{DD.16}
+$$
+
+Consequently one of the two ancestries satisfies
+
+$$
+\boxed{
+L_i
+\ge
+D+\left(\frac{\delta_*}{2}-o(1)\right)E-O(\sqrt D).
+}
+\tag{DD.17}
+$$
+
+Using (DD.3),
+
+$$
+\boxed{
+L_i
+\ge
+\left(
+1+\frac{\delta_*\alpha_K}{4}-o(1)
+\right)D.
+}
+\tag{DD.18}
+$$
+
+For `K=1`, the new linear surplus coefficient is
+
+$$
+\boxed{
+\frac{\delta_*\alpha_1}{4}
+=0.000694026332810067\ldots .
+}
+\tag{DD.19}
+$$
+
+The small numerical constant is not the main point. The inequality is strict at
+linear scale and comes from the fixed angular separation of the two repairs. A common
+lower corridor cannot be reused at zero directional cost.
+
+A traversal-sensitive version is also immediate. If `E_same,E_opp` are the numbers of
+common edges traversed in the same and opposite directions, then
+
+$$
+\boxed{
+L_1+L_2
+\ge
+2D+
+\delta_*E_{same}+(2-\sqrt2)E_{opp}-o(D).
+}
+\tag{DD.20}
+$$
+
+Thus opposite-direction reuse is much more expensive than the uniform estimate.
+
+## 3. The heavy fixed-pair branch crosses the `D/2` near-unit matching threshold
+
+The same ancestry also inherits the global lower-slack ledger
+
+$$
+\sum_{e\in E_{{\rm low},i}}(|e|-1)
+\le h_*+D^{-1/3}.
+\tag{DD.21}
+$$
+
+Fix another constant `J>h_*`. At most
+
+$$
+\left(\frac{h_*}{J}+o(1)\right)D
+\tag{DD.22}
+$$
+
+lower edges can have excess larger than `J/D`. Therefore the ancestry supplied by
+(DD.18) contains at least
+
+$$
+\left(
+1+\frac{\delta_*\alpha_K}{4}
+-\frac{h_*}{J}
+-o(1)
+\right)D
+\tag{DD.23}
+$$
+
+lower edges satisfying
+
+$$
+1<|x-y|\le1+\frac JD.
+\tag{DD.24}
+$$
+
+Split those edges by ancestry-edge parity. One parity is a vertex-disjoint matching,
+so the original source contains a matching of old fully inactive outer-face pairs of
+size
+
+$$
+\boxed{
+\left(
+\frac12
++\frac{\delta_*\alpha_K}{8}
+-\frac{h_*}{2J}
+-o(1)
+\right)D
+}
+\tag{DD.25}
+$$
+
+satisfying (DD.24).
+
+Letting the fixed constants `K,J` be chosen arbitrarily large before sending `D` to
+infinity yields the asymptotic envelope
+
+$$
+\boxed{
+\left(
+\frac12+\frac{\delta_*}{8}-o(1)
+\right)D
+=
+(0.500521626629059\ldots-o(1))D
+}
+\tag{DD.26}
+$$
+
+with edge lengths `1+O(1/D)`; more precisely, for every fixed `epsilon>0` one can
+choose finite constants `K,J` so that the matching coefficient is at least
+`1/2+delta_*/8-epsilon`.
+
+There is also a concrete one-parameter statement. Take `K=J`. The coefficient in
+(DD.25) becomes
+
+$$
+M(K):=
+\frac12-\frac{h_*}{2K}
++\frac{\delta_*}{8}\left(1-\frac{h_*}{K}\right).
+\tag{DD.27}
+$$
+
+It exceeds `1/2` exactly when
+
+$$
+\boxed{
+K>K_{1/2}:=h_*+\frac{4h_*}{\delta_*}
+=321.204087938175\ldots .
+}
+\tag{DD.28}
+$$
+
+For the explicit fixed choice `K=J=400`, `PAIR-REUSE` therefore gives
+
+\[
+\boxed{
+(0.500102755114981\ldots-o(1))D
+}
+\tag{DD.29}
+
+vertex-disjoint original fully inactive outer-face pairs satisfying
+
+\[
+\boxed{
+1<|x-y|\le1+\frac{400}{D}.
+}
+\tag{DD.30}
+
+This is the first consequence of the fixed-pair heavy-reuse branch here which forces
+strictly more than `D/2` disjoint inverse-`D` near-unit pairs.
+
+## 4. Source-wide interpretation and remaining seam
+
+Combined with the fixed-pair incidence fork, the two extreme FREE modules now have the
+following proof-only reduction for every fixed `K>h_*`:
+
+1. `LINEAR-MATCHING`: the existing `(alpha_K/11-o(1))D` inverse-`D` matching occurs; or
+2. `PAIR-REUSE`: one of the two ancestries has the linear lower-edge inflation
+   (DD.18), and therefore the larger matching family (DD.25).
+
+For large fixed cutoff constants the heavy branch is qualitatively stronger: its
+matching passes `D/2` while remaining in the original outer contact face and while all
+endpoints remain old contact- and diameter-isolated source points.
+
+This still does not close C-II. There is no currently promoted theorem saying that an
+outer-face inactive matching of size just above `D/2` is impossible. The next useful
+step is to spend the half-plus matching against a genuine capacity, outer-walk, or
+source-preserving deformation bound, rather than to continue optimizing the fixed-pair
+cycle-rank constants.
+
+**Disposition:** converted constant-angle reuse of a linear common lower-edge set into
+an unavoidable linear sum of lower directional defects, then inserted that sum into
+the exact support ledger. This forces one reused FREE ancestry to contain more than
+`D` lower gates by a fixed linear amount and, after the bounded lower-slack ledger, a
+strictly greater than `D/2` inverse-`D` matching for explicit fixed cutoffs.

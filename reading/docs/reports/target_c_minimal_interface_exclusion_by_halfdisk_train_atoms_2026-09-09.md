@@ -1,0 +1,557 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_minimal_interface_exclusion_by_halfdisk_train_atoms_2026-09-09.md) · source SHA-256 `44141b1b5df8d5e564e891f803a4a6e1bb41f6ffa985ca1f9291105b12e25cd1`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- theorem-state: {"artifact_id":"ART-77C735329406","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+<!-- migration-source: path=docs/reports/target_c_minimal_interface_exclusion_by_halfdisk_train_atoms_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=fdd597e7436d571cfd7b8d91d2e20502ea8472c9; lifecycle=unreviewed; canonical=false -->
+> **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
+
+# Erdős Problem #99 — half-disk train atoms exclude the sharp two-unit loaded interface
+
+**Date:** 2026-09-09  
+**Repository branch:** `research/fullcore-interface-perimeter-2026-09-09`  
+**Run type:** asymptotic contradiction / branch exclusion  
+**Target:** full-core near-circle endpoint after GP  
+**Depends on:** GP, corrected FS, AS/CF, DT/DE stopped-train machinery, full-core rhombus area-excess collapse, HBd exact terminal budget  
+**Computation:** displayed decimals only
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+GP proves that every full-core near-circle survivor satisfies
+
+$$
+Q_B\ge(2-o(1))D,
+$$
+
+where `Q_B` is the bounded-face degree excess on faces incident to loaded terminals.
+
+The equality coefficient `2` is **not attainable**.
+
+Assume for contradiction that a full-core near-circle survivor sequence satisfies
+
+$$
+\frac{Q_B}{D}\to2.
+\tag{HA.1}
+$$
+
+Corrected FS and AS/CF then give two dominant harmonic components `I_1,I_2` with
+
+$$
+|I_i|=\left(\frac\Delta2+o(1)\right)D^2,
+\qquad
+\Delta=\frac\pi{2\sqrt3},
+\tag{HA.2}
+$$
+
+and component outer-walk lengths
+
+$$
+k_i=\left(1+\frac\pi2+o(1)\right)D.
+\tag{HA.3}
+$$
+
+Each component has a shell-facing boundary arc containing
+
+$$
+\left(\frac\pi2-o(1)\right)D
+\tag{HA.4}
+$$
+
+unit contact edges that are exact translates of distinct consecutive unit sides of the near-circular loaded shell.
+
+Run the DE atomic train-direction argument **inside each component**. If
+
+$$
+\tau_i:=\lim\frac{T_i}{D}
+$$
+
+and `s_i` is the total atomic mass of a weak limit of the empirical projective train-direction measure, then the curved shell-facing ends give
+
+$$
+\boxed{
+\frac\pi2\le\tau_i(1-s_i),
+}
+\tag{HA.5}
+$$
+
+while the rhombus crossing density and weighted Mantel give
+
+$$
+\boxed{
+\sqrt{\frac\pi{\sqrt3}}
+=2\sqrt{\frac\Delta2}
+\le\tau_i s_i.
+}
+\tag{HA.6}
+$$
+
+Hence
+
+$$
+\boxed{
+\tau_i\ge
+\frac\pi2+\sqrt{\frac\pi{\sqrt3}}
+=2.91757001388\ldots .
+}
+\tag{HA.7}
+$$
+
+DT gives exactly
+
+$$
+2T_i=k_i+Q_i+4f_i.
+$$
+
+Therefore each dominant component satisfies
+
+$$
+\boxed{
+\frac{Q_i+4f_i}{D}
+\ge
+\frac\pi2-1+2\sqrt{\frac\pi{\sqrt3}}-o(1)
+=3.26434370097\ldots-o(1).
+}
+\tag{HA.8}
+$$
+
+Summing the two components,
+
+$$
+\boxed{
+\frac{K_{\rm dom}}D
+:=\frac{(Q_1+4f_1)+(Q_2+4f_2)}D
+\ge
+\pi-2+4\sqrt{\frac\pi{\sqrt3}}-o(1)
+=6.52868740194\ldots-o(1).
+}
+\tag{HA.9}
+
+But HBd gives in the same sharp-interface branch
+
+\[
+Q_{\rm int}+2s_C=(\pi-2+o(1))D,
+$$
+
+so
+
+$$
+Q_{\rm int}\le(\pi-2+o(1))D.
+\tag{HA.10}
+$$
+
+Every internal exceptional face has degree at least five, hence `f_int<=Q_int` and
+
+$$
+K_{\rm int}:=Q_{\rm int}+4f_{\rm int}
+\le5Q_{\rm int}
+\le5(\pi-2+o(1))D
+=5.70796326795\ldots D+o(D).
+\tag{HA.11}
+$$
+
+Since the two dominant components are internal harmonic components,
+
+$$
+K_{\rm dom}\le K_{\rm int}.
+$$
+
+Equations HA.9 and HA.11 contradict one another by the fixed linear margin
+
+$$
+\boxed{
+4\left(
+\sqrt{\frac\pi{\sqrt3}}-(\pi-2)
+\right)D-o(D)
+=0.820724133995\ldots D-o(D).
+}
+\tag{HA.12}
+$$
+
+Therefore HA.1 is impossible.
+
+### Theorem HA — sharp interface exclusion
+
+No full-core near-circle triangle-free post-ZF survivor sequence satisfies
+
+$$
+Q_B/D\to2.
+$$
+
+Together with GP, this implies a qualitative uniform gap: there exists an absolute
+
+$$
+\boxed{\eta_{IF}>0}
+$$
+
+such that every sufficiently large full-core near-circle survivor satisfies
+
+$$
+\boxed{
+Q_B\ge(2+\eta_{IF})D-o(D).
+}
+\tag{HA.13}
+
+The present proof does not compute `eta_IF`; FS's fragmentation stability and the atomic-direction compactness are qualitative. The equality contradiction itself has the explicit margin HA.12.
+
+---
+
+## 1. Equality geometry supplied by FS/AS/CF
+
+Assume HA.1.
+
+FS proves that the total attachment-cell perimeter satisfies
+
+\[
+P_A=(\pi+2+o(1))D
+$$
+
+and that each of the two HG half-disk groups contains one dominant attachment cell `P_i` with
+
+$$
+\operatorname{area}(P_i)
+=\left(\frac\pi8+o(1)\right)D^2,
+\qquad
+|I_i|=\left(\frac\Delta2+o(1)\right)D^2.
+$$
+
+AS proves
+
+$$
+\sum_rk_r=(\pi+2+o(1))D,
+$$
+
+while convex perimeter continuity gives for the two dominant component hulls
+
+$$
+\operatorname{per}(\operatorname{conv}I_i)
+=\left(1+\frac\pi2+o(1)\right)D.
+$$
+
+Since each `k_i` dominates its convex-hull perimeter and all other outer-walk lengths are nonnegative, equality forces HA.3 for both `i=1,2`.
+
+AS/PT also gives a shell-facing block for each dominant component. All but `o(D)` loaded shell terminals have one interior spoke, component labels change on only `o(D)` shell edges, and regular quadrilateral annular faces give exact translated inner edges
+
+$$
+u_{j+1}-u_j=b_{j+1}-b_j.
+$$
+
+The dominant loaded attachment block spans one semicircle. Hence the number of regular translated unit inner boundary edges is HA.4.
+
+Call these edges the **curved good ends** of `I_i`.
+
+---
+
+## 2. Every curved good edge is a stopped-train endpoint
+
+Apply DT to the connected triangle-free unit-contact graph `C[I_i]`.
+
+A curved good edge lies on the outer face of `C[I_i]`: on its exterior side is the loaded annular face, which is deleted when passing to the induced component graph. Through every bounded quadrilateral face of `C[I_i]`, DT connects opposite edges; at the outer face the train stops. Therefore every curved good edge is one outer endpoint of one stopped train.
+
+Every stopped train has one fixed projective transverse edge direction, because all contact edges belonging to the train are parallel as unoriented vectors.
+
+The shell-facing good edges inherit exactly the projective directions of the corresponding loaded shell sides.
+
+---
+
+## 3. One train cannot cover two generic curved good ends
+
+The normalized loaded hull converges to the diameter-one disk. The dominant attachment block converges to one open semicircle of that circle.
+
+Along a strictly convex boundary arc whose total tangent turning is strictly less than `pi`, no two distinct oriented side vectors are parallel or antiparallel. The full dominant block has tangent turning `pi+o(1)`. Delete endpoint subarcs of total angular width tending to zero but larger than the `o(1)` endpoint error. Those deleted subarcs contain only `o(D)` unit shell sides by convergence of the convex perimeter measure to the circular measure.
+
+On the remaining curved block the tangent turning is `<pi`. Hence no two remaining good shell sides have the same projective direction.
+
+Since one stopped train has a fixed projective edge direction, it contains at most one of these remaining curved good ends.
+
+This gives the crude lower bound `T_i>=(pi/2-o(1))D`, but the atomic refinement below is the useful statement.
+
+---
+
+## 4. Atomic train directions cannot supply a positive fraction of curved ends
+
+Pass to a subsequence on which
+
+$$
+T_i/D\to\tau_i
+$$
+
+and the empirical probability measures of projective train directions converge weakly to a probability measure `mu_i` on the projective circle. Let `s_i` be the total mass of the atoms of `mu_i`.
+
+Fix `epsilon>0`. Choose finitely many atoms carrying mass at least `s_i-epsilon`, and choose pairwise disjoint projective direction neighborhoods `U_delta` around them with `mu_i`-null boundaries.
+
+The curved good shell sides have the semicircular tangent-direction distribution. For fixed finitely many neighborhoods of total angular width `O(delta)`, convex perimeter-measure convergence gives only
+
+$$
+O(\delta D)+o(D)
+$$
+
+curved good edges whose projective directions lie in `U_delta`.
+
+Every remaining curved good edge has direction outside `U_delta`, and by Section 3 each train outside `U_delta` supplies at most one such edge, up to the already discarded `o(D)` endpoint sides. Hence
+
+$$
+\left(\frac\pi2-o_delta(1)\right)D
+\le
+T_i\bigl(1-\mu_i(U_delta)+o(1)\bigr).
+$$
+
+Divide by `D`, let the source sequence tend to infinity, then `delta->0`, and finally `epsilon->0`. This proves
+
+$$
+\boxed{\frac\pi2\le\tau_i(1-s_i).}
+$$
+
+This is the half-disk analogue of DE's exposed-hull atomic-mass inequality, with coefficient one rather than DE's two-occurrence full-hull estimate because a projective train direction occurs at most once on an open semicircular boundary arc.
+
+---
+
+## 5. Internal rhombus crossings force atomic train mass
+
+Let `R_i` be the number of bounded quadrilateral faces of `C[I_i]`.
+
+DT gives the exact Euler/train identity
+
+$$
+R_i=n_i+f_i-T_i-1.
+\tag{5.1}
+$$
+
+All post-ZF face currencies are `O(D)`, and HA.3 gives `T_i=O(D)`. Thus HA.2 and (5.1) imply
+
+$$
+\boxed{
+R_i/D^2\to\Delta/2.
+}
+\tag{5.2}
+$$
+
+The full-core area argument used by CE/UF gives total strict-rhombus area excess `o(D^2)`. The internal rhombi of `I_i` are a subset of all strict rhombi, so their total area excess is also `o(D^2)`.
+
+Therefore the DE limiting crossing argument applies verbatim to the stopped-train system of `I_i`:
+
+- positive-density train crossings can occur only between limiting projective directions separated by `pi/3`;
+- this relation carries product measure only on pairs of atoms;
+- the finite crossing graph is triangle-free;
+- weighted Mantel on finitely many atomic neighborhoods gives
+
+$$
+\frac{\Delta/2}{\tau_i^2}
+\le\frac{s_i^2}{4}.
+$$
+
+Hence
+
+$$
+\boxed{
+\tau_i s_i
+\ge2\sqrt{\Delta/2}
+=\sqrt{2\Delta}
+=\sqrt{\frac\pi{\sqrt3}}.
+}
+$$
+
+This proves HA.6.
+
+No disk-shaped component hull is needed for the crossing half of DE; only DT, positive rhombus crossing density, and `o(D^2)` total rhombus area excess are used.
+
+---
+
+## 6. Add atomic and nonatomic train obligations
+
+HA.5 and HA.6 concern disjoint parts of the same train-direction probability measure:
+
+$$
+\tau_i
+=\tau_i(1-s_i)+\tau_i s_i.
+$$
+
+Therefore
+
+$$
+\tau_i
+\ge
+\frac\pi2+\sqrt{\frac\pi{\sqrt3}},
+$$
+
+proving HA.7.
+
+This is much stronger than the raw stopped-train/Mantel lower bound. Numerically,
+
+$$
+\frac\pi2+\sqrt{\frac\pi{\sqrt3}}
+=2.91757001388\ldots .
+$$
+
+The two terms have clear geometric meanings:
+
+- `pi/2`: diffuse train directions needed to expose the semicircular shell-facing boundary;
+- `sqrt(pi/sqrt3)`: atomic train directions needed to carry the quadratic rhombus crossing density.
+
+The same train population cannot cheaply serve both roles.
+
+---
+
+## 7. Convert train count to exceptional perimeter
+
+DT gives for component `I_i`
+
+$$
+T_i=\frac{k_i+Q_i}{2}+2f_i,
+$$
+
+or
+
+$$
+Q_i+4f_i=2T_i-k_i.
+$$
+
+Use HA.3 and HA.7:
+
+$$
+\begin{aligned}
+\liminf\frac{Q_i+4f_i}{D}
+&\ge
+2\left(\frac\pi2+\sqrt{\frac\pi{\sqrt3}}\right)
+-\left(1+\frac\pi2\right)\\
+&=\frac\pi2-1+2\sqrt{\frac\pi{\sqrt3}}\\
+&=3.26434370097\ldots .
+\end{aligned}
+$$
+
+This proves HA.8. Summing `i=1,2` proves HA.9.
+
+---
+
+## 8. Exact global internal-face budget gives the contradiction
+
+HBd proves throughout the full-core near-circle branch
+
+$$
+Q+2s_C=(\pi+o(1))D.
+$$
+
+Under HA.1,
+
+$$
+Q=Q_B+Q_{int}
+=(2+o(1))D+Q_{int}.
+$$
+
+Therefore
+
+$$
+Q_{int}+2s_C=(\pi-2+o(1))D.
+$$
+
+Since `s_C>=0`, HA.10 follows.
+
+Every internal bounded nonquadrilateral face has degree at least five. Hence each contributes at least one to `Q_int`, so
+
+$$
+f_{int}\le Q_{int}.
+$$
+
+Therefore
+
+$$
+K_{int}=Q_{int}+4f_{int}\le5Q_{int},
+$$
+
+which proves HA.11.
+
+The two dominant component exceptional faces are a subset of the internal faces, so
+
+$$
+K_{dom}\le K_{int}.
+$$
+
+But the coefficient lower and upper bounds are
+
+$$
+6.52868740194\ldots
+\le\liminf K_{dom}/D
+\le\limsup K_{int}/D
+\le5.70796326795\ldots,
+$$
+
+impossible.
+
+This completes the contradiction.
+
+---
+
+## 9. Uniform positive gap above coefficient two
+
+GP supplies the universal asymptotic lower endpoint `2` in the full-core near-circle phase.
+
+If there were no absolute positive separation above `2`, one could choose for each integer `m` a sufficiently large full-core near-circle survivor with
+
+$$
+Q_B/D<2+1/m
+$$
+
+while also making the defining near-circle/full-core errors smaller than `1/m`. A diagonal sequence would then satisfy HA.1, contradicting Theorem HA.
+
+Therefore some `eta_IF>0` exists with HA.13.
+
+The argument is compactness/diagonal and does not provide a numerical value. Quantifying it would require explicit stability moduli for
+
+- FS's half-disk fragmentation theorem;
+- the curved-boundary atomic-mass estimate;
+- the DE weighted-Mantel limiting step.
+
+No such quantitative modulus is silently assumed.
+
+---
+
+## 10. Regression audit
+
+- **Cap minimality is not used.** Corrected FS gives the two dominant half-disk components from `Q_B/D->2`, not from `S/D->2`.
+- **Graph diameter is not used.** The erroneous first-version FS claim `delta_i/D->1` remains unnecessary here.
+- **No per-face area gap is used.** Near-degenerate pentagons and the thin central-face regression remain allowed locally.
+- **No KKT coefficient lower bound is used.** The argument is entirely unweighted after the post-ZF structural reductions.
+- **Central-face rattlers do not matter.** HA uses only the two dominant positive contact components and internal stopped trains; it never treats the central contact face as source-empty.
+- **One-sided local stress regression does not matter.** No local transverse-force lower bound is used.
+- **Train projective-direction injectivity is only claimed after deleting `o(D)` endpoint sides.** A complete semicircle has the same projective tangent direction at its two limiting endpoints; the proof removes that endpoint ambiguity explicitly.
+- **Atomic crossing estimate does not require a disk component hull.** It is the DT/DE crossing half only, using `R_i/D^2->Delta/2` and rhombus area-excess collapse.
+
+---
+
+## 11. What this changes
+
+The full-core near-circle interface route previously ended at
+
+```text
+Q_B >= 2D-o(D),
+with a highly structured but apparently feasible equality model.
+```
+
+HA proves that the equality model cannot exist. Hence the correct endpoint is
+
+```text
+Q_B >= (2+eta_IF)D-o(D)
+for some absolute eta_IF>0.
+```
+
+This is a genuine branch improvement: a linear amount of additional loaded-interface defect is now compulsory.
+
+It still does not close the whole full-core near-circle branch because `eta_IF` is not known to be large enough to exceed the remaining terminal budget. The exact HBd identity only gives
+
+$$
+Q_B\le Q\le(\pi+o(1))D.
+$$
+
+The next target is to quantify HA's stability gap, or iterate the same half-disk train-atom argument away from exact equality using FS's fragmentation alternative.
+
+---
+
+## 12. Next target
+
+There are two direct continuations.
+
+1. **Quantitative HA.** Make the relative-isoperimetric fragmentation modulus explicit. If `Q_B/D=2+xi`, FS bounds the amount of half-disk population/perimeter that can fragment. Feed that into the curved-good-end count and weighted Mantel to obtain an explicit inequality in `xi`. A fixed-point lower bound on `xi` may consume a substantial part of the remaining `pi-2` terminal budget.
+
+2. **Non-equality group form.** Avoid selecting dominant individual components. Run the atomic train argument over all components in one HG half-disk group, charging fragmentation through the exact total attachment-cell perimeter `P_A`. This may produce a direct lower bound on `Q_B` with an explicit coefficient and bypass qualitative FS stability entirely.
+
+The second route is preferable if the train-direction measures of fragmented components can be combined without losing the weighted-Mantel crossing density.

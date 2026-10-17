@@ -1,0 +1,33 @@
+> Generated reading edition · [exact source](../../research/target_c_optimized_joint_train_superseded.md) · source SHA-256 `949d23fde0008ffcaa4c2adc357da0fcec8eba5d998fbcb4e1e64847615f00b9`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "29dd776bb82387ca789455eab8f3a363dcf7bd22", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_optimized_joint_train_superseded.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b75627729ca3ade16415cae364035558227ad16c70911bb502d0d49a83a1f1fb"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C - optimized joint-train candidate (historical Section 112 label)
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** historical proof-only candidate; superseded as a numbered frontier by the aggregate Section 112 theorem.
+
+The original proof was introduced under the label "Section 112" and proved the finite-window carrier bound
+
+$$
+\sigma\le 4.5\times10^{-4},\qquad
+\mu=0.976051176417287175\ldots .
+$$
+
+That proof is preserved verbatim at
+[`legacy/target_c_section112_optimized_joint_train_gap_original.md`](legacy/target_c_section112_optimized_joint_train_gap_original.md).
+Its arithmetic regression is
+[`verify_target_c_optimized_joint_train_legacy.py`](../../research/verify_target_c_optimized_joint_train_legacy.py).
+
+The live proof-only Section 112 is
+[`target_c_section112_aggregate_projection_gap.md`](target_c_section112_aggregate_projection_gap.md).
+It strictly dominates this candidate on the same full-core route: it reaches
+`sigma=1e-3` and `mu=0.9760638978066385...`. Section 113 subsequently reaches
+`sigma=1.4e-3` by rederiving the needed ingredients directly.
+
+This file assigns no current section number and changes no theorem authority. The
+canonical Target-C state remains `2026-09-12.audit.44`; C-II remains open.

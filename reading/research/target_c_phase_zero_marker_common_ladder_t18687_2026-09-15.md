@@ -1,0 +1,316 @@
+> Generated reading edition · [exact source](../../research/target_c_phase_zero_marker_common_ladder_t18687_2026-09-15.md) · source SHA-256 `cf6f9bb5530a9a35bf4d54e786776c8de17b2efeba9f59e1d31139d8714f9fd1`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d9abe498f984f22c0ea94690a26c41fb83a4a509", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_phase_zero_marker_common_ladder_t18687_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2836bbab92540b1eeb670dffbeb451f0f0db3775017a6da41fac400b722c55e1"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — a phase-zero marker strip carries a macroscopic common-transverse ladder through `t<=1.8687`
+
+**Date:** 2026-09-15  
+**Status:** proof-only high-`t` structural strengthening  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Dependencies:** phase-zero marker path through `1.8687`; exact stopped-train terminal ledger; exact diameter interval/KKT switch budgets; complement-train rhombus-incidence theorem; triangle-free stopped-train crossing graph  
+**Certificate:** `research/verify_target_c_marker_ladder_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The merged `1.8687` path theorem and the phase-zero marker refinement give more than `0.0002D-o(D)` selected O--O cuts on one common-marker path. Spending the diameter switch-count, complete-train terminal, and KKT switch-mass budgets on the same nonhub region produces a finite-defect strip. The adaptive terminal-energy threshold simultaneously makes both boundary trains macroscopic in the strict-rhombus crossing graph.
+
+Therefore one phase-zero marker strip has both a bounded defect set and a linear common transverse train family.
+
+For every sufficiently large survivor with `t<=1.8687`, there are consecutive selected marker-path cuts `tau_0,tau_1` bounding a nonhub region `R` such that
+
+$$
+\boxed{
+N_R+L_R+D B_R<72025,
+}
+\tag{ML.1}
+$$
+
+where `N_R` counts switching actual diameter rows, `L_R` counts complete-train terminal face-side occurrences assigned to `R`, and `B_R` is the normalized switching diameter KKT mass. Consequently
+
+$$
+N_R,L_R\le72024,
+\qquad
+B_R<{72025\over D},
+\tag{ML.2}
+$$
+
+and `R` contains at most `14404` bounded nonquadrilateral faces.
+
+Moreover the crossing neighborhoods of the two boundary trains satisfy
+
+$$
+\boxed{
+|\Gamma(\tau_0)\triangle\Gamma(\tau_1)|\le72024,
+}
+\tag{ML.3}
+$$
+
+while each boundary train has more than
+
+$$
+0.6535D-o(D)
+$$
+
+distinct strict-rhombus crossing neighbors. Hence
+
+$$
+\boxed{
+|\Gamma(\tau_0)\cap\Gamma(\tau_1)|
+>0.6535D-o(D).
+}
+\tag{ML.4}
+$$
+
+The common family is pairwise noncrossing, so the strip contains an ordered train-crossing
+
+$$
+\boxed{K_{2,M},\qquad M>0.6535D-o(D).}
+\tag{ML.5}
+$$
+
+This same strip also inherits the phase-zero marker blocker classification: it is one-sided toward the common diameter hub, its exact strip reaction is supported by one or two actual switching diameter directions, and its rigid layer translation is locally isolated.
+
+---
+
+## 1. Joint finite-defect averaging at the `1.8687` path density
+
+The phase-zero marker theorem gives a cleaned path
+
+$$
+\tau_1,\ldots,\tau_m,
+\qquad
+m>0.0002D-o(D).
+\tag{ML.6}
+$$
+
+Delete the one common diameter-routing hub region and the two end regions. This costs only `O(1)` indices and leaves the same normalized path density.
+
+For an eligible internal region put
+
+$$
+C_i:=N_i+L_i+D B_i.
+\tag{ML.7}
+$$
+
+Exact interval support gives
+
+$$
+\sum_iN_i\le2|H|\le2\pi D.
+\tag{ML.8}
+$$
+
+The exact stopped-train ledger gives
+
+$$
+T_{tr}=tD+2f,
+$$
+
+so total terminal face-side occurrences equal
+
+$$
+2T_{tr}=2tD+4f.
+$$
+
+Since `f<=Q` and the loaded-hull ledger gives
+
+$$
+Q/D\le2T-\pi+o(1)
+$$
+
+uniformly for `t<=T`, at
+
+$$
+T=1.8687
+$$
+
+we get
+
+$$
+\boxed{
+\sum_iL_i
+\le(10T-4\pi)D+o(D).
+}
+\tag{ML.9}
+$$
+
+Normalize the positive relative-interior diameter stress by `sum beta_h=1`. Diameter interval support gives
+
+$$
+\sum_iD B_i\le2D.
+\tag{ML.10}
+$$
+
+Therefore
+
+$$
+\sum_iC_i
+\le(10T-2\pi+2)D+o(D).
+\tag{ML.11}
+$$
+
+The exact certificate proves
+
+$$
+{10T-2\pi+2\over0.0002}
+<72025.
+\tag{ML.12}
+$$
+
+Hence some eligible nonhub region satisfies (ML.1). Integrality yields (ML.2). Every bounded nonquadrilateral face assigned to the region contributes at least five terminal face-side occurrences, so
+
+$$
+5|\mathcal F_R|\le L_R\le72024,
+$$
+
+which gives
+
+$$
+\boxed{|\mathcal F_R|\le14404.}
+\tag{ML.13}
+$$
+
+---
+
+## 2. Finite terminal count controls crossing-neighborhood change
+
+A complete train which crosses exactly one of `tau_0,tau_1` must terminate inside the intervening region. Conversely a train crossing both or neither contributes nothing to their crossing-neighborhood symmetric difference.
+
+Each such one-sided transverse train contributes at least one terminal face-side occurrence assigned to `R`. Thus
+
+$$
+\boxed{
+|\Gamma(\tau_0)\triangle\Gamma(\tau_1)|
+\le L_R
+\le72024.
+}
+\tag{ML.14}
+$$
+
+This is exact occurrence-safe counting; no train is counted from an exceptional face outside the selected region.
+
+---
+
+## 3. Every adaptive boundary train has more than `0.6535D` crossing neighbors
+
+For a complete O--O train `tau`, let `r_tau` be the number of strict rhombi traversed. The hostile-audited complement-train incidence theorem gives
+
+$$
+{r_\tau\over D}
+\ge1-\delta-{e_\tau\over2}-o(1).
+\tag{ML.15}
+$$
+
+The coupled adaptive path selects only trains satisfying
+
+$$
+e_\tau\le\lambda(\delta)
+=0.5857-\delta.
+\tag{ML.16}
+$$
+
+Therefore
+
+$$
+{r_\tau\over D}
+\ge0.70715-{\delta\over2}-o(1).
+\tag{ML.17}
+$$
+
+At `T=1.8687`, the matched `C_76` floor gives the exact detour ceiling used in the merged theorem. The companion certificate recomputes it outward and obtains
+
+$$
+\delta<0.10687+o(1),
+$$
+
+hence
+
+$$
+\boxed{
+r_\tau>0.6535D-o(D).
+}
+\tag{ML.18}
+$$
+
+The stopped-train crossing graph is simple: two complete trains cross at most once. Thus strict rhombi on `tau` correspond to distinct crossing neighbors and
+
+$$
+|\Gamma(\tau)|=r_\tau.
+\tag{ML.19}
+$$
+
+In particular (ML.18) holds for both `tau_0,tau_1`.
+
+---
+
+## 4. A macroscopic common transverse family
+
+Put
+
+$$
+A=\Gamma(\tau_0),
+\qquad
+B=\Gamma(\tau_1).
+$$
+
+Using (ML.14),
+
+$$
+|A\cap B|
+\ge\min(|A|,|B|)-|A\triangle B|.
+$$
+
+The second term is an absolute constant while the first is `>0.6535D-o(D)`, so
+
+$$
+\boxed{
+|A\cap B|>0.6535D-o(D).
+}
+$$
+
+Call this common family `mathcal C`. Every member crosses each boundary exactly once and its segment between the two crossing rhombi lies in the selected strip.
+
+Two distinct members of `mathcal C` cannot cross each other: if they did, together with `tau_0` they would form a triangle in the stopped-train crossing graph. That graph is triangle-free because each crossing requires projective direction separation strictly greater than `pi/3`.
+
+Thus `mathcal C` is pairwise noncrossing and (ML.5) follows.
+
+---
+
+## 5. Add the phase-zero marker geometry on the same strip
+
+The region `R` was selected from the cleaned fixed-marker path. Hence its two loaded-hull boundary subarcs avoid the shrinking phase-marker neighborhoods.
+
+The phase-zero interval-isolation theorem therefore applies to this exact finite-defect strip:
+
+- every switching diameter has its moving endpoint away from the phase markers;
+- if `nu_0!=nu_1`, the minimal translation obstruction is strict-interior TB1;
+- if `nu_0=nu_1`, it is opposite-transverse TB2 and there is no phase-parallel switching diameter;
+- zero is locally isolated for the rigid translation of `R`;
+- because `R` is nonhub, all switching diameter intervals use one path orientation toward the common hub.
+
+Thus the finite set of at most `72024` moving diameter bars and at most `14404` exceptional bounded faces sits inside a macroscopic ordered transverse ladder of more than `0.6535D-o(D)` train columns.
+
+---
+
+## 6. Frontier effect
+
+At the full merged path endpoint the source contains one strip with the combined normal form
+
+```text
+fixed antipodal phase markers;
+one-sided diameter routing toward the common hub;
+N_R,L_R <= 72024;
+D B_R < 72025;
+<=14404 bounded exceptional faces;
+|Gamma(tau_0) triangle Gamma(tau_1)| <=72024;
+>0.6535D pairwise-noncrossing common transverse trains;
+strict-interior TB1 or opposite-transverse TB2 marker blocker;
+rigid layer translation locally isolated.
+```
+
+The finite constants are deliberately loose; their role is qualitative. Since the common transverse family is linear in `D` while every listed defect count is absolute, the strip contains arbitrarily long ordered stretches of the transverse ladder avoiding all bounded exceptional faces, terminal events, and switching-diameter endpoints.
+
+Turning one such clean stretch into a source-preserving strict diameter decrease still requires a contact-boundary/flex theorem for the defect-free rhombic ladder. This note does not assume that missing implication.
+
+**Disposition:** proved proof-only finite-defect phase-zero marker strip with a macroscopic common-transverse ladder through `t<=1.8687`. C-II and Level I remain open.

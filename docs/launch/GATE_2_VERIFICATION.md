@@ -112,13 +112,20 @@ restricted-content scans remain mandatory. Source-rights reconciliation is Gate 
 visibility authorization and eventual anonymous access remain Gate 3. A scan does
 not establish legal ownership or clearance of independently owned prose.
 
-The schema's existing source-repository URL is a local schema identifier, not a
-credential or a runtime network/private-archive dependency. Scanner regex
-literals and their historical versions are also reviewed reference warnings.
-PR #16 proposes optional removal of that identifier; changing its imported-file
-hash also changes the exact inclusion-manifest blob and requires separate
-attestation reconciliation before that PR can be release-ready. It is not part
-of this frozen candidate, and its claimed checks do not verify this release.
+PR #16 merged on 2026-10-16. The schema now uses
+`urn:erdos-99:theorem-state.schema`; the imported-file hash and exact-manifest
+attestation reconciliation are recorded in Gate 1. Historical schema URLs and
+scanner regex literals remain reviewed reference warnings. Each final release
+receipt verifies the resulting commit, including this repair.
+
+## Publication candidate 0.1.0-rc.1
+
+The release gate also runs the documented task selector and verifies every page
+of the [GitHub reading edition](../../reading/README.md). Reading pages are
+generated presentation views: the exact proof sources, source hashes, historical
+archives, and mathematical lifecycles remain authoritative. A gate pass must name
+the final commit/tree after all publication edits. The private draft release
+carries its detached receipts and checksums; a draft does not change visibility.
 
 The maintenance cleanup workflow uses `pull_request_target` solely for trusted
 inline API operations, without checking out or executing PR code. Its offline

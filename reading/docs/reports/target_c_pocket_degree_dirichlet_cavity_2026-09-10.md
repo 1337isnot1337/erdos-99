@@ -1,0 +1,546 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_pocket_degree_dirichlet_cavity_2026-09-10.md) · source SHA-256 `ebd287e5fd65a75db7bf50052326a397eb1473f9811bf2cbb15a6365f8a61151`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- theorem-state: {"artifact_id":"ART-9F35E9A60889","canonical":true,"claim_ids":["C-PD"],"claim_statuses":{"C-PD":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
+# Erdős Problem #99 — pocket-degree Dirichlet cavity theorem
+
+**Date:** 2026-09-10  
+**Branch base:** `76d15af99dfce6cd58e928f47b280771d1e8a972`  
+**Depends on:** PC exact pocket ledger, DD Dirichlet-dual pocket theorem, JC exceptional-face isoperimetry, ZG/GU  
+**Run type:** exact cavity compression / contact-budget coupling  
+**Target:** Target C, C-II after ZF
+
+## LEVEL I STATUS
+
+`STILL OPEN`.
+
+The previous DD bound used
+
+$$
+\sum_P\ell_P^3
+\le\left(\sum_P\ell_P\right)^3,
+$$
+
+where `ell_P` is the unit-contact-chain length of an OP outer pocket.  That relaxation
+is extremely wasteful when there are linearly many triangular pockets.  PC resolves
+the exact baseline:
+
+$$
+\ell_P=2+r_P,
+\qquad
+r_P:=k_P-3\ge0,
+\qquad
+\sum_Pr_P=d_P.
+$$
+
+Only the total pocket degree excess `d_P`, not the number of triangular pockets, can
+concentrate on the `D` scale.  This gives a new exact finite DD estimate and, after
+coupling to PC's loaded-contact ledger, a much smaller generic quadratic cavity.
+
+### Theorem PD — pocket-degree Dirichlet cavity
+
+For `a>=1` OP outer pockets,
+
+$$
+\boxed{
+H_{out}
+\le
+\frac1{\sqrt6}
+\sqrt{(d_P+2)^3+8(a-1)}
+\sqrt{b-\operatorname{per}F}.
+}
+\tag{PD.1}
+$$
+
+If `a=0`, then `H_out=0`.
+
+Consequently, along any convergent post-ZF sequence, write
+
+$$
+\lambda=\lim\frac{e_{BB}+2s_C}{D},
+\qquad
+y=\lim\frac hD,
+\qquad
+p=\lim\frac{\operatorname{per}F}{D}.
+\tag{PD.2}
+$$
+
+Then
+
+$$
+\boxed{
+\limsup\frac{H_{out}+A_{exc}}{D^2}
+\le
+\frac1{\sqrt6}\lambda^{3/2}\sqrt{2y-p}.
+}
+\tag{PD.3}
+$$
+
+The exceptional-face term is already included in PD.3.  The worst relaxed allocation
+puts the entire loaded-contact budget into `d_P` and none into `Q`.
+
+Combining with the original GU attachment-cell area gives every post-ZF survivor the
+new necessary inequality
+
+$$
+\boxed{
+A(y,p)-\frac\pi4\lambda^2
+\le
+\frac1{\sqrt6}\lambda^{3/2}\sqrt{2y-p},
+}
+\tag{PD.4}
+$$
+
+where
+
+$$
+A(y,p)=\max\left\{
+\frac{y+\sin y}{4},
+\frac\pi{(\pi-2)^2}\left(\frac p2-1\right)^2
+\right\}.
+\tag{PD.5}
+$$
+
+PD.4 is dramatically stronger than the previous RD detour inequality, whose first
+factor was `(2y)^(3/2)` rather than `lambda^(3/2)`.
+
+---
+
+## 1. Exact cubic moment of the pocket-chain lengths
+
+For an OP outer pocket `P`, let
+
+$$
+k_P\ge3
+$$
+
+be its graph-boundary degree and
+
+$$
+\ell_P=k_P-1
+$$
+
+the number of old unit-contact edges in its boundary chain.  PC defines
+
+$$
+r_P:=k_P-3\ge0
+$$
+
+and
+
+$$
+\boxed{d_P=\sum_Pr_P.}
+\tag{1.1}
+$$
+
+Thus
+
+$$
+\boxed{\ell_P=r_P+2.}
+\tag{1.2}
+$$
+
+For nonnegative `r,s`, direct expansion gives
+
+$$
+(r+s+2)^3+8-(r+2)^3-(s+2)^3
+=3rs(r+s+4)\ge0.
+\tag{1.3}
+$$
+
+Therefore moving all positive excess from two pockets into one cannot decrease the
+sum of cubes.  Repeating this transfer yields
+
+$$
+\boxed{
+\sum_P\ell_P^3
+=\sum_P(r_P+2)^3
+\le(d_P+2)^3+8(a-1).
+}
+\tag{1.4}
+$$
+
+This bound is exact at fixed `(a,d_P)`: equality occurs when all pocket degree excess
+is concentrated in one pocket.
+
+---
+
+## 2. Insert the exact cubic moment into DD
+
+DD proves for each pocket
+
+$$
+\operatorname{area}(P)
+\le
+\frac1{\sqrt6}\ell_P^{3/2}\sqrt{u_P},
+\qquad
+u_P:=\ell_P-s_P\ge0,
+\tag{2.1}
+$$
+
+and the exact detour identity
+
+$$
+\sum_Pu_P=b-P_F,
+\qquad
+P_F:=\operatorname{per}F.
+\tag{2.2}
+$$
+
+Cauchy-Schwarz gives
+
+$$
+\begin{aligned}
+H_{out}
+&\le
+\frac1{\sqrt6}
+\left(\sum_P\ell_P^3\right)^{1/2}
+\left(\sum_Pu_P\right)^{1/2}\\
+&\le
+\frac1{\sqrt6}
+\sqrt{(d_P+2)^3+8(a-1)}
+\sqrt{b-P_F}.
+\end{aligned}
+$$
+
+This proves PD.1.
+
+The improvement is structural.  If `d_P=o(D)` while `a=Theta(D)`, then
+
+$$
+\sum_P\ell_P^3=o(D^3),
+$$
+
+so the total outer-pocket area is `o(D^2)` even if the total number of pockets is
+linear and the total detour is linear.
+
+---
+
+## 3. Normalize the exact pocket/contact ledger
+
+Pass to a convergent post-ZF subsequence and write
+
+$$
+d:=\lim\frac{d_P}{D},
+\qquad
+\xi:=\lim\frac QD,
+\qquad
+\sigma:=\lim\frac{s_Z}{D},
+\tag{3.1}
+$$
+
+$$
+t:=\lim\frac{e_{BB}}D,
+\qquad
+s:=\lim\frac{s_C}{D},
+\qquad
+\lambda=t+2s.
+\tag{3.2}
+$$
+
+PC gives exactly
+
+$$
+e_{BB}=d_P+Q+2(d_H+s_Z)+c_B.
+\tag{3.3}
+$$
+
+All terms are nonnegative, so
+
+$$
+\boxed{d+\xi\le t\le\lambda.}
+\tag{3.4}
+$$
+
+The outer contact-walk identity is
+
+$$
+b=2h-Q-2s_Z,
+$$
+
+hence
+
+$$
+\frac{b-P_F}{D}
+\to
+2y-p-\xi-2\sigma
+\le
+2y-p-\xi.
+\tag{3.5}
+$$
+
+The number of outer pockets is `O(D)`, so the `8(a-1)` term in PD.1 is `O(D)` and
+disappears after division by `D^3`.  Therefore PD.1 gives
+
+$$
+\boxed{
+\limsup\frac{H_{out}}{D^2}
+\le
+\frac1{\sqrt6}
+d^{3/2}\sqrt{2y-p-\xi}.
+}
+\tag{3.6}
+$$
+
+JC gives for bounded exceptional faces
+
+$$
+\boxed{
+\limsup\frac{A_{exc}}{D^2}
+\le\frac{\xi^2}{4\pi}.
+}
+\tag{3.7}
+$$
+
+Use (3.4) in the first term:
+
+$$
+d\le\lambda-\xi.
+$$
+
+Put
+
+$$
+u:=2y-p\ge0.
+\tag{3.8}
+$$
+
+Then the total cavity capacity is at most
+
+$$
+\boxed{
+\frac1{\sqrt6}(\lambda-\xi)^{3/2}\sqrt{u-\xi}
++\frac{\xi^2}{4\pi},
+}
+\tag{3.9}
+$$
+
+for some
+
+$$
+0\le\xi\le\min\{\lambda,u\}.
+\tag{3.10}
+$$
+
+---
+
+## 4. Spending loaded-contact budget on exceptional faces never helps
+
+The one-dimensional maximum in (3.9) has an elementary exact domination.
+Assume `lambda>0`; the zero case is trivial.  Set
+
+$$
+a:=\frac\xi\lambda,
+\qquad
+r:=\frac u\lambda.
+\tag{4.1}
+$$
+
+Then
+
+$$
+0\le a\le1,
+\qquad
+r\ge a.
+\tag{4.2}
+$$
+
+After division by `lambda^2`, the desired inequality is
+
+$$
+\frac1{\sqrt6}(1-a)^{3/2}\sqrt{r-a}
++\frac{a^2}{4\pi}
+\le
+\frac1{\sqrt6}\sqrt r.
+\tag{4.3}
+$$
+
+The loss in the DD term satisfies
+
+$$
+\begin{aligned}
+\sqrt r-(1-a)^{3/2}\sqrt{r-a}
+&\ge
+\sqrt r\left[1-(1-a)^{3/2}\right]\\
+&\ge
+\sqrt a\,a\\
+&=a^{3/2}\\
+&\ge a^2.
+\end{aligned}
+\tag{4.4}
+$$
+
+Here we used
+
+$$
+r\ge a,
+\qquad
+(1-a)^{3/2}\le1-a,
+\qquad
+0\le a\le1.
+$$
+
+Since
+
+$$
+\frac1{\sqrt6}>rac1{4\pi},
+\tag{4.5}
+$$
+
+(4.4) proves (4.3).  Therefore the total cavity capacity is maximized by the relaxed
+allocation
+
+$$
+\boxed{\xi=0,\qquad d=\lambda.}
+\tag{4.6}
+$$
+
+No calculus is required.
+
+Substituting in (3.9) proves PD.3.
+
+The equality interpretation is useful: any sequence approaching equality in PD.3
+must drive
+
+$$
+\frac QD\to0,
+\qquad
+\frac{s_Z}{D}\to0,
+\qquad
+\frac{d_H}{D}\to0,
+\qquad
+\frac{c_B}{D}\to0,
+\tag{4.7}
+$$
+
+and
+
+$$
+\frac{d_P}{D}\to\lambda,
+\qquad
+\frac{e_{BB}}D\to\lambda,
+\qquad
+\frac{s_C}{D}\to0,
+\tag{4.8}
+$$
+
+provided the final scalar threshold also saturates the `t<=lambda` relaxation.
+Thus the new extremal cavity is forced into one giant high-degree outer pocket rather
+than many exceptional faces.
+
+---
+
+## 5. Force-hull consequence
+
+GU gives the attachment-cell area bound
+
+$$
+\limsup\frac1{D^2}
+\sum_r\operatorname{area}(\operatorname{conv}A_r)
+\le\frac\pi4\lambda^2.
+\tag{5.1}
+$$
+
+ZG gives
+
+$$
+\operatorname{area}F
+\le
+\sum_r\operatorname{area}(\operatorname{conv}A_r)
++H_{out}+A_{exc}+O(D).
+\tag{5.2}
+$$
+
+FSDB plus RSR gives
+
+$$
+\liminf\frac{\operatorname{area}F}{D^2}
+\ge A(y,p).
+\tag{5.3}
+$$
+
+Insert (5.1), PD.3, and (5.2) into (5.3):
+
+$$
+A(y,p)
+\le
+\frac\pi4\lambda^2
++\frac1{\sqrt6}\lambda^{3/2}\sqrt{2y-p}.
+$$
+
+This is PD.4.
+
+The actual-perimeter JC obstruction remains independently valid:
+
+$$
+\boxed{
+A(y,p)-\frac\pi4\lambda^2
+\le
+\frac{(\lambda+p-y)^2}{4\pi},
+}
+\tag{5.4}
+$$
+
+because `p<=2y` throughout the exact post-ZF domain.
+
+PD.4 and (5.4) are the new scalar pair.
+
+---
+
+## 6. Numerical reconnaissance
+
+Optimizing PD.4 and (5.4) over the exact DB domain
+
+$$
+2\rho\le y\le\pi,
+\qquad
+y+2\cos(y/2)\le p\le\min\{2y,\pi\}
+$$
+
+places the new minimizer near
+
+$$
+y\approx2.01702082,
+\qquad
+p\approx3.08326395,
+$$
+
+with
+
+$$
+\lambda\approx0.76719537.
+$$
+
+At this point the FSDB area currency is active; the RSR perimeter-area floor is
+strictly lower.  These decimals are exploratory only.  A separate optimizer report
+must prove a rigorous explicit constant.
+
+Even the deliberately weaker bound obtained by adding the DD and exceptional-face
+budgets independently already gives a numerical threshold around `0.746`, so the
+large jump is not sensitive to the exact one-dimensional budget optimization.
+
+---
+
+## 7. Audit classification
+
+| Claim | Status | Reason |
+| --- | --- | --- |
+| exact cubic pocket moment (1.4) | proved | pairwise excess concentration |
+| finite PD.1 | proved | DD + exact cubic moment |
+| normalized outer-pocket bound (3.6) | proved | PC and `a=O(D)` |
+| loaded-contact coupling `d+xi<=lambda` | proved | exact PC.2 |
+| exceptional-face allocation never increases total capacity | proved | normalized inequality (4.3)--(4.5) |
+| generic cavity PD.3 | proved | preceding steps |
+| force-hull obstruction PD.4 | proved | GU + ZG + FSDB/RSR |
+| numerical `0.767...` | exploratory | optimizer not yet certified here |
+| Level I | still open | high pinned/contact surplus still lacks a universal upper contradiction |
+
+---
+
+## 8. Next run
+
+Solve the PD.4 + JC optimizer rigorously.  The numerical minimizer lies in the FSDB
+branch with `p<p_e(y)` and `y>pi/2`, so the old area-crossover proof is no longer the
+right normal form.  For fixed `y`, JC decreases with `p` while PD increases with `p`,
+so the optimizer is their unique intersection.  The remaining task is a one-variable
+stationarity analysis in `y`, followed by an exact interval certificate.

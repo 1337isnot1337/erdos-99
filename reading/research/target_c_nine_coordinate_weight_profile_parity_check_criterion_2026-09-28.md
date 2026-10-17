@@ -1,0 +1,44 @@
+> Generated reading edition · [exact source](../../research/target_c_nine_coordinate_weight_profile_parity_check_criterion_2026-09-28.md) · source SHA-256 `a7ba2779a2813c578f1271ecc866db50da1dbe92e6b3fdc30a2ab862515f0316`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "476db5b98b422a2e1336be56d9251c2b0d566437", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_nine_coordinate_weight_profile_parity_check_criterion_2026-09-28.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "81246479e493472d7cdff5fb48276b9e33bdbbe3478ec7c530040eadfa39e4b5"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Exact parity-check criterion for the nine-coordinate weight profile
+
+Date: 2026-09-28
+
+Lemma. Let A be a full-row-rank 4 by 9 rational matrix, let W be its rowspace, and let P=ker(A), so dim(P)=5. Then
+
+(d1,d2,d3,d4,d5)(P) >= (2,4,5,7,8)
+
+if and only if all three conditions hold:
+
+1. every column of A is nonzero;
+2. every set of three columns has rank at least two;
+3. every set of six columns has rank at least three.
+
+Equivalently, no projective column occurs three times and no rank-two column flat contains six columns.
+
+Proof. For a coordinate set S, the subcode of P supported inside S is the kernel of the restricted column matrix A_S. Hence
+
+dim P[S] = |S| - rank(A_S).
+
+By the definition of generalized Hamming weights, d_j(P)>=D is equivalent to dim P[S] <= j-1 for every |S|<D.
+
+For d1>=2, the only nontrivial requirement is rank(A_S)=1 for every singleton S, which is condition 1.
+
+For d2>=4, sets of size two only require rank at least one and are already covered by condition 1. Sets of size three require rank at least two, giving condition 2.
+
+For d3>=5, the only new size is four, where rank at least two is required. Every four-set contains a three-set, so condition 2 already implies this.
+
+For d4>=7, size five again requires only rank at least two and follows from condition 2. Size six requires rank at least three, giving condition 3.
+
+For d5>=8, size seven requires rank at least three. Every seven-set contains a six-set, so condition 3 implies it. All smaller cases were already covered.
+
+Thus the five generalized-weight lower bounds are exactly equivalent to conditions 1-3.
+
+For the projective reformulation, three columns have rank one exactly when three lie on one projective point. If six columns have rank at most two, either they are all rank one, already excluded by condition 2, or an independent pair among them spans a rank-two flat containing all six. Conversely any such flat violates condition 3.
+
+This lemma replaces the 512-subset generalized-weight test for every rank-four candidate constraint space in the nine-no-root D=-1,p=2 search by a constant-size column-flat test. It is proof-level and independent of the finite orientation census.

@@ -1,0 +1,298 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_forest_double_gap_defect_currency_2026-09-11.md) · source SHA-256 `1222b22cbf7f52f5b0342a9f7b95e79ca1478f1da54d5775b814c91b6c76ed38`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- theorem-state: {"artifact_id":"ART-211BE41E76EC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+<!-- migration-source: path=docs/reports/target_c_forest_double_gap_defect_currency_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=7bdf35dddc26e615e76af93e2985ea34221d00d4; lifecycle=unreviewed; canonical=false -->
+> **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
+
+# Erdős Problem #99: doubled diameter gaps charge the whole forest defect
+
+**Date:** 2026-09-11
+**Run type:** exact forest-branch geometric corollary
+**Target:** Target C C-II, post-ZF forest branch with $s_Z=0$
+**Status:** new proved statement, hold report
+**External input:** none
+
+## LEVEL I STATUS
+
+STILL OPEN.
+
+The forest diameter-gap estimate gives more than a lower bound on the outer-walk
+excess $x_B$. The exact circuit identity gives
+
+$$
+x_B+Q=2h-q,
+\tag{FDC.1}
+$$
+
+where $h=|H|$, $q$ is the number of loaded vertices, and $Q\ge0$ is the
+bounded-face defect. Therefore the same metric estimate charges the entire forest
+defect $x_B+Q$.
+
+### Theorem FDC.1
+
+Let $A$ be a sufficiently large post-ZF C-II source in the exact circuit branch
+$s_Z=0$, and suppose its actual diameter graph $H$ is a forest. Put
+
+$$
+d_H=q-h>0,\qquad a_D=\arcsin\frac1{2D}.
+$$
+
+Then
+
+$$
+\boxed{
+x_B+Q\ge
+2D\cos\bigl((q-2)a_D\bigr)-2
+-2(d_H-1)(1-\cos a_D).
+}
+\tag{FDC.2}
+$$
+
+Along every unbounded sequence on which $q/D\to x$,
+
+$$
+\boxed{
+\liminf\frac{x_B+Q}{D}\ge2\cos\frac x2,
+\qquad
+\liminf\frac hD\ge\frac x2+\cos\frac x2.
+}
+\tag{FDC.3}
+$$
+
+Consequently, for fixed $\eta>0$, the subbranch $q/D\le\pi-\eta$ satisfies
+
+$$
+\boxed{
+\liminf\frac{x_B+Q}{D}\ge2\sin\frac\eta2.
+}
+\tag{FDC.4}
+$$
+
+No source point is removed from this statement, and no assertion is made about
+the $s_Z>0$ branch.
+
+## 1. Metric lemma for two disjoint diameter edges
+
+Let $AB$ and $CD$ be distinct segments of length $D$ in a set of diameter
+at most $D$. If $\theta\in(0,\pi/2]$ is the acute projective angle between
+their supporting lines, then
+
+$$
+\boxed{
+\min\{|A-C|,|A-D|,|B-C|,|B-D|\}
+\le2D\sin\frac\theta4.
+}
+\tag{FDC.5}
+$$
+
+To prove this, scale by $D$, put the midpoint of $AB$ at the origin, and
+write $u,v$ for unit directions along $AB,CD$. If $m$ is the displacement
+between the two normalized midpoints, set
+
+$$
+w=\frac{u-v}{2},\qquad z=\frac{u+v}{2}.
+$$
+
+Then $w\perp z$, $|w|=s=\sin(\theta/2)$, and
+$|z|=c=\cos(\theta/2)$. Write
+$m=\alpha\widehat w+\beta\widehat z$. The two cross-distances involving $z$
+are at most one, so
+
+$$
+\alpha^2+(|\beta|+c)^2\le1.
+\tag{FDC.6}
+$$
+
+Thus $|\alpha|\le s$. Write $|\alpha|=\sin\varphi$, with
+$0\le\varphi\le\theta/2$. Equation (FDC.6) gives
+$|\beta|\le\cos\varphi-c$. The smaller squared cross-distance involving $w$
+is
+
+$$
+\min\{|m+w|^2,|m-w|^2\}=(s-|\alpha|)^2+\beta^2.
+$$
+
+It is at most
+
+$$
+\begin{aligned}
+(s-\sin\varphi)^2+(\cos\varphi-c)^2
+&=2-2\cos\left(\frac\theta2-\varphi\right)\\
+&\le2-2\cos\frac\theta2
+=4\sin^2\frac\theta4.
+\end{aligned}
+$$
+
+Restoring $D$ proves (FDC.5). If the four endpoints are source points, unit
+separation makes the left side at least one, so disjoint diameter edges have
+$\theta\ge4a_D$. If two diameter edges share an endpoint, the two other
+endpoints only give $\theta\ge2a_D$.
+
+## 2. Direction-gap perimeter bound
+
+The actual diameter graph is a convex geometric thrackle. Order its $h$
+projective directions cyclically. Let $N_{\rm sh}$ count consecutive direction
+pairs sharing a vertex. If $H$ is not a star, the incident edges at $v$
+occupy a proper subset of the cyclic positions, so at most
+$\deg_H(v)-1$ such adjacencies are charged to $v$. Since two simple edges
+share at most one endpoint,
+
+$$
+N_{\rm sh}\le\sum_v(\deg_H(v)-1)=2h-q.
+\tag{FDC.7}
+$$
+
+Therefore at least $h-N_{\rm sh}\ge q-h=d_H$ consecutive pairs have disjoint
+endpoints. At least $d_H$ cyclic gaps are thus at least $4a_D$, while all
+gaps are at least $2a_D$.
+
+For completeness, the star exception is asymptotically absent in this branch.
+If $H$ is a star, all leaf rays lie in an angular interval of width at most
+$\pi/3$, because leaf pairs have distance at most $D$. Unit separation gives
+$(h-1)2a_D\le\pi/3$, hence $h/D\le\pi/3+o(1)$. The promoted diameter
+boundary estimate gives $h/D\ge2\rho-o(1)$, with
+$\rho=\cos\rho$ and $2\rho>\pi/3$.
+
+Let $g_1,\ldots,g_h$ be the direction gaps. Their sum is $\pi$. The polygon
+
+$$
+P_H=D\operatorname{conv}\{\pm u_e:e\in E(H)\}
+$$
+
+lies in $F-F$, where $F$ is the force hull. Thus
+
+$$
+\operatorname{per}F\ge2D\sum_i\sin\frac{g_i}{2}.
+\tag{FDC.8}
+$$
+
+Concavity of $g\mapsto\sin(g/2)$ shows that, under the lower bounds just found,
+the sum is minimized by putting the free gap on one of the $d_H$ doubled
+coordinates. Hence
+
+$$
+\sum_i\sin\frac{g_i}{2}
+\ge(h-d_H)\sin a_D+(d_H-1)\sin(2a_D)
++\cos\bigl((q-2)a_D\bigr).
+\tag{FDC.9}
+$$
+
+Since $\sin a_D=1/(2D)$ and
+$2D\sin(2a_D)=2\cos a_D$, this gives
+
+$$
+\operatorname{per}F\ge
+h-d_H+2(d_H-1)\cos a_D
++2D\cos\bigl((q-2)a_D\bigr).
+\tag{FDC.10}
+$$
+
+## 3. Transfer to the full circuit defect
+
+The outer contact walk has length $b=q+x_B$, and its polygonal length is at
+least the perimeter of its convex hull:
+
+$$
+\operatorname{per}F\le q+x_B.
+\tag{FDC.11}
+$$
+
+Insert $h=q-d_H$ in (FDC.10) and compare with (FDC.11). This gives
+
+$$
+x_B\ge2D\cos\bigl((q-2)a_D\bigr)-2
+-2(d_H-1)(1-\cos a_D).
+\tag{FDC.12}
+$$
+
+In the exact circuit phase, the selected outer-walk identity is
+
+$$
+b+Q=2h.
+\tag{FDC.13}
+$$
+
+Using $b=q+x_B$ and $h=q-d_H$,
+
+$$
+x_B+Q=2h-q=q-2d_H.
+\tag{FDC.14}
+$$
+
+Because $Q\ge0$, (FDC.12) implies (FDC.2).
+
+Now $q\le\pi D$, so $d_H=O(D)$ and
+$d_H(1-\cos a_D)=O(D^{-1})$. If $q/D\to x$, then
+$a_D=1/(2D)+O(D^{-3})$ and
+$(q-2)a_D\to x/2$. Dividing by $D$ proves the first part of (FDC.3).
+Equation (FDC.14) gives
+$$
+h/D=(q/D+(x_B+Q)/D)/2,
+$$
+which proves its second part. The implication (FDC.4) follows from
+$\cos(x/2)\ge\sin(\eta/2)$ when $x\le\pi-\eta$. This completes the proof.
+
+## 4. Exact closure test and surviving obstruction
+
+The exact contradiction this route would need is an opposing upper bound
+$$
+\limsup\frac{x_B+Q}{D}<2\cos\frac{x}{2}
+$$
+in the $q/D\to x<\pi$ regime, or a separate stability theorem at $q/D\to\pi$.
+No current theorem gives either one. The existing all-ZF low-defect theorem can
+be combined with (FDC.3) to replace the lower bound there by
+$$
+\liminf\frac{x_B+Q}{D}
+\ge\max\left\{\varepsilon_0,2\cos\frac x2\right\},
+$$
+but this still has no opposing upper bound.
+
+At the near-$\pi$ endpoint the new term tends to zero. The full force hull and
+full source hull may then converge to a unit disk while the full source population
+is Oler-saturated to boundary order. That saturation does not put
+contact-isolated points into the positive KKT core. The cyclic $s_Z=0$ branch
+and the $s_Z>0$ branch are unaffected.
+
+## 5. Regression audit
+
+* Perfect matching is already excluded by the separate force-hull area
+  comparison; FDC.1 assumes $d_H>0$.
+* Regular odd shells are cyclic and have $s_Z=2$; no circuit identity is
+  applied to them.
+* Stars are excluded only asymptotically by the stated diameter-boundary
+  estimate. No bounded-degree assumption is hidden in (FDC.7).
+* Shared endpoints receive only the $2a_D$ gap; the doubled gap uses four
+  distinct source points.
+* $Q$ and repeated outer-walk edges are retained. No pure-disk train
+  transport is used.
+* Contact-isolated points are not discarded, and no source-hull saturation is
+  imposed.
+* No separator response sign and no extension of an $s_Z=0$ identity to
+  $s_Z>0$ is used.
+
+## 6. Audit classification
+
+| Claim | Status | Reason |
+| --- | --- | --- |
+| equal-diameter four-endpoint lemma | proved | midpoint orthogonal decomposition |
+| doubled gap for disjoint diameter edges | proved | unit separation |
+| at least $d_H$ disjoint consecutive gaps | proved | cyclic incidence count |
+| finite whole-defect bound FDC.2 | proved | difference-body perimeter and $Q\ge0$ |
+| asymptotic bounds FDC.3--FDC.4 | proved | $q\le\pi D$, $a_D\sim1/(2D)$ |
+| Level I settlement | not proved | near-$\pi$ forest endpoint and other branches |
+
+## Compact handoff
+
+STILL OPEN.
+
+In the $s_Z=0$ forest branch,
+$$
+x_B+Q\ge2D\cos((q-2)a_D)-2-2(d_H-1)(1-\cos a_D).
+$$
+Thus $q/D\to x$ implies
+$$
+\liminf (x_B+Q)/D\ge2\cos(x/2).
+$$
+The bound is positive away from $q/D\to\pi$, but degenerates at $q/D\to\pi$.
+The cyclic and positive-surplus branches remain open.

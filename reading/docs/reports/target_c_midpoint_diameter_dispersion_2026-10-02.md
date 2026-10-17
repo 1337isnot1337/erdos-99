@@ -1,0 +1,137 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_midpoint_diameter_dispersion_2026-10-02.md) · source SHA-256 `4963f83a849f8b408b724ea6cf78cc518a88dd21f9b4ff96749acb31020fcf94`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- theorem-state: {"artifact_id":"ART-D2FD302A166E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+<!-- migration-source: path=docs/reports/target_c_midpoint_diameter_dispersion_2026-10-02.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=fcad589770c79148262984b2bac29e5d41e7ebc6; lifecycle=unreviewed; canonical=false -->
+> **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
+
+# Target C: midpoint localization improves diameter dispersion
+
+Date: 2026-10-02.
+
+Starting remote main: 3bad7c12bf5133665be466d0396362108fadef2c.
+
+Status: unreviewed proof note. It uses the merged but unpromoted midpoint theorem
+ME.1/ME.2 from docs/reports/target_c_full_source_midpoint_energy_2026-10-02.md
+and the canonical post-ZF bound h >= ceil(D). No computation is used.
+
+## Finite star lemma
+
+Let A be a unit-separated planar set of diameter D. Assume there are a point s
+and a number B < D/2 such that every actual diameter xy satisfies
+
+    |(x+y)/2 - s| <= B.                                      (1)
+
+Let H_all be the complete actual diameter graph and define
+
+    a_D = 2 arcsin(1/(2D)).                                  (2)
+
+Then
+
+    Delta(H_all)
+      <= 1 + floor( 2 arcsin(2B/D) / a_D ).                 (3)
+
+Proof. Fix a diameter vertex x, with partners y_1,...,y_d, and put
+m_i = (x+y_i)/2. Then
+
+    m_i in closed_disk(s,B),     |m_i-x| = D/2.              (4)
+
+Hence the m_i lie on one circle of radius D/2 and inside one disk of radius B.
+Because B < D/2, their circle-disk intersection is one proper arc. If its
+central angle is omega, the chord joining the arc endpoints has length at most
+2B. Therefore
+
+    D sin(omega/2) <= 2B,
+    omega <= 2 arcsin(2B/D).                                 (5)
+
+Also y_i-x = 2(m_i-x), so the partner rays have exactly the same angular order.
+Unit separation gives, for distinct partners,
+
+    1 <= |y_i-y_j| = 2D sin(theta_ij/2),
+
+so every consecutive angular gap is at least a_D. Packing d rays into the arc
+from (5) yields
+
+    (d-1) a_D <= 2 arcsin(2B/D),
+
+which proves (3).
+
+## Apply current main's midpoint theorem
+
+ME.1 gives one common Steiner point s for which (1) holds, with
+
+    B = sqrt( F^2 + (27 L delta / 16)^(2/3) ),
+    F = sqrt(delta/(2 pi)),
+    L = D/2 + F,                                             (6)
+
+where
+
+    delta = pi D^2/4 - area(conv A).
+
+For a global minimum-diameter source, canonical full-source geometry gives
+
+    0 <= delta < (pi sqrt(3)/4) D.                           (7)
+
+ME.2 therefore gives B < (3/2) D^(2/3), so B < D/2 once D > 27.
+
+More sharply,
+
+    limsup B / D^(2/3) <= C_M,
+    C_M = (27 pi sqrt(3) / 128)^(1/3).                       (8)
+
+Indeed F = O(D^(1/2)), L/D -> 1/2, and the F^2 term in B^2 is
+o(D^(4/3)). Also
+
+    2 arcsin(2B/D) = (4B/D)(1+o(1)),
+    a_D = (1/D)(1+o(1)).
+
+Substituting into (3) gives
+
+    Delta(H_all) <= (4 C_M + o(1)) D^(2/3).                 (9)
+
+This improves the previous source-wide O(D^(3/4)) degree exponent.
+
+## Post-ZF matching consequence
+
+For the canonical contact-minimal, then diameter-pair-minimal C-II source, let H
+be the positive actual diameter support and h = |H|. Canonical ZF gives
+
+    h >= ceil(D).                                           (10)
+
+Because H is a subgraph of H_all, (9) also bounds Delta(H).
+
+If tau(H) is vertex-cover number, every cover S satisfies
+
+    h <= sum_{v in S} deg_H(v) <= |S| Delta(H),
+
+and therefore
+
+    tau(H) >= (1/(4 C_M) - o(1)) D^(1/3).                  (11)
+
+If nu(H) is matching number, the endpoints of any maximal matching form a
+vertex cover. Hence tau(H) <= 2 nu(H), so
+
+    nu(H) >= (1/(8 C_M) - o(1)) D^(1/3).                   (12)
+
+The planar actual-diameter graph is a straight-line thrackle, so the matching
+in (12) consists of pairwise properly crossing diameter segments. ME.1 also
+puts every one of their midpoints in the same disk
+
+    closed_disk(s, (C_M+o(1)) D^(2/3)).                    (13)
+
+Thus the earlier D^(1/4)-size crossing family through a D^(3/4)-scale core
+improves to a D^(1/3)-size family through a D^(2/3)-scale core.
+
+## Threshold consequence and remaining gap
+
+Any threshold exact-phase argument that starts with a linear family of actual
+diameter rows and extracts a matching only through the global maximum-degree
+bound can now use the D^(2/3) denominator. A linear full-support family therefore
+contains Omega(D^(1/3)) vertex-disjoint pairwise crossing diameters instead of
+only Omega(D^(1/4)).
+
+This is support geometry only. It does not give a lower bound on KKT multiplier
+mass on the matching, so it does not close C-II. The next target is to convert
+the common O(D^(2/3)) crossing core into a loaded-hull/contact payment, or to
+combine the stronger matching with opposite-shore order to obtain a
+source-preserving diameter reduction.

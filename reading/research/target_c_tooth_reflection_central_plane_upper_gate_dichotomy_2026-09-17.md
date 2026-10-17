@@ -1,0 +1,553 @@
+> Generated reading edition · [exact source](../../research/target_c_tooth_reflection_central_plane_upper_gate_dichotomy_2026-09-17.md) · source SHA-256 `924883ccdcf294206bb1be01dd61776c7df411fa9ceedc0597901ed5733d988d`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cf0f1c1912db79f266950e3a8f844242d9fefc6c", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_central_plane_upper_gate_dichotomy_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d6e637b88fed5d72ad1d383eb8a5e873352a5ffb93cae8b770fdfb54d9ca462e"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — FREE reflection repair reaches the circumcenter plane or creates a tangent near-diameter gate
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; proof-only strengthening of the FREE-module reflection branch  
+**Scope:** slow-scale `eta=3/26` reflection modules after the existing exact-anchor reductions  
+**Dependencies:** FREE rigid repair; inactive-guard absorption; CORE-GATE and `Q-DIAMETER` exact-anchor reductions; FREE-blocker outer-face localization; support-monotone inactive corridor; full-source same-center disk sandwich; fixed-slack midpoint/star theorem; slow-scale normal dispersion  
+**Certificate:** `research/verify_target_c_tooth_reflection_central_plane_upper_gate_dichotomy_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The preceding near-halfdepth theorem stopped the inactive absorption process at
+
+$$
+{D\over2}-(3^{1/8}+o(1))D^{3/4}
+$$
+
+because the circular-cap argument used there must keep every possible upper pair strictly below diameter without inspecting when an upper equality is actually created. That loss is avoidable if upper equalities are treated as events rather than excluded a priori.
+
+Let `o` be the audited full-source circumcenter. For one non-anchored FREE module let `N` be its canonical blocker support direction,
+
+$$
+H=h_A(N),\qquad c=N\cdot o,\qquad a_v:=H-N\cdot v,
+$$
+
+and put
+
+$$
+\boxed{C_D:=H-c.}
+\tag{CP.1}
+$$
+
+Thus `a_v=C_D` is exactly the support line through `o` perpendicular to `N`.
+The same-center disk sandwich and the canonical support-width estimate give
+
+$$
+\boxed{
+{D\over2}-3^{1/4}\sqrt D-h_*
+<C_D
+<{D\over2}+3^{1/4}\sqrt D,
+}
+\tag{CP.2}
+$$
+
+where
+
+$$
+h_*={\sqrt{303}\over52}=0.334747984337\ldots .
+$$
+
+Run the existing inactive-guard absorption repair, but stop at the first occurrence of one of the following:
+
+1. an already understood exact-anchor event (`CORE-GATE`, `Q-DIAMETER`, or an earlier anchored module);
+2. a new upper equality `|p(s)-v|=D` involving a moving old-inactive vertex and a source point not yet moving;
+3. absorption of an old fully inactive vertex with original support depth `a_v>C_D`;
+4. the clearing time.
+
+The fourth alternative cannot occur first. Consequently every surviving FREE module either converts to an exact source-diameter anchor, crosses the actual circumcenter support plane by a macroscopic outer-face inactive corridor, or creates a fixed-slack near-diameter gate whose direction is asymptotically tangent to that plane.
+
+For the slow-scale module family this gives a four-way source-wide reduction:
+
+$$
+\boxed{
+\text{NORMAL-EXACT},\quad
+\text{CENTER-CORRIDOR},\quad
+\text{TANGENT-EXACT},\quad
+\text{TANGENT-INACTIVE}.
+}
+\tag{CP.3}
+$$
+
+The two tangent classes themselves form central crossing braids after one pigeonhole step.
+
+---
+
+## 1. Monitor upper equalities instead of imposing cap safety
+
+Use the same clearing time as in the existing FREE repair,
+
+$$
+t_D=\delta+D^{-1/3}
+\le h_*+D^{-1/3}.
+\tag{CP.4}
+$$
+
+All initially moving blockers and every subsequently absorbed inactive guard translate with velocity `-N`. If a moving point first reaches an old nonisolated contact-core vertex at unit distance, the existing CORE-GATE theorem converts the module to an actual source-diameter anchor. If it reaches an old inactive source point, absorb that point and continue it with the same velocity. The existing `Q-DIAMETER` event is also kept as an exact-anchor stop.
+
+The only part of the old proof that failed at exact half-depth was the attempt to prove in advance that no new upper equality can occur. We no longer need that assertion. Instead, stop at the first such equality.
+
+Suppose none of the first three events occurs before the clearing time. Then every pair involving the moving old-inactive set is still strictly below `D`: if such a pair had first reached `D`, event 2 would already have occurred. A pair of two points that are both already moving has zero relative velocity, so a new upper equality cannot first appear after both members have joined the moving set; any first occurrence is seen while the later member is still fixed. Existing old diameter equalities among untouched source points are irrelevant because they do not involve the repair.
+
+All lower equalities involving moved old-inactive vertices are exactly the recorded gate edges. At the clearing time, each finite gate component can therefore be expanded by an arbitrarily small factor about its centroid, exactly as in the linear inactive-chain theorem. The expansion opens every newly created unit contact while preserving all other strict lower and upper inequalities. The reflected shallow apex can then be inserted and the existing arbitrarily small base-opening perturbation applied. This produces a same-cardinality feasible source with strictly fewer unit contacts, contradicting the contact-minimal choice of the global minimizer.
+
+Hence:
+
+$$
+\boxed{
+\text{before clearing, every non-anchored FREE module has either event 2 or event 3.}
+}
+\tag{CP.5}
+$$
+
+No upper-safety estimate beyond the first upper equality is used.
+
+---
+
+## 2. Event 3 pushes the outer-face corridor across the actual circumcenter plane
+
+Assume event 3 occurs before any new upper equality. Let
+
+$$
+z_0,z_1,\ldots,z_\ell
+$$
+
+be the parent ancestry from an original FREE blocker `z_0` to the first absorbed vertex `z_ell` with
+
+$$
+a_{z_\ell}>C_D.
+$$
+
+The existing first-contact calculation gives strict support monotonicity,
+
+$$
+a_{z_0}<a_{z_1}<\cdots<a_{z_\ell},
+\tag{CP.6}
+$$
+
+and the parent increment bound
+
+$$
+0<a_{z_{j+1}}-a_{z_j}\le1+t_D.
+\tag{CP.7}
+$$
+
+By first crossing,
+
+$$
+a_{z_{\ell-1}}\le C_D<a_{z_\ell}\le C_D+1+t_D.
+\tag{CP.8}
+$$
+
+Since
+
+$$
+N\cdot(z-o)=C_D-a_z,
+$$
+
+( CP.8 ) gives the exact endpoint localization
+
+$$
+\boxed{
+-(1+t_D)\le N\cdot(z_\ell-o)<0.
+}
+\tag{CP.9}
+$$
+
+Thus the original fully inactive corridor actually crosses the support hyperplane through the full-source circumcenter and its first crossing vertex lies only `O(1)` beyond that hyperplane. The previous `O(D^{3/4})` central gap disappears on this branch.
+
+The root still satisfies `a_{z_0}=O(sqrt D)`. Combining (CP.2), (CP.4), and (CP.7),
+
+$$
+\ell
+\ge
+{C_D-O(\sqrt D)\over1+h_*+D^{-1/3}}
+=
+\boxed{
+{D\over2(1+h_*)}-O(D^{2/3}).
+}
+\tag{CP.10}
+$$
+
+Numerically,
+
+$$
+{1\over2(1+h_*)}
+=0.374602551093811\ldots .
+\tag{CP.11}
+$$
+
+Every chain vertex is an original contact- and diameter-isolated source point, every original parent edge has length in
+
+$$
+(1,1+h_*+o(1)),
+$$
+
+the polygonal chain is simple and strictly `N`-monotone, and the FREE-blocker outer-face theorem keeps the entire chain in the unbounded face of the old positive contact graph. These properties do not depend on the old fixed-`lambda` cap bound.
+
+---
+
+## 3. Event 2 creates a fixed-slack original near-diameter pair
+
+Assume the first new upper equality occurs before the circumcenter plane is crossed. Let `p` be the original position of the moving old-inactive vertex involved in this first equality, let `v` be the still-fixed original source point, and let
+
+$$
+p(s)=p-\tau N,
+\qquad
+0<\tau\le t_D.
+$$
+
+At the event,
+
+$$
+|p-\tau N-v|=D.
+\tag{CP.12}
+$$
+
+The strict inequality `tau>0` follows because `p` was diameter-isolated in the original source.
+
+Fix
+
+$$
+\boxed{C_g={17\over50}=0.34>h_*.}
+\tag{CP.13}
+$$
+
+For all sufficiently large `D`, (CP.4) gives `t_D<C_g`. The triangle inequality applied to (CP.12) yields
+
+$$
+|p-v|>D-C_g.
+$$
+
+Because `p` was originally diameter-isolated,
+
+$$
+\boxed{
+D-C_g<|p-v|<D.
+}
+\tag{CP.14}
+$$
+
+Thus a first upper gate is already an original fixed-slack near-diameter pair, not a newly manufactured long pair.
+
+Let
+
+$$
+r=p-v,\qquad \ell=|r|,\qquad m={p+v\over2}.
+$$
+
+The fixed-slack midpoint theorem gives
+
+$$
+\boxed{
+|m-o|
+\le
+L_{g,D}
+:=\sqrt{D\eta_D+\eta_D^2+{C_gD\over2}}
+=(3^{1/8}+o(1))D^{3/4},
+}
+\tag{CP.15}
+$$
+
+where `eta_D=3^(1/4)sqrt D`.
+
+---
+
+## 4. A first upper gate is tangent to the module support plane
+
+Square (CP.12):
+
+$$
+D^2
+=\ell^2-2\tau N\cdot r+\tau^2.
+\tag{CP.16}
+$$
+
+Since `ell<=D`,
+
+$$
+\boxed{N\cdot r\le {\tau\over2}=O(1).}
+\tag{CP.17}
+$$
+
+Event 2 occurs before event 3, so the moving vertex has original support depth
+
+$$
+a_p\le C_D,
+$$
+
+or equivalently
+
+$$
+N\cdot(p-o)\ge0.
+\tag{CP.18}
+$$
+
+But
+
+$$
+p-o=(m-o)+{r\over2}.
+$$
+
+Therefore
+
+$$
+N\cdot r
+=2N\cdot(p-o)-2N\cdot(m-o)
+\ge-2|m-o|.
+\tag{CP.19}
+$$
+
+Combining (CP.15), (CP.17), and (CP.19),
+
+$$
+\boxed{
+|N\cdot r|
+\le(2\,3^{1/8}+o(1))D^{3/4}.
+}
+\tag{CP.20}
+$$
+
+Since `ell>D-C_g`, the projective direction of the original gate pair satisfies
+
+$$
+\boxed{
+ d_{\mathbb{RP}^1}([p-v],[JN])
+\le
+(2\,3^{1/8}+o(1))D^{-1/4},
+}
+\tag{CP.21}
+$$
+
+where `J` is rotation by `pi/2`. Numerically,
+
+$$
+2\,3^{1/8}=2.294405380879754\ldots .
+$$
+
+The gate chord is therefore asymptotically tangent to the module's support line. This is a different direction class from the existing reflection blocker / normal exact braid, whose long chords are asymptotically parallel to `N`.
+
+Equation (CP.15) also gives the two-shore form. After choosing one sign `sigma in {+1,-1}`,
+
+$$
+\boxed{
+ p-o=\sigma {D\over2}JN+O(D^{3/4}),
+\qquad
+ v-o=-\sigma {D\over2}JN+O(D^{3/4}).
+}
+\tag{CP.22}
+$$
+
+Each endpoint in fact has radial norm `D/2+O(sqrt D)`. Indeed the same-center outer radius gives `|p-o|,|v-o|<=D/2+eta_D`, while (CP.14) and the triangle inequality give, for either endpoint,
+
+$$
+|p-o|,|v-o|
+\ge {D\over2}-\eta_D-C_g.
+\tag{CP.23}
+$$
+
+---
+
+## 5. If the fixed endpoint is active, the tangent gate promotes to an actual diameter
+
+Suppose the fixed gate endpoint `v` is not fully inactive.
+
+If `v` is already a source-diameter endpoint, keep one actual diameter incident to it. Otherwise `v` is a nonisolated unloaded contact-core vertex. Put
+
+$$
+S={v-o\over|v-o|}.
+$$
+
+By (CP.23) and the same-center outer radius,
+
+$$
+h_A(S)-S\cdot v=O(\sqrt D).
+\tag{CP.24}
+$$
+
+The support-ascent argument from the CORE-GATE theorem applies verbatim in direction `S`: C26 positive contact equilibrium forces an unloaded contact-core vertex to have a contact neighbor strictly farther outward in `S`; iterating this strict ascent terminates at an actual source-diameter endpoint `w`. Support depth decreases along the ascent, so `w` remains in the same `O(sqrt D)` cap. Hence
+
+$$
+|w-v|=O(D^{3/4}).
+\tag{CP.25}
+$$
+
+Choose an actual diameter partner `t` of `w`. The actual-diameter midpoint theorem gives
+
+$$
+\left|{w+t\over2}-o\right|=O(D^{3/4}).
+\tag{CP.26}
+$$
+
+The gate midpoint bound gives
+
+$$
+\left|{p+v\over2}-o\right|=O(D^{3/4}).
+\tag{CP.27}
+$$
+
+Subtracting the two midpoint relations and using (CP.25),
+
+$$
+\boxed{|t-p|=O(D^{3/4}).}
+\tag{CP.28}
+$$
+
+Thus `wt` is an actual source diameter occupying the same two tangent shores as the gate pair. In particular,
+
+$$
+\boxed{
+ d_{\mathbb{RP}^1}([w-t],[JN])=O(D^{-1/4}).
+}
+\tag{CP.29}
+$$
+
+Call this outcome `TANGENT-EXACT`.
+
+If `v` is fully inactive instead, both endpoints `p,v` of (CP.14) are old contact- and diameter-isolated vertices. Call this outcome `TANGENT-INACTIVE`.
+
+---
+
+## 6. Tangent upper-gate survivors form central braids
+
+Return to the slow-scale reflection family. For
+
+$$
+\kappa_D\to\infty,
+\qquad
+\kappa_D=o(D^{1/4}),
+$$
+
+the selected module normals lie in one quadrant and satisfy
+
+$$
+ d_{\mathbb{RP}^1}([N_i],[N_j])
+\ge(2-o(1))\kappa_DD^{-1/4}
+\qquad(i\ne j).
+\tag{CP.30}
+$$
+
+Rotation by `J` preserves projective angular separation. The `O(D^-1/4)` errors in (CP.21) and (CP.29) are negligible compared with (CP.30).
+
+### TANGENT-INACTIVE
+
+Every retained gate edge has length in `(D-C_g,D)`, midpoint in `B(o,O(D^(3/4)))`, and line direction within `O(D^-1/4)` of `JN_i`. Its two endpoints lie in the corresponding antipodal tangent shore caps by (CP.22). Different module shore caps are separated by
+
+$$
+\Omega(\kappa_DD^{3/4}),
+$$
+
+whereas the localization error is only `O(D^(3/4))`. Thus the selected gate edges are pairwise vertex-disjoint.
+
+For two such edges, their supporting-line angle is at least
+
+$$
+(2-o(1))\kappa_DD^{-1/4}.
+$$
+
+Their midpoint separation is `O(D^(3/4))`, so the supporting-line intersection lies at distance
+
+$$
+O\!\left({D^{3/4}\over\kappa_DD^{-1/4}}\right)
+=
+\boxed{O(D/\kappa_D)=o(D)}
+\tag{CP.31}
+$$
+
+from either midpoint. Since every half-length is `(1/2-o(1))D`, the intersection lies in the relative interior of both finite segments. Hence the `TANGENT-INACTIVE` edges are pairwise properly crossing inside one `O(D/kappa_D)` central region.
+
+### TANGENT-EXACT
+
+The promoted actual diameter endpoints have the same tangent-shore localization up to `O(D^(3/4))`, so different modules again give pairwise vertex-disjoint diameter edges. The diameter graph is a convex geometric thrackle, hence every two selected edges cross properly. The same midpoint/angle estimate as (CP.31) places all crossings in `B(o,O(D/kappa_D))`.
+
+Thus both tangent upper-gate outcomes have an exact central braid normal form; the only difference is whether the braid edges are actual diameters or inactive fixed-slack almost-diameters.
+
+---
+
+## 7. Source-wide four-way reduction
+
+The controlled slow-scale family has
+
+$$
+|I_D|=(\rho_*-o(1)){D^{1/4}\over\kappa_D},
+\qquad
+\rho_*=0.129220199818177\ldots .
+\tag{CP.32}
+$$
+
+Every selected module belongs to one of four classes:
+
+1. `NORMAL-EXACT`: an existing ANCHORED / `Q-DIAMETER` / CORE-GATE-type reduction supplies an actual diameter in the module-normal shore pair;
+2. `CENTER-CORRIDOR`: the old fully inactive outer-face corridor crosses the actual circumcenter support plane and satisfies (CP.9)--(CP.10);
+3. `TANGENT-EXACT`: the first upper gate touches the active contact core and promotes to an actual diameter in the tangent shore pair;
+4. `TANGENT-INACTIVE`: the first upper gate has two old fully inactive endpoints and itself supplies the fixed-slack tangent braid edge.
+
+One class therefore has size at least
+
+$$
+\boxed{
+\left({\rho_*\over4}-o(1)\right){D^{1/4}\over\kappa_D},
+}
+\tag{CP.33}
+$$
+
+where
+
+$$
+\boxed{{\rho_*\over4}=0.03230504995454425\ldots .}
+\tag{CP.34}
+$$
+
+For every subpolynomial divergent `kappa_D=D^{o(1)}`, the surviving class has size `D^(1/4-o(1))`.
+
+The two exact classes are deliberately kept separate. Their directions differ by approximately `pi/2`, and no cross-class endpoint-disjointness theorem is asserted here. Within either exact class, however, the selected actual diameters form a vertex-disjoint central braid. Within the tangent-inactive class, the fixed-slack inactive pairs do the same.
+
+---
+
+## 8. Hostile checks and limitations
+
+- The argument does **not** claim upper-distance safety after the circumcenter-plane scale. It monitors the first upper equality and stops there.
+- A first upper equality between two already-moving points cannot appear spontaneously because their relative velocity is zero. It is therefore enough to monitor moving-versus-not-yet-moving pairs.
+- The fixed endpoint of an upper gate is not assumed inactive. The active case is separated and promoted to an actual diameter by support ascent.
+- The central corridors supplied by different modules may merge. No source-wide disjointness or area lower bound is claimed for the corridor class.
+- `TANGENT-INACTIVE` edges have fixed additive diameter slack below `0.34`; they are not promoted to actual diameters by this theorem.
+- The four classes are a proof-only normal form. This note does not modify the canonical theorem ledger and does not close C-II.
+
+---
+
+## 9. Frontier effect
+
+The old FREE endpoint
+
+```text
+outer-face inactive corridor stops at
+D/2 - (3^(1/8)+o(1)) D^(3/4)
+```
+
+is replaced by
+
+```text
+CENTER-CORRIDOR
+    simple support-monotone old-inactive path in the outer face
+    crosses the actual support hyperplane through the full-source circumcenter
+    first crossing vertex lies O(1) beyond that plane
+    length D/[2(1+h_*)] - O(D^(2/3))
+
+or
+
+TANGENT UPPER GATE
+    original pair in (D-0.34,D)
+    midpoint O(D^(3/4)) from the circumcenter
+    direction (2*3^(1/8)+o(1))D^(-1/4) from JN
+    if active: promotes to a tangent actual-diameter braid
+    if inactive: gives a tangent fixed-slack braid directly
+```
+
+The immediate remaining reflection bottlenecks are now concrete: either rule out a macroscopic outer-face inactive corridor that crosses a circumcenter hyperplane, or promote / deform the vertex-disjoint pairwise-crossing `TANGENT-INACTIVE` fixed-slack braid. The previous `D^(3/4)` stopping gap is no longer an independent escape.
+
+**Disposition:** extended the FREE absorption process to the actual circumcenter plane by converting the only lost upper-safety event into a tangent fixed-slack near-diameter gate, and extracted exact/fixed-slack tangent braid normal forms. C-II remains open.

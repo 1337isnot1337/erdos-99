@@ -95,11 +95,11 @@ MIGRATION_SUPPORT_PATHS = {
 
 
 def inclusion_manifest_lineage(root: Path, manifest: dict, current_blob: str):
-    """Bind one editorial generator update to the unchanged approved source scope.
+    """Bind exact operational edits to the unchanged approved source scope.
 
     The owner grant remains attached to OWNER_APPROVED_MANIFEST_BLOB. A later
-    manifest may update only the existing artifact generator's published hash
-    and editorial description; its source identities and rights do not change.
+    manifest may update the existing generator and the archived selector repair's
+    published hashes/descriptions; source identities and rights do not change.
     Every comparison uses committed Git bytes, including the current generator.
     """
     if not isinstance(manifest, dict) or not HEX40.fullmatch(current_blob):
@@ -138,8 +138,22 @@ def inclusion_manifest_lineage(root: Path, manifest: dict, current_blob: str):
     for old, new in zip(approved_entries, current_entries):
         if old == new:
             continue
-        if old.get("public_path") != allowed_path:
-            return None
+        path = old.get("public_path")
+        if path != allowed_path:
+            if path != "scripts/choose_research_task.py":
+                return None
+            from publication_followup import original_tree
+            tree = {}
+            for raw in git(root, "ls-tree", "-rz", "HEAD").split(b"\0"):
+                if raw:
+                    meta, name = raw.split(b"\t", 1)
+                    mode, kind, blob = meta.decode().split()
+                    if kind != "blob":
+                        return None
+                    tree[name.decode()] = (mode, blob)
+            _, reviewed = original_tree(lambda blob: git(root, "cat-file", "blob", blob), tree)
+            if path not in reviewed:
+                return None
         if ({key: value for key, value in old.items() if key not in allowed_fields}
                 != {key: value for key, value in new.items() if key not in allowed_fields}):
             return None
@@ -147,14 +161,16 @@ def inclusion_manifest_lineage(root: Path, manifest: dict, current_blob: str):
         if (not isinstance(description, str) or not description.strip()
                 or not isinstance(digest, str) or not HEX64.fullmatch(digest)):
             return None
-        generator = git(root, "show", "HEAD:" + allowed_path)
+        generator = git(root, "show", "HEAD:" + path)
         if hashlib.sha256(generator).hexdigest() != digest:
             return None
-        changed.append(allowed_path)
-    if changed != [allowed_path]:
+        changed.append(path)
+    if not changed or len(changed) != len(set(changed)):
         return None
-    lineage.update(editorial_update=True, updated_public_path=allowed_path,
-                   current_public_sha256=hashlib.sha256(generator).hexdigest())
+    lineage.update(editorial_update=True, updated_public_paths=changed)
+    if len(changed) == 1:
+        lineage.update(updated_public_path=changed[0],
+                       current_public_sha256=hashlib.sha256(generator).hexdigest())
     return approved, lineage
 
 

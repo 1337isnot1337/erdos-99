@@ -1,0 +1,275 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_ordered_interval_band_regression_2026-09-14.md) · source SHA-256 `ca0d0e27fdb5e01a0ad9ebaf7aac2dd66f7b0c5879d34ff64ba28aaa57226ba3`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- theorem-state: {"artifact_id":"ART-985F41E43AE6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Erdős Problem #99 — ordered interval-band regression against aggregate grid closure
+
+**Date:** 2026-09-14
+**Repository commit:** `ef941ab2b44aa393bdc461926769247b45754202`
+**State version:** `2026-09-14.audit.50`
+**Run type:** regression / closing-proof obstruction
+**Target:** Target C-II / Level I
+**Starting status:** canonical Sections 90–91 dense inverse-phase and ordered-grid route
+**Active prompt:** `docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md`
+**External literature search:** not used
+**Computation:** used: `[research/verify_target_c_ordered_interval_band_regression.py](../research/migration/2026-10-16/shards/04/evidence/research/verify_target_c_ordered_interval_band_regression.py)`
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+This artifact is an exact obstruction to one proposed continuation of the
+canonical Section-91 route. It is not a packing, a global minimizer, or a
+disproof of Erdős Problem #99.
+
+## 1. Starting canonical endpoint
+
+The current full-core Type-II route provides a dense bipartite train-crossing
+core with linear minimum degree, quadratic crossing count, fixed phase labels,
+and reduced phase spread (O(1/D)). Section 91 then extracts one explicit
+complete ordered grid using an endpoint-balanced slab and interval neighborhoods.
+
+The attempted stronger chain was
+
+```text
+forward phase-collapsed crossing graph
+    + interval neighborhoods from spanning trains
+    + quadratic crossing mass
+    -> aggregate many interval blocks
+    -> a Section-76 diameter margin of order D
+    -> full-core contradiction
+```
+
+The regression below certifies that the displayed graph/order hypotheses do
+not imply that arrow. Any successful aggregate theorem must use additional
+unit-rhombus metric information, source geometry, or global minimum-diameter
+optimality.
+
+## 2. Strongest genuinely new result
+
+**Classification:** exact regression / rejected continuation.
+
+### Statement
+
+For every integer (tge2), put (m=4t). Let
+
+[
+A_t={a_i:tle ile3t},qquad
+B_t={b_j:2tle jle6t},
+]
+
+and join (a_i) to (b_j) exactly when
+
+[
+ile jle i+m-1.
+	ag{2.1}
+]
+
+Then:
+
+1. every (A_t)-neighborhood is an interval in the displayed order of
+   (B_t);
+2. (|A_t|=2t+1), (|B_t|=4t+1), and the crossing count is
+   (Theta(t^2)=Theta(m^2));
+3. every (A_t)-vertex has degree at least (3t), and every (B_t)-vertex
+   has degree at least (t), so both shores have linear minimum degree;
+4. all edges can be oriented forward in one reduced-phase order with
+   (x_{a_i}=0), (x_{b_j}=1/m), giving phase spread (1/m=O(1/D)) if
+   (D=sqrt3,m/2); and
+5. every complete biclique (K_{k,ell}) in this graph satisfies
+
+   [
+   k+ellle m+1=rac{2D}{sqrt3}+1.
+   \tag{2.2}
+   ]
+
+Consequently, no theorem using only the Section-90/91 graph properties can
+force a complete grid with shore sum
+
+[
+rac{2D}{sqrt3}+cD
+]
+
+for any fixed (c>0).
+
+### Scope
+
+This is an abstract interval/pseudosegment regression. It is not asserted to
+be a unit-separated source, a strict-rhombus contact complex, a KKT stress,
+or a global (D(n))-minimizer. It retains the graph-theoretic and monotone
+topological features of the proposed aggregate Section-91 mechanism. The
+original full source, isolated points, and cardinality constraints are not
+represented because the regression targets only the implication from those
+intermediate graph properties.
+
+### Proof
+
+For (a_i), the neighborhood is the intersection of the integer interval
+([i,i+m-1]) with the ordered column block ([2t,6t]), hence is an interval.
+At (i=t) the intersection contains (3t) columns, and the overlap only
+increases toward the center (the other endpoint gives (3t+1)). Therefore
+
+[
+deg(a_i)ge3t.
+	ag{2.3}
+]
+
+For a fixed (b_j), the row indices containing it satisfy
+
+[
+max(t,j-m+1)le ilemin(3t,j).
+	ag{2.4}
+]
+
+At the two ends (j=2t) and (j=6t) this interval has respectively at
+least (t+1) and (t) integers, and its size is larger in between. Thus
+
+[
+deg(b_j)ge t.
+	ag{2.5}
+]
+
+The edge count is at least the minimum (A)-degree times (|A_t|), so
+
+[
+E_tge3t(2t+1)ge6t^2=rac38m^2.
+	ag{2.6}
+]
+
+It is also at most (|A_t||B_t|=O(m^2)), proving quadratic density. Assigning
+(x_{a_i}=0) and (x_{b_j}=1/m) makes every edge forward and puts all
+reduced phases in an interval of width (1/m).
+
+Now suppose (K_{k,ell}) is complete, with row-start set (Isubseteq[t,3t])
+of size (k). Its common column set is contained in the intersection of
+([i,i+m-1]) over (iin I). Since distinct integer starts have
+
+[
+max I-min Ige k-1,
+]
+
+that intersection contains at most (m-k+1) integer positions. Therefore
+
+[
+ellle m-k+1,qquad k+ellle m+1.
+]
+
+This proves (2.2). (square)
+
+For a monotone pseudosegment realization, take disjoint horizontal segments
+(A_i) whose (x)-intervals are ([i,i+m-1]), and disjoint vertical
+segments (B_j) at (x=j), each spanning all (A_i)-levels. The intersections
+are exactly (2.1), every crossing is proper and unique, and (X=x+y) is
+strictly increasing along every segment. An invertible linear map can send the
+horizontal and vertical directions to any prescribed pair of nonparallel
+directions, including directions with angle (pi/3+1/m), without changing
+the interval graph or its crossing order. This realizes the regression at the
+pseudosegment/monotonicity level. It deliberately does not preserve unit edge
+lengths or Euclidean rhombus areas.
+
+## 3. Exact frontier effect
+
+The regression rejects the following candidate lemma:
+
+> A phase-collapsed dense forward interval-neighborhood graph with linear
+> minimum degree necessarily contains a complete ordered block whose
+> Section-76 shore sum exceeds (2D/sqrt3) by a linear amount.
+
+It also rejects the weaker strategy of repeatedly applying the Section-91
+block extraction while relying only on interval neighborhoods and total edge
+mass. The band has (Theta(m^2)) edges distributed across sliding intervals,
+but the common intersection of (k) rows loses one column for each additional
+row, exactly preventing a linear positive shore-sum margin.
+
+This does not weaken any canonical theorem. Section 91 remains a valid
+one-grid extraction theorem. It identifies the precise missing ingredient for
+an aggregate continuation: a metric inequality that charges the sliding-band
+interfaces, or a source-preserving/global-optimality theorem that forbids them.
+
+## 4. Exact remaining lemma
+
+The relevant replacement target is now:
+
+> **Metric band exclusion (missing).** Under the full canonical hypotheses,
+> including unit source edges, strict-rhombus area, the carrier boundary/
+> interface currency, and global (D(n))-minimality, a sliding interval band
+> with (Theta(D^2)) crossings and no linear-shore complete block must either
+> incur a positive normalized area/perimeter defect or admit an explicit
+> same-cardinality strict sub-(D) deformation.
+
+The regression proves that none of the graph, phase, or interval conditions by
+themselves can supply this statement.
+
+## 5. Claim audit table
+
+| Claim | Status | Dependencies | Reason |
+| --- | --- | --- | --- |
+| The construction has interval neighborhoods | regression proved | elementary interval definition | Direct from (2.1) |
+| Both shores have linear minimum degree | regression proved | central-block indices | Exact degree bounds (2.3)–(2.5) |
+| Crossing count is quadratic | regression proved | degree lower bound | (2.6) and trivial upper bound |
+| Phase spread is (O(1/D)) | regression model | formal phase labels | Set (D=sqrt3m/2), (x_B-x_A=1/m) |
+| Every biclique has shore sum at most (m+1) | regression proved | interval intersection | (k) distinct starts span at least (k-1) |
+| Pseudosegment realization exists | regression proved at topological level | horizontal/vertical segments; affine map | Does not preserve unit metric |
+| The regression is a unit-separated source | rejected inference | none | Unit lengths and source points are omitted |
+| The regression is globally diameter-minimizing | rejected inference | none | No (D(n)) comparison is supplied |
+| Aggregate Section-91 closure follows | rejected | preceding rows | Sliding interval band is a countermodel |
+
+## 6. Regression checks
+
+The exact certificate is:
+
+```text
+python3 docs/research/migration/2026-10-16/shards/04/evidence/research/verify_target_c_ordered_interval_band_regression.py
+```
+
+It uses integer arithmetic only. It checks the interval property, exact shore
+sizes, degree lower bounds, quadratic edge lower bound, the formal phase scale,
+and the biclique intersection bound. The proof of the latter is symbolic and
+uniform in (t); the script checks representative values (t=2,3,5,10,25).
+
+Certified output has the form:
+
+```text
+t=25 m=100 |A|=51 |B|=101 E=... min_degree=(75,25) biclique_shore_sum<=m+1=101 threshold=m=100
+PASS: ordered interval-band regression certified
+PASS: dense forward interval structure alone gives no linear Section-76 margin
+PASS: regression omits unit-rhombus metric, source cardinality, KKT, and global optimality
+```
+
+No numerical optimization or floating-point assertion is used.
+
+## 7. Literature imports
+
+None.
+
+## 8. Computation
+
+The script uses exact Python integers and no external packages. It does not
+enumerate all bicliques; the uniform interval-intersection proof supplies the
+certificate. It does not prove a planar unit-rhombus realization, global
+optimality, or a counterexample to Problem #99.
+
+## 9. Corrections / supersessions
+
+This regression sharpens the warning already present in canonical Section 91
+that arbitrary sliding interval neighborhoods can evade a useful complete-grid
+extraction. It does not supersede Section 91 or any canonical endpoint.
+
+## 10. Promotion recommendation
+
+**Regression/rejection only.** No theorem-state promotion is requested. The
+artifact should remain unreviewed in the registry and should not be used as a
+canonical packing theorem.
+
+## 11. Handoff
+
+1. **Strongest new result:** an exact dense, phase-collapsed, linear-minimum-
+   degree interval-band obstruction with no linear-shore complete block.
+2. **Canonical chain tested:** `C-DENSE-PHASE-CORE` / Section 90 plus
+   `C-ORDERED-GRID` / Section 91; no canonical claim is altered.
+3. **Exact remaining lemma:** metric band exclusion using unit-rhombus area,
+   boundary currency, or global source minimality.
+4. **Binding dead route:** graph density, phase collapse, interval order, and
+   repeated Section-91 rectangle extraction alone.
+5. **Files to read next:** canonical Sections 82, 85, 122–123 and the full-core
+   source-preserving deformation regressions.

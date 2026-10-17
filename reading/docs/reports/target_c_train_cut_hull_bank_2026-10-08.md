@@ -1,0 +1,399 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_train_cut_hull_bank_2026-10-08.md) · source SHA-256 `15e2530cbae69f6c43cf0d8dea664e626ded9ce80b216dbccf9d1c98de9d58e9`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- theorem-state: {"artifact_id":"ART-1223F56A275E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: every train family has a cut-to-hull bank
+
+Date: 2026-10-08.
+Base: `c2856c7bd7898cfe40dc136bacceaca056c92fea`.
+State: `2026-10-08.audit.134`.
+Classification: proved candidate awaiting independent audit/promotion.
+Registry status: unreviewed; noncanonical.
+Level I and C-II: open.
+
+Rechecked on `origin/main=0ce9dc0ac674c5018f0fc271c0263d9d10e09936`,
+state `2026-10-08.audit.137`. The new conditional grid/cap audits do not
+change this proof's canonical inputs.
+
+Rechecked again on `023917ace0719d0050664a8a08fed1eb5cdb2013`,
+state `2026-10-08.audit.139`. The new support-hub and exterior-cap
+separator claims do not change the bank construction or supply
+independently paid return lengths.
+
+## 1. Exact finite source conclusion
+
+Use the canonical contact-minimal, then diameter-pair-minimal triangle-free
+global source with $D\ge9$, retaining every source point. Work on its
+actual positive-contact core for the train construction.
+Let $\mathcal T$ contain every complete physical rhombus track and every
+actual contact edge incident to no rhombus, as a singleton train.
+Write $T=|\mathcal T|$, $R_4$ for the rhombus count, and $d_\tau$
+for a train's number of crossed rhombi.
+
+Choose any family $\mathcal A\subseteq\mathcal T$, and put
+$\mathcal N=\mathcal T\setminus\mathcal A$.
+The recipient graph has one vertex per occurrence-counted outer hull
+chain and one vertex per actual bounded nonquadrilateral face.
+Its edges are the trains in $\mathcal N$.
+Let $\mathcal B(\mathcal A)$ consist of those trains in $\mathcal A$
+having at least one terminal recipient in a component reaching an
+outer chain.
+
+The new candidate finite conclusion is
+$$
+\boxed{|\mathcal B(\mathcal A)|\ge|\mathcal A|/3.}
+\tag{CB1}
+$$
+Each counted train has a terminal contact vertex connected to an actual
+loaded vertex by a path of actual unit contacts. All these returns can
+be placed in one physical contact carrier $\mathcal K_{\mathcal N}$ with
+$$
+\boxed{|E(\mathcal K_{\mathcal N})|
+\le\sum_{\tau\in\mathcal N}d_\tau+2T.}
+\tag{CB2}
+$$
+This counts carrier edges once, not independent returns.
+The crossing graph also gives
+$$
+\boxed{|\mathcal B(\mathcal A)|\ge
+{2\over3}\sqrt{\left[R_4-\sum_{\tau\in\mathcal N}d_\tau\right]_+}.}
+\tag{CB3}
+$$
+
+There is no Type-II, grain, phase-purity, or direction-atom hypothesis
+in CB1--CB3. Source isolates remain in the configuration; the carrier is
+a contact subgraph, not a reduced source or a replacement.
+
+The implication chain is:
+
+    reciprocal subset sparsity
+      -> a cut around interior-only recipients needs many selected trains
+      -> at least one third of the selected family reaches the hull
+      -> literal unit-contact rails and facial-walk lifts
+      -> a counted physical return carrier for long train banks.
+
+This supplies return geometry for a finite-move argument. It does not
+supply the motion, simultaneous endpoint compatibility, or Level I.
+
+## 2. Canonical inputs and object comparison
+
+- [Section 63](../targets/target-c/63-loaded-hull-slack-audit.md):
+  distinguished outer hull chains, $b+Q=2(q-k)$, and $k\ge0$.
+- [Section 67](../targets/target-c/67-rhombus-population-transport-audit.md):
+  the connected actual core and force-hull augmentation; original bounded
+  exceptional faces have actual unit boundaries.
+- [Audit.131](../audits/target_c_atomic_one_end_train_boundary_independent_audit_2026-10-08.md):
+  the complete-train count, including singletons,
+  $2T=b+4f+Q$, $T=q-k+2f$.
+- [The positive reciprocal theorem](target_c_positive_reciprocal_internal_train_graph_2026-10-05.md),
+  canonical `C-RECIPROCAL-TRAIN-GRAPH`: for any bounded endpoint set $U$,
+  $$
+  e(U)\le\sum_{j:\,|U_j|\ge2}(2|U_j|-3).
+  \tag{CB4}
+  $$
+  Its internal-column independence input is canonical
+  [Lemma AR.2](target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md).
+- [Theory 01, Theorems 10.6 and 10.8](../theory/01-local-structure.md):
+  actual parallel-side propagation, monotone transverse progress, and
+  the simple triangle-free crossing graph.
+
+CB4 is applied only to original bounded physical exceptional faces.
+Adding hull sides leaves these faces and their internal trains unchanged.
+All augmented pockets remain in the canonical reciprocal construction.
+
+The canonical
+[outer-train determination theorem](target_c_outer_train_rank_groemer_bank_synthesis_2026-10-05.md)
+controls all outer-ended angular rates. CB1 instead allows any selected
+family and reaches the hull through its complement.
+The canonical
+[global face-return quotas](target_c_global_exceptional_face_return_quotas_2026-10-04.md)
+give disjoint returns for their face-boundary demands. CB2 gives literal
+train-terminal returns and a common edge budget, without disjointness.
+
+## 3. Exact cut proof
+
+Let $I$ be the bounded-face recipients whose $\mathcal N$-component
+has no outer chain. Put
+$$
+f_I=|I|,\qquad Q_I=\sum_{F\in I}(\deg F-4)\ge f_I.
+$$
+Let $E_I$ count all complete trains with both ends in $I$, and $X_I$
+count those with exactly one end in $I$.
+Every cut train belongs to $\mathcal A$ and to $\mathcal B(\mathcal A)$:
+an $\mathcal N$ edge cannot leave its own recipient component.
+The complete terminal-occurrence handshake is
+$$
+4f_I+Q_I=2E_I+X_I.
+\tag{CB5}
+$$
+
+Let $\sigma_I$ equal two times the number of singleton components plus
+three times the number of nontrivial components of the full induced
+internal train graph on $I$. CB4 gives
+$$
+E_I\le2f_I-\sigma_I,\qquad
+X_I\ge Q_I+2\sigma_I\ge f_I+2\sigma_I.
+\tag{CB6}
+$$
+The empty set is permitted. Facial repetitions are counted in CB5;
+canonical reciprocal sparsity rules out internal loops and repeated pairs.
+
+Let $A_I,N_I$ count selected and complementary trains with both ends
+in $I$. Every selected train outside the bank has both ends in $I$.
+Thus
+$$
+|\mathcal A|=|\mathcal B(\mathcal A)|+A_I,\qquad A_I+N_I=E_I.
+$$
+By CB6,
+$$
+A_I+N_I\le2X_I-5\sigma_I
+\le2|\mathcal B(\mathcal A)|-5\sigma_I.
+$$
+Consequently
+$$
+\boxed{|\mathcal A|+N_I+5\sigma_I
+\le3|\mathcal B(\mathcal A)|.}
+\tag{CB7}
+$$
+This proves CB1 for distinct complete trains, rather than terminal
+occurrences or independent owner variables.
+
+## 4. Literal physical contact returns
+
+Orient a train's constant unit-edge vector $u_\tau$ once. On each of
+its parallel contact sides choose the endpoint with smaller coordinate
+along $u_\tau$. In a strict unit rhombus, these chosen endpoints of
+opposite sides are joined by one of its other unit sides.
+Following the train therefore gives an actual unit-contact rail of
+exactly $d_\tau$ edges between the chosen terminal vertices.
+A singleton's chosen vertices coincide; its rail has length zero.
+
+A whole bounded facial walk joins all its terminal contact vertices.
+An outer chain joins its terminal vertices to a loaded end vertex.
+Any recipient path to an outer chain therefore lifts to a source contact
+walk; erasing repetitions gives a source contact path.
+
+Take the union of all complementary train rails, all bounded facial walks
+in boundary-reaching recipient components, and the old outer contact walk.
+This is $\mathcal K_{\mathcal N}$. Its edge count is at most
+$$
+\sum_{\tau\in\mathcal N}d_\tau+
+b+\sum_{\substack{F\text{ in a}\\\text{boundary-reaching component}}}\deg F
+\le\sum_{\tau\in\mathcal N}d_\tau+2T.
+$$
+This proves CB2. No auxiliary hull side is used as a contact path.
+Different rails and returns can share actual contact edges and vertices.
+A rail's side contacts belong to the crossing trains. The complementary
+family labels the tracks whose rails are taken, not ownership of every
+contact in the carrier.
+
+## 5. Select by length and retain the bulk
+
+Removing $\mathcal N$ from the crossing graph deletes at most
+$\sum_{\mathcal N}d_\tau$ crossings. Mantel bounds the remaining
+crossings by $|\mathcal A|^2/4$, proving CB3.
+
+For an integer $L\ge1$, choose
+$\mathcal A_L=\{\tau:d_\tau\ge L\}$.
+Then
+$$
+\sum_{\mathcal N_L}d_\tau\le LT,\qquad
+|\mathcal B(\mathcal A_L)|\ge{2\over3}\sqrt{[R_4-LT]_+},
+\qquad |E(\mathcal K_{\mathcal N_L})|\le(L+2)T.
+\tag{CB8}
+$$
+Each selected train has endpoint-midpoint separation at least
+$(\sqrt3/2)L$: its monotone transverse coordinate increases by at
+least $\sqrt3/2$ at each rhombus.
+
+For any canonical quadratic-core sequence with $R_4/D^2\to r>0$,
+the finite bound $T\le3\pi D$ permits
+$$
+L=\left\lfloor{\epsilon D\over3\pi}\right\rfloor,\qquad0<\epsilon<r.
+$$
+It gives at least
+$$
+\left({2\over3}\sqrt{r-\epsilon}-o(1)\right)D
+\tag{CB9}
+$$
+distinct bank trains, each with endpoint-midpoint separation at least
+$\sqrt3\,\epsilon D/(6\pi)-O(1)$.
+Their returns lie in one actual contact carrier with at most
+$$
+\epsilon D^2+6\pi D
+\tag{CB10}
+$$
+edges. In Type II, $r=\pi/(2\sqrt3)$, so the bank coefficient approaches
+$2\sqrt{\pi/(2\sqrt3)}/3=0.6348752045\ldots$.
+No atomic measure or previous terminal-cancellation candidate is used.
+The same result applies to quadratic cores outside Type II.
+
+For fixed $\epsilon$, separation is a fixed positive fraction of $D$
+and the carrier has an $\epsilon D^2$ budget. Letting $\epsilon$
+go to zero slowly gives an $o(D^2)$ carrier and the limiting bank
+coefficient. If $L\to\infty$, separations diverge; they need not remain
+a uniform positive fraction of $D$.
+
+## 6. Verification and exact remaining gap
+
+The [finite checker](../../../research/verify_target_c_train_cut_hull_bank_2026_10_08.py)
+uses ten rational nonglobal contact fixtures with holes, bridges, and
+aligned-hole internal trains. It checks 13,259 source lower pairs,
+164 physical train rails, and 506 selections including degree thresholds.
+The reciprocal subset bound passes as a finite antecedent in 459
+selections and fails in 47. Those failures are recorded as fixture
+hypothesis failures; no canonical-source claim is applied to them.
+All contact-walk lifts are checked regardless of that antecedent:
+4,714 bank-end returns and 8,906 actual unit steps.
+
+Positive output proves the finite identities, conditional cut bounds,
+and actual path lifts. It does not certify KKT stress, global optimality,
+asymptotic sources, a motion, or Level I.
+
+A small carrier can contain a bottleneck reused by many returns.
+CB2 gives no uniform individual route length or disjointness within its
+edge budget. Section 7 obtains disjoint returns in the full contact graph;
+it does not keep them inside this small carrier. A simultaneous source
+displacement or independently paid return-length bound is still missing.
+
+The subquadratic-core container branch has no positive $r$ for CB9.
+The finite cut theorem still applies, but it creates no quadratic bulk
+bank or refill packet. Every future endpoint must check all retained
+isolates and all original lower and upper pairs. No canonical state
+change is made here.
+
+## 7. Disjoint rerouting in the full source contact graph
+
+The following additional candidate uses canonical
+[Section 57 mixed rigidity](../targets/target-c/57-zr-zf-rigidity-audit.md)
+and positive unloaded equilibrium. It keeps the metric argument elementary.
+
+Choose $a$ distinct complete trains of degree at least $L\ge1$.
+For each train choose one of its two matched rail-end vertices.
+Let $X$ be the set of chosen vertices. Different trains may choose
+the same source vertex. Let $k$ be the minimum endpoint-inclusive
+physical-contact separator from $X$ to the actual loaded set $B$.
+Then
+$$
+\boxed{(a-5k)_+(L+1)\le {80\over\pi^2}k^2+{40\over\pi}k.}
+\tag{CB11}
+$$
+Menger therefore supplies $k$ mutually vertex-disjoint actual contact
+paths from chosen terminals to distinct loaded vertices. Each path can
+be assigned a distinct chosen train, because one train was assigned
+only one start vertex.
+
+### 7.1 How many source vertices can lie behind a separator?
+
+Let $S$ be such a separator, $|S|=k$, and let $U$ be the union
+of components of $C-S$ meeting $X\setminus S$. These components
+contain no loaded vertex. Every external contact neighbor lies in $S$.
+For a component $U_j$, let $n_j,e_j,t_j$ count its vertices, internal
+contacts, and contacts to $S$.
+
+Its contact matrix on the $2n_j$ unpinned columns has full rank.
+A kernel velocity extended by zero outside $U_j$ would be a mixed
+bar flex vanishing at every loaded vertex, hence zero by Section 57.
+Positive unloaded equilibrium supplies a nonzero row dependence of
+that same pinned matrix. Thus
+$$
+e_j+t_j\ge2n_j+1.
+$$
+This is the pinned argument in canonical GQ.1, not a generic rank inference.
+
+Let $K=C[U\cup S]$, let $c_U,c_K$ count its unloaded components and
+its full components, and let $e_S$ count contacts internal to $S$.
+All its edges are actual unit contacts. Euler and triangle-freeness give
+$$
+b_K+Q(K)=4|V(K)|-2e(K)-4c_K
+\le4k-2c_U-4c_K-2e_S\le4k.
+$$
+In particular $b_K\le4k$. Every component of $K$ contains a separator
+vertex. Otherwise it would be a whole contact component of the source
+core containing only unloaded vertices. Positive equilibrium there,
+multiplied by the source coordinates and summed, would give a positive
+sum of weighted squared unit-edge lengths equal to zero. An isolated
+closed component is also impossible because its vertex belongs to the
+nonisolated contact core. Thus $c_K\le k$. This argument does not need
+to infer contact-graph connectivity from mixed rigidity.
+
+For each component $K_j$, let $p_j,A_j$ be its convex-hull perimeter
+and area. Its actual unit outer walk gives $p_j\le b_j$.
+The open radius-$1/2$ disks centered at its source vertices are
+disjoint and lie inside the radius-$1/2$ parallel body of its hull.
+The planar parallel-body formula gives
+$$
+|V(K_j)|\le {4A_j\over\pi}+{2p_j\over\pi}+1.
+$$
+It holds for point and segment hulls as well. Isoperimetry and
+$\sum p_j\le b_K$ imply
+$$
+|U|+k\le {b_K^2\over\pi^2}+{2b_K\over\pi}+c_K.
+$$
+Therefore
+$$
+\boxed{|U|\le {16\over\pi^2}k^2+{8\over\pi}k.}
+\tag{CB12}
+$$
+Possible hull overlap between distinct components is harmless; this is
+an upper bound by a sum of component bounds.
+
+### 7.2 Long rails cannot all pass through a small cut
+
+Every rail vertex is incident to an actual contact belonging to its train.
+A triangle-free source vertex has at most five unit neighbors. Thus
+one source vertex belongs to at most five complete train rails.
+The $k$ separator vertices meet at most $5k$ chosen rails.
+
+Each uncut chosen rail starts in $X\setminus S$ and lies wholly in $U$.
+It has at least $L+1$ distinct vertices: monotone transverse progress
+rules out repetitions. Counting those vertices with multiplicity at
+most five gives
+$$
+(a-5k)_+(L+1)\le5|U|.
+$$
+Combine with CB12 to obtain CB11.
+
+This argument concerns graph punctures for a separator proof. It never
+deletes points from the source or asserts that a punctured graph is a
+feasible replacement.
+
+### 7.3 Quadratic-core consequence and its practical limit
+
+Apply CB11 to the bank selected in Section 5, choosing a terminal whose
+recipient reaches the outer walk through $\mathcal N_L$.
+For fixed $\epsilon$, put
+$$
+a_*={2\over3}\sqrt{r-\epsilon},\qquad
+\ell={\epsilon\over3\pi}.
+$$
+The bank has $a\ge(a_*-o(1))D$, and $L\ge\ell D-O(1)$.
+Solving the limiting quadratic in CB11 gives
+$$
+\boxed{\liminf {k\over D}\ge
+{\pi^2\over32}
+\left(\sqrt{\ell^2+{64a_*\ell\over5\pi^2}}-\ell\right)>0.}
+\tag{CB13}
+$$
+Thus a linear subfamily of long bank trains has mutually vertex-disjoint
+actual contact returns to distinct actual loaded vertices. There is
+no cap-extraction hypothesis and no face-degree-tail assumption.
+
+The finite checker additionally runs 27 vertex-split max-flow/min-cut
+tests and explicitly checks 113 mutually vertex-disjoint physical
+contact returns. Its minimum-cut pinned-count antecedent passes in
+three cases and fails in 24 nonglobal cases. The outward rational
+packing consequence uses $\pi>3$; no floating arithmetic is used.
+Fixture hull corners are bookkeeping roots and are not certified
+diameter-loaded vertices. These checks do not prove canonical KKT
+or mixed rigidity for the fixtures.
+
+The disjoint returns of CB13 use the full contact graph. They need not
+lie in the small carrier of CB2, and they need not be long or contribute
+new vertices outside a selected grid. The small-carrier and disjointness
+conclusions cannot be combined into a single independently paid return
+family without another theorem. They supply no simultaneous feasible
+motion or strict diameter improvement.
+The positive coefficient in CB13 depends on fixed $\epsilon$.
+It is not claimed to stay bounded away from zero in the diagonal
+$\epsilon\to0$ version of CB10.

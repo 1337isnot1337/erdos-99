@@ -1,0 +1,193 @@
+> Generated reading edition · [exact source](../../research/target_c_paired_remainder_path_t18659_2026-09-15.md) · source SHA-256 `8179039b5ab9babcfe3f71fe2a970fe619e57b5762239611bee6a5e12e384b2b`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "22791502eca3e100891171c7265fcc5ae34f6915", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_paired_remainder_path_t18659_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c886b5f8bbcebe59c44106429f54143e76ed8eb017457252b0019d5928ca88b8"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — paired-remainder path extends through `t<=1.8659`
+
+**Date:** 2026-09-15  
+**Status:** proof-only high-`t` endpoint strengthening  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch  
+**Dependencies:** hostile-audited paired-remainder path through `t<=1.865`; corrected retained-mass feasibility; Section-157 opposite-branch geometry; phase-free path saturation; diameter-path Helly hub  
+**Certificate:** `research/verify_target_c_paired_remainder_path_t18659.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The hostile-audited paired-remainder theorem gives, for retained dominant outer
+occurrence mass `z`, retained dominant O--O pair weight `P`, and pair-weighted
+terminal energy `E_pair`,
+
+$$
+E_{pair}+F(z-2P)\le\delta+o(1),
+\qquad F(s)=s-6\sin(s/6).
+\tag{R59.1}
+$$
+
+Together with
+
+$$
+P\ge z-U-o(1),
+\qquad
+U={9t\over2}-2\pi-2\delta-\kappa/2,
+\tag{R59.2}
+$$
+
+this gives, for an energy threshold `lambda`,
+
+$$
+P_{low}\ge
+P-{\delta-F(z-2P)\over\lambda}-o(1).
+\tag{R59.3}
+$$
+
+The parent hostile audit proves that for
+`2-sqrt(3)<lambda<1/2` the right side is increasing in `P`, then after inserting
+(R59.2) is increasing in `z,kappa` and decreasing in `delta,t`.  The new work is an
+outward exact endpoint certificate on the enlarged box.
+
+Set
+
+$$
+T={18659\over10000}=1.8659,
+\qquad
+z_0={827\over400}=2.0675,
+\qquad
+\lambda={4887\over10000}=0.4887.
+\tag{R59.4}
+$$
+
+Let
+
+$$
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+C_{76}=2\sqrt{\Delta_2}+0.0076,
+\qquad
+U_0={9T\over2}-2\pi,
+$$
+
+and
+
+$$
+\delta_{max}={U_0-C_{76}\over2}.
+\tag{R59.5}
+$$
+
+The exact certificate proves
+
+$$
+U_0<2.113365,
+\qquad
+\boxed{\delta_{max}<0.100570}.
+\tag{R59.6}
+$$
+
+The corrected retained-mass feasibility calculation remains valid on the enlarged
+box and gives the outward sign
+
+$$
+\boxed{H(2.0675)<-9.41\times10^{-5}}.
+\tag{R59.7}
+$$
+
+Hence every survivor with `t<=1.8659` satisfies
+
+$$
+\boxed{z>2.0675-o(1).}
+\tag{R59.8}
+$$
+
+Use the adverse endpoint values
+
+$$
+t=T,\qquad z=z_0,\qquad\kappa=0,\qquad\delta=\delta_{max}.
+$$
+
+Then the pair floor and residual mass are
+
+$$
+P_0=z_0-U_0+2\delta_{max}>0.1552743,
+\tag{R59.9}
+$$
+
+$$
+r_0=z_0-2P_0>1.7569512.
+\tag{R59.10}
+$$
+
+The exact three-well bathtub evaluation gives
+
+$$
+F(r_0)>0.0250013.
+\tag{R59.11}
+$$
+
+Therefore (R59.3) yields
+
+$$
+\boxed{P_{low}>0.0006433-o(1)>0.0006-o(1).}
+\tag{R59.12}
+$$
+
+The dominant orbit has at most three shrinking phase windows, so one phase contains
+retained low-energy pair weight greater than `0.0002-o(1)`.  Pair weight per train is
+at most one.  Thus there are more than
+
+$$
+\boxed{0.0002D-o(D)}
+\tag{R59.13}
+$$
+
+actual same-phase O--O trains at terminal energy at most `0.4887`.
+
+For every such train, the inherited same-oriented-branch upper bound and Section-157
+bracing lower bound are incompatible.  The exact squared margin is
+
+$$
+\boxed{
+\left(1-\delta_{max}-{\lambda\over2}\right)^2
+-\left(\lambda-{\lambda^2\over4}\right)
+>1.37\times10^{-4}.
+}
+\tag{R59.14}
+$$
+
+Hence all selected trains use opposite oriented terminal branches. Since
+`lambda<1/2`, the two terminal arcs retain a fixed positive angular separation. The
+same-phase proper crosscuts are pairwise noncrossing and form one complement-dual
+path.
+
+The phase-free path-saturation theorem makes every path region diameter-loaded; the
+diameter-path Helly theorem gives one common routing hub; and all nonhub switching is
+one-sided toward the hub.  If `N_i` is the switching-diameter count at internal path
+boundary `i`, then
+
+$$
+\sum_iN_i\le2|H|\le2\pi D+o(D).
+$$
+
+After deleting the one hub boundary, there remain more than `0.0002D-o(D)` path
+boundaries.  Using `pi<355/113`,
+
+$$
+{2(355/113)\over0.0002}<31416.
+$$
+
+Thus some nonhub strip has integer switching count
+
+$$
+\boxed{N_i\le31415}
+\tag{R59.15}
+$$
+
+for all sufficiently large survivors. Its exact nonzero layer reaction is generated by
+one or two actual switching diameter bars by planar conic Caratheodory.
+
+The continuous endpoint of this particular paired-remainder/physical-branch functional
+is numerically about `1.8659664`, so the present extension uses most but not all of the
+remaining scalar range.  No claim at that numerical root is made.
+
+**Disposition:** proved proof-only extension of the paired-remainder O--O
+path/hub/one-sided-strip normal form through `t<=1.8659`.  C-II and Level I remain
+open.

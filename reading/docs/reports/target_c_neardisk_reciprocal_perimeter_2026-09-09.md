@@ -1,0 +1,275 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_neardisk_reciprocal_perimeter_2026-09-09.md) · source SHA-256 `fc05b8188695feba62908af0741a2eafc9015ea1c4d2b06b6a3b8c351a70e77f`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- theorem-state: {"artifact_id":"ART-3FF7AF8EABE5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+<!-- migration-source: path=docs/reports/target_c_neardisk_reciprocal_perimeter_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=266bb7eac7e2a9b18a7390c7f80afb4b0fe6ec4b; lifecycle=unreviewed; canonical=false -->
+> **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
+
+# Erdős Problem #99 — near-disk force hull forces near-maximal reciprocal perimeter
+
+**Date:** 2026-09-09  
+**Repository base:** PR #115 near-isodiametric stability branch  
+**Run type:** exact reciprocal-geometric consequence  
+**Target:** Target C C-II / near-disk branch  
+**LEVEL I STATUS:** STILL OPEN
+
+The ND theorem puts a near-isodiametric force hull inside a disk of radius
+`D(1/2+eta)`, with
+
+$$
+\eta=\sqrt\xi+\frac{2\xi}{\pi},
+\qquad
+\xi=\frac\pi4-\frac{\operatorname{area}(F)}{D^2}.
+$$
+
+C10's reciprocal force-polygon theorem then immediately forces the reciprocal
+perimeter to its upper endpoint `2D`. This resolves a conditional observation already
+recorded in C10: the ER near-disk branch has asymptotically zero diameter-reaction
+cancellation for **every** normalized KKT stress on the common full-support force
+hull.
+
+## 1. C10 input
+
+For any normalized KKT stress, let `F*` be the reciprocal force polygon and put
+
+$$
+P_*:=\operatorname{per}(F^*).
+$$
+
+C10 proves
+
+$$
+\boxed{
+\frac{D^2}{R(F)}\le P_*\le2D,
+}
+\tag{RP.1}
+$$
+
+where `R(F)` is the minimum circumradius of the force hull.
+
+It also gives the exact cancellation identity
+
+$$
+\boxed{
+2D-P_*
+=
+\sum_{b\in B}
+\left[
+D s_b-|g_b|
+\right],
+}
+\tag{RP.2}
+$$
+
+where
+
+$$
+s_b:=\sum_{bk\in H}\beta_{bk},
+\qquad
+ g_b:=\sum_{bk\in H}\beta_{bk}(b-k).
+$$
+
+Each summand in RP.2 is nonnegative.
+
+## 2. Theorem RP — explicit reciprocal deficit bound
+
+ND gives a containing disk of radius
+
+$$
+D(1/2+\eta).
+$$
+
+Therefore the minimum circumradius obeys
+
+$$
+R(F)\le D(1/2+\eta).
+\tag{RP.3}
+$$
+
+Insert this in RP.1.
+
+### Theorem RP.1
+
+For every normalized KKT stress on the ND force hull,
+
+$$
+\boxed{
+\frac{2D}{1+2\eta}
+\le P_*\le2D.
+}
+\tag{RP.4}
+$$
+
+Consequently
+
+$$
+\boxed{
+0\le2D-P_*
+\le
+\frac{4\eta}{1+2\eta}D
+\le4\eta D.
+}
+\tag{RP.5}
+$$
+
+By RP.2,
+
+$$
+\boxed{
+\sum_b(Ds_b-|g_b|)
+\le4\eta D.
+}
+\tag{RP.6}
+$$
+
+### Corollary RP.2 — ER near-disk branch
+
+If `Z_ext=o(D^2)`, then ER gives `xi->0`, ND gives `eta->0`, and hence
+
+$$
+\boxed{
+P_*=2D-o(D),
+\qquad
+\sum_b(Ds_b-|g_b|)=o(D).
+}
+\tag{RP.7}
+$$
+
+This holds for every normalized KKT certificate for which the force hull is the same
+full C65 hull; in particular it holds for the relative-interior full-support stress.
+
+## 3. Exact local variance identity
+
+The cancellation term can be rewritten without approximation. At one loaded vertex
+`b`, write the incident diameter unit directions
+
+$$
+u_{bk}:=\frac{b-k}{D},
+\qquad |u_{bk}|=1.
+$$
+
+Then
+
+$$
+\frac{g_b}{D}=\sum_{bk}\beta_{bk}u_{bk}.
+$$
+
+Put `s=s_b` and `r=|g_b|/D`. Direct expansion gives
+
+$$
+\boxed{
+s^2-r^2
+=\sum_{\{e,f\}\subset H(b)}
+\beta_e\beta_f|u_e-u_f|^2.
+}
+\tag{RP.8}
+$$
+
+Therefore
+
+$$
+\boxed{
+Ds_b-|g_b|
+=
+D\,
+\frac{
+\sum_{e<f\ni b}\beta_e\beta_f|u_e-u_f|^2
+}{s_b+|g_b|/D}.
+}
+\tag{RP.9}
+$$
+
+This identifies exactly what RP.7 controls: the total weighted angular variance of
+incident diameter reactions.
+
+Since distinct diameter partners are unit separated,
+
+$$
+|u_e-u_f|
+=\frac{|k_e-k_f|}{D}\ge\frac1D.
+$$
+
+Hence, using `s_b+|g_b|/D<=2s_b`,
+
+$$
+\boxed{
+Ds_b-|g_b|
+\ge
+\frac1{2Ds_b}
+\sum_{e<f\ni b}\beta_e\beta_f.
+}
+\tag{RP.10}
+$$
+
+This is exact but too weak by itself to force a matching-weight theorem unless the
+area deficit is controlled at a much faster scale than ER currently supplies.
+
+## 4. Why no matching-weight theorem is claimed
+
+The ND geometry makes all partners of one endpoint nearly antipodal, so the incident
+diameter directions themselves become nearly parallel. Therefore a vertex may carry
+several positive diameter weights with very little triangle-inequality cancellation.
+
+RP.7 does **not** imply that the beta support becomes a matching. The exact upper
+endpoint C10.3 does imply a matching when `P_*=2D` exactly, but stability of equality
+has a scale loss of order the partner angular separation, which can be as small as
+`1/D` by unit separation.
+
+Thus the correct audited conclusion is
+
+```text
+near-disk F
+ -> near-maximal reciprocal perimeter
+ -> vanishing aggregate reaction cancellation,
+```
+
+not
+
+```text
+near-disk F -> beta is close in mass to a matching.
+```
+
+## 5. Interaction with C66
+
+C66 independently says `D epsilon->0` forces beta mass to one diameter star. RP says
+the near-disk branch makes the reactions in that star almost perfectly aligned, so
+there is no contradiction between the two statements. In fact ND explains
+geometrically how the C66 stress-star can evade reciprocal cancellation: all of its
+partners sit near the antipode of the center vertex.
+
+This removes a tempting false closing route. A genuine closure must charge either
+
+1. the many tiny-weight off-star diameter edges forced by ND/ZS; or
+2. the contact topology needed to carry the nearly radial star stress across a force
+   hull that is itself nearly circular.
+
+## 6. Audit classification
+
+| Claim | Status | Reason |
+| --- | --- | --- |
+| RP.4/RP.5 reciprocal bound | proved | ND containing disk + C10. |
+| cancellation tends to zero in ER near-disk branch | proved | RP.2 + eta->0. |
+| exact local variance RP.8/RP.9 | proved | vector expansion. |
+| beta mass approaches a matching | not proved | partner directions may be `O(1/D)` apart. |
+| contradiction with C66 stress-star | rejected | near-antipodal partners make cancellation small. |
+| Level I | still open | Need weight/contact-topology bridge. |
+
+## 7. Compact handoff
+
+```text
+LEVEL I STATUS: STILL OPEN.
+
+ND: F subset B_{D(1/2+eta)}(c), eta=sqrt(xi)+2xi/pi.
+C10: D^2/R(F) <= P_* <= 2D.
+Therefore
+    2D/(1+2eta) <= P_* <= 2D,
+    2D-P_* <= 4eta D.
+Hence ER near-disk branch gives P_*=2D-o(D) and total diameter-reaction
+cancellation o(D).
+
+Exact local identity:
+    s_b^2-|g_b|^2/D^2
+      = sum_{e<f incident b} beta_e beta_f |u_e-u_f|^2.
+This does NOT force beta toward a matching because near-disk geometry also makes the
+incident directions nearly parallel.
+```

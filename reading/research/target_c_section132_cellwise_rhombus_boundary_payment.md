@@ -1,0 +1,254 @@
+> Generated reading edition · [exact source](../../research/target_c_section132_cellwise_rhombus_boundary_payment.md) · source SHA-256 `02c0eca59472dc6777c4f4c9a072c4cc8aaea7f0a83e2bf8f5316fcbb704e953`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "6618a43b0993e4e7170d40299e187f689f619b9f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_section132_cellwise_rhombus_boundary_payment.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "5ef4b70e2de89d537d33f723ce725883abcf671defd2358471c4e6048c2e8c1e"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C — Section 132 candidate: cellwise rhombus boundary versus exact aggregate payment
+
+**Date:** 2026-09-12
+**Base:** canonical Sections 82--83 and strict-rhombus boundary theorem; proof-only Sections 124/125/127
+**Status:** proof-only research candidate; C-II remains open
+
+The global strict-rhombus boundary theorem has previously been applied only to the union of all quadrilateral faces.  In Type II the harmonic decomposition supplies more information: each induced harmonic graph has its own strict-rhombus complex, and the Section-124/127 payment controls the sum of the corresponding outer/exceptional boundaries.
+
+For each unloaded positive-contact component `I_r`, let
+
+- `H_r` be the actual induced harmonic graph on `I_r union A_r`;
+- `R_{4,r}` be the number of bounded quadrilateral faces of `H_r`;
+- `L_r` be its occurrence-counted outer-face walk length;
+- `P_exc,r` be the total boundary degree of its bounded nonquadrilateral faces.
+
+Then the finite local theorem is
+
+$$
+\boxed{
+L_r+P_{{\rm exc},r}\ge4\sqrt{R_{4,r}}.
+}
+\tag{132.1}
+$$
+
+Summing and using the exact Sections-124/127 payment gives
+
+$$
+\boxed{
+4\sum_r\sqrt{R_{4,r}}
+\le
+6(q-k)-4s_C-12,
+\qquad k=d_H+s_Z.
+}
+\tag{132.2}
+$$
+
+Equivalently,
+
+$$
+\boxed{
+3(h-s_Z)-2s_C
+\ge
+2\sum_r\sqrt{R_{4,r}}+6.
+}
+\tag{132.3}
+$$
+
+This is partition-sensitive: splitting a fixed number of rhombi among several macroscopic harmonic cells increases the right-hand side.  It does not assume that local boundary occurrences are globally injective.
+
+---
+
+## 132.1 Local strict-rhombus boundary
+
+Canonical Section 82 proves that every bounded quadrilateral face of `H_r` is a strict unit rhombus.  Let `B_{4,r}` be the number of contact-edge occurrences incident to exactly one such quadrilateral face, counted inside the plane graph `H_r`.
+
+The canonical strict-rhombus boundary theorem applies to an arbitrary finite collection of strict unit rhombi, with holes and disconnected pieces allowed.  Applied to the bounded quadrilateral faces of `H_r`, it gives
+
+$$
+\boxed{B_{4,r}\ge4\sqrt{R_{4,r}}.}
+\tag{132.4}
+$$
+
+Every occurrence counted by `B_{4,r}` has a quadrilateral face on one side and no quadrilateral face on the other.  In the plane graph `H_r`, the other side is either
+
+1. the outer face of `H_r`; or
+2. one bounded nonquadrilateral face of `H_r`.
+
+The outer-face recipients contribute at most `L_r` occurrences.  The bounded nonquadrilateral recipients contribute at most their total boundary degree `P_exc,r`.  Hence
+
+$$
+\boxed{B_{4,r}\le L_r+P_{{\rm exc},r}.}
+\tag{132.5}
+$$
+
+Combining (132.4) and (132.5) proves (132.1).
+
+No disk topology is used.  Bridges and repeated outer-walk vertices are handled because `L_r` is occurrence-counted.
+
+---
+
+## 132.2 Exact global upper payment
+
+Proof-only Section 124 gives
+
+$$
+\sum_r(L_r+P_{{\rm exc},r}-2a_r)
+\le
+10(e_{BB}-k-d_{tile})-6C_A,
+\tag{132.6}
+$$
+
+where `a_r=|A_r|`, `a=sum a_r`, and `C_A=sum c_r` is the summed local loaded-loaded contact count.
+
+Therefore
+
+$$
+\sum_r(L_r+P_{{\rm exc},r})
+\le
+10(e_{BB}-k-d_{tile})-6C_A+2a.
+\tag{132.7}
+$$
+
+The exact attachment-incidence identity is
+
+$$
+a=3q-6-2(e_{BB}-k)-2s_C-d_{tile}.
+\tag{132.8}
+$$
+
+Substitution gives
+
+$$
+\boxed{
+\sum_r(L_r+P_{{\rm exc},r})
+\le
+6(q-k)+6e_{BB}-4s_C-12d_{tile}-6C_A-12.
+}
+\tag{132.9}
+$$
+
+The hostile-audited completion-triangle payment of Section 127 is
+
+$$
+\boxed{e_{BB}-C_A\le2d_{tile}.}
+\tag{132.10}
+$$
+
+Thus
+
+$$
+6e_{BB}-6C_A-12d_{tile}\le0,
+$$
+
+and (132.9) reduces to the exact upper bound
+
+$$
+\boxed{
+\sum_r(L_r+P_{{\rm exc},r})
+\le6(q-k)-4s_C-12.
+}
+\tag{132.11}
+$$
+
+Combining (132.1), summed over `r`, with (132.11) proves (132.2).
+
+Finally `q-k=h-s_Z`, giving (132.3).
+
+---
+
+## 132.3 Coarse Type-II consequence
+
+The strength of (132.3) is its dependence on the distribution of rhombi among cells.  Even without using that distribution, it recovers a finite first-order floor.
+
+Canonical Section 83 shows that every strict rhombus with no loaded vertex belongs to one harmonic component and lies inside its attachment cell.  Only `O(D)` global strict rhombi touch loaded vertices, because loaded positive-contact degree is at most three and `q=O(D)`.  Therefore
+
+$$
+\sum_rR_{4,r}\ge R_4-O(D).
+\tag{132.12}
+$$
+
+In Type II,
+
+$$
+{R_4\over D^2}\longrightarrow
+\Delta_2:={\pi\over2\sqrt3}.
+\tag{132.13}
+$$
+
+Since all `R_{4,r}` are nonnegative,
+
+$$
+\sum_r\sqrt{R_{4,r}}
+\ge
+\sqrt{\sum_rR_{4,r}}.
+$$
+
+Hence
+
+$$
+\boxed{
+\liminf {1\over D}\sum_r\sqrt{R_{4,r}}
+\ge\sqrt{\Delta_2}.
+}
+\tag{132.14}
+$$
+
+Equation (132.3) therefore gives the universal Type-II tradeoff
+
+$$
+\boxed{
+\liminf {3(h-s_Z)-2s_C\over D}
+\ge
+2\sqrt{\Delta_2}
+=1.9046256137\ldots .
+}
+\tag{132.15}
+$$
+
+This is **not** the withdrawn statement `(q-k)/D>=1.9046256...`.  The left side here is `3(q-k)-2s_C`, and the negative pinned-surplus term is essential.
+
+---
+
+## 132.4 Macroscopic partition refinement
+
+Let `\mathcal G_1,...,\mathcal G_t` be disjoint groups of harmonic components.  From nonnegativity,
+
+$$
+\sum_{r\in\mathcal G_j}\sqrt{R_{4,r}}
+\ge
+\sqrt{\sum_{r\in\mathcal G_j}R_{4,r}}.
+\tag{132.16}
+$$
+
+Thus whenever geometry supplies groupwise rhombus-population floors
+
+$$
+\sum_{r\in\mathcal G_j}R_{4,r}
+\ge(\rho_j-o(1))D^2,
+$$
+
+Section 132 immediately upgrades (132.3) to
+
+$$
+\boxed{
+\liminf {3(h-s_Z)-2s_C\over D}
+\ge
+2\sum_{j=1}^t\sqrt{\rho_j}.
+}
+\tag{132.17}
+$$
+
+This is the intended use with the repaired Section-130 complement-gap decomposition: the wrapping cell and distinct gap segments give disjoint macroscopic regions, so their rhombic areas can be charged separately rather than collapsed into the single global square root.
+
+The groupwise area-to-rhombus conversion must be proved for the chosen groups before (132.17) is instantiated.  No such numerical endpoint is asserted in this section.
+
+---
+
+## 132.5 Hostile checks
+
+1. **No global injectivity assumption.**  Equation (132.1) is proved separately in each `H_r`; summing local boundary occurrences is legitimate even if a loaded edge appears in more than one induced graph.  The global upper bound already sums the same local quantities.
+2. **Loaded-touching rhombi.**  The Type-II coarse consequence discards at most `O(D)` such faces and uses only unloaded-only rhombi to connect global `R_4` to the local counts.
+3. **No withdrawn interface theorem.**  The rejected unconditional `q-k>=1.9046256...D` and rejected `0.6676585...` nonmatching floor are not used.
+4. **Proof-only dependencies.**  The sharp global upper (132.11) depends on Sections 124 and 127, and Section 127 depends on the Type-II loaded-side theorem.  Section 132 therefore remains proof-only.
+5. **All source points retained.**  The theorem concerns the positive-contact harmonic decomposition and does not delete or reclassify contact-isolated source points.
+6. **No closure claim.**  The coarse floor (132.15) is feasible.  The value of the theorem is that Section-130-style geometric partitioning can raise its right side by separate square-root charges.
+
+**Theorem state:** unchanged.  C-II remains open.

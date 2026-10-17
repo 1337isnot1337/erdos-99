@@ -1,0 +1,389 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_phase_swap_rhombus_threshold_currency_2026-10-02.md) · source SHA-256 `b6d511effca7b4bf5f0c5832ea137a2310d60f78bc78c7bb32f3c3d16a0e5faa`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- theorem-state: {"artifact_id":"ART-E8F0D7EC4AC2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C-II — phase-swap blockers spend quadratic crossing omissions
+
+**Date:** 2026-10-02  
+**Initial checkout:** `78a65968d51af7871a0ce5a865bf2db1a2c2e0ec`  
+**Research base after refresh:** `fbeae9b3fa18a63e07573676b4e2e512a91ca4d5`  
+**State:** `2026-09-14.audit.51`  
+**Mission:** nonconstant-phase finite swaps; remove all old rhombus-diagonal
+blockers, rather than only the retained product's diagonals.  
+**Classification:** proved candidate awaiting independent audit; conditional
+source application; exact regression. Artifact lifecycle remains unreviewed.  
+**LEVEL I STATUS: STILL OPEN. C-II REMAINS OPEN.**
+
+```text
+phase-gap blocker injection -> quadratic omissions in actual train crossings
+-> an all-rhombus-safe inverse-square-size finite contact swap under a small
+omission hypothesis -> active TWO-SIGN support or a non-rhombus inactive pair
+-> still requires a source-level elimination of those two alternatives.
+```
+
+## 1. Authority and dependencies
+
+Canonical geometry: [shared Lemma 10.1](../theory/01-local-structure.md), each
+bounded contact four-face is a strict unit rhombus, and [Section 74](../targets/target-c/74-complete-grid-phase-collapse-audit.md),
+complete phase-pure shores have one strict phase order. The mathematical results
+below require only the strict-rhombus angular criterion, not the asymptotic
+extraction or a global phase potential for other trains.
+
+The finite source application is conditional on the proof-only exact global
+O–O cutset and laminar layer model audited in
+[the exact multishear audit](../../research/target_c_global_outer_train_exact_multishear_hostile_audit_2026-09-15.md),
+the [arbitrary block transposition](target_c_open_cell_block_transposition_2026-10-01.md),
+and its open diameter witness cell. It uses canonical full-support KKT and
+contact-/diameter-pair-minimal normalization. No assertion that these unpromoted
+extraction results are canonical is made. No source point, including a contact
+isolate, is removed.
+
+No literature import is used. The new geometric proof is elementary. Computation
+is an exact regression and finite audit, not a global-optimality certificate.
+
+## 2. Precise setup
+
+Put `L=pi/3`. Let `A={a_1,...,a_r}` be distinct actual stopped trains with
+pairwise distinct projective contact directions. Their real lifts satisfy
+
+$$
+x_1<\cdots<x_r,\qquad W=x_r-x_1<L.
+\tag{2.1}
+$$
+
+They are internally noncrossing. Choose one representative for each distinct
+phase if the original shore has repeats. Every `A` train crosses every train
+of a nonempty internally noncrossing shore `B` in an actual strict rhombus.
+Here indices are **phase order**, not complement-dual path order.
+
+An external train means an actual stopped train outside `A union B`. An
+actual crossing is a bounded strict rhombus of the original source. A pair
+of trains with no such crossing is a crossing omission; it need not have
+disjoint centerlines in another artificially extended drawing.
+
+For `1<=i<r`, exchange the directions on `a_i,a_{i+1}`, leaving every other
+contact train direction fixed. A gap is **rhombus-blocked** if a diagonal of
+some old bounded four-face becomes length at most one under this exchange.
+Equality counts as blocked: it can create an exact unit triangle or add contacts.
+Let `G` be the blocked-gap set and `k=|G|`.
+
+When the global O–O cutset hypotheses hold, this direction exchange is exactly
+the source-preserving slab translation between these two trains, even if they
+are far apart in path order. Its amplitude is
+
+$$
+s_i=2\sin((x_{i+1}-x_i)/2)\le x_{i+1}-x_i.
+\tag{2.2}
+$$
+
+The following assertions concern only the old rhombus diagonal constraints.
+They do not assert feasibility of every source pair after the move.
+
+## 3. One external direction can block only one phase gap
+
+**Theorem 3.1.** For every `i in G`, one can choose an external train `c_i`
+whose crossing with one of `a_i,a_{i+1}` supplies the blocked diagonal. The
+chosen trains are all distinct. Train `c_i` has no strict-rhombus crossing
+with any train of `B`, and it omits crossings with at least
+
+$$
+w_i:=\min(i,r-i)
+\tag{3.1}
+$$
+
+trains of `A`.
+
+**Proof.** A unit parallelogram with side directions `x,y` has diagonal
+squares `2+2cos(x-y)` and `2-2cos(x-y)`. Both exceed one exactly when
+
+$$
+|\cos(x-y)|<1/2.
+\tag{3.2}
+$$
+
+On the projective direction circle, for fixed `y` the admissible directions
+are the open arc `(y-2L,y-L)` modulo `3L`. It has length `L`. On the real
+window `[x_1,x_r]` of length less than `L`, its intersection is an interval
+and at most one of its boundary directions can lie in the window. This
+last assertion also follows directly: the two arc boundaries are projectively
+distance `L` apart, and the window is shorter than `L`.
+
+Consequently, if a fixed external train changes an old strict crossing into
+a diagonal of length at most one, its admissible portion of this window is
+either `x<t` or `x>t`. For the gap `i`:
+
+* In the upper-bound case, `x_i<t<=x_{i+1}`. Only `a_i` can be the old
+  crossing. Every `a_j` with `j>=i+1` has an inadmissible direction and hence
+  cannot cross this external train in an old strict rhombus.
+* In the lower-bound case, `x_i<=t<x_{i+1}`. Only `a_{i+1}` can be the old
+  crossing. Every `a_j` with `j<=i` is inadmissible.
+
+Each fixed boundary and side belongs to exactly one of these half-open
+phase gaps. Thus one external train cannot block two gaps, including the
+case that a boundary equals an existing phase. The count (3.1) follows.
+
+No member of `A` can be the other side of an old rhombus, by internal
+noncrossing. A member of `B` cannot block: both swapped directions already
+cross that same `B` train in old strict rhombi. Therefore the blocker is
+external.
+
+For completeness, lift every direction of `B` to the common admissible
+interval
+
+$$
+x_r+L<y_b<x_1+2L.
+\tag{3.3}
+$$
+
+This interval exists because `W<L`. In the upper-bound case lift the
+external direction as `y_c=t+L`. Then
+
+$$
+0<y_b-y_c<L+x_1-t\le L.
+$$
+
+In the lower-bound case lift it as `y_c=t+2L`. Then
+
+$$
+0<y_c-y_b<L+t-x_r\le L.
+$$
+
+The inequalities with `L` are strict even at an endpoint, because (3.3) is
+strict. Thus the external/B projective angle is less than `L`; (3.2) fails.
+They cannot cross in a strict rhombus. This proves the theorem. `square`
+
+No global three-label chart was assumed for `c_i`. The argument uses its
+actual Euclidean projective direction.
+
+## 4. Quadratic crossing-omission currency
+
+Let `C_G={c_i:i in G}` be any choices from Theorem 3.1. Count omissions only
+between `A` and these distinct actual trains:
+
+$$
+M_A(C_G)=|\{(a,c)\in A\times C_G:a,c
+\text{ have no old strict-rhombus crossing}\}|.
+$$
+
+**Theorem 4.1.**
+
+$$
+M_A(C_G)\ge\sum_{i\in G}\min(i,r-i)
+\ge\left\lfloor{(k+1)^2\over4}\right\rfloor,
+\qquad M_B(C_G)=|B|k.
+\tag{4.1}
+$$
+
+In particular, if every phase-consecutive swap is rhombus-blocked, then
+
+$$
+M_A(C_G)\ge\lfloor r^2/4\rfloor.
+\tag{4.2}
+$$
+
+**Proof.** The external trains are distinct, so the missing pairs paid by
+different gap witnesses are distinct. This proves the first inequality and
+the `B` identity. The gap weights in increasing order are
+`1,1,2,2,...`, with a single middle weight when required. The sum of the
+`k` smallest weights is `floor((k+1)^2/4)`. Any `k`-element subset has at
+least that sum. Setting `k=r-1` gives (4.2). `square`
+
+This is a count of **actual crossing omissions**. It is not automatically
+the Mantel deficit `T^2/4-R_4`: same-part nonedges in a bipartite crossing
+graph are expected. Applying (4.1) to a Mantel-stable branch requires a
+proved allocation of these blocker trains to the opposite part, with the
+allocation errors paid. That step is not inferred here.
+
+## 5. Safe inverse-square-amplitude swap under an explicit hypothesis
+
+Suppose a number `M` bounds `M_A(C_G)` for the chosen witnesses (for example,
+a proved bound on all `A`/external crossing omissions). Then
+
+$$
+k<2\sqrt{M+1},\qquad
+q:=r-1-k>r-1-2\sqrt{M+1}.
+\tag{5.1}
+$$
+
+If `q>0`, at least `q` phase-consecutive swaps preserve both diagonals of
+**every old bounded four-face** strictly above one. Since the sum of all
+phase gaps is `W`, at least one safe swap has
+
+$$
+s\le W/q.
+\tag{5.2}
+$$
+
+**Proof.** From `floor((k+1)^2/4)<=M` we get `(k+1)^2/4<M+1`, which implies
+the slightly weaker displayed bound. The `q` safe gaps have total width at
+most `W`, so one has width at most `W/q`. Old four-faces unaffected by the
+two cutsets are translated rigidly. A face on a changed cut has the new
+unit side direction just considered in Theorem 3.1. Every such face is
+covered by the definition of a safe gap. The two old selected trains do
+not cross each other. Therefore all old four-face diagonals are safe,
+not only diagonals in the retained `A x B` product. `square`
+
+In particular, if `r>=gamma D`, `W<=4K/D`, and `M=o(D^2)`, then there
+are `r-o(D)` safe phase gaps and some safe swap satisfies
+
+$$
+s\le{4K\over(\gamma-o(1))D^2}.
+\tag{5.3}
+$$
+
+Under the open witness-cell hypotheses, the proof-only arbitrary block
+transposition theorem applies at this exact amplitude. It gives an actual
+TWO-SIGN moving-diameter response, or a previously strict pair within `s`
+of contact/diameter activity. In the latter case that pair is **not a
+diagonal of any old bounded four-face**. Old four-face diagonals are also
+less than two at the endpoint, so cannot be upper blockers for `D>2`.
+
+This improves the conditional fork from protection of retained rhombi
+and inverse-`D` amplitude to protection of all old rhombi and inverse-square
+amplitude. It is not an unconditional branch exclusion: (5.3) needs its
+actual crossing-omission bound, and non-rhombus/active blockers survive.
+
+### 5.1 Arbitrary rhombus-safe phase permutations reduce to a safe exchange
+
+For each selected train `a_i`, intersect the open admissible arcs of every
+old rhombus it crosses with the phase window. This gives an interval `I_i`
+containing `x_i`. If it crosses no rhombus, use the whole window. Define
+
+$$
+J_i=\{j:x_j\in I_i\}.
+$$
+
+Each `J_i` is a consecutive interval of phase ranks containing `i`.
+Because selected trains do not cross each other, a permutation `pi` of
+their directions preserves both diagonals of every old rhombus above one
+if and only if `pi(i) in J_i` for every `i`.
+
+**Theorem 5.2.** A nonidentity admissible permutation exists if and only if
+there are two distinct ranks `i,j` with `j in J_i` and `i in J_j`. Thus
+searching arbitrary rhombus-safe permutations cannot succeed unless some
+single two-train exchange is already rhombus-safe.
+
+**Proof.** The reverse implication is the exchange itself. For the forward
+implication, draw a directed arc `i->j` when `j in J_i`. A nonidentity
+permutation contains a directed cycle of length at least two. Choose a
+shortest such cycle. If its length exceeds two, let `m` be its largest
+rank, and let `p,m,n` be the predecessor, maximum and successor on this
+cycle. Both `p,n<m` and `p!=n`.
+
+If `p>n`, the interval `J_m` contains `n,m`, hence contains `p`. Together
+with `p->m` this gives a directed two-cycle. If `p<n`, the interval `J_p`
+contains `p,m`, hence contains `n`. The arc `p->n` bypasses `m` and gives
+a shorter nontrivial directed cycle. Both alternatives contradict the
+chosen cycle. It must have length two. `square`
+
+This theorem reduces the lower-bound part of the full finite permutation
+orbit to a pair test. It does not reduce the simultaneous upper-diameter
+constraints to pair tests: those couple translations at different layers.
+
+**Rejected stronger statement.** Absence of safe *phase-consecutive*
+exchanges does not imply that the identity is the only admissible
+permutation. The exact rank intervals
+
+$$
+J_1=\{1,2,3\},\quad J_2=\{2\},\quad J_3=\{1,2,3\}
+$$
+
+block both consecutive exchanges but permit exchange `1<->3`. The
+quadratic bound in Section 4 is a necessary price for consecutive blocking,
+not a sufficient criterion for permutation rigidity. The verifier checks
+Theorem 5.2 on every interval packet through five phases and preserves this
+false-lock regression.
+
+## 6. Exact source regression: a complete retained grid can still be blocked
+
+Let `M>=20`, `theta=2 arctan(1/M)`, and let `R` denote rotation through
+`theta`, with rational matrix entries
+
+$$
+\cos\theta={M^2-1\over M^2+1},\qquad
+\sin\theta={2M\over M^2+1}.
+$$
+
+Put
+
+$$
+a=(1,0),\quad b=R^2a,\quad
+v=R(1/2,\sqrt3/2),\quad w=R^3(1/2,\sqrt3/2).
+$$
+
+Take the eight points
+
+$$
+0,a,a+b,w,a+w,a+b+w,-v,a-v,
+\tag{6.1}
+$$
+
+and, to realize an arbitrarily large full-source diameter, the ninth point
+`z=(-M,-M)`. The three bounded contact four-faces are the two retained
+`a,w` and `b,w` cells, and the attached external `a,v` cell. All source
+pairs are unit-separated and the contact graph is triangle-free, as
+checked exactly for the registered parameter values. All coordinates lie
+in `Q(sqrt(3))`.
+
+Translate precisely `a,a+w,a-v` by `b-a`. Every old unit contact remains
+unit. The two retained cells exchange shapes, but the external cell's
+short diagonal becomes `b-v`, with
+
+$$
+|b-v|^2=2-2\cos(L-\theta)<1.
+\tag{6.2}
+$$
+
+Originally `|a-v|^2=2-2cos(L+theta)>1`. The retained crossing angles are
+`L+3theta` and `L+theta`, so both are strict and remain so after exchange.
+The external direction has its upper boundary `t=theta` between the two
+selected phase values `0,2theta`, and does not cross `w`. Thus the one
+blocked phase gap spends exactly the one witness predicted by Theorem 3.1.
+
+The finite verifier checks all 36 pairs, all 10 contacts, all three old
+rhombus diagonal pairs, and triangle-freeness. Parameters tend to infinity
+in the formula; the executed exact checks use `M=20,40,100,1000,10000`.
+They are certificates for those finite packets, not a claimed exhaustive
+proof of the entire parameter ray. The decisive angular overlap (6.2)
+holds symbolically for the displayed range.
+
+This rejects automatic **all-rhombus** immunity from complete retained
+crossings. It does not reject the current local-immunity theorem. The
+far point is contact-isolated and diameter-loaded; full positive KKT and
+canonical global-minimizer hypotheses are absent. It is not a Level I
+counterexample. Isolates are included in every pair check, not discarded.
+
+## 7. Computation and hostile checks
+
+Run [the exact verifier](../../../docs/research/migration/2026-10-16/shards/04/evidence/research/verify_phase_swap_rhombus_threshold_currency_2026_10_02.py).
+It uses `Fraction` arithmetic in `Q(sqrt(3))`, exact sign tests, all-pair
+source checks, and exhaustive finite interval packets. Interval packets
+encode admissible directions and actual crossing choices abstractly;
+they do not certify source realizability, KKT, or global optimality.
+
+Binding checks: phase order is not path order; equality at a threshold is
+assigned to only one half-open gap; an external train has only one
+effective boundary in a window shorter than `L`; complete retained
+crossings are not a full additive vertex chart; omissions are not silently
+identified with Mantel deficit; contacts preserved at the finite endpoint
+do not imply feasible intermediate interpolation; inactive near-contact
+pairs do not receive an asserted KKT multiplier.
+
+## 8. Exact remaining obstruction and promotion recommendation
+
+No canonical state change is requested. The strongest new theorem is the
+phase-gap injection and quadratic omission inequality (4.1). The source
+application remains conditional on the O–O/extraction chain and on the
+explicit omission bound. No claim that the exact-phase, split-star,
+inactive-interface, macroscopic-container, or higher-defect full-core
+branches are excluded is made.
+
+The next source obligation is to prove a small **cross-part** omission
+budget for the actual external threshold trains, or pay their quadratic
+omissions in the current defect ledger. Even after that, a safe swap can
+meet TWO-SIGN diameters or a non-rhombus strict pair; a strict competitor
+requires eliminating those constraints with a full-source argument.
+
+**Recommendation:** preserve as unreviewed proof candidate plus regression;
+audit before promotion. Read the arbitrary block-transposition theorem,
+this proof, and the registered exact verifier before using the new bound.

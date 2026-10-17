@@ -1,0 +1,135 @@
+> Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_selected_pair_support_reimplementation_2026-09-28.md) · source SHA-256 `ebf3fbc6223fbfa4233e26f52f5bc5c6f8fd5cfda41361891963e4271aa1c941`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "6cb132fed82a59dc12fbeb37ca15bb7d278831a9", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_selected_pair_support_reimplementation_2026-09-28.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "cc829d242912dadb82558a1d5038dbfe8d2739968ab2e899ba859f20df67bdb2"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: repository-audited selected-pair support narrowing
+
+Date: 2026-09-28
+
+Status: exact, executed, fail-closed support-level certificate for the nine-no-root
+`k=4, D=-1, d_root=0, p=2` selected-pair profile. It replaces the source-persistence
+gap recorded in `target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_selected_pair_support_audit_2026-09-28.md`.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_selected_pair_support_reimplementation_2026_09_28.cpp`
+
+Executed verifier blob:
+
+`af06b37d42eb417357f9f7e7eac40092c46db7ae`
+
+## Sound relaxation
+
+Let `P` be the five-dimensional external coefficient space. The committed reduction gives
+
+`(d1,d2,d3,d4,d5)(P) >= (2,4,5,7,8)`.
+
+For a touched block `b`, let `I_b` be the set of the nine no-root occurrences
+whose tetrahedral support contains `b`.
+
+The verifier uses only local-rank implications that are valid without the false
+converse "nonrepeated containing support implies rank one":
+
+- if some containing tetrahedral support repeats, the local empty-block space has
+  rank two; `d2>=4` then forces `|I_b|>=4`;
+- if no containing support repeats and `|I_b|<2`, the block cannot be empty by
+  `d1>=2`;
+- if no containing support repeats and `|I_b|=2` or `3`, a rank-two local
+  space is impossible by `d2>=4`, so only rank one is allowed;
+- if no containing support repeats and `|I_b|>=4`, both ranks one and two are
+  allowed.
+
+Thus every actual empty block receives at least one rank option searched by the
+verifier.
+
+For two candidate local spaces with occurrence sets `I,J`, the pairwise filters
+are exactly necessary consequences of the generalized weights:
+
+- line-line: `|I∩J|>=2` or `|I∪J|>=4`;
+- plane-line: `|I∩J|>=2` or `|I∪J|>=5`;
+- plane-plane: `|I∩J|>=4`, or
+  `|I∩J|>=2 and |I∪J|>=5`, or `|I∪J|>=7`.
+
+These alternatives correspond to intersection dimension two, one, or zero as
+appropriate. They are necessary only; the search does not assert they are
+sufficient.
+
+The selected pair contributes no external coefficient constraint. Hence the
+actual empty-block spaces generate `P`. The verifier therefore requires only
+the necessary relaxed conditions that the sum of nominal local dimensions is at
+least five and that the union of the occurrence sets has size at least eight
+(the latter follows from `d5(P)>=8`).
+
+## Structural conditions
+
+Let `T` be the touched block set, `C` the touched complete blocks, and `e`
+the number of touched actual-empty blocks. Since `d_root=0`, the triangle rows
+of every actual complete family are independent. The four external relation
+directions also give
+
+`rank H(T) - rank H(C) >= 4`.
+
+Because `rank H(T)<=15`, every actual state has `|C|<=11`. Therefore
+
+- if the selected pair is untouched, `e>=|T|-11`;
+- if it is touched, `e>=|T|-12`.
+
+The nine no-root cycles contribute 36 cycle-block incidences. Every actual empty
+block has at least two incidences, so the touched-pair case gives
+`36 >= |T|+e >= 2|T|-12`, hence `|T|<=24`.
+
+For each relaxed empty family the verifier tests both an untouched selected pair
+and every possible touched selected-pair placement. It keeps only states whose
+virtual complete set is independent and whose face-local rank gap is at least
+four. These tests are again necessary conditions.
+
+## Exact support enumeration
+
+A no-root four-cycle has one of 35 tetrahedral supports on seven labels, and a
+fixed support has at most three orientations. The verifier independently checks
+the Burnside orbit counts
+
+`1, 1, 4, 14, 61, 268, 1283, 6032, 27763, 121458`
+
+for support-multiset sizes zero through nine and separately constructs the
+orbits by canonical augmentation.
+
+The executed census is:
+
+- size-nine support orbits: `121458`;
+- support orbits with `|T|<=24`: `103247`;
+- raw legal size-nine extensions: `966977`;
+- raw legal extensions with `|T|<=24`: `802570`;
+- relaxed rank-labelled empty-family states reaching the final gate: `14480`;
+- selected-pair placements tested at that gate: `168944`;
+- support-orbit survivors: `2`.
+
+The two canonical survivors are exactly
+
+1. `[0123]^3 [0124]^3 [0134] [0234] [1234]`;
+2. `[0123]^3 [0124] [0134] [0145] [0234] [0245] [1234]`.
+
+The internal `14480` counter is specific to this independent reimplementation
+and is not used to validate the earlier non-persisted verifier's internal
+`8957` counter. The theorem-level enumeration agrees on the exhaustive
+`121458` and `103247` orbit counts and on the exact two surviving canonical
+support orbits.
+
+## Exactness of triangle-row ranks
+
+Triangle-row ranks are computed modulo `2^31-1`. The verifier runs the
+Lucas-Lehmer test for this Mersenne prime. Every triangle row has squared norm
+three and relevant rank at most fifteen, so Hadamard gives
+`|det|^2<=3^15`. Since `(2^31-1)^2>3^15`, reduction modulo the prime cannot
+annihilate a nonzero integer minor. The modular ranks therefore equal the
+rational ranks.
+
+## Result
+
+Every realizable selected-pair state lies in the searched relaxation. The
+support stage leaves only the two support orbits above. They are eliminated by
+the exact rational orientation certificate in
+`target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_selected_pair_orientation_2026-09-28.md`.

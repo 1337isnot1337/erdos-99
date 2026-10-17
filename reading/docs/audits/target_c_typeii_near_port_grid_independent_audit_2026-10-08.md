@@ -1,0 +1,78 @@
+> Generated reading edition · [exact source](../../../docs/audits/target_c_typeii_near_port_grid_independent_audit_2026-10-08.md) · source SHA-256 `fadcc0c94b45b218f5b033e40aa74f107c8f41e83da19458e15ba69e4a2b5426`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- theorem-state: {"artifact_id":"ART-3D57C98678D9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C Audit.136 — Type-II near-port grid and face-tail alternative
+
+Date: 2026-10-08  
+Audit base: `origin/main=c2856c7bd7898cfe40dc136bacceaca056c92fea`, state `2026-10-08.audit.134`  
+Source snapshot: open PR #668, branch `research/sol-c2-deep-port-route-20261004` at `a2ccd6161519c7d27482a7c6e751cd44e595e1b6`  
+Source report SHA-256: `bf0ae00a71c86ac895059c6c5b9edff9fb2b27ccab4d6a62bd18efbce191b018`  
+Source verifier SHA-256: `21367e572ced2b7967731ed817763717d21f7472778dd8f3f04709d217d861cc`
+
+## Audit boundary
+
+Audit.134 independently promoted the source report's finite fixed-port route theorem and its bounded-face-degree refinement. This audit covers only source Theorem 4 and Corollary 5 in Section 5. It does not audit the extraction of the host-cap package from the predecessor reports, the macroscopic-cap antecedent, or a finite source move. Sections 3 and 3b remain governed by Audit.134; source regressions already subsumed by canonical regressions are not reopened here.
+
+## Exact conditional statement audited
+
+Work along a selected canonical post-ZF C-II sequence in the Type-II branch of `C-FULLCORE-NEAR-DISK`, with all source points retained. Fix a coherent phase width `epsilon` in `(0,pi/6)`. Assume there is one harmonic cell `P=conv(A)` with unloaded positive-contact component `I`, a convex cap `C_cap` above a host chord, and a finite union `G_cap` of strict source unit-rhombus faces such that, for one fixed `alpha>0` along the sequence:
+
+- `G_cap` has area at least `alpha D^2`, its rhombi belong to `I`, and `G_cap` lies in `int(C_cap) intersect P`;
+- `a in A` is an actual loaded attachment on the designated host arc and has signed height `eta(a)>=alpha D` above the chord;
+- `eta>=0` on `C_cap`, and the cap and its rhombi lie in the full source force hull.
+
+Then, for each fixed `rho` with `0<rho<min(1,alpha/2)`, and all sufficiently large members of this same sequence, `I` contains an epsilon-coherent strict-rhombus subgrain with `Omega_{alpha,rho,epsilon}(D^2)` area. It contains a complete train grid with both shores of size `Omega_{alpha,rho,epsilon}(D)`. Every grid point is in `closed_ball(a,rho D) intersect int(P) intersect conv({a} union C_cap)` and has positive height above the host chord.
+
+The fixed-radius quantifier is essential: the theorem does not give grid shores with fixed positive linear constants when `rho=rho_D` tends to zero.
+
+For the alternative below, let `T_M` be the one global degree tail from Audit.134: the sum of `(d(f)-4)` over bounded faces of degree greater than the fixed integer `M>=5` in all canonical augmented harmonic cells. It obeys `T_M<=2(e_BB-k)` by `C-AUGMENTED-CELL-DEFECT-BUDGET`.
+
+1. If `lim_{M->infinity} limsup_{D->infinity} T_M/D=0`, then for every fixed `lambda>0` there are fixed `M` and `rho>0` such that eventually the attachment `a` reaches a vertex of the extracted near-port grid by an actual contact path in `I` of length `<lambda D`; both grid shores remain linear in `D` with constants depending on `alpha`, `epsilon`, and `lambda`.
+2. Conversely, if for some fixed `lambda>0` and every fixed sufficiently small `rho>0` the grid supplied at that radius has a vertex whose every actual contact path from `a` in `I` has length at least `lambda D`, then for every fixed `M>=5`, `liminf_{D->infinity} T_M/D>=lambda/10`.
+
+Neither statement asserts that the cap package or the uniform tail hypothesis holds for canonical sources. The reverse direction concerns one extracted grid at each fixed radius and gives no multiplicity bound for several routes.
+
+## Independent reconstruction
+
+For `K=conv(G_cap)` and `K_rho=a+rho(K-a)`, the source cap premises and convexity give `K subset int(P) intersect C_cap`. Canonical harmonic trapping is strict here: a supporting functional attaining its maximum at an unloaded vertex would, by the positive harmonic maximum principle, attain the same value at every attachment, contrary to the noncollinear extreme attachment set. Thus the rhombus faces and their convex hull lie in `int(P)`. Also `a,K subset P`, and `K subset C_cap`, so
+
+`K_rho subset P intersect conv({a} union C_cap)`.
+
+Because `a` and every point of `K` lie in the convex hull of source points of diameter `D`, `K_rho subset closed_ball(a,rho D)`. Homothety gives `area(K_rho)=rho^2 area(K)>=alpha rho^2 D^2`. The 1-Lipschitz signed height gives `eta(x)>=eta(a)-rho D>(alpha/2)D` throughout `K_rho`.
+
+In the canonical Type-II branch, `C-FULLCORE-NEAR-DISK` and `C-COHERENT-GRAINS` give an `o(D^2)` area deficit between the force hull and the union of fixed-epsilon coherent rhombi, with total grain perimeter `O_epsilon(D)`. Since `K_rho` is a subset of the force hull, this global deficit also bounds the missing area in the moving set `K_rho`; it leaves at least `alpha rho^2 D^2-o(D^2)` coherent rhombus area there.
+
+Every strict source rhombus has area at least `sqrt(3)/2`, has diameter less than two, and has disjoint interior from every other contact face. A rhombus meeting `partial K_rho` is contained in its width-two boundary tube. The perimeter of the convex set `K_rho` is at most `pi rho D`, so the tube has area `O(D)` and only `O(D)` rhombi meet that boundary. Removing those rhombi loses `O(D)` area and exposes at most four unit sides per removed face. The surviving pieces therefore still have quadratic area and total perimeter `O_epsilon(D)`.
+
+For the edge-connected surviving pieces with areas `A_j` and perimeters `P_j`, planar isoperimetry gives `sum_j sqrt(A_j)<=sum_j P_j/(2 sqrt(pi))=O_epsilon(D)`. Since `sum_j A_j>=c_{alpha,rho,epsilon}D^2` and `sum_j A_j<=sqrt(max_j A_j) sum_j sqrt(A_j)`, one piece has area `Omega_{alpha,rho,epsilon}(D^2)`. It remains a subcomplex of one epsilon-coherent grain, with holes allowed and perimeter `O_epsilon(D)`. The hypotheses used in the Section-73 pseudosegment proof are inherited by this subgrain: local trains are pseudosegments, rhombi are exactly their crossing pairs, the train-crossing graph is triangle-free, and each train retains its parent's phase label. Applying that proof gives two internally noncrossing distinct-phase shores, each linear in `D`.
+
+Every grid rhombus lies inside `int(P)`, hence has no loaded vertex: loaded force-hull points are extreme and none other than the attachments lie in `P`. Its actual contact edges put its vertices in one unloaded component `I'`. Harmonic trapping puts the rhombus in `P_{I'}`. If `I'!=I`, the positive-area rhombus interior lies in both `int(P)` and `int(P_{I'})`, contradicting canonical `C-HARMONIC-CELL-TILING`. Thus the grid is in the specified same component `I`. This uses actual source contacts and does not assign coordinates to or delete contact-isolated points.
+
+For the forward tail implication, first choose fixed `M` so `5T_M/D<lambda/4` eventually, then choose fixed `rho<min(1,alpha/2,lambda/(4K_M))`. Audit.134 gives a route of length at most `K_M rho D+B_M+5T_M<lambda D` for sufficiently large `D`. The fixed `rho` leaves the linear grid-shore constants intact.
+
+For the converse, fix `M` and then `rho<min(1,alpha/2,lambda/(2K_M))`. Theorem 4 supplies a grid and the assumed obstruction supplies a route lower bound `lambda D`. Combining this with Audit.134's upper bound `K_M rho D+B_M+5T_M` gives `T_M >= (lambda-K_M rho)D/5-B_M/5`; division by `D` and `K_M rho<lambda/2` yields the claimed `lambda/10` liminf.
+
+## Adversarial scope checks
+
+- A moving cap does not require a local density theorem: the canonical global Type-II deficit `o(D^2)` controls every subset of the force hull, including `K_rho` chosen from the current source.
+- A long, thin cap still has `O(D)` boundary tube area because its convex perimeter is bounded by `pi D`; no aspect-ratio lower bound is used.
+- Boundary trimming cannot destroy the phase frame: every surviving component is a subcomplex of one parent epsilon-coherent grain. Train pieces split by trimming inherit the parent's phase labels; no train is rejoined across a deleted face.
+- The same-cell conclusion uses the canonical interior-disjointness theorem for distinct harmonic attachment cells, not only local geometric overlap.
+- The proof constructs no competitor and makes no claim about global optimality beyond the selected canonical sequence. The cap geometry is an explicit premise; the predecessor's macroscopic-cap and attachment-depth extraction is not audited here.
+- The uniform-tail premise is not implied by `T_M<=2(e_BB-k)`: that bound permits a linear tail. Audit.123's positive pinned face-tail example is a nonglobal pin-only regression and does not refute this loaded canonical statement.
+- The source report's diagonal choice `rho_D->0` is not used to preserve a linear grid; only fixed `rho` is promoted.
+
+## Verifier audit
+
+I inspected the exact-snapshot `Fraction` verifier and reran it at the source commit. It checks exact source spacing, contact graphs, triangle absence, positive equilibria, augmented-face fixtures, rational rhombus boundary detours, oblique-lattice contact geometry, and the thin-face regression. It passed 14 harmonic-fixture augmented faces, 111 rational rhombi / 13,320 boundary pairs, 17,736 lattice source-pair checks, and 3,164 thin-face source-pair checks. It verifies finite fixtures and exact arithmetic only; it does not encode the Type-II area deficit, moving-cap localization, isoperimetric extraction, or the universal Section-5 implications. No certificate is registered for these new claims.
+
+## Verdict and disposition
+
+- **PASS WITH EXPLICIT CONDITIONAL SCOPE:** the near-port grid implication is valid when the stated same-cell cap package and canonical Type-II density hypotheses hold. The unproved extraction of that package from arbitrary canonical sources is not promoted.
+- **CONDITIONAL ONLY:** the uniform-tail short-access implication and its fixed-radius obstruction converse follow from the near-port grid theorem and the canonical Audit.134 route budget. The uniform-tail condition is unproved; a persistent obstruction is compatible with the canonical linear face-defect allowance.
+- **No C-II frontier closure:** the result supplies no contact-changing move, strict sub-`D` competitor, triangle, or Level I conclusion. The current finite-move/payment obligation and active continuation prompt remain unchanged.
+
+The two results are recorded under `target-c.audited_working` with status `audited-working` and explicit conditional scopes; canonical arguments may not depend on them. PR #668 remains open because the host-cap package extraction itself and its strong-branch application are not audited here.
+
+Local validation and the protected PR transaction are recorded in Audit cycle 136 of the administrative source review log (excluded; its target proof/audit is retained).

@@ -1,0 +1,446 @@
+> Generated reading edition · [exact source](../../research/target_c_high_t_pentagon_rhombus_dichotomy_2026-09-15.md) · source SHA-256 `1c5d0d928cf1b53762c5d2395d7ad256af182cde670495256b38702789871013`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "5d26e449d010b4af5aba0479c898ea4b593a06eb", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_pentagon_rhombus_dichotomy_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "15c31612e596d8e099f5776256199cab880a3699c69fbbf3a0d358e6af1a764f"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — modern train slack forces either large recipient waste or a rhombus-coupled pentagon/Mantel branch
+
+**Date:** 2026-09-15  
+**Status:** proof-only high-`t` structural strengthening  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch; pentagon-incidence staircase stated through `t=(q-k)/D<=1.860`  
+**Dependencies:** hostile-audited modern chamber/train-slack theorem; exact recipient-waste/train-isoperimetric split; high-`t` pentagon face floor  
+**Certificate:** `research/verify_target_c_high_t_pentagon_rhombus_dichotomy.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The modern high-`t` theorem gives the safe train-slack floor
+
+$$
+\boxed{
+\liminf {\tau_D\over D}\ge0.7467921.
+}
+\tag{PRD.1}
+$$
+
+The hostile audit explicitly checks that this is the same canonical slack as the older
+exact two-currency decomposition
+
+$$
+\boxed{2\tau_D=\rho_D+\sigma_D,}
+\tag{PRD.2}
+$$
+
+where
+
+$$
+\rho_D:=b+4f+Q-B_4\ge0
+\tag{PRD.3}
+$$
+
+is unused outer/nonquadrilateral **recipient capacity** for boundary occurrences of the
+strict-rhombus complex, while
+
+$$
+\sigma_D:=B_4-4\sqrt{R_4}\ge0
+\tag{PRD.4}
+$$
+
+is strict-rhombus train-isoperimetric slack.
+
+Put
+
+$$
+\tau_0:=0.7467921.
+$$
+
+Then every remaining full-core survivor has, after passage to a subsequence, one of
+two explicit branches:
+
+### RW — large recipient waste
+
+$$
+\boxed{
+\rho_D\ge(\tau_0-o(1))D.
+}
+\tag{PRD.5}
+$$
+
+### RP — rhombus-coupled pentagons plus large Mantel deficit
+
+$$
+\boxed{
+\rho_D<(\tau_0+o(1))D,
+\qquad
+\sigma_D>(\tau_0-o(1))D,
+}
+\tag{PRD.6}
+$$
+
+and the stopped strict-rhombus train-crossing graph has Mantel deficit
+
+$$
+\boxed{
+M_D:={T_R^2\over4}-R_4
+>(0.390-o(1))D^2.
+}
+\tag{PRD.7}
+$$
+
+Here `T_R=B_4/2` is the stopped **strict-rhombus** train count used in the older exact
+split.  No identification with a differently normalized all-train count is needed in
+(PRD.7).
+
+Moreover, in branch RP, the high-`t` pentagon population cannot hide behind unused
+recipient slots.  Let `I_5` be the number of contact-edge occurrences that have a
+bounded pentagonal contact face on one side and a strict unit-rhombus face on the
+other.  Then
+
+$$
+\boxed{
+t\le1.850\Longrightarrow I_5>0.468D-o(D),}
+\tag{PRD.8}
+$$
+
+$$
+\boxed{
+t\le1.855\Longrightarrow I_5>0.393D-o(D),}
+\tag{PRD.9}
+$$
+
+$$
+\boxed{
+t\le1.860\Longrightarrow I_5>0.318D-o(D).}
+\tag{PRD.10}
+$$
+
+Consequently the numbers of **distinct** pentagons touching the strict-rhombus complex
+are respectively greater than
+
+$$
+0.093D-o(D),\qquad0.078D-o(D),\qquad0.063D-o(D).
+\tag{PRD.11}
+$$
+
+Thus the modern train slack has a concrete geometric meaning.  Either a linear number
+of potential rhombus-boundary recipient slots are unused, or a linear pentagon
+population is physically attached to the rhombic bulk while the global train-crossing
+graph is macroscopically far from its Mantel endpoint.
+
+---
+
+## 1. The balanced two-currency split
+
+The hostile-audited modern chamber theorem proves
+
+$$
+\liminf {\tau_D\over D}\ge\rho_*+0.007707
+>0.7467921,
+\tag{PRD.12}
+$$
+
+where `rho_*=cos rho_*` is the Dottie number.  The same audit checks the exact older
+identity (PRD.2).
+
+If (PRD.5) fails along a subsequence, then
+
+$$
+\rho_D<(\tau_0+o(1))D.
+$$
+
+Equations (PRD.2) and (PRD.12) give
+
+$$
+\sigma_D
+=2\tau_D-\rho_D
+>(\tau_0-o(1))D.
+$$
+
+This proves the first part of branch RP.
+
+The threshold `tau_0` is deliberately balanced: it gives the same explicit linear
+coefficient to either defect currency.  Other Pareto thresholds are possible, but are
+not needed below.
+
+---
+
+## 2. Linear `sigma_D` gives a large quadratic Mantel deficit
+
+Let
+
+$$
+T_R={B_4\over2}
+$$
+
+be the stopped strict-rhombus train count.  Its train-crossing graph is simple and
+triangle-free with exactly `R_4` edges.  Put
+
+$$
+M_D={T_R^2\over4}-R_4.
+\tag{PRD.13}
+$$
+
+From the definition (PRD.4),
+
+$$
+\sigma_D=2T_R-4\sqrt{R_4},
+$$
+
+so exactly
+
+$$
+T_R=2\sqrt{R_4}+{\sigma_D\over2}.
+\tag{PRD.14}
+$$
+
+Substitution in (PRD.13) gives the sharper identity
+
+$$
+\boxed{
+M_D
+={\sigma_D\sqrt{R_4}\over2}
++{\sigma_D^2\over16}.
+}
+\tag{PRD.15}
+$$
+
+This is stronger than the previously recorded one-sided estimate obtained by merely
+rationalizing the Mantel deficit.
+
+Canonical Type-II rhombic saturation gives
+
+$$
+{\sqrt{R_4}\over D}\to
+\sqrt{\Delta_2},
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\tag{PRD.16}
+$$
+
+Hence branch RP and (PRD.15) imply
+
+$$
+\liminf {M_D\over D^2}
+\ge
+{\tau_0\sqrt{\Delta_2}\over2}
++{\tau_0^2\over16}.
+\tag{PRD.17}
+$$
+
+The exact companion certificate gives
+
+$$
+{\tau_0\sqrt{\Delta_2}\over2}
++{\tau_0^2\over16}
+>0.3904459>0.390,
+$$
+
+which proves (PRD.7).
+
+So the low-recipient-waste branch is not near the Mantel endpoint.  Its missing
+train-crossing mass is a fixed positive quadratic fraction of the `D^2` scale.
+
+---
+
+## 3. Recipient waste controls unused exceptional-face boundary slots
+
+Every boundary occurrence of the strict-rhombus complex faces either the old outer
+contact face or one bounded nonquadrilateral contact face.  The total available
+recipient capacity is
+
+$$
+b+(4f+Q),
+$$
+
+while the used capacity is `B_4`.  Thus (PRD.3) is exactly total unused recipient
+capacity.
+
+Let
+
+$$
+I_{exc}
+$$
+
+be the number of strict-rhombus boundary occurrences whose recipient is a bounded
+nonquadrilateral face.  Even if all unused capacity were charged to the exceptional
+faces,
+
+$$
+\boxed{
+I_{exc}\ge4f+Q-\rho_D.
+}
+\tag{PRD.18}
+$$
+
+This is deliberately adverse: unused outer-face slots are ignored rather than credited.
+
+---
+
+## 4. Higher-degree exceptional faces cannot absorb all those incidences
+
+Let `P_5` be the pentagon count and put
+
+$$
+N_{6+}:=f-P_5.
+$$
+
+The total boundary-occurrence capacity of faces of degree at least six is
+
+$$
+\begin{aligned}
+C_{6+}
+&=\sum_{\deg P\ge6}\deg P\\
+&=4N_{6+}+\sum_{\deg P\ge6}(\deg P-4)\\
+&=4(f-P_5)+(Q-P_5).
+\end{aligned}
+\tag{PRD.19}
+$$
+
+The degree arithmetic used in the pentagon-floor theorem gives
+
+$$
+P_5\ge2f-Q.
+\tag{PRD.20}
+$$
+
+Therefore
+
+$$
+\boxed{
+C_{6+}
+\le6(Q-f).
+}
+\tag{PRD.21}
+$$
+
+Let `I_5` count rhombus/pentagon boundary incidences.  Even if every occurrence of
+every degree-`>=6` face were used by a rhombus, (PRD.18)--(PRD.21) yield
+
+$$
+\begin{aligned}
+I_5
+&\ge I_{exc}-C_{6+}\\
+&\ge4f+Q-\rho_D-6(Q-f)\\
+&=10f-5Q-\rho_D\\
+&=5(2f-Q)-\rho_D.
+\end{aligned}
+\tag{PRD.22}
+$$
+
+On branch RP, `rho_D<(tau_0+o(1))D`, so
+
+$$
+\boxed{
+{I_5\over D}
+\ge5\left(2{f\over D}-{Q\over D}\right)-\tau_0-o(1).
+}
+\tag{PRD.23}
+$$
+
+---
+
+## 5. Insert the high-`t` pentagon staircase
+
+The companion pentagon theorem proves
+
+$$
+2{f\over D}-{Q\over D}
+>\begin{cases}
+0.2430102-o(1),&t\le1.850,\\
+0.2280102-o(1),&t\le1.855,\\
+0.2130102-o(1),&t\le1.860.
+\end{cases}
+\tag{PRD.24}
+$$
+
+Substitute (PRD.24) in (PRD.23).  Exact outward arithmetic gives
+
+$$
+{I_5\over D}
+>\begin{cases}
+0.4682592-o(1),&t\le1.850,\\
+0.3932592-o(1),&t\le1.855,\\
+0.3182592-o(1),&t\le1.860.
+\end{cases}
+\tag{PRD.25}
+$$
+
+This proves (PRD.8)--(PRD.10).
+
+A pentagon has exactly five boundary occurrences.  Hence the number `P_5^{touch}` of
+distinct pentagons with at least one strict-rhombus neighbor satisfies
+
+$$
+P_5^{touch}\ge {I_5\over5}.
+\tag{PRD.26}
+$$
+
+The certificate gives the stronger numerical floors
+
+$$
+0.09365D-o(D),\qquad0.07865D-o(D),\qquad0.06365D-o(D),
+$$
+
+and (PRD.11) records simple safe roundings.
+
+---
+
+## 6. Interaction with the live high-`t` O--O path
+
+In the live band
+
+$$
+1.844<t\le1.855,
+$$
+
+the independently proved low-energy O--O theorem gives a same-phase dual path of more
+than `0.0184D-o(D)` selected cuts, one common diameter-routing hub, and a nonhub
+adjacent strip with at most `341` one-sided moving diameter bars.
+
+The present theorem adds a separate global dichotomy:
+
+```text
+RW:
+  >=0.7467921 D unused rhombus-recipient slots;
+
+or RP:
+  >0.390 D^2 Mantel deficit in the strict-rhombus train graph,
+  >0.393 D rhombus/pentagon incidences,
+  >0.078 D distinct pentagons physically touching the rhombic complex.
+```
+
+The two structures are not yet localized to the same selected O--O path.  No averaging
+step across those ledgers is asserted here.
+
+---
+
+## 7. Scope audit and next target
+
+- `rho_D` and `sigma_D` are exactly the canonical defects in the hostile-audited
+  identity `2tau_D=rho_D+sigma_D`.
+- `T_R=B_4/2` in the Mantel calculation is the strict-rhombus stopped-train count.  The
+  theorem does not identify it with any separately normalized all-train count.
+- `rho_D` counts unused recipient **occurrences**, not distinct faces or edges.
+- The incidence bound charges every unused recipient occurrence adversarially to the
+  exceptional faces and lets every higher-degree face use its entire boundary against
+  rhombi.  Thus (PRD.25) does not assume favorable interface distribution.
+- `I_5` is an occurrence count; (PRD.26) is the only conversion to distinct pentagons.
+- A rhombus-adjacent pentagon is not automatically a positive-width defect.  Near-unit
+  diagonals and thin corridor arrangements remain possible.
+- A quadratic Mantel deficit is structural information, not by itself a contradiction:
+  the live all-train phase theorem does not require near-Mantel crossing density.
+
+The next closing theorem should now attack one of two sharply different objects:
+
+1. in branch RW, show that `Omega(D)` unused recipient slots are incompatible with the
+   near-disk loaded-hull/train endpoint structure or can be used in a source-preserving
+   deformation; or
+2. in branch RP, combine the `Omega(D)` rhombus-adjacent pentagons with the exact phase
+   geometry of their neighboring strict rhombi.  A local classification that charges
+   a fixed angular/directional defect to a positive fraction of those interfaces would
+   turn the global `O(D)` defect budget into a contradiction or a much smaller finite
+   obstruction.
+
+**Disposition:** proved proof-only modern train-slack dichotomy with an explicit
+quadratic Mantel-deficit branch and a linear rhombus-coupled pentagon interface.  C-II
+and Level I remain open.

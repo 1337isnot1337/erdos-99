@@ -1,0 +1,206 @@
+{
+  "schema": "erdos-99-publication-polish/v1",
+  "baseline_commit": "2de788bf461d765859be99152ce40318b3e9bcbe",
+  "scope": "Owner-directed operational and presentation fixes; no mathematical promotion or source-rights extension.",
+  "edits": [
+    {
+      "path": "README.md",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "6324ff1fd8885ef7a8a5cf4dcaea5aafa0e25569",
+        "sha256": "1621b1068c9fa80339050b9410b30205da06e0cd07dc74206fe48407a8921020",
+        "bytes": 6087
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "73268bdcdb7df602831b88c554bd33687fdbe6eb",
+        "sha256": "bd3003014a09a5c3a50e31139d134e68ca5e5b29cbcd72c8e1083e4cc474b24b",
+        "bytes": 6681
+      },
+      "preserved_original": "docs/archive/publication-polish-20261017/README.md.source",
+      "reason": "Route readers through the generated math edition; expose glossary, bibliography and current release summary."
+    },
+    {
+      "path": "CITATION.cff",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "4c8fc3c8556ce39c983aad23d595aaf0f56b5810",
+        "sha256": "134912c75d57d1007a05a75a12dbecefbc79350f6e7e7178f89140cfbbc189e8",
+        "bytes": 384
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "82f09fbc27290aa8532c0277766dafc754064477",
+        "sha256": "6c929bf09826a73d913c2763c08d7660aeea7e672e17d65149b63ab863d9c19a",
+        "bytes": 432
+      },
+      "preserved_original": "docs/archive/publication-polish-20261017/CITATION.cff.source",
+      "reason": "Identify the dated 0.1.0-rc.1 release candidate."
+    },
+    {
+      "path": "scripts/choose_research_task.py",
+      "before": {
+        "mode": "100755",
+        "git_blob_sha1": "dc16cb3f6c3698290c7bde9f1b655d697e2f8fc4",
+        "sha256": "c6d981f4323412965caa6c6420a3eea5dd50aebcd21c7e16f4a321942fc8b56e",
+        "bytes": 18461
+      },
+      "after": {
+        "mode": "100755",
+        "git_blob_sha1": "1c844622e73471ed9f7d50521880f395aa40de2f",
+        "sha256": "41e8b73d4d221af3a94f9e39de998ed7d38a3933ddea70516d23dc321780d1b8",
+        "bytes": 18977
+      },
+      "preserved_original": "docs/archive/publication-polish-20261017/scripts/choose_research_task.py.source",
+      "reason": "Resolve prerequisite IDs through the generated authoritative graph rather than literal proof prose."
+    },
+    {
+      "path": "docs/launch/GATE_2_VERIFICATION.md",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "a701f5b1b4e3f1f1f645f2871392754c7a554da5",
+        "sha256": "6f5eca8dc24d3e254299cd243739931c8c94aef484458ff0151d8bb6bcbeb56b",
+        "bytes": 7084
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "b5b0e342e3231ce655ef932532742733b314f1a6",
+        "sha256": "5b97a5da39def3236359e44a53ab892463bc92bc9380928dbfb3ac525d182676",
+        "bytes": 7404
+      },
+      "preserved_original": "docs/archive/publication-polish-20261017/docs/launch/GATE_2_VERIFICATION.md.source",
+      "reason": "Replace stale PR16 status and document direct newcomer/reading checks."
+    },
+    {
+      "path": "docs/launch/READINESS.md",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "71579e4116156abea52b6e0c3931efb707c71d83",
+        "sha256": "754382dfdf072f89d70a2bc42521c526c6994c4c717ac7fb6a3eacb3f97d44a5",
+        "bytes": 8400
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "d6715722cde804e7b8763745124244431224348b",
+        "sha256": "2792eb77273802a3a202a9b283718a866db7ef703d2fbed0bbe3aa0fde05e926",
+        "bytes": 8882
+      },
+      "preserved_original": "docs/archive/publication-polish-20261017/docs/launch/READINESS.md.source",
+      "reason": "Prepend current publication status; preserve the complete previous narrative."
+    },
+    {
+      "path": "docs/launch/PUBLICATION_AUDIT.md",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "b94fa28a143c9031e2abe347401be5ef2225fe27",
+        "sha256": "6da8206fbdc44f01c58c4febb09ee4cde9ba9ae7ce290b5c14bd43c2e5559af4",
+        "bytes": 14670
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "55194ca2d693dffdb718ed7406344d37d9af4112",
+        "sha256": "8465fa9e17809e6533fa272aeeeca4e877e9626c9eb4aad9aab4b5fe5a9ef42f",
+        "bytes": 15152
+      },
+      "preserved_original": "docs/archive/publication-polish-20261017/docs/launch/PUBLICATION_AUDIT.md.source",
+      "reason": "Prepend current publication status; preserve the complete previous narrative."
+    },
+    {
+      "path": "tools/check_public.py",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "0801b0614b03f75bafcd80ec6a85f70a06b258c9",
+        "sha256": "68c27a523947854c86884125710c31715fd25afa7e0e74d18eecdb2411570cc9",
+        "bytes": 7046
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "742bb066f9304a27375f34ba67600b9d5d54b4c5",
+        "sha256": "20d886a206abfa032c3fecb49a087204209146fde3bde71b367f3929ea00d47e",
+        "bytes": 7225
+      },
+      "preserved_original": "docs/archive/publication-polish-20261017/tools/check_public.py.source",
+      "reason": "Check every generated reading page in ordinary public integrity validation."
+    },
+    {
+      "path": "tools/verify_publication_candidate.py",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "96a884c5facf38441a3f2adc79cc5c022b8196cb",
+        "sha256": "06fb998d6ae1b2ea93e9ece3d98cd114e0017c2cbb960eaf44b99b9963f714bd",
+        "bytes": 12818
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "3cc17a67cc211b07ca995d080f56b8b53f44c06f",
+        "sha256": "70f2cde2648c54d132dceaeabca294a422308bbe4576018c2234ea52e9695b51",
+        "bytes": 13041
+      },
+      "preserved_original": "docs/archive/publication-polish-20261017/tools/verify_publication_candidate.py.source",
+      "reason": "Directly exercise the published selector and reading-edition entry commands."
+    },
+    {
+      "path": "tools/audit_public_release.py",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "654df0bd54d5523370a78f664de3002fdc7c1023",
+        "sha256": "8739112ff005bfefedc9e8ab2e58258498c991df6d88f784f3dc6d02facef1e8",
+        "bytes": 36619
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "8be2d4e79ac09f164d42715a43e236f463145fff",
+        "sha256": "f4143a84bc78278dfca5fcd0d7b16625b86a357e53a51cbf195371f98aad2c58",
+        "bytes": 37369
+      },
+      "preserved_original": "docs/archive/publication-polish-20261017/tools/audit_public_release.py.source",
+      "reason": "Retain unchanged owner-granted source scope across the exact archived operational selector edit."
+    },
+    {
+      "path": "tools/publication_migration.py",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "89a1ee5fea4ba23c9a768960f4a1038a0d703505",
+        "sha256": "cd8c97e9a2d9fa06b17c67fc0bd9b8d30d12deb512d07797a57a3b5bb55110d5",
+        "bytes": 13396
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "ff3debbbbb098fdbd7a7e0b2254b7b235aabefa1",
+        "sha256": "7612390f5595d9bd5cc7d63bd575359ba7d00ce8124206ee90f2611beefacff1",
+        "bytes": 13513
+      },
+      "preserved_original": "docs/archive/publication-polish-20261017/tools/publication_migration.py.source",
+      "reason": "Validate exact archived post-migration operational edits before the unchanged historical policy."
+    },
+    {
+      "path": "docs/publication/inclusion.json",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "2dd1f35f72407d185861db0127429236c1248119",
+        "sha256": "44ed8f72563daf0464a9b34dc298bb80fa111bc1d4854a079c313699f44bca72",
+        "bytes": 1533146
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "0e04a778c177d33de194146c80e4c7aac4b0b891",
+        "sha256": "02cbcf817b2608fb6507b41787652b64c663b1873e440b30e5104db887c5ffbb",
+        "bytes": 1532971
+      },
+      "preserved_original": "docs/archive/publication-polish-20261017/docs/publication/inclusion.json.source",
+      "reason": "Update only the selector's actual public hash and editorial description; all source and rights identities unchanged."
+    },
+    {
+      "path": ".github/workflows/migration-namespace-canary.yml",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "0db51fcefd1dedf2c4883c7cc739b82d9378e8ee",
+        "sha256": "f26e9861193c4e7273d5555377ec61885b5f51ab4243a1723c5e3913f771fe18",
+        "bytes": 2053
+      },
+      "after": null,
+      "preserved_original": "docs/archive/publication-polish-20261017/.github/workflows/migration-namespace-canary.yml.source",
+      "reason": "Retire the completed PR75-only canary while retaining its exact archived bytes and mode."
+    }
+  ]
+}

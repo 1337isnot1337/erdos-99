@@ -1,0 +1,224 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_two_side_polynomial_collective_refill_2026-10-05.md) · source SHA-256 `f6b75c01c629bbb4aa33a825f50ff991061f0b20622743af45a8174f03c81b25`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- theorem-state: {"artifact_id":"ART-3EE36CEB5BDF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C — a simultaneous protected refill with a polynomial wall tolerance
+
+**Date:** 2026-10-05. **Starting main:** f539af073a691c13327a0a7fef3c746fb7704e5f.
+**Initial checkpoint:** b779f5d7, state 2026-09-14.audit.51.
+**Angular extension checkpoint:** fb895e5c, state 2026-10-05.audit.53.
+The refill claims in this report remain unreviewed.
+**Classification:** proved source-replacement candidate awaiting independent audit.
+Unreviewed and noncanonical. **LEVEL I STATUS: STILL OPEN.**
+
+## 1. Closing purpose and quantitative tradeoff
+
+Opening two complete adjacent sides of a unit oblique rectangular wall with angle between 60 and 90 degrees
+permits a simultaneous strictification of its entire interior, with an
+explicit polynomial separation margin and wall tolerance. Deleting the
+actual side vertices funds their relocation into that interior whenever
+the source has the corresponding linear population deficit.
+
+Unlike the fixed-frame sequential construction, this theorem states an
+explicit tolerance for every frame size. Its source contradiction requires
+deficiency at least $m+n-1$. The two-boundary-vertex theorem still
+excludes deficiency two in its fixed-frame neighbourhood. Neither theorem
+is asserted to extract a deficient frame from arbitrary train bulk.
+
+## 2. Explicit simultaneous motion
+
+Let $m,n\ge4$, $L=m+n$, $u=(1,0)$,
+$v_0=(\cos\phi,\sin\phi)$, $\pi/3\le\phi\le\pi/2$, and take the complete oblique grid wall
+$W_0$. Retain its top and right sides. Delete the other wall labels,
+namely $(i,0)$, $0\le i<m$, and $(0,j)$, $1\le j<n$.
+There are exactly
+
+$$
+J=m+n-1=L-1
+$$
+
+deleted pins. Retain all $K_0=(m-1)(n-1)$ interior labels.
+Put
+
+$$
+\epsilon=\frac1{10L^4},\quad t=\frac1{100L^3},\quad
+\lambda_{ij}=(m-i)(n-j)\bigl(1+\epsilon(m-i)\bigr).
+$$
+
+For interior points set
+
+$$
+p'_{ij}=iu+jv_0-t\lambda_{ij}(u+v_0).\tag{P.1}
+$$
+
+The retained wall has $\lambda=0$ and is fixed. The complete segment
+with amplitude from zero to $t$ is a feasible motion of the remaining
+source. Every interior point ends strictly separated from all other
+remaining points.
+
+Horizontal and vertical contact steps have strictly decreasing $\lambda$
+as their index increases, so their squared lengths have strictly positive
+linear derivative. For a short diagonal step $u-v_0$, the displacement
+difference is perpendicular to that step. It therefore lengthens
+quadratically whenever its two $\lambda$'s differ. This step
+is a contact only at the triangular endpoint; all its near-unit lengths
+are controlled uniformly below.
+
+Write $I=m-i,J_0=n-j$. On an interior diagonal, its index changes
+to $(I-1,J_0+1)$. The unperturbed product difference is the integer
+$I-J_0-1$. If this is nonzero, the correction has absolute value
+at most $2\epsilon L^3<1/2$, so the full difference has magnitude
+at least $1/2$. If it is zero, then $I=J_0+1$ and the difference
+is $-\epsilon I J_0$, of magnitude at least $2\epsilon$.
+A diagonal to a retained wall point has one zero scalar and one scalar
+at least one. Thus every relevant diagonal strictly lengthens. Put $c=\cos\phi$
+and $d=t\Delta\lambda$. Since $0\le c\le1/2$ and
+$|d|<1$, its exact squared-distance excess satisfies
+
+$$
+|p_x'-p_y'|^2-1
+=3d^2+(1-2c)(1-d^2)\ge3d^2.\tag{P.1a}
+$$
+
+The triangular endpoint is therefore the worst case for this bound.
+
+The scalar is at most $2L^2$. Every point moves at most
+$\sqrt3/(50L)<1/100$; its two oblique coordinates decrease by
+less than $1/(50L)$, retaining strict containment. Original
+pairs other than the two basis steps and short diagonals have distance
+at least $\sqrt2$, so displacement of
+less than $1/100$ at each endpoint preserves strict separation on
+the whole segment. All basis pairs have excess at least $2t$. Short diagonals
+involving an interior point have
+squared-distance excess at least
+
+$$
+\boxed{g_L=12t^2\epsilon^2=\frac3{250000L^{14}}.}\tag{P.2}
+$$
+
+The same lower bound holds for original noncontacts, whose excess is
+much larger. This proves a simultaneous, source-label-preserving motion
+after exactly the stated boundary pins have been removed.
+
+## 3. Explicit tolerance for actual walls
+
+Define
+
+$$
+\boxed{\eta_L=\frac{g_L}{4(L+1)}
+=\frac3{1000000L^{14}(L+1)}.}\tag{P.3}
+$$
+
+Suppose an actual simple unit cycle has its ordered vertices within
+$\eta_L$ of $W_0$ after one Euclidean isometry. Delete its
+corresponding lower/left side vertices and retain its top/right vertices.
+For a target interior point its distance to any reference wall vertex
+is at most $L+1$. Changing the wall vertex by at most $\eta_L$
+reduces squared distance by at most $2(L+1)\eta_L$: the omitted
+$|\delta w|^2$ term has the favorable nonnegative sign. Hence every
+target/retained-wall squared distance exceeds one by at least $g_L/2$.
+Mutual target distances are unchanged.
+
+Both the original reference interior points and their displaced targets
+stay inside the actual unit cycle: they have reference boundary depth
+at least $\sqrt3/2-1/100$, and the vertex interpolation/winding
+argument from the preceding
+[boundary-vacancy theorem](target_c_boundary_vacancy_funded_collective_refill_2026-10-05.md)
+applies. No convexity of the actual simple cycle is required here.
+
+Every old exterior source point was separated from every actual wall
+coordinate, including deleted ones, by at least one. Each original
+reference interior point is separated from those wall coordinates by
+at least $1-\eta_L\ge19/20$. Its joining segment to an exterior
+point crosses an actual unit side. The relaxed shielding lemma B.1
+gives distance at least $\sqrt{261}/10>151/100$. Displacement below
+$1/100$ leaves every target farther than $3/2$ from every old
+exterior point. All exterior labels remain fixed.
+
+Final targets need not avoid the deleted wall coordinates. Their original
+reference positions supply the exterior margin; reference positions are
+not counted as extra source points or assigned force/diameter constraints.
+
+## 4. Actual minimum-diameter source implication
+
+**Theorem P.1.** For every $m,n\ge4$ and every reference angle
+$\phi\in[\pi/3,\pi/2]$, any triangle-free contact-minimal
+global minimizer containing the actual unit cycle of Section 3 satisfies
+
+$$
+\boxed{z:=|A\cap\operatorname{int}(C_W)|
+\ge K_0-J+1=mn-2m-2n+3.}\tag{P.4}
+$$
+
+If $z+J\le K_0$, delete all $z$ enclosed source points and the
+$J$ designated wall vertices, and insert $z+J$ of the strict
+targets. Assign the old labels bijectively, retaining cardinality exactly.
+Every new mutual, retained-wall and exterior lower constraint is strict.
+Old retained pairs are unchanged. Inserted points lie in the interior
+of the old source hull, so all new pairs have distance strictly less
+than the old diameter. The complete maximum is at most $D(n)$.
+
+Global optimality forces equality or gives a direct strict-diameter
+contradiction. In the equality case all contacts belong to retained old
+points, so the new source is triangle-free. Removing the wall vertices
+loses old unit cycle contacts and creates none. Contact minimality is
+contradicted. Every interior and exterior isolate has been accounted for.
+This proves P.4 without assuming force activation or extending the affine
+stress kernel to isolated points.
+
+The quantifiers are uniform over frame size with the explicit tolerance
+(P.3). A frame may grow along a source sequence provided its actual vertex
+errors satisfy that bound and its integer population deficiency is at
+least $m+n-1$. There is no inference that near-unit or coherent bulk
+automatically has either property.
+
+## 5. Exact residual substitution
+
+If the wall bounds an actual **convex inactive chamber**, its unit
+perimeter is $2L$, all $2L$ boundary source vertices are retained
+in the old source, and its Oler residual is
+
+$$
+r_W=\frac{A_W}{a_0}-L+1-z,
+\qquad a_0=\sqrt3/2.
+$$
+
+The reference area is $mn\sin\phi$. The signed polygon area
+difference from the reference is at most
+$2L\eta_L+L\eta_L^2$. Indeed its linear variation is
+$\tfrac12\sum_i\delta p_i\times(p_{i+1}^0-p_{i-1}^0)$, with
+each adjacent reference side unit, and the remaining quadratic sum has
+absolute value at most $L\eta_L^2$. P.4 therefore gives the source
+bound
+
+$$
+\boxed{r_W\le mn\left(\frac{\sin\phi}{a_0}-1\right)+L-2+
+\frac{2L\eta_L+L\eta_L^2}{a_0}.}\tag{P.5}
+$$
+
+At $\phi=\pi/3$ this recovers the original triangular residual
+threshold. Thus a framed macroscopic-container branch exceeding the displayed local residual
+threshold is excluded. The canonical data $r_W=O(D)$, area
+$\Omega(D^2)$, and boundary $O(D)$ do not assert that the threshold
+is exceeded, or that its actual interface is this reference wall. The
+general macroscopic-container branch remains open.
+
+## 6. Exact certificate
+
+```bash
+python3 research/verify_target_c_two_side_polynomial_refill_2026_10_05.py
+```
+
+Six packets include triangular, strictly oblique and square reference
+frames and perturbed actual oblique walls. They check every local pair
+against the uniform squared-distance floor, retain and move every interior
+label simultaneously, and check every complete guarded old/new source pair.
+They relocate every funding label, remove contacts, preserve the full
+maximum diameter and keep every exterior label fixed. The executable
+prints the exact counts. Arithmetic is in $\mathbb Q(\sqrt3)$.
+
+The guarded packets are not certified global minimizers. Their exact
+checks support the finite motion and complete replacement contracts;
+the source contradiction is the analytic P.1 theorem. The open obligation
+is actual interface and deficit extraction, not an unverified constraint
+or a numerical optimum.

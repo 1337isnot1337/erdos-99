@@ -185,9 +185,11 @@ def permitted_baseline_changes(read_blob, tree, base):
     The two release-status documents may only prepend a current status section;
     their complete historical text and regular-file mode must be preserved.
     """
+    from publication_followup import original_tree
+    tree, followup = original_tree(read_blob, tree)
     changed = {path for path, entry in base.items() if tree.get(path) != entry}
     if not changed:
-        return set()
+        return followup
     if not changed <= SUPPORT_CHANGES or POLICY not in tree:
         raise ValueError("unapproved baseline changes: " + ", ".join(sorted(changed)))
     policy = parse_policy(read_blob(tree[POLICY][1]))
@@ -252,4 +254,4 @@ def permitted_baseline_changes(read_blob, tree, base):
         allowed.add(path)
     if allowed != changed:
         raise ValueError("baseline transformation inventory is incomplete")
-    return allowed
+    return allowed | followup

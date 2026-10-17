@@ -1,0 +1,219 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_groemer_pair_matching_refinement_2026-09-14.md) · source SHA-256 `4ba8188ab9cc00c8da01ac70e424119679f9d93392bd2d17d68430f4351a1b9a`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- theorem-state: {"artifact_id":"ART-79D585A46210","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Erdős Problem #99 — pair-level refinement of the Groemer near-contact matching
+
+**Date:** 2026-09-14\
+**Repository base:** `45e910ad`\
+**State version:** `2026-09-14.audit.51`\
+**Run type:** proof-only extraction refinement\
+**Target:** Target C-II, canonical full-core Type-II branch\
+**Dependencies:** `target_c_all_degree_groemer_face_stability_2026-09-14.md` and the canonical triangle-free contact-degree bound\
+**External literature:** no new import beyond the Groemer equality theorem already used by the parent note
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The all-degree Groemer stability theorem proves that, on the branch
+
+$$
+R_F=o(D),
+$$
+
+linearly many bounded exceptional contact faces contain hidden source pairs of length
+`1+o(1)`. Its first extraction makes the *entire faces* vertex-disjoint. That is
+stronger than needed. To obtain a matching of hidden pairs, it is enough to prevent
+the chosen pairs themselves from sharing endpoints.
+
+The contact-degree bound makes the corresponding conflict graph uniformly bounded by
+8, independent of face degree. This improves the matching loss from `1/169` to `1/9`
+and removes the reason for fixing the degree cutoff at `K=42` for the matching step.
+
+Put
+
+$$
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+f_*:=\sqrt{\Delta_2}-{\pi\over4}+0.00021
+=0.167124643466509\ldots .
+\tag{PM.1}
+$$
+
+## 1. Fixed-degree input from Groemer stability
+
+For every fixed integer `K>=5` and every fixed `eta>0`, the parent theorem gives a
+constant `sigma_K(eta)>0` such that every degree-at-most-`K` exceptional face whose
+hidden pairs are all at least `1+eta` has local residual at least
+`sigma_K(eta)`.
+
+The same note proves
+
+$$
+\liminf {f_{\le K}\over D}
+\ge
+\ell_K:=f_*-{\pi\over K-3}.
+\tag{PM.2}
+$$
+
+On `R_F=o(D)`, the number of `eta`-clean degree-at-most-`K` faces is therefore `o(D)`.
+Consequently
+
+$$
+N_{K,\eta}
+\ge(\ell_K-o(1))D
+\tag{PM.3}
+$$
+
+exceptional faces each contain at least one hidden actual source pair
+
+$$
+1<|x-y|<1+\eta.
+\tag{PM.4}
+$$
+
+Choose one such pair from every face counted in `N_{K,eta}`.
+
+## 2. Pair conflicts have degree at most eight
+
+Build a graph whose vertices are the chosen hidden pairs, joining two vertices when
+the corresponding pairs share a source point.
+
+A contact-isolated point assigned to the interior of an exceptional face belongs to no
+other exceptional face, so an endpoint of that type creates no conflict outside its
+own chosen pair.
+
+Now let `x` be a boundary vertex of an exceptional contact face. In a triangle-free
+unit-separated source, distinct unit neighbors of `x` subtend angles strictly larger
+than `pi/3`; equality would make a unit equilateral triangle. Hence
+
+$$
+\deg_C(x)\le5.
+\tag{PM.5}
+$$
+
+In a plane embedding, the number of distinct bounded faces incident with `x` is at
+most the number of contact-edge sectors, hence at most its contact degree. Therefore at
+most five exceptional faces can have a chosen pair containing `x`. For a chosen pair
+`{x,y}`, there are at most four *other* chosen pairs through `x` and at most four
+through `y`. Thus its conflict degree is at most
+
+$$
+\boxed{8.}
+\tag{PM.6}
+$$
+
+No bound on the degrees of the containing exceptional faces enters (PM.6).
+
+A greedy independent set in a graph of maximum degree eight contains at least one
+ninth of its vertices. The chosen source pairs corresponding to that independent set
+are pairwise vertex-disjoint. Hence for every fixed `K,eta`,
+
+$$
+\boxed{
+\liminf {\nu_\eta\over D}
+\ge {\ell_K\over9},
+}
+\tag{PM.7}
+$$
+
+where `nu_eta` is the maximum number of pairwise vertex-disjoint source pairs lying in
+distinct exceptional faces and having distance in `(1,1+eta)`.
+
+## 3. Remove the arbitrary degree cutoff from the coefficient
+
+The quantity `nu_eta` in (PM.7) does not depend on `K`. Since (PM.7) holds for every
+fixed `K` with positive `ell_K`, we may take the supremum over fixed cutoffs:
+
+$$
+\sup_K\ell_K=f_*.
+$$
+
+Therefore, on every Type-II subsequence with `R_F=o(D)`, for every fixed `eta>0`,
+
+$$
+\boxed{
+\liminf {\nu_\eta\over D}
+\ge {f_*\over9}
+=0.018569404829612\ldots .
+}
+\tag{PM.8}
+$$
+
+This is more than 36 times the parent theorem's fixed-`eta` coefficient
+`0.0005122543...`.
+
+## 4. Vanishing-gap diagonal with the same limiting coefficient
+
+The fixed-`eta` statement can be diagonalized without the factor `1/2` used in the
+parent note.
+
+Choose increasing integers `K_j` so that
+
+$$
+{\ell_{K_j}\over9}>{f_*\over9}-{1\over j}.
+$$
+
+Set `eta_j=1/j`. For each fixed `j`, Groemer stability and `R_F/D->0` imply that for
+all sufficiently large `D`, after the pair-conflict extraction there are at least
+
+$$
+\left({f_*\over9}-{2\over j}\right)D
+$$
+
+pairwise vertex-disjoint hidden pairs with lengths in `(1,1+eta_j)`. Choose increasing
+thresholds `D_j` on which this conclusion is valid, and for
+`D_j<=D<D_{j+1}` put `eta_D=eta_j`.
+
+Then `eta_D->0` and
+
+$$
+\boxed{
+\liminf {\nu_{\eta_D}\over D}
+\ge {f_*\over9}
+=0.018569404829612\ldots .
+}
+\tag{PM.9}
+$$
+
+Thus the small-residual branch contains a vertex-disjoint matching of genuine
+noncontacts of asymptotic size at least `1.8569%` of `D`, with every gap tending to
+zero.
+
+Relative to the parent diagonal coefficient
+
+$$
+0.000256127176574\ldots,
+$$
+
+this is an improvement by a factor greater than 72.
+
+## 5. Scope and next use
+
+- The theorem changes only the combinatorial extraction after the Groemer stability
+  step. It does not strengthen the compactness modulus `sigma_K(eta)`.
+- Hidden pairs may join two positive-core boundary vertices, one boundary vertex and an
+  assigned isolate, or two assigned isolates. No isolated-point activation theorem is
+  applied here.
+- The contact-degree-five bound is source-level and uses the standing absence of an
+  exact unit equilateral triangle.
+- Bridges and articulation vertices do not invalidate (PM.6): they can repeat a face
+  around a vertex, but cannot create more distinct face incidences than contact-edge
+  sectors.
+- This remains a near-contact theorem, not an exact contact theorem. It produces no
+  strict sub-`D` competitor by itself.
+
+The strengthened matching makes a KKT/global-minimality attack on the hidden
+near-contact branch more plausible: one now has a macroscopic family of disjoint
+near-active inequalities, rather than the much thinner `2.56e-4 D` family from the
+face-disjoint extraction.
+
+C-II and Level I remain open.
+
+---
+
+
+**Recovery provenance:** copied from `research/c2-closure-sol-20260914-r7` at exact
+tip `1541dac85e9ddf6450bb3cd7b14f5ce76e119420` during the 2026-10-04 Slot 2
+branch audit. This recovered claim remains unreviewed and noncanonical.

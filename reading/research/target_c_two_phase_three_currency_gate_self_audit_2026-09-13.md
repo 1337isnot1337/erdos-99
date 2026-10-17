@@ -1,0 +1,86 @@
+> Generated reading edition · [exact source](../../research/target_c_two_phase_three_currency_gate_self_audit_2026-09-13.md) · source SHA-256 `7fcd413b11448c12955546aa0afeae0252aae2c5a5887c3a0faba13176dd9147`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "1b63d959561b0754139fbaa795c924f255d760ed", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_two_phase_three_currency_gate_self_audit_2026-09-13.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "aa32dd8cb31bacee0e6f6824407f67e1e620838a9d19759c4a761e87be10d751"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Self-audit — Target C-II three-currency gate
+
+**Date:** 2026-09-13  
+**Artifact:** `target_c_two_phase_three_currency_gate_2026-09-13.md`  
+**Disposition:** pass as a proof-only composition; no theorem-state change.
+
+## 1. Algebra
+
+The carrier-scope input inequalities have the same occurrence convention:
+
+$$
+N_o\le P_{exc}+2B_o,
+\qquad
+2B_o\le(b-\pi D)+P_{exc}+o(D).
+$$
+
+Substitution gives
+
+$$
+(4-\pi)D-o(D)
+\le(b-\pi D)+2P_{exc}.
+$$
+
+The Type-II augmented-cell payment is
+
+$$
+P_{exc}\le5(e_{BB}-2k)+o(D),
+$$
+
+so the carrier-scope final coefficient is `10`, not `5` or `20`:
+
+$$
+\delta+\rho+10(e_{BB}-2k)/D\ge4-\pi-o(1),
+\qquad
+\rho={\operatorname{per}(F)-\pi D\over D}.
+$$
+
+The force-hull residual `rho` is `o(1)` in the Type-II near-disk limit. It must be
+carried explicitly before taking that limit: `delta=(b-per(F))/D` is not itself
+`(b-pi D)/D` at finite scale.
+
+The exact Type-II identity `e_BB-2k=Q+u_B` gives the equivalent form in the source.
+
+For the canonical no-container Type-II full core, the near-disk area sandwich
+is valid because the full bounded-face union `U` contains the strict-rhombus union
+of area `A_4=(pi/4+o(1))D^2` and is contained in the force hull of area
+`(pi/4+o(1))D^2`. Thus `area(U)-A_4=o(D^2)`, and the finite union inequality gives
+`2B_o <= (b-pi D)+o(D)`. The same occurrence charge then gives
+`delta+rho+P_exc/D >= 4-pi-o(1)`, and the sharpened payment gives
+
+`delta+rho+5(e_BB-2k)/D >= 4-pi-o(1)`.
+
+This stronger coefficient is scoped to the full positive-contact core; it is not
+available for an arbitrary selected carrier.
+
+## 2. Scope audit
+
+- The variation lower bound requires the selected outer walk to have both reciprocal
+  widths `D-o(D)` and length at most `pi D+o(D)`.
+- The occurrence charge requires global two-phase purity for bounded quadrilateral
+  faces of the graph under discussion.
+- The bridge-subtracted inequality requires the full-core near-disk/full-area
+  hypotheses from its source; it is not a universal bridge estimate.
+- The factor two multiplies physical outer-visible bridges because each such bridge has
+  two outer-face occurrences. It is not silently applied to all graph bridges.
+- The sharpened payment is proof-only Section 125, not canonical theorem-state input.
+
+## 3. Non-implications checked
+
+The gate does not bound `delta`, `rho`, `e_BB`, `Q`, or `u_B` separately. In particular,
+`e_BB-2k` may remain linear. The supplied scalar witness has positive `Q`, `u_B`, and
+`P_exc`, and satisfies the gate with large margin; therefore the composition is not a
+scalar-only C-II closure. The bridge-chain regression is outside the near-disk/full-
+core scope and is not contradicted.
+
+No contact-isolated source point is deleted, no affine-kernel statement is extended to
+isolates, and no KKT stress is inferred from the scalar witness. The remaining work is
+to control the surviving large-surplus branch from the actual diameter graph or build a
+finite strict-diameter descent.

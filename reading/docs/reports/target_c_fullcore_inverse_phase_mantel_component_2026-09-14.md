@@ -1,0 +1,543 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_fullcore_inverse_phase_mantel_component_2026-09-14.md) · source SHA-256 `a17548d33a7d752fef80663bcdd7ad5eee2e639e2dd3959135a52d656adf3557`.
+> Formatting and navigation only; the source and theorem ledger control mathematical status.
+
+<!-- theorem-state: {"artifact_id":"ART-4C4A50A00728","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+<!-- migration-source: path=docs/reports/target_c_fullcore_inverse_phase_mantel_component_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=0614eb0c43e68e4320033f44bfa7e8e12fbb713e; lifecycle=unreviewed; canonical=false -->
+> **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
+
+# Erdős Problem #99 — full-core inverse-phase Mantel component
+
+**Date:** 2026-09-14
+**Repository commit:** ef941ab2b44aa393bdc461926769247b45754202
+**State version:** 2026-09-14.audit.49
+**Run type:** closing proof / endpoint reduction
+**Target:** Target C-II / Level I
+**Starting status:** canonical full-core near-disk branch at the promoted train-coupled floor
+**Active prompt:** `docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md`
+**External literature search:** used for a near-miss scope check; no external theorem is used in the proof
+**Computation:** not used
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+This report does not settle the original quantifiers. It removes one more purely
+scalar description of the train-floor endpoint: after deleting only (o(T_D))
+exceptional train vertices, the endpoint contains a connected, inverse-diameter
+phase-collapsed train component whose three phase classes asymptotically saturate
+the cyclic-order edge bound. The construction deletes train relations for the
+analysis only; it does not delete source points or claim a new packing.
+
+## 1. Starting canonical endpoint
+
+Let (D	oinfty) along a canonical full-core, no-macroscopic-container Type-II
+sequence, and write
+
+$$
+\Delta_2=\frac{\pi}{2\sqrt3},
+\qquad
+\mu_{\rm TC}=\frac{2\pi+2\sqrt{\Delta_2}}5,
+\qquad
+f_{\rm TC}=\frac{4\sqrt{\Delta_2}-\pi}{5}.
+$$
+
+Assume the endpoint subsequence
+
+$$
+\mu_D:=\frac{e_{BB}+2s_C-3(d_H+s_Z)}D
+\longrightarrow \mu_{\rm TC}.
+\tag{1.1}
+$$
+
+The canonical full-core train-coupled floor and its equality bookkeeping give
+
+$$
+\frac{R_D}{D^2}\to\Delta_2,
+\qquad
+\frac{q-k}{D}\to\mu_{\rm TC},
+\qquad
+\frac{f_D}{D}\to f_{\rm TC},
+\qquad k=d_H+s_Z.
+\tag{1.2}
+$$
+
+Let (T_D) be the number of global train tracks and (R_D) the number of strict
+rhombus faces. The exact occurrence-counted train boundary relation and the
+canonical train-interface inequality are
+
+$$
+2T_D=B_{4,D},
+\qquad
+T_D\le q-k+2f_D,
+\qquad
+T_D\ge2\sqrt{R_D}.
+\tag{1.3}
+$$
+
+Since
+
+$$
+\mu_{\rm TC}+2f_{\rm TC}=2\sqrt{\Delta_2},
+$$
+
+(1.2)--(1.3) squeeze the endpoint train count:
+
+$$
+\boxed{\frac{T_D}{D}\longrightarrow 2\sqrt{\Delta_2}.}
+\tag{1.4}
+$$
+
+The canonical phase-circle cut deletes (O(D)) crossing relations and supplies
+real reduced phases (x_\tau) in one interval of length (pi/3), labels
+$\ell(\tau)\in\mathbb Z/3\mathbb Z), and, on every retained oriented crossing,
+
+\[
+x_v-x_u=\delta_{uv}>0,
+\tag{1.5}
+\]
+
+where (delta_{uv}) is the acute rhombus-angle excess above (pi/3). The
+global angular-defect budget is
+
+\[
+\sum_{e}\delta_e\le C_{\rm phase}D
+\tag{1.6}
+\]
+
+for an absolute canonical constant (C_{\rm phase}). All source points, including
+contact-isolated points, remain in the original source throughout.
+
+The candidate chain is therefore
+
+```text
+mu_D -> mu_TC
+    -> T_D/D -> 2 sqrt(Delta_2)
+    -> Mantel deficit o(T_D^2)
+    -> delete o(T_D) high-incidence vertices
+    -> inverse-D phase-collapsed coherent component
+    -> cyclic-order near-saturation
+    -> missing: a holed full-core near-extremal exclusion or a source-level descent
+```
+
+## 2. Strongest genuinely new result
+
+**Classification:** unreviewed report-level theorem; independently audited in the
+companion audit named below, but not promoted into the theorem-state manifest.
+
+### Theorem IPM — inverse-diameter phase-collapsed near-extremal component
+
+For every sequence (K_D) satisfying
+
+\[
+K_D\to\infty,
+\qquad K_D=o(D),
+\tag{2.1}
+\]
+
+there are, for all sufficiently large (D), disjoint train sets
+
+\[
+X_D'\sqcup Y_D'\subseteq\mathcal T_D
+\]
+
+and a simple bipartite graph (H_D) on (X_D'\sqcup Y_D') with the following
+properties.
+
+1. **Only sublinear train population is discarded.**
+
+   \[
+   |\mathcal T_D\setminus(X_D'\cup Y_D')|=o(T_D),
+   \qquad
+   |X_D'|,|Y_D'|=\frac{T_D}{2}-o(T_D).
+   \tag{2.2}
+   \]
+
+2. **The good graph is almost complete and robust.** Every edge of (H_D) is an
+   actual strict-rhombus crossing with
+
+   \[
+   0<\delta_e\le\frac{K_D}{D},
+   \tag{2.3}
+   \]
+
+   and every vertex has
+
+   \[
+   \deg_{H_D}(v)\ge\frac{T_D}{2}-o(T_D).
+   \tag{2.4}
+   \]
+
+   In particular, (H_D) is connected and has graph diameter at most three.
+
+3. **All surviving reduced phases collapse.** There is an interval (J_D) such
+   that
+
+   \[
+   x_\tau\in J_D\quad(\tau\in X_D'\cup Y_D'),
+   \qquad
+   |J_D|\le\frac{3K_D}{D}=o(1).
+   \tag{2.5}
+   \]
+
+4. **The three labels are concentrated on the two Mantel shores.** If
+   (n_0,n_1,n_2) are the sizes of the three label classes in (H_D), and
+   (M_D^{\rm cls}\ge b_D^{\rm cls}\ge a_D^{\rm cls}) are those sizes in decreasing
+   order, then
+
+   \[
+   M_D^{\rm cls}=\frac{T_D}{2}+o(T_D),
+   \qquad
+   a_D^{\rm cls}+b_D^{\rm cls}=\frac{T_D}{2}+o(T_D).
+   \tag{2.6}
+   \]
+
+5. **The local cyclic-order bound is asymptotically saturated.**
+
+   \[
+   |E(H_D)|
+   =M_D^{\rm cls}(a_D^{\rm cls}+b_D^{\rm cls})-o(T_D^2),
+   \tag{2.7}
+   \]
+
+   and all but (o(D^2)) strict-rhombus crossings of the full source are outside
+   (H_D). The component has one (o(1))-coherent three-phase frame, and its
+   phase-pair crossing defects are bounded by (2.3) on the retained edges.
+
+The phrase “component” in this theorem means a connected component of the
+retained train-crossing graph (H_D). It is not asserted that its rhombi form a
+simply connected disk, that the source is a pure rhombic disk, or that the
+component is an independent source configuration.
+
+### Proof
+
+#### 2.1 Mantel stability at the endpoint
+
+Let (G_D^\circ) be the full train-crossing graph after the canonical phase cut.
+Only (O(D)) crossing edges are deleted, so
+
+\[
+e_D:=|E(G_D^\circ)|=R_D-O(D).
+\tag{2.8}
+\]
+
+The exact train-track theorem makes (G_D^\circ) simple and triangle-free. Put
+\(v=T_D$. By (1.2) and (1.4),
+
+$$
+\frac{e_D}{v^2}\to\frac{\Delta_2}{4\Delta_2}=\frac14.
+\tag{2.9}
+$$
+
+For completeness, the needed finite stability statement is proved here.
+
+**Lemma 2.1 (Mantel stability).** If a simple triangle-free graph on (v) vertices
+has (e=v^2/4-\varepsilon v^2), then there is a partition
+$V=X\sqcup Y) with
+
+\[
+|X|,|Y|=v/2+O(\sqrt\varepsilon v),
+\quad
+e(X)+e(Y)=O(\sqrt\varepsilon v^2),
+\quad
+|X||Y|-e(X,Y)=O(\sqrt\varepsilon v^2).
+\tag{2.10}
+\]
+
+For every edge (xy), triangle-freeness gives (d(x)+d(y)\le v). Summing over
+edges yields
+
+\[
+\sum_zd(z)^2\le ve.
+\tag{2.11}
+\]
+
+Since (sum_zd(z)=2e),
+
+\[
+\sum_z\left(d(z)-\frac v2\right)^2
+\le \frac{v^3}{4}-ve
+=\varepsilon v^3.
+\tag{2.12}
+\]
+
+Choose (x) with (|d(x)-v/2|\le\sqrt\varepsilon v), put (X=N(x)), and
+put (Y=V\setminus X). The set (X) is independent. Moreover,
+
+\[
+e(X,Y)=\sum_{z\in X}d(z)
+=\frac{v^2}{4}+O(\sqrt\varepsilon v^2)
+\tag{2.13}
+\]
+
+by Cauchy--Schwarz and (2.12). Since (e=v^2/4-\varepsilon v^2), this gives
+\(e(Y)=O(\sqrt\varepsilon v^2)). Finally,
+\(|X||Y|=v^2/4+O(\varepsilon v^2)), proving (2.10).
+\(\square$
+
+Applying Lemma 2.1 to (2.9) gives (\mathcal T_D=X_D\sqcup Y_D) with
+
+$$
+|X_D|,|Y_D|=T_D/2+o(T_D),
+\qquad
+M_D:=|X_D||Y_D|-e_D(X_D,Y_D)=o(T_D^2).
+\tag{2.14}
+$$
+
+The internal edges in the partition are irrelevant below; only the cross edges
+are retained.
+
+#### 2.2 Remove only high-defect incidences
+
+Call a phase-cut crossing (K_D)-bad if
+
+$$
+\delta_e> K_D/D.
+$$
+
+By (1.6), the number of bad edges is at most
+
+$$
+\frac{C_{\rm phase}D}{K_D/D}
+=\frac{C_{\rm phase}}{K_D}D^2=o(D^2)=o(T_D^2).
+\tag{2.15}
+$$
+
+Let (U_D) be the number of cross pairs in (X_D\times Y_D) that are either
+missing in (G_D^\circ) or are bad retained edges. Then
+
+$$
+U_D=o(T_D^2).
+\tag{2.16}
+$$
+
+If (U_D>0), set
+
+$$
+\rho_D=\frac{\sqrt{U_D}}{T_D}=o(1);
+$$
+
+if (U_D=0), set (
+ho_D=0). Delete from (X_D\cup Y_D) every vertex incident with
+more than (
+ho_DT_D) pairs counted by (U_D). The number of deleted vertices is
+at most (2\rho_DT_D=o(T_D)), since the total bad/missing incidence is at most
+$2U_D). Call the remaining sets (X_D',Y_D'), and let (H_D) consist of all
+remaining good cross edges.
+
+For (v\in X_D'), at most (
+ho_DT_D) members of (Y_D) are missing or bad at
+\(v), and deleting the exceptional (Y_D\setminus Y_D') loses at most another
+\(2\rho_DT_D) neighbors. Thus
+
+\[
+\deg_{H_D}(v)\ge |Y_D'|-\rho_DT_D,
+\tag{2.17}
+\]
+
+and symmetrically for (v\in Y_D'). This proves (2.2)--(2.4).
+
+For large (D), every two vertices on the same shore have a common neighbor:
+their two neighborhoods each have size (|\text{opposite shore}|-o(T_D)), so their
+intersection is nonempty. If (x\in X_D') and (y\in Y_D') are nonadjacent, choose
+any (y_1\in N(x)). The two neighborhoods (N(y)) and (N(y_1)) in (X_D')
+have a common vertex (x_1), giving
+
+\[
+x-y_1-x_1-y.
+\]
+
+Thus (H_D) is connected with diameter at most three.
+
+#### 2.3 Phase collapse
+
+Every edge (uv\in H_D) is good, so its canonical oriented endpoints satisfy
+
+\[
+|x_u-x_v|=\delta_{uv}\le K_D/D.
+\]
+
+The diameter-three property gives, for any two vertices of (H_D),
+
+\[
+|x_u-x_v|\le3K_D/D.
+\]
+
+This proves (2.5). Notice that this is a statement about the real phase potential;
+it does not identify the train arcs with a Cartesian coordinate array in the plane.
+
+#### 2.4 Label concentration and local cyclic saturation
+
+Let (x_i=|X_D'\cap\ell^{-1}(i)|) and (y_i=|Y_D'\cap\ell^{-1}(i)|). Two trains with
+the same label cannot cross in the triangle-free strict-rhombic branch. Therefore
+all same-label cross pairs are among the (M_D) missing cross pairs in (2.14), and
+
+\[
+\sum_{i=0}^2x_iy_i\le M_D=o(T_D^2).
+\tag{2.18}
+\]
+
+Cauchy--Schwarz gives
+
+\[
+\sum_{i=0}^2\min(x_i,y_i)
+\le\sum_i\sqrt{x_iy_i}
+\le\sqrt{3\sum_ix_iy_i}=o(T_D).
+\tag{2.19}
+\]
+
+Hence every label is concentrated, up to (o(T_D)) trains, on one Mantel shore.
+At least one label is concentrated on each shore, because both shores have
+\(T_D/2-o(T_D)) vertices. With only three labels, the labels split between the
+shores as (1+2) (or, if a label is absent, (1+1) with an empty third class).
+Consequently the unique label on one shore has class size (T_D/2+o(T_D)), and
+the other two classes together have size (T_D/2+o(T_D)). This proves (2.6).
+
+The good graph has
+
+\[
+|E(H_D)|=|X_D'||Y_D'|-o(T_D^2)=\frac{T_D^2}{4}-o(T_D^2).
+\tag{2.20}
+\]
+
+Combining (2.6) and (2.20) gives (2.7). Since (R_D=T_D^2/4+o(D^2)), the number
+of full-source rhombus crossings not in (H_D) is (o(D^2)). This completes the
+proof. \(\square$
+
+## 3. Exact frontier effect
+
+The theorem is stronger than the previous Mantel endpoint report in two precise
+ways:
+
+1. the phase potential is (o(1))-collapsed on a connected component after only
+   (o(T_D)) train deletions, rather than merely lying in a fixed (pi/3) bin; and
+2. the retained component itself, not only one selected pair of shores, has
+   (M(a+b)-o(T_D^2)) crossings and carries all but (o(D^2)) rhombus crossings.
+
+It therefore supplies the exact antecedent needed by a *generalized* coherent
+near-extremal exclusion theorem:
+
+```text
+full-core source, with holes/interfaces and O(D) exceptional faces
+    + one connected o(1)-coherent three-phase train component
+    + M(a+b)-o(T^2) actual crossings
+    + all but o(D^2) rhombi represented
+    -> contradiction or source-preserving strict diameter decrease.
+```
+
+The existing proof-only Target-B NE/GPS1 exclusion is not silently invoked here.
+Its audited form is stated for a pure simply connected rhombic disk, with the
+source equal to the disk vertices and with its own pure-disk counting identity.
+The present full-core source has the canonical (O(D)) exceptional-face/interface
+and possible-hole structure, so the hypotheses are not identical.
+
+## 4. Exact remaining lemma
+
+The required next statement can be written without asymptotic ambiguity:
+
+> **Full-core near-extremal exclusion (missing).** There exist
+> (arepsilon_0>0) and (D_0<\infty) such that no canonical full-core global
+> minimizer with (D\ge D_0) contains a connected train-crossing subgraph (H)
+> whose phase classes have (M\ge b\ge a), whose reduced phase diameter is at
+> most (arepsilon_0), whose crossing count satisfies
+> (|E(H)|\ge M(a+b)-arepsilon_0D^2), and for which the full source has at most
+> (arepsilon_0D^2) strict-rhombus crossings outside (H), while retaining all
+> holes, exceptional faces, bridges, repeated boundary occurrences, and
+> contact-isolated source points.
+
+The endpoint theorem proves a sequential (o(1)) version of the hypotheses, not
+this finite uniform theorem. A proof of the boxed missing statement would exclude
+the entire floor-attainment subsequence. It would still leave non-endpoint
+high-$mu_D) full-core sequences and the macroscopic-container branch, so it
+would not by itself solve Level I.
+
+The most direct geometric form is a near-complete phase-pure grid theorem for
+actual train pseudosegments with (O(D)) physical boundary. An arbitrary
+near-complete graph is insufficient: a random bipartite graph with edge deletion
+probability (p_D\to0) can have (o(T_D^2)) missing edges and no complete
+linear-by-linear biclique. The train embedding, boundary budget, or global
+minimality must be used in the missing implication.
+
+## 5. Claim audit table
+
+| Claim | Status | Dependencies | Reason |
+| --- | --- | --- | --- |
+| (T_D/D\to2\sqrt{\Delta_2}) at (mu_D\to\mu_{\rm TC}) | proved here, report-level | `C-FULLCORE-TRAIN-SURPLUS-FLOOR`, `C-TRAIN-INTERFACE-CURRENCY` | Exact upper/lower train squeeze |
+| Lemma 2.1 Mantel stability | proved here, elementary | triangle-free simple graph | Degree-square variance argument |
+| (G_D^\circ) has (R_D-O(D)) edges | canonical input | `C-PUNCTURED-PHASE`, full train graph | Phase cut deletes only boundary-order crossing relations |
+| (o(T_D^2)) bad edges for (K_D\to\infty) | proved here | global (sum\delta_e=O(D)) | Markov threshold (K_D/D) |
+| (o(T_D)) high-incidence deletion | proved here | preceding row and Mantel missing cross count | Square-root incidence threshold |
+| Diameter at most three of (H_D) | proved here | linear minimum degree on both shores | Common-neighbor intersection |
+| (o(1)) phase diameter | proved here | canonical edge law and diameter-three bound | Three good edges at most |
+| Three-label concentration and (M(a+b)-o(T_D^2)) | proved here | same-label noncrossing, Mantel partition | Two shores receive the three labels in a (1+2) split |
+| (H_D) is a full source or pure disk | rejected inference | source/scaffold distinction | (H_D) is an analytic train subgraph only |
+| Existing pure-disk NE/GPS1 applies automatically | not used / hypothesis failure | Target-B pure-disk reports | Full-core holes and exceptional faces are not removed |
+| Level-I closure | unresolved | missing full-core near-extremal exclusion | High-(mu_D) and Type-I branches remain |
+
+## 6. Regression checks
+
+| Regression/correction | Result | Exact hypothesis or failure |
+| --- | --- | --- |
+| Abstract random near-complete bipartite graph | pass | It shows (o(T^2)) missing edges alone do not force a linear biclique; it is not claimed to be a train arrangement or source |
+| Five-sector (C_5)-blowup | pass | Its edge density is (1/5), not the endpoint density (1/4) |
+| Sheared near-triangular lattice | pass | It has no global-minimizer certificate and does not satisfy the endpoint train-floor ledger |
+| Sliding interval model | pass | It warns that density plus interval neighborhoods at a fixed density is insufficient; no interval simplification is assumed here |
+| Holes and boundary interfaces | retained | The theorem never fills holes, deletes interface faces, or invokes a disk complement tree |
+| Contact-isolated source points | retained | Only train vertices/relations are removed for analysis; the original source cardinality is unchanged |
+| Bridges and repeated boundary occurrences | retained | Only the canonical occurrence-counted identities are used; no Euler path is inferred |
+| Positive local KKT force / finite release | not used | No stress-to-deformation implication is claimed |
+| Full-source affine-kernel extension | not used | The theorem uses no affine-kernel assertion on isolates |
+| Selected representative versus every minimizer | pass | The statement is conditional on any canonical representative in the endpoint subsequence and does not claim a new representative solves the problem |
+
+## 7. Literature imports and near misses
+
+No external theorem is load-bearing. The 2025 Fox--Pach--Suk pseudosegment
+structure theorem, arXiv:2312.01028, Theorem 2.12, supplies linear complete
+crossing subfamilies from a fixed positive crossing density. It does not supply a
+near-complete-bipartite completion with shore sizes (T/2-o(T)), nor does it
+handle the full-source diameter/minimality bridge. It is therefore only a near miss
+for the missing lemma. The primary source is
+<https://arxiv.org/abs/2312.01028>.
+
+The endpoint proof itself uses only elementary graph theory and canonical repository
+inputs. No periodic-packing or fixed-container theorem is imported.
+
+## 8. Computation
+
+No script was required. The abstract random-graph obstruction remains the union-bound
+regression already recorded in
+`target_c_fullcore_mantel_endpoint_stability_2026-09-14.md`; it is not used as a
+geometric counterexample.
+
+## 9. Corrections / supersessions
+
+This report does not supersede a canonical theorem. It sharpens the report-level
+endpoint reduction in `target_c_fullcore_mantel_endpoint_stability_2026-09-14.md`.
+The latter's near-complete distinct-label pair remains valid; IPM adds a connected
+inverse-diameter phase collapse and promotes the near-saturation conclusion from a
+selected pair to an almost-full train component.
+
+The report does not promote the unreviewed Target-B GPS1/NE statements and does not
+change the canonical Level-I/C-II statuses.
+
+## 10. Promotion recommendation
+
+**Unreviewed.** The proof is elementary once the canonical endpoint ledgers are
+accepted, but the phase-cut/train-track identification and the use of endpoint
+equality rates should receive an independent hostile audit before any promotion.
+Even after audit, promotion would remove only the scalar-floor attainment branch;
+it would not close C-II or Level I.
+
+## 11. Handoff
+
+1. **Strongest new theorem:** at (mu_D\to\mu_{\rm TC}), an (o(T_D))-trimmed
+   connected train component has (o(1)) reduced-phase diameter, robust
+   near-complete bipartite crossing, and cyclic-order deficit (o(T_D^2)).
+2. **Canonical dependency chain:** `C-FULLCORE-TRAIN-SURPLUS-FLOOR` + `C-PUNCTURED-PHASE` + exact train-track/Mantel bounds \(\to$ IPM.
+3. **Exact remaining lemma:** a finite, uniform full-core near-extremal exclusion
+   that tolerates holes, (O(D)) exceptional interfaces, and the full source.
+4. **Binding dead route:** ordinary Mantel stability or an abstract graph biclique
+   theorem cannot provide that source-level completion.
+5. **Files to read next:** `docs/targets/target-c/76-hole-stable-complete-grid-order-diameter-audit.md`,
+   `docs/targets/target-c/91-explicit-ordered-grid-audit.md`, the canonical Sections
+   122--123, and the Target-B near-extremal reports only for their exact pure-disk
+   hypotheses.
