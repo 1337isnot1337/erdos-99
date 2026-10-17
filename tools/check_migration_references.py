@@ -146,7 +146,7 @@ class GitReader:
         self.path = path.resolve()
 
     def run(self, *args: str) -> bytes:
-        proc = subprocess.run(["git", "-C", str(self.path), *args], capture_output=True)
+        proc = subprocess.run(["git", "--no-replace-objects", "-C", str(self.path), *args], capture_output=True)
         if proc.returncode:
             raise ReferenceError(proc.stderr.decode("utf-8", "replace").strip())
         return proc.stdout
